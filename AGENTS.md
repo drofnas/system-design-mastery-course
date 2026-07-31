@@ -149,6 +149,49 @@ implicitly; the agent's permission level may need to change first. Unless the
 user says otherwise, create the pull request as a draft and use the repository's
 required PR-title convention.
 
+### "Plan out the next module" trigger
+
+When the user says **"Plan out the next module."**, treat the phrase as a
+request to execute the complete next-module authoring workflow, not merely to
+produce a proposed plan. It also explicitly authorizes evaluation and pushing
+the resulting module branch; do not pause for approval between authoring,
+evaluation, revision, committing, and pushing. For this trigger:
+
+1. Inspect the module directory names to inventory which syllabus modules have
+   already been created. Compare that inventory with `00_COURSE_SYLLABUS.md`,
+   select the first syllabus module that has not been created, and derive its
+   number, title, outcomes, scope, required evidence, and dependencies from the
+   syllabus. Do not infer the next module solely from the highest directory
+   number.
+2. Read all required course standards and relevant existing learner artifacts.
+   If the target module does not exist yet, the target-module `README.md` and
+   `module.json` requirement begins after those files are created and applies
+   to every subsequent review and evaluation pass.
+3. Before authoring module files, create and switch to the module's dedicated
+   branch using the naming and base-branch rules above. Protect unrelated or
+   uncommitted work rather than folding it into the module branch.
+4. Execute the entire Authoring workflow below. Create logical, reviewed commits
+   at meaningful milestones so that instruction, practice, assessment,
+   evaluation, and readiness changes are traceable; do not save the whole
+   module for one undifferentiated commit.
+5. Send the completed module and its evidence through the required structural,
+   semantic, evaluator-calibration, and readiness evaluation. Run evaluation
+   without requesting approval, apply warranted fixes, rerun failed checks, and
+   record evaluation or calibration results in the repository when the module
+   contract requires them.
+6. After all evaluations and readiness checks pass, review the complete
+   in-scope diff and create a final commit that captures any remaining fixes,
+   evaluation evidence, and readiness transition. Verify that the working tree
+   contains no uncommitted in-scope changes, then push the module branch to
+   GitHub so it is ready for a pull request.
+7. Report the created module, evaluation results, commit sequence, and pushed
+   branch. Do not create the pull request unless the user separately asks for
+   one.
+
+This trigger is a narrow exception to the default publication pause above: it
+authorizes pushing the module branch, but it does not authorize creating or
+merging a pull request.
+
 ## Authoring workflow
 
 1. Inspect the syllabus requirements and current module manifest.
