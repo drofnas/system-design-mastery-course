@@ -121,6 +121,34 @@ point. Run the module's deterministic calibration checker as well; structured
 output is not accepted when its reported average, citations, finding classes,
 or remediation references contradict the detailed scores.
 
+## Branch and pull-request workflow
+
+Create every new module on its own branch before authoring module files. Branch
+from the current `main` branch unless the user names another base, and use
+`feature/module-NN-short-name` by default. Do not combine multiple new modules
+on one branch, and do not author a new module directly on `main`.
+
+Keep the module implementation, resource verification, tests, evaluator runs,
+calibration results, and readiness transition on that module branch. If module
+work began on `main` but has not been committed, move the complete working tree
+onto the module branch before evaluation and publication.
+
+At the end of every session that updates repository files, review the complete
+in-scope diff, run the relevant checks, and create a local commit before the
+final response. This commit is required whether or not the user requested a
+push or pull request; do not leave completed session work uncommitted or batch
+it into a later session. Never commit known failing, secret-bearing, unrelated,
+or unreviewed changes. If a blocker prevents a safe commit, report it explicitly
+instead of creating a misleading checkpoint.
+
+After evaluation and every readiness check succeeds, stop and report the
+result. The completed update session must already have its local commit. Ask the
+user whether to proceed with the publication phase: push the branch and create
+a pull request back into `main`. Do not perform those remote publication actions
+implicitly; the agent's permission level may need to change first. Unless the
+user says otherwise, create the pull request as a draft and use the repository's
+required PR-title convention.
+
 ## Authoring workflow
 
 1. Inspect the syllabus requirements and current module manifest.
