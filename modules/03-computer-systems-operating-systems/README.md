@@ -1,8 +1,8 @@
 # Module 3: Computer Systems and Operating Systems
 
-> **Authoring status:** Teaching package drafted. Readiness is recorded only
-> after the lab, assessment calibration, independent review, and course
-> validation pass.
+> **Authoring status:** Review. The complete teaching, lab, assessment, and Gate
+> 1 package is registered; readiness is recorded only after calibration,
+> independent review, regression checks, and final course validation pass.
 
 ## What this module changes
 
@@ -113,6 +113,34 @@ Use the [report-and-defense worksheet](worksheets/week-12-report-defense.md).
 
 The required portfolio evidence is one systems-performance investigation, one
 failure matrix, one source-code internals review, and one recorded teach-back.
+
+## Build and measure
+
+- Use the [portable systems behavior lab](lab/README.md).
+- Freeze the prediction before running the
+  [required experiment matrix](worksheets/week-11-systems-matrix.md).
+- Validate each raw trial against the versioned scenario and trial schemas.
+- Preserve the native-versus-container boundary: Docker Desktop is not
+  bare-metal Linux evidence.
+
+## Decide, assess, and remediate
+
+- Write the decision with the
+  [systems-performance report template](../../templates/systems-performance-report-template.md).
+- Use the [Module 3 assessment](assessment/README.md),
+  [anchored rubric](assessment/rubric.md), and
+  [provider-neutral evaluator](assessment/evaluator-prompt.md).
+- Complete [Gate 1](assessment/gate-01.md) and record changed beliefs only in
+  the [Week 12 revision](../../capstone/revisions/week-12-gate-01.md).
+- Keep the frozen prediction and raw trials unchanged. Remediation is a new,
+  cited artifact linked to a lesson and exercise.
+
+## Completion rules
+
+Completion requires all weekly evidence, the full bounded matrix, passing
+native and Linux checks, a defensible decision and teach-back, Module 3
+evaluation, a separate revision when required, and Gate 1. Course completion
+develops evidence of staff-plus judgment; it does not award a job title.
 
 ## AI use
 

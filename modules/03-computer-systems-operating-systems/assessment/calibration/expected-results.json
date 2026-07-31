@@ -1,10 +1,32 @@
 {
-  "module_id": "M03",
-  "expected": {
-    "pass": "Pass",
-    "revise": "Revise",
-    "repeat": "Repeat"
+  "pass.md": {
+    "result": "Pass",
+    "average_range": [3.0, 4.0],
+    "required_observations": [
+      "All structural gates pass",
+      "Equivalent-work and repeated measurements support the mechanism",
+      "Concurrency and durability invariants remain safe",
+      "Production transfer, cost, ownership, and reversal are explicit"
+    ]
   },
-  "maximum_category_drift": 1,
-  "required_runs_per_fixture": 2
+  "revise.md": {
+    "result": "Revise",
+    "average_range": [1.5, 2.9],
+    "required_observations": [
+      "Artifacts and required experiments exist",
+      "Benchmark and causal evidence are incomplete",
+      "Production transfer and decision reasoning are weak",
+      "Safety bounds avoid an automatic Repeat"
+    ]
+  },
+  "repeat.md": {
+    "result": "Repeat",
+    "average_range": [0.0, 1.7],
+    "required_observations": [
+      "Prediction and raw-evidence integrity fail",
+      "Required experiments and measurement identity are absent",
+      "Concurrency and durability invariants fail",
+      "The machine and workload model is materially false"
+    ]
+  }
 }
