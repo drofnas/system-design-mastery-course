@@ -87,6 +87,16 @@ class NativeIntegrationTests(unittest.TestCase):
             run_trial(mixed)["samples"][0]["checksum"],
         )
 
+    def test_copying_variants_measure_equivalent_work(self) -> None:
+        direct = copy.deepcopy(BASE)
+        direct.update({"id": "direct-scan", "variant": "direct_scan"})
+        copied = copy.deepcopy(direct)
+        copied.update({"id": "copy-then-scan", "variant": "copy_then_scan"})
+        direct_sample = run_trial(direct)["samples"][0]
+        copied_sample = run_trial(copied)["samples"][0]
+        self.assertEqual(direct_sample["checksum"], copied_sample["checksum"])
+        self.assertEqual(direct_sample["bytes"], copied_sample["bytes"])
+
     def test_odd_branch_variants_have_equivalent_checksums(self) -> None:
         predictable = copy.deepcopy(BASE)
         predictable.update({"id": "branch-predictable-odd", "variant": "branch_predictable"})
@@ -141,7 +151,25 @@ class NativeIntegrationTests(unittest.TestCase):
                 "parameters": {"total_bytes": 16384, "chunk_bytes": 4096, "sync_every": sync_every},
                 "repetitions": 1,
             })
-            self.assertEqual(run_trial(scenario)["summary"]["useful_bytes"], 16384)
+            trial = run_trial(scenario)
+            self.assertEqual(trial["summary"]["useful_bytes"], 16384)
+            self.assertTrue(trial["samples"][0]["post_exit_matches"])
+            self.assertIn("reopened-and-verified", trial["samples"][0]["recovery_observation"])
+
+    def test_injected_crash_preserves_prior_checkpoint(self) -> None:
+        scenario = copy.deepcopy(BASE)
+        scenario.update({
+            "id": "io-crash-window", "probe": "io", "variant": "crash_before_rename",
+            "parameters": {"total_bytes": 16384, "chunk_bytes": 4096, "sync_every": 2},
+            "repetitions": 1,
+        })
+        sample = run_trial(scenario)["samples"][0]
+        self.assertEqual(sample["outcome"], "injected_crash")
+        self.assertTrue(sample["post_exit_matches"])
+        self.assertEqual(
+            sample["recovery_observation"],
+            "prior-generation-preserved-temp-generation-unpublished",
+        )
 
     def test_syscall_batching_preserves_content_checksum(self) -> None:
         checksums = set()
@@ -186,6 +214,24 @@ class NativeIntegrationTests(unittest.TestCase):
     def test_trial_rejects_checksum_drift(self) -> None:
         trial = run_trial(copy.deepcopy(BASE))
         trial["samples"][1]["checksum"] += 1
+        with self.assertRaises(ScenarioError):
+            validate_trial(trial)
+
+    def test_trial_rejects_missing_resource_samples(self) -> None:
+        trial = run_trial(copy.deepcopy(BASE))
+        del trial["resource_samples"]
+        with self.assertRaises(ScenarioError):
+            validate_trial(trial)
+
+    def test_trial_rejects_empty_measurement_limitations(self) -> None:
+        trial = run_trial(copy.deepcopy(BASE))
+        trial["measurement_limitations"] = []
+        with self.assertRaises(ScenarioError):
+            validate_trial(trial)
+
+    def test_trial_rejects_contradictory_summary(self) -> None:
+        trial = run_trial(copy.deepcopy(BASE))
+        trial["summary"]["successful_repetitions"] = 0
         with self.assertRaises(ScenarioError):
             validate_trial(trial)
 

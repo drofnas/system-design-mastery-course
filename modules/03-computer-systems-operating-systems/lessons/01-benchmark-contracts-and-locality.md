@@ -44,6 +44,13 @@ Branches create a similar dependency. Predictable branches let speculative work
 remain useful. An unpredictable branch may discard work, but a branchless rewrite
 can do more instructions. Measure equal outputs before preferring either.
 
+Copying is a workload transformation, not free locality. Let `C` be the measured
+cost to copy a structure once and let `Δ = D - P` be the saving per reuse between
+direct access cost `D` and packed-copy access cost `P`. Copying can break even
+only when `k × Δ > C`, or `k > C / Δ`, and only while ownership, lifetime, update
+visibility, and memory headroom remain acceptable. Include allocation and copy in
+the timed boundary when the production request pays them.
+
 ## Worked example
 
 Transit replays 2,000,000 updates. A contiguous route table and a 4 KiB-strided
@@ -55,6 +62,12 @@ order, records every sample, and reports the median plus range. If a compiler
 report shows one loop vectorized and the other not, vectorization becomes part of
 the causal model instead of being hidden as “cache.” If checksums differ, the run
 is invalid.
+
+A second Transit pair scans route state directly or copies it into a packed
+buffer and then scans it. Both report the same logical bytes and checksum; the
+copying variant times allocation, `memcpy`, and the scan. One scan therefore
+tests copy overhead. A separate repeated-reuse experiment is needed to establish
+a break-even count.
 
 ## Common expert mistakes
 
@@ -72,12 +85,17 @@ scan of every 64th record. Write the address delta, prediction, equivalent-work
 check, and a falsifier. Then identify why “the strided loop is 64 times slower”
 is not a valid prediction.
 
+Next, suppose a packed copy costs 1.8 ms and saves 0.3 ms per later scan. Derive
+the first reuse count that can pay back the copy, then name two conditions that
+could still reject the change.
+
 ## Self-check
 
 1. Why must a checksum be consumed outside the timed loop?
 2. What does a lower elapsed time prove when no counter is available?
 3. When is a warm cache the correct state rather than benchmark contamination?
 4. Why can a branchless implementation lose?
+5. When does a faster packed scan fail to justify copying?
 
 ## Explained answers
 
@@ -89,6 +107,9 @@ is not a valid prediction.
    steady-state behavior. The contract must say so.
 4. It may execute more instructions or create longer data dependencies than a
    well-predicted branch.
+5. When copy/allocation cost is outside the measurement, reuse is too low to
+   cross `C / Δ`, or ownership, freshness, and memory requirements make the extra
+   representation unsafe. Measure the complete boundary the decision will pay.
 
 ## Sources and next work
 

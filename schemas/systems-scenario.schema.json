@@ -10,10 +10,10 @@
     "probe": {"enum": ["locality", "allocation", "contention", "io", "deadlock"]},
     "variant": {
       "enum": [
-        "contiguous", "strided", "branch_predictable", "branch_mixed",
+        "contiguous", "strided", "direct_scan", "copy_then_scan", "branch_predictable", "branch_mixed",
         "reuse", "per_iteration", "working_set", "shared", "sharded", "adjacent", "padded",
         "buffered", "batch_sync", "per_record_sync", "syscall_small",
-        "syscall_batched", "contended", "lock_inversion"
+        "syscall_batched", "contended", "crash_before_rename", "lock_inversion"
       ]
     },
     "runtime": {"enum": ["native", "docker"]},
@@ -36,7 +36,7 @@
       "if": {"properties": {"probe": {"const": "locality"}}, "required": ["probe"]},
       "then": {
         "properties": {
-          "variant": {"enum": ["contiguous", "strided", "branch_predictable", "branch_mixed"]},
+          "variant": {"enum": ["contiguous", "strided", "direct_scan", "copy_then_scan", "branch_predictable", "branch_mixed"]},
           "parameters": {
             "type": "object",
             "required": ["elements", "stride"],
@@ -88,7 +88,7 @@
       "then": {
         "properties": {
           "variant": {
-            "enum": ["buffered", "batch_sync", "per_record_sync", "syscall_small", "syscall_batched", "contended"]
+            "enum": ["buffered", "batch_sync", "per_record_sync", "syscall_small", "syscall_batched", "contended", "crash_before_rename"]
           },
           "parameters": {
             "type": "object",
@@ -119,6 +119,10 @@
     {
       "if": {"properties": {"variant": {"const": "batch_sync"}}, "required": ["variant"]},
       "then": {"properties": {"parameters": {"properties": {"sync_every": {"minimum": 2}}}}}
+    },
+    {
+      "if": {"properties": {"variant": {"const": "crash_before_rename"}}, "required": ["variant"]},
+      "then": {"properties": {"parameters": {"properties": {"sync_every": {"minimum": 1}}}}}
     },
     {
       "if": {"properties": {"probe": {"const": "deadlock"}}, "required": ["probe"]},

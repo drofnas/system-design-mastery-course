@@ -41,9 +41,12 @@ application acknowledgement, and partial writes matter. Draw the timeline.
 
 Transit writes checkpoints in buffered, per-record-sync, and batch-sync modes.
 The benchmark records payload bytes, write calls, sync calls, elapsed time, and
-checksum. The recovery experiment writes a versioned header and checksum to a
-temporary directory, terminates only at declared injection points, and validates
-the latest complete checkpoint.
+checksum. All three modes write equal payload bytes. Durable modes synchronize a
+temporary file, rename it, attempt directory synchronization, reopen the
+published path, and validate bytes and checksum. The bounded failure variant
+stops after temporary-file synchronization but before rename; recovery must see
+the prior checkpoint and an unpublished temporary generation. It models a named
+process boundary, not kernel or host-power failure.
 
 Batching may increase useful throughput while increasing replay exposure. The
 decision therefore uses a recovery objective, not “fastest.” Docker Desktop runs

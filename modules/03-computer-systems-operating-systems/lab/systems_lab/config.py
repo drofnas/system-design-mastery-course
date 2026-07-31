@@ -11,10 +11,10 @@ from typing import Any
 PROBES = {"locality", "allocation", "contention", "io", "deadlock"}
 RUNTIMES = {"native", "docker"}
 VARIANTS = {
-    "locality": {"contiguous", "strided", "branch_predictable", "branch_mixed"},
+    "locality": {"contiguous", "strided", "direct_scan", "copy_then_scan", "branch_predictable", "branch_mixed"},
     "allocation": {"reuse", "per_iteration", "working_set"},
     "contention": {"shared", "sharded", "adjacent", "padded"},
-    "io": {"buffered", "batch_sync", "per_record_sync", "syscall_small", "syscall_batched", "contended"},
+    "io": {"buffered", "batch_sync", "per_record_sync", "syscall_small", "syscall_batched", "contended", "crash_before_rename"},
     "deadlock": {"lock_inversion"},
 }
 
@@ -46,9 +46,13 @@ def validate_scenario(value: Any) -> dict[str, Any]:
     missing = required - value.keys()
     if missing:
         raise ScenarioError(f"missing fields: {sorted(missing)}")
+    allowed = required | {"repetitions", "warmup", "timeout_seconds", "limits"}
+    if set(value) - allowed:
+        raise ScenarioError("scenario contains fields outside the published schema")
     if value["schema_version"] != 1:
         raise ScenarioError("schema_version must be 1")
-    if not isinstance(value["id"], str) or not value["id"].replace("-", "").isalnum():
+    if (not isinstance(value["id"], str) or not 1 <= len(value["id"]) <= 64
+            or not value["id"].replace("-", "").isalnum()):
         raise ScenarioError("id must contain letters, digits, and hyphens")
     probe = value["probe"]
     variant = value["variant"]
@@ -61,19 +65,30 @@ def validate_scenario(value: Any) -> dict[str, Any]:
         raise ScenarioError("parameters must be an object")
 
     if probe == "locality":
+        if set(parameters) != {"elements", "stride"}:
+            raise ScenarioError("locality parameters must be elements and stride")
         elements = _integer(parameters, "elements", 1024, 2_000_000)
         stride = _integer(parameters, "stride", 1, 128)
         if variant == "strided" and elements * stride > 2_000_000:
             raise ScenarioError("strided elements times stride exceeds 2,000,000 slots")
     elif probe == "allocation":
+        if set(parameters) != {"iterations", "bytes_per_iteration"}:
+            raise ScenarioError("allocation parameters must be iterations and bytes_per_iteration")
         iterations = _integer(parameters, "iterations", 1, 1_000_000)
         size = _integer(parameters, "bytes_per_iteration", 64, 1_048_576)
         if iterations * size > 512 * 1024 * 1024:
             raise ScenarioError("allocation work exceeds 512 MiB")
     elif probe == "contention":
+        if set(parameters) != {"workers", "iterations"}:
+            raise ScenarioError("contention parameters must be workers and iterations")
         _integer(parameters, "workers", 1, 64)
         _integer(parameters, "iterations", 100, 10_000_000)
     elif probe == "io":
+        expected_parameters = {"total_bytes", "chunk_bytes", "sync_every"}
+        if variant == "contended":
+            expected_parameters.add("competitor_bytes")
+        if set(parameters) != expected_parameters:
+            raise ScenarioError("I/O parameters do not match the selected variant")
         total = _integer(parameters, "total_bytes", 4096, 512 * 1024 * 1024)
         chunk = _integer(parameters, "chunk_bytes", 1, 1_048_576)
         sync_every = _integer(parameters, "sync_every", 0, 1_000_000)
@@ -85,10 +100,14 @@ def validate_scenario(value: Any) -> dict[str, Any]:
             raise ScenarioError("per_record_sync requires sync_every=1")
         if variant == "batch_sync" and sync_every < 2:
             raise ScenarioError("batch_sync requires sync_every>=2")
+        if variant == "crash_before_rename" and sync_every < 1:
+            raise ScenarioError("crash_before_rename requires sync_every>=1")
         if variant == "contended":
             competitor = _integer(parameters, "competitor_bytes", 4096, 512 * 1024 * 1024)
             if competitor + total > 1024 * 1024 * 1024:
                 raise ScenarioError("combined I/O work exceeds 1 GiB")
+    elif probe == "deadlock" and parameters:
+        raise ScenarioError("deadlock parameters must be empty")
 
     repetitions = value.get("repetitions", 3)
     warmup = value.get("warmup", 1)
@@ -102,6 +121,8 @@ def validate_scenario(value: Any) -> dict[str, Any]:
     limits = value.get("limits", {})
     if not isinstance(limits, dict):
         raise ScenarioError("limits must be an object")
+    if set(limits) - {"cpus", "memory_mb", "pids"}:
+        raise ScenarioError("limits contains unsupported fields")
     if "cpus" in limits:
         _finite_number(limits["cpus"], "limits.cpus", 0.1, 8)
     if "memory_mb" in limits:

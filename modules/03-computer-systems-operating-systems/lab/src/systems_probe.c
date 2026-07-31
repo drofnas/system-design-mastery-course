@@ -36,6 +36,7 @@ typedef struct {
 } worker_args;
 
 static struct rusage usage_before;
+static const char *acknowledgement_boundary = "not-applicable";
 
 static void begin_measurement(void) {
     if (getrusage(RUSAGE_SELF, &usage_before) != 0) {
@@ -87,7 +88,8 @@ static void emit(const char *probe, const char *variant, uint64_t operations,
            ",\"system_cpu_ns\":%" PRIu64 ",\"max_rss_bytes\":%" PRIu64
            ",\"minor_faults\":%ld,\"major_faults\":%ld"
            ",\"voluntary_context_switches\":%ld,\"involuntary_context_switches\":%ld"
-           ",\"block_inputs\":%ld,\"block_outputs\":%ld,\"outcome\":\"%s\"}\n",
+           ",\"block_inputs\":%ld,\"block_outputs\":%ld,\"outcome\":\"%s\""
+           ",\"acknowledgement_boundary\":\"%s\"}\n",
            probe, variant, operations, bytes, checksum, elapsed_ns,
            timeval_ns(usage_after.ru_utime) - timeval_ns(usage_before.ru_utime),
            timeval_ns(usage_after.ru_stime) - timeval_ns(usage_before.ru_stime), rss,
@@ -96,7 +98,8 @@ static void emit(const char *probe, const char *variant, uint64_t operations,
            usage_after.ru_nvcsw - usage_before.ru_nvcsw,
            usage_after.ru_nivcsw - usage_before.ru_nivcsw,
            usage_after.ru_inblock - usage_before.ru_inblock,
-           usage_after.ru_oublock - usage_before.ru_oublock, outcome);
+           usage_after.ru_oublock - usage_before.ru_oublock, outcome,
+           acknowledgement_boundary);
 }
 
 static int run_locality(int argc, char **argv) {
@@ -115,6 +118,8 @@ static int run_locality(int argc, char **argv) {
         }
         slots = elements * stride;
     } else if (strcmp(variant, "contiguous") != 0 &&
+               strcmp(variant, "direct_scan") != 0 &&
+               strcmp(variant, "copy_then_scan") != 0 &&
                strcmp(variant, "branch_predictable") != 0 &&
                strcmp(variant, "branch_mixed") != 0) {
         fprintf(stderr, "unknown locality variant\n");
@@ -139,16 +144,25 @@ static int run_locality(int argc, char **argv) {
     }
 
     uint64_t checksum = 0;
+    uint64_t *scan_values = values;
+    uint64_t *copied = NULL;
     begin_measurement();
     uint64_t start = monotonic_ns();
+    if (strcmp(variant, "copy_then_scan") == 0) {
+        copied = malloc((size_t)elements * sizeof(*copied));
+        if (copied == NULL) { free(values); return 3; }
+        memcpy(copied, values, (size_t)elements * sizeof(*copied));
+        scan_values = copied;
+    }
     if (strncmp(variant, "branch_", 7) == 0) {
         for (uint64_t i = 0; i < elements; i++) checksum += values[i] ? 7U : 3U;
     } else {
         uint64_t step = strcmp(variant, "strided") == 0 ? stride : 1;
-        for (uint64_t i = 0; i < elements; i++) checksum += values[i * step];
+        for (uint64_t i = 0; i < elements; i++) checksum += scan_values[i * step];
     }
     uint64_t elapsed = monotonic_ns() - start;
     emit("locality", variant, elements, elements * sizeof(uint64_t), checksum, elapsed, "ok");
+    free(copied);
     free(values);
     return 0;
 }
@@ -307,10 +321,18 @@ static int run_io(int argc, char **argv) {
         fprintf(stderr, "total_bytes must be divisible by chunk_bytes\n");
         return 2;
     }
-    int descriptor = open(path, O_CREAT | O_TRUNC | O_WRONLY, 0600);
+    int durable = strcmp(variant, "batch_sync") == 0 ||
+                  strcmp(variant, "per_record_sync") == 0 ||
+                  strcmp(variant, "crash_before_rename") == 0;
+    size_t temporary_size = strlen(path) + 5;
+    char *temporary = malloc(temporary_size);
+    if (temporary == NULL) return 3;
+    if (snprintf(temporary, temporary_size, "%s.tmp", path) < 0) return 3;
+    const char *write_path = durable ? temporary : path;
+    int descriptor = open(write_path, O_CREAT | O_TRUNC | O_WRONLY, 0600);
     if (descriptor < 0) { perror("open"); return 3; }
     unsigned char *buffer = malloc((size_t)chunk);
-    if (buffer == NULL) return 3;
+    if (buffer == NULL) { close(descriptor); free(temporary); return 3; }
     memset(buffer, 0xa5, (size_t)chunk);
     uint64_t writes = total / chunk;
     uint64_t syncs = 0;
@@ -329,10 +351,41 @@ static int run_io(int argc, char **argv) {
         if (fsync(descriptor) != 0) return 4;
         syncs++;
     }
-    uint64_t elapsed = monotonic_ns() - start;
+    if (durable && syncs == 0) {
+        if (fsync(descriptor) != 0) return 4;
+        syncs++;
+    }
     if (close(descriptor) != 0) return 4;
-    emit("io", variant, writes + syncs, total, checksum, elapsed, "ok");
+    const char *outcome = "ok";
+    if (strcmp(variant, "crash_before_rename") == 0) {
+        acknowledgement_boundary = "injected-stop-after-file-fsync-before-rename";
+        outcome = "injected_crash";
+    } else if (durable) {
+        if (rename(temporary, path) != 0) return 4;
+        char *directory = strdup(path);
+        if (directory == NULL) return 3;
+        char *slash = strrchr(directory, '/');
+        if (slash == NULL) strcpy(directory, ".");
+        else if (slash == directory) slash[1] = '\0';
+        else *slash = '\0';
+        int directory_descriptor = open(directory, O_RDONLY);
+        if (directory_descriptor < 0) return 4;
+        if (fsync(directory_descriptor) == 0) {
+            acknowledgement_boundary = "file-fsync-rename-directory-fsync";
+        } else if (errno == EINVAL || errno == ENOTSUP) {
+            acknowledgement_boundary = "file-fsync-rename-directory-fsync-unsupported";
+        } else {
+            close(directory_descriptor); free(directory); return 4;
+        }
+        if (close(directory_descriptor) != 0) { free(directory); return 4; }
+        free(directory);
+    } else {
+        acknowledgement_boundary = "buffered-close";
+    }
+    uint64_t elapsed = monotonic_ns() - start;
+    emit("io", variant, writes + syncs, total, checksum, elapsed, outcome);
     free(buffer);
+    free(temporary);
     return 0;
 }
 

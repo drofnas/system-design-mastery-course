@@ -30,6 +30,7 @@ Before running a probe, predict direction and mechanism, not a magic ratio.
 | Variant | Prediction | Mechanism | Falsifier |
 |---|---|---|---|
 | contiguous route table | lower elapsed time than strided access | fewer cache lines and better prefetch opportunity | equal repeated distribution with equivalent work |
+| copy then scan | worse for one scan; may pay back after repeated reuse | allocation and copy add fixed cost before locality saving | full-boundary runs never cross the derived reuse threshold |
 | per-update allocation | more CPU and faults than reuse | allocator metadata, initialization, and page touching | counters and profiles show no extra work |
 | one shared lock | throughput plateaus as workers increase | serialized critical section and scheduler handoff | lock wait remains negligible while another bound explains plateau |
 | adjacent counters | may degrade versus padded counters | coherence traffic from false sharing | padding changes no repeated distribution and counters show another cause |
@@ -45,6 +46,11 @@ performance numbers.
 Each probe reports input count, output checksum, bytes touched, compiler flags,
 and a monotonic elapsed interval. A fast run with a different checksum is not an
 optimization; it changed the work.
+
+For copying, the reference probe compares direct scan with allocation, copy, and
+scan of the same route data. Learners derive
+`reuse count > copy cost / per-scan saving` and test the actual reuse range before
+proposing a second representation.
 
 ### 2. Separate observation from cause
 

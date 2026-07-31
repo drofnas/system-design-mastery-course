@@ -18,6 +18,12 @@ Every-record logical scan is 128,000,000 bytes. Every-64th-record inspection is
 traffic: stride, prefetch, alignment, compiler access width, and page mapping
 change transferred bytes. Elapsed time includes the whole dependency chain.
 
+The direct and copied variants must produce the same checksum and logical-byte
+count; the copied variant records allocation, copy, and scan when a request pays
+all three. With `C = 2.4 ms` and `Δ = 0.5 ms`, `k > C/Δ = 4.8`, so the first
+integer reuse count that can break even is 5. Update visibility, buffer lifetime,
+extra memory, and production reuse can still reject the second representation.
+
 ## EX-03
 
 Executing requires CPU-time/scheduler evidence; runnable requires run-queue or

@@ -23,8 +23,9 @@ make sanitize
 ```
 
 `run` executes one scenario. `matrix` executes the ordered scenario paths in a
-manifest. `validate` checks evidence structure, nonnegative measures, and checksum
-agreement. `--runtime native|docker` may override a scenario after all other
+manifest. `validate` enforces the published contract, including aligned resource
+samples, nonempty limitations, consistent summaries, nonnegative measures,
+checksums, and I/O recovery observations. `--runtime native|docker` may override a scenario after all other
 inputs have passed the same bounds.
 
 ## Evidence contract
@@ -38,6 +39,21 @@ are in `schemas/systems-scenario.schema.json` and `schemas/systems-trial.schema.
 
 Performance expectations are never test assertions. Tests require equivalent
 work, valid checksums, bounded termination, and honest output.
+
+The required matrix contains the 0.5/1/2 CPU quota sweep, 64/128/256 MiB
+memory-limit sweep and retained OOM outcome, 16–256 MiB native working sets,
+1/8/16-worker lock pairs, 64-worker oversubscription, direct/copy locality pair,
+and equal-byte durability variants. Docker evidence includes `cpu.stat`, memory
+events/current/peak, PIDs current/peak/events, and `io.stat`. These are trial
+cgroup observations, not reserved-capacity guarantees.
+
+Durable variants synchronize a temporary file, rename it, attempt to synchronize
+the containing directory, and record whether the directory operation is
+supported. The harness reopens the published path and verifies its byte count and
+checksum. The injected-stop scenario halts after temporary-file synchronization
+but before rename and verifies that the prior checkpoint remains published while
+the temporary generation remains unpublished. This is a bounded process-boundary
+experiment, not proof against kernel, VM, device, or host-power failure.
 
 ## Docker boundary
 

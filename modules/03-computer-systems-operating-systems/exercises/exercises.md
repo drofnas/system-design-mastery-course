@@ -14,6 +14,11 @@ For 2,000,000 64-byte records, calculate bytes scanned for every-record and
 every-64th-record traversal. Explain why bytes logically inspected, cache lines
 transferred, and elapsed time are different quantities.
 
+Then compare a direct scan with copying the same records into a packed buffer and
+scanning it. Freeze equal output and logical bytes. If copying costs 2.4 ms and
+saves 0.5 ms on each later scan, derive the first reuse count that can break even;
+state whether allocation and copy belong inside the measured request boundary.
+
 ## EX-03: Scheduler state table
 
 Classify five Transit worker intervals as executing, runnable, blocked, or
