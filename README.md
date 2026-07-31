@@ -8,14 +8,19 @@ course requirements are in [`00_COURSE_SYLLABUS.md`](00_COURSE_SYLLABUS.md).
 
 The course is at **Week 1: Architectural Judgment**.
 
-Before reading architecture recommendations or choosing technologies:
+Start with the complete
+[`Module 1: Architectural Judgment`](modules/01-architectural-judgment/README.md).
+Its local lessons teach the methods using a non-commerce transit case before
+you apply them independently.
 
-1. Complete [`capstone/baselines/week-01-baseline.md`](capstone/baselines/week-01-baseline.md)
-   independently.
-2. Commit and tag the completed baseline as `week-01-baseline`.
-3. Record criticism only in
+1. Study Module 1 Lessons 1–5 and complete the guided exercises without using
+   the commerce capstone.
+2. Complete [`capstone/baselines/week-01-baseline.md`](capstone/baselines/week-01-baseline.md)
+   independently, without requesting AI architecture recommendations.
+3. Commit and tag the completed baseline as `week-01-baseline`.
+4. Record criticism only in
    [`reviews/week-01-baseline-review.md`](reviews/week-01-baseline-review.md).
-4. Complete [`learning-log/week-01.md`](learning-log/week-01.md).
+5. Continue Module 1 through its Week 4 RFC, defense, and assessment.
 
 The baseline is evidence of initial judgment. Once tagged, it must never be
 edited. Revised designs belong in new Week 24, Week 48, and Week 72 files.
@@ -85,7 +90,33 @@ reviews/        Artifact reviews and assessment feedback
 capstone/       Global Commerce Platform artifacts and implementation
 learning-log/   Weekly reflection and teach-back records
 templates/      Reusable artifact contracts
+modules/        Complete four-week teaching and assessment packages
+schemas/        Machine-readable module and evaluation contracts
+scripts/        Course validation tools
 ```
+
+## Module catalog
+
+| Module | Weeks | Status | Entry point |
+|---:|---:|---|---|
+| 1. Architectural Judgment | 1–4 | Ready | [Start Module 1](modules/01-architectural-judgment/README.md) |
+| 2–18 | 5–72 | Syllabus-defined; teaching packages not yet authored | [Course syllabus](00_COURSE_SYLLABUS.md) |
+
+Future modules must satisfy
+[`MODULE_STANDARD.md`](MODULE_STANDARD.md). Course-authoring agents must also
+follow [`AGENTS.md`](AGENTS.md).
+
+## Validate the course
+
+Run:
+
+```bash
+python3 scripts/validate_course.py
+```
+
+The validator checks the Module 1 manifest, hour budget, outcome mappings,
+required teaching and assessment files, expanded baseline contract, JSON
+interfaces, and local Markdown links.
 
 ## Evidence and AI rules
 

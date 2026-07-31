@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/system-design-course/module.schema.json",
+  "title": "Course module manifest",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "weeks",
+    "target_hours",
+    "status",
+    "outcomes",
+    "resources",
+    "artifacts",
+    "failure_experiments",
+    "assessment"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^M[0-9]{2}$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 3
+    },
+    "weeks": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "required": ["number", "focus", "hours", "evidence"],
+        "properties": {
+          "number": {"type": "integer", "minimum": 1, "maximum": 72},
+          "focus": {"type": "string"},
+          "hours": {"type": "number", "minimum": 10, "maximum": 12},
+          "evidence": {
+            "type": "array",
+            "minItems": 1,
+            "items": {"type": "string"}
+          }
+        }
+      }
+    },
+    "target_hours": {
+      "type": "number",
+      "minimum": 40,
+      "maximum": 48
+    },
+    "status": {
+      "enum": ["draft", "review", "ready", "retired"]
+    },
+    "outcomes": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "statement",
+          "graduate_profile",
+          "mastery_levels",
+          "lessons",
+          "exercises",
+          "artifacts",
+          "rubric"
+        ]
+      }
+    },
+    "resources": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "type",
+          "url",
+          "required",
+          "access",
+          "week",
+          "estimated_minutes",
+          "assignment",
+          "last_verified",
+          "text_alternative"
+        ]
+      }
+    },
+    "artifacts": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "type": "object",
+        "required": ["id", "week", "required", "template_path", "submission_path"]
+      }
+    },
+    "failure_experiments": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "scenario", "evidence"]
+      }
+    },
+    "assessment": {
+      "type": "object",
+      "required": [
+        "rubric_path",
+        "evaluator_prompt_path",
+        "evaluation_schema_path",
+        "calibration_path",
+        "pass_average",
+        "safety_critical_criteria"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

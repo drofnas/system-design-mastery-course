@@ -31,7 +31,26 @@ frozen_commit:
 
 <!-- Include a metric, target, population, and time window. -->
 
-## 2. Workload model
+## 2. Functional scope and non-goals
+
+### In scope
+
+<!-- List the user-visible and business behaviors included in this baseline.
+Use domain language, not components or technologies. -->
+
+-
+
+### Non-goals
+
+<!-- List related behavior intentionally excluded from the current planning
+horizon. Explain why each exclusion is safe and does not hide a required
+invariant. -->
+
+| Non-goal | Reason excluded | Condition that would bring it into scope |
+|---|---|---|
+| | | |
+
+## 3. Workload model
 
 Use explicit units and time windows. Distinguish measured facts from assumptions.
 
@@ -52,7 +71,57 @@ Use explicit units and time windows. Distinguish measured facts from assumptions
 <!-- Describe seasonality, regional distribution, skew, burst duration, and
 growth horizon. -->
 
-## 3. Invariants
+### Sensitivity
+
+<!-- Which two or three uncertain inputs could change the first design? Show a
+low/base/high range and the resulting workload difference. -->
+
+| Input | Low | Base | High | Decision affected |
+|---|---:|---:|---:|---|
+| | | | | |
+
+## 4. Assumptions and constraints
+
+Classify each statement. A constraint removes a choice in the current scope; an
+assumption is an unverified planning claim; a preference can be traded.
+
+| ID | Statement | Type | Source/owner | Confidence | Consequence if false | Test or review date |
+|---|---|---|---|---|---|---|
+| AC-01 | | | | | | |
+
+### Explicit facts
+
+<!-- Record relevant facts supported by inspectable evidence. -->
+
+| Fact | Evidence | Date verified |
+|---|---|---|
+| | | |
+
+## 5. Cost boundaries
+
+Use ranges when evidence is weak. Include human and operating cost, not only
+infrastructure.
+
+| Cost area | Boundary or target | Unit/window | Evidence status | Consequence if exceeded |
+|---|---|---|---|---|
+| Delivery team and calendar | | | | |
+| Build or migration effort | | | | |
+| Recurring infrastructure/vendor | | | | |
+| Cost per useful outcome | | | | |
+| On-call and incident load | | | | |
+| Security/compliance operation | | | | |
+| Recovery/degraded capacity | | | | |
+
+## 6. Decision drivers
+
+Rank five to seven facts, outcomes, invariants, scenarios, constraints, costs, or
+risks that should distinguish candidate designs.
+
+| Rank | Driver | Evidence | Consequence if unmet |
+|---:|---|---|---|
+| 1 | | | |
+
+## 7. Invariants
 
 Write at least ten statements that can be proven true or false. Avoid goals such
 as "the system should be reliable."
@@ -70,7 +139,7 @@ as "the system should be reliable."
 | INV-09 | | | |
 | INV-10 | | | |
 
-## 4. Quality-attribute scenarios
+## 8. Quality-attribute scenarios
 
 Write at least five measurable scenarios. Each must name the stimulus,
 environment, response, threshold, time window, and measurement method. Include
@@ -84,7 +153,7 @@ performance, overload, availability, recovery, and tenant-security scenarios.
 | QA-04 | Recovery | | | | |
 | QA-05 | Tenant security | | | | |
 
-## 5. Failure and overload model
+## 9. Failure and overload model
 
 Predict behavior before testing. Name excluded faults rather than implying that
 the design covers every possible failure.
@@ -100,9 +169,14 @@ the design covers every possible failure.
 
 ### Explicit exclusions
 
-<!-- Which faults are not covered by this first design? -->
+<!-- Which faults are not covered by this first design? For each, state the user
+or business consequence and who accepts the risk. -->
 
-## 6. System context
+| Excluded fault | Consequence | Risk owner | Revisit condition |
+|---|---|---|---|
+| | | | |
+
+## 10. System context
 
 Replace the placeholders with actors, the commerce platform boundary, and
 external systems. Show information or command flow on each arrow.
@@ -116,15 +190,15 @@ flowchart LR
     P -->|"<request or information>"| E
 ```
 
-## 7. State ownership
+## 11. State ownership
 
 Identify the authority for each business fact. Do not choose storage products.
 
-| Business state | Authoritative owner | Readers or derived copies | Retention or residency constraint |
-|---|---|---|---|
-| | | | |
+| Business state | Authoritative owner | Allowed writers | Readers or derived copies | Repair/rebuild rule | Retention or residency constraint |
+|---|---|---|---|---|---|
+| | | | | | |
 
-## 8. Simplest design believed to work
+## 12. Simplest design believed to work
 
 <!-- Explain the design in domain terms. State how requests, business state,
 irreversible actions, and background work interact without naming technologies
@@ -141,7 +215,7 @@ flowchart LR
 
 <!-- Identify what has intentionally not been added and why. -->
 
-## 9. Strongest arguments
+## 13. Strongest arguments
 
 | For this design | Against this design |
 |---|---|
@@ -149,26 +223,42 @@ flowchart LR
 | | |
 | | |
 
-## 10. Open questions
+## 14. Open questions
 
-| Question | Why it matters | Evidence needed |
-|---|---|---|
-| | | |
+| Question | Why it matters | Evidence needed | Owner/decision date |
+|---|---|---|---|
+| | | | |
 
-## 11. Self-check before freezing
+## 15. Reversal evidence
 
+For the most consequential assumptions or design choices, state the evidence
+that should trigger reconsideration. Do not write “when we scale.”
+
+| Current claim or choice | Original driver | Measurable reversal condition | Credible migration seam |
+|---|---|---|---|
+| | | | |
+
+## 16. Self-check before freezing
+
+- [ ] Functional scope and explicit non-goals are stated.
 - [ ] Workloads have numbers, units, time windows, and labeled assumptions.
+- [ ] Workload sensitivity identifies decision-changing uncertainty.
+- [ ] Constraints, assumptions, facts, and preferences are distinguished.
+- [ ] Delivery, recurring, operational, security, and recovery cost boundaries exist.
+- [ ] Five to seven decision drivers are ranked.
 - [ ] At least ten invariants are independently testable.
 - [ ] At least five quality scenarios have measurable thresholds.
 - [ ] The five required failure scenarios have predicted behavior.
+- [ ] Excluded faults state consequences and risk owners.
 - [ ] The context diagram names actors, boundaries, and flows.
-- [ ] Every important business fact has an authoritative owner.
+- [ ] Every important business fact has an authority and repair rule.
 - [ ] The design avoids vendor, framework, database, broker, and service names.
 - [ ] The strongest arguments for and against the design are recorded.
-- [ ] Open questions name the evidence needed to resolve them.
+- [ ] Open questions have evidence, owners, and decision dates.
+- [ ] Material choices include measurable reversal conditions and migration seams.
 - [ ] `completed_on` and `status` are updated before the freeze commit.
 
-## 12. AI assistance disclosure
+## 17. AI assistance disclosure
 
 - Template supplied with AI assistance: yes
 - Design content supplied by AI before baseline freeze: no

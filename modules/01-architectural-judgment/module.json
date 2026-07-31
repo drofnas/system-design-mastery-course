@@ -1,0 +1,342 @@
+{
+  "$schema": "../../schemas/module.schema.json",
+  "id": "M01",
+  "title": "Architectural Judgment",
+  "weeks": [
+    {
+      "number": 1,
+      "focus": "Model",
+      "hours": 10.5,
+      "evidence": [
+        "Frozen Week 1 commerce baseline",
+        "Week 1 learning log"
+      ]
+    },
+    {
+      "number": 2,
+      "focus": "Build",
+      "hours": 10.5,
+      "evidence": [
+        "Candidate-design comparison",
+        "Practice ADR",
+        "Week 2 learning log"
+      ]
+    },
+    {
+      "number": 3,
+      "focus": "Break and measure",
+      "hours": 10.5,
+      "evidence": [
+        "Failure matrix",
+        "Evidence ledger",
+        "Adversarial baseline review",
+        "Week 3 learning log"
+      ]
+    },
+    {
+      "number": 4,
+      "focus": "Decide and teach",
+      "hours": 10.5,
+      "evidence": [
+        "Module RFC",
+        "Architecture defense",
+        "Evaluation report",
+        "Revision log",
+        "Week 4 learning log"
+      ]
+    }
+  ],
+  "target_hours": 42,
+  "status": "ready",
+  "readiness_note": "Local validation and the two-run Pass, Revise, and Repeat LLM calibration passed on 2026-07-31.",
+  "outcomes": [
+    {
+      "id": "M01-O1",
+      "statement": "Translate an ambiguous product request into users, outcomes, scope, constraints, and measurable acceptance conditions.",
+      "graduate_profile": [1, 15, 16],
+      "mastery_levels": ["Define", "Decide and Teach"],
+      "lessons": ["L01", "L02"],
+      "exercises": ["EX-01", "EX-02"],
+      "artifacts": ["A01", "A07"],
+      "rubric": ["R01"]
+    },
+    {
+      "id": "M01-O2",
+      "statement": "Build a workload model with normal, peak, burst, projected, skew, and uncertainty dimensions.",
+      "graduate_profile": [1, 2],
+      "mastery_levels": ["Define", "Calculate"],
+      "lessons": ["L02"],
+      "exercises": ["EX-03"],
+      "artifacts": ["A01"],
+      "rubric": ["R02"]
+    },
+    {
+      "id": "M01-O3",
+      "statement": "Express business, data, security, and operational invariants and assign authoritative state ownership.",
+      "graduate_profile": [1, 4, 7, 9],
+      "mastery_levels": ["Define", "Implement", "Diagnose"],
+      "lessons": ["L03"],
+      "exercises": ["EX-04", "EX-05"],
+      "artifacts": ["A01", "A04"],
+      "rubric": ["R03", "R06"]
+    },
+    {
+      "id": "M01-O4",
+      "statement": "Write measurable quality-attribute scenarios tied to user journeys and evidence collection.",
+      "graduate_profile": [1, 8, 15],
+      "mastery_levels": ["Define", "Calculate", "Decide and Teach"],
+      "lessons": ["L04"],
+      "exercises": ["EX-06"],
+      "artifacts": ["A01", "A07"],
+      "rubric": ["R04"]
+    },
+    {
+      "id": "M01-O5",
+      "statement": "Communicate system context, boundaries, flows, trust, and ownership without prematurely choosing deployable services.",
+      "graduate_profile": [1, 9, 10, 16],
+      "mastery_levels": ["Define", "Implement", "Decide and Teach"],
+      "lessons": ["L05"],
+      "exercises": ["EX-07"],
+      "artifacts": ["A01", "A02"],
+      "rubric": ["R06", "R09"]
+    },
+    {
+      "id": "M01-O6",
+      "statement": "Compare simple, moderate, and distributed designs using shared drivers, cost boundaries, evidence, and reversal conditions.",
+      "graduate_profile": [10, 14, 15],
+      "mastery_levels": ["Calculate", "Implement", "Decide and Teach"],
+      "lessons": ["L06", "L08"],
+      "exercises": ["EX-08", "EX-09"],
+      "artifacts": ["A02", "A03", "A07"],
+      "rubric": ["R07", "R08"]
+    },
+    {
+      "id": "M01-O7",
+      "statement": "State a scoped failure and overload model and expose unsupported claims through adversarial review.",
+      "graduate_profile": [5, 7, 8],
+      "mastery_levels": ["Define", "Diagnose", "Decide and Teach"],
+      "lessons": ["L07"],
+      "exercises": ["EX-10", "EX-11"],
+      "artifacts": ["A04", "A05"],
+      "rubric": ["R05", "R10"]
+    },
+    {
+      "id": "M01-O8",
+      "statement": "Write and defend an evidence-based RFC, resolve disagreement through decision drivers, and teach the causal model.",
+      "graduate_profile": [14, 15, 16],
+      "mastery_levels": ["Implement", "Diagnose", "Decide and Teach"],
+      "lessons": ["L08"],
+      "exercises": ["EX-12"],
+      "artifacts": ["A07", "A08", "A09"],
+      "rubric": ["R08", "R09", "R10"]
+    }
+  ],
+  "resources": [
+    {
+      "id": "RES-01",
+      "title": "Reasoning About Software Quality Attributes",
+      "type": "authoritative written source",
+      "url": "https://www.sei.cmu.edu/library/reasoning-about-software-quality-attributes/",
+      "required": true,
+      "access": "free",
+      "week": 1,
+      "estimated_minutes": 35,
+      "assignment": "Read the overview and General Scenarios sections through the discussion of trade-offs. Record one quality name that remains ambiguous until expressed as a scenario.",
+      "last_verified": "2026-07-31",
+      "text_alternative": "lessons/04-quality-attribute-scenarios.md"
+    },
+    {
+      "id": "RES-02",
+      "title": "Architecting in a Complex World: Eliciting and Specifying Quality Attribute Requirements",
+      "type": "webcast",
+      "url": "https://www.sei.cmu.edu/library/architecting-in-a-complex-world-eliciting-and-specifying-quality-attribute-requirements/",
+      "required": true,
+      "access": "free",
+      "week": 1,
+      "estimated_minutes": 60,
+      "assignment": "Watch the complete webcast or study the supplemental slides. Write down the workshop steps that prevent the loudest stakeholder from defining every priority.",
+      "last_verified": "2026-07-31",
+      "text_alternative": "lessons/04-quality-attribute-scenarios.md"
+    },
+    {
+      "id": "RES-03",
+      "title": "Implementing SLOs",
+      "type": "practitioner handbook chapter",
+      "url": "https://sre.google/workbook/implementing-slos/",
+      "required": true,
+      "access": "free",
+      "week": 1,
+      "estimated_minutes": 45,
+      "assignment": "Read Getting Started, SLI Specification versus Implementation, and Modeling User Journeys. Explain why a server metric may misrepresent a user's outcome.",
+      "last_verified": "2026-07-31",
+      "text_alternative": "lessons/02-problem-framing-and-workloads.md"
+    },
+    {
+      "id": "RES-04",
+      "title": "The C4 model for visualising software architecture",
+      "type": "official documentation",
+      "url": "https://c4model.com/",
+      "required": true,
+      "access": "free",
+      "week": 1,
+      "estimated_minutes": 30,
+      "assignment": "Read the overview, abstractions, system-context guidance, notation guidance, and diagram-review checklist. Identify which details do not belong on a context diagram.",
+      "last_verified": "2026-07-31",
+      "text_alternative": "lessons/05-context-and-boundaries.md"
+    },
+    {
+      "id": "RES-05",
+      "title": "The C4 model for visualising software architecture",
+      "type": "conference video",
+      "url": "https://www.youtube.com/watch?v=KvoBrUd1-5E",
+      "required": false,
+      "access": "free",
+      "week": 1,
+      "estimated_minutes": 60,
+      "assignment": "Watch the complete creator-led talk. Capture three diagram smells and how each impairs a design review.",
+      "last_verified": "2026-07-31",
+      "text_alternative": "lessons/05-context-and-boundaries.md"
+    },
+    {
+      "id": "RES-06",
+      "title": "Documenting Architecture Decisions",
+      "type": "original practitioner article",
+      "url": "https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions",
+      "required": true,
+      "access": "free",
+      "week": 2,
+      "estimated_minutes": 20,
+      "assignment": "Read the complete article. Explain why preserving a superseded decision is useful and identify one decision too small to deserve an ADR.",
+      "last_verified": "2026-07-31",
+      "text_alternative": "lessons/08-decisions-rfcs-and-defense.md"
+    },
+    {
+      "id": "RES-07",
+      "title": "Challenges with Distributed Systems",
+      "type": "first-person engineering case",
+      "url": "https://builder.aws.com/content/3F08f7GPFiZMCgXD8gny6OjxR0Z/challenges-with-distributed-systems",
+      "required": true,
+      "access": "free",
+      "week": 3,
+      "estimated_minutes": 45,
+      "assignment": "Read the complete article. Add three independent failure combinations and one unknown-outcome case to the transit case failure matrix.",
+      "last_verified": "2026-07-31",
+      "text_alternative": "lessons/07-failure-models-and-adversarial-review.md"
+    },
+    {
+      "id": "RES-08",
+      "title": "ISO/IEC 25010:2023 Product quality model",
+      "type": "standard",
+      "url": "https://www.iso.org/standard/78176.html",
+      "required": false,
+      "access": "paid",
+      "week": 1,
+      "estimated_minutes": 60,
+      "assignment": "Optional: review the current product-quality taxonomy and compare its categories with the scenarios you wrote.",
+      "last_verified": "2026-07-31",
+      "text_alternative": "lessons/04-quality-attribute-scenarios.md"
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "A01",
+      "week": 1,
+      "required": true,
+      "template_path": "capstone/baselines/week-01-baseline.md",
+      "submission_path": "capstone/baselines/week-01-baseline.md",
+      "immutable_after_submission": true
+    },
+    {
+      "id": "A02",
+      "week": 2,
+      "required": true,
+      "template_path": "modules/01-architectural-judgment/worksheets/week-02-candidate-designs.md",
+      "submission_path": "reports/module-01-candidate-designs.md"
+    },
+    {
+      "id": "A03",
+      "week": 2,
+      "required": true,
+      "template_path": "templates/adr-template.md",
+      "submission_path": "adr/ADR-001-module-01-decision.md"
+    },
+    {
+      "id": "A04",
+      "week": 3,
+      "required": true,
+      "template_path": "modules/01-architectural-judgment/worksheets/week-03-failure-review.md",
+      "submission_path": "experiments/module-01-failure-review.md"
+    },
+    {
+      "id": "A05",
+      "week": 3,
+      "required": true,
+      "template_path": "reviews/week-01-baseline-review.md",
+      "submission_path": "reviews/week-01-baseline-review.md"
+    },
+    {
+      "id": "A07",
+      "week": 4,
+      "required": true,
+      "template_path": "templates/rfc-template.md",
+      "submission_path": "rfc/RFC-001-architectural-judgment.md"
+    },
+    {
+      "id": "A08",
+      "week": 4,
+      "required": true,
+      "template_path": "modules/01-architectural-judgment/worksheets/week-04-rfc-defense.md",
+      "submission_path": "reviews/module-01-defense.md"
+    },
+    {
+      "id": "A09",
+      "week": 4,
+      "required": true,
+      "template_path": "modules/01-architectural-judgment/assessment/report-template.md",
+      "submission_path": "reviews/module-01-evaluation.md"
+    },
+    {
+      "id": "A10",
+      "week": 4,
+      "required": true,
+      "template_path": "templates/learning-log-template.md",
+      "submission_path": "learning-log/week-01.md through learning-log/week-04.md"
+    }
+  ],
+  "failure_experiments": [
+    {
+      "id": "F01",
+      "scenario": "Tenfold traffic burst",
+      "evidence": "Predicted behavior, saturated responsibility, affected journey, invariant exposure, and follow-up measurement"
+    },
+    {
+      "id": "F02",
+      "scenario": "One slow dependency",
+      "evidence": "Critical-path effect, queue or concurrency propagation, bounded response, and unsupported assumptions"
+    },
+    {
+      "id": "F03",
+      "scenario": "Stale data",
+      "evidence": "Operation-specific consequence, invariant impact, user-visible behavior, and detection"
+    },
+    {
+      "id": "F04",
+      "scenario": "Operator mistake",
+      "evidence": "Blast radius, prevention, detection, recovery, ownership, and residual risk"
+    },
+    {
+      "id": "F05",
+      "scenario": "Loss of one hosting zone",
+      "evidence": "Capacity and state assumptions, degraded behavior, recovery path, and excluded correlated faults"
+    }
+  ],
+  "assessment": {
+    "rubric_path": "modules/01-architectural-judgment/assessment/rubric.md",
+    "evaluator_prompt_path": "modules/01-architectural-judgment/assessment/evaluator-prompt.md",
+    "evaluation_schema_path": "schemas/evaluation.schema.json",
+    "calibration_path": "modules/01-architectural-judgment/assessment/calibration",
+    "pass_average": 3,
+    "safety_critical_criteria": ["R03", "R05", "R06"],
+    "required_result_bands": ["Pass", "Revise", "Repeat"]
+  }
+}
