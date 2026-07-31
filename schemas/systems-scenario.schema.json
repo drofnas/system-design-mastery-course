@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/system-design-course/systems-scenario.schema.json",
+  "title": "Module 3 bounded systems scenario",
+  "type": "object",
+  "required": ["schema_version", "id", "probe", "variant", "runtime", "parameters"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "id": {"type": "string", "pattern": "^[A-Za-z0-9-]+$"},
+    "probe": {"enum": ["locality", "allocation", "contention", "io", "deadlock"]},
+    "variant": {
+      "enum": [
+        "contiguous", "strided", "branch_predictable", "branch_mixed",
+        "reuse", "per_iteration", "working_set", "shared", "sharded", "adjacent", "padded",
+        "buffered", "batch_sync", "per_record_sync", "syscall_small",
+        "syscall_batched", "contended", "lock_inversion"
+      ]
+    },
+    "runtime": {"enum": ["native", "docker"]},
+    "parameters": {"type": "object"},
+    "repetitions": {"type": "integer", "minimum": 1, "maximum": 9, "default": 3},
+    "warmup": {"type": "integer", "minimum": 0, "maximum": 3, "default": 1},
+    "timeout_seconds": {"type": "number", "minimum": 0.2, "maximum": 60, "default": 20},
+    "limits": {
+      "type": "object",
+      "properties": {
+        "cpus": {"type": "number", "minimum": 0.1, "maximum": 8},
+        "memory_mb": {"type": "integer", "minimum": 32, "maximum": 1024},
+        "pids": {"type": "integer", "minimum": 16, "maximum": 128}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

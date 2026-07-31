@@ -489,6 +489,8 @@ def main() -> int:
         ROOT / "schemas" / "evaluation.schema.json",
         ROOT / "schemas" / "capacity-scenario.schema.json",
         ROOT / "schemas" / "capacity-trial.schema.json",
+        ROOT / "schemas" / "systems-scenario.schema.json",
+        ROOT / "schemas" / "systems-trial.schema.json",
     ):
         load_json(path, errors)
 

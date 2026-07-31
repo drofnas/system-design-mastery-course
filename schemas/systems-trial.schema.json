@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/system-design-course/systems-trial.schema.json",
+  "title": "Module 3 systems trial evidence",
+  "type": "object",
+  "required": [
+    "schema_version", "scenario_id", "source_commit", "environment", "limits",
+    "samples", "resource_samples", "summary", "measurement_limitations"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "scenario_id": {"type": "string"},
+    "source_commit": {"type": "string", "minLength": 7},
+    "environment": {
+      "type": "object",
+      "required": [
+        "runtime", "platform", "system", "kernel", "architecture",
+        "logical_cpus", "compiler", "compiler_flags", "filesystem"
+      ]
+    },
+    "limits": {"type": "object"},
+    "samples": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "probe", "variant", "operations", "bytes", "checksum",
+          "elapsed_ns", "outcome"
+        ],
+        "properties": {
+          "probe": {"type": "string"},
+          "variant": {"type": "string"},
+          "operations": {"type": "integer", "minimum": 0},
+          "bytes": {"type": "integer", "minimum": 0},
+          "checksum": {"type": "integer", "minimum": 0},
+          "elapsed_ns": {"type": "integer", "minimum": 0},
+          "outcome": {"enum": ["ok", "timeout"]}
+        },
+        "additionalProperties": false
+      }
+    },
+    "resource_samples": {"type": "array"},
+    "summary": {
+      "type": "object",
+      "required": [
+        "repetitions", "successful_repetitions", "median_elapsed_ns",
+        "min_elapsed_ns", "max_elapsed_ns", "useful_operations", "useful_bytes"
+      ]
+    },
+    "measurement_limitations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string"}
+    }
+  },
+  "additionalProperties": false
+}
