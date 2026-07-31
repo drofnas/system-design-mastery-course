@@ -123,10 +123,15 @@ or remediation references contradict the detailed scores.
 
 ## Branch and pull-request workflow
 
-Create every new module on its own branch before authoring module files. Branch
-from the current `main` branch unless the user names another base, and use
-`feature/module-NN-short-name` by default. Do not combine multiple new modules
-on one branch, and do not author a new module directly on `main`.
+Create every new module on its own branch before authoring module files. Unless
+the user names another base, first protect any unrelated working-tree changes,
+switch to `main`, and run `git pull --ff-only origin main`. Verify that local
+`main` and `origin/main` resolve to the same commit before branching. If the
+fast-forward pull or verification fails, stop and report the divergence; do not
+merge, rebase, reset, or fold unrelated work into the module automatically.
+Create `feature/module-NN-short-name` from that verified `main` by default. Do
+not combine multiple new modules on one branch, and do not author a new module
+directly on `main`.
 
 Keep the module implementation, resource verification, tests, evaluator runs,
 calibration results, and readiness transition on that module branch. If module
@@ -167,9 +172,11 @@ evaluation, revision, committing, and pushing. For this trigger:
    If the target module does not exist yet, the target-module `README.md` and
    `module.json` requirement begins after those files are created and applies
    to every subsequent review and evaluation pass.
-3. Before authoring module files, create and switch to the module's dedicated
-   branch using the naming and base-branch rules above. Protect unrelated or
-   uncommitted work rather than folding it into the module branch.
+3. Before authoring module files, protect unrelated or uncommitted work, switch
+   to `main`, run `git pull --ff-only origin main`, and verify that `main` equals
+   `origin/main`. Stop on divergence instead of merging, rebasing, or resetting.
+   Then create and switch to the module's dedicated branch from that exact
+   commit using the naming rules above.
 4. Execute the entire Authoring workflow below. Create logical, reviewed commits
    at meaningful milestones so that instruction, practice, assessment,
    evaluation, and readiness changes are traceable; do not save the whole

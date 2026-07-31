@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/system-design-course/observability-trial.schema.json",
+  "title": "Module 4 observability trial summary",
+  "type": "object", "additionalProperties": false,
+  "required": ["schema_version", "scenario_id", "arrival_mode", "logical_requests", "attempts", "unique_successes", "useful_throughput_per_second", "latency_ms", "queue_wait_ms", "generator_lag_ms", "outcomes", "max_service_concurrency", "max_downstream_concurrency", "connection_peak", "retained_connections_before_cleanup", "retained_allocation_bytes_before_cleanup", "limits", "useful_work", "retry_budget", "telemetry", "resource_delta", "failure_reason", "cleanup"],
+  "properties": {
+    "schema_version": {"const": "1.0"}, "scenario_id": {"type": "string"},
+    "arrival_mode": {"enum": ["open", "closed"]},
+    "logical_requests": {"type": "integer", "minimum": 0}, "attempts": {"type": "integer", "minimum": 0},
+    "unique_successes": {"type": "integer", "minimum": 0}, "useful_throughput_per_second": {"type": "number", "minimum": 0},
+    "latency_ms": {"$ref": "#/$defs/percentiles"}, "queue_wait_ms": {"$ref": "#/$defs/percentiles"},
+    "generator_lag_ms": {"$ref": "#/$defs/percentiles"},
+    "outcomes": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 0}},
+    "max_service_concurrency": {"type": "integer", "minimum": 0},
+    "max_downstream_concurrency": {"type": "integer", "minimum": 0},
+    "connection_peak": {"type": "integer", "minimum": 0},
+    "retained_connections_before_cleanup": {"type": "integer", "minimum": 0},
+    "retained_allocation_bytes_before_cleanup": {"type": "integer", "minimum": 0},
+    "limits": {
+      "type": "object", "additionalProperties": false,
+      "required": ["max_logical_requests", "max_attempts_per_request", "max_telemetry_records", "max_retained_allocation_bytes"],
+      "properties": {
+        "max_logical_requests": {"type": "integer", "minimum": 1, "maximum": 5000},
+        "max_attempts_per_request": {"type": "integer", "minimum": 1, "maximum": 3},
+        "max_telemetry_records": {"type": "integer", "minimum": 100, "maximum": 250000},
+        "max_retained_allocation_bytes": {"type": "integer", "minimum": 0, "maximum": 16777216}
+      }
+    },
+    "useful_work": {
+      "type": "object", "additionalProperties": false,
+      "required": ["workload_signature", "result_signature"],
+      "properties": {
+        "workload_signature": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "result_signature": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "retry_budget": {
+      "type": "object", "additionalProperties": false,
+      "required": ["limit", "used"],
+      "properties": {"limit": {"type": "integer", "minimum": 0}, "used": {"type": "integer", "minimum": 0}}
+    },
+    "telemetry": {
+      "type": "object", "additionalProperties": false,
+      "required": ["spans", "metrics", "logs", "series_count", "cardinality_budget", "cardinality_exceeded", "estimated_bytes", "dropped_records", "collection_enabled"],
+      "properties": {
+        "spans": {"type": "integer", "minimum": 0}, "metrics": {"type": "integer", "minimum": 0},
+        "logs": {"type": "integer", "minimum": 0}, "series_count": {"type": "integer", "minimum": 0},
+        "cardinality_budget": {"type": "integer", "minimum": 1}, "cardinality_exceeded": {"type": "boolean"},
+        "estimated_bytes": {"type": "integer", "minimum": 0},
+        "dropped_records": {"type": "integer", "minimum": 0},
+        "collection_enabled": {"type": "boolean"}
+      }
+    },
+    "resource_delta": {
+      "type": "object", "additionalProperties": false,
+      "required": ["user_cpu_seconds", "system_cpu_seconds", "max_rss_bytes", "voluntary_context_switches", "involuntary_context_switches"],
+      "properties": {
+        "user_cpu_seconds": {"type": "number", "minimum": 0}, "system_cpu_seconds": {"type": "number", "minimum": 0},
+        "max_rss_bytes": {"type": "integer", "minimum": 0}, "voluntary_context_switches": {"type": "integer", "minimum": 0},
+        "involuntary_context_switches": {"type": "integer", "minimum": 0}
+      }
+    },
+    "failure_reason": {"type": ["string", "null"]},
+    "cleanup": {
+      "type": "object", "additionalProperties": false,
+      "required": ["owned_service", "connections_after", "retained_allocation_bytes_after", "temporary_file_exists_after", "errors"],
+      "properties": {
+        "owned_service": {"type": "boolean"},
+        "connections_after": {"type": ["integer", "null"], "minimum": 0},
+        "retained_allocation_bytes_after": {"type": ["integer", "null"], "minimum": 0},
+        "temporary_file_exists_after": {"type": ["boolean", "null"]},
+        "errors": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  },
+  "$defs": {
+    "percentiles": {
+      "type": "object", "additionalProperties": false,
+      "required": ["p50", "p95", "p99", "max"],
+      "properties": {"p50": {"type": "number", "minimum": 0}, "p95": {"type": "number", "minimum": 0}, "p99": {"type": "number", "minimum": 0}, "max": {"type": "number", "minimum": 0}}
+    }
+  }
+}

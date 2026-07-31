@@ -358,6 +358,9 @@ def validate_calibration(
 
     rubric_path = module_root / "assessment" / "rubric.md"
     criteria = set(RUBRIC_ID.findall(rubric_path.read_text(encoding="utf-8")))
+    evaluation_schema = load_json(ROOT / "schemas" / "evaluation.schema.json", errors)
+    if not isinstance(evaluation_schema, dict):
+        return
     accepted: list[dict[str, dict[str, int]]] = []
     raw_records: list[tuple[str, str, Path, dict[str, int]]] = []
     for run in runs[:2]:
@@ -430,6 +433,7 @@ def validate_calibration(
                     module_root,
                     str(manifest.get("id")),
                     criteria,
+                    evaluation_schema,
                 )
                 if raw_scores != aggregate_scores:
                     fail(
@@ -491,6 +495,12 @@ def main() -> int:
         ROOT / "schemas" / "capacity-trial.schema.json",
         ROOT / "schemas" / "systems-scenario.schema.json",
         ROOT / "schemas" / "systems-trial.schema.json",
+        ROOT / "schemas" / "observability-scenario.schema.json",
+        ROOT / "schemas" / "telemetry-record.schema.json",
+        ROOT / "schemas" / "observability-trial.schema.json",
+        ROOT / "schemas" / "benchmark-result.schema.json",
+        ROOT / "schemas" / "blind-collection.schema.json",
+        ROOT / "schemas" / "blind-reveal.schema.json",
     ):
         load_json(path, errors)
 

@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import statistics
 import sys
 from pathlib import Path
 from typing import Any
@@ -70,11 +71,29 @@ def validate_run(
     module_root: Path,
     module_id: str,
     criteria: set[str],
+    evaluation_schema: dict[str, Any],
 ) -> dict[str, int]:
     data = load_json(path)
+    expected_fields = set(evaluation_schema.get("properties", {}))
+    if set(data) != expected_fields:
+        fail(f"{path}: evaluation fields differ from schemas/evaluation.schema.json")
+    calibration = module_root / "assessment" / "calibration"
+    manifest_reference = expected[f"{fixture}.md"].get("manifest")
+    if isinstance(manifest_reference, str):
+        manifest = load_json(calibration / manifest_reference)
+        if data.get("artifact_commit") != manifest.get("artifact_commit"):
+            fail(f"{path}: artifact_commit contradicts {manifest_reference}")
+        if data.get("baseline_tag") != manifest.get("baseline_tag"):
+            fail(f"{path}: baseline_tag contradicts {manifest_reference}")
     expected_result = expected[f"{fixture}.md"]["result"]
     if data.get("module_id") != module_id:
         fail(f"{path}: expected module_id {module_id}")
+    if not isinstance(data.get("evaluated_at"), str) or "T" not in data["evaluated_at"]:
+        fail(f"{path}: evaluated_at is not a date-time string")
+    if not isinstance(data.get("summary"), str) or not isinstance(data.get("next_actions"), list) or any(
+        not isinstance(item, str) for item in data.get("next_actions", [])
+    ):
+        fail(f"{path}: summary or next_actions violates evaluation schema")
     if data.get("result") != expected_result:
         fail(f"{path}: expected {expected_result}, received {data.get('result')}")
 
@@ -98,7 +117,6 @@ def validate_run(
     if not lower <= calculated <= upper:
         fail(f"{path}: average {calculated} is outside expected range {lower}-{upper}")
 
-    calibration = module_root / "assessment" / "calibration"
     headings = fixture_headings(calibration, fixture)
     expected_prefix = f"{module_root.relative_to(ROOT)}/assessment/calibration/{fixture}.md#"
 
@@ -126,9 +144,13 @@ def validate_run(
     if set(gates) != GATES or any(not isinstance(value, bool) for value in gates.values()):
         fail(f"{path}: structural gates must contain one boolean row for G01-G06")
     for row in gate_rows:
+        if set(row) != {"id", "passed", "evidence"}:
+            fail(f"{path}: structural gate fields differ from evaluation schema")
         validate_citations(row.get("evidence"), str(row.get("id")))
 
     for row in score_rows:
+        if set(row) != {"criterion_id", "score", "evidence", "findings", "remediation"}:
+            fail(f"{path}: rubric row fields differ from evaluation schema")
         criterion = row["criterion_id"]
         validate_citations(row.get("evidence"), criterion)
         findings = row.get("findings", [])
@@ -165,11 +187,37 @@ def validate_run(
             f"({calculated_result})"
         )
     confidence = data.get("confidence", {})
+    if not isinstance(confidence, dict) or set(confidence) != {"level", "reasons"}:
+        fail(f"{path}: confidence fields differ from evaluation schema")
+    if confidence.get("level") not in {"high", "medium", "low"} or not isinstance(
+        confidence.get("reasons"), list
+    ) or any(not isinstance(item, str) for item in confidence["reasons"]):
+        fail(f"{path}: confidence value is invalid")
     if data.get("result") == "Pass" and (
         not isinstance(confidence, dict) or confidence.get("level") == "low"
     ):
         fail(f"{path}: low confidence cannot produce Pass")
     return scores
+
+
+def validate_module4_fixture_arithmetic(module_root: Path) -> None:
+    text = (module_root / "assessment" / "calibration" / "pass.md").read_text(
+        encoding="utf-8"
+    )
+    match = re.search(
+        r"Baseline p95 samples:\s*([0-9., ]+)\s*ms\.\s*Validated candidate:\s*"
+        r"([0-9., ]+)\s*ms\..*?Median ratio is\s*([0-9.]+)\.",
+        text,
+        re.DOTALL,
+    )
+    if match is None:
+        fail("M04 pass fixture benchmark samples or ratio cannot be parsed")
+    baseline = [float(item.strip()) for item in match.group(1).split(",")]
+    candidate = [float(item.strip()) for item in match.group(2).split(",")]
+    declared = float(match.group(3))
+    calculated = round(statistics.median(candidate) / statistics.median(baseline), 3)
+    if declared != calculated:
+        fail(f"M04 pass fixture median ratio is {declared}; calculated {calculated}")
 
 
 def parse_args() -> argparse.Namespace:
@@ -214,6 +262,12 @@ def main() -> int:
     criteria = set(re.findall(r"^## (R\d{2}):", rubric, re.MULTILINE))
     if not criteria:
         fail(f"{module_root}: rubric has no criterion IDs")
+    evaluation_schema = load_json(ROOT / "schemas" / "evaluation.schema.json")
+    if module_id == "M04":
+        for fixture in FIXTURES:
+            if not isinstance(expected[f"{fixture}.md"].get("manifest"), str):
+                fail(f"M04 {fixture} fixture has no calibration manifest")
+        validate_module4_fixture_arithmetic(module_root)
 
     paths = [resolve_path(module_root, value) for value in args.results]
     run_scores: list[dict[str, dict[str, int]]] = []
@@ -227,6 +281,7 @@ def main() -> int:
                 module_root,
                 module_id,
                 criteria,
+                evaluation_schema,
             )
         run_scores.append(scores_for_run)
         print(f"Calibration run {run_number}: result bands and evidence valid")
