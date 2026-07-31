@@ -1,22 +1,26 @@
+#define _DARWIN_C_SOURCE
+#define _DEFAULT_SOURCE
 #define _POSIX_C_SOURCE 200809L
 
 #include <errno.h>
 #include <fcntl.h>
 #include <inttypes.h>
 #include <pthread.h>
+#include <stdatomic.h>
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <sys/resource.h>
 #include <time.h>
 #include <unistd.h>
 
 typedef struct {
-    uint64_t value;
+    _Atomic uint64_t value;
 } adjacent_counter;
 
 typedef struct {
-    uint64_t value;
+    _Atomic uint64_t value;
     unsigned char padding[120];
 } padded_counter;
 
@@ -30,6 +34,20 @@ typedef struct {
     padded_counter *padded;
     uint64_t local;
 } worker_args;
+
+static struct rusage usage_before;
+
+static void begin_measurement(void) {
+    if (getrusage(RUSAGE_SELF, &usage_before) != 0) {
+        perror("getrusage");
+        exit(2);
+    }
+}
+
+static uint64_t timeval_ns(struct timeval value) {
+    return (uint64_t)value.tv_sec * UINT64_C(1000000000) +
+           (uint64_t)value.tv_usec * UINT64_C(1000);
+}
 
 static uint64_t monotonic_ns(void) {
     struct timespec value;
@@ -54,10 +72,31 @@ static uint64_t parse_u64(const char *text, const char *name, uint64_t lower, ui
 static void emit(const char *probe, const char *variant, uint64_t operations,
                  uint64_t bytes, uint64_t checksum, uint64_t elapsed_ns,
                  const char *outcome) {
+    struct rusage usage_after;
+    if (getrusage(RUSAGE_SELF, &usage_after) != 0) {
+        perror("getrusage");
+        exit(2);
+    }
+    uint64_t rss = (uint64_t)usage_after.ru_maxrss;
+#ifndef __APPLE__
+    rss *= UINT64_C(1024);
+#endif
     printf("{\"probe\":\"%s\",\"variant\":\"%s\",\"operations\":%" PRIu64
            ",\"bytes\":%" PRIu64 ",\"checksum\":%" PRIu64
-           ",\"elapsed_ns\":%" PRIu64 ",\"outcome\":\"%s\"}\n",
-           probe, variant, operations, bytes, checksum, elapsed_ns, outcome);
+           ",\"elapsed_ns\":%" PRIu64 ",\"user_cpu_ns\":%" PRIu64
+           ",\"system_cpu_ns\":%" PRIu64 ",\"max_rss_bytes\":%" PRIu64
+           ",\"minor_faults\":%ld,\"major_faults\":%ld"
+           ",\"voluntary_context_switches\":%ld,\"involuntary_context_switches\":%ld"
+           ",\"block_inputs\":%ld,\"block_outputs\":%ld,\"outcome\":\"%s\"}\n",
+           probe, variant, operations, bytes, checksum, elapsed_ns,
+           timeval_ns(usage_after.ru_utime) - timeval_ns(usage_before.ru_utime),
+           timeval_ns(usage_after.ru_stime) - timeval_ns(usage_before.ru_stime), rss,
+           usage_after.ru_minflt - usage_before.ru_minflt,
+           usage_after.ru_majflt - usage_before.ru_majflt,
+           usage_after.ru_nvcsw - usage_before.ru_nvcsw,
+           usage_after.ru_nivcsw - usage_before.ru_nivcsw,
+           usage_after.ru_inblock - usage_before.ru_inblock,
+           usage_after.ru_oublock - usage_before.ru_oublock, outcome);
 }
 
 static int run_locality(int argc, char **argv) {
@@ -92,7 +131,7 @@ static int run_locality(int argc, char **argv) {
     } else if (strncmp(variant, "branch_", 7) == 0) {
         for (uint64_t i = 0; i < elements; i++) {
             values[i] = strcmp(variant, "branch_predictable") == 0
-                ? (i >= elements / 2)
+                ? (i >= (elements + 1) / 2)
                 : (i & 1U);
         }
     } else {
@@ -100,6 +139,7 @@ static int run_locality(int argc, char **argv) {
     }
 
     uint64_t checksum = 0;
+    begin_measurement();
     uint64_t start = monotonic_ns();
     if (strncmp(variant, "branch_", 7) == 0) {
         for (uint64_t i = 0; i < elements; i++) checksum += values[i] ? 7U : 3U;
@@ -135,6 +175,7 @@ static int run_allocation(int argc, char **argv) {
         unsigned char *working = malloc((size_t)total);
         if (working == NULL) return 3;
         uint64_t checksum = 0;
+        begin_measurement();
         uint64_t start = monotonic_ns();
         for (uint64_t offset = 0; offset < total; offset += 4096) {
             working[offset] = (unsigned char)((offset / 4096) & 0xffU);
@@ -151,6 +192,7 @@ static int run_allocation(int argc, char **argv) {
         if (reuse == NULL) return 3;
     }
     uint64_t checksum = 0;
+    begin_measurement();
     uint64_t start = monotonic_ns();
     for (uint64_t i = 0; i < iterations; i++) {
         unsigned char *buffer = reuse != NULL ? reuse : malloc((size_t)size);
@@ -172,7 +214,7 @@ static int run_allocation(int argc, char **argv) {
 
 static void *worker(void *opaque) {
     worker_args *args = opaque;
-    uint64_t local = 0;
+    volatile uint64_t local = 0;
     for (uint64_t i = 0; i < args->iterations; i++) {
         if (args->mode == 0) {
             pthread_mutex_lock(args->lock);
@@ -181,9 +223,11 @@ static void *worker(void *opaque) {
         } else if (args->mode == 1) {
             local++;
         } else if (args->mode == 2) {
-            args->adjacent[args->index].value++;
+            atomic_fetch_add_explicit(&args->adjacent[args->index].value, 1,
+                                      memory_order_relaxed);
         } else {
-            args->padded[args->index].value++;
+            atomic_fetch_add_explicit(&args->padded[args->index].value, 1,
+                                      memory_order_relaxed);
         }
     }
     args->local = local;
@@ -216,6 +260,7 @@ static int run_contention(int argc, char **argv) {
     uint64_t shared = 0;
     if (threads == NULL || args == NULL || adjacent == NULL || padded == NULL) return 3;
 
+    begin_measurement();
     uint64_t start = monotonic_ns();
     for (uint64_t i = 0; i < workers; i++) {
         args[i] = (worker_args){iterations, (size_t)i, mode, &lock, &shared,
@@ -226,8 +271,8 @@ static int run_contention(int argc, char **argv) {
     for (uint64_t i = 0; i < workers; i++) {
         pthread_join(threads[i], NULL);
         if (mode == 1) checksum += args[i].local;
-        if (mode == 2) checksum += adjacent[i].value;
-        if (mode == 3) checksum += padded[i].value;
+        if (mode == 2) checksum += atomic_load_explicit(&adjacent[i].value, memory_order_relaxed);
+        if (mode == 3) checksum += atomic_load_explicit(&padded[i].value, memory_order_relaxed);
     }
     if (mode == 0) checksum = shared;
     uint64_t elapsed = monotonic_ns() - start;
@@ -266,14 +311,15 @@ static int run_io(int argc, char **argv) {
     if (descriptor < 0) { perror("open"); return 3; }
     unsigned char *buffer = malloc((size_t)chunk);
     if (buffer == NULL) return 3;
-    for (uint64_t i = 0; i < chunk; i++) buffer[i] = (unsigned char)(i & 0xffU);
+    memset(buffer, 0xa5, (size_t)chunk);
     uint64_t writes = total / chunk;
     uint64_t syncs = 0;
     uint64_t checksum = 0;
+    begin_measurement();
     uint64_t start = monotonic_ns();
     for (uint64_t i = 0; i < writes; i++) {
         if (write_all(descriptor, buffer, (size_t)chunk) != 0) return 4;
-        checksum += buffer[i % chunk];
+        checksum += UINT64_C(0xa5) * chunk;
         if (sync_every > 0 && (i + 1) % sync_every == 0) {
             if (fsync(descriptor) != 0) return 4;
             syncs++;

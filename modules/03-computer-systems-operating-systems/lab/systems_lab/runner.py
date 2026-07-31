@@ -35,22 +35,71 @@ def _run_text(command: list[str], *, timeout: float = 5) -> str:
 
 def _filesystem(path: Path) -> str:
     if platform.system() == "Darwin":
-        return _run_text(["stat", "-f", "%T", str(path)])
+        resolved = path.resolve()
+        best_mount = ""
+        best_type = "unavailable"
+        for line in _run_text(["mount"]).splitlines():
+            if " on " not in line or " (" not in line:
+                continue
+            _, remainder = line.split(" on ", 1)
+            mount_point, options = remainder.rsplit(" (", 1)
+            try:
+                contains_path = resolved == Path(mount_point) or resolved.is_relative_to(mount_point)
+            except (OSError, ValueError):
+                contains_path = False
+            if contains_path and len(mount_point) > len(best_mount):
+                best_mount = mount_point
+                best_type = options.rstrip(")").split(",", 1)[0]
+        return f"{best_type}:{best_mount or 'unavailable'}"
     return _run_text(["stat", "-f", "-c", "%T", str(path)])
 
 
+def _recorded_text(path: Path, fallback: str) -> str:
+    try:
+        value = path.read_text(encoding="utf-8").strip()
+    except OSError:
+        return fallback
+    return value or fallback
+
+
+def _effective_limits(scenario: dict[str, Any]) -> dict[str, Any]:
+    limits = dict(scenario.get("limits", {}))
+    if scenario["runtime"] == "docker":
+        limits.setdefault("cpus", 1.0)
+        limits.setdefault("memory_mb", 512)
+        limits.setdefault("pids", 64)
+    return limits
+
+
 def environment(runtime: str, workdir: Path) -> dict[str, Any]:
-    compiler = _run_text(["cc", "--version"]).splitlines()[0]
+    host_compiler = _run_text(["cc", "--version"]).splitlines()[0]
+    host_system = platform.system()
+    host_kernel = platform.release()
+    host_architecture = platform.machine()
+    host_filesystem = _filesystem(workdir)
+    if runtime == "docker":
+        system = _recorded_text(workdir / "runtime.system", "unavailable")
+        kernel = _recorded_text(workdir / "runtime.kernel", "unavailable")
+        architecture = _recorded_text(workdir / "runtime.architecture", "unavailable")
+        compiler = _recorded_text(workdir / "runtime.compiler", f"{DOCKER_IMAGE} cc")
+        filesystem = _recorded_text(workdir / "runtime.filesystem", "unavailable")
+    else:
+        system, kernel, architecture = host_system, host_kernel, host_architecture
+        compiler, filesystem = host_compiler, host_filesystem
     return {
         "runtime": runtime,
         "platform": platform.platform(),
-        "system": platform.system(),
-        "kernel": platform.release(),
-        "architecture": platform.machine(),
+        "system": system,
+        "kernel": kernel,
+        "architecture": architecture,
         "logical_cpus": os.cpu_count(),
-        "compiler": compiler if runtime == "native" else f"{DOCKER_IMAGE} cc",
+        "compiler": compiler,
         "compiler_flags": COMPILER_FLAGS,
-        "filesystem": _filesystem(workdir),
+        "filesystem": filesystem,
+        "host_system": host_system,
+        "host_kernel": host_kernel,
+        "host_architecture": host_architecture,
+        "host_filesystem": host_filesystem,
         "container_image": DOCKER_IMAGE if runtime == "docker" else None,
         "virtualization_note": (
             "Docker may run inside a desktop Linux VM; results are not bare-metal claims."
@@ -132,6 +181,10 @@ def _native_sample(scenario: dict[str, Any], workdir: Path) -> tuple[dict[str, A
             "probe": "deadlock", "variant": scenario["variant"], "operations": 2,
             "bytes": 0, "checksum": 0,
             "elapsed_ns": int(float(scenario.get("timeout_seconds", 20)) * 1_000_000_000),
+            "user_cpu_ns": 0, "system_cpu_ns": 0, "max_rss_bytes": 0,
+            "minor_faults": 0, "major_faults": 0,
+            "voluntary_context_switches": 0, "involuntary_context_switches": 0,
+            "block_inputs": 0, "block_outputs": 0,
             "outcome": "timeout",
         }
     if competitor is not None:
@@ -162,7 +215,7 @@ def _docker_sample(scenario: dict[str, Any], workdir: Path) -> tuple[dict[str, A
     output_path = workdir / "probe.data"
     result_path = workdir / "probe.json"
     args = _probe_arguments(scenario, Path("/work/probe.data"))
-    limits = scenario.get("limits", {})
+    limits = _effective_limits(scenario)
     command = [
         "docker", "run", "--rm", "--network", "none", "--read-only",
         "--pids-limit", str(limits.get("pids", 64)),
@@ -189,6 +242,11 @@ def _docker_sample(scenario: dict[str, Any], workdir: Path) -> tuple[dict[str, A
         "cp /sys/fs/cgroup/memory.events /work/memory.events 2>/dev/null || true; "
         "cp /sys/fs/cgroup/memory.current /work/memory.current 2>/dev/null || true; "
         "cp /sys/fs/cgroup/memory.peak /work/memory.peak 2>/dev/null || true; exit $code"
+    )
+    shell = (
+        "uname -s > /work/runtime.system; uname -r > /work/runtime.kernel; "
+        "uname -m > /work/runtime.architecture; cc --version | head -1 > /work/runtime.compiler; "
+        "df -T /work | tail -1 > /work/runtime.filesystem; " + shell
     )
     command.extend([DOCKER_IMAGE, "sh", "-lc", shell])
     subprocess.run(
@@ -225,8 +283,17 @@ def validate_trial(trial: Any) -> dict[str, Any]:
     if len(checksums) > 1:
         raise ScenarioError("successful samples disagree on checksum")
     for sample in trial["samples"]:
+        metrics = {
+            "user_cpu_ns", "system_cpu_ns", "max_rss_bytes", "minor_faults",
+            "major_faults", "voluntary_context_switches",
+            "involuntary_context_switches", "block_inputs", "block_outputs",
+        }
+        if metrics - sample.keys():
+            raise ScenarioError("sample is missing required resource counters")
         if sample["elapsed_ns"] < 0 or sample["operations"] < 0 or sample["bytes"] < 0:
             raise ScenarioError("negative sample measurement")
+        if any(sample[key] < 0 for key in metrics):
+            raise ScenarioError("negative sample resource counter")
     return trial
 
 
@@ -250,7 +317,7 @@ def run_trial(scenario: dict[str, Any]) -> dict[str, Any]:
             "scenario_id": scenario["id"],
             "source_commit": _run_text(["git", "-C", str(REPO_ROOT), "rev-parse", "HEAD"]),
             "environment": environment(scenario["runtime"], workdir),
-            "limits": scenario.get("limits", {}),
+            "limits": _effective_limits(scenario),
             "samples": samples,
             "resource_samples": resource_samples,
             "summary": {
@@ -261,10 +328,20 @@ def run_trial(scenario: dict[str, Any]) -> dict[str, Any]:
                 "max_elapsed_ns": max(elapsed),
                 "useful_operations": sum(sample["operations"] for sample in successful),
                 "useful_bytes": sum(sample["bytes"] for sample in successful),
+                "median_throughput_per_second": round(statistics.median(
+                    sample["operations"] * 1_000_000_000 / max(sample["elapsed_ns"], 1)
+                    for sample in successful
+                ), 3) if successful else 0.0,
+                "median_bytes_per_second": round(statistics.median(
+                    sample["bytes"] * 1_000_000_000 / max(sample["elapsed_ns"], 1)
+                    for sample in successful
+                ), 3) if successful else 0.0,
             },
             "measurement_limitations": [
                 "Counters are OS interfaces, not a complete causal proof.",
                 "Performance ratios apply only to the recorded environment and workload.",
+                "Maximum RSS is a process high-water mark, not current residency.",
+                "Docker controller counters include compiler setup before the probe.",
             ],
         }
     return validate_trial(trial)

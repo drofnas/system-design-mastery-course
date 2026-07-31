@@ -26,7 +26,9 @@
         "type": "object",
         "required": [
           "probe", "variant", "operations", "bytes", "checksum",
-          "elapsed_ns", "outcome"
+          "elapsed_ns", "user_cpu_ns", "system_cpu_ns", "max_rss_bytes",
+          "minor_faults", "major_faults", "voluntary_context_switches",
+          "involuntary_context_switches", "block_inputs", "block_outputs", "outcome"
         ],
         "properties": {
           "probe": {"type": "string"},
@@ -35,6 +37,15 @@
           "bytes": {"type": "integer", "minimum": 0},
           "checksum": {"type": "integer", "minimum": 0},
           "elapsed_ns": {"type": "integer", "minimum": 0},
+          "user_cpu_ns": {"type": "integer", "minimum": 0},
+          "system_cpu_ns": {"type": "integer", "minimum": 0},
+          "max_rss_bytes": {"type": "integer", "minimum": 0},
+          "minor_faults": {"type": "integer", "minimum": 0},
+          "major_faults": {"type": "integer", "minimum": 0},
+          "voluntary_context_switches": {"type": "integer", "minimum": 0},
+          "involuntary_context_switches": {"type": "integer", "minimum": 0},
+          "block_inputs": {"type": "integer", "minimum": 0},
+          "block_outputs": {"type": "integer", "minimum": 0},
           "outcome": {"enum": ["ok", "timeout"]}
         },
         "additionalProperties": false
@@ -45,7 +56,8 @@
       "type": "object",
       "required": [
         "repetitions", "successful_repetitions", "median_elapsed_ns",
-        "min_elapsed_ns", "max_elapsed_ns", "useful_operations", "useful_bytes"
+        "min_elapsed_ns", "max_elapsed_ns", "useful_operations", "useful_bytes",
+        "median_throughput_per_second", "median_bytes_per_second"
       ]
     },
     "measurement_limitations": {

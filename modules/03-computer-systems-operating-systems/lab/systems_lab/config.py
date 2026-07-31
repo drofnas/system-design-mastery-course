@@ -61,8 +61,10 @@ def validate_scenario(value: Any) -> dict[str, Any]:
         raise ScenarioError("parameters must be an object")
 
     if probe == "locality":
-        _integer(parameters, "elements", 1024, 2_000_000)
-        _integer(parameters, "stride", 1, 128)
+        elements = _integer(parameters, "elements", 1024, 2_000_000)
+        stride = _integer(parameters, "stride", 1, 128)
+        if variant == "strided" and elements * stride > 2_000_000:
+            raise ScenarioError("strided elements times stride exceeds 2,000,000 slots")
     elif probe == "allocation":
         iterations = _integer(parameters, "iterations", 1, 1_000_000)
         size = _integer(parameters, "bytes_per_iteration", 64, 1_048_576)

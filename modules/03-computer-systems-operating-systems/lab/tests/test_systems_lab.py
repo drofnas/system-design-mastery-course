@@ -36,6 +36,13 @@ class ConfigTests(unittest.TestCase):
         with self.assertRaises(ScenarioError):
             validate_scenario(scenario)
 
+    def test_rejects_strided_storage_above_c_bound(self) -> None:
+        scenario = copy.deepcopy(BASE)
+        scenario.update({"id": "too-wide", "variant": "strided"})
+        scenario["parameters"] = {"elements": 2_000_000, "stride": 2}
+        with self.assertRaises(ScenarioError):
+            validate_scenario(scenario)
+
     def test_rejects_contradictory_durability(self) -> None:
         scenario = copy.deepcopy(BASE)
         scenario.update({
@@ -80,6 +87,17 @@ class NativeIntegrationTests(unittest.TestCase):
             run_trial(mixed)["samples"][0]["checksum"],
         )
 
+    def test_odd_branch_variants_have_equivalent_checksums(self) -> None:
+        predictable = copy.deepcopy(BASE)
+        predictable.update({"id": "branch-predictable-odd", "variant": "branch_predictable"})
+        predictable["parameters"]["elements"] = 10001
+        mixed = copy.deepcopy(predictable)
+        mixed.update({"id": "branch-mixed-odd", "variant": "branch_mixed"})
+        self.assertEqual(
+            run_trial(predictable)["samples"][0]["checksum"],
+            run_trial(mixed)["samples"][0]["checksum"],
+        )
+
     def test_contention_variants_preserve_work(self) -> None:
         checksums = set()
         for variant in ("shared", "sharded", "adjacent", "padded"):
@@ -90,6 +108,19 @@ class NativeIntegrationTests(unittest.TestCase):
             })
             checksums.add(run_trial(scenario)["samples"][0]["checksum"])
         self.assertEqual(checksums, {20000})
+
+    def test_false_sharing_variants_execute_atomic_work(self) -> None:
+        elapsed = {}
+        for variant in ("adjacent", "padded"):
+            scenario = copy.deepcopy(BASE)
+            scenario.update({
+                "id": f"atomic-{variant}", "probe": "contention", "variant": variant,
+                "parameters": {"workers": 4, "iterations": 100000}, "repetitions": 1,
+            })
+            sample = run_trial(scenario)["samples"][0]
+            self.assertEqual(sample["checksum"], 400000)
+            elapsed[variant] = sample["elapsed_ns"]
+        self.assertTrue(all(value > 0 for value in elapsed.values()))
 
     def test_allocation_variants_are_bounded(self) -> None:
         for variant in ("reuse", "per_iteration", "working_set"):
@@ -111,6 +142,30 @@ class NativeIntegrationTests(unittest.TestCase):
                 "repetitions": 1,
             })
             self.assertEqual(run_trial(scenario)["summary"]["useful_bytes"], 16384)
+
+    def test_syscall_batching_preserves_content_checksum(self) -> None:
+        checksums = set()
+        for variant, chunk in (("syscall_small", 512), ("syscall_batched", 4096)):
+            scenario = copy.deepcopy(BASE)
+            scenario.update({
+                "id": f"io-{variant.replace('_', '-')}", "probe": "io", "variant": variant,
+                "parameters": {"total_bytes": 16384, "chunk_bytes": chunk, "sync_every": 0},
+                "repetitions": 1,
+            })
+            trial = run_trial(scenario)
+            checksums.add(trial["samples"][0]["checksum"])
+            self.assertGreater(trial["summary"]["median_bytes_per_second"], 0)
+        self.assertEqual(len(checksums), 1)
+
+    def test_sample_has_required_resource_counters(self) -> None:
+        sample = run_trial(copy.deepcopy(BASE))["samples"][0]
+        for key in (
+            "user_cpu_ns", "system_cpu_ns", "max_rss_bytes", "minor_faults",
+            "major_faults", "voluntary_context_switches",
+            "involuntary_context_switches", "block_inputs", "block_outputs",
+        ):
+            self.assertIn(key, sample)
+            self.assertGreaterEqual(sample[key], 0)
 
     def test_deadlock_is_bounded_by_watchdog(self) -> None:
         scenario = copy.deepcopy(BASE)

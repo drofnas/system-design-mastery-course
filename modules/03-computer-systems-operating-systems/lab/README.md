@@ -30,8 +30,10 @@ inputs have passed the same bounds.
 ## Evidence contract
 
 Each trial records source commit, machine/kernel/architecture, compiler and flags,
-filesystem, runtime/image, resource limits, raw samples, CPU/RSS/fault/context
-switch or cgroup counters, useful work, checksum, and limitations. JSON contracts
+filesystem, runtime/image, effective resource limits, raw samples, per-process
+CPU/RSS/fault/context-switch/I/O counters, cgroup counters, throughput, useful
+work, checksum, and limitations. Docker records both its Linux runtime and host
+boundary. JSON contracts
 are in `schemas/systems-scenario.schema.json` and `schemas/systems-trial.schema.json`.
 
 Performance expectations are never test assertions. Tests require equivalent
@@ -44,6 +46,9 @@ read-only root, PIDs/CPU/memory limits, a 64 MiB temporary filesystem, and one
 bounded writable trial directory. Learners may pin the resolved multi-architecture
 digest in their environment record. Docker Desktop results include its Linux VM
 and must not be described as native bare-metal storage results.
+
+If `--runtime docker` overrides a native scenario, the harness applies defaults
+of 1 CPU, 512 MiB, and 64 PIDs unless the scenario declares tighter limits.
 
 ## Safety
 
