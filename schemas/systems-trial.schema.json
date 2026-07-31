@@ -9,30 +9,58 @@
   ],
   "properties": {
     "schema_version": {"const": 1},
-    "scenario_id": {"type": "string"},
+    "scenario_id": {"type": "string", "pattern": "^[A-Za-z0-9-]+$"},
     "source_commit": {"type": "string", "minLength": 7},
     "environment": {
       "type": "object",
       "required": [
-        "runtime", "platform", "system", "kernel", "architecture",
-        "logical_cpus", "compiler", "compiler_flags", "filesystem"
-      ]
+        "runtime", "platform", "system", "kernel", "architecture", "logical_cpus",
+        "compiler", "compiler_flags", "filesystem", "host_system", "host_kernel",
+        "host_architecture", "host_filesystem", "container_image", "virtualization_note"
+      ],
+      "properties": {
+        "runtime": {"enum": ["native", "docker"]},
+        "platform": {"type": "string", "minLength": 1},
+        "system": {"type": "string", "minLength": 1},
+        "kernel": {"type": "string", "minLength": 1},
+        "architecture": {"type": "string", "minLength": 1},
+        "logical_cpus": {"type": ["integer", "null"], "minimum": 1},
+        "compiler": {"type": "string", "minLength": 1},
+        "compiler_flags": {"type": "string", "minLength": 1},
+        "filesystem": {"type": "string", "minLength": 1},
+        "host_system": {"type": "string", "minLength": 1},
+        "host_kernel": {"type": "string", "minLength": 1},
+        "host_architecture": {"type": "string", "minLength": 1},
+        "host_filesystem": {"type": "string", "minLength": 1},
+        "container_image": {"type": ["string", "null"]},
+        "virtualization_note": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
     },
-    "limits": {"type": "object"},
+    "limits": {
+      "type": "object",
+      "properties": {
+        "cpus": {"type": "number", "minimum": 0.1, "maximum": 8},
+        "memory_mb": {"type": "integer", "minimum": 32, "maximum": 1024},
+        "pids": {"type": "integer", "minimum": 16, "maximum": 128}
+      },
+      "additionalProperties": false
+    },
     "samples": {
       "type": "array",
       "minItems": 1,
+      "maxItems": 9,
       "items": {
         "type": "object",
         "required": [
-          "probe", "variant", "operations", "bytes", "checksum",
-          "elapsed_ns", "user_cpu_ns", "system_cpu_ns", "max_rss_bytes",
-          "minor_faults", "major_faults", "voluntary_context_switches",
+          "probe", "variant", "operations", "bytes", "checksum", "elapsed_ns",
+          "user_cpu_ns", "system_cpu_ns", "max_rss_bytes", "minor_faults",
+          "major_faults", "voluntary_context_switches",
           "involuntary_context_switches", "block_inputs", "block_outputs", "outcome"
         ],
         "properties": {
-          "probe": {"type": "string"},
-          "variant": {"type": "string"},
+          "probe": {"enum": ["locality", "allocation", "contention", "io", "deadlock"]},
+          "variant": {"type": "string", "minLength": 1},
           "operations": {"type": "integer", "minimum": 0},
           "bytes": {"type": "integer", "minimum": 0},
           "checksum": {"type": "integer", "minimum": 0},
@@ -51,19 +79,36 @@
         "additionalProperties": false
       }
     },
-    "resource_samples": {"type": "array"},
+    "resource_samples": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 9,
+      "items": {"type": "object"}
+    },
     "summary": {
       "type": "object",
       "required": [
         "repetitions", "successful_repetitions", "median_elapsed_ns",
         "min_elapsed_ns", "max_elapsed_ns", "useful_operations", "useful_bytes",
         "median_throughput_per_second", "median_bytes_per_second"
-      ]
+      ],
+      "properties": {
+        "repetitions": {"type": "integer", "minimum": 1, "maximum": 9},
+        "successful_repetitions": {"type": "integer", "minimum": 0, "maximum": 9},
+        "median_elapsed_ns": {"type": "integer", "minimum": 0},
+        "min_elapsed_ns": {"type": "integer", "minimum": 0},
+        "max_elapsed_ns": {"type": "integer", "minimum": 0},
+        "useful_operations": {"type": "integer", "minimum": 0},
+        "useful_bytes": {"type": "integer", "minimum": 0},
+        "median_throughput_per_second": {"type": "number", "minimum": 0},
+        "median_bytes_per_second": {"type": "number", "minimum": 0}
+      },
+      "additionalProperties": false
     },
     "measurement_limitations": {
       "type": "array",
       "minItems": 1,
-      "items": {"type": "string"}
+      "items": {"type": "string", "minLength": 1}
     }
   },
   "additionalProperties": false
