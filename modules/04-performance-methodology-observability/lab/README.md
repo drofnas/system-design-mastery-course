@@ -28,7 +28,7 @@ bounded resource, and writes:
 - `traces.jsonl`: client, server, branch, fault, and dependency spans;
 - `metrics.jsonl`: bounded measurements and exemplars;
 - `logs.jsonl`: structured lifecycle events;
-- `profile.json`: top `cProfile` and `tracemalloc` locations;
+- `profile.json`: top `cProfile` rows plus before/after `tracemalloc` deltas;
 - `query-plan.json`: SQLite plan text;
 - `summary.json`: user, resource, and telemetry aggregates;
 - `metadata.json`: scenario hash, runtime, platform, and signal inventory.
@@ -52,10 +52,48 @@ Only loopback addresses are accepted.
 
 ### `benchmark BASELINE CANDIDATE --output FILE`
 
-Runs interleaved process-level trials, preserves every p95 sample, reports the
-median ratio and ranges, and returns `pass`, `regression`, or `inconclusive`.
-Real-time smoke tests verify the harness; deterministic sample tests verify the
-decision arithmetic.
+Runs interleaved process-level trials, preserves the exact execution order and
+every p95 sample, reports the median ratio and ranges, and returns `pass`,
+`regression`, or `inconclusive`. Before scoring, it rejects different workload
+signatures, thresholds, logical-request counts, success counts, or deterministic
+result signatures. Real-time tests verify equivalent-work enforcement;
+deterministic sample tests verify the decision arithmetic.
+
+### `blind-prepare` and `blind-reveal`
+
+The named scenario files are for guided source work and fault-specific tests.
+They are not the Week 15 blind input. A partner or instructor prepares six
+randomly assigned opaque bundles and keeps the mapping outside the learner's
+directory:
+
+```bash
+python3 -m observability_lab blind-prepare \
+  --output-dir /tmp/transit-blind-learner \
+  --reveal-file /tmp/transit-blind-partner/mapping.json
+```
+
+Give only `/tmp/transit-blind-learner` to the learner. Its manifest, bundle
+metadata, scenario IDs, and telemetry contain no injected-cause label or source
+filename. Evidence such as a hot normalization stack, lock wait, retained
+bytes, or a wide dependency span remains visible because diagnosing that
+mechanism is the assignment.
+
+After the learner commits a non-empty diagnosis matrix, the partner reveals the
+held mapping into a new artifact:
+
+```bash
+python3 -m observability_lab blind-reveal \
+  --bundle-dir /tmp/transit-blind-learner \
+  --reveal-file /tmp/transit-blind-partner/mapping.json \
+  --frozen-diagnosis reports/module-04-failure-matrix.md \
+  --frozen-commit DIAGNOSIS_COMMIT \
+  --output reports/module-04-reveal.json
+```
+
+The command verifies that the diagnosis bytes match the named Git commit, then
+records both the commit and content hash. It never changes the original matrix
+or raw bundles. This is a workflow boundary, not a defense against a
+learner deliberately inspecting the lab source or a partner's private file.
 
 ## Scenario contract
 
@@ -63,22 +101,40 @@ The authoritative schema is
 [`observability-scenario.schema.json`](../../../schemas/observability-scenario.schema.json).
 The runtime enforces the same bounds without a JSON Schema dependency.
 
-- At most 5,000 logical requests and 30 seconds per trial.
+- `limits.max_logical_requests` caps open and closed arrival modes at 5,000;
+  closed mode stops at the count even if time remains.
+- `limits.max_telemetry_records` caps all in-memory spans, metrics, and logs at
+  250,000, with scenarios declaring a lower operational value.
+- `limits.max_retained_allocation_bytes` caps trial retention at 16 MiB.
 - `fault.kind`: `none`, `cpu`, `allocation`, `lock`, `slow_io`,
   `connection_leak`, `high_cardinality`, or `query_scan`.
 - CPU iterations, allocation/file bytes, retained connections, delay, database
   rows, and metric series are capped.
 - `request_id` is permitted only on the deliberately unsafe
   `lab.high_cardinality` metric.
+- `telemetry.signals_enabled` provides a true collection-off comparison;
+  capped collection drops excess records and reports the dropped count instead
+  of interrupting request or cleanup paths.
 - Temporary files, allocations, and retained server connections are cleaned up
   during service shutdown.
 
 ## Output contracts and limitations
 
-Machine-readable contracts are in the repository `schemas/` directory. Runtime
-validators reject schema-version or field drift.
+Machine-readable structural contracts are in the repository `schemas/`
+directory. A dependency-free schema checker and the runtime validators enforce
+the same fields, types, enumerations, identifiers, and bounds. Runtime checks
+also enforce cross-field arithmetic: outcome and attempt totals, percentile
+ordering, telemetry and request caps, cleanup, cardinality decisions,
+useful-work signatures, medians, dispersion, interleaving, and regression
+decisions.
 
 - Durations use a monotonic clock; cross-record timestamps use Unix nanoseconds.
+- Trace and span identifiers include a random per-run nonce, so repeated seeded
+  workloads remain behaviorally comparable without reusing telemetry identity.
+- Trace-context parsing implements W3C version `00`; malformed or unsupported
+  future-version headers safely start a new root and are reported as invalid.
+- Telemetry cost uses the exact compact JSONL bytes produced by this lab. It
+  excludes collector, indexing, replication, retention, and vendor charges.
 - `cProfile` instruments calls and changes runtime behavior.
 - `tracemalloc` covers Python-managed allocations, not all resident memory.
 - `ru_maxrss` is normalized to bytes but remains a platform-dependent peak.

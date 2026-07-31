@@ -1,7 +1,8 @@
 # Module 4: Performance Methodology and Observability
 
-> **Authoring status:** Review. The complete teaching package, lab, and
-> assessment are present; isolated calibration and the readiness review remain.
+> **Authoring status:** Ready. Structural, semantic, lab, regression, evaluator
+> calibration, and course-validation gates passed on 2026-07-31. See the
+> [readiness review](assessment/readiness-review.md).
 
 ## What this module changes
 
@@ -135,6 +136,10 @@ one recorded teach-back to the course portfolio.
 - Apply a Revise or Repeat result through the
   [remediation map](assessment/remediation-map.md), preserving the original
   submission and raw telemetry.
+- Inspect the accepted [calibration results](assessment/calibration/results.md),
+  [fixtures](assessment/calibration/README.md), and
+  [six-run record](assessment/calibration/runs/README.md) when auditing evaluator
+  behavior.
 
 The evaluator runs structural gates before semantic scoring, cites submitted
 headings, and returns Pass, Revise, or Repeat under the published thresholds.

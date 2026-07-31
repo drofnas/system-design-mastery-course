@@ -70,6 +70,12 @@ Every run preserves scenario, seed, planned arrivals, useful-work definition,
 and machine metadata. The raw order remains visible. The review reports the
 ratio and dispersion rather than selecting the most convenient run.
 
+For independent diagnosis, a partner runs the lab's `blind-prepare` command and
+keeps its reveal mapping outside the learner-visible directory. Opaque bundle
+IDs are randomized on every preparation. The learner commits the Week 15 matrix
+before the partner runs `blind-reveal`; that reveal record hashes the frozen
+matrix. Named lab scenarios remain guided source-work inputs, not blind fixtures.
+
 Suppose the candidate has a higher p95 and the server span widens. The SQLite
 child span is unchanged, process CPU rises, and the CPU profile attributes most
 new samples to impact normalization. That pattern weakens H3–H5 and supports

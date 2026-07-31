@@ -4,7 +4,7 @@
   "title": "Module 4 observability scenario",
   "type": "object",
   "additionalProperties": false,
-  "required": ["id", "seed", "arrival", "service", "retry", "capacity", "fault", "telemetry", "database", "benchmark"],
+  "required": ["id", "seed", "arrival", "service", "retry", "capacity", "limits", "fault", "telemetry", "database", "benchmark"],
   "properties": {
     "id": {"type": "string", "minLength": 1},
     "seed": {"type": "integer", "minimum": 0, "maximum": 999999999},
@@ -53,6 +53,15 @@
         "fixed_cost_per_hour": {"type": "number", "minimum": 0, "maximum": 1000}
       }
     },
+    "limits": {
+      "type": "object", "additionalProperties": false,
+      "required": ["max_logical_requests", "max_telemetry_records", "max_retained_allocation_bytes"],
+      "properties": {
+        "max_logical_requests": {"type": "integer", "minimum": 1, "maximum": 5000},
+        "max_telemetry_records": {"type": "integer", "minimum": 100, "maximum": 250000},
+        "max_retained_allocation_bytes": {"type": "integer", "minimum": 0, "maximum": 16777216}
+      }
+    },
     "fault": {
       "type": "object", "additionalProperties": false,
       "required": ["kind", "intensity", "delay_ms"],
@@ -64,12 +73,13 @@
     },
     "telemetry": {
       "type": "object", "additionalProperties": false,
-      "required": ["cardinality_budget", "max_retained_connections", "profile_enabled", "allocation_frames"],
+      "required": ["cardinality_budget", "max_retained_connections", "profile_enabled", "allocation_frames", "signals_enabled"],
       "properties": {
         "cardinality_budget": {"type": "integer", "minimum": 1, "maximum": 10000},
         "max_retained_connections": {"type": "integer", "minimum": 0, "maximum": 64},
         "profile_enabled": {"type": "boolean"},
-        "allocation_frames": {"type": "integer", "minimum": 1, "maximum": 25}
+        "allocation_frames": {"type": "integer", "minimum": 1, "maximum": 25},
+        "signals_enabled": {"type": "boolean"}
       }
     },
     "database": {

@@ -3,7 +3,7 @@
   "$id": "https://example.invalid/system-design-course/benchmark-result.schema.json",
   "title": "Module 4 benchmark result",
   "type": "object", "additionalProperties": false,
-  "required": ["schema_version", "metric", "baseline_samples", "candidate_samples", "baseline_median", "candidate_median", "candidate_to_baseline_ratio", "regression_threshold_ratio", "decision", "dispersion", "environment"],
+  "required": ["schema_version", "metric", "baseline_samples", "candidate_samples", "baseline_median", "candidate_median", "candidate_to_baseline_ratio", "regression_threshold_ratio", "decision", "execution_order", "equivalent_work", "process_runs", "dispersion", "environment"],
   "properties": {
     "schema_version": {"const": "1.0"}, "metric": {"const": "latency_ms.p95"},
     "baseline_samples": {"type": "array", "minItems": 2, "items": {"type": "number", "exclusiveMinimum": 0}},
@@ -13,7 +13,41 @@
     "candidate_to_baseline_ratio": {"type": "number", "exclusiveMinimum": 0},
     "regression_threshold_ratio": {"type": "number", "minimum": 1, "maximum": 3},
     "decision": {"enum": ["pass", "regression", "inconclusive"]},
-    "dispersion": {"type": "object", "required": ["baseline_range", "candidate_range"]},
-    "environment": {"type": "object", "required": ["python_version", "platform"]}
+    "execution_order": {"type": "array", "minItems": 4, "items": {"enum": ["baseline", "candidate"]}},
+    "equivalent_work": {
+      "type": "object", "additionalProperties": false,
+      "required": ["verified", "workload_signature", "result_signature", "logical_requests", "unique_successes"],
+      "properties": {
+        "verified": {"const": true},
+        "workload_signature": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "result_signature": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "logical_requests": {"type": "integer", "minimum": 0},
+        "unique_successes": {"type": "integer", "minimum": 0}
+      }
+    },
+    "process_runs": {
+      "type": "array", "minItems": 4,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["variant", "ordinal", "pid", "python_version", "platform"],
+        "properties": {
+          "variant": {"enum": ["baseline", "candidate"]},
+          "ordinal": {"type": "integer", "minimum": 1},
+          "pid": {"type": "integer", "minimum": 1},
+          "python_version": {"type": "string", "minLength": 1},
+          "platform": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "dispersion": {
+      "type": "object", "additionalProperties": false,
+      "required": ["baseline_range", "candidate_range"],
+      "properties": {"baseline_range": {"type": "number", "minimum": 0}, "candidate_range": {"type": "number", "minimum": 0}}
+    },
+    "environment": {
+      "type": "object", "additionalProperties": false,
+      "required": ["python_version", "platform"],
+      "properties": {"python_version": {"type": "string", "minLength": 1}, "platform": {"type": "string", "minLength": 1}}
+    }
   }
 }

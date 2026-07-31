@@ -3,7 +3,10 @@
 from __future__ import annotations
 
 import hashlib
+import math
 import re
+import secrets
+import json
 import time
 from dataclasses import dataclass
 from typing import Any
@@ -13,6 +16,24 @@ SCHEMA_VERSION = "1.0"
 TRACEPARENT = re.compile(
     r"^00-([0-9a-f]{32})-([0-9a-f]{16})-([0-9a-f]{2})$"
 )
+TRACE_ID = re.compile(r"^[0-9a-f]{32}$")
+SPAN_ID = re.compile(r"^[0-9a-f]{16}$")
+SEVERITIES = {"INFO", "WARN", "ERROR"}
+STATUSES = {"ok", "error"}
+
+
+def _valid_identifier(value: Any, pattern: re.Pattern[str], zero_length: int) -> bool:
+    return (
+        isinstance(value, str)
+        and pattern.fullmatch(value) is not None
+        and value != "0" * zero_length
+    )
+
+
+def _valid_attribute_value(value: Any) -> bool:
+    if isinstance(value, (str, bool)):
+        return True
+    return isinstance(value, (int, float)) and not isinstance(value, bool) and math.isfinite(value)
 
 
 def deterministic_hex(material: str, length: int) -> str:
@@ -49,15 +70,46 @@ class SpanToken:
 class Recorder:
     """In-memory bounded records written to JSONL after a trial."""
 
-    def __init__(self, *, seed: int, cardinality_budget: int) -> None:
+    def __init__(
+        self,
+        *,
+        seed: int,
+        cardinality_budget: int,
+        max_records: int = 100_000,
+        enabled: bool = True,
+        run_nonce: str | None = None,
+    ) -> None:
         self.seed = seed
         self.cardinality_budget = cardinality_budget
+        self.max_records = max_records
+        self.enabled = enabled
+        self.run_id = run_nonce or secrets.token_hex(16)
         self.traces: list[dict[str, Any]] = []
         self.metrics: list[dict[str, Any]] = []
         self.logs: list[dict[str, Any]] = []
         self._sequence = 0
         self._series: set[tuple[str, tuple[tuple[str, str], ...]]] = set()
         self.estimated_bytes = 0
+        self.dropped_records = 0
+
+    @property
+    def record_count(self) -> int:
+        return len(self.traces) + len(self.metrics) + len(self.logs)
+
+    def _reserve_record(self) -> bool:
+        if not self.enabled:
+            return False
+        if self.record_count >= self.max_records:
+            self.dropped_records += 1
+            return False
+        return True
+
+    def _record_bytes(self, record: dict[str, Any]) -> int:
+        return len(
+            (json.dumps(record, sort_keys=True, separators=(",", ":")) + "\n").encode(
+                "utf-8"
+            )
+        )
 
     @property
     def series_count(self) -> int:
@@ -69,7 +121,9 @@ class Recorder:
 
     def _id(self, kind: str, length: int) -> str:
         self._sequence += 1
-        return deterministic_hex(f"{self.seed}:{kind}:{self._sequence}", length)
+        return deterministic_hex(
+            f"{self.seed}:{self.run_id}:{kind}:{self._sequence}", length
+        )
 
     def new_trace(self) -> str:
         value = self._id("trace", 32)
@@ -98,6 +152,8 @@ class Recorder:
         )
 
     def end_span(self, token: SpanToken, *, status: str = "ok", attributes: dict[str, Any] | None = None) -> None:
+        if not self._reserve_record():
+            return
         ended_wall = time.time_ns()
         ended_monotonic = time.monotonic_ns()
         merged = {**token.attributes, **(attributes or {})}
@@ -114,7 +170,7 @@ class Recorder:
             "attributes": merged,
         }
         self.traces.append(record)
-        self.estimated_bytes += len(str(record).encode("utf-8"))
+        self.estimated_bytes += self._record_bytes(record)
 
     def log(
         self,
@@ -125,6 +181,8 @@ class Recorder:
         span_id: str | None,
         attributes: dict[str, Any] | None = None,
     ) -> None:
+        if not self._reserve_record():
+            return
         record = {
             "schema_version": SCHEMA_VERSION,
             "signal": "log",
@@ -136,7 +194,7 @@ class Recorder:
             "attributes": dict(attributes or {}),
         }
         self.logs.append(record)
-        self.estimated_bytes += len(str(record).encode("utf-8"))
+        self.estimated_bytes += self._record_bytes(record)
 
     def metric(
         self,
@@ -148,6 +206,8 @@ class Recorder:
         trace_id: str | None = None,
         span_id: str | None = None,
     ) -> None:
+        if not self._reserve_record():
+            return
         normalized = tuple(sorted((str(key), str(item)) for key, item in attributes.items()))
         self._series.add((name, normalized))
         record = {
@@ -165,7 +225,7 @@ class Recorder:
             ),
         }
         self.metrics.append(record)
-        self.estimated_bytes += len(str(record).encode("utf-8"))
+        self.estimated_bytes += self._record_bytes(record)
 
 
 def validate_telemetry_record(value: Any) -> dict[str, Any]:
@@ -190,12 +250,70 @@ def validate_telemetry_record(value: Any) -> dict[str, Any]:
             "status",
             "attributes",
         }
+        if not _valid_identifier(value.get("trace_id"), TRACE_ID, 32):
+            raise ValueError("span trace_id is invalid")
+        if not _valid_identifier(value.get("span_id"), SPAN_ID, 16):
+            raise ValueError("span span_id is invalid")
+        parent = value.get("parent_span_id")
+        if parent is not None and not _valid_identifier(parent, SPAN_ID, 16):
+            raise ValueError("span parent_span_id is invalid")
+        if not isinstance(value.get("name"), str) or not value["name"]:
+            raise ValueError("span name must be non-empty")
+        duration = value.get("duration_ms")
+        if (
+            isinstance(duration, bool)
+            or not isinstance(duration, (int, float))
+            or not math.isfinite(duration)
+            or duration < 0
+        ):
+            raise ValueError("span duration_ms is invalid")
+        if value.get("status") not in STATUSES:
+            raise ValueError("span status is invalid")
     elif value["signal"] == "metric":
         required = common | {"name", "value", "unit", "attributes", "exemplar"}
+        if not isinstance(value.get("name"), str) or not value["name"]:
+            raise ValueError("metric name must be non-empty")
+        metric_value = value.get("value")
+        if (
+            isinstance(metric_value, bool)
+            or not isinstance(metric_value, (int, float))
+            or not math.isfinite(metric_value)
+        ):
+            raise ValueError("metric value must be finite")
+        if not isinstance(value.get("unit"), str) or not value["unit"]:
+            raise ValueError("metric unit must be non-empty")
         if "request_id" in value.get("attributes", {}) and value["name"] != "lab.high_cardinality":
             raise ValueError("request_id is prohibited in normal metric attributes")
+        exemplar = value.get("exemplar")
+        if exemplar is not None and (
+            not isinstance(exemplar, dict)
+            or set(exemplar) != {"trace_id", "span_id"}
+            or not _valid_identifier(exemplar.get("trace_id"), TRACE_ID, 32)
+            or not _valid_identifier(exemplar.get("span_id"), SPAN_ID, 16)
+        ):
+            raise ValueError("metric exemplar is invalid")
     else:
         required = common | {"event_name", "severity", "trace_id", "span_id", "attributes"}
+        if not isinstance(value.get("event_name"), str) or not value["event_name"]:
+            raise ValueError("log event_name must be non-empty")
+        if value.get("severity") not in SEVERITIES:
+            raise ValueError("log severity is invalid")
+        trace_id = value.get("trace_id")
+        span_id = value.get("span_id")
+        if trace_id is not None and not _valid_identifier(trace_id, TRACE_ID, 32):
+            raise ValueError("log trace_id is invalid")
+        if span_id is not None and not _valid_identifier(span_id, SPAN_ID, 16):
+            raise ValueError("log span_id is invalid")
     if set(value) != required:
         raise ValueError("telemetry record fields differ from its signal contract")
+    attributes = value.get("attributes")
+    if not isinstance(attributes, dict) or not all(
+        isinstance(key, str) and _valid_attribute_value(item)
+        for key, item in attributes.items()
+    ):
+        raise ValueError("telemetry attributes must contain JSON scalar values")
+    if value["signal"] == "metric" and not all(
+        isinstance(item, str) for item in attributes.values()
+    ):
+        raise ValueError("metric attributes must contain strings")
     return value

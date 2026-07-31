@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/system-design-course/blind-reveal.schema.json",
+  "title": "Module 4 partner-held and revealed mapping",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "collection_id", "items"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "collection_id": {"type": "string", "pattern": "^[0-9a-f]{32}$"},
+    "revealed_at": {"type": "string", "minLength": 20},
+    "frozen_diagnosis_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "frozen_commit": {"type": "string", "pattern": "^[0-9a-f]{40,64}$"},
+    "items": {
+      "type": "array", "minItems": 2,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["opaque_id", "scenario_sha256", "kind", "intensity", "delay_ms"],
+        "properties": {
+          "opaque_id": {"type": "string", "pattern": "^O[0-9]{2}$"},
+          "scenario_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "kind": {"enum": ["cpu", "allocation", "lock", "slow_io", "connection_leak", "high_cardinality"]},
+          "intensity": {"type": "integer", "minimum": 0, "maximum": 1000000},
+          "delay_ms": {"type": "number", "minimum": 0, "maximum": 1000}
+        }
+      }
+    }
+  }
+}

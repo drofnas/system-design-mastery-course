@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import math
 from pathlib import Path
 from typing import Any
 
@@ -67,6 +68,7 @@ def validate_scenario(value: Any) -> dict[str, Any]:
         "service",
         "retry",
         "capacity",
+        "limits",
         "fault",
         "telemetry",
         "database",
@@ -95,16 +97,12 @@ def validate_scenario(value: Any) -> dict[str, Any]:
         raise ScenarioError("arrival has unexpected fields")
     if arrival["mode"] not in {"open", "closed"}:
         raise ScenarioError("arrival.mode must be open or closed")
-    rate = _number(arrival["rate_per_second"], "arrival.rate_per_second", minimum=1, maximum=500)
-    duration = _number(arrival["duration_seconds"], "arrival.duration_seconds", minimum=0.1, maximum=30)
+    _number(arrival["rate_per_second"], "arrival.rate_per_second", minimum=1, maximum=500)
+    _number(arrival["duration_seconds"], "arrival.duration_seconds", minimum=0.1, maximum=30)
     _integer(arrival["max_in_flight"], "arrival.max_in_flight", minimum=1, maximum=256)
-    multiplier = _number(arrival["burst_multiplier"], "arrival.burst_multiplier", minimum=1, maximum=20)
-    burst_start = _number(arrival["burst_start_seconds"], "arrival.burst_start_seconds", minimum=0, maximum=30)
-    burst_duration = _number(arrival["burst_duration_seconds"], "arrival.burst_duration_seconds", minimum=0, maximum=30)
-    active_burst = max(0.0, min(burst_duration, duration - burst_start))
-    planned = rate * duration + rate * (multiplier - 1) * active_burst
-    if planned > 5_000:
-        raise ScenarioError("planned logical requests may not exceed 5000")
+    _number(arrival["burst_multiplier"], "arrival.burst_multiplier", minimum=1, maximum=20)
+    _number(arrival["burst_start_seconds"], "arrival.burst_start_seconds", minimum=0, maximum=30)
+    _number(arrival["burst_duration_seconds"], "arrival.burst_duration_seconds", minimum=0, maximum=30)
 
     service = _object(scenario["service"], "service")
     service_fields = {
@@ -124,15 +122,13 @@ def validate_scenario(value: Any) -> dict[str, Any]:
     _number(service["base_service_ms"], "service.base_service_ms", minimum=0, maximum=1000)
     _number(service["slow_service_ms"], "service.slow_service_ms", minimum=0, maximum=5000)
     _number(service["slow_probability"], "service.slow_probability", minimum=0, maximum=1)
-    fanout = _integer(service["fanout"], "service.fanout", minimum=1, maximum=16)
-    downstream = _integer(
+    _integer(service["fanout"], "service.fanout", minimum=1, maximum=16)
+    _integer(
         service["downstream_concurrency"],
         "service.downstream_concurrency",
         minimum=1,
         maximum=1024,
     )
-    if downstream < fanout:
-        raise ScenarioError("downstream_concurrency must permit one full fan-out")
     _number(
         service["downstream_failure_probability"],
         "service.downstream_failure_probability",
@@ -154,6 +150,32 @@ def validate_scenario(value: Any) -> dict[str, Any]:
     _number(capacity["worker_cost_per_hour"], "capacity.worker_cost_per_hour", minimum=0, maximum=100)
     _number(capacity["fixed_cost_per_hour"], "capacity.fixed_cost_per_hour", minimum=0, maximum=1000)
 
+    limits = _object(scenario["limits"], "limits")
+    if set(limits) != {
+        "max_logical_requests",
+        "max_telemetry_records",
+        "max_retained_allocation_bytes",
+    }:
+        raise ScenarioError("limits has unexpected fields")
+    _integer(
+        limits["max_logical_requests"],
+        "limits.max_logical_requests",
+        minimum=1,
+        maximum=5_000,
+    )
+    _integer(
+        limits["max_telemetry_records"],
+        "limits.max_telemetry_records",
+        minimum=100,
+        maximum=250_000,
+    )
+    _integer(
+        limits["max_retained_allocation_bytes"],
+        "limits.max_retained_allocation_bytes",
+        minimum=0,
+        maximum=16_777_216,
+    )
+
     fault = _object(scenario["fault"], "fault")
     if set(fault) != {"kind", "intensity", "delay_ms"}:
         raise ScenarioError("fault has unexpected fields")
@@ -168,6 +190,7 @@ def validate_scenario(value: Any) -> dict[str, Any]:
         "max_retained_connections",
         "profile_enabled",
         "allocation_frames",
+        "signals_enabled",
     }
     if set(telemetry) != telemetry_fields:
         raise ScenarioError("telemetry has unexpected fields")
@@ -180,6 +203,8 @@ def validate_scenario(value: Any) -> dict[str, Any]:
     )
     if not isinstance(telemetry["profile_enabled"], bool):
         raise ScenarioError("telemetry.profile_enabled must be boolean")
+    if not isinstance(telemetry["signals_enabled"], bool):
+        raise ScenarioError("telemetry.signals_enabled must be boolean")
     _integer(telemetry["allocation_frames"], "telemetry.allocation_frames", minimum=1, maximum=25)
 
     database = _object(scenario["database"], "database")
@@ -199,6 +224,38 @@ def validate_scenario(value: Any) -> dict[str, Any]:
         minimum=1,
         maximum=3,
     )
+    if arrival["mode"] == "closed":
+        bounded_requests = int(limits["max_logical_requests"])
+    else:
+        active_burst = max(
+            0.0,
+            min(
+                float(arrival["burst_duration_seconds"]),
+                float(arrival["duration_seconds"])
+                - float(arrival["burst_start_seconds"]),
+            ),
+        )
+        planned = (
+            float(arrival["rate_per_second"])
+            * float(arrival["duration_seconds"])
+            + float(arrival["rate_per_second"])
+            * (float(arrival["burst_multiplier"]) - 1)
+            * active_burst
+        )
+        bounded_requests = min(
+            int(limits["max_logical_requests"]),
+            math.ceil(planned) + 2,
+        )
+    if fault["kind"] == "cpu" and bounded_requests * int(fault["intensity"]) > 50_000_000:
+        raise ScenarioError("total CPU fault work may not exceed 50000000 iterations")
+    if fault["kind"] in {"lock", "slow_io"} and (
+        bounded_requests * float(fault["delay_ms"]) > 60_000
+    ):
+        raise ScenarioError("total injected wait may not exceed 60000 milliseconds")
+    if fault["kind"] == "slow_io" and (
+        bounded_requests * int(fault["intensity"]) > 67_108_864
+    ):
+        raise ScenarioError("total injected file work may not exceed 67108864 bytes")
     return scenario
 
 

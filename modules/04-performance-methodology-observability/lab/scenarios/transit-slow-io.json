@@ -4,8 +4,9 @@
   "service": {"workers": 8, "queue_capacity": 8, "base_service_ms": 5, "slow_service_ms": 20, "slow_probability": 0.01, "fanout": 3, "downstream_concurrency": 24, "downstream_failure_probability": 0},
   "retry": {"max_attempts": 2, "budget_ratio": 0.1, "base_backoff_ms": 5},
   "capacity": {"failover_fraction": 0.75, "worker_cost_per_hour": 0.08, "fixed_cost_per_hour": 0.12},
+  "limits": {"max_logical_requests": 5000, "max_telemetry_records": 100000, "max_retained_allocation_bytes": 16777216},
   "fault": {"kind": "slow_io", "intensity": 4096, "delay_ms": 12},
-  "telemetry": {"cardinality_budget": 20, "max_retained_connections": 8, "profile_enabled": true, "allocation_frames": 5},
+  "telemetry": {"cardinality_budget": 20, "max_retained_connections": 8, "profile_enabled": true, "allocation_frames": 5, "signals_enabled": true},
   "database": {"rows": 256, "indexed": true},
   "benchmark": {"repetitions": 2, "regression_threshold_ratio": 1.1}
 }

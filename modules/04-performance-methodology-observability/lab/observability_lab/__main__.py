@@ -5,10 +5,13 @@ from __future__ import annotations
 import argparse
 import asyncio
 import json
+import os
+import platform
 import signal
 from pathlib import Path
 
 from .benchmark import run_benchmark
+from .blind import prepare_blind_collection, reveal_blind_collection
 from .config import ScenarioError, load_scenario
 from .runner import analyze_bundle, run_trial, write_bundle
 from .service import ObservabilityService
@@ -53,6 +56,27 @@ def _parser() -> argparse.ArgumentParser:
     analyze = commands.add_parser("analyze", help="validate and correlate one telemetry bundle")
     analyze.add_argument("bundle")
     analyze.add_argument("--output")
+
+    blind_prepare = commands.add_parser(
+        "blind-prepare",
+        help="partner: collect six opaque bundles and hold the reveal mapping separately",
+    )
+    blind_prepare.add_argument("--output-dir", required=True)
+    blind_prepare.add_argument("--reveal-file", required=True)
+
+    blind_reveal = commands.add_parser(
+        "blind-reveal",
+        help="reveal an opaque mapping after the diagnosis artifact is frozen",
+    )
+    blind_reveal.add_argument("--bundle-dir", required=True)
+    blind_reveal.add_argument("--reveal-file", required=True)
+    blind_reveal.add_argument("--frozen-diagnosis", required=True)
+    blind_reveal.add_argument("--frozen-commit", required=True)
+    blind_reveal.add_argument("--output", required=True)
+
+    trial = commands.add_parser("_trial", help=argparse.SUPPRESS)
+    trial.add_argument("scenario")
+    trial.add_argument("--output", required=True)
     return parser
 
 
@@ -73,11 +97,29 @@ async def _run_command(args: argparse.Namespace) -> int:
         Path(args.output).write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
         print(json.dumps(result, indent=2, sort_keys=True))
         return 0
+    if args.command == "_trial":
+        scenario = load_scenario(args.scenario)
+        result = await run_trial(scenario)
+        payload = {
+            "summary": result["summary"],
+            "process": {
+                "pid": os.getpid(),
+                "python_version": platform.python_version(),
+                "platform": platform.platform(),
+            },
+        }
+        Path(args.output).write_text(
+            json.dumps(payload, indent=2, sort_keys=True) + "\n",
+            encoding="utf-8",
+        )
+        return 0
     if args.command == "serve":
         scenario = load_scenario(args.scenario)
         recorder = Recorder(
             seed=int(scenario["seed"]),
             cardinality_budget=int(scenario["telemetry"]["cardinality_budget"]),
+            max_records=int(scenario["limits"]["max_telemetry_records"]),
+            enabled=bool(scenario["telemetry"]["signals_enabled"]),
         )
         service = ObservabilityService(scenario, recorder)
         host, port = await service.start(args.host, args.port)
@@ -105,6 +147,10 @@ async def _run_command(args: argparse.Namespace) -> int:
                         validate_telemetry_record(row)
                         stream.write(json.dumps(row, sort_keys=True) + "\n")
         return 0
+    if args.command == "blind-prepare":
+        result = await prepare_blind_collection(args.output_dir, args.reveal_file)
+        print(json.dumps(result, indent=2, sort_keys=True))
+        return 0
     raise AssertionError(f"unhandled command {args.command}")
 
 
@@ -117,6 +163,16 @@ def main() -> int:
             if args.output:
                 Path(args.output).write_text(rendered, encoding="utf-8")
             print(rendered, end="")
+            return 0
+        if args.command == "blind-reveal":
+            result = reveal_blind_collection(
+                args.bundle_dir,
+                args.reveal_file,
+                args.frozen_diagnosis,
+                args.frozen_commit,
+                args.output,
+            )
+            print(json.dumps(result, indent=2, sort_keys=True))
             return 0
         return asyncio.run(_run_command(args))
     except (ScenarioError, OSError, ValueError) as error:

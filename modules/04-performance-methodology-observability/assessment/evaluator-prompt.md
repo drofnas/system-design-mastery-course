@@ -10,7 +10,8 @@ require the Transit exemplar's architecture, or write replacement graded work.
 
 The caller supplies:
 
-1. `assessment/rubric.md` and `assessment/remediation-map.md`.
+1. `assessment/README.md`, `assessment/rubric.md`, and
+   `assessment/remediation-map.md`.
 2. `schemas/evaluation.schema.json`.
 3. One submission manifest with immutable commit identifiers.
 4. The files listed by that manifest.

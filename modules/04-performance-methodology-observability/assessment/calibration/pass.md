@@ -84,7 +84,7 @@ same port. Temporary files and allocations are bounded and removed.
 
 Baseline p95 samples: 31.1, 30.7, 31.5, 30.9, 31.2, 30.8 ms. Validated candidate:
 27.0, 27.4, 27.1, 27.2, 27.5, 27.1 ms. Raw order, process boundaries, machine
-load, checksums, and profile-off mode are preserved. Median ratio is 0.873.
+load, checksums, and profile-off mode are preserved. Median ratio is 0.876.
 
 The release gate blocks when candidate p95 ratio exceeds 1.10 with directionally
 separate ranges, returns inconclusive for overlap/high dispersion, and passes

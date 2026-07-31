@@ -37,6 +37,7 @@ class ObservabilityService:
         )
         self.worker_count = int(service["workers"])
         self._workers: list[asyncio.Task[None]] = []
+        self._handler_tasks: set[asyncio.Task[Any]] = set()
         self._server: asyncio.Server | None = None
         self._service_in_use = 0
         self._service_peak = 0
@@ -52,6 +53,8 @@ class ObservabilityService:
         self._io_path = Path(self._tempdir.name) / "dependency.bin"
         self._database = sqlite3.connect(":memory:")
         self._query_plan: list[str] = []
+        self._cleanup_errors: list[str] = []
+        self._closed = False
         self._setup_database()
 
     @property
@@ -66,30 +69,73 @@ class ObservabilityService:
     def retained_connection_count(self) -> int:
         return len(self._retained_connections)
 
+    @property
+    def retained_allocation_bytes(self) -> int:
+        return sum(len(value) for value in self._retained_allocations)
+
+    @property
+    def temporary_file_exists(self) -> bool:
+        return self._io_path.exists()
+
+    @property
+    def cleanup_errors(self) -> list[str]:
+        return list(self._cleanup_errors)
+
     async def start(self, host: str = "127.0.0.1", port: int = 0) -> tuple[str, int]:
         if host not in {"127.0.0.1", "::1", "localhost"}:
             raise ValueError("observability lab serves loopback addresses only")
+        self._server = await asyncio.start_server(self._handle_connection, host, port)
         self._workers = [
             asyncio.create_task(self._worker(index), name=f"observability-worker-{index}")
             for index in range(self.worker_count)
         ]
-        self._server = await asyncio.start_server(self._handle_connection, host, port)
         socket = self._server.sockets[0]
         bound_host, bound_port = socket.getsockname()[:2]
         return str(bound_host), int(bound_port)
 
     async def close(self) -> None:
+        if self._closed:
+            return
+        self._closed = True
         if self._server is not None:
             self._server.close()
+        for task in list(self._handler_tasks):
+            task.cancel()
+        if self._handler_tasks:
+            try:
+                await asyncio.wait_for(
+                    asyncio.gather(*self._handler_tasks, return_exceptions=True),
+                    timeout=2,
+                )
+            except asyncio.TimeoutError:
+                self._cleanup_errors.append("handlers:TimeoutError")
         for writer in self._retained_connections:
             writer.close()
-        await asyncio.gather(
-            *(writer.wait_closed() for writer in self._retained_connections),
-            return_exceptions=True,
+        try:
+            results = await asyncio.wait_for(
+                asyncio.gather(
+                    *(writer.wait_closed() for writer in self._retained_connections),
+                    return_exceptions=True,
+                ),
+                timeout=2,
+            )
+        except asyncio.TimeoutError:
+            self._cleanup_errors.append("writer:TimeoutError")
+            results = []
+        self._cleanup_errors.extend(
+            f"writer:{type(result).__name__}"
+            for result in results
+            if isinstance(result, Exception)
         )
         if self._server is not None:
-            await self._server.wait_closed()
-        await self.queue.join()
+            try:
+                await asyncio.wait_for(self._server.wait_closed(), timeout=2)
+            except Exception as error:  # pragma: no cover - platform cleanup boundary
+                self._cleanup_errors.append(f"server:{type(error).__name__}")
+        try:
+            await asyncio.wait_for(self.queue.join(), timeout=2)
+        except Exception as error:  # pragma: no cover - defensive cleanup boundary
+            self._cleanup_errors.append(f"queue:{type(error).__name__}")
         self._retained_connections.clear()
         self._connection_active = 0
         self.recorder.metric(
@@ -100,11 +146,23 @@ class ObservabilityService:
         )
         for worker in self._workers:
             worker.cancel()
-        await asyncio.gather(*self._workers, return_exceptions=True)
+        try:
+            await asyncio.wait_for(
+                asyncio.gather(*self._workers, return_exceptions=True),
+                timeout=2,
+            )
+        except asyncio.TimeoutError:
+            self._cleanup_errors.append("workers:TimeoutError")
         self._workers.clear()
-        self._database.close()
+        try:
+            self._database.close()
+        except Exception as error:  # pragma: no cover - defensive cleanup boundary
+            self._cleanup_errors.append(f"database:{type(error).__name__}")
         self._retained_allocations.clear()
-        self._tempdir.cleanup()
+        try:
+            self._tempdir.cleanup()
+        except Exception as error:  # pragma: no cover - defensive cleanup boundary
+            self._cleanup_errors.append(f"temporary:{type(error).__name__}")
 
     def _setup_database(self) -> None:
         database = self.scenario["database"]
@@ -132,6 +190,9 @@ class ObservabilityService:
         reader: asyncio.StreamReader,
         writer: asyncio.StreamWriter,
     ) -> None:
+        task = asyncio.current_task()
+        if task is not None:
+            self._handler_tasks.add(task)
         self._connection_active += 1
         self._connection_peak = max(self._connection_peak, self._connection_active)
         retain = False
@@ -139,7 +200,7 @@ class ObservabilityService:
             raw = await asyncio.wait_for(reader.readline(), timeout=5)
             request = json.loads(raw)
             response = await self.submit(request)
-        except (asyncio.TimeoutError, json.JSONDecodeError, TypeError, ValueError) as error:
+        except (asyncio.TimeoutError, json.JSONDecodeError, OSError, TypeError, ValueError) as error:
             response = {
                 "request_id": "invalid",
                 "attempt": 0,
@@ -147,19 +208,26 @@ class ObservabilityService:
                 "failure_reason": str(error),
                 "completed_at": time.monotonic(),
             }
-        writer.write((json.dumps(response, sort_keys=True) + "\n").encode("utf-8"))
-        await writer.drain()
-        maximum = int(self.scenario["telemetry"]["max_retained_connections"])
-        if (
-            self.scenario["fault"]["kind"] == "connection_leak"
-            and len(self._retained_connections) < maximum
-        ):
-            self._retained_connections.append(writer)
-            retain = True
-        if not retain:
-            writer.close()
-            await writer.wait_closed()
-            self._connection_active -= 1
+        try:
+            writer.write((json.dumps(response, sort_keys=True) + "\n").encode("utf-8"))
+            await writer.drain()
+            maximum = int(self.scenario["telemetry"]["max_retained_connections"])
+            if (
+                self.scenario["fault"]["kind"] == "connection_leak"
+                and len(self._retained_connections) < maximum
+            ):
+                self._retained_connections.append(writer)
+                retain = True
+        finally:
+            if not retain:
+                writer.close()
+                try:
+                    await asyncio.wait_for(writer.wait_closed(), timeout=1)
+                except (OSError, asyncio.TimeoutError):
+                    pass
+                self._connection_active = max(0, self._connection_active - 1)
+            if task is not None:
+                self._handler_tasks.discard(task)
         self.recorder.metric(
             "service.active_connections",
             self._connection_active,
@@ -168,8 +236,14 @@ class ObservabilityService:
         )
 
     async def submit(self, request: dict[str, Any]) -> dict[str, Any]:
-        if not isinstance(request.get("request_id"), str):
-            raise ValueError("request_id must be a string")
+        request_id = request.get("request_id")
+        if (
+            not isinstance(request_id, str)
+            or len(request_id) != 14
+            or not request_id.startswith("request-")
+            or not request_id[8:].isdigit()
+        ):
+            raise ValueError("request_id must use synthetic request-NNNNNN form")
         if not isinstance(request.get("attempt"), int) or request["attempt"] < 1:
             raise ValueError("attempt must be a positive integer")
         incoming = parse_traceparent(request.get("traceparent"))
@@ -247,11 +321,11 @@ class ObservabilityService:
             self.recorder.end_span(item.server_span, status="error", attributes={"outcome": "rejected_downstream"})
             return self._response(item, started, completed, "rejected_downstream", "downstream bound")
         try:
-            await self._apply_fault(item)
+            await self._apply_variation(item)
             results = await asyncio.gather(
                 *(self._branch(item, branch) for branch in range(fanout))
             )
-            await self._query_dependency(item)
+            query_result_sha256 = await self._query_dependency(item)
         finally:
             async with self._downstream_lock:
                 self._downstream_in_use -= fanout
@@ -278,27 +352,54 @@ class ObservabilityService:
             span_id=item.server_span.span_id,
         )
         self.recorder.end_span(item.server_span, status="ok" if outcome == "success" else "error", attributes={"outcome": outcome})
-        return self._response(item, started, completed, outcome, None if outcome == "success" else "branch failed")
+        response_checksum = hashlib.sha256(
+            json.dumps(
+                {
+                    "branches": results,
+                    "query_result_sha256": query_result_sha256,
+                    "outcome": outcome,
+                },
+                sort_keys=True,
+                separators=(",", ":"),
+            ).encode("utf-8")
+        ).hexdigest()
+        return self._response(
+            item,
+            started,
+            completed,
+            outcome,
+            None if outcome == "success" else "branch failed",
+            branch_count=len(results),
+            query_result_sha256=query_result_sha256,
+            response_checksum=response_checksum,
+        )
 
-    async def _apply_fault(self, item: WorkItem) -> None:
+    async def _apply_variation(self, item: WorkItem) -> None:
         fault = self.scenario["fault"]
         kind = fault["kind"]
         intensity = int(fault["intensity"])
         delay = float(fault["delay_ms"]) / 1000
         if kind == "cpu":
             token = self.recorder.start_span(
-                "fault.cpu-work",
+                "route-impact.normalize",
                 trace_id=item.server_span.trace_id,
                 parent_span_id=item.server_span.span_id,
             )
-            self._cpu_work(intensity)
+            self._normalize_route_key(intensity)
             self.recorder.end_span(token)
         elif kind == "allocation":
             amount = min(intensity, 1_000_000)
-            self._retained_allocations.append(bytearray(amount))
+            remaining = max(
+                0,
+                int(self.scenario["limits"]["max_retained_allocation_bytes"])
+                - self.retained_allocation_bytes,
+            )
+            retained = min(amount, remaining)
+            if retained:
+                self._retained_allocations.append(bytearray(retained))
             self.recorder.metric(
                 "process.retained_allocation_bytes",
-                sum(len(value) for value in self._retained_allocations),
+                self.retained_allocation_bytes,
                 unit="By",
                 attributes={"scope": "trial"},
             )
@@ -323,7 +424,7 @@ class ObservabilityService:
             self.recorder.end_span(token)
 
     @staticmethod
-    def _cpu_work(iterations: int) -> str:
+    def _normalize_route_key(iterations: int) -> str:
         digest = b"transit"
         for _ in range(iterations):
             digest = hashlib.sha256(digest).digest()
@@ -353,7 +454,7 @@ class ObservabilityService:
         self.recorder.end_span(token, status="error" if failed else "ok", attributes={"slow": slow})
         return "failed" if failed else "success"
 
-    async def _query_dependency(self, item: WorkItem) -> None:
+    async def _query_dependency(self, item: WorkItem) -> str:
         token = self.recorder.start_span(
             "dependency.sqlite",
             trace_id=item.server_span.trace_id,
@@ -364,7 +465,14 @@ class ObservabilityService:
             "select detail from impacts where route_id = ? order by approved_at desc limit 1",
             (1,),
         ).fetchall()
-        self.recorder.end_span(token, attributes={"result.count": len(rows)})
+        checksum = hashlib.sha256(
+            json.dumps(rows, sort_keys=True, separators=(",", ":")).encode("utf-8")
+        ).hexdigest()
+        self.recorder.end_span(
+            token,
+            attributes={"result.count": len(rows), "result.sha256": checksum},
+        )
+        return checksum
 
     def _response(
         self,
@@ -373,6 +481,10 @@ class ObservabilityService:
         completed: float,
         outcome: str,
         failure_reason: str | None,
+        *,
+        branch_count: int = 0,
+        query_result_sha256: str | None = None,
+        response_checksum: str | None = None,
     ) -> dict[str, Any]:
         return {
             "request_id": item.request["request_id"],
@@ -393,4 +505,7 @@ class ObservabilityService:
             "trace_id": item.server_span.trace_id,
             "server_span_id": item.server_span.span_id,
             "traceparent": make_traceparent(item.server_span.trace_id, item.server_span.span_id),
+            "branch_count": branch_count,
+            "query_result_sha256": query_result_sha256,
+            "response_checksum": response_checksum,
         }

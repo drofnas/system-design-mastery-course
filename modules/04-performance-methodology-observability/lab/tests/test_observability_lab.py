@@ -4,13 +4,21 @@ import asyncio
 import copy
 import json
 import tempfile
+import subprocess
 import unittest
 from pathlib import Path
 
-from observability_lab.benchmark import evaluate_samples, validate_benchmark_result
+from observability_lab.benchmark import evaluate_samples, run_benchmark, validate_benchmark_result
+from observability_lab.blind import prepare_blind_collection, reveal_blind_collection
 from observability_lab.config import ScenarioError, load_scenario, validate_scenario
 from observability_lab.runner import analyze_bundle, run_trial, validate_trial_summary, write_bundle
-from observability_lab.telemetry import Recorder, parse_traceparent, validate_telemetry_record
+from observability_lab.schema_check import SchemaValidationError, validate_with_schema
+from observability_lab.service import ObservabilityService
+from observability_lab.telemetry import (
+    Recorder,
+    parse_traceparent,
+    validate_telemetry_record,
+)
 
 
 LAB = Path(__file__).resolve().parents[1]
@@ -27,6 +35,41 @@ def scenario(name: str = "transit-baseline.json") -> dict:
     value["service"]["slow_probability"] = 0
     value["telemetry"]["profile_enabled"] = True
     return validate_scenario(value)
+
+
+def schema(name: str) -> dict:
+    return json.loads((ROOT / "schemas" / name).read_text(encoding="utf-8"))
+
+
+def benchmark_evidence(repetitions: int) -> dict:
+    order = (["baseline", "candidate", "candidate", "baseline"] * repetitions)[: repetitions * 2]
+    counts = {"baseline": 0, "candidate": 0}
+    filtered = []
+    for item in order:
+        if counts[item] >= repetitions:
+            continue
+        filtered.append(item)
+        counts[item] += 1
+    return {
+        "execution_order": filtered,
+        "equivalent_work": {
+            "verified": True,
+            "workload_signature": "1" * 64,
+            "result_signature": "2" * 64,
+            "logical_requests": 3,
+            "unique_successes": 3,
+        },
+        "process_runs": [
+            {
+                "variant": variant,
+                "ordinal": index,
+                "pid": 10_000 + index,
+                "python_version": "test",
+                "platform": "test",
+            }
+            for index, variant in enumerate(filtered, start=1)
+        ],
+    }
 
 
 class ContractTests(unittest.TestCase):
@@ -50,15 +93,32 @@ class ContractTests(unittest.TestCase):
         with self.assertRaises(ScenarioError):
             validate_scenario(value)
         value = scenario()
-        value["arrival"].update(
-            rate_per_second=500,
-            duration_seconds=30,
-            burst_multiplier=20,
-            burst_start_seconds=0,
-            burst_duration_seconds=30,
-        )
+        value["limits"]["max_logical_requests"] = 5001
         with self.assertRaises(ScenarioError):
             validate_scenario(value)
+        value = scenario("transit-cpu.json")
+        value["arrival"]["mode"] = "closed"
+        value["limits"]["max_logical_requests"] = 5000
+        value["fault"]["intensity"] = 1_000_000
+        with self.assertRaisesRegex(ScenarioError, "total CPU"):
+            validate_scenario(value)
+
+    def test_scenario_schema_and_runtime_structural_parity(self) -> None:
+        contract = schema("observability-scenario.schema.json")
+        valid = scenario()
+        validate_with_schema(valid, contract)
+        validate_scenario(valid)
+        for mutate in (
+            lambda value: value.update(unknown=True),
+            lambda value: value["limits"].update(max_telemetry_records=99),
+            lambda value: value["fault"].update(kind="mystery"),
+        ):
+            invalid = copy.deepcopy(valid)
+            mutate(invalid)
+            with self.assertRaises(SchemaValidationError):
+                validate_with_schema(invalid, contract)
+            with self.assertRaises(ScenarioError):
+                validate_scenario(invalid)
 
     def test_traceparent_validation(self) -> None:
         valid = "00-4bf92f3577b34da6a3ce929d0e0e4736-00f067aa0ba902b7-01"
@@ -91,18 +151,53 @@ class ContractTests(unittest.TestCase):
         )
         validate_telemetry_record(recorder.metrics[0])
 
+    def test_telemetry_schema_and_runtime_parity_and_record_cap(self) -> None:
+        contract = schema("telemetry-record.schema.json")
+        recorder = Recorder(seed=1, cardinality_budget=2, max_records=2)
+        span = recorder.start_span("route-impact.test")
+        recorder.end_span(span)
+        validate_with_schema(recorder.traces[0], contract)
+        validate_telemetry_record(recorder.traces[0])
+
+        invalid = copy.deepcopy(recorder.traces[0])
+        invalid["trace_id"] = "0" * 32
+        with self.assertRaises(SchemaValidationError):
+            validate_with_schema(invalid, contract)
+        with self.assertRaises(ValueError):
+            validate_telemetry_record(invalid)
+
+        recorder.log("test", severity="INFO", trace_id=None, span_id=None)
+        recorder.metric("bounded", 1, unit="1", attributes={})
+        self.assertEqual(recorder.record_count, 2)
+        self.assertEqual(recorder.dropped_records, 1)
+
+        other = Recorder(seed=1, cardinality_budget=2)
+        first = other.start_span("same-seed")
+        self.assertNotEqual(first.trace_id, span.trace_id)
+
     def test_benchmark_decisions_and_arithmetic(self) -> None:
-        passed = evaluate_samples([100, 102, 101], [103, 104, 102], 1.10)
+        evidence = benchmark_evidence(3)
+        passed = evaluate_samples([100, 102, 101], [103, 104, 102], 1.10, **evidence)
         self.assertEqual(passed["decision"], "pass")
-        regressed = evaluate_samples([100, 101, 99], [125, 126, 124], 1.10)
+        regressed = evaluate_samples([100, 101, 99], [125, 126, 124], 1.10, **evidence)
         self.assertEqual(regressed["decision"], "regression")
-        inconclusive = evaluate_samples([90, 110], [105, 120], 1.10)
+        inconclusive = evaluate_samples(
+            [90, 110], [105, 120], 1.10, **benchmark_evidence(2)
+        )
         self.assertEqual(inconclusive["decision"], "inconclusive")
+        noisy = evaluate_samples(
+            [100, 100, 100], [1, 109, 109], 1.10, **evidence
+        )
+        self.assertEqual(noisy["decision"], "inconclusive")
         validate_benchmark_result(regressed)
         changed = copy.deepcopy(regressed)
         changed["candidate_to_baseline_ratio"] = 1.0
         with self.assertRaises(ValueError):
             validate_benchmark_result(changed)
+        forged = copy.deepcopy(regressed)
+        forged["decision"] = "pass"
+        with self.assertRaisesRegex(ValueError, "decision contradicts"):
+            validate_benchmark_result(forged)
 
     def test_schema_files_parse(self) -> None:
         for name in (
@@ -110,6 +205,8 @@ class ContractTests(unittest.TestCase):
             "telemetry-record.schema.json",
             "observability-trial.schema.json",
             "benchmark-result.schema.json",
+            "blind-collection.schema.json",
+            "blind-reveal.schema.json",
         ):
             parsed = json.loads((ROOT / "schemas" / name).read_text(encoding="utf-8"))
             self.assertEqual(parsed["$schema"], "https://json-schema.org/draft/2020-12/schema")
@@ -141,17 +238,21 @@ class IntegrationTests(unittest.IsolatedAsyncioTestCase):
         self.assertTrue(all("request_id" not in row["attributes"] for row in normal_metrics))
         self.assertEqual(result["recorder"].metrics[-1]["name"], "service.active_connections")
         self.assertEqual(result["recorder"].metrics[-1]["value"], 0)
+        self.assertEqual(summary["cleanup"]["connections_after"], 0)
+        self.assertEqual(summary["cleanup"]["retained_allocation_bytes_after"], 0)
+        self.assertFalse(summary["cleanup"]["temporary_file_exists_after"])
+        validate_with_schema(summary, schema("observability-trial.schema.json"))
 
     async def test_cpu_and_allocation_fault_evidence(self) -> None:
         cpu = scenario("transit-cpu.json")
         cpu["fault"]["intensity"] = 5000
         cpu_result = await run_trial(validate_scenario(cpu))
         self.assertTrue(
-            any(row["name"] == "fault.cpu-work" for row in cpu_result["recorder"].traces)
+            any(row["name"] == "route-impact.normalize" for row in cpu_result["recorder"].traces)
         )
         self.assertGreater(cpu_result["summary"]["resource_delta"]["user_cpu_seconds"], 0)
         self.assertTrue(
-            any("_cpu_work" in row["location"] for row in cpu_result["profile"]["cpu_top"])
+            any("_normalize_route_key" in row["location"] for row in cpu_result["profile"]["cpu_top"])
         )
 
         allocation = scenario("transit-allocation.json")
@@ -165,6 +266,45 @@ class IntegrationTests(unittest.IsolatedAsyncioTestCase):
         self.assertTrue(retained)
         self.assertGreater(max(retained), 0)
         self.assertTrue(allocation_result["profile"]["allocation_top"])
+
+    async def test_closed_loop_and_allocation_retention_are_hard_capped(self) -> None:
+        closed = scenario("transit-allocation.json")
+        closed["arrival"]["mode"] = "closed"
+        closed["arrival"]["duration_seconds"] = 1
+        closed["arrival"]["max_in_flight"] = 8
+        closed["limits"]["max_logical_requests"] = 3
+        closed["limits"]["max_retained_allocation_bytes"] = 25_000
+        closed["fault"]["intensity"] = 10_000
+        result = await run_trial(validate_scenario(closed))
+        self.assertEqual(result["summary"]["logical_requests"], 3)
+        self.assertEqual(result["summary"]["retained_allocation_bytes_before_cleanup"], 25_000)
+        self.assertEqual(result["summary"]["cleanup"]["retained_allocation_bytes_after"], 0)
+        self.assertLessEqual(
+            result["recorder"].record_count,
+            closed["limits"]["max_telemetry_records"],
+        )
+
+    async def test_collection_off_and_bind_failure_cleanup(self) -> None:
+        disabled = scenario()
+        disabled["telemetry"]["signals_enabled"] = False
+        disabled["telemetry"]["profile_enabled"] = False
+        result = await run_trial(validate_scenario(disabled))
+        self.assertEqual(result["recorder"].record_count, 0)
+        self.assertEqual(result["recorder"].dropped_records, 0)
+        self.assertFalse(result["summary"]["telemetry"]["collection_enabled"])
+
+        occupied = await asyncio.start_server(lambda _reader, _writer: None, "127.0.0.1", 0)
+        port = occupied.sockets[0].getsockname()[1]
+        recorder = Recorder(seed=2, cardinality_budget=20)
+        service = ObservabilityService(scenario(), recorder)
+        with self.assertRaises(OSError):
+            await service.start(port=port)
+        await service.close()
+        await service.close()
+        self.assertFalse(service.temporary_file_exists)
+        self.assertEqual(service.retained_allocation_bytes, 0)
+        occupied.close()
+        await occupied.wait_closed()
 
     async def test_lock_and_slow_io_fault_evidence(self) -> None:
         lock = scenario("transit-lock.json")
@@ -227,6 +367,84 @@ class IntegrationTests(unittest.IsolatedAsyncioTestCase):
             self.assertGreater(analysis["correlated_logs"], 0)
             self.assertGreater(analysis["metric_exemplars"], 0)
             self.assertNotIn("fault", json.dumps(analysis).lower())
+            with (target / "events.jsonl").open("a", encoding="utf-8") as stream:
+                stream.write("{}\n")
+            with self.assertRaisesRegex(ValueError, "hash mismatch"):
+                analyze_bundle(target)
+
+    async def test_benchmark_rejects_changed_work_and_records_equivalence(self) -> None:
+        baseline = scenario()
+        baseline["telemetry"]["profile_enabled"] = False
+        baseline["benchmark"]["repetitions"] = 2
+        candidate = copy.deepcopy(baseline)
+        candidate["id"] = "transit-candidate"
+        result = await run_benchmark(baseline, candidate)
+        self.assertTrue(result["equivalent_work"]["verified"])
+        self.assertEqual(result["execution_order"], ["baseline", "candidate", "candidate", "baseline"])
+        validate_with_schema(result, schema("benchmark-result.schema.json"))
+
+        changed = copy.deepcopy(candidate)
+        changed["service"]["fanout"] += 1
+        with self.assertRaisesRegex(ValueError, "not equivalent"):
+            await run_benchmark(baseline, changed)
+        threshold_changed = copy.deepcopy(candidate)
+        threshold_changed["benchmark"]["regression_threshold_ratio"] = 1.2
+        with self.assertRaisesRegex(ValueError, "thresholds"):
+            await run_benchmark(baseline, threshold_changed)
+
+    async def test_partner_held_blind_mapping_is_absent_until_frozen_reveal(self) -> None:
+        first = scenario("transit-cpu.json")
+        second = scenario("transit-lock.json")
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            bundles = root / "learner"
+            reveal = root / "partner" / "mapping.json"
+            await prepare_blind_collection(
+                bundles,
+                reveal,
+                scenario_paths=[
+                    LAB / "scenarios" / "transit-cpu.json",
+                    LAB / "scenarios" / "transit-lock.json",
+                ],
+                randomizer=__import__("random").Random(7),
+            )
+            public_text = "\n".join(
+                path.read_text(encoding="utf-8", errors="replace")
+                for path in bundles.rglob("*")
+                if path.is_file()
+            )
+            self.assertNotIn(first["fault"]["kind"], (bundles / "manifest.json").read_text())
+            self.assertNotIn(second["fault"]["kind"], (bundles / "manifest.json").read_text())
+            self.assertNotIn("fault.cpu-work", public_text)
+            self.assertTrue(reveal.is_file())
+            empty = root / "empty.md"
+            empty.write_text("", encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "frozen diagnosis"):
+                reveal_blind_collection(
+                    bundles, reveal, empty, "HEAD", root / "revealed.json"
+                )
+            diagnosis = root / "diagnosis.md"
+            diagnosis.write_text("# Frozen diagnosis\n\nO01: evidence and alternative.\n", encoding="utf-8")
+            subprocess.run(["git", "init", "-q", str(root)], check=True)
+            subprocess.run(["git", "-C", str(root), "config", "user.name", "Lab Test"], check=True)
+            subprocess.run(["git", "-C", str(root), "config", "user.email", "lab@example.invalid"], check=True)
+            subprocess.run(["git", "-C", str(root), "add", "diagnosis.md"], check=True)
+            subprocess.run(
+                ["git", "-C", str(root), "commit", "-q", "-m", "freeze diagnosis"],
+                check=True,
+            )
+            frozen_commit = subprocess.run(
+                ["git", "-C", str(root), "rev-parse", "HEAD"],
+                check=True,
+                capture_output=True,
+                text=True,
+            ).stdout.strip()
+            revealed = reveal_blind_collection(
+                bundles, reveal, diagnosis, frozen_commit, root / "revealed.json"
+            )
+            self.assertEqual(len(revealed["items"]), 2)
+            self.assertIn("frozen_diagnosis_sha256", revealed)
+            self.assertEqual(revealed["frozen_commit"], frozen_commit)
 
 
 if __name__ == "__main__":

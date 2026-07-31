@@ -97,6 +97,20 @@ sources provide standards text, maintainer contracts, and production experience.
 
 ## Optional enrichment
 
-- Python Software Foundation, `cProfile` and `tracemalloc` documentation:
-  https://docs.python.org/3/library/debug.html — inspect exact profiler
-  limitations while implementing a non-Python production equivalent.
+### Python debugging and profiling documentation
+
+- Author/publisher: Python Software Foundation
+- URL: https://docs.python.org/3/library/debug.html
+- Type/status: maintainer documentation index; optional enrichment
+- Boundary: follow only the `cProfile` and `tracemalloc` entries, then read the
+  measurement-boundary sections for the learner's Python version
+- Time/week: 25 minutes, Week 14
+- Access: free
+- Purpose: inspect exact profiler boundaries before mapping the technique to a
+  non-Python production equivalent
+- Evidence: add two profiler limitations and one non-Python mapping to the Week
+  14 build review
+- Local alternative: Lesson 5 and the lab reference's output-contract section
+- Reflection: Which allocation or CPU claim remains outside the selected tool's
+  measurement boundary?
+- Last verified: 2026-07-31
