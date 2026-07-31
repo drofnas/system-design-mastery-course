@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/system-design-course/observability-trial.schema.json",
+  "title": "Module 4 observability trial summary",
+  "type": "object", "additionalProperties": false,
+  "required": ["schema_version", "scenario_id", "arrival_mode", "logical_requests", "attempts", "unique_successes", "useful_throughput_per_second", "latency_ms", "queue_wait_ms", "generator_lag_ms", "outcomes", "max_service_concurrency", "max_downstream_concurrency", "connection_peak", "retained_connections_before_cleanup", "retry_budget", "telemetry", "resource_delta", "failure_reason"],
+  "properties": {
+    "schema_version": {"const": "1.0"}, "scenario_id": {"type": "string"},
+    "arrival_mode": {"enum": ["open", "closed"]},
+    "logical_requests": {"type": "integer", "minimum": 0}, "attempts": {"type": "integer", "minimum": 0},
+    "unique_successes": {"type": "integer", "minimum": 0}, "useful_throughput_per_second": {"type": "number", "minimum": 0},
+    "latency_ms": {"$ref": "#/$defs/percentiles"}, "queue_wait_ms": {"$ref": "#/$defs/percentiles"},
+    "generator_lag_ms": {"$ref": "#/$defs/percentiles"}, "outcomes": {"type": "object"},
+    "max_service_concurrency": {"type": "integer", "minimum": 0},
+    "max_downstream_concurrency": {"type": "integer", "minimum": 0},
+    "connection_peak": {"type": "integer", "minimum": 0},
+    "retained_connections_before_cleanup": {"type": "integer", "minimum": 0},
+    "retry_budget": {"type": "object", "required": ["limit", "used"]},
+    "telemetry": {"type": "object", "required": ["spans", "metrics", "logs", "series_count", "cardinality_budget", "cardinality_exceeded", "estimated_bytes"]},
+    "resource_delta": {"type": "object", "required": ["user_cpu_seconds", "system_cpu_seconds", "max_rss_bytes", "voluntary_context_switches", "involuntary_context_switches"]},
+    "failure_reason": {"type": ["string", "null"]}
+  },
+  "$defs": {
+    "percentiles": {
+      "type": "object", "additionalProperties": false,
+      "required": ["p50", "p95", "p99", "max"],
+      "properties": {"p50": {"type": "number", "minimum": 0}, "p95": {"type": "number", "minimum": 0}, "p99": {"type": "number", "minimum": 0}, "max": {"type": "number", "minimum": 0}}
+    }
+  }
+}

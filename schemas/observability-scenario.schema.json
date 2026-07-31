@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/system-design-course/observability-scenario.schema.json",
+  "title": "Module 4 observability scenario",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "seed", "arrival", "service", "retry", "capacity", "fault", "telemetry", "database", "benchmark"],
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "seed": {"type": "integer", "minimum": 0, "maximum": 999999999},
+    "arrival": {
+      "type": "object", "additionalProperties": false,
+      "required": ["mode", "rate_per_second", "duration_seconds", "max_in_flight", "burst_multiplier", "burst_start_seconds", "burst_duration_seconds"],
+      "properties": {
+        "mode": {"enum": ["open", "closed"]},
+        "rate_per_second": {"type": "number", "minimum": 1, "maximum": 500},
+        "duration_seconds": {"type": "number", "minimum": 0.1, "maximum": 30},
+        "max_in_flight": {"type": "integer", "minimum": 1, "maximum": 256},
+        "burst_multiplier": {"type": "number", "minimum": 1, "maximum": 20},
+        "burst_start_seconds": {"type": "number", "minimum": 0, "maximum": 30},
+        "burst_duration_seconds": {"type": "number", "minimum": 0, "maximum": 30}
+      }
+    },
+    "service": {
+      "type": "object", "additionalProperties": false,
+      "required": ["workers", "queue_capacity", "base_service_ms", "slow_service_ms", "slow_probability", "fanout", "downstream_concurrency", "downstream_failure_probability"],
+      "properties": {
+        "workers": {"type": "integer", "minimum": 1, "maximum": 64},
+        "queue_capacity": {"type": "integer", "minimum": 1, "maximum": 1024},
+        "base_service_ms": {"type": "number", "minimum": 0, "maximum": 1000},
+        "slow_service_ms": {"type": "number", "minimum": 0, "maximum": 5000},
+        "slow_probability": {"type": "number", "minimum": 0, "maximum": 1},
+        "fanout": {"type": "integer", "minimum": 1, "maximum": 16},
+        "downstream_concurrency": {"type": "integer", "minimum": 1, "maximum": 1024},
+        "downstream_failure_probability": {"type": "number", "minimum": 0, "maximum": 1}
+      }
+    },
+    "retry": {
+      "type": "object", "additionalProperties": false,
+      "required": ["max_attempts", "budget_ratio", "base_backoff_ms"],
+      "properties": {
+        "max_attempts": {"type": "integer", "minimum": 1, "maximum": 3},
+        "budget_ratio": {"type": "number", "minimum": 0, "maximum": 0.5},
+        "base_backoff_ms": {"type": "number", "minimum": 0, "maximum": 1000}
+      }
+    },
+    "capacity": {
+      "type": "object", "additionalProperties": false,
+      "required": ["failover_fraction", "worker_cost_per_hour", "fixed_cost_per_hour"],
+      "properties": {
+        "failover_fraction": {"type": "number", "minimum": 0.1, "maximum": 1},
+        "worker_cost_per_hour": {"type": "number", "minimum": 0, "maximum": 100},
+        "fixed_cost_per_hour": {"type": "number", "minimum": 0, "maximum": 1000}
+      }
+    },
+    "fault": {
+      "type": "object", "additionalProperties": false,
+      "required": ["kind", "intensity", "delay_ms"],
+      "properties": {
+        "kind": {"enum": ["none", "cpu", "allocation", "lock", "slow_io", "connection_leak", "high_cardinality", "query_scan"]},
+        "intensity": {"type": "integer", "minimum": 0, "maximum": 1000000},
+        "delay_ms": {"type": "number", "minimum": 0, "maximum": 1000}
+      }
+    },
+    "telemetry": {
+      "type": "object", "additionalProperties": false,
+      "required": ["cardinality_budget", "max_retained_connections", "profile_enabled", "allocation_frames"],
+      "properties": {
+        "cardinality_budget": {"type": "integer", "minimum": 1, "maximum": 10000},
+        "max_retained_connections": {"type": "integer", "minimum": 0, "maximum": 64},
+        "profile_enabled": {"type": "boolean"},
+        "allocation_frames": {"type": "integer", "minimum": 1, "maximum": 25}
+      }
+    },
+    "database": {
+      "type": "object", "additionalProperties": false,
+      "required": ["rows", "indexed"],
+      "properties": {
+        "rows": {"type": "integer", "minimum": 10, "maximum": 10000},
+        "indexed": {"type": "boolean"}
+      }
+    },
+    "benchmark": {
+      "type": "object", "additionalProperties": false,
+      "required": ["repetitions", "regression_threshold_ratio"],
+      "properties": {
+        "repetitions": {"type": "integer", "minimum": 2, "maximum": 20},
+        "regression_threshold_ratio": {"type": "number", "minimum": 1, "maximum": 3}
+      }
+    }
+  }
+}

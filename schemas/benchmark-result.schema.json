@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/system-design-course/benchmark-result.schema.json",
+  "title": "Module 4 benchmark result",
+  "type": "object", "additionalProperties": false,
+  "required": ["schema_version", "metric", "baseline_samples", "candidate_samples", "baseline_median", "candidate_median", "candidate_to_baseline_ratio", "regression_threshold_ratio", "decision", "dispersion", "environment"],
+  "properties": {
+    "schema_version": {"const": "1.0"}, "metric": {"const": "latency_ms.p95"},
+    "baseline_samples": {"type": "array", "minItems": 2, "items": {"type": "number", "exclusiveMinimum": 0}},
+    "candidate_samples": {"type": "array", "minItems": 2, "items": {"type": "number", "exclusiveMinimum": 0}},
+    "baseline_median": {"type": "number", "exclusiveMinimum": 0},
+    "candidate_median": {"type": "number", "exclusiveMinimum": 0},
+    "candidate_to_baseline_ratio": {"type": "number", "exclusiveMinimum": 0},
+    "regression_threshold_ratio": {"type": "number", "minimum": 1, "maximum": 3},
+    "decision": {"enum": ["pass", "regression", "inconclusive"]},
+    "dispersion": {"type": "object", "required": ["baseline_range", "candidate_range"]},
+    "environment": {"type": "object", "required": ["python_version", "platform"]}
+  }
+}

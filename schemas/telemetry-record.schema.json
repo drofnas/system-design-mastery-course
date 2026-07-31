@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/system-design-course/telemetry-record.schema.json",
+  "title": "Module 4 provider-neutral telemetry record",
+  "oneOf": [
+    {"$ref": "#/$defs/span"},
+    {"$ref": "#/$defs/metric"},
+    {"$ref": "#/$defs/log"}
+  ],
+  "$defs": {
+    "common": {
+      "type": "object",
+      "required": ["schema_version", "signal", "timestamp_unix_ns"],
+      "properties": {
+        "schema_version": {"const": "1.0"},
+        "timestamp_unix_ns": {"type": "integer", "minimum": 1}
+      }
+    },
+    "span": {
+      "type": "object", "additionalProperties": false,
+      "required": ["schema_version", "signal", "timestamp_unix_ns", "trace_id", "span_id", "parent_span_id", "name", "duration_ms", "status", "attributes"],
+      "properties": {
+        "schema_version": {"const": "1.0"}, "signal": {"const": "span"},
+        "timestamp_unix_ns": {"type": "integer", "minimum": 1},
+        "trace_id": {"type": "string", "pattern": "^[0-9a-f]{32}$"},
+        "span_id": {"type": "string", "pattern": "^[0-9a-f]{16}$"},
+        "parent_span_id": {"type": ["string", "null"]},
+        "name": {"type": "string"}, "duration_ms": {"type": "number", "minimum": 0},
+        "status": {"enum": ["ok", "error"]}, "attributes": {"type": "object"}
+      }
+    },
+    "metric": {
+      "type": "object", "additionalProperties": false,
+      "required": ["schema_version", "signal", "timestamp_unix_ns", "name", "value", "unit", "attributes", "exemplar"],
+      "properties": {
+        "schema_version": {"const": "1.0"}, "signal": {"const": "metric"},
+        "timestamp_unix_ns": {"type": "integer", "minimum": 1},
+        "name": {"type": "string"}, "value": {"type": "number"}, "unit": {"type": "string"},
+        "attributes": {"type": "object", "additionalProperties": {"type": "string"}},
+        "exemplar": {"type": ["object", "null"]}
+      }
+    },
+    "log": {
+      "type": "object", "additionalProperties": false,
+      "required": ["schema_version", "signal", "timestamp_unix_ns", "event_name", "severity", "trace_id", "span_id", "attributes"],
+      "properties": {
+        "schema_version": {"const": "1.0"}, "signal": {"const": "log"},
+        "timestamp_unix_ns": {"type": "integer", "minimum": 1},
+        "event_name": {"type": "string"}, "severity": {"enum": ["INFO", "WARN", "ERROR"]},
+        "trace_id": {"type": ["string", "null"]}, "span_id": {"type": ["string", "null"]},
+        "attributes": {"type": "object"}
+      }
+    }
+  }
+}

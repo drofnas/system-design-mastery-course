@@ -1,0 +1,210 @@
+"""Strict scenario validation shared by every CLI command."""
+
+from __future__ import annotations
+
+import json
+from pathlib import Path
+from typing import Any
+
+
+class ScenarioError(ValueError):
+    """Raised when a scenario violates the bounded lab contract."""
+
+
+FAULTS = {
+    "none",
+    "cpu",
+    "allocation",
+    "lock",
+    "slow_io",
+    "connection_leak",
+    "high_cardinality",
+    "query_scan",
+}
+
+
+def _object(value: Any, path: str) -> dict[str, Any]:
+    if not isinstance(value, dict):
+        raise ScenarioError(f"{path} must be an object")
+    return value
+
+
+def _number(
+    value: Any,
+    path: str,
+    *,
+    minimum: float,
+    maximum: float,
+) -> float:
+    if isinstance(value, bool) or not isinstance(value, (int, float)):
+        raise ScenarioError(f"{path} must be a number")
+    result = float(value)
+    if not minimum <= result <= maximum:
+        raise ScenarioError(f"{path} must be between {minimum} and {maximum}")
+    return result
+
+
+def _integer(
+    value: Any,
+    path: str,
+    *,
+    minimum: int,
+    maximum: int,
+) -> int:
+    if isinstance(value, bool) or not isinstance(value, int):
+        raise ScenarioError(f"{path} must be an integer")
+    if not minimum <= value <= maximum:
+        raise ScenarioError(f"{path} must be between {minimum} and {maximum}")
+    return value
+
+
+def validate_scenario(value: Any) -> dict[str, Any]:
+    scenario = _object(value, "scenario")
+    required = {
+        "id",
+        "seed",
+        "arrival",
+        "service",
+        "retry",
+        "capacity",
+        "fault",
+        "telemetry",
+        "database",
+        "benchmark",
+    }
+    if set(scenario) != required:
+        raise ScenarioError(
+            f"scenario fields differ; missing={sorted(required - set(scenario))}, "
+            f"unknown={sorted(set(scenario) - required)}"
+        )
+    if not isinstance(scenario["id"], str) or not scenario["id"]:
+        raise ScenarioError("id must be a non-empty string")
+    _integer(scenario["seed"], "seed", minimum=0, maximum=999_999_999)
+
+    arrival = _object(scenario["arrival"], "arrival")
+    arrival_fields = {
+        "mode",
+        "rate_per_second",
+        "duration_seconds",
+        "max_in_flight",
+        "burst_multiplier",
+        "burst_start_seconds",
+        "burst_duration_seconds",
+    }
+    if set(arrival) != arrival_fields:
+        raise ScenarioError("arrival has unexpected fields")
+    if arrival["mode"] not in {"open", "closed"}:
+        raise ScenarioError("arrival.mode must be open or closed")
+    rate = _number(arrival["rate_per_second"], "arrival.rate_per_second", minimum=1, maximum=500)
+    duration = _number(arrival["duration_seconds"], "arrival.duration_seconds", minimum=0.1, maximum=30)
+    _integer(arrival["max_in_flight"], "arrival.max_in_flight", minimum=1, maximum=256)
+    multiplier = _number(arrival["burst_multiplier"], "arrival.burst_multiplier", minimum=1, maximum=20)
+    burst_start = _number(arrival["burst_start_seconds"], "arrival.burst_start_seconds", minimum=0, maximum=30)
+    burst_duration = _number(arrival["burst_duration_seconds"], "arrival.burst_duration_seconds", minimum=0, maximum=30)
+    active_burst = max(0.0, min(burst_duration, duration - burst_start))
+    planned = rate * duration + rate * (multiplier - 1) * active_burst
+    if planned > 5_000:
+        raise ScenarioError("planned logical requests may not exceed 5000")
+
+    service = _object(scenario["service"], "service")
+    service_fields = {
+        "workers",
+        "queue_capacity",
+        "base_service_ms",
+        "slow_service_ms",
+        "slow_probability",
+        "fanout",
+        "downstream_concurrency",
+        "downstream_failure_probability",
+    }
+    if set(service) != service_fields:
+        raise ScenarioError("service has unexpected fields")
+    _integer(service["workers"], "service.workers", minimum=1, maximum=64)
+    _integer(service["queue_capacity"], "service.queue_capacity", minimum=1, maximum=1024)
+    _number(service["base_service_ms"], "service.base_service_ms", minimum=0, maximum=1000)
+    _number(service["slow_service_ms"], "service.slow_service_ms", minimum=0, maximum=5000)
+    _number(service["slow_probability"], "service.slow_probability", minimum=0, maximum=1)
+    fanout = _integer(service["fanout"], "service.fanout", minimum=1, maximum=16)
+    downstream = _integer(
+        service["downstream_concurrency"],
+        "service.downstream_concurrency",
+        minimum=1,
+        maximum=1024,
+    )
+    if downstream < fanout:
+        raise ScenarioError("downstream_concurrency must permit one full fan-out")
+    _number(
+        service["downstream_failure_probability"],
+        "service.downstream_failure_probability",
+        minimum=0,
+        maximum=1,
+    )
+
+    retry = _object(scenario["retry"], "retry")
+    if set(retry) != {"max_attempts", "budget_ratio", "base_backoff_ms"}:
+        raise ScenarioError("retry has unexpected fields")
+    _integer(retry["max_attempts"], "retry.max_attempts", minimum=1, maximum=3)
+    _number(retry["budget_ratio"], "retry.budget_ratio", minimum=0, maximum=0.5)
+    _number(retry["base_backoff_ms"], "retry.base_backoff_ms", minimum=0, maximum=1000)
+
+    capacity = _object(scenario["capacity"], "capacity")
+    if set(capacity) != {"failover_fraction", "worker_cost_per_hour", "fixed_cost_per_hour"}:
+        raise ScenarioError("capacity has unexpected fields")
+    _number(capacity["failover_fraction"], "capacity.failover_fraction", minimum=0.1, maximum=1)
+    _number(capacity["worker_cost_per_hour"], "capacity.worker_cost_per_hour", minimum=0, maximum=100)
+    _number(capacity["fixed_cost_per_hour"], "capacity.fixed_cost_per_hour", minimum=0, maximum=1000)
+
+    fault = _object(scenario["fault"], "fault")
+    if set(fault) != {"kind", "intensity", "delay_ms"}:
+        raise ScenarioError("fault has unexpected fields")
+    if fault["kind"] not in FAULTS:
+        raise ScenarioError(f"fault.kind must be one of {sorted(FAULTS)}")
+    _integer(fault["intensity"], "fault.intensity", minimum=0, maximum=1_000_000)
+    _number(fault["delay_ms"], "fault.delay_ms", minimum=0, maximum=1000)
+
+    telemetry = _object(scenario["telemetry"], "telemetry")
+    telemetry_fields = {
+        "cardinality_budget",
+        "max_retained_connections",
+        "profile_enabled",
+        "allocation_frames",
+    }
+    if set(telemetry) != telemetry_fields:
+        raise ScenarioError("telemetry has unexpected fields")
+    _integer(telemetry["cardinality_budget"], "telemetry.cardinality_budget", minimum=1, maximum=10000)
+    _integer(
+        telemetry["max_retained_connections"],
+        "telemetry.max_retained_connections",
+        minimum=0,
+        maximum=64,
+    )
+    if not isinstance(telemetry["profile_enabled"], bool):
+        raise ScenarioError("telemetry.profile_enabled must be boolean")
+    _integer(telemetry["allocation_frames"], "telemetry.allocation_frames", minimum=1, maximum=25)
+
+    database = _object(scenario["database"], "database")
+    if set(database) != {"rows", "indexed"}:
+        raise ScenarioError("database has unexpected fields")
+    _integer(database["rows"], "database.rows", minimum=10, maximum=10000)
+    if not isinstance(database["indexed"], bool):
+        raise ScenarioError("database.indexed must be boolean")
+
+    benchmark = _object(scenario["benchmark"], "benchmark")
+    if set(benchmark) != {"repetitions", "regression_threshold_ratio"}:
+        raise ScenarioError("benchmark has unexpected fields")
+    _integer(benchmark["repetitions"], "benchmark.repetitions", minimum=2, maximum=20)
+    _number(
+        benchmark["regression_threshold_ratio"],
+        "benchmark.regression_threshold_ratio",
+        minimum=1,
+        maximum=3,
+    )
+    return scenario
+
+
+def load_scenario(path: str | Path) -> dict[str, Any]:
+    try:
+        value = json.loads(Path(path).read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as error:
+        raise ScenarioError(f"cannot read scenario: {error}") from error
+    return validate_scenario(value)

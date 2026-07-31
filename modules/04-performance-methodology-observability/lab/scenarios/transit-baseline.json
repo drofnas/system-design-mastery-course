@@ -1,0 +1,12 @@
+{
+  "id": "transit-baseline",
+  "seed": 20260731,
+  "arrival": {"mode": "open", "rate_per_second": 30, "duration_seconds": 5, "max_in_flight": 8, "burst_multiplier": 1, "burst_start_seconds": 0, "burst_duration_seconds": 0},
+  "service": {"workers": 8, "queue_capacity": 8, "base_service_ms": 20, "slow_service_ms": 200, "slow_probability": 0.01, "fanout": 3, "downstream_concurrency": 24, "downstream_failure_probability": 0},
+  "retry": {"max_attempts": 2, "budget_ratio": 0.1, "base_backoff_ms": 20},
+  "capacity": {"failover_fraction": 0.75, "worker_cost_per_hour": 0.08, "fixed_cost_per_hour": 0.12},
+  "fault": {"kind": "none", "intensity": 0, "delay_ms": 0},
+  "telemetry": {"cardinality_budget": 20, "max_retained_connections": 8, "profile_enabled": true, "allocation_frames": 5},
+  "database": {"rows": 256, "indexed": true},
+  "benchmark": {"repetitions": 2, "regression_threshold_ratio": 1.1}
+}
