@@ -55,8 +55,12 @@ status: blocked-until-baseline-frozen
 
 ## Initial rubric
 
-Use [`../templates/rubric-scorecard-template.md`](../templates/rubric-scorecard-template.md)
-to score the artifact when the review is complete.
+Use the Module 1
+[`anchored rubric`](../modules/01-architectural-judgment/assessment/rubric.md)
+and
+[`provider-neutral evaluator`](../modules/01-architectural-judgment/assessment/evaluator-prompt.md)
+after the baseline is frozen. The generic course scorecard is not specific
+enough for this artifact.
 
 ## Review result
 
@@ -67,6 +71,10 @@ to score the artifact when the review is complete.
 ### Required follow-up
 
 <!-- Revisions belong in a new artifact, experiment, ADR, or RFC. -->
+
+| Finding | Lesson/exercise remediation | New artifact | Owner/date |
+|---|---|---|---|
+| | | | |
 
 ## AI assistance disclosure
 
