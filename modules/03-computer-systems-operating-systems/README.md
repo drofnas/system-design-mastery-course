@@ -1,8 +1,8 @@
 # Module 3: Computer Systems and Operating Systems
 
-> **Authoring status:** Review. The complete teaching, lab, assessment, and Gate
-> 1 package is registered; readiness is recorded only after calibration,
-> independent review, regression checks, and final course validation pass.
+> **Authoring status:** Ready. The teaching, lab, assessment, calibration, and
+> Gate 1 package passed independent review and all recorded readiness checks.
+> See the [readiness review](assessment/readiness-review.md).
 
 ## What this module changes
 

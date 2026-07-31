@@ -1,0 +1,218 @@
+{
+  "module_id": "M03",
+  "artifact_commit": "f8d86b3",
+  "baseline_tag": null,
+  "evaluated_at": "2026-07-31T12:00:00-07:00",
+  "structural_gates": [
+    {
+      "id": "G01",
+      "passed": true,
+      "evidence": [
+        "modules/03-computer-systems-operating-systems/assessment/calibration/revise.md#artifact-and-freeze-record"
+      ]
+    },
+    {
+      "id": "G02",
+      "passed": true,
+      "evidence": [
+        "modules/03-computer-systems-operating-systems/assessment/calibration/revise.md#artifact-and-freeze-record"
+      ]
+    },
+    {
+      "id": "G03",
+      "passed": true,
+      "evidence": [
+        "modules/03-computer-systems-operating-systems/assessment/calibration/revise.md#artifact-and-freeze-record",
+        "modules/03-computer-systems-operating-systems/assessment/calibration/revise.md#machine-and-workload-model"
+      ]
+    },
+    {
+      "id": "G04",
+      "passed": true,
+      "evidence": [
+        "modules/03-computer-systems-operating-systems/assessment/calibration/revise.md#machine-and-workload-model",
+        "modules/03-computer-systems-operating-systems/assessment/calibration/revise.md#benchmark-and-mechanism-evidence"
+      ]
+    },
+    {
+      "id": "G05",
+      "passed": true,
+      "evidence": [
+        "modules/03-computer-systems-operating-systems/assessment/calibration/revise.md#artifact-and-freeze-record",
+        "modules/03-computer-systems-operating-systems/assessment/calibration/revise.md#memory-concurrency-and-durability",
+        "modules/03-computer-systems-operating-systems/assessment/calibration/revise.md#resource-containment-and-decision"
+      ]
+    },
+    {
+      "id": "G06",
+      "passed": true,
+      "evidence": [
+        "modules/03-computer-systems-operating-systems/assessment/calibration/revise.md#artifact-and-freeze-record",
+        "modules/03-computer-systems-operating-systems/assessment/calibration/revise.md#resource-containment-and-decision"
+      ]
+    }
+  ],
+  "rubric_scores": [
+    {
+      "criterion_id": "R01",
+      "score": 2,
+      "evidence": [
+        "modules/03-computer-systems-operating-systems/assessment/calibration/revise.md#machine-and-workload-model: the submission identifies replayed work, checksums, host and software environment, filesystem, and bounded inputs, but does not fully specify compiler flags or the consequences and ownership of workload uncertainty"
+      ],
+      "findings": [
+        "missing_evidence: data skew and production working-set uncertainty lack a consequence, owner, and follow-up, preventing sensitivity-based transfer of the machine model; modules/03-computer-systems-operating-systems/assessment/calibration/revise.md#machine-and-workload-model"
+      ],
+      "remediation": [
+        "Lesson 1; EX-01",
+        "Lesson 1; EX-02"
+      ]
+    },
+    {
+      "criterion_id": "R02",
+      "score": 2,
+      "evidence": [
+        "modules/03-computer-systems-operating-systems/assessment/calibration/revise.md#artifact-and-freeze-record: the prediction predates retained raw trials and required checks pass",
+        "modules/03-computer-systems-operating-systems/assessment/calibration/revise.md#benchmark-and-mechanism-evidence: trials retain timing, counters, outcomes, and checksums, but claimed effects are not compared with trial spread"
+      ],
+      "findings": [
+        "missing_evidence: the noise boundary is qualitative and the reported performance differences are not tested against observed variance, weakening decision relevance; modules/03-computer-systems-operating-systems/assessment/calibration/revise.md#machine-and-workload-model",
+        "unsupported_claim: the 11% and 18% improvements lack a confidence or effect-threshold analysis, so their practical significance is not established; modules/03-computer-systems-operating-systems/assessment/calibration/revise.md#benchmark-and-mechanism-evidence"
+      ],
+      "remediation": [
+        "Lesson 1; EX-01",
+        "Lesson 1; EX-03"
+      ]
+    },
+    {
+      "criterion_id": "R03",
+      "score": 2,
+      "evidence": [
+        "modules/03-computer-systems-operating-systems/assessment/calibration/revise.md#benchmark-and-mechanism-evidence: locality and sharding effects are measured, but compiler and branch-mix alternatives are not discriminated"
+      ],
+      "findings": [
+        "unsupported_claim: the contiguous-layout result is attributed without checking compiler behavior, branch mix, or trial spread, leaving the processor-level causal chain unresolved; modules/03-computer-systems-operating-systems/assessment/calibration/revise.md#benchmark-and-mechanism-evidence"
+      ],
+      "remediation": [
+        "Lesson 1; EX-02",
+        "Lesson 1; EX-03"
+      ]
+    },
+    {
+      "criterion_id": "R04",
+      "score": 2,
+      "evidence": [
+        "modules/03-computer-systems-operating-systems/assessment/calibration/revise.md#benchmark-and-mechanism-evidence: context-switch growth is observed, but lock waiting and container throttling are not separated from scheduler effects",
+        "modules/03-computer-systems-operating-systems/assessment/calibration/revise.md#resource-containment-and-decision: CPU limits and controller outcomes exist, although transfer to native production Linux is not confirmed"
+      ],
+      "findings": [
+        "incorrect_reasoning: rising context switches alone are labeled scheduler overhead without a discriminating test for lock wait or throttling, so the scheduling diagnosis is not supported; modules/03-computer-systems-operating-systems/assessment/calibration/revise.md#benchmark-and-mechanism-evidence"
+      ],
+      "remediation": [
+        "Lesson 2; EX-04",
+        "Lesson 2; EX-05"
+      ]
+    },
+    {
+      "criterion_id": "R05",
+      "score": 2,
+      "evidence": [
+        "modules/03-computer-systems-operating-systems/assessment/calibration/revise.md#memory-concurrency-and-durability: bounded allocation, page-touch, pressure, RSS, fault, and checksum evidence exists, but retained RSS after free lacks a causal account"
+      ],
+      "findings": [
+        "communication_gap: the report does not connect elevated post-free RSS to allocator retention, reclaim, page cache, or the applicable accounting boundary, limiting operational interpretation; modules/03-computer-systems-operating-systems/assessment/calibration/revise.md#memory-concurrency-and-durability"
+      ],
+      "remediation": [
+        "Lesson 3; EX-05",
+        "Lesson 3; EX-06"
+      ]
+    },
+    {
+      "criterion_id": "R06",
+      "score": 3,
+      "evidence": [
+        "modules/03-computer-systems-operating-systems/assessment/calibration/revise.md#memory-concurrency-and-durability: shared and sharded counters, false-sharing variants, oversized concurrency, watchdog bounds, correct checksums, lock ordering, and cleanup are tested"
+      ],
+      "findings": [],
+      "remediation": [
+        "Lesson 4; EX-07",
+        "Lesson 4; EX-08"
+      ]
+    },
+    {
+      "criterion_id": "R07",
+      "score": 2,
+      "evidence": [
+        "modules/03-computer-systems-operating-systems/assessment/calibration/revise.md#memory-concurrency-and-durability: buffered and synchronized variants test errors without acknowledging failures, and policy covers file and directory synchronization, recovery ownership, and a loss window"
+      ],
+      "findings": [
+        "missing_evidence: the submission does not fully establish the positive acknowledgement point, partial-write behavior, or rename boundary across crash windows; modules/03-computer-systems-operating-systems/assessment/calibration/revise.md#memory-concurrency-and-durability",
+        "invariant_failure: the durability performance comparison changes both synchronization frequency and record size, so it does not preserve equivalent work and cannot support the performance choice; modules/03-computer-systems-operating-systems/assessment/calibration/revise.md#memory-concurrency-and-durability"
+      ],
+      "remediation": [
+        "Lesson 5; EX-09",
+        "Lesson 6; EX-10"
+      ]
+    },
+    {
+      "criterion_id": "R08",
+      "score": 2,
+      "evidence": [
+        "modules/03-computer-systems-operating-systems/assessment/calibration/revise.md#resource-containment-and-decision: unprivileged bounded containers and CPU, memory, and PID limits have recorded controller outcomes, but Docker Desktop results are transferred beyond their demonstrated scope"
+      ],
+      "findings": [
+        "unsupported_claim: Docker Desktop measurements are represented as production-Linux evidence without native Linux confirmation, making the operational transfer boundary unreliable; modules/03-computer-systems-operating-systems/assessment/calibration/revise.md#resource-containment-and-decision"
+      ],
+      "remediation": [
+        "Lesson 7; EX-10",
+        "Lesson 7; EX-11"
+      ]
+    },
+    {
+      "criterion_id": "R09",
+      "score": 2,
+      "evidence": [
+        "modules/03-computer-systems-operating-systems/assessment/calibration/revise.md#benchmark-and-mechanism-evidence: observations and repetitions exist, but important compiler, branch, lock-wait, and throttling alternatives remain untested",
+        "modules/03-computer-systems-operating-systems/assessment/calibration/revise.md#resource-containment-and-decision: the teach-back preserves a contradictory layout result but supplies no discriminating test"
+      ],
+      "findings": [
+        "missing_evidence: contradictory layout and scheduling observations are not followed by experiments that distinguish plausible mechanisms, preventing a defensible causal diagnosis; modules/03-computer-systems-operating-systems/assessment/calibration/revise.md#benchmark-and-mechanism-evidence",
+        "communication_gap: the teach-back lists the contradictory result without explaining its causal uncertainty or the next decision-changing test; modules/03-computer-systems-operating-systems/assessment/calibration/revise.md#resource-containment-and-decision"
+      ],
+      "remediation": [
+        "Lesson 8; EX-11",
+        "Lesson 8; EX-12"
+      ]
+    },
+    {
+      "criterion_id": "R10",
+      "score": 2,
+      "evidence": [
+        "modules/03-computer-systems-operating-systems/assessment/calibration/revise.md#resource-containment-and-decision: the submission chooses sharded counters and batched checkpoints with a service owner, rollback, and latency signal, but omits several decision and transfer commitments"
+      ],
+      "findings": [
+        "missing_evidence: cost per completed record, platform and recovery commitments, migration sequencing, security effects, and a measurable reversal threshold are absent, leaving the rollout decision incomplete; modules/03-computer-systems-operating-systems/assessment/calibration/revise.md#resource-containment-and-decision",
+        "communication_gap: the teach-back does not resolve the operations challenge with evidence or a discriminating test, limiting its usefulness for stakeholder decision-making; modules/03-computer-systems-operating-systems/assessment/calibration/revise.md#resource-containment-and-decision"
+      ],
+      "remediation": [
+        "Lesson 8; EX-12"
+      ]
+    }
+  ],
+  "average_score": 2.1,
+  "safety_critical_zero": false,
+  "result": "Revise",
+  "confidence": {
+    "level": "high",
+    "reasons": [
+      "The complete submitted fixture directly states gate status, retained evidence, safety behavior, causal gaps, and decision omissions.",
+      "All structural gates pass, no Repeat condition is established, and the exact score sum of 21 divided by 10 is 2.1."
+    ]
+  },
+  "summary": "Revise: all six structural gates pass and concurrency and durability avoid safety-critical zero scores, but the 2.1 average is below the 3.0 Pass threshold. Benchmark variance, processor and scheduler causality, memory interpretation, durability work equivalence, environment transfer, and decision commitments require new remediation evidence.",
+  "next_actions": [
+    "Create a separate benchmark-remediation artifact that quantifies trial spread and tests compiler, branch-mix, lock-wait, and throttling alternatives without changing frozen predictions or raw trials.",
+    "Add bounded memory and durability follow-up evidence that explains retained RSS and compares checkpoint policies under equivalent logical work.",
+    "Revise the decision artifact with native-Linux confirmation or a narrowed claim, cost per completed record, platform and recovery commitments, migration and security analysis, and a measurable reversal threshold.",
+    "Update the teach-back to preserve the contradictory observations and document the discriminating tests used to address the operations challenge."
+  ]
+}
