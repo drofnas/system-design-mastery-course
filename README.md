@@ -100,7 +100,8 @@ scripts/        Course validation tools
 | Module | Weeks | Status | Entry point |
 |---:|---:|---|---|
 | 1. Architectural Judgment | 1–4 | Ready | [Start Module 1](modules/01-architectural-judgment/README.md) |
-| 2–18 | 5–72 | Syllabus-defined; teaching packages not yet authored | [Course syllabus](00_COURSE_SYLLABUS.md) |
+| 2. Capacity, Queues, and Tail Latency | 5–8 | Ready | [Start Module 2](modules/02-capacity-queues-tail-latency/README.md) |
+| 3–18 | 9–72 | Syllabus-defined; teaching packages not yet authored | [Course syllabus](00_COURSE_SYLLABUS.md) |
 
 Future modules must satisfy
 [`MODULE_STANDARD.md`](MODULE_STANDARD.md). Course-authoring agents must also
@@ -114,9 +115,11 @@ Run:
 python3 scripts/validate_course.py
 ```
 
-The validator checks the Module 1 manifest, hour budget, outcome mappings,
-required teaching and assessment files, expanded baseline contract, JSON
-interfaces, and local Markdown links.
+The validator discovers every module manifest and checks hour budgets, outcome
+mappings, lesson and resource contracts, required teaching and assessment
+files, calibration state, the frozen baseline contract, JSON interfaces, and
+local Markdown links. Use `--module M01` or `--module M02` to validate a single
+module.
 
 ## Evidence and AI rules
 

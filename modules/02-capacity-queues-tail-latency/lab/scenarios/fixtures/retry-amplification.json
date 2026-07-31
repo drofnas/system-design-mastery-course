@@ -1,0 +1,30 @@
+{
+  "id": "fixture-retry-amplification",
+  "seed": 41,
+  "arrival": {
+    "mode": "open",
+    "rate_per_second": 25,
+    "duration_seconds": 0.4,
+    "max_in_flight": 4
+  },
+  "service": {
+    "workers": 4,
+    "queue_capacity": 8,
+    "base_service_ms": 3,
+    "slow_service_ms": 3,
+    "slow_probability": 0,
+    "fanout": 1,
+    "downstream_concurrency": 4,
+    "downstream_failure_probability": 0.6
+  },
+  "retry": {
+    "max_attempts": 3,
+    "budget_ratio": 1,
+    "base_backoff_ms": 1
+  },
+  "capacity": {
+    "failover_fraction": 0.75,
+    "worker_cost_per_hour": 0.05,
+    "fixed_cost_per_hour": 0.05
+  }
+}

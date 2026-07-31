@@ -1,0 +1,32 @@
+{
+  "pass.md": {
+    "result": "Pass",
+    "average_range": [3.0, 4.0],
+    "required_observations": [
+      "All structural gates pass",
+      "Open-loop evidence supports the safe region",
+      "Overload and retry work remain bounded",
+      "Failover, cost, ownership, and reversal are explicit"
+    ]
+  },
+  "revise.md": {
+    "result": "Revise",
+    "average_range": [1.5, 2.9],
+    "required_observations": [
+      "Artifacts exist",
+      "Closed-loop evidence weakens the capacity claim",
+      "Tail and failover reasoning are incomplete",
+      "Bounds avoid an automatic Repeat"
+    ]
+  },
+  "repeat.md": {
+    "result": "Repeat",
+    "average_range": [0.0, 1.7],
+    "required_observations": [
+      "Prediction integrity fails",
+      "Raw evidence and required sweep are absent",
+      "Retries and waiting are unbounded",
+      "Reported capacity uses a materially false model"
+    ]
+  }
+}

@@ -1,21 +1,19 @@
 #!/usr/bin/env python3
-"""Check two Module 1 evaluator calibration runs without provider SDKs."""
+"""Validate two evaluator calibration runs for any authored module."""
 
 from __future__ import annotations
 
+import argparse
 import json
 import re
 import sys
 from pathlib import Path
+from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[1]
-CALIBRATION = (
-    ROOT / "modules/01-architectural-judgment/assessment/calibration"
-)
-EXPECTED = CALIBRATION / "expected-results.json"
 FIXTURES = ("pass", "revise", "repeat")
-CRITERIA = {f"R{number:02d}" for number in range(1, 11)}
+GATES = {f"G{number:02d}" for number in range(1, 7)}
 FINDING_TYPES = {
     "missing_evidence",
     "incorrect_reasoning",
@@ -36,128 +34,211 @@ def slug(value: str) -> str:
     return re.sub(r"[-\s]+", "-", value).strip("-")
 
 
-def load_json(path: Path) -> dict:
+def load_json(path: Path) -> dict[str, Any]:
     try:
-        return json.loads(path.read_text(encoding="utf-8"))
+        value = json.loads(path.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError) as error:
         fail(f"{path}: cannot read valid JSON: {error}")
+    if not isinstance(value, dict):
+        fail(f"{path}: root must be a JSON object")
+    return value
 
 
-def fixture_headings(fixture: str) -> set[str]:
-    path = CALIBRATION / f"{fixture}.md"
-    headings = set()
-    for line in path.read_text(encoding="utf-8").splitlines():
+def resolve_path(module_root: Path, value: str) -> Path:
+    path = Path(value)
+    if path.exists():
+        return path
+    candidate = module_root / path
+    if candidate.exists():
+        return candidate
+    fail(f"calibration result does not exist: {value}")
+
+
+def fixture_headings(calibration: Path, fixture: str) -> set[str]:
+    headings: set[str] = set()
+    for line in (calibration / f"{fixture}.md").read_text(encoding="utf-8").splitlines():
         match = re.match(r"^#{1,6}\s+(.+?)\s*$", line)
         if match:
             headings.add(slug(match.group(1)))
     return headings
 
 
-def validate_run(path: Path, fixture: str, expected: dict) -> dict[str, int]:
+def validate_run(
+    path: Path,
+    fixture: str,
+    expected: dict[str, Any],
+    module_root: Path,
+    module_id: str,
+    criteria: set[str],
+) -> dict[str, int]:
     data = load_json(path)
     expected_result = expected[f"{fixture}.md"]["result"]
+    if data.get("module_id") != module_id:
+        fail(f"{path}: expected module_id {module_id}")
     if data.get("result") != expected_result:
-        fail(
-            f"{path}: expected {expected_result}, received {data.get('result')}"
-        )
+        fail(f"{path}: expected {expected_result}, received {data.get('result')}")
 
     score_rows = data.get("rubric_scores", [])
+    if not isinstance(score_rows, list) or len(score_rows) != len(criteria):
+        fail(f"{path}: expected one rubric row for each criterion")
     scores = {
         row.get("criterion_id"): row.get("score")
         for row in score_rows
         if isinstance(row, dict)
     }
-    if set(scores) != CRITERIA:
-        fail(f"{path}: expected exactly R01-R10")
+    if set(scores) != criteria:
+        fail(f"{path}: expected exactly {sorted(criteria)}")
     if any(not isinstance(score, int) or not 0 <= score <= 4 for score in scores.values()):
         fail(f"{path}: every rubric score must be an integer from 0 to 4")
 
-    calculated = round(sum(scores.values()) / 10, 2)
+    calculated = round(sum(scores.values()) / len(criteria), 2)
     if data.get("average_score") != calculated:
-        fail(
-            f"{path}: average_score is {data.get('average_score')}; "
-            f"R01-R10 average is {calculated}"
-        )
-
+        fail(f"{path}: average_score is {data.get('average_score')}; calculated {calculated}")
     lower, upper = expected[f"{fixture}.md"]["average_range"]
     if not lower <= calculated <= upper:
-        fail(
-            f"{path}: average {calculated} is outside expected range "
-            f"{lower}-{upper}"
-        )
+        fail(f"{path}: average {calculated} is outside expected range {lower}-{upper}")
 
-    headings = fixture_headings(fixture)
-    expected_path = (
-        "modules/01-architectural-judgment/assessment/calibration/"
-        f"{fixture}.md#"
-    )
-    for row in score_rows:
-        criterion = row["criterion_id"]
-        evidence = row.get("evidence", [])
-        if not evidence:
-            fail(f"{path}: {criterion} has no evidence")
-        for citation in evidence:
-            if expected_path.lower() not in citation.lower():
-                fail(f"{path}: {criterion} cites outside the fixture: {citation}")
-            fragment = citation.lower().split(expected_path.lower(), 1)[1]
+    calibration = module_root / "assessment" / "calibration"
+    headings = fixture_headings(calibration, fixture)
+    expected_prefix = f"{module_root.relative_to(ROOT)}/assessment/calibration/{fixture}.md#"
+
+    def validate_citations(citations: Any, label: str) -> None:
+        if not isinstance(citations, list) or not citations:
+            fail(f"{path}: {label} has no evidence")
+        for citation in citations:
+            if not isinstance(citation, str):
+                fail(f"{path}: {label} evidence must contain strings")
+            if expected_prefix.lower() not in citation.lower():
+                fail(f"{path}: {label} cites outside the fixture: {citation}")
+            fragment = citation.lower().split(expected_prefix.lower(), 1)[1]
             heading = fragment.split(":", 1)[0]
             if slug(heading) not in headings:
-                fail(
-                    f"{path}: {criterion} cites a missing fixture heading: "
-                    f"{heading}"
-                )
+                fail(f"{path}: {label} cites a missing fixture heading: {heading}")
 
-        for finding in row.get("findings", []):
+    gate_rows = data.get("structural_gates", [])
+    if not isinstance(gate_rows, list) or len(gate_rows) != len(GATES):
+        fail(f"{path}: expected exactly G01-G06 structural gates")
+    gates = {
+        row.get("id"): row.get("passed")
+        for row in gate_rows
+        if isinstance(row, dict)
+    }
+    if set(gates) != GATES or any(not isinstance(value, bool) for value in gates.values()):
+        fail(f"{path}: structural gates must contain one boolean row for G01-G06")
+    for row in gate_rows:
+        validate_citations(row.get("evidence"), str(row.get("id")))
+
+    for row in score_rows:
+        criterion = row["criterion_id"]
+        validate_citations(row.get("evidence"), criterion)
+        findings = row.get("findings", [])
+        if not isinstance(findings, list):
+            fail(f"{path}: {criterion} findings must be an array")
+        for finding in findings:
+            if not isinstance(finding, str):
+                fail(f"{path}: {criterion} findings must contain strings")
             classification = finding.split(":", 1)[0].strip()
             if classification not in FINDING_TYPES:
-                fail(
-                    f"{path}: {criterion} finding lacks a valid "
-                    f"classification: {finding}"
-                )
-
-        remediation = " ".join(row.get("remediation", []))
+                fail(f"{path}: {criterion} finding lacks valid classification: {finding}")
+        remediation_rows = row.get("remediation", [])
+        if not isinstance(remediation_rows, list) or any(
+            not isinstance(item, str) for item in remediation_rows
+        ):
+            fail(f"{path}: {criterion} remediation must contain strings")
+        remediation = " ".join(remediation_rows)
         if "Lesson" not in remediation or "EX-" not in remediation:
-            fail(
-                f"{path}: {criterion} remediation must name a lesson and "
-                "exercise"
-            )
+            fail(f"{path}: {criterion} remediation must name a lesson and EX- exercise")
 
+    safety_zero = scores.get("R06") == 0 or scores.get("R07") == 0
+    if data.get("safety_critical_zero") is not safety_zero:
+        fail(f"{path}: safety_critical_zero contradicts R06/R07")
+    hard_gate_failure = any(not gates[gate] for gate in ("G02", "G03", "G04", "G05"))
+    if hard_gate_failure or safety_zero:
+        calculated_result = "Repeat"
+    elif all(gates.values()) and calculated >= 3.0:
+        calculated_result = "Pass"
+    else:
+        calculated_result = "Revise"
+    if data.get("result") != calculated_result:
+        fail(
+            f"{path}: result {data.get('result')} contradicts gates and scores "
+            f"({calculated_result})"
+        )
+    confidence = data.get("confidence", {})
+    if data.get("result") == "Pass" and (
+        not isinstance(confidence, dict) or confidence.get("level") == "low"
+    ):
+        fail(f"{path}: low confidence cannot produce Pass")
     return scores
 
 
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--module",
+        default="modules/01-architectural-judgment",
+        help="module directory relative to the repository root",
+    )
+    parser.add_argument("results", nargs=6)
+    return parser.parse_args()
+
+
+def resolve_module(selector: str) -> Path:
+    candidate = Path(selector)
+    if not candidate.is_absolute():
+        candidate = ROOT / candidate
+    if candidate.is_file() and candidate.name == "module.json":
+        candidate = candidate.parent
+    if (candidate / "module.json").exists():
+        return candidate.resolve()
+
+    normalized = selector.upper()
+    matches: list[Path] = []
+    for manifest_path in sorted((ROOT / "modules").glob("*/module.json")):
+        manifest = load_json(manifest_path)
+        if str(manifest.get("id", "")).upper() == normalized:
+            matches.append(manifest_path.parent)
+    if len(matches) != 1:
+        fail(f"module selector {selector!r} did not resolve to one manifest")
+    return matches[0].resolve()
+
+
 def main() -> int:
-    if len(sys.argv) != 7:
-        print(
-            "Usage: check_calibration.py "
-            "run1-pass run1-revise run1-repeat "
-            "run2-pass run2-revise run2-repeat",
-            file=sys.stderr,
-        )
-        return 2
+    args = parse_args()
+    module_root = resolve_module(args.module)
+    manifest = load_json(module_root / "module.json")
+    module_id = str(manifest["id"])
+    calibration = module_root / "assessment" / "calibration"
+    expected = load_json(calibration / "expected-results.json")
+    rubric = (module_root / "assessment" / "rubric.md").read_text(encoding="utf-8")
+    criteria = set(re.findall(r"^## (R\d{2}):", rubric, re.MULTILINE))
+    if not criteria:
+        fail(f"{module_root}: rubric has no criterion IDs")
 
-    expected = load_json(EXPECTED)
-    paths = [Path(argument) for argument in sys.argv[1:]]
+    paths = [resolve_path(module_root, value) for value in args.results]
     run_scores: list[dict[str, dict[str, int]]] = []
-
     for run_number, run_paths in enumerate((paths[:3], paths[3:]), start=1):
-        scores_for_run = {}
+        scores_for_run: dict[str, dict[str, int]] = {}
         for fixture, path in zip(FIXTURES, run_paths):
-            scores_for_run[fixture] = validate_run(path, fixture, expected)
+            scores_for_run[fixture] = validate_run(
+                path,
+                fixture,
+                expected,
+                module_root,
+                module_id,
+                criteria,
+            )
         run_scores.append(scores_for_run)
         print(f"Calibration run {run_number}: result bands and evidence valid")
 
     for fixture in FIXTURES:
-        for criterion in CRITERIA:
+        for criterion in criteria:
             difference = abs(
                 run_scores[0][fixture][criterion]
                 - run_scores[1][fixture][criterion]
             )
             if difference > 1:
-                fail(
-                    f"{fixture}: {criterion} differs by {difference} points "
-                    "between runs"
-                )
-
+                fail(f"{fixture}: {criterion} differs by {difference} points between runs")
     print("Calibration comparison passed: every category differs by at most 1")
     return 0
 

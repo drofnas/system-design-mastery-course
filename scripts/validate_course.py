@@ -1,36 +1,83 @@
 #!/usr/bin/env python3
-"""Validate course manifests, required files, and local Markdown links."""
+"""Validate every authored course module, contract, calibration, and local link."""
 
 from __future__ import annotations
 
+import argparse
 import json
 import re
 import sys
 from pathlib import Path
+from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[1]
-MODULE_ROOT = ROOT / "modules" / "01-architectural-judgment"
-MANIFEST_PATH = MODULE_ROOT / "module.json"
 LOCAL_LINK = re.compile(r"\]\((?!https?://|mailto:|#)([^)]+)\)")
+LESSON_ID = re.compile(r"^lesson_id:\s*(L\d{2})$", re.MULTILINE)
+EXERCISE_ID = re.compile(r"^## (EX-\d{2}):", re.MULTILINE)
+RUBRIC_ID = re.compile(r"^## (R\d{2}):", re.MULTILINE)
+ALLOWED_MASTERY = {
+    "Define",
+    "Calculate",
+    "Implement",
+    "Diagnose",
+    "Decide and Teach",
+}
 
 
 def fail(errors: list[str], message: str) -> None:
     errors.append(message)
 
 
-def load_json(path: Path, errors: list[str]) -> object:
+def relative(path: Path) -> str:
+    try:
+        return str(path.relative_to(ROOT))
+    except ValueError:
+        return str(path)
+
+
+def load_json(path: Path, errors: list[str]) -> Any:
     try:
         return json.loads(path.read_text(encoding="utf-8"))
-    except (OSError, json.JSONDecodeError) as exc:
-        fail(errors, f"{path.relative_to(ROOT)}: {exc}")
+    except (OSError, json.JSONDecodeError) as error:
+        fail(errors, f"{relative(path)}: {error}")
         return {}
 
 
-def validate_manifest(errors: list[str]) -> None:
-    manifest = load_json(MANIFEST_PATH, errors)
+def discover_module_roots() -> list[Path]:
+    return sorted(path.parent for path in (ROOT / "modules").glob("*/module.json"))
+
+
+def selected_module_roots(selector: str | None, errors: list[str]) -> list[Path]:
+    roots = discover_module_roots()
+    if selector is None:
+        return roots
+
+    candidate = Path(selector)
+    if not candidate.is_absolute():
+        candidate = ROOT / candidate
+    if candidate.is_file() and candidate.name == "module.json":
+        candidate = candidate.parent
+    if (candidate / "module.json").exists():
+        return [candidate.resolve()]
+
+    normalized = selector.upper()
+    matches: list[Path] = []
+    for root in roots:
+        manifest = load_json(root / "module.json", errors)
+        if isinstance(manifest, dict) and str(manifest.get("id", "")).upper() == normalized:
+            matches.append(root)
+    if len(matches) == 1:
+        return matches
+    fail(errors, f"module selector {selector!r} did not resolve to one manifest")
+    return []
+
+
+def validate_manifest(module_root: Path, errors: list[str]) -> dict[str, Any]:
+    path = module_root / "module.json"
+    manifest = load_json(path, errors)
     if not isinstance(manifest, dict):
-        return
+        return {}
 
     required = {
         "id",
@@ -45,46 +92,66 @@ def validate_manifest(errors: list[str]) -> None:
         "assessment",
     }
     for key in sorted(required - manifest.keys()):
-        fail(errors, f"module.json: missing {key}")
+        fail(errors, f"{relative(path)}: missing {key}")
+
+    module_id = str(manifest.get("id", relative(module_root)))
+    if not re.fullmatch(r"M\d{2}", module_id):
+        fail(errors, f"{relative(path)}: invalid module id {module_id!r}")
+    if manifest.get("status") not in {"draft", "review", "ready", "retired"}:
+        fail(errors, f"{relative(path)}: invalid status {manifest.get('status')!r}")
 
     weeks = manifest.get("weeks", [])
     if not isinstance(weeks, list) or len(weeks) != 4:
-        fail(errors, "module.json: weeks must contain exactly four entries")
+        fail(errors, f"{module_id}: weeks must contain exactly four entries")
     else:
-        total = sum(float(week.get("hours", 0)) for week in weeks)
+        try:
+            total = sum(float(week.get("hours", 0)) for week in weeks)
+        except (AttributeError, TypeError, ValueError):
+            total = -1
         if not 40 <= total <= 48:
-            fail(errors, f"module.json: scheduled hours {total} are outside 40–48")
+            fail(errors, f"{module_id}: scheduled hours {total} are outside 40–48")
         if total != float(manifest.get("target_hours", -1)):
-            fail(errors, "module.json: target_hours must equal the week-hour sum")
+            fail(errors, f"{module_id}: target_hours must equal week-hour sum")
         for week in weeks:
+            if not isinstance(week, dict):
+                fail(errors, f"{module_id}: each week must be an object")
+                continue
             if not 10 <= float(week.get("hours", 0)) <= 12:
-                fail(errors, f"module.json: week {week.get('number')} is outside 10–12 hours")
+                fail(errors, f"{module_id}: week {week.get('number')} is outside 10–12 hours")
+            if not week.get("evidence"):
+                fail(errors, f"{module_id}: week {week.get('number')} has no evidence")
 
     outcomes = manifest.get("outcomes", [])
-    mapping_keys = {"lessons", "exercises", "artifacts", "rubric"}
     if not isinstance(outcomes, list) or len(outcomes) < 4:
-        fail(errors, "module.json: at least four outcomes are required")
+        fail(errors, f"{module_id}: at least four outcomes are required")
     else:
         for outcome in outcomes:
-            for key in mapping_keys:
+            if not isinstance(outcome, dict):
+                fail(errors, f"{module_id}: every outcome must be an object")
+                continue
+            for key in ("lessons", "exercises", "artifacts", "rubric"):
                 if not outcome.get(key):
-                    fail(errors, f"{outcome.get('id', 'outcome')}: empty {key} mapping")
+                    fail(errors, f"{outcome.get('id', module_id)}: empty {key} mapping")
             for profile_id in outcome.get("graduate_profile", []):
                 if not isinstance(profile_id, int) or not 1 <= profile_id <= 16:
                     fail(errors, f"{outcome.get('id')}: invalid graduate profile {profile_id}")
-            allowed_mastery = {
-                "Define",
-                "Calculate",
-                "Implement",
-                "Diagnose",
-                "Decide and Teach",
-            }
             for level in outcome.get("mastery_levels", []):
-                if level not in allowed_mastery:
+                if level not in ALLOWED_MASTERY:
                     fail(errors, f"{outcome.get('id')}: invalid mastery level {level}")
 
-    resources = manifest.get("resources", [])
-    required_resource_fields = {
+    validate_resources(module_root, manifest, errors)
+    validate_artifacts(manifest, errors)
+    validate_assessment_targets(manifest, errors)
+    validate_outcome_mappings(module_root, manifest, errors)
+    return manifest
+
+
+def validate_resources(
+    module_root: Path,
+    manifest: dict[str, Any],
+    errors: list[str],
+) -> None:
+    required_fields = {
         "id",
         "title",
         "type",
@@ -97,8 +164,15 @@ def validate_manifest(errors: list[str]) -> None:
         "last_verified",
         "text_alternative",
     }
-    for resource in resources if isinstance(resources, list) else []:
-        missing = required_resource_fields - resource.keys()
+    resources = manifest.get("resources", [])
+    if not isinstance(resources, list) or len(resources) < 3:
+        fail(errors, f"{manifest.get('id')}: at least three resources are required")
+        return
+    for resource in resources:
+        if not isinstance(resource, dict):
+            fail(errors, f"{manifest.get('id')}: each resource must be an object")
+            continue
+        missing = required_fields - resource.keys()
         if missing:
             fail(errors, f"{resource.get('id', 'resource')}: missing {sorted(missing)}")
         if resource.get("required") and resource.get("access") != "free":
@@ -107,16 +181,36 @@ def validate_manifest(errors: list[str]) -> None:
             fail(errors, f"{resource.get('id')}: resource URL must use HTTPS")
         if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(resource.get("last_verified", ""))):
             fail(errors, f"{resource.get('id')}: invalid last_verified date")
-        text_alternative = resource.get("text_alternative")
-        if text_alternative and not (MODULE_ROOT / text_alternative).exists():
-            fail(errors, f"{resource.get('id')}: missing text alternative {text_alternative}")
+        alternative = resource.get("text_alternative")
+        if alternative and not (module_root / alternative).exists():
+            fail(errors, f"{resource.get('id')}: missing text alternative {alternative}")
+        if manifest.get("id") != "M01":
+            for field in ("author_or_publisher", "purpose"):
+                if not resource.get(field):
+                    fail(errors, f"{resource.get('id')}: missing {field}")
 
-    for artifact in manifest.get("artifacts", []):
+
+def validate_artifacts(manifest: dict[str, Any], errors: list[str]) -> None:
+    artifacts = manifest.get("artifacts", [])
+    if not isinstance(artifacts, list) or len(artifacts) < 4:
+        fail(errors, f"{manifest.get('id')}: at least four artifacts are required")
+        return
+    for artifact in artifacts:
+        if not isinstance(artifact, dict):
+            fail(errors, f"{manifest.get('id')}: each artifact must be an object")
+            continue
         template = artifact.get("template_path")
-        if template and not (ROOT / template).exists():
-            fail(errors, f"{artifact.get('id')}: missing template {template}")
+        if not template or not (ROOT / template).exists():
+            fail(errors, f"{artifact.get('id')}: missing template {template!r}")
+        if not artifact.get("submission_path"):
+            fail(errors, f"{artifact.get('id')}: missing submission_path")
 
+
+def validate_assessment_targets(manifest: dict[str, Any], errors: list[str]) -> None:
     assessment = manifest.get("assessment", {})
+    if not isinstance(assessment, dict):
+        fail(errors, f"{manifest.get('id')}: assessment must be an object")
+        return
     for key in (
         "rubric_path",
         "evaluator_prompt_path",
@@ -125,28 +219,37 @@ def validate_manifest(errors: list[str]) -> None:
     ):
         value = assessment.get(key)
         if not value or not (ROOT / value).exists():
-            fail(errors, f"assessment: missing {key} target {value!r}")
-
-    validate_outcome_mappings(manifest, errors)
+            fail(errors, f"{manifest.get('id')} assessment: missing {key} target {value!r}")
 
 
-def validate_outcome_mappings(manifest: dict[str, object], errors: list[str]) -> None:
+def validate_outcome_mappings(
+    module_root: Path,
+    manifest: dict[str, Any],
+    errors: list[str],
+) -> None:
     lesson_ids: set[str] = set()
-    for path in (MODULE_ROOT / "lessons").glob("*.md"):
-        match = re.search(r"^lesson_id:\s*(L\d{2})$", path.read_text(encoding="utf-8"), re.MULTILINE)
+    for path in (module_root / "lessons").glob("*.md"):
+        match = LESSON_ID.search(path.read_text(encoding="utf-8"))
         if match:
             lesson_ids.add(match.group(1))
 
-    exercise_text = (MODULE_ROOT / "exercises" / "exercises.md").read_text(encoding="utf-8")
-    exercise_ids = set(re.findall(r"^## (EX-\d{2}):", exercise_text, re.MULTILINE))
-    rubric_text = (MODULE_ROOT / "assessment" / "rubric.md").read_text(encoding="utf-8")
-    rubric_ids = set(re.findall(r"^## (R\d{2}):", rubric_text, re.MULTILINE))
+    exercise_path = module_root / "exercises" / "exercises.md"
+    rubric_path = ROOT / manifest["assessment"]["rubric_path"]
+    exercise_ids = (
+        set(EXERCISE_ID.findall(exercise_path.read_text(encoding="utf-8")))
+        if exercise_path.exists()
+        else set()
+    )
+    rubric_ids = (
+        set(RUBRIC_ID.findall(rubric_path.read_text(encoding="utf-8")))
+        if rubric_path.exists()
+        else set()
+    )
     artifact_ids = {
         artifact.get("id")
         for artifact in manifest.get("artifacts", [])
         if isinstance(artifact, dict)
     }
-
     known = {
         "lessons": lesson_ids,
         "exercises": exercise_ids,
@@ -154,6 +257,8 @@ def validate_outcome_mappings(manifest: dict[str, object], errors: list[str]) ->
         "rubric": rubric_ids,
     }
     for outcome in manifest.get("outcomes", []):
+        if not isinstance(outcome, dict):
+            continue
         for mapping, identifiers in known.items():
             for identifier in outcome.get(mapping, []):
                 if identifier not in identifiers:
@@ -163,43 +268,44 @@ def validate_outcome_mappings(manifest: dict[str, object], errors: list[str]) ->
                     )
 
 
-def validate_required_files(errors: list[str]) -> None:
+def validate_required_files(
+    module_root: Path,
+    manifest: dict[str, Any],
+    errors: list[str],
+) -> None:
     required = [
-        ROOT / "AGENTS.md",
-        ROOT / "MODULE_STANDARD.md",
-        ROOT / "schemas" / "module.schema.json",
-        ROOT / "schemas" / "evaluation.schema.json",
-        ROOT / "scripts" / "check_calibration.py",
-        MODULE_ROOT / "README.md",
-        MODULE_ROOT / "resources.md",
-        MODULE_ROOT / "glossary.md",
-        MODULE_ROOT / "case-study" / "transit-alerting.md",
-        MODULE_ROOT / "exercises" / "exercises.md",
-        MODULE_ROOT / "exercises" / "answer-key.md",
-        MODULE_ROOT / "assessment" / "rubric.md",
-        MODULE_ROOT / "assessment" / "evaluator-prompt.md",
-        MODULE_ROOT / "assessment" / "calibration" / "results.md",
-        MODULE_ROOT / "assessment" / "calibration" / "results.json",
+        module_root / "README.md",
+        module_root / "module.json",
+        module_root / "resources.md",
+        module_root / "glossary.md",
+        module_root / "exercises" / "exercises.md",
+        module_root / "exercises" / "answer-key.md",
+        module_root / "assessment" / "README.md",
+        module_root / "assessment" / "rubric.md",
+        module_root / "assessment" / "evaluator-prompt.md",
+        module_root / "assessment" / "report-template.md",
+        module_root / "assessment" / "calibration" / "README.md",
+        module_root / "assessment" / "calibration" / "expected-results.json",
+        module_root / "assessment" / "calibration" / "pass.md",
+        module_root / "assessment" / "calibration" / "revise.md",
+        module_root / "assessment" / "calibration" / "repeat.md",
     ]
-    required.extend(
-        MODULE_ROOT / "lessons" / f"{number:02d}-{slug}.md"
-        for number, slug in (
-            (1, "architectural-judgment"),
-            (2, "problem-framing-and-workloads"),
-            (3, "invariants-and-state-ownership"),
-            (4, "quality-attribute-scenarios"),
-            (5, "context-and-boundaries"),
-            (6, "constraints-options-and-reversibility"),
-            (7, "failure-models-and-adversarial-review"),
-            (8, "decisions-rfcs-and-defense"),
-        )
-    )
     for path in required:
         if not path.exists():
-            fail(errors, f"missing required file: {path.relative_to(ROOT)}")
+            fail(errors, f"missing required file: {relative(path)}")
+
+    if not list((module_root / "case-study").glob("*.md")):
+        fail(errors, f"{relative(module_root)}: case-study Markdown is required")
+    if len(list((module_root / "lessons").glob("*.md"))) < 4:
+        fail(errors, f"{relative(module_root)}: at least four local lessons are required")
+    if manifest.get("status") == "ready":
+        for name in ("results.json", "results.md"):
+            path = module_root / "assessment" / "calibration" / name
+            if not path.exists():
+                fail(errors, f"{manifest.get('id')}: ready module missing calibration/{name}")
 
 
-def validate_lesson_contracts(errors: list[str]) -> None:
+def validate_lesson_contracts(module_root: Path, errors: list[str]) -> None:
     required_sections = [
         "## Outcomes",
         "## Prerequisites",
@@ -210,41 +316,50 @@ def validate_lesson_contracts(errors: list[str]) -> None:
         "## Explained answers",
         "## Sources and next work",
     ]
-    for lesson in sorted((MODULE_ROOT / "lessons").glob("*.md")):
+    for lesson in sorted((module_root / "lessons").glob("*.md")):
         text = lesson.read_text(encoding="utf-8")
         for section in required_sections:
             if section not in text:
-                fail(errors, f"{lesson.relative_to(ROOT)}: missing lesson section {section}")
+                fail(errors, f"{relative(lesson)}: missing lesson section {section}")
 
 
-def validate_calibration(errors: list[str]) -> None:
-    calibration = MODULE_ROOT / "assessment" / "calibration"
+def validate_calibration(
+    module_root: Path,
+    manifest: dict[str, Any],
+    errors: list[str],
+) -> None:
+    calibration = module_root / "assessment" / "calibration"
     expected = load_json(calibration / "expected-results.json", errors)
     if not isinstance(expected, dict):
         return
-    expected_bands = {
+    for fixture, result in {
         "pass.md": "Pass",
         "revise.md": "Revise",
         "repeat.md": "Repeat",
-    }
-    for fixture, result in expected_bands.items():
-        if not (calibration / fixture).exists():
-            fail(errors, f"calibration: missing {fixture}")
+    }.items():
         entry = expected.get(fixture)
         if not isinstance(entry, dict) or entry.get("result") != result:
-            fail(errors, f"calibration: {fixture} must expect {result}")
+            fail(errors, f"{manifest.get('id')} calibration: {fixture} must expect {result}")
 
-    results = load_json(calibration / "results.json", errors)
+    results_path = calibration / "results.json"
+    if not results_path.exists():
+        if manifest.get("status") == "ready":
+            fail(errors, f"{manifest.get('id')}: ready module has no calibration results")
+        return
+    results = load_json(results_path, errors)
     if not isinstance(results, dict):
         return
     if results.get("checker_passed") is not True:
-        fail(errors, "calibration: deterministic checker has not passed")
+        fail(errors, f"{manifest.get('id')}: deterministic calibration checker has not passed")
     runs = results.get("runs", [])
     if not isinstance(runs, list) or len(runs) < 2:
-        fail(errors, "calibration: at least two accepted runs are required")
+        fail(errors, f"{manifest.get('id')}: at least two accepted calibration runs are required")
         return
 
-    accepted_scores: list[dict[str, dict[str, int]]] = []
+    rubric_path = module_root / "assessment" / "rubric.md"
+    criteria = set(RUBRIC_ID.findall(rubric_path.read_text(encoding="utf-8")))
+    accepted: list[dict[str, dict[str, int]]] = []
+    raw_records: list[tuple[str, str, Path, dict[str, int]]] = []
     for run in runs[:2]:
         fixtures = run.get("fixtures", {})
         scores_for_run: dict[str, dict[str, int]] = {}
@@ -255,51 +370,87 @@ def validate_calibration(errors: list[str]) -> None:
         ):
             result = fixtures.get(fixture, {})
             if result.get("result") != expected_result:
-                fail(
-                    errors,
-                    f"calibration: {run.get('id')} {fixture} must be "
-                    f"{expected_result}",
-                )
+                fail(errors, f"{manifest.get('id')}: {run.get('id')} {fixture} must be {expected_result}")
             scores = result.get("scores", {})
-            if set(scores) != {f"R{number:02d}" for number in range(1, 11)}:
-                fail(errors, f"calibration: {run.get('id')} {fixture} needs R01-R10")
+            if set(scores) != criteria:
+                fail(errors, f"{manifest.get('id')}: {run.get('id')} {fixture} needs {sorted(criteria)}")
                 continue
-            calculated = round(sum(scores.values()) / 10, 2)
+            if any(
+                not isinstance(score, int) or not 0 <= score <= 4
+                for score in scores.values()
+            ):
+                fail(errors, f"{manifest.get('id')}: {run.get('id')} {fixture} has invalid scores")
+                continue
+            calculated = round(sum(scores.values()) / len(criteria), 2)
             if result.get("average_score") != calculated:
+                fail(errors, f"{manifest.get('id')}: {run.get('id')} {fixture} average mismatch")
+            lower, upper = expected[f"{fixture}.md"]["average_range"]
+            if not lower <= calculated <= upper:
                 fail(
                     errors,
-                    f"calibration: {run.get('id')} {fixture} average mismatch",
+                    f"{manifest.get('id')}: {run.get('id')} {fixture} average "
+                    f"{calculated} is outside {lower}-{upper}",
                 )
+            raw_reference = result.get("raw_result")
+            if raw_reference:
+                raw_path = (calibration / raw_reference).resolve()
+                if not raw_path.is_relative_to(calibration.resolve()):
+                    fail(errors, f"{manifest.get('id')}: raw result escapes calibration directory")
+                elif not raw_path.exists():
+                    fail(errors, f"{manifest.get('id')}: missing raw result {raw_reference}")
+                else:
+                    raw_records.append((run.get("id", "run"), fixture, raw_path, scores))
+            elif manifest.get("status") == "ready" and manifest.get("id") != "M01":
+                fail(errors, f"{manifest.get('id')}: ready calibration lacks raw {fixture} result")
             scores_for_run[fixture] = scores
-        accepted_scores.append(scores_for_run)
+        accepted.append(scores_for_run)
 
-    if len(accepted_scores) == 2:
+    maximum_drift = 0
+    if len(accepted) == 2:
         for fixture in ("pass", "revise", "repeat"):
-            if fixture not in accepted_scores[0] or fixture not in accepted_scores[1]:
+            if fixture not in accepted[0] or fixture not in accepted[1]:
                 continue
-            for criterion in accepted_scores[0][fixture]:
-                drift = abs(
-                    accepted_scores[0][fixture][criterion]
-                    - accepted_scores[1][fixture][criterion]
-                )
+            for criterion in criteria:
+                drift = abs(accepted[0][fixture][criterion] - accepted[1][fixture][criterion])
+                maximum_drift = max(maximum_drift, drift)
                 if drift > 1:
+                    fail(errors, f"{manifest.get('id')}: {fixture} {criterion} drift is {drift}")
+    if results.get("max_category_drift") != maximum_drift:
+        fail(errors, f"{manifest.get('id')}: reported maximum category drift is incorrect")
+
+    if raw_records:
+        try:
+            from check_calibration import validate_run as validate_raw_run
+
+            for run_id, fixture, raw_path, aggregate_scores in raw_records:
+                raw_scores = validate_raw_run(
+                    raw_path,
+                    fixture,
+                    expected,
+                    module_root,
+                    str(manifest.get("id")),
+                    criteria,
+                )
+                if raw_scores != aggregate_scores:
                     fail(
                         errors,
-                        f"calibration: {fixture} {criterion} drift is {drift}",
+                        f"{manifest.get('id')}: {run_id} {fixture} raw scores "
+                        "do not match results.json",
                     )
+        except (ImportError, ValueError) as error:
+            fail(errors, f"{manifest.get('id')}: raw calibration validation failed: {error}")
 
 
 def validate_baseline(errors: list[str]) -> None:
     path = ROOT / "capstone" / "baselines" / "week-01-baseline.md"
     text = path.read_text(encoding="utf-8")
-    required_headings = [
+    for heading in (
         "Functional scope and non-goals",
         "Assumptions and constraints",
         "Cost boundaries",
         "Decision drivers",
         "Reversal evidence",
-    ]
-    for heading in required_headings:
+    ):
         if heading not in text:
             fail(errors, f"baseline: missing {heading}")
     if len(re.findall(r"^\| INV-\d{2} ", text, re.MULTILINE)) < 10:
@@ -317,22 +468,41 @@ def validate_local_links(errors: list[str]) -> None:
             target = raw_target.split("#", 1)[0].split(" ", 1)[0].strip("<>")
             if not target:
                 continue
-            resolved = (markdown.parent / target).resolve()
-            if not resolved.exists():
-                fail(
-                    errors,
-                    f"{markdown.relative_to(ROOT)}: broken local link {raw_target}",
-                )
+            if not (markdown.parent / target).resolve().exists():
+                fail(errors, f"{relative(markdown)}: broken local link {raw_target}")
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--module",
+        help="validate one module by ID (for example M02) or repository-relative path",
+    )
+    return parser.parse_args()
 
 
 def main() -> int:
+    args = parse_args()
     errors: list[str] = []
-    load_json(ROOT / "schemas" / "module.schema.json", errors)
-    load_json(ROOT / "schemas" / "evaluation.schema.json", errors)
-    validate_required_files(errors)
-    validate_manifest(errors)
-    validate_lesson_contracts(errors)
-    validate_calibration(errors)
+    for path in (
+        ROOT / "schemas" / "module.schema.json",
+        ROOT / "schemas" / "evaluation.schema.json",
+        ROOT / "schemas" / "capacity-scenario.schema.json",
+        ROOT / "schemas" / "capacity-trial.schema.json",
+    ):
+        load_json(path, errors)
+
+    roots = selected_module_roots(args.module, errors)
+    if not roots:
+        fail(errors, "no module manifests found")
+    manifests: list[dict[str, Any]] = []
+    for module_root in roots:
+        manifest = validate_manifest(module_root, errors)
+        manifests.append(manifest)
+        validate_required_files(module_root, manifest, errors)
+        validate_lesson_contracts(module_root, errors)
+        validate_calibration(module_root, manifest, errors)
+
     validate_baseline(errors)
     validate_local_links(errors)
 
@@ -343,11 +513,14 @@ def main() -> int:
         return 1
 
     print("Course validation passed.")
-    print("- Module 1 manifest: valid")
-    print("- Scheduled time: 42 hours")
-    print("- Required content: present")
-    print("- Baseline contract: present")
-    print("- Local Markdown links: valid")
+    for manifest in manifests:
+        print(
+            f"- {manifest.get('id')} {manifest.get('title')}: "
+            f"{manifest.get('target_hours')} hours, {manifest.get('status')}"
+        )
+    print("- Required content and outcome mappings: present")
+    print("- Calibration state: valid for each module status")
+    print("- Baseline contract and local Markdown links: valid")
     return 0
 
 
