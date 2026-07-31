@@ -235,6 +235,18 @@ class NativeIntegrationTests(unittest.TestCase):
         with self.assertRaises(ScenarioError):
             validate_trial(trial)
 
+    def test_trial_rejects_unicode_identifier(self) -> None:
+        trial = run_trial(copy.deepcopy(BASE))
+        trial["scenario_id"] = "é"
+        with self.assertRaises(ScenarioError):
+            validate_trial(trial)
+
+    def test_trial_rejects_float_for_integer_summary(self) -> None:
+        trial = run_trial(copy.deepcopy(BASE))
+        trial["summary"]["repetitions"] = float(trial["summary"]["repetitions"])
+        with self.assertRaises(ScenarioError):
+            validate_trial(trial)
+
 
 if __name__ == "__main__":
     unittest.main()

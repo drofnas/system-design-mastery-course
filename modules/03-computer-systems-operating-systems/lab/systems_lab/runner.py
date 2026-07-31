@@ -6,6 +6,7 @@ import json
 import math
 import os
 import platform
+import re
 import resource
 import statistics
 import subprocess
@@ -367,7 +368,7 @@ def validate_trial(trial: Any) -> dict[str, Any]:
         raise ScenarioError("trial contains fields outside the published schema")
     if trial["schema_version"] != 1:
         raise ScenarioError("trial schema_version must be 1")
-    if not isinstance(trial["scenario_id"], str) or not trial["scenario_id"].replace("-", "").isalnum():
+    if not isinstance(trial["scenario_id"], str) or re.fullmatch(r"[A-Za-z0-9-]+", trial["scenario_id"]) is None:
         raise ScenarioError("trial scenario_id is invalid")
     if not isinstance(trial["source_commit"], str) or len(trial["source_commit"]) < 7:
         raise ScenarioError("trial source_commit is invalid")
@@ -454,6 +455,14 @@ def validate_trial(trial: Any) -> dict[str, Any]:
     }
     if not isinstance(summary, dict) or set(summary) != summary_fields:
         raise ScenarioError("trial summary does not match the published schema")
+    integer_summary_fields = summary_fields - {
+        "median_throughput_per_second", "median_bytes_per_second"
+    }
+    if any(
+        isinstance(summary[key], bool) or not isinstance(summary[key], int) or summary[key] < 0
+        for key in integer_summary_fields
+    ):
+        raise ScenarioError("trial summary integer fields must be non-negative integers")
     elapsed = [sample["elapsed_ns"] for sample in samples]
     successful = [sample for sample in samples if sample["outcome"] == "ok"]
     expected = {

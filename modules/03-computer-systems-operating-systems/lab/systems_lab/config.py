@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import math
+import re
 from pathlib import Path
 from typing import Any
 
@@ -52,7 +53,7 @@ def validate_scenario(value: Any) -> dict[str, Any]:
     if value["schema_version"] != 1:
         raise ScenarioError("schema_version must be 1")
     if (not isinstance(value["id"], str) or not 1 <= len(value["id"]) <= 64
-            or not value["id"].replace("-", "").isalnum()):
+            or re.fullmatch(r"[A-Za-z0-9-]+", value["id"]) is None):
         raise ScenarioError("id must contain letters, digits, and hyphens")
     probe = value["probe"]
     variant = value["variant"]
