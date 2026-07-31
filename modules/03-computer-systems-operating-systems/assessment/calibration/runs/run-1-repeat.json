@@ -1,0 +1,218 @@
+{
+  "module_id": "M03",
+  "artifact_commit": "f8d86b3",
+  "baseline_tag": null,
+  "evaluated_at": "2026-07-31T12:00:00-07:00",
+  "structural_gates": [
+    {
+      "id": "G01",
+      "passed": false,
+      "evidence": [
+        "modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Artifact and freeze record"
+      ]
+    },
+    {
+      "id": "G02",
+      "passed": false,
+      "evidence": [
+        "modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Artifact and freeze record"
+      ]
+    },
+    {
+      "id": "G03",
+      "passed": false,
+      "evidence": [
+        "modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Build and required experiments"
+      ]
+    },
+    {
+      "id": "G04",
+      "passed": false,
+      "evidence": [
+        "modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Measurement and diagnosis"
+      ]
+    },
+    {
+      "id": "G05",
+      "passed": false,
+      "evidence": [
+        "modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Build and required experiments"
+      ]
+    },
+    {
+      "id": "G06",
+      "passed": false,
+      "evidence": [
+        "modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Resource containment, decision, and defense"
+      ]
+    }
+  ],
+  "rubric_scores": [
+    {
+      "criterion_id": "R01",
+      "score": 0,
+      "evidence": [
+        "modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Machine and workload model: the machine boundary and compiler, filesystem, constraint, repetition, and checksum evidence are absent, while locality variants process different record counts"
+      ],
+      "findings": [
+        "invariant_failure: different record counts invalidate the equivalent-work boundary; modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Machine and workload model",
+        "missing_evidence: the machine, runtime, compiler, filesystem, constraint, and checksum model cannot support a scoped claim; modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Machine and workload model"
+      ],
+      "remediation": [
+        "Lesson 1; EX-01"
+      ]
+    },
+    {
+      "criterion_id": "R02",
+      "score": 0,
+      "evidence": [
+        "modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Artifact and freeze record: the prediction was edited after results and two raw timings were hand-normalized",
+        "modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Measurement and diagnosis: single elapsed values lack identities, counters, outcomes, repetitions, and limitations, and estimates are presented as measurements"
+      ],
+      "findings": [
+        "invariant_failure: post-result prediction editing destroys prediction integrity; modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Artifact and freeze record",
+        "incorrect_reasoning: altered trials and estimated measurements cannot support benchmark conclusions; modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Measurement and diagnosis"
+      ],
+      "remediation": [
+        "Lesson 1; EX-03"
+      ]
+    },
+    {
+      "criterion_id": "R03",
+      "score": 0,
+      "evidence": [
+        "modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Machine and workload model: locality variants perform unequal logical work",
+        "modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Measurement and diagnosis: every slowdown is attributed to cache misses without supporting counters"
+      ],
+      "findings": [
+        "invariant_failure: unequal record counts make the locality comparison causally uninterpretable; modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Machine and workload model",
+        "unsupported_claim: attributing every slowdown to cache misses without counter evidence prevents a scoped processor diagnosis; modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Measurement and diagnosis"
+      ],
+      "remediation": [
+        "Lesson 1; EX-02"
+      ]
+    },
+    {
+      "criterion_id": "R04",
+      "score": 0,
+      "evidence": [
+        "modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Build and required experiments: oversized-concurrency and syscall-batching evidence are absent, and the deadlock probe has no timeout",
+        "modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Measurement and diagnosis: scheduler throttling is claimed without controller or scheduler evidence"
+      ],
+      "findings": [
+        "invariant_failure: an in-process deadlock probe without a timeout leaves required concurrent work unbounded; modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Build and required experiments",
+        "unsupported_claim: scheduler throttling is asserted without quota, controller, context-switch, CPU, or throughput evidence; modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Measurement and diagnosis"
+      ],
+      "remediation": [
+        "Lesson 2; EX-04"
+      ]
+    },
+    {
+      "criterion_id": "R05",
+      "score": 0,
+      "evidence": [
+        "modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Build and required experiments: bounded page-touch and memory-pressure evidence are absent",
+        "modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Measurement and diagnosis: raw counters and outcomes are not submitted"
+      ],
+      "findings": [
+        "missing_evidence: allocation lifetime, page touching, RSS, faults, reclaim, memory limits, outcomes, and workload checksums are unavailable; modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Build and required experiments"
+      ],
+      "remediation": [
+        "Lesson 3; EX-06"
+      ]
+    },
+    {
+      "criterion_id": "R06",
+      "score": 0,
+      "evidence": [
+        "modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Concurrency and durability safety: the shared counter loses increments and the accepted run only happened to match",
+        "modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Build and required experiments: the deadlock probe runs without a timeout"
+      ],
+      "findings": [
+        "invariant_failure: lost increments demonstrate a concurrency correctness failure that a coincidentally matching run does not repair; modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Concurrency and durability safety",
+        "invariant_failure: the uncontained deadlock requires manual termination and violates bounded-progress requirements; modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Concurrency and durability safety"
+      ],
+      "remediation": [
+        "Lesson 4; EX-08"
+      ]
+    },
+    {
+      "criterion_id": "R07",
+      "score": 0,
+      "evidence": [
+        "modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Concurrency and durability safety: acknowledgement occurs before flush, sync, rename, and directory errors are checked, and a crash loses acknowledged progress"
+      ],
+      "findings": [
+        "invariant_failure: the acknowledgement policy falsely claims durability before the required persistence and error boundaries; modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Concurrency and durability safety",
+        "incorrect_reasoning: dismissing observed acknowledged-progress loss as an outlier leaves the demonstrated durability failure uncontained; modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Concurrency and durability safety"
+      ],
+      "remediation": [
+        "Lesson 5; EX-09"
+      ]
+    },
+    {
+      "criterion_id": "R08",
+      "score": 0,
+      "evidence": [
+        "modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Resource containment, decision, and defense: a privileged container mounts the repository writable and Docker Desktop timing is represented as a bare-metal guarantee",
+        "modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Build and required experiments: CPU quota, memory pressure, and I/O contention evidence are absent"
+      ],
+      "findings": [
+        "invariant_failure: privileged execution with a writable repository violates the bounded, unprivileged experiment boundary; modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Resource containment, decision, and defense",
+        "incorrect_reasoning: Docker Desktop observations are generalized into a bare-metal production guarantee without transfer evidence; modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Resource containment, decision, and defense"
+      ],
+      "remediation": [
+        "Lesson 7; EX-10"
+      ]
+    },
+    {
+      "criterion_id": "R09",
+      "score": 0,
+      "evidence": [
+        "modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Artifact and freeze record: raw timings and the prediction were altered after observation",
+        "modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Measurement and diagnosis: estimates are labeled as measurements and cache and scheduler causes are asserted without discriminating evidence"
+      ],
+      "findings": [
+        "invariant_failure: altering the prediction and raw trials destroys the preserved observation chain required for causal diagnosis; modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Artifact and freeze record",
+        "incorrect_reasoning: unsupported mechanism selection and estimated measurements cannot distinguish cache, scheduler, workload, or measurement alternatives; modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Measurement and diagnosis"
+      ],
+      "remediation": [
+        "Lesson 8; EX-11"
+      ]
+    },
+    {
+      "criterion_id": "R10",
+      "score": 0,
+      "evidence": [
+        "modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Resource containment, decision, and defense: the recommendation lacks correctness bounds, security, cost, owner, migration, rollback, and reversal conditions",
+        "modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Resource containment, decision, and defense: the defense changes workload and durability assumptions and required decision artifacts are missing"
+      ],
+      "findings": [
+        "invariant_failure: recommending less flushing after demonstrated acknowledged data loss creates an unsafe rollout decision; modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Resource containment, decision, and defense",
+        "internal_contradiction: changing the record count and durability promise during defense invalidates the assumptions under which the recommendation was evaluated; modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Resource containment, decision, and defense",
+        "missing_evidence: the failure matrix, evaluation target, separate revision, ownership, migration, rollback, cost, and reversal conditions are absent; modules/03-computer-systems-operating-systems/assessment/calibration/repeat.md#Resource containment, decision, and defense"
+      ],
+      "remediation": [
+        "Lesson 8; EX-12"
+      ]
+    }
+  ],
+  "average_score": 0.0,
+  "safety_critical_zero": true,
+  "result": "Repeat",
+  "confidence": {
+    "level": "high",
+    "reasons": [
+      "The submitted fixture directly documents prediction and raw-evidence alteration.",
+      "Required benchmark, containment, concurrency, and durability evidence is explicitly absent or unsafe.",
+      "Both safety-critical criteria contain demonstrated invariant failures."
+    ]
+  },
+  "summary": "Repeat is required because G02, G03, G04, and G05 fail; prediction and measurement integrity are compromised; required work includes an unbounded deadlock; and both concurrency and durability invariants fail. The ten scores total 0, yielding an exact average of 0.0.",
+  "next_actions": [
+    "Create a new remediation attempt with a prediction frozen before any experiment evidence; preserve the failed submission unchanged.",
+    "Regenerate the complete bounded experiment matrix with equivalent-work checks, unaltered raw trials, required counters, repetitions, sanitizer evidence, and Linux-container evidence.",
+    "Repair and adversarially test concurrency and durability invariants before making a new production decision.",
+    "Submit a new decision and defense with fixed assumptions, explicit loss bounds, security and cost analysis, owners, migration, rollback, reversal conditions, and all missing learning artifacts."
+  ]
+}

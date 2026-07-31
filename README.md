@@ -101,7 +101,8 @@ scripts/        Course validation tools
 |---:|---:|---|---|
 | 1. Architectural Judgment | 1–4 | Ready | [Start Module 1](modules/01-architectural-judgment/README.md) |
 | 2. Capacity, Queues, and Tail Latency | 5–8 | Ready | [Start Module 2](modules/02-capacity-queues-tail-latency/README.md) |
-| 3–18 | 9–72 | Syllabus-defined; teaching packages not yet authored | [Course syllabus](00_COURSE_SYLLABUS.md) |
+| 3. Computer Systems and Operating Systems | 9–12 | Ready | [Start Module 3](modules/03-computer-systems-operating-systems/README.md) |
+| 4–18 | 13–72 | Syllabus-defined; teaching packages not yet authored | [Course syllabus](00_COURSE_SYLLABUS.md) |
 
 Future modules must satisfy
 [`MODULE_STANDARD.md`](MODULE_STANDARD.md). Course-authoring agents must also
@@ -118,8 +119,8 @@ python3 scripts/validate_course.py
 The validator discovers every module manifest and checks hour budgets, outcome
 mappings, lesson and resource contracts, required teaching and assessment
 files, calibration state, the frozen baseline contract, JSON interfaces, and
-local Markdown links. Use `--module M01` or `--module M02` to validate a single
-module.
+local Markdown links. Use `--module M01`, `--module M02`, or `--module M03` to
+validate a single module.
 
 ## Evidence and AI rules
 
@@ -139,5 +140,6 @@ module.
 - [`templates/adr-template.md`](templates/adr-template.md)
 - [`templates/rfc-template.md`](templates/rfc-template.md)
 - [`templates/experiment-report-template.md`](templates/experiment-report-template.md)
+- [`templates/systems-performance-report-template.md`](templates/systems-performance-report-template.md)
 - [`templates/review-template.md`](templates/review-template.md)
 - [`templates/rubric-scorecard-template.md`](templates/rubric-scorecard-template.md)

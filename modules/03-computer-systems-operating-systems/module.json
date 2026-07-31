@@ -1,0 +1,358 @@
+{
+  "$schema": "../../schemas/module.schema.json",
+  "id": "M03",
+  "title": "Computer Systems and Operating Systems",
+  "weeks": [
+    {
+      "number": 9,
+      "focus": "Machine model and frozen prediction",
+      "hours": 10.5,
+      "evidence": [
+        "Machine and workload inventory",
+        "Frozen benchmark prediction",
+        "Week 9 learning log"
+      ]
+    },
+    {
+      "number": 10,
+      "focus": "Portable probes and instrumentation",
+      "hours": 10.5,
+      "evidence": [
+        "C11 probes and Python harness",
+        "Automated and sanitizer checks",
+        "Guided build review",
+        "Week 10 learning log"
+      ]
+    },
+    {
+      "number": 11,
+      "focus": "Break and measure",
+      "hours": 10.5,
+      "evidence": [
+        "Raw systems-trial JSON",
+        "Required experiment matrix",
+        "Failure matrix",
+        "Week 11 learning log"
+      ]
+    },
+    {
+      "number": 12,
+      "focus": "Decide, teach, and Gate 1",
+      "hours": 10.5,
+      "evidence": [
+        "Counterintuitive-result report",
+        "Systems-performance decision",
+        "Recorded teach-back",
+        "Evaluation and separate revision",
+        "Gate 1 record",
+        "Week 12 learning log"
+      ]
+    }
+  ],
+  "target_hours": 42,
+  "status": "ready",
+  "readiness_note": "Ready on 2026-07-31 after six accepted evaluator runs, clean independent authoring review, 24 native tests, sanitizer checks, 37 validated matrix scenarios including Linux GCC constraints, M01/M02 regressions, and focused/full course validation.",
+  "outcomes": [
+    {
+      "id": "M03-O1",
+      "statement": "Freeze a falsifiable benchmark contract with equivalent work, machine boundaries, measurement limits, and production-transfer uncertainty.",
+      "graduate_profile": [1, 2, 3, 8],
+      "mastery_levels": ["Define", "Calculate", "Diagnose"],
+      "lessons": ["L01"],
+      "exercises": ["EX-01", "EX-02", "EX-03"],
+      "artifacts": ["A01", "A04"],
+      "rubric": ["R01", "R02"]
+    },
+    {
+      "id": "M03-O2",
+      "statement": "Explain and measure how access patterns, branches, copying, pipelines, and caches shape equivalent application work.",
+      "graduate_profile": [3, 8, 11],
+      "mastery_levels": ["Define", "Implement", "Diagnose"],
+      "lessons": ["L01"],
+      "exercises": ["EX-02", "EX-03"],
+      "artifacts": ["A02", "A03", "A04"],
+      "rubric": ["R03"]
+    },
+    {
+      "id": "M03-O3",
+      "statement": "Relate runnable work, processes, threads, syscalls, context switches, quotas, and oversubscription to useful throughput.",
+      "graduate_profile": [3, 6, 8],
+      "mastery_levels": ["Calculate", "Implement", "Diagnose"],
+      "lessons": ["L02", "L07"],
+      "exercises": ["EX-04", "EX-05", "EX-11"],
+      "artifacts": ["A02", "A04"],
+      "rubric": ["R04", "R08"]
+    },
+    {
+      "id": "M03-O4",
+      "statement": "Diagnose allocation lifetime, page touching, faults, residency, reclaim pressure, and memory-limit outcomes without conflating their counters.",
+      "graduate_profile": [3, 7, 8, 11],
+      "mastery_levels": ["Define", "Implement", "Diagnose"],
+      "lessons": ["L03", "L07"],
+      "exercises": ["EX-05", "EX-06", "EX-11"],
+      "artifacts": ["A03", "A04"],
+      "rubric": ["R05", "R08"]
+    },
+    {
+      "id": "M03-O5",
+      "statement": "Implement and safely test lock contention, bounded deadlock, shared-state invariants, and false sharing.",
+      "graduate_profile": [6, 7, 8, 11],
+      "mastery_levels": ["Implement", "Diagnose", "Decide and Teach"],
+      "lessons": ["L04"],
+      "exercises": ["EX-07", "EX-08"],
+      "artifacts": ["A03", "A04", "A05"],
+      "rubric": ["R06"]
+    },
+    {
+      "id": "M03-O6",
+      "statement": "Distinguish buffered completion, page-cache writeback, device queues, file sync, directory durability, and recoverable acknowledgement.",
+      "graduate_profile": [2, 3, 7, 8],
+      "mastery_levels": ["Define", "Implement", "Diagnose", "Decide and Teach"],
+      "lessons": ["L05", "L06"],
+      "exercises": ["EX-09", "EX-10"],
+      "artifacts": ["A03", "A04", "A05", "A06"],
+      "rubric": ["R07"]
+    },
+    {
+      "id": "M03-O7",
+      "statement": "Apply unprivileged CPU, memory, PID, and I/O constraints and transfer container evidence with explicit operational limits and owners.",
+      "graduate_profile": [2, 3, 8, 9, 10],
+      "mastery_levels": ["Calculate", "Implement", "Diagnose"],
+      "lessons": ["L06", "L07"],
+      "exercises": ["EX-10", "EX-11"],
+      "artifacts": ["A04", "A05"],
+      "rubric": ["R08", "R09"]
+    },
+    {
+      "id": "M03-O8",
+      "statement": "Defend and teach a systems-performance decision from a counterintuitive result with cost, security, operations, ownership, migration, rollback, and reversal evidence.",
+      "graduate_profile": [8, 10, 14, 15, 16],
+      "mastery_levels": ["Diagnose", "Decide and Teach"],
+      "lessons": ["L08"],
+      "exercises": ["EX-11", "EX-12"],
+      "artifacts": ["A05", "A06", "A07", "A08", "A09", "A10"],
+      "rubric": ["R09", "R10"]
+    }
+  ],
+  "resources": [
+    {
+      "id": "RES-01",
+      "title": "getrusage(2)",
+      "author_or_publisher": "Linux man-pages project",
+      "type": "maintainer interface documentation",
+      "url": "https://man7.org/linux/man-pages/man2/getrusage.2.html",
+      "required": true,
+      "access": "free",
+      "week": 9,
+      "estimated_minutes": 25,
+      "purpose": "Bound what process resource counters can and cannot establish.",
+      "assignment": "Read Description through maintained ru_* fields and Notes; create a counter-versus-claim table and identify one unmaintained-field risk.",
+      "last_verified": "2026-07-31",
+      "text_alternative": "lessons/02-processes-scheduling-and-syscalls.md"
+    },
+    {
+      "id": "RES-02",
+      "title": "Virtual Memory",
+      "author_or_publisher": "Chris Terman; MIT OpenCourseWare",
+      "type": "captioned lecture videos and transcripts",
+      "url": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c16/c16s2/c16s2v2/",
+      "required": true,
+      "access": "free",
+      "week": 10,
+      "estimated_minutes": 40,
+      "purpose": "Trace address translation and distinguish translation events from storage faults.",
+      "assignment": "Watch or read the named virtual-memory segments; draw an address-translation path and classify one minor and one major fault.",
+      "last_verified": "2026-07-31",
+      "text_alternative": "lessons/03-virtual-memory-allocation-and-faults.md"
+    },
+    {
+      "id": "RES-03",
+      "title": "write(2) and fsync(2)",
+      "author_or_publisher": "Linux man-pages project",
+      "type": "maintainer interface documentation",
+      "url": "https://www.man7.org/linux/man-pages/man2/fsync.2.html",
+      "required": true,
+      "access": "free",
+      "week": 10,
+      "estimated_minutes": 30,
+      "purpose": "Define data, metadata, file, and directory durability boundaries.",
+      "assignment": "Read Description, Errors, and Notes for write(2) and fsync(2); draw a failure timeline and identify delayed error reporting.",
+      "last_verified": "2026-07-31",
+      "text_alternative": "lessons/05-files-page-cache-and-durability.md"
+    },
+    {
+      "id": "RES-04",
+      "title": "Control Group v2",
+      "author_or_publisher": "Tejun Heo and Linux kernel contributors",
+      "type": "kernel interface documentation",
+      "url": "https://www.kernel.org/doc/html/latest/admin-guide/cgroup-v2.html",
+      "required": true,
+      "access": "free",
+      "week": 11,
+      "estimated_minutes": 45,
+      "purpose": "Connect resource constraints to controller evidence and outcomes.",
+      "assignment": "Read Introduction plus CPU, Memory, and IO controller sections; map each configured limit to an observable and failure outcome.",
+      "last_verified": "2026-07-31",
+      "text_alternative": "lessons/07-containers-quotas-and-limits.md"
+    },
+    {
+      "id": "RES-05",
+      "title": "Serving Facebook Multifeed",
+      "author_or_publisher": "Meta Production Engineering",
+      "type": "first-person production case study",
+      "url": "https://engineering.fb.com/2015/03/10/production-engineering/serving-facebook-multifeed-efficiency-performance-gains-through-redesign/",
+      "required": true,
+      "access": "free",
+      "week": 11,
+      "estimated_minutes": 30,
+      "purpose": "Trace heterogeneous work, cache contention, switches, resource ratios, and redesign evidence.",
+      "assignment": "Read the complete article; reconstruct its driver-to-evidence chain and name one alternative explanation.",
+      "last_verified": "2026-07-31",
+      "text_alternative": "lessons/08-causal-diagnosis-and-decisions.md"
+    },
+    {
+      "id": "RES-06",
+      "title": "Opening the Box",
+      "author_or_publisher": "Julia Lawall; USENIX Association",
+      "type": "conference video and slides",
+      "url": "https://www.usenix.org/conference/srecon24emea/presentation/lawall",
+      "required": true,
+      "access": "free",
+      "week": 11,
+      "estimated_minutes": 40,
+      "purpose": "Form scheduler hypotheses from observable traces and alternatives.",
+      "assignment": "Watch the presentation or use all slides with the local written lesson; record one hypothesis, predicted trace, and competing explanation.",
+      "last_verified": "2026-07-31",
+      "text_alternative": "lessons/02-processes-scheduling-and-syscalls.md"
+    },
+    {
+      "id": "RES-07",
+      "title": "Intel Software Developer Manuals",
+      "author_or_publisher": "Intel",
+      "type": "processor-vendor reference",
+      "url": "https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html",
+      "required": false,
+      "access": "free",
+      "week": 9,
+      "estimated_minutes": 40,
+      "purpose": "Compare a vendor-specific optimization model with portable reasoning.",
+      "assignment": "Optional: read only the front-end, memory hierarchy/data access, and multithreading sections; label what does not transfer to ARM.",
+      "last_verified": "2026-07-31",
+      "text_alternative": "lessons/01-benchmark-contracts-and-locality.md"
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "A01",
+      "week": 9,
+      "required": true,
+      "template_path": "modules/03-computer-systems-operating-systems/worksheets/week-09-benchmark-prediction.md",
+      "submission_path": "reports/module-03-benchmark-prediction.md",
+      "immutable_after_submission": true
+    },
+    {
+      "id": "A02",
+      "week": 10,
+      "required": true,
+      "template_path": "modules/03-computer-systems-operating-systems/lab/README.md",
+      "submission_path": "labs/module-03/"
+    },
+    {
+      "id": "A03",
+      "week": 10,
+      "required": true,
+      "template_path": "modules/03-computer-systems-operating-systems/worksheets/week-10-portable-build.md",
+      "submission_path": "labs/module-03/build-review.md"
+    },
+    {
+      "id": "A04",
+      "week": 11,
+      "required": true,
+      "template_path": "modules/03-computer-systems-operating-systems/worksheets/week-11-systems-matrix.md",
+      "submission_path": "experiments/module-03/"
+    },
+    {
+      "id": "A05",
+      "week": 12,
+      "required": true,
+      "template_path": "templates/systems-performance-report-template.md",
+      "submission_path": "reports/module-03-systems-performance.md"
+    },
+    {
+      "id": "A06",
+      "week": 12,
+      "required": true,
+      "template_path": "templates/adr-template.md",
+      "submission_path": "adr/ADR-003-systems-performance-policy.md"
+    },
+    {
+      "id": "A07",
+      "week": 12,
+      "required": true,
+      "template_path": "modules/03-computer-systems-operating-systems/worksheets/week-12-report-defense.md",
+      "submission_path": "reviews/module-03-defense.md"
+    },
+    {
+      "id": "A08",
+      "week": 12,
+      "required": true,
+      "template_path": "modules/03-computer-systems-operating-systems/assessment/report-template.md",
+      "submission_path": "reviews/module-03-evaluation.md"
+    },
+    {
+      "id": "A09",
+      "week": 12,
+      "required": true,
+      "template_path": "modules/03-computer-systems-operating-systems/assessment/gate-01.md",
+      "submission_path": "capstone/revisions/week-12-gate-01.md"
+    },
+    {
+      "id": "A10",
+      "week": 12,
+      "required": true,
+      "template_path": "templates/learning-log-template.md",
+      "submission_path": "learning-log/week-09.md through learning-log/week-12.md"
+    }
+  ],
+  "failure_experiments": [
+    {
+      "id": "F01",
+      "scenario": "Locality and branch-predictability reversal",
+      "evidence": "Equivalent checksums, access/branch variants, repeated timing and CPU evidence, limitations, and prediction comparison"
+    },
+    {
+      "id": "F02",
+      "scenario": "Allocation and bounded memory pressure",
+      "evidence": "Allocation lifetime, page touches, RSS, page faults, controller events, outcome, and workload checksum"
+    },
+    {
+      "id": "F03",
+      "scenario": "Lock contention, false sharing, and bounded deadlock",
+      "evidence": "Correct final counts, elapsed/CPU/context-switch evidence, watchdog timeout, and cleanup"
+    },
+    {
+      "id": "F04",
+      "scenario": "Oversized concurrency and CPU quota",
+      "evidence": "Runnable work, useful throughput, user/system CPU, switches, quota, throttling, and outcome"
+    },
+    {
+      "id": "F05",
+      "scenario": "Buffered, batched, and durable writes under I/O contention",
+      "evidence": "Equivalent bytes/checksum, acknowledgement boundary, I/O counts, elapsed time, errors, recovery, and loss window"
+    },
+    {
+      "id": "F06",
+      "scenario": "Production-transfer challenge",
+      "evidence": "Counterintuitive result, alternatives, discriminating tests, environment gap, operating signals, owners, cost, and reversal"
+    }
+  ],
+  "assessment": {
+    "rubric_path": "modules/03-computer-systems-operating-systems/assessment/rubric.md",
+    "evaluator_prompt_path": "modules/03-computer-systems-operating-systems/assessment/evaluator-prompt.md",
+    "evaluation_schema_path": "schemas/evaluation.schema.json",
+    "calibration_path": "modules/03-computer-systems-operating-systems/assessment/calibration",
+    "pass_average": 3,
+    "safety_critical_criteria": ["R06", "R07"],
+    "required_result_bands": ["Pass", "Revise", "Repeat"]
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/system-design-course/systems-scenario.schema.json",
+  "title": "Module 3 bounded systems scenario",
+  "type": "object",
+  "required": ["schema_version", "id", "probe", "variant", "runtime", "parameters"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "id": {"type": "string", "pattern": "^[A-Za-z0-9-]+$", "minLength": 1, "maxLength": 64},
+    "probe": {"enum": ["locality", "allocation", "contention", "io", "deadlock"]},
+    "variant": {
+      "enum": [
+        "contiguous", "strided", "direct_scan", "copy_then_scan", "branch_predictable", "branch_mixed",
+        "reuse", "per_iteration", "working_set", "shared", "sharded", "adjacent", "padded",
+        "buffered", "batch_sync", "per_record_sync", "syscall_small",
+        "syscall_batched", "contended", "crash_before_rename", "lock_inversion"
+      ]
+    },
+    "runtime": {"enum": ["native", "docker"]},
+    "parameters": {"type": "object"},
+    "repetitions": {"type": "integer", "minimum": 1, "maximum": 9, "default": 3},
+    "warmup": {"type": "integer", "minimum": 0, "maximum": 3, "default": 1},
+    "timeout_seconds": {"type": "number", "minimum": 0.2, "maximum": 60, "default": 20},
+    "limits": {
+      "type": "object",
+      "properties": {
+        "cpus": {"type": "number", "minimum": 0.1, "maximum": 8},
+        "memory_mb": {"type": "integer", "minimum": 32, "maximum": 1024},
+        "pids": {"type": "integer", "minimum": 16, "maximum": 128}
+      },
+      "additionalProperties": false
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"probe": {"const": "locality"}}, "required": ["probe"]},
+      "then": {
+        "properties": {
+          "variant": {"enum": ["contiguous", "strided", "direct_scan", "copy_then_scan", "branch_predictable", "branch_mixed"]},
+          "parameters": {
+            "type": "object",
+            "required": ["elements", "stride"],
+            "properties": {
+              "elements": {"type": "integer", "minimum": 1024, "maximum": 2000000},
+              "stride": {"type": "integer", "minimum": 1, "maximum": 128}
+            },
+            "additionalProperties": false
+          }
+        }
+      }
+    },
+    {
+      "if": {"properties": {"probe": {"const": "allocation"}}, "required": ["probe"]},
+      "then": {
+        "properties": {
+          "variant": {"enum": ["reuse", "per_iteration", "working_set"]},
+          "parameters": {
+            "type": "object",
+            "required": ["iterations", "bytes_per_iteration"],
+            "properties": {
+              "iterations": {"type": "integer", "minimum": 1, "maximum": 1000000},
+              "bytes_per_iteration": {"type": "integer", "minimum": 64, "maximum": 1048576}
+            },
+            "additionalProperties": false
+          }
+        }
+      }
+    },
+    {
+      "if": {"properties": {"probe": {"const": "contention"}}, "required": ["probe"]},
+      "then": {
+        "properties": {
+          "variant": {"enum": ["shared", "sharded", "adjacent", "padded"]},
+          "parameters": {
+            "type": "object",
+            "required": ["workers", "iterations"],
+            "properties": {
+              "workers": {"type": "integer", "minimum": 1, "maximum": 64},
+              "iterations": {"type": "integer", "minimum": 100, "maximum": 10000000}
+            },
+            "additionalProperties": false
+          }
+        }
+      }
+    },
+    {
+      "if": {"properties": {"probe": {"const": "io"}}, "required": ["probe"]},
+      "then": {
+        "properties": {
+          "variant": {
+            "enum": ["buffered", "batch_sync", "per_record_sync", "syscall_small", "syscall_batched", "contended", "crash_before_rename"]
+          },
+          "parameters": {
+            "type": "object",
+            "required": ["total_bytes", "chunk_bytes", "sync_every"],
+            "properties": {
+              "total_bytes": {"type": "integer", "minimum": 4096, "maximum": 536870912},
+              "chunk_bytes": {"type": "integer", "minimum": 1, "maximum": 1048576},
+              "sync_every": {"type": "integer", "minimum": 0, "maximum": 1000000},
+              "competitor_bytes": {"type": "integer", "minimum": 4096, "maximum": 536870912}
+            },
+            "additionalProperties": false
+          }
+        }
+      }
+    },
+    {
+      "if": {"properties": {"variant": {"const": "contended"}}, "required": ["variant"]},
+      "then": {"properties": {"parameters": {"required": ["competitor_bytes"]}}}
+    },
+    {
+      "if": {"properties": {"variant": {"const": "buffered"}}, "required": ["variant"]},
+      "then": {"properties": {"parameters": {"properties": {"sync_every": {"const": 0}}}}}
+    },
+    {
+      "if": {"properties": {"variant": {"const": "per_record_sync"}}, "required": ["variant"]},
+      "then": {"properties": {"parameters": {"properties": {"sync_every": {"const": 1}}}}}
+    },
+    {
+      "if": {"properties": {"variant": {"const": "batch_sync"}}, "required": ["variant"]},
+      "then": {"properties": {"parameters": {"properties": {"sync_every": {"minimum": 2}}}}}
+    },
+    {
+      "if": {"properties": {"variant": {"const": "crash_before_rename"}}, "required": ["variant"]},
+      "then": {"properties": {"parameters": {"properties": {"sync_every": {"minimum": 1}}}}}
+    },
+    {
+      "if": {"properties": {"probe": {"const": "deadlock"}}, "required": ["probe"]},
+      "then": {
+        "properties": {
+          "variant": {"const": "lock_inversion"},
+          "parameters": {"type": "object", "maxProperties": 0}
+        }
+      }
+    }
+  ],
+  "additionalProperties": false
+}

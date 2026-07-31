@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/system-design-course/systems-trial.schema.json",
+  "title": "Module 3 systems trial evidence",
+  "type": "object",
+  "required": [
+    "schema_version", "scenario_id", "source_commit", "environment", "limits",
+    "samples", "resource_samples", "summary", "measurement_limitations"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "scenario_id": {"type": "string", "pattern": "^[A-Za-z0-9-]+$"},
+    "source_commit": {"type": "string", "minLength": 7},
+    "environment": {
+      "type": "object",
+      "required": [
+        "runtime", "platform", "system", "kernel", "architecture", "logical_cpus",
+        "compiler", "compiler_flags", "filesystem", "host_system", "host_kernel",
+        "host_architecture", "host_filesystem", "container_image", "virtualization_note"
+      ],
+      "properties": {
+        "runtime": {"enum": ["native", "docker"]},
+        "platform": {"type": "string", "minLength": 1},
+        "system": {"type": "string", "minLength": 1},
+        "kernel": {"type": "string", "minLength": 1},
+        "architecture": {"type": "string", "minLength": 1},
+        "logical_cpus": {"type": ["integer", "null"], "minimum": 1},
+        "compiler": {"type": "string", "minLength": 1},
+        "compiler_flags": {"type": "string", "minLength": 1},
+        "filesystem": {"type": "string", "minLength": 1},
+        "host_system": {"type": "string", "minLength": 1},
+        "host_kernel": {"type": "string", "minLength": 1},
+        "host_architecture": {"type": "string", "minLength": 1},
+        "host_filesystem": {"type": "string", "minLength": 1},
+        "container_image": {"type": ["string", "null"]},
+        "virtualization_note": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "limits": {
+      "type": "object",
+      "properties": {
+        "cpus": {"type": "number", "minimum": 0.1, "maximum": 8},
+        "memory_mb": {"type": "integer", "minimum": 32, "maximum": 1024},
+        "pids": {"type": "integer", "minimum": 16, "maximum": 128}
+      },
+      "additionalProperties": false
+    },
+    "samples": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 9,
+      "items": {
+        "type": "object",
+        "required": [
+          "probe", "variant", "operations", "bytes", "checksum", "elapsed_ns",
+          "user_cpu_ns", "system_cpu_ns", "max_rss_bytes", "minor_faults",
+          "major_faults", "voluntary_context_switches",
+          "involuntary_context_switches", "block_inputs", "block_outputs", "outcome",
+          "acknowledgement_boundary", "post_exit_bytes", "post_exit_checksum",
+          "post_exit_matches", "recovery_observation"
+        ],
+        "properties": {
+          "probe": {"enum": ["locality", "allocation", "contention", "io", "deadlock"]},
+          "variant": {"type": "string", "minLength": 1},
+          "operations": {"type": "integer", "minimum": 0},
+          "bytes": {"type": "integer", "minimum": 0},
+          "checksum": {"type": "integer", "minimum": 0},
+          "elapsed_ns": {"type": "integer", "minimum": 0},
+          "user_cpu_ns": {"type": "integer", "minimum": 0},
+          "system_cpu_ns": {"type": "integer", "minimum": 0},
+          "max_rss_bytes": {"type": "integer", "minimum": 0},
+          "minor_faults": {"type": "integer", "minimum": 0},
+          "major_faults": {"type": "integer", "minimum": 0},
+          "voluntary_context_switches": {"type": "integer", "minimum": 0},
+          "involuntary_context_switches": {"type": "integer", "minimum": 0},
+          "block_inputs": {"type": "integer", "minimum": 0},
+          "block_outputs": {"type": "integer", "minimum": 0},
+          "outcome": {"enum": ["ok", "timeout", "oom", "injected_crash"]},
+          "acknowledgement_boundary": {"type": "string", "minLength": 1},
+          "post_exit_bytes": {"type": "integer", "minimum": 0},
+          "post_exit_checksum": {"type": "integer", "minimum": 0},
+          "post_exit_matches": {"type": "boolean"},
+          "recovery_observation": {"type": "string", "minLength": 1}
+        },
+        "additionalProperties": false
+      }
+    },
+    "resource_samples": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 9,
+      "items": {"type": "object", "minProperties": 1}
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "repetitions", "successful_repetitions", "median_elapsed_ns",
+        "min_elapsed_ns", "max_elapsed_ns", "useful_operations", "useful_bytes",
+        "median_throughput_per_second", "median_bytes_per_second"
+      ],
+      "properties": {
+        "repetitions": {"type": "integer", "minimum": 1, "maximum": 9},
+        "successful_repetitions": {"type": "integer", "minimum": 0, "maximum": 9},
+        "median_elapsed_ns": {"type": "integer", "minimum": 0},
+        "min_elapsed_ns": {"type": "integer", "minimum": 0},
+        "max_elapsed_ns": {"type": "integer", "minimum": 0},
+        "useful_operations": {"type": "integer", "minimum": 0},
+        "useful_bytes": {"type": "integer", "minimum": 0},
+        "median_throughput_per_second": {"type": "number", "minimum": 0},
+        "median_bytes_per_second": {"type": "number", "minimum": 0}
+      },
+      "additionalProperties": false
+    },
+    "measurement_limitations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string", "minLength": 1}
+    }
+  },
+  "additionalProperties": false
+}
