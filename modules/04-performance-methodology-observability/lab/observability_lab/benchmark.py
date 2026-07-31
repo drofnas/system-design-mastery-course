@@ -14,6 +14,11 @@ from pathlib import Path
 from typing import Any
 
 from .runner import workload_signature
+from .schema_check import load_repository_schema, validate_with_schema
+
+
+CHILD_TIMEOUT_SECONDS = 75
+CHILD_REAP_SECONDS = 5
 
 
 def _interleaved_order(repetitions: int) -> list[str]:
@@ -84,6 +89,7 @@ def evaluate_samples(
 
 
 def validate_benchmark_result(value: Any) -> dict[str, Any]:
+    validate_with_schema(value, load_repository_schema("benchmark-result.schema.json"))
     if not isinstance(value, dict):
         raise ValueError("benchmark result must be an object")
     required = {
@@ -228,7 +234,26 @@ async def _run_fresh_process(scenario: dict[str, Any]) -> tuple[dict[str, Any], 
             stderr=asyncio.subprocess.PIPE,
             env=environment,
         )
-        stdout, stderr = await asyncio.wait_for(process.communicate(), timeout=75)
+        try:
+            stdout, stderr = await asyncio.wait_for(
+                process.communicate(), timeout=CHILD_TIMEOUT_SECONDS
+            )
+        except asyncio.TimeoutError as error:
+            try:
+                process.terminate()
+            except ProcessLookupError:
+                pass
+            try:
+                await asyncio.wait_for(
+                    process.communicate(), timeout=CHILD_REAP_SECONDS
+                )
+            except asyncio.TimeoutError:
+                try:
+                    process.kill()
+                except ProcessLookupError:
+                    pass
+                await process.communicate()
+            raise ValueError("benchmark child process exceeded its 75-second limit") from error
         if process.returncode != 0:
             detail = stderr.decode("utf-8", errors="replace") or stdout.decode("utf-8", errors="replace")
             raise ValueError(f"benchmark child process failed: {detail.strip()}")

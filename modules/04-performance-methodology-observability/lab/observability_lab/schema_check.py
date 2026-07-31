@@ -7,13 +7,37 @@ vendor extensions.
 
 from __future__ import annotations
 
+import json
 import math
 import re
+from functools import lru_cache
+from pathlib import Path
 from typing import Any
 
 
 class SchemaValidationError(ValueError):
     """Raised when a value violates one of the lab's public JSON schemas."""
+
+
+SCHEMA_ROOT = Path(__file__).resolve().parents[4] / "schemas"
+
+
+@lru_cache(maxsize=16)
+def load_repository_schema(name: str) -> dict[str, Any]:
+    """Load one public lab schema without allowing paths outside ``schemas``."""
+
+    if Path(name).name != name or not name.endswith(".schema.json"):
+        raise SchemaValidationError("schema name must be a repository schema filename")
+    path = (SCHEMA_ROOT / name).resolve()
+    if not path.is_relative_to(SCHEMA_ROOT.resolve()):
+        raise SchemaValidationError("schema path escapes the repository schema directory")
+    try:
+        value = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as error:
+        raise SchemaValidationError(f"cannot load public schema {name}: {error}") from error
+    if not isinstance(value, dict):
+        raise SchemaValidationError(f"public schema {name} must be an object")
+    return value
 
 
 def _resolve(root: dict[str, Any], reference: str) -> dict[str, Any]:

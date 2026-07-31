@@ -89,6 +89,7 @@ class Recorder:
         self.logs: list[dict[str, Any]] = []
         self._sequence = 0
         self._series: set[tuple[str, tuple[tuple[str, str], ...]]] = set()
+        self._reserved_span_ids: set[str] = set()
         self.estimated_bytes = 0
         self.dropped_records = 0
 
@@ -99,9 +100,18 @@ class Recorder:
     def _reserve_record(self) -> bool:
         if not self.enabled:
             return False
-        if self.record_count >= self.max_records:
+        if self.record_count + len(self._reserved_span_ids) >= self.max_records:
             self.dropped_records += 1
             return False
+        return True
+
+    def _reserve_span(self, span_id: str) -> bool:
+        if not self.enabled:
+            return False
+        if self.record_count + len(self._reserved_span_ids) >= self.max_records:
+            self.dropped_records += 1
+            return False
+        self._reserved_span_ids.add(span_id)
         return True
 
     def _record_bytes(self, record: dict[str, Any]) -> int:
@@ -141,9 +151,11 @@ class Recorder:
         parent_span_id: str | None = None,
         attributes: dict[str, Any] | None = None,
     ) -> SpanToken:
+        span_id = self.new_span_id()
+        self._reserve_span(span_id)
         return SpanToken(
             trace_id=trace_id or self.new_trace(),
-            span_id=self.new_span_id(),
+            span_id=span_id,
             parent_span_id=parent_span_id,
             name=name,
             started_wall_ns=time.time_ns(),
@@ -152,8 +164,9 @@ class Recorder:
         )
 
     def end_span(self, token: SpanToken, *, status: str = "ok", attributes: dict[str, Any] | None = None) -> None:
-        if not self._reserve_record():
+        if token.span_id not in self._reserved_span_ids:
             return
+        self._reserved_span_ids.remove(token.span_id)
         ended_wall = time.time_ns()
         ended_monotonic = time.monotonic_ns()
         merged = {**token.attributes, **(attributes or {})}

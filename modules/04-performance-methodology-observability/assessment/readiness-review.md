@@ -42,12 +42,13 @@ safety-critical reporting, and the maximum one-point category drift.
 
 ## Verification record
 
-- Module 4 standard-library lab: 17 tests passed, including valid and invalid
+- Module 4 standard-library lab: 19 tests passed, including valid and invalid
   trace context, signal correlation, label policy, cardinality and cost,
   redaction, CPU/allocation/lock/I/O/query-plan evidence, connection cleanup,
   benchmark decisions, fresh-process isolation, collection caps, blind-reveal
-  preservation, bundle corruption detection, schema/runtime parity, and Module
-  2 scenario compatibility.
+  preservation, bundle corruption detection, schema/runtime parity,
+  retry-amplified fault bounds, span-safe record caps, timed-out child-process
+  reaping, and Module 2 scenario compatibility.
 - Module 2 regression suite: 22 tests passed.
 - Module 3 regression suite: 24 tests passed with C11 compilation warnings
   treated as errors.

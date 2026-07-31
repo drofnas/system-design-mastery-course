@@ -4,16 +4,35 @@ PASS
 
 None.
 
-## Evidence
+## Closed findings
 
-- Complete `main` plus live-worktree diff reviewed, including authorized `AGENTS.md`.
-- `scripts/validate_course.py` passed for all modules.
-- `scripts/check_calibration.py` accepted all six outputs: identities, citations, schemas, arithmetic, decisions, remediation, and two-run drift.
-- Eight lab contract tests passed. Nine integration tests reached only the audit sandbox's loopback denial; this is not a product defect.
-- Implementation and artifacts support bounded work and cleanup, bundle hashes and recomputation, schema/runtime contracts, fresh-process interleaving, equivalent-work checksums, dispersion decisions, opaque preparation, Git-frozen reveal, telemetry privacy/cardinality/cost/drop reporting, and allocation deltas.
-- Resource records, course navigation, Module 4 manifest, readiness evidence, and calibration summaries are consistent.
+- Retry-amplified fault work is now calculated from the exact shared open-loop
+  schedule or the closed-loop request cap plus the maximum shared retry-budget
+  claims. CPU, injected-wait, and file-work ceilings reject unsafe scenarios.
+- The recorder reserves bounded capacity when a span starts. A kept log or
+  exemplar therefore cannot outlive a dropped referenced span; capped bundles
+  at 101, 109, and 117 records pass full bundle analysis.
+- Trial and benchmark runtime validators execute the public dependency-free
+  schema checker before semantic arithmetic. Negative resources, malformed
+  retry/failure fields, invalid benchmark metrics, and empty environment fields
+  are rejected consistently.
+- A benchmark timeout terminates the child process, escalates to a kill when
+  graceful termination does not complete, and awaits the child before leaving
+  its temporary directory.
+
+## Verification evidence
+
+- Module 4 lab: 19 tests passed.
+- Module 2 regression suite: 22 tests passed.
+- Module 3 regression suite: 24 tests passed.
+- Deterministic calibration, focused M04 validation, and full-course validation
+  passed after the fixes.
 
 ## Optional improvements
 
-- Add a loopback-independent unit test explicitly asserting non-empty `profile.json` allocation deltas.
-- Add focused tests comparing cross-field open-arrival bounds with generated request offsets at burst boundaries.
+- Make the abbreviated calibration command in readiness evidence directly
+  reproducible.
+- Require all six diagnosis rows and revalidate bundle hashes before blind
+  reveal.
+- Include or directly verify the normal-run scenario within the bundle
+  integrity chain.

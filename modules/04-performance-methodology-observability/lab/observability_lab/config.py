@@ -24,6 +24,32 @@ FAULTS = {
 }
 
 
+def planned_open_offsets(scenario: dict[str, Any]) -> list[float]:
+    """Return the exact bounded open-loop schedule used by validation and execution."""
+
+    arrival = scenario["arrival"]
+    rate = float(arrival["rate_per_second"])
+    duration = float(arrival["duration_seconds"])
+    interval = 1 / rate
+    multiplier = float(arrival["burst_multiplier"])
+    burst_start = float(arrival["burst_start_seconds"])
+    burst_end = burst_start + float(arrival["burst_duration_seconds"])
+    maximum = int(scenario["limits"]["max_logical_requests"])
+    offsets: list[float] = []
+    offset = 0.0
+    while offset < duration - 1e-12 and len(offsets) < maximum:
+        offsets.append(offset)
+        in_burst = burst_start <= offset < burst_end
+        next_offset = offset + (interval / multiplier if in_burst else interval)
+        has_burst = multiplier > 1 and burst_end > burst_start
+        if has_burst and offset < burst_start < next_offset:
+            next_offset = burst_start
+        elif has_burst and in_burst and next_offset > burst_end:
+            next_offset = burst_end
+        offset = next_offset
+    return offsets
+
+
 def _object(value: Any, path: str) -> dict[str, Any]:
     if not isinstance(value, dict):
         raise ScenarioError(f"{path} must be an object")
@@ -224,36 +250,24 @@ def validate_scenario(value: Any) -> dict[str, Any]:
         minimum=1,
         maximum=3,
     )
-    if arrival["mode"] == "closed":
-        bounded_requests = int(limits["max_logical_requests"])
-    else:
-        active_burst = max(
-            0.0,
-            min(
-                float(arrival["burst_duration_seconds"]),
-                float(arrival["duration_seconds"])
-                - float(arrival["burst_start_seconds"]),
-            ),
-        )
-        planned = (
-            float(arrival["rate_per_second"])
-            * float(arrival["duration_seconds"])
-            + float(arrival["rate_per_second"])
-            * (float(arrival["burst_multiplier"]) - 1)
-            * active_burst
-        )
-        bounded_requests = min(
-            int(limits["max_logical_requests"]),
-            math.ceil(planned) + 2,
-        )
-    if fault["kind"] == "cpu" and bounded_requests * int(fault["intensity"]) > 50_000_000:
+    bounded_requests = (
+        int(limits["max_logical_requests"])
+        if arrival["mode"] == "closed"
+        else len(planned_open_offsets(scenario))
+    )
+    retry_limit = min(
+        math.floor(bounded_requests * float(retry["budget_ratio"])),
+        bounded_requests * (int(retry["max_attempts"]) - 1),
+    )
+    bounded_attempts = bounded_requests + retry_limit
+    if fault["kind"] == "cpu" and bounded_attempts * int(fault["intensity"]) > 50_000_000:
         raise ScenarioError("total CPU fault work may not exceed 50000000 iterations")
     if fault["kind"] in {"lock", "slow_io"} and (
-        bounded_requests * float(fault["delay_ms"]) > 60_000
+        bounded_attempts * float(fault["delay_ms"]) > 60_000
     ):
         raise ScenarioError("total injected wait may not exceed 60000 milliseconds")
     if fault["kind"] == "slow_io" and (
-        bounded_requests * int(fault["intensity"]) > 67_108_864
+        bounded_attempts * int(fault["intensity"]) > 67_108_864
     ):
         raise ScenarioError("total injected file work may not exceed 67108864 bytes")
     return scenario

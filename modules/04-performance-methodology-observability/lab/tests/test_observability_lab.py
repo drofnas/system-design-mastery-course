@@ -7,10 +7,17 @@ import tempfile
 import subprocess
 import unittest
 from pathlib import Path
+from unittest import mock
 
+import observability_lab.benchmark as benchmark_module
 from observability_lab.benchmark import evaluate_samples, run_benchmark, validate_benchmark_result
 from observability_lab.blind import prepare_blind_collection, reveal_blind_collection
-from observability_lab.config import ScenarioError, load_scenario, validate_scenario
+from observability_lab.config import (
+    ScenarioError,
+    load_scenario,
+    planned_open_offsets,
+    validate_scenario,
+)
 from observability_lab.runner import analyze_bundle, run_trial, validate_trial_summary, write_bundle
 from observability_lab.schema_check import SchemaValidationError, validate_with_schema
 from observability_lab.service import ObservabilityService
@@ -100,6 +107,15 @@ class ContractTests(unittest.TestCase):
         value["arrival"]["mode"] = "closed"
         value["limits"]["max_logical_requests"] = 5000
         value["fault"]["intensity"] = 1_000_000
+        with self.assertRaisesRegex(ScenarioError, "total CPU"):
+            validate_scenario(value)
+        value = scenario("transit-cpu.json")
+        value["arrival"]["rate_per_second"] = 40
+        value["arrival"]["duration_seconds"] = 1
+        value["retry"]["max_attempts"] = 2
+        value["retry"]["budget_ratio"] = 0.5
+        value["fault"]["intensity"] = 1_000_000
+        self.assertEqual(len(planned_open_offsets(value)), 40)
         with self.assertRaisesRegex(ScenarioError, "total CPU"):
             validate_scenario(value)
 
@@ -198,6 +214,58 @@ class ContractTests(unittest.TestCase):
         forged["decision"] = "pass"
         with self.assertRaisesRegex(ValueError, "decision contradicts"):
             validate_benchmark_result(forged)
+        contract = schema("benchmark-result.schema.json")
+        for mutate in (
+            lambda value: value.update(metric="latency"),
+            lambda value: value["environment"].update(platform=""),
+            lambda value: value["process_runs"][0].update(python_version=""),
+        ):
+            invalid = copy.deepcopy(regressed)
+            mutate(invalid)
+            with self.assertRaises(SchemaValidationError):
+                validate_with_schema(invalid, contract)
+            with self.assertRaises(ValueError):
+                validate_benchmark_result(invalid)
+
+    def test_benchmark_timeout_reaps_child_process(self) -> None:
+        class TimedOutProcess:
+            def __init__(self, *, reap_hangs: bool) -> None:
+                self.calls = 0
+                self.returncode = None
+                self.terminated = False
+                self.killed = False
+                self.reap_hangs = reap_hangs
+
+            async def communicate(self) -> tuple[bytes, bytes]:
+                self.calls += 1
+                if self.calls == 1 or (self.calls == 2 and self.reap_hangs):
+                    await asyncio.sleep(1)
+                return b"", b""
+
+            def terminate(self) -> None:
+                self.terminated = True
+                self.returncode = -15
+
+            def kill(self) -> None:
+                self.killed = True
+                self.returncode = -9
+
+        for reap_hangs in (False, True):
+            process = TimedOutProcess(reap_hangs=reap_hangs)
+            with (
+                mock.patch.object(
+                    benchmark_module.asyncio,
+                    "create_subprocess_exec",
+                    new=mock.AsyncMock(return_value=process),
+                ),
+                mock.patch.object(benchmark_module, "CHILD_TIMEOUT_SECONDS", 0.01),
+                mock.patch.object(benchmark_module, "CHILD_REAP_SECONDS", 0.01),
+            ):
+                with self.assertRaisesRegex(ValueError, "exceeded"):
+                    asyncio.run(benchmark_module._run_fresh_process(scenario()))
+            self.assertTrue(process.terminated)
+            self.assertEqual(process.killed, reap_hangs)
+            self.assertEqual(process.calls, 3 if reap_hangs else 2)
 
     def test_schema_files_parse(self) -> None:
         for name in (
@@ -242,6 +310,22 @@ class IntegrationTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(summary["cleanup"]["retained_allocation_bytes_after"], 0)
         self.assertFalse(summary["cleanup"]["temporary_file_exists_after"])
         validate_with_schema(summary, schema("observability-trial.schema.json"))
+        contract = schema("observability-trial.schema.json")
+        for mutate in (
+            lambda value: value["retry_budget"].update(used="1"),
+            lambda value: value["resource_delta"].update(user_cpu_seconds=-1),
+            lambda value: value.update(failure_reason=3),
+        ):
+            invalid = copy.deepcopy(summary)
+            mutate(invalid)
+            with self.assertRaises(SchemaValidationError):
+                validate_with_schema(invalid, contract)
+            with self.assertRaises(ValueError):
+                validate_trial_summary(invalid)
+        invalid = copy.deepcopy(summary)
+        invalid["retry_budget"]["used"] = invalid["retry_budget"]["limit"] + 1
+        with self.assertRaisesRegex(ValueError, "exceeds"):
+            validate_trial_summary(invalid)
 
     async def test_cpu_and_allocation_fault_evidence(self) -> None:
         cpu = scenario("transit-cpu.json")
@@ -305,6 +389,19 @@ class IntegrationTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(service.retained_allocation_bytes, 0)
         occupied.close()
         await occupied.wait_closed()
+
+    async def test_record_caps_preserve_bundle_referential_integrity(self) -> None:
+        for cap in (101, 109, 117):
+            bounded = scenario()
+            bounded["arrival"]["rate_per_second"] = 80
+            bounded["limits"]["max_telemetry_records"] = cap
+            result = await run_trial(validate_scenario(bounded))
+            self.assertLessEqual(result["recorder"].record_count, cap)
+            self.assertGreater(result["recorder"].dropped_records, 0)
+            with tempfile.TemporaryDirectory() as directory:
+                target = write_bundle(directory, bounded, result)
+                analysis = analyze_bundle(target)
+                self.assertEqual(analysis["signal_counts"]["span"], len(result["recorder"].traces))
 
     async def test_lock_and_slow_io_fault_evidence(self) -> None:
         lock = scenario("transit-lock.json")

@@ -18,7 +18,9 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Iterable
 
+from .config import planned_open_offsets
 from .service import ObservabilityService
+from .schema_check import load_repository_schema, validate_with_schema
 from .telemetry import Recorder, make_traceparent, validate_telemetry_record
 
 
@@ -64,28 +66,7 @@ def _planned_requests(scenario: dict[str, Any]) -> int:
 
 
 def _open_offsets(scenario: dict[str, Any]) -> list[float]:
-    arrival = scenario["arrival"]
-    rate = float(arrival["rate_per_second"])
-    duration = float(arrival["duration_seconds"])
-    interval = 1 / rate
-    multiplier = float(arrival["burst_multiplier"])
-    burst_start = float(arrival["burst_start_seconds"])
-    burst_end = burst_start + float(arrival["burst_duration_seconds"])
-    offsets: list[float] = []
-    maximum = int(scenario["limits"]["max_logical_requests"])
-    offset = 0.0
-    while offset < duration - 1e-12 and len(offsets) < maximum:
-        offsets.append(offset)
-        in_burst = burst_start <= offset < burst_end
-        effective = interval / multiplier if in_burst else interval
-        next_offset = offset + effective
-        has_burst = multiplier > 1 and burst_end > burst_start
-        if has_burst and offset < burst_start < next_offset:
-            next_offset = burst_start
-        elif has_burst and in_burst and next_offset > burst_end:
-            next_offset = burst_end
-        offset = next_offset
-    return offsets
+    return planned_open_offsets(scenario)
 
 
 def _retry_budget(scenario: dict[str, Any]) -> RetryBudget:
@@ -498,6 +479,7 @@ def summarize(
 
 
 def validate_trial_summary(value: Any) -> dict[str, Any]:
+    validate_with_schema(value, load_repository_schema("observability-trial.schema.json"))
     if not isinstance(value, dict):
         raise ValueError("trial summary must be an object")
     required = {
@@ -570,6 +552,9 @@ def validate_trial_summary(value: Any) -> dict[str, Any]:
         raise ValueError("attempt count contradicts logical requests and retry cap")
     if value["unique_successes"] > value["logical_requests"]:
         raise ValueError("unique successes exceed logical requests")
+    retry_budget = value["retry_budget"]
+    if retry_budget["used"] > retry_budget["limit"]:
+        raise ValueError("retry budget use exceeds its declared limit")
     throughput = value["useful_throughput_per_second"]
     if (
         isinstance(throughput, bool)

@@ -57,7 +57,9 @@ every p95 sample, reports the median ratio and ranges, and returns `pass`,
 `regression`, or `inconclusive`. Before scoring, it rejects different workload
 signatures, thresholds, logical-request counts, success counts, or deterministic
 result signatures. Real-time tests verify equivalent-work enforcement;
-deterministic sample tests verify the decision arithmetic.
+deterministic sample tests verify the decision arithmetic. A timed-out child is
+terminated, escalated to a kill if needed, and awaited before the benchmark
+returns an error.
 
 ### `blind-prepare` and `blind-reveal`
 
@@ -109,12 +111,14 @@ The runtime enforces the same bounds without a JSON Schema dependency.
 - `fault.kind`: `none`, `cpu`, `allocation`, `lock`, `slow_io`,
   `connection_leak`, `high_cardinality`, or `query_scan`.
 - CPU iterations, allocation/file bytes, retained connections, delay, database
-  rows, and metric series are capped.
+  rows, and metric series are capped. CPU, injected-wait, and file-work budgets
+  include the maximum attempts permitted by the shared retry budget.
 - `request_id` is permitted only on the deliberately unsafe
   `lab.high_cardinality` metric.
 - `telemetry.signals_enabled` provides a true collection-off comparison;
   capped collection drops excess records and reports the dropped count instead
-  of interrupting request or cleanup paths.
+  of interrupting request or cleanup paths. Span capacity is reserved at span
+  start so retained logs and exemplars never reference a span dropped at end.
 - Temporary files, allocations, and retained server connections are cleaned up
   during service shutdown.
 
