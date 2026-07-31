@@ -274,4 +274,3 @@ For EX-05, include a duplicate and a concurrent transition.
 - Security depth appears in Module 13; transaction enforcement appears in
   Module 8.
 - Next: [Lesson 4](04-quality-attribute-scenarios.md)
-

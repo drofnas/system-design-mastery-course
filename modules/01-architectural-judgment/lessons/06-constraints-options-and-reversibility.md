@@ -282,4 +282,3 @@ Then use the [Week 2 candidate worksheet](../worksheets/week-02-candidate-design
 - [Michael Nygard, “Documenting Architecture
   Decisions”](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions)
 - Next: [Lesson 7](07-failure-models-and-adversarial-review.md)
-

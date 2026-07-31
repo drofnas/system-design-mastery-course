@@ -278,4 +278,3 @@ scenarios at lower operating cost, Candidate A should win.
 
 Proceed to the [guided exercises](../exercises/exercises.md), then produce your
 commerce artifacts independently.
-

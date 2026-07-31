@@ -285,4 +285,3 @@ Then complete the [Week 3 failure review](../worksheets/week-03-failure-review.m
 - [CMU SEI, Early Architecture
   Analysis](https://www.sei.cmu.edu/library/early-analysis-of-software-architecture/)
 - Next: [Lesson 8](08-decisions-rfcs-and-defense.md)
-

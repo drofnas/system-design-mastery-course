@@ -190,4 +190,3 @@ For each response:
 - Explain the causal mechanism.
 - Cite evidence or state what is missing.
 - Name the consequence and follow-up.
-

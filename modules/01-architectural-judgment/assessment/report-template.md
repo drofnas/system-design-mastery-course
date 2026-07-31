@@ -75,4 +75,3 @@ baseline. Never edit the frozen Week 1 baseline.
 - Calibration run:
 - Structured JSON result:
 - Human reviewer, if any:
-
