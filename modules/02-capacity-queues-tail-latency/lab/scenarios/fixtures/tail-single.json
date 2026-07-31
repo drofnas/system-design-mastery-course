@@ -1,0 +1,30 @@
+{
+  "id": "fixture-tail-single",
+  "seed": 41,
+  "arrival": {
+    "mode": "open",
+    "rate_per_second": 60,
+    "duration_seconds": 0.5,
+    "max_in_flight": 8
+  },
+  "service": {
+    "workers": 8,
+    "queue_capacity": 8,
+    "base_service_ms": 2,
+    "slow_service_ms": 30,
+    "slow_probability": 0.25,
+    "fanout": 1,
+    "downstream_concurrency": 32,
+    "downstream_failure_probability": 0
+  },
+  "retry": {
+    "max_attempts": 1,
+    "budget_ratio": 0,
+    "base_backoff_ms": 0
+  },
+  "capacity": {
+    "failover_fraction": 0.75,
+    "worker_cost_per_hour": 0.05,
+    "fixed_cost_per_hour": 0.05
+  }
+}

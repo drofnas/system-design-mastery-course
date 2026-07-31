@@ -1,0 +1,30 @@
+{
+  "id": "fixture-closed-loop-stall",
+  "seed": 41,
+  "arrival": {
+    "mode": "closed",
+    "rate_per_second": 100,
+    "duration_seconds": 0.3,
+    "max_in_flight": 1
+  },
+  "service": {
+    "workers": 1,
+    "queue_capacity": 1,
+    "base_service_ms": 20,
+    "slow_service_ms": 100,
+    "slow_probability": 0.2,
+    "fanout": 1,
+    "downstream_concurrency": 1,
+    "downstream_failure_probability": 0
+  },
+  "retry": {
+    "max_attempts": 1,
+    "budget_ratio": 0,
+    "base_backoff_ms": 0
+  },
+  "capacity": {
+    "failover_fraction": 0.5,
+    "worker_cost_per_hour": 0.05,
+    "fixed_cost_per_hour": 0
+  }
+}
