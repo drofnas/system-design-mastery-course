@@ -1,7 +1,7 @@
 # Module 4: Performance Methodology and Observability
 
-> **Authoring status:** Draft. Instruction and practice are present; lab,
-> assessment, calibration, and readiness evidence are added in later milestones.
+> **Authoring status:** Review. The complete teaching package, lab, and
+> assessment are present; isolated calibration and the readiness review remain.
 
 ## What this module changes
 
@@ -108,6 +108,8 @@ derivations.
 ## Practice and independent evidence
 
 - Follow the [Transit Signal investigation](case-study/transit-observability.md).
+- Use the [observability lab](lab/README.md) to collect versioned telemetry,
+  exercise loopback propagation, analyze evidence, and run interleaved benchmarks.
 - Complete the [guided exercises](exercises/exercises.md) before opening the
   [explained answers](exercises/answer-key.md).
 - Complete the bounded assignments in the [resource guide](resources.md).
@@ -119,6 +121,23 @@ derivations.
 
 The module contributes one performance investigation, one failure matrix, and
 one recorded teach-back to the course portfolio.
+
+## Assessment and remediation
+
+- Read the [assessment contract](assessment/README.md) and the
+  [module-specific rubric](assessment/rubric.md) before beginning independent
+  work.
+- Submit the frozen artifacts through the provider-neutral
+  [evaluator prompt](assessment/evaluator-prompt.md).
+- Use the [performance review template](../../templates/performance-review-template.md)
+  for the decision artifact and the
+  [evaluation report template](assessment/report-template.md) for the result.
+- Apply a Revise or Repeat result through the
+  [remediation map](assessment/remediation-map.md), preserving the original
+  submission and raw telemetry.
+
+The evaluator runs structural gates before semantic scoring, cites submitted
+headings, and returns Pass, Revise, or Repeat under the published thresholds.
 
 ## Evidence integrity and AI use
 

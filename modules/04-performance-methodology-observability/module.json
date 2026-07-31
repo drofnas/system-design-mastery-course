@@ -1,0 +1,163 @@
+{
+  "$schema": "../../schemas/module.schema.json",
+  "id": "M04",
+  "title": "Performance Methodology and Observability",
+  "weeks": [
+    {"number": 13, "focus": "Model and freeze the investigation", "hours": 10.5, "evidence": ["Frozen baseline and question", "Hypothesis ledger and falsifiers", "Collection and overhead plan", "Week 13 learning log"]},
+    {"number": 14, "focus": "Instrument and correlate", "hours": 10.5, "evidence": ["Instrumented Module 2 service", "Trace-context and signal-correlation proof", "Profiles and query-plan evidence", "Build review and Week 14 learning log"]},
+    {"number": 15, "focus": "Break and diagnose", "hours": 10.5, "evidence": ["Six raw fault bundles", "Frozen blind diagnosis matrix", "Discriminating reruns and reveal record", "Week 15 learning log"]},
+    {"number": 16, "focus": "Validate, decide, and teach", "hours": 10.5, "evidence": ["Interleaved benchmark and regression budget", "Performance review", "Recorded teach-back", "Evaluation, separate remediation, and Week 16 learning log"]}
+  ],
+  "target_hours": 42,
+  "status": "review",
+  "readiness_note": "Review state pending isolated evaluator calibration and final readiness review.",
+  "outcomes": [
+    {
+      "id": "M04-O1",
+      "statement": "Freeze a user-scoped performance question, equivalent-work baseline, competing hypotheses, falsifiers, and bounded collection plan before inspecting a fault.",
+      "graduate_profile": [1, 2, 8],
+      "mastery_levels": ["Define", "Calculate", "Diagnose"],
+      "lessons": ["L01", "L02"],
+      "exercises": ["EX-01", "EX-02", "EX-03", "EX-04"],
+      "artifacts": ["A01"],
+      "rubric": ["R01", "R02"]
+    },
+    {
+      "id": "M04-O2",
+      "statement": "Design controlled, interleaved experiments that expose process and environment variation while preserving useful work and raw samples.",
+      "graduate_profile": [2, 3, 8],
+      "mastery_levels": ["Calculate", "Implement", "Diagnose"],
+      "lessons": ["L02", "L07"],
+      "exercises": ["EX-03", "EX-04", "EX-13"],
+      "artifacts": ["A01", "A06"],
+      "rubric": ["R02", "R08"]
+    },
+    {
+      "id": "M04-O3",
+      "statement": "Propagate safe trace context across a process boundary and correlate request traces, structured logs, metrics, and exemplars.",
+      "graduate_profile": [3, 8, 9, 11],
+      "mastery_levels": ["Define", "Implement", "Diagnose"],
+      "lessons": ["L03"],
+      "exercises": ["EX-05", "EX-06"],
+      "artifacts": ["A02", "A03"],
+      "rubric": ["R03"]
+    },
+    {
+      "id": "M04-O4",
+      "statement": "Choose metrics and logs with explicit units, purpose, cardinality, overhead, privacy, retention, access, cost, and ownership bounds.",
+      "graduate_profile": [2, 8, 9, 10],
+      "mastery_levels": ["Calculate", "Implement", "Decide and Teach"],
+      "lessons": ["L04"],
+      "exercises": ["EX-07", "EX-08"],
+      "artifacts": ["A02", "A03", "A04"],
+      "rubric": ["R04", "R07"]
+    },
+    {
+      "id": "M04-O5",
+      "statement": "Use CPU, allocation, lock-wait, dependency-span, local-I/O, and query-plan evidence without overstating profiler or cache boundaries.",
+      "graduate_profile": [3, 8, 11],
+      "mastery_levels": ["Implement", "Diagnose"],
+      "lessons": ["L05", "L06"],
+      "exercises": ["EX-09", "EX-10", "EX-11"],
+      "artifacts": ["A02", "A03", "A04"],
+      "rubric": ["R05"]
+    },
+    {
+      "id": "M04-O6",
+      "statement": "Diagnose CPU work, allocation pressure, lock contention, slow I/O, connection retention, and metric-cardinality faults before reveal, then design discriminating reruns.",
+      "graduate_profile": [7, 8, 11],
+      "mastery_levels": ["Diagnose", "Decide and Teach"],
+      "lessons": ["L01", "L05", "L06"],
+      "exercises": ["EX-09", "EX-10", "EX-11", "EX-12"],
+      "artifacts": ["A04", "A05"],
+      "rubric": ["R06", "R07"]
+    },
+    {
+      "id": "M04-O7",
+      "statement": "Build a reproducible benchmark and enforce a workload-scoped regression budget with pass, regression, and inconclusive outcomes.",
+      "graduate_profile": [2, 8, 10],
+      "mastery_levels": ["Calculate", "Implement", "Diagnose", "Decide and Teach"],
+      "lessons": ["L02", "L07"],
+      "exercises": ["EX-13"],
+      "artifacts": ["A06"],
+      "rubric": ["R08"]
+    },
+    {
+      "id": "M04-O8",
+      "statement": "Defend a performance change through user outcome, causal evidence, validation, telemetry safety and cost, ownership, migration, rollout, rollback, and reversal conditions.",
+      "graduate_profile": [8, 10, 14, 15, 16],
+      "mastery_levels": ["Diagnose", "Decide and Teach"],
+      "lessons": ["L08"],
+      "exercises": ["EX-14", "EX-15"],
+      "artifacts": ["A07", "A08", "A09"],
+      "rubric": ["R09", "R10"]
+    }
+  ],
+  "resources": [
+    {
+      "id": "RES-01", "title": "The USE Method", "author_or_publisher": "Brendan Gregg", "type": "practitioner performance methodology", "url": "https://www.brendangregg.com/usemethod.html", "required": true, "access": "free", "week": 13, "estimated_minutes": 35,
+      "purpose": "Start investigation from resource questions rather than available dashboards.",
+      "assignment": "Read Summary, Metrics, In Practice, and Other Methodologies; build a USE table and name two gaps.",
+      "last_verified": "2026-07-31", "text_alternative": "lessons/01-question-first-investigations.md"
+    },
+    {
+      "id": "RES-02", "title": "Monitoring Systems with Advanced Analytics", "author_or_publisher": "Google SRE Workbook contributors", "type": "practitioner handbook chapter", "url": "https://sre.google/workbook/monitoring/", "required": true, "access": "free", "week": 13, "estimated_minutes": 45,
+      "purpose": "Connect user symptoms, diagnostic signals, and operating cost.",
+      "assignment": "Read Desirable Features, Sources of Monitoring Data, and Metrics with Purpose through Saturation; classify five signals.",
+      "last_verified": "2026-07-31", "text_alternative": "lessons/04-signals-cardinality-cost.md"
+    },
+    {
+      "id": "RES-03", "title": "Trace Context", "author_or_publisher": "W3C Distributed Tracing Working Group", "type": "W3C Recommendation", "url": "https://www.w3.org/TR/trace-context/", "required": true, "access": "free", "week": 14, "estimated_minutes": 40,
+      "purpose": "Define interoperable trace identity, parsing, and privacy behavior.",
+      "assignment": "Read Abstract, header format, processing model, and privacy considerations; validate three contexts and identify one trust boundary.",
+      "last_verified": "2026-07-31", "text_alternative": "lessons/03-trace-context.md"
+    },
+    {
+      "id": "RES-04", "title": "OpenTelemetry Specification Overview", "author_or_publisher": "OpenTelemetry maintainers and CNCF", "type": "maintainer specification", "url": "https://opentelemetry.io/docs/specs/otel/overview/", "required": true, "access": "free", "week": 14, "estimated_minutes": 45,
+      "purpose": "Map provider-neutral lab records to trace, metric, log, resource, and context semantics.",
+      "assignment": "Read the named signal, resource, context, and propagator sections; map every lab record field.",
+      "last_verified": "2026-07-31", "text_alternative": "lessons/03-trace-context.md"
+    },
+    {
+      "id": "RES-05", "title": "Rigorous Benchmarking in Reasonable Time", "author_or_publisher": "Tomas Kalibera and Richard E. Jones; ACM ISMM and University of Kent", "type": "original research paper", "url": "https://kar.kent.ac.uk/33611/", "required": true, "access": "free", "week": 16, "estimated_minutes": 55,
+      "purpose": "Model multiple sources of benchmark variation and efficient repetition.",
+      "assignment": "Read the abstract, experimental dimensions, repetition guidance, and reporting recommendations; identify three variation levels.",
+      "last_verified": "2026-07-31", "text_alternative": "lessons/07-benchmarks-regression-budgets.md"
+    },
+    {
+      "id": "RES-06", "title": "The Art of Performance Monitoring", "author_or_publisher": "Brian Smith, Facebook; USENIX Association", "type": "conference video, audio, and slides", "url": "https://www.usenix.org/conference/srecon16/program/presentation/smith", "required": true, "access": "free", "week": 14, "estimated_minutes": 35,
+      "purpose": "Examine production performance monitoring as a designed and owned system.",
+      "assignment": "Watch the complete talk or use all slides with the local alternative; record one design rule, its cost, and a counterexample.",
+      "last_verified": "2026-07-31", "text_alternative": "lessons/04-signals-cardinality-cost.md"
+    }
+  ],
+  "artifacts": [
+    {"id": "A01", "week": 13, "required": true, "template_path": "modules/04-performance-methodology-observability/worksheets/week-13-investigation-plan.md", "submission_path": "reports/module-04-investigation-plan.md", "immutable_after_submission": true},
+    {"id": "A02", "week": 14, "required": true, "template_path": "modules/04-performance-methodology-observability/lab/README.md", "submission_path": "labs/module-04/"},
+    {"id": "A03", "week": 14, "required": true, "template_path": "modules/04-performance-methodology-observability/worksheets/week-14-instrumentation-build.md", "submission_path": "labs/module-04/build-review.md"},
+    {"id": "A04", "week": 15, "required": true, "template_path": "modules/04-performance-methodology-observability/worksheets/week-15-blind-diagnosis.md", "submission_path": "experiments/module-04/"},
+    {"id": "A05", "week": 15, "required": true, "template_path": "modules/04-performance-methodology-observability/worksheets/week-15-blind-diagnosis.md", "submission_path": "reports/module-04-failure-matrix.md", "immutable_after_submission": true},
+    {"id": "A06", "week": 16, "required": true, "template_path": "modules/04-performance-methodology-observability/worksheets/week-16-performance-review.md", "submission_path": "experiments/module-04/benchmark-result.json"},
+    {"id": "A07", "week": 16, "required": true, "template_path": "templates/performance-review-template.md", "submission_path": "reports/module-04-performance-review.md"},
+    {"id": "A08", "week": 16, "required": true, "template_path": "modules/04-performance-methodology-observability/worksheets/week-16-performance-review.md", "submission_path": "reviews/module-04-defense.md"},
+    {"id": "A09", "week": 16, "required": true, "template_path": "modules/04-performance-methodology-observability/assessment/report-template.md", "submission_path": "reviews/module-04-evaluation.md"},
+    {"id": "A10", "week": 16, "required": true, "template_path": "templates/learning-log-template.md", "submission_path": "learning-log/week-13.md through learning-log/week-16.md"}
+  ],
+  "failure_experiments": [
+    {"id": "F01", "scenario": "CPU work hidden in request processing", "evidence": "Journey effect, process CPU, hot profile stack, stable dependency timing, equivalent checksum, and discriminating rerun"},
+    {"id": "F02", "scenario": "Allocation pressure and retention", "evidence": "Allocation rate/sites, retained bytes, memory boundary, cleanup, journey effect, and churn-versus-leak test"},
+    {"id": "F03", "scenario": "Lock contention", "evidence": "Lock wait, concurrency, server spans, CPU evidence, critical-section variation, and alternative explanation"},
+    {"id": "F04", "scenario": "Slow bounded local I/O", "evidence": "File child spans, process CPU, bytes, cache/durability limits, user effect, and equivalent-work rerun"},
+    {"id": "F05", "scenario": "Bounded connection retention", "evidence": "Active/peak/retained connections, request completion, descriptor boundary, shutdown cleanup, and second-run proof"},
+    {"id": "F06", "scenario": "High-cardinality metric label", "evidence": "Unique series, encoded-byte estimate, budget violation, safe aggregation replacement, trace exemplar, privacy and owner"}
+  ],
+  "assessment": {
+    "rubric_path": "modules/04-performance-methodology-observability/assessment/rubric.md",
+    "evaluator_prompt_path": "modules/04-performance-methodology-observability/assessment/evaluator-prompt.md",
+    "evaluation_schema_path": "schemas/evaluation.schema.json",
+    "calibration_path": "modules/04-performance-methodology-observability/assessment/calibration",
+    "pass_average": 3,
+    "safety_critical_criteria": ["R06", "R07"],
+    "required_result_bands": ["Pass", "Revise", "Repeat"]
+  }
+}
