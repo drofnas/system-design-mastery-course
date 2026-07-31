@@ -37,4 +37,3 @@ goes to another region. Retries prevent data loss.
 Distributed architecture is more future-proof and is industry best practice.
 The additional cost is worth the scalability. The design can be changed later
 if needed.
-

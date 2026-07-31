@@ -50,4 +50,3 @@ canonical design.
 An experienced human reviewer is encouraged. The LLM evaluator is sufficient
 for formal self-study only when it follows the prompt and produces cited,
 schema-conforming output.
-

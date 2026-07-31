@@ -64,4 +64,3 @@ state connections. It labels backlog recovery unknown until measured and
 assigns the experiment. The learner records that the initial claim “separate
 worker isolates channel failure” was too broad and narrows it without editing
 the frozen baseline.
-

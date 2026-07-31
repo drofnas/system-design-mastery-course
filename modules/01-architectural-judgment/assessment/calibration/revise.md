@@ -45,4 +45,3 @@ not. Reversal says “split further when scale requires it.”
 The defense is understandable and preserves the submitted assumptions. It
 admits that burst and recovery evidence is missing. The revision log assigns a
 load model and failure tabletop but has not completed them.
-

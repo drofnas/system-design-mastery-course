@@ -249,4 +249,3 @@ the context view.
 - [Creator-led C4 video](https://www.youtube.com/watch?v=KvoBrUd1-5E)
 - Next: Complete the Week 1 baseline, then study
   [Lesson 6](06-constraints-options-and-reversibility.md).
-

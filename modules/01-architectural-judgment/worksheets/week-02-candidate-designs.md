@@ -191,4 +191,3 @@ Select one architecturally significant decision within the candidate and create
 - Tool:
 - Assistance:
 - Verification:
-

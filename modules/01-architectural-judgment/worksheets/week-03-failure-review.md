@@ -129,4 +129,3 @@ For each reviewer finding:
 - Tool:
 - Assistance:
 - Verification:
-

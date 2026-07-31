@@ -140,4 +140,3 @@ A module is `ready` only when:
 6. Calibration fixtures produce the expected result bands consistently.
 7. Internal-link, content-structure, and syllabus-preservation checks pass.
 8. A reviewer confirms that the local content teaches rather than merely tests.
-
