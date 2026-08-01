@@ -52,6 +52,9 @@ these finding prefixes, and name a Lesson plus EX exercise in remediation:
 
 Distinguish bounded uncertainty from absent evidence. Accept defensible
 alternatives. Do not draft the repaired diagnosis or architecture.
+The `remediation` array must be non-empty for every row, including a score of 4;
+for a fully satisfied criterion, name the Lesson and EX exercise that sustain or
+extend the demonstrated capability without inventing a finding.
 
 ## Step 4: Result
 
