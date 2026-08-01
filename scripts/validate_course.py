@@ -501,6 +501,8 @@ def main() -> int:
         ROOT / "schemas" / "benchmark-result.schema.json",
         ROOT / "schemas" / "blind-collection.schema.json",
         ROOT / "schemas" / "blind-reveal.schema.json",
+        ROOT / "schemas" / "network-scenario.schema.json",
+        ROOT / "schemas" / "network-trial.schema.json",
     ):
         load_json(path, errors)
 
