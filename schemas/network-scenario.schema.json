@@ -4,7 +4,7 @@
   "title":"Module 5 network scenario",
   "type":"object",
   "oneOf":[
-    {"properties":{"mode":{"const":"trace"},"protocol":{"const":"h1"},"fault":{"properties":{"type":{"enum":["baseline","reset","dns_failure","slow_reader"]}}}}},
+    {"properties":{"mode":{"const":"trace"},"protocol":{"const":"h1"},"fault":{"properties":{"type":{"enum":["baseline","reset","dns_failure","slow_reader"]}}},"limits":{"properties":{"max_connections":{"type":"integer","minimum":3,"maximum":128}}}}},
     {"properties":{"mode":{"const":"simulate"},"protocol":{"enum":["h2_tcp","h3_quic"]},"fault":{"properties":{"type":{"enum":["delay","jitter","loss","reordering","bandwidth","pool_exhaustion"]}}}}}
   ],
   "required":["schema_version","id","seed","mode","protocol","client_population","path","streams","fault","limits","expected_work"],

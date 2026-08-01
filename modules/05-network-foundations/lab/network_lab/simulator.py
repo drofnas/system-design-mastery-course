@@ -6,7 +6,7 @@ import math
 import random
 from typing import Any
 
-from .config import scenario_hash
+from .config import scenario_hash, sha256_bytes
 
 
 PACKET_BYTES = 1200
@@ -96,6 +96,8 @@ def simulate(scenario: dict[str, Any]) -> dict[str, Any]:
         pool["wait_ms"] = round(rtt, 3)
     elapsed = max(completion.values(), default=setup_ms)
     useful = sum(stream["bytes"] for stream in scenario["streams"])
+    actual_checksum = sha256_bytes(b"T" * useful)
+    equivalent_work = actual_checksum == scenario["expected_work"]["checksum"]
     return {
         "schema_version": "1.0",
         "scenario_id": scenario["id"],
@@ -106,13 +108,13 @@ def simulate(scenario: dict[str, Any]) -> dict[str, Any]:
         "status": "ok",
         "phase_timings_ms": {"setup": round(setup_ms, 3), "transfer": round(max(0.0, elapsed - setup_ms), 3), "total": round(elapsed, 3)},
         "connections": dict(pool, created=pool["peak"], reused_requests=0),
-        "attempts": [{"number": 1, "connection": 1, "reused": False, "duration_ms": round(elapsed, 3), "bytes": useful, "checksum": scenario["expected_work"]["checksum"]}],
+        "attempts": [{"number": 1, "connection": 1, "reused": False, "duration_ms": round(elapsed, 3), "bytes": useful, "checksum": actual_checksum}],
         "bytes": {"useful": useful, "wire_modeled": total_wire},
         "goodput_bytes_per_second": round(useful / (elapsed / 1000.0), 3) if elapsed else 0.0,
         "stream_completion_ms": completion,
         "events": events,
-        "integrity": {"expected_checksum": scenario["expected_work"]["checksum"], "actual_checksum": scenario["expected_work"]["checksum"], "equivalent_work": True},
-        "cleanup": {"open_connections": 0, "temporary_keys": 0},
+        "integrity": {"expected_checksum": scenario["expected_work"]["checksum"], "actual_checksum": actual_checksum, "equivalent_work": equivalent_work},
+        "cleanup": {"open_connections": 0, "temporary_keys": 0, "unresolved_tasks": 0},
         "limits": scenario["limits"],
         "limitations": ["No IP packets or production protocol stack were measured.", "Congestion and recovery are simplified deterministic teaching rules."]
     }

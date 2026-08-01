@@ -1,8 +1,10 @@
 from __future__ import annotations
 
 import asyncio
+import hashlib
 import json
 import shutil
+import subprocess
 import tempfile
 import unittest
 from pathlib import Path
@@ -10,7 +12,7 @@ from pathlib import Path
 from network_lab.blind import prepare, reveal
 from network_lab.config import load_scenario, validate_scenario, validate_trial
 from network_lab.simulator import simulate
-from network_lab.trace import trace
+from network_lab.trace import RuntimeTracker, trace
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -40,6 +42,14 @@ class ScenarioTests(unittest.TestCase):
         scenario = load_scenario(SCENARIOS / "transit-loss.json")
         scenario["unexpected"] = True
         self.assertIn("unknown property", " ".join(validate_scenario(scenario)))
+
+    def test_rejects_changed_work_checksum_and_small_trace_pool(self) -> None:
+        scenario = load_scenario(SCENARIOS / "transit-loss.json")
+        scenario["expected_work"]["checksum"] = "0" * 64
+        self.assertIn("canonical stream workload", " ".join(validate_scenario(scenario)))
+        trace_scenario = load_scenario(SCENARIOS / "transit-baseline.json")
+        trace_scenario["limits"]["max_connections"] = 2
+        self.assertTrue(validate_scenario(trace_scenario))
 
 
 class SimulationTests(unittest.TestCase):
@@ -79,9 +89,55 @@ class SimulationTests(unittest.TestCase):
                 with self.subTest(path=path.name):
                     self.assertEqual(validate_trial(simulate(scenario)), [])
 
+    def test_modeled_checksum_is_derived_and_trial_overflow_is_rejected(self) -> None:
+        scenario = load_scenario(SCENARIOS / "transit-loss.json")
+        scenario["expected_work"]["checksum"] = "0" * 64
+        trial = simulate(scenario)
+        self.assertFalse(trial["integrity"]["equivalent_work"])
+        self.assertNotEqual(trial["integrity"]["actual_checksum"], "0" * 64)
+        valid = simulate(load_scenario(SCENARIOS / "transit-loss.json"))
+        valid["connections"]["peak"] = valid["connections"]["limit"] + 1
+        self.assertIn("peak cannot exceed", " ".join(validate_trial(valid)))
+
 
 @unittest.skipUnless(shutil.which("openssl"), "OpenSSL-compatible CLI required")
 class TraceTests(unittest.IsolatedAsyncioTestCase):
+    async def test_cleanup_reports_unresolved_writers_and_handler(self) -> None:
+        class StubbornWriter:
+            def __init__(self) -> None:
+                self.closing = False
+
+            def is_closing(self) -> bool:
+                return self.closing
+
+            def close(self) -> None:
+                self.closing = True
+
+            async def wait_closed(self) -> None:
+                await asyncio.Event().wait()
+
+        tracker = RuntimeTracker()
+        logical_writer = StubbornWriter()
+        accepted_writer = StubbornWriter()
+        tracker.logical_writers.add(logical_writer)  # type: ignore[arg-type]
+        tracker.accepted_writers.add(accepted_writer)  # type: ignore[arg-type]
+        release = asyncio.Event()
+
+        async def cancellation_resistant_handler() -> None:
+            try:
+                await asyncio.Event().wait()
+            except asyncio.CancelledError:
+                await release.wait()
+
+        handler = asyncio.create_task(cancellation_resistant_handler())
+        tracker.tasks.add(handler)
+        await asyncio.sleep(0)
+        await tracker.cleanup(0.001)
+        self.assertEqual(tracker.open_connections, 2)
+        self.assertEqual(tracker.unresolved_tasks, 1)
+        release.set()
+        await asyncio.wait_for(handler, 0.1)
+
     async def test_loopback_trace_validates_tls_and_cleans_up(self) -> None:
         trial = await trace(load_scenario(SCENARIOS / "transit-baseline.json"))
         self.assertEqual(trial["status"], "ok")
@@ -94,6 +150,7 @@ class TraceTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(trial["connections"]["created"], 1)
         self.assertEqual(trial["connections"]["reused_requests"], 1)
         self.assertEqual(trial["cleanup"]["temporary_keys"], 0)
+        self.assertEqual(trial["cleanup"]["unresolved_tasks"], 0)
         self.assertIn("dns", trial["phase_timings_ms"])
         self.assertIn("edge_proxy", trial["phase_timings_ms"])
         self.assertIn("application", trial["phase_timings_ms"])
@@ -107,6 +164,33 @@ class TraceTests(unittest.IsolatedAsyncioTestCase):
         self.assertFalse(trial["integrity"]["equivalent_work"])
         self.assertEqual(trial["attempts"][0]["bytes"], 12288)
         self.assertNotEqual(trial["integrity"]["actual_checksum"], "0" * 64)
+
+    async def test_schema_maximum_payload_uses_configured_reader_bound(self) -> None:
+        scenario = load_scenario(SCENARIOS / "transit-baseline.json")
+        scenario["streams"][0]["bytes"] = 1048576
+        scenario["limits"]["max_bytes"] = 1048576
+        scenario["expected_work"]["checksum"] = hashlib.sha256(b"T" * 1048576).hexdigest()
+        trial = await trace(scenario)
+        self.assertTrue(trial["integrity"]["equivalent_work"])
+        self.assertEqual([item["bytes"] for item in trial["attempts"]], [1048576, 1048576])
+
+    async def test_minimum_timeout_stops_setup(self) -> None:
+        scenario = load_scenario(SCENARIOS / "transit-baseline.json")
+        scenario["limits"]["timeout_ms"] = 1
+        with self.assertRaises((subprocess.TimeoutExpired, TimeoutError)):
+            await trace(scenario)
+
+    async def test_network_timeout_reports_derived_cleanup(self) -> None:
+        scenario = load_scenario(SCENARIOS / "transit-slow-reader.json")
+        scenario["limits"]["timeout_ms"] = 1500
+        scenario["fault"]["reader_delay_ms"] = 3000
+        trial = await trace(scenario)
+        self.assertEqual(trial["status"], "timeout")
+        self.assertFalse(trial["integrity"]["equivalent_work"])
+        self.assertEqual(trial["cleanup"]["open_connections"], 0)
+        self.assertEqual(trial["cleanup"]["temporary_keys"], 0)
+        self.assertEqual(trial["cleanup"]["unresolved_tasks"], 0)
+        self.assertEqual(validate_trial(trial), [])
 
     async def test_dns_failure_prevents_connection(self) -> None:
         trial = await trace(load_scenario(SCENARIOS / "transit-dns-failure.json"))

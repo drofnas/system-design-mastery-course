@@ -56,11 +56,16 @@ def validate_scenario(value: dict[str, Any]) -> list[str]:
         errors.append("duplicate stream id")
     if sum(stream["bytes"] for stream in streams) > value["limits"]["max_bytes"]:
         errors.append("stream bytes exceed limits.max_bytes")
+    canonical_checksum = sha256_bytes(b"T" * sum(stream["bytes"] for stream in streams))
+    if value["expected_work"]["checksum"] != canonical_checksum:
+        errors.append("expected_work.checksum does not match the canonical stream workload")
     fault = value["fault"]
     trace_faults = {"baseline", "reset", "dns_failure", "slow_reader"}
     model_faults = {"delay", "jitter", "loss", "reordering", "bandwidth", "pool_exhaustion"}
     if value["mode"] == "trace" and (value["protocol"] != "h1" or fault["type"] not in trace_faults):
         errors.append("trace mode requires h1 and a measured-loopback fault")
+    if value["mode"] == "trace" and value["limits"]["max_connections"] < 3:
+        errors.append("trace mode requires limits.max_connections of at least 3")
     if value["mode"] == "simulate" and fault["type"] not in model_faults:
         errors.append("simulate mode requires a modeled fault")
     if fault["type"] in {"loss", "reordering"}:
@@ -101,4 +106,16 @@ def validate_trial(value: dict[str, Any]) -> list[str]:
         errors.append("measured loopback trials must use h1")
     if value["evidence_kind"] == "deterministic_model" and value.get("tls") is not None:
         errors.append("modeled trials cannot report measured TLS")
+    connections = value["connections"]
+    limits = value["limits"]
+    if connections["peak"] > connections["limit"]:
+        errors.append("connections.peak cannot exceed connections.limit")
+    if connections["limit"] != limits.get("max_connections"):
+        errors.append("connections.limit must equal limits.max_connections")
+    cleanup = value["cleanup"]
+    if value["status"] == "ok" and any(
+        cleanup[field] != 0
+        for field in ("open_connections", "temporary_keys", "unresolved_tasks")
+    ):
+        errors.append("successful trials require zero residual cleanup resources")
     return errors

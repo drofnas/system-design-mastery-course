@@ -1,7 +1,8 @@
 # Module 5: Network Foundations
 
-> **Authoring status:** Draft until the lab, assessment, calibration, semantic
-> review, and full course validation have passed.
+> **Authoring status:** Ready. Structural, semantic, lab, evaluator-calibration,
+> and full-course validation gates passed on 2026-08-01. See the
+> [readiness review](assessment/readiness-review.md).
 
 ## What this module changes
 
