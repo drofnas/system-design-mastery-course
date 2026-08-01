@@ -1,0 +1,20 @@
+{
+  "fixture": "Transit Signal Pass",
+  "author": "Calibration Author",
+  "artifact_commit": "fixture-m05-pass",
+  "baseline_tag": "fixture-m05-pass-baseline",
+  "environment": "Python 3.13; macOS loopback; OpenSSL 3",
+  "workload": "regional-mobile route-impact request",
+  "assistance": "AI explained RFC terms; it did not inspect hidden scenarios or produce evidence",
+  "artifacts": {
+    "A01": "../../pass.md#frozen-client-path-and-budget",
+    "A02": "measured-trace.json",
+    "A03": "../../pass.md#measured-tls-path",
+    "A04": "../../pass.md#blind-failure-matrix",
+    "A05": "../../pass.md#protocol-topology-decision",
+    "A06": "../../pass.md#teach-back-and-uncertainty",
+    "A07": "../../pass.md#learning-and-remediation-record",
+    "A08": "../../pass.md#learning-and-remediation-record"
+  },
+  "raw_evidence": ["measured-trace.json", "h2-loss.json", "h3-loss.json"]
+}

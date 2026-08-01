@@ -1,0 +1,6 @@
+{
+  "schema_version":"1.0","scenario_id":"transit-loss-quic","scenario_hash":"498f0ec86cf6590edc68bcf0f462e1a34c4b396a71a47c9dc4f8f1b13a2f4d60","evidence_kind":"deterministic_model","seed":1708,"protocol":"h3_quic","status":"ok","phase_timings_ms":{"setup":120.0,"transfer":92.4,"total":212.4},
+  "connections":{"limit":4,"peak":3,"wait_ms":0.0,"rejected":0,"created":3,"reused_requests":0},"attempts":[{"number":1,"connection":1,"reused":false,"duration_ms":212.4,"bytes":22528,"checksum":"982943b2b1bbe2a6b57ed06b816719f8671b118f901464af926918e2be2125f1"}],
+  "bytes":{"useful":22528,"wire_modeled":22528},"goodput_bytes_per_second":106064.03,"stream_completion_ms":{"impact":212.4,"alerts":184.88,"accessibility":177.392},"events":[{"stream_id":"impact","packet_index":0,"send_order":0,"bytes":1200,"event":"lost_then_recovered","arrival_ms":212.4,"delivery_ms":212.4}],
+  "integrity":{"expected_checksum":"982943b2b1bbe2a6b57ed06b816719f8671b118f901464af926918e2be2125f1","actual_checksum":"982943b2b1bbe2a6b57ed06b816719f8671b118f901464af926918e2be2125f1","equivalent_work":true},"cleanup":{"open_connections":0,"temporary_keys":0},"limits":{"timeout_ms":5000,"max_connections":4,"max_bytes":131072},"tls":null,"limitations":["No IP packets or production protocol stack were measured.","Congestion and recovery are simplified deterministic teaching rules."]
+}

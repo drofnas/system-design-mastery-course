@@ -2,7 +2,10 @@
 
 ## Submission identity
 
-Artifact commit `fixture-m05-pass`; frozen baseline `fixture-m05-pass-baseline`.
+Author: Calibration Author. Artifact commit `fixture-m05-pass`; frozen baseline
+`fixture-m05-pass-baseline`. The resolvable A01–A08 map and environment are in
+`artifacts/pass/submission-manifest.json`; representative immutable trials are
+`measured-trace.json`, `h2-loss.json`, and `h3-loss.json` in that directory.
 Python 3.13, macOS loopback, OpenSSL 3; AI explained RFC terms but did not
 inspect hidden scenarios or produce evidence.
 
@@ -23,8 +26,8 @@ health owner are recorded separately.
 
 ## Measured TLS path
 
-The loopback trace recorded DNS and combined TCP/TLS setup, proxy/app/dependency
-response, TLS version/cipher, expected hostname success, default-anchor rejection,
+The loopback trace recorded DNS and combined TCP/TLS setup, separate
+edge/application/dependency timings, TLS version/cipher, expected hostname success, default-anchor rejection,
 wrong-name rejection, response checksum, and zero open connections/temporary
 keys. The ephemeral key stayed in a 0700 temporary directory and was deleted.
 No production certificate, public route, or packet behavior is claimed.
@@ -49,8 +52,9 @@ plausible dependency, congestion, and DNS-health explanations.
 ## HTTP protocol comparison
 
 H2/TCP and H3/QUIC model trials use the same seed 1708, 60 ms RTT, 4 Mbit/s,
-three stream sizes, early impact loss, and 60 ms recovery. Shared ordering
-delayed every H2 completion; per-stream ordering let unaffected H3 streams
+three stream sizes, early impact loss, and 60 ms recovery. Identical setup and
+packet schedules isolate ordering: shared recovery delayed every H2 completion;
+per-stream recovery let unaffected H3 streams
 complete earlier while impact recovered. Congestion capacity stayed shared.
 The output is labeled deterministic model, not packet capture or protocol benchmark.
 
