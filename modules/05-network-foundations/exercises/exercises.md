@@ -26,7 +26,9 @@ discovery, and certificate to owners and escalation evidence.
 ## EX-05: Flow versus congestion
 
 Given falling sender goodput, design evidence that distinguishes a slow reader,
-path congestion, and application pacing.
+path congestion, and application pacing. Include application call timing,
+kernel send/receive queues or counters, peer consumption, and a same-work rerun;
+label observed facts separately from inferred mechanisms.
 
 ## EX-06: Equivalent goodput
 

@@ -3,8 +3,8 @@
 The lab exposes two different evidence boundaries:
 
 1. `trace` measures a real unprivileged loopback path: a UDP DNS message, TCP/TLS
-   setup, edge proxy, application, dependency, response, certificate validation,
-   and cleanup.
+  setup, edge proxy, application, dependency, two-request connection reuse,
+  response bytes/checksums, certificate success and rejection, and cleanup.
 2. `simulate` runs a deterministic event model for delay, jitter, bandwidth,
    loss, reordering, pool pressure, and shared-versus-per-stream ordering.
 
@@ -44,7 +44,8 @@ The lab never writes certificates into the repository.
 - `validate PATH`: validate a scenario contract before work begins.
 - `analyze TRIAL...`: summarize total timing and statuses without replacing raw evidence.
 - `blind-prepare SCENARIO_DIR OUTPUT_DIR --seed N`: create shuffled evidence
-  bundles and hashes. Move `reveal-key.json` out of view before diagnosis.
+  bundles and hashes for exactly F01–F09 across measured and modeled modes. Move
+  `reveal-key.json` out of view before diagnosis.
 - `blind-reveal BUNDLE_DIR DIAGNOSIS OUTPUT`: require and hash a frozen diagnosis,
   verify bundles, and produce a reveal record.
 
@@ -59,7 +60,7 @@ The lab never writes certificates into the repository.
 | bandwidth | model | serialization, bytes, and useful goodput |
 | reset | measured loopback | completed phases, no useful response, cleanup |
 | DNS failure | measured loopback | SERVFAIL, no connection, cleanup |
-| slow reader | measured loopback | added client read hold time |
+| slow reader | measured loopback | configured client-consumption hold and bounded connection retention; no receive-window claim |
 | pool exhaustion | model | limit, peak, wait, and bounded rejection |
 
 For loss, compare the H2/TCP and H3/QUIC scenarios with the same seed, path,
@@ -68,7 +69,7 @@ complete standards.
 
 ## Blind workflow
 
-1. Copy only the required simulate scenarios into a bounded temporary directory.
+1. Use the complete supplied scenario directory; preparation selects one canonical case for each F01–F09 fault.
 2. Run `blind-prepare`, then have a facilitator retain `reveal-key.json`.
 3. Diagnose each bundle using the Week 19 worksheet and freeze it in version control.
 4. Run `blind-reveal` with the frozen diagnosis path.
@@ -84,7 +85,7 @@ Inspecting scenario names or the reveal key before freeze invalidates R06.
   `impact.transit.test`; disabling verification is not supported.
 - Do not add packet payloads, hostnames containing user data, credentials, or
   production endpoints to scenarios.
-- Every server binds loopback only, uses bounded input, and closes after one trial.
+- Every server binds loopback only, uses bounded input, and closes after the two-request reuse trial.
 
 ## Troubleshooting
 

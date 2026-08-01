@@ -33,21 +33,27 @@ def simulate(scenario: dict[str, Any]) -> dict[str, Any]:
     recovery_ms = float(fault.get("recovery_ms", rtt))
     target_stream = str(fault.get("stream_id", scenario["streams"][0]["id"]))
     target_packet = int(fault.get("packet_index", 0))
-    shared_ordering = scenario["protocol"] in {"h1", "h2_tcp"}
-    setup_rtts = {"h1": 2, "h2_tcp": 2, "h3_quic": 1}[scenario["protocol"]]
-    setup_ms = setup_rtts * rtt
+    shared_ordering = scenario["protocol"] == "h2_tcp"
+    # Hold setup constant: this experiment isolates recovery ordering, not handshake cost.
+    setup_ms = 2 * rtt
     events: list[dict[str, Any]] = []
     completion: dict[str, float] = {}
-    shared_barrier = setup_ms
+    shared_recovery_until = setup_ms
+    stream_recovery_until = {stream["id"]: setup_ms for stream in scenario["streams"]}
     cursor = setup_ms
     total_wire = 0
-    reset = fault["type"] == "reset"
+    packet_counts = {
+        stream["id"]: math.ceil(stream["bytes"] / PACKET_BYTES)
+        for stream in scenario["streams"]
+    }
 
-    for stream in scenario["streams"]:
-        stream_id = stream["id"]
-        stream_barrier = setup_ms
-        packets = math.ceil(stream["bytes"] / PACKET_BYTES)
-        for packet_index in range(packets):
+    # Round-robin serialization gives both protocol variants the same packet schedule.
+    send_order = 0
+    for packet_index in range(max(packet_counts.values())):
+        for stream in scenario["streams"]:
+            stream_id = stream["id"]
+            if packet_index >= packet_counts[stream_id]:
+                continue
             size = min(PACKET_BYTES, stream["bytes"] - packet_index * PACKET_BYTES)
             cursor += size / bandwidth_bytes_ms
             arrival = cursor + base_one_way
@@ -60,22 +66,28 @@ def simulate(scenario: dict[str, Any]) -> dict[str, Any]:
             if fault["type"] == "reordering" and stream_id == target_stream and packet_index == target_packet:
                 arrival += float(fault.get("reorder_ms", rtt / 2.0))
                 kind = "reordered"
-            stream_barrier = max(stream_barrier, arrival)
-            if shared_ordering:
-                shared_barrier = max(shared_barrier, arrival)
+            if kind != "delivered":
+                if shared_ordering:
+                    shared_recovery_until = max(shared_recovery_until, arrival)
+                else:
+                    stream_recovery_until[stream_id] = max(stream_recovery_until[stream_id], arrival)
+            delivery = max(
+                arrival,
+                shared_recovery_until if shared_ordering else stream_recovery_until[stream_id],
+            )
+            completion[stream_id] = max(completion.get(stream_id, setup_ms), delivery)
             total_wire += size
-            events.append({"stream_id": stream_id, "packet_index": packet_index, "bytes": size, "event": kind, "arrival_ms": round(arrival, 3)})
-        delivered = max(stream_barrier, shared_barrier) if shared_ordering else stream_barrier
-        completion[stream_id] = round(delivered, 3)
-
-    if shared_ordering:
-        maximum = max(completion.values(), default=setup_ms)
-        for stream_id in completion:
-            completion[stream_id] = round(max(completion[stream_id], maximum if fault["type"] in {"loss", "reordering"} else completion[stream_id]), 3)
-    if fault["type"] == "slow_reader":
-        reader_delay = float(fault.get("reader_delay_ms", 25.0))
-        for index, stream_id in enumerate(completion):
-            completion[stream_id] = round(completion[stream_id] + reader_delay * (index + 1), 3)
+            events.append({
+                "stream_id": stream_id,
+                "packet_index": packet_index,
+                "send_order": send_order,
+                "bytes": size,
+                "event": kind,
+                "arrival_ms": round(arrival, 3),
+                "delivery_ms": round(delivery, 3),
+            })
+            send_order += 1
+    completion = {stream_id: round(value, 3) for stream_id, value in completion.items()}
     pool = {"limit": scenario["limits"]["max_connections"], "peak": min(len(scenario["streams"]), scenario["limits"]["max_connections"]), "wait_ms": 0.0, "rejected": 0}
     if fault["type"] == "pool_exhaustion":
         demand = int(fault.get("connections", len(scenario["streams"]) + 1))
@@ -91,9 +103,10 @@ def simulate(scenario: dict[str, Any]) -> dict[str, Any]:
         "evidence_kind": "deterministic_model",
         "seed": scenario["seed"],
         "protocol": scenario["protocol"],
-        "status": "reset" if reset else "ok",
+        "status": "ok",
         "phase_timings_ms": {"setup": round(setup_ms, 3), "transfer": round(max(0.0, elapsed - setup_ms), 3), "total": round(elapsed, 3)},
-        "connections": pool,
+        "connections": dict(pool, created=pool["peak"], reused_requests=0),
+        "attempts": [{"number": 1, "connection": 1, "reused": False, "duration_ms": round(elapsed, 3), "bytes": useful, "checksum": scenario["expected_work"]["checksum"]}],
         "bytes": {"useful": useful, "wire_modeled": total_wire},
         "goodput_bytes_per_second": round(useful / (elapsed / 1000.0), 3) if elapsed else 0.0,
         "stream_completion_ms": completion,

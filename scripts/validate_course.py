@@ -463,6 +463,30 @@ def validate_baseline(errors: list[str]) -> None:
         fail(errors, "baseline: fewer than five quality-scenario rows")
 
 
+def validate_network_lab(module_root: Path, manifest: dict[str, Any], errors: list[str]) -> None:
+    """Exercise Module 5's public scenario schemas and deterministic outputs."""
+
+    if manifest.get("id") != "M05":
+        return
+    lab_root = module_root / "lab"
+    sys.path.insert(0, str(lab_root))
+    try:
+        from network_lab.config import load_scenario, validate_trial
+        from network_lab.simulator import simulate
+
+        for scenario_path in sorted((lab_root / "scenarios").glob("*.json")):
+            try:
+                scenario = load_scenario(scenario_path)
+                if scenario["mode"] == "simulate":
+                    trial_errors = validate_trial(simulate(scenario))
+                    for error in trial_errors:
+                        fail(errors, f"{relative(scenario_path)} modeled trial: {error}")
+            except (OSError, ValueError, KeyError) as error:
+                fail(errors, f"{relative(scenario_path)}: {error}")
+    finally:
+        sys.path.remove(str(lab_root))
+
+
 def validate_local_links(errors: list[str]) -> None:
     for markdown in ROOT.rglob("*.md"):
         if ".git" in markdown.parts:
@@ -516,6 +540,7 @@ def main() -> int:
         validate_required_files(module_root, manifest, errors)
         validate_lesson_contracts(module_root, errors)
         validate_calibration(module_root, manifest, errors)
+        validate_network_lab(module_root, manifest, errors)
 
     validate_baseline(errors)
     validate_local_links(errors)

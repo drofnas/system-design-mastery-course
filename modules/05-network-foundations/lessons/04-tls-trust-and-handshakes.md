@@ -66,5 +66,5 @@ for each failure.
 
 ## Sources and next work
 
-- RFC 8446, TLS 1.3: https://www.rfc-editor.org/rfc/rfc8446.html
+- RFC 9846, TLS 1.3: https://www.rfc-editor.org/rfc/rfc9846.html
 - Continue with Lesson 5 for connection ownership beyond the TLS endpoint.

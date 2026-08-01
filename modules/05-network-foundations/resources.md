@@ -32,7 +32,7 @@ same evidence prompt from that local lesson and record the substitution.
 ### RES-03: TLS 1.3
 
 - Author/publisher: E. Rescorla; IETF
-- URL: https://www.rfc-editor.org/rfc/rfc8446.html
+- URL: https://www.rfc-editor.org/rfc/rfc9846.html
 - Type/status/access: Internet standard; required; free
 - Boundary/time: Sections 2, 4.1–4.4, and 9; 45 minutes
 - Purpose: trace negotiation, authentication, key establishment, and resumption

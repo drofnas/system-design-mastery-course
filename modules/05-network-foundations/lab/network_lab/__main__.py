@@ -70,7 +70,7 @@ def main() -> int:
         write_result(result, None)
         return 0
     if args.command == "blind-prepare":
-        write_result(prepare(Path(args.scenario_dir), Path(args.output_dir), args.seed), None)
+        write_result(asyncio.run(prepare(Path(args.scenario_dir), Path(args.output_dir), args.seed)), None)
         return 0
     if args.command == "blind-reveal":
         write_result(reveal(Path(args.bundle_dir), Path(args.diagnosis), Path(args.output)), None)
