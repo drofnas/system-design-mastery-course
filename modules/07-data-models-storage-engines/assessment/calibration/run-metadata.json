@@ -1,0 +1,21 @@
+{
+  "runtime": {
+    "provider": "OpenAI",
+    "model": "Codex current session model",
+    "client": "Codex desktop isolated collaboration agents"
+  },
+  "deterministic_settings": {
+    "temperature": "closest platform-supported deterministic setting",
+    "reasoning_effort": "inherited evaluator reasoning setting",
+    "output_constraint": "schemas/evaluation.schema.json"
+  },
+  "isolation_method": "Six fresh no-history agent contexts; each received one fixture, its manifest, and published assessment contracts only. Expected bands, other fixtures, and prior outputs were explicitly excluded.",
+  "invocations": [
+    {"fixture": "pass", "run": 1, "isolation_id": "m07-pass-run1", "invoked_at": "2026-08-02T00:00:00Z", "raw_response": "runs/pass-run-1.json", "sha256": "7b4742a43724e814cb742e006731545efab2e84a228deed7fad85bb7d92b4021"},
+    {"fixture": "revise", "run": 1, "isolation_id": "m07-revise-run1", "invoked_at": "2026-08-02T00:00:00Z", "raw_response": "runs/revise-run-1.json", "sha256": "fee69d0aea0f6366d251b08e28efcf3eddbadf80d8eef319c4e3c5a00e8c833a"},
+    {"fixture": "repeat", "run": 1, "isolation_id": "m07-repeat-run1", "invoked_at": "2026-08-02T00:00:00Z", "raw_response": "runs/repeat-run-1.json", "sha256": "3923b7748b28d60af38c81f7aad8e5c97a298b84faa560b69a4488122bc88645"},
+    {"fixture": "pass", "run": 2, "isolation_id": "m07-pass-run2", "invoked_at": "2026-08-02T00:00:00-07:00", "raw_response": "runs/pass-run-2.json", "sha256": "95073e8528dacdd7dc8ffe4eae7afe852ba98bd2785943a857191af2d098a639"},
+    {"fixture": "revise", "run": 2, "isolation_id": "m07-revise-run2", "invoked_at": "2026-08-02T08:10:21Z", "raw_response": "runs/revise-run-2.json", "sha256": "2cf68607043550df12fd154970d229fb89901e8c63d02de033de30b3d7dd93c2"},
+    {"fixture": "repeat", "run": 2, "isolation_id": "m07-repeat-run2", "invoked_at": "2026-08-02T00:00:00Z", "raw_response": "runs/repeat-run-2.json", "sha256": "ec5ca1fb888ab1ed9abf6984f3c351006b334cdae3e0ba1540a389cb3b381225"}
+  ]
+}
