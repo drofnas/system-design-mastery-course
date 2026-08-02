@@ -156,56 +156,35 @@ required PR-title convention.
 
 ### "Plan out the next module" trigger
 
-When the user says **"Plan out the next module."**, first check the active
-collaboration mode before taking any other step:
+When the user says **"Plan out the next module."**, first inspect the active
+collaboration mode. This is a mandatory precondition and applies before any
+pull, branch creation, file edit, evaluation, commit, push, or other mutation.
 
-- If Plan Mode is active, produce a decision-complete `<proposed_plan>` and
-  stop. Do not begin the authoring workflow or create branches, edit files,
-  commit, push, or perform any other mutation. Do not automatically begin
-  execution if the mode later changes; wait for a new user request outside
-  Plan Mode.
-- If Plan Mode is not active, treat the phrase as a request to execute the
-  complete next-module authoring workflow, not merely to produce a proposed
-  plan. It also explicitly authorizes evaluation and pushing the resulting
-  module branch; do not pause for approval between authoring, evaluation,
-  revision, committing, and pushing. For this trigger:
+- If the active mode is not Plan mode, stop and tell the user that this trigger
+  requires Plan mode. Do not begin the authoring or publication workflow.
+- If the active mode is Plan mode, perform read-only discovery and return one
+  decision-complete `<proposed_plan>`. Do not mutate repository state while
+  planning.
+- The proposed plan must identify the first missing syllabus module from the
+  complete module inventory; derive its outcomes, scope, evidence, dependencies,
+  non-capstone case, interfaces, failure work, assessment, calibration,
+  validation, commit, and publication strategy; and record every material
+  assumption or user decision.
+- The phrase **"Plan out the next module."** requests planning only. It does not
+  authorize authoring, evaluation mutations, committing, pushing, pull-request
+  creation, or merging.
+- Authoring may begin only after Plan mode ends and the user explicitly asks to
+  implement the approved plan. At that point, re-read current repository state,
+  recheck every plan assumption, protect unrelated work, update `main` with
+  `git pull --ff-only origin main`, and verify `main` equals `origin/main` before
+  creating the dedicated module branch. Stop and re-plan when the selected
+  module, base commit, requirements, or other material assumptions changed.
 
-1. Inspect the module directory names to inventory which syllabus modules have
-   already been created. Compare that inventory with `00_COURSE_SYLLABUS.md`,
-   select the first syllabus module that has not been created, and derive its
-   number, title, outcomes, scope, required evidence, and dependencies from the
-   syllabus. Do not infer the next module solely from the highest directory
-   number.
-2. Read all required course standards and relevant existing learner artifacts.
-   If the target module does not exist yet, the target-module `README.md` and
-   `module.json` requirement begins after those files are created and applies
-   to every subsequent review and evaluation pass.
-3. Before authoring module files, protect unrelated or uncommitted work, switch
-   to `main`, run `git pull --ff-only origin main`, and verify that `main` equals
-   `origin/main`. Stop on divergence instead of merging, rebasing, or resetting.
-   Then create and switch to the module's dedicated branch from that exact
-   commit using the naming rules above.
-4. Execute the entire Authoring workflow below. Create logical, reviewed commits
-   at meaningful milestones so that instruction, practice, assessment,
-   evaluation, and readiness changes are traceable; do not save the whole
-   module for one undifferentiated commit.
-5. Send the completed module and its evidence through the required structural,
-   semantic, evaluator-calibration, and readiness evaluation. Run evaluation
-   without requesting approval, apply warranted fixes, rerun failed checks, and
-   record evaluation or calibration results in the repository when the module
-   contract requires them.
-6. After all evaluations and readiness checks pass, review the complete
-   in-scope diff and create a final commit that captures any remaining fixes,
-   evaluation evidence, and readiness transition. Verify that the working tree
-   contains no uncommitted in-scope changes, then push the module branch to
-   GitHub so it is ready for a pull request.
-7. Report the created module, evaluation results, commit sequence, and pushed
-   branch. Do not create the pull request unless the user separately asks for
-   one.
-
-This trigger is a narrow exception to the default publication pause above: it
-authorizes pushing the module branch, but it does not authorize creating or
-merging a pull request.
+During the later implementation turn, execute the approved Authoring workflow
+below, keep logical reviewed commits, run every structural, semantic,
+evaluator-calibration, and readiness gate, and follow the default publication
+pause. Publication requires separate user authorization; the planning phrase
+does not provide it.
 
 ## Authoring workflow
 
