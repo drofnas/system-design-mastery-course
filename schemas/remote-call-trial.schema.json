@@ -1,0 +1,160 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/system-design-course/remote-call-trial.schema.json",
+  "title": "Module 6 measured asynchronous fan-out trial",
+  "type": "object",
+  "required": ["schema_version", "scenario_id", "pair_id", "variant", "seed", "evidence_kind", "runtime", "input_fingerprint", "logical_request_ids", "outcomes", "attempts", "concurrency", "deadlines", "cancellation", "effects", "completeness", "health", "cleanup", "policy_checks"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "scenario_id": {"type": "string", "minLength": 1},
+    "pair_id": {"type": "string", "minLength": 1},
+    "variant": {"enum": ["baseline", "broken", "repaired"]},
+    "seed": {"type": "integer"},
+    "evidence_kind": {"const": "measured-asyncio-scaled"},
+    "runtime": {
+      "type": "object",
+      "required": ["implementation", "python", "time_scale", "network"],
+      "properties": {
+        "implementation": {"const": "stdlib-asyncio-fanout-service"},
+        "python": {"type": "string", "minLength": 1},
+        "time_scale": {"type": "number", "exclusiveMinimum": 0},
+        "network": {"const": "offline-synthetic-dependencies"}
+      },
+      "additionalProperties": false
+    },
+    "input_fingerprint": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "logical_request_ids": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
+    "outcomes": {
+      "$ref": "#/$defs/outcomeCounts"
+    },
+    "attempts": {
+      "type": "object",
+      "required": ["initial", "retries", "total", "per_dependency", "start_logical_ms", "backoff_logical_ms", "useful_work_ratio"],
+      "properties": {
+        "initial": {"$ref": "#/$defs/count"},
+        "retries": {"$ref": "#/$defs/count"},
+        "total": {"$ref": "#/$defs/count"},
+        "per_dependency": {"$ref": "#/$defs/countMap"},
+        "start_logical_ms": {"$ref": "#/$defs/nonnegativeNumberArray"},
+        "backoff_logical_ms": {"$ref": "#/$defs/nonnegativeNumberArray"},
+        "useful_work_ratio": {"type": "number", "minimum": 0, "maximum": 1}
+      },
+      "additionalProperties": false
+    },
+    "concurrency": {
+      "type": "object",
+      "required": ["global_peak", "per_dependency_peak", "per_tenant_peak", "queue_peak", "rejections", "global_limit", "per_dependency_limit", "per_tenant_limit", "queue_limit"],
+      "properties": {
+        "global_peak": {"$ref": "#/$defs/count"},
+        "per_dependency_peak": {"$ref": "#/$defs/countMap"},
+        "per_tenant_peak": {"$ref": "#/$defs/countMap"},
+        "queue_peak": {"$ref": "#/$defs/count"},
+        "rejections": {"$ref": "#/$defs/count"},
+        "global_limit": {"type": "integer", "minimum": 1},
+        "per_dependency_limit": {"$ref": "#/$defs/positiveCountMap"},
+        "per_tenant_limit": {"type": "integer", "minimum": 1},
+        "queue_limit": {"$ref": "#/$defs/count"}
+      },
+      "additionalProperties": false
+    },
+    "deadlines": {
+      "type": "object",
+      "required": ["expired", "insufficient_budget", "late_work", "remaining_at_dispatch_ms"],
+      "properties": {
+        "expired": {"$ref": "#/$defs/count"},
+        "insufficient_budget": {"$ref": "#/$defs/count"},
+        "late_work": {"$ref": "#/$defs/count"},
+        "remaining_at_dispatch_ms": {"$ref": "#/$defs/numberArray"}
+      },
+      "additionalProperties": false
+    },
+    "cancellation": {
+      "type": "object",
+      "required": ["signals", "cancelled_children", "leaked_children", "drain_ms"],
+      "properties": {
+        "signals": {"$ref": "#/$defs/count"},
+        "cancelled_children": {"$ref": "#/$defs/count"},
+        "leaked_children": {"$ref": "#/$defs/count"},
+        "drain_ms": {"type": "number", "minimum": 0}
+      },
+      "additionalProperties": false
+    },
+    "effects": {
+      "type": "object",
+      "required": ["count", "dedup_replays", "conflicts"],
+      "properties": {
+        "count": {"$ref": "#/$defs/count"},
+        "dedup_replays": {"$ref": "#/$defs/count"},
+        "conflicts": {"$ref": "#/$defs/count"}
+      },
+      "additionalProperties": false
+    },
+    "completeness": {
+      "type": "object",
+      "required": ["false_complete", "degraded", "unavailable"],
+      "properties": {
+        "false_complete": {"$ref": "#/$defs/count"},
+        "degraded": {"$ref": "#/$defs/count"},
+        "unavailable": {"$ref": "#/$defs/count"}
+      },
+      "additionalProperties": false
+    },
+    "health": {
+      "type": "object",
+      "required": ["checks", "rejected", "isolated"],
+      "properties": {
+        "checks": {"$ref": "#/$defs/count"},
+        "rejected": {"$ref": "#/$defs/count"},
+        "isolated": {"type": "boolean"}
+      },
+      "additionalProperties": false
+    },
+    "cleanup": {
+      "type": "object",
+      "required": ["active_after", "queued_after", "pending_tasks_after"],
+      "properties": {
+        "active_after": {"$ref": "#/$defs/count"},
+        "queued_after": {"$ref": "#/$defs/count"},
+        "pending_tasks_after": {"$ref": "#/$defs/count"}
+      },
+      "additionalProperties": false
+    },
+    "policy_checks": {
+      "type": "object",
+      "required": ["deadline_propagated", "retry_budget_respected", "global_bound_respected", "dependency_bounds_respected", "tenant_bounds_respected", "cancellation_drained", "single_effect", "partial_state_truthful", "health_isolated", "cleanup_complete"],
+      "properties": {
+        "deadline_propagated": {"type": "boolean"},
+        "retry_budget_respected": {"type": "boolean"},
+        "global_bound_respected": {"type": "boolean"},
+        "dependency_bounds_respected": {"type": "boolean"},
+        "tenant_bounds_respected": {"type": "boolean"},
+        "cancellation_drained": {"type": "boolean"},
+        "single_effect": {"type": "boolean"},
+        "partial_state_truthful": {"type": "boolean"},
+        "health_isolated": {"type": "boolean"},
+        "cleanup_complete": {"type": "boolean"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "$defs": {
+    "count": {"type": "integer", "minimum": 0},
+    "countMap": {"type": "object", "additionalProperties": {"$ref": "#/$defs/count"}},
+    "positiveCountMap": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 1}},
+    "numberArray": {"type": "array", "items": {"type": "number"}},
+    "nonnegativeNumberArray": {"type": "array", "items": {"type": "number", "minimum": 0}},
+    "outcomeCounts": {
+      "type": "object",
+      "required": ["complete", "degraded", "unavailable", "cancelled", "rejected"],
+      "properties": {
+        "complete": {"$ref": "#/$defs/count"},
+        "degraded": {"$ref": "#/$defs/count"},
+        "unavailable": {"$ref": "#/$defs/count"},
+        "cancelled": {"$ref": "#/$defs/count"},
+        "rejected": {"$ref": "#/$defs/count"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

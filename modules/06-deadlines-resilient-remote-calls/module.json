@@ -1,0 +1,62 @@
+{
+  "$schema": "../../schemas/module.schema.json",
+  "id": "M06",
+  "title": "Deadlines and Resilient Remote Calls",
+  "weeks": [
+    {"number": 21, "focus": "Model and freeze end-to-end call budgets", "hours": 10.5, "evidence": ["Frozen call graph and deadline budget", "Cancellation contract", "Retry eligibility table", "Week 21 learning log"]},
+    {"number": 22, "focus": "Build bounded fan-out and deduplication", "hours": 10.5, "evidence": ["Fan-out implementation", "Concurrency and pool bounds", "Idempotency tests", "Build review and Week 22 learning log"]},
+    {"number": 23, "focus": "Break, measure, and repair amplification", "hours": 10.5, "evidence": ["Six raw fault trials", "Failure matrix", "Repaired same-work reruns", "Week 23 learning log"]},
+    {"number": 24, "focus": "Decide, teach, and complete Gate 2", "hours": 10.5, "evidence": ["Remote-call policy", "Migration and rollback plan", "Recorded defense", "Gate 2 revision and Week 24 learning log"]}
+  ],
+  "target_hours": 42,
+  "status": "ready",
+  "readiness_note": "Ready on 2026-08-01 after semantic review, 13 async lab tests across 13 scenarios, six isolated evaluator invocations with stable calibration bands, two calibration checks, focused validation, full-course validation, and evidence-safety review.",
+  "outcomes": [
+    {"id": "M06-O1", "statement": "Allocate and propagate an end-to-end deadline through serial and parallel work with response and cleanup reserves.", "graduate_profile": [1, 2, 3, 6], "mastery_levels": ["Define", "Calculate", "Implement"], "lessons": ["L01"], "exercises": ["EX-01", "EX-02"], "artifacts": ["A01", "A02"], "rubric": ["R01"]},
+    {"id": "M06-O2", "statement": "Prove cancellation stops queued, active, and child work within a declared bound.", "graduate_profile": [6, 7, 8], "mastery_levels": ["Implement", "Diagnose"], "lessons": ["L02"], "exercises": ["EX-03", "EX-04"], "artifacts": ["A02", "A04"], "rubric": ["R02", "R07"]},
+    {"id": "M06-O3", "statement": "Classify retry eligibility and enforce bounded randomized retries using attempt and cost budgets.", "graduate_profile": [2, 6, 7, 8], "mastery_levels": ["Calculate", "Implement", "Diagnose"], "lessons": ["L03"], "exercises": ["EX-05", "EX-06"], "artifacts": ["A02", "A04"], "rubric": ["R03", "R07"]},
+    {"id": "M06-O4", "statement": "Make ambiguous remote outcomes safe using scoped idempotency records, atomic effects, and deduplication retention.", "graduate_profile": [4, 6, 7, 9], "mastery_levels": ["Define", "Implement", "Diagnose"], "lessons": ["L04"], "exercises": ["EX-07", "EX-08"], "artifacts": ["A02", "A04"], "rubric": ["R04", "R07"]},
+    {"id": "M06-O5", "statement": "Bound fan-out, pools, tenants, and health traffic with explicit admission, fairness, and overload behavior.", "graduate_profile": [2, 6, 8, 10], "mastery_levels": ["Calculate", "Implement", "Diagnose"], "lessons": ["L05", "L07"], "exercises": ["EX-09", "EX-12"], "artifacts": ["A02", "A04"], "rubric": ["R05", "R07"]},
+    {"id": "M06-O6", "statement": "Compare breakers, hedges, partial results, and fail-fast behavior by failure model and useful-work economics.", "graduate_profile": [6, 7, 8, 10], "mastery_levels": ["Calculate", "Diagnose", "Decide and Teach"], "lessons": ["L06"], "exercises": ["EX-10", "EX-11"], "artifacts": ["A04", "A05"], "rubric": ["R06", "R08"]},
+    {"id": "M06-O7", "statement": "Diagnose and repair retry storm, pool exhaustion, slowdown, partial response, duplicate effect, and cancellation leak from preserved evidence.", "graduate_profile": [6, 7, 8], "mastery_levels": ["Diagnose", "Decide and Teach"], "lessons": ["L02", "L03", "L04", "L05", "L06"], "exercises": ["EX-13", "EX-14"], "artifacts": ["A04"], "rubric": ["R06", "R07"]},
+    {"id": "M06-O8", "statement": "Defend a remote-call policy through user outcomes, security, cost, ownership, exceptions, migration, rollback, and reversal evidence.", "graduate_profile": [9, 10, 14, 15, 16], "mastery_levels": ["Decide and Teach"], "lessons": ["L08"], "exercises": ["EX-15", "EX-16"], "artifacts": ["A05", "A06", "A07", "A10"], "rubric": ["R08", "R09", "R10"]}
+  ],
+  "resources": [
+    {"id": "RES-01", "title": "Deadlines", "author_or_publisher": "gRPC Authors; Linux Foundation", "type": "maintainer documentation", "url": "https://grpc.io/docs/guides/deadlines/", "required": true, "access": "free", "week": 21, "estimated_minutes": 35, "purpose": "Ground deadline and propagation behavior in an explicit RPC contract.", "assignment": "Read Overview through Deadline Propagation; annotate which behavior the library provides and which cleanup remains application-owned.", "last_verified": "2026-08-01", "text_alternative": "lessons/01-end-to-end-deadlines.md"},
+    {"id": "RES-02", "title": "Cancellation", "author_or_publisher": "gRPC Authors; Linux Foundation", "type": "maintainer documentation", "url": "https://grpc.io/docs/guides/cancellation/", "required": true, "access": "free", "week": 21, "estimated_minutes": 25, "purpose": "Separate a cancellation signal from interruption and cleanup completion.", "assignment": "Read Overview and client/server cancellation sections; list every loop, queue, and child call in your build that must observe cancellation.", "last_verified": "2026-08-01", "text_alternative": "lessons/02-cancellation-and-cleanup.md"},
+    {"id": "RES-03", "title": "HTTP Semantics", "author_or_publisher": "R. Fielding, M. Nottingham, J. Reschke; IETF", "type": "Internet standard", "url": "https://www.rfc-editor.org/rfc/rfc9110.html", "required": true, "access": "free", "week": 22, "estimated_minutes": 35, "purpose": "Scope safe and idempotent request semantics without equating a method name to business deduplication.", "assignment": "Read Sections 9.2.1–9.2.3 and 10.2.3; classify each independent operation and explain what remains unknown after connection loss.", "last_verified": "2026-08-01", "text_alternative": "lessons/04-idempotency-and-deduplication.md"},
+    {"id": "RES-04", "title": "Timeouts, retries, and backoff with jitter", "author_or_publisher": "Marc Brooker; Amazon Builders' Library", "type": "first-person practitioner case", "url": "https://builder.aws.com/content/3EumjoZascWd1oZiEgL8ORlv3qE/timeouts-retries-and-backoff-with-jitter", "required": true, "access": "free", "week": 22, "estimated_minutes": 45, "purpose": "Connect timeout selection, ambiguous outcomes, retry placement, token budgets, and jitter to operated systems.", "assignment": "Read the complete article; produce an attempt-amplification tree and identify one policy whose safe value depends on your latency distribution.", "last_verified": "2026-08-01", "text_alternative": "lessons/03-retry-budgets-backoff-jitter.md"},
+    {"id": "RES-05", "title": "Addressing Cascading Failures", "author_or_publisher": "Mike Ulrich and Google SRE contributors", "type": "practitioner book chapter", "url": "https://sre.google/sre-book/addressing-cascading-failures/", "required": true, "access": "free", "week": 23, "estimated_minutes": 60, "purpose": "Relate deadlines, retries, health checks, load shedding, and resource exhaustion to cascading failure.", "assignment": "Read Retry Cascades, Latency and Deadlines, and Testing for Cascading Failures; map each positive feedback loop to a lab metric and mitigation owner.", "last_verified": "2026-08-01", "text_alternative": "lessons/05-bulkheads-pools-health.md"},
+    {"id": "RES-06", "title": "Metastable Failures in the Wild", "author_or_publisher": "L. Huang, M. Magnusson, A. Baldini, S. Treichler, M. D. Ernst; USENIX", "type": "peer-reviewed research paper", "url": "https://www.usenix.org/system/files/osdi22-huang-lexiang.pdf", "required": true, "access": "free", "week": 23, "estimated_minutes": 55, "purpose": "Distinguish a temporary trigger from the sustaining effect that prevents recovery.", "assignment": "Read Sections 1–3 and 6; classify the retry-storm trial's trigger, vulnerable state, sustaining effect, and recovery action.", "last_verified": "2026-08-01", "text_alternative": "lessons/06-circuit-breakers-hedges-partials.md"},
+    {"id": "RES-07", "title": "Avoiding Cascading Failures at eBay?", "author_or_publisher": "Craig Fender, Ravindra Punati; eBay and USENIX Association", "type": "conference video, audio, and slides", "url": "https://www.usenix.org/conference/srecon16/program/presentation/fender", "required": true, "access": "free", "week": 24, "estimated_minutes": 50, "purpose": "Examine failure containment, traffic shifting, operational ownership, and recovery in a large commerce platform without using it as a capstone answer.", "assignment": "Watch the presentation or use its audio/slides with Lesson 8; record one containment boundary, one coordination risk, and one migration gate.", "last_verified": "2026-08-01", "text_alternative": "lessons/08-policy-migration-ownership.md"}
+  ],
+  "artifacts": [
+    {"id": "A01", "week": 21, "required": true, "template_path": "modules/06-deadlines-resilient-remote-calls/worksheets/week-21-deadline-model.md", "submission_path": "reports/module-06-call-budget.md", "immutable_after_submission": true},
+    {"id": "A02", "week": 22, "required": true, "template_path": "modules/06-deadlines-resilient-remote-calls/worksheets/week-22-bounded-build.md", "submission_path": "labs/module-06/"},
+    {"id": "A03", "week": 22, "required": true, "template_path": "modules/06-deadlines-resilient-remote-calls/worksheets/week-22-bounded-build.md", "submission_path": "reports/module-06-build-review.md"},
+    {"id": "A04", "week": 23, "required": true, "template_path": "modules/06-deadlines-resilient-remote-calls/worksheets/week-23-failure-matrix.md", "submission_path": "experiments/module-06/", "immutable_after_submission": true},
+    {"id": "A05", "week": 24, "required": true, "template_path": "templates/remote-call-policy-template.md", "submission_path": "rfc/module-06-remote-call-policy.md"},
+    {"id": "A06", "week": 24, "required": true, "template_path": "modules/06-deadlines-resilient-remote-calls/worksheets/week-24-policy-defense.md", "submission_path": "reviews/module-06-defense.md"},
+    {"id": "A07", "week": 24, "required": true, "template_path": "capstone/revisions/week-24-gate-02.md", "submission_path": "capstone/revisions/week-24-gate-02.md"},
+    {"id": "A08", "week": 24, "required": true, "template_path": "modules/06-deadlines-resilient-remote-calls/assessment/report-template.md", "submission_path": "reviews/module-06-evaluation.md"},
+    {"id": "A09", "week": 24, "required": true, "template_path": "templates/learning-log-template.md", "submission_path": "learning-log/week-21.md through learning-log/week-24.md"},
+    {"id": "A10", "week": 24, "required": true, "template_path": "modules/06-deadlines-resilient-remote-calls/assessment/gate-02.md", "submission_path": "reviews/gate-02-submission.md"}
+  ],
+  "failure_experiments": [
+    {"id": "F01", "scenario": "retry storm", "evidence": "logical requests, total attempts, retry budget use, arrival histogram, useful-work ratio, and recovery"},
+    {"id": "F02", "scenario": "connection-pool exhaustion", "evidence": "pool bound, peak active, wait and rejection counts, deadline expiry, cleanup, and tenant impact"},
+    {"id": "F03", "scenario": "dependency slowdown", "evidence": "remaining budget at dispatch/completion, cancelled work, useful results, and tail latency"},
+    {"id": "F04", "scenario": "partial response", "evidence": "required/optional dependency contract, completeness marker, fallback, and user-visible outcome"},
+    {"id": "F05", "scenario": "duplicate request", "evidence": "idempotency scope and fingerprint, concurrent claims, one irreversible effect, replay response, and retention"},
+    {"id": "F06", "scenario": "cancellation leak", "evidence": "caller cancellation time, active/queued child work over time, cleanup bound, leaked-work count, and repaired rerun"}
+  ],
+  "assessment": {
+    "rubric_path": "modules/06-deadlines-resilient-remote-calls/assessment/rubric.md",
+    "evaluator_prompt_path": "modules/06-deadlines-resilient-remote-calls/assessment/evaluator-prompt.md",
+    "evaluation_schema_path": "schemas/evaluation.schema.json",
+    "calibration_path": "modules/06-deadlines-resilient-remote-calls/assessment/calibration",
+    "pass_average": 3,
+    "safety_critical_criteria": ["R06", "R07"],
+    "required_result_bands": ["Pass", "Revise", "Repeat"]
+  }
+}
