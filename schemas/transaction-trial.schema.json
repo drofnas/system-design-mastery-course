@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/system-design-course/transaction-trial.schema.json",
+  "title": "Transaction and recovery lab trial",
+  "type": "object",
+  "required": ["schema_version", "scenario_id", "pair_id", "variant", "seed", "evidence_kind", "environment", "shared_input_sha256", "config_sha256", "trace", "transactions", "conflicts", "locks", "wal", "recovery", "final_state", "invariants", "uncertainty"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "scenario_id": {"type": "string"},
+    "pair_id": {"type": "string", "pattern": "^F0[1-7]$"},
+    "variant": {"enum": ["broken", "repaired"]},
+    "seed": {"type": "integer"},
+    "evidence_kind": {"const": "measured-local-toy-engine"},
+    "environment": {"type": "object"},
+    "shared_input_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "config_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "trace": {"type": "array", "minItems": 1},
+    "transactions": {"type": "array", "minItems": 1},
+    "conflicts": {"type": "object"},
+    "locks": {"type": "object"},
+    "wal": {"type": "object", "required": ["records", "durable_lsn", "fsync_count", "acknowledged"]},
+    "recovery": {"type": "object", "required": ["attempted", "validated", "rto_ms", "rpo_operations", "target_lsn"]},
+    "final_state": {"type": "object"},
+    "invariants": {"type": "array", "minItems": 1},
+    "uncertainty": {"type": "array", "minItems": 1}
+  },
+  "additionalProperties": false
+}
