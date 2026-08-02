@@ -6,8 +6,8 @@ identical supported settings, preserve raw JSON and SHA-256, then run:
 
 ```bash
 python3 scripts/check_calibration.py --module M09 \
-  pass-run-1.json pass-run-2.json revise-run-1.json revise-run-2.json \
-  repeat-run-1.json repeat-run-2.json
+  pass-run-1.json revise-run-1.json repeat-run-1.json \
+  pass-run-2.json revise-run-2.json repeat-run-2.json
 ```
 
 Expected bands must agree and category scores may differ by at most one point.

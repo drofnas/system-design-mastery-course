@@ -1,7 +1,8 @@
 # Module 9: Replication and Partitioning
 
-> **Authoring status:** Review. Teaching, practice, lab, assessment, and Gate 3
-> are complete; readiness requires recorded calibration and final review.
+> **Authoring status:** Ready. Teaching, practice, executable lab, Gate 3,
+> semantic review, evaluator calibration, focused validation, and full-course
+> gates passed on 2026-08-02. See the [readiness review](assessment/readiness-review.md).
 
 ## What this module changes
 
