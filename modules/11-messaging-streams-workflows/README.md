@@ -1,7 +1,8 @@
 # Module 11: Messaging, Streams, and Workflows
 
-> **Authoring status:** Draft until teaching, practice, lab, calibration,
-> semantic review, and validation all pass.
+> **Authoring status:** Ready. Teaching, practice, lab, assessment, calibration,
+> semantic review, and validation passed on 2026-08-02. See the
+> [readiness review](assessment/readiness-review.md).
 
 ## What this module changes
 
