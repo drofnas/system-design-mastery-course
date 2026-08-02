@@ -1,12 +1,76 @@
 # Principal Engineer and Systems Design Mastery
 
-This repository is the working record for the 72-week
-**Principal Engineer and Systems Design Mastery** course. The authoritative
-course requirements are in [`00_COURSE_SYLLABUS.md`](00_COURSE_SYLLABUS.md).
+This repository contains the teaching materials for the 72-week
+**Principal Engineer and Systems Design Mastery** course. It is also designed
+to become each learner's version-controlled record of coursework: notes, labs,
+experiments, architecture decisions, reviews, and capstone evidence. The
+authoritative course requirements are in
+[`00_COURSE_SYLLABUS.md`](00_COURSE_SYLLABUS.md).
 
-## Current milestone
+## Make your own course repository
 
-The course is at **Week 1: Architectural Judgment**.
+The recommended setup is a GitHub fork with two long-lived branches:
+
+- Keep `main` free of personal coursework so it can track this repository.
+- Do all coursework on `coursework`, including answers, experiments, reports,
+  and capstone artifacts.
+
+Fork this repository on GitHub, then clone your fork and create the coursework
+branch:
+
+```bash
+git clone https://github.com/YOUR-USERNAME/system-design-mastery-course.git
+cd system-design-mastery-course
+git remote add upstream https://github.com/drofnas/system-design-mastery-course.git
+git switch -c coursework
+git push -u origin coursework
+```
+
+Commit your work to `coursework`. When this course publishes an update, bring
+it into your fork with:
+
+```bash
+git switch main
+git fetch upstream
+git merge --ff-only upstream/main
+git push origin main
+git switch coursework
+git merge main
+git push origin coursework
+```
+
+Keeping coursework off `main` prevents course updates from being mixed with
+your commits. It cannot prevent every merge conflict: if both you and the
+course change the same worksheet, resolve that conflict on `coursework` and
+preserve your completed evidence.
+
+### Public and private coursework
+
+A fork of this public repository is also public. Its branches and Git history
+are visible to others, and commits may remain accessible even after a fork or
+branch is deleted. Never commit secrets, proprietary employer material, private
+data, or other sensitive information.
+
+If your coursework must remain private, create an empty private repository and
+use a clone of this course instead of a GitHub fork:
+
+```bash
+git clone https://github.com/drofnas/system-design-mastery-course.git
+cd system-design-mastery-course
+git remote rename origin upstream
+git remote add origin https://github.com/YOUR-USERNAME/YOUR-PRIVATE-REPOSITORY.git
+git push -u origin main
+git switch -c coursework
+git push -u origin coursework
+```
+
+Use the same update sequence shown above. This private copy will not retain
+GitHub's fork relationship, but the `upstream` remote still provides course
+updates.
+
+## Start here: Week 1
+
+Your first milestone is **Week 1: Architectural Judgment**.
 
 Start with the complete
 [`Module 1: Architectural Judgment`](modules/01-architectural-judgment/README.md).
@@ -139,6 +203,25 @@ single module.
 - Keep secrets, private data, and proprietary material out of unapproved tools.
 - Preserve an independent first design before requesting AI critique.
 - Never rely on AI during an architecture defense.
+
+## License
+
+Copyright © 2026 drofnas.
+
+- Course content, including lessons, exercises, assessments, documentation, and
+  templates, is licensed under
+  [Creative Commons Attribution 4.0 International](LICENSE-CONTENT).
+- Software, including source code, executable labs, tests, scripts, schemas,
+  and machine-readable fixtures, is licensed under the
+  [Apache License 2.0](LICENSE-CODE).
+
+The repository-wide scope and exceptions are defined in [`LICENSE`](LICENSE).
+Linked or quoted third-party resources remain subject to their original
+copyright and license terms.
+
+You retain copyright in original coursework that you add to your copy. The
+licenses above continue to govern course material that you copy, modify, or
+redistribute as part of that work.
 
 ## Templates
 
