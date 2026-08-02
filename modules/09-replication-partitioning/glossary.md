@@ -1,0 +1,22 @@
+# Module 9 Glossary
+
+- **Anti-entropy:** Background comparison and exchange that drives replicas toward convergence.
+- **Bounded staleness:** A read contract limiting lag by time, versions, or operations.
+- **Causal consistency:** Visibility respects declared cause-before-effect relations.
+- **Conflict:** Concurrent versions that cannot be ordered or safely discarded by available metadata.
+- **Consistent hashing:** Placement that bounds expected key movement when membership changes.
+- **Leader/follower:** One accepted write authority propagates updates to follower replicas.
+- **Leaderless:** A coordinator contacts replicas directly under a chosen read/write rule.
+- **Linearizability:** Each operation appears atomic between invocation and response in real-time order.
+- **Monotonic reads:** A session never observes an older state after a newer one.
+- **Multi-leader:** Multiple sites accept writes and later reconcile replicated changes.
+- **Partition:** A failure in which some messages between non-failed nodes are unavailable or delayed beyond the operation's bound.
+- **Quorum:** A selected subset of replicas; arithmetic alone does not establish membership, durability, or conflict semantics.
+- **Read repair:** A read-path comparison that updates replicas found stale by that read.
+- **Read-your-writes:** A session's later reads include its earlier acknowledged writes or explicitly fail.
+- **Replication factor:** Number of intended copies, distinct from the number durable or reachable now.
+- **Resharding:** Changing key-to-shard ownership while preserving service and authoritative state.
+- **Sibling:** A concurrent version preserved for resolution rather than silently overwritten.
+- **Sloppy quorum:** Responses may come from substitute nodes outside the normal replica set.
+- **Staleness:** Distance between an observed version and the required reference version.
+- **Tenant isolation:** Controls preventing one tenant's data or demand from violating another tenant's confidentiality, integrity, or capacity objective.
