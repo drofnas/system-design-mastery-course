@@ -30,7 +30,9 @@ class FanoutLabTests(unittest.TestCase):
     def test_all_scenarios_validate(self):
         for path in sorted(SCENARIOS.glob("*.json")):
             with self.subTest(path=path.name):
-                self.assertFalse(validate_trial(asyncio.run(run_scenario(load_scenario(path)))))
+                trial = asyncio.run(run_scenario(load_scenario(path)))
+                self.assertFalse(validate_trial(trial))
+                self.assertLessEqual(trial["attempts"]["useful_work_ratio"], 1.0)
 
     def test_baseline_completes_without_rejection(self):
         trial = run("beacon-baseline.json")

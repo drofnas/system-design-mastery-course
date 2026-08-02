@@ -104,7 +104,7 @@ scripts/        Course validation tools
 | 3. Computer Systems and Operating Systems | 9–12 | Ready | [Start Module 3](modules/03-computer-systems-operating-systems/README.md) |
 | 4. Performance Methodology and Observability | 13–16 | Ready | [Start Module 4](modules/04-performance-methodology-observability/README.md) |
 | 5. Network Foundations | 17–20 | Ready | [Start Module 5](modules/05-network-foundations/README.md) |
-| 6. Deadlines and Resilient Remote Calls | 21–24 | Review | [Review Module 6](modules/06-deadlines-resilient-remote-calls/README.md) |
+| 6. Deadlines and Resilient Remote Calls | 21–24 | Ready | [Start Module 6](modules/06-deadlines-resilient-remote-calls/README.md) |
 | 7–18 | 25–72 | Syllabus-defined; teaching packages not yet authored | [Course syllabus](00_COURSE_SYLLABUS.md) |
 
 Future modules must satisfy

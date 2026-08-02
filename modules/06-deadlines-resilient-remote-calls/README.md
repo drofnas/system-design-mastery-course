@@ -1,7 +1,8 @@
 # Module 6: Deadlines and Resilient Remote Calls
 
-> **Authoring status:** Review. The teaching package and asynchronous lab are
-> implemented; evaluator calibration and final readiness evidence are pending.
+> **Authoring status:** Ready. Executable-lab, structural, semantic,
+> evaluator-calibration, focused, and full-course gates passed on 2026-08-01.
+> See the [readiness review](assessment/readiness-review.md).
 
 ## What this module changes
 

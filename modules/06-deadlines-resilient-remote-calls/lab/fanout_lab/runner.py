@@ -136,7 +136,9 @@ async def run_scenario(scenario: dict[str, Any]) -> dict[str, Any]:
             "per_dependency": dict(sorted(attempt_counts.items())),
             "start_logical_ms": [item["start_logical_ms"] for item in service.attempts],
             "backoff_logical_ms": service.backoffs,
-            "useful_work_ratio": round(useful / max(len(service.attempts), 1), 4),
+            "useful_work_ratio": round(
+                min(1.0, useful / max(len(service.attempts), 1)), 4
+            ),
         },
         "concurrency": {
             "global_peak": service.gate.global_peak,

@@ -133,7 +133,7 @@ def validate_trial(trial: dict[str, Any]) -> list[str]:
     if attempts["total"] != attempts["initial"] + attempts["retries"]:
         errors.append("attempt total arithmetic mismatch")
     useful = trial["outcomes"]["complete"] + trial["outcomes"]["degraded"]
-    expected_ratio = round(useful / max(attempts["total"], 1), 4)
+    expected_ratio = round(min(1.0, useful / max(attempts["total"], 1)), 4)
     if attempts["useful_work_ratio"] != expected_ratio:
         errors.append("useful_work_ratio arithmetic mismatch")
     cleanup = trial["cleanup"]
