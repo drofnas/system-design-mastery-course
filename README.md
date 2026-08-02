@@ -107,7 +107,8 @@ scripts/        Course validation tools
 | 6. Deadlines and Resilient Remote Calls | 21–24 | Ready | [Start Module 6](modules/06-deadlines-resilient-remote-calls/README.md) |
 | 7. Data Models and Storage Engines | 25–28 | Ready | [Start Module 7](modules/07-data-models-storage-engines/README.md) |
 | 8. Transactions, Concurrency, and Recovery | 29–32 | Ready | [Start Module 8](modules/08-transactions-concurrency-recovery/README.md) |
-| 9–18 | 33–72 | Syllabus-defined; teaching packages not yet authored | [Course syllabus](00_COURSE_SYLLABUS.md) |
+| 9. Replication and Partitioning | 33–36 | Ready | [Start Module 9](modules/09-replication-partitioning/README.md) |
+| 10–18 | 37–72 | Syllabus-defined; teaching packages not yet authored | [Course syllabus](00_COURSE_SYLLABUS.md) |
 
 Future modules must satisfy
 [`MODULE_STANDARD.md`](MODULE_STANDARD.md). Course-authoring agents must also
