@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/system-design-course/storage-trial.schema.json",
+  "title": "Module 7 measured storage trial",
+  "type": "object",
+  "required": ["module_id", "schema_version", "scenario_id", "pair_id", "engine", "evidence_kind", "runtime", "shared_input_sha256", "config_sha256", "workload", "latency_ns", "io", "amplification", "maintenance", "correctness", "cleanup"],
+  "properties": {
+    "module_id": {"const": "M07"},
+    "schema_version": {"const": 1},
+    "scenario_id": {"type": "string"},
+    "pair_id": {"type": "string"},
+    "engine": {"enum": ["btree", "lsm"]},
+    "evidence_kind": {"const": "measured-python-filesystem-clean-close"},
+    "runtime": {"type": "object"},
+    "shared_input_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "config_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "workload": {"type": "object"},
+    "latency_ns": {"type": "object"},
+    "io": {"type": "object"},
+    "amplification": {
+      "type": "object",
+      "required": ["read", "write", "space"],
+      "properties": {
+        "read": {"type": "number", "minimum": 0},
+        "write": {"type": "number", "minimum": 0},
+        "space": {"type": "number", "minimum": 0}
+      },
+      "additionalProperties": false
+    },
+    "maintenance": {"type": "object"},
+    "correctness": {
+      "type": "object",
+      "required": ["reference_match", "reopen_match", "resurrections", "engine_errors", "mismatches"]
+    },
+    "cleanup": {"type": "object"}
+  },
+  "additionalProperties": false
+}

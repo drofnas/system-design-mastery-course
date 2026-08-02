@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/system-design-course/storage-scenario.schema.json",
+  "title": "Module 7 storage workload scenario",
+  "type": "object",
+  "required": ["schema_version", "scenario_id", "pair_id", "seed", "engine", "workload", "engine_config", "comparison_variable"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "scenario_id": {"type": "string", "minLength": 1},
+    "pair_id": {"type": "string", "minLength": 1},
+    "seed": {"type": "integer"},
+    "engine": {"enum": ["btree", "lsm"]},
+    "comparison_variable": {"type": "string", "minLength": 1},
+    "workload": {
+      "type": "object",
+      "required": ["kind", "initial_records", "operations", "keyspace", "value_bytes", "read_pct", "write_pct", "scan_pct", "delete_pct", "distribution", "range_width", "negative_read_pct"],
+      "properties": {
+        "kind": {"enum": ["read", "write", "range", "skew", "delete", "negative"]},
+        "initial_records": {"type": "integer", "minimum": 1},
+        "operations": {"type": "integer", "minimum": 1},
+        "keyspace": {"type": "integer", "minimum": 1},
+        "value_bytes": {"type": "integer", "minimum": 1},
+        "read_pct": {"type": "integer", "minimum": 0, "maximum": 100},
+        "write_pct": {"type": "integer", "minimum": 0, "maximum": 100},
+        "scan_pct": {"type": "integer", "minimum": 0, "maximum": 100},
+        "delete_pct": {"type": "integer", "minimum": 0, "maximum": 100},
+        "distribution": {"enum": ["uniform", "hot"]},
+        "range_width": {"type": "integer", "minimum": 1},
+        "negative_read_pct": {"type": "integer", "minimum": 0, "maximum": 100}
+      },
+      "additionalProperties": false
+    },
+    "engine_config": {
+      "type": "object",
+      "required": ["page_size", "cache_pages", "memtable_entries", "bloom_bits_per_key", "compaction_threshold", "compaction_enabled", "max_runs", "sparse_stride"],
+      "properties": {
+        "page_size": {"type": "integer", "minimum": 512},
+        "cache_pages": {"type": "integer", "minimum": 1},
+        "memtable_entries": {"type": "integer", "minimum": 1},
+        "bloom_bits_per_key": {"type": "integer", "minimum": 0},
+        "compaction_threshold": {"type": "integer", "minimum": 2},
+        "compaction_enabled": {"type": "boolean"},
+        "max_runs": {"type": "integer", "minimum": 1},
+        "sparse_stride": {"type": "integer", "minimum": 1}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

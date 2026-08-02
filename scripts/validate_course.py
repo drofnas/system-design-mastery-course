@@ -452,9 +452,14 @@ def validate_calibration_provenance(
     manifest: dict[str, Any],
     errors: list[str],
 ) -> None:
-    """Verify Module 6's six isolated evaluator response records and hashes."""
+    """Verify six isolated evaluator response records for current modules."""
 
-    if manifest.get("id") != "M06":
+    module_id = str(manifest.get("id", ""))
+    try:
+        module_number = int(module_id.removeprefix("M"))
+    except ValueError:
+        return
+    if module_number < 6:
         return
     calibration = module_root / "assessment" / "calibration"
     if not (calibration / "results.json").exists():
@@ -576,6 +581,59 @@ def validate_remote_call_lab(
         sys.path.remove(str(lab_root))
 
 
+def validate_storage_lab(
+    module_root: Path,
+    manifest: dict[str, Any],
+    errors: list[str],
+) -> None:
+    """Exercise Module 7's persistent engines and strict trial contracts."""
+
+    if manifest.get("id") != "M07":
+        return
+    lab_root = module_root / "lab"
+    expected = {
+        "base-btree-read.json", "base-lsm-read.json",
+        "base-btree-write.json", "base-lsm-write.json",
+        "base-btree-range.json", "base-lsm-range.json",
+        "base-btree-skew.json", "base-lsm-skew.json",
+        "base-btree-delete.json", "base-lsm-delete.json",
+        "f01-cache-broken.json", "f01-cache-repaired.json",
+        "f02-compaction-broken.json", "f02-compaction-repaired.json",
+        "f03-bloom-broken.json", "f03-bloom-repaired.json",
+        "f04-runs-broken.json", "f04-runs-repaired.json",
+        "f05-skew-cache-broken.json", "f05-skew-cache-repaired.json",
+        "f06-tombstone-broken.json", "f06-tombstone-repaired.json",
+    }
+    scenario_paths = sorted((lab_root / "scenarios").glob("*.json"))
+    observed_names = {path.name for path in scenario_paths}
+    if observed_names != expected:
+        fail(errors, f"M07: storage scenario inventory differs: {sorted(observed_names ^ expected)}")
+    sys.path.insert(0, str(lab_root))
+    try:
+        from storage_lab.config import load_scenario, validate_trial
+        from storage_lab.runner import run_scenario
+
+        pair_results: dict[str, list[dict[str, Any]]] = {}
+        for scenario_path in scenario_paths:
+            try:
+                scenario = load_scenario(scenario_path)
+                trial = run_scenario(scenario)
+                for error in validate_trial(trial):
+                    fail(errors, f"{relative(scenario_path)} measured trial: {error}")
+                pair_results.setdefault(str(trial["pair_id"]), []).append(trial)
+            except (OSError, ValueError, KeyError, RuntimeError) as error:
+                fail(errors, f"{relative(scenario_path)}: {error}")
+        for pair_id, trials in pair_results.items():
+            if len(trials) != 2:
+                continue
+            if len({trial["shared_input_sha256"] for trial in trials}) != 1:
+                fail(errors, f"M07 {pair_id}: pair inputs do not match")
+            if len({trial["config_sha256"] for trial in trials}) != 2:
+                fail(errors, f"M07 {pair_id}: pair configurations do not differ")
+    finally:
+        sys.path.remove(str(lab_root))
+
+
 def validate_local_links(errors: list[str]) -> None:
     for markdown in ROOT.rglob("*.md"):
         if ".git" in markdown.parts:
@@ -618,6 +676,8 @@ def main() -> int:
         ROOT / "schemas" / "network-trial.schema.json",
         ROOT / "schemas" / "remote-call-scenario.schema.json",
         ROOT / "schemas" / "remote-call-trial.schema.json",
+        ROOT / "schemas" / "storage-scenario.schema.json",
+        ROOT / "schemas" / "storage-trial.schema.json",
     ):
         load_json(path, errors)
 
@@ -634,6 +694,7 @@ def main() -> int:
         validate_calibration_provenance(module_root, manifest, errors)
         validate_network_lab(module_root, manifest, errors)
         validate_remote_call_lab(module_root, manifest, errors)
+        validate_storage_lab(module_root, manifest, errors)
 
     validate_baseline(errors)
     validate_local_links(errors)
