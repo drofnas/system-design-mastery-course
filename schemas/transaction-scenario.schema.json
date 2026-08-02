@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/system-design-course/transaction-scenario.schema.json",
+  "title": "Transaction and recovery lab scenario",
+  "type": "object",
+  "required": ["schema_version", "scenario_id", "pair_id", "variant", "seed", "initial_state", "invariants", "transactions", "schedule", "control", "fault", "prediction", "evidence_boundary"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "scenario_id": {"type": "string", "pattern": "^f0[1-7]-[a-z0-9-]+-(broken|repaired)$"},
+    "pair_id": {"type": "string", "pattern": "^F0[1-7]$"},
+    "variant": {"enum": ["broken", "repaired"]},
+    "seed": {"type": "integer"},
+    "initial_state": {"type": "object", "additionalProperties": {"type": ["integer", "string", "boolean", "null"]}},
+    "invariants": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["id", "type"], "additionalProperties": true}},
+    "transactions": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["id", "reads", "writes"], "properties": {"id": {"type": "string"}, "reads": {"type": "array", "items": {"type": "string"}}, "writes": {"type": "object"}}, "additionalProperties": false}},
+    "schedule": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "control": {"type": "object", "required": ["isolation", "atomic_workflow", "lock_order", "retry_scope", "flush_before_ack", "validate_restore", "rebuild_derived"], "additionalProperties": true},
+    "fault": {"type": "object", "required": ["type"], "properties": {"type": {"enum": ["lost_update", "write_skew", "deadlock", "process_termination", "torn_workflow", "derived_corruption", "restore_failure"]}}, "additionalProperties": true},
+    "prediction": {"type": "string", "minLength": 10},
+    "evidence_boundary": {"type": "string", "minLength": 10}
+  },
+  "additionalProperties": false
+}

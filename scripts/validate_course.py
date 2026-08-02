@@ -436,6 +436,7 @@ def validate_calibration(
                     str(manifest.get("id")),
                     criteria,
                     evaluation_schema,
+                    set(manifest.get("assessment", {}).get("safety_critical_criteria", [])),
                 )
                 if raw_scores != aggregate_scores:
                     fail(
@@ -634,6 +635,59 @@ def validate_storage_lab(
         sys.path.remove(str(lab_root))
 
 
+def validate_transaction_lab(
+    module_root: Path,
+    manifest: dict[str, Any],
+    errors: list[str],
+) -> None:
+    """Exercise Module 8's transaction schedules, WAL, and recovery contracts."""
+
+    if manifest.get("id") != "M08":
+        return
+    lab_root = module_root / "lab"
+    expected = {
+        f"f{number:02d}-{slug}-{variant}.json"
+        for number, slug in (
+            (1, "lost-update"),
+            (2, "write-skew"),
+            (3, "deadlock"),
+            (4, "process-termination"),
+            (5, "torn-workflow"),
+            (6, "derived-corruption"),
+            (7, "restore-failure"),
+        )
+        for variant in ("broken", "repaired")
+    }
+    scenario_paths = sorted((lab_root / "scenarios").glob("*.json"))
+    observed = {path.name for path in scenario_paths}
+    if observed != expected:
+        fail(errors, f"M08: transaction scenario inventory differs: {sorted(observed ^ expected)}")
+    sys.path.insert(0, str(lab_root))
+    try:
+        from transaction_lab.config import load_scenario, validate_trial
+        from transaction_lab.runner import run_scenario
+
+        pair_results: dict[str, list[dict[str, Any]]] = {}
+        for scenario_path in scenario_paths:
+            try:
+                trial = run_scenario(load_scenario(scenario_path))
+                for error in validate_trial(trial):
+                    fail(errors, f"{relative(scenario_path)} measured trial: {error}")
+                pair_results.setdefault(str(trial["pair_id"]), []).append(trial)
+            except (OSError, ValueError, KeyError, RuntimeError) as error:
+                fail(errors, f"{relative(scenario_path)}: {error}")
+        for pair_id, trials in pair_results.items():
+            if len(trials) != 2:
+                fail(errors, f"M08 {pair_id}: expected broken and repaired trials")
+                continue
+            if len({trial["shared_input_sha256"] for trial in trials}) != 1:
+                fail(errors, f"M08 {pair_id}: pair inputs do not match")
+            if len({trial["config_sha256"] for trial in trials}) != 2:
+                fail(errors, f"M08 {pair_id}: pair controls do not differ")
+    finally:
+        sys.path.remove(str(lab_root))
+
+
 def validate_local_links(errors: list[str]) -> None:
     for markdown in ROOT.rglob("*.md"):
         if ".git" in markdown.parts:
@@ -678,6 +732,8 @@ def main() -> int:
         ROOT / "schemas" / "remote-call-trial.schema.json",
         ROOT / "schemas" / "storage-scenario.schema.json",
         ROOT / "schemas" / "storage-trial.schema.json",
+        ROOT / "schemas" / "transaction-scenario.schema.json",
+        ROOT / "schemas" / "transaction-trial.schema.json",
     ):
         load_json(path, errors)
 
@@ -695,6 +751,7 @@ def main() -> int:
         validate_network_lab(module_root, manifest, errors)
         validate_remote_call_lab(module_root, manifest, errors)
         validate_storage_lab(module_root, manifest, errors)
+        validate_transaction_lab(module_root, manifest, errors)
 
     validate_baseline(errors)
     validate_local_links(errors)

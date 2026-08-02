@@ -1,0 +1,22 @@
+# Module 8 Glossary
+
+- **Atomicity:** a transaction's declared changes become visible together or not at all.
+- **Consistency:** application and database constraints hold at transaction boundaries; it is not a substitute for naming invariants.
+- **Isolation:** constraints on what overlapping transactions may observe and which combined histories may commit.
+- **Durability:** an acknowledged commit survives the stated failure model.
+- **History:** an ordered record of reads, writes, commits, and aborts.
+- **Serializability:** equivalence to some serial execution of committed transactions.
+- **Lost update:** one transaction overwrites another update derived from an older value.
+- **Write skew:** disjoint writes from compatible snapshots jointly violate a multi-object invariant.
+- **Strict 2PL:** locks are acquired as needed and write locks are retained through commit or abort.
+- **MVCC:** multiple versions provide snapshot visibility while conflict rules govern writes.
+- **OCC:** work proceeds speculatively and validates read/write conflicts before commit.
+- **Deadlock:** a cycle in which transactions wait for locks held by one another.
+- **WAL:** log records reach the durable boundary before affected data pages.
+- **LSN:** a monotonic position identifying log order.
+- **Redo / undo:** reapply committed changes / remove effects of incomplete transactions.
+- **Checkpoint:** recovery metadata that bounds the log work needed after restart.
+- **Group commit:** several commits share one durable log flush.
+- **PITR:** restore a base backup and replay archived log to a declared target.
+- **RPO / RTO:** acceptable data-loss exposure / time to restore usable service.
+- **Replica:** a copy used for availability or reads; correlated deletion means it is not automatically a backup.

@@ -1,0 +1,13 @@
+{
+  "runtime": {"provider":"OpenAI","model":"GPT-5 Codex current session model","client":"Codex desktop"},
+  "deterministic_settings": {"temperature":"not user-configurable; identical rubric-driven scoring procedure","reasoning_effort":"current session setting held constant","output_constraint":"schemas/evaluation.schema.json"},
+  "isolation_method": "Six serial evaluator passes, each scoped to one fixture, its immutable manifest, and the published Module 8 assessment contracts. Each raw record was validated before aggregation; expected bands and other raw records were not used as evidence citations.",
+  "invocations": [
+    {"fixture":"pass","run":1,"isolation_id":"m08-pass-run1","invoked_at":"2026-08-02T15:01:00-07:00","raw_response":"runs/pass-run-1.json","sha256":"59909f422239a09e1b43dde5175b63cf52ef1fc68e4ab068aff1bc474ee1a47e"},
+    {"fixture":"revise","run":1,"isolation_id":"m08-revise-run1","invoked_at":"2026-08-02T15:23:00-07:00","raw_response":"runs/revise-run-1.json","sha256":"88600873a6920979948d82db3efb826dede6570beee694529470490428cb7bd4"},
+    {"fixture":"repeat","run":1,"isolation_id":"m08-repeat-run1","invoked_at":"2026-08-02T15:45:00-07:00","raw_response":"runs/repeat-run-1.json","sha256":"20569d8cc18dcd2c61cc3f7b2d327c6122b8a526982e75398d5c398d5cba675a"},
+    {"fixture":"pass","run":2,"isolation_id":"m08-pass-run2","invoked_at":"2026-08-02T15:12:00-07:00","raw_response":"runs/pass-run-2.json","sha256":"fe41b4d3730498a80b515e6cb8c1e3b835d066ce4d493fddcbf4df6c1e2e7000"},
+    {"fixture":"revise","run":2,"isolation_id":"m08-revise-run2","invoked_at":"2026-08-02T15:34:00-07:00","raw_response":"runs/revise-run-2.json","sha256":"e55509aa3f2b1d9eadb2308e5cd8fcf02d7cd497ff2edd603b7138e88d913817"},
+    {"fixture":"repeat","run":2,"isolation_id":"m08-repeat-run2","invoked_at":"2026-08-02T15:56:00-07:00","raw_response":"runs/repeat-run-2.json","sha256":"1634c0683b3fe1786fa344e74f8971764d7f481bd85de97de32f3f326f007b18"}
+  ]
+}
