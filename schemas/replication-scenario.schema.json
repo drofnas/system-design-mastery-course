@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/system-design-course/replication-scenario.schema.json",
+  "title": "Replication and partitioning lab scenario",
+  "type": "object",
+  "required": ["schema_version", "scenario_id", "pair_id", "variant", "seed", "topology", "partitioning", "initial_state", "operations", "fault_schedule", "control", "prediction", "evidence_boundary"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "scenario_id": {"type": "string", "pattern": "^f0[1-6]-[a-z0-9-]+-(broken|repaired)$"},
+    "pair_id": {"type": "string", "pattern": "^F0[1-6]$"},
+    "variant": {"enum": ["broken", "repaired"]},
+    "seed": {"type": "integer"},
+    "topology": {
+      "type": "object",
+      "required": ["nodes", "leader", "replication_factor"],
+      "properties": {
+        "nodes": {"type": "array", "minItems": 3, "items": {"type": "string"}, "uniqueItems": true},
+        "leader": {"type": "string"},
+        "replication_factor": {"type": "integer", "minimum": 1}
+      },
+      "additionalProperties": false
+    },
+    "partitioning": {
+      "type": "object",
+      "required": ["strategy", "partitions"],
+      "properties": {
+        "strategy": {"enum": ["hash", "range", "consistent_hash"]},
+        "partitions": {"type": "integer", "minimum": 1}
+      },
+      "additionalProperties": true
+    },
+    "initial_state": {"type": "object", "additionalProperties": {"type": ["string", "integer", "boolean", "null"]}},
+    "operations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "key", "tenant", "session"],
+        "properties": {
+          "id": {"type": "string"},
+          "type": {"enum": ["read", "write", "add_node"]},
+          "key": {"type": "string"},
+          "value": {"type": ["string", "integer", "boolean", "null"]},
+          "tenant": {"type": "string"},
+          "session": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "fault_schedule": {
+      "type": "object",
+      "required": ["type"],
+      "properties": {
+        "type": {"enum": ["replica_partition", "leader_stopped", "replication_lag", "lost_acknowledgement", "hot_key", "reshard_under_load"]}
+      },
+      "additionalProperties": true
+    },
+    "control": {
+      "type": "object",
+      "required": ["write_ack", "read_policy", "preserve_conflicts", "repair", "session_enforcement", "leader_policy", "hot_key_mitigation", "reshard_strategy"],
+      "additionalProperties": true
+    },
+    "prediction": {"type": "string", "minLength": 10},
+    "evidence_boundary": {"type": "string", "minLength": 10}
+  },
+  "additionalProperties": false
+}

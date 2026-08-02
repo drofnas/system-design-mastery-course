@@ -688,6 +688,67 @@ def validate_transaction_lab(
         sys.path.remove(str(lab_root))
 
 
+def validate_replication_lab(
+    module_root: Path,
+    manifest: dict[str, Any],
+    errors: list[str],
+) -> None:
+    """Exercise Module 9's replication, session, repair, and placement contracts."""
+
+    if manifest.get("id") != "M09":
+        return
+    lab_root = module_root / "lab"
+    expected = {
+        f"f{number:02d}-{slug}-{variant}.json"
+        for number, slug in (
+            (1, "replica-partition"),
+            (2, "leader-stopped"),
+            (3, "replication-lag"),
+            (4, "lost-acknowledgement"),
+            (5, "hot-key"),
+            (6, "reshard-under-load"),
+        )
+        for variant in ("broken", "repaired")
+    }
+    scenario_paths = sorted((lab_root / "scenarios").glob("*.json"))
+    observed = {path.name for path in scenario_paths}
+    if observed != expected:
+        fail(errors, f"M09: replication scenario inventory differs: {sorted(observed ^ expected)}")
+    sys.path.insert(0, str(lab_root))
+    try:
+        from replication_lab.config import load_scenario, validate_trial
+        from replication_lab.runner import run_scenario
+
+        pair_results: dict[str, list[dict[str, Any]]] = {}
+        for scenario_path in scenario_paths:
+            try:
+                scenario = load_scenario(scenario_path)
+                trial = run_scenario(scenario)
+                if trial != run_scenario(scenario):
+                    fail(errors, f"{relative(scenario_path)}: rerun is not deterministic")
+                for error in validate_trial(trial):
+                    fail(errors, f"{relative(scenario_path)} measured trial: {error}")
+                pair_results.setdefault(str(trial["pair_id"]), []).append(trial)
+            except (OSError, ValueError, KeyError, RuntimeError) as error:
+                fail(errors, f"{relative(scenario_path)}: {error}")
+        for pair_id, trials in pair_results.items():
+            if len(trials) != 2:
+                fail(errors, f"M09 {pair_id}: expected broken and repaired trials")
+                continue
+            if len({trial["shared_input_sha256"] for trial in trials}) != 1:
+                fail(errors, f"M09 {pair_id}: pair inputs do not match")
+            if len({trial["config_sha256"] for trial in trials}) != 2:
+                fail(errors, f"M09 {pair_id}: pair controls do not differ")
+            broken = next(trial for trial in trials if trial["variant"] == "broken")
+            repaired = next(trial for trial in trials if trial["variant"] == "repaired")
+            if all(row["passed"] for row in broken["invariants"]):
+                fail(errors, f"M09 {pair_id}: broken trial does not expose its invariant failure")
+            if not all(row["passed"] for row in repaired["invariants"]):
+                fail(errors, f"M09 {pair_id}: repaired trial does not restore its invariant")
+    finally:
+        sys.path.remove(str(lab_root))
+
+
 def validate_local_links(errors: list[str]) -> None:
     for markdown in ROOT.rglob("*.md"):
         if ".git" in markdown.parts:
@@ -734,6 +795,8 @@ def main() -> int:
         ROOT / "schemas" / "storage-trial.schema.json",
         ROOT / "schemas" / "transaction-scenario.schema.json",
         ROOT / "schemas" / "transaction-trial.schema.json",
+        ROOT / "schemas" / "replication-scenario.schema.json",
+        ROOT / "schemas" / "replication-trial.schema.json",
     ):
         load_json(path, errors)
 
@@ -752,6 +815,7 @@ def main() -> int:
         validate_remote_call_lab(module_root, manifest, errors)
         validate_storage_lab(module_root, manifest, errors)
         validate_transaction_lab(module_root, manifest, errors)
+        validate_replication_lab(module_root, manifest, errors)
 
     validate_baseline(errors)
     validate_local_links(errors)
