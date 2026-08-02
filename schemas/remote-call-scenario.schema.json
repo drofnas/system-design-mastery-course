@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/system-design-course/remote-call-scenario.schema.json",
+  "title": "Module 6 asynchronous fan-out scenario",
+  "type": "object",
+  "required": ["schema_version", "id", "pair_id", "variant", "seed", "workload", "dependencies", "fault", "policy"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "id": {"type": "string", "minLength": 1},
+    "pair_id": {"type": "string", "minLength": 1},
+    "variant": {"enum": ["baseline", "broken", "repaired"]},
+    "seed": {"type": "integer"},
+    "workload": {
+      "type": "object",
+      "required": ["logical_requests", "operation", "tenants", "deadline_ms", "cleanup_reserve_ms", "arrival_interval_ms", "time_scale"],
+      "properties": {
+        "logical_requests": {"type": "integer", "minimum": 1},
+        "operation": {"enum": ["status", "reserve"]},
+        "tenants": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+        "deadline_ms": {"type": "number", "exclusiveMinimum": 0},
+        "cleanup_reserve_ms": {"type": "number", "minimum": 0},
+        "arrival_interval_ms": {"type": "number", "minimum": 0},
+        "time_scale": {"type": "number", "exclusiveMinimum": 0}
+      },
+      "additionalProperties": false
+    },
+    "dependencies": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["name", "required", "latency_ms", "effectful"],
+        "properties": {
+          "name": {"type": "string", "minLength": 1},
+          "required": {"type": "boolean"},
+          "latency_ms": {"type": "number", "minimum": 0},
+          "effectful": {"type": "boolean"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "fault": {
+      "type": "object",
+      "required": ["kind", "retry_dependency", "retryable_failures_per_request", "missing_dependencies", "cancel_after_ms", "duplicate_requests", "conflicting_duplicate", "slow_dependency", "slow_latency_ms"],
+      "properties": {
+        "kind": {"enum": ["none", "retry_storm", "pool_exhaustion", "dependency_slowdown", "partial_response", "duplicate_request", "cancellation_leak"]},
+        "retry_dependency": {"type": ["string", "null"]},
+        "retryable_failures_per_request": {"type": "integer", "minimum": 0},
+        "missing_dependencies": {"type": "array", "items": {"type": "string"}},
+        "cancel_after_ms": {"type": ["number", "null"], "minimum": 0},
+        "duplicate_requests": {"type": "integer", "minimum": 1},
+        "conflicting_duplicate": {"type": "boolean"},
+        "slow_dependency": {"type": ["string", "null"]},
+        "slow_latency_ms": {"type": ["number", "null"], "minimum": 0}
+      },
+      "additionalProperties": false
+    },
+    "policy": {
+      "type": "object",
+      "required": ["propagate_deadline", "cancellation", "retry_owner", "max_attempts", "retry_budget", "backoff_base_ms", "backoff_cap_ms", "full_jitter", "global_limit", "per_dependency_limit", "per_tenant_limit", "queue_limit", "queue_wait_ms", "deduplicate", "explicit_partial", "health_isolated"],
+      "properties": {
+        "propagate_deadline": {"type": "boolean"},
+        "cancellation": {"type": "boolean"},
+        "retry_owner": {"enum": ["caller", "layered"]},
+        "max_attempts": {"type": "integer", "minimum": 1},
+        "retry_budget": {"type": "integer", "minimum": 0},
+        "backoff_base_ms": {"type": "number", "minimum": 0},
+        "backoff_cap_ms": {"type": "number", "minimum": 0},
+        "full_jitter": {"type": "boolean"},
+        "global_limit": {"type": "integer", "minimum": 1},
+        "per_dependency_limit": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 1}},
+        "per_tenant_limit": {"type": "integer", "minimum": 1},
+        "queue_limit": {"type": "integer", "minimum": 0},
+        "queue_wait_ms": {"type": "number", "minimum": 0},
+        "deduplicate": {"type": "boolean"},
+        "explicit_partial": {"type": "boolean"},
+        "health_isolated": {"type": "boolean"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

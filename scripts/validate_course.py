@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import asyncio
 import json
 import re
 import sys
@@ -487,6 +488,33 @@ def validate_network_lab(module_root: Path, manifest: dict[str, Any], errors: li
         sys.path.remove(str(lab_root))
 
 
+def validate_remote_call_lab(
+    module_root: Path,
+    manifest: dict[str, Any],
+    errors: list[str],
+) -> None:
+    """Exercise Module 6's strict scenario and measured trial contracts."""
+
+    if manifest.get("id") != "M06":
+        return
+    lab_root = module_root / "lab"
+    sys.path.insert(0, str(lab_root))
+    try:
+        from fanout_lab.config import load_scenario, validate_trial
+        from fanout_lab.runner import run_scenario
+
+        for scenario_path in sorted((lab_root / "scenarios").glob("*.json")):
+            try:
+                scenario = load_scenario(scenario_path)
+                trial_errors = validate_trial(asyncio.run(run_scenario(scenario)))
+                for error in trial_errors:
+                    fail(errors, f"{relative(scenario_path)} measured trial: {error}")
+            except (OSError, ValueError, KeyError, RuntimeError) as error:
+                fail(errors, f"{relative(scenario_path)}: {error}")
+    finally:
+        sys.path.remove(str(lab_root))
+
+
 def validate_local_links(errors: list[str]) -> None:
     for markdown in ROOT.rglob("*.md"):
         if ".git" in markdown.parts:
@@ -527,6 +555,8 @@ def main() -> int:
         ROOT / "schemas" / "blind-reveal.schema.json",
         ROOT / "schemas" / "network-scenario.schema.json",
         ROOT / "schemas" / "network-trial.schema.json",
+        ROOT / "schemas" / "remote-call-scenario.schema.json",
+        ROOT / "schemas" / "remote-call-trial.schema.json",
     ):
         load_json(path, errors)
 
@@ -541,6 +571,7 @@ def main() -> int:
         validate_lesson_contracts(module_root, errors)
         validate_calibration(module_root, manifest, errors)
         validate_network_lab(module_root, manifest, errors)
+        validate_remote_call_lab(module_root, manifest, errors)
 
     validate_baseline(errors)
     validate_local_links(errors)
