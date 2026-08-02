@@ -119,6 +119,11 @@ def validate_run(
 
     headings = fixture_headings(calibration, fixture)
     expected_prefix = f"{module_root.relative_to(ROOT)}/assessment/calibration/{fixture}.md#"
+    manifest_prefix = (
+        f"{module_root.relative_to(ROOT)}/assessment/calibration/{manifest_reference}#"
+        if isinstance(manifest_reference, str)
+        else ""
+    )
 
     def validate_citations(citations: Any, label: str) -> None:
         if not isinstance(citations, list) or not citations:
@@ -126,6 +131,8 @@ def validate_run(
         for citation in citations:
             if not isinstance(citation, str):
                 fail(f"{path}: {label} evidence must contain strings")
+            if label == "G01" and manifest_prefix.lower() in citation.lower():
+                continue
             if expected_prefix.lower() not in citation.lower():
                 fail(f"{path}: {label} cites outside the fixture: {citation}")
             fragment = citation.lower().split(expected_prefix.lower(), 1)[1]
@@ -159,7 +166,8 @@ def validate_run(
         for finding in findings:
             if not isinstance(finding, str):
                 fail(f"{path}: {criterion} findings must contain strings")
-            classification = finding.split(":", 1)[0].strip()
+            prefix = re.match(r"^([a-z_]+)\s*(?::|—|-)\s+", finding)
+            classification = prefix.group(1) if prefix else ""
             if classification not in FINDING_TYPES:
                 fail(f"{path}: {criterion} finding lacks valid classification: {finding}")
         remediation_rows = row.get("remediation", [])

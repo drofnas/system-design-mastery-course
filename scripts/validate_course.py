@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import asyncio
+import hashlib
 import json
 import re
 import sys
@@ -446,6 +447,66 @@ def validate_calibration(
             fail(errors, f"{manifest.get('id')}: raw calibration validation failed: {error}")
 
 
+def validate_calibration_provenance(
+    module_root: Path,
+    manifest: dict[str, Any],
+    errors: list[str],
+) -> None:
+    """Verify Module 6's six isolated evaluator response records and hashes."""
+
+    if manifest.get("id") != "M06":
+        return
+    calibration = module_root / "assessment" / "calibration"
+    if not (calibration / "results.json").exists():
+        return
+    metadata_path = calibration / "run-metadata.json"
+    metadata = load_json(metadata_path, errors)
+    if not isinstance(metadata, dict):
+        return
+    runtime = metadata.get("runtime", {})
+    if not isinstance(runtime, dict) or not all(runtime.get(key) for key in ("provider", "model", "client")):
+        fail(errors, f"{manifest.get('id')}: evaluator runtime provenance is incomplete")
+    settings = metadata.get("deterministic_settings", {})
+    if not isinstance(settings, dict) or not all(
+        settings.get(key) for key in ("temperature", "reasoning_effort", "output_constraint")
+    ):
+        fail(errors, f"{manifest.get('id')}: deterministic evaluator settings are incomplete")
+    if not metadata.get("isolation_method"):
+        fail(errors, f"{manifest.get('id')}: evaluator isolation method is missing")
+    invocations = metadata.get("invocations", [])
+    if not isinstance(invocations, list) or len(invocations) != 6:
+        fail(errors, f"{manifest.get('id')}: exactly six evaluator invocations are required")
+        return
+    expected = {(fixture, run) for fixture in ("pass", "revise", "repeat") for run in (1, 2)}
+    observed: set[tuple[str, int]] = set()
+    isolation_ids: set[str] = set()
+    for invocation in invocations:
+        if not isinstance(invocation, dict):
+            fail(errors, f"{manifest.get('id')}: evaluator invocation must be an object")
+            continue
+        key = (invocation.get("fixture"), invocation.get("run"))
+        observed.add(key)
+        isolation_id = invocation.get("isolation_id")
+        if not isinstance(isolation_id, str) or not isolation_id or isolation_id in isolation_ids:
+            fail(errors, f"{manifest.get('id')}: evaluator isolation IDs must be unique")
+        isolation_ids.add(isolation_id)
+        raw_reference = invocation.get("raw_response")
+        if not isinstance(raw_reference, str):
+            fail(errors, f"{manifest.get('id')}: evaluator raw-response path is missing")
+            continue
+        raw_path = (calibration / raw_reference).resolve()
+        if not raw_path.is_relative_to(calibration.resolve()) or not raw_path.exists():
+            fail(errors, f"{manifest.get('id')}: invalid evaluator raw response {raw_reference}")
+            continue
+        digest = hashlib.sha256(raw_path.read_bytes()).hexdigest()
+        if digest != invocation.get("sha256"):
+            fail(errors, f"{manifest.get('id')}: evaluator hash mismatch for {raw_reference}")
+        if not invocation.get("invoked_at"):
+            fail(errors, f"{manifest.get('id')}: invocation time missing for {raw_reference}")
+    if observed != expected:
+        fail(errors, f"{manifest.get('id')}: evaluator fixture/run coverage is incomplete")
+
+
 def validate_baseline(errors: list[str]) -> None:
     path = ROOT / "capstone" / "baselines" / "week-01-baseline.md"
     text = path.read_text(encoding="utf-8")
@@ -570,6 +631,7 @@ def main() -> int:
         validate_required_files(module_root, manifest, errors)
         validate_lesson_contracts(module_root, errors)
         validate_calibration(module_root, manifest, errors)
+        validate_calibration_provenance(module_root, manifest, errors)
         validate_network_lab(module_root, manifest, errors)
         validate_remote_call_lab(module_root, manifest, errors)
 
