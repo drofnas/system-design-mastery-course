@@ -1,7 +1,7 @@
 # Transaction and Recovery Lab
 
 This Python 3.11+ standard-library lab exposes deterministic transaction
-schedules, conflicts, locks, WAL ordering, explicit flushes, crash recovery,
+schedules, shared/exclusive locks, MVCC validation, WAL ordering, explicit flushes, crash recovery,
 backup, and point-in-time restore. It executes real local file writes and
 `fsync`, but it is a teaching engine: it does not prove production database,
 device-cache, kernel, distributed, or cloud durability.
@@ -26,6 +26,8 @@ Run the tests:
 python3 -m unittest discover -s tests -v
 ```
 
-The required matrix is F01–F07, each with broken and repaired variants. A pair
+Tests include a real subprocess that terminates with a stolen uncommitted
+update, plus shared-flush group commit and target-LSN restore. The required
+matrix is F01–F07, each with broken and repaired variants. A pair
 must share logical input and change only the named control. The learner should
 reproduce the contract in a chosen stack; PostgreSQL translation is optional.

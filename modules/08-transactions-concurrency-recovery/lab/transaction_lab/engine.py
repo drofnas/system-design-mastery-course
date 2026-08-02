@@ -84,6 +84,15 @@ class ToyStore:
         self.active.pop(txn, None)
         return record["lsn"]
 
+    def group_commit(self, txns: list[str]) -> list[int]:
+        """Append several commits, share one flush, then acknowledge each."""
+        records = [self.append("COMMIT", txn) for txn in txns]
+        self.flush(records[-1]["lsn"])
+        for txn, record in zip(txns, records):
+            self.acknowledged.append({"txn": txn, "commit_lsn": record["lsn"]})
+            self.active.pop(txn, None)
+        return [record["lsn"] for record in records]
+
     def abort(self, txn: str) -> None:
         for key, before, _after in reversed(self.active.get(txn, [])):
             self.state[key] = before

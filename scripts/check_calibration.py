@@ -72,6 +72,7 @@ def validate_run(
     module_id: str,
     criteria: set[str],
     evaluation_schema: dict[str, Any],
+    safety_critical: set[str] | None = None,
 ) -> dict[str, int]:
     data = load_json(path)
     expected_fields = set(evaluation_schema.get("properties", {}))
@@ -179,9 +180,10 @@ def validate_run(
         if "Lesson" not in remediation or "EX-" not in remediation:
             fail(f"{path}: {criterion} remediation must name a lesson and EX- exercise")
 
-    safety_zero = scores.get("R06") == 0 or scores.get("R07") == 0
+    safety_critical = safety_critical or {"R06", "R07"}
+    safety_zero = any(scores.get(criterion) == 0 for criterion in safety_critical)
     if data.get("safety_critical_zero") is not safety_zero:
-        fail(f"{path}: safety_critical_zero contradicts R06/R07")
+        fail(f"{path}: safety_critical_zero contradicts configured safety-critical criteria")
     hard_gate_failure = any(not gates[gate] for gate in ("G02", "G03", "G04", "G05"))
     if hard_gate_failure or safety_zero:
         calculated_result = "Repeat"
@@ -271,6 +273,7 @@ def main() -> int:
     if not criteria:
         fail(f"{module_root}: rubric has no criterion IDs")
     evaluation_schema = load_json(ROOT / "schemas" / "evaluation.schema.json")
+    safety_critical = set(manifest.get("assessment", {}).get("safety_critical_criteria", []))
     if module_id == "M04":
         for fixture in FIXTURES:
             if not isinstance(expected[f"{fixture}.md"].get("manifest"), str):
@@ -290,6 +293,7 @@ def main() -> int:
                 module_id,
                 criteria,
                 evaluation_schema,
+                safety_critical,
             )
         run_scores.append(scores_for_run)
         print(f"Calibration run {run_number}: result bands and evidence valid")

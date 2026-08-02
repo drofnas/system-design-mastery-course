@@ -106,7 +106,8 @@ scripts/        Course validation tools
 | 5. Network Foundations | 17–20 | Ready | [Start Module 5](modules/05-network-foundations/README.md) |
 | 6. Deadlines and Resilient Remote Calls | 21–24 | Ready | [Start Module 6](modules/06-deadlines-resilient-remote-calls/README.md) |
 | 7. Data Models and Storage Engines | 25–28 | Ready | [Start Module 7](modules/07-data-models-storage-engines/README.md) |
-| 8–18 | 29–72 | Syllabus-defined; teaching packages not yet authored | [Course syllabus](00_COURSE_SYLLABUS.md) |
+| 8. Transactions, Concurrency, and Recovery | 29–32 | Ready | [Start Module 8](modules/08-transactions-concurrency-recovery/README.md) |
+| 9–18 | 33–72 | Syllabus-defined; teaching packages not yet authored | [Course syllabus](00_COURSE_SYLLABUS.md) |
 
 Future modules must satisfy
 [`MODULE_STANDARD.md`](MODULE_STANDARD.md). Course-authoring agents must also
@@ -123,7 +124,7 @@ python3 scripts/validate_course.py
 The validator discovers every module manifest and checks hour budgets, outcome
 mappings, lesson and resource contracts, required teaching and assessment
 files, calibration state, the frozen baseline contract, JSON interfaces, and
-local Markdown links. Use `--module M01` through `--module M07` to validate a
+local Markdown links. Use `--module M01` through `--module M08` to validate a
 single module.
 
 ## Evidence and AI rules

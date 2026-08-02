@@ -436,6 +436,7 @@ def validate_calibration(
                     str(manifest.get("id")),
                     criteria,
                     evaluation_schema,
+                    set(manifest.get("assessment", {}).get("safety_critical_criteria", [])),
                 )
                 if raw_scores != aggregate_scores:
                     fail(

@@ -1,8 +1,8 @@
 # Module 8: Transactions, Concurrency, and Recovery
 
-> **Authoring status:** Review. Teaching, practice, executable lab, and
-> assessment contracts are complete; evaluator calibration and readiness gates
-> must pass before this status becomes Ready.
+> **Authoring status:** Ready. Teaching, practice, executable lab, structural,
+> semantic, evaluator-calibration, focused, and full-course gates passed on
+> 2026-08-02. See the [readiness review](assessment/readiness-review.md).
 
 ## What this module changes
 
