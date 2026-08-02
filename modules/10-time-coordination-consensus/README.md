@@ -1,8 +1,8 @@
 # Module 10: Time, Coordination, and Consensus
 
-> **Authoring status:** Review. Teaching, practice, lab, assessment, calibration,
-> semantic review, and readiness evidence must pass before this status becomes
-> Ready.
+> **Authoring status:** Ready. Teaching, practice, lab, assessment, calibration,
+> semantic review, and validation passed on 2026-08-02. See the
+> [readiness review](assessment/readiness-review.md).
 
 ## What this module changes
 

@@ -10,8 +10,12 @@ and deterministic settings, timestamps, and SHA-256 hashes. Then run:
 
 ```bash
 python3 scripts/check_calibration.py --module M10 \
-  pass-run-1.json revise-run-1.json repeat-run-1.json \
-  pass-run-2.json revise-run-2.json repeat-run-2.json
+  assessment/calibration/runs/pass-run-1.json \
+  assessment/calibration/runs/revise-run-1.json \
+  assessment/calibration/runs/repeat-run-1.json \
+  assessment/calibration/runs/pass-run-2.json \
+  assessment/calibration/runs/revise-run-2.json \
+  assessment/calibration/runs/repeat-run-2.json
 ```
 
 Accept readiness only when bands match Pass/Revise/Repeat, all detailed records
