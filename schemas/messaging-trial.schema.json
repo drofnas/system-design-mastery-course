@@ -1,0 +1,31 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://example.invalid/system-design-course/messaging-trial.schema.json",
+  "title":"Module 11 deterministic messaging trial",
+  "type":"object",
+  "required":["schema_version","scenario_id","pair_id","variant","seed","scenario_sha256","shared_input_sha256","config_sha256","authority","outbox","broker","consumer","inbox","derived_view","workflow","dead_letters","watermarks","reconciliation","metrics","invariants","evidence_boundary"],
+  "properties":{
+    "schema_version":{"const":"1.0"},
+    "scenario_id":{"type":"string"},
+    "pair_id":{"type":"string","pattern":"^F0[1-9]$"},
+    "variant":{"enum":["broken","repaired"]},
+    "seed":{"type":"integer"},
+    "scenario_sha256":{"type":"string","pattern":"^[0-9a-f]{64}$"},
+    "shared_input_sha256":{"type":"string","pattern":"^[0-9a-f]{64}$"},
+    "config_sha256":{"type":"string","pattern":"^[0-9a-f]{64}$"},
+    "authority":{"type":"object","required":["database","facts","version"],"additionalProperties":true},
+    "outbox":{"type":"object","required":["rows","pending","published"],"additionalProperties":true},
+    "broker":{"type":"object","required":["records","duplicates"],"additionalProperties":true},
+    "consumer":{"type":"object","required":["name","offset","applications","attempts"],"additionalProperties":true},
+    "inbox":{"type":"object","required":["event_ids"],"additionalProperties":true},
+    "derived_view":{"type":"object","required":["aggregate_id","version"],"additionalProperties":true},
+    "workflow":{"type":"object","required":["state","history","compensation_effects"],"additionalProperties":true},
+    "dead_letters":{"type":"array"},
+    "watermarks":{"type":"object","required":["event_time","processing_time","watermark","late_action"],"additionalProperties":true},
+    "reconciliation":{"type":"object","required":["before","repairs","after"],"additionalProperties":true},
+    "metrics":{"type":"object","required":["published_records","consumed_records","logical_applications","effect_count","attempts","backlog_start","backlog_end","oldest_age_ticks","corrections","repairs"],"additionalProperties":{"type":"integer","minimum":0}},
+    "invariants":{"type":"array","minItems":12,"maxItems":12,"items":{"type":"object","required":["id","name","passed","evidence"],"additionalProperties":false}},
+    "evidence_boundary":{"type":"array","minItems":1,"items":{"type":"string"}}
+  },
+  "additionalProperties":false
+}
