@@ -1,0 +1,11 @@
+{
+  "schema_version":"1.0","scenario_id":"transit-baseline","scenario_hash":"484aa5f23e8673945a9179500511a4661c48ce0c36fe2f07db0c0a36256f1720","evidence_kind":"measured_loopback","seed":1705,"protocol":"h1","status":"ok",
+  "phase_timings_ms":{"dns":0.354,"tcp_tls_setup":1.553,"edge_proxy":0.802,"application":0.374,"dependency":0.363,"client_response":2.333,"total":64.979},
+  "connections":{"limit":8,"peak":3,"wait_ms":0.0,"rejected":0,"created":1,"reused_requests":1},
+  "attempts":[{"number":1,"connection":1,"reused":false,"duration_ms":1.307,"bytes":12288,"checksum":"5a3085bbdcfaa5473a5380d0dafc498a26ca3cecafd84ad533e4b34999734ab1"},{"number":2,"connection":1,"reused":true,"duration_ms":1.027,"bytes":12288,"checksum":"5a3085bbdcfaa5473a5380d0dafc498a26ca3cecafd84ad533e4b34999734ab1"}],
+  "bytes":{"useful":24576,"wire_modeled":0},"goodput_bytes_per_second":378213.283,"stream_completion_ms":{"route-impact":64.979},"events":[{"event":"dns_result","result":"positive"}],
+  "integrity":{"expected_checksum":"5a3085bbdcfaa5473a5380d0dafc498a26ca3cecafd84ad533e4b34999734ab1","actual_checksum":"5a3085bbdcfaa5473a5380d0dafc498a26ca3cecafd84ad533e4b34999734ab1","equivalent_work":true},
+  "cleanup":{"open_connections":0,"temporary_keys":0,"unresolved_tasks":0,"key_existed_during_run":true},"limits":{"timeout_ms":5000,"max_connections":8,"max_bytes":131072},
+  "tls":{"version":"TLSv1.3","cipher":"TLS_AES_256_GCM_SHA384","hostname_verified":true,"rejections":{"untrusted_anchor":true,"wrong_hostname":true}},
+  "limitations":["Loopback combines TCP and TLS setup timing.","No carrier, public DNS, public CA, NAT, or packet-loss behavior was measured."]
+}

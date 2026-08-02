@@ -1,0 +1,459 @@
+"""Measured loopback DNS/TCP/TLS/proxy/application/dependency trace."""
+
+from __future__ import annotations
+
+import asyncio
+import hashlib
+import json
+import os
+import socket
+import ssl
+import struct
+import subprocess
+import tempfile
+import time
+from pathlib import Path
+from typing import Any
+
+from .config import scenario_hash
+
+
+class RuntimeTracker:
+    """Track logical connections and accepted handler lifetimes for cleanup evidence."""
+
+    def __init__(self) -> None:
+        self.logical_writers: set[asyncio.StreamWriter] = set()
+        self.accepted_writers: set[asyncio.StreamWriter] = set()
+        self.tasks: set[asyncio.Task[Any]] = set()
+        self.peak_connections = 0
+
+    def track_connection(self, writer: asyncio.StreamWriter) -> None:
+        self.logical_writers.add(writer)
+        self.peak_connections = max(self.peak_connections, len(self.logical_writers))
+
+    async def close_connection(self, writer: asyncio.StreamWriter) -> None:
+        if not writer.is_closing():
+            writer.close()
+        try:
+            await writer.wait_closed()
+        except (ConnectionError, ssl.SSLError):
+            pass
+        self.logical_writers.discard(writer)
+
+    def wrap(self, handler: Any) -> Any:
+        async def tracked(reader: asyncio.StreamReader, writer: asyncio.StreamWriter) -> None:
+            task = asyncio.current_task()
+            if task is not None:
+                self.tasks.add(task)
+            self.accepted_writers.add(writer)
+            try:
+                await handler(reader, writer)
+            except (TimeoutError, ConnectionError, asyncio.IncompleteReadError, json.JSONDecodeError):
+                pass
+            finally:
+                if not writer.is_closing():
+                    writer.close()
+                try:
+                    await writer.wait_closed()
+                except (ConnectionError, ssl.SSLError):
+                    pass
+                self.accepted_writers.discard(writer)
+                if task is not None:
+                    self.tasks.discard(task)
+
+        return tracked
+
+    async def cleanup(self, timeout_s: float) -> None:
+        loop = asyncio.get_running_loop()
+        deadline = loop.time() + timeout_s
+        writers = list(self.logical_writers | self.accepted_writers)
+        for writer in writers:
+            if not writer.is_closing():
+                writer.close()
+        writer_waiters: dict[asyncio.Task[Any], asyncio.StreamWriter] = {
+            asyncio.create_task(writer.wait_closed()): writer for writer in writers
+        }
+        unresolved_waiters = set(writer_waiters)
+        if unresolved_waiters:
+            done, unresolved_waiters = await asyncio.wait(
+                unresolved_waiters, timeout=max(0.0, deadline - loop.time())
+            )
+            for task in done:
+                writer = writer_waiters[task]
+                if not task.cancelled() and task.exception() is None:
+                    self.logical_writers.discard(writer)
+                    self.accepted_writers.discard(writer)
+        for task in unresolved_waiters:
+            task.cancel()
+        if unresolved_waiters and loop.time() < deadline:
+            done, unresolved_waiters = await asyncio.wait(
+                unresolved_waiters, timeout=max(0.0, deadline - loop.time())
+            )
+            for task in done:
+                writer = writer_waiters[task]
+                if not task.cancelled() and task.exception() is None:
+                    self.logical_writers.discard(writer)
+                    self.accepted_writers.discard(writer)
+
+        handlers = {task for task in self.tasks if task is not asyncio.current_task()}
+        if handlers and loop.time() < deadline:
+            _, handlers = await asyncio.wait(
+                handlers, timeout=max(0.0, deadline - loop.time())
+            )
+        for task in handlers:
+            task.cancel()
+        if handlers and loop.time() < deadline:
+            _, handlers = await asyncio.wait(
+                handlers, timeout=max(0.0, deadline - loop.time())
+            )
+        self.tasks = {task for task in self.tasks if not task.done()}
+
+    @property
+    def open_connections(self) -> int:
+        return len(self.logical_writers | self.accepted_writers)
+
+    @property
+    def unresolved_tasks(self) -> int:
+        return len(self.tasks)
+
+
+def _qname(name: str) -> bytes:
+    return b"".join(bytes([len(label)]) + label.encode("ascii") for label in name.split(".")) + b"\x00"
+
+
+def _dns_query(name: str, query_id: int) -> bytes:
+    return struct.pack("!HHHHHH", query_id, 0x0100, 1, 0, 0, 0) + _qname(name) + struct.pack("!HH", 1, 1)
+
+
+def _question_end(data: bytes) -> int:
+    offset = 12
+    while data[offset] != 0:
+        offset += data[offset] + 1
+    return offset + 5
+
+
+class DNSProtocol(asyncio.DatagramProtocol):
+    def __init__(self, fail: bool) -> None:
+        self.transport: asyncio.DatagramTransport | None = None
+        self.fail = fail
+
+    def connection_made(self, transport: asyncio.BaseTransport) -> None:
+        self.transport = transport  # type: ignore[assignment]
+
+    def datagram_received(self, data: bytes, addr: tuple[str, int]) -> None:
+        query_id = struct.unpack("!H", data[:2])[0]
+        end = _question_end(data)
+        if self.fail:
+            response = struct.pack("!HHHHHH", query_id, 0x8182, 1, 0, 0, 0) + data[12:end]
+        else:
+            header = struct.pack("!HHHHHH", query_id, 0x8180, 1, 1, 0, 0)
+            answer = b"\xc0\x0c" + struct.pack("!HHIH", 1, 1, 30, 4) + socket.inet_aton("127.0.0.1")
+            response = header + data[12:end] + answer
+        assert self.transport is not None
+        self.transport.sendto(response, addr)
+
+
+async def query_dns(port: int, name: str, query_id: int, timeout_s: float) -> tuple[str | None, str]:
+    loop = asyncio.get_running_loop()
+    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    sock.setblocking(False)
+    try:
+        await loop.sock_sendto(sock, _dns_query(name, query_id), ("127.0.0.1", port))
+        data, _ = await asyncio.wait_for(loop.sock_recvfrom(sock, 512), timeout_s)
+    finally:
+        sock.close()
+    flags = struct.unpack("!H", data[2:4])[0]
+    rcode = flags & 0xF
+    if rcode != 0:
+        return None, "servfail" if rcode == 2 else f"rcode_{rcode}"
+    return socket.inet_ntoa(data[-4:]), "positive"
+
+
+async def _read_line(reader: asyncio.StreamReader, timeout_s: float) -> dict[str, Any]:
+    raw = await asyncio.wait_for(reader.readline(), timeout_s)
+    if not raw:
+        raise ConnectionResetError("peer closed before response")
+    return json.loads(raw)
+
+
+async def _dependency(reader: asyncio.StreamReader, writer: asyncio.StreamWriter, timeout_s: float) -> None:
+    request = await _read_line(reader, timeout_s)
+    response = {"route": request["route"], "version": 7, "impact": "minor"}
+    writer.write(json.dumps(response, sort_keys=True).encode() + b"\n")
+    await writer.drain()
+    writer.close()
+    await writer.wait_closed()
+
+
+async def _application(
+    reader: asyncio.StreamReader,
+    writer: asyncio.StreamWriter,
+    dependency_port: int,
+    timeout_s: float,
+    reader_limit: int,
+    tracker: RuntimeTracker,
+) -> None:
+    request = await _read_line(reader, timeout_s)
+    started = time.perf_counter()
+    dep_reader, dep_writer = await asyncio.open_connection(
+        "127.0.0.1", dependency_port, limit=reader_limit
+    )
+    tracker.track_connection(dep_writer)
+    dep_writer.write(json.dumps(request).encode() + b"\n")
+    await dep_writer.drain()
+    result = await _read_line(dep_reader, timeout_s)
+    await tracker.close_connection(dep_writer)
+    dependency_ms = (time.perf_counter() - started) * 1000
+    payload = b"T" * int(request["response_bytes"])
+    result["payload"] = payload.decode("ascii")
+    result["checksum"] = hashlib.sha256(payload).hexdigest()
+    result["server_timings_ms"] = {"dependency": dependency_ms}
+    result["server_timings_ms"]["application"] = (time.perf_counter() - started) * 1000
+    writer.write(json.dumps(result, sort_keys=True).encode() + b"\n")
+    await writer.drain()
+    writer.close()
+    await writer.wait_closed()
+
+
+async def _edge(
+    reader: asyncio.StreamReader,
+    writer: asyncio.StreamWriter,
+    app_port: int,
+    reset: bool,
+    timeout_s: float,
+    reader_limit: int,
+    tracker: RuntimeTracker,
+) -> None:
+    for attempt in range(2):
+        request = await _read_line(reader, timeout_s)
+        if reset and attempt == 0:
+            writer.transport.abort()
+            return
+        started = time.perf_counter()
+        app_reader, app_writer = await asyncio.open_connection(
+            "127.0.0.1", app_port, limit=reader_limit
+        )
+        tracker.track_connection(app_writer)
+        app_writer.write(json.dumps(request).encode() + b"\n")
+        await app_writer.drain()
+        result = await _read_line(app_reader, timeout_s)
+        await tracker.close_connection(app_writer)
+        result["server_timings_ms"]["edge_proxy"] = (time.perf_counter() - started) * 1000
+        writer.write(json.dumps(result, sort_keys=True).encode() + b"\n")
+        await writer.drain()
+    writer.close()
+    await writer.wait_closed()
+
+
+def _certificate(directory: Path, timeout_s: float) -> tuple[Path, Path]:
+    key = directory / "key.pem"
+    cert = directory / "cert.pem"
+    command = [
+        "openssl", "req", "-x509", "-newkey", "rsa:2048", "-nodes",
+        "-keyout", str(key), "-out", str(cert), "-days", "1",
+        "-subj", "/CN=impact.transit.test",
+        "-addext", "subjectAltName=DNS:impact.transit.test",
+    ]
+    completed = subprocess.run(command, capture_output=True, text=True, timeout=timeout_s)
+    if completed.returncode != 0:
+        raise RuntimeError(f"openssl failed: {completed.stderr.strip()}")
+    os.chmod(key, 0o600)
+    return cert, key
+
+
+async def trace(scenario: dict[str, Any]) -> dict[str, Any]:
+    fault_type = scenario["fault"]["type"]
+    started = time.perf_counter()
+    timings: dict[str, float] = {}
+    status = "ok"
+    response: dict[str, Any] | None = None
+    attempts: list[dict[str, Any]] = []
+    tls: dict[str, Any] | None = None
+    timeout_s = float(scenario["limits"]["timeout_ms"]) / 1000.0
+    reader_limit = int(scenario["limits"]["max_bytes"]) + 8192
+    deadline = started + timeout_s
+    tracker = RuntimeTracker()
+    dns_result = "not_completed"
+    with tempfile.TemporaryDirectory(prefix="network-lab-") as temp_name:
+        temp = Path(temp_name)
+        cert, key = _certificate(temp, max(0.001, deadline - time.perf_counter()))
+        server_context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
+        server_context.minimum_version = ssl.TLSVersion.TLSv1_3
+        server_context.maximum_version = ssl.TLSVersion.TLSv1_3
+        server_context.load_cert_chain(cert, key)
+        client_context = ssl.create_default_context(cafile=str(cert))
+        client_context.check_hostname = True
+        client_context.minimum_version = ssl.TLSVersion.TLSv1_3
+        client_context.maximum_version = ssl.TLSVersion.TLSv1_3
+        loop = asyncio.get_running_loop()
+        previous_exception_handler = loop.get_exception_handler()
+
+        def expected_tls_rejection_handler(
+            active_loop: asyncio.AbstractEventLoop, context: dict[str, Any]
+        ) -> None:
+            error = context.get("exception")
+            if context.get("message") == "Error on transport creation for incoming connection" and isinstance(
+                error, (ssl.SSLError, ConnectionResetError)
+            ):
+                return
+            if previous_exception_handler is not None:
+                previous_exception_handler(active_loop, context)
+            else:
+                active_loop.default_exception_handler(context)
+
+        loop.set_exception_handler(expected_tls_rejection_handler)
+        dns_transport, _ = await loop.create_datagram_endpoint(
+            lambda: DNSProtocol(fault_type == "dns_failure"), local_addr=("127.0.0.1", 0)
+        )
+        dns_port = dns_transport.get_extra_info("sockname")[1]
+        dependency_server = await asyncio.start_server(
+            tracker.wrap(lambda r, w: _dependency(r, w, timeout_s)),
+            "127.0.0.1", 0, limit=reader_limit
+        )
+        dependency_port = dependency_server.sockets[0].getsockname()[1]
+        app_server = await asyncio.start_server(
+            tracker.wrap(lambda r, w: _application(
+                r, w, dependency_port, timeout_s, reader_limit, tracker
+            )),
+            "127.0.0.1", 0, limit=reader_limit
+        )
+        app_port = app_server.sockets[0].getsockname()[1]
+        edge_server = await asyncio.start_server(
+            tracker.wrap(lambda r, w: _edge(
+                r, w, app_port, fault_type == "reset", timeout_s, reader_limit, tracker
+            )),
+            "127.0.0.1", 0, ssl=server_context, limit=reader_limit
+        )
+        edge_port = edge_server.sockets[0].getsockname()[1]
+        try:
+            remaining_s = deadline - time.perf_counter()
+            if remaining_s <= 0:
+                raise TimeoutError("scenario timeout expired during setup")
+            async with asyncio.timeout(remaining_s):
+                phase = time.perf_counter()
+                address, dns_result = await query_dns(
+                    dns_port, "impact.transit.test", scenario["seed"] % 65535, timeout_s
+                )
+                timings["dns"] = (time.perf_counter() - phase) * 1000
+                if address is None:
+                    status = "dns_failure"
+                else:
+                    rejections = {"untrusted_anchor": False, "wrong_hostname": False}
+                    untrusted_context = ssl.create_default_context()
+                    untrusted_context.minimum_version = ssl.TLSVersion.TLSv1_3
+                    untrusted_context.maximum_version = ssl.TLSVersion.TLSv1_3
+                    try:
+                        await asyncio.open_connection(
+                            address, edge_port, ssl=untrusted_context,
+                            server_hostname="impact.transit.test", limit=reader_limit
+                        )
+                    except ssl.SSLCertVerificationError:
+                        rejections["untrusted_anchor"] = True
+                    try:
+                        await asyncio.open_connection(
+                            address, edge_port, ssl=client_context,
+                            server_hostname="wrong.transit.test", limit=reader_limit
+                        )
+                    except ssl.SSLCertVerificationError:
+                        rejections["wrong_hostname"] = True
+                    if not all(rejections.values()):
+                        raise RuntimeError("TLS negative verification checks did not reject")
+                    phase = time.perf_counter()
+                    reader, writer = await asyncio.open_connection(
+                        address, edge_port, ssl=client_context,
+                        server_hostname="impact.transit.test", limit=reader_limit
+                    )
+                    tracker.track_connection(writer)
+                    timings["tcp_tls_setup"] = (time.perf_counter() - phase) * 1000
+                    ssl_object = writer.get_extra_info("ssl_object")
+                    client_response_ms = 0.0
+                    for attempt_number in range(1, 3):
+                        phase = time.perf_counter()
+                        writer.write(json.dumps({
+                            "route": "R-17",
+                            "response_bytes": sum(item["bytes"] for item in scenario["streams"]),
+                        }).encode() + b"\n")
+                        await writer.drain()
+                        if fault_type == "slow_reader" and attempt_number == 1:
+                            await asyncio.sleep(float(scenario["fault"].get("reader_delay_ms", 25)) / 1000.0)
+                        try:
+                            response = await _read_line(reader, timeout_s)
+                        except (ConnectionResetError, asyncio.IncompleteReadError):
+                            status = "reset"
+                            break
+                        duration_ms = (time.perf_counter() - phase) * 1000
+                        client_response_ms += duration_ms
+                        attempt_payload = response.get("payload", "").encode("ascii")
+                        attempts.append({
+                            "number": attempt_number,
+                            "connection": 1,
+                            "reused": attempt_number > 1,
+                            "duration_ms": round(duration_ms, 3),
+                            "bytes": len(attempt_payload),
+                            "checksum": hashlib.sha256(attempt_payload).hexdigest(),
+                        })
+                    timings["client_response"] = client_response_ms
+                    await tracker.close_connection(writer)
+                    tls = {
+                        "version": ssl_object.version(),
+                        "cipher": ssl_object.cipher()[0],
+                        "hostname_verified": True,
+                        "rejections": rejections,
+                    }
+                    if response is not None:
+                        server_timings = response.get("server_timings_ms", {})
+                        for boundary in ("edge_proxy", "application", "dependency"):
+                            timings[boundary] = float(server_timings[boundary])
+        except TimeoutError:
+            status = "timeout"
+        finally:
+            edge_server.close()
+            app_server.close()
+            dependency_server.close()
+            await edge_server.wait_closed()
+            await app_server.wait_closed()
+            await dependency_server.wait_closed()
+            dns_transport.close()
+            await tracker.cleanup(max(0.05, min(1.0, timeout_s)))
+            loop.set_exception_handler(previous_exception_handler)
+        key_present_before_cleanup = key.exists()
+    temporary_keys = int(key.exists())
+    expected = scenario["expected_work"]["checksum"]
+    payload = response.get("payload", "").encode("ascii") if response is not None else b""
+    actual = hashlib.sha256(payload).hexdigest() if payload else ""
+    expected_bytes = sum(item["bytes"] for item in scenario["streams"])
+    equivalent = bool(
+        status == "ok"
+        and len(attempts) == 2
+        and response
+        and len(payload) == expected_bytes
+        and actual == expected
+        and response.get("checksum") == actual
+    )
+    total = (time.perf_counter() - started) * 1000
+    timings["total"] = total
+    return {
+        "schema_version": "1.0",
+        "scenario_id": scenario["id"],
+        "scenario_hash": scenario_hash(scenario),
+        "evidence_kind": "measured_loopback",
+        "seed": scenario["seed"],
+        "protocol": "h1",
+        "status": status,
+        "phase_timings_ms": {key: round(value, 3) for key, value in timings.items()},
+        "connections": {"limit": scenario["limits"]["max_connections"], "peak": tracker.peak_connections, "wait_ms": 0.0, "rejected": 0, "created": 1 if attempts else 0, "reused_requests": max(0, len(attempts) - 1)},
+        "attempts": attempts,
+        "bytes": {"useful": sum(item["bytes"] for item in attempts), "wire_modeled": 0},
+        "goodput_bytes_per_second": round(sum(item["bytes"] for item in attempts) / (total / 1000.0), 3) if attempts else 0.0,
+        "stream_completion_ms": {"route-impact": round(total, 3)} if response else {},
+        "events": [{"event": "dns_result", "result": dns_result}],
+        "integrity": {"expected_checksum": expected, "actual_checksum": actual, "equivalent_work": equivalent and all(item["checksum"] == expected and item["bytes"] == expected_bytes for item in attempts)},
+        "cleanup": {"open_connections": tracker.open_connections, "temporary_keys": temporary_keys, "unresolved_tasks": tracker.unresolved_tasks, "key_existed_during_run": key_present_before_cleanup},
+        "limits": scenario["limits"],
+        "tls": tls,
+        "limitations": [
+            "Loopback combines TCP and TLS setup timing.",
+            "The slow-reader case measures configured client-consumption hold time, not kernel receive-window pressure.",
+            "No IP loss, routing, NAT, or public certificate system was measured.",
+        ]
+    }

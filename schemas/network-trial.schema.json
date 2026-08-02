@@ -1,0 +1,29 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://example.invalid/system-design-course/network-trial.schema.json",
+  "title":"Module 5 network trial",
+  "type":"object",
+  "required":["schema_version","scenario_id","scenario_hash","evidence_kind","seed","protocol","status","phase_timings_ms","connections","attempts","bytes","goodput_bytes_per_second","stream_completion_ms","events","integrity","cleanup","limits","limitations"],
+  "properties":{
+    "schema_version":{"const":"1.0"},
+    "scenario_id":{"type":"string","minLength":1},
+    "scenario_hash":{"type":"string","pattern":"^[0-9a-f]{64}$"},
+    "evidence_kind":{"enum":["measured_loopback","deterministic_model"]},
+    "seed":{"type":"integer"},
+    "protocol":{"enum":["h1","h2_tcp","h3_quic"]},
+    "status":{"enum":["ok","reset","dns_failure","timeout"]},
+    "phase_timings_ms":{"type":"object","required":["total"],"additionalProperties":{"type":"number","minimum":0}},
+    "connections":{"type":"object","required":["limit","peak","wait_ms","rejected","created","reused_requests"],"properties":{"limit":{"type":"integer","minimum":1},"peak":{"type":"integer","minimum":0},"wait_ms":{"type":"number","minimum":0},"rejected":{"type":"integer","minimum":0},"created":{"type":"integer","minimum":0},"reused_requests":{"type":"integer","minimum":0}},"additionalProperties":false},
+    "attempts":{"type":"array","items":{"type":"object","required":["number","connection","reused","duration_ms","bytes","checksum"],"properties":{"number":{"type":"integer","minimum":1},"connection":{"type":"integer","minimum":1},"reused":{"type":"boolean"},"duration_ms":{"type":"number","minimum":0},"bytes":{"type":"integer","minimum":0},"checksum":{"type":"string","pattern":"^[0-9a-f]{64}$"}},"additionalProperties":false}},
+    "bytes":{"type":"object","required":["useful","wire_modeled"],"properties":{"useful":{"type":"integer","minimum":0},"wire_modeled":{"type":"integer","minimum":0}},"additionalProperties":false},
+    "goodput_bytes_per_second":{"type":"number","minimum":0},
+    "stream_completion_ms":{"type":"object","additionalProperties":{"type":"number","minimum":0}},
+    "events":{"type":"array","items":{"type":"object"}},
+    "integrity":{"type":"object","required":["expected_checksum","actual_checksum","equivalent_work"],"properties":{"expected_checksum":{"type":"string"},"actual_checksum":{"type":"string"},"equivalent_work":{"type":"boolean"}},"additionalProperties":false},
+    "cleanup":{"type":"object","required":["open_connections","temporary_keys","unresolved_tasks"],"properties":{"open_connections":{"type":"integer","minimum":0},"temporary_keys":{"type":"integer","minimum":0},"unresolved_tasks":{"type":"integer","minimum":0},"key_existed_during_run":{"type":"boolean"}},"additionalProperties":false},
+    "limits":{"type":"object","required":["timeout_ms","max_connections","max_bytes"],"properties":{"timeout_ms":{"type":"integer","minimum":1,"maximum":30000},"max_connections":{"type":"integer","minimum":1,"maximum":128},"max_bytes":{"type":"integer","minimum":1,"maximum":1048576}},"additionalProperties":false},
+    "tls":{"type":["object","null"],"properties":{"version":{"type":"string"},"cipher":{"type":"string"},"hostname_verified":{"type":"boolean"},"rejections":{"type":"object","required":["untrusted_anchor","wrong_hostname"],"properties":{"untrusted_anchor":{"const":true},"wrong_hostname":{"const":true}},"additionalProperties":false}},"additionalProperties":false},
+    "limitations":{"type":"array","minItems":1,"items":{"type":"string"}}
+  },
+  "additionalProperties":false
+}
