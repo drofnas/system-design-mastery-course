@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/system-design-course/consensus-scenario.schema.json",
+  "title": "Module 10 deterministic consensus scenario",
+  "type": "object",
+  "required": ["schema_version","scenario_id","pair_id","variant","seed","cluster","timing","initial_state","events","controls","expected"],
+  "properties": {
+    "schema_version": {"const":"1.0"},
+    "scenario_id": {"type":"string","pattern":"^f0[1-8]-[a-z0-9-]+-(broken|repaired)$"},
+    "pair_id": {"type":"string","pattern":"^F0[1-8]$"},
+    "variant": {"enum":["broken","repaired"]},
+    "seed": {"type":"integer","minimum":0},
+    "cluster": {
+      "type":"object",
+      "required":["nodes","initial_voters","joint_voters"],
+      "properties": {
+        "nodes":{"type":"array","minItems":3,"uniqueItems":true,"items":{"type":"string"}},
+        "initial_voters":{"type":"array","minItems":3,"uniqueItems":true,"items":{"type":"string"}},
+        "joint_voters":{"type":"array","uniqueItems":true,"items":{"type":"string"}}
+      },
+      "additionalProperties":false
+    },
+    "timing": {
+      "type":"object",
+      "required":["heartbeat_interval_ticks","election_timeout_ticks","clock_offsets_ms","clock_drift_ppm"],
+      "properties": {
+        "heartbeat_interval_ticks":{"type":"integer","minimum":1},
+        "election_timeout_ticks":{"type":"object","additionalProperties":{"type":"integer","minimum":2}},
+        "clock_offsets_ms":{"type":"object","additionalProperties":{"type":"number"}},
+        "clock_drift_ppm":{"type":"number","minimum":0}
+      },
+      "additionalProperties":false
+    },
+    "initial_state": {
+      "type":"object",
+      "required":["hard_state","logs","snapshots","client_sessions","key_values","max_fence"],
+      "properties": {
+        "hard_state":{"type":"object","minProperties":3,"additionalProperties":{"type":"object","required":["current_term","voted_for","commit_index","last_applied"],"properties":{"current_term":{"type":"integer","minimum":0},"voted_for":{"type":["string","null"]},"commit_index":{"type":"integer","minimum":0},"last_applied":{"type":"integer","minimum":0}},"additionalProperties":false}},
+        "logs":{"type":"object","minProperties":3,"additionalProperties":{"type":"array","items":{"type":"object","required":["index","term","command"],"properties":{"index":{"type":"integer","minimum":1},"term":{"type":"integer","minimum":0},"command":{"type":"string"}},"additionalProperties":false}}},
+        "snapshots":{"type":"object","minProperties":3,"additionalProperties":{"type":"object","required":["last_included_index","last_included_term","checksum"],"properties":{"last_included_index":{"type":"integer","minimum":0},"last_included_term":{"type":"integer","minimum":0},"checksum":{"type":"string","minLength":1}},"additionalProperties":false}},
+        "client_sessions":{"type":"object"},
+        "key_values":{"type":"object","additionalProperties":{"type":["string","integer"]}},
+        "max_fence":{"type":"integer","minimum":0}
+      },
+      "additionalProperties":false
+    },
+    "events": {
+      "type":"array","minItems":1,
+      "items":{"type":"object","required":["tick","type"],"properties":{"tick":{"type":"integer","minimum":0},"type":{"type":"string"}},"additionalProperties":true}
+    },
+    "controls": {
+      "type":"object",
+      "required":["persist_before_response","commit_before_reply","require_majority","deduplicate_clients","read_barrier","atomic_snapshot","joint_consensus","enforce_fencing","validate_prev_log"],
+      "properties": {
+        "persist_before_response":{"type":"boolean"},
+        "commit_before_reply":{"type":"boolean"},
+        "require_majority":{"type":"boolean"},
+        "deduplicate_clients":{"type":"boolean"},
+        "read_barrier":{"type":"boolean"},
+        "atomic_snapshot":{"type":"boolean"},
+        "joint_consensus":{"type":"boolean"},
+        "enforce_fencing":{"type":"boolean"},
+        "validate_prev_log":{"type":"boolean"}
+      },
+      "additionalProperties":false
+    },
+    "expected": {
+      "type":"object",
+      "required":["target_invariant","repaired_invariants"],
+      "properties": {
+        "target_invariant":{"type":"string","pattern":"^C(0[1-9]|10)$"},
+        "repaired_invariants":{"type":"array","minItems":1,"uniqueItems":true,"items":{"type":"string","pattern":"^C(0[1-9]|10)$"}}
+      },
+      "additionalProperties":false
+    }
+  },
+  "additionalProperties":false
+}
