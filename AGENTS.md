@@ -156,11 +156,19 @@ required PR-title convention.
 
 ### "Plan out the next module" trigger
 
-When the user says **"Plan out the next module."**, treat the phrase as a
-request to execute the complete next-module authoring workflow, not merely to
-produce a proposed plan. It also explicitly authorizes evaluation and pushing
-the resulting module branch; do not pause for approval between authoring,
-evaluation, revision, committing, and pushing. For this trigger:
+When the user says **"Plan out the next module."**, first check the active
+collaboration mode before taking any other step:
+
+- If Plan Mode is active, produce a decision-complete `<proposed_plan>` and
+  stop. Do not begin the authoring workflow or create branches, edit files,
+  commit, push, or perform any other mutation. Do not automatically begin
+  execution if the mode later changes; wait for a new user request outside
+  Plan Mode.
+- If Plan Mode is not active, treat the phrase as a request to execute the
+  complete next-module authoring workflow, not merely to produce a proposed
+  plan. It also explicitly authorizes evaluation and pushing the resulting
+  module branch; do not pause for approval between authoring, evaluation,
+  revision, committing, and pushing. For this trigger:
 
 1. Inspect the module directory names to inventory which syllabus modules have
    already been created. Compare that inventory with `00_COURSE_SYLLABUS.md`,
