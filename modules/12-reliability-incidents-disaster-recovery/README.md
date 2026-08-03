@@ -1,7 +1,8 @@
 # Module 12: Reliability, Incidents, and Disaster Recovery
 
-> **Authoring status:** Review. Teaching, practice, assessment, and lab evidence
-> must pass calibration and readiness review before this module becomes ready.
+> **Authoring status:** Ready. Teaching, practice, lab, assessment, calibration,
+> semantic review, resource verification, and course validation passed on
+> 2026-08-02.
 
 ## What this module changes
 
