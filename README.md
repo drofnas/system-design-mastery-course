@@ -173,7 +173,8 @@ scripts/        Course validation tools
 | 8. Transactions, Concurrency, and Recovery | 29–32 | Ready | [Start Module 8](modules/08-transactions-concurrency-recovery/README.md) |
 | 9. Replication and Partitioning | 33–36 | Ready | [Start Module 9](modules/09-replication-partitioning/README.md) |
 | 10. Time, Coordination, and Consensus | 37–40 | Ready | [Start Module 10](modules/10-time-coordination-consensus/README.md) |
-| 11–18 | 41–72 | Syllabus-defined; teaching packages not yet authored | [Course syllabus](00_COURSE_SYLLABUS.md) |
+| 11. Messaging, Streams, and Workflows | 41–44 | Ready | [Start Module 11](modules/11-messaging-streams-workflows/README.md) |
+| 12–18 | 45–72 | Syllabus-defined; teaching packages not yet authored | [Course syllabus](00_COURSE_SYLLABUS.md) |
 
 Future modules must satisfy
 [`MODULE_STANDARD.md`](MODULE_STANDARD.md). Course-authoring agents must also
@@ -190,7 +191,7 @@ python3 scripts/validate_course.py
 The validator discovers every module manifest and checks hour budgets, outcome
 mappings, lesson and resource contracts, required teaching and assessment
 files, calibration state, the frozen baseline contract, JSON interfaces, and
-local Markdown links. Use `--module M01` through `--module M10` to validate a
+local Markdown links. Use `--module M01` through `--module M11` to validate a
 single module.
 
 ## Evidence and AI rules
