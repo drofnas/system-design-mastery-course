@@ -1,0 +1,31 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://example.invalid/system-design-course/reliability-trial.schema.json",
+  "title":"Module 12 deterministic reliability and recovery trial",
+  "type":"object",
+  "required":["schema_version","scenario_id","pair_id","variant","seed","scenario_sha256","shared_input_sha256","config_sha256","time_series","user_journey_results","sli_windows","error_budget","alerts","mitigations","incident","authority_state","backup_restore","regional_capacity","recovery_failback","invariants","evidence_boundaries"],
+  "properties":{
+    "schema_version":{"const":"1.0"},
+    "scenario_id":{"type":"string"},
+    "pair_id":{"type":"string","pattern":"^F0[1-9]$"},
+    "variant":{"enum":["broken","repaired"]},
+    "seed":{"type":"integer"},
+    "scenario_sha256":{"type":"string","pattern":"^[0-9a-f]{64}$"},
+    "shared_input_sha256":{"type":"string","pattern":"^[0-9a-f]{64}$"},
+    "config_sha256":{"type":"string","pattern":"^[0-9a-f]{64}$"},
+    "time_series":{"type":"array","minItems":3,"items":{"type":"object","required":["minute","valid","bad","queue"],"additionalProperties":false}},
+    "user_journey_results":{"type":"object","required":["journey","actual_valid","actual_bad","reported_valid","reported_bad","coverage_complete"],"additionalProperties":false},
+    "sli_windows":{"type":"object","required":["target","window_days","reported_sli","actual_sli"],"additionalProperties":false},
+    "error_budget":{"type":"object","required":["allowed_bad","consumed_bad","consumed_fraction","burn_rate"],"additionalProperties":false},
+    "alerts":{"type":"object","required":["page_fired","ticket_fired","long_window_minutes","short_window_minutes","actionable"],"additionalProperties":false},
+    "mitigations":{"type":"object","required":["degraded_mode","priority_preserved","optional_shed","queue_bounded"],"additionalProperties":false},
+    "incident":{"type":"object","required":["declared","roles_assigned","serialized_changes","handoff_complete","updates"],"additionalProperties":false},
+    "authority_state":{"type":"object","required":["last_required_version","restored_version","old_epoch","new_epoch","stale_owner_rejected"],"additionalProperties":false},
+    "backup_restore":{"type":"object","required":["backup_valid","verification_enabled","selected","isolated_restore","reconciled","observed_rpo_minutes"],"additionalProperties":false},
+    "regional_capacity":{"type":"object","required":["remaining","priority_required","recovery_required","reserve_enabled","minimum_service_supported"],"additionalProperties":false},
+    "recovery_failback":{"type":"object","required":["observed_rto_minutes","point_in_time_complete","staged_failback","operator_approved","source","target","rollback_available"],"additionalProperties":false},
+    "invariants":{"type":"array","minItems":12,"maxItems":12,"items":{"type":"object","required":["id","name","passed","evidence"],"properties":{"id":{"type":"string","pattern":"^I(0[1-9]|1[0-2])$"},"name":{"type":"string","minLength":1},"passed":{"type":"boolean"},"evidence":{"type":"string","minLength":1}},"additionalProperties":false}},
+    "evidence_boundaries":{"type":"array","minItems":1,"items":{"type":"string"}}
+  },
+  "additionalProperties":false
+}

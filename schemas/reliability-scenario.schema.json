@@ -1,0 +1,22 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://example.invalid/system-design-course/reliability-scenario.schema.json",
+  "title":"Module 12 deterministic reliability and recovery scenario",
+  "type":"object",
+  "required":["schema_version","scenario_id","pair_id","variant","seed","service","workload","slo","fault_events","controls","recovery","expected"],
+  "properties":{
+    "schema_version":{"const":"1.0"},
+    "scenario_id":{"type":"string","pattern":"^f0[1-9]-[a-z0-9-]+-(broken|repaired)$"},
+    "pair_id":{"type":"string","pattern":"^F0[1-9]$"},
+    "variant":{"enum":["broken","repaired"]},
+    "seed":{"type":"integer","minimum":0},
+    "service":{"type":"object","required":["name","journey","regions"],"properties":{"name":{"type":"string","minLength":1},"journey":{"type":"string","minLength":1},"regions":{"type":"array","minItems":2,"items":{"type":"string","minLength":1}}},"additionalProperties":false},
+    "workload":{"type":"object","required":["valid_events","bad_events","arrival_rate","priority_demand","optional_demand","recovery_demand","duration_minutes"],"properties":{"valid_events":{"type":"integer","minimum":1},"bad_events":{"type":"integer","minimum":0},"arrival_rate":{"type":"integer","minimum":0},"priority_demand":{"type":"integer","minimum":0},"optional_demand":{"type":"integer","minimum":0},"recovery_demand":{"type":"integer","minimum":0},"duration_minutes":{"type":"integer","minimum":1}},"additionalProperties":false},
+    "slo":{"type":"object","required":["target","window_days"],"properties":{"target":{"type":"number","exclusiveMinimum":0,"maximum":1},"window_days":{"type":"integer","minimum":1}},"additionalProperties":false},
+    "fault_events":{"type":"array","minItems":1,"items":{"type":"object","required":["minute","type"],"properties":{"minute":{"type":"integer","minimum":0},"type":{"type":"string","minLength":1}},"additionalProperties":false}},
+    "controls":{"type":"object","required":["bounded_degradation","multiwindow_burn_alerts","journey_sli","incident_command","restore_verification","point_in_time_recovery","degraded_capacity_reserve","fenced_failback","operator_safety_checks"],"properties":{"bounded_degradation":{"type":"boolean"},"multiwindow_burn_alerts":{"type":"boolean"},"journey_sli":{"type":"boolean"},"incident_command":{"type":"boolean"},"restore_verification":{"type":"boolean"},"point_in_time_recovery":{"type":"boolean"},"degraded_capacity_reserve":{"type":"boolean"},"fenced_failback":{"type":"boolean"},"operator_safety_checks":{"type":"boolean"}},"additionalProperties":false},
+    "recovery":{"type":"object","required":["last_durable_version","last_required_version","disruption_minute","minimum_service_minute","backup_valid","old_epoch","new_epoch","source","target","remaining_capacity"],"properties":{"last_durable_version":{"type":"integer","minimum":0},"last_required_version":{"type":"integer","minimum":0},"disruption_minute":{"type":"integer","minimum":0},"minimum_service_minute":{"type":"integer","minimum":0},"backup_valid":{"type":"boolean"},"old_epoch":{"type":"integer","minimum":0},"new_epoch":{"type":"integer","minimum":0},"source":{"type":"string","minLength":1},"target":{"type":"string","minLength":1},"remaining_capacity":{"type":"integer","minimum":0}},"additionalProperties":false},
+    "expected":{"type":"object","required":["target_invariant","repaired_invariants"],"properties":{"target_invariant":{"type":"string","pattern":"^I(0[1-9]|1[0-2])$"},"repaired_invariants":{"type":"array","minItems":12,"maxItems":12,"uniqueItems":true,"items":{"type":"string","pattern":"^I(0[1-9]|1[0-2])$"}}},"additionalProperties":false}
+  },
+  "additionalProperties":false
+}
