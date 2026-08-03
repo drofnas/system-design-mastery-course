@@ -1,8 +1,8 @@
 # Module 14: Architecture Evolution, Economics, and Organization
 
-> **Authoring status:** Draft until the deterministic lab, isolated evaluator
-> calibration, semantic review, resource verification, and course validators
-> pass.
+> **Authoring status:** Ready. Deterministic lab tests, six isolated evaluator
+> runs, calibration checking, semantic and resource review, and focused and
+> full-course validation passed on 2026-08-03.
 
 ## What this module changes
 
