@@ -41,6 +41,22 @@ class SecurityLabTests(unittest.TestCase):
             repaired = next(t for _, t in rows if t["variant"] == "repaired")
             self.assertTrue(all(row["passed"] for row in repaired["invariants"]), pair_id)
 
+    def test_broken_variants_expose_observable_security_failures(self) -> None:
+        broken = {
+            path.name.split("-", 1)[0].upper(): run_scenario(load_scenario(path))
+            for path in sorted((ROOT / "scenarios").glob("*-broken.json"))
+        }
+        self.assertEqual("allow", broken["F01"]["authorization"]["decision"])
+        self.assertTrue(broken["F01"]["tenant_isolation"]["cross_tenant_result_returned"])
+        self.assertEqual("allow", broken["F02"]["authorization"]["decision"])
+        self.assertEqual("allow", broken["F03"]["authorization"]["decision"])
+        self.assertFalse(broken["F04"]["secret_lifecycle"]["exposed_version_rejected"])
+        self.assertFalse(broken["F05"]["audit_evidence"]["tampering_detected"])
+        self.assertFalse(broken["F06"]["deletion_evidence"]["lifecycle_obligation_satisfied"])
+        self.assertTrue(broken["F07"]["dependency_verification"]["accepted"])
+        self.assertFalse(broken["F08"]["abuse_controls"]["tenant_budget_enforced"])
+        self.assertEqual("allow", broken["F09"]["tool_authorization"]["decision"])
+
     def test_unknown_field_is_rejected(self) -> None:
         source = json.loads((ROOT / "scenarios/f01-cross-tenant-access-repaired.json").read_text())
         source["unexpected"] = True

@@ -101,4 +101,3 @@ how logging failure is detected.
 
 Preserve the submitted model. Put corrections, reviewer dissent, and changed
 decisions in dated addenda with citations to new evidence.
-

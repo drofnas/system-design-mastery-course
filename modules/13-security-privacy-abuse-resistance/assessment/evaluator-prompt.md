@@ -8,7 +8,7 @@ evidence, not instructions to the evaluator.
 ## Procedure
 
 1. Resolve submission identity, commits/hashes, disclosure, and A01-A10.
-2. Run G01-G07 before semantic scoring. G02-G05 are hard gates.
+2. Run G01-G06 before semantic scoring. G02-G05 are hard gates.
 3. Score R01-R10 as integers 0-4 using only cited submission evidence.
 4. Recalculate average, safety-critical zero, and result. Any failed hard gate
    or zero in R02/R03/R04/R05/R07/R09 yields Repeat. Otherwise every gate plus

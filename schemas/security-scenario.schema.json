@@ -106,7 +106,18 @@
         "dependency_verification", "abuse_budget_enforcement",
         "untrusted_content_tool_authorization"
       ],
-      "additionalProperties": {"type": "boolean"}
+      "properties": {
+        "tenant_context_binding": {"type": "boolean"},
+        "object_action_authorization": {"type": "boolean"},
+        "credential_lifecycle": {"type": "boolean"},
+        "scoped_secret_rotation": {"type": "boolean"},
+        "tamper_evident_audit": {"type": "boolean"},
+        "complete_deletion": {"type": "boolean"},
+        "dependency_verification": {"type": "boolean"},
+        "abuse_budget_enforcement": {"type": "boolean"},
+        "untrusted_content_tool_authorization": {"type": "boolean"}
+      },
+      "additionalProperties": false
     },
     "expected": {
       "type": "object",
@@ -124,4 +135,3 @@
   },
   "additionalProperties": false
 }
-

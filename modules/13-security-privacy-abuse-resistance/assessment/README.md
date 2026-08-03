@@ -36,16 +36,13 @@ Audit/deletion, dependency, economic-abuse, prompt-injection, and high-risk tool
 claims have deterministic decisions, evidence boundaries, owners, and recovery.
 An unauthorized effect or false deletion/provenance claim yields Repeat.
 
-### G06: Threat model and security decision
+### G06: Threat model, security decision, defense, and remediation
 
 The major threat model and RFC map assets, threats, preventive/detective/recovery
 controls, evidence, residual risks, costs, owners, migration, alternatives, and
-reversal conditions without copying Northstar into the capstone.
-
-### G07: Defense, disclosure, and remediation
-
-The recorded defense includes dissent and follow-up; AI is not used to answer;
-findings point to published lessons/exercises; revisions preserve prior evidence.
+reversal conditions without copying Northstar into the capstone. The recorded
+defense includes dissent and follow-up; AI is not used to answer; findings point
+to published lessons/exercises; revisions preserve prior evidence.
 
 ## Scoring and result
 

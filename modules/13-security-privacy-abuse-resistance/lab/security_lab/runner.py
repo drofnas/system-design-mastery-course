@@ -75,20 +75,27 @@ def run_scenario(scenario: dict[str, Any]) -> dict[str, Any]:
             "evidence": f"{control or 'contract_identity'}={passed}; pair={scenario['pair_id']}",
         })
 
+    session_allows = session_current if controls["credential_lifecycle"] else True
+    policy_allows = role_allows if controls["object_action_authorization"] else True
+    effective_tenant_matches = (
+        tenant_matches
+        if controls["tenant_context_binding"]
+        else tenant["requested_tenant"] == tenant["resource_tenant"]
+    )
     authorization_allowed = (
-        controls["credential_lifecycle"]
-        and controls["object_action_authorization"]
-        and controls["tenant_context_binding"]
-        and session_current
-        and role_allows
-        and tenant_matches
+        identity["authenticated"]
+        and session_allows
+        and policy_allows
+        and effective_tenant_matches
     )
-    tool_allowed = (
-        controls["untrusted_content_tool_authorization"]
-        and retrieved["user_authorized"]
-        and (not request["high_risk"] or retrieved["approval_present"])
-        and bool(retrieved["idempotency_key"])
-    )
+    if controls["untrusted_content_tool_authorization"]:
+        tool_allowed = (
+            retrieved["user_authorized"]
+            and (not request["high_risk"] or retrieved["approval_present"])
+            and bool(retrieved["idempotency_key"])
+        )
+    else:
+        tool_allowed = retrieved["requests_tool"]
 
     return {
         "schema_version": "1.0",
@@ -132,7 +139,7 @@ def run_scenario(scenario: dict[str, Any]) -> dict[str, Any]:
         "deletion_evidence": {
             "delete_requested": lifecycle["delete_requested"],
             "copies_present_before_control": copies_present_before,
-            "copies_absent_after_control": deletion_complete,
+            "lifecycle_obligation_satisfied": deletion_complete,
             "verification_complete": controls["complete_deletion"],
             "exceptions_recorded": controls["complete_deletion"],
         },
@@ -140,7 +147,11 @@ def run_scenario(scenario: dict[str, Any]) -> dict[str, Any]:
             "name": dependency["name"],
             "digest_matches": dependency_matches,
             "provenance_input": dependency["provenance_verified"],
-            "accepted": controls["dependency_verification"] and dependency_matches and dependency["provenance_verified"],
+            "accepted": (
+                dependency_matches and dependency["provenance_verified"]
+                if controls["dependency_verification"]
+                else True
+            ),
         },
         "abuse_controls": {
             "subject_budget_enforced": controls["abuse_budget_enforcement"],

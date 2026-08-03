@@ -1,8 +1,8 @@
 # Module 13: Security, Privacy, and Abuse Resistance
 
-> **Authoring status:** Review. Teaching, lab, assessment, and fixtures exist;
-> readiness requires two isolated evaluator runs per fixture, semantic review,
-> resource verification, and focused and full course validation.
+> **Authoring status:** Ready. Six isolated evaluator records, semantic review,
+> resource verification, deterministic lab checks, and focused and full course
+> validation passed on 2026-08-03.
 
 ## What this module changes
 
@@ -132,7 +132,7 @@ one recorded teach-back.
   [anchored rubric](assessment/rubric.md),
   [evaluator prompt](assessment/evaluator-prompt.md), and
   [remediation map](assessment/remediation-map.md) before independent work.
-- Pass G01-G07, average at least 3.0, and avoid a zero in R02, R03, R04,
+- Pass G01-G06, average at least 3.0, and avoid a zero in R02, R03, R04,
   R05, R07, or R09.
 - Gate 5 remains at Week 60. Module 13 evidence feeds that later assessment;
   Week 52 does not create or edit a capstone gate revision.
