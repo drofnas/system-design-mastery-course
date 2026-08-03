@@ -1,0 +1,137 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/system-design-course/security-scenario.schema.json",
+  "title": "Module 13 security failure scenario",
+  "type": "object",
+  "required": [
+    "schema_version", "scenario_id", "pair_id", "variant", "seed",
+    "identity", "tenant", "request", "credential", "data_lifecycle",
+    "dependency", "retrieved_content", "controls", "expected"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "scenario_id": {"type": "string", "pattern": "^f0[1-9]-[a-z0-9-]+-(broken|repaired)$"},
+    "pair_id": {"type": "string", "pattern": "^F0[1-9]$"},
+    "variant": {"enum": ["broken", "repaired"]},
+    "seed": {"type": "integer", "minimum": 1},
+    "identity": {
+      "type": "object",
+      "required": ["subject_id", "role", "authenticated", "session_age_minutes"],
+      "properties": {
+        "subject_id": {"type": "string"},
+        "role": {"type": "string"},
+        "authenticated": {"type": "boolean"},
+        "session_age_minutes": {"type": "integer", "minimum": 0}
+      },
+      "additionalProperties": false
+    },
+    "tenant": {
+      "type": "object",
+      "required": ["subject_tenant", "resource_tenant", "requested_tenant"],
+      "properties": {
+        "subject_tenant": {"type": "string"},
+        "resource_tenant": {"type": "string"},
+        "requested_tenant": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "request": {
+      "type": "object",
+      "required": ["resource_id", "action", "required_role", "high_risk"],
+      "properties": {
+        "resource_id": {"type": "string"},
+        "action": {"type": "string"},
+        "required_role": {"type": "string"},
+        "high_risk": {"type": "boolean"}
+      },
+      "additionalProperties": false
+    },
+    "credential": {
+      "type": "object",
+      "required": ["expires_after_minutes", "revoked", "scope", "required_scope", "exposed_version", "active_version"],
+      "properties": {
+        "expires_after_minutes": {"type": "integer", "minimum": 1},
+        "revoked": {"type": "boolean"},
+        "scope": {"type": "string"},
+        "required_scope": {"type": "string"},
+        "exposed_version": {"type": "integer", "minimum": 0},
+        "active_version": {"type": "integer", "minimum": 0}
+      },
+      "additionalProperties": false
+    },
+    "data_lifecycle": {
+      "type": "object",
+      "required": ["delete_requested", "authoritative", "cache", "index", "backup", "audit_tampered", "sensitive_logged"],
+      "properties": {
+        "delete_requested": {"type": "boolean"},
+        "authoritative": {"type": "boolean"},
+        "cache": {"type": "boolean"},
+        "index": {"type": "boolean"},
+        "backup": {"type": "boolean"},
+        "audit_tampered": {"type": "boolean"},
+        "sensitive_logged": {"type": "boolean"}
+      },
+      "additionalProperties": false
+    },
+    "dependency": {
+      "type": "object",
+      "required": ["name", "approved_digest", "observed_digest", "provenance_verified"],
+      "properties": {
+        "name": {"type": "string"},
+        "approved_digest": {"type": "string"},
+        "observed_digest": {"type": "string"},
+        "provenance_verified": {"type": "boolean"}
+      },
+      "additionalProperties": false
+    },
+    "retrieved_content": {
+      "type": "object",
+      "required": ["trusted", "requests_tool", "tool", "user_authorized", "approval_present", "idempotency_key"],
+      "properties": {
+        "trusted": {"type": "boolean"},
+        "requests_tool": {"type": "boolean"},
+        "tool": {"type": "string"},
+        "user_authorized": {"type": "boolean"},
+        "approval_present": {"type": "boolean"},
+        "idempotency_key": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "controls": {
+      "type": "object",
+      "required": [
+        "tenant_context_binding", "object_action_authorization",
+        "credential_lifecycle", "scoped_secret_rotation",
+        "tamper_evident_audit", "complete_deletion",
+        "dependency_verification", "abuse_budget_enforcement",
+        "untrusted_content_tool_authorization"
+      ],
+      "properties": {
+        "tenant_context_binding": {"type": "boolean"},
+        "object_action_authorization": {"type": "boolean"},
+        "credential_lifecycle": {"type": "boolean"},
+        "scoped_secret_rotation": {"type": "boolean"},
+        "tamper_evident_audit": {"type": "boolean"},
+        "complete_deletion": {"type": "boolean"},
+        "dependency_verification": {"type": "boolean"},
+        "abuse_budget_enforcement": {"type": "boolean"},
+        "untrusted_content_tool_authorization": {"type": "boolean"}
+      },
+      "additionalProperties": false
+    },
+    "expected": {
+      "type": "object",
+      "required": ["target_invariant", "repaired_invariants"],
+      "properties": {
+        "target_invariant": {"type": "string", "pattern": "^I(0[1-9]|1[0-2])$"},
+        "repaired_invariants": {
+          "type": "array", "minItems": 12, "maxItems": 12,
+          "items": {"type": "string", "pattern": "^I(0[1-9]|1[0-2])$"},
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

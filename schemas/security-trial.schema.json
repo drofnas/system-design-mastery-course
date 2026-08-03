@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/system-design-course/security-trial.schema.json",
+  "title": "Module 13 deterministic security trial",
+  "type": "object",
+  "required": [
+    "schema_version", "scenario_id", "pair_id", "variant", "seed",
+    "scenario_sha256", "shared_input_sha256", "config_sha256",
+    "identity_session", "authorization", "tenant_isolation",
+    "secret_lifecycle", "audit_evidence", "deletion_evidence",
+    "dependency_verification", "abuse_controls", "tool_authorization",
+    "invariants", "evidence_boundaries"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "scenario_id": {"type": "string"},
+    "pair_id": {"type": "string", "pattern": "^F0[1-9]$"},
+    "variant": {"enum": ["broken", "repaired"]},
+    "seed": {"type": "integer"},
+    "scenario_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "shared_input_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "config_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "identity_session": {"type": "object"},
+    "authorization": {"type": "object"},
+    "tenant_isolation": {"type": "object"},
+    "secret_lifecycle": {"type": "object"},
+    "audit_evidence": {"type": "object"},
+    "deletion_evidence": {"type": "object"},
+    "dependency_verification": {"type": "object"},
+    "abuse_controls": {"type": "object"},
+    "tool_authorization": {"type": "object"},
+    "invariants": {
+      "type": "array", "minItems": 12, "maxItems": 12,
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "passed", "evidence"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^I(0[1-9]|1[0-2])$"},
+          "name": {"type": "string"},
+          "passed": {"type": "boolean"},
+          "evidence": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "evidence_boundaries": {"type": "array", "minItems": 3, "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}
