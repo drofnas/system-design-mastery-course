@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/system-design-course/evolution-trial.schema.json",
+  "title": "Module 14 deterministic architecture evolution trial",
+  "type": "object",
+  "required": ["schema_version","scenario_id","pair_id","variant","seed","scenario_sha256","shared_input_sha256","config_sha256","boundary_decision","compatibility","schema_evolution","backfill","write_authority","shadow_validation","cutover_rollback","economics","dependency_strategy","ownership","invariants","evidence_boundaries"],
+  "properties": {
+    "schema_version":{"const":"1.0"},
+    "scenario_id":{"type":"string"},
+    "pair_id":{"type":"string","pattern":"^F0[1-9]$"},
+    "variant":{"enum":["broken","repaired"]},
+    "seed":{"type":"integer"},
+    "scenario_sha256":{"type":"string","pattern":"^[0-9a-f]{64}$"},
+    "shared_input_sha256":{"type":"string","pattern":"^[0-9a-f]{64}$"},
+    "config_sha256":{"type":"string","pattern":"^[0-9a-f]{64}$"},
+    "boundary_decision":{"type":"object"},
+    "compatibility":{"type":"object"},
+    "schema_evolution":{"type":"object"},
+    "backfill":{"type":"object"},
+    "write_authority":{"type":"object"},
+    "shadow_validation":{"type":"object"},
+    "cutover_rollback":{"type":"object"},
+    "economics":{"type":"object"},
+    "dependency_strategy":{"type":"object"},
+    "ownership":{"type":"object"},
+    "invariants":{"type":"array","minItems":12,"maxItems":12,"items":{"type":"object","required":["id","name","passed","evidence"],"properties":{"id":{"type":"string","pattern":"^I(0[1-9]|1[0-2])$"},"name":{"type":"string"},"passed":{"type":"boolean"},"evidence":{"type":"string"}},"additionalProperties":false}},
+    "evidence_boundaries":{"type":"array","minItems":4,"items":{"type":"string"}}
+  },
+  "additionalProperties": false
+}
