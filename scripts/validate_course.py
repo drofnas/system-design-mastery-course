@@ -1469,6 +1469,126 @@ def validate_inference_lab(
         sys.path.remove(str(lab_root))
 
 
+def validate_retrieval_agent_lab(
+    module_root: Path,
+    manifest: dict[str, Any],
+    errors: list[str],
+) -> None:
+    """Exercise Module 18's retrieval, authorization, and durability contracts."""
+
+    if manifest.get("id") != "M18":
+        return
+    lab_root = module_root / "lab"
+    expected = {
+        f"f{number:02d}-{slug}-{variant}.json"
+        for number, slug in (
+            (1, "index-freshness"),
+            (2, "revoked-evidence"),
+            (3, "low-quality-retrieval"),
+            (4, "adversarial-document"),
+            (5, "provider-timeout"),
+            (6, "restart-duplicate"),
+            (7, "budget-cancellation"),
+            (8, "unauthorized-action"),
+        )
+        for variant in ("broken", "repaired")
+    }
+    scenario_paths = sorted((lab_root / "scenarios").glob("*.json"))
+    observed = {path.name for path in scenario_paths}
+    if observed != expected:
+        fail(errors, f"M18: retrieval-agent scenario inventory differs: {sorted(observed ^ expected)}")
+
+    required_files = (
+        "rag_agent_lab/config.py",
+        "rag_agent_lab/evaluation.py",
+        "rag_agent_lab/retrieval.py",
+        "rag_agent_lab/runner.py",
+        "rag_agent_lab/workflow.py",
+        "rag_agent_lab/__main__.py",
+        "tests/test_retrieval.py",
+        "tests/test_workflow_scenarios.py",
+        "contracts/get-permit-status.schema.json",
+        "contracts/request-inspection.schema.json",
+        "contracts/save-application-draft.schema.json",
+        "contracts/submit-permit-application.schema.json",
+    )
+    for name in required_files:
+        path = lab_root / name
+        if not path.exists():
+            fail(errors, f"M18: missing executable lab file {relative(path)}")
+        elif path.suffix == ".json":
+            contract = load_json(path, errors)
+            if contract.get("x-tool-version") != "1.0" or not contract.get("$id"):
+                fail(errors, f"M18: tool contract lacks stable version identity {relative(path)}")
+
+    sys.path.insert(0, str(lab_root))
+    try:
+        from rag_agent_lab.config import CONTROL_KEYS, load_scenario, validate_trial
+        from rag_agent_lab.runner import run_scenario
+
+        pairs: dict[str, list[tuple[dict[str, Any], dict[str, Any]]]] = {}
+        for scenario_path in scenario_paths:
+            try:
+                scenario = load_scenario(scenario_path)
+                trial = run_scenario(scenario)
+                if trial != run_scenario(scenario):
+                    fail(errors, f"{relative(scenario_path)}: rerun is not deterministic")
+                for error in validate_trial(trial):
+                    fail(errors, f"{relative(scenario_path)} modeled trial: {error}")
+                pairs.setdefault(str(trial["pair_id"]), []).append((scenario, trial))
+            except (OSError, ValueError, KeyError, RuntimeError) as error:
+                fail(errors, f"{relative(scenario_path)}: {error}")
+        if set(pairs) != {f"F{number:02d}" for number in range(1, 9)}:
+            fail(errors, "M18: retrieval-agent pair coverage must be F01-F08")
+        manifest_failures = {
+            row.get("id") for row in manifest.get("failure_experiments", [])
+            if isinstance(row, dict)
+        }
+        if manifest_failures != {f"F{number:02d}" for number in range(1, 9)}:
+            fail(errors, "M18: manifest failure inventory must be exactly F01-F08")
+        for pair_id, rows in pairs.items():
+            if len(rows) != 2:
+                fail(errors, f"M18 {pair_id}: expected broken and repaired trials")
+                continue
+            scenarios = [row[0] for row in rows]
+            trials = [row[1] for row in rows]
+            if {trial["variant"] for trial in trials} != {"broken", "repaired"}:
+                fail(errors, f"M18 {pair_id}: variants must be broken and repaired")
+                continue
+            for identity in ("shared_input_sha256", "seed"):
+                if len({trial[identity] for trial in trials}) != 1:
+                    fail(errors, f"M18 {pair_id}: pair {identity} values do not match")
+            if any(
+                trial["corpus_sha256"] != scenario["corpus_snapshot"]["sha256"]
+                or trial["evaluation_set_sha256"] != scenario["evaluation_set"]["sha256"]
+                for scenario, trial in rows
+            ):
+                fail(errors, f"M18 {pair_id}: trial corpus or evaluation hash is not bound to its scenario")
+            for identity in ("corpus_snapshot", "evaluation_set", "workload", "fault"):
+                if scenarios[0][identity] != scenarios[1][identity]:
+                    fail(errors, f"M18 {pair_id}: pair {identity} differs")
+            if len({trial["config_sha256"] for trial in trials}) != 2:
+                fail(errors, f"M18 {pair_id}: pair configuration hashes do not differ")
+            broken_scenario = next(row for row in scenarios if row["variant"] == "broken")
+            repaired_scenario = next(row for row in scenarios if row["variant"] == "repaired")
+            changed = {
+                key for key in CONTROL_KEYS
+                if broken_scenario["controls"][key] != repaired_scenario["controls"][key]
+            }
+            if len(changed) != 1:
+                fail(errors, f"M18 {pair_id}: pair must differ by exactly one named control")
+            broken = next(trial for trial in trials if trial["variant"] == "broken")
+            repaired = next(trial for trial in trials if trial["variant"] == "repaired")
+            target = broken_scenario["expected"]["target_invariant"]
+            broken_results = {row["id"]: row["passed"] for row in broken["invariants"]}
+            if broken_results.get(target) is not False:
+                fail(errors, f"M18 {pair_id}: broken trial does not expose {target}")
+            if not all(row["passed"] for row in repaired["invariants"]):
+                fail(errors, f"M18 {pair_id}: repaired trial does not restore I01-I12")
+    finally:
+        sys.path.remove(str(lab_root))
+
+
 def validate_local_links(errors: list[str]) -> None:
     for markdown in ROOT.rglob("*.md"):
         if any(part in {".git", "node_modules", "test-results"} for part in markdown.parts):
@@ -1535,6 +1655,8 @@ def main() -> int:
         ROOT / "schemas" / "browser-edge-trial.schema.json",
         ROOT / "schemas" / "inference-scenario.schema.json",
         ROOT / "schemas" / "inference-trial.schema.json",
+        ROOT / "schemas" / "retrieval-agent-scenario.schema.json",
+        ROOT / "schemas" / "retrieval-agent-trial.schema.json",
     ):
         load_json(path, errors)
 
@@ -1562,6 +1684,7 @@ def main() -> int:
         validate_runtime_lab(module_root, manifest, errors)
         validate_browser_edge_lab(module_root, manifest, errors)
         validate_inference_lab(module_root, manifest, errors)
+        validate_retrieval_agent_lab(module_root, manifest, errors)
 
     validate_baseline(errors)
     validate_local_links(errors)

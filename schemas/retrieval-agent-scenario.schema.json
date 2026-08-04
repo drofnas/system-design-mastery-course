@@ -13,9 +13,10 @@
     "seed": {"type": "integer"},
     "corpus_snapshot": {
       "type": "object",
-      "required": ["id", "source_version", "index_version", "revocation_epoch", "document_count"],
+      "required": ["id", "sha256", "source_version", "index_version", "revocation_epoch", "document_count"],
       "properties": {
         "id": {"type": "string"},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
         "source_version": {"type": "integer", "minimum": 1},
         "index_version": {"type": "integer", "minimum": 0},
         "revocation_epoch": {"type": "integer", "minimum": 0},

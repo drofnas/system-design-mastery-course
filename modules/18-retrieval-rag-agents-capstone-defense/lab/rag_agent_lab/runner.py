@@ -119,6 +119,8 @@ def run_scenario(scenario: dict[str, Any]) -> dict[str, Any]:
         "evidence_kind": "modeled",
         "shared_input_sha256": _sha256(_shared_input(scenario)),
         "config_sha256": _sha256(scenario),
+        "corpus_sha256": corpus["sha256"],
+        "evaluation_set_sha256": scenario["evaluation_set"]["sha256"],
         "toolchain": {"python": platform.python_version(), "lab_version": "1.0"},
         "retrieval": {
             "exact_ids": exact_ids,
@@ -147,6 +149,9 @@ def run_scenario(scenario: dict[str, Any]) -> dict[str, Any]:
             "duplicate_side_effects": duplicate_side_effects,
             "authorization_source": authorization_source,
             "approval_consumed": approval_consumed,
+            "tool_records": [{"tool": "submit-permit-application", "schema_version": "1.0", "authorization_source": authorization_source}],
+            "approval_records": [{"present": workload["approval_present"], "consumed": approval_consumed, "binding": "principal+action+arguments+expiry+idempotency"}],
+            "idempotency_records": [{"key": "civicaid-submit-1", "side_effect_count": 1 + duplicate_side_effects}],
             "cancelled": cancelled,
             "outstanding_work": outstanding_work,
         },
