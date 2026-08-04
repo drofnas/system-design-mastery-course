@@ -176,7 +176,8 @@ scripts/        Course validation tools
 | 11. Messaging, Streams, and Workflows | 41–44 | Ready | [Start Module 11](modules/11-messaging-streams-workflows/README.md) |
 | 12. Reliability, Incidents, and Disaster Recovery | 45–48 | Ready | [Start Module 12](modules/12-reliability-incidents-disaster-recovery/README.md) |
 | 13. Security, Privacy, and Abuse Resistance | 49–52 | Ready | [Start Module 13](modules/13-security-privacy-abuse-resistance/README.md) |
-| 14–18 | 53–72 | Syllabus-defined; teaching packages not yet authored | [Course syllabus](00_COURSE_SYLLABUS.md) |
+| 14. Architecture Evolution, Economics, and Organization | 53–56 | Ready | [Start Module 14](modules/14-architecture-evolution-economics-organization/README.md) |
+| 15–18 | 57–72 | Syllabus-defined; teaching packages not yet authored | [Course syllabus](00_COURSE_SYLLABUS.md) |
 
 Future modules must satisfy
 [`MODULE_STANDARD.md`](MODULE_STANDARD.md). Course-authoring agents must also
@@ -193,7 +194,7 @@ python3 scripts/validate_course.py
 The validator discovers every module manifest and checks hour budgets, outcome
 mappings, lesson and resource contracts, required teaching and assessment
 files, calibration state, the frozen baseline contract, JSON interfaces, and
-local Markdown links. Use `--module M01` through `--module M13` to validate a
+local Markdown links. Use `--module M01` through `--module M14` to validate a
 single module.
 
 ## Evidence and AI rules
@@ -240,3 +241,6 @@ redistribute as part of that work.
 - [`templates/slo-reliability-policy-template.md`](templates/slo-reliability-policy-template.md)
 - [`templates/incident-postmortem-template.md`](templates/incident-postmortem-template.md)
 - [`templates/disaster-recovery-review-template.md`](templates/disaster-recovery-review-template.md)
+- [`templates/architecture-cost-model-template.md`](templates/architecture-cost-model-template.md)
+- [`templates/migration-plan-template.md`](templates/migration-plan-template.md)
+- [`templates/technical-strategy-memo-template.md`](templates/technical-strategy-memo-template.md)
