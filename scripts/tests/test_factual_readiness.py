@@ -95,6 +95,11 @@ class FactualReadinessTest(unittest.TestCase):
         ledger["claims"][0]["claim_sha256"] = hashlib.sha256(b"This is only a lead-in:").hexdigest()
         self.assertTrue(any("fragment" in error for error in self.errors_for(self.manifest, ledger)))
 
+    def test_provenance_commit_need_not_exist_in_an_exported_learner_repository(self) -> None:
+        ledger = copy.deepcopy(self.ledger)
+        ledger["reviewed_commit"] = "f" * 40
+        self.assertEqual(self.errors_for(self.manifest, ledger), [])
+
     def test_fenced_bloom_formula_mutation_is_rejected(self) -> None:
         module_root = ROOT / "modules" / "07-data-models-storage-engines"
         target = module_root / "lessons" / "04-lsm-bloom-compaction.md"

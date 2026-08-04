@@ -222,10 +222,10 @@ def validate_module(root: Path, errors: list[str]) -> None:
     if reviewed_commit == "WORKTREE":
         if manifest.get("status") == "ready":
             errors.append(f"{module_id}: ready factual ledger cannot reference WORKTREE")
-    else:
-        result = subprocess.run(["git", "cat-file", "-e", f"{reviewed_commit}^{{commit}}"], cwd=ROOT, capture_output=True, check=False)
-        if result.returncode:
-            errors.append(f"{module_id}: factual ledger provenance commit does not exist locally")
+    # A concrete commit is provenance, not the readiness binding. Exported,
+    # squashed, and shallow learner repositories may legitimately omit that
+    # historical object; the current document hashes and content digest below
+    # remain the fail-closed readiness authority.
     reviewed_at = date.fromisoformat(ledger["reviewed_at"])
     if reviewed_at > date.today():
         errors.append(f"{module_id}: factual review date is in the future")
