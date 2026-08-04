@@ -59,5 +59,50 @@
     "pass_average": 3,
     "safety_critical_criteria": ["R06", "R07"],
     "required_result_bands": ["Pass", "Revise", "Repeat"]
+  },
+  "solo_review": {
+    "challenge_questions": [
+      {
+        "id": "M05-SR-Q01",
+        "prompt": "Which claim in your artifact most directly supports this outcome, and what evidence could falsify it: Model a client journey as a layered path with round-trip, byte, bandwidth-delay-product, and tail-latency budgets."
+      },
+      {
+        "id": "M05-SR-Q02",
+        "prompt": "What unstated assumption could invalidate your treatment of this outcome, and how would you test it: Trace DNS resolution, addressing, routing, caching, and discovery with explicit authority, expiry, and failure boundaries."
+      },
+      {
+        "id": "M05-SR-Q03",
+        "prompt": "Defend the causal chain behind your evidence for this outcome, including the first likely failure: Relate TCP ordering, loss recovery, flow control, congestion control, and receiver behavior to measured goodput and tail latency."
+      },
+      {
+        "id": "M05-SR-Q04",
+        "prompt": "Which reasonable alternative would challenge your treatment of this outcome, and under what evidence would it win: Trace TLS authentication and handshake costs while preserving hostname, certificate, key, resumption, and trust boundaries."
+      },
+      {
+        "id": "M05-SR-Q05",
+        "prompt": "What operational, security, cost, or ownership consequence is least supported in your treatment of this outcome: Diagnose proxy, load-balancer, NAT, connection-pool, and slow-reader behavior with capacity, ownership, and cost evidence."
+      },
+      {
+        "id": "M05-SR-Q06",
+        "prompt": "Where does your evidence stop transferring to production for this outcome, and how is that boundary disclosed: Compare HTTP/1.1, HTTP/2, and HTTP/3 through setup, multiplexing, stream isolation, fallback, observability, and client-network constraints."
+      },
+      {
+        "id": "M05-SR-Q07",
+        "prompt": "What dissent should a skeptical reviewer raise about your treatment of this outcome, and what follow-up evidence would resolve it: Diagnose nine hidden network faults from preserved evidence before reveal and design reruns that separate credible causes."
+      },
+      {
+        "id": "M05-SR-Q08",
+        "prompt": "What changed belief or reversal condition follows from your work on this outcome, and where is it recorded: Defend a protocol and topology decision through client outcomes, security, cost, ownership, migration, rollback, and reversal conditions."
+      }
+    ],
+    "required_reviewer_roles": [
+      "Network Foundations domain reviewer",
+      "operations and reliability owner",
+      "security and privacy reviewer",
+      "delivery and cost stakeholder"
+    ],
+    "questions_per_attempt": 5,
+    "live_ai_allowed": false,
+    "record_template_path": "templates/solo-review-record-template.md"
   }
 }

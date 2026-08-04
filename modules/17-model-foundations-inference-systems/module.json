@@ -61,5 +61,50 @@
     "pass_average": 3,
     "safety_critical_criteria": ["R05","R06","R08","R09"],
     "required_result_bands": ["Pass","Revise","Repeat"]
+  },
+  "solo_review": {
+    "challenge_questions": [
+      {
+        "id": "M17-SR-Q01",
+        "prompt": "Which claim in your artifact most directly supports this outcome, and what evidence could falsify it: Derive vectors, matrices, norms, probability, entropy, gradients, and scaled dot-product attention with explicit shapes, units, and numerical limits."
+      },
+      {
+        "id": "M17-SR-Q02",
+        "prompt": "What unstated assumption could invalidate your treatment of this outcome, and how would you test it: Implement versioned tokenization, embeddings, causal attention, and a deterministic tiny transformer inference path."
+      },
+      {
+        "id": "M17-SR-Q03",
+        "prompt": "Defend the causal chain behind your evidence for this outcome, including the first likely failure: Calculate weights, activations, KV cache, bandwidth, concurrency, headroom, failover reserve, and cost per useful output."
+      },
+      {
+        "id": "M17-SR-Q04",
+        "prompt": "Which reasonable alternative would challenge your treatment of this outcome, and under what evidence would it win: Measure queue-inclusive TTFT, inter-token latency, prefill, decode, outcomes, throughput, memory, and profiler limits."
+      },
+      {
+        "id": "M17-SR-Q05",
+        "prompt": "What operational, security, cost, or ownership consequence is least supported in your treatment of this outcome: Implement bounded batching, pre-admission resource reservation, quotas, shedding, and traffic-class fairness."
+      },
+      {
+        "id": "M17-SR-Q06",
+        "prompt": "Where does your evidence stop transferring to production for this outcome, and how is that boundary disclosed: Apply versioned prefix and semantic caches and precision changes without crossing privacy, compatibility, or quality boundaries."
+      },
+      {
+        "id": "M17-SR-Q07",
+        "prompt": "What dissent should a skeptical reviewer raise about your treatment of this outcome, and what follow-up evidence would resolve it: Diagnose memory exhaustion, mixed-length interference, queue overload, cache collision, precision loss, and provider failure from preserved evidence."
+      },
+      {
+        "id": "M17-SR-Q08",
+        "prompt": "What changed belief or reversal condition follows from your work on this outcome, and where is it recorded: Defend an inference architecture across quality, latency, availability, security, cost, ownership, migration, rollback, and reversal."
+      }
+    ],
+    "required_reviewer_roles": [
+      "Model Foundations and Inference Systems domain reviewer",
+      "operations and reliability owner",
+      "security and privacy reviewer",
+      "delivery and cost stakeholder"
+    ],
+    "questions_per_attempt": 5,
+    "live_ai_allowed": false,
+    "record_template_path": "templates/solo-review-record-template.md"
   }
 }

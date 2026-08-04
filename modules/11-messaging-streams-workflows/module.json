@@ -52,5 +52,50 @@
     {"id":"F08","scenario":"event delayed beyond watermark","evidence":"event/processing times, watermark, window, late-data action, correction, and declared-time-policy invariant"},
     {"id":"F09","scenario":"dropped CDC record and corrupted derived state","evidence":"authority/outbox/log/projection checksums, missing identity, reconciliation diff, rebuild evidence, and convergence invariant"}
   ],
-  "assessment": {"rubric_path":"modules/11-messaging-streams-workflows/assessment/rubric.md","evaluator_prompt_path":"modules/11-messaging-streams-workflows/assessment/evaluator-prompt.md","evaluation_schema_path":"schemas/evaluation.schema.json","calibration_path":"modules/11-messaging-streams-workflows/assessment/calibration","pass_average":3,"safety_critical_criteria":["R04","R06","R09"],"required_result_bands":["Pass","Revise","Repeat"]}
+  "assessment": {"rubric_path":"modules/11-messaging-streams-workflows/assessment/rubric.md","evaluator_prompt_path":"modules/11-messaging-streams-workflows/assessment/evaluator-prompt.md","evaluation_schema_path":"schemas/evaluation.schema.json","calibration_path":"modules/11-messaging-streams-workflows/assessment/calibration","pass_average":3,"safety_critical_criteria":["R04","R06","R09"],"required_result_bands":["Pass","Revise","Repeat"]},
+  "solo_review": {
+    "challenge_questions": [
+      {
+        "id": "M11-SR-Q01",
+        "prompt": "Which claim in your artifact most directly supports this outcome, and what evidence could falsify it: Separate authoritative facts, commands, events, queues, logs, streams, and derived state, with explicit owners and rebuild contracts."
+      },
+      {
+        "id": "M11-SR-Q02",
+        "prompt": "What unstated assumption could invalidate your treatment of this outcome, and how would you test it: Derive delivery failure windows, stable identities, ordering scope, and defensible exactly-once boundaries."
+      },
+      {
+        "id": "M11-SR-Q03",
+        "prompt": "Defend the causal chain behind your evidence for this outcome, including the first likely failure: Select partition keys and consumer-group topology from workload, fairness, and per-aggregate invariants."
+      },
+      {
+        "id": "M11-SR-Q04",
+        "prompt": "Which reasonable alternative would challenge your treatment of this outcome, and under what evidence would it win: Implement an atomic outbox, stable envelope, publisher, idempotent inbox, derived view, and CDC checkpoint boundary."
+      },
+      {
+        "id": "M11-SR-Q05",
+        "prompt": "What operational, security, cost, or ownership consequence is least supported in your treatment of this outcome: Design safe replay, poison handling, schema evolution, derived-state rebuild, and reconciliation."
+      },
+      {
+        "id": "M11-SR-Q06",
+        "prompt": "Where does your evidence stop transferring to production for this outcome, and how is that boundary disclosed: Model durable workflows, orchestration or choreography, idempotent compensation, and explicit points of no return."
+      },
+      {
+        "id": "M11-SR-Q07",
+        "prompt": "What dissent should a skeptical reviewer raise about your treatment of this outcome, and what follow-up evidence would resolve it: Calculate lag and drain time and apply explicit event-time, watermark, late-data, backpressure, and recovery policies."
+      },
+      {
+        "id": "M11-SR-Q08",
+        "prompt": "What changed belief or reversal condition follows from your work on this outcome, and where is it recorded: Diagnose nine asynchronous failures and defend an RFC covering semantics, operations, security, cost, migration, ownership, dissent, and reversal evidence."
+      }
+    ],
+    "required_reviewer_roles": [
+      "Messaging, Streams, and Workflows domain reviewer",
+      "operations and reliability owner",
+      "security and privacy reviewer",
+      "delivery and cost stakeholder"
+    ],
+    "questions_per_attempt": 5,
+    "live_ai_allowed": false,
+    "record_template_path": "templates/solo-review-record-template.md"
+  }
 }

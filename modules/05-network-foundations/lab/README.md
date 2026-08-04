@@ -58,11 +58,17 @@ The lab never writes certificates into the repository.
 - `simulate SCENARIO [--output PATH]`: run the deterministic protocol model.
 - `validate PATH`: validate a scenario contract before work begins.
 - `analyze TRIAL...`: summarize total timing and statuses without replacing raw evidence.
-- `blind-prepare SCENARIO_DIR OUTPUT_DIR --seed N`: create shuffled evidence
-  bundles and hashes for exactly F01–F09 across measured and modeled modes. Move
-  `reveal-key.json` out of view before diagnosis.
-- `blind-reveal BUNDLE_DIR DIAGNOSIS OUTPUT`: require and hash a frozen diagnosis,
-  verify bundles, and produce a reveal record.
+- `blind-prepare SCENARIO_DIR OUTPUT_DIR --reveal-file PATH --seed N`: create
+  shuffled evidence bundles and hashes for exactly F01–F09 across measured and
+  modeled modes. `PATH` is required and must be outside `OUTPUT_DIR`.
+- `blind-reveal BUNDLE_DIR REVEAL_FILE DIAGNOSIS COMMIT OUTPUT`: require a
+  non-empty diagnosis whose bytes match `COMMIT`, verify the key and bundles,
+  and produce a new reveal record.
+- `blind-solo-prepare --output-dir PATH [--scenario-dir PATH] [--seed N]`:
+  prepare learner bundles and a local `.sblind` reveal envelope.
+- `blind-solo-reveal --bundle-dir PATH --frozen-diagnosis PATH
+  --frozen-commit SHA --output PATH`: verify the frozen diagnosis, envelope,
+  manifest, and bundle hashes before reveal.
 
 ## Required scenario matrix
 
@@ -85,12 +91,19 @@ complete standards.
 ## Blind workflow
 
 1. Use the complete supplied scenario directory; preparation selects one canonical case for each F01–F09 fault.
-2. Run `blind-prepare`, then have a facilitator retain `reveal-key.json`.
+2. Run `blind-prepare` with `--reveal-file` outside the bundle directory, then
+   have a facilitator retain that file.
 3. Diagnose each bundle using the Week 19 worksheet and freeze it in version control.
 4. Run `blind-reveal` with the frozen diagnosis path.
 5. Preserve the reveal record and run discriminating scenarios after reveal.
 
 Inspecting scenario names or the reveal key before freeze invalidates R06.
+
+For solo study, substitute the `blind-solo-*` commands. The envelope is stored
+under `.course-private/blind/M05/`, remains after reveal, and is ignored by Git.
+It protects only against accidental exposure; it is not encryption or
+anti-cheating, and inspecting source scenarios or decoding it bypasses the
+boundary. Disclose solo mode in the failure matrix.
 
 ## Security and cleanup
 

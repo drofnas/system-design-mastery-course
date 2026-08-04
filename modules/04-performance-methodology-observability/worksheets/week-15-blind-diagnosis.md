@@ -21,3 +21,7 @@ each diagnosis and discriminating rerun is frozen and committed.
 - Any diagnosis changed after reveal belongs only in the final column.
 - Ask the partner to run `blind-reveal` with this frozen file; preserve the
   resulting reveal record separately.
+- If working alone, run `blind-solo-prepare`, commit this non-empty diagnosis,
+  and then run `blind-solo-reveal` with the exact commit. Preserve both the
+  reveal record and `.sblind` envelope, and disclose that the envelope provides
+  accidental-exposure protection rather than enforced secrecy.

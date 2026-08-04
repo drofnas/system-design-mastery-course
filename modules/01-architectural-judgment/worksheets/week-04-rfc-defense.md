@@ -40,8 +40,12 @@ Target 12–15 minutes.
 
 ## 3. Adversarial panel
 
-Use an experienced human reviewer when available. Otherwise use an LLM with the
-published evaluator prompt. Ask at least:
+Use an experienced human reviewer when available; that is stronger portfolio
+evidence. If working alone, generate five questions with
+`scripts/prepare_solo_review.py`, record answers without live AI assistance,
+freeze them, and only then use the published provider-neutral evaluator for
+critique. Disclose the substitution and limitations in the solo-review record.
+For a human panel, ask at least:
 
 1. Which workload assumption most threatens the recommendation?
 2. Show how the top three invariants survive one concurrent and one duplicate

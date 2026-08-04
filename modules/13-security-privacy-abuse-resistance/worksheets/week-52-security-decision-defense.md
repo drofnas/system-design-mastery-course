@@ -38,3 +38,7 @@ why the chosen design is simpler than rejected alternatives.
 
 Do not edit the Week 49 baseline, raw trials, major threat-model submission, or
 prior capstone revisions. Do not use AI to answer during the recorded defense.
+Human review is preferred and is stronger portfolio evidence. A solo learner
+may use the generated five-question packet, but must record and freeze every
+answer before any provider-neutral LLM critique. The critique occurs only after
+the defense and must be disclosed with the solo-review limitations.

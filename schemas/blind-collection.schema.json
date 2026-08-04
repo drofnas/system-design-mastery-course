@@ -10,6 +10,8 @@
     "collection_id": {"type": "string", "pattern": "^[0-9a-f]{32}$"},
     "created_at": {"type": "string", "minLength": 20},
     "reveal_required": {"const": true},
+    "reveal_mode": {"enum": ["partner", "solo"]},
+    "envelope_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
     "items": {
       "type": "array", "minItems": 2,
       "items": {

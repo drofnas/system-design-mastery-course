@@ -50,5 +50,50 @@
     {"id":"F05","scenario":"hot key and tenant skew","evidence":"per-key/node/tenant load, imbalance, accepted/rejected work, fairness reserve, useful work, cost, and owner"},
     {"id":"F06","scenario":"reshard under load","evidence":"old/new ownership, key count, moved keys/ratio, missing keys, duplicate authority, staged copy/verify/cutover, rollback, and uncertainty"}
   ],
-  "assessment": {"rubric_path":"modules/09-replication-partitioning/assessment/rubric.md","evaluator_prompt_path":"modules/09-replication-partitioning/assessment/evaluator-prompt.md","evaluation_schema_path":"schemas/evaluation.schema.json","calibration_path":"modules/09-replication-partitioning/assessment/calibration","pass_average":3,"safety_critical_criteria":["R07","R08"],"required_result_bands":["Pass","Revise","Repeat"]}
+  "assessment": {"rubric_path":"modules/09-replication-partitioning/assessment/rubric.md","evaluator_prompt_path":"modules/09-replication-partitioning/assessment/evaluator-prompt.md","evaluation_schema_path":"schemas/evaluation.schema.json","calibration_path":"modules/09-replication-partitioning/assessment/calibration","pass_average":3,"safety_critical_criteria":["R07","R08"],"required_result_bands":["Pass","Revise","Repeat"]},
+  "solo_review": {
+    "challenge_questions": [
+      {
+        "id": "M09-SR-Q01",
+        "prompt": "Which claim in your artifact most directly supports this outcome, and what evidence could falsify it: Specify fresh, bounded-stale, read-your-writes, monotonic, causal, and linearizable requirements per operation."
+      },
+      {
+        "id": "M09-SR-Q02",
+        "prompt": "What unstated assumption could invalidate your treatment of this outcome, and how would you test it: Compare leader/follower, multi-leader, and leaderless replication with explicit synchronous and asynchronous acknowledgement boundaries."
+      },
+      {
+        "id": "M09-SR-Q03",
+        "prompt": "Defend the causal chain behind your evidence for this outcome, including the first likely failure: Calculate quorum intersections and diagnose failures in membership, durability, concurrent-version, and sloppy-quorum assumptions."
+      },
+      {
+        "id": "M09-SR-Q04",
+        "prompt": "Which reasonable alternative would challenge your treatment of this outcome, and under what evidence would it win: Implement selectable version metadata, conflict preservation, read repair, and anti-entropy with convergence evidence."
+      },
+      {
+        "id": "M09-SR-Q05",
+        "prompt": "What operational, security, cost, or ownership consequence is least supported in your treatment of this outcome: Compare hash, range, and consistent-hash partitioning using balance, movement, routing, and safe reshard evidence."
+      },
+      {
+        "id": "M09-SR-Q06",
+        "prompt": "Where does your evidence stop transferring to production for this outcome, and how is that boundary disclosed: Diagnose replica partition, leader loss, lag, lost acknowledgement, hot key, and reshard failures from immutable same-input evidence."
+      },
+      {
+        "id": "M09-SR-Q07",
+        "prompt": "What dissent should a skeptical reviewer raise about your treatment of this outcome, and what follow-up evidence would resolve it: Design tenant isolation, regional placement, residency controls, capacity, repair ownership, migration, rollback, and cost."
+      },
+      {
+        "id": "M09-SR-Q08",
+        "prompt": "What changed belief or reversal condition follows from your work on this outcome, and where is it recorded: Defend the Week 36 Gate 3 invariant using storage, transaction, replication, partition, and preserved portfolio evidence."
+      }
+    ],
+    "required_reviewer_roles": [
+      "Replication and Partitioning domain reviewer",
+      "operations and reliability owner",
+      "security and privacy reviewer",
+      "delivery and cost stakeholder"
+    ],
+    "questions_per_attempt": 5,
+    "live_ai_allowed": false,
+    "record_template_path": "templates/solo-review-record-template.md"
+  }
 }

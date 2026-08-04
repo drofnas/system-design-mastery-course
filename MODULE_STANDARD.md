@@ -132,6 +132,22 @@ practice:
 These exercises prepare a learner for Principal-level work. Organizations award
 titles based on sustained real-world scope, ownership, influence, and results.
 
+## Solo review and teach-back
+
+Human review is preferred and is stronger portfolio evidence because another
+person can challenge framing, adapt follow-ups, and contribute independent
+experience. It is not required for a learner studying alone. Every manifest
+must publish at least eight module-specific challenge questions, required
+reviewer roles, five questions per attempt, and `live_ai_allowed: false`.
+
+A solo learner may run `scripts/prepare_solo_review.py` against an artifact that
+is byte-identical to a supplied Git commit, record answers to the selected five
+questions without live AI assistance, and freeze those answers. Provider-neutral
+LLM critique is permitted only afterward. The record must disclose the solo
+substitution, AI use, limitations, dissent, changed beliefs, and follow-up
+evidence. This satisfies course completion but must not be represented as human
+review.
+
 ## Definition of ready
 
 A module is `ready` only when:

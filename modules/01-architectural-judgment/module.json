@@ -338,5 +338,50 @@
     "pass_average": 3,
     "safety_critical_criteria": ["R03", "R05", "R06"],
     "required_result_bands": ["Pass", "Revise", "Repeat"]
+  },
+  "solo_review": {
+    "challenge_questions": [
+      {
+        "id": "M01-SR-Q01",
+        "prompt": "Which claim in your artifact most directly supports this outcome, and what evidence could falsify it: Translate an ambiguous product request into users, outcomes, scope, constraints, and measurable acceptance conditions."
+      },
+      {
+        "id": "M01-SR-Q02",
+        "prompt": "What unstated assumption could invalidate your treatment of this outcome, and how would you test it: Build a workload model with normal, peak, burst, projected, skew, and uncertainty dimensions."
+      },
+      {
+        "id": "M01-SR-Q03",
+        "prompt": "Defend the causal chain behind your evidence for this outcome, including the first likely failure: Express business, data, security, and operational invariants and assign authoritative state ownership."
+      },
+      {
+        "id": "M01-SR-Q04",
+        "prompt": "Which reasonable alternative would challenge your treatment of this outcome, and under what evidence would it win: Write measurable quality-attribute scenarios tied to user journeys and evidence collection."
+      },
+      {
+        "id": "M01-SR-Q05",
+        "prompt": "What operational, security, cost, or ownership consequence is least supported in your treatment of this outcome: Communicate system context, boundaries, flows, trust, and ownership without prematurely choosing deployable services."
+      },
+      {
+        "id": "M01-SR-Q06",
+        "prompt": "Where does your evidence stop transferring to production for this outcome, and how is that boundary disclosed: Compare simple, moderate, and distributed designs using shared drivers, cost boundaries, evidence, and reversal conditions."
+      },
+      {
+        "id": "M01-SR-Q07",
+        "prompt": "What dissent should a skeptical reviewer raise about your treatment of this outcome, and what follow-up evidence would resolve it: State a scoped failure and overload model and expose unsupported claims through adversarial review."
+      },
+      {
+        "id": "M01-SR-Q08",
+        "prompt": "What changed belief or reversal condition follows from your work on this outcome, and where is it recorded: Write and defend an evidence-based RFC, resolve disagreement through decision drivers, and teach the causal model."
+      }
+    ],
+    "required_reviewer_roles": [
+      "Architectural Judgment domain reviewer",
+      "operations and reliability owner",
+      "security and privacy reviewer",
+      "delivery and cost stakeholder"
+    ],
+    "questions_per_attempt": 5,
+    "live_ai_allowed": false,
+    "record_template_path": "templates/solo-review-record-template.md"
   }
 }

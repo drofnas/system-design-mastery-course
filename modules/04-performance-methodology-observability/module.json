@@ -159,5 +159,50 @@
     "pass_average": 3,
     "safety_critical_criteria": ["R06", "R07"],
     "required_result_bands": ["Pass", "Revise", "Repeat"]
+  },
+  "solo_review": {
+    "challenge_questions": [
+      {
+        "id": "M04-SR-Q01",
+        "prompt": "Which claim in your artifact most directly supports this outcome, and what evidence could falsify it: Freeze a user-scoped performance question, equivalent-work baseline, competing hypotheses, falsifiers, and bounded collection plan before inspecting a fault."
+      },
+      {
+        "id": "M04-SR-Q02",
+        "prompt": "What unstated assumption could invalidate your treatment of this outcome, and how would you test it: Design controlled, interleaved experiments that expose process and environment variation while preserving useful work and raw samples."
+      },
+      {
+        "id": "M04-SR-Q03",
+        "prompt": "Defend the causal chain behind your evidence for this outcome, including the first likely failure: Propagate safe trace context across a process boundary and correlate request traces, structured logs, metrics, and exemplars."
+      },
+      {
+        "id": "M04-SR-Q04",
+        "prompt": "Which reasonable alternative would challenge your treatment of this outcome, and under what evidence would it win: Choose metrics and logs with explicit units, purpose, cardinality, overhead, privacy, retention, access, cost, and ownership bounds."
+      },
+      {
+        "id": "M04-SR-Q05",
+        "prompt": "What operational, security, cost, or ownership consequence is least supported in your treatment of this outcome: Use CPU, allocation, lock-wait, dependency-span, local-I/O, and query-plan evidence without overstating profiler or cache boundaries."
+      },
+      {
+        "id": "M04-SR-Q06",
+        "prompt": "Where does your evidence stop transferring to production for this outcome, and how is that boundary disclosed: Diagnose CPU work, allocation pressure, lock contention, slow I/O, connection retention, and metric-cardinality faults before reveal, then design discriminating reruns."
+      },
+      {
+        "id": "M04-SR-Q07",
+        "prompt": "What dissent should a skeptical reviewer raise about your treatment of this outcome, and what follow-up evidence would resolve it: Build a reproducible benchmark and enforce a workload-scoped regression budget with pass, regression, and inconclusive outcomes."
+      },
+      {
+        "id": "M04-SR-Q08",
+        "prompt": "What changed belief or reversal condition follows from your work on this outcome, and where is it recorded: Defend a performance change through user outcome, causal evidence, validation, telemetry safety and cost, ownership, migration, rollout, rollback, and reversal conditions."
+      }
+    ],
+    "required_reviewer_roles": [
+      "Performance Methodology and Observability domain reviewer",
+      "operations and reliability owner",
+      "security and privacy reviewer",
+      "delivery and cost stakeholder"
+    ],
+    "questions_per_attempt": 5,
+    "live_ai_allowed": false,
+    "record_template_path": "templates/solo-review-record-template.md"
   }
 }

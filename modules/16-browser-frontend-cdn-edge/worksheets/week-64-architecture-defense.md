@@ -35,6 +35,12 @@ Have a reviewer apply the method to a non-commerce, non-Northstar route. Record
 their assumptions, where the method transferred, confusion, correction, and one
 change to your RFC or explanation.
 
+Human review is preferred and produces stronger portfolio evidence. When no
+reviewer is available, use `scripts/prepare_solo_review.py`, record the five
+answers without live AI, freeze them, and request provider-neutral critique only
+afterward. Disclose the solo substitution and note that it does not demonstrate
+transfer to another person's route.
+
 ## Assessment and remediation
 
 Freeze the defense and A09 evaluation. Map each finding to the remediation map

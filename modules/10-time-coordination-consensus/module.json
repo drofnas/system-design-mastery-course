@@ -51,5 +51,50 @@
     {"id":"F07","scenario":"interrupted snapshot installation and restart","evidence":"snapshot identity/checksum, temporary and active state, last included index/term, restart state, application count, and snapshot invariant"},
     {"id":"F08","scenario":"membership replacement without overlapping quorums","evidence":"old/joint/new voters, quorum proofs, committed configuration entries, competing decisions, rollback, and membership invariant"}
   ],
-  "assessment": {"rubric_path":"modules/10-time-coordination-consensus/assessment/rubric.md","evaluator_prompt_path":"modules/10-time-coordination-consensus/assessment/evaluator-prompt.md","evaluation_schema_path":"schemas/evaluation.schema.json","calibration_path":"modules/10-time-coordination-consensus/assessment/calibration","pass_average":3,"safety_critical_criteria":["R08","R09"],"required_result_bands":["Pass","Revise","Repeat"]}
+  "assessment": {"rubric_path":"modules/10-time-coordination-consensus/assessment/rubric.md","evaluator_prompt_path":"modules/10-time-coordination-consensus/assessment/evaluator-prompt.md","evaluation_schema_path":"schemas/evaluation.schema.json","calibration_path":"modules/10-time-coordination-consensus/assessment/calibration","pass_average":3,"safety_critical_criteria":["R08","R09"],"required_result_bands":["Pass","Revise","Repeat"]},
+  "solo_review": {
+    "challenge_questions": [
+      {
+        "id": "M10-SR-Q01",
+        "prompt": "Which claim in your artifact most directly supports this outcome, and what evidence could falsify it: Calculate physical-clock drift, skew, and uncertainty and diagnose conclusions that exceed the available clock contract."
+      },
+      {
+        "id": "M10-SR-Q02",
+        "prompt": "What unstated assumption could invalidate your treatment of this outcome, and how would you test it: Derive happened-before, Lamport-clock, and vector-clock relationships without treating display order as causality."
+      },
+      {
+        "id": "M10-SR-Q03",
+        "prompt": "Defend the causal chain behind your evidence for this outcome, including the first likely failure: Separate safety, liveness, and failure-detector assumptions and select consensus only for properties that require agreement."
+      },
+      {
+        "id": "M10-SR-Q04",
+        "prompt": "Which reasonable alternative would challenge your treatment of this outcome, and under what evidence would it win: Implement and diagnose Raft elections, persistent hard state, log matching, commitment, and state-machine application."
+      },
+      {
+        "id": "M10-SR-Q05",
+        "prompt": "What operational, security, cost, or ownership consequence is least supported in your treatment of this outcome: Implement client deduplication and linearizable reads with explicit ambiguous-outcome and quorum barriers."
+      },
+      {
+        "id": "M10-SR-Q06",
+        "prompt": "Where does your evidence stop transferring to production for this outcome, and how is that boundary disclosed: Protect snapshots, membership changes, leases, and external resources with atomic state, overlapping quorums, and fencing."
+      },
+      {
+        "id": "M10-SR-Q07",
+        "prompt": "What dissent should a skeptical reviewer raise about your treatment of this outcome, and what follow-up evidence would resolve it: Diagnose eight coordination failures from immutable same-input evidence and scoped safety oracles."
+      },
+      {
+        "id": "M10-SR-Q08",
+        "prompt": "What changed belief or reversal condition follows from your work on this outcome, and where is it recorded: Defend a coordination architecture covering alternatives, operating limits, security, cost, migration, ownership, dissent, and reversal evidence."
+      }
+    ],
+    "required_reviewer_roles": [
+      "Time, Coordination, and Consensus domain reviewer",
+      "operations and reliability owner",
+      "security and privacy reviewer",
+      "delivery and cost stakeholder"
+    ],
+    "questions_per_attempt": 5,
+    "live_ai_allowed": false,
+    "record_template_path": "templates/solo-review-record-template.md"
+  }
 }

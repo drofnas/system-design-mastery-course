@@ -55,5 +55,50 @@
     {"id":"F08","scenario":"unsafe failback creates dual authority","evidence":"epochs, stale-owner attempts, catch-up versions, reconciliation, staged routing, observation window, rollback, and single-authority invariant"},
     {"id":"F09","scenario":"operator targets the wrong recovery environment","evidence":"source/target identity, approvals, preconditions, audit, namespace isolation, abort/rollback state, break-glass expiry, and operator-safety invariant"}
   ],
-  "assessment": {"rubric_path":"modules/12-reliability-incidents-disaster-recovery/assessment/rubric.md","evaluator_prompt_path":"modules/12-reliability-incidents-disaster-recovery/assessment/evaluator-prompt.md","evaluation_schema_path":"schemas/evaluation.schema.json","calibration_path":"modules/12-reliability-incidents-disaster-recovery/assessment/calibration","pass_average":3,"safety_critical_criteria":["R04","R07","R08","R09"],"required_result_bands":["Pass","Revise","Repeat"]}
+  "assessment": {"rubric_path":"modules/12-reliability-incidents-disaster-recovery/assessment/rubric.md","evaluator_prompt_path":"modules/12-reliability-incidents-disaster-recovery/assessment/evaluator-prompt.md","evaluation_schema_path":"schemas/evaluation.schema.json","calibration_path":"modules/12-reliability-incidents-disaster-recovery/assessment/calibration","pass_average":3,"safety_critical_criteria":["R04","R07","R08","R09"],"required_result_bands":["Pass","Revise","Repeat"]},
+  "solo_review": {
+    "challenge_questions": [
+      {
+        "id": "M12-SR-Q01",
+        "prompt": "Which claim in your artifact most directly supports this outcome, and what evidence could falsify it: Define user-journey SLIs and SLOs with valid populations, windows, exclusions, latency, availability, freshness, and correctness."
+      },
+      {
+        "id": "M12-SR-Q02",
+        "prompt": "What unstated assumption could invalidate your treatment of this outcome, and how would you test it: Calculate error budgets, burn, dependency exposure, shared fate, and composite reliability and use them in decisions."
+      },
+      {
+        "id": "M12-SR-Q03",
+        "prompt": "Defend the causal chain behind your evidence for this outcome, including the first likely failure: Implement multi-window burn alerts and separate actionable journey symptoms from causal diagnostic telemetry."
+      },
+      {
+        "id": "M12-SR-Q04",
+        "prompt": "Which reasonable alternative would challenge your treatment of this outcome, and under what evidence would it win: Build priority-aware degradation, load shedding, bounded dependency work, and degraded regional capacity."
+      },
+      {
+        "id": "M12-SR-Q05",
+        "prompt": "What operational, security, cost, or ownership consequence is least supported in your treatment of this outcome: Run incidents with explicit command, operations, communications, liaison, handoff, escalation, and stop conditions."
+      },
+      {
+        "id": "M12-SR-Q06",
+        "prompt": "Where does your evidence stop transferring to production for this outcome, and how is that boundary disclosed: Produce an evidence-based postmortem and rank corrective work by risk reduction, effort, ownership, and verification."
+      },
+      {
+        "id": "M12-SR-Q07",
+        "prompt": "What dissent should a skeptical reviewer raise about your treatment of this outcome, and what follow-up evidence would resolve it: Verify backup integrity, RPO, RTO, restore, failover, fencing, reconciliation, and failback with controlled evidence."
+      },
+      {
+        "id": "M12-SR-Q08",
+        "prompt": "What changed belief or reversal condition follows from your work on this outcome, and where is it recorded: Diagnose nine reliability failures and defend Gate 4 across consensus, messaging, operations, security, cost, ownership, and recovery."
+      }
+    ],
+    "required_reviewer_roles": [
+      "Reliability, Incidents, and Disaster Recovery domain reviewer",
+      "operations and reliability owner",
+      "security and privacy reviewer",
+      "delivery and cost stakeholder"
+    ],
+    "questions_per_attempt": 5,
+    "live_ai_allowed": false,
+    "record_template_path": "templates/solo-review-record-template.md"
+  }
 }
