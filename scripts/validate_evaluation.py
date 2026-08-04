@@ -10,6 +10,8 @@ import sys
 from pathlib import Path
 from typing import Any
 
+from schema_contract import SchemaContractError, validate_instance
+
 
 ROOT = Path(__file__).resolve().parents[1]
 FINDING_TYPES = {"missing_evidence", "incorrect_reasoning", "unsupported_claim", "invariant_failure", "internal_contradiction", "communication_gap"}
@@ -81,6 +83,14 @@ def validate(module: str, bundle: Path, result_path: Path, report: Path, attesta
     result = _load(result_path)
     attestation_path = attestation_path or result_path.with_name("attestation.json")
     attestation = _load(attestation_path)
+    try:
+        validate_instance(
+            bundle_manifest,
+            _load(ROOT / "schemas" / "evaluation-bundle.schema.json"),
+            label="bundle-manifest.json",
+        )
+    except SchemaContractError as error:
+        raise EvaluationError(str(error)) from error
     normalized = module.upper()
     file_records = bundle_manifest.get("files")
     if not isinstance(file_records, list) or not file_records:
@@ -95,6 +105,25 @@ def validate(module: str, bundle: Path, result_path: Path, report: Path, attesta
             raise EvaluationError(f"bundle file is missing: {row['path']}")
         if hashlib.sha256(path.read_bytes()).hexdigest() != row["sha256"]:
             raise EvaluationError(f"bundle file hash mismatch: {row['path']}")
+    schema_records = {
+        row["role"]: row for row in file_records
+        if row["role"] in {"evaluation_schema", "attestation_schema", "bundle_schema"}
+    }
+    if set(schema_records) != {"evaluation_schema", "attestation_schema", "bundle_schema"}:
+        raise EvaluationError("bundle lacks the current evaluation, attestation, or bundle schema")
+    try:
+        validate_instance(
+            result,
+            _load(bundle / "files" / schema_records["evaluation_schema"]["path"]),
+            label="evaluation result",
+        )
+        validate_instance(
+            attestation,
+            _load(bundle / "files" / schema_records["attestation_schema"]["path"]),
+            label="evaluation attestation",
+        )
+    except SchemaContractError as error:
+        raise EvaluationError(str(error)) from error
     calculated_bundle = hashlib.sha256(json.dumps(file_records, sort_keys=True, separators=(",", ":")).encode("utf-8")).hexdigest()
     if bundle_manifest.get("bundle_sha256") != calculated_bundle:
         raise EvaluationError("bundle manifest hash is invalid")
@@ -106,16 +135,19 @@ def validate(module: str, bundle: Path, result_path: Path, report: Path, attesta
         raise EvaluationError("evaluation commit does not match the immutable bundle")
     if attestation.get("bundle_sha256") != bundle_manifest.get("bundle_sha256"):
         raise EvaluationError("attestation bundle hash mismatch")
+    if attestation.get("evaluated_at") != result.get("evaluated_at"):
+        raise EvaluationError("result and attestation evaluation timestamps do not agree")
     mode = attestation.get("review_mode")
-    formal = attestation.get("formal")
-    if mode == "self" and formal is not False:
-        raise EvaluationError("self evaluation must be provisional")
-    if mode in {"independent_llm", "independent_human"} and formal is not True:
-        raise EvaluationError("independent evaluation must be marked formal")
-    if mode not in {"self", "independent_llm", "independent_human"}:
-        raise EvaluationError("unknown evaluation review mode")
-    if mode == "self" and result.get("result") == "Pass":
-        raise EvaluationError("provisional self-scoring cannot produce formal Pass")
+    expected_completion = (
+        "in_progress"
+        if result.get("result") != "Pass"
+        else ("solo_complete" if mode == "self" else "independently_validated")
+    )
+    completion_status = attestation.get("completion_status")
+    if completion_status != expected_completion:
+        raise EvaluationError(
+            f"completion status contradicts result and review mode: expected {expected_completion}"
+        )
 
     module_record = next((row for row in file_records if row["role"] == "contract"), None)
     rubric_record = next((row for row in file_records if row["role"] == "rubric"), None)
@@ -169,7 +201,12 @@ def validate(module: str, bundle: Path, result_path: Path, report: Path, attesta
         if not lesson_references <= allowed_lessons or not exercise_references <= allowed_exercises:
             raise EvaluationError(f"{row['criterion_id']} remediation cites an unknown lesson or exercise")
 
-    label = "FORMAL" if formal else "PROVISIONAL SELF-REVIEW"
+    labels = {
+        "in_progress": "IN PROGRESS",
+        "solo_complete": "SOLO COMPLETE — SELF-ATTESTED, NOT INDEPENDENTLY REVIEWED",
+        "independently_validated": "INDEPENDENTLY VALIDATED",
+    }
+    label = labels[completion_status]
     lines = [
         f"# {normalized} Evaluation Report",
         "",
@@ -194,7 +231,12 @@ def validate(module: str, bundle: Path, result_path: Path, report: Path, attesta
     lines.extend(f"- {item}" for item in result.get("next_actions", []))
     report.parent.mkdir(parents=True, exist_ok=True)
     report.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
-    return {"module": normalized, "result": result["result"], "formal": formal, "report_sha256": hashlib.sha256(report.read_bytes()).hexdigest()}
+    return {
+        "module": normalized,
+        "result": result["result"],
+        "completion_status": completion_status,
+        "report_sha256": hashlib.sha256(report.read_bytes()).hexdigest(),
+    }
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -210,7 +252,7 @@ def main(argv: list[str] | None = None) -> int:
     except (EvaluationError, OSError, json.JSONDecodeError) as error:
         print(f"evaluation validation failed: {error}", file=sys.stderr)
         return 2
-    print(f"validated {result['module']} {result['result']} ({'formal' if result['formal'] else 'provisional'})")
+    print(f"validated {result['module']} {result['result']} ({result['completion_status']})")
     return 0
 
 

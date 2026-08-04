@@ -48,3 +48,7 @@ in this workflow. It is not encryption or an anti-cheating mechanism. A learner
 who deliberately inspects the implementation can recover generated answers.
 Disclose the solo substitution and any post-freeze LLM critique. Do not represent
 the result as independent human review.
+
+A passing sealed gate may contribute to **Solo Complete**. Only a later review
+performed by an independent human or LLM against the same frozen evidence may
+contribute to **Independently Validated**.

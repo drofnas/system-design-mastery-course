@@ -550,7 +550,7 @@
     },
     {
       "id": "RES-02",
-      "title": "Virtual Memory",
+      "title": "16.2 Topic Videos | Computation Structures",
       "author_or_publisher": "Chris Terman; MIT OpenCourseWare",
       "type": "captioned lecture videos and transcripts",
       "url": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c16/c16s2/c16s2v2/",
@@ -562,7 +562,7 @@
       "assignment": "Watch or read the named virtual-memory segments; draw an address-translation path and classify one minor and one major fault.",
       "last_verified": "2026-07-31",
       "text_alternative": "lessons/03-virtual-memory-allocation-and-faults.md",
-      "verified_title": "Virtual Memory",
+      "verified_title": "16.2 Topic Videos | Computation Structures",
       "verified_publisher": "Chris Terman; MIT OpenCourseWare",
       "verification_method": "HTTP GET plus primary-source metadata comparison",
       "final_url": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c16/c16s2/c16s2v2/",
@@ -713,7 +713,7 @@
       "required": true,
       "template_path": "modules/03-computer-systems-operating-systems/worksheets/week-10-portable-build.md",
       "submission_path": "labs/module-03/build-review.md",
-      "portfolio_category": "implementation"
+      "portfolio_category": "source_code_internals_review"
     },
     {
       "id": "A04",
@@ -906,6 +906,44 @@
       "id": "L08",
       "path": "lessons/08-causal-diagnosis-and-decisions.md",
       "estimated_minutes": 30
+    }
+  ],
+  "citation_catalog": [
+    {
+      "id": "CIT-01",
+      "title": "write(2) — Linux manual page",
+      "author_or_publisher": "Linux man-pages project",
+      "type": "primary-source citation",
+      "url": "https://www.man7.org/linux/man-pages/man2/write.2.html",
+      "required": true,
+      "access": "free",
+      "purpose": "Provide primary-source support for the bounded mechanism discussed in the cited local lesson.",
+      "reading_boundary": "Read Description, Return Value, Notes, and Bugs; distinguish write completion from durable storage.",
+      "last_verified": "2026-08-04",
+      "text_alternative": "lessons/05-files-page-cache-and-durability.md",
+      "verified_title": "write(2) — Linux manual page",
+      "verified_publisher": "Linux man-pages project",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://www.man7.org/linux/man-pages/man2/write.2.html",
+      "verification_status": "verified"
+    },
+    {
+      "id": "CIT-02",
+      "title": "Resource constraints",
+      "author_or_publisher": "Docker",
+      "type": "primary-source citation",
+      "url": "https://docs.docker.com/engine/containers/resource_constraints/",
+      "required": true,
+      "access": "free",
+      "purpose": "Provide primary-source support for the bounded mechanism discussed in the cited local lesson.",
+      "reading_boundary": "Read memory, CPU, and block-I/O constraint sections and note host and cgroup prerequisites.",
+      "last_verified": "2026-08-04",
+      "text_alternative": "lessons/07-containers-quotas-and-limits.md",
+      "verified_title": "Resource constraints",
+      "verified_publisher": "Docker",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://docs.docker.com/engine/containers/resource_constraints/",
+      "verification_status": "verified"
     }
   ]
 }

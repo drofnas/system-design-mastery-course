@@ -55,8 +55,9 @@ tested RPO/RTO meets the journey need at an operable cost.
 
 Design a tabletop, component test, and live isolated game day for an archive.
 For each, state the new claim it can support and the claim it cannot. Compare
-three recovery tiers and conduct a teach-back to product, security, finance, and
-on-call reviewers. Record dissent and evidence needed to resolve it.
+three recovery tiers and use the frozen solo-review packet to conduct a
+teach-back from product, security, finance, and on-call perspectives. Record
+dissent and evidence needed to resolve it. A live panel is optional.
 
 ## Self-check
 

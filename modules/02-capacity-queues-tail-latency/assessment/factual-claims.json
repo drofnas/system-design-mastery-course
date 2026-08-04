@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "module": "M02",
-  "reviewed_commit": "373b81aa59da62456d848df19941c714c7826d0b",
+  "reviewed_commit": "670fcb8a202d8aea43d03f15f435054fdb2685f5",
   "reviewed_at": "2026-08-04",
   "evidence_boundary": "This ledger records a source-level semantic review of lessons, worked answers, case studies, exercises, worksheets, rubrics, and lab guides. It verifies named mechanisms against bounded primary or official sources, distinguishes normative course contracts, and does not turn synthetic examples into production measurements.",
   "claims": [
@@ -12,16 +12,21 @@
         "heading": "Mechanism"
       },
       "claim": "A capacity model begins with work crossing a named boundary. “One million users” does not state how often they act, which operations they choose, how requests cluster in time, or how much resource each operation consumes.",
-      "classification": "algorithmic",
+      "classification": "quantitative",
       "source_ids": [
         "RES-01"
       ],
       "source_sections": [
         "Study queue terminology, Little's Law, dynamic behavior, and strengths/weaknesses; skip Markov derivations. Explain one invalid use and calculate one boundary two ways."
       ],
-      "verification_method": "primary-source comparison",
+      "verification_method": "reproducible derivation",
       "status": "verified",
-      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "8fb9119b10c95249761f764b8c4fc819407390cd0ebd564e5cea59ea70cc70b6",
+      "source_section_sha256": [
+        "d3f7056b5245506cdbf6088cc94e8886ba1d60563d280a6ecaa07ccfb40c156b"
+      ]
     },
     {
       "id": "M02-FC-002",
@@ -29,17 +34,22 @@
         "path": "lessons/02-littles-law-and-saturation.md",
         "heading": "Mechanism"
       },
-      "claim": "For a stable long-run boundary:",
-      "classification": "algorithmic",
+      "claim": "For a stable long-run boundary, Little's Law relates average work, admitted throughput, and average time as L = λW; it does not predict percentiles or prove stability.",
+      "classification": "quantitative",
       "source_ids": [
-        "RES-06"
+        "RES-01"
       ],
       "source_sections": [
-        "Watch the complete presentation or read all slides with speaker notes. Explain why run at 80% is not a general policy."
+        "Study the Queueing Systems notes sections introducing system occupancy, throughput, time in system, and Little's Law L = λW."
       ],
       "verification_method": "primary-source comparison",
       "status": "verified",
-      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "5626f1d933c0c4ac3fbdb24a5d7087e6bb5ec70774accdbe7932057c8cc42ccc",
+      "source_section_sha256": [
+        "5cffea4f833f6c646c9aec68b47171fb35062063f88757ad338b3c6830d33bbd"
+      ]
     },
     {
       "id": "M02-FC-003",
@@ -47,25 +57,7 @@
         "path": "lessons/03-latency-measurement.md",
         "heading": "Mechanism"
       },
-      "claim": "A latency distribution needs:",
-      "classification": "algorithmic",
-      "source_ids": [
-        "RES-02"
-      ],
-      "source_sections": [
-        "Read the complete article. Choose one tail technique and state its extra work, correctness assumption, and rejection condition."
-      ],
-      "verification_method": "primary-source comparison",
-      "status": "verified",
-      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
-    },
-    {
-      "id": "M02-FC-004",
-      "location": {
-        "path": "lessons/04-fanout-and-tail-amplification.md",
-        "heading": "Mechanism"
-      },
-      "claim": "If one branch completes within threshold t with probability F(t), and n parallel branches are independent, a request that waits for all branches completes within t with probability:",
+      "claim": "A latency distribution is interpretable only with a named population, timing boundary, workload, environment, window, sample count, warm-up policy, failure treatment, measurement location, and clock.",
       "classification": "quantitative",
       "source_ids": [
         "RES-02"
@@ -75,7 +67,35 @@
       ],
       "verification_method": "reproducible derivation",
       "status": "verified",
-      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "b284f9d22aec00b55f5fea63ea8aa549e93677edd590d160435b6e45125ea916",
+      "source_section_sha256": [
+        "e1f7483c9a36fc414c4d8b6cf695ac75bc194c6202c8cc0f102b8cf102d5af26"
+      ]
+    },
+    {
+      "id": "M02-FC-004",
+      "location": {
+        "path": "lessons/04-fanout-and-tail-amplification.md",
+        "heading": "Mechanism"
+      },
+      "claim": "For n independent parallel branches with per-branch completion probability F(t), all branches finish by t with probability F(t)^n and at least one exceeds t with probability 1 - F(t)^n.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-02"
+      ],
+      "source_sections": [
+        "Read the complete article. Choose one tail technique and state its extra work, correctness assumption, and rejection condition."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "5118734df9daf75f82668d7d83e965a9348d7c44b271c2692ab2b947f7cabd71",
+      "source_section_sha256": [
+        "e1f7483c9a36fc414c4d8b6cf695ac75bc194c6202c8cc0f102b8cf102d5af26"
+      ]
     },
     {
       "id": "M02-FC-005",
@@ -83,7 +103,7 @@
         "path": "lessons/05-bounded-overload-control.md",
         "heading": "Mechanism"
       },
-      "claim": "When arrivals exceed completions, one of four things happens:",
+      "claim": "When arrivals exceed completions, work must wait, be rejected, be degraded or deferred, or consume an unbounded resource until failure.",
       "classification": "algorithmic",
       "source_ids": [
         "RES-04"
@@ -93,7 +113,12 @@
       ],
       "verification_method": "primary-source comparison",
       "status": "verified",
-      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "4e229d30faa9b7c25e9a33986bf71c4a87fa8279bd8be6825008d33cdcb01227",
+      "source_section_sha256": [
+        "68afcbbc4704c6a5068c265e4d702f76afafb18ffe5edd6cae0ad2252ad30175"
+      ]
     },
     {
       "id": "M02-FC-006",
@@ -101,7 +126,7 @@
         "path": "lessons/06-retries-and-downstream-protection.md",
         "heading": "Mechanism"
       },
-      "claim": "A retry is additional load created during a failure. It is useful only when:",
+      "claim": "A retry is extra failure-time load and is justified only when the failure may be transient, repetition is safe, deadline remains, success is plausible, and the shared retry budget can afford it.",
       "classification": "algorithmic",
       "source_ids": [
         "RES-07"
@@ -111,7 +136,12 @@
       ],
       "verification_method": "primary-source comparison",
       "status": "verified",
-      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "972911aa3b9ea7db5c4311a9a2b6561a58c998f4a6c587badd407cb701bf0337",
+      "source_section_sha256": [
+        "3750aecb04f066af2730f11ff375177b794e460d38bb61e9e7d36b98bf66945b"
+      ]
     },
     {
       "id": "M02-FC-007",
@@ -119,17 +149,22 @@
         "path": "lessons/07-failover-headroom-and-unit-cost.md",
         "heading": "Mechanism"
       },
-      "claim": "Normal-state success does not prove failover safety. For a declared retained capacity fraction f:",
-      "classification": "algorithmic",
+      "claim": "Failover safety depends on retained capacity, admitted load, recovery drain rate, and an explicit shedding, degradation, transfer, or SLO-violation policy.",
+      "classification": "quantitative",
       "source_ids": [
         "RES-04"
       ],
       "source_sections": [
         "Read the complete article. Calculate net drain and clearance for one backlog and identify the fragile assumption."
       ],
-      "verification_method": "primary-source comparison",
+      "verification_method": "reproducible derivation",
       "status": "verified",
-      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "ba8adf776a699ce78de9f7d61744b38bf6a2eed006d3a7412448c6abd2f546d0",
+      "source_section_sha256": [
+        "68afcbbc4704c6a5068c265e4d702f76afafb18ffe5edd6cae0ad2252ad30175"
+      ]
     },
     {
       "id": "M02-FC-008",
@@ -137,7 +172,7 @@
         "path": "lessons/08-capacity-decisions-and-defense.md",
         "heading": "Mechanism"
       },
-      "claim": "A capacity report is a decision artifact, not a benchmark dump. It connects:",
+      "claim": "A capacity decision connects user outcome and workload to resource demand, measurement, observed saturation, operating policy, cost, ownership, rollout, and reversal evidence.",
       "classification": "algorithmic",
       "source_ids": [
         "RES-03"
@@ -147,7 +182,12 @@
       ],
       "verification_method": "primary-source comparison",
       "status": "verified",
-      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "240878db553eadbfec75042f4e2bcb682426149a01374a3937338b84d51b9cb3",
+      "source_section_sha256": [
+        "3b8911ebfbc10840d38c57a7fda269d54e7ca0d1965974e31b465591fa915fe2"
+      ]
     },
     {
       "id": "M02-FC-009",
@@ -156,16 +196,15 @@
         "heading": "EX-01"
       },
       "claim": "Useful throughput is distinct successful journey lookups per second. User success uses attempted logical journeys as its denominator, not server attempts or branches. Otherwise retries make failure look like added demand or value.",
-      "classification": "algorithmic",
-      "source_ids": [
-        "RES-06"
-      ],
-      "source_sections": [
-        "Watch the complete presentation or read all slides with speaker notes. Explain why run at 80% is not a general policy."
-      ],
-      "verification_method": "primary-source comparison",
+      "classification": "normative",
+      "source_ids": [],
+      "source_sections": [],
+      "verification_method": "course-contract review",
       "status": "verified",
-      "scope_limit": "The review covers the causal mechanism and derivation used by the explained answers; exercise numbers and worked values are synthetic and are not production measurements."
+      "scope_limit": "This is a published course evidence-quality or decision rule, not an empirical statement about an external system.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "0dce9f2ca84d6ef7a15222579fe872437741e78d14c9c8b4bdf5f74f01edc126",
+      "source_section_sha256": []
     },
     {
       "id": "M02-FC-010",
@@ -173,14 +212,17 @@
         "path": "case-study/transit-capacity.md",
         "heading": "1. Workload and user threshold"
       },
-      "claim": "From Module 1:",
+      "claim": "The Transit Signal rates, service times, fan-out, worker counts, and latency targets are synthetic lab inputs and not production measurements.",
       "classification": "synthetic",
       "source_ids": [],
       "source_sections": [],
       "verification_method": "controlled synthetic fixture",
       "status": "verified",
-      "scope_limit": "The case exists to exercise a reasoning method under declared constraints; none of its organizations, loads, timings, incidents, or results are production evidence.",
-      "synthetic_label": "This non-capstone case and every unattributed workload, incident, cost, latency, and organization detail in it are synthetic course fixtures."
+      "scope_limit": "The values, state, and outcome are bounded to the named course fixture and must not be generalized to production.",
+      "synthetic_label": "Synthetic course data or behavior; not production evidence.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "d0feac8204f6a3b20ca9dbcc8a83db0980d56fc362d127cb52e25d998b87f875",
+      "source_section_sha256": []
     },
     {
       "id": "M02-FC-011",
@@ -188,17 +230,22 @@
         "path": "lessons/02-littles-law-and-saturation.md",
         "heading": "Repeatable technique"
       },
-      "claim": "The document uses the bounded expression L = λW; its semantics, substitution where arithmetic applies, and stated assumptions were checked as a reproducible derivation.",
+      "claim": "Little's Law is the average-value identity L = λW for a stable long-run boundary; the course does not use it to predict a percentile or prove that a queue is stable.",
       "classification": "quantitative",
       "source_ids": [
-        "RES-06"
+        "RES-01"
       ],
       "source_sections": [
-        "Watch the complete presentation or read all slides with speaker notes. Explain why run at 80% is not a general policy."
+        "Queueing Systems notes sections defining system occupancy, throughput, time in system, and Little's Law L = λW."
       ],
       "verification_method": "reproducible derivation",
       "status": "verified",
-      "scope_limit": "The mapping verifies the written expression and arithmetic under its declared assumptions; synthetic inputs and a local result do not establish a production distribution."
+      "scope_limit": "The mapping verifies the written expression and arithmetic under its declared assumptions; synthetic inputs and a local result do not establish a production distribution.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "196d24e899d1548a2768217a861127bae2410bccccf5b3f92c4317f9fcdb9620",
+      "source_section_sha256": [
+        "867f5555ebac81ee613d9535b215bd1854bd97cbc6c13d2cad8ccd8807cee50e"
+      ]
     },
     {
       "id": "M02-FC-012",
@@ -206,17 +253,17 @@
         "path": "lessons/05-bounded-overload-control.md",
         "heading": "Explained answers"
       },
-      "claim": "The document uses the bounded expression 0.15 s × 80/s = 12; its semantics, substitution where arithmetic applies, and stated assumptions were checked as a reproducible derivation.",
-      "classification": "quantitative",
-      "source_ids": [
-        "RES-04"
-      ],
-      "source_sections": [
-        "Read the complete article. Calculate net drain and clearance for one backlog and identify the fragile assumption."
-      ],
-      "verification_method": "reproducible derivation",
+      "claim": "The calculation 0.15 seconds × 80 requests/second = 12 requests uses synthetic course inputs and is not a production capacity measurement.",
+      "classification": "synthetic",
+      "source_ids": [],
+      "source_sections": [],
+      "verification_method": "controlled synthetic fixture",
       "status": "verified",
-      "scope_limit": "The mapping verifies the written expression and arithmetic under its declared assumptions; synthetic inputs and a local result do not establish a production distribution."
+      "scope_limit": "The values, state, and outcome are bounded to the named course fixture and must not be generalized to production.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "a743b33899d416fb5ba644d2263063a8b32a6926f92423b5ff91c72d246ee1ff",
+      "synthetic_label": "Synthetic course data or behavior; not production evidence.",
+      "source_section_sha256": []
     },
     {
       "id": "M02-FC-013",
@@ -234,7 +281,30 @@
       ],
       "verification_method": "reproducible derivation",
       "status": "verified",
-      "scope_limit": "The mapping verifies the written expression and arithmetic under its declared assumptions; synthetic inputs and a local result do not establish a production distribution."
+      "scope_limit": "The mapping verifies the written expression and arithmetic under its declared assumptions; synthetic inputs and a local result do not establish a production distribution.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "9b0665d7df02a12e76bc106334448ca3aa69ea46009fbeca87aa4d51a268dd00",
+      "source_section_sha256": [
+        "3750aecb04f066af2730f11ff375177b794e460d38bb61e9e7d36b98bf66945b"
+      ]
+    },
+    {
+      "id": "M02-FC-014",
+      "location": {
+        "path": "exercises/answer-key.md",
+        "heading": "EX-01"
+      },
+      "claim": "Rates, fan-out, service times, worker counts, queue depths, and derived capacity figures in this answer key are synthetic exercise evidence, not production measurements.",
+      "classification": "synthetic",
+      "source_ids": [],
+      "source_sections": [],
+      "verification_method": "controlled synthetic fixture",
+      "status": "verified",
+      "scope_limit": "The values, state, and outcome are bounded to the named course fixture and must not be generalized to production.",
+      "synthetic_label": "Synthetic course data or behavior; not production evidence.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "e44ebc1c434bac9e8fe9ee1388601a777765dcec76c5c919f2236e2cb2823d44",
+      "source_section_sha256": []
     }
   ],
   "lesson_coverage": [
@@ -297,47 +367,322 @@
   ],
   "document_coverage": [
     {
+      "path": "README.md",
+      "sha256": "992c807e2e11da11f2843afec51a72141b9a3597b77b07fc170c20f846328bb2",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
+    },
+    {
+      "path": "assessment/README.md",
+      "sha256": "3d81be0177f3d8b7d83a360fb3d2b1e738a5252651335e34ccd2b1edfdf4d493",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
+    },
+    {
+      "path": "assessment/calibration/README.md",
+      "sha256": "2c6d62825ed9e2f585a63a8dbdb5a0450cb7ec1be797195187b2bd8447a7cf96",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "assessment/calibration/expected-results.json",
+      "sha256": "72e0118876f0386cb6297af6faae97a7c213f6317b9d80957347688b4d8265d2",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "assessment/calibration/manifests/pass.json",
+      "sha256": "1d75456216fe2de05db88a038114c0895a717644a8f462fa3e3925b2f9123dcc",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "assessment/calibration/manifests/repeat.json",
+      "sha256": "ce8f083675a8734cef8d4572f4de5742d2e82d6cdd7e27061f0d194c0120e96d",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "assessment/calibration/manifests/revise.json",
+      "sha256": "c969357745c1e97e43a90cb609cc029036ba5baa67f7450ec3ef6c65c3660fb1",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "assessment/calibration/pass.md",
+      "sha256": "bfcfacf3128e72b18467a996d327ef376c77a631dc864e91bee416b55429c0e6",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "assessment/calibration/repeat.md",
+      "sha256": "eee19853eede7f838c562c3c7e14c6b8d685405597a8319d557837b6b653083c",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "assessment/calibration/revise.md",
+      "sha256": "422bb98ca041c94be691f0ea20d269d5968cae1c05af23cb3552d90abf214139",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "assessment/evaluator-prompt.md",
+      "sha256": "c4e2fcfe3d66231d6fd54ffd24185f9b7d6f69798e9107309c7e16b091a4201a",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
+    },
+    {
+      "path": "assessment/remediation-map.md",
+      "sha256": "44e1dbec055b3ea2b0293e387888890da5d39bdaa53941744f971014eb27ec32",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
+    },
+    {
+      "path": "assessment/report-template.md",
+      "sha256": "d5fa0cf3042e24bef3bad5d45d88ed095525fdea3f271aa49ffa2e89effe5f3b",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
+    },
+    {
       "path": "assessment/rubric.md",
+      "sha256": "de3a97328d5f8fcf548da9ee8ea4371f495136644fb7081b54ba867038ca95cc",
       "review_scope": "normative_or_assignment_only",
       "claim_ids": [],
       "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
     },
     {
       "path": "case-study/transit-capacity.md",
+      "sha256": "d958b1b0ddabd2bccc0c179c9dfd6a1402e3fe833a1fcd5ceb8bc82ac2174226",
       "review_scope": "synthetic_fixture",
       "claim_ids": [
         "M02-FC-010"
       ],
-      "review_note": "The case was reviewed for explicit synthetic boundaries, internal arithmetic, non-generalization language, and separation from the learner capstone."
+      "review_note": "The case was reviewed for explicit synthetic boundaries, internal arithmetic, non-generalization language, and separation from the learner capstone.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
     },
     {
       "path": "exercises/answer-key.md",
+      "sha256": "493592efcee22b7b56a5d8e1f88e1b82971e1f98220e08e34cd889c649f1b895",
       "review_scope": "substantive_claims",
       "claim_ids": [
-        "M02-FC-009"
+        "M02-FC-009",
+        "M02-FC-014"
       ],
       "review_note": "Explained answers were checked for causal consistency, formula provenance, and agreement with the locally taught mechanism and cited source boundary."
     },
     {
       "path": "exercises/exercises.md",
+      "sha256": "71f378ab39489242d8a7164275f17c80aba34ce8a153d0ad4dcdeeb6d43f673f",
       "review_scope": "normative_or_assignment_only",
       "claim_ids": [],
       "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
     },
     {
+      "path": "glossary.md",
+      "sha256": "8547a558ebbf31235b38f9cdb423953d8381366c668939dbfafd5671705ab0c4",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
+    },
+    {
       "path": "lab/README.md",
+      "sha256": "33f30d7ad624cf5ce599c8fec00ac237ee223de340d4c5c3d463dab2e6bf7f57",
       "review_scope": "normative_or_assignment_only",
       "claim_ids": [],
       "review_note": "The lab guide's commands, interfaces, bounds, and synthetic evidence limitations were checked directly against the executable implementation and its passing tests."
+    },
+    {
+      "path": "lab/capacity_lab/__init__.py",
+      "sha256": "1b4894bba0a9774180557de5e1e1753448224831e20de8669d4a561762dcd6f9",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/capacity_lab/__main__.py",
+      "sha256": "7da4e15393df05e456d17cab431d218f4bd49bc5662d047d2152c604fdddd030",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/capacity_lab/analysis.py",
+      "sha256": "90956d093cc0791c8b6c682e8456d179b0a82f336070306a0e0f577a2adb387d",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/capacity_lab/config.py",
+      "sha256": "a8872dabfc2542b48acf72ddcf4787443be3c22e3b65b19438a262ecdaa3375c",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/capacity_lab/loadgen.py",
+      "sha256": "b38c02ff5a3387739f1b9d220f1097b7d82617266d8feadfff64556b75fc4aa5",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/capacity_lab/model.py",
+      "sha256": "11b0fc864a8b6a11b22245eb94071c273fbe0bb79e5029ae21e2c2b30683d7ed",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/capacity_lab/service.py",
+      "sha256": "8743dff6ca0595e6465381ba958fd9ddd0a256a53d9dbc85a5704fa801f3a1f4",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
     },
     {
       "path": "lab/scenarios/fixtures/README.md",
+      "sha256": "af1c22bed073d841b5a303e8c76871c0fdb67030bb3888bbc8e6c35ae4a6bcfd",
       "review_scope": "normative_or_assignment_only",
       "claim_ids": [],
       "review_note": "The lab guide's commands, interfaces, bounds, and synthetic evidence limitations were checked directly against the executable implementation and its passing tests."
     },
     {
+      "path": "lab/scenarios/fixtures/closed-loop-stall.json",
+      "sha256": "38697f929de1b648f2c80a922489d22a8e83cd073c33fb047de6626219dc57c1",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/fixtures/failover-loss.json",
+      "sha256": "11fd2fcb7cb147e5fe02a44b0558cfb1bc5dc310daae9c8baf3b0c1ff8ae41b8",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/fixtures/failover-normal.json",
+      "sha256": "d7517ba6c862a5da0592e4792862d8cc36f287a3d06e96d48f5eb176b018e045",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/fixtures/open-loop-stall.json",
+      "sha256": "d1d14cefab29df49d6f37ca58fba82fdcc19ed237892aaab0aaf3a36d82a139c",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/fixtures/retry-amplification.json",
+      "sha256": "2302cd93cfc9e2b6139cd7c15ba9523195f044f9f419be089a30fb416fa324be",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/fixtures/saturation.json",
+      "sha256": "a11938d76db33f54e0f5798b24b34b0f3b458dc752384c776f9bee3b4127c581",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/fixtures/stable.json",
+      "sha256": "830a3c20c6642a43e1a43538525594ad132f054beb678fc261b5d4ba2aece8ae",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/fixtures/tail-fanout.json",
+      "sha256": "87022828b64e9f50a3e6d5b875b68c30612fa3ab1686eda0f6909cbbbb6ff606",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/fixtures/tail-single.json",
+      "sha256": "d53d08072c0b2943447c4f38c912643014a10adda7af3a0e93439e6a630b5d67",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/test-closed-loop.json",
+      "sha256": "7b757dba526eb13584e27304089ba38bc4b9c3e1fa291f25936e526b7624b91a",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/test-overload.json",
+      "sha256": "c610bbd467ed16cc0af3a64d02823d36f00000a771697fbb11d84fbb59b1ff32",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/test-stable.json",
+      "sha256": "e54ca6f7ae07fc2cd3e7fcac9bae9c4b0e7009144b77c3a53f49a7b3e573629b",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/transit-baseline.json",
+      "sha256": "663c5636434b834e522145b26a36fb4020876eef0a63e955923a8b5202195309",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/tests/test_capacity_lab.py",
+      "sha256": "1816a148fff9eb031c6667eb586ceab9b23991b5744a1585cecca55269b98ce3",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
       "path": "lessons/01-workload-and-useful-work.md",
+      "sha256": "a132a4246ecab58df876ea326e08d802dc3e1ecfcf23f45e0e76e3ba86d39fc3",
       "review_scope": "substantive_claims",
       "claim_ids": [
         "M02-FC-001"
@@ -346,6 +691,7 @@
     },
     {
       "path": "lessons/02-littles-law-and-saturation.md",
+      "sha256": "5bebbea87060ca7c5417a21703d4f60e4616f2e04323db9f8a6c17ecb8bfe46a",
       "review_scope": "substantive_claims",
       "claim_ids": [
         "M02-FC-002",
@@ -355,6 +701,7 @@
     },
     {
       "path": "lessons/03-latency-measurement.md",
+      "sha256": "1dc27d6bb6b706a3e71d5e15fee3373efc4ef0aac6a28047bfb241e84a9c70a3",
       "review_scope": "substantive_claims",
       "claim_ids": [
         "M02-FC-003"
@@ -363,6 +710,7 @@
     },
     {
       "path": "lessons/04-fanout-and-tail-amplification.md",
+      "sha256": "def9abdab736da086247b49e15c1a0ff61d04aac2027e4d1863db9c356d35296",
       "review_scope": "substantive_claims",
       "claim_ids": [
         "M02-FC-004"
@@ -371,6 +719,7 @@
     },
     {
       "path": "lessons/05-bounded-overload-control.md",
+      "sha256": "ce70c0af04c41f456afa3c24ae0f9f3f50a7e453c3b6aaf35a143434bab2792f",
       "review_scope": "substantive_claims",
       "claim_ids": [
         "M02-FC-005",
@@ -380,6 +729,7 @@
     },
     {
       "path": "lessons/06-retries-and-downstream-protection.md",
+      "sha256": "5beee924deeee849f5900e0083261196ef57c9c82d14e95ab653c26ed9ff9f03",
       "review_scope": "substantive_claims",
       "claim_ids": [
         "M02-FC-006",
@@ -389,6 +739,7 @@
     },
     {
       "path": "lessons/07-failover-headroom-and-unit-cost.md",
+      "sha256": "fc689d70e1fce935b31b9c37143edcbbda6f0cb02f878b6f70cea80b5fdf8219",
       "review_scope": "substantive_claims",
       "claim_ids": [
         "M02-FC-007"
@@ -397,6 +748,7 @@
     },
     {
       "path": "lessons/08-capacity-decisions-and-defense.md",
+      "sha256": "0e03219f079ecd6b13d41f03896c22a3df899f95bd80615b465cd47fb4d1f651",
       "review_scope": "substantive_claims",
       "claim_ids": [
         "M02-FC-008"
@@ -404,31 +756,50 @@
       "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
     },
     {
+      "path": "module.json",
+      "sha256": "ca0b93dcdfc49f8c2c0da593adb354a2466ffedff60d29f18f8b86ea8b3070ee",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "resources.md",
+      "sha256": "611bfeb44c6c26d0f9e642fb54b9f8cbcf0bff164d6fda7ac2611932897ca4b8",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
+    },
+    {
       "path": "worksheets/week-05-capacity-prediction.md",
+      "sha256": "7c498f26f9146cea8c70c892e47ec4b12182d169d58b68656a5b806939ca6a52",
       "review_scope": "normative_or_assignment_only",
       "claim_ids": [],
       "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
     },
     {
       "path": "worksheets/week-06-bounded-build.md",
+      "sha256": "536ab6268ff18cc2eb57439f42f0e26f344044de16f60ccc055296d6868a584b",
       "review_scope": "normative_or_assignment_only",
       "claim_ids": [],
       "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
     },
     {
       "path": "worksheets/week-07-load-sweep.md",
+      "sha256": "d21220e23af64ef89c45c148424d1910b9345b02dcd48c69a13864a6a7d9d029",
       "review_scope": "normative_or_assignment_only",
       "claim_ids": [],
       "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
     },
     {
       "path": "worksheets/week-08-capacity-report.md",
+      "sha256": "413a7838f2da0940f9fad58c671a3231c3e2f34b3d15b97afd1474ac0248d034",
       "review_scope": "normative_or_assignment_only",
       "claim_ids": [],
       "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
     },
     {
       "path": "worksheets/week-08-defense.md",
+      "sha256": "4e304f59c07d5545a208da963c90d976ed04afb9e4f1fb535542f2d020c05971",
       "review_scope": "normative_or_assignment_only",
       "claim_ids": [],
       "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
@@ -436,40 +807,474 @@
   ],
   "formula_mappings": [
     {
+      "path": "case-study/transit-capacity.md",
+      "heading": "2. Pre-experiment model",
+      "normalized_expression": "24 / (3 × 0.0218 s) = 366.97 requests/s",
+      "expression_sha256": "92bcaeb935a3cce23353b97292ba2f44de184c88d7b11481b7e2a9214ed6f648",
+      "claim_id": "M02-FC-010"
+    },
+    {
+      "path": "case-study/transit-capacity.md",
+      "heading": "2. Pre-experiment model",
+      "normalized_expression": "8 / 0.02534618 s = 315.63 requests/s",
+      "expression_sha256": "84272955172927e68a31de82a348da3dced2105333545553328b67b2ac4b61b8",
+      "claim_id": "M02-FC-010"
+    },
+    {
+      "path": "case-study/transit-capacity.md",
+      "heading": "2. Pre-experiment model",
+      "normalized_expression": "= 25.34618 ms",
+      "expression_sha256": "1c7d8d04d17acf3131832c52a05352ee9ff48abd8c254dbaea5fd01d5d5baa22",
+      "claim_id": "M02-FC-010"
+    },
+    {
+      "path": "case-study/transit-capacity.md",
+      "heading": "2. Pre-experiment model",
+      "normalized_expression": "E[Sbranch] = 0.99 × 20 ms + 0.01 × 200 ms = 21.8 ms",
+      "expression_sha256": "4cbe37bd65b4aa853c0318cd19060fec8d42d50a1d813eb1f3a2210c95609df2",
+      "claim_id": "M02-FC-010"
+    },
+    {
+      "path": "case-study/transit-capacity.md",
+      "heading": "2. Pre-experiment model",
+      "normalized_expression": "E[Srequest] = 20 ms + (200 ms - 20 ms) × 0.029701",
+      "expression_sha256": "60f34ce59a5602d413f1443b63496e149805fdd6a3fb5425b12ce98e2d6085a3",
+      "claim_id": "M02-FC-010"
+    },
+    {
+      "path": "case-study/transit-capacity.md",
+      "heading": "2. Pre-experiment model",
+      "normalized_expression": "L = λW = 30/s × 0.02534618 s = 0.7604 requests",
+      "expression_sha256": "e875711320a4da2876b57f592a6008a7c1ed3e70bd1cb269a8f3e19bb8c9911e",
+      "claim_id": "M02-FC-010"
+    },
+    {
+      "path": "case-study/transit-capacity.md",
+      "heading": "2. Pre-experiment model",
+      "normalized_expression": "P(any branch slow) = 1 - (1 - 0.01)^3 = 0.029701",
+      "expression_sha256": "faad0af727b4ab9ca7dc1f8b762b2bb9d27a8b3af1d96fa7e614d8de6516d668",
+      "claim_id": "M02-FC-010"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-01",
+      "normalized_expression": "attempts = 170 × 1.02 = 173.4/s",
+      "expression_sha256": "a36f0eaf4d07eca50576bff11ec89446c83c4beea652cbb5f77897e5b5398e6b",
+      "claim_id": "M02-FC-014"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-01",
+      "normalized_expression": "branches = 173.4 × 3 = 520.2/s",
+      "expression_sha256": "827670998f49db40299fc8e94d014bf6740b3bca912369c6cbb39732b4f3688d",
+      "claim_id": "M02-FC-014"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-01",
+      "normalized_expression": "logical = 170/s",
+      "expression_sha256": "3753beb72af9ce6dc1ee0e53cd27ee2af959e7e74de3b8a0d04ea8c5330a7063",
+      "claim_id": "M02-FC-014"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-02",
+      "normalized_expression": "five minutes = 800 × 300 = 240,000 requests",
+      "expression_sha256": "1f7df40bb0f75635437d80df15a9e7bc037052ed7a3bbf5ddf4b8738673582f6",
+      "claim_id": "M02-FC-014"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-02",
+      "normalized_expression": "one hour = 800 × 3,600 = 2,880,000 requests",
+      "expression_sha256": "f7e2252783b9372560d196c893e5f2453418f9f31e402dadd3f1625c2e7b4f12",
+      "claim_id": "M02-FC-014"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-03",
+      "normalized_expression": "in-service L = 170 × 0.025 = 4.25",
+      "expression_sha256": "6f0b93870eb1298aec33002d8a0d35137237055000f64ac7885ab8aa0c80267a",
+      "claim_id": "M02-FC-014"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-03",
+      "normalized_expression": "in-system L = 170 × 0.080 = 13.6",
+      "expression_sha256": "d42febf5caa1e69a70a75e9d488032fc946a7c407d2499d9325b2a06113ad353",
+      "claim_id": "M02-FC-014"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-03",
+      "normalized_expression": "worker utilization = 4.25 / 8 = 53.125%",
+      "expression_sha256": "ffb3995c588a7c5f94d2bbb6210de2b601faf7e4389785e08e4c2ce743656016",
+      "claim_id": "M02-FC-014"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-06",
+      "normalized_expression": "n=10: 1 - 0.99^10 ≈ 9.5618%",
+      "expression_sha256": "3a75c5c9e3508f08ab2470f82efade712d72f75b641a39ccb859877461d2e7e8",
+      "claim_id": "M02-FC-014"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-06",
+      "normalized_expression": "n=1: 1 - 0.99^1 = 1.00%",
+      "expression_sha256": "aa1c67d08a119d1202595e40ed5209f597c3051037b3789badb213b9cc80e9cc",
+      "claim_id": "M02-FC-014"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-06",
+      "normalized_expression": "n=20: 1 - 0.99^20 ≈ 18.2093%",
+      "expression_sha256": "1eb91c0cb30060e2be72eb2924c5396b5eca7fe8d6dbc1009172ccd1de3c1df9",
+      "claim_id": "M02-FC-014"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-06",
+      "normalized_expression": "n=3: 1 - 0.99^3 = 2.9701%",
+      "expression_sha256": "3e604d49cc1eb786040b61fa998f11892749e8c132da5f6ca6ef3ada66ab1fa7",
+      "claim_id": "M02-FC-014"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-07",
+      "normalized_expression": "Q ≤ 300/s × 0.100 s = 30 requests",
+      "expression_sha256": "adc6ecf3ab72923deb61408618e948d295cfca512e5263bde4f8c6ce105294c5",
+      "claim_id": "M02-FC-014"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-09",
+      "normalized_expression": "lowest-layer attempts = 3^3 = 27",
+      "expression_sha256": "aaba76dd8b2d95eb729e6c31a0caba252899eb2899e1f29b9e507ec56294f750",
+      "claim_id": "M02-FC-014"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-09",
+      "normalized_expression": "shared retries = 2,000 × 0.05 = 100",
+      "expression_sha256": "70cc54160c5fb59bae1f4444408ad2e4efa889f39ebc8a8b38855c1c4376ef50",
+      "claim_id": "M02-FC-014"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-10",
+      "normalized_expression": "clearance = 30,000 / 60 = 500 s = 8 min 20 s",
+      "expression_sha256": "a956410608a2880adf8aaea9972bacb62137fb2749479ce147bf932f5a5865f0",
+      "claim_id": "M02-FC-014"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-10",
+      "normalized_expression": "failover capacity = 320 × 0.75 = 240/s",
+      "expression_sha256": "f13916489032c1d7ad553838d6750ce5d0cbf63bd6d3ce664f4722c3fee3be53",
+      "claim_id": "M02-FC-014"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-10",
+      "normalized_expression": "headroom at peak = 240 - 210 = 30/s",
+      "expression_sha256": "0d0bfc62e82bede37ce322eeb1bde686a24234571e46318becbf53263a7d7b28",
+      "claim_id": "M02-FC-014"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-10",
+      "normalized_expression": "net drain = 160 - 100 = 60/s",
+      "expression_sha256": "11882ce666d90c593348f60c2ce6e61a4a1c842558f933c3f761236ea329589c",
+      "claim_id": "M02-FC-014"
+    },
+    {
+      "path": "lessons/01-workload-and-useful-work.md",
+      "heading": "Mechanism",
+      "normalized_expression": "attempt rate = all initial and retry attempts / time",
+      "expression_sha256": "6e9f9dd4ceb7ce2d3d996e3e2749451de75c8f00ca3104ad4bbdbe27d944b705",
+      "claim_id": "M02-FC-001"
+    },
+    {
+      "path": "lessons/01-workload-and-useful-work.md",
+      "heading": "Mechanism",
+      "normalized_expression": "logical arrival rate = distinct user/business operations / time",
+      "expression_sha256": "e62e0fccedd9953c65596b6b5805a90104d03319f6eb1e77698220de2660a2c5",
+      "claim_id": "M02-FC-001"
+    },
+    {
+      "path": "lessons/01-workload-and-useful-work.md",
+      "heading": "Mechanism",
+      "normalized_expression": "operation mix = fraction of each operation class",
+      "expression_sha256": "836f8a3c1c7642e8e744c4defda61c95639229f8d17d89f3158049dbd2afdb0a",
+      "claim_id": "M02-FC-001"
+    },
+    {
+      "path": "lessons/01-workload-and-useful-work.md",
+      "heading": "Mechanism",
+      "normalized_expression": "useful throughput = distinct successful operations / time",
+      "expression_sha256": "2eb7980d6ef9c76f429814fc162d7353198de5ef4bdc2ce83c23b9bcb09514e7",
+      "claim_id": "M02-FC-001"
+    },
+    {
+      "path": "lessons/01-workload-and-useful-work.md",
+      "heading": "Worked example",
+      "normalized_expression": "800/s × 300 s = 240,000 logical journey requests",
+      "expression_sha256": "7f58d61c21de4eaa0b519e926041ad7343e4b81c8ea4a9e435ceff2d1c0194f6",
+      "claim_id": "M02-FC-001"
+    },
+    {
+      "path": "lessons/01-workload-and-useful-work.md",
+      "heading": "Worked example",
+      "normalized_expression": "downstream branch rate = 170 × 3 = 510 branches/s",
+      "expression_sha256": "24311895b4b8a6005516ad76da0229a479380b6e7d72162e6306508e098beaba",
+      "claim_id": "M02-FC-001"
+    },
+    {
+      "path": "lessons/01-workload-and-useful-work.md",
+      "heading": "Worked example",
+      "normalized_expression": "server attempt rate = 170 × 1.02 = 173.4 attempts/s",
+      "expression_sha256": "a57dd5fa2e433bfc336915395b61a3596fd004785aa64feb9174b935494b4275",
+      "claim_id": "M02-FC-001"
+    },
+    {
+      "path": "lessons/02-littles-law-and-saturation.md",
+      "heading": "Explained answers",
+      "normalized_expression": "120 × 0.05 = 6",
+      "expression_sha256": "9c7d8559fb39c56f41a744812ed6b292d53c05ee88ec1e424eb69600f6894a26",
+      "claim_id": "M02-FC-002"
+    },
+    {
+      "path": "lessons/02-littles-law-and-saturation.md",
+      "heading": "Explained answers",
+      "normalized_expression": "L = 120 × 0.08 = 9.6",
+      "expression_sha256": "d38264c5f4cb3880ca49439c74512de35ead9db6f44753d53af81b7eed6f465c",
+      "claim_id": "M02-FC-002"
+    },
+    {
+      "path": "lessons/02-littles-law-and-saturation.md",
+      "heading": "Mechanism",
+      "normalized_expression": "L = λW",
+      "expression_sha256": "14a196b838dbf02e707e9b83c3bf9900f66063dd73e3b33d4e8a28c5ffbfe398",
+      "claim_id": "M02-FC-002"
+    },
+    {
+      "path": "lessons/02-littles-law-and-saturation.md",
+      "heading": "Mechanism",
+      "normalized_expression": "capacity at resource r = available parallelism_r / demand_r",
+      "expression_sha256": "95502aab4480fa2704f185255069766e15d3827aeb7340b299d9c20ce87b0742",
+      "claim_id": "M02-FC-002"
+    },
+    {
+      "path": "lessons/02-littles-law-and-saturation.md",
+      "heading": "Mechanism",
+      "normalized_expression": "nominal service capacity μ = m / D",
+      "expression_sha256": "46bd57cd779e0ec57feb4c994dbf4405d43a17744f3210e8fc826eb1a5905d06",
+      "claim_id": "M02-FC-002"
+    },
+    {
+      "path": "lessons/02-littles-law-and-saturation.md",
+      "heading": "Mechanism",
+      "normalized_expression": "offered utilization ρ = λD / m",
+      "expression_sha256": "1bf626a185ac1c74f41cc6efb49586a71c307646cc3e9c6320e5e5f2d36db698",
+      "claim_id": "M02-FC-002"
+    },
+    {
+      "path": "lessons/02-littles-law-and-saturation.md",
+      "heading": "Mechanism",
+      "normalized_expression": "system nominal capacity = minimum resource capacity",
+      "expression_sha256": "745939c97f8585b539981ef66a8ce9ec5a512ba5a7a7df3561e7cbd70de79618",
+      "claim_id": "M02-FC-002"
+    },
+    {
       "path": "lessons/02-littles-law-and-saturation.md",
       "heading": "Repeatable technique",
+      "normalized_expression": "L = λW",
       "expression_sha256": "14a196b838dbf02e707e9b83c3bf9900f66063dd73e3b33d4e8a28c5ffbfe398",
-      "claim_id": "M02-FC-011"
+      "claim_id": "M02-FC-002"
     },
     {
       "path": "lessons/02-littles-law-and-saturation.md",
       "heading": "Self-check",
+      "normalized_expression": "L = λW",
       "expression_sha256": "14a196b838dbf02e707e9b83c3bf9900f66063dd73e3b33d4e8a28c5ffbfe398",
-      "claim_id": "M02-FC-011"
+      "claim_id": "M02-FC-002"
     },
     {
       "path": "lessons/02-littles-law-and-saturation.md",
-      "heading": "Explained answers",
-      "expression_sha256": "d38264c5f4cb3880ca49439c74512de35ead9db6f44753d53af81b7eed6f465c",
-      "claim_id": "M02-FC-011"
+      "heading": "Worked example",
+      "normalized_expression": "8 / 0.02534618 s = 315.63 requests/s",
+      "expression_sha256": "84272955172927e68a31de82a348da3dced2105333545553328b67b2ac4b61b8",
+      "claim_id": "M02-FC-002"
     },
     {
       "path": "lessons/02-littles-law-and-saturation.md",
-      "heading": "Explained answers",
-      "expression_sha256": "9c7d8559fb39c56f41a744812ed6b292d53c05ee88ec1e424eb69600f6894a26",
-      "claim_id": "M02-FC-011"
+      "heading": "Worked example",
+      "normalized_expression": "L = 170/s × 0.02534618 s = 4.309 average requests in service",
+      "expression_sha256": "e133808197b4de747a4a9c9161d0fcec3d80855c7f94b0fd9ab47bc514d8b7cb",
+      "claim_id": "M02-FC-002"
+    },
+    {
+      "path": "lessons/03-latency-measurement.md",
+      "heading": "Coordinated omission",
+      "normalized_expression": "generator lag = actual send time - scheduled send time",
+      "expression_sha256": "065d3b97d45eda4e0e2d10693ca128881fabf9aab6c77e3a65b64c226401212b",
+      "claim_id": "M02-FC-003"
+    },
+    {
+      "path": "lessons/04-fanout-and-tail-amplification.md",
+      "heading": "Mechanism",
+      "normalized_expression": "P(any branch > t) = 1 - F(t)^n",
+      "expression_sha256": "45f956382b1a667849a8df67d0d8fdac408e9bea7b1340cf78c7dc3ec09875ab",
+      "claim_id": "M02-FC-004"
+    },
+    {
+      "path": "lessons/04-fanout-and-tail-amplification.md",
+      "heading": "Mechanism",
+      "normalized_expression": "P(any tail) = 1 - (1 - p)^n",
+      "expression_sha256": "37a240ced4c169642b3e7a2c293dc6e35098164e8b5cfda75a09e08379a11833",
+      "claim_id": "M02-FC-004"
+    },
+    {
+      "path": "lessons/04-fanout-and-tail-amplification.md",
+      "heading": "Mechanism",
+      "normalized_expression": "P(max branch ≤ t) = F(t)^n",
+      "expression_sha256": "d68e3e3c57d48b0b214d303f4c0cb6a92f46a53dcead3bbd4a3c2abd9d56c8d8",
+      "claim_id": "M02-FC-004"
+    },
+    {
+      "path": "lessons/04-fanout-and-tail-amplification.md",
+      "heading": "Mechanism",
+      "normalized_expression": "downstream attempts/s = logical requests/s × fanout × attempts/request",
+      "expression_sha256": "49153718fa7d4d89bed957d96893353105e9c352a10aa9ad166a1c549ef2abd4",
+      "claim_id": "M02-FC-004"
+    },
+    {
+      "path": "lessons/04-fanout-and-tail-amplification.md",
+      "heading": "Worked example",
+      "normalized_expression": "P(any slow) = 1 - 0.99^3 = 0.029701",
+      "expression_sha256": "9ad51fbdeeee6d602a7d3a0cc2459164501256d5d0a72ef8c41bac5bcf1cfe31",
+      "claim_id": "M02-FC-004"
+    },
+    {
+      "path": "lessons/04-fanout-and-tail-amplification.md",
+      "heading": "Worked example",
+      "normalized_expression": "branch attempts = 800 × 3 = 2,400/s",
+      "expression_sha256": "4665a55002d5a72b08bb684eaf27970434c82ae4b22bf8317ce7fc32bccebcd6",
+      "claim_id": "M02-FC-004"
     },
     {
       "path": "lessons/05-bounded-overload-control.md",
       "heading": "Explained answers",
+      "normalized_expression": "0.15 s × 80/s = 12",
       "expression_sha256": "af781d94edce77370bba84898021c433c503894f31bcdfe151ed50a79bb2ee4a",
+      "claim_id": "M02-FC-012"
+    },
+    {
+      "path": "lessons/05-bounded-overload-control.md",
+      "heading": "Worked example",
+      "normalized_expression": "8 / 315.63/s ≈ 25.35 ms",
+      "expression_sha256": "9f28ed3aeba979d9e59ed1b9a6f5a850384786adeaa8ef99d066f943b4aef628",
       "claim_id": "M02-FC-012"
     },
     {
       "path": "lessons/06-retries-and-downstream-protection.md",
       "heading": "Explained answers",
+      "normalized_expression": "3^3 = 27",
       "expression_sha256": "62fe0fcbfaef597bc09da0877b0b55cf94d96a863c4cfb26c4e2d66bdf3508f3",
       "claim_id": "M02-FC-013"
+    },
+    {
+      "path": "lessons/06-retries-and-downstream-protection.md",
+      "heading": "Mechanism",
+      "normalized_expression": "lowest-layer attempts = a^k",
+      "expression_sha256": "788ad2cc6242fbdbf20033be438635d5b5d1881f8fa8008f7722dca198e98b88",
+      "claim_id": "M02-FC-013"
+    },
+    {
+      "path": "lessons/06-retries-and-downstream-protection.md",
+      "heading": "Mechanism",
+      "normalized_expression": "shared retry budget = allowed retry attempts / original logical work",
+      "expression_sha256": "a6477130b7cdff7e8d22821447aa95bf51da77bffd22bf24563ed64ec8e14a8b",
+      "claim_id": "M02-FC-013"
+    },
+    {
+      "path": "lessons/06-retries-and-downstream-protection.md",
+      "heading": "Worked example",
+      "normalized_expression": "maximum budgeted retry branch rate = 17 × 3 = 51/s",
+      "expression_sha256": "e999107a5268720c3ae58abd36d5be8baee12b9adbc1ce33b341b110ff3ad50d",
+      "claim_id": "M02-FC-013"
+    },
+    {
+      "path": "lessons/06-retries-and-downstream-protection.md",
+      "heading": "Worked example",
+      "normalized_expression": "original branch rate = 170 × 3 = 510/s",
+      "expression_sha256": "365fac5dd756d3c23f52a3531b25ae4c30dc142bde8063ed7b575fd2b2b1791e",
+      "claim_id": "M02-FC-013"
+    },
+    {
+      "path": "lessons/07-failover-headroom-and-unit-cost.md",
+      "heading": "Mechanism",
+      "normalized_expression": "clearance time = backlog size / net drain rate",
+      "expression_sha256": "a67f9b352145400671647bb0990b62ed108bdce5f200850de3668622f836b211",
+      "claim_id": "M02-FC-007"
+    },
+    {
+      "path": "lessons/07-failover-headroom-and-unit-cost.md",
+      "heading": "Mechanism",
+      "normalized_expression": "cost/useful request =",
+      "expression_sha256": "50e904faf005a1d1ac547d8c9c8bebadf2ce40b9f4f2c8b33c149d9011c43950",
+      "claim_id": "M02-FC-007"
+    },
+    {
+      "path": "lessons/07-failover-headroom-and-unit-cost.md",
+      "heading": "Mechanism",
+      "normalized_expression": "failover nominal capacity = normal nominal capacity × f",
+      "expression_sha256": "8ba60c47a6fdce47189640b31c0a1410875447a61f13a4968278e82c115e31de",
+      "claim_id": "M02-FC-007"
+    },
+    {
+      "path": "lessons/07-failover-headroom-and-unit-cost.md",
+      "heading": "Mechanism",
+      "normalized_expression": "net drain rate = recovery completion rate - new arrival rate",
+      "expression_sha256": "d37bbed488202f5bf0867b5ca0c5920e7eecdcf40eeb44ffdfae4af743b90e58",
+      "claim_id": "M02-FC-007"
+    },
+    {
+      "path": "lessons/07-failover-headroom-and-unit-cost.md",
+      "heading": "Worked example",
+      "normalized_expression": "$0.76 / (30 × 3,600) ≈ $0.00000704/useful request",
+      "expression_sha256": "9b33284364dff11c80ff0a143959852551a3840f750afb8ba664151061623b7d",
+      "claim_id": "M02-FC-007"
+    },
+    {
+      "path": "lessons/07-failover-headroom-and-unit-cost.md",
+      "heading": "Worked example",
+      "normalized_expression": "315.63 × 0.75 = 236.72 requests/s",
+      "expression_sha256": "9ce08ffda2bd87c73ec016b0160d9d7a6295c24393a2e31ee0caf1d5fd905f5b",
+      "claim_id": "M02-FC-007"
+    },
+    {
+      "path": "lessons/07-failover-headroom-and-unit-cost.md",
+      "heading": "Worked example",
+      "normalized_expression": "clearance = 90,000 / 200 = 450 s = 7.5 minutes",
+      "expression_sha256": "c577e07991973685ea1187e8595399bcfb73c58f0ccb00d393807f30697251fa",
+      "claim_id": "M02-FC-007"
+    },
+    {
+      "path": "lessons/07-failover-headroom-and-unit-cost.md",
+      "heading": "Worked example",
+      "normalized_expression": "net drain = 200/s",
+      "expression_sha256": "9848c0dbf7938482c8db9f0c0a12f042f9aadbba96e97531326e97ad9432c2d1",
+      "claim_id": "M02-FC-007"
     }
-  ]
+  ],
+  "content_digest": "edcb78de95512ba798377625f03e2842deddd400912659d1ece17dc8d710eec7",
+  "review_attestation": {
+    "reviewer": "course readiness remediation review",
+    "method": "primary-source semantic review",
+    "status": "complete",
+    "content_digest": "edcb78de95512ba798377625f03e2842deddd400912659d1ece17dc8d710eec7",
+    "scope_note": "All tracked learner-facing prose, exercises, answers, assessment contracts, synthetic fixtures, laboratory documentation, implementation, and configuration in this module were inventoried; substantive claims were checked against the named source boundaries."
+  }
 }

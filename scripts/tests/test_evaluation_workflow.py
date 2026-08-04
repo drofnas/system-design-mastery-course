@@ -14,6 +14,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import validate_evaluation
 import prepare_evaluation_bundle
 
+ROOT = Path(__file__).resolve().parents[2]
+
 
 class EvaluationWorkflowTests(unittest.TestCase):
     def git(self, root: Path, *args: str) -> str:
@@ -31,7 +33,9 @@ class EvaluationWorkflowTests(unittest.TestCase):
             module / "assessment" / "rubric.md": "# Rubric\n\n## R01: Evidence\n",
             module / "assessment" / "prompt.md": "Return JSON only.\n",
             module / "assessment" / "remediation-map.md": "# Remediation\n",
-            root / "schemas" / "evaluation.schema.json": "{}\n",
+            root / "schemas" / "evaluation.schema.json": (ROOT / "schemas" / "evaluation.schema.json").read_text(),
+            root / "schemas" / "evaluation-attestation.schema.json": (ROOT / "schemas" / "evaluation-attestation.schema.json").read_text(),
+            root / "schemas" / "evaluation-bundle.schema.json": (ROOT / "schemas" / "evaluation-bundle.schema.json").read_text(),
             root / "reports" / "submission.md": "# Frozen evidence\n",
         }
         for path, content in paths.items():
@@ -60,6 +64,9 @@ class EvaluationWorkflowTests(unittest.TestCase):
         contract_path = "modules/01/module.json"
         rubric_path = "modules/01/assessment/rubric.md"
         remediation_path = "modules/01/assessment/remediation-map.md"
+        evaluation_schema_path = "schemas/evaluation.schema.json"
+        attestation_schema_path = "schemas/evaluation-attestation.schema.json"
+        bundle_schema_path = "schemas/evaluation-bundle.schema.json"
         for path in (files / artifact_path, files / contract_path, files / rubric_path, files / remediation_path):
             path.parent.mkdir(parents=True, exist_ok=True)
         (files / artifact_path).write_text("# Evidence\n\nFrozen learner evidence.\n")
@@ -67,6 +74,9 @@ class EvaluationWorkflowTests(unittest.TestCase):
         (files / contract_path).write_text(json.dumps(manifest))
         (files / rubric_path).write_text("# Rubric\n\n## R01: Evidence\n")
         (files / remediation_path).write_text("# Remediation\n\nLessons 1–2 and EX-01–EX-02.\n")
+        for relative in (evaluation_schema_path, attestation_schema_path, bundle_schema_path):
+            (files / relative).parent.mkdir(parents=True, exist_ok=True)
+            (files / relative).write_text((ROOT / relative).read_text())
         structural = bundle / "structural-validation.json"
         structural.write_text(json.dumps({"exit_code": 0}))
         def record(path: str, role: str, file_path: Path) -> dict[str, str]:
@@ -76,10 +86,18 @@ class EvaluationWorkflowTests(unittest.TestCase):
             record(contract_path, "contract", files / contract_path),
             record(remediation_path, "remediation", files / remediation_path),
             record(rubric_path, "rubric", files / rubric_path),
+            record(evaluation_schema_path, "evaluation_schema", files / evaluation_schema_path),
+            record(attestation_schema_path, "attestation_schema", files / attestation_schema_path),
+            record(bundle_schema_path, "bundle_schema", files / bundle_schema_path),
             record("structural-validation.json", "structural_validation", structural),
         ]
         bundle_sha = hashlib.sha256(json.dumps(records, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
-        bundle_manifest = {"module": "M01", "artifact_commit": "1" * 40, "bundle_sha256": bundle_sha, "structural_validation_passed": True, "files": records}
+        bundle_manifest = {
+            "schema_version": "2.0", "module": "M01", "artifact_commit": "1" * 40,
+            "bundle_sha256": bundle_sha, "structural_validation_passed": True, "files": records,
+            "evaluator_instruction": "Return exactly one JSON object conforming to the included evaluation schema.",
+            "completion_instruction": "Freeze learner work before evaluation and disclose whether review was self or independent.",
+        }
         (bundle / "bundle-manifest.json").write_text(json.dumps(bundle_manifest))
         score = 3 if result_band == "Pass" else 2
         gates = [{"id": f"G{number:02d}", "passed": True, "evidence": [f"{artifact_path}#Evidence: frozen"]} for number in range(1, 7)]
@@ -93,7 +111,15 @@ class EvaluationWorkflowTests(unittest.TestCase):
         }
         result_path = root / "result.json"
         result_path.write_text(json.dumps(result))
-        attestation = {"schema_version": "1.0", "module": "M01", "bundle_sha256": bundle_sha, "review_mode": mode, "reviewer": "test", "evaluated_at": "2026-08-04T00:00:00Z", "formal": mode != "self"}
+        completion_status = (
+            "in_progress" if result_band != "Pass"
+            else ("solo_complete" if mode == "self" else "independently_validated")
+        )
+        attestation = {
+            "schema_version": "2.0", "module": "M01", "bundle_sha256": bundle_sha,
+            "review_mode": mode, "reviewer": "test", "evaluated_at": "2026-08-04T00:00:00Z",
+            "completion_status": completion_status,
+        }
         attestation_path = root / "attestation.json"
         attestation_path.write_text(json.dumps(attestation))
         return temporary, bundle, result_path, attestation_path, root / "report.md"
@@ -102,12 +128,37 @@ class EvaluationWorkflowTests(unittest.TestCase):
         temporary, bundle, result, attestation, report = self.fixture()
         self.addCleanup(temporary.cleanup)
         checked = validate_evaluation.validate("M01", bundle, result, report, attestation)
-        self.assertTrue(checked["formal"])
-        self.assertIn("**Status:** FORMAL", report.read_text())
+        self.assertEqual(checked["completion_status"], "independently_validated")
+        self.assertIn("**Status:** INDEPENDENTLY VALIDATED", report.read_text())
 
-    def test_self_score_cannot_pass(self) -> None:
+    def test_self_pass_establishes_disclosed_solo_completion(self) -> None:
         temporary, bundle, result, attestation, report = self.fixture(mode="self")
         self.addCleanup(temporary.cleanup)
+        checked = validate_evaluation.validate("M01", bundle, result, report, attestation)
+        self.assertEqual(checked["completion_status"], "solo_complete")
+        self.assertIn("SELF-ATTESTED, NOT INDEPENDENTLY REVIEWED", report.read_text())
+
+    def test_schema_rejects_missing_extra_and_bad_format_fields(self) -> None:
+        temporary, bundle, result, attestation, report = self.fixture()
+        self.addCleanup(temporary.cleanup)
+        original = json.loads(result.read_text())
+        for mutate in (
+            lambda row: row.pop("confidence"),
+            lambda row: row.update({"invented": True}),
+            lambda row: row.update({"evaluated_at": "not-a-date"}),
+        ):
+            data = json.loads(json.dumps(original))
+            mutate(data)
+            result.write_text(json.dumps(data))
+            with self.assertRaisesRegex(validate_evaluation.EvaluationError, "published schema"):
+                validate_evaluation.validate("M01", bundle, result, report, attestation)
+
+    def test_completion_status_cannot_overclaim_review(self) -> None:
+        temporary, bundle, result, attestation, report = self.fixture(mode="self")
+        self.addCleanup(temporary.cleanup)
+        data = json.loads(attestation.read_text())
+        data["completion_status"] = "independently_validated"
+        attestation.write_text(json.dumps(data))
         with self.assertRaises(validate_evaluation.EvaluationError):
             validate_evaluation.validate("M01", bundle, result, report, attestation)
 

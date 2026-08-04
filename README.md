@@ -99,7 +99,7 @@ you apply them independently.
 5. Continue Module 1 through its Week 4 RFC, defense, and assessment.
 
 The baseline is evidence of initial judgment. Once tagged, it must never be
-edited. Revised designs belong in new Week 24, Week 48, and Week 72 files.
+edited. Revised designs belong in new Week 12, Week 24, Week 48, and Week 72 files.
 
 ## Standard cadence
 

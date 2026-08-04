@@ -34,7 +34,8 @@ Record a 12–15 minute defense and answer:
 ## Dissent and teach-back
 
 Record the strongest disagreement, shared driver, evidence requested, owner/date,
-resolution or open status, and one example of another team applying the method.
+resolution or open status, and one frozen role-based example applying the method
+to a different stack. Optional team feedback is recorded separately.
 
 ## Evaluation and remediation
 

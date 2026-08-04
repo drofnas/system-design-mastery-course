@@ -52,9 +52,10 @@ canaries one museum, expands by cohort, and can drain back to the prior version.
 
 ## Guided practice
 
-Complete EX-17 and EX-18. Conduct a 20-minute defense with one reviewer arguing
-for managed service and another for split deployments. Record the strongest
-dissent, response, unresolved risk, owner, and due date.
+Complete EX-17 and EX-18. Conduct a 20-minute defense using the frozen
+solo-review packet, answering once from the managed-service alternative and once
+from the split-deployment alternative. Record the strongest dissent, response,
+unresolved risk, owner, and due date. Live reviewers are optional.
 
 ## Self-check
 

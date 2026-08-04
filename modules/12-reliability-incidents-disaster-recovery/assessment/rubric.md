@@ -92,7 +92,9 @@ failed repaired invariants invalidate every recovery claim.
 - **3:** postmortem, DR review, Gate 4, revision, and defense cover alternatives, risk, cost, owners, dissent, and remediation.
 - A passing decision also includes A12 as a distinct recovery-tier ADR linked
   to, but not substituted by, the postmortem and DR review.
-- **4:** cross-team review resolves disagreement and transfers consensus-to-recovery reasoning to another stack.
+- **4:** the frozen role-based transfer exercise resolves disagreement and
+  transfers consensus-to-recovery reasoning to another stack. Optional team
+  review upgrades attestation, not score.
 
 ## Result thresholds
 

@@ -51,8 +51,9 @@ select Northstar's runtime.
 
 Deliver a ten-minute review: two minutes on workload and invariants, three on
 execution evidence, two on operations/security/cost, two on migration and
-reversal, and one on uncertainty. Have reviewers challenge a metric, failure,
-team dependency, and boundary. Record what changed.
+reversal, and one on uncertainty. Use the frozen solo-review packet to challenge
+a metric, failure, team dependency, and boundary. Record what changed. A live
+panel is optional.
 
 ## Self-check
 

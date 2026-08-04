@@ -52,7 +52,7 @@ task; record the substitution.
 
 ### RES-03: Addressing Cascading Failures
 
-- **Author/publisher:** Mike Ulrich and Google SRE contributors; Google
+- **Author/publisher:** Google Site Reliability Engineering
 - **URL:** https://sre.google/sre-book/addressing-cascading-failures/
 - **Type/status:** practitioner handbook chapter; Required
 - **Access:** free

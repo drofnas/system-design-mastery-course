@@ -81,7 +81,7 @@ Use the [Week 59 worksheet](worksheets/week-59-runtime-failure-matrix.md).
 | Work | Time |
 |---|---:|
 | Lesson 8, Discord case, and EX-18 | 1.5 h |
-| Two comparison reports and runtime-selection ADR | 3 h |
+| Runtime comparison, performance, internals, and selection ADR | 3 h |
 | Defense and module evaluation | 1.5 h |
 | Four-part Gate 5 | 3.5 h |
 | Remediation and learning log | 1.5 h |
@@ -115,7 +115,7 @@ studying the mechanisms.
   a language property.
 - Preserve predictions and raw results. Corrections belong in dated addenda.
 
-This module contributes two runtime-comparison reports, the course's third
+This module contributes one runtime-comparison report, the course's third
 source-code internals review, one ADR, one failure matrix, one performance
 investigation, one Gate 5 submission, and one recorded teach-back.
 
@@ -146,4 +146,4 @@ produce replacement graded answers, or answer during the defense.
 - Use the [provider-neutral evaluation workflow](../../EVALUATION_GUIDE.md) only after learner evidence is committed.
 - Use the [sealed local gate workflow](../../SOLO_GATE_GUIDE.md) when a course gate applies. Human review is optional.
 
-Self-scoring is provisional and cannot establish Pass. Synthetic lab values are not production measurements.
+A frozen self-evaluation may establish **Solo Complete**; independent human or LLM review may establish **Independently Validated**. Synthetic lab values are not production measurements.

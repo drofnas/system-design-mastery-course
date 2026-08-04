@@ -552,7 +552,7 @@
   "resources": [
     {
       "id": "RES-01",
-      "title": "Deep Learning: Chapters 2-4 bounded sections",
+      "title": "Deep Learning",
       "author_or_publisher": "Ian Goodfellow, Yoshua Bengio, Aaron Courville / MIT Press",
       "type": "free online textbook",
       "url": "https://www.deeplearningbook.org/",
@@ -564,7 +564,7 @@
       "assignment": "Read Chapter 2 Sections 2.1-2.5, Chapter 3 Sections 3.1-3.4 and 3.13, and Chapter 4 Sections 4.1-4.3; reproduce one matrix, entropy, and gradient calculation.",
       "last_verified": "2026-08-03",
       "text_alternative": "lessons/01-mathematics-for-inference.md",
-      "verified_title": "Deep Learning: Chapters 2-4 bounded sections",
+      "verified_title": "Deep Learning",
       "verified_publisher": "Ian Goodfellow, Yoshua Bengio, Aaron Courville / MIT Press",
       "verification_method": "HTTP GET plus primary-source metadata comparison",
       "final_url": "https://www.deeplearningbook.org/",
@@ -755,7 +755,7 @@
       "required": true,
       "template_path": "modules/17-model-foundations-inference-systems/worksheets/week-66-inference-build.md",
       "submission_path": "reports/module-17-inference-conformance-and-internals.md",
-      "portfolio_category": "runtime_comparison"
+      "portfolio_category": "source_code_internals_review"
     },
     {
       "id": "A04",
@@ -967,6 +967,26 @@
       "id": "L08",
       "path": "lessons/08-atlas-inference-decision.md",
       "estimated_minutes": 30
+    }
+  ],
+  "citation_catalog": [
+    {
+      "id": "CIT-01",
+      "title": "The tokenization pipeline",
+      "author_or_publisher": "Hugging Face",
+      "type": "official maintainer documentation",
+      "url": "https://huggingface.co/docs/tokenizers/python/latest/pipeline.html",
+      "required": true,
+      "access": "free",
+      "purpose": "Document normalization, pre-tokenization, vocabulary-to-ID mapping, and special-token post-processing as distinct tokenizer inputs to a model.",
+      "reading_boundary": "Read Normalization, Pre-Tokenization, The Model, and Post-Processing; examples describe this maintained library and support the general need to bind tokenizer configuration to model inputs.",
+      "last_verified": "2026-08-04",
+      "text_alternative": "lessons/02-tokens-embeddings-attention.md",
+      "verified_title": "The tokenization pipeline",
+      "verified_publisher": "Hugging Face",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://huggingface.co/docs/tokenizers/python/latest/pipeline.html",
+      "verification_status": "verified"
     }
   ]
 }

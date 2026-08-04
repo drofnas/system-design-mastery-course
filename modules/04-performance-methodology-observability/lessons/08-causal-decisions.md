@@ -51,11 +51,11 @@ the hot path elsewhere reverses the decision.
 
 ## Guided practice
 
-Complete EX-14 and EX-15. Ask a reviewer to challenge the strongest assumption
-and record the evidence needed to resolve disagreement. If no reviewer is
-available, use the scripted solo-review packet, answer without live AI, freeze
-the responses, and request provider-neutral critique only afterward. Disclose
-that the solo path is weaker portfolio evidence than human review.
+Complete EX-14 and EX-15. Use the scripted solo-review packet to challenge the
+strongest assumption, answer without live AI, record the evidence needed to
+resolve disagreement, and freeze the responses. That record completes the solo
+teach-back. A human reviewer or provider-neutral LLM may critique the frozen
+record afterward as optional stronger portfolio evidence.
 
 ## Self-check
 

@@ -78,7 +78,7 @@ task; record the substitution.
 
 ### RES-05: Addressing Cascading Failures
 
-- **Author/publisher:** Mike Ulrich and Google SRE contributors
+- **Author/publisher:** Google Site Reliability Engineering
 - **URL:** https://sre.google/sre-book/addressing-cascading-failures/
 - **Type/status:** practitioner book chapter; Required
 - **Access:** free
@@ -104,7 +104,7 @@ task; record the substitution.
 
 ### RES-06: Metastable Failures in the Wild
 
-- **Author/publisher:** L. Huang, M. Magnusson, A. Baldini, S. Treichler, M. D. Ernst; USENIX
+- **Author/publisher:** Lexiang Huang et al.; USENIX
 - **URL:** https://www.usenix.org/system/files/osdi22-huang-lexiang.pdf
 - **Type/status:** peer-reviewed research paper; Optional enrichment
 - **Access:** free

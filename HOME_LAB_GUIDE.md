@@ -140,9 +140,10 @@ cache, but bounded trial data belongs in the output path the learner selected.
 
 Human review is preferred and is the stronger portfolio signal. A learner
 working alone may instead prepare a scripted five-question review, record the
-answers without live AI assistance, freeze the artifact and responses, and then
-request provider-neutral LLM critique. Disclose that substitution and its
-limitations. See `templates/solo-review-record-template.md`.
+answers without live AI assistance, and freeze the artifact and responses. That
+frozen record completes the solo teach-back. Provider-neutral LLM critique may
+be requested afterward as an optional independent upgrade. Disclose the review
+mode and its limitations. See `templates/solo-review-record-template.md`.
 
 Modules 4 and 5 also provide `blind-solo-prepare` and `blind-solo-reveal`.
 Their `.sblind` envelope provides accidental-exposure protection; it is not

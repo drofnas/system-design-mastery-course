@@ -154,6 +154,71 @@ class SoloGateTests(unittest.TestCase):
             with self.assertRaises(solo_gate.GateError):
                 solo_gate.check(challenge, reviews / "reveal.json", repair_path, reviews / "wrong-check.json")
 
+    def test_all_six_gates_complete_locally_with_broken_and_repaired_evidence(self) -> None:
+        temporary, root = self.repository()
+        self.addCleanup(temporary.cleanup)
+        with patch.object(solo_gate, "ROOT", root):
+            for number in range(1, 7):
+                gate = f"G{number:02d}"
+                reviews = root / "reviews" / gate
+                challenge_path = reviews / "challenge.json"
+                alternate_path = reviews / "alternate.json"
+                challenge = solo_gate.prepare(gate, challenge_path, 100 + number)
+                alternate = solo_gate.prepare(gate, alternate_path, 200 + number)
+                self.assertNotEqual(challenge["challenge_id"], alternate["challenge_id"])
+                with self.assertRaisesRegex(solo_gate.GateError, "output already exists"):
+                    solo_gate.prepare(gate, challenge_path, 100 + number)
+
+                diagnosis_path = reviews / "diagnosis.md"
+                diagnosis_path.write_text(
+                    f"# {gate} frozen diagnosis\n\nThe first invariant follows from the recorded causal evidence.\n",
+                    encoding="utf-8",
+                )
+                with self.assertRaises(solo_gate.GateError):
+                    solo_gate.reveal(
+                        challenge_path, diagnosis_path, "HEAD", reviews / "precommit-reveal.json"
+                    )
+                self.git(root, "add", f"reviews/{gate}")
+                self.git(root, "commit", "-qm", f"freeze {gate}")
+                reveal_path = reviews / "reveal.json"
+                revealed = solo_gate.reveal(challenge_path, diagnosis_path, "HEAD", reveal_path)
+
+                evidence_path = reviews / "raw-evidence.json"
+                evidence_path.write_text(
+                    json.dumps({"synthetic": True, "gate": gate}) + "\n", encoding="utf-8"
+                )
+                repaired_measurements = {
+                    row["metric"]: row["value"] for row in revealed["acceptance_constraints"]
+                }
+                broken_measurements = {
+                    row["metric"]: (
+                        row["value"] + 1 if row["operator"] in {"<=", "=="} else row["value"] - 1
+                    )
+                    for row in revealed["acceptance_constraints"]
+                }
+                repair = {
+                    "schema_version": "1.0",
+                    "gate": gate,
+                    "challenge_id": revealed["challenge_id"],
+                    "challenge_sha256": revealed["challenge_sha256"],
+                    "workload_sha256": revealed["workload_sha256"],
+                    "measurements": broken_measurements,
+                    "evidence_paths": [f"reviews/{gate}/raw-evidence.json"],
+                }
+                repair_path = reviews / "repair.json"
+                repair_path.write_text(json.dumps(repair), encoding="utf-8")
+                broken = solo_gate.check(
+                    challenge_path, reveal_path, repair_path, reviews / "broken-check.json"
+                )
+                self.assertFalse(broken["passed"])
+
+                repair["measurements"] = repaired_measurements
+                repair_path.write_text(json.dumps(repair), encoding="utf-8")
+                repaired = solo_gate.check(
+                    challenge_path, reveal_path, repair_path, reviews / "repaired-check.json"
+                )
+                self.assertTrue(repaired["passed"])
+
 
 if __name__ == "__main__":
     unittest.main()

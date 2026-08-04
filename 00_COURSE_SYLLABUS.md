@@ -938,6 +938,15 @@ Score each major artifact from 0 to 4 in each category.
 
 The scores guide revision. The evidence and your ability to defend it matter more than arithmetic.
 
+### Completion attestation
+
+A frozen self-evaluation that meets the passing standard establishes **Solo
+Complete**. It is self-attested and must not be represented as independent
+review. A capable human or LLM may later evaluate the identical immutable
+bundle; a passing independent record establishes **Independently Validated**.
+Independent review is stronger portfolio evidence but is not required to
+complete the course.
+
 ## 14. Required portfolio
 
 By Week 72, your portfolio should contain:

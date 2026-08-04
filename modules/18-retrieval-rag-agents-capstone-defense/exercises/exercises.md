@@ -76,8 +76,15 @@ Run all 16 scenarios. Verify shared workload/seed/corpus hashes, exactly one con
 
 ## EX-19: Adversarial architecture defense
 
-Have a peer challenge the independent commerce design on product value, retrieval quality, tenant scope, unsafe tools, replay, provider failure, cost, on-call ownership, and migration. Classify every answer as evidence, inference, assumption, or unknown.
+Use the frozen solo-review packet to challenge the independent commerce design
+on product value, retrieval quality, tenant scope, unsafe tools, replay,
+provider failure, cost, on-call ownership, and migration. Classify every answer
+as evidence, inference, assumption, or unknown. A peer is optional.
 
 ## EX-20: Decision teach-back
 
-Deliver a ten-minute explanation to an engineer outside the project. Ask them to restate the decision, strongest rejected alternative, highest-risk invariant, migration trigger, and owner. Revise the explanation, not the frozen baseline.
+Deliver a ten-minute explanation as a recording or written transcript, then use
+the frozen solo-review packet to restate the decision, strongest rejected
+alternative, highest-risk invariant, migration trigger, and owner. Revise the
+explanation, not the frozen baseline. An engineer outside the project may
+perform the restatement as optional stronger transfer evidence.

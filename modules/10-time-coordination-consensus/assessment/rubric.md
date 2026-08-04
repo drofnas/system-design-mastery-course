@@ -84,7 +84,9 @@ authority, corrupt snapshots, or disjoint membership can cause irreversible harm
 - **1:** preference without shared drivers, operated contract, alternatives, or owners.
 - **2:** decision exists but cost, security, telemetry, quorum loss, migration, rollback, dissent, or reversal is weak.
 - **3:** evidence-driven RFC and defense cover properties, alternatives, operation, security, cost, migration, owners, dissent, and remediation.
-- **4:** cross-team review resolves disagreement and another team applies the method to a different stack with measured reversal thresholds.
+- **4:** the frozen role-based transfer exercise resolves disagreement and
+  applies the method to a different stack with measured reversal thresholds.
+  Optional team review upgrades attestation, not score.
 
 ## Result thresholds
 

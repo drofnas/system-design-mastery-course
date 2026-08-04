@@ -92,5 +92,6 @@ fairness, cost, operability, migration, and reversal evidence.
 ## EX-16: Defense and migration
 
 Draft a telemetry-first rollout, mixed-client compatibility rule, canary gate,
-rollback trigger, exception expiry, and decommission condition. Rehearse answers
-to challenges from a dependency owner, security reviewer, finance partner, and on-call lead.
+rollback trigger, exception expiry, and decommission condition. Use the frozen
+solo-review packet to answer challenges from dependency-owner, security,
+finance, and on-call perspectives. A live panel is optional.

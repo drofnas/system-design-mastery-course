@@ -12,6 +12,8 @@ import sys
 from pathlib import Path
 from typing import Any
 
+from schema_contract import SchemaContractError, validate_instance, validate_schema_contract
+
 
 ROOT = Path(__file__).resolve().parents[1]
 LOCAL_LINK = re.compile(r"\]\((?!https?://|mailto:|#)([^)]+)\)")
@@ -27,7 +29,8 @@ ALLOWED_MASTERY = {
 }
 ALLOWED_PORTFOLIO_CATEGORIES = {
     "adr", "rfc", "controlled_incident_postmortem", "capacity_cost_model",
-    "performance_investigation", "failure_matrix", "threat_model", "dr_exercise",
+    "performance_investigation", "failure_matrix", "source_code_internals_review",
+    "threat_model", "dr_exercise",
     "migration_plan", "runtime_comparison", "teach_back", "capstone",
     "implementation", "model", "learning_log", "evaluation",
 }
@@ -298,6 +301,35 @@ def validate_resources(
     required_ids = {str(row.get("id")) for row in resources if isinstance(row, dict) and row.get("required")}
     if required_ids != EXPECTED_REQUIRED_SPINE.get(str(manifest.get("id"))):
         fail(errors, f"{manifest.get('id')}: required resource spine differs from the published course contract")
+    citations = manifest.get("citation_catalog")
+    if not isinstance(citations, list):
+        fail(errors, f"{manifest.get('id')}: citation_catalog must be an array")
+        return
+    citation_fields = {
+        "id", "title", "author_or_publisher", "type", "url", "required", "access",
+        "purpose", "reading_boundary", "last_verified", "text_alternative",
+        "verified_title", "verified_publisher", "verification_method", "final_url",
+        "verification_status",
+    }
+    seen_ids = {str(row.get("id")) for row in resources if isinstance(row, dict)}
+    for citation in citations:
+        if not isinstance(citation, dict):
+            fail(errors, f"{manifest.get('id')}: citation records must be objects")
+            continue
+        missing = citation_fields - citation.keys()
+        if missing:
+            fail(errors, f"{manifest.get('id')} {citation.get('id')}: missing citation fields {sorted(missing)}")
+        identifier = str(citation.get("id"))
+        if identifier in seen_ids or not re.fullmatch(r"CIT-\d{2}", identifier):
+            fail(errors, f"{manifest.get('id')}: citation IDs must be unique CIT-NN values")
+        seen_ids.add(identifier)
+        if citation.get("required") and citation.get("access") != "free":
+            fail(errors, f"{manifest.get('id')} {identifier}: required citations must be free")
+        if not str(citation.get("url", "")).startswith("https://"):
+            fail(errors, f"{manifest.get('id')} {identifier}: citation URL must use HTTPS")
+        fallback = citation.get("text_alternative")
+        if not fallback or not (module_root / str(fallback)).is_file():
+            fail(errors, f"{manifest.get('id')} {identifier}: citation fallback is missing")
 
 
 def validate_time_contract(module_root: Path, manifest: dict[str, Any], errors: list[str]) -> None:
@@ -1905,6 +1937,40 @@ def validate_portfolio_contract(manifests: list[dict[str, Any]], errors: list[st
     if categories.get("controlled_incident_postmortem", 0) != 4:
         fail(errors, "portfolio: expected exactly four controlled incident postmortems, "
              f"found {categories.get('controlled_incident_postmortem', 0)}")
+    minimums = {
+        "rfc": 6,
+        "capacity_cost_model": 3,
+        "performance_investigation": 6,
+        "failure_matrix": 6,
+        "source_code_internals_review": 3,
+        "runtime_comparison": 2,
+        "threat_model": 1,
+        "dr_exercise": 2,
+        "migration_plan": 2,
+        "teach_back": 6,
+        "capstone": 1,
+    }
+    for category, minimum in minimums.items():
+        if categories.get(category, 0) < minimum:
+            fail(
+                errors,
+                f"portfolio: {category} requires at least {minimum} unique artifacts, "
+                f"found {categories.get(category, 0)}",
+            )
+    pinned_categories = {
+        ("M03", "A03"): "source_code_internals_review",
+        ("M07", "A04"): "source_code_internals_review",
+        ("M15", "A03"): "runtime_comparison",
+        ("M15", "A06"): "performance_investigation",
+        ("M15", "A07"): "source_code_internals_review",
+        ("M17", "A03"): "source_code_internals_review",
+    }
+    for manifest in manifests:
+        for artifact in manifest.get("artifacts", []):
+            key = (manifest.get("id"), artifact.get("id"))
+            expected = pinned_categories.get(key)
+            if expected and artifact.get("portfolio_category") != expected:
+                fail(errors, f"portfolio: {key[0]} {key[1]} must remain {expected}")
 
 
 def validate_revision_chronology(errors: list[str]) -> None:
@@ -1932,8 +1998,65 @@ def validate_revision_chronology(errors: list[str]) -> None:
         text = markdown.read_text(encoding="utf-8")
         if "Weeks 12, 24, 48, and 72" not in text:
             fail(errors, f"{relative(markdown)}: canonical revision chronology is not published")
-        if re.search(r"Weeks\s+24,\s*48,\s*and\s*72", text):
+    readme = ROOT / "README.md"
+    readme_text = readme.read_text(encoding="utf-8") if readme.is_file() else ""
+    if not re.search(r"Week 12,\s*Week 24,\s*Week 48,\s*and Week 72", readme_text):
+        fail(errors, "README.md: canonical Week 12/24/48/72 revision chronology is not published")
+    obsolete = re.compile(
+        r"(?:Weeks?\s+24,\s*48,\s*and\s*72|Week 24,\s*Week 48,\s*and Week 72)"
+    )
+    for markdown in sorted(ROOT.rglob("*.md")):
+        if {".git", "node_modules", "target", "dist"} & set(markdown.parts):
+            continue
+        lines = markdown.read_text(encoding="utf-8", errors="replace").splitlines()
+        if any(obsolete.search(line) and "Week 12" not in line and "Weeks 12" not in line for line in lines):
             fail(errors, f"{relative(markdown)}: obsolete three-revision chronology remains")
+
+
+def validate_solo_completion_contract(module_roots: list[Path], errors: list[str]) -> None:
+    """Keep Solo Complete distinct from the optional independent upgrade."""
+
+    paths = [
+        ROOT / "00_COURSE_SYLLABUS.md",
+        ROOT / "MODULE_STANDARD.md",
+        ROOT / "EVALUATION_GUIDE.md",
+        ROOT / "SOLO_GATE_GUIDE.md",
+    ]
+    for module_root in module_roots:
+        paths.extend((module_root / "README.md", module_root / "assessment" / "README.md"))
+    forbidden = re.compile(
+        r"self.{0,40}(?:cannot|can't|may not).{0,30}pass|"
+        r"self[- ]scor(?:e|ing).{0,50}provisional|"
+        r"cannot produce a formal pass|independent.{0,40}required for formal completion",
+        re.IGNORECASE,
+    )
+    for path in paths:
+        if not path.is_file():
+            fail(errors, f"{relative(path)}: solo-completion contract document is missing")
+            continue
+        text = path.read_text(encoding="utf-8")
+        normalized = " ".join(text.replace("**", "").split())
+        if "Solo Complete" not in normalized or "Independently Validated" not in normalized:
+            fail(errors, f"{relative(path)}: must distinguish Solo Complete from Independently Validated")
+        if forbidden.search(text):
+            fail(errors, f"{relative(path)}: contains the obsolete reviewer-required completion contract")
+
+    partner_required = re.compile(
+        r"partner-held|ask the partner|one LLM or human evaluation|"
+        r"with at least one engineer outside|have a peer challenge|"
+        r"give.{0,50}defense to a peer|conduct.{0,50}defense with one reviewer|"
+        r"then obtain and disclose provider-neutral critique",
+        re.IGNORECASE | re.DOTALL,
+    )
+    authored_paths: set[Path] = set(paths)
+    for module_root in module_roots:
+        for markdown in module_root.rglob("*.md"):
+            parts = set(markdown.relative_to(module_root).parts)
+            if "calibration" not in parts and "legacy" not in parts:
+                authored_paths.add(markdown)
+    for path in sorted(authored_paths):
+        if path.is_file() and partner_required.search(path.read_text(encoding="utf-8", errors="replace")):
+            fail(errors, f"{relative(path)}: required learner work still depends on a partner or external reviewer")
 
 
 def validate_solo_gate_global_contract(errors: list[str]) -> None:
@@ -2005,6 +2128,9 @@ def main() -> int:
         ROOT / "schemas" / "solo-gate-reveal.schema.json",
         ROOT / "schemas" / "solo-gate-repair.schema.json",
         ROOT / "schemas" / "evaluation-attestation.schema.json",
+        ROOT / "schemas" / "evaluation-bundle.schema.json",
+        ROOT / "schemas" / "course-resources.schema.json",
+        ROOT / "schemas" / "resource-verification-attestations.schema.json",
         ROOT / "schemas" / "factual-claims.schema.json",
         ROOT / "schemas" / "network-scenario.schema.json",
         ROOT / "schemas" / "network-trial.schema.json",
@@ -2037,7 +2163,35 @@ def main() -> int:
         ROOT / "schemas" / "retrieval-agent-scenario.schema.json",
         ROOT / "schemas" / "retrieval-agent-trial.schema.json",
     ):
-        load_json(path, errors)
+        schema = load_json(path, errors)
+        if isinstance(schema, dict):
+            try:
+                validate_schema_contract(schema, label=relative(path))
+            except SchemaContractError as error:
+                fail(errors, str(error))
+
+    course_resources = load_json(ROOT / "course-resources.json", errors)
+    course_resource_schema = load_json(ROOT / "schemas" / "course-resources.schema.json", errors)
+    if isinstance(course_resources, dict) and isinstance(course_resource_schema, dict):
+        try:
+            validate_instance(course_resources, course_resource_schema, label="course-resources.json")
+        except SchemaContractError as error:
+            fail(errors, str(error))
+        for resource in course_resources.get("resources", []):
+            fallback = ROOT / str(resource.get("text_alternative", ""))
+            if not fallback.is_file():
+                fail(errors, f"{resource.get('id')}: global resource fallback is missing")
+
+    resource_attestations = load_json(ROOT / "resource-verification-attestations.json", errors)
+    resource_attestation_schema = load_json(ROOT / "schemas" / "resource-verification-attestations.schema.json", errors)
+    if isinstance(resource_attestations, dict) and isinstance(resource_attestation_schema, dict):
+        try:
+            validate_instance(resource_attestations, resource_attestation_schema, label="resource-verification-attestations.json")
+        except SchemaContractError as error:
+            fail(errors, str(error))
+        keys = [row.get("resource_key") for row in resource_attestations.get("records", [])]
+        if len(keys) != len(set(keys)):
+            fail(errors, "resource-verification-attestations.json: resource keys must be unique")
 
     roots = selected_module_roots(args.module, errors)
     if not roots:
@@ -2070,6 +2224,7 @@ def main() -> int:
     validate_home_lab_global_contract(errors)
     validate_portfolio_contract(manifests, errors)
     validate_revision_chronology(errors)
+    validate_solo_completion_contract(roots, errors)
     validate_solo_gate_global_contract(errors)
     validate_factual_contracts(roots, errors)
     validate_local_links(errors)

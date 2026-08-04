@@ -21,3 +21,5 @@ preference. Use only the submission, assessment contract, rubric, and schema.
 Every evidence string uses `path#heading`. `artifact_commit` identifies the
 submission; `baseline_tag` may be null. Preserve defensible alternatives and
 reasonable uncertainty.
+Return exactly one JSON object conforming to the schema. Do not append Markdown
+or any text outside that object.

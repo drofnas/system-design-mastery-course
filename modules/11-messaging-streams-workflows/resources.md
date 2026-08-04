@@ -91,7 +91,7 @@ task; record the substitution.
 
 ### RES-05: Sagas
 
-- **Author/publisher:** Hector Garcia-Molina and Kenneth Salem; Princeton University
+- **Author/publisher:** Princeton University
 - **URL:** https://www.cs.princeton.edu/research/techreps/598
 - **Type/status:** original research paper; Optional enrichment
 - **Access:** free

@@ -61,3 +61,9 @@ The reference model cannot prove production isolation, cryptographic strength,
 physical deletion, real provenance, legal compliance, human response, or
 adaptive-adversary resistance. Claims beyond the observed environment must be
 scoped as uncertainty and assigned to a verification owner.
+
+## Completion attestation
+
+A frozen self-evaluated Pass establishes **Solo Complete** and remains
+self-attested. A passing independent human or LLM review of the same immutable
+bundle establishes **Independently Validated**.

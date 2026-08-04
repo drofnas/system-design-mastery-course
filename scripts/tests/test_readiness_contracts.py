@@ -104,6 +104,34 @@ class ReadinessContractTests(unittest.TestCase):
         validate_course.validate_portfolio_contract(extra, errors)
         self.assertTrue(any("exactly 12 ADRs" in error for error in errors))
 
+        minimum_categories = {
+            "rfc", "capacity_cost_model", "performance_investigation", "failure_matrix",
+            "source_code_internals_review", "runtime_comparison", "threat_model",
+            "dr_exercise", "migration_plan", "teach_back", "capstone",
+        }
+        for category in minimum_categories:
+            substituted = copy.deepcopy(manifests)
+            for manifest in substituted:
+                for artifact in manifest["artifacts"]:
+                    if artifact["portfolio_category"] == category:
+                        artifact["portfolio_category"] = "model"
+            errors = []
+            validate_course.validate_portfolio_contract(substituted, errors)
+            self.assertTrue(any(category in error for error in errors), category)
+
+        m15 = next(manifest for manifest in manifests if manifest["id"] == "M15")
+        categories = {artifact["id"]: artifact["portfolio_category"] for artifact in m15["artifacts"]}
+        self.assertEqual(categories["A03"], "runtime_comparison")
+        self.assertEqual(categories["A06"], "performance_investigation")
+        self.assertEqual(categories["A07"], "source_code_internals_review")
+        for artifact_id in ("A03", "A06", "A07"):
+            regressed = copy.deepcopy(manifests)
+            target = next(manifest for manifest in regressed if manifest["id"] == "M15")
+            next(row for row in target["artifacts"] if row["id"] == artifact_id)["portfolio_category"] = "model"
+            errors = []
+            validate_course.validate_portfolio_contract(regressed, errors)
+            self.assertTrue(errors, artifact_id)
+
     def test_raft_vote_explanation_is_unambiguous(self) -> None:
         text = (ROOT / "modules" / "10-time-coordination-consensus" / "lessons" / "05-raft-election-persistence.md").read_text()
         self.assertIn("`n3` | `(4,11)` | `(4,9)`", text)
@@ -119,6 +147,7 @@ class ReadinessContractTests(unittest.TestCase):
         shutil.copytree(ROOT / "capstone", root / "capstone")
         shutil.copy2(ROOT / "00_COURSE_SYLLABUS.md", root / "00_COURSE_SYLLABUS.md")
         shutil.copy2(ROOT / "HOME_LAB_GUIDE.md", root / "HOME_LAB_GUIDE.md")
+        shutil.copy2(ROOT / "README.md", root / "README.md")
         with patch.object(validate_course, "ROOT", root):
             errors: list[str] = []
             validate_course.validate_revision_chronology(errors)
@@ -128,6 +157,13 @@ class ReadinessContractTests(unittest.TestCase):
             validate_course.validate_revision_chronology(errors)
             self.assertTrue(any("Week 12 revision is missing" in error for error in errors))
 
+        readme = root / "README.md"
+        readme.write_text(readme.read_text().replace("Week 12, ", ""))
+        with patch.object(validate_course, "ROOT", root):
+            errors = []
+            validate_course.validate_revision_chronology(errors)
+            self.assertTrue(any("README.md" in error and "Week 12" in error for error in errors))
+
         shutil.copy2(ROOT / "capstone" / "revisions" / "week-12-gate-01.md", root / "capstone" / "revisions" / "week-12-gate-01.md")
         baseline = root / "capstone" / "baselines" / "week-01-baseline.md"
         baseline.write_text(baseline.read_text().replace("never edit this", "replace this"))
@@ -135,6 +171,38 @@ class ReadinessContractTests(unittest.TestCase):
             errors = []
             validate_course.validate_revision_chronology(errors)
             self.assertTrue(any("immutable" in error for error in errors))
+
+    def test_solo_completion_contract_rejects_a_reviewer_requirement(self) -> None:
+        source_root, _ = self.manifest("M01")
+        temporary = tempfile.TemporaryDirectory()
+        self.addCleanup(temporary.cleanup)
+        root = Path(temporary.name)
+        module_root = root / "modules" / source_root.name
+        (module_root / "assessment").mkdir(parents=True)
+        shutil.copy2(source_root / "README.md", module_root / "README.md")
+        shutil.copy2(source_root / "assessment" / "README.md", module_root / "assessment" / "README.md")
+        for name in ("00_COURSE_SYLLABUS.md", "MODULE_STANDARD.md", "EVALUATION_GUIDE.md", "SOLO_GATE_GUIDE.md"):
+            shutil.copy2(ROOT / name, root / name)
+        with patch.object(validate_course, "ROOT", root):
+            errors: list[str] = []
+            validate_course.validate_solo_completion_contract([module_root], errors)
+            self.assertEqual(errors, [])
+            assessment = module_root / "assessment" / "README.md"
+            assessment.write_text(
+                assessment.read_text() + "\nSelf-scoring is provisional and cannot produce a formal Pass.\n",
+                encoding="utf-8",
+            )
+            errors = []
+            validate_course.validate_solo_completion_contract([module_root], errors)
+            self.assertTrue(any("obsolete reviewer-required" in error for error in errors))
+
+            assessment.write_text(
+                assessment.read_text() + "\nHave a peer challenge the required defense before completion.\n",
+                encoding="utf-8",
+            )
+            errors = []
+            validate_course.validate_solo_completion_contract([module_root], errors)
+            self.assertTrue(any("depends on a partner" in error for error in errors))
 
 
 if __name__ == "__main__":

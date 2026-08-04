@@ -79,11 +79,11 @@ operate streaming, or edge unit cost exceeds the recorded threshold.
 
 Prepare a 12-minute Northstar defense: five minutes for route and authority
 decisions, four for failure/cost/ownership evidence, and three for dissent and
-reversal. Have a reviewer apply the ledger to a non-observatory route and record
-where your explanation fails to transfer. Human transfer review is preferred.
-A solo learner may instead answer the generated five-question packet without
-live AI, freeze the record, then obtain and disclose provider-neutral critique;
-the record must identify the missing independent transfer evidence.
+reversal. Answer the generated five-question packet without live AI, apply its
+challenge to a non-observatory route, record where the explanation fails to
+transfer, and freeze the record. That completes the solo teach-back. Optional
+human or LLM critique may occur only afterward and must be disclosed as a
+separate review mode.
 
 ## Self-check
 

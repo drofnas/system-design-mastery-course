@@ -6,7 +6,8 @@
 - **1:** layer names without client, workload, units, or critical path.
 - **2:** plausible path and estimates with missing overlap, bytes, percentile, or uncertainty.
 - **3:** frozen client/path model quantifies serial exchanges, bytes, BDP, serialization, useful work, percentile, and transfer limits.
-- **4:** sensitivity and correlated journey evidence teach another team when the model transfers.
+- **4:** sensitivity and correlated journey evidence make transfer limits
+  explicit and teach reuse through the frozen role-based exercise.
 
 ## R02: DNS, addressing, routing, and discovery
 
@@ -84,7 +85,9 @@ or unbounded resources can harm users and invalidate evidence.
 - **1:** protocol vocabulary is recited without mechanism.
 - **2:** understandable summary with weak counterexample, uncertainty, or follow-up ownership.
 - **3:** teach-back derives ordering, trust, and failure behavior; handles challenge; records dissent, changed claims, and owners.
-- **4:** another engineer can apply the method to a different stack and identify where evidence stops transferring.
+- **4:** the frozen role-based transfer exercise applies the method to a different
+  stack, identifies where evidence stops transferring, and improves the decision.
+  Optional human application upgrades attestation, not score.
 
 ## Result thresholds
 

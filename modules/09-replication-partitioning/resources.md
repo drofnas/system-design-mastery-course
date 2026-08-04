@@ -92,7 +92,7 @@ task; record the substitution.
 ### RES-03: Brewer's Conjecture and the Feasibility of Consistent, Available, Partition-Tolerant Web Services
 
 - **Author/publisher:** Seth Gilbert and Nancy Lynch; ACM SIGACT
-- **URL:** https://groups.csail.mit.edu/tds/papers/Gilbert/Brewer2.pdf
+- **URL:** https://groups.csail.mit.edu/tds/papers/Gilbert/Brewer6.pdf
 - **Type/status:** original proof; Optional enrichment
 - **Access:** free
 - **Week/time:** Week 33; 45 minutes optional

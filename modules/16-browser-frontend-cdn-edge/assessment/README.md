@@ -61,3 +61,9 @@ The deterministic model proves repository contracts, not browser behavior. One
 pinned Chromium configuration supplies reproducible lab evidence, not universal
 browser, user-population, production CDN, assistive-technology, privacy, or cost
 claims. Field telemetry remains observational and must be analyzed separately.
+
+## Completion attestation
+
+A frozen self-evaluated Pass establishes **Solo Complete** and remains
+self-attested. A passing independent human or LLM review of the same immutable
+bundle establishes **Independently Validated**.

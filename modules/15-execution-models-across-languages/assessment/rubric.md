@@ -88,7 +88,9 @@ Safety-critical because changed work or rewritten trials can manufacture a runti
 - **1:** preferred language without alternatives, evidence, or reversal.
 - **2:** decision exists but uncertainty, no-change, bounded adoption, or teaching transfer is weak.
 - **3:** drivers, alternatives, evidence, dissent, choice, reversals, defense, and revision align.
-- **4:** another engineer applies the method to a different workload and improves it.
+- **4:** the frozen role-based transfer exercise applies the method to a
+  different workload and improves it. Optional human application upgrades
+  attestation, not score.
 
 ## Thresholds
 

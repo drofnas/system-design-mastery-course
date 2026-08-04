@@ -81,6 +81,7 @@ assumptions; identify the policy owner.
 
 ## EX-16: ADR and defense rehearsal
 
-Build a per-operation decision table and answer challenges from data platform,
-security/residency, finance, and on-call reviewers. Record dissent, uncertainty,
-owners, migration/rollback, and one quantified reversal threshold.
+Build a per-operation decision table and answer the frozen solo-review
+challenges from data-platform, security/residency, finance, and on-call
+perspectives. Record dissent, uncertainty, owners, migration/rollback, and one
+quantified reversal threshold. A live panel is optional.

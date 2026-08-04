@@ -14,7 +14,9 @@
 - **1:** org chart and named team without interaction, access, on-call, or succession evidence.
 - **2:** primary ownership exists but cognitive load, temporary interactions, or secondary operation is weak.
 - **3:** flow-of-change, interaction modes, decision rights, access, primary/secondary owners, runbook, and handoff align.
-- **4:** an owner-loss exercise and cross-team review change the design or staffing plan with preserved dissent.
+- **4:** an owner-loss exercise and frozen role-based review change the design or
+  staffing plan with preserved dissent. Optional team review upgrades
+  attestation, not score.
 
 ## R03: Sourcing, platform, and governance
 
@@ -93,7 +95,9 @@ migration appear verified.
 - **1:** target diagram or roadmap without outcomes, alternatives, evidence gates, or stops.
 - **2:** strategy exists but cost, dependencies, dissent, governance, remediation, or decommissioning is weak.
 - **3:** outcome, alternatives, causal increments, staffing, dependencies, cost, gates, dissent, stops, reversals, defense, and revision align.
-- **4:** cross-team review resolves disagreement and another engineer applies the method to a different stack or domain.
+- **4:** the frozen role-based transfer exercise resolves disagreement and
+  applies the method to a different stack or domain. Optional human application
+  upgrades attestation, not score.
 
 ## Result thresholds
 

@@ -26,7 +26,7 @@ task; record the substitution.
 
 ### RES-01: Implementing SLOs
 
-- **Author/publisher:** Steven Thurgood, David Ferguson, Alex Hidalgo, Betsy Beyer; Google SRE
+- **Author/publisher:** Google Site Reliability Engineering
 - **URL:** https://sre.google/workbook/implementing-slos/
 - **Type/status:** practitioner book chapter; Required
 - **Access:** free

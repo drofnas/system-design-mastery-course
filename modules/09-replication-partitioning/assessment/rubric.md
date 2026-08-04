@@ -86,7 +86,9 @@ non-convergence, missing keys, or duplicate owners can cause irreversible harm.
 - **1:** vocabulary recited without storage, transaction, replica, partition, or evidence derivation.
 - **2:** understandable defense with weak hidden practical, portfolio traceability, challenge, dissent, uncertainty, or remediation linkage.
 - **3:** all four Gate 3 parts pass; teach-back derives Modules 7–9 mechanisms, handles four stakeholder views, records changed belief/dissent, and preserves dated remediation.
-- **4:** another team applies the method to a different stack and resolves a cross-module data decision with evidence.
+- **4:** the frozen role-based transfer exercise applies the method to a different
+  stack and resolves a cross-module data decision with evidence. Optional team
+  review upgrades attestation, not score.
 
 ## Result thresholds
 

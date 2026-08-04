@@ -21,9 +21,10 @@ reversal conditions without copying the postmortem or DR report.
 
 ## Defense
 
-Reviewers play product, on-call, data/security, and finance roles. Record each
-challenge, answer, cited evidence, uncertainty, dissent, owner, and follow-up.
-Do not change the workload or failure model to evade a question.
+Use the frozen solo-review packet and answer from product, on-call,
+data/security, and finance perspectives. Record each challenge, answer, cited
+evidence, uncertainty, dissent, owner, and follow-up. Do not change the workload
+or failure model to evade a question. A live panel is optional.
 
 ## Teach-back
 

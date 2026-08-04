@@ -90,7 +90,9 @@ Safety-critical because model-controlled authority can turn untrusted text into 
 - **1:** preferred controls without shared drivers, alternatives, evidence, or owners.
 - **2:** decision exists but cost, privacy, operations, migration, dissent, residual risk, or reversal is weak.
 - **3:** threat model, verification, RFC, defense, alternatives, owners, costs, dissent, remediation, and reversals align.
-- **4:** cross-team review resolves disagreement and transfers the reasoning to another stack or domain.
+- **4:** the frozen role-based transfer exercise resolves disagreement and
+  transfers the reasoning to another stack or domain. Optional team review
+  upgrades attestation, not score.
 
 ## Result thresholds
 

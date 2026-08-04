@@ -46,10 +46,11 @@ dissent, changed claims, follow-ups, owners, and reversal evidence.
 
 ## Part 4: Portfolio and revision review — 60 minutes
 
-Index Modules 4–6 evidence by file heading and commit, then have the independent
-post-freeze evaluator verify the index. Show frozen predictions,
+Index Modules 4–6 evidence by file heading and commit, then validate the index
+through the frozen self-evaluation workflow. Show frozen predictions,
 builds/tests, failure investigations, decisions/revisions, and learning logs.
 Complete `capstone/revisions/week-24-gate-02.md` without editing earlier evidence.
+An optional independent evaluator may later review the identical bundle.
 
 ## Scoring
 

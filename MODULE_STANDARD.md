@@ -173,10 +173,13 @@ semantic source comparison remains a required readiness review.
 ## Provider-neutral semantic evaluation
 
 Learner work is committed before evaluation. The course packages the exact
-commit, required artifacts, structural results, rubric, prompt, schema, and
-remediation map with `scripts/prepare_evaluation_bundle.py`. An independent LLM
-or human returns JSON only; `scripts/validate_evaluation.py` validates it and
-renders Markdown. Self-scoring is provisional and cannot establish Pass.
+commit, required artifacts, structural results, rubric, prompt, schemas, and
+remediation map with `scripts/prepare_evaluation_bundle.py`. A self-evaluation
+that passes the same published rubric and deterministic checks establishes
+**Solo Complete** and must be labeled self-attested, not independent. An
+independent LLM or human can later evaluate the identical bundle; a passing
+record establishes **Independently Validated**. Evaluators return JSON only,
+and `scripts/validate_evaluation.py` validates it and renders Markdown.
 
 ## Definition of ready
 

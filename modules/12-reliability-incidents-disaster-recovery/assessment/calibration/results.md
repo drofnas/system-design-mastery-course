@@ -4,13 +4,13 @@ The deterministic checker passed the six current raw evaluator records.
 
 ## run-1
 
-- Pass: Pass, average 3.1
+- Pass: Pass, average 3.5
 - Revise: Revise, average 2.2
-- Repeat: Repeat, average 0
+- Repeat: Repeat, average 0.0
 
 ## run-2
 
-- Pass: Pass, average 3.2
+- Pass: Pass, average 3.4
 - Revise: Revise, average 2.0
 - Repeat: Repeat, average 0.0
 

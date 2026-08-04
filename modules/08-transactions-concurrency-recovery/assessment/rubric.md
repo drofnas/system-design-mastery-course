@@ -84,7 +84,9 @@ commits, or invalid restores can cause irreversible harm.
 - **1:** vocabulary recited without schedule, log, restore, or evidence derivation.
 - **2:** understandable defense with weak challenge, dissent, uncertainty, changed belief, or remediation linkage.
 - **3:** teach-back derives mechanisms, handles five stakeholder views, records dissent, and preserves dated remediation.
-- **4:** another team applies the method in a different stack and resolves a transaction/recovery decision with evidence.
+- **4:** the frozen role-based transfer exercise applies the method in a different
+  stack and resolves a transaction/recovery decision with evidence. Optional
+  team review upgrades attestation, not score.
 
 ## Result thresholds
 

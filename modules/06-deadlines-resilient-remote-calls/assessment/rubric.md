@@ -87,7 +87,9 @@ or unbounded amplification can harm users.
 - **1:** vocabulary is recited without derivation or evidence.
 - **2:** understandable defense with weak challenge, dissent, uncertainty, portfolio, or remediation linkage.
 - **3:** teach-back derives deadline/retry/idempotency/overload behavior, handles cross-functional challenge, records changed belief, dissent, owners, Gate 2, and separate remediation.
-- **4:** another team applies the method to a different stack and resolves a real policy disagreement with evidence.
+- **4:** the frozen role-based transfer exercise applies the method to a different
+  stack and resolves a policy disagreement with evidence. Optional team review
+  upgrades attestation, not score.
 
 ## Result thresholds
 

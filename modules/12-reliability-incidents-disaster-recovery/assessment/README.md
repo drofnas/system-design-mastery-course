@@ -71,4 +71,4 @@ remediable gaps. Repeat applies when G02–G05 fails or a safety-critical score 
 
 ## Evaluation packaging and independence
 
-Use the [provider-neutral bundle and validation workflow](../../../EVALUATION_GUIDE.md). The evaluator returns JSON only; the validator renders the report. An independent LLM or human critique after the freeze is required for formal Pass. Self-scoring remains provisional.
+Use the [provider-neutral bundle and validation workflow](../../../EVALUATION_GUIDE.md). The evaluator returns JSON only; the validator renders the report. A frozen self-evaluated Pass establishes **Solo Complete** and remains explicitly self-attested. A passing independent human or LLM review of the same bundle establishes **Independently Validated**.

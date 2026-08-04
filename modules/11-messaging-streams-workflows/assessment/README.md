@@ -64,3 +64,9 @@ gaps. Repeat applies when G02–G05 fails or a safety-critical criterion is zero
   survival, universal exactly-once effects, or security enforcement from the lab.
 - Accept defensible alternatives; never require Northstar's topology or thresholds.
 - Recommend named lessons/exercises without writing replacement graded work.
+
+## Completion attestation
+
+A frozen self-evaluated Pass establishes **Solo Complete** and remains
+self-attested. A passing independent human or LLM review of the same immutable
+bundle establishes **Independently Validated**.

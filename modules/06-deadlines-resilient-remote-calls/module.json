@@ -625,7 +625,7 @@
     {
       "id": "RES-05",
       "title": "Addressing Cascading Failures",
-      "author_or_publisher": "Mike Ulrich and Google SRE contributors",
+      "author_or_publisher": "Google Site Reliability Engineering",
       "type": "practitioner book chapter",
       "url": "https://sre.google/sre-book/addressing-cascading-failures/",
       "required": true,
@@ -637,7 +637,7 @@
       "last_verified": "2026-08-01",
       "text_alternative": "lessons/05-bulkheads-pools-health.md",
       "verified_title": "Addressing Cascading Failures",
-      "verified_publisher": "Mike Ulrich and Google SRE contributors",
+      "verified_publisher": "Google Site Reliability Engineering",
       "verification_method": "HTTP GET plus primary-source metadata comparison",
       "final_url": "https://sre.google/sre-book/addressing-cascading-failures/",
       "verification_status": "verified"
@@ -645,7 +645,7 @@
     {
       "id": "RES-06",
       "title": "Metastable Failures in the Wild",
-      "author_or_publisher": "L. Huang, M. Magnusson, A. Baldini, S. Treichler, M. D. Ernst; USENIX",
+      "author_or_publisher": "Lexiang Huang et al.; USENIX",
       "type": "peer-reviewed research paper",
       "url": "https://www.usenix.org/system/files/osdi22-huang-lexiang.pdf",
       "required": false,
@@ -657,7 +657,7 @@
       "last_verified": "2026-08-01",
       "text_alternative": "lessons/06-circuit-breakers-hedges-partials.md",
       "verified_title": "Metastable Failures in the Wild",
-      "verified_publisher": "L. Huang, M. Magnusson, A. Baldini, S. Treichler, M. D. Ernst; USENIX",
+      "verified_publisher": "Lexiang Huang et al.; USENIX",
       "verification_method": "HTTP GET plus primary-source metadata comparison",
       "final_url": "https://www.usenix.org/system/files/osdi22-huang-lexiang.pdf",
       "verification_status": "verified"
@@ -918,6 +918,44 @@
       "id": "L08",
       "path": "lessons/08-policy-migration-ownership.md",
       "estimated_minutes": 30
+    }
+  ],
+  "citation_catalog": [
+    {
+      "id": "CIT-01",
+      "title": "Status Codes",
+      "author_or_publisher": "gRPC Authors",
+      "type": "primary-source citation",
+      "url": "https://grpc.io/docs/guides/status-codes/",
+      "required": true,
+      "access": "free",
+      "purpose": "Provide primary-source support for the bounded mechanism discussed in the cited local lesson.",
+      "reading_boundary": "Read the complete status-code table and the notes about library-generated codes; retryability remains operation-specific.",
+      "last_verified": "2026-08-04",
+      "text_alternative": "lessons/04-idempotency-and-deduplication.md",
+      "verified_title": "Status Codes",
+      "verified_publisher": "gRPC Authors",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://grpc.io/docs/guides/status-codes/",
+      "verification_status": "verified"
+    },
+    {
+      "id": "CIT-02",
+      "title": "lec5.pdf | Logistical and Transportation Planning Methods",
+      "author_or_publisher": "Richard C. Larson, Amedeo R. Odoni, Arnold Barnett; MIT OpenCourseWare",
+      "type": "primary-source citation",
+      "url": "https://ocw.mit.edu/courses/1-203j-logistical-and-transportation-planning-methods-fall-2006/resources/lec5/",
+      "required": true,
+      "access": "free",
+      "purpose": "Support the use of Little's Law for average bounded-resource inventory.",
+      "reading_boundary": "Study the Queueing Systems notes sections defining system occupancy, throughput, time in system, and Little's Law L = λW.",
+      "last_verified": "2026-08-04",
+      "text_alternative": "lessons/05-bulkheads-pools-health.md",
+      "verified_title": "lec5.pdf | Logistical and Transportation Planning Methods",
+      "verified_publisher": "Richard C. Larson, Amedeo R. Odoni, Arnold Barnett; MIT OpenCourseWare",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://ocw.mit.edu/courses/1-203j-logistical-and-transportation-planning-methods-fall-2006/resources/lec5/",
+      "verification_status": "verified"
     }
   ]
 }

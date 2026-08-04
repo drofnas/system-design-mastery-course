@@ -12,6 +12,7 @@
     "status",
     "outcomes",
     "resources",
+    "citation_catalog",
     "artifacts",
     "failure_experiments",
     "factual_claims_path",
@@ -129,6 +130,25 @@
         ]
       }
     },
+    "citation_catalog": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id", "title", "author_or_publisher", "type", "url", "required",
+          "access", "purpose", "reading_boundary", "last_verified",
+          "text_alternative", "verified_title", "verified_publisher",
+          "verification_method", "final_url", "verification_status"
+        ],
+        "properties": {
+          "id": {"type": "string", "pattern": "^CIT-[0-9]{2}$"},
+          "url": {"type": "string", "pattern": "^https://"},
+          "required": {"type": "boolean"},
+          "access": {"const": "free"},
+          "last_verified": {"type": "string", "format": "date"}
+        }
+      }
+    },
     "artifacts": {
       "type": "array",
       "minItems": 4,
@@ -136,7 +156,7 @@
         "type": "object",
         "required": ["id", "week", "required", "template_path", "submission_path", "portfolio_category"],
         "properties": {
-          "portfolio_category": {"enum": ["adr", "rfc", "controlled_incident_postmortem", "capacity_cost_model", "performance_investigation", "failure_matrix", "threat_model", "dr_exercise", "migration_plan", "runtime_comparison", "teach_back", "capstone", "implementation", "model", "learning_log", "evaluation"]}
+          "portfolio_category": {"enum": ["adr", "rfc", "controlled_incident_postmortem", "capacity_cost_model", "performance_investigation", "failure_matrix", "source_code_internals_review", "threat_model", "dr_exercise", "migration_plan", "runtime_comparison", "teach_back", "capstone", "implementation", "model", "learning_log", "evaluation"]}
         }
       }
     },

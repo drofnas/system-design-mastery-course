@@ -15,8 +15,9 @@ and recovery controls with cited evidence.
 
 ## Defense record
 
-Reviewers should represent product/data owner, security/privacy, operations,
-finance, and an affected engineering team.
+Use the frozen solo-review packet to represent product/data owner,
+security/privacy, operations, finance, and an affected engineering team. A live
+panel is optional.
 
 | Challenge | Claim/evidence cited | Answer | Dissent | Follow-up owner/date |
 |---|---|---|---|---|
@@ -38,7 +39,7 @@ why the chosen design is simpler than rejected alternatives.
 
 Do not edit the Week 49 baseline, raw trials, major threat-model submission, or
 prior capstone revisions. Do not use AI to answer during the recorded defense.
-Human review is preferred and is stronger portfolio evidence. A solo learner
-may use the generated five-question packet, but must record and freeze every
-answer before any provider-neutral LLM critique. The critique occurs only after
-the defense and must be disclosed with the solo-review limitations.
+The generated five-question record completes the solo defense when every answer
+is recorded and frozen without live AI. Human review is optional stronger
+portfolio evidence. Provider-neutral LLM critique is also optional, may occur
+only after freezing, and must be disclosed with the solo-review limitations.

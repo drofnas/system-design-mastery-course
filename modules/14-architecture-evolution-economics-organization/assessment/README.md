@@ -61,3 +61,9 @@ is not a defect because it differs from Northstar.
 The lab cannot prove production compatibility, migration safety at scale,
 provider portability, accounting accuracy, legal or security compliance, real
 human staffing resilience, or multi-quarter organizational results.
+
+## Completion attestation
+
+A frozen self-evaluated Pass establishes **Solo Complete** and remains
+self-attested. A passing independent human or LLM review of the same immutable
+bundle establishes **Independently Validated**.

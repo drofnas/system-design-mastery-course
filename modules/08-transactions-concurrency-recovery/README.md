@@ -155,4 +155,4 @@ replacement graded answer, or answer during the defense. Disclose assistance.
 - Use the [provider-neutral evaluation workflow](../../EVALUATION_GUIDE.md) only after learner evidence is committed.
 - Use the [sealed local gate workflow](../../SOLO_GATE_GUIDE.md) when a course gate applies. Human review is optional.
 
-Self-scoring is provisional and cannot establish Pass. Synthetic lab values are not production measurements.
+A frozen self-evaluation may establish **Solo Complete**; independent human or LLM review may establish **Independently Validated**. Synthetic lab values are not production measurements.

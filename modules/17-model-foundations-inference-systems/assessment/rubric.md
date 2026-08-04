@@ -92,7 +92,9 @@ inference conclusion.
 - **3:** decision, alternatives, evidence, owners, cost, migration, rollback, stops, defense, and revision align.
 - A passing submission distinguishes the architecture RFC from A12's narrower
   deployment-policy ADR and links both to the same measured evidence.
-- **4:** another team applies the method and resulting dissent materially improves the decision.
+- **4:** the frozen role-based transfer exercise applies the method and resulting
+  dissent materially improves the decision. Optional team review upgrades
+  attestation, not score.
 
 ## Thresholds
 

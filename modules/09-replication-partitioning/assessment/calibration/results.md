@@ -11,9 +11,9 @@ The deterministic checker passed the six current raw evaluator records.
 ## run-2
 
 - Pass: Pass, average 3.0
-- Revise: Revise, average 2.0
+- Revise: Revise, average 2.1
 - Repeat: Repeat, average 0.1
 
-Maximum per-category drift: 1.
+Maximum per-category drift: 0.
 
 Raw JSON and invocation provenance are authoritative; this file is rendered from them.

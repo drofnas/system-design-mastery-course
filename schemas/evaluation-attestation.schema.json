@@ -1,21 +1,27 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://example.invalid/system-design-course/evaluation-attestation.schema.json",
-  "title": "Evaluation independence attestation",
+  "title": "Evaluation completion attestation",
   "type": "object",
-  "required": ["schema_version", "module", "bundle_sha256", "review_mode", "reviewer", "evaluated_at", "formal"],
+  "required": ["schema_version", "module", "bundle_sha256", "review_mode", "reviewer", "evaluated_at", "completion_status"],
   "properties": {
-    "schema_version": {"const": "1.0"},
+    "schema_version": {"const": "2.0"},
     "module": {"type": "string", "pattern": "^M(0[1-9]|1[0-8])$"},
     "bundle_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
     "review_mode": {"enum": ["independent_llm", "independent_human", "self"]},
     "reviewer": {"type": "string", "minLength": 2},
     "evaluated_at": {"type": "string", "format": "date-time"},
-    "formal": {"type": "boolean"}
+    "completion_status": {"enum": ["in_progress", "solo_complete", "independently_validated"]}
   },
   "allOf": [
-    {"if": {"properties": {"review_mode": {"const": "self"}}}, "then": {"properties": {"formal": {"const": false}}}},
-    {"if": {"properties": {"review_mode": {"enum": ["independent_llm", "independent_human"]}}}, "then": {"properties": {"formal": {"const": true}}}}
+    {
+      "if": {"properties": {"review_mode": {"const": "self"}}},
+      "then": {"properties": {"completion_status": {"enum": ["in_progress", "solo_complete"]}}}
+    },
+    {
+      "if": {"properties": {"review_mode": {"enum": ["independent_llm", "independent_human"]}}},
+      "then": {"properties": {"completion_status": {"enum": ["in_progress", "independently_validated"]}}}
+    }
   ],
   "additionalProperties": false
 }

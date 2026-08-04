@@ -1047,5 +1047,61 @@
       "path": "lessons/08-frontend-edge-decision-teachback.md",
       "estimated_minutes": 30
     }
+  ],
+  "citation_catalog": [
+    {
+      "id": "CIT-01",
+      "title": "Backends for Frontends pattern",
+      "author_or_publisher": "Microsoft Azure Architecture Center",
+      "type": "official architecture guidance",
+      "url": "https://learn.microsoft.com/en-us/azure/architecture/patterns/backends-for-frontends",
+      "required": true,
+      "access": "free",
+      "purpose": "Bound the benefits and operational, security, latency, ownership, and duplication costs of a BFF boundary.",
+      "reading_boundary": "Read Context and problem, Solution, Problems and considerations, and When to use this pattern; treat vendor-specific examples as examples rather than universal proof.",
+      "last_verified": "2026-08-04",
+      "text_alternative": "lessons/08-frontend-edge-decision-teachback.md",
+      "verified_title": "Backends for Frontends pattern",
+      "verified_publisher": "Microsoft Azure Architecture Center",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://learn.microsoft.com/en-us/azure/architecture/patterns/backends-for-frontends",
+      "verification_status": "verified"
+    },
+    {
+      "id": "CIT-02",
+      "title": "How Workers works",
+      "author_or_publisher": "Cloudflare Workers documentation",
+      "type": "official maintainer documentation",
+      "url": "https://developers.cloudflare.com/workers/reference/how-workers-works/",
+      "required": true,
+      "access": "free",
+      "purpose": "Document one concrete edge runtime's distributed execution, isolate lifetime, state, and request-placement boundaries.",
+      "reading_boundary": "Read Isolates, Compute per request, and Distributed execution; do not generalize Cloudflare-specific implementation details to every edge platform.",
+      "last_verified": "2026-08-04",
+      "text_alternative": "lessons/08-frontend-edge-decision-teachback.md",
+      "verified_title": "How Workers works",
+      "verified_publisher": "Cloudflare Workers documentation",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://developers.cloudflare.com/workers/reference/how-workers-works/",
+      "verification_status": "verified"
+    },
+    {
+      "id": "CIT-03",
+      "title": "Limits",
+      "author_or_publisher": "Cloudflare Workers documentation",
+      "type": "official maintainer documentation",
+      "url": "https://developers.cloudflare.com/workers/platform/limits/",
+      "required": true,
+      "access": "free",
+      "purpose": "Establish that edge runtimes retain finite CPU, memory, subrequest, connection, body, and lifecycle constraints.",
+      "reading_boundary": "Read Request and response limits, CPU time, Subrequests, Simultaneous open connections, and Wall time; values are versioned Cloudflare limits, not universal edge limits.",
+      "last_verified": "2026-08-04",
+      "text_alternative": "lessons/08-frontend-edge-decision-teachback.md",
+      "verified_title": "Limits",
+      "verified_publisher": "Cloudflare Workers documentation",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://developers.cloudflare.com/workers/platform/limits/",
+      "verification_status": "verified"
+    }
   ]
 }

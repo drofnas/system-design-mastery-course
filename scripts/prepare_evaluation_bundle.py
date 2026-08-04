@@ -13,6 +13,8 @@ import tempfile
 from pathlib import Path
 from typing import Any
 
+from schema_contract import SchemaContractError, validate_instance
+
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -98,9 +100,11 @@ def prepare(module: str, commit: str, output: Path) -> dict[str, Any]:
         for field, role in (
             ("rubric_path", "rubric"),
             ("evaluator_prompt_path", "prompt"),
-            ("evaluation_schema_path", "schema"),
+            ("evaluation_schema_path", "evaluation_schema"),
         ):
             include(str(manifest["assessment"][field]), role)
+        include("schemas/evaluation-attestation.schema.json", "attestation_schema")
+        include("schemas/evaluation-bundle.schema.json", "bundle_schema")
         remediation = manifest_path.parent / "assessment" / "remediation-map.md"
         include(remediation.relative_to(ROOT).as_posix(), "remediation")
 
@@ -134,15 +138,23 @@ def prepare(module: str, commit: str, output: Path) -> dict[str, Any]:
         records.sort(key=lambda row: (row["role"], row["path"]))
         bundle_digest = hashlib.sha256(json.dumps(records, sort_keys=True, separators=(",", ":")).encode("utf-8")).hexdigest()
         bundle_manifest = {
-            "schema_version": "1.0",
+            "schema_version": "2.0",
             "module": manifest["id"],
             "artifact_commit": resolved_commit,
             "bundle_sha256": bundle_digest,
             "structural_validation_passed": validation.returncode == 0,
             "files": records,
             "evaluator_instruction": "Return exactly one JSON object conforming to the included evaluation schema. Do not append Markdown.",
-            "independence_instruction": "Freeze learner work before evaluation. Record independent_llm, independent_human, or self in a separate attestation.",
+            "completion_instruction": (
+                "Freeze learner work before evaluation. A self-reviewed Pass may establish "
+                "Solo Complete; an independent human or LLM Pass establishes Independently Validated."
+            ),
         }
+        bundle_schema = json.loads((ROOT / "schemas" / "evaluation-bundle.schema.json").read_text(encoding="utf-8"))
+        try:
+            validate_instance(bundle_manifest, bundle_schema, label="evaluation bundle manifest")
+        except SchemaContractError as error:
+            raise BundleError(str(error)) from error
         (staging / "bundle-manifest.json").write_text(json.dumps(bundle_manifest, indent=2) + "\n", encoding="utf-8")
         shutil.copytree(staging, output)
     return bundle_manifest

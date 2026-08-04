@@ -4,7 +4,7 @@ The deterministic checker passed the six current raw evaluator records.
 
 ## run-1
 
-- Pass: Pass, average 3.5
+- Pass: Pass, average 3.6
 - Revise: Revise, average 2.0
 - Repeat: Repeat, average 0.0
 
@@ -12,7 +12,7 @@ The deterministic checker passed the six current raw evaluator records.
 
 - Pass: Pass, average 3.0
 - Revise: Revise, average 2.0
-- Repeat: Repeat, average 0.1
+- Repeat: Repeat, average 0.0
 
 Maximum per-category drift: 1.
 
