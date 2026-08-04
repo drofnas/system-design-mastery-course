@@ -1,8 +1,8 @@
 # Module 15: Execution Models Across Languages
 
 > **Authoring status:** Ready. Four-runtime conformance, paired failure evidence,
-> six isolated evaluator runs, calibration checking, semantic and resource
-> review, and focused and full-course validation passed on 2026-08-03.
+> six isolated evaluator runs, factual and resource review, calibration
+> checking, and focused and full-course validation passed on 2026-08-04.
 
 ## What this module changes
 
