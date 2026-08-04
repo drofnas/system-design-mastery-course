@@ -66,7 +66,7 @@ class EvaluationWorkflowTests(unittest.TestCase):
         manifest = {"assessment": {"pass_average": 3, "safety_critical_criteria": ["R01"]}}
         (files / contract_path).write_text(json.dumps(manifest))
         (files / rubric_path).write_text("# Rubric\n\n## R01: Evidence\n")
-        (files / remediation_path).write_text("# Remediation\n\nLesson 1 and EX-01.\n")
+        (files / remediation_path).write_text("# Remediation\n\nLessons 1–2 and EX-01–EX-02.\n")
         structural = bundle / "structural-validation.json"
         structural.write_text(json.dumps({"exit_code": 0}))
         def record(path: str, role: str, file_path: Path) -> dict[str, str]:
@@ -134,6 +134,10 @@ class EvaluationWorkflowTests(unittest.TestCase):
             validate_evaluation.validate("M01", bundle, result, report, attestation)
         data["average_score"] = 3.0
         data["rubric_scores"][0]["remediation"] = ["Lesson 99; EX-99"]
+        result.write_text(json.dumps(data))
+        with self.assertRaisesRegex(validate_evaluation.EvaluationError, "unknown lesson or exercise"):
+            validate_evaluation.validate("M01", bundle, result, report, attestation)
+        data["rubric_scores"][0]["remediation"] = ["L99; EX-01"]
         result.write_text(json.dumps(data))
         with self.assertRaisesRegex(validate_evaluation.EvaluationError, "unknown lesson or exercise"):
             validate_evaluation.validate("M01", bundle, result, report, attestation)

@@ -37,6 +37,30 @@ def _headings(path: Path) -> set[str]:
     return {match.group(1).strip().lower() for match in re.finditer(r"^#{1,6}\s+(.+?)\s*$", path.read_text(encoding="utf-8", errors="replace"), re.MULTILINE)}
 
 
+def _expand_range(prefix: str, start: str, end: str | None) -> set[str]:
+    first = int(start)
+    last = int(end) if end is not None else first
+    if last < first or last - first > 50:
+        return set()
+    return {f"{prefix}{number:02d}" for number in range(first, last + 1)}
+
+
+def _remediation_references(text: str) -> tuple[set[str], set[str]]:
+    """Normalize Lesson/LNN and EX-NN range forms used by module maps."""
+    lessons: set[str] = set()
+    exercises: set[str] = set()
+    for match in re.finditer(r"\bL(\d{2})(?:\s*[–-]\s*(?:L)?(\d{2}))?\b", text):
+        lessons.update(_expand_range("L", match.group(1), match.group(2)))
+    for match in re.finditer(r"\bLessons?\s+([^;|\n]+)", text, re.IGNORECASE):
+        segment = re.sub(r"\bL(?=\d)", "", match.group(1), flags=re.IGNORECASE)
+        segment = re.split(r"\bEX-", segment, maxsplit=1, flags=re.IGNORECASE)[0]
+        for number_range in re.finditer(r"\b(\d{1,2})(?:\s*[–-]\s*(\d{1,2}))?\b", segment):
+            lessons.update(_expand_range("L", number_range.group(1), number_range.group(2)))
+    for match in re.finditer(r"\bEX-(\d{2})(?:\s*[–-]\s*(?:EX-)?(\d{2}))?\b", text, re.IGNORECASE):
+        exercises.update(_expand_range("EX-", match.group(1), match.group(2)))
+    return lessons, exercises
+
+
 def _validate_citation(citation: str, bundle: Path, allowed: set[str]) -> None:
     if "#" not in citation:
         raise EvaluationError(f"evidence citation lacks a heading: {citation}")
@@ -137,11 +161,12 @@ def validate(module: str, bundle: Path, result_path: Path, report: Path, attesta
             if classification not in FINDING_TYPES:
                 raise EvaluationError(f"invalid finding classification: {finding}")
         remediation = " ".join(row.get("remediation", []))
-        if "Lesson" not in remediation or "EX-" not in remediation:
+        lesson_references, exercise_references = _remediation_references(remediation)
+        if not lesson_references or not exercise_references:
             raise EvaluationError(f"{row['criterion_id']} remediation must name a lesson and exercise")
         remediation_contract = (bundle / "files" / remediation_record["path"]).read_text(encoding="utf-8")
-        references = re.findall(r"\bLesson\s+\d+\b|\bEX-\d{2}\b", remediation)
-        if not references or any(reference not in remediation_contract for reference in references):
+        allowed_lessons, allowed_exercises = _remediation_references(remediation_contract)
+        if not lesson_references <= allowed_lessons or not exercise_references <= allowed_exercises:
             raise EvaluationError(f"{row['criterion_id']} remediation cites an unknown lesson or exercise")
 
     label = "FORMAL" if formal else "PROVISIONAL SELF-REVIEW"
