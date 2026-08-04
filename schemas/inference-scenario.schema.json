@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/system-design-course/inference-scenario.schema.json",
+  "title": "Module 17 inference failure scenario",
+  "type": "object",
+  "required": ["module_id","schema_version","scenario_id","pair_id","variant","seed","model","hardware","workload","controls","expected"],
+  "properties": {
+    "module_id": {"const":"M17"},
+    "schema_version": {"const":"1.0"},
+    "scenario_id": {"type":"string","pattern":"^f0[1-6]-[a-z0-9-]+-(broken|repaired)$"},
+    "pair_id": {"type":"string","pattern":"^F0[1-6]$"},
+    "variant": {"enum":["broken","repaired"]},
+    "seed": {"type":"integer"},
+    "model": {
+      "type":"object",
+      "required":["model_version","tokenizer_version","prompt_policy_version","precision","layers","kv_heads","head_dim","bytes_per_value","weights_bytes","runtime_bytes","activation_bytes"],
+      "properties": {
+        "model_version":{"type":"string"},
+        "tokenizer_version":{"type":"string"},
+        "prompt_policy_version":{"type":"string"},
+        "precision":{"type":"string"},
+        "layers":{"type":"integer","minimum":1},
+        "kv_heads":{"type":"integer","minimum":1},
+        "head_dim":{"type":"integer","minimum":1},
+        "bytes_per_value":{"type":"integer","minimum":1},
+        "weights_bytes":{"type":"integer","minimum":1},
+        "runtime_bytes":{"type":"integer","minimum":0},
+        "activation_bytes":{"type":"integer","minimum":0}
+      },
+      "additionalProperties":false
+    },
+    "hardware": {
+      "type":"object",
+      "required":["evidence_kind","device","memory_capacity_bytes"],
+      "properties": {
+        "evidence_kind":{"enum":["modeled","measured"]},
+        "device":{"type":"string"},
+        "memory_capacity_bytes":{"type":"integer","minimum":1}
+      },
+      "additionalProperties":false
+    },
+    "workload": {
+      "type":"object",
+      "required":["interactive_requests","batch_requests","short_prompt_tokens","long_prompt_tokens","max_output_tokens","queue_limit","deadline_ms","provider_available"],
+      "properties": {
+        "interactive_requests":{"type":"integer","minimum":0},
+        "batch_requests":{"type":"integer","minimum":0},
+        "short_prompt_tokens":{"type":"integer","minimum":1},
+        "long_prompt_tokens":{"type":"integer","minimum":1},
+        "max_output_tokens":{"type":"integer","minimum":1},
+        "queue_limit":{"type":"integer","minimum":1},
+        "deadline_ms":{"type":"integer","minimum":1},
+        "provider_available":{"type":"boolean"}
+      },
+      "additionalProperties":false
+    },
+    "controls": {
+      "type":"object",
+      "required":["enforce_memory_budget","length_aware_scheduling","bounded_admission","versioned_cache_identity","quality_gated_precision","bounded_provider_failover"],
+      "properties": {
+        "enforce_memory_budget":{"type":"boolean"},
+        "length_aware_scheduling":{"type":"boolean"},
+        "bounded_admission":{"type":"boolean"},
+        "versioned_cache_identity":{"type":"boolean"},
+        "quality_gated_precision":{"type":"boolean"},
+        "bounded_provider_failover":{"type":"boolean"}
+      },
+      "additionalProperties":false
+    },
+    "expected": {
+      "type":"object",
+      "required":["target_invariant","repaired_invariants"],
+      "properties": {
+        "target_invariant":{"type":"string","pattern":"^I(0[1-9]|10)$"},
+        "repaired_invariants":{"type":"array","items":{"type":"string","pattern":"^I(0[1-9]|10)$"},"minItems":10,"maxItems":10,"uniqueItems":true}
+      },
+      "additionalProperties":false
+    }
+  },
+  "additionalProperties":false
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/system-design-course/inference-trial.schema.json",
+  "title": "Module 17 deterministic inference trial",
+  "type": "object",
+  "required": ["module_id","schema_version","scenario_id","pair_id","variant","seed","evidence_kind","shared_input_sha256","config_sha256","toolchain","model","measurements","memory","cache","quality","provider","cost","invariants","limitations"],
+  "properties": {
+    "module_id":{"const":"M17"},
+    "schema_version":{"const":"1.0"},
+    "scenario_id":{"type":"string"},
+    "pair_id":{"type":"string","pattern":"^F0[1-6]$"},
+    "variant":{"enum":["broken","repaired"]},
+    "seed":{"type":"integer"},
+    "evidence_kind":{"enum":["modeled","measured"]},
+    "shared_input_sha256":{"type":"string","pattern":"^[a-f0-9]{64}$"},
+    "config_sha256":{"type":"string","pattern":"^[a-f0-9]{64}$"},
+    "toolchain":{"type":"object","required":["python","model_version"],"properties":{"python":{"type":"string"},"model_version":{"type":"string"}},"additionalProperties":false},
+    "model":{"type":"object"},
+    "measurements":{"type":"object","required":["accepted","rejected","completed","failed","queue_max","ttft_p50_ms","ttft_p95_ms","itl_p50_ms","itl_p95_ms","input_tokens_per_s","output_tokens_per_s","useful_output_tokens_per_s"],"additionalProperties":true},
+    "memory":{"type":"object","required":["capacity_bytes","weights_bytes","kv_reserved_bytes","peak_bytes","headroom_bytes","oom_count"],"additionalProperties":true},
+    "cache":{"type":"object","required":["cross_tenant_hits","stale_version_hits","identity_fields"],"additionalProperties":true},
+    "quality":{"type":"object","required":["reference_hash","max_logit_error","top_k_agreement","task_score","threshold_passed"],"additionalProperties":true},
+    "provider":{"type":"object","required":["available","attempts","duplicate_work","deadline_exceeded","compatible_fallback"],"additionalProperties":true},
+    "cost":{"type":"object","required":["compute_units","cost_per_1000_useful_output_tokens"],"additionalProperties":true},
+    "invariants":{"type":"array","minItems":10,"maxItems":10,"items":{"type":"object","required":["id","passed","evidence"],"properties":{"id":{"type":"string","pattern":"^I(0[1-9]|10)$"},"passed":{"type":"boolean"},"evidence":{"type":"string"}},"additionalProperties":false}},
+    "limitations":{"type":"array","items":{"type":"string"},"minItems":1}
+  },
+  "additionalProperties":false
+}
