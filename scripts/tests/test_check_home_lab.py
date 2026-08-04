@@ -18,7 +18,7 @@ def snapshot(platform_name="ubuntu", architecture="x86_64", **changes):
         "versions": {"python": "3.11.9", "git": "git version 2.45", "compiler": "cc 15.0",
                      "make": "GNU Make 4.4", "openssl": "OpenSSL 3.0", "docker": "Docker 28.0",
                      "node": "v24.19.0", "npm": "11.0"},
-        "docker_daemon": True, "loopback": True, "temporary_files": True,
+        "docker_daemon": True, "openssl_addext": True, "loopback": True, "temporary_files": True,
     }
     value.update(changes)
     return value
@@ -36,6 +36,14 @@ class PreflightTests(unittest.TestCase):
         self.assertEqual("fail", report["summary"]["result"])
         self.assertIn("WSL2", " ".join(report["remediations"]))
 
+    def test_windows_arm_wsl_is_out_of_scope(self):
+        report = check_home_lab.evaluate(snapshot("wsl2-ubuntu", "arm64"), ["M02"])
+        self.assertEqual("fail", report["summary"]["result"])
+
+    def test_wsl1_is_not_mistaken_for_wsl2(self):
+        report = check_home_lab.evaluate(snapshot("wsl1-unsupported", "x86_64"), ["M02"])
+        self.assertEqual("fail", report["summary"]["result"])
+
     def test_unknown_resources_warn_but_do_not_block(self):
         report = check_home_lab.evaluate(snapshot(ram_gib=None, logical_cpus=None, free_disk_gib=None), ["M02"])
         self.assertEqual("warn", report["summary"]["result"])
@@ -52,6 +60,10 @@ class PreflightTests(unittest.TestCase):
         values["versions"]["python"] = "3.10.14"
         values["versions"]["node"] = "v22.0.0"
         report = check_home_lab.evaluate(values, ["M16"])
+        self.assertEqual("fail", report["summary"]["result"])
+
+    def test_openssl_without_addext_is_incompatible(self):
+        report = check_home_lab.evaluate(snapshot(openssl_addext=False), ["M05"])
         self.assertEqual("fail", report["summary"]["result"])
 
     def test_blocked_loopback_is_module_scoped(self):

@@ -40,6 +40,14 @@ def _version_tuple(text: str | None) -> tuple[int, ...] | None:
     return tuple(int(part) for part in match.groups(default="0")) if match else None
 
 
+def _command_supports(command: list[str], token: str) -> bool:
+    try:
+        result = subprocess.run(command, capture_output=True, text=True, timeout=5, check=False)
+    except (OSError, subprocess.SubprocessError):
+        return False
+    return token in f"{result.stdout}\n{result.stderr}"
+
+
 def _platform_kind() -> str:
     system = platform.system().lower()
     if system == "darwin":
@@ -53,8 +61,10 @@ def _platform_kind() -> str:
         release = Path("/proc/sys/kernel/osrelease").read_text(encoding="utf-8").lower()
     except OSError:
         pass
-    if "microsoft" in release or os.environ.get("WSL_INTEROP"):
-        return "wsl2-ubuntu"
+    if "microsoft" in release:
+        return "wsl2-ubuntu" if "wsl2" in release or "microsoft-standard" in release else "wsl1-unsupported"
+    if os.environ.get("WSL_INTEROP"):
+        return "wsl1-unsupported"
     try:
         os_release = Path("/etc/os-release").read_text(encoding="utf-8").lower()
     except OSError:
@@ -140,6 +150,7 @@ def collect_snapshot() -> dict[str, Any]:
         "free_disk_gib": free_disk,
         "versions": versions,
         "docker_daemon": _docker_daemon_ok(),
+        "openssl_addext": _command_supports(["openssl", "req", "-help"], "-addext"),
         "loopback": _loopback_ok(),
         "temporary_files": _temporary_ok(),
     }
@@ -158,7 +169,10 @@ def evaluate(snapshot: dict[str, Any], selected_modules: list[str]) -> dict[str,
     platform_status = "pass" if platform_kind in {"macos", "ubuntu", "wsl2-ubuntu"} else "fail"
     checks.append(_check("platform", platform_status, platform_kind, "macOS, Ubuntu LTS, or Ubuntu on WSL2", selected,
                          "Use a supported macOS/Ubuntu host; on Windows install Ubuntu on WSL2."))
-    arch_status = "pass" if arch in {"x86_64", "arm64"} and platform_kind != "windows-native" else "fail"
+    supported_arch = arch in {"x86_64", "arm64"} and platform_kind != "windows-native"
+    if platform_kind == "wsl2-ubuntu":
+        supported_arch = arch == "x86_64"
+    arch_status = "pass" if supported_arch else "fail"
     checks.append(_check("architecture", arch_status, arch, "64-bit x86_64 or ARM64 (Windows ARM is unsupported)", selected,
                          "Use a supported 64-bit x86_64 or ARM64 host; Windows must use supported x86_64 WSL2."))
 
@@ -199,6 +213,8 @@ def evaluate(snapshot: dict[str, Any], selected_modules: list[str]) -> dict[str,
         present = bool(versions.get(tool))
         if tool == "docker":
             present = present and bool(snapshot.get("docker_daemon"))
+        if tool == "openssl":
+            present = present and bool(snapshot.get("openssl_addext"))
         if tool == "node" and present:
             lock_path = ROOT / "modules/16-browser-frontend-cdn-edge/lab/toolchains.lock.json"
             try:

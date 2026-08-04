@@ -96,6 +96,7 @@ supported baseline.
 
 No module needs a GPU. Module 17 models inference mechanics locally and does
 not download or execute a production model.
+Integrated graphics are sufficient for every lab.
 
 ## Low-resource operation
 
@@ -140,7 +141,7 @@ request provider-neutral LLM critique. Disclose that substitution and its
 limitations. See `templates/solo-review-record-template.md`.
 
 Modules 4 and 5 also provide `blind-solo-prepare` and `blind-solo-reveal`.
-Their `.sblind` envelope protects against accidental exposure; it is not
+Their `.sblind` envelope provides accidental-exposure protection; it is not
 encryption or anti-cheating. The learner can bypass it by inspecting source or
 decoding the envelope. Reveal is allowed only after the diagnosis is committed
 and byte-identical to the committed version.

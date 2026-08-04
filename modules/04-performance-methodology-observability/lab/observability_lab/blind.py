@@ -173,6 +173,7 @@ async def prepare_blind_collection(
         private_items.append(
             {
                 "opaque_id": opaque_id,
+                "bundle_sha256": _directory_sha256(bundle),
                 "scenario_sha256": _sha256_json(source),
                 "kind": source["fault"]["kind"],
                 "intensity": source["fault"]["intensity"],
@@ -225,9 +226,12 @@ def reveal_blind_collection(
         raise ValueError("public collection and reveal mapping do not match")
     validate_with_schema(public, _schema("blind-collection.schema.json"))
     validate_with_schema(private, _schema("blind-reveal.schema.json"))
+    private_by_id = {item["opaque_id"]: item for item in private["items"]}
     for item in public["items"]:
         summary = public_root / item["bundle"] / "summary.json"
         if not summary.is_file() or hashlib.sha256(summary.read_bytes()).hexdigest() != item["summary_sha256"]:
+            raise ValueError("opaque bundle integrity check failed")
+        if _directory_sha256(public_root / item["bundle"]) != private_by_id[item["opaque_id"]].get("bundle_sha256"):
             raise ValueError("opaque bundle integrity check failed")
     revealed = {
         **private,

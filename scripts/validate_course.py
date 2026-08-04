@@ -91,6 +91,7 @@ def validate_manifest(module_root: Path, errors: list[str]) -> dict[str, Any]:
         "resources",
         "artifacts",
         "failure_experiments",
+        "solo_review",
         "assessment",
     }
     for key in sorted(required - manifest.keys()):
@@ -142,10 +143,81 @@ def validate_manifest(module_root: Path, errors: list[str]) -> dict[str, Any]:
                     fail(errors, f"{outcome.get('id')}: invalid mastery level {level}")
 
     validate_resources(module_root, manifest, errors)
+    validate_solo_review(manifest, errors)
     validate_artifacts(manifest, errors)
     validate_assessment_targets(manifest, errors)
     validate_outcome_mappings(module_root, manifest, errors)
     return manifest
+
+
+def validate_solo_review(manifest: dict[str, Any], errors: list[str]) -> None:
+    module_id = str(manifest.get("id", "module"))
+    contract = manifest.get("solo_review")
+    if not isinstance(contract, dict):
+        fail(errors, f"{module_id}: solo_review must be an object")
+        return
+    bank = contract.get("challenge_questions")
+    if not isinstance(bank, list) or len(bank) < 8:
+        fail(errors, f"{module_id}: solo_review needs at least eight challenge questions")
+        return
+    ids: list[str] = []
+    for question in bank:
+        if not isinstance(question, dict) or set(question) != {"id", "prompt"}:
+            fail(errors, f"{module_id}: solo-review questions may contain only id and prompt")
+            continue
+        identifier = question.get("id")
+        prompt = question.get("prompt")
+        if not isinstance(identifier, str) or not identifier.startswith(f"{module_id}-SR-Q"):
+            fail(errors, f"{module_id}: invalid solo-review question id {identifier!r}")
+        else:
+            ids.append(identifier)
+        if not isinstance(prompt, str) or len(prompt.strip()) < 20:
+            fail(errors, f"{module_id}: solo-review question {identifier!r} is too short")
+    if len(ids) != len(set(ids)):
+        fail(errors, f"{module_id}: solo-review question ids must be unique")
+    roles = contract.get("required_reviewer_roles")
+    if not isinstance(roles, list) or any(not isinstance(role, str) for role in roles) or len(roles) < 2 or len(roles) != len(set(roles)):
+        fail(errors, f"{module_id}: solo_review needs unique required reviewer roles")
+    if contract.get("questions_per_attempt") != 5:
+        fail(errors, f"{module_id}: solo_review must select five questions per attempt")
+    if contract.get("live_ai_allowed") is not False:
+        fail(errors, f"{module_id}: live AI must be prohibited during solo review")
+    template = contract.get("record_template_path")
+    if template != "templates/solo-review-record-template.md" or not (ROOT / str(template)).is_file():
+        fail(errors, f"{module_id}: solo-review record template is missing or incorrect")
+
+
+def validate_home_lab_support(module_root: Path, manifest: dict[str, Any], errors: list[str]) -> None:
+    module_id = str(manifest.get("id", ""))
+    lab_readme = module_root / "lab" / "README.md"
+    if not lab_readme.is_file():
+        return
+    text = lab_readme.read_text(encoding="utf-8")
+    if "../../../HOME_LAB_GUIDE.md" not in text:
+        fail(errors, f"{module_id}: executable lab README must link HOME_LAB_GUIDE.md")
+    if module_id in {"M03", "M05", "M15", "M16"}:
+        for label in ("macOS", "supported Linux", "Windows through WSL2"):
+            if label.lower() not in text.lower():
+                fail(errors, f"{module_id}: lab README lacks detailed {label} guidance")
+    if module_id == "M15":
+        lock = load_json(module_root / "lab" / "toolchains.lock.json", errors)
+        expected = {"schema_version": "1.0", "cpus": 2, "memory": "3g", "memory_swap": "3g", "pids": 256}
+        if not isinstance(lock, dict) or lock.get("container_resource_limits") != expected:
+            fail(errors, "M15: pinned container resource limits must be 2 CPUs, 3 GiB memory/swap, and 256 PIDs")
+        harness = (module_root / "lab" / "run_conformance.py").read_text(encoding="utf-8")
+        for token in ("--runtime", "--all", "--cpus", "--memory-swap", "--pids-limit", "MINIMUM_FREE_BYTES"):
+            if token not in harness:
+                fail(errors, f"M15: conformance harness lacks {token}")
+    if module_id == "M16":
+        config = (module_root / "lab" / "playwright.config.js").read_text(encoding="utf-8")
+        if not re.search(r"\bworkers:\s*1\b", config):
+            fail(errors, "M16: Playwright must default to one worker")
+        if "trace: 'retain-on-failure'" not in config:
+            fail(errors, "M16: Playwright traces must be retained only on failure")
+        lock = load_json(module_root / "lab" / "toolchains.lock.json", errors)
+        browser = lock.get("browser", {}) if isinstance(lock, dict) else {}
+        if not browser.get("automated_evidence") or not browser.get("manual_evidence"):
+            fail(errors, "M16: browser toolchain must distinguish automated and manual evidence")
 
 
 def validate_resources(
@@ -1602,6 +1674,29 @@ def validate_local_links(errors: list[str]) -> None:
                 fail(errors, f"{relative(markdown)}: broken local link {raw_target}")
 
 
+def validate_home_lab_global_contract(errors: list[str]) -> None:
+    required = (
+        ROOT / "HOME_LAB_GUIDE.md",
+        ROOT / "scripts" / "check_home_lab.py",
+        ROOT / "scripts" / "prepare_solo_review.py",
+        ROOT / "templates" / "solo-review-record-template.md",
+        ROOT / "reviews" / "home-lab-readiness-review.md",
+    )
+    for path in required:
+        if not path.is_file():
+            fail(errors, f"missing home-lab contract file: {relative(path)}")
+    lab_readmes = sorted((ROOT / "modules").glob("*/lab/README.md"))
+    if len(lab_readmes) != 17:
+        fail(errors, f"home-lab contract expects 17 executable lab READMEs, found {len(lab_readmes)}")
+    ignore_path = ROOT / ".gitignore"
+    if not ignore_path.is_file() or ".course-private/" not in ignore_path.read_text(encoding="utf-8"):
+        fail(errors, ".gitignore must exclude .course-private/")
+    guide = (ROOT / "HOME_LAB_GUIDE.md").read_text(encoding="utf-8") if (ROOT / "HOME_LAB_GUIDE.md").is_file() else ""
+    for token in ("8 GiB", "WSL2", "Integrated graphics", "Offline", "Accidental-exposure protection"):
+        if token.lower() not in guide.lower():
+            fail(errors, f"HOME_LAB_GUIDE.md lacks required guidance: {token}")
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -1627,6 +1722,10 @@ def main() -> int:
         ROOT / "schemas" / "benchmark-result.schema.json",
         ROOT / "schemas" / "blind-collection.schema.json",
         ROOT / "schemas" / "blind-reveal.schema.json",
+        ROOT / "schemas" / "home-lab-preflight.schema.json",
+        ROOT / "schemas" / "solo-review.schema.json",
+        ROOT / "schemas" / "solo-blind-envelope.schema.json",
+        ROOT / "schemas" / "solo-blind-reveal.schema.json",
         ROOT / "schemas" / "network-scenario.schema.json",
         ROOT / "schemas" / "network-trial.schema.json",
         ROOT / "schemas" / "remote-call-scenario.schema.json",
@@ -1668,6 +1767,7 @@ def main() -> int:
         manifest = validate_manifest(module_root, errors)
         manifests.append(manifest)
         validate_required_files(module_root, manifest, errors)
+        validate_home_lab_support(module_root, manifest, errors)
         validate_lesson_contracts(module_root, errors)
         validate_calibration(module_root, manifest, errors)
         validate_calibration_provenance(module_root, manifest, errors)
@@ -1687,6 +1787,7 @@ def main() -> int:
         validate_retrieval_agent_lab(module_root, manifest, errors)
 
     validate_baseline(errors)
+    validate_home_lab_global_contract(errors)
     validate_local_links(errors)
 
     if errors:

@@ -19,6 +19,7 @@
         "properties": {
           "opaque_id": {"type": "string", "pattern": "^O[0-9]{2}$"},
           "scenario_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "bundle_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
           "kind": {"enum": ["cpu", "allocation", "lock", "slow_io", "connection_leak", "high_cardinality"]},
           "intensity": {"type": "integer", "minimum": 0, "maximum": 1000000},
           "delay_ms": {"type": "number", "minimum": 0, "maximum": 1000}

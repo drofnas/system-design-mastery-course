@@ -6,7 +6,7 @@
   "required": ["schema_version", "platform", "architecture", "selected_modules", "resource_observations", "checks", "remediations", "summary"],
   "properties": {
     "schema_version": {"const": "1.0"},
-    "platform": {"enum": ["macos", "ubuntu", "wsl2-ubuntu", "windows-native", "linux-other", "unknown"]},
+    "platform": {"enum": ["macos", "ubuntu", "wsl2-ubuntu", "wsl1-unsupported", "windows-native", "linux-other", "unknown"]},
     "architecture": {"enum": ["x86_64", "arm64", "unsupported", "unknown"]},
     "selected_modules": {
       "type": "array",
