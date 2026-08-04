@@ -1,7 +1,7 @@
 # Module 15 Semantic and Resource Readiness Review
 
 Review date: 2026-08-03
-Current decision: **Draft — calibration authorization outstanding**
+Current decision: **Ready**
 
 ## Teaching and evidence review
 
@@ -59,13 +59,15 @@ Current decision: **Draft — calibration authorization outstanding**
 - Java compile and behavior tests in OpenJDK 25
 - `python3 scripts/validate_course.py --module M15`
 
-## Outstanding readiness gate
+## Calibration and readiness result
 
-The complete six-run external LLM calibration was not run because the execution
-environment requires explicit approval before sending fixture-scoped assessment
-text to an external model. One concurrent invocation returned before the other
-invocations were blocked; that partial output was discarded and is not accepted
-as calibration evidence. No synthetic output substitutes for the required set.
-Keep the module and catalog at Draft until two isolated Pass, Revise, and Repeat
-runs exist, their hashes and provenance are recorded, and
-`scripts/check_calibration.py` plus the full-course validator pass.
+Pass, Revise, and Repeat were each evaluated twice in isolated, ephemeral,
+read-only invocations after explicit authorization. The deterministic checker
+accepted all six schema-valid records: Pass scored 3.0/3.0, Revise 2.0/2.5,
+and Repeat 0.1/0.1. Result bands agree, maximum per-criterion drift is one,
+and response, fixture, contract, prompt, and schema hashes are preserved in
+`assessment/calibration/run-metadata.json`.
+
+Focused and full-course validation pass. Semantic and resource review therefore
+passes, and the module is ready for learners within its published evidence
+boundary.

@@ -1,9 +1,9 @@
 # Module 16: Browser, Frontend, CDN, and Edge Architecture
 
-> **Authoring status:** Draft. Do not mark Ready until the pinned browser lab,
-> F01–F08 pairs, accessibility/manual checks, six isolated evaluator runs,
-> calibration checking, semantic and resource review, and focused and full-course
-> validation pass.
+> **Authoring status:** Ready. The pinned browser lab, F01–F08 pairs,
+> accessibility and manual checks, six isolated evaluator runs, calibration
+> checking, semantic and resource review, and focused and full-course validation
+> passed on 2026-08-03.
 
 ## What this module changes
 

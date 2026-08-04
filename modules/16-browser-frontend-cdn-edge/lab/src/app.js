@@ -47,7 +47,11 @@ export function EventDetail({event, forecastPromise}) {
     React.createElement('h1', null, event.title),
     React.createElement('p', null, `Visibility: ${event.region}. Starts ${event.time}.`),
     React.createElement(React.Suspense, {fallback: React.createElement('p', {id: 'stream-status', className: 'status', role: 'status'}, 'Forecast arriving…')},
-      React.createElement(Forecast, {forecastPromise})));
+      React.createElement(Forecast, {forecastPromise})),
+    React.createElement('noscript', null,
+      React.createElement('style', null, '#stream-status{display:none}'),
+      React.createElement('p', {id: 'forecast-degraded', className: 'status', role: 'status'},
+        'Forecast unavailable without JavaScript. Event time and visibility remain available.')));
 }
 
 export function LiveShell() {

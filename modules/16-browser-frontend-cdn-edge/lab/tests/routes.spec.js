@@ -88,3 +88,39 @@ test('constrained profile preserves a usable critical route and records timing',
   test.info().annotations.push({type: 'lab-observation', description: `critical-route elapsed=${elapsedMs}ms; not field evidence`});
   await context.close();
 });
+
+test('200% zoom reflows at an effective 320 CSS pixels', async ({browser}) => {
+  const context = await browser.newContext({viewport: {width: 640, height: 800}});
+  const page = await context.newPage();
+  await page.goto('/sky-events');
+  const layout = await page.evaluate(() => {
+    document.documentElement.style.zoom = '200%';
+    return {
+      viewportWidth: document.documentElement.clientWidth,
+      scrollWidth: document.documentElement.scrollWidth
+    };
+  });
+  expect(layout.scrollWidth).toBeLessThanOrEqual(layout.viewportWidth);
+  await expect(page.getByLabel('Observing region')).toBeVisible();
+  await context.close();
+});
+
+test('public content and navigation remain available with JavaScript disabled', async ({browser}) => {
+  const context = await browser.newContext({javaScriptEnabled: false});
+  const page = await context.newPage();
+  await page.goto('/sky-events');
+  await expect(page.getByRole('heading', {name: 'Public sky events'})).toBeVisible();
+  await expect(page.getByLabel('Observing region')).toBeVisible();
+  await expect(page.getByRole('link', {name: 'Aurora Watch'})).toBeVisible();
+  await page.getByRole('link', {name: 'Aurora Watch'}).click();
+  await expect(page.getByRole('heading', {name: 'Aurora Watch'})).toBeVisible();
+  await expect(page.getByRole('status')).toContainText('Forecast unavailable without JavaScript');
+  await expect(page.getByText('Visibility: north. Starts 22:30 UTC.')).toBeVisible();
+  await context.close();
+});
+
+test('streamed detail exposes a bounded status while delayed content resolves', async ({page}) => {
+  await page.goto('/events/aurora-7');
+  await expect(page.getByRole('heading', {name: 'Aurora Watch'})).toBeVisible();
+  await expect(page.getByRole('status')).toContainText('Forecast: clear');
+});

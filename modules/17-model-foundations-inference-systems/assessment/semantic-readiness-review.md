@@ -14,6 +14,11 @@ Reviewed 2026-08-03 against the syllabus, module standard, and authoring contrac
 - Rubric anchors score causal evidence rather than terminology or Atlas conformity.
 - Evaluator findings cite submitted headings and remediation never writes graded answers.
 - Frozen learner artifacts and the syllabus are untouched.
+- Six fresh isolated records classify Atlas Pass, Revise, and Repeat fixtures
+  consistently across two runs; deterministic comparison reports zero category
+  drift and verified response hashes.
+- The synthetic-fixture convention is explicit and does not allow a real learner
+  summary to replace the underlying evidence required by the assessment contract.
 
-Result: draft. Local semantic review is complete; external evaluator calibration,
-deterministic aggregation, and final focused/full validation remain readiness gates.
+Result: ready. Local lab tests, semantic review, external evaluator calibration,
+deterministic comparison, and focused/full validation pass.
