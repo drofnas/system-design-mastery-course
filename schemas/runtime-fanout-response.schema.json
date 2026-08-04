@@ -1,0 +1,15 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://example.invalid/system-design-course/runtime-fanout-response.schema.json",
+  "title":"Module 15 bounded fan-out response",
+  "type":"object",
+  "required":["request_id","runtime","outcome","children","elapsed_ms","max_in_flight","cleanup"],
+  "properties":{
+    "request_id":{"type":"string"},"runtime":{"enum":["typescript","go","rust","java"]},
+    "outcome":{"enum":["complete","partial","failed","rejected"]},
+    "children":{"type":"array","maxItems":16,"items":{"type":"object","required":["child_id","status","elapsed_ms"],"properties":{"child_id":{"type":"string"},"status":{"enum":["ok","error","timeout","cancelled","invalid"]},"elapsed_ms":{"type":"number","minimum":0}},"additionalProperties":false}},
+    "elapsed_ms":{"type":"number","minimum":0},"max_in_flight":{"type":"integer","minimum":0,"maximum":64},
+    "cleanup":{"type":"object","required":["active_tasks","open_resources"],"properties":{"active_tasks":{"type":"integer","minimum":0},"open_resources":{"type":"integer","minimum":0}},"additionalProperties":false}
+  },
+  "additionalProperties":false
+}
