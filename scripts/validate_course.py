@@ -1363,6 +1363,112 @@ def validate_browser_edge_lab(
         sys.path.remove(str(lab_root))
 
 
+def validate_inference_lab(
+    module_root: Path,
+    manifest: dict[str, Any],
+    errors: list[str],
+) -> None:
+    """Exercise Module 17's portable inference model and serving contracts."""
+
+    if manifest.get("id") != "M17":
+        return
+    lab_root = module_root / "lab"
+    expected = {
+        f"f{number:02d}-{slug}-{variant}.json"
+        for number, slug in (
+            (1, "memory-exhaustion"),
+            (2, "mixed-length-starvation"),
+            (3, "queue-overload"),
+            (4, "cache-identity"),
+            (5, "precision-quality"),
+            (6, "provider-loss"),
+        )
+        for variant in ("broken", "repaired")
+    }
+    scenario_paths = sorted((lab_root / "scenarios").glob("*.json"))
+    observed = {path.name for path in scenario_paths}
+    if observed != expected:
+        fail(errors, f"M17: inference scenario inventory differs: {sorted(observed ^ expected)}")
+
+    required_files = (
+        "inference_lab/tensor.py",
+        "inference_lab/model.py",
+        "inference_lab/config.py",
+        "inference_lab/runner.py",
+        "inference_lab/server.py",
+        "inference_lab/profile.py",
+        "tests/test_tensor_model.py",
+        "tests/test_scenarios_server.py",
+    )
+    for name in required_files:
+        path = lab_root / name
+        if not path.exists():
+            fail(errors, f"M17: missing executable lab file {relative(path)}")
+
+    server_path = lab_root / "inference_lab" / "server.py"
+    tests_path = lab_root / "tests" / "test_scenarios_server.py"
+    if server_path.exists() and tests_path.exists():
+        server_text = server_path.read_text(encoding="utf-8")
+        tests_text = tests_path.read_text(encoding="utf-8")
+        for contract in ("/v1/generate", "/healthz", "/metrics", "application/x-ndjson"):
+            if contract not in server_text:
+                fail(errors, f"M17: server does not implement {contract}")
+        for contract in ("accepted", "token", "completed", "rejected"):
+            if contract not in tests_text:
+                fail(errors, f"M17: server tests do not exercise {contract}")
+
+    sys.path.insert(0, str(lab_root))
+    try:
+        from inference_lab.config import CONTROL_KEYS, load_scenario, validate_trial
+        from inference_lab.runner import run_scenario
+
+        pairs: dict[str, list[tuple[dict[str, Any], dict[str, Any]]]] = {}
+        for scenario_path in scenario_paths:
+            try:
+                scenario = load_scenario(scenario_path)
+                trial = run_scenario(scenario)
+                if trial != run_scenario(scenario):
+                    fail(errors, f"{relative(scenario_path)}: rerun is not deterministic")
+                for error in validate_trial(trial):
+                    fail(errors, f"{relative(scenario_path)} modeled trial: {error}")
+                pairs.setdefault(str(trial["pair_id"]), []).append((scenario, trial))
+            except (OSError, ValueError, KeyError, RuntimeError) as error:
+                fail(errors, f"{relative(scenario_path)}: {error}")
+        if set(pairs) != {f"F{number:02d}" for number in range(1, 7)}:
+            fail(errors, "M17: inference pair coverage must be F01-F06")
+        for pair_id, rows in pairs.items():
+            if len(rows) != 2:
+                fail(errors, f"M17 {pair_id}: expected broken and repaired trials")
+                continue
+            scenarios = [row[0] for row in rows]
+            trials = [row[1] for row in rows]
+            if {trial["variant"] for trial in trials} != {"broken", "repaired"}:
+                fail(errors, f"M17 {pair_id}: variants must be broken and repaired")
+                continue
+            if len({trial["shared_input_sha256"] for trial in trials}) != 1:
+                fail(errors, f"M17 {pair_id}: pair inputs do not match")
+            if len({trial["config_sha256"] for trial in trials}) != 2:
+                fail(errors, f"M17 {pair_id}: pair configuration hashes do not differ")
+            broken_scenario = next(row for row in scenarios if row["variant"] == "broken")
+            repaired_scenario = next(row for row in scenarios if row["variant"] == "repaired")
+            changed = {
+                key for key in CONTROL_KEYS
+                if broken_scenario["controls"][key] != repaired_scenario["controls"][key]
+            }
+            if len(changed) != 1:
+                fail(errors, f"M17 {pair_id}: pair must differ by one named control")
+            broken = next(trial for trial in trials if trial["variant"] == "broken")
+            repaired = next(trial for trial in trials if trial["variant"] == "repaired")
+            target = broken_scenario["expected"]["target_invariant"]
+            broken_results = {row["id"]: row["passed"] for row in broken["invariants"]}
+            if broken_results.get(target) is not False:
+                fail(errors, f"M17 {pair_id}: broken trial does not expose {target}")
+            if not all(row["passed"] for row in repaired["invariants"]):
+                fail(errors, f"M17 {pair_id}: repaired trial does not restore I01-I10")
+    finally:
+        sys.path.remove(str(lab_root))
+
+
 def validate_local_links(errors: list[str]) -> None:
     for markdown in ROOT.rglob("*.md"):
         if any(part in {".git", "node_modules", "test-results"} for part in markdown.parts):
@@ -1427,6 +1533,8 @@ def main() -> int:
         ROOT / "schemas" / "runtime-trial.schema.json",
         ROOT / "schemas" / "browser-edge-scenario.schema.json",
         ROOT / "schemas" / "browser-edge-trial.schema.json",
+        ROOT / "schemas" / "inference-scenario.schema.json",
+        ROOT / "schemas" / "inference-trial.schema.json",
     ):
         load_json(path, errors)
 
@@ -1453,6 +1561,7 @@ def main() -> int:
         validate_evolution_lab(module_root, manifest, errors)
         validate_runtime_lab(module_root, manifest, errors)
         validate_browser_edge_lab(module_root, manifest, errors)
+        validate_inference_lab(module_root, manifest, errors)
 
     validate_baseline(errors)
     validate_local_links(errors)
