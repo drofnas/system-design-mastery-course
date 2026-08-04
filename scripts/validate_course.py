@@ -1153,6 +1153,94 @@ def validate_evolution_lab(
         sys.path.remove(str(lab_root))
 
 
+def validate_runtime_lab(
+    module_root: Path,
+    manifest: dict[str, Any],
+    errors: list[str],
+) -> None:
+    """Exercise Module 15's isolated runtime controls and public trial contract."""
+
+    if manifest.get("id") != "M15":
+        return
+    lab_root = module_root / "lab"
+    expected = {
+        f"f{number:02d}-{slug}-{variant}.json"
+        for number, slug in (
+            (1, "event-loop-block"),
+            (2, "worker-exhaustion"),
+            (3, "task-leak"),
+            (4, "allocation-pressure"),
+            (5, "gc-pause"),
+            (6, "data-race"),
+            (7, "missing-cancellation"),
+            (8, "resource-leak"),
+            (9, "invalid-json"),
+        )
+        for variant in ("broken", "repaired")
+    }
+    scenario_paths = sorted((lab_root / "scenarios").glob("*.json"))
+    observed = {path.name for path in scenario_paths}
+    if observed != expected:
+        fail(errors, f"M15: runtime scenario inventory differs: {sorted(observed ^ expected)}")
+    implementations = {
+        "typescript": lab_root / "implementations" / "typescript" / "src" / "server.ts",
+        "go": lab_root / "implementations" / "go" / "main.go",
+        "rust": lab_root / "implementations" / "rust" / "src" / "main.rs",
+        "java": lab_root / "implementations" / "java" / "FanoutServer.java",
+    }
+    for runtime, path in implementations.items():
+        if not path.exists():
+            fail(errors, f"M15: missing {runtime} implementation {relative(path)}")
+    sys.path.insert(0, str(lab_root))
+    try:
+        from runtime_lab.config import CONTROL_KEYS, load_scenario, validate_trial
+        from runtime_lab.runner import run_scenario
+
+        pairs: dict[str, list[tuple[dict[str, Any], dict[str, Any]]]] = {}
+        for scenario_path in scenario_paths:
+            try:
+                scenario = load_scenario(scenario_path)
+                trial = run_scenario(scenario)
+                if trial != run_scenario(scenario):
+                    fail(errors, f"{relative(scenario_path)}: rerun is not deterministic")
+                for error in validate_trial(trial):
+                    fail(errors, f"{relative(scenario_path)} modeled trial: {error}")
+                pairs.setdefault(str(trial["pair_id"]), []).append((scenario, trial))
+            except (OSError, ValueError, KeyError, RuntimeError) as error:
+                fail(errors, f"{relative(scenario_path)}: {error}")
+        if set(pairs) != {f"F{number:02d}" for number in range(1, 10)}:
+            fail(errors, "M15: runtime pair coverage must be F01-F09")
+        for pair_id, rows in pairs.items():
+            if len(rows) != 2:
+                fail(errors, f"M15 {pair_id}: expected broken and repaired trials")
+                continue
+            scenarios = [row[0] for row in rows]
+            trials = [row[1] for row in rows]
+            if {trial["variant"] for trial in trials} != {"broken", "repaired"}:
+                fail(errors, f"M15 {pair_id}: variants must be broken and repaired")
+                continue
+            if len({trial["shared_input_sha256"] for trial in trials}) != 1:
+                fail(errors, f"M15 {pair_id}: pair inputs do not match")
+            broken_scenario = next(row for row in scenarios if row["variant"] == "broken")
+            repaired_scenario = next(row for row in scenarios if row["variant"] == "repaired")
+            changed = {
+                key for key in CONTROL_KEYS
+                if broken_scenario["controls"][key] != repaired_scenario["controls"][key]
+            }
+            if len(changed) != 1:
+                fail(errors, f"M15 {pair_id}: pair must differ by one named control")
+            broken = next(trial for trial in trials if trial["variant"] == "broken")
+            repaired = next(trial for trial in trials if trial["variant"] == "repaired")
+            target = broken_scenario["expected"]["target_invariant"]
+            broken_results = {row["id"]: row["passed"] for row in broken["invariants"]}
+            if broken_results.get(target) is not False:
+                fail(errors, f"M15 {pair_id}: broken trial does not expose {target}")
+            if not all(row["passed"] for row in repaired["invariants"]):
+                fail(errors, f"M15 {pair_id}: repaired trial does not restore I01-I10")
+    finally:
+        sys.path.remove(str(lab_root))
+
+
 def validate_local_links(errors: list[str]) -> None:
     for markdown in ROOT.rglob("*.md"):
         if ".git" in markdown.parts:
@@ -1211,6 +1299,10 @@ def main() -> int:
         ROOT / "schemas" / "security-trial.schema.json",
         ROOT / "schemas" / "evolution-scenario.schema.json",
         ROOT / "schemas" / "evolution-trial.schema.json",
+        ROOT / "schemas" / "runtime-fanout-request.schema.json",
+        ROOT / "schemas" / "runtime-fanout-response.schema.json",
+        ROOT / "schemas" / "runtime-scenario.schema.json",
+        ROOT / "schemas" / "runtime-trial.schema.json",
     ):
         load_json(path, errors)
 
@@ -1235,6 +1327,7 @@ def main() -> int:
         validate_reliability_lab(module_root, manifest, errors)
         validate_security_lab(module_root, manifest, errors)
         validate_evolution_lab(module_root, manifest, errors)
+        validate_runtime_lab(module_root, manifest, errors)
 
     validate_baseline(errors)
     validate_local_links(errors)

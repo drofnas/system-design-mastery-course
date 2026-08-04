@@ -1,0 +1,7 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import { fanout, validate } from "./server.js";
+test("rejects erased invalid shape",()=>assert.equal(validate({request_id:"x",deadline_ms:"500",concurrency_limit:4,children:[]}),false));
+test("rejects unknown child fields and invalid modes",()=>{assert.equal(validate({request_id:"x",deadline_ms:500,concurrency_limit:4,children:[{child_id:"a",required:true,delay_ms:1,payload_bytes:0,mode:"invented"}]}),false);assert.equal(validate({request_id:"x",deadline_ms:500,concurrency_limit:4,children:[{child_id:"a",required:true,delay_ms:1,payload_bytes:0,extra:true}]}),false);});
+test("returns ordered bounded clean result",async()=>{const value=await fanout({request_id:"r1",deadline_ms:100,concurrency_limit:1,children:[{child_id:"b",required:false,delay_ms:1,payload_bytes:0},{child_id:"a",required:true,delay_ms:1,payload_bytes:0}]});assert.deepEqual(value.children.map(c=>c.child_id),["a","b"]);assert.equal(value.max_in_flight,1);assert.deepEqual(value.cleanup,{active_tasks:0,open_resources:0});});
+test("does not restart the deadline for queued work",async()=>{const value=await fanout({request_id:"r2",deadline_ms:50,concurrency_limit:1,children:[{child_id:"a",required:true,delay_ms:40,payload_bytes:0},{child_id:"b",required:true,delay_ms:40,payload_bytes:0}]});assert.equal(value.children.find(c=>c.child_id==="b")?.status,"timeout");assert.equal(value.cleanup.active_tasks,0);});
