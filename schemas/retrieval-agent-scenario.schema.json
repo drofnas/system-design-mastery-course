@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/system-design-course/retrieval-agent-scenario.schema.json",
+  "title": "Module 18 retrieval and agent failure scenario",
+  "type": "object",
+  "required": ["module_id", "schema_version", "scenario_id", "pair_id", "variant", "seed", "corpus_snapshot", "evaluation_set", "workload", "controls", "fault", "expected"],
+  "properties": {
+    "module_id": {"const": "M18"},
+    "schema_version": {"const": "1.0"},
+    "scenario_id": {"type": "string", "pattern": "^f0[1-8]-[a-z0-9-]+-(broken|repaired)$"},
+    "pair_id": {"type": "string", "pattern": "^F0[1-8]$"},
+    "variant": {"enum": ["broken", "repaired"]},
+    "seed": {"type": "integer"},
+    "corpus_snapshot": {
+      "type": "object",
+      "required": ["id", "sha256", "source_version", "index_version", "revocation_epoch", "document_count"],
+      "properties": {
+        "id": {"type": "string"},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "source_version": {"type": "integer", "minimum": 1},
+        "index_version": {"type": "integer", "minimum": 0},
+        "revocation_epoch": {"type": "integer", "minimum": 0},
+        "document_count": {"type": "integer", "minimum": 1}
+      },
+      "additionalProperties": false
+    },
+    "evaluation_set": {
+      "type": "object",
+      "required": ["id", "sha256", "queries"],
+      "properties": {
+        "id": {"type": "string"},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "queries": {"type": "integer", "minimum": 1}
+      },
+      "additionalProperties": false
+    },
+    "workload": {
+      "type": "object",
+      "required": ["principal", "scopes", "query", "k", "deadline_ms", "provider_delay_ms", "max_steps", "planned_steps", "max_cost_microunits", "cost_per_step_microunits", "cancellation_at_step", "approval_present"],
+      "properties": {
+        "principal": {"type": "string"},
+        "scopes": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "query": {"type": "string"},
+        "k": {"type": "integer", "minimum": 1},
+        "deadline_ms": {"type": "integer", "minimum": 1},
+        "provider_delay_ms": {"type": "integer", "minimum": 0},
+        "max_steps": {"type": "integer", "minimum": 1},
+        "planned_steps": {"type": "integer", "minimum": 1},
+        "max_cost_microunits": {"type": "integer", "minimum": 1},
+        "cost_per_step_microunits": {"type": "integer", "minimum": 1},
+        "cancellation_at_step": {"type": ["integer", "null"], "minimum": 1},
+        "approval_present": {"type": "boolean"}
+      },
+      "additionalProperties": false
+    },
+    "controls": {
+      "type": "object",
+      "required": ["fresh_index_gate", "revocation_enforcement", "quality_release_gate", "untrusted_content_is_data", "bounded_provider_activity", "durable_idempotency", "budget_and_cancellation_bounds", "approval_authorization_gate"],
+      "properties": {
+        "fresh_index_gate": {"type": "boolean"},
+        "revocation_enforcement": {"type": "boolean"},
+        "quality_release_gate": {"type": "boolean"},
+        "untrusted_content_is_data": {"type": "boolean"},
+        "bounded_provider_activity": {"type": "boolean"},
+        "durable_idempotency": {"type": "boolean"},
+        "budget_and_cancellation_bounds": {"type": "boolean"},
+        "approval_authorization_gate": {"type": "boolean"}
+      },
+      "additionalProperties": false
+    },
+    "fault": {"type": "object", "required": ["kind"], "properties": {"kind": {"type": "string"}}, "additionalProperties": true},
+    "expected": {
+      "type": "object",
+      "required": ["target_invariant", "repaired_invariants"],
+      "properties": {
+        "target_invariant": {"type": "string", "pattern": "^I(0[1-9]|1[0-2])$"},
+        "repaired_invariants": {"type": "array", "minItems": 12, "maxItems": 12, "uniqueItems": true, "items": {"type": "string", "pattern": "^I(0[1-9]|1[0-2])$"}}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
