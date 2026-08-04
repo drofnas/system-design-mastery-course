@@ -24,6 +24,23 @@ Each manifest record contains the exact URL, publisher, purpose, assignment,
 verification date, and local text alternative. If a link later fails, use its
 listed lesson, record the access failure, and do not skip the required evidence.
 
+## Verification record — 2026-08-03
+
+- RES-01–RES-09 and RES-11–RES-13 resolved to the named standards-body,
+  maintainer, or first-person publisher pages over HTTPS. Their titles,
+  boundaries, free access, and local alternatives match `module.json`.
+- RES-10 resolved to the Chromium project video page. Its public player metadata
+  advertised `captionTracks` with English (`languageCode: en`). Current
+  RenderingNG documentation and local L01 remain the required written/current
+  comparison because the 2020 video contains version-bound implementation detail.
+- Package versions were checked against their registries and the Node release
+  schedule before locking. The measured harness records Node 24.19.0,
+  React/React DOM 19.2.8, Playwright 1.62.1, axe-core Playwright 4.12.1,
+  esbuild 0.28.1, and Chromium 151.0.7922.34.
+
+Verification confirms reachability and assignment fit on that date; it does not
+transfer implementation-specific browser behavior into a platform guarantee.
+
 ## Reflection questions
 
 1. Which source defines a normative contract, and which reports one implementation?

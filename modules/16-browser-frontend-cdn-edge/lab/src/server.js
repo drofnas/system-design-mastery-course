@@ -1,4 +1,5 @@
 import http from 'node:http';
+import {randomBytes} from 'node:crypto';
 import {readFile} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
 import React from 'react';
@@ -11,6 +12,15 @@ const cache = new Map();
 const counters = {edgeRequests: 0, originRequests: 0, cacheHits: 0, cacheMisses: 0, privateBypasses: 0, rejectedTraceparents: 0};
 const clientBundle = await readFile(fileURLToPath(new URL('../dist/client.js', import.meta.url)));
 const validTraceparent = /^00-[0-9a-f]{32}-[0-9a-f]{16}-0[01]$/;
+const allowedFaults = new Set(['long-task', 'hydrate', 'resource-leak', 'third-party', 'cache-key', 'private-cache', 'origin-failure-unsafe', 'origin-failure-bounded', 'critical-bloat']);
+
+function cleanFault(value) {
+  return allowedFaults.has(value) ? value : '';
+}
+
+function freshTraceparent() {
+  return `00-${randomBytes(16).toString('hex')}-${randomBytes(8).toString('hex')}-01`;
+}
 
 function cleanRegion(value) {
   return value === 'south' ? 'south' : 'north';
@@ -34,10 +44,9 @@ function send(res, status, headers, body) {
 const origin = http.createServer((req, res) => {
   counters.originRequests += 1;
   const url = new URL(req.url, `http://${req.headers.host}`);
-  const fault = req.headers['x-northstar-fault'] || '';
+  const fault = cleanFault(req.headers['x-northstar-fault'] || '');
   const traceparent = req.headers.traceparent || '';
-  const safeTrace = validTraceparent.test(traceparent) ? traceparent : '00-00000000000000000000000000000016-0000000000000016-01';
-  if (traceparent && traceparent !== safeTrace) counters.rejectedTraceparents += 1;
+  const safeTrace = validTraceparent.test(traceparent) ? traceparent : freshTraceparent();
   const common = {'x-origin-traceparent': safeTrace, 'x-content-version': 'northstar-2026-08-03'};
 
   if (url.pathname === '/assets/client.js') {
@@ -104,7 +113,7 @@ const edge = http.createServer(async (req, res) => {
     res.writeHead(200, {'content-type': 'application/json', 'cache-control': 'no-store'});
     return res.end(JSON.stringify({...counters, cacheEntries: cache.size, traceFields: ['traceparent'], sensitiveFields: []}));
   }
-  const fault = req.headers['x-northstar-fault'] || '';
+  const fault = cleanFault(req.headers['x-northstar-fault'] || '');
   const unsafePrivateCache = fault === 'private-cache';
   const isPrivate = !unsafePrivateCache && (url.pathname === '/staff/schedule' || url.pathname === '/api/live' || url.pathname === '/telemetry/snapshot');
   const key = cacheKey(url, req.headers, fault);
@@ -126,7 +135,10 @@ const edge = http.createServer(async (req, res) => {
   }
   if (isPrivate) counters.privateBypasses += 1;
   else counters.cacheMisses += 1;
-  const upstream = await fetch(`http://127.0.0.1:${originPort}${req.url}`, {headers: req.headers});
+  const traceparent = req.headers.traceparent || '';
+  const upstreamHeaders = {...req.headers, traceparent: validTraceparent.test(traceparent) ? traceparent : freshTraceparent()};
+  if (traceparent && traceparent !== upstreamHeaders.traceparent) counters.rejectedTraceparents += 1;
+  const upstream = await fetch(`http://127.0.0.1:${originPort}${req.url}`, {headers: upstreamHeaders});
   const headers = Object.fromEntries(upstream.headers.entries());
   const cacheEligible = !isPrivate && (unsafePrivateCache || /public/.test(headers['cache-control'] || '')) && upstream.ok;
   const responseHeaders = {...headers, 'x-cache': isPrivate ? 'BYPASS' : 'MISS'};
