@@ -55,12 +55,18 @@ if (location.pathname === '/staff/schedule') {
 if (fault === 'resource-leak') {
   window.__northstarLeakTimer = setInterval(() => {}, 1000);
   window.addEventListener('northstar-leak', () => document.body.dataset.leaked = 'true');
+  window.__northstarActiveResources = {timers: 1, listeners: 1};
+} else {
+  window.__northstarActiveResources = {timers: 0, listeners: 0};
 }
 
 if (fault === 'third-party') {
+  const control = document.querySelector('#region');
+  if (control) control.disabled = true;
   const script = document.createElement('script');
   script.src = '/third-party.js?delay=600';
   script.async = false;
+  script.addEventListener('error', () => { window.__northstarThirdPartyFailure = true; });
   document.head.append(script);
 }
 

@@ -41,8 +41,11 @@ const origin = http.createServer((req, res) => {
   const common = {'x-origin-traceparent': safeTrace, 'x-content-version': 'northstar-2026-08-03'};
 
   if (url.pathname === '/assets/client.js') {
-    res.writeHead(200, {'content-type': 'text/javascript; charset=utf-8', 'cache-control': 'public, max-age=31536000, immutable'});
-    return res.end(clientBundle);
+    const delay = fault === 'critical-bloat' ? 1400 : 0;
+    return setTimeout(() => {
+      res.writeHead(200, {'content-type': 'text/javascript; charset=utf-8', 'cache-control': 'public, max-age=31536000, immutable'});
+      res.end(clientBundle);
+    }, delay);
   }
   if (url.pathname === '/api/live') {
     res.writeHead(200, {'content-type': 'application/json', 'cache-control': 'no-store', ...common});
@@ -62,12 +65,12 @@ const origin = http.createServer((req, res) => {
   if (url.pathname.startsWith('/events/')) {
     const id = url.pathname.split('/')[2];
     const event = events.find((row) => row.id === id) || events[0];
-    res.writeHead(200, {'content-type': 'text/html; charset=utf-8', 'cache-control': 'public, max-age=20', ...common});
-    res.write('<!doctype html>');
-    const stream = renderToPipeableStream(React.createElement(Layout, {title: event.title}, React.createElement(EventDetail, {event})), {
+    const forecastPromise = new Promise((resolve) => setTimeout(() => resolve('Forecast: clear with light cloud after midnight.'), 60));
+    const stream = renderToPipeableStream(React.createElement(Layout, {title: event.title}, React.createElement(EventDetail, {event, forecastPromise})), {
       onShellReady() {
+        res.writeHead(200, {'content-type': 'text/html; charset=utf-8', 'cache-control': 'public, max-age=20', ...common});
+        res.write('<!doctype html>');
         stream.pipe(res);
-        setTimeout(() => {}, 25);
       },
       onError(error) {
         console.error('stream error', error.message);
@@ -88,9 +91,10 @@ const origin = http.createServer((req, res) => {
   send(res, 404, {'cache-control': 'no-store', ...common}, '<!doctype html><h1>Not found</h1>');
 });
 
-function cacheKey(url, headers, incomplete = false) {
-  if (incomplete) return url.pathname;
-  return `${url.pathname}|region=${cleanRegion(headers['x-region'])}`;
+function cacheKey(url, headers, fault = '') {
+  if (fault === 'cache-key') return url.pathname;
+  const faultNamespace = fault && !fault.startsWith('origin-failure-') ? `|fault=${fault}` : '';
+  return `${url.pathname}|region=${cleanRegion(headers['x-region'])}${faultNamespace}`;
 }
 
 const edge = http.createServer(async (req, res) => {
@@ -100,9 +104,20 @@ const edge = http.createServer(async (req, res) => {
     res.writeHead(200, {'content-type': 'application/json', 'cache-control': 'no-store'});
     return res.end(JSON.stringify({...counters, cacheEntries: cache.size, traceFields: ['traceparent'], sensitiveFields: []}));
   }
-  const isPrivate = url.pathname === '/staff/schedule' || url.pathname === '/api/live' || url.pathname === '/telemetry/snapshot';
   const fault = req.headers['x-northstar-fault'] || '';
-  const key = cacheKey(url, req.headers, fault === 'cache-key');
+  const unsafePrivateCache = fault === 'private-cache';
+  const isPrivate = !unsafePrivateCache && (url.pathname === '/staff/schedule' || url.pathname === '/api/live' || url.pathname === '/telemetry/snapshot');
+  const key = cacheKey(url, req.headers, fault);
+  if (fault === 'origin-failure-unsafe' || fault === 'origin-failure-bounded') {
+    if (url.pathname === '/staff/schedule' || !cache.has(key)) {
+      res.writeHead(503, {'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store', 'x-cache': 'FAIL-CLOSED'});
+      return res.end('<!doctype html><h1>Temporarily unavailable</h1>');
+    }
+    const stale = cache.get(key);
+    const bounded = fault === 'origin-failure-bounded';
+    res.writeHead(stale.status, {...stale.headers, 'x-cache': 'STALE', 'x-degraded': String(bounded), 'x-stale-age': bounded ? '60' : '3600'});
+    return res.end(stale.body);
+  }
   if (!isPrivate && cache.has(key)) {
     counters.cacheHits += 1;
     const hit = cache.get(key);
@@ -112,10 +127,24 @@ const edge = http.createServer(async (req, res) => {
   if (isPrivate) counters.privateBypasses += 1;
   else counters.cacheMisses += 1;
   const upstream = await fetch(`http://127.0.0.1:${originPort}${req.url}`, {headers: req.headers});
-  const body = Buffer.from(await upstream.arrayBuffer());
   const headers = Object.fromEntries(upstream.headers.entries());
-  if (!isPrivate && /public/.test(headers['cache-control'] || '') && upstream.ok) cache.set(key, {status: upstream.status, headers, body});
-  res.writeHead(upstream.status, {...headers, 'x-cache': isPrivate ? 'BYPASS' : 'MISS'});
+  const cacheEligible = !isPrivate && (unsafePrivateCache || /public/.test(headers['cache-control'] || '')) && upstream.ok;
+  const responseHeaders = {...headers, 'x-cache': isPrivate ? 'BYPASS' : 'MISS'};
+  if (url.pathname.startsWith('/events/') && upstream.body) {
+    res.writeHead(upstream.status, responseHeaders);
+    const chunks = [];
+    for await (const chunk of upstream.body) {
+      const bytes = Buffer.from(chunk);
+      chunks.push(bytes);
+      res.write(bytes);
+    }
+    res.end();
+    if (cacheEligible) cache.set(key, {status: upstream.status, headers, body: Buffer.concat(chunks)});
+    return;
+  }
+  const body = Buffer.from(await upstream.arrayBuffer());
+  if (cacheEligible) cache.set(key, {status: upstream.status, headers, body});
+  res.writeHead(upstream.status, responseHeaders);
   res.end(body);
 });
 

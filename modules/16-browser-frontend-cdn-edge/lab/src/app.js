@@ -37,11 +37,17 @@ export function SkyEvents({region}) {
         React.createElement('p', null, `${event.time} · ${event.region}`)))));
 }
 
-export function EventDetail({event}) {
+function Forecast({forecastPromise}) {
+  const forecast = React.use(forecastPromise);
+  return React.createElement('p', {id: 'stream-status', className: 'status', role: 'status'}, forecast);
+}
+
+export function EventDetail({event, forecastPromise}) {
   return React.createElement(React.Fragment, null,
     React.createElement('h1', null, event.title),
     React.createElement('p', null, `Visibility: ${event.region}. Starts ${event.time}.`),
-    React.createElement('div', {id: 'stream-status', className: 'status', role: 'status'}, 'Forecast arriving…'));
+    React.createElement(React.Suspense, {fallback: React.createElement('p', {id: 'stream-status', className: 'status', role: 'status'}, 'Forecast arriving…')},
+      React.createElement(Forecast, {forecastPromise})));
 }
 
 export function LiveShell() {

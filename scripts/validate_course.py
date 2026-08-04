@@ -1279,6 +1279,7 @@ def validate_browser_edge_lab(
         "src/client.jsx",
         "tests/server.test.js",
         "tests/routes.spec.js",
+        "tests/failure-pairs.spec.js",
     )
     for name in required_files:
         path = lab_root / name
@@ -1286,6 +1287,7 @@ def validate_browser_edge_lab(
             fail(errors, f"M16: missing executable lab file {relative(path)}")
     server_path = lab_root / "src" / "server.js"
     tests_path = lab_root / "tests" / "routes.spec.js"
+    failure_tests_path = lab_root / "tests" / "failure-pairs.spec.js"
     if server_path.exists() and tests_path.exists():
         server_text = server_path.read_text(encoding="utf-8")
         tests_text = tests_path.read_text(encoding="utf-8")
@@ -1303,6 +1305,11 @@ def validate_browser_edge_lab(
         for contract in ("AxeBuilder", "keyboard", "traceparent", "Network.emulateNetworkConditions"):
             if contract not in tests_text:
                 fail(errors, f"M16: browser suite lacks {contract} evidence")
+    if failure_tests_path.exists():
+        failure_tests = failure_tests_path.read_text(encoding="utf-8")
+        for pair_id in (f"F{number:02d}" for number in range(1, 9)):
+            if pair_id not in failure_tests:
+                fail(errors, f"M16: browser suite does not exercise {pair_id}")
 
     sys.path.insert(0, str(lab_root))
     try:
