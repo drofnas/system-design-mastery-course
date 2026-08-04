@@ -1,5 +1,8 @@
 # Atlas Inference Lab
 
+Before setup, run the repository [Home Lab Guide](../../../HOME_LAB_GUIDE.md)
+preflight for `M17`.
+
 The lab has three evidence planes:
 
 1. `inference_lab/tensor.py` and `model.py` are a dependency-free, inspectable

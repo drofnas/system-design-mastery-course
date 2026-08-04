@@ -11,6 +11,11 @@ The target learner is an experienced software engineer. Modules should demand
 precision, causal reasoning, quantified claims, and leadership judgment without
 re-teaching routine programming skills.
 
+Executable work must remain feasible under the supported one-computer baseline
+in [`HOME_LAB_GUIDE.md`](HOME_LAB_GUIDE.md). A lab README must link that guide,
+state its resource bounds, and give macOS, supported Linux, and Windows-through-
+WSL2 instructions wherever commands or evidence boundaries differ.
+
 ## Required learning loop
 
 Every four-week module follows this sequence:

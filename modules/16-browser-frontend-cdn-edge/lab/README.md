@@ -1,5 +1,8 @@
 # Northstar Browser–Edge Lab
 
+Before setup, run the repository [Home Lab Guide](../../../HOME_LAB_GUIDE.md)
+preflight for `M16`.
+
 This lab has two evidence planes:
 
 - `browser_edge_lab/` is a deterministic repository model. It proves scenario

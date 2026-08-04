@@ -1,5 +1,8 @@
 # Observability Lab Reference
 
+Before setup, run the repository [Home Lab Guide](../../../HOME_LAB_GUIDE.md)
+preflight for `M04`.
+
 This Python 3 standard-library lab is an instrumented, versioned continuation of
 Module 2's Transit Signal saturation service. It preserves fixed workers, a
 bounded queue, bounded downstream fan-out, seeded branch latency/failure, and a

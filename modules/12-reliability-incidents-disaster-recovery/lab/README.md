@@ -1,5 +1,8 @@
 # Reliability, Incidents, and Disaster Recovery Lab
 
+Before setup, run the repository [Home Lab Guide](../../../HOME_LAB_GUIDE.md)
+preflight for `M12`.
+
 This Python 3.11+ standard-library lab models deterministic journey events,
 budget windows, alerts, degradation, incident coordination, backup/restore,
 regional capacity, authority epochs, failback, reconciliation, and operator

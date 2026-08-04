@@ -1,5 +1,8 @@
 # Security, Privacy, and Abuse-Resistance Lab
 
+Before setup, run the repository [Home Lab Guide](../../../HOME_LAB_GUIDE.md)
+preflight for `M13`.
+
 This Python 3.11+ standard-library lab models explicit identity, authorization,
 tenant, secret, audit, deletion, dependency, abuse-budget, and tool decisions.
 Its public CLI is:

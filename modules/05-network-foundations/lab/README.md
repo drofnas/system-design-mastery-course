@@ -1,5 +1,8 @@
 # Module 5 Hybrid Network Lab
 
+Before setup, run the repository [Home Lab Guide](../../../HOME_LAB_GUIDE.md)
+preflight for `M05`.
+
 The lab exposes two different evidence boundaries:
 
 1. `trace` measures a real unprivileged loopback path: a UDP DNS message, TCP/TLS

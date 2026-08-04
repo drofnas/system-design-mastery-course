@@ -1,5 +1,8 @@
 # CivicAid Retrieval and Durable-Agent Lab Reference
 
+Before setup, run the repository [Home Lab Guide](../../../HOME_LAB_GUIDE.md)
+preflight for `M18`.
+
 This portable Python 3.11 lab exposes retrieval and workflow mechanisms without
 an external model, vector database, workflow service, account, or network. The
 required path uses frozen vectors and a deterministic extractive answer model.

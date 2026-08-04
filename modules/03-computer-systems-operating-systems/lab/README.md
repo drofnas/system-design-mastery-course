@@ -1,5 +1,8 @@
 # Module 3 Systems Lab
 
+Before setup, run the repository [Home Lab Guide](../../../HOME_LAB_GUIDE.md)
+preflight for `M03`.
+
 The lab exposes observable mechanisms; it is not a hardware-ranking suite.
 
 ## Requirements

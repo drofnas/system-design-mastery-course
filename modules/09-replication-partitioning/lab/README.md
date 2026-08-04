@@ -1,5 +1,8 @@
 # Replication and Partitioning Lab
 
+Before setup, run the repository [Home Lab Guide](../../../HOME_LAB_GUIDE.md)
+preflight for `M09`.
+
 This Python 3.11+ lab is a deterministic teaching model. It uses no database,
 container, account, external package, or network. It exposes operation order,
 replica versions, acknowledgements, session violations, conflict handling,

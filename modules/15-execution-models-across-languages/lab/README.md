@@ -1,5 +1,8 @@
 # Module 15 Polyglot Lab
 
+Before setup, run the repository [Home Lab Guide](../../../HOME_LAB_GUIDE.md)
+preflight for `M15`.
+
 This lab has two layers. `runtime_lab` is a deterministic contract model used by
 course validation. `implementations/` contains measured services in TypeScript,
 Go, Rust, and Java. Model output is never accepted as runtime performance evidence.

@@ -1,5 +1,8 @@
 # Capacity Lab Reference
 
+Before setup, run the repository [Home Lab Guide](../../../HOME_LAB_GUIDE.md)
+preflight for `M02`.
+
 This Python 3 standard-library lab exposes the mechanisms used in Module 2. It
 is intentionally a bounded synthetic system, not a production server. It binds
 only to loopback, caps scenario size, and never contacts an external service.

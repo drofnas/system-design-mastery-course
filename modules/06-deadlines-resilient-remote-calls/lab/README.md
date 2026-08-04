@@ -1,5 +1,8 @@
 # Beacon Dispatch Asynchronous Fan-Out Lab
 
+Before setup, run the repository [Home Lab Guide](../../../HOME_LAB_GUIDE.md)
+preflight for `M06`.
+
 This lab is an actual standard-library `asyncio` fan-out service with synthetic,
 offline dependencies. It executes queues, permits, retries, cancellation,
 idempotency, partial-result classification, and health isolation; it does not

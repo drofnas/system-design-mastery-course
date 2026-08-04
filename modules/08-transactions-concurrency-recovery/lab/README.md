@@ -1,5 +1,8 @@
 # Transaction and Recovery Lab
 
+Before setup, run the repository [Home Lab Guide](../../../HOME_LAB_GUIDE.md)
+preflight for `M08`.
+
 This Python 3.11+ standard-library lab exposes deterministic transaction
 schedules, shared/exclusive locks, MVCC validation, WAL ordering, explicit flushes, crash recovery,
 backup, and point-in-time restore. It executes real local file writes and
