@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/system-design-course/retrieval-agent-trial.schema.json",
+  "title": "Module 18 deterministic retrieval and agent trial",
+  "type": "object",
+  "required": ["module_id", "schema_version", "scenario_id", "pair_id", "variant", "seed", "evidence_kind", "shared_input_sha256", "config_sha256", "toolchain", "retrieval", "answer", "workflow", "budget", "audit", "cost", "invariants", "limitations"],
+  "properties": {
+    "module_id": {"const": "M18"},
+    "schema_version": {"const": "1.0"},
+    "scenario_id": {"type": "string"},
+    "pair_id": {"type": "string", "pattern": "^F0[1-8]$"},
+    "variant": {"enum": ["broken", "repaired"]},
+    "seed": {"type": "integer"},
+    "evidence_kind": {"const": "modeled"},
+    "shared_input_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "config_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "toolchain": {"type": "object", "required": ["python", "lab_version"], "additionalProperties": true},
+    "retrieval": {"type": "object", "required": ["exact_ids", "approximate_ids", "lexical_ids", "hybrid_ids", "recall_at_3", "mrr", "ndcg_at_3", "visited_nodes", "index_bytes_estimate", "release_passed"], "additionalProperties": true},
+    "answer": {"type": "object", "required": ["abstained", "grounded_claims", "unsupported_claims", "citations", "citation_versions_valid", "revoked_hits"], "additionalProperties": true},
+    "workflow": {"type": "object", "required": ["events", "checkpoint", "resumed", "duplicate_side_effects", "authorization_source", "approval_consumed", "cancelled", "outstanding_work"], "additionalProperties": true},
+    "budget": {"type": "object", "required": ["max_steps", "used_steps", "max_cost_microunits", "used_cost_microunits", "deadline_ms", "elapsed_ms"], "additionalProperties": true},
+    "audit": {"type": "object", "required": ["records", "secrets_exposed", "complete"], "additionalProperties": true},
+    "cost": {"type": "object", "required": ["index_units", "query_units", "provider_units", "total_microunits", "cost_per_supported_answer"], "additionalProperties": true},
+    "invariants": {"type": "array", "minItems": 12, "maxItems": 12, "items": {"type": "object", "required": ["id", "passed", "evidence"], "properties": {"id": {"type": "string", "pattern": "^I(0[1-9]|1[0-2])$"}, "passed": {"type": "boolean"}, "evidence": {"type": "string"}}, "additionalProperties": false}},
+    "limitations": {"type": "array", "minItems": 1, "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}
