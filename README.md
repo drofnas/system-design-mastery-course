@@ -178,7 +178,8 @@ scripts/        Course validation tools
 | 13. Security, Privacy, and Abuse Resistance | 49–52 | Ready | [Start Module 13](modules/13-security-privacy-abuse-resistance/README.md) |
 | 14. Architecture Evolution, Economics, and Organization | 53–56 | Ready | [Start Module 14](modules/14-architecture-evolution-economics-organization/README.md) |
 | 15. Execution Models Across Languages | 57–60 | Draft | [Start Module 15](modules/15-execution-models-across-languages/README.md) |
-| 16–18 | 61–72 | Syllabus-defined; teaching packages not yet authored | [Course syllabus](00_COURSE_SYLLABUS.md) |
+| 16. Browser, Frontend, CDN, and Edge Architecture | 61–64 | Draft | [Start Module 16](modules/16-browser-frontend-cdn-edge/README.md) |
+| 17–18 | 65–72 | Syllabus-defined; teaching packages not yet authored | [Course syllabus](00_COURSE_SYLLABUS.md) |
 
 Future modules must satisfy
 [`MODULE_STANDARD.md`](MODULE_STANDARD.md). Course-authoring agents must also
@@ -195,7 +196,7 @@ python3 scripts/validate_course.py
 The validator discovers every module manifest and checks hour budgets, outcome
 mappings, lesson and resource contracts, required teaching and assessment
 files, calibration state, the frozen baseline contract, JSON interfaces, and
-local Markdown links. Use `--module M01` through `--module M15` to validate a
+local Markdown links. Use `--module M01` through `--module M16` to validate a
 single module.
 
 ## Evidence and AI rules

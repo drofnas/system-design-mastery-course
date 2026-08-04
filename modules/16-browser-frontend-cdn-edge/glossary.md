@@ -1,0 +1,29 @@
+# Module 16 Glossary
+
+- **Task:** Event-loop work selected from a task queue, such as input dispatch or a timer callback.
+- **Microtask:** Work drained at a microtask checkpoint before the event loop proceeds; promises commonly enqueue it.
+- **Rendering opportunity:** A user-agent-selected point at which rendering updates may occur; it is not guaranteed after every task.
+- **Style, layout, paint, raster, composite:** Distinct stages that calculate appearance and geometry, record drawing, create pixels, and assemble frames.
+- **Long task:** Main-thread work long enough to block other work; attribution and user impact matter more than the label alone.
+- **INP:** A field metric representing interaction latency across a page visit, reported at a population percentile.
+- **LCP:** Largest Contentful Paint, a field/lab loading milestone whose candidate and timing require context.
+- **CLS:** Cumulative Layout Shift, a visual-stability metric that excludes some user-initiated shifts.
+- **Static rendering:** HTML produced before a request and reusable while its content contract remains valid.
+- **Server rendering:** HTML produced for a request at an origin or edge runtime.
+- **Streaming rendering:** Sending an HTML shell and later chunks while retaining explicit status, error, and abort semantics.
+- **Client rendering:** Producing important route content after browser JavaScript executes and obtains state.
+- **Hydration:** Attaching client behavior to server-produced markup under an identity/equality contract.
+- **Island:** A bounded interactive root hydrated independently from surrounding static or server-rendered content.
+- **Freshness lifetime:** Time a stored response can be reused without validation under its cache policy.
+- **Validation:** Asking the origin whether a stored representation remains current, commonly with an ETag.
+- **Cache key:** Normalized request dimensions that distinguish reusable representations.
+- **Shared cache:** A cache that can serve multiple users; it must never infer permission from possession of an object.
+- **Private response:** A representation bound to a subject or session and ineligible for shared storage.
+- **Stale-if-error:** Bounded reuse of a stale response after failure; safe only for routes whose authority permits it.
+- **Accessibility tree:** The semantic representation exposed to assistive technology; visual pixels alone do not define it.
+- **Focus order:** The sequence in which keyboard navigation reaches interactive elements.
+- **Detached DOM:** Nodes no longer in the document but retained by references, listeners, or closures.
+- **Third-party script:** Code governed and changed outside the route owner's release boundary.
+- **Trace context:** Interoperable request identity and parentage; it is not authorization and should not carry private attributes.
+- **BFF:** Backend for frontend, an interface shaped for a client population with explicit ownership and authority.
+- **Microfrontend:** Independently owned frontend capability; it adds runtime, governance, compatibility, and user-experience costs.

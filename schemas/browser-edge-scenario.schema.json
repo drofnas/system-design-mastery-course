@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/system-design-course/browser-edge-scenario.schema.json",
+  "title": "Module 16 browser-edge failure scenario",
+  "type": "object",
+  "required": ["module_id","schema_version","scenario_id","pair_id","variant","seed","route","environment","workload","subjects","controls","expected"],
+  "properties": {
+    "module_id": {"const":"M16"},
+    "schema_version": {"const":"1.0"},
+    "scenario_id": {"type":"string","pattern":"^f0[1-8]-[a-z0-9-]+-(broken|repaired)$"},
+    "pair_id": {"type":"string","pattern":"^F0[1-8]$"},
+    "variant": {"enum":["broken","repaired"]},
+    "seed": {"type":"integer"},
+    "route": {
+      "type":"object",
+      "required":["id","rendering_mode","data_class","language","content_version"],
+      "properties": {
+        "id":{"type":"string"},
+        "rendering_mode":{"enum":["static","server","streaming","client","island"]},
+        "data_class":{"enum":["public","regional","private","current"]},
+        "language":{"type":"string"},
+        "content_version":{"type":"string"}
+      },
+      "additionalProperties":false
+    },
+    "environment": {
+      "type":"object",
+      "required":["browser_engine","network_profile","device_profile"],
+      "properties": {
+        "browser_engine":{"type":"string"},
+        "network_profile":{"type":"string"},
+        "device_profile":{"type":"string"}
+      },
+      "additionalProperties":false
+    },
+    "workload": {
+      "type":"object",
+      "required":["critical_bytes","request_count","main_thread_ms","navigations","third_party_delay_ms","origin_available"],
+      "properties": {
+        "critical_bytes":{"type":"integer","minimum":0},
+        "request_count":{"type":"integer","minimum":0},
+        "main_thread_ms":{"type":"integer","minimum":0},
+        "navigations":{"type":"integer","minimum":1},
+        "third_party_delay_ms":{"type":"integer","minimum":0},
+        "origin_available":{"type":"boolean"}
+      },
+      "additionalProperties":false
+    },
+    "subjects":{"type":"array","items":{"type":"string"},"minItems":2,"maxItems":2,"uniqueItems":true},
+    "controls": {
+      "type":"object",
+      "required":["yield_long_tasks","prioritize_critical_resources","deterministic_hydration","release_route_resources","isolate_third_party","complete_public_cache_key","private_cache_bypass","bounded_stale_on_error"],
+      "properties": {
+        "yield_long_tasks":{"type":"boolean"},
+        "prioritize_critical_resources":{"type":"boolean"},
+        "deterministic_hydration":{"type":"boolean"},
+        "release_route_resources":{"type":"boolean"},
+        "isolate_third_party":{"type":"boolean"},
+        "complete_public_cache_key":{"type":"boolean"},
+        "private_cache_bypass":{"type":"boolean"},
+        "bounded_stale_on_error":{"type":"boolean"}
+      },
+      "additionalProperties":false
+    },
+    "expected": {
+      "type":"object",
+      "required":["target_invariant","repaired_invariants"],
+      "properties": {
+        "target_invariant":{"type":"string","pattern":"^I(0[1-9]|10)$"},
+        "repaired_invariants":{"type":"array","items":{"type":"string","pattern":"^I(0[1-9]|10)$"},"minItems":10,"maxItems":10,"uniqueItems":true}
+      },
+      "additionalProperties":false
+    }
+  },
+  "additionalProperties":false
+}

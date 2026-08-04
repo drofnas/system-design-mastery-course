@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/system-design-course/browser-edge-trial.schema.json",
+  "title": "Module 16 deterministic browser-edge trial",
+  "type": "object",
+  "required": ["module_id","schema_version","scenario_id","pair_id","variant","seed","shared_input_sha256","config_sha256","toolchain","environment","route","measurements","cache","accessibility","memory","trace","invariants","limitations"],
+  "properties": {
+    "module_id":{"const":"M16"},
+    "schema_version":{"const":"1.0"},
+    "scenario_id":{"type":"string"},
+    "pair_id":{"type":"string","pattern":"^F0[1-8]$"},
+    "variant":{"enum":["broken","repaired"]},
+    "seed":{"type":"integer"},
+    "shared_input_sha256":{"type":"string","pattern":"^[a-f0-9]{64}$"},
+    "config_sha256":{"type":"string","pattern":"^[a-f0-9]{64}$"},
+    "toolchain":{
+      "type":"object",
+      "required":["node","react","playwright","chromium","model_version"],
+      "properties":{
+        "node":{"type":"string"},
+        "react":{"type":"string"},
+        "playwright":{"type":"string"},
+        "chromium":{"type":"string"},
+        "model_version":{"type":"string"}
+      },
+      "additionalProperties":false
+    },
+    "environment":{"type":"object"},
+    "route":{"type":"object"},
+    "measurements":{
+      "type":"object",
+      "required":["lab_interaction_ms","critical_transfer_ms","long_task_count","hydration_mismatches"],
+      "properties": {
+        "lab_interaction_ms":{"type":"number","minimum":0},
+        "critical_transfer_ms":{"type":"number","minimum":0},
+        "long_task_count":{"type":"integer","minimum":0},
+        "hydration_mismatches":{"type":"integer","minimum":0}
+      },
+      "additionalProperties":false
+    },
+    "cache":{
+      "type":"object",
+      "required":["public_representations_distinct","private_cache_entries","stale_age_seconds","degraded_marked"],
+      "properties": {
+        "public_representations_distinct":{"type":"boolean"},
+        "private_cache_entries":{"type":"integer","minimum":0},
+        "stale_age_seconds":{"type":"integer","minimum":0},
+        "degraded_marked":{"type":"boolean"}
+      },
+      "additionalProperties":false
+    },
+    "accessibility":{
+      "type":"object",
+      "required":["semantic_structure","keyboard_path","focus_preserved","manual_boundary_recorded"],
+      "properties": {
+        "semantic_structure":{"type":"boolean"},
+        "keyboard_path":{"type":"boolean"},
+        "focus_preserved":{"type":"boolean"},
+        "manual_boundary_recorded":{"type":"boolean"}
+      },
+      "additionalProperties":false
+    },
+    "memory":{
+      "type":"object",
+      "required":["active_resource_delta","detached_node_delta"],
+      "properties": {
+        "active_resource_delta":{"type":"integer","minimum":0},
+        "detached_node_delta":{"type":"integer","minimum":0}
+      },
+      "additionalProperties":false
+    },
+    "trace":{
+      "type":"object",
+      "required":["valid_parentage","sensitive_attribute_count","bounded_route_template"],
+      "properties": {
+        "valid_parentage":{"type":"boolean"},
+        "sensitive_attribute_count":{"type":"integer","minimum":0},
+        "bounded_route_template":{"type":"boolean"}
+      },
+      "additionalProperties":false
+    },
+    "invariants":{
+      "type":"array","minItems":10,"maxItems":10,
+      "items":{
+        "type":"object","required":["id","passed","evidence"],
+        "properties":{"id":{"type":"string"},"passed":{"type":"boolean"},"evidence":{"type":"string"}},
+        "additionalProperties":false
+      }
+    },
+    "limitations":{"type":"array","items":{"type":"string"},"minItems":1}
+  },
+  "additionalProperties":false
+}
