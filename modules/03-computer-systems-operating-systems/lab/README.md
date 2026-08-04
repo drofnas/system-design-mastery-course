@@ -1,5 +1,8 @@
 # Module 3 Systems Lab
 
+Before setup, run the repository [Home Lab Guide](../../../HOME_LAB_GUIDE.md)
+preflight for `M03`.
+
 The lab exposes observable mechanisms; it is not a hardware-ranking suite.
 
 ## Requirements
@@ -21,6 +24,19 @@ PYTHONPATH=. python3 -m systems_lab validate build/locality-contiguous.json
 make matrix
 make sanitize
 ```
+
+### macOS and supported Linux
+
+Use the commands above unchanged in Terminal on macOS or a shell on Ubuntu.
+Docker Desktop supplies the Linux container boundary on macOS; Docker Engine
+supplies it on Ubuntu. Native trials remain native to the host operating system.
+
+### Windows through WSL2
+
+Run the same commands in the Ubuntu WSL2 shell with Docker Desktop WSL
+integration enabled. Keep the repository in the WSL filesystem. These results
+cross both the Windows/WSL and Docker Linux-VM boundaries; they are not native
+Windows measurements. A native PowerShell path is not supported.
 
 `run` executes one scenario. `matrix` executes the ordered scenario paths in a
 manifest. `validate` enforces the published contract, including aligned resource
@@ -46,6 +62,13 @@ memory-limit sweep and retained OOM outcome, 16–256 MiB native working sets,
 and equal-byte durability variants. Docker evidence includes `cpu.stat`, memory
 events/current/peak, PIDs current/peak/events, and `io.stat`. These are trial
 cgroup observations, not reserved-capacity guarantees.
+
+The complete matrix runs serially. Its expected peak bounds are two assigned
+container CPUs, 256 MiB working-set/container memory for the bounded trials,
+bounded temporary I/O, and one active scenario at a time. The initial Docker
+run downloads the pinned GCC image. The 64-worker scenario intentionally shows
+scheduler oversubscription and does not require 64 physical or logical cores.
+Do not replace the required matrix with a reduced assessment path.
 
 Durable variants synchronize a temporary file, rename it, attempt to synchronize
 the containing directory, and record whether the directory operation is

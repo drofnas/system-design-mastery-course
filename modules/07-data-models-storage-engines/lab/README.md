@@ -1,5 +1,8 @@
 # Harbor Persistent Storage Lab
 
+Before setup, run the repository [Home Lab Guide](../../../HOME_LAB_GUIDE.md)
+preflight for `M07`.
+
 This standard-library lab executes two educational storage engines:
 
 - a fixed-size page file with B+ tree interior/leaf pages, linked leaves,

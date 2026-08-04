@@ -13,6 +13,7 @@
     "resources",
     "artifacts",
     "failure_experiments",
+    "solo_review",
     "assessment"
   ],
   "properties": {
@@ -103,6 +104,25 @@
         "type": "object",
         "required": ["id", "scenario", "evidence"]
       }
+    },
+    "solo_review": {
+      "type": "object",
+      "required": ["challenge_questions", "required_reviewer_roles", "questions_per_attempt", "live_ai_allowed", "record_template_path"],
+      "properties": {
+        "challenge_questions": {
+          "type": "array", "minItems": 8, "uniqueItems": true,
+          "items": {
+            "type": "object", "required": ["id", "prompt"],
+            "properties": {"id": {"type": "string"}, "prompt": {"type": "string", "minLength": 20}},
+            "additionalProperties": false
+          }
+        },
+        "required_reviewer_roles": {"type": "array", "minItems": 2, "uniqueItems": true, "items": {"type": "string"}},
+        "questions_per_attempt": {"const": 5},
+        "live_ai_allowed": {"const": false},
+        "record_template_path": {"const": "templates/solo-review-record-template.md"}
+      },
+      "additionalProperties": false
     },
     "assessment": {
       "type": "object",

@@ -75,6 +75,9 @@ keeps its reveal mapping outside the learner-visible directory. Opaque bundle
 IDs are randomized on every preparation. The learner commits the Week 15 matrix
 before the partner runs `blind-reveal`; that reveal record hashes the frozen
 matrix. Named lab scenarios remain guided source-work inputs, not blind fixtures.
+When no partner is available, the lab's solo commands preserve the same commit
+boundary with a local `.sblind` envelope. That envelope only reduces accidental
+exposure and is explicitly bypassable; the learner discloses the solo mode.
 
 Suppose the candidate has a higher p95 and the server span widens. The SQLite
 child span is unchanged, process CPU rises, and the CPU profile attributes most

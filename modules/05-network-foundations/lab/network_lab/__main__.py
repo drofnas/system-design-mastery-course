@@ -8,7 +8,7 @@ import json
 import statistics
 from pathlib import Path
 
-from .blind import prepare, reveal
+from .blind import prepare, prepare_solo, reveal, reveal_solo
 from .config import load_json, load_scenario, validate_scenario, validate_trial
 from .simulator import simulate
 from .trace import trace
@@ -36,11 +36,23 @@ def main() -> int:
     blind_prepare = sub.add_parser("blind-prepare")
     blind_prepare.add_argument("scenario_dir")
     blind_prepare.add_argument("output_dir")
+    blind_prepare.add_argument("--reveal-file", required=True)
     blind_prepare.add_argument("--seed", type=int, default=1705)
     blind_reveal = sub.add_parser("blind-reveal")
     blind_reveal.add_argument("bundle_dir")
+    blind_reveal.add_argument("reveal_file")
     blind_reveal.add_argument("diagnosis")
+    blind_reveal.add_argument("frozen_commit")
     blind_reveal.add_argument("output")
+    solo_prepare = sub.add_parser("blind-solo-prepare")
+    solo_prepare.add_argument("--output-dir", required=True)
+    solo_prepare.add_argument("--scenario-dir", default=str(Path(__file__).resolve().parents[1] / "scenarios"))
+    solo_prepare.add_argument("--seed", type=int, default=1705)
+    solo_reveal = sub.add_parser("blind-solo-reveal")
+    solo_reveal.add_argument("--bundle-dir", required=True)
+    solo_reveal.add_argument("--frozen-diagnosis", required=True)
+    solo_reveal.add_argument("--frozen-commit", required=True)
+    solo_reveal.add_argument("--output", required=True)
     args = parser.parse_args()
 
     if args.command == "validate":
@@ -70,10 +82,16 @@ def main() -> int:
         write_result(result, None)
         return 0
     if args.command == "blind-prepare":
-        write_result(asyncio.run(prepare(Path(args.scenario_dir), Path(args.output_dir), args.seed)), None)
+        write_result(asyncio.run(prepare(Path(args.scenario_dir), Path(args.output_dir), Path(args.reveal_file), args.seed)), None)
         return 0
     if args.command == "blind-reveal":
-        write_result(reveal(Path(args.bundle_dir), Path(args.diagnosis), Path(args.output)), None)
+        write_result(reveal(Path(args.bundle_dir), Path(args.reveal_file), Path(args.diagnosis), args.frozen_commit, Path(args.output)), None)
+        return 0
+    if args.command == "blind-solo-prepare":
+        write_result(asyncio.run(prepare_solo(Path(args.scenario_dir), Path(args.output_dir), args.seed)), None)
+        return 0
+    if args.command == "blind-solo-reveal":
+        write_result(reveal_solo(Path(args.bundle_dir), Path(args.frozen_diagnosis), args.frozen_commit, Path(args.output)), None)
         return 0
     return 2
 

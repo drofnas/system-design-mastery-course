@@ -52,7 +52,10 @@ the hot path elsewhere reverses the decision.
 ## Guided practice
 
 Complete EX-14 and EX-15. Ask a reviewer to challenge the strongest assumption
-and record the evidence needed to resolve disagreement.
+and record the evidence needed to resolve disagreement. If no reviewer is
+available, use the scripted solo-review packet, answer without live AI, freeze
+the responses, and request provider-neutral critique only afterward. Disclose
+that the solo path is weaker portfolio evidence than human review.
 
 ## Self-check
 

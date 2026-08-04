@@ -11,7 +11,12 @@ import signal
 from pathlib import Path
 
 from .benchmark import run_benchmark
-from .blind import prepare_blind_collection, reveal_blind_collection
+from .blind import (
+    prepare_blind_collection,
+    prepare_solo_blind_collection,
+    reveal_blind_collection,
+    reveal_solo_blind_collection,
+)
 from .config import ScenarioError, load_scenario
 from .runner import analyze_bundle, run_trial, write_bundle
 from .service import ObservabilityService
@@ -73,6 +78,21 @@ def _parser() -> argparse.ArgumentParser:
     blind_reveal.add_argument("--frozen-diagnosis", required=True)
     blind_reveal.add_argument("--frozen-commit", required=True)
     blind_reveal.add_argument("--output", required=True)
+
+    solo_prepare = commands.add_parser(
+        "blind-solo-prepare",
+        help="solo: create opaque bundles and a local accidental-exposure envelope",
+    )
+    solo_prepare.add_argument("--output-dir", required=True)
+
+    solo_reveal = commands.add_parser(
+        "blind-solo-reveal",
+        help="solo: reveal after the diagnosis bytes are frozen in Git",
+    )
+    solo_reveal.add_argument("--bundle-dir", required=True)
+    solo_reveal.add_argument("--frozen-diagnosis", required=True)
+    solo_reveal.add_argument("--frozen-commit", required=True)
+    solo_reveal.add_argument("--output", required=True)
 
     trial = commands.add_parser("_trial", help=argparse.SUPPRESS)
     trial.add_argument("scenario")
@@ -151,6 +171,10 @@ async def _run_command(args: argparse.Namespace) -> int:
         result = await prepare_blind_collection(args.output_dir, args.reveal_file)
         print(json.dumps(result, indent=2, sort_keys=True))
         return 0
+    if args.command == "blind-solo-prepare":
+        result = await prepare_solo_blind_collection(args.output_dir)
+        print(json.dumps(result, indent=2, sort_keys=True))
+        return 0
     raise AssertionError(f"unhandled command {args.command}")
 
 
@@ -171,6 +195,12 @@ def main() -> int:
                 args.frozen_diagnosis,
                 args.frozen_commit,
                 args.output,
+            )
+            print(json.dumps(result, indent=2, sort_keys=True))
+            return 0
+        if args.command == "blind-solo-reveal":
+            result = reveal_solo_blind_collection(
+                args.bundle_dir, args.frozen_diagnosis, args.frozen_commit, args.output,
             )
             print(json.dumps(result, indent=2, sort_keys=True))
             return 0

@@ -7,6 +7,11 @@ experiments, architecture decisions, reviews, and capstone evidence. The
 authoritative course requirements are in
 [`00_COURSE_SYLLABUS.md`](00_COURSE_SYLLABUS.md).
 
+Before running any executable lab, use the cross-platform
+[`HOME_LAB_GUIDE.md`](HOME_LAB_GUIDE.md) and its read-only preflight. The course
+supports one ordinary macOS or Ubuntu computer, and Windows through Ubuntu on
+WSL2; no discrete GPU or second learner is required.
+
 ## Make your own course repository
 
 The recommended setup is a GitHub fork with two long-lived branches:

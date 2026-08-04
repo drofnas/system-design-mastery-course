@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/system-design-course/home-lab-preflight.schema.json",
+  "title": "Home lab preflight evidence",
+  "type": "object",
+  "required": ["schema_version", "platform", "architecture", "selected_modules", "resource_observations", "checks", "remediations", "summary"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "platform": {"enum": ["macos", "ubuntu", "wsl2-ubuntu", "wsl1-unsupported", "windows-native", "linux-other", "unknown"]},
+    "architecture": {"enum": ["x86_64", "arm64", "unsupported", "unknown"]},
+    "selected_modules": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "pattern": "^M(0[1-9]|1[0-8])$"}
+    },
+    "resource_observations": {
+      "type": "object",
+      "required": ["ram_gib", "logical_cpus", "free_disk_gib"],
+      "properties": {
+        "ram_gib": {"type": ["number", "null"], "minimum": 0},
+        "logical_cpus": {"type": ["integer", "null"], "minimum": 0},
+        "free_disk_gib": {"type": ["number", "null"], "minimum": 0}
+      },
+      "additionalProperties": false
+    },
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "status", "observed", "requirement", "modules", "remediation"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+          "status": {"enum": ["pass", "warn", "fail", "skipped"]},
+          "observed": {"type": "string"},
+          "requirement": {"type": "string"},
+          "modules": {"type": "array", "items": {"type": "string", "pattern": "^M(0[1-9]|1[0-8])$"}},
+          "remediation": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "remediations": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+    "summary": {
+      "type": "object",
+      "required": ["result", "pass", "warn", "fail", "skipped"],
+      "properties": {
+        "result": {"enum": ["pass", "warn", "fail"]},
+        "pass": {"type": "integer", "minimum": 0},
+        "warn": {"type": "integer", "minimum": 0},
+        "fail": {"type": "integer", "minimum": 0},
+        "skipped": {"type": "integer", "minimum": 0}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

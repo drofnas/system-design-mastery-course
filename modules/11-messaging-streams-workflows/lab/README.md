@@ -1,5 +1,8 @@
 # Messaging, Streams, and Workflows Lab
 
+Before setup, run the repository [Home Lab Guide](../../../HOME_LAB_GUIDE.md)
+preflight for `M11`.
+
 This Python 3.11+ standard-library lab uses temporary SQLite databases and a
 deterministic in-process log. It exposes authority/outbox commits, publication,
 log positions, inbox/projection transactions, external effect identities,

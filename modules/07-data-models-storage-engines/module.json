@@ -61,5 +61,50 @@
     "pass_average": 3,
     "safety_critical_criteria": ["R06", "R07"],
     "required_result_bands": ["Pass", "Revise", "Repeat"]
+  },
+  "solo_review": {
+    "challenge_questions": [
+      {
+        "id": "M07-SR-Q01",
+        "prompt": "Which claim in your artifact most directly supports this outcome, and what evidence could falsify it: Derive logical and physical data models from quantified access paths, invariants, retention, growth, and ownership."
+      },
+      {
+        "id": "M07-SR-Q02",
+        "prompt": "What unstated assumption could invalidate your treatment of this outcome, and how would you test it: Explain and measure how pages, records, buffer pools, locality, and cache policy shape physical work."
+      },
+      {
+        "id": "M07-SR-Q03",
+        "prompt": "Defend the causal chain behind your evidence for this outcome, including the first likely failure: Implement and validate a persistent paged B+ tree with point lookup, range scan, splits, cache behavior, deletion, and clean reopen."
+      },
+      {
+        "id": "M07-SR-Q04",
+        "prompt": "Which reasonable alternative would challenge your treatment of this outcome, and under what evidence would it win: Implement and validate an LSM store with memtable, SSTables, sparse indexes, Bloom filters, tombstones, and compaction."
+      },
+      {
+        "id": "M07-SR-Q05",
+        "prompt": "What operational, security, cost, or ownership consequence is least supported in your treatment of this outcome: Calculate read, write, and space amplification and connect them to tail latency, capacity, cost, and SSD endurance."
+      },
+      {
+        "id": "M07-SR-Q06",
+        "prompt": "Where does your evidence stop transferring to production for this outcome, and how is that boundary disclosed: Choose indexes and diagnose query plans whose estimates, statistics, or access paths do not match the workload."
+      },
+      {
+        "id": "M07-SR-Q07",
+        "prompt": "What dissent should a skeptical reviewer raise about your treatment of this outcome, and what follow-up evidence would resolve it: Diagnose read, write, range, skew, delete, cache, Bloom, compaction, and tombstone behavior from preserved same-input evidence."
+      },
+      {
+        "id": "M07-SR-Q08",
+        "prompt": "What changed belief or reversal condition follows from your work on this outcome, and where is it recorded: Defend a storage-engine decision covering security, operations, cost, ownership, migration, rollback, recovery requirements, and reversal evidence."
+      }
+    ],
+    "required_reviewer_roles": [
+      "Data Models and Storage Engines domain reviewer",
+      "operations and reliability owner",
+      "security and privacy reviewer",
+      "delivery and cost stakeholder"
+    ],
+    "questions_per_attempt": 5,
+    "live_ai_allowed": false,
+    "record_template_path": "templates/solo-review-record-template.md"
   }
 }

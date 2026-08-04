@@ -1,5 +1,8 @@
 # Time, Coordination, and Consensus Lab
 
+Before setup, run the repository [Home Lab Guide](../../../HOME_LAB_GUIDE.md)
+preflight for `M10`.
+
 This Python 3.11+ standard-library lab is a deterministic logical-tick teaching
 model. It exposes clocks, terms, votes, logs, commitment/application, client
 deduplication, read barriers, fencing, snapshots, and membership. It does not

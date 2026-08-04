@@ -56,5 +56,50 @@
     {"id":"F08","scenario":"managed dependency quota or price change has no executable exit","evidence":"dependency limit, price, portable contract/data, replacement lead time, owner, and I10"},
     {"id":"F09","scenario":"loss of the primary owning team leaves a critical capability unowned","evidence":"primary/secondary owners, runbook verification, access, escalation, handoff trial, and I11"}
   ],
-  "assessment": {"rubric_path":"modules/14-architecture-evolution-economics-organization/assessment/rubric.md","evaluator_prompt_path":"modules/14-architecture-evolution-economics-organization/assessment/evaluator-prompt.md","evaluation_schema_path":"schemas/evaluation.schema.json","calibration_path":"modules/14-architecture-evolution-economics-organization/assessment/calibration","pass_average":3,"safety_critical_criteria":["R05","R06","R07","R08","R09"],"required_result_bands":["Pass","Revise","Repeat"]}
+  "assessment": {"rubric_path":"modules/14-architecture-evolution-economics-organization/assessment/rubric.md","evaluator_prompt_path":"modules/14-architecture-evolution-economics-organization/assessment/evaluator-prompt.md","evaluation_schema_path":"schemas/evaluation.schema.json","calibration_path":"modules/14-architecture-evolution-economics-organization/assessment/calibration","pass_average":3,"safety_critical_criteria":["R05","R06","R07","R08","R09"],"required_result_bands":["Pass","Revise","Repeat"]},
+  "solo_review": {
+    "challenge_questions": [
+      {
+        "id": "M14-SR-Q01",
+        "prompt": "Which claim in your artifact most directly supports this outcome, and what evidence could falsify it: Select modular-monolith, service, or event boundaries from change, workload, failure, data-authority, security, and ownership evidence."
+      },
+      {
+        "id": "M14-SR-Q02",
+        "prompt": "What unstated assumption could invalidate your treatment of this outcome, and how would you test it: Model Conway effects, interaction cost, cognitive load, ownership, and succession for an evolving architecture."
+      },
+      {
+        "id": "M14-SR-Q03",
+        "prompt": "Defend the causal chain behind your evidence for this outcome, including the first likely failure: Compare managed, open-source, custom, and platform choices with explicit operating, security, governance, portability, and exit obligations."
+      },
+      {
+        "id": "M14-SR-Q04",
+        "prompt": "Which reasonable alternative would challenge your treatment of this outcome, and under what evidence would it win: Calculate fully loaded cost and cost per useful outcome with allocation, sensitivity, and stopping thresholds."
+      },
+      {
+        "id": "M14-SR-Q05",
+        "prompt": "What operational, security, cost, or ownership consequence is least supported in your treatment of this outcome: Design compatibility policies and expand-and-contract changes for mixed-version operation."
+      },
+      {
+        "id": "M14-SR-Q06",
+        "prompt": "Where does your evidence stop transferring to production for this outcome, and how is that boundary disclosed: Implement resumable backfills, shadow comparison, controlled cutover, rollback, and evidence-based decommissioning."
+      },
+      {
+        "id": "M14-SR-Q07",
+        "prompt": "What dissent should a skeptical reviewer raise about your treatment of this outcome, and what follow-up evidence would resolve it: Diagnose nine evolution failures without losing authority, data, service, cost control, dependency control, or ownership continuity."
+      },
+      {
+        "id": "M14-SR-Q08",
+        "prompt": "What changed belief or reversal condition follows from your work on this outcome, and where is it recorded: Defend a multi-quarter strategy with outcomes, sequencing, staffing, dependencies, dissent, stopping conditions, and reversal evidence."
+      }
+    ],
+    "required_reviewer_roles": [
+      "Architecture Evolution, Economics, and Organization domain reviewer",
+      "operations and reliability owner",
+      "security and privacy reviewer",
+      "delivery and cost stakeholder"
+    ],
+    "questions_per_attempt": 5,
+    "live_ai_allowed": false,
+    "record_template_path": "templates/solo-review-record-template.md"
+  }
 }

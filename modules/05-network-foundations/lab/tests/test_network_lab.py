@@ -9,7 +9,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from network_lab.blind import prepare, reveal
+from network_lab.blind import REPOSITORY_ROOT, prepare, prepare_solo, reveal, reveal_solo
 from network_lab.config import load_scenario, validate_scenario, validate_trial
 from network_lab.simulator import simulate
 from network_lab.trace import RuntimeTracker, trace
@@ -17,6 +17,15 @@ from network_lab.trace import RuntimeTracker, trace
 
 ROOT = Path(__file__).resolve().parents[1]
 SCENARIOS = ROOT / "scenarios"
+
+
+def freeze_diagnosis(root: Path, diagnosis: Path) -> str:
+    subprocess.run(["git", "init", "-q", str(root)], check=True)
+    subprocess.run(["git", "-C", str(root), "config", "user.name", "Lab Test"], check=True)
+    subprocess.run(["git", "-C", str(root), "config", "user.email", "lab@example.invalid"], check=True)
+    subprocess.run(["git", "-C", str(root), "add", diagnosis.name], check=True)
+    subprocess.run(["git", "-C", str(root), "commit", "-q", "-m", "freeze diagnosis"], check=True)
+    return subprocess.run(["git", "-C", str(root), "rev-parse", "HEAD"], check=True, capture_output=True, text=True).stdout.strip()
 
 
 class ScenarioTests(unittest.TestCase):
@@ -218,7 +227,8 @@ class BlindTests(unittest.IsolatedAsyncioTestCase):
         with tempfile.TemporaryDirectory() as temp_name:
             temp = Path(temp_name)
             bundles = temp / "bundles"
-            manifest = await prepare(SCENARIOS, bundles, 99)
+            key = temp / "partner" / "reveal-key.json"
+            manifest = await prepare(SCENARIOS, bundles, key, 99)
             self.assertEqual(len(manifest["bundles"]), 9)
             rendered = "\n".join(
                 (bundles / item["path"]).read_text(encoding="utf-8")
@@ -231,28 +241,81 @@ class BlindTests(unittest.IsolatedAsyncioTestCase):
                 self.assertNotIn(scenario_hash(scenario), rendered)
             diagnosis = temp / "diagnosis.md"
             with self.assertRaisesRegex(ValueError, "non-empty frozen diagnosis"):
-                reveal(bundles, diagnosis, temp / "premature.json")
+                reveal(bundles, key, diagnosis, "HEAD", temp / "premature.json")
             diagnosis.write_text("# Frozen diagnosis\n\nEvidence recorded.\n")
-            record = reveal(bundles, diagnosis, temp / "reveal.json")
+            frozen_commit = freeze_diagnosis(temp, diagnosis)
+            record = reveal(bundles, key, diagnosis, frozen_commit, temp / "reveal.json")
             self.assertEqual(len(record["mapping"]), 9)
+            self.assertEqual("diagnosis.md", record["diagnosis_path"])
+            with self.assertRaisesRegex(ValueError, "already exists"):
+                reveal(bundles, key, diagnosis, frozen_commit, temp / "reveal.json")
             bundle = bundles / "bundle-01.json"
             bundle.write_text(bundle.read_text() + " ")
-            with self.assertRaisesRegex(ValueError, "changed"):
-                reveal(bundles, diagnosis, temp / "second.json")
+            with self.assertRaisesRegex(ValueError, "integrity"):
+                reveal(bundles, key, diagnosis, frozen_commit, temp / "second.json")
 
     async def test_reveal_key_is_bound_to_manifest(self) -> None:
         with tempfile.TemporaryDirectory() as temp_name:
             temp = Path(temp_name)
             bundles = temp / "bundles"
-            await prepare(SCENARIOS, bundles, 101)
+            key = temp / "partner" / "reveal-key.json"
+            await prepare(SCENARIOS, bundles, key, 101)
             diagnosis = temp / "diagnosis.md"
             diagnosis.write_text("# Frozen diagnosis\n")
+            frozen_commit = freeze_diagnosis(temp, diagnosis)
             manifest_path = bundles / "manifest.json"
             manifest = json.loads(manifest_path.read_text())
             manifest["seed"] += 1
             manifest_path.write_text(json.dumps(manifest))
             with self.assertRaisesRegex(ValueError, "does not belong"):
-                reveal(bundles, diagnosis, temp / "reveal.json")
+                reveal(bundles, key, diagnosis, frozen_commit, temp / "reveal.json")
+
+    async def test_partner_key_must_be_outside_bundle_directory(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_name:
+            bundles = Path(temp_name) / "bundles"
+            with self.assertRaisesRegex(ValueError, "outside"):
+                await prepare(SCENARIOS, bundles, bundles / "reveal-key.json", 1)
+
+    async def test_solo_envelope_freeze_integrity_and_no_cause_leakage(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_name:
+            temp = Path(temp_name)
+            bundles = temp / "bundles"
+            manifest = await prepare_solo(SCENARIOS, bundles, 303)
+            envelope = REPOSITORY_ROOT / ".course-private" / "blind" / "M05" / f"{manifest['collection_id']}.sblind"
+            try:
+                visible = "\n".join(path.name + "\n" + path.read_text(encoding="utf-8") for path in bundles.rglob("*") if path.is_file())
+                for scenario_path in SCENARIOS.glob("*.json"):
+                    item = load_scenario(scenario_path)
+                    self.assertNotIn(item["id"], visible)
+                    self.assertNotIn(item["fault"]["type"], (bundles / "manifest.json").read_text(encoding="utf-8"))
+                envelope_text = envelope.read_bytes()
+                self.assertNotIn(b"dns_failure", envelope_text)
+                diagnosis = temp / "diagnosis.md"
+                diagnosis.write_text("# Frozen diagnosis\n\nNine evidence-based hypotheses.\n", encoding="utf-8")
+                with self.assertRaises(ValueError):
+                    reveal_solo(bundles, diagnosis, "HEAD", temp / "early.json")
+                frozen_commit = freeze_diagnosis(temp, diagnosis)
+                diagnosis.write_text(diagnosis.read_text(encoding="utf-8") + "modified\n", encoding="utf-8")
+                with self.assertRaisesRegex(ValueError, "differs"):
+                    reveal_solo(bundles, diagnosis, frozen_commit, temp / "modified.json")
+                committed = subprocess.run(
+                    ["git", "-C", str(temp), "show", f"{frozen_commit}:diagnosis.md"],
+                    check=True, capture_output=True,
+                ).stdout
+                diagnosis.write_bytes(committed)
+                record = reveal_solo(bundles, diagnosis, frozen_commit, temp / "revealed.json")
+                self.assertEqual("solo", record["reveal_mode"])
+                self.assertEqual("diagnosis.md", record["diagnosis_path"])
+                self.assertTrue(envelope.exists())
+                with self.assertRaisesRegex(ValueError, "already exists"):
+                    reveal_solo(bundles, diagnosis, frozen_commit, temp / "revealed.json")
+                data = envelope.read_bytes()
+                envelope.write_bytes(data[:-1] + bytes([data[-1] ^ 1]))
+                with self.assertRaisesRegex(ValueError, "integrity"):
+                    reveal_solo(bundles, diagnosis, frozen_commit, temp / "tampered.json")
+            finally:
+                if envelope.exists():
+                    envelope.unlink()
 
 
 if __name__ == "__main__":

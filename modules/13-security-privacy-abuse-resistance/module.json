@@ -59,5 +59,50 @@
     {"id":"F08","scenario":"per-actor or per-tenant economic abuse bypasses one global limit","evidence":"actor/tenant identity, admitted/denied work, resource and cost units, fairness, alerts, recovery, and I09"},
     {"id":"F09","scenario":"malicious retrieved instructions request an unauthorized high-risk tool","evidence":"untrusted source, original intent, proposed tool arguments, deterministic policy, approval/idempotency, denial audit, and I10-I11"}
   ],
-  "assessment": {"rubric_path":"modules/13-security-privacy-abuse-resistance/assessment/rubric.md","evaluator_prompt_path":"modules/13-security-privacy-abuse-resistance/assessment/evaluator-prompt.md","evaluation_schema_path":"schemas/evaluation.schema.json","calibration_path":"modules/13-security-privacy-abuse-resistance/assessment/calibration","pass_average":3,"safety_critical_criteria":["R02","R03","R04","R05","R07","R09"],"required_result_bands":["Pass","Revise","Repeat"]}
+  "assessment": {"rubric_path":"modules/13-security-privacy-abuse-resistance/assessment/rubric.md","evaluator_prompt_path":"modules/13-security-privacy-abuse-resistance/assessment/evaluator-prompt.md","evaluation_schema_path":"schemas/evaluation.schema.json","calibration_path":"modules/13-security-privacy-abuse-resistance/assessment/calibration","pass_average":3,"safety_critical_criteria":["R02","R03","R04","R05","R07","R09"],"required_result_bands":["Pass","Revise","Repeat"]},
+  "solo_review": {
+    "challenge_questions": [
+      {
+        "id": "M13-SR-Q01",
+        "prompt": "Which claim in your artifact most directly supports this outcome, and what evidence could falsify it: Build a repeatable threat model from assets, actors, data flows, trust boundaries, abuse cases, risk owners, and reversal evidence."
+      },
+      {
+        "id": "M13-SR-Q02",
+        "prompt": "What unstated assumption could invalidate your treatment of this outcome, and how would you test it: Design identity, authentication, recovery, session binding, assurance, expiry, revocation, and replay controls."
+      },
+      {
+        "id": "M13-SR-Q03",
+        "prompt": "Defend the causal chain behind your evidence for this outcome, including the first likely failure: Select role, attribute, or relationship authorization and enforce deny-by-default checks for every object and action."
+      },
+      {
+        "id": "M13-SR-Q04",
+        "prompt": "Which reasonable alternative would challenge your treatment of this outcome, and under what evidence would it win: Preserve tenant isolation and least privilege through data, cache, file, queue, search, administrative, and break-glass paths."
+      },
+      {
+        "id": "M13-SR-Q05",
+        "prompt": "What operational, security, cost, or ownership consequence is least supported in your treatment of this outcome: Operate scoped secrets, certificates, and encryption keys through issuance, rotation, revocation, recovery, and retirement without inventing cryptography."
+      },
+      {
+        "id": "M13-SR-Q06",
+        "prompt": "Where does your evidence stop transferring to production for this outcome, and how is that boundary disclosed: Design attributable tamper-detectable audit evidence and verified classification, minimization, retention, deletion, residency, and backup handling."
+      },
+      {
+        "id": "M13-SR-Q07",
+        "prompt": "What dissent should a skeptical reviewer raise about your treatment of this outcome, and what follow-up evidence would resolve it: Bound dependency, supply-chain, economic-abuse, prompt-injection, and tool-authorization risk with deterministic enforcement and security response."
+      },
+      {
+        "id": "M13-SR-Q08",
+        "prompt": "What changed belief or reversal condition follows from your work on this outcome, and where is it recorded: Diagnose nine adversarial failures and defend a security architecture with residual risk, ownership, cost, migration, and reversal conditions."
+      }
+    ],
+    "required_reviewer_roles": [
+      "Security, Privacy, and Abuse Resistance domain reviewer",
+      "operations and reliability owner",
+      "security and privacy reviewer",
+      "delivery and cost stakeholder"
+    ],
+    "questions_per_attempt": 5,
+    "live_ai_allowed": false,
+    "record_template_path": "templates/solo-review-record-template.md"
+  }
 }

@@ -63,5 +63,50 @@
     {"id":"F08","scenario":"response or file resources remain open after completion","evidence":"acquisition and release identity, open-resource delta, exception path, and I05"},
     {"id":"F09","scenario":"TypeScript shape assumptions accept invalid JSON at the process boundary","evidence":"wire bytes, compile-time type, validation result, safe rejection, request context, and I06-I10"}
   ],
-  "assessment": {"rubric_path":"modules/15-execution-models-across-languages/assessment/rubric.md","evaluator_prompt_path":"modules/15-execution-models-across-languages/assessment/evaluator-prompt.md","evaluation_schema_path":"schemas/evaluation.schema.json","calibration_path":"modules/15-execution-models-across-languages/assessment/calibration","pass_average":3,"safety_critical_criteria":["R05","R06","R07","R08"],"required_result_bands":["Pass","Revise","Repeat"]}
+  "assessment": {"rubric_path":"modules/15-execution-models-across-languages/assessment/rubric.md","evaluator_prompt_path":"modules/15-execution-models-across-languages/assessment/evaluator-prompt.md","evaluation_schema_path":"schemas/evaluation.schema.json","calibration_path":"modules/15-execution-models-across-languages/assessment/calibration","pass_average":3,"safety_critical_criteria":["R05","R06","R07","R08"],"required_result_bands":["Pass","Revise","Repeat"]},
+  "solo_review": {
+    "challenge_questions": [
+      {
+        "id": "M15-SR-Q01",
+        "prompt": "Which claim in your artifact most directly supports this outcome, and what evidence could falsify it: Explain and compare stack, heap, allocation, escape, manual lifetime, RAII, ownership, reference counting, and tracing collection from workload evidence."
+      },
+      {
+        "id": "M15-SR-Q02",
+        "prompt": "What unstated assumption could invalidate your treatment of this outcome, and how would you test it: Trace work through operating-system threads, event loops, worker pools, goroutines, async tasks, virtual threads, and runtime schedulers."
+      },
+      {
+        "id": "M15-SR-Q03",
+        "prompt": "Defend the causal chain behind your evidence for this outcome, including the first likely failure: Implement the same bounded fan-out contract in TypeScript, Go, Rust, and Java with bounded admission, deadlines, cancellation, validation, and cleanup."
+      },
+      {
+        "id": "M15-SR-Q04",
+        "prompt": "Which reasonable alternative would challenge your treatment of this outcome, and under what evidence would it win: Measure latency, useful throughput, queueing, memory, allocation, and garbage collection under equivalent work without treating host noise as a language property."
+      },
+      {
+        "id": "M15-SR-Q05",
+        "prompt": "What operational, security, cost, or ownership consequence is least supported in your treatment of this outcome: Diagnose memory-visibility and data-race failures with happens-before reasoning, detector evidence, and explicit detector limits."
+      },
+      {
+        "id": "M15-SR-Q06",
+        "prompt": "Where does your evidence stop transferring to production for this outcome, and how is that boundary disclosed: Preserve contracts across static, dynamic, process, and serialization boundaries through explicit validation and scoped authority."
+      },
+      {
+        "id": "M15-SR-Q07",
+        "prompt": "What dissent should a skeptical reviewer raise about your treatment of this outcome, and what follow-up evidence would resolve it: Diagnose nine execution-model failures while bounding operational, security, cost, migration, and ownership consequences."
+      },
+      {
+        "id": "M15-SR-Q08",
+        "prompt": "What changed belief or reversal condition follows from your work on this outcome, and where is it recorded: Defend and teach a runtime choice from workload behavior, safety, operability, ecosystem, cost, migration, ownership, and team evidence."
+      }
+    ],
+    "required_reviewer_roles": [
+      "Execution Models Across Languages domain reviewer",
+      "operations and reliability owner",
+      "security and privacy reviewer",
+      "delivery and cost stakeholder"
+    ],
+    "questions_per_attempt": 5,
+    "live_ai_allowed": false,
+    "record_template_path": "templates/solo-review-record-template.md"
+  }
 }

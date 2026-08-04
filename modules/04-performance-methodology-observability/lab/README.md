@@ -1,5 +1,8 @@
 # Observability Lab Reference
 
+Before setup, run the repository [Home Lab Guide](../../../HOME_LAB_GUIDE.md)
+preflight for `M04`.
+
 This Python 3 standard-library lab is an instrumented, versioned continuation of
 Module 2's Transit Signal saturation service. It preserves fixed workers, a
 bounded queue, bounded downstream fan-out, seeded branch latency/failure, and a
@@ -96,6 +99,28 @@ The command verifies that the diagnosis bytes match the named Git commit, then
 records both the commit and content hash. It never changes the original matrix
 or raw bundles. This is a workflow boundary, not a defense against a
 learner deliberately inspecting the lab source or a partner's private file.
+
+### Solo blind workflow
+
+When no partner is available, use the same freeze boundary with a local binary
+envelope:
+
+```bash
+python3 -m observability_lab blind-solo-prepare \
+  --output-dir /tmp/transit-blind-learner
+python3 -m observability_lab blind-solo-reveal \
+  --bundle-dir /tmp/transit-blind-learner \
+  --frozen-diagnosis reports/module-04-failure-matrix.md \
+  --frozen-commit DIAGNOSIS_COMMIT \
+  --output reports/module-04-solo-reveal.json
+```
+
+Preparation stores a `.sblind` envelope under
+`.course-private/blind/M04/`; that directory is ignored by Git. The envelope is
+preserved after reveal for audit and recovery. It is accidental-exposure
+protection, not encryption or anti-cheating: inspecting the open-source
+scenarios or decoding the envelope bypasses it. Reveal refuses empty,
+uncommitted, modified, mismatched, tampered, or overwrite-prone evidence.
 
 ## Scenario contract
 

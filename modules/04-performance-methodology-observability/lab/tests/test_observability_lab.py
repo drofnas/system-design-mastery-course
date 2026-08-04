@@ -11,7 +11,13 @@ from unittest import mock
 
 import observability_lab.benchmark as benchmark_module
 from observability_lab.benchmark import evaluate_samples, run_benchmark, validate_benchmark_result
-from observability_lab.blind import prepare_blind_collection, reveal_blind_collection
+from observability_lab.blind import (
+    REPOSITORY_ROOT,
+    prepare_blind_collection,
+    prepare_solo_blind_collection,
+    reveal_blind_collection,
+    reveal_solo_blind_collection,
+)
 from observability_lab.config import (
     ScenarioError,
     load_scenario,
@@ -542,6 +548,64 @@ class IntegrationTests(unittest.IsolatedAsyncioTestCase):
             self.assertEqual(len(revealed["items"]), 2)
             self.assertIn("frozen_diagnosis_sha256", revealed)
             self.assertEqual(revealed["frozen_commit"], frozen_commit)
+            with self.assertRaisesRegex(ValueError, "already exists"):
+                reveal_blind_collection(
+                    bundles, reveal, diagnosis, frozen_commit, root / "revealed.json"
+                )
+            summary = bundles / "O01" / "summary.json"
+            summary.write_text(summary.read_text(encoding="utf-8") + " ", encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "integrity"):
+                reveal_blind_collection(
+                    bundles, reveal, diagnosis, frozen_commit, root / "tampered.json"
+                )
+
+    async def test_solo_blind_envelope_requires_immutable_diagnosis(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            bundles = root / "learner"
+            public = await prepare_solo_blind_collection(
+                bundles,
+                scenario_paths=[
+                    LAB / "scenarios" / "transit-cpu.json",
+                    LAB / "scenarios" / "transit-lock.json",
+                ],
+                randomizer=__import__("random").Random(17),
+            )
+            envelope = REPOSITORY_ROOT / ".course-private" / "blind" / "M04" / f"{public['collection_id']}.sblind"
+            try:
+                visible = "\n".join(
+                    path.name + "\n" + path.read_text(encoding="utf-8", errors="replace")
+                    for path in bundles.rglob("*") if path.is_file()
+                )
+                self.assertNotIn("fault.cpu-work", visible)
+                self.assertNotIn(b"fault.cpu-work", envelope.read_bytes())
+                diagnosis = root / "diagnosis.md"
+                diagnosis.write_text("# Frozen diagnosis\n\nO01 and O02 hypotheses.\n", encoding="utf-8")
+                with self.assertRaises(ValueError):
+                    reveal_solo_blind_collection(bundles, diagnosis, "HEAD", root / "early.json")
+                subprocess.run(["git", "init", "-q", str(root)], check=True)
+                subprocess.run(["git", "-C", str(root), "config", "user.name", "Lab Test"], check=True)
+                subprocess.run(["git", "-C", str(root), "config", "user.email", "lab@example.invalid"], check=True)
+                subprocess.run(["git", "-C", str(root), "add", "diagnosis.md"], check=True)
+                subprocess.run(["git", "-C", str(root), "commit", "-q", "-m", "freeze diagnosis"], check=True)
+                commit = subprocess.run(["git", "-C", str(root), "rev-parse", "HEAD"], check=True, capture_output=True, text=True).stdout.strip()
+                diagnosis.write_text(diagnosis.read_text(encoding="utf-8") + "changed\n", encoding="utf-8")
+                with self.assertRaisesRegex(ValueError, "differs"):
+                    reveal_solo_blind_collection(bundles, diagnosis, commit, root / "changed.json")
+                diagnosis.write_bytes(subprocess.run(["git", "-C", str(root), "show", f"{commit}:diagnosis.md"], check=True, capture_output=True).stdout)
+                record = reveal_solo_blind_collection(bundles, diagnosis, commit, root / "revealed.json")
+                self.assertEqual("solo", record["reveal_mode"])
+                self.assertEqual("diagnosis.md", record["diagnosis_path"])
+                self.assertTrue(envelope.exists())
+                with self.assertRaisesRegex(ValueError, "already exists"):
+                    reveal_solo_blind_collection(bundles, diagnosis, commit, root / "revealed.json")
+                data = envelope.read_bytes()
+                envelope.write_bytes(data[:-1] + bytes([data[-1] ^ 1]))
+                with self.assertRaisesRegex(ValueError, "integrity"):
+                    reveal_solo_blind_collection(bundles, diagnosis, commit, root / "tampered.json")
+            finally:
+                if envelope.exists():
+                    envelope.unlink()
 
 
 if __name__ == "__main__":

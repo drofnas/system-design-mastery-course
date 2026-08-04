@@ -67,5 +67,50 @@
     "pass_average": 3,
     "safety_critical_criteria": ["R04","R05","R06","R09"],
     "required_result_bands": ["Pass","Revise","Repeat"]
+  },
+  "solo_review": {
+    "challenge_questions": [
+      {
+        "id": "M16-SR-Q01",
+        "prompt": "Which claim in your artifact most directly supports this outcome, and what evidence could falsify it: Trace tasks, microtasks, input dispatch, style, layout, paint, raster, and compositing from browser evidence."
+      },
+      {
+        "id": "M16-SR-Q02",
+        "prompt": "What unstated assumption could invalidate your treatment of this outcome, and how would you test it: Calculate route-level performance budgets and interpret controlled-lab and field evidence without conflating them."
+      },
+      {
+        "id": "M16-SR-Q03",
+        "prompt": "Defend the causal chain behind your evidence for this outcome, including the first likely failure: Select and implement static, server, streaming, client, and island-hydration strategies per route from workload and interaction evidence."
+      },
+      {
+        "id": "M16-SR-Q04",
+        "prompt": "Which reasonable alternative would challenge your treatment of this outcome, and under what evidence would it win: Implement HTTP and CDN cache keys, freshness, validation, invalidation, and private-response isolation with explicit authority."
+      },
+      {
+        "id": "M16-SR-Q05",
+        "prompt": "What operational, security, cost, or ownership consequence is least supported in your treatment of this outcome: Build keyboard-complete, accessible, resilient interactions and explain the boundary between automated and manual evidence."
+      },
+      {
+        "id": "M16-SR-Q06",
+        "prompt": "Where does your evidence stop transferring to production for this outcome, and how is that boundary disclosed: Diagnose long tasks, hydration mismatches, retained browser resources, and third-party failures from controlled evidence."
+      },
+      {
+        "id": "M16-SR-Q07",
+        "prompt": "What dissent should a skeptical reviewer raise about your treatment of this outcome, and what follow-up evidence would resolve it: Preserve privacy-aware trace context across browser, edge, and origin while bounding telemetry cost and trust."
+      },
+      {
+        "id": "M16-SR-Q08",
+        "prompt": "What changed belief or reversal condition follows from your work on this outcome, and where is it recorded: Defend frontend boundaries, BFF and microfrontend choices, edge consistency, ownership, cost, migration, and reversal conditions."
+      }
+    ],
+    "required_reviewer_roles": [
+      "Browser, Frontend, CDN, and Edge Architecture domain reviewer",
+      "operations and reliability owner",
+      "security and privacy reviewer",
+      "delivery and cost stakeholder"
+    ],
+    "questions_per_attempt": 5,
+    "live_ai_allowed": false,
+    "record_template_path": "templates/solo-review-record-template.md"
   }
 }

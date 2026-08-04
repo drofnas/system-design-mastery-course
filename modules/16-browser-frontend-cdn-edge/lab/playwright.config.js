@@ -4,6 +4,7 @@ export default defineConfig({
   testDir: './tests',
   testMatch: '**/*.spec.js',
   fullyParallel: false,
+  workers: 1,
   retries: 0,
   reporter: [['list'], ['json', {outputFile: 'test-results/results.json'}]],
   use: {

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/system-design-course/solo-blind-reveal.schema.json",
+  "title": "Solo blind reveal record",
+  "type": "object",
+  "required": ["schema_version", "module", "collection_id", "reveal_mode", "revealed_at", "diagnosis_path", "diagnosis_sha256", "frozen_commit", "manifest_sha256", "manifest_core_sha256", "envelope_sha256", "mapping", "assurance_limitation"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "module": {"enum": ["M04", "M05"]},
+    "collection_id": {"type": "string", "pattern": "^[a-f0-9]{32}$"},
+    "reveal_mode": {"enum": ["solo", "partner"]},
+    "revealed_at": {"type": "string", "minLength": 20},
+    "diagnosis_path": {"type": "string", "minLength": 1},
+    "diagnosis_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "frozen_commit": {"type": "string", "pattern": "^[a-f0-9]{40,64}$"},
+    "manifest_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "manifest_core_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "envelope_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "mapping": {"type": "object", "minProperties": 2},
+    "assurance_limitation": {"type": "string", "minLength": 40}
+  },
+  "additionalProperties": false
+}

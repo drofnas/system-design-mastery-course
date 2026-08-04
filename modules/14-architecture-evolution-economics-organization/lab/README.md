@@ -1,5 +1,8 @@
 # Module 14 Evolution Lab
 
+Before setup, run the repository [Home Lab Guide](../../../HOME_LAB_GUIDE.md)
+preflight for `M14`.
+
 The lab is a deterministic Python 3.11 model of compatibility, migration,
 economics, dependency, and ownership decisions. It is intentionally smaller
 than a production migration and uses only the standard library.

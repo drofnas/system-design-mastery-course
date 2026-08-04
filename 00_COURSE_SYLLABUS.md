@@ -137,6 +137,11 @@ You should know algebra, functions, exponents, logarithms, basic probability, an
 
 You may substitute tools when your environment imposes limits. Record the substitution and explain which behavior it changes.
 
+The complete supported home-computer baseline, macOS/Linux/Windows-through-WSL2
+setup, module dependency matrix, and read-only preflight are in
+[`HOME_LAB_GUIDE.md`](HOME_LAB_GUIDE.md). A discrete GPU and multi-machine lab
+are not required.
+
 ## 7. Time commitment and pacing
 
 ### Standard track
