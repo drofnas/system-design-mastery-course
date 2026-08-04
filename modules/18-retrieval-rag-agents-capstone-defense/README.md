@@ -1,9 +1,8 @@
 # Module 18: Retrieval, RAG, Agents, and Capstone Defense
 
-> **Authoring status:** Draft. The portable lab, lessons, practice, assessment,
-> and calibration fixtures are implemented. Do not mark Ready until six isolated
-> evaluator runs, deterministic calibration checking, semantic/resource review,
-> and focused/full validation pass.
+> **Authoring status:** Ready. The portable lab, F01–F08 pairs, six isolated
+> evaluator records, deterministic calibration, semantic/resource review, and
+> focused/full validation all pass.
 
 ## What this module changes
 

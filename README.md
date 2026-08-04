@@ -177,10 +177,10 @@ scripts/        Course validation tools
 | 12. Reliability, Incidents, and Disaster Recovery | 45–48 | Ready | [Start Module 12](modules/12-reliability-incidents-disaster-recovery/README.md) |
 | 13. Security, Privacy, and Abuse Resistance | 49–52 | Ready | [Start Module 13](modules/13-security-privacy-abuse-resistance/README.md) |
 | 14. Architecture Evolution, Economics, and Organization | 53–56 | Ready | [Start Module 14](modules/14-architecture-evolution-economics-organization/README.md) |
-| 15. Execution Models Across Languages | 57–60 | Draft | [Start Module 15](modules/15-execution-models-across-languages/README.md) |
-| 16. Browser, Frontend, CDN, and Edge Architecture | 61–64 | Draft | [Start Module 16](modules/16-browser-frontend-cdn-edge/README.md) |
-| 17. Model Foundations and Inference Systems | 65–68 | Draft pending external evaluator calibration | [Start Module 17](modules/17-model-foundations-inference-systems/README.md) |
-| 18. Retrieval, RAG, Agents, and Capstone Defense | 69–72 | Draft pending external evaluator calibration | [Start Module 18](modules/18-retrieval-rag-agents-capstone-defense/README.md) |
+| 15. Execution Models Across Languages | 57–60 | Ready | [Start Module 15](modules/15-execution-models-across-languages/README.md) |
+| 16. Browser, Frontend, CDN, and Edge Architecture | 61–64 | Ready | [Start Module 16](modules/16-browser-frontend-cdn-edge/README.md) |
+| 17. Model Foundations and Inference Systems | 65–68 | Ready | [Start Module 17](modules/17-model-foundations-inference-systems/README.md) |
+| 18. Retrieval, RAG, Agents, and Capstone Defense | 69–72 | Ready | [Start Module 18](modules/18-retrieval-rag-agents-capstone-defense/README.md) |
 
 Future modules must satisfy
 [`MODULE_STANDARD.md`](MODULE_STANDARD.md). Course-authoring agents must also

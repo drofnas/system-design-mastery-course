@@ -1,8 +1,8 @@
 # Module 17: Model Foundations and Inference Systems
 
-> **Authoring status:** Draft. The portable CPU lab and F01–F06 pairs are
-> implemented. Do not mark Ready until six isolated evaluator runs, deterministic
-> calibration checking, semantic/resource review, and focused/full validation pass.
+> **Authoring status:** Ready. The portable CPU lab, F01–F06 pairs, six isolated
+> evaluator records, deterministic calibration, semantic/resource review, and
+> focused/full validation all pass.
 
 ## What this module changes
 

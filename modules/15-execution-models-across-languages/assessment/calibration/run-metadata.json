@@ -1,0 +1,111 @@
+{
+  "runtime": {
+    "provider": "OpenAI",
+    "model": "gpt-5.6-sol",
+    "client": "Codex CLI 0.146.0-alpha.9.2"
+  },
+  "deterministic_settings": {
+    "temperature": "not user-configurable; rubric-driven procedure held constant",
+    "reasoning_effort": "medium",
+    "output_constraint": "schemas/evaluation.schema.json"
+  },
+  "isolation_method": "Six ephemeral, read-only, fixture-scoped evaluator invocations. Each invocation ran outside the repository with no submission tools and received one immutable fixture, its manifest, and the published module assessment contracts. Other raw responses were not available as evidence.",
+  "invocations": [
+    {
+      "fixture": "pass",
+      "run": 1,
+      "isolation_id": "019fcb87-d0b3-7be3-945e-a93677f28cdf",
+      "invoked_at": "2026-08-03T23:48:23-07:00",
+      "raw_response": "runs/pass-run-1.json",
+      "sha256": "a6a3f763260f01e4f8fc442bd94451d4f422b713f2f6e2683fe72c99e8942f41",
+      "evaluator_prompt_sha256": "34e121be78381b3cb81294fd4a6e5266f0d23230981fadbaa897f59236b26fbc",
+      "assessment_contract_sha256": "19298951513349d980dff6401f15fffa0ab39c48d7dc85196a2fee4000294a59",
+      "rubric_sha256": "317954c5f553c13a4a584b1e5940469c21579af4748a6e20c76f3703f5d6c6e6",
+      "remediation_map_sha256": "1c4ce91747cfd5b3ab58cb3dfbd41532117723ce78e2d255fd524efbddcb6bda",
+      "evaluation_schema_sha256": "0a1017107f7c1fa6826391a1280f1553f0a3c46f76b0c999cc6f8f11e60e7c0c",
+      "fixture_manifest_sha256": "cccd3fefbc37a72eee8d521c27f1063417e8a259e5d540faa22633651e6cb45a",
+      "fixture_sha256": "09ec8ffd7744bb24d068855a1294eb08bd8e608451bcb3b475bf0b35ffcf5041",
+      "prompt_sha256": "7a7093f4a3faef299ef66533262490569bc4230b35cfeb4f05f7f7e552ef2f48"
+    },
+    {
+      "fixture": "revise",
+      "run": 1,
+      "isolation_id": "019fcb88-f595-7a40-91ff-f60cb1d25c13",
+      "invoked_at": "2026-08-03T23:49:38-07:00",
+      "raw_response": "runs/revise-run-1.json",
+      "sha256": "12af64b44a6bb7f4e9f8d7d60fc704a3b982eca07dd3d61f7cee0c96f907875f",
+      "evaluator_prompt_sha256": "34e121be78381b3cb81294fd4a6e5266f0d23230981fadbaa897f59236b26fbc",
+      "assessment_contract_sha256": "19298951513349d980dff6401f15fffa0ab39c48d7dc85196a2fee4000294a59",
+      "rubric_sha256": "317954c5f553c13a4a584b1e5940469c21579af4748a6e20c76f3703f5d6c6e6",
+      "remediation_map_sha256": "1c4ce91747cfd5b3ab58cb3dfbd41532117723ce78e2d255fd524efbddcb6bda",
+      "evaluation_schema_sha256": "0a1017107f7c1fa6826391a1280f1553f0a3c46f76b0c999cc6f8f11e60e7c0c",
+      "fixture_manifest_sha256": "d1516190af9fd4fc943c887c8c7aed89c8f493ad924ba4a2eab90090a9531e17",
+      "fixture_sha256": "f61ecc79f81291feaccbf52a0e18192408de41244a854ac2bb1f351af14b7730",
+      "prompt_sha256": "f8e13fab27f0095ccec7473bc75d7434670ba9417a6da873fda6ae24db43c994"
+    },
+    {
+      "fixture": "repeat",
+      "run": 1,
+      "isolation_id": "019fcb8b-436e-7711-8b02-51221e5ca5e5",
+      "invoked_at": "2026-08-03T23:52:09-07:00",
+      "raw_response": "runs/repeat-run-1.json",
+      "sha256": "feee3d87f7a12223b8ad71d074eacebd8b5946304e0c5c8a5c7ae74911dc1d53",
+      "evaluator_prompt_sha256": "34e121be78381b3cb81294fd4a6e5266f0d23230981fadbaa897f59236b26fbc",
+      "assessment_contract_sha256": "19298951513349d980dff6401f15fffa0ab39c48d7dc85196a2fee4000294a59",
+      "rubric_sha256": "317954c5f553c13a4a584b1e5940469c21579af4748a6e20c76f3703f5d6c6e6",
+      "remediation_map_sha256": "1c4ce91747cfd5b3ab58cb3dfbd41532117723ce78e2d255fd524efbddcb6bda",
+      "evaluation_schema_sha256": "0a1017107f7c1fa6826391a1280f1553f0a3c46f76b0c999cc6f8f11e60e7c0c",
+      "fixture_manifest_sha256": "20e0eaedc341d358b5f16a5fdd699411e0fa7d907cf779a221bb53590c7be7ec",
+      "fixture_sha256": "03baec1506c47ea9d951c77de9102b9aa81f45576d426340a0978db92053c628",
+      "prompt_sha256": "c4eb3c22ea8e060a775498de3c57ac69ad4e22b0b0dfc5bef44ae0e9cdc8a6b8"
+    },
+    {
+      "fixture": "pass",
+      "run": 2,
+      "isolation_id": "019fcb8b-48ac-79b1-9777-f96813e5105c",
+      "invoked_at": "2026-08-03T23:52:10-07:00",
+      "raw_response": "runs/pass-run-2.json",
+      "sha256": "09dd0d852a06bd1fcdd9091131b6d930221c902ad2d51d583e91b674bcdf4430",
+      "evaluator_prompt_sha256": "34e121be78381b3cb81294fd4a6e5266f0d23230981fadbaa897f59236b26fbc",
+      "assessment_contract_sha256": "19298951513349d980dff6401f15fffa0ab39c48d7dc85196a2fee4000294a59",
+      "rubric_sha256": "317954c5f553c13a4a584b1e5940469c21579af4748a6e20c76f3703f5d6c6e6",
+      "remediation_map_sha256": "1c4ce91747cfd5b3ab58cb3dfbd41532117723ce78e2d255fd524efbddcb6bda",
+      "evaluation_schema_sha256": "0a1017107f7c1fa6826391a1280f1553f0a3c46f76b0c999cc6f8f11e60e7c0c",
+      "fixture_manifest_sha256": "cccd3fefbc37a72eee8d521c27f1063417e8a259e5d540faa22633651e6cb45a",
+      "fixture_sha256": "09ec8ffd7744bb24d068855a1294eb08bd8e608451bcb3b475bf0b35ffcf5041",
+      "prompt_sha256": "5139c9218ffcea2df71f7b2251089bd8175be80188eaa19db936a7fa405e6531"
+    },
+    {
+      "fixture": "revise",
+      "run": 2,
+      "isolation_id": "019fcb8b-490a-7f42-bc22-00f01a9c12da",
+      "invoked_at": "2026-08-03T23:52:10-07:00",
+      "raw_response": "runs/revise-run-2.json",
+      "sha256": "d38e0e467fd4cab380ef0b066830a3722fc23a6c9f6b37744abaeef60564a9da",
+      "evaluator_prompt_sha256": "34e121be78381b3cb81294fd4a6e5266f0d23230981fadbaa897f59236b26fbc",
+      "assessment_contract_sha256": "19298951513349d980dff6401f15fffa0ab39c48d7dc85196a2fee4000294a59",
+      "rubric_sha256": "317954c5f553c13a4a584b1e5940469c21579af4748a6e20c76f3703f5d6c6e6",
+      "remediation_map_sha256": "1c4ce91747cfd5b3ab58cb3dfbd41532117723ce78e2d255fd524efbddcb6bda",
+      "evaluation_schema_sha256": "0a1017107f7c1fa6826391a1280f1553f0a3c46f76b0c999cc6f8f11e60e7c0c",
+      "fixture_manifest_sha256": "d1516190af9fd4fc943c887c8c7aed89c8f493ad924ba4a2eab90090a9531e17",
+      "fixture_sha256": "f61ecc79f81291feaccbf52a0e18192408de41244a854ac2bb1f351af14b7730",
+      "prompt_sha256": "2645b64e5c850055e0b1e0c51e4f3c4f71dece1d9f734b82934121654a39a2ee"
+    },
+    {
+      "fixture": "repeat",
+      "run": 2,
+      "isolation_id": "019fcb8b-4a92-78e1-b980-f23f61a632b6",
+      "invoked_at": "2026-08-03T23:52:11-07:00",
+      "raw_response": "runs/repeat-run-2.json",
+      "sha256": "fd454fcf2683d9891d8bcca129598dab6696af53b9b32348231bfd6b7d32c01a",
+      "evaluator_prompt_sha256": "34e121be78381b3cb81294fd4a6e5266f0d23230981fadbaa897f59236b26fbc",
+      "assessment_contract_sha256": "19298951513349d980dff6401f15fffa0ab39c48d7dc85196a2fee4000294a59",
+      "rubric_sha256": "317954c5f553c13a4a584b1e5940469c21579af4748a6e20c76f3703f5d6c6e6",
+      "remediation_map_sha256": "1c4ce91747cfd5b3ab58cb3dfbd41532117723ce78e2d255fd524efbddcb6bda",
+      "evaluation_schema_sha256": "0a1017107f7c1fa6826391a1280f1553f0a3c46f76b0c999cc6f8f11e60e7c0c",
+      "fixture_manifest_sha256": "20e0eaedc341d358b5f16a5fdd699411e0fa7d907cf779a221bb53590c7be7ec",
+      "fixture_sha256": "03baec1506c47ea9d951c77de9102b9aa81f45576d426340a0978db92053c628",
+      "prompt_sha256": "d51d0b5903d9dfac1d828bae43746ff7f56455ce93056b697fb2ededbd9695aa"
+    }
+  ]
+}

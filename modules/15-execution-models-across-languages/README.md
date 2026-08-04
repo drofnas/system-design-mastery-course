@@ -1,8 +1,8 @@
 # Module 15: Execution Models Across Languages
 
-> **Authoring status:** Draft. Do not mark Ready until four-runtime conformance,
-> paired failure evidence, six isolated evaluator runs, calibration checking,
-> semantic and resource review, and focused and full-course validation pass.
+> **Authoring status:** Ready. Four-runtime conformance, paired failure evidence,
+> six isolated evaluator runs, calibration checking, semantic and resource
+> review, and focused and full-course validation passed on 2026-08-03.
 
 ## What this module changes
 

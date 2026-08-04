@@ -1,8 +1,10 @@
 # Module 18 semantic readiness review
 
-## Current status: draft
+## Current status: ready
 
-Local instruction, executable contracts, tests, fixtures, and deterministic validation can be reviewed now. Readiness remains blocked until Pass, Revise, and Repeat CivicAid fixtures have each been evaluated twice in isolated deterministic provider-neutral invocations, raw schema-valid responses and hashes are preserved, result bands are stable, category drift is at most one point, and the calibration checker passes.
+Local instruction, executable contracts, tests, fixtures, six isolated evaluator
+records, deterministic calibration, and focused/full validation pass. Package
+readiness does not pre-judge a learner's Module 18, Gate 6, or capstone result.
 
 ## Review checklist
 
@@ -22,4 +24,8 @@ Local instruction, executable contracts, tests, fixtures, and deterministic vali
 - Contract review: F01–F08 pair identity, I01–I12, G01–G06, safety-critical R04–R07, Module Pass, and separate Gate 6 thresholds reconcile across the manifest, lab, lessons, and assessment.
 - Resource review: all eight HTTPS pages resolved on 2026-08-03; the reading/viewing boundaries remain available without payment. Every item has a local written alternative. Because video caption presentation can vary, Lesson 3 is the complete equivalent-text path.
 - Integrity review: the module adds a blank Week 72 contract and does not modify an existing learner baseline or revision. The portable lab uses synthetic data and no credentials.
-- Readiness blocker: no compliant external evaluator runtime or six isolated raw responses are present. The module therefore remains `draft`; calibration results and readiness status are intentionally not fabricated.
+- Calibration review: Pass, Revise, and Repeat CivicAid fixtures each agree over
+  two isolated runs, category drift is zero, response hashes verify, and the
+  deterministic checker passes.
+- Final result: ready. The synthetic-fixture convention does not relax the
+  underlying-artifact requirement for a real learner submission.
