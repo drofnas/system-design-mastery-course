@@ -82,22 +82,13 @@ python3 -m capacity_lab load scenarios/transit-baseline.json \
   --metadata /tmp/transit-metadata.json
 ```
 
-On the author’s Python 3.13 run on 2026-07-31, the five-second trial recorded:
-
-| Measure | Observation |
-|---|---:|
-| Offered rate | 30.0 logical requests/s |
-| Useful throughput | 30.0 requests/s |
-| Accepted/rejected attempts | 150 / 0 |
-| p50 / p95 / p99 | 25.55 / 35.29 / 204.72 ms |
-| Peak queue depth | 0 |
-| Peak worker concurrency | 3 of 8 |
-| Peak downstream concurrency | 9 of 24 |
-| Retry budget used | 0 of 15 |
-
-The trial’s p99 generator lag was 7.84 ms. Precise timings will change by host.
-The request count, seeded slow-branch
-choices, bounds, and qualitative behavior are the reproducible evidence.
+The command writes the learner's measured evidence. Preserve all three output
+files together and record Python version, operating system and architecture,
+logical CPU count, memory boundary, scenario hash, start time, and whether the
+machine was otherwise loaded. Exact latency and generator-lag figures are
+host-dependent and are deliberately not published as transferable reference
+measurements. The request count, seeded slow-branch choices, configured bounds,
+and qualitative mechanism are the replayable parts of the exercise.
 
 ## 4. What the baseline teaches
 

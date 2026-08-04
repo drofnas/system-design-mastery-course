@@ -1,14 +1,19 @@
-# Module 6 Calibration Results
+# M06 Current Calibration Results
 
-Two isolated evaluation rounds produced the required bands:
+The deterministic checker passed the six current raw evaluator records.
 
-| Fixture | Run 1 | Average | Run 2 | Average |
-|---|---|---:|---|---:|
-| Pass | Pass | 3.20 | Pass | 3.10 |
-| Revise | Revise | 2.00 | Revise | 2.00 |
-| Repeat | Repeat | 0.00 | Repeat | 0.00 |
+## run-1
 
-The deterministic checker accepted all six raw responses. Maximum criterion
-drift was one point (Pass R02); every result band agreed. Raw response hashes,
-runtime identity, model, invocation times, and isolation controls are recorded
-in `run-metadata.json`.
+- Pass: Pass, average 3.0
+- Revise: Revise, average 2.0
+- Repeat: Repeat, average 0.0
+
+## run-2
+
+- Pass: Pass, average 3.0
+- Revise: Revise, average 2.0
+- Repeat: Repeat, average 0.0
+
+Maximum per-category drift: 0.
+
+Raw JSON and invocation provenance are authoritative; this file is rendered from them.

@@ -42,3 +42,10 @@ The DR review compares three tiers using user/data exposure, capacity, security,
 cost, staffing, migration, rollback, owners, dissent, and reversal. All Gate 4
 parts pass. The Week 48 revision cites changes without editing earlier evidence.
 The teach-back derives the method in an archive domain.
+
+## Recovery-tier and degradation ADR
+
+The distinct A12 ADR selects a recovery tier and priority-degradation policy
+from the measured RPO/RTO and reserve evidence. It records alternatives, owner,
+security and cost boundaries, migration, rollback, exception expiry, dissent,
+and quantified stop and reversal conditions without replacing the DR review.

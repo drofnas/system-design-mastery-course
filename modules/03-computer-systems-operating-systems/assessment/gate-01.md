@@ -7,8 +7,9 @@ judgment under time pressure without copying a capstone answer. The practical
 uses Transit Signal, not the commerce capstone. Complete the gate in a clean
 workspace after the Module 3 portfolio is frozen.
 
-Total learner time: 3.5 hours. A reviewer may pause between sections but may not
-coach the learner or provide architecture choices.
+Total learner time: 3.5 hours. Complete the sealed-local workflow in the
+[solo-gate guide](../../../SOLO_GATE_GUIDE.md). An optional human reviewer may
+pause between sections but may not coach the learner or provide choices.
 
 ## Required evidence
 
@@ -18,7 +19,7 @@ coach the learner or provide architecture choices.
 - A repository commit identifying the exact gate submission
 - A disclosed record of tool and AI assistance
 
-The reviewer must not edit the Week 1 baseline. All changed beliefs belong in
+Neither the learner nor a reviewer edits the Week 1 baseline. All changed beliefs belong in
 the Week 12 revision.
 
 ## Part A: Written examination — 60 minutes
@@ -49,9 +50,10 @@ A passing written section has no material falsehood and a mean of at least 3.0.
 
 ## Part B: Transit practical — 75 minutes
 
-The reviewer supplies two versioned scenario files for the Transit
-replay-and-checkpoint worker: one native comparison and one unprivileged Linux
-constraint. Expected direction is hidden.
+Run `scripts/solo_gate.py prepare --gate G01` to select one of three synthetic
+cross-module scenarios. The public bundle contains the workload, observations,
+and target invariants; the expected cause and repair remain in the local
+envelope until the diagnosis and challenge are committed.
 
 The learner must:
 
@@ -86,9 +88,10 @@ questions. The defense must cover:
 - operational, security, cost, ownership, migration, and organizational effects;
 - a measurable reversal condition.
 
-The reviewer challenges one assumption, one metric boundary, one failure mode,
-and one cross-team dependency. Silent changes to the workload, failure model,
-or machine boundary are not allowed; uncertainty may be labeled and assigned.
+After the defense is frozen, use `scripts/prepare_solo_review.py` to select five
+challenge questions covering assumptions, measurement, failure, and ownership.
+An optional human reviewer may ask adaptive follow-ups. Silent changes to the
+workload, failure model, or machine boundary are not allowed.
 
 ### Defense scoring
 
@@ -108,9 +111,9 @@ for:
 - at least one teach-back and one source-code internals review;
 - assistance disclosure and evidence provenance.
 
-The reviewer samples one item from each row, confirms chronological integrity,
-and checks that no evaluation or AI loop replaced the learner's preserved first
-attempt.
+The learner records a path-and-commit index and samples one item from each row.
+The independent post-freeze evaluator checks chronology and that no evaluation
+or AI loop replaced the preserved first attempt.
 
 ## Gate result algorithm
 

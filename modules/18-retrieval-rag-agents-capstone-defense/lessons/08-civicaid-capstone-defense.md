@@ -51,7 +51,11 @@ Prepare three defense layers: a two-minute product and risk summary; a ten-minut
 
 ## Guided practice
 
-Give a five-minute CivicAid defense to a peer. Ask the peer to challenge freshness, tenant isolation, duplicate submission, provider timeout, cost growth, on-call ownership, and migration reversal. Record each answer as evidence, inference, assumption, or unknown. Revise only claims that have new evidence.
+Give a five-minute CivicAid defense against the frozen solo-review packet. Apply
+its questions to freshness, tenant isolation, duplicate submission, provider
+timeout, cost growth, on-call ownership, and migration reversal. Record each
+answer as evidence, inference, assumption, or unknown. Revise only claims that
+have new evidence. A peer may add adaptive questions after freezing.
 
 ## Self-check
 

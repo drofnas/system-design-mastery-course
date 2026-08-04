@@ -11,6 +11,7 @@ canonical design.
 - [Rubric](rubric.md): module-specific 0–4 anchors and remediation
 - [Evaluator prompt](evaluator-prompt.md): provider-neutral review contract
 - [Report template](report-template.md): human-readable saved result
+- [Remediation map](remediation-map.md): new evidence paths that preserve frozen work
 - [Evaluation schema](../../../schemas/evaluation.schema.json): structured result
 - [Calibration fixtures](calibration/README.md): Pass, Revise, and Repeat cases
 
@@ -50,3 +51,7 @@ canonical design.
 An experienced human reviewer is encouraged. The LLM evaluator is sufficient
 for formal self-study only when it follows the prompt and produces cited,
 schema-conforming output.
+
+## Evaluation packaging and independence
+
+Use the [provider-neutral bundle and validation workflow](../../../EVALUATION_GUIDE.md). The evaluator returns JSON only; the validator renders the report. A frozen self-evaluated Pass establishes **Solo Complete** and remains explicitly self-attested. A passing independent human or LLM review of the same bundle establishes **Independently Validated**.

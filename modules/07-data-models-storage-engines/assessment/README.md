@@ -62,3 +62,9 @@ remediable gaps. Repeat applies when G02–G05 fails or R06/R07 is zero.
   cloud-cost evidence.
 - Accept defensible alternatives; never require Harbor's model or engine.
 - Recommend named lessons/exercises without drafting replacement graded work.
+
+## Completion attestation
+
+A frozen self-evaluated Pass establishes **Solo Complete** and remains
+self-attested. A passing independent human or LLM review of the same immutable
+bundle establishes **Independently Validated**.

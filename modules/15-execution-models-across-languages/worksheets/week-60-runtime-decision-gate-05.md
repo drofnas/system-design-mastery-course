@@ -14,8 +14,10 @@ migration, rollback, dissent, stopping conditions, and reversal evidence.
 
 ## Defense
 
-Present for ten minutes and answer security, platform, finance, on-call, and
-team-ownership challenges without AI. Record changed claims and follow-ups.
+Present for ten minutes as a recording or transcript and answer the frozen
+solo-review packet from security, platform, finance, on-call, and team-ownership
+perspectives without live AI. Record changed claims and follow-ups. A live panel
+is optional.
 
 ## Assessment and remediation
 

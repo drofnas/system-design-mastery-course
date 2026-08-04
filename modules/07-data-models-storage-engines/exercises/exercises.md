@@ -91,6 +91,7 @@ migration, and reversal drivers.
 
 ## EX-16: Defense and dissent
 
-Conduct a recorded defense. Have five roles challenge the decision: database,
-application, security/privacy, finance, and on-call/recovery. Record changed
-belief, unresolved dissent, owner, follow-up evidence, and any dated addendum.
+Conduct a recorded defense using the frozen solo-review packet. Answer from
+database, application, security/privacy, finance, and on-call/recovery
+perspectives. Record changed belief, unresolved dissent, owner, follow-up
+evidence, and any dated addendum. A live panel is optional.

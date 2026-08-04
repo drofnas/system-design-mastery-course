@@ -11,7 +11,8 @@ lesson_id: L08
 ## Prerequisites
 
 Bring the frozen baseline, cost model, migration evidence, failure matrix, and
-feedback from an engineer outside the chosen stack.
+either a frozen solo-review record or optional feedback from an engineer outside
+the chosen stack.
 
 ## Decision procedure
 
@@ -31,9 +32,10 @@ increments through a causal model: “If we introduce this seam, then this team
 can change this capability independently; we will observe that through these
 flow and reliability measures.”
 
-The defense tests whether the reasoning transfers. Ask reviewers to challenge
-authority, mixed versions, rollback, cost allocation, staffing loss, security,
-and the no-migration alternative. Record what would change the plan. Teach-back
+The defense tests whether the reasoning transfers. Use the module's frozen
+solo-review questions to challenge authority, mixed versions, rollback, cost
+allocation, staffing loss, security, and the no-migration alternative. Record
+what would change the plan. An optional human panel may add adaptive questions. Teach-back
 is successful when another engineer can apply the decision procedure to a
 different stack, not when they repeat Northstar's answer.
 
@@ -69,8 +71,10 @@ the ownership exercise. Neither role gets a veto by title alone.
 ## Guided practice
 
 Write a four-increment Northstar strategy. For each increment, state the user or
-team outcome, dependency, owner, evidence gate, and stop condition. Have a peer
-replace one assumption and revise only the affected increments.
+team outcome, dependency, owner, evidence gate, and stop condition. Select one
+assumption through the deterministic solo-review packet, replace it, and revise
+only the affected increments. An optional peer may supply the replacement after
+the original is frozen.
 
 ## Self-check
 

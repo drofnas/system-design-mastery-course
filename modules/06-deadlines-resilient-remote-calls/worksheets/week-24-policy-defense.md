@@ -11,6 +11,14 @@
 Compare at least three coherent policies under shared user, safety, recovery,
 load, fairness, security, cost, delivery, and ownership drivers.
 
+## A12: Remote-call containment ADR — 45 minutes
+
+Create `adr/module-06-remote-call-containment.md`. The remote-call policy RFC
+defines the cross-team contract; this ADR records the bounded-containment choice
+for the submitted workload. Compare at least three coherent alternatives and
+record decision, rejected options, evidence, migration, rollback, owner, and
+reversal threshold. Link the RFC and postmortem rather than duplicating them.
+
 ## Migration and rollback
 
 Record telemetry-only phase, mixed-version compatibility, canary population,

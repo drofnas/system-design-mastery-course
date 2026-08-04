@@ -3,55 +3,850 @@
   "id": "M08",
   "title": "Transactions, Concurrency, and Recovery",
   "weeks": [
-    {"number": 29, "focus": "Model and freeze invariants, boundaries, histories, and anomaly predictions", "hours": 10.5, "evidence": ["Frozen invariant and transaction-boundary map", "History and serialization analysis", "Isolation predictions", "Week 29 learning log"]},
-    {"number": 30, "focus": "Build concurrent transactions and explicit correctness controls", "hours": 11, "evidence": ["Concurrent transaction implementation", "Constraint and isolation tests", "Deadlock and retry evidence", "Internals review and Week 30 learning log"]},
-    {"number": 31, "focus": "Break transactions, crash the store, and validate recovery", "hours": 11.5, "evidence": ["Seven broken/repaired pairs", "WAL and acknowledgement evidence", "Restore validation with RTO/RPO", "Failure matrix and Week 31 learning log"]},
-    {"number": 32, "focus": "Decide, migrate, teach, and assess", "hours": 10.5, "evidence": ["Transaction and recovery ADR", "Migration and rollback plan", "Recorded defense", "Evaluation, remediation, and Week 32 learning log"]}
+    {
+      "number": 29,
+      "focus": "Model and freeze invariants, boundaries, histories, and anomaly predictions",
+      "hours": 10.5,
+      "evidence": [
+        "Frozen invariant and transaction-boundary map",
+        "History and serialization analysis",
+        "Isolation predictions",
+        "Week 29 learning log"
+      ],
+      "time_blocks": [
+        {
+          "id": "W29-T01",
+          "label": "Bounded authoritative resources",
+          "minutes": 55,
+          "activity": "required_resource",
+          "resource_ids": [
+            "RES-01"
+          ]
+        },
+        {
+          "id": "W29-T02",
+          "label": "Local lesson instruction",
+          "minutes": 120,
+          "activity": "local_instruction",
+          "lesson_ids": [
+            "L01",
+            "L02",
+            "L03",
+            "L04"
+          ]
+        },
+        {
+          "id": "W29-T03",
+          "label": "Guided practice",
+          "minutes": 90,
+          "activity": "guided_practice",
+          "exercise_ids": [
+            "EX-01",
+            "EX-02",
+            "EX-03",
+            "EX-04",
+            "EX-05",
+            "EX-06"
+          ]
+        },
+        {
+          "id": "W29-T04",
+          "label": "Reflection and learning log",
+          "minutes": 30,
+          "activity": "reflection"
+        },
+        {
+          "id": "W29-T05",
+          "label": "Independent Work",
+          "minutes": 335,
+          "activity": "independent_work",
+          "artifact_ids": [
+            "A01"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "focus": "Build concurrent transactions and explicit correctness controls",
+      "hours": 11,
+      "evidence": [
+        "Concurrent transaction implementation",
+        "Constraint and isolation tests",
+        "Deadlock and retry evidence",
+        "Internals review and Week 30 learning log"
+      ],
+      "time_blocks": [
+        {
+          "id": "W30-T01",
+          "label": "Bounded authoritative resources",
+          "minutes": 45,
+          "activity": "required_resource",
+          "resource_ids": [
+            "RES-02"
+          ]
+        },
+        {
+          "id": "W30-T02",
+          "label": "Local lesson instruction",
+          "minutes": 90,
+          "activity": "local_instruction",
+          "lesson_ids": [
+            "L03",
+            "L05",
+            "L07"
+          ]
+        },
+        {
+          "id": "W30-T03",
+          "label": "Guided practice",
+          "minutes": 90,
+          "activity": "guided_practice",
+          "exercise_ids": [
+            "EX-07",
+            "EX-08",
+            "EX-09",
+            "EX-10",
+            "EX-11"
+          ]
+        },
+        {
+          "id": "W30-T04",
+          "label": "Reflection and learning log",
+          "minutes": 30,
+          "activity": "reflection"
+        },
+        {
+          "id": "W30-T05",
+          "label": "Decision Artifact",
+          "minutes": 30,
+          "activity": "decision_artifact",
+          "artifact_ids": [
+            "A02",
+            "A03"
+          ]
+        },
+        {
+          "id": "W30-T06",
+          "label": "Independent Work",
+          "minutes": 375,
+          "activity": "independent_work"
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "focus": "Break transactions, crash the store, and validate recovery",
+      "hours": 11.5,
+      "evidence": [
+        "Seven broken/repaired pairs",
+        "WAL and acknowledgement evidence",
+        "Restore validation with RTO/RPO",
+        "Failure matrix and Week 31 learning log"
+      ],
+      "time_blocks": [
+        {
+          "id": "W31-T01",
+          "label": "Bounded authoritative resources",
+          "minutes": 105,
+          "activity": "required_resource",
+          "resource_ids": [
+            "RES-04",
+            "RES-06"
+          ]
+        },
+        {
+          "id": "W31-T02",
+          "label": "Local lesson instruction",
+          "minutes": 90,
+          "activity": "local_instruction",
+          "lesson_ids": [
+            "L01",
+            "L04",
+            "L06"
+          ]
+        },
+        {
+          "id": "W31-T03",
+          "label": "Guided practice",
+          "minutes": 90,
+          "activity": "guided_practice",
+          "exercise_ids": [
+            "EX-12",
+            "EX-13",
+            "EX-14",
+            "EX-15"
+          ]
+        },
+        {
+          "id": "W31-T04",
+          "label": "Reflection and learning log",
+          "minutes": 30,
+          "activity": "reflection"
+        },
+        {
+          "id": "W31-T05",
+          "label": "Decision Artifact",
+          "minutes": 30,
+          "activity": "decision_artifact",
+          "artifact_ids": [
+            "A05"
+          ]
+        },
+        {
+          "id": "W31-T06",
+          "label": "Failure Experiment",
+          "minutes": 345,
+          "activity": "failure_experiment",
+          "artifact_ids": [
+            "A04"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "focus": "Decide, migrate, teach, and assess",
+      "hours": 10.5,
+      "evidence": [
+        "Transaction and recovery ADR",
+        "Migration and rollback plan",
+        "Recorded defense",
+        "Evaluation, remediation, and Week 32 learning log"
+      ],
+      "time_blocks": [
+        {
+          "id": "W32-T01",
+          "label": "Bounded authoritative resources",
+          "minutes": 45,
+          "activity": "required_resource",
+          "resource_ids": [
+            "RES-07"
+          ]
+        },
+        {
+          "id": "W32-T02",
+          "label": "Local lesson instruction",
+          "minutes": 45,
+          "activity": "local_instruction",
+          "lesson_ids": [
+            "L08"
+          ]
+        },
+        {
+          "id": "W32-T03",
+          "label": "Guided practice",
+          "minutes": 45,
+          "activity": "guided_practice",
+          "exercise_ids": [
+            "EX-16"
+          ]
+        },
+        {
+          "id": "W32-T04",
+          "label": "Reflection and learning log",
+          "minutes": 30,
+          "activity": "reflection",
+          "artifact_ids": [
+            "A09"
+          ]
+        },
+        {
+          "id": "W32-T05",
+          "label": "Assessment",
+          "minutes": 60,
+          "activity": "assessment",
+          "artifact_ids": [
+            "A08"
+          ]
+        },
+        {
+          "id": "W32-T06",
+          "label": "Decision Artifact",
+          "minutes": 285,
+          "activity": "decision_artifact",
+          "artifact_ids": [
+            "A06"
+          ]
+        },
+        {
+          "id": "W32-T07",
+          "label": "Review Remediation",
+          "minutes": 60,
+          "activity": "review_remediation"
+        },
+        {
+          "id": "W32-T08",
+          "label": "Teach Back",
+          "minutes": 60,
+          "activity": "teach_back",
+          "artifact_ids": [
+            "A07"
+          ]
+        }
+      ]
+    }
   ],
   "target_hours": 43.5,
   "status": "ready",
   "readiness_note": "Ready on 2026-08-02 after semantic and evidence-safety review, nine transaction-lab tests across fourteen strict paired scenarios, six evaluator records with stable calibration bands, deterministic calibration checking, focused validation, full-course validation, and authoritative-resource verification.",
   "outcomes": [
-    {"id":"M08-O1","statement":"Map business invariants to transaction boundaries, authoritative state, and enforceable constraints.","graduate_profile":[1,4,5,7],"mastery_levels":["Define","Calculate","Decide and Teach"],"lessons":["L01"],"exercises":["EX-01","EX-02"],"artifacts":["A01","A06"],"rubric":["R01"]},
-    {"id":"M08-O2","statement":"Derive isolation anomalies from histories, visibility rules, and serialization dependencies.","graduate_profile":[4,5,7,8],"mastery_levels":["Define","Calculate","Diagnose"],"lessons":["L02"],"exercises":["EX-03","EX-04"],"artifacts":["A01","A04"],"rubric":["R02"]},
-    {"id":"M08-O3","statement":"Implement and compare locking, optimistic validation, MVCC, deadlock handling, and bounded transaction retries.","graduate_profile":[3,4,6,7,8,11],"mastery_levels":["Implement","Diagnose"],"lessons":["L03","L04"],"exercises":["EX-05","EX-06","EX-07","EX-08"],"artifacts":["A02","A03","A04"],"rubric":["R03","R04"]},
-    {"id":"M08-O4","statement":"Enforce atomic authoritative workflows with schema constraints and rebuildable derived state.","graduate_profile":[1,4,7,9],"mastery_levels":["Implement","Diagnose","Decide and Teach"],"lessons":["L05"],"exercises":["EX-09","EX-10"],"artifacts":["A02","A06"],"rubric":["R05"]},
-    {"id":"M08-O5","statement":"Explain and test WAL ordering, checkpoints, redo/undo, group commit, and durable acknowledgement.","graduate_profile":[3,7,8],"mastery_levels":["Define","Implement","Diagnose"],"lessons":["L06"],"exercises":["EX-11","EX-12"],"artifacts":["A03","A04"],"rubric":["R06","R08"]},
-    {"id":"M08-O6","statement":"Automate and validate backup, point-in-time recovery, integrity checks, and measured RTO/RPO while distinguishing replicas from backups.","graduate_profile":[2,7,8,10],"mastery_levels":["Calculate","Implement","Diagnose"],"lessons":["L07"],"exercises":["EX-13","EX-14"],"artifacts":["A04","A05","A06"],"rubric":["R06","R08"]},
-    {"id":"M08-O7","statement":"Diagnose seven concurrency and recovery failures from immutable same-input evidence.","graduate_profile":[7,8],"mastery_levels":["Diagnose","Decide and Teach"],"lessons":["L02","L03","L04","L05","L06","L07"],"exercises":["EX-15"],"artifacts":["A04","A05"],"rubric":["R07","R08"]},
-    {"id":"M08-O8","statement":"Defend a transaction and recovery strategy covering security, cost, operations, ownership, migration, rollback, and reversal evidence.","graduate_profile":[9,10,14,15,16],"mastery_levels":["Decide and Teach"],"lessons":["L08"],"exercises":["EX-16"],"artifacts":["A06","A07","A08","A09"],"rubric":["R09","R10"]}
+    {
+      "id": "M08-O1",
+      "statement": "Map business invariants to transaction boundaries, authoritative state, and enforceable constraints.",
+      "graduate_profile": [
+        1,
+        4,
+        5,
+        7
+      ],
+      "mastery_levels": [
+        "Define",
+        "Calculate",
+        "Decide and Teach"
+      ],
+      "lessons": [
+        "L01"
+      ],
+      "exercises": [
+        "EX-01",
+        "EX-02"
+      ],
+      "artifacts": [
+        "A01",
+        "A06"
+      ],
+      "rubric": [
+        "R01"
+      ]
+    },
+    {
+      "id": "M08-O2",
+      "statement": "Derive isolation anomalies from histories, visibility rules, and serialization dependencies.",
+      "graduate_profile": [
+        4,
+        5,
+        7,
+        8
+      ],
+      "mastery_levels": [
+        "Define",
+        "Calculate",
+        "Diagnose"
+      ],
+      "lessons": [
+        "L02"
+      ],
+      "exercises": [
+        "EX-03",
+        "EX-04"
+      ],
+      "artifacts": [
+        "A01",
+        "A04"
+      ],
+      "rubric": [
+        "R02"
+      ]
+    },
+    {
+      "id": "M08-O3",
+      "statement": "Implement and compare locking, optimistic validation, MVCC, deadlock handling, and bounded transaction retries.",
+      "graduate_profile": [
+        3,
+        4,
+        6,
+        7,
+        8,
+        11
+      ],
+      "mastery_levels": [
+        "Implement",
+        "Diagnose"
+      ],
+      "lessons": [
+        "L03",
+        "L04"
+      ],
+      "exercises": [
+        "EX-05",
+        "EX-06",
+        "EX-07",
+        "EX-08"
+      ],
+      "artifacts": [
+        "A02",
+        "A03",
+        "A04"
+      ],
+      "rubric": [
+        "R03",
+        "R04"
+      ]
+    },
+    {
+      "id": "M08-O4",
+      "statement": "Enforce atomic authoritative workflows with schema constraints and rebuildable derived state.",
+      "graduate_profile": [
+        1,
+        4,
+        7,
+        9
+      ],
+      "mastery_levels": [
+        "Implement",
+        "Diagnose",
+        "Decide and Teach"
+      ],
+      "lessons": [
+        "L05"
+      ],
+      "exercises": [
+        "EX-09",
+        "EX-10"
+      ],
+      "artifacts": [
+        "A02",
+        "A06"
+      ],
+      "rubric": [
+        "R05"
+      ]
+    },
+    {
+      "id": "M08-O5",
+      "statement": "Explain and test WAL ordering, checkpoints, redo/undo, group commit, and durable acknowledgement.",
+      "graduate_profile": [
+        3,
+        7,
+        8
+      ],
+      "mastery_levels": [
+        "Define",
+        "Implement",
+        "Diagnose"
+      ],
+      "lessons": [
+        "L06"
+      ],
+      "exercises": [
+        "EX-11",
+        "EX-12"
+      ],
+      "artifacts": [
+        "A03",
+        "A04"
+      ],
+      "rubric": [
+        "R06",
+        "R08"
+      ]
+    },
+    {
+      "id": "M08-O6",
+      "statement": "Automate and validate backup, point-in-time recovery, integrity checks, and measured RTO/RPO while distinguishing replicas from backups.",
+      "graduate_profile": [
+        2,
+        7,
+        8,
+        10
+      ],
+      "mastery_levels": [
+        "Calculate",
+        "Implement",
+        "Diagnose"
+      ],
+      "lessons": [
+        "L07"
+      ],
+      "exercises": [
+        "EX-13",
+        "EX-14"
+      ],
+      "artifacts": [
+        "A04",
+        "A05",
+        "A06"
+      ],
+      "rubric": [
+        "R06",
+        "R08"
+      ]
+    },
+    {
+      "id": "M08-O7",
+      "statement": "Diagnose seven concurrency and recovery failures from immutable same-input evidence.",
+      "graduate_profile": [
+        7,
+        8
+      ],
+      "mastery_levels": [
+        "Diagnose",
+        "Decide and Teach"
+      ],
+      "lessons": [
+        "L02",
+        "L03",
+        "L04",
+        "L05",
+        "L06",
+        "L07"
+      ],
+      "exercises": [
+        "EX-15"
+      ],
+      "artifacts": [
+        "A04",
+        "A05"
+      ],
+      "rubric": [
+        "R07",
+        "R08"
+      ]
+    },
+    {
+      "id": "M08-O8",
+      "statement": "Defend a transaction and recovery strategy covering security, cost, operations, ownership, migration, rollback, and reversal evidence.",
+      "graduate_profile": [
+        9,
+        10,
+        14,
+        15,
+        16
+      ],
+      "mastery_levels": [
+        "Decide and Teach"
+      ],
+      "lessons": [
+        "L08"
+      ],
+      "exercises": [
+        "EX-16"
+      ],
+      "artifacts": [
+        "A06",
+        "A07",
+        "A08",
+        "A09"
+      ],
+      "rubric": [
+        "R09",
+        "R10"
+      ]
+    }
   ],
   "resources": [
-    {"id":"RES-01","title":"Transaction Isolation","author_or_publisher":"PostgreSQL Global Development Group","type":"maintainer documentation","url":"https://www.postgresql.org/docs/current/transaction-iso.html","required":true,"access":"free","week":29,"estimated_minutes":55,"purpose":"Ground visibility, anomalies, and whole-transaction serialization retry in an operated DBMS.","assignment":"Read Sections 13.2.1-13.2.3; draw one admitted history per level and state which Northstar invariant it can violate.","last_verified":"2026-08-02","text_alternative":"lessons/02-histories-isolation-anomalies.md"},
-    {"id":"RES-02","title":"Explicit Locking","author_or_publisher":"PostgreSQL Global Development Group","type":"maintainer documentation","url":"https://www.postgresql.org/docs/current/explicit-locking.html","required":true,"access":"free","week":30,"estimated_minutes":45,"purpose":"Connect lock modes, wait behavior, and deadlock victim handling to application retry policy.","assignment":"Read Sections 13.3.2 and 13.3.4; build a wait-for graph and write a complete-transaction retry boundary.","last_verified":"2026-08-02","text_alternative":"lessons/03-locks-deadlocks-retries.md"},
-    {"id":"RES-03","title":"Database Systems Spring 2026 Schedule and Materials","author_or_publisher":"Carnegie Mellon University","type":"course videos with notes and slides","url":"https://15445.courses.cs.cmu.edu/spring2026/schedule.html","required":true,"access":"free","week":30,"estimated_minutes":150,"purpose":"Connect concurrency-control theory, 2PL, MVCC, logging, and recovery in one primary teaching sequence.","assignment":"Use only Lectures 17, 18, 20, 22, and 23; watch selected mechanism segments or use the linked notes, then annotate one schedule and one recovery trace.","last_verified":"2026-08-02","text_alternative":"lessons/04-occ-mvcc-write-skew.md"},
-    {"id":"RES-04","title":"Write-Ahead Logging","author_or_publisher":"PostgreSQL Global Development Group","type":"maintainer documentation","url":"https://www.postgresql.org/docs/current/wal-intro.html","required":true,"access":"free","week":31,"estimated_minutes":35,"purpose":"Derive WAL-before-data, redo, group commit, and PITR consequences from a concise implementation contract.","assignment":"Read the complete section; order log, data, flush, commit, and acknowledgement events and identify the unsafe permutation.","last_verified":"2026-08-02","text_alternative":"lessons/06-wal-checkpoints-recovery.md"},
-    {"id":"RES-05","title":"Reliability and Storage Caches","author_or_publisher":"PostgreSQL Global Development Group","type":"maintainer documentation","url":"https://www.postgresql.org/docs/current/wal-reliability.html","required":true,"access":"free","week":31,"estimated_minutes":35,"purpose":"Bound durability claims across process, OS, controller, and device caches.","assignment":"Read Sections 28.1-28.2; list the flush assumptions the local lab cannot verify and the owner of each production check.","last_verified":"2026-08-02","text_alternative":"lessons/06-wal-checkpoints-recovery.md"},
-    {"id":"RES-06","title":"Continuous Archiving and Point-in-Time Recovery","author_or_publisher":"PostgreSQL Global Development Group","type":"maintainer documentation","url":"https://www.postgresql.org/docs/current/continuous-archiving.html","required":true,"access":"free","week":31,"estimated_minutes":70,"purpose":"Connect a base backup, complete WAL archive, recovery target, and restore time/storage cost.","assignment":"Read Sections 25.3.1, 25.3.2, and 25.3.5; draw the minimum recoverable set and calculate a bounded RPO and replay workload.","last_verified":"2026-08-02","text_alternative":"lessons/07-backups-pitr-restore.md"},
-    {"id":"RES-07","title":"Postmortem of database outage of January 31","author_or_publisher":"GitLab","type":"first-person engineering postmortem","url":"https://about.gitlab.com/blog/postmortem-of-database-outage-of-january-31/","required":true,"access":"free","week":32,"estimated_minutes":45,"purpose":"Show why successful backup jobs, replicas, runbooks, ownership, and tested restores are different claims.","assignment":"Read Broken recovery procedures through Root cause analysis; classify each failed control as prevention, detection, recovery, or ownership evidence.","last_verified":"2026-08-02","text_alternative":"lessons/07-backups-pitr-restore.md"},
-    {"id":"RES-08","title":"October 21 post-incident analysis","author_or_publisher":"GitHub","type":"first-person engineering postmortem","url":"https://github.blog/news-insights/company-news/oct21-post-incident-analysis/","required":true,"access":"free","week":32,"estimated_minutes":40,"purpose":"Relate integrity-first degradation, large restore time, reconciliation, and backlog recovery to operating decisions.","assignment":"Read the recovery plan through Next steps; separate RTO, consistency, replay, backlog, and user-communication decisions.","last_verified":"2026-08-02","text_alternative":"lessons/08-decisions-migration-ownership.md"}
+    {
+      "id": "RES-01",
+      "title": "Transaction Isolation",
+      "author_or_publisher": "PostgreSQL Global Development Group",
+      "type": "maintainer documentation",
+      "url": "https://www.postgresql.org/docs/current/transaction-iso.html",
+      "required": true,
+      "access": "free",
+      "week": 29,
+      "estimated_minutes": 55,
+      "purpose": "Ground visibility, anomalies, and whole-transaction serialization retry in an operated DBMS.",
+      "assignment": "Read Sections 13.2.1-13.2.3; draw one admitted history per level and state which Northstar invariant it can violate.",
+      "last_verified": "2026-08-02",
+      "text_alternative": "lessons/02-histories-isolation-anomalies.md",
+      "verified_title": "Transaction Isolation",
+      "verified_publisher": "PostgreSQL Global Development Group",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://www.postgresql.org/docs/current/transaction-iso.html",
+      "verification_status": "verified"
+    },
+    {
+      "id": "RES-02",
+      "title": "Explicit Locking",
+      "author_or_publisher": "PostgreSQL Global Development Group",
+      "type": "maintainer documentation",
+      "url": "https://www.postgresql.org/docs/current/explicit-locking.html",
+      "required": true,
+      "access": "free",
+      "week": 30,
+      "estimated_minutes": 45,
+      "purpose": "Connect lock modes, wait behavior, and deadlock victim handling to application retry policy.",
+      "assignment": "Read Sections 13.3.2 and 13.3.4; build a wait-for graph and write a complete-transaction retry boundary.",
+      "last_verified": "2026-08-02",
+      "text_alternative": "lessons/03-locks-deadlocks-retries.md",
+      "verified_title": "Explicit Locking",
+      "verified_publisher": "PostgreSQL Global Development Group",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://www.postgresql.org/docs/current/explicit-locking.html",
+      "verification_status": "verified"
+    },
+    {
+      "id": "RES-03",
+      "title": "Database Systems Spring 2026 Schedule and Materials",
+      "author_or_publisher": "Carnegie Mellon University",
+      "type": "course videos with notes and slides",
+      "url": "https://15445.courses.cs.cmu.edu/spring2026/schedule.html",
+      "required": false,
+      "access": "free",
+      "week": 30,
+      "estimated_minutes": 150,
+      "purpose": "Connect concurrency-control theory, 2PL, MVCC, logging, and recovery in one primary teaching sequence.",
+      "assignment": "Use only Lectures 17, 18, 20, 22, and 23; watch selected mechanism segments or use the linked notes, then annotate one schedule and one recovery trace.",
+      "last_verified": "2026-08-02",
+      "text_alternative": "lessons/04-occ-mvcc-write-skew.md",
+      "verified_title": "Database Systems Spring 2026 Schedule and Materials",
+      "verified_publisher": "Carnegie Mellon University",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://15445.courses.cs.cmu.edu/spring2026/schedule.html",
+      "verification_status": "verified"
+    },
+    {
+      "id": "RES-04",
+      "title": "Write-Ahead Logging",
+      "author_or_publisher": "PostgreSQL Global Development Group",
+      "type": "maintainer documentation",
+      "url": "https://www.postgresql.org/docs/current/wal-intro.html",
+      "required": true,
+      "access": "free",
+      "week": 31,
+      "estimated_minutes": 35,
+      "purpose": "Derive WAL-before-data, redo, group commit, and PITR consequences from a concise implementation contract.",
+      "assignment": "Read the complete section; order log, data, flush, commit, and acknowledgement events and identify the unsafe permutation.",
+      "last_verified": "2026-08-02",
+      "text_alternative": "lessons/06-wal-checkpoints-recovery.md",
+      "verified_title": "Write-Ahead Logging",
+      "verified_publisher": "PostgreSQL Global Development Group",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://www.postgresql.org/docs/current/wal-intro.html",
+      "verification_status": "verified"
+    },
+    {
+      "id": "RES-05",
+      "title": "Reliability and Storage Caches",
+      "author_or_publisher": "PostgreSQL Global Development Group",
+      "type": "maintainer documentation",
+      "url": "https://www.postgresql.org/docs/current/wal-reliability.html",
+      "required": false,
+      "access": "free",
+      "week": 31,
+      "estimated_minutes": 35,
+      "purpose": "Bound durability claims across process, OS, controller, and device caches.",
+      "assignment": "Read Sections 28.1-28.2; list the flush assumptions the local lab cannot verify and the owner of each production check.",
+      "last_verified": "2026-08-02",
+      "text_alternative": "lessons/06-wal-checkpoints-recovery.md",
+      "verified_title": "Reliability and Storage Caches",
+      "verified_publisher": "PostgreSQL Global Development Group",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://www.postgresql.org/docs/current/wal-reliability.html",
+      "verification_status": "verified"
+    },
+    {
+      "id": "RES-06",
+      "title": "Continuous Archiving and Point-in-Time Recovery",
+      "author_or_publisher": "PostgreSQL Global Development Group",
+      "type": "maintainer documentation",
+      "url": "https://www.postgresql.org/docs/current/continuous-archiving.html",
+      "required": true,
+      "access": "free",
+      "week": 31,
+      "estimated_minutes": 70,
+      "purpose": "Connect a base backup, complete WAL archive, recovery target, and restore time/storage cost.",
+      "assignment": "Read Sections 25.3.1, 25.3.2, and 25.3.5; draw the minimum recoverable set and calculate a bounded RPO and replay workload.",
+      "last_verified": "2026-08-02",
+      "text_alternative": "lessons/07-backups-pitr-restore.md",
+      "verified_title": "Continuous Archiving and Point-in-Time Recovery",
+      "verified_publisher": "PostgreSQL Global Development Group",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://www.postgresql.org/docs/current/continuous-archiving.html",
+      "verification_status": "verified"
+    },
+    {
+      "id": "RES-07",
+      "title": "Postmortem of database outage of January 31",
+      "author_or_publisher": "GitLab",
+      "type": "first-person engineering postmortem",
+      "url": "https://about.gitlab.com/blog/postmortem-of-database-outage-of-january-31/",
+      "required": true,
+      "access": "free",
+      "week": 32,
+      "estimated_minutes": 45,
+      "purpose": "Show why successful backup jobs, replicas, runbooks, ownership, and tested restores are different claims.",
+      "assignment": "Read Broken recovery procedures through Root cause analysis; classify each failed control as prevention, detection, recovery, or ownership evidence.",
+      "last_verified": "2026-08-02",
+      "text_alternative": "lessons/07-backups-pitr-restore.md",
+      "verified_title": "Postmortem of database outage of January 31",
+      "verified_publisher": "GitLab",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://about.gitlab.com/blog/postmortem-of-database-outage-of-january-31/",
+      "verification_status": "verified"
+    },
+    {
+      "id": "RES-08",
+      "title": "October 21 post-incident analysis",
+      "author_or_publisher": "GitHub",
+      "type": "first-person engineering postmortem",
+      "url": "https://github.blog/news-insights/company-news/oct21-post-incident-analysis/",
+      "required": false,
+      "access": "free",
+      "week": 32,
+      "estimated_minutes": 40,
+      "purpose": "Relate integrity-first degradation, large restore time, reconciliation, and backlog recovery to operating decisions.",
+      "assignment": "Read the recovery plan through Next steps; separate RTO, consistency, replay, backlog, and user-communication decisions.",
+      "last_verified": "2026-08-02",
+      "text_alternative": "lessons/08-decisions-migration-ownership.md",
+      "verified_title": "October 21 post-incident analysis",
+      "verified_publisher": "GitHub",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://github.blog/news-insights/company-news/oct21-post-incident-analysis/",
+      "verification_status": "verified"
+    },
+    {
+      "id": "RES-09",
+      "title": "PostgreSQL DDL Constraints",
+      "author_or_publisher": "PostgreSQL Global Development Group",
+      "type": "maintainer documentation",
+      "url": "https://www.postgresql.org/docs/current/ddl-constraints.html",
+      "required": false,
+      "access": "free",
+      "week": 29,
+      "estimated_minutes": 35,
+      "purpose": "Ground commit-time invariant enforcement in check, uniqueness, primary-key, and foreign-key contracts.",
+      "assignment": "Read the check, not-null, unique, primary-key, and foreign-key sections; map each mechanism to the facts it can and cannot enforce.",
+      "last_verified": "2026-08-04",
+      "text_alternative": "lessons/05-constraints-atomic-workflows.md",
+      "verified_title": "PostgreSQL DDL Constraints",
+      "verified_publisher": "PostgreSQL Global Development Group",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://www.postgresql.org/docs/current/ddl-constraints.html",
+      "verification_status": "verified"
+    }
   ],
   "artifacts": [
-    {"id":"A01","week":29,"required":true,"template_path":"modules/08-transactions-concurrency-recovery/worksheets/week-29-transaction-model.md","submission_path":"reports/module-08-transaction-baseline.md","immutable_after_submission":true},
-    {"id":"A02","week":30,"required":true,"template_path":"modules/08-transactions-concurrency-recovery/worksheets/week-30-concurrency-build.md","submission_path":"labs/module-08/transaction-recovery/"},
-    {"id":"A03","week":30,"required":true,"template_path":"modules/08-transactions-concurrency-recovery/worksheets/week-30-concurrency-build.md","submission_path":"reports/module-08-transaction-recovery-internals.md"},
-    {"id":"A04","week":31,"required":true,"template_path":"modules/08-transactions-concurrency-recovery/worksheets/week-31-failure-restore-matrix.md","submission_path":"experiments/module-08/","immutable_after_submission":true},
-    {"id":"A05","week":31,"required":true,"template_path":"modules/08-transactions-concurrency-recovery/worksheets/week-31-failure-restore-matrix.md","submission_path":"reports/module-08-restore-validation.md","immutable_after_submission":true},
-    {"id":"A06","week":32,"required":true,"template_path":"templates/adr-template.md","submission_path":"adr/module-08-transaction-recovery-design.md"},
-    {"id":"A07","week":32,"required":true,"template_path":"modules/08-transactions-concurrency-recovery/worksheets/week-32-transaction-recovery-decision.md","submission_path":"reviews/module-08-defense.md"},
-    {"id":"A08","week":32,"required":true,"template_path":"modules/08-transactions-concurrency-recovery/assessment/report-template.md","submission_path":"reviews/module-08-evaluation.md"},
-    {"id":"A09","week":32,"required":true,"template_path":"templates/learning-log-template.md","submission_path":"learning-log/week-29.md through learning-log/week-32.md"}
+    {
+      "id": "A01",
+      "week": 29,
+      "required": true,
+      "template_path": "modules/08-transactions-concurrency-recovery/worksheets/week-29-transaction-model.md",
+      "submission_path": "reports/module-08-transaction-baseline.md",
+      "immutable_after_submission": true,
+      "portfolio_category": "model"
+    },
+    {
+      "id": "A02",
+      "week": 30,
+      "required": true,
+      "template_path": "modules/08-transactions-concurrency-recovery/worksheets/week-30-concurrency-build.md",
+      "submission_path": "labs/module-08/transaction-recovery/",
+      "portfolio_category": "dr_exercise"
+    },
+    {
+      "id": "A03",
+      "week": 30,
+      "required": true,
+      "template_path": "modules/08-transactions-concurrency-recovery/worksheets/week-30-concurrency-build.md",
+      "submission_path": "reports/module-08-transaction-recovery-internals.md",
+      "portfolio_category": "dr_exercise"
+    },
+    {
+      "id": "A04",
+      "week": 31,
+      "required": true,
+      "template_path": "modules/08-transactions-concurrency-recovery/worksheets/week-31-failure-restore-matrix.md",
+      "submission_path": "experiments/module-08/",
+      "immutable_after_submission": true,
+      "portfolio_category": "failure_matrix"
+    },
+    {
+      "id": "A05",
+      "week": 31,
+      "required": true,
+      "template_path": "modules/08-transactions-concurrency-recovery/worksheets/week-31-failure-restore-matrix.md",
+      "submission_path": "reports/module-08-restore-validation.md",
+      "immutable_after_submission": true,
+      "portfolio_category": "dr_exercise"
+    },
+    {
+      "id": "A06",
+      "week": 32,
+      "required": true,
+      "template_path": "templates/adr-template.md",
+      "submission_path": "adr/module-08-transaction-recovery-design.md",
+      "portfolio_category": "adr"
+    },
+    {
+      "id": "A07",
+      "week": 32,
+      "required": true,
+      "template_path": "modules/08-transactions-concurrency-recovery/worksheets/week-32-transaction-recovery-decision.md",
+      "submission_path": "reviews/module-08-defense.md",
+      "portfolio_category": "teach_back"
+    },
+    {
+      "id": "A08",
+      "week": 32,
+      "required": true,
+      "template_path": "modules/08-transactions-concurrency-recovery/assessment/report-template.md",
+      "submission_path": "reviews/module-08-evaluation.md",
+      "portfolio_category": "evaluation"
+    },
+    {
+      "id": "A09",
+      "week": 32,
+      "required": true,
+      "template_path": "templates/learning-log-template.md",
+      "submission_path": "learning-log/week-29.md through learning-log/week-32.md",
+      "portfolio_category": "learning_log"
+    }
   ],
   "failure_experiments": [
-    {"id":"F01","scenario":"lost update","evidence":"same-input unsafe/locked schedule, reads, writes, commits, invariant, and repair"},
-    {"id":"F02","scenario":"write skew","evidence":"same-input snapshot/serializable schedule, dependency cycle, abort, retry, and controller invariant"},
-    {"id":"F03","scenario":"deadlock","evidence":"wait-for cycle, victim, rollback, canonical order, bounded whole-transaction retry, and completion"},
-    {"id":"F04","scenario":"process termination","evidence":"WAL/data/flush/ack order, durable LSN, redo/undo, acknowledged effects, and uncertainty"},
-    {"id":"F05","scenario":"torn workflow","evidence":"result/audit authority, transaction boundary, constraint, crash point, and completeness"},
-    {"id":"F06","scenario":"corrupted derived state","evidence":"authoritative comparison, detection, rebuild, integrity probe, and excluded authoritative corruption"},
-    {"id":"F07","scenario":"restore failure","evidence":"base/WAL identity, checksums, archive completeness, target, invariant probes, RTO, RPO, and traffic gate"}
+    {
+      "id": "F01",
+      "scenario": "lost update",
+      "evidence": "same-input unsafe/locked schedule, reads, writes, commits, invariant, and repair"
+    },
+    {
+      "id": "F02",
+      "scenario": "write skew",
+      "evidence": "same-input snapshot/serializable schedule, dependency cycle, abort, retry, and controller invariant"
+    },
+    {
+      "id": "F03",
+      "scenario": "deadlock",
+      "evidence": "wait-for cycle, victim, rollback, canonical order, bounded whole-transaction retry, and completion"
+    },
+    {
+      "id": "F04",
+      "scenario": "process termination",
+      "evidence": "WAL/data/flush/ack order, durable LSN, redo/undo, acknowledged effects, and uncertainty"
+    },
+    {
+      "id": "F05",
+      "scenario": "torn workflow",
+      "evidence": "result/audit authority, transaction boundary, constraint, crash point, and completeness"
+    },
+    {
+      "id": "F06",
+      "scenario": "corrupted derived state",
+      "evidence": "authoritative comparison, detection, rebuild, integrity probe, and excluded authoritative corruption"
+    },
+    {
+      "id": "F07",
+      "scenario": "restore failure",
+      "evidence": "base/WAL identity, checksums, archive completeness, target, invariant probes, RTO, RPO, and traffic gate"
+    }
   ],
-  "assessment": {"rubric_path":"modules/08-transactions-concurrency-recovery/assessment/rubric.md","evaluator_prompt_path":"modules/08-transactions-concurrency-recovery/assessment/evaluator-prompt.md","evaluation_schema_path":"schemas/evaluation.schema.json","calibration_path":"modules/08-transactions-concurrency-recovery/assessment/calibration","pass_average":3,"safety_critical_criteria":["R07","R08"],"required_result_bands":["Pass","Revise","Repeat"]},
+  "assessment": {
+    "rubric_path": "modules/08-transactions-concurrency-recovery/assessment/rubric.md",
+    "evaluator_prompt_path": "modules/08-transactions-concurrency-recovery/assessment/evaluator-prompt.md",
+    "evaluation_schema_path": "schemas/evaluation.schema.json",
+    "calibration_path": "modules/08-transactions-concurrency-recovery/assessment/calibration",
+    "pass_average": 3,
+    "safety_critical_criteria": [
+      "R07",
+      "R08"
+    ],
+    "required_result_bands": [
+      "Pass",
+      "Revise",
+      "Repeat"
+    ]
+  },
   "solo_review": {
     "challenge_questions": [
       {
@@ -96,5 +891,86 @@
     "questions_per_attempt": 5,
     "live_ai_allowed": false,
     "record_template_path": "templates/solo-review-record-template.md"
-  }
+  },
+  "factual_claims_path": "modules/08-transactions-concurrency-recovery/assessment/factual-claims.json",
+  "lesson_catalog": [
+    {
+      "id": "L01",
+      "path": "lessons/01-invariants-transaction-boundaries.md",
+      "estimated_minutes": 30
+    },
+    {
+      "id": "L02",
+      "path": "lessons/02-histories-isolation-anomalies.md",
+      "estimated_minutes": 30
+    },
+    {
+      "id": "L03",
+      "path": "lessons/03-locks-deadlocks-retries.md",
+      "estimated_minutes": 30
+    },
+    {
+      "id": "L04",
+      "path": "lessons/04-occ-mvcc-write-skew.md",
+      "estimated_minutes": 30
+    },
+    {
+      "id": "L05",
+      "path": "lessons/05-constraints-atomic-workflows.md",
+      "estimated_minutes": 30
+    },
+    {
+      "id": "L06",
+      "path": "lessons/06-wal-checkpoints-recovery.md",
+      "estimated_minutes": 30
+    },
+    {
+      "id": "L07",
+      "path": "lessons/07-backups-pitr-restore.md",
+      "estimated_minutes": 30
+    },
+    {
+      "id": "L08",
+      "path": "lessons/08-decisions-migration-ownership.md",
+      "estimated_minutes": 30
+    }
+  ],
+  "citation_catalog": [
+    {
+      "id": "CIT-01",
+      "title": "13.1. Introduction",
+      "author_or_publisher": "PostgreSQL Global Development Group",
+      "type": "primary-source citation",
+      "url": "https://www.postgresql.org/docs/current/mvcc-intro.html",
+      "required": true,
+      "access": "free",
+      "purpose": "Provide primary-source support for the bounded mechanism discussed in the cited local lesson.",
+      "reading_boundary": "Read the MVCC introduction and follow its linked transaction-isolation section for version-specific PostgreSQL behavior.",
+      "last_verified": "2026-08-04",
+      "text_alternative": "lessons/04-occ-mvcc-write-skew.md",
+      "verified_title": "13.1. Introduction",
+      "verified_publisher": "PostgreSQL Global Development Group",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://www.postgresql.org/docs/current/mvcc-intro.html",
+      "verification_status": "verified"
+    },
+    {
+      "id": "CIT-02",
+      "title": "Perform testing for recovery from data loss",
+      "author_or_publisher": "Google Cloud",
+      "type": "primary-source citation",
+      "url": "https://docs.cloud.google.com/architecture/framework/reliability/perform-testing-for-recovery-from-data-loss",
+      "required": true,
+      "access": "free",
+      "purpose": "Provide primary-source support for the bounded mechanism discussed in the cited local lesson.",
+      "reading_boundary": "Read the recovery-testing recommendations, validation steps, ownership guidance, and stated cloud applicability boundary.",
+      "last_verified": "2026-08-04",
+      "text_alternative": "lessons/08-decisions-migration-ownership.md",
+      "verified_title": "Perform testing for recovery from data loss",
+      "verified_publisher": "Google Cloud",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://docs.cloud.google.com/architecture/framework/reliability/perform-testing-for-recovery-from-data-loss",
+      "verification_status": "verified"
+    }
+  ]
 }

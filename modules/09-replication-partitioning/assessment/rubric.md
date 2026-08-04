@@ -57,6 +57,8 @@ or contradictory arithmetic invalidate every distributed-systems conclusion.
 - **1:** fault labels restate symptoms without hashes, histories, alternatives, or uncertainty.
 - **2:** most pairs exist but ordering, same-input proof, ratios, causal alternatives, or evidence boundary is incomplete.
 - **3:** F01–F06 preserve predictions, scenarios, raw pairs, hashes, calculations, isolated repairs, reruns, alternatives, and uncertainty.
+- A passing evidence chain also links A11 to the unchanged F01 pair and keeps
+  postmortem causality distinct from the cross-trial failure matrix.
 - **4:** discriminating variants falsify strong alternatives and explain failed predictions across implementation boundaries.
 
 ## R08: Distributed correctness and convergence
@@ -84,7 +86,9 @@ non-convergence, missing keys, or duplicate owners can cause irreversible harm.
 - **1:** vocabulary recited without storage, transaction, replica, partition, or evidence derivation.
 - **2:** understandable defense with weak hidden practical, portfolio traceability, challenge, dissent, uncertainty, or remediation linkage.
 - **3:** all four Gate 3 parts pass; teach-back derives Modules 7–9 mechanisms, handles four stakeholder views, records changed belief/dissent, and preserves dated remediation.
-- **4:** another team applies the method to a different stack and resolves a cross-module data decision with evidence.
+- **4:** the frozen role-based transfer exercise applies the method to a different
+  stack and resolves a cross-module data decision with evidence. Optional team
+  review upgrades attestation, not score.
 
 ## Result thresholds
 

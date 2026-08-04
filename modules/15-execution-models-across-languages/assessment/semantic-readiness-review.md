@@ -1,6 +1,6 @@
 # Module 15 Semantic and Resource Readiness Review
 
-Review date: 2026-08-03
+Review date: 2026-08-04
 Current decision: **Ready**
 
 ## Teaching and evidence review
@@ -29,17 +29,17 @@ Current decision: **Ready**
   deadlines, cleanup counters, and TypeScript's erased-type boundary.
 - Go runs under `-race`; Rust includes Send/Sync contrast material. Detector and
   compiler evidence are explicitly bounded and do not claim protocol proof.
-- The deterministic scenario layer verifies F01–F09 inventory, matching shared
-  input hashes, exactly one changed control, broken target failure, and repaired
-  I01–I10 results. Its output declares that it is modeled rather than measured
-  runtime evidence.
+- The measured scenario layer drives F01–F09 through actual loopback services.
+  Each broken/repaired pair preserves runtime, seed, workload, limits, and
+  shared-input hash while changing one test-only process control. Broken cases
+  expose the named target and repaired cases restore it.
 - Node.js 24.18.0, Go 1.26.5, Rust 1.97.1, and OpenJDK 25 image digests are
   recorded. TypeScript 7.0.2 replaces the planned unavailable 6.0 package; the
   language boundary and explicit runtime-validation objective are unchanged.
 
 ## Resource and integrity review
 
-- RES-01–RES-15 were opened successfully on 2026-08-03. Required sources are
+- RES-01–RES-17 were opened successfully on 2026-08-04. Required sources are
   free, bounded to named sections, assigned a purpose, time, week, evidence
   prompt, and local alternative. The scheduler video has captions and Lesson 2
   is its written alternative.
@@ -52,18 +52,22 @@ Current decision: **Ready**
 ## Passing local gates
 
 - `python3 -m unittest discover modules/15-execution-models-across-languages/lab/tests`
-- `python3 modules/15-execution-models-across-languages/lab/run_conformance.py --all`
+- `python3 modules/15-execution-models-across-languages/lab/run_conformance.py --mode all --runtime all --scenario all --output NEW_DIRECTORY`
 - TypeScript build and behavior tests in Node.js 24.18.0
 - Go tests with race detection in Go 1.26.5
 - Rust locked tests in Rust 1.97.1
 - Java compile and behavior tests in OpenJDK 25
+- 22/22 clean-checkout measured outputs, with three excluded warmups, five
+  measured repetitions, verified hashes, successful cleanup, and no remaining
+  Module 15 containers
+- `python3 scripts/validate_factual_readiness.py --module M15`
 - `python3 scripts/validate_course.py --module M15`
 
 ## Calibration and readiness result
 
 Pass, Revise, and Repeat were each evaluated twice in isolated, ephemeral,
 read-only invocations after explicit authorization. The deterministic checker
-accepted all six schema-valid records: Pass scored 3.0/3.0, Revise 2.0/2.5,
+accepted all six schema-valid records: Pass scored 3.0/3.0, Revise 2.5/2.5,
 and Repeat 0.1/0.1. Result bands agree, maximum per-criterion drift is one,
 and response, fixture, contract, prompt, and schema hashes are preserved in
 `assessment/calibration/run-metadata.json`.

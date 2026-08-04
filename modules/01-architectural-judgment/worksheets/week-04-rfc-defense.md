@@ -114,7 +114,7 @@ The Week 1 baseline remains unchanged.
 - [ ] One failure matrix
 - [ ] One architecture defense/teach-back
 - [ ] Four learning logs
-- [ ] One LLM or human evaluation
+- [ ] One frozen evaluation record (self-review is sufficient; independent review is optional)
 - [ ] One revision log
 
 ## AI assistance disclosure

@@ -27,3 +27,5 @@ After caller cancellation, child work continues indefinitely and permits are
 not released. The pool and queue have no bounds. Only a happy-path screenshot is
 submitted; F01–F06 raw and repaired trials, policy alternatives, migration,
 rollback, defense, Gate 2 revision, and remediation record are absent.
+The required controlled retry-storm postmortem and distinct containment ADR are
+also absent; a single unsupported summary is counted as both artifacts.

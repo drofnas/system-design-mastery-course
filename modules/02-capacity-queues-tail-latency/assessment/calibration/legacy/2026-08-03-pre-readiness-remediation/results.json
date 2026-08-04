@@ -1,0 +1,130 @@
+{
+  "verified_at": "2026-07-31",
+  "provider": "OpenAI",
+  "model": "gpt-5.6-sol",
+  "execution": {
+    "temperature": "not exposed by the evaluator CLI",
+    "fixed_inputs": true,
+    "expected_bands_hidden_from_evaluator": true,
+    "strict_output_schema": "schemas/evaluation.schema.json",
+    "sandbox": "read-only",
+    "session_persistence": "ephemeral"
+  },
+  "checker": "scripts/check_calibration.py --module M02",
+  "checker_passed": true,
+  "runs": [
+    {
+      "id": "accepted-1",
+      "fixtures": {
+        "pass": {
+          "result": "Pass",
+          "average_score": 3.4,
+          "scores": {
+            "R01": 4,
+            "R02": 3,
+            "R03": 3,
+            "R04": 3,
+            "R05": 3,
+            "R06": 4,
+            "R07": 3,
+            "R08": 3,
+            "R09": 4,
+            "R10": 4
+          },
+          "raw_result": "runs/run-1-pass.json"
+        },
+        "revise": {
+          "result": "Revise",
+          "average_score": 2.0,
+          "scores": {
+            "R01": 2,
+            "R02": 2,
+            "R03": 2,
+            "R04": 2,
+            "R05": 2,
+            "R06": 2,
+            "R07": 2,
+            "R08": 2,
+            "R09": 2,
+            "R10": 2
+          },
+          "raw_result": "runs/run-1-revise.json"
+        },
+        "repeat": {
+          "result": "Repeat",
+          "average_score": 0.2,
+          "scores": {
+            "R01": 1,
+            "R02": 0,
+            "R03": 0,
+            "R04": 0,
+            "R05": 0,
+            "R06": 0,
+            "R07": 0,
+            "R08": 0,
+            "R09": 1,
+            "R10": 0
+          },
+          "raw_result": "runs/run-1-repeat.json"
+        }
+      }
+    },
+    {
+      "id": "accepted-2",
+      "fixtures": {
+        "pass": {
+          "result": "Pass",
+          "average_score": 3.6,
+          "scores": {
+            "R01": 4,
+            "R02": 4,
+            "R03": 3,
+            "R04": 4,
+            "R05": 3,
+            "R06": 4,
+            "R07": 3,
+            "R08": 3,
+            "R09": 4,
+            "R10": 4
+          },
+          "raw_result": "runs/run-2-pass.json"
+        },
+        "revise": {
+          "result": "Revise",
+          "average_score": 1.9,
+          "scores": {
+            "R01": 2,
+            "R02": 2,
+            "R03": 2,
+            "R04": 2,
+            "R05": 1,
+            "R06": 2,
+            "R07": 2,
+            "R08": 2,
+            "R09": 2,
+            "R10": 2
+          },
+          "raw_result": "runs/run-2-revise.json"
+        },
+        "repeat": {
+          "result": "Repeat",
+          "average_score": 0.2,
+          "scores": {
+            "R01": 1,
+            "R02": 0,
+            "R03": 1,
+            "R04": 0,
+            "R05": 0,
+            "R06": 0,
+            "R07": 0,
+            "R08": 0,
+            "R09": 0,
+            "R10": 0
+          },
+          "raw_result": "runs/run-2-repeat.json"
+        }
+      }
+    }
+  ],
+  "max_category_drift": 1
+}

@@ -64,3 +64,9 @@ remediable gaps. Repeat applies when G02–G05 fails or R08/R09 is zero.
   tolerance, regional survival, or security enforcement from the toy lab.
 - Accept defensible alternatives; never require Northstar's topology or timings.
 - Recommend named lessons/exercises without writing replacement graded work.
+
+## Completion attestation
+
+A frozen self-evaluated Pass establishes **Solo Complete** and remains
+self-attested. A passing independent human or LLM review of the same immutable
+bundle establishes **Independently Validated**.

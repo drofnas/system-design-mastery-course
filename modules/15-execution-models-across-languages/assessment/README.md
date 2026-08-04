@@ -22,6 +22,9 @@ change exactly one named control. Fabricated/altered evidence yields Repeat.
 TypeScript, Go, Rust, and Java pass request/response schemas, bounds, deadline,
 required/optional semantics, deterministic ordering policy, safe errors, and
 post-grace cleanup. A missing runtime or unresolved semantic mismatch prevents Pass.
+Evidence must come from `run_conformance.py --mode contract` with a new output
+directory, three excluded warm-ups, five measured repetitions, immutable image
+references, raw wire records, and successful cleanup.
 
 ### G04: Concurrency and boundary safety (hard gate)
 
@@ -33,6 +36,8 @@ request, or context disclosure yields Repeat.
 
 F01–F09 each have broken/repaired evidence, target failure, one repair, all
 I01–I10 restored, tool limits, and operational/security/cost consequences.
+The accepted runner mode is `--mode matrix`; deterministic model output is not
+runtime evidence. Faults must originate in process-only test configuration.
 
 ### G06: Decision, defense, Gate 5, and remediation
 
@@ -53,3 +58,7 @@ Findings use `missing_evidence`, `incorrect_reasoning`, `unsupported_claim`,
 
 The lab cannot prove production performance, every schedule, physical memory
 safety, future runtime behavior, ecosystem quality, compliance, or team ability.
+
+## Evaluation packaging and independence
+
+Use the [provider-neutral bundle and validation workflow](../../../EVALUATION_GUIDE.md). The evaluator returns JSON only; the validator renders the report. A frozen self-evaluated Pass establishes **Solo Complete** and remains explicitly self-attested. A passing independent human or LLM review of the same bundle establishes **Independently Validated**.

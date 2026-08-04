@@ -108,3 +108,10 @@ shows alternatives and the falsifying rerun, and ends with uncertainty. A
 database owner challenged cache transfer; the follow-up representative-data run
 is assigned and does not expand the current claim. Workload and fault model stayed
 fixed. No remediation is required; two future experiments have owners and dates.
+
+## Regression-policy ADR
+
+The distinct A11 ADR records the accepted regression gate, dispersion and
+inconclusive rules, telemetry and privacy costs, owner, canary sequence,
+rollback trigger, exception expiry, and reversal evidence. It links the raw
+benchmark report without duplicating that report or rewriting the review.

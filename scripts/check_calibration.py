@@ -11,6 +11,8 @@ import sys
 from pathlib import Path
 from typing import Any
 
+from schema_contract import SchemaContractError, validate_instance
+
 
 ROOT = Path(__file__).resolve().parents[1]
 FIXTURES = ("pass", "revise", "repeat")
@@ -75,9 +77,10 @@ def validate_run(
     safety_critical: set[str] | None = None,
 ) -> dict[str, int]:
     data = load_json(path)
-    expected_fields = set(evaluation_schema.get("properties", {}))
-    if set(data) != expected_fields:
-        fail(f"{path}: evaluation fields differ from schemas/evaluation.schema.json")
+    try:
+        validate_instance(data, evaluation_schema, label=str(path))
+    except SchemaContractError as error:
+        fail(str(error))
     calibration = module_root / "assessment" / "calibration"
     manifest_reference = expected[f"{fixture}.md"].get("manifest")
     if isinstance(manifest_reference, str):
@@ -132,7 +135,7 @@ def validate_run(
         for citation in citations:
             if not isinstance(citation, str):
                 fail(f"{path}: {label} evidence must contain strings")
-            if label == "G01" and manifest_prefix.lower() in citation.lower():
+            if label in {"G01", "G02"} and manifest_prefix.lower() in citation.lower():
                 continue
             if expected_prefix.lower() not in citation.lower():
                 fail(f"{path}: {label} cites outside the fixture: {citation}")

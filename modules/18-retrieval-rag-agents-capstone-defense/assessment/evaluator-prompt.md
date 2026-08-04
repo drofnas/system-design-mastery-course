@@ -13,3 +13,5 @@ Evaluate retrieval, agent, and architecture judgment—not model, embedding, dat
 9. Recommend only published lessons and exercises. Do not write a replacement graded RFC, frozen baseline, remediation submission, or defense answer.
 
 Every evidence string uses `path#heading`. Distinguish missing evidence, incorrect reasoning, unsupported claims, and reasonable uncertainty. `artifact_commit` identifies the submission and `baseline_tag` may be null.
+Return exactly one JSON object conforming to the schema. Do not append Markdown
+or any text outside that object.

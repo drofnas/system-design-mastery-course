@@ -6,7 +6,8 @@
 - **1:** model labels appear without quantified operations or authority.
 - **2:** plausible access paths with material distribution, retention, duplicate-copy, or invariant gaps.
 - **3:** frozen matrix quantifies dominant operations and maps models, authority, access paths, evolution, and reversal evidence.
-- **4:** sensitivity and stakeholder review teach where the model changes under growth, skew, security, or new operations.
+- **4:** sensitivity and frozen role-based review teach where the model changes
+  under growth, skew, security, or new operations.
 
 ## R02: Pages, records, and buffer behavior
 
@@ -84,7 +85,9 @@ users and make performance evidence meaningless.
 - **1:** vocabulary is recited without derivation or evidence.
 - **2:** understandable defense with weak challenge, dissent, uncertainty, changed belief, or remediation linkage.
 - **3:** teach-back derives mechanisms, handles database/application/security/finance/on-call challenge, records dissent and dated remediation.
-- **4:** another team applies the method to a different stack and resolves a storage decision with evidence.
+- **4:** the frozen role-based transfer exercise applies the method to a different
+  stack and resolves a storage decision with evidence. Optional team review
+  upgrades attestation, not score.
 
 ## Result thresholds
 

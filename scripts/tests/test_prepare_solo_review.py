@@ -15,7 +15,9 @@ class SoloReviewPreparationTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         cls.commit = subprocess.run(["git", "rev-parse", "HEAD"], cwd=ROOT, capture_output=True, text=True, check=True).stdout.strip()
-        cls.artifact = ROOT / "README.md"
+        # Use the preparation script itself so this unit test remains valid while
+        # unrelated course documentation is being edited on a feature branch.
+        cls.artifact = ROOT / "scripts" / "prepare_solo_review.py"
 
     def prepare(self, directory: str, name: str, seed: int = 41) -> dict:
         output = Path(directory) / name

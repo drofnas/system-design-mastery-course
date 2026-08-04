@@ -20,9 +20,10 @@ conditions. Do not create two uncoordinated authorities.
 
 ## Defense record
 
-Record reviewer roles, evidence commit, questions, answers, dissent, changed and
-unchanged claims, follow-up owner/date, and a teach-back using a case in another
-stack. Defend without AI assistance.
+Use the frozen solo-review packet. Record the represented roles, evidence
+commit, questions, answers, dissent, changed and unchanged claims, follow-up
+owner/date, and a teach-back using a case in another stack. Answer without live
+AI assistance. A live panel is optional.
 
 ## Evaluation and remediation
 

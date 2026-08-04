@@ -1,0 +1,260 @@
+#!/usr/bin/env python3
+"""Validate provider-neutral evaluation JSON and render its report."""
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+import re
+import sys
+from pathlib import Path
+from typing import Any
+
+from schema_contract import SchemaContractError, validate_instance
+
+
+ROOT = Path(__file__).resolve().parents[1]
+FINDING_TYPES = {"missing_evidence", "incorrect_reasoning", "unsupported_claim", "invariant_failure", "internal_contradiction", "communication_gap"}
+
+
+class EvaluationError(ValueError):
+    pass
+
+
+def _load(path: Path) -> dict[str, Any]:
+    try:
+        value = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as error:
+        raise EvaluationError(f"{path}: {error}") from error
+    if not isinstance(value, dict):
+        raise EvaluationError(f"{path}: root must be an object")
+    return value
+
+
+def _criteria(rubric: Path) -> set[str]:
+    return set(re.findall(r"^## (R\d{2}):", rubric.read_text(encoding="utf-8"), re.MULTILINE))
+
+
+def _headings(path: Path) -> set[str]:
+    return {match.group(1).strip().lower() for match in re.finditer(r"^#{1,6}\s+(.+?)\s*$", path.read_text(encoding="utf-8", errors="replace"), re.MULTILINE)}
+
+
+def _expand_range(prefix: str, start: str, end: str | None) -> set[str]:
+    first = int(start)
+    last = int(end) if end is not None else first
+    if last < first or last - first > 50:
+        return set()
+    return {f"{prefix}{number:02d}" for number in range(first, last + 1)}
+
+
+def _remediation_references(text: str) -> tuple[set[str], set[str]]:
+    """Normalize Lesson/LNN and EX-NN range forms used by module maps."""
+    lessons: set[str] = set()
+    exercises: set[str] = set()
+    for match in re.finditer(r"\bL(\d{2})(?:\s*[–-]\s*(?:L)?(\d{2}))?\b", text):
+        lessons.update(_expand_range("L", match.group(1), match.group(2)))
+    for match in re.finditer(r"\bLessons?\s+([^;|\n]+)", text, re.IGNORECASE):
+        segment = re.sub(r"\bL(?=\d)", "", match.group(1), flags=re.IGNORECASE)
+        segment = re.split(r"\bEX-", segment, maxsplit=1, flags=re.IGNORECASE)[0]
+        for number_range in re.finditer(r"\b(\d{1,2})(?:\s*[–-]\s*(\d{1,2}))?\b", segment):
+            lessons.update(_expand_range("L", number_range.group(1), number_range.group(2)))
+    for match in re.finditer(r"\bEX-(\d{2})(?:\s*[–-]\s*(?:EX-)?(\d{2}))?\b", text, re.IGNORECASE):
+        exercises.update(_expand_range("EX-", match.group(1), match.group(2)))
+    return lessons, exercises
+
+
+def _validate_citation(citation: str, bundle: Path, allowed: set[str]) -> None:
+    if "#" not in citation:
+        raise EvaluationError(f"evidence citation lacks a heading: {citation}")
+    raw_path, raw_heading = citation.split("#", 1)
+    relative = raw_path.strip()
+    if relative not in allowed:
+        raise EvaluationError(f"evidence cites a file outside the artifact bundle: {relative}")
+    file_path = bundle / "files" / relative
+    heading = raw_heading.split(":", 1)[0].strip().lower()
+    if heading not in _headings(file_path):
+        raise EvaluationError(f"evidence cites a missing heading: {citation}")
+
+
+def validate(module: str, bundle: Path, result_path: Path, report: Path, attestation_path: Path | None = None) -> dict[str, Any]:
+    if report.exists():
+        raise EvaluationError("report output already exists")
+    bundle_manifest = _load(bundle / "bundle-manifest.json")
+    result = _load(result_path)
+    attestation_path = attestation_path or result_path.with_name("attestation.json")
+    attestation = _load(attestation_path)
+    try:
+        validate_instance(
+            bundle_manifest,
+            _load(ROOT / "schemas" / "evaluation-bundle.schema.json"),
+            label="bundle-manifest.json",
+        )
+    except SchemaContractError as error:
+        raise EvaluationError(str(error)) from error
+    normalized = module.upper()
+    file_records = bundle_manifest.get("files")
+    if not isinstance(file_records, list) or not file_records:
+        raise EvaluationError("bundle manifest has no files")
+    if len({row.get("path") for row in file_records if isinstance(row, dict)}) != len(file_records):
+        raise EvaluationError("bundle manifest contains duplicate file paths")
+    for row in file_records:
+        if not isinstance(row, dict) or set(row) != {"path", "role", "sha256"}:
+            raise EvaluationError("bundle file record is malformed")
+        path = bundle / (row["path"] if row["role"] == "structural_validation" else f"files/{row['path']}")
+        if not path.is_file():
+            raise EvaluationError(f"bundle file is missing: {row['path']}")
+        if hashlib.sha256(path.read_bytes()).hexdigest() != row["sha256"]:
+            raise EvaluationError(f"bundle file hash mismatch: {row['path']}")
+    schema_records = {
+        row["role"]: row for row in file_records
+        if row["role"] in {"evaluation_schema", "attestation_schema", "bundle_schema"}
+    }
+    if set(schema_records) != {"evaluation_schema", "attestation_schema", "bundle_schema"}:
+        raise EvaluationError("bundle lacks the current evaluation, attestation, or bundle schema")
+    try:
+        validate_instance(
+            result,
+            _load(bundle / "files" / schema_records["evaluation_schema"]["path"]),
+            label="evaluation result",
+        )
+        validate_instance(
+            attestation,
+            _load(bundle / "files" / schema_records["attestation_schema"]["path"]),
+            label="evaluation attestation",
+        )
+    except SchemaContractError as error:
+        raise EvaluationError(str(error)) from error
+    calculated_bundle = hashlib.sha256(json.dumps(file_records, sort_keys=True, separators=(",", ":")).encode("utf-8")).hexdigest()
+    if bundle_manifest.get("bundle_sha256") != calculated_bundle:
+        raise EvaluationError("bundle manifest hash is invalid")
+    if bundle_manifest.get("structural_validation_passed") is not True:
+        raise EvaluationError("structural validation must pass before semantic scoring")
+    if bundle_manifest.get("module") != normalized or result.get("module_id") != normalized or attestation.get("module") != normalized:
+        raise EvaluationError("module identifiers do not agree")
+    if result.get("artifact_commit") != bundle_manifest.get("artifact_commit"):
+        raise EvaluationError("evaluation commit does not match the immutable bundle")
+    if attestation.get("bundle_sha256") != bundle_manifest.get("bundle_sha256"):
+        raise EvaluationError("attestation bundle hash mismatch")
+    if attestation.get("evaluated_at") != result.get("evaluated_at"):
+        raise EvaluationError("result and attestation evaluation timestamps do not agree")
+    mode = attestation.get("review_mode")
+    expected_completion = (
+        "in_progress"
+        if result.get("result") != "Pass"
+        else ("solo_complete" if mode == "self" else "independently_validated")
+    )
+    completion_status = attestation.get("completion_status")
+    if completion_status != expected_completion:
+        raise EvaluationError(
+            f"completion status contradicts result and review mode: expected {expected_completion}"
+        )
+
+    module_record = next((row for row in file_records if row["role"] == "contract"), None)
+    rubric_record = next((row for row in file_records if row["role"] == "rubric"), None)
+    remediation_record = next((row for row in file_records if row["role"] == "remediation"), None)
+    if not module_record or not rubric_record or not remediation_record:
+        raise EvaluationError("bundle lacks module, rubric, or remediation contract")
+    manifest = _load(bundle / "files" / module_record["path"])
+    criteria = _criteria(bundle / "files" / rubric_record["path"])
+    score_rows = result.get("rubric_scores")
+    if not isinstance(score_rows, list) or {row.get("criterion_id") for row in score_rows if isinstance(row, dict)} != criteria:
+        raise EvaluationError("evaluation must contain exactly one row for every rubric criterion")
+    scores = {row["criterion_id"]: row.get("score") for row in score_rows}
+    if any(not isinstance(score, int) or not 0 <= score <= 4 for score in scores.values()):
+        raise EvaluationError("rubric scores must be integers from 0 to 4")
+    average = round(sum(scores.values()) / len(scores), 2)
+    if result.get("average_score") != average:
+        raise EvaluationError(f"average_score mismatch: expected {average}")
+    safety = set(manifest["assessment"].get("safety_critical_criteria", []))
+    safety_zero = any(scores.get(identifier) == 0 for identifier in safety)
+    if result.get("safety_critical_zero") is not safety_zero:
+        raise EvaluationError("safety_critical_zero contradicts detailed scores")
+
+    gates = result.get("structural_gates")
+    if not isinstance(gates, list) or {row.get("id") for row in gates if isinstance(row, dict)} != {f"G{number:02d}" for number in range(1, 7)}:
+        raise EvaluationError("structural gates must contain exactly G01-G06")
+    hard_failure = any(not row.get("passed") for row in gates if row.get("id") in {"G02", "G03", "G04", "G05"})
+    expected_result = "Repeat" if hard_failure or safety_zero else ("Pass" if all(row.get("passed") for row in gates) and average >= float(manifest["assessment"]["pass_average"]) else "Revise")
+    if result.get("result") != expected_result:
+        raise EvaluationError(f"result contradicts gates and scores: expected {expected_result}")
+
+    artifact_paths = {row["path"] for row in file_records if row["role"].startswith("artifact:")}
+    for row in [*gates, *score_rows]:
+        evidence = row.get("evidence")
+        if not isinstance(evidence, list) or not evidence:
+            raise EvaluationError(f"{row.get('id', row.get('criterion_id'))} has no evidence")
+        for citation in evidence:
+            if not isinstance(citation, str):
+                raise EvaluationError("evidence citations must be strings")
+            _validate_citation(citation, bundle, artifact_paths)
+    for row in score_rows:
+        for finding in row.get("findings", []):
+            classification = finding.split(":", 1)[0].strip() if isinstance(finding, str) else ""
+            if classification not in FINDING_TYPES:
+                raise EvaluationError(f"invalid finding classification: {finding}")
+        remediation = " ".join(row.get("remediation", []))
+        lesson_references, exercise_references = _remediation_references(remediation)
+        if not lesson_references or not exercise_references:
+            raise EvaluationError(f"{row['criterion_id']} remediation must name a lesson and exercise")
+        remediation_contract = (bundle / "files" / remediation_record["path"]).read_text(encoding="utf-8")
+        allowed_lessons, allowed_exercises = _remediation_references(remediation_contract)
+        if not lesson_references <= allowed_lessons or not exercise_references <= allowed_exercises:
+            raise EvaluationError(f"{row['criterion_id']} remediation cites an unknown lesson or exercise")
+
+    labels = {
+        "in_progress": "IN PROGRESS",
+        "solo_complete": "SOLO COMPLETE — SELF-ATTESTED, NOT INDEPENDENTLY REVIEWED",
+        "independently_validated": "INDEPENDENTLY VALIDATED",
+    }
+    label = labels[completion_status]
+    lines = [
+        f"# {normalized} Evaluation Report",
+        "",
+        f"**Status:** {label}",
+        f"**Result:** {result['result']}",
+        f"**Average:** {average:.2f}",
+        f"**Artifact commit:** `{result['artifact_commit']}`",
+        f"**Bundle:** `{bundle_manifest['bundle_sha256']}`",
+        "",
+        "## Summary",
+        "",
+        str(result.get("summary", "")),
+        "",
+        "## Structural gates",
+        "",
+    ]
+    lines.extend(f"- {row['id']}: {'Pass' if row['passed'] else 'Fail'} — {'; '.join(row['evidence'])}" for row in gates)
+    lines.extend(["", "## Rubric scores", ""])
+    for row in score_rows:
+        lines.extend([f"### {row['criterion_id']}: {row['score']}/4", "", f"Evidence: {'; '.join(row['evidence'])}", "", f"Findings: {'; '.join(row['findings']) or 'None'}", "", f"Remediation: {'; '.join(row['remediation'])}", ""])
+    lines.extend(["## Next actions", ""])
+    lines.extend(f"- {item}" for item in result.get("next_actions", []))
+    report.parent.mkdir(parents=True, exist_ok=True)
+    report.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
+    return {
+        "module": normalized,
+        "result": result["result"],
+        "completion_status": completion_status,
+        "report_sha256": hashlib.sha256(report.read_bytes()).hexdigest(),
+    }
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--module", required=True)
+    parser.add_argument("--bundle", required=True, type=Path)
+    parser.add_argument("--result", required=True, type=Path)
+    parser.add_argument("--attestation", type=Path)
+    parser.add_argument("--report", required=True, type=Path)
+    args = parser.parse_args(argv)
+    try:
+        result = validate(args.module, args.bundle, args.result, args.report, args.attestation)
+    except (EvaluationError, OSError, json.JSONDecodeError) as error:
+        print(f"evaluation validation failed: {error}", file=sys.stderr)
+        return 2
+    print(f"validated {result['module']} {result['result']} ({result['completion_status']})")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

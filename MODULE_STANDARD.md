@@ -58,6 +58,12 @@ instruction and guided practice.
 Time estimates include reading, watching, writing, experiments, review, and
 teach-back. Do not hide required work under "optional."
 
+Every manifest publishes a lesson catalog and minute-level weekly time blocks.
+The blocks schedule each local lesson, required source, guided exercise,
+required artifact, failure experiment, assessment, teach-back, and reflection.
+The validator requires the block sum to equal the README and manifest hours;
+required-resource blocks equal the source estimates exactly.
+
 ## Outcomes and mastery evidence
 
 Each outcome must identify:
@@ -148,6 +154,33 @@ substitution, AI use, limitations, dissent, changed beliefs, and follow-up
 evidence. This satisfies course completion but must not be represented as human
 review.
 
+Course gates use the same freeze-first rule through `scripts/solo_gate.py`.
+Preparation writes an answer-free challenge and a gitignored local reveal
+envelope. Reveal is refused until the challenge and diagnosis match a supplied
+Git commit; repair checks preserve the workload hash. This is accidental-
+exposure protection, not cryptographic anti-cheating. Human review is preferred
+but never required.
+
+## Factual readiness
+
+Every module maintains `assessment/factual-claims.json`. It maps each local
+lesson to substantive claims, exact headings, authoritative resource IDs and
+reading sections, verification method/date, and scope limits. Synthetic fixtures
+must be labeled and cannot be presented as production measurements. Inferences
+name their premises. Automated checks establish traceability and consistency;
+semantic source comparison remains a required readiness review.
+
+## Provider-neutral semantic evaluation
+
+Learner work is committed before evaluation. The course packages the exact
+commit, required artifacts, structural results, rubric, prompt, schemas, and
+remediation map with `scripts/prepare_evaluation_bundle.py`. A self-evaluation
+that passes the same published rubric and deterministic checks establishes
+**Solo Complete** and must be labeled self-attested, not independent. An
+independent LLM or human can later evaluate the identical bundle; a passing
+record establishes **Independently Validated**. Evaluators return JSON only,
+and `scripts/validate_evaluation.py` validates it and renders Markdown.
+
 ## Definition of ready
 
 A module is `ready` only when:
@@ -161,3 +194,5 @@ A module is `ready` only when:
 6. Calibration fixtures produce the expected result bands consistently.
 7. Internal-link, content-structure, and syllabus-preservation checks pass.
 8. A reviewer confirms that the local content teaches rather than merely tests.
+9. Factual claims, time blocks, portfolio accounting, solo-gate contracts, and
+   current calibration provenance pass their deterministic validators.

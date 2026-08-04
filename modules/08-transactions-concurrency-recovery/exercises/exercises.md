@@ -82,5 +82,6 @@ dated comparison and discriminating rerun.
 ## EX-16: Decision defense
 
 Build the invariant decision matrix; compare three concurrency and two recovery
-options; defend it to application, database, security, finance, and on-call
-reviewers. Record dissent, changed belief, and reversal experiment.
+options; answer the frozen solo-review questions from application, database,
+security, finance, and on-call perspectives. Record dissent, changed belief,
+and a reversal experiment. A live panel is optional.

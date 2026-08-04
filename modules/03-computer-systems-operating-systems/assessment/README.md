@@ -11,6 +11,7 @@ processor, operating system, filesystem, container runtime, or faster result.
 - [Rubric](rubric.md): Module 3 score anchors and remediation
 - [Evaluator prompt](evaluator-prompt.md): evidence-bound review contract
 - [Report template](report-template.md): saved human-readable result
+- [Remediation map](remediation-map.md): new evidence paths that preserve frozen work
 - [Gate 1](gate-01.md): written exam, Transit practical, architecture defense,
   and portfolio review
 - [Evaluation schema](../../../schemas/evaluation.schema.json): JSON contract
@@ -52,3 +53,7 @@ processor, operating system, filesystem, container runtime, or faster result.
 - **Repeat:** prediction or required evidence is missing, raw evidence is
   altered or invented, concurrency or durability safety fails, required work is
   unbounded, or the machine model is materially false.
+
+## Evaluation packaging and independence
+
+Use the [provider-neutral bundle and validation workflow](../../../EVALUATION_GUIDE.md). The evaluator returns JSON only; the validator renders the report. A frozen self-evaluated Pass establishes **Solo Complete** and remains explicitly self-attested. A passing independent human or LLM review of the same bundle establishes **Independently Validated**.

@@ -86,8 +86,10 @@ Safety-critical because changed inputs or rewritten trials can manufacture a con
 - **1:** vocabulary substitutes for causal explanation.
 - **2:** correct design reasoning has weak teaching, challenge handling, influence, or practice plan.
 - **3:** product, technical, security, cost, ownership, operating review, teach-back, revision, and continued practice align.
-- **4:** another team applies the method, and recorded dissent or operational learning changes the decision.
+- **4:** the frozen role-based transfer exercise applies the method, and recorded
+  dissent or operational learning changes the decision. Optional team review
+  upgrades attestation, not score.
 
 ## Thresholds
 
-Module Pass requires G01–G06, A01–A17, average ≥3.0, non-low confidence, and no zero in R04–R07. Gate 6/final capstone Pass additionally requires all six course gates, average ≥3.5, every invariant passing, and successful product, technical, security, cost, ownership, and operating review.
+Module Pass requires G01–G06, A01–A17, average ≥3.0, non-low confidence, and no zero in R04–R07. Gate 6/final capstone Pass additionally requires all six course gates, average ≥3.5, every invariant passing, and successful product, technical, security, cost, ownership, and operating review through the frozen solo-review packet or an optional live panel.

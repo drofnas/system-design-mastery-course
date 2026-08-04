@@ -51,8 +51,8 @@ an average of at least 3.0, and no zero in R02, R03, R04, R05, R07, or R09.
 Repeat applies when G02-G05 fails or a safety-critical criterion is zero.
 Remaining incomplete but repairable work is Revise.
 
-Distinguish `missing evidence`, `incorrect reasoning`, `unsupported claim`,
-`invariant failure`, `contradiction`, and `communication gap`. A defensible
+Distinguish `missing_evidence`, `incorrect_reasoning`, `unsupported_claim`,
+`invariant_failure`, `internal_contradiction`, and `communication_gap`. A defensible
 alternative is not a defect because it differs from Northstar.
 
 ## Evidence boundary
@@ -61,3 +61,9 @@ The reference model cannot prove production isolation, cryptographic strength,
 physical deletion, real provenance, legal compliance, human response, or
 adaptive-adversary resistance. Claims beyond the observed environment must be
 scoped as uncertainty and assigned to a verification owner.
+
+## Completion attestation
+
+A frozen self-evaluated Pass establishes **Solo Complete** and remains
+self-attested. A passing independent human or LLM review of the same immutable
+bundle establishes **Independently Validated**.

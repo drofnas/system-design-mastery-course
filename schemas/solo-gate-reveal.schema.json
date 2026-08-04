@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/system-design-course/solo-gate-reveal.schema.json",
+  "title": "Post-freeze local gate reveal",
+  "type": "object",
+  "required": ["schema_version", "gate", "challenge_id", "challenge_sha256", "workload_sha256", "frozen_diagnosis", "root_cause", "causal_explanation", "repair", "acceptance_constraints", "disclosure"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "gate": {"enum": ["G01", "G02", "G03", "G04", "G05", "G06"]},
+    "challenge_id": {"type": "string", "pattern": "^G0[1-6]-[a-f0-9]{16}$"},
+    "challenge_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "workload_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "frozen_diagnosis": {
+      "type": "object",
+      "required": ["repository_relative_path", "sha256", "commit"],
+      "properties": {
+        "repository_relative_path": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "commit": {"type": "string", "pattern": "^[a-f0-9]{40}$"}
+      },
+      "additionalProperties": false
+    },
+    "root_cause": {"type": "string", "minLength": 20},
+    "causal_explanation": {"type": "string", "minLength": 40},
+    "repair": {"type": "string", "minLength": 20},
+    "acceptance_constraints": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": ["metric", "operator", "value"],
+        "properties": {
+          "metric": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"},
+          "operator": {"enum": ["<=", ">=", "=="]},
+          "value": {"type": "number"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "disclosure": {"type": "string", "minLength": 80}
+  },
+  "additionalProperties": false
+}

@@ -32,7 +32,7 @@ def load_scenario(path: Path) -> dict[str, Any]:
         raise ValueError("invalid runtime")
     return data
 
-def validate_trial(trial: dict[str, Any]) -> list[str]:
+def _validate_common(trial: dict[str, Any]) -> list[str]:
     errors: list[str] = []
     for key in ("scenario_sha256","shared_input_sha256","config_sha256"):
         if len(str(trial.get(key, ""))) != 64:
@@ -40,4 +40,31 @@ def validate_trial(trial: dict[str, Any]) -> list[str]:
     rows = trial.get("invariants", [])
     if [row.get("id") for row in rows] != [f"I{i:02d}" for i in range(1, 11)]:
         errors.append("invariants must be ordered I01-I10")
+    return errors
+
+
+def validate_model(trial: dict[str, Any]) -> list[str]:
+    errors = _validate_common(trial)
+    if "model is not measured runtime evidence" not in trial.get("evidence_boundaries", []):
+        errors.append("deterministic model must disclose that it is not measured evidence")
+    return errors
+
+
+def validate_trial(trial: dict[str, Any]) -> list[str]:
+    errors = _validate_common(trial)
+    boundaries = trial.get("evidence_boundaries", [])
+    if "model is not measured runtime evidence" in boundaries:
+        errors.append("measured trial must not claim to be deterministic model evidence")
+    if not any("five measured repetitions" in str(boundary) for boundary in boundaries):
+        errors.append("measured trial must disclose its five-repetition evidence boundary")
+    hashes = trial.get("hashes", {})
+    for key in ("code_sha256", "schema_sha256", "image_sha256"):
+        if len(str(hashes.get(key, ""))) != 64:
+            errors.append(f"hashes.{key} must be sha256")
+    if len(trial.get("warmups", [])) != 3 or any(not row.get("excluded_warmup") for row in trial.get("warmups", [])):
+        errors.append("exactly three excluded warmups are required")
+    if len(trial.get("repetitions", [])) != 5 or any(row.get("excluded_warmup") for row in trial.get("repetitions", [])):
+        errors.append("exactly five measured repetitions are required")
+    if trial.get("cleanup_results", {}).get("removed") is not True:
+        errors.append("container cleanup must be recorded as successful")
     return errors

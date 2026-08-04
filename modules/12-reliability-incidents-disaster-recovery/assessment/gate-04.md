@@ -4,6 +4,9 @@ Gate 4 closes Week 48. Complete it after freezing Module 12 evidence. Freeze
 each part before feedback. The practical uses an unpublished Northstar variant
 and does not expose a commerce answer. Total learner time: 3.5 hours.
 
+Use the [sealed-local gate workflow](../../../SOLO_GATE_GUIDE.md). Human review
+is optional and stronger portfolio evidence, but it is not required.
+
 ## Part 1: Written examination — 60 minutes
 
 1. Define a user-journey SLI whose denominator cannot exclude dependency
@@ -19,8 +22,8 @@ and does not expose a commerce answer. Total learner time: 3.5 hours.
 
 ## Part 2: Hidden Northstar workflow-recovery practical — 90 minutes
 
-A reviewer selects an unpublished variant combining one Module 10/11 workflow
-or coordination fault with data loss or regional unavailability. Before reveal,
+Run `scripts/solo_gate.py prepare --gate G04` to select one of three synthetic
+cross-module variants. Before reveal,
 freeze the invariant, predictions, journey/SLO impact, diagnostic plan, recovery
 order, and evidence limits. Preserve raw evidence; identify two causal alternatives;
 reveal the faults; apply one isolated repair per cause; rerun equivalent work.
@@ -32,8 +35,9 @@ operator approvals, and uncertainty. The model cannot prove production or region
 
 ## Part 3: Architecture defense — 30 minutes
 
-Defend independent commerce reliability and DR decisions to product, on-call,
-data/security, and finance reviewers. Derive journeys/SLOs, degradation,
+Defend independent commerce reliability and DR decisions against frozen
+solo-review questions for product, on-call, data/security, and finance roles.
+An optional human panel may ask adaptive follow-ups. Derive journeys/SLOs, degradation,
 incident ownership, recovery tiers, capacity, security, cost, migration,
 rollback, dissent, and reversal evidence. Do not copy Northstar or change the
 failure model to evade a challenge.
@@ -43,7 +47,8 @@ failure model to evade a challenge.
 Index Modules 10–12 evidence by exact file heading and commit: predictions,
 builds/tests, failure experiments, incident/recovery records, decisions,
 evaluations, learning logs, assistance disclosures, Gate 4, and the separately
-frozen Week 48 capstone revision. Sample one item per class and verify chronology.
+frozen Week 48 capstone revision. Sample one item per class and have the
+independent post-freeze evaluator verify chronology.
 
 ## Result algorithm
 

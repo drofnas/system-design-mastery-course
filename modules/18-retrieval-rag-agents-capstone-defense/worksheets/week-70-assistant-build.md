@@ -24,6 +24,8 @@ Report dataset/hash, measures, slices, confidence limits, regressions, release d
 
 ## Implementation review
 
-Record reviewer challenges, accepted changes, rejected suggestions with reasons, and unresolved risks.
+Record frozen solo-review challenges, accepted changes, rejected suggestions
+with reasons, and unresolved risks. Optional independent review is recorded
+separately.
 
 ## Week 70 learning log link

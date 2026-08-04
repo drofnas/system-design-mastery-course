@@ -78,7 +78,7 @@ Use the [Week 34 worksheet](worksheets/week-34-replicated-kv-build.md).
 | Lesson 6 and practitioner evidence | 2 h |
 | EX-11–EX-14 failure rehearsal | 2 h |
 | Six broken/repaired pairs and raw evidence | 5 h |
-| Convergence, hotspot, reshard analysis and learning log | 2.5 h |
+| Controlled partition postmortem, convergence, reshard analysis, and log | 2.5 h |
 
 Use the [Week 35 worksheet](worksheets/week-35-replication-failure-matrix.md).
 
@@ -120,8 +120,9 @@ Use the [glossary](glossary.md) as reference after studying the mechanisms.
 - Do not copy Northstar's semantics, topology, placement, thresholds, or merge
   rules into the commerce capstone.
 
-This module contributes one ADR, one failure matrix, one distributed-systems
-investigation, one internals report, and one recorded teach-back.
+This module contributes one ADR, one failure matrix, one controlled
+replica-partition postmortem, one distributed-systems investigation, one
+internals report, and one recorded teach-back.
 
 ## Assessment and completion
 
@@ -145,3 +146,12 @@ AI may challenge calculations, histories, experiments, and alternatives. It
 may not choose the graded architecture, invent raw trials, overwrite frozen
 evidence, write replacement graded work, or answer during the defense. Disclose
 assistance and verify generated claims against sources, code, or experiments.
+
+## Course-wide completion contracts
+
+- The machine-readable `module.json` time blocks are the canonical required-work budget.
+- The [factual-claims ledger](assessment/factual-claims.json) maps each local lesson to its authoritative source boundary.
+- Use the [provider-neutral evaluation workflow](../../EVALUATION_GUIDE.md) only after learner evidence is committed.
+- Use the [sealed local gate workflow](../../SOLO_GATE_GUIDE.md) when a course gate applies. Human review is optional.
+
+A frozen self-evaluation may establish **Solo Complete**; independent human or LLM review may establish **Independently Validated**. Synthetic lab values are not production measurements.

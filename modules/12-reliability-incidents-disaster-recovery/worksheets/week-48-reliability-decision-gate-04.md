@@ -11,11 +11,20 @@ Complete after freezing all incident and recovery evidence.
 4. Rank corrective work by expected exposure reduction, effort, confidence,
    owner, due date, and verification.
 
+## A12: Recovery-tier and degradation ADR — 45 minutes
+
+Create `adr/module-12-recovery-tier-and-degradation.md`. The DR review reports
+tested recovery evidence; the ADR selects one recovery/degradation policy from
+at least three alternatives under the same journey, RPO/RTO, capacity, security,
+cost, staffing, and ownership drivers. Record rollout, rollback, stopping and
+reversal conditions without copying the postmortem or DR report.
+
 ## Defense
 
-Reviewers play product, on-call, data/security, and finance roles. Record each
-challenge, answer, cited evidence, uncertainty, dissent, owner, and follow-up.
-Do not change the workload or failure model to evade a question.
+Use the frozen solo-review packet and answer from product, on-call,
+data/security, and finance perspectives. Record each challenge, answer, cited
+evidence, uncertainty, dissent, owner, and follow-up. Do not change the workload
+or failure model to evade a question. A live panel is optional.
 
 ## Teach-back
 
@@ -36,7 +45,7 @@ describes changed beliefs and citations; it never edits earlier artifacts.
 
 ## Completion check
 
-- All A01–A11 paths resolve to commits or hashes.
+- All A01–A12 paths resolve to commits or hashes.
 - G01–G06 pass; average is at least 3.0; R04/R07/R08/R09 are nonzero.
 - Required resources and local alternatives are complete.
 - Defense, Gate 4, revision, evaluation, remediation, and learning logs are separate.

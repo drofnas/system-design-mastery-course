@@ -3,6 +3,9 @@
 Gate 5 closes Week 60 after Module 15 evidence is frozen. Freeze every part
 before feedback. Total learner time: 3.5 hours.
 
+Use the [sealed-local gate workflow](../../../SOLO_GATE_GUIDE.md). Human review
+is optional and stronger portfolio evidence, but it is not required.
+
 ## Part 1: Written examination — 60 minutes
 
 1. Trace untrusted JSON through static types, validation, authorization, task
@@ -18,9 +21,9 @@ before feedback. Total learner time: 3.5 hours.
 
 ## Part 2: Hidden Northstar practical — 90 minutes
 
-A reviewer selects an unpublished variant combining one Module 13 security
-control failure, one Module 14 migration/economic failure, and one Module 15
-runtime failure. Before reveal, freeze invariants, predictions, diagnostic plan,
+Run `scripts/solo_gate.py prepare --gate G05` to select one of three synthetic
+cross-module variants combining security, migration/economic, and runtime
+evidence. Before reveal, freeze and commit invariants, predictions, diagnostic plan,
 repair order, and evidence limits. Preserve raw evidence; reveal faults; change
 one control per cause; rerun equivalent work; reconcile authority, runtime, and
 migration evidence.
@@ -32,15 +35,18 @@ cancellation, resources, race/validation, hashes, owners, and uncertainty.
 ## Part 3: Architecture defense — 30 minutes
 
 Defend independent commerce security, evolution, economics, and runtime choices
-to security, platform, finance, on-call, and team-ownership reviewers. Include
-alternatives, dissent, migration/rollback, and reversal evidence. Do not use AI.
+against frozen solo-review questions for security, platform, finance, on-call,
+and ownership roles. An optional human panel may ask adaptive follow-ups.
+Include alternatives, dissent, migration/rollback, and reversal evidence. Do not
+use AI before the defense is frozen.
 
 ## Part 4: Portfolio review — 30 minutes
 
 Index Modules 13–15 by exact heading and commit: threat model, security trials,
 cost and migration evidence, two runtime comparisons, internals review, ADRs,
 raw pairs, evaluations, learning logs, and teach-backs. Sample each class and
-verify chronology. Gate 5 does not create a Week 60 capstone revision.
+have the independent post-freeze evaluator verify chronology. Gate 5 does not
+create a Week 60 capstone revision.
 
 ## Result algorithm
 

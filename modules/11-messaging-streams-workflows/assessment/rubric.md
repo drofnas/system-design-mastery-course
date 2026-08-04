@@ -87,7 +87,9 @@ or contradictory arithmetic invalidate every decision.
 - **1:** architecture preference without shared drivers, evidence, or owners.
 - **2:** decision exists but security, cost, telemetry, migration, dissent, or reversal is weak.
 - **3:** evidence-driven RFC and defense cover alternatives, operation, security, cost, migration, owners, dissent, and remediation.
-- **4:** cross-team review resolves disagreement and transfers the method to another stack.
+- **4:** the frozen role-based transfer exercise resolves disagreement and
+  transfers the method to another stack. Optional team review upgrades
+  attestation, not score.
 
 ## Result thresholds
 

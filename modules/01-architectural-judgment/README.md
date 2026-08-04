@@ -162,3 +162,12 @@ under the published evaluator contract.
 
 Disclose all AI assistance and verify every generated claim against sources,
 code, or experiments.
+
+## Course-wide completion contracts
+
+- The machine-readable `module.json` time blocks are the canonical required-work budget.
+- The [factual-claims ledger](assessment/factual-claims.json) maps each local lesson to its authoritative source boundary.
+- Use the [provider-neutral evaluation workflow](../../EVALUATION_GUIDE.md) only after learner evidence is committed.
+- Use the [sealed local gate workflow](../../SOLO_GATE_GUIDE.md) when a course gate applies. Human review is optional.
+
+A frozen self-evaluation may establish **Solo Complete**; independent human or LLM review may establish **Independently Validated**. Synthetic lab values are not production measurements.

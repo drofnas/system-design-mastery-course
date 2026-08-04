@@ -3,61 +3,944 @@
   "id": "M16",
   "title": "Browser, Frontend, CDN, and Edge Architecture",
   "weeks": [
-    {"number":61,"focus":"Model browser work, route rendering, cache authority, accessibility, telemetry, and performance budgets; freeze predictions","hours":11,"evidence":["Frozen browser-edge baseline","Route and cache policy","F01-F08 predictions","Week 61 learning log"]},
-    {"number":62,"focus":"Build and verify static, streaming, client-rendered, and private personalized storefront routes","hours":12,"evidence":["Independent storefront implementation","Rendering and cache conformance review","Accessibility and trace evidence","Week 62 learning log"]},
-    {"number":63,"focus":"Break and measure main-thread, hydration, memory, third-party, cache, edge, and constrained-network failures","hours":12,"evidence":["Sixteen immutable raw trials","Eight broken/repaired comparisons","Browser-edge failure matrix","Performance investigation review"]},
-    {"number":64,"focus":"Decide per-route architecture, defend ownership and edge limits, assess, teach, and remediate","hours":11,"evidence":["Frontend and edge RFC","Architecture defense and teach-back","Module evaluation and remediation","Week 64 learning log"]}
+    {
+      "number": 61,
+      "focus": "Model browser work, route rendering, cache authority, accessibility, telemetry, and performance budgets; freeze predictions",
+      "hours": 11,
+      "evidence": [
+        "Frozen browser-edge baseline",
+        "Route and cache policy",
+        "F01-F08 predictions",
+        "Week 61 learning log"
+      ],
+      "time_blocks": [
+        {
+          "id": "W61-T01",
+          "label": "Bounded authoritative resources",
+          "minutes": 155,
+          "activity": "required_resource",
+          "resource_ids": [
+            "RES-01",
+            "RES-02",
+            "RES-04"
+          ]
+        },
+        {
+          "id": "W61-T02",
+          "label": "Local lesson instruction",
+          "minutes": 120,
+          "activity": "local_instruction",
+          "lesson_ids": [
+            "L01",
+            "L02",
+            "L03",
+            "L04"
+          ]
+        },
+        {
+          "id": "W61-T03",
+          "label": "Guided practice",
+          "minutes": 90,
+          "activity": "guided_practice",
+          "exercise_ids": [
+            "EX-01",
+            "EX-02",
+            "EX-03",
+            "EX-04",
+            "EX-05",
+            "EX-06",
+            "EX-07"
+          ]
+        },
+        {
+          "id": "W61-T04",
+          "label": "Reflection and learning log",
+          "minutes": 30,
+          "activity": "reflection"
+        },
+        {
+          "id": "W61-T05",
+          "label": "Independent Work",
+          "minutes": 265,
+          "activity": "independent_work",
+          "artifact_ids": [
+            "A01"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 62,
+      "focus": "Build and verify static, streaming, client-rendered, and private personalized storefront routes",
+      "hours": 12,
+      "evidence": [
+        "Independent storefront implementation",
+        "Rendering and cache conformance review",
+        "Accessibility and trace evidence",
+        "Week 62 learning log"
+      ],
+      "time_blocks": [
+        {
+          "id": "W62-T01",
+          "label": "Bounded authoritative resources",
+          "minutes": 60,
+          "activity": "required_resource",
+          "resource_ids": [
+            "RES-07"
+          ]
+        },
+        {
+          "id": "W62-T02",
+          "label": "Local lesson instruction",
+          "minutes": 90,
+          "activity": "local_instruction",
+          "lesson_ids": [
+            "L03",
+            "L05",
+            "L07"
+          ]
+        },
+        {
+          "id": "W62-T03",
+          "label": "Guided practice",
+          "minutes": 90,
+          "activity": "guided_practice",
+          "exercise_ids": [
+            "EX-08",
+            "EX-09",
+            "EX-10",
+            "EX-11",
+            "EX-12",
+            "EX-13"
+          ]
+        },
+        {
+          "id": "W62-T04",
+          "label": "Reflection and learning log",
+          "minutes": 30,
+          "activity": "reflection"
+        },
+        {
+          "id": "W62-T05",
+          "label": "Decision Artifact",
+          "minutes": 30,
+          "activity": "decision_artifact",
+          "artifact_ids": [
+            "A03"
+          ]
+        },
+        {
+          "id": "W62-T06",
+          "label": "Independent Work",
+          "minutes": 420,
+          "activity": "independent_work",
+          "artifact_ids": [
+            "A02"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 63,
+      "focus": "Break and measure main-thread, hydration, memory, third-party, cache, edge, and constrained-network failures",
+      "hours": 12,
+      "evidence": [
+        "Sixteen immutable raw trials",
+        "Eight broken/repaired comparisons",
+        "Browser-edge failure matrix",
+        "Performance investigation review"
+      ],
+      "time_blocks": [
+        {
+          "id": "W63-T01",
+          "label": "Bounded authoritative resources",
+          "minutes": 35,
+          "activity": "required_resource",
+          "resource_ids": [
+            "RES-09"
+          ]
+        },
+        {
+          "id": "W63-T02",
+          "label": "Local lesson instruction",
+          "minutes": 90,
+          "activity": "local_instruction",
+          "lesson_ids": [
+            "L01",
+            "L04",
+            "L06"
+          ]
+        },
+        {
+          "id": "W63-T03",
+          "label": "Guided practice",
+          "minutes": 90,
+          "activity": "guided_practice",
+          "exercise_ids": [
+            "EX-14",
+            "EX-15",
+            "EX-16",
+            "EX-17"
+          ]
+        },
+        {
+          "id": "W63-T04",
+          "label": "Reflection and learning log",
+          "minutes": 30,
+          "activity": "reflection"
+        },
+        {
+          "id": "W63-T05",
+          "label": "Decision Artifact",
+          "minutes": 30,
+          "activity": "decision_artifact",
+          "artifact_ids": [
+            "A06"
+          ]
+        },
+        {
+          "id": "W63-T06",
+          "label": "Failure Experiment",
+          "minutes": 445,
+          "activity": "failure_experiment",
+          "artifact_ids": [
+            "A04",
+            "A05"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 64,
+      "focus": "Decide per-route architecture, defend ownership and edge limits, assess, teach, and remediate",
+      "hours": 11,
+      "evidence": [
+        "Frontend and edge RFC",
+        "Architecture defense and teach-back",
+        "Module evaluation and remediation",
+        "Week 64 learning log"
+      ],
+      "time_blocks": [
+        {
+          "id": "W64-T01",
+          "label": "Bounded authoritative resources",
+          "minutes": 45,
+          "activity": "required_resource",
+          "resource_ids": [
+            "RES-11"
+          ]
+        },
+        {
+          "id": "W64-T02",
+          "label": "Local lesson instruction",
+          "minutes": 45,
+          "activity": "local_instruction",
+          "lesson_ids": [
+            "L08"
+          ]
+        },
+        {
+          "id": "W64-T03",
+          "label": "Guided practice",
+          "minutes": 45,
+          "activity": "guided_practice",
+          "exercise_ids": [
+            "EX-18"
+          ]
+        },
+        {
+          "id": "W64-T04",
+          "label": "Required portfolio artifact A11",
+          "minutes": 45,
+          "activity": "reflection",
+          "artifact_ids": [
+            "A11"
+          ]
+        },
+        {
+          "id": "W64-T05",
+          "label": "Reflection and learning log",
+          "minutes": 30,
+          "activity": "reflection"
+        },
+        {
+          "id": "W64-T06",
+          "label": "Assessment",
+          "minutes": 60,
+          "activity": "assessment",
+          "artifact_ids": [
+            "A09",
+            "A10"
+          ]
+        },
+        {
+          "id": "W64-T07",
+          "label": "Decision Artifact",
+          "minutes": 270,
+          "activity": "decision_artifact",
+          "artifact_ids": [
+            "A07"
+          ]
+        },
+        {
+          "id": "W64-T08",
+          "label": "Review Remediation",
+          "minutes": 60,
+          "activity": "review_remediation"
+        },
+        {
+          "id": "W64-T09",
+          "label": "Teach Back",
+          "minutes": 60,
+          "activity": "teach_back",
+          "artifact_ids": [
+            "A08"
+          ]
+        }
+      ]
+    }
   ],
   "target_hours": 46,
   "status": "ready",
   "readiness_note": "Ready on 2026-08-03 after the pinned browser lab, eight paired failures, accessibility and manual checks, six isolated evaluator runs, deterministic calibration checking, semantic and resource reviews, and focused and full-course validation passed.",
   "outcomes": [
-    {"id":"M16-O1","statement":"Trace tasks, microtasks, input dispatch, style, layout, paint, raster, and compositing from browser evidence.","graduate_profile":[3,8,12],"mastery_levels":["Define","Diagnose"],"lessons":["L01"],"exercises":["EX-01","EX-02"],"artifacts":["A01","A06"],"rubric":["R01"]},
-    {"id":"M16-O2","statement":"Calculate route-level performance budgets and interpret controlled-lab and field evidence without conflating them.","graduate_profile":[2,8,12],"mastery_levels":["Calculate","Diagnose"],"lessons":["L02"],"exercises":["EX-03","EX-04"],"artifacts":["A01","A06"],"rubric":["R02"]},
-    {"id":"M16-O3","statement":"Select and implement static, server, streaming, client, and island-hydration strategies per route from workload and interaction evidence.","graduate_profile":[1,10,12,15],"mastery_levels":["Define","Implement","Decide and Teach"],"lessons":["L03","L07"],"exercises":["EX-05","EX-06","EX-07"],"artifacts":["A02","A03","A07"],"rubric":["R03"]},
-    {"id":"M16-O4","statement":"Implement HTTP and CDN cache keys, freshness, validation, invalidation, and private-response isolation with explicit authority.","graduate_profile":[5,9,12],"mastery_levels":["Define","Implement","Diagnose"],"lessons":["L04","L07"],"exercises":["EX-08","EX-09","EX-10"],"artifacts":["A02","A03","A04","A05"],"rubric":["R04","R05"]},
-    {"id":"M16-O5","statement":"Build keyboard-complete, accessible, resilient interactions and explain the boundary between automated and manual evidence.","graduate_profile":[9,12,16],"mastery_levels":["Implement","Diagnose","Decide and Teach"],"lessons":["L05"],"exercises":["EX-11","EX-12"],"artifacts":["A02","A03","A07"],"rubric":["R06"]},
-    {"id":"M16-O6","statement":"Diagnose long tasks, hydration mismatches, retained browser resources, and third-party failures from controlled evidence.","graduate_profile":[3,8,11,12],"mastery_levels":["Implement","Diagnose"],"lessons":["L01","L03","L06"],"exercises":["EX-13","EX-14","EX-15","EX-16"],"artifacts":["A04","A05","A06"],"rubric":["R01","R07","R09"]},
-    {"id":"M16-O7","statement":"Preserve privacy-aware trace context across browser, edge, and origin while bounding telemetry cost and trust.","graduate_profile":[8,9,10,12],"mastery_levels":["Implement","Diagnose"],"lessons":["L06","L07"],"exercises":["EX-17"],"artifacts":["A03","A05"],"rubric":["R08"]},
-    {"id":"M16-O8","statement":"Defend frontend boundaries, BFF and microfrontend choices, edge consistency, ownership, cost, migration, and reversal conditions.","graduate_profile":[10,12,14,15,16],"mastery_levels":["Decide and Teach"],"lessons":["L08"],"exercises":["EX-18"],"artifacts":["A07","A08","A09","A10","A11"],"rubric":["R10"]}
+    {
+      "id": "M16-O1",
+      "statement": "Trace tasks, microtasks, input dispatch, style, layout, paint, raster, and compositing from browser evidence.",
+      "graduate_profile": [
+        3,
+        8,
+        12
+      ],
+      "mastery_levels": [
+        "Define",
+        "Diagnose"
+      ],
+      "lessons": [
+        "L01"
+      ],
+      "exercises": [
+        "EX-01",
+        "EX-02"
+      ],
+      "artifacts": [
+        "A01",
+        "A06"
+      ],
+      "rubric": [
+        "R01"
+      ]
+    },
+    {
+      "id": "M16-O2",
+      "statement": "Calculate route-level performance budgets and interpret controlled-lab and field evidence without conflating them.",
+      "graduate_profile": [
+        2,
+        8,
+        12
+      ],
+      "mastery_levels": [
+        "Calculate",
+        "Diagnose"
+      ],
+      "lessons": [
+        "L02"
+      ],
+      "exercises": [
+        "EX-03",
+        "EX-04"
+      ],
+      "artifacts": [
+        "A01",
+        "A06"
+      ],
+      "rubric": [
+        "R02"
+      ]
+    },
+    {
+      "id": "M16-O3",
+      "statement": "Select and implement static, server, streaming, client, and island-hydration strategies per route from workload and interaction evidence.",
+      "graduate_profile": [
+        1,
+        10,
+        12,
+        15
+      ],
+      "mastery_levels": [
+        "Define",
+        "Implement",
+        "Decide and Teach"
+      ],
+      "lessons": [
+        "L03",
+        "L07"
+      ],
+      "exercises": [
+        "EX-05",
+        "EX-06",
+        "EX-07"
+      ],
+      "artifacts": [
+        "A02",
+        "A03",
+        "A07"
+      ],
+      "rubric": [
+        "R03"
+      ]
+    },
+    {
+      "id": "M16-O4",
+      "statement": "Implement HTTP and CDN cache keys, freshness, validation, invalidation, and private-response isolation with explicit authority.",
+      "graduate_profile": [
+        5,
+        9,
+        12
+      ],
+      "mastery_levels": [
+        "Define",
+        "Implement",
+        "Diagnose"
+      ],
+      "lessons": [
+        "L04",
+        "L07"
+      ],
+      "exercises": [
+        "EX-08",
+        "EX-09",
+        "EX-10"
+      ],
+      "artifacts": [
+        "A02",
+        "A03",
+        "A04",
+        "A05"
+      ],
+      "rubric": [
+        "R04",
+        "R05"
+      ]
+    },
+    {
+      "id": "M16-O5",
+      "statement": "Build keyboard-complete, accessible, resilient interactions and explain the boundary between automated and manual evidence.",
+      "graduate_profile": [
+        9,
+        12,
+        16
+      ],
+      "mastery_levels": [
+        "Implement",
+        "Diagnose",
+        "Decide and Teach"
+      ],
+      "lessons": [
+        "L05"
+      ],
+      "exercises": [
+        "EX-11",
+        "EX-12"
+      ],
+      "artifacts": [
+        "A02",
+        "A03",
+        "A07"
+      ],
+      "rubric": [
+        "R06"
+      ]
+    },
+    {
+      "id": "M16-O6",
+      "statement": "Diagnose long tasks, hydration mismatches, retained browser resources, and third-party failures from controlled evidence.",
+      "graduate_profile": [
+        3,
+        8,
+        11,
+        12
+      ],
+      "mastery_levels": [
+        "Implement",
+        "Diagnose"
+      ],
+      "lessons": [
+        "L01",
+        "L03",
+        "L06"
+      ],
+      "exercises": [
+        "EX-13",
+        "EX-14",
+        "EX-15",
+        "EX-16"
+      ],
+      "artifacts": [
+        "A04",
+        "A05",
+        "A06"
+      ],
+      "rubric": [
+        "R01",
+        "R07",
+        "R09"
+      ]
+    },
+    {
+      "id": "M16-O7",
+      "statement": "Preserve privacy-aware trace context across browser, edge, and origin while bounding telemetry cost and trust.",
+      "graduate_profile": [
+        8,
+        9,
+        10,
+        12
+      ],
+      "mastery_levels": [
+        "Implement",
+        "Diagnose"
+      ],
+      "lessons": [
+        "L06",
+        "L07"
+      ],
+      "exercises": [
+        "EX-17"
+      ],
+      "artifacts": [
+        "A03",
+        "A05"
+      ],
+      "rubric": [
+        "R08"
+      ]
+    },
+    {
+      "id": "M16-O8",
+      "statement": "Defend frontend boundaries, BFF and microfrontend choices, edge consistency, ownership, cost, migration, and reversal conditions.",
+      "graduate_profile": [
+        10,
+        12,
+        14,
+        15,
+        16
+      ],
+      "mastery_levels": [
+        "Decide and Teach"
+      ],
+      "lessons": [
+        "L08"
+      ],
+      "exercises": [
+        "EX-18"
+      ],
+      "artifacts": [
+        "A07",
+        "A08",
+        "A09",
+        "A10",
+        "A11"
+      ],
+      "rubric": [
+        "R10"
+      ]
+    }
   ],
   "resources": [
-    {"id":"RES-01","title":"HTML Living Standard: Event loops","author_or_publisher":"WHATWG","type":"living web standard","url":"https://html.spec.whatwg.org/multipage/webappapis.html#event-loops","required":true,"access":"free","week":61,"estimated_minutes":50,"purpose":"Ground tasks, microtasks, rendering opportunities, and agent event loops in the platform contract.","assignment":"Read definitions, queuing tasks, and the processing model; trace one input through task, microtask checkpoint, and rendering opportunity.","last_verified":"2026-08-03","text_alternative":"lessons/01-browser-work-rendering-pipeline.md"},
-    {"id":"RES-02","title":"RenderingNG architecture","author_or_publisher":"Chromium project","type":"maintainer architecture guide","url":"https://developer.chrome.com/docs/chromium/renderingng-architecture","required":true,"access":"free","week":61,"estimated_minutes":45,"purpose":"Connect style, layout, paint, raster, compositing, and thread placement to observed work.","assignment":"Read the pipeline and threading sections; label which Northstar work must use the main thread and which may bypass it.","last_verified":"2026-08-03","text_alternative":"lessons/01-browser-work-rendering-pipeline.md"},
-    {"id":"RES-03","title":"Interaction to Next Paint (INP)","author_or_publisher":"web.dev / Chrome team","type":"maintainer metric guide","url":"https://web.dev/articles/inp","required":true,"access":"free","week":61,"estimated_minutes":45,"purpose":"Interpret interaction latency and separate field thresholds from controlled lab observations.","assignment":"Read through the interaction anatomy and thresholds; map input delay, processing, and presentation delay to the Northstar filter interaction.","last_verified":"2026-08-03","text_alternative":"lessons/02-performance-budgets-evidence.md"},
-    {"id":"RES-04","title":"RFC 9111: HTTP Caching","author_or_publisher":"IETF","type":"Internet Standard","url":"https://www.rfc-editor.org/rfc/rfc9111.html","required":true,"access":"free","week":61,"estimated_minutes":60,"purpose":"Reason precisely about cache storage, freshness, validation, invalidation, and shared-cache restrictions.","assignment":"Read Sections 3–5 and 7; produce the cache decision table for all four Northstar routes.","last_verified":"2026-08-03","text_alternative":"lessons/04-http-cdn-cache-safety.md"},
-    {"id":"RES-05","title":"renderToPipeableStream","author_or_publisher":"React project","type":"maintainer API reference","url":"https://react.dev/reference/react-dom/server/renderToPipeableStream","required":true,"access":"free","week":62,"estimated_minutes":35,"purpose":"Expose streaming HTML shell, readiness, error, and abort semantics without a framework abstraction.","assignment":"Read reference, caveats, and error recovery; identify when response status and headers become irreversible.","last_verified":"2026-08-03","text_alternative":"lessons/03-route-rendering-hydration.md"},
-    {"id":"RES-06","title":"hydrateRoot","author_or_publisher":"React project","type":"maintainer API reference","url":"https://react.dev/reference/react-dom/client/hydrateRoot","required":true,"access":"free","week":62,"estimated_minutes":35,"purpose":"Define hydration identity, mismatch handling, and root ownership.","assignment":"Read caveats and error hooks; define the server/client inputs whose equality the lab must preserve.","last_verified":"2026-08-03","text_alternative":"lessons/03-route-rendering-hydration.md"},
-    {"id":"RES-07","title":"Web Content Accessibility Guidelines (WCAG) 2.2","author_or_publisher":"W3C Web Accessibility Initiative","type":"W3C Recommendation","url":"https://www.w3.org/TR/WCAG22/","required":true,"access":"free","week":62,"estimated_minutes":60,"purpose":"Tie resilient interaction to testable accessibility outcomes rather than tool scores.","assignment":"Read Principles, Conformance, 1.3.1, 2.1.1, 2.4.3, 2.4.7, 2.5.8, 3.3.1, and 4.1.2; create manual and automated checks.","last_verified":"2026-08-03","text_alternative":"lessons/05-accessibility-resilient-interaction.md"},
-    {"id":"RES-08","title":"Fix memory problems","author_or_publisher":"Chrome DevTools","type":"maintainer diagnostic guide","url":"https://developer.chrome.com/docs/devtools/memory-problems","required":true,"access":"free","week":63,"estimated_minutes":45,"purpose":"Use heap growth, detached DOM, and allocation evidence to diagnose retained browser resources.","assignment":"Read the overview and leak workflow; define a repeated-navigation test and the evidence that distinguishes growth from a leak.","last_verified":"2026-08-03","text_alternative":"lessons/06-memory-third-parties-observability.md"},
-    {"id":"RES-09","title":"Trace Context","author_or_publisher":"W3C Distributed Tracing Working Group","type":"W3C Recommendation","url":"https://www.w3.org/TR/trace-context/","required":true,"access":"free","week":63,"estimated_minutes":35,"purpose":"Propagate interoperable trace identity without trusting client sampling or leaking session data.","assignment":"Read the design overview and security considerations; trace browser, edge, and origin parentage and list rejected sensitive attributes.","last_verified":"2026-08-03","text_alternative":"lessons/06-memory-third-parties-observability.md"},
-    {"id":"RES-10","title":"Life of a Pixel (Chromium University 2020)","author_or_publisher":"Chromium project","type":"captioned technical video","url":"https://www.youtube.com/watch?v=K2QHdgAKP-s","required":true,"access":"free","week":61,"estimated_minutes":60,"purpose":"Visualize the journey from web content to displayed pixels while identifying version-bound Chromium details.","assignment":"Watch with captions; draw the pipeline, then annotate at least two details superseded or clarified by current RenderingNG documentation.","last_verified":"2026-08-03","text_alternative":"lessons/01-browser-work-rendering-pipeline.md"},
-    {"id":"RES-11","title":"Building a better web: A faster YouTube","author_or_publisher":"YouTube and Chrome teams","type":"first-person engineering case","url":"https://web.dev/case-studies/better-youtube-web-part1","required":true,"access":"free","week":64,"estimated_minutes":45,"purpose":"Examine how a large operator connected constrained devices, field data, code delivery, and product outcomes.","assignment":"Read the full case; separate measurements, interventions, product outcomes, and claims that do not transfer to Northstar.","last_verified":"2026-08-03","text_alternative":"lessons/08-frontend-edge-decision-teachback.md"},
-    {"id":"RES-12","title":"Browser instrumentation","author_or_publisher":"OpenTelemetry project","type":"maintainer documentation","url":"https://opentelemetry.io/docs/languages/js/getting-started/browser/","required":false,"access":"free","week":63,"estimated_minutes":30,"purpose":"Inspect a browser tracing implementation while preserving its documented experimental boundary.","assignment":"Read the warning, setup, and instrumentation sections; record which contracts are standard and which library behavior remains experimental.","last_verified":"2026-08-03","text_alternative":"lessons/06-memory-third-parties-observability.md"},
-    {"id":"RES-13","title":"Load Third-Party JavaScript","author_or_publisher":"web.dev / Chrome team","type":"maintainer guidance","url":"https://web.dev/articles/optimizing-content-efficiency-loading-third-party-javascript","required":true,"access":"free","week":63,"estimated_minutes":45,"purpose":"Treat third-party code as a performance, privacy, security, and ownership dependency.","assignment":"Read risks, measurement, loading, and safety sections; write a Northstar admission, failure, and removal policy.","last_verified":"2026-08-03","text_alternative":"lessons/06-memory-third-parties-observability.md"}
+    {
+      "id": "RES-01",
+      "title": "HTML Living Standard: Event loops",
+      "author_or_publisher": "WHATWG",
+      "type": "living web standard",
+      "url": "https://html.spec.whatwg.org/multipage/webappapis.html#event-loops",
+      "required": true,
+      "access": "free",
+      "week": 61,
+      "estimated_minutes": 50,
+      "purpose": "Ground tasks, microtasks, rendering opportunities, and agent event loops in the platform contract.",
+      "assignment": "Read definitions, queuing tasks, and the processing model; trace one input through task, microtask checkpoint, and rendering opportunity.",
+      "last_verified": "2026-08-03",
+      "text_alternative": "lessons/01-browser-work-rendering-pipeline.md",
+      "verified_title": "HTML Living Standard: Event loops",
+      "verified_publisher": "WHATWG",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://html.spec.whatwg.org/multipage/webappapis.html#event-loops",
+      "verification_status": "verified"
+    },
+    {
+      "id": "RES-02",
+      "title": "RenderingNG architecture",
+      "author_or_publisher": "Chromium project",
+      "type": "maintainer architecture guide",
+      "url": "https://developer.chrome.com/docs/chromium/renderingng-architecture",
+      "required": true,
+      "access": "free",
+      "week": 61,
+      "estimated_minutes": 45,
+      "purpose": "Connect style, layout, paint, raster, compositing, and thread placement to observed work.",
+      "assignment": "Read the pipeline and threading sections; label which Northstar work must use the main thread and which may bypass it.",
+      "last_verified": "2026-08-03",
+      "text_alternative": "lessons/01-browser-work-rendering-pipeline.md",
+      "verified_title": "RenderingNG architecture",
+      "verified_publisher": "Chromium project",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://developer.chrome.com/docs/chromium/renderingng-architecture",
+      "verification_status": "verified"
+    },
+    {
+      "id": "RES-03",
+      "title": "Interaction to Next Paint (INP)",
+      "author_or_publisher": "web.dev / Chrome team",
+      "type": "maintainer metric guide",
+      "url": "https://web.dev/articles/inp",
+      "required": false,
+      "access": "free",
+      "week": 61,
+      "estimated_minutes": 45,
+      "purpose": "Interpret interaction latency and separate field thresholds from controlled lab observations.",
+      "assignment": "Read through the interaction anatomy and thresholds; map input delay, processing, and presentation delay to the Northstar filter interaction.",
+      "last_verified": "2026-08-03",
+      "text_alternative": "lessons/02-performance-budgets-evidence.md",
+      "verified_title": "Interaction to Next Paint (INP)",
+      "verified_publisher": "web.dev / Chrome team",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://web.dev/articles/inp",
+      "verification_status": "verified"
+    },
+    {
+      "id": "RES-04",
+      "title": "RFC 9111: HTTP Caching",
+      "author_or_publisher": "IETF",
+      "type": "Internet Standard",
+      "url": "https://www.rfc-editor.org/rfc/rfc9111.html",
+      "required": true,
+      "access": "free",
+      "week": 61,
+      "estimated_minutes": 60,
+      "purpose": "Reason precisely about cache storage, freshness, validation, invalidation, and shared-cache restrictions.",
+      "assignment": "Read Sections 3–5 and 7; produce the cache decision table for all four Northstar routes.",
+      "last_verified": "2026-08-03",
+      "text_alternative": "lessons/04-http-cdn-cache-safety.md",
+      "verified_title": "RFC 9111: HTTP Caching",
+      "verified_publisher": "IETF",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://www.rfc-editor.org/rfc/rfc9111.html",
+      "verification_status": "verified"
+    },
+    {
+      "id": "RES-05",
+      "title": "renderToPipeableStream",
+      "author_or_publisher": "React project",
+      "type": "maintainer API reference",
+      "url": "https://react.dev/reference/react-dom/server/renderToPipeableStream",
+      "required": false,
+      "access": "free",
+      "week": 62,
+      "estimated_minutes": 35,
+      "purpose": "Expose streaming HTML shell, readiness, error, and abort semantics without a framework abstraction.",
+      "assignment": "Read reference, caveats, and error recovery; identify when response status and headers become irreversible.",
+      "last_verified": "2026-08-03",
+      "text_alternative": "lessons/03-route-rendering-hydration.md",
+      "verified_title": "renderToPipeableStream",
+      "verified_publisher": "React project",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://react.dev/reference/react-dom/server/renderToPipeableStream",
+      "verification_status": "verified"
+    },
+    {
+      "id": "RES-06",
+      "title": "hydrateRoot",
+      "author_or_publisher": "React project",
+      "type": "maintainer API reference",
+      "url": "https://react.dev/reference/react-dom/client/hydrateRoot",
+      "required": false,
+      "access": "free",
+      "week": 62,
+      "estimated_minutes": 35,
+      "purpose": "Define hydration identity, mismatch handling, and root ownership.",
+      "assignment": "Read caveats and error hooks; define the server/client inputs whose equality the lab must preserve.",
+      "last_verified": "2026-08-03",
+      "text_alternative": "lessons/03-route-rendering-hydration.md",
+      "verified_title": "hydrateRoot",
+      "verified_publisher": "React project",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://react.dev/reference/react-dom/client/hydrateRoot",
+      "verification_status": "verified"
+    },
+    {
+      "id": "RES-07",
+      "title": "Web Content Accessibility Guidelines (WCAG) 2.2",
+      "author_or_publisher": "W3C Web Accessibility Initiative",
+      "type": "W3C Recommendation",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "required": true,
+      "access": "free",
+      "week": 62,
+      "estimated_minutes": 60,
+      "purpose": "Tie resilient interaction to testable accessibility outcomes rather than tool scores.",
+      "assignment": "Read Principles, Conformance, 1.3.1, 2.1.1, 2.4.3, 2.4.7, 2.5.8, 3.3.1, and 4.1.2; create manual and automated checks.",
+      "last_verified": "2026-08-03",
+      "text_alternative": "lessons/05-accessibility-resilient-interaction.md",
+      "verified_title": "Web Content Accessibility Guidelines (WCAG) 2.2",
+      "verified_publisher": "W3C Web Accessibility Initiative",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://www.w3.org/TR/WCAG22/",
+      "verification_status": "verified"
+    },
+    {
+      "id": "RES-08",
+      "title": "Fix memory problems",
+      "author_or_publisher": "Chrome DevTools",
+      "type": "maintainer diagnostic guide",
+      "url": "https://developer.chrome.com/docs/devtools/memory-problems",
+      "required": false,
+      "access": "free",
+      "week": 63,
+      "estimated_minutes": 45,
+      "purpose": "Use heap growth, detached DOM, and allocation evidence to diagnose retained browser resources.",
+      "assignment": "Read the overview and leak workflow; define a repeated-navigation test and the evidence that distinguishes growth from a leak.",
+      "last_verified": "2026-08-03",
+      "text_alternative": "lessons/06-memory-third-parties-observability.md",
+      "verified_title": "Fix memory problems",
+      "verified_publisher": "Chrome DevTools",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://developer.chrome.com/docs/devtools/memory-problems",
+      "verification_status": "verified"
+    },
+    {
+      "id": "RES-09",
+      "title": "Trace Context",
+      "author_or_publisher": "W3C Distributed Tracing Working Group",
+      "type": "W3C Recommendation",
+      "url": "https://www.w3.org/TR/trace-context/",
+      "required": true,
+      "access": "free",
+      "week": 63,
+      "estimated_minutes": 35,
+      "purpose": "Propagate interoperable trace identity without trusting client sampling or leaking session data.",
+      "assignment": "Read the design overview and security considerations; trace browser, edge, and origin parentage and list rejected sensitive attributes.",
+      "last_verified": "2026-08-03",
+      "text_alternative": "lessons/06-memory-third-parties-observability.md",
+      "verified_title": "Trace Context",
+      "verified_publisher": "W3C Distributed Tracing Working Group",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://www.w3.org/TR/trace-context/",
+      "verification_status": "verified"
+    },
+    {
+      "id": "RES-10",
+      "title": "Life of a Pixel (Chromium University 2020)",
+      "author_or_publisher": "Chromium project",
+      "type": "captioned technical video",
+      "url": "https://www.youtube.com/watch?v=K2QHdgAKP-s",
+      "required": false,
+      "access": "free",
+      "week": 61,
+      "estimated_minutes": 60,
+      "purpose": "Visualize the journey from web content to displayed pixels while identifying version-bound Chromium details.",
+      "assignment": "Watch with captions; draw the pipeline, then annotate at least two details superseded or clarified by current RenderingNG documentation.",
+      "last_verified": "2026-08-03",
+      "text_alternative": "lessons/01-browser-work-rendering-pipeline.md",
+      "verified_title": "Life of a Pixel (Chromium University 2020)",
+      "verified_publisher": "Chromium project",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://www.youtube.com/watch?v=K2QHdgAKP-s",
+      "verification_status": "verified"
+    },
+    {
+      "id": "RES-11",
+      "title": "Building a better web: A faster YouTube",
+      "author_or_publisher": "YouTube and Chrome teams",
+      "type": "first-person engineering case",
+      "url": "https://web.dev/case-studies/better-youtube-web-part1",
+      "required": true,
+      "access": "free",
+      "week": 64,
+      "estimated_minutes": 45,
+      "purpose": "Examine how a large operator connected constrained devices, field data, code delivery, and product outcomes.",
+      "assignment": "Read the full case; separate measurements, interventions, product outcomes, and claims that do not transfer to Northstar.",
+      "last_verified": "2026-08-03",
+      "text_alternative": "lessons/08-frontend-edge-decision-teachback.md",
+      "verified_title": "Building a better web: A faster YouTube",
+      "verified_publisher": "YouTube and Chrome teams",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://web.dev/case-studies/better-youtube-web-part1",
+      "verification_status": "verified"
+    },
+    {
+      "id": "RES-12",
+      "title": "Browser instrumentation",
+      "author_or_publisher": "OpenTelemetry project",
+      "type": "maintainer documentation",
+      "url": "https://opentelemetry.io/docs/languages/js/getting-started/browser/",
+      "required": false,
+      "access": "free",
+      "week": 63,
+      "estimated_minutes": 30,
+      "purpose": "Inspect a browser tracing implementation while preserving its documented experimental boundary.",
+      "assignment": "Read the warning, setup, and instrumentation sections; record which contracts are standard and which library behavior remains experimental.",
+      "last_verified": "2026-08-03",
+      "text_alternative": "lessons/06-memory-third-parties-observability.md",
+      "verified_title": "Browser instrumentation",
+      "verified_publisher": "OpenTelemetry project",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://opentelemetry.io/docs/languages/js/getting-started/browser/",
+      "verification_status": "verified"
+    },
+    {
+      "id": "RES-13",
+      "title": "Load Third-Party JavaScript",
+      "author_or_publisher": "web.dev / Chrome team",
+      "type": "maintainer guidance",
+      "url": "https://web.dev/articles/optimizing-content-efficiency-loading-third-party-javascript",
+      "required": false,
+      "access": "free",
+      "week": 63,
+      "estimated_minutes": 45,
+      "purpose": "Treat third-party code as a performance, privacy, security, and ownership dependency.",
+      "assignment": "Read risks, measurement, loading, and safety sections; write a Northstar admission, failure, and removal policy.",
+      "last_verified": "2026-08-03",
+      "text_alternative": "lessons/06-memory-third-parties-observability.md",
+      "verified_title": "Load Third-Party JavaScript",
+      "verified_publisher": "web.dev / Chrome team",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://web.dev/articles/optimizing-content-efficiency-loading-third-party-javascript",
+      "verification_status": "verified"
+    }
   ],
   "artifacts": [
-    {"id":"A01","week":61,"required":true,"template_path":"modules/16-browser-frontend-cdn-edge/worksheets/week-61-browser-edge-model.md","submission_path":"reports/module-16-browser-edge-baseline.md","immutable_after_submission":true},
-    {"id":"A02","week":62,"required":true,"template_path":"modules/16-browser-frontend-cdn-edge/worksheets/week-62-storefront-build.md","submission_path":"labs/module-16/storefront/"},
-    {"id":"A03","week":62,"required":true,"template_path":"modules/16-browser-frontend-cdn-edge/worksheets/week-62-storefront-build.md","submission_path":"reports/module-16-render-cache-accessibility-conformance.md"},
-    {"id":"A04","week":63,"required":true,"template_path":"modules/16-browser-frontend-cdn-edge/worksheets/week-63-browser-edge-failures.md","submission_path":"experiments/module-16/","immutable_after_submission":true},
-    {"id":"A05","week":63,"required":true,"template_path":"modules/16-browser-frontend-cdn-edge/worksheets/week-63-browser-edge-failures.md","submission_path":"reports/module-16-browser-edge-failure-matrix.md"},
-    {"id":"A06","week":63,"required":true,"template_path":"templates/performance-review-template.md","submission_path":"reports/module-16-performance-investigation.md"},
-    {"id":"A07","week":64,"required":true,"template_path":"templates/rfc-template.md","submission_path":"rfc/module-16-frontend-edge-architecture.md"},
-    {"id":"A08","week":64,"required":true,"template_path":"modules/16-browser-frontend-cdn-edge/worksheets/week-64-architecture-defense.md","submission_path":"reviews/module-16-defense.md"},
-    {"id":"A09","week":64,"required":true,"template_path":"modules/16-browser-frontend-cdn-edge/assessment/report-template.md","submission_path":"reviews/module-16-evaluation.md"},
-    {"id":"A10","week":64,"required":true,"template_path":"modules/16-browser-frontend-cdn-edge/assessment/report-template.md","submission_path":"reviews/module-16-remediation-revision.md"},
-    {"id":"A11","week":64,"required":true,"template_path":"templates/learning-log-template.md","submission_path":"learning-log/week-61.md through learning-log/week-64.md"}
+    {
+      "id": "A01",
+      "week": 61,
+      "required": true,
+      "template_path": "modules/16-browser-frontend-cdn-edge/worksheets/week-61-browser-edge-model.md",
+      "submission_path": "reports/module-16-browser-edge-baseline.md",
+      "immutable_after_submission": true,
+      "portfolio_category": "model"
+    },
+    {
+      "id": "A02",
+      "week": 62,
+      "required": true,
+      "template_path": "modules/16-browser-frontend-cdn-edge/worksheets/week-62-storefront-build.md",
+      "submission_path": "labs/module-16/storefront/",
+      "portfolio_category": "implementation"
+    },
+    {
+      "id": "A03",
+      "week": 62,
+      "required": true,
+      "template_path": "modules/16-browser-frontend-cdn-edge/worksheets/week-62-storefront-build.md",
+      "submission_path": "reports/module-16-render-cache-accessibility-conformance.md",
+      "portfolio_category": "runtime_comparison"
+    },
+    {
+      "id": "A04",
+      "week": 63,
+      "required": true,
+      "template_path": "modules/16-browser-frontend-cdn-edge/worksheets/week-63-browser-edge-failures.md",
+      "submission_path": "experiments/module-16/",
+      "immutable_after_submission": true,
+      "portfolio_category": "failure_matrix"
+    },
+    {
+      "id": "A05",
+      "week": 63,
+      "required": true,
+      "template_path": "modules/16-browser-frontend-cdn-edge/worksheets/week-63-browser-edge-failures.md",
+      "submission_path": "reports/module-16-browser-edge-failure-matrix.md",
+      "portfolio_category": "failure_matrix"
+    },
+    {
+      "id": "A06",
+      "week": 63,
+      "required": true,
+      "template_path": "templates/performance-review-template.md",
+      "submission_path": "reports/module-16-performance-investigation.md",
+      "portfolio_category": "performance_investigation"
+    },
+    {
+      "id": "A07",
+      "week": 64,
+      "required": true,
+      "template_path": "templates/rfc-template.md",
+      "submission_path": "rfc/module-16-frontend-edge-architecture.md",
+      "portfolio_category": "rfc"
+    },
+    {
+      "id": "A08",
+      "week": 64,
+      "required": true,
+      "template_path": "modules/16-browser-frontend-cdn-edge/worksheets/week-64-architecture-defense.md",
+      "submission_path": "reviews/module-16-defense.md",
+      "portfolio_category": "teach_back"
+    },
+    {
+      "id": "A09",
+      "week": 64,
+      "required": true,
+      "template_path": "modules/16-browser-frontend-cdn-edge/assessment/report-template.md",
+      "submission_path": "reviews/module-16-evaluation.md",
+      "portfolio_category": "evaluation"
+    },
+    {
+      "id": "A10",
+      "week": 64,
+      "required": true,
+      "template_path": "modules/16-browser-frontend-cdn-edge/assessment/report-template.md",
+      "submission_path": "reviews/module-16-remediation-revision.md",
+      "portfolio_category": "evaluation"
+    },
+    {
+      "id": "A11",
+      "week": 64,
+      "required": true,
+      "template_path": "templates/learning-log-template.md",
+      "submission_path": "learning-log/week-61.md through learning-log/week-64.md",
+      "portfolio_category": "learning_log"
+    }
   ],
   "failure_experiments": [
-    {"id":"F01","scenario":"long main-thread task blocks a critical interaction and next paint","evidence":"shared input hash, task attribution, input/processing/presentation timing, repaired yield points, and I01"},
-    {"id":"F02","scenario":"server and client state produce a hydration mismatch","evidence":"server state hash, client state hash, recoverable error, semantic DOM result, repair, and I03"},
-    {"id":"F03","scenario":"listeners, timers, or detached DOM survive repeated navigation","evidence":"navigation count, listener/timer identities, detached nodes, heap/resource delta, cleanup, and I04"},
-    {"id":"F04","scenario":"slow or failed third-party script blocks or breaks the core journey","evidence":"dependency identity, loading policy, blocked time, failure mode, fallback, owner, and I07"},
-    {"id":"F05","scenario":"incomplete public cache key returns the wrong regional representation","evidence":"normalized request dimensions, cache key, hit source, content version, region, repair, and I05"},
-    {"id":"F06","scenario":"shared cache stores or serves a stale personalized staff response","evidence":"two pseudonymous sessions, response policy, cache decision, subject binding, content version, and I06"},
-    {"id":"F07","scenario":"edge-origin failure serves unsafe stale data or lacks bounded degradation","evidence":"route authority, origin state, object age, stale policy, degraded marker, fail-closed result, and I08"},
-    {"id":"F08","scenario":"constrained network and device conditions violate the critical-route budget","evidence":"network/device profile, critical bytes and requests, route milestones, interaction result, repair, and I02"}
+    {
+      "id": "F01",
+      "scenario": "long main-thread task blocks a critical interaction and next paint",
+      "evidence": "shared input hash, task attribution, input/processing/presentation timing, repaired yield points, and I01"
+    },
+    {
+      "id": "F02",
+      "scenario": "server and client state produce a hydration mismatch",
+      "evidence": "server state hash, client state hash, recoverable error, semantic DOM result, repair, and I03"
+    },
+    {
+      "id": "F03",
+      "scenario": "listeners, timers, or detached DOM survive repeated navigation",
+      "evidence": "navigation count, listener/timer identities, detached nodes, heap/resource delta, cleanup, and I04"
+    },
+    {
+      "id": "F04",
+      "scenario": "slow or failed third-party script blocks or breaks the core journey",
+      "evidence": "dependency identity, loading policy, blocked time, failure mode, fallback, owner, and I07"
+    },
+    {
+      "id": "F05",
+      "scenario": "incomplete public cache key returns the wrong regional representation",
+      "evidence": "normalized request dimensions, cache key, hit source, content version, region, repair, and I05"
+    },
+    {
+      "id": "F06",
+      "scenario": "shared cache stores or serves a stale personalized staff response",
+      "evidence": "two pseudonymous sessions, response policy, cache decision, subject binding, content version, and I06"
+    },
+    {
+      "id": "F07",
+      "scenario": "edge-origin failure serves unsafe stale data or lacks bounded degradation",
+      "evidence": "route authority, origin state, object age, stale policy, degraded marker, fail-closed result, and I08"
+    },
+    {
+      "id": "F08",
+      "scenario": "constrained network and device conditions violate the critical-route budget",
+      "evidence": "network/device profile, critical bytes and requests, route milestones, interaction result, repair, and I02"
+    }
   ],
   "assessment": {
     "rubric_path": "modules/16-browser-frontend-cdn-edge/assessment/rubric.md",
@@ -65,8 +948,17 @@
     "evaluation_schema_path": "schemas/evaluation.schema.json",
     "calibration_path": "modules/16-browser-frontend-cdn-edge/assessment/calibration",
     "pass_average": 3,
-    "safety_critical_criteria": ["R04","R05","R06","R09"],
-    "required_result_bands": ["Pass","Revise","Repeat"]
+    "safety_critical_criteria": [
+      "R04",
+      "R05",
+      "R06",
+      "R09"
+    ],
+    "required_result_bands": [
+      "Pass",
+      "Revise",
+      "Repeat"
+    ]
   },
   "solo_review": {
     "challenge_questions": [
@@ -112,5 +1004,104 @@
     "questions_per_attempt": 5,
     "live_ai_allowed": false,
     "record_template_path": "templates/solo-review-record-template.md"
-  }
+  },
+  "factual_claims_path": "modules/16-browser-frontend-cdn-edge/assessment/factual-claims.json",
+  "lesson_catalog": [
+    {
+      "id": "L01",
+      "path": "lessons/01-browser-work-rendering-pipeline.md",
+      "estimated_minutes": 30
+    },
+    {
+      "id": "L02",
+      "path": "lessons/02-performance-budgets-evidence.md",
+      "estimated_minutes": 30
+    },
+    {
+      "id": "L03",
+      "path": "lessons/03-route-rendering-hydration.md",
+      "estimated_minutes": 30
+    },
+    {
+      "id": "L04",
+      "path": "lessons/04-http-cdn-cache-safety.md",
+      "estimated_minutes": 30
+    },
+    {
+      "id": "L05",
+      "path": "lessons/05-accessibility-resilient-interaction.md",
+      "estimated_minutes": 30
+    },
+    {
+      "id": "L06",
+      "path": "lessons/06-memory-third-parties-observability.md",
+      "estimated_minutes": 30
+    },
+    {
+      "id": "L07",
+      "path": "lessons/07-northstar-browser-edge-tutorial.md",
+      "estimated_minutes": 30
+    },
+    {
+      "id": "L08",
+      "path": "lessons/08-frontend-edge-decision-teachback.md",
+      "estimated_minutes": 30
+    }
+  ],
+  "citation_catalog": [
+    {
+      "id": "CIT-01",
+      "title": "Backends for Frontends pattern",
+      "author_or_publisher": "Microsoft Azure Architecture Center",
+      "type": "official architecture guidance",
+      "url": "https://learn.microsoft.com/en-us/azure/architecture/patterns/backends-for-frontends",
+      "required": true,
+      "access": "free",
+      "purpose": "Bound the benefits and operational, security, latency, ownership, and duplication costs of a BFF boundary.",
+      "reading_boundary": "Read Context and problem, Solution, Problems and considerations, and When to use this pattern; treat vendor-specific examples as examples rather than universal proof.",
+      "last_verified": "2026-08-04",
+      "text_alternative": "lessons/08-frontend-edge-decision-teachback.md",
+      "verified_title": "Backends for Frontends pattern",
+      "verified_publisher": "Microsoft Azure Architecture Center",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://learn.microsoft.com/en-us/azure/architecture/patterns/backends-for-frontends",
+      "verification_status": "verified"
+    },
+    {
+      "id": "CIT-02",
+      "title": "How Workers works",
+      "author_or_publisher": "Cloudflare Workers documentation",
+      "type": "official maintainer documentation",
+      "url": "https://developers.cloudflare.com/workers/reference/how-workers-works/",
+      "required": true,
+      "access": "free",
+      "purpose": "Document one concrete edge runtime's distributed execution, isolate lifetime, state, and request-placement boundaries.",
+      "reading_boundary": "Read Isolates, Compute per request, and Distributed execution; do not generalize Cloudflare-specific implementation details to every edge platform.",
+      "last_verified": "2026-08-04",
+      "text_alternative": "lessons/08-frontend-edge-decision-teachback.md",
+      "verified_title": "How Workers works",
+      "verified_publisher": "Cloudflare Workers documentation",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://developers.cloudflare.com/workers/reference/how-workers-works/",
+      "verification_status": "verified"
+    },
+    {
+      "id": "CIT-03",
+      "title": "Limits",
+      "author_or_publisher": "Cloudflare Workers documentation",
+      "type": "official maintainer documentation",
+      "url": "https://developers.cloudflare.com/workers/platform/limits/",
+      "required": true,
+      "access": "free",
+      "purpose": "Establish that edge runtimes retain finite CPU, memory, subrequest, connection, body, and lifecycle constraints.",
+      "reading_boundary": "Read Request and response limits, CPU time, Subrequests, Simultaneous open connections, and Wall time; values are versioned Cloudflare limits, not universal edge limits.",
+      "last_verified": "2026-08-04",
+      "text_alternative": "lessons/08-frontend-edge-decision-teachback.md",
+      "verified_title": "Limits",
+      "verified_publisher": "Cloudflare Workers documentation",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://developers.cloudflare.com/workers/platform/limits/",
+      "verification_status": "verified"
+    }
+  ]
 }

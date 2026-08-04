@@ -76,6 +76,9 @@ or unbounded amplification can harm users.
 - **1:** preferred defaults without operation scope, evidence, or owner.
 - **2:** policy exists but security, cost, telemetry, exceptions, migration, rollback, or decommissioning is incomplete.
 - **3:** policy follows evidence and covers operation/error contracts, security, unit cost, telemetry/runbook, owners, staged migration, rollback, exceptions, and reversal.
+- A passing submission distinguishes the cross-team policy RFC, the A11
+  controlled postmortem, and the A12 containment ADR; one file cannot satisfy
+  more than one artifact contract.
 - **4:** mixed-version canary and rollback rehearsal resolve cross-team disagreement under failure.
 
 ## R10: Defense, Gate 2, and teach-back
@@ -84,7 +87,9 @@ or unbounded amplification can harm users.
 - **1:** vocabulary is recited without derivation or evidence.
 - **2:** understandable defense with weak challenge, dissent, uncertainty, portfolio, or remediation linkage.
 - **3:** teach-back derives deadline/retry/idempotency/overload behavior, handles cross-functional challenge, records changed belief, dissent, owners, Gate 2, and separate remediation.
-- **4:** another team applies the method to a different stack and resolves a real policy disagreement with evidence.
+- **4:** the frozen role-based transfer exercise applies the method to a different
+  stack and resolves a policy disagreement with evidence. Optional team review
+  upgrades attestation, not score.
 
 ## Result thresholds
 

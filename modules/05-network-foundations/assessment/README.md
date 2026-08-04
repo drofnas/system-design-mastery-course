@@ -58,3 +58,7 @@ or R06/R07 is zero.
 - Do not infer unsubmitted packet captures, production behavior, or intent.
 - Do not require the Transit protocol choice or penalize a defensible alternative.
 - Recommend named lessons and exercises; never draft repaired graded work.
+
+## Evaluation packaging and independence
+
+Use the [provider-neutral bundle and validation workflow](../../../EVALUATION_GUIDE.md). The evaluator returns JSON only; the validator renders the report. A frozen self-evaluated Pass establishes **Solo Complete** and remains explicitly self-attested. A passing independent human or LLM review of the same bundle establishes **Independently Validated**.

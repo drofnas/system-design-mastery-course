@@ -62,14 +62,12 @@ generator or test host.
 
 ## Worked example
 
-The Transit Signal reference run scheduled 150 logical requests over five
-seconds. It observed p99 end-to-end latency near 204.72 ms and p99 generator lag
-near 7.84 ms on the author’s host.
-
-The p99 is consistent with the 200 ms slow branch. The generator lag is small
-relative to the service tail, but it is not zero. Another host may produce
-different timing. The report therefore preserves the scenario, event count,
-host, and raw JSONL rather than claiming identical microseconds.
+The Transit Signal scenario schedules 150 logical requests over five seconds.
+Run it locally and treat the generated raw JSONL, metadata, and summary as the
+only measured evidence. The seeded workload includes a 200 ms slow branch, so a
+conforming run should preserve that qualitative tail mechanism, but its exact
+percentiles and generator lag depend on the learner's host and load-generator
+behavior. Do not copy reference microseconds into an empirical report.
 
 Now imagine one closed-loop participant with 20 ms normal latency and a 2-second
 stall. During the stall it records one slow observation. An open-loop 50/s

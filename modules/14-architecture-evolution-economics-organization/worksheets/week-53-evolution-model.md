@@ -45,4 +45,5 @@ before running any trial.
 ## Review and learning log
 
 Record unsupported claims, disagreement, next evidence, and one concept taught
-to an engineer outside the chosen stack.
+through the frozen solo-review transfer exercise in a different stack. An
+optional engineer may review it after freezing.

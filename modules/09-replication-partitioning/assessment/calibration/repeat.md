@@ -27,3 +27,5 @@ migration/rollback and owners, and claims the toy run proves regional durability
 and legal residency. Gate 3 practical raw evidence is absent; the defense changes
 the failure model after challenge. These failures require a new frozen baseline
 and new trials, not prose remediation.
+No controlled replica-partition postmortem is submitted; the learner treats the
+unsupported ADR paragraph as both incident analysis and decision evidence.

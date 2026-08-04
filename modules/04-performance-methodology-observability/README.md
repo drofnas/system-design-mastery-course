@@ -87,7 +87,7 @@ Use the [Week 15 diagnosis worksheet](worksheets/week-15-blind-diagnosis.md).
 |---|---:|
 | Lessons 7–8 and benchmark resource | 2 h |
 | Controlled validation and regression budget | 2.5 h |
-| Performance review and recorded teach-back | 3 h |
+| Performance review, regression-policy ADR, and recorded teach-back | 3 h |
 | Evaluation, separate remediation, and learning log | 3 h |
 
 Use the [Week 16 review worksheet](worksheets/week-16-performance-review.md).
@@ -120,8 +120,8 @@ derivations.
 - Instrument one commerce journey from Module 2 without copying Transit Signal's
   architecture or conclusions.
 
-The module contributes one performance investigation, one failure matrix, and
-one recorded teach-back to the course portfolio.
+The module contributes one performance investigation, one failure matrix, one
+performance-regression policy ADR, and one recorded teach-back to the portfolio.
 
 ## Assessment and remediation
 
@@ -150,3 +150,12 @@ AI may explain a telemetry contract or propose test cases. It may not invent
 measurements, reveal a hidden fixture before the diagnosis is frozen, rewrite
 raw evidence, or answer during the defense. Disclose assistance and verify every
 claim against source, schema, or experiment evidence.
+
+## Course-wide completion contracts
+
+- The machine-readable `module.json` time blocks are the canonical required-work budget.
+- The [factual-claims ledger](assessment/factual-claims.json) maps each local lesson to its authoritative source boundary.
+- Use the [provider-neutral evaluation workflow](../../EVALUATION_GUIDE.md) only after learner evidence is committed.
+- Use the [sealed local gate workflow](../../SOLO_GATE_GUIDE.md) when a course gate applies. Human review is optional.
+
+A frozen self-evaluation may establish **Solo Complete**; independent human or LLM review may establish **Independently Validated**. Synthetic lab values are not production measurements.

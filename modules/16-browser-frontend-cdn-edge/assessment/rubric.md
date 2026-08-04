@@ -90,7 +90,9 @@ browser or edge conclusion.
 - **1:** framework or CDN preference without route drivers, alternatives, or obligations.
 - **2:** useful RFC with weak security, operations, accessibility, cost, migration, ownership, dissent, or reversal.
 - **3:** per-route decisions, boundaries, evidence, alternatives, owners, migration, rollback, stops, defense, and revision align.
-- **4:** another team applies the method to a different route and the resulting dissent improves the decision.
+- **4:** the frozen role-based transfer exercise applies the method to a
+  different route and the resulting dissent improves the decision. Optional
+  team review upgrades attestation, not score.
 
 ## Thresholds
 

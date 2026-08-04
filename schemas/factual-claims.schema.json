@@ -1,0 +1,173 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/system-design-course/factual-claims.schema.json",
+  "title": "Content-bound module factual-claims ledger",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "module",
+    "reviewed_commit",
+    "reviewed_at",
+    "content_digest",
+    "review_attestation",
+    "evidence_boundary",
+    "claims",
+    "lesson_coverage",
+    "document_coverage",
+    "formula_mappings"
+  ],
+  "properties": {
+    "schema_version": {"const": "2.0"},
+    "module": {"type": "string", "pattern": "^M(0[1-9]|1[0-8])$"},
+    "reviewed_commit": {"type": "string", "pattern": "^[a-f0-9]{40}$|^WORKTREE$"},
+    "reviewed_at": {"type": "string", "format": "date"},
+    "content_digest": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "review_attestation": {
+      "type": "object",
+      "required": ["reviewer", "method", "status", "content_digest", "scope_note"],
+      "properties": {
+        "reviewer": {"type": "string", "minLength": 3},
+        "method": {"const": "primary-source semantic review"},
+        "status": {"const": "complete"},
+        "content_digest": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "scope_note": {"type": "string", "minLength": 80}
+      },
+      "additionalProperties": false
+    },
+    "evidence_boundary": {"type": "string", "minLength": 80},
+    "claims": {
+      "type": "array",
+      "minItems": 8,
+      "items": {
+        "type": "object",
+        "required": [
+          "id", "location", "claim", "claim_sha256", "classification",
+          "source_ids", "source_sections", "source_section_sha256", "verification_method",
+          "verified_at", "status", "scope_limit"
+        ],
+        "properties": {
+          "id": {"type": "string", "pattern": "^M(0[1-9]|1[0-8])-FC-[0-9]{3}$"},
+          "location": {
+            "type": "object",
+            "required": ["path", "heading"],
+            "properties": {
+              "path": {"type": "string", "minLength": 1},
+              "heading": {"type": "string", "minLength": 1}
+            },
+            "additionalProperties": false
+          },
+          "claim": {"type": "string", "minLength": 20},
+          "claim_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "classification": {"enum": ["normative", "algorithmic", "quantitative", "versioned", "historical", "security", "synthetic", "inference"]},
+          "source_ids": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {"type": "string", "pattern": "^(RES|CIT)-[0-9]{2}$"}
+          },
+          "source_sections": {"type": "array", "items": {"type": "string", "minLength": 3}},
+          "source_section_sha256": {
+            "type": "array",
+            "items": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+          },
+          "verification_method": {"enum": ["primary-source comparison", "official-documentation comparison", "reproducible derivation", "controlled synthetic fixture", "bounded inference from cited premises", "course-contract review"]},
+          "verified_at": {"type": "string", "format": "date"},
+          "status": {"const": "verified"},
+          "scope_limit": {"type": "string", "minLength": 20},
+          "synthetic_label": {"type": "string", "minLength": 20},
+          "premises": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 10}},
+          "evidence_context": {
+            "type": "object",
+            "required": ["observed_at", "workload", "software_version", "hardware_boundary", "non_generalization"],
+            "properties": {
+              "observed_at": {"type": "string", "format": "date"},
+              "workload": {"type": "string", "minLength": 20},
+              "software_version": {"type": "string", "minLength": 3},
+              "hardware_boundary": {"type": "string", "minLength": 10},
+              "non_generalization": {"type": "string", "minLength": 20}
+            },
+            "additionalProperties": false
+          }
+        },
+        "allOf": [
+          {
+            "if": {"properties": {"classification": {"enum": ["synthetic", "normative"]}}},
+            "then": {
+              "properties": {"source_ids": {"maxItems": 0}, "source_sections": {"maxItems": 0}, "source_section_sha256": {"maxItems": 0}}
+            },
+            "else": {"properties": {"source_ids": {"minItems": 1}, "source_sections": {"minItems": 1}, "source_section_sha256": {"minItems": 1}}}
+          },
+          {
+            "if": {"properties": {"classification": {"const": "synthetic"}}},
+            "then": {"required": ["synthetic_label"]}
+          },
+          {
+            "if": {"properties": {"classification": {"const": "inference"}}},
+            "then": {"required": ["premises"]}
+          },
+          {
+            "if": {"properties": {"classification": {"const": "historical"}}},
+            "then": {"required": ["evidence_context"]}
+          }
+        ],
+        "additionalProperties": false
+      }
+    },
+    "lesson_coverage": {
+      "type": "array",
+      "minItems": 8,
+      "items": {
+        "type": "object",
+        "required": ["lesson_id", "path", "claim_ids"],
+        "properties": {
+          "lesson_id": {"type": "string", "pattern": "^L[0-9]{2}$"},
+          "path": {"type": "string", "minLength": 1},
+          "claim_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}}
+        },
+        "additionalProperties": false
+      }
+    },
+    "document_coverage": {
+      "type": "array",
+      "minItems": 20,
+      "items": {
+        "type": "object",
+        "required": ["path", "sha256", "review_scope", "claim_ids", "review_note"],
+        "properties": {
+          "path": {"type": "string", "minLength": 1},
+          "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "review_scope": {"enum": ["substantive_claims", "synthetic_fixture", "normative_or_assignment_only", "implementation_evidence"]},
+          "claim_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+          "review_note": {"type": "string", "minLength": 30},
+          "synthetic_label": {"type": "string", "minLength": 20}
+        },
+        "allOf": [
+          {
+            "if": {"properties": {"review_scope": {"const": "substantive_claims"}}},
+            "then": {"properties": {"claim_ids": {"minItems": 1}}}
+          },
+          {
+            "if": {"properties": {"review_scope": {"const": "synthetic_fixture"}}},
+            "then": {"required": ["synthetic_label"]}
+          }
+        ],
+        "additionalProperties": false
+      }
+    },
+    "formula_mappings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "heading", "normalized_expression", "expression_sha256", "claim_id"],
+        "properties": {
+          "path": {"type": "string", "minLength": 1},
+          "heading": {"type": "string", "minLength": 1},
+          "normalized_expression": {"type": "string", "minLength": 3},
+          "expression_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "claim_id": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

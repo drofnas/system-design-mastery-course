@@ -1,8 +1,8 @@
 # Module 15: Execution Models Across Languages
 
 > **Authoring status:** Ready. Four-runtime conformance, paired failure evidence,
-> six isolated evaluator runs, calibration checking, semantic and resource
-> review, and focused and full-course validation passed on 2026-08-03.
+> six isolated evaluator runs, factual and resource review, calibration
+> checking, and focused and full-course validation passed on 2026-08-04.
 
 ## What this module changes
 
@@ -81,7 +81,7 @@ Use the [Week 59 worksheet](worksheets/week-59-runtime-failure-matrix.md).
 | Work | Time |
 |---|---:|
 | Lesson 8, Discord case, and EX-18 | 1.5 h |
-| Two comparison reports and runtime-selection ADR | 3 h |
+| Runtime comparison, performance, internals, and selection ADR | 3 h |
 | Defense and module evaluation | 1.5 h |
 | Four-part Gate 5 | 3.5 h |
 | Remediation and learning log | 1.5 h |
@@ -115,7 +115,7 @@ studying the mechanisms.
   a language property.
 - Preserve predictions and raw results. Corrections belong in dated addenda.
 
-This module contributes two runtime-comparison reports, the course's third
+This module contributes one runtime-comparison report, the course's third
 source-code internals review, one ADR, one failure matrix, one performance
 investigation, one Gate 5 submission, and one recorded teach-back.
 
@@ -138,3 +138,12 @@ ecosystem quality, future runtime behavior, legal compliance, or team ability.
 AI may challenge arithmetic, hypotheses, experiment design, and alternatives.
 It may not choose the graded runtime, invent measurements, rewrite frozen work,
 produce replacement graded answers, or answer during the defense.
+
+## Course-wide completion contracts
+
+- The machine-readable `module.json` time blocks are the canonical required-work budget.
+- The [factual-claims ledger](assessment/factual-claims.json) maps each local lesson to its authoritative source boundary.
+- Use the [provider-neutral evaluation workflow](../../EVALUATION_GUIDE.md) only after learner evidence is committed.
+- Use the [sealed local gate workflow](../../SOLO_GATE_GUIDE.md) when a course gate applies. Human review is optional.
+
+A frozen self-evaluation may establish **Solo Complete**; independent human or LLM review may establish **Independently Validated**. Synthetic lab values are not production measurements.

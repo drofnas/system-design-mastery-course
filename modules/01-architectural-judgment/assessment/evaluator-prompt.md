@@ -187,8 +187,9 @@ Return one JSON object conforming exactly to
 }
 ```
 
-After the JSON, produce a Markdown report using
-`assessment/report-template.md`. The JSON remains the source of truth.
+Return JSON only. Do not append a Markdown report. After validation,
+`scripts/validate_evaluation.py` renders the learner-facing report from this
+JSON so the structured result remains the single source of truth.
 
 ## Confidence
 

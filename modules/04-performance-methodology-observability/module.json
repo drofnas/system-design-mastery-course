@@ -3,10 +3,277 @@
   "id": "M04",
   "title": "Performance Methodology and Observability",
   "weeks": [
-    {"number": 13, "focus": "Model and freeze the investigation", "hours": 10.5, "evidence": ["Frozen baseline and question", "Hypothesis ledger and falsifiers", "Collection and overhead plan", "Week 13 learning log"]},
-    {"number": 14, "focus": "Instrument and correlate", "hours": 10.5, "evidence": ["Instrumented Module 2 service", "Trace-context and signal-correlation proof", "Profiles and query-plan evidence", "Build review and Week 14 learning log"]},
-    {"number": 15, "focus": "Break and diagnose", "hours": 10.5, "evidence": ["Six raw fault bundles", "Frozen blind diagnosis matrix", "Discriminating reruns and reveal record", "Week 15 learning log"]},
-    {"number": 16, "focus": "Validate, decide, and teach", "hours": 10.5, "evidence": ["Interleaved benchmark and regression budget", "Performance review", "Recorded teach-back", "Evaluation, separate remediation, and Week 16 learning log"]}
+    {
+      "number": 13,
+      "focus": "Model and freeze the investigation",
+      "hours": 10.5,
+      "evidence": [
+        "Frozen baseline and question",
+        "Hypothesis ledger and falsifiers",
+        "Collection and overhead plan",
+        "Week 13 learning log"
+      ],
+      "time_blocks": [
+        {
+          "id": "W13-T01",
+          "label": "Bounded authoritative resources",
+          "minutes": 80,
+          "activity": "required_resource",
+          "resource_ids": [
+            "RES-01",
+            "RES-02"
+          ]
+        },
+        {
+          "id": "W13-T02",
+          "label": "Local lesson instruction",
+          "minutes": 120,
+          "activity": "local_instruction",
+          "lesson_ids": [
+            "L01",
+            "L02",
+            "L03",
+            "L04"
+          ]
+        },
+        {
+          "id": "W13-T03",
+          "label": "Guided practice",
+          "minutes": 90,
+          "activity": "guided_practice",
+          "exercise_ids": [
+            "EX-01",
+            "EX-02",
+            "EX-03",
+            "EX-04",
+            "EX-05",
+            "EX-06"
+          ]
+        },
+        {
+          "id": "W13-T04",
+          "label": "Reflection and learning log",
+          "minutes": 30,
+          "activity": "reflection"
+        },
+        {
+          "id": "W13-T05",
+          "label": "Independent Work",
+          "minutes": 310,
+          "activity": "independent_work",
+          "artifact_ids": [
+            "A01"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "focus": "Instrument and correlate",
+      "hours": 10.5,
+      "evidence": [
+        "Instrumented Module 2 service",
+        "Trace-context and signal-correlation proof",
+        "Profiles and query-plan evidence",
+        "Build review and Week 14 learning log"
+      ],
+      "time_blocks": [
+        {
+          "id": "W14-T01",
+          "label": "Bounded authoritative resources",
+          "minutes": 120,
+          "activity": "required_resource",
+          "resource_ids": [
+            "RES-03",
+            "RES-04",
+            "RES-06"
+          ]
+        },
+        {
+          "id": "W14-T02",
+          "label": "Local lesson instruction",
+          "minutes": 90,
+          "activity": "local_instruction",
+          "lesson_ids": [
+            "L03",
+            "L05",
+            "L07"
+          ]
+        },
+        {
+          "id": "W14-T03",
+          "label": "Guided practice",
+          "minutes": 90,
+          "activity": "guided_practice",
+          "exercise_ids": [
+            "EX-07",
+            "EX-08",
+            "EX-09",
+            "EX-10"
+          ]
+        },
+        {
+          "id": "W14-T04",
+          "label": "Reflection and learning log",
+          "minutes": 30,
+          "activity": "reflection"
+        },
+        {
+          "id": "W14-T05",
+          "label": "Independent Work",
+          "minutes": 300,
+          "activity": "independent_work",
+          "artifact_ids": [
+            "A02",
+            "A03"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "focus": "Break and diagnose",
+      "hours": 10.5,
+      "evidence": [
+        "Six raw fault bundles",
+        "Frozen blind diagnosis matrix",
+        "Discriminating reruns and reveal record",
+        "Week 15 learning log"
+      ],
+      "time_blocks": [
+        {
+          "id": "W15-T01",
+          "label": "Local lesson instruction",
+          "minutes": 90,
+          "activity": "local_instruction",
+          "lesson_ids": [
+            "L01",
+            "L04",
+            "L06"
+          ]
+        },
+        {
+          "id": "W15-T02",
+          "label": "Guided practice",
+          "minutes": 90,
+          "activity": "guided_practice",
+          "exercise_ids": [
+            "EX-11",
+            "EX-12",
+            "EX-13",
+            "EX-14"
+          ]
+        },
+        {
+          "id": "W15-T03",
+          "label": "Reflection and learning log",
+          "minutes": 30,
+          "activity": "reflection"
+        },
+        {
+          "id": "W15-T04",
+          "label": "Failure Experiment",
+          "minutes": 420,
+          "activity": "failure_experiment",
+          "artifact_ids": [
+            "A04",
+            "A05"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "focus": "Validate, decide, and teach",
+      "hours": 10.5,
+      "evidence": [
+        "Interleaved benchmark and regression budget",
+        "Performance review",
+        "Recorded teach-back",
+        "Evaluation, separate remediation, and Week 16 learning log"
+      ],
+      "time_blocks": [
+        {
+          "id": "W16-T01",
+          "label": "Bounded authoritative resources",
+          "minutes": 55,
+          "activity": "required_resource",
+          "resource_ids": [
+            "RES-05"
+          ]
+        },
+        {
+          "id": "W16-T02",
+          "label": "Local lesson instruction",
+          "minutes": 45,
+          "activity": "local_instruction",
+          "lesson_ids": [
+            "L08"
+          ]
+        },
+        {
+          "id": "W16-T03",
+          "label": "Guided practice",
+          "minutes": 45,
+          "activity": "guided_practice",
+          "exercise_ids": [
+            "EX-15"
+          ]
+        },
+        {
+          "id": "W16-T04",
+          "label": "Required portfolio artifact A11",
+          "minutes": 215,
+          "activity": "decision_artifact",
+          "artifact_ids": [
+            "A11"
+          ]
+        },
+        {
+          "id": "W16-T05",
+          "label": "Reflection and learning log",
+          "minutes": 30,
+          "activity": "reflection",
+          "artifact_ids": [
+            "A10"
+          ]
+        },
+        {
+          "id": "W16-T06",
+          "label": "Assessment",
+          "minutes": 60,
+          "activity": "assessment",
+          "artifact_ids": [
+            "A09"
+          ]
+        },
+        {
+          "id": "W16-T07",
+          "label": "Decision Artifact",
+          "minutes": 60,
+          "activity": "decision_artifact",
+          "artifact_ids": [
+            "A06",
+            "A07"
+          ]
+        },
+        {
+          "id": "W16-T08",
+          "label": "Review Remediation",
+          "minutes": 60,
+          "activity": "review_remediation"
+        },
+        {
+          "id": "W16-T09",
+          "label": "Teach Back",
+          "minutes": 60,
+          "activity": "teach_back",
+          "artifact_ids": [
+            "A08"
+          ]
+        }
+      ]
+    }
   ],
   "target_hours": 42,
   "status": "ready",
@@ -15,141 +282,553 @@
     {
       "id": "M04-O1",
       "statement": "Freeze a user-scoped performance question, equivalent-work baseline, competing hypotheses, falsifiers, and bounded collection plan before inspecting a fault.",
-      "graduate_profile": [1, 2, 8],
-      "mastery_levels": ["Define", "Calculate", "Diagnose"],
-      "lessons": ["L01", "L02"],
-      "exercises": ["EX-01", "EX-02", "EX-03", "EX-04"],
-      "artifacts": ["A01"],
-      "rubric": ["R01", "R02"]
+      "graduate_profile": [
+        1,
+        2,
+        8
+      ],
+      "mastery_levels": [
+        "Define",
+        "Calculate",
+        "Diagnose"
+      ],
+      "lessons": [
+        "L01",
+        "L02"
+      ],
+      "exercises": [
+        "EX-01",
+        "EX-02",
+        "EX-03",
+        "EX-04"
+      ],
+      "artifacts": [
+        "A01"
+      ],
+      "rubric": [
+        "R01",
+        "R02"
+      ]
     },
     {
       "id": "M04-O2",
       "statement": "Design controlled, interleaved experiments that expose process and environment variation while preserving useful work and raw samples.",
-      "graduate_profile": [2, 3, 8],
-      "mastery_levels": ["Calculate", "Implement", "Diagnose"],
-      "lessons": ["L02", "L07"],
-      "exercises": ["EX-03", "EX-04", "EX-13"],
-      "artifacts": ["A01", "A06"],
-      "rubric": ["R02", "R08"]
+      "graduate_profile": [
+        2,
+        3,
+        8
+      ],
+      "mastery_levels": [
+        "Calculate",
+        "Implement",
+        "Diagnose"
+      ],
+      "lessons": [
+        "L02",
+        "L07"
+      ],
+      "exercises": [
+        "EX-03",
+        "EX-04",
+        "EX-13"
+      ],
+      "artifacts": [
+        "A01",
+        "A06"
+      ],
+      "rubric": [
+        "R02",
+        "R08"
+      ]
     },
     {
       "id": "M04-O3",
       "statement": "Propagate safe trace context across a process boundary and correlate request traces, structured logs, metrics, and exemplars.",
-      "graduate_profile": [3, 8, 9, 11],
-      "mastery_levels": ["Define", "Implement", "Diagnose"],
-      "lessons": ["L03"],
-      "exercises": ["EX-05", "EX-06"],
-      "artifacts": ["A02", "A03"],
-      "rubric": ["R03"]
+      "graduate_profile": [
+        3,
+        8,
+        9,
+        11
+      ],
+      "mastery_levels": [
+        "Define",
+        "Implement",
+        "Diagnose"
+      ],
+      "lessons": [
+        "L03"
+      ],
+      "exercises": [
+        "EX-05",
+        "EX-06"
+      ],
+      "artifacts": [
+        "A02",
+        "A03"
+      ],
+      "rubric": [
+        "R03"
+      ]
     },
     {
       "id": "M04-O4",
       "statement": "Choose metrics and logs with explicit units, purpose, cardinality, overhead, privacy, retention, access, cost, and ownership bounds.",
-      "graduate_profile": [2, 8, 9, 10],
-      "mastery_levels": ["Calculate", "Implement", "Decide and Teach"],
-      "lessons": ["L04"],
-      "exercises": ["EX-07", "EX-08"],
-      "artifacts": ["A02", "A03", "A04"],
-      "rubric": ["R04", "R07"]
+      "graduate_profile": [
+        2,
+        8,
+        9,
+        10
+      ],
+      "mastery_levels": [
+        "Calculate",
+        "Implement",
+        "Decide and Teach"
+      ],
+      "lessons": [
+        "L04"
+      ],
+      "exercises": [
+        "EX-07",
+        "EX-08"
+      ],
+      "artifacts": [
+        "A02",
+        "A03",
+        "A04"
+      ],
+      "rubric": [
+        "R04",
+        "R07"
+      ]
     },
     {
       "id": "M04-O5",
       "statement": "Use CPU, allocation, lock-wait, dependency-span, local-I/O, and query-plan evidence without overstating profiler or cache boundaries.",
-      "graduate_profile": [3, 8, 11],
-      "mastery_levels": ["Implement", "Diagnose"],
-      "lessons": ["L05", "L06"],
-      "exercises": ["EX-09", "EX-10", "EX-11"],
-      "artifacts": ["A02", "A03", "A04"],
-      "rubric": ["R05"]
+      "graduate_profile": [
+        3,
+        8,
+        11
+      ],
+      "mastery_levels": [
+        "Implement",
+        "Diagnose"
+      ],
+      "lessons": [
+        "L05",
+        "L06"
+      ],
+      "exercises": [
+        "EX-09",
+        "EX-10",
+        "EX-11"
+      ],
+      "artifacts": [
+        "A02",
+        "A03",
+        "A04"
+      ],
+      "rubric": [
+        "R05"
+      ]
     },
     {
       "id": "M04-O6",
       "statement": "Diagnose CPU work, allocation pressure, lock contention, slow I/O, connection retention, and metric-cardinality faults before reveal, then design discriminating reruns.",
-      "graduate_profile": [7, 8, 11],
-      "mastery_levels": ["Diagnose", "Decide and Teach"],
-      "lessons": ["L01", "L05", "L06"],
-      "exercises": ["EX-09", "EX-10", "EX-11", "EX-12"],
-      "artifacts": ["A04", "A05"],
-      "rubric": ["R06", "R07"]
+      "graduate_profile": [
+        7,
+        8,
+        11
+      ],
+      "mastery_levels": [
+        "Diagnose",
+        "Decide and Teach"
+      ],
+      "lessons": [
+        "L01",
+        "L05",
+        "L06"
+      ],
+      "exercises": [
+        "EX-09",
+        "EX-10",
+        "EX-11",
+        "EX-12"
+      ],
+      "artifacts": [
+        "A04",
+        "A05"
+      ],
+      "rubric": [
+        "R06",
+        "R07"
+      ]
     },
     {
       "id": "M04-O7",
       "statement": "Build a reproducible benchmark and enforce a workload-scoped regression budget with pass, regression, and inconclusive outcomes.",
-      "graduate_profile": [2, 8, 10],
-      "mastery_levels": ["Calculate", "Implement", "Diagnose", "Decide and Teach"],
-      "lessons": ["L02", "L07"],
-      "exercises": ["EX-13"],
-      "artifacts": ["A06"],
-      "rubric": ["R08"]
+      "graduate_profile": [
+        2,
+        8,
+        10
+      ],
+      "mastery_levels": [
+        "Calculate",
+        "Implement",
+        "Diagnose",
+        "Decide and Teach"
+      ],
+      "lessons": [
+        "L02",
+        "L07"
+      ],
+      "exercises": [
+        "EX-13"
+      ],
+      "artifacts": [
+        "A06"
+      ],
+      "rubric": [
+        "R08"
+      ]
     },
     {
       "id": "M04-O8",
       "statement": "Defend a performance change through user outcome, causal evidence, validation, telemetry safety and cost, ownership, migration, rollout, rollback, and reversal conditions.",
-      "graduate_profile": [8, 10, 14, 15, 16],
-      "mastery_levels": ["Diagnose", "Decide and Teach"],
-      "lessons": ["L08"],
-      "exercises": ["EX-14", "EX-15"],
-      "artifacts": ["A07", "A08", "A09"],
-      "rubric": ["R09", "R10"]
+      "graduate_profile": [
+        8,
+        10,
+        14,
+        15,
+        16
+      ],
+      "mastery_levels": [
+        "Diagnose",
+        "Decide and Teach"
+      ],
+      "lessons": [
+        "L08"
+      ],
+      "exercises": [
+        "EX-14",
+        "EX-15"
+      ],
+      "artifacts": [
+        "A07",
+        "A08",
+        "A09",
+        "A11"
+      ],
+      "rubric": [
+        "R09",
+        "R10"
+      ]
     }
   ],
   "resources": [
     {
-      "id": "RES-01", "title": "The USE Method", "author_or_publisher": "Brendan Gregg", "type": "practitioner performance methodology", "url": "https://www.brendangregg.com/usemethod.html", "required": true, "access": "free", "week": 13, "estimated_minutes": 35,
+      "id": "RES-01",
+      "title": "The USE Method",
+      "author_or_publisher": "Brendan Gregg",
+      "type": "practitioner performance methodology",
+      "url": "https://www.brendangregg.com/usemethod.html",
+      "required": true,
+      "access": "free",
+      "week": 13,
+      "estimated_minutes": 35,
       "purpose": "Start investigation from resource questions rather than available dashboards.",
       "assignment": "Read Summary, Metrics, In Practice, and Other Methodologies; build a USE table and name two gaps.",
-      "last_verified": "2026-07-31", "text_alternative": "lessons/01-question-first-investigations.md"
+      "last_verified": "2026-07-31",
+      "text_alternative": "lessons/01-question-first-investigations.md",
+      "verified_title": "The USE Method",
+      "verified_publisher": "Brendan Gregg",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://www.brendangregg.com/usemethod.html",
+      "verification_status": "verified"
     },
     {
-      "id": "RES-02", "title": "Monitoring Systems with Advanced Analytics", "author_or_publisher": "Google SRE Workbook contributors", "type": "practitioner handbook chapter", "url": "https://sre.google/workbook/monitoring/", "required": true, "access": "free", "week": 13, "estimated_minutes": 45,
+      "id": "RES-02",
+      "title": "Monitoring Systems with Advanced Analytics",
+      "author_or_publisher": "Google SRE Workbook contributors",
+      "type": "practitioner handbook chapter",
+      "url": "https://sre.google/workbook/monitoring/",
+      "required": true,
+      "access": "free",
+      "week": 13,
+      "estimated_minutes": 45,
       "purpose": "Connect user symptoms, diagnostic signals, and operating cost.",
       "assignment": "Read Desirable Features, Sources of Monitoring Data, and Metrics with Purpose through Saturation; classify five signals.",
-      "last_verified": "2026-07-31", "text_alternative": "lessons/04-signals-cardinality-cost.md"
+      "last_verified": "2026-07-31",
+      "text_alternative": "lessons/04-signals-cardinality-cost.md",
+      "verified_title": "Monitoring Systems with Advanced Analytics",
+      "verified_publisher": "Google SRE Workbook contributors",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://sre.google/workbook/monitoring/",
+      "verification_status": "verified"
     },
     {
-      "id": "RES-03", "title": "Trace Context", "author_or_publisher": "W3C Distributed Tracing Working Group", "type": "W3C Recommendation", "url": "https://www.w3.org/TR/trace-context/", "required": true, "access": "free", "week": 14, "estimated_minutes": 40,
+      "id": "RES-03",
+      "title": "Trace Context",
+      "author_or_publisher": "W3C Distributed Tracing Working Group",
+      "type": "W3C Recommendation",
+      "url": "https://www.w3.org/TR/trace-context/",
+      "required": true,
+      "access": "free",
+      "week": 14,
+      "estimated_minutes": 40,
       "purpose": "Define interoperable trace identity, parsing, and privacy behavior.",
       "assignment": "Read Abstract, header format, processing model, and privacy considerations; validate three contexts and identify one trust boundary.",
-      "last_verified": "2026-07-31", "text_alternative": "lessons/03-trace-context.md"
+      "last_verified": "2026-07-31",
+      "text_alternative": "lessons/03-trace-context.md",
+      "verified_title": "Trace Context",
+      "verified_publisher": "W3C Distributed Tracing Working Group",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://www.w3.org/TR/trace-context/",
+      "verification_status": "verified"
     },
     {
-      "id": "RES-04", "title": "OpenTelemetry Specification Overview", "author_or_publisher": "OpenTelemetry maintainers and CNCF", "type": "maintainer specification", "url": "https://opentelemetry.io/docs/specs/otel/overview/", "required": true, "access": "free", "week": 14, "estimated_minutes": 45,
+      "id": "RES-04",
+      "title": "OpenTelemetry Specification Overview",
+      "author_or_publisher": "OpenTelemetry maintainers and CNCF",
+      "type": "maintainer specification",
+      "url": "https://opentelemetry.io/docs/specs/otel/overview/",
+      "required": true,
+      "access": "free",
+      "week": 14,
+      "estimated_minutes": 45,
       "purpose": "Map provider-neutral lab records to trace, metric, log, resource, and context semantics.",
       "assignment": "Read the named signal, resource, context, and propagator sections; map every lab record field.",
-      "last_verified": "2026-07-31", "text_alternative": "lessons/03-trace-context.md"
+      "last_verified": "2026-07-31",
+      "text_alternative": "lessons/03-trace-context.md",
+      "verified_title": "OpenTelemetry Specification Overview",
+      "verified_publisher": "OpenTelemetry maintainers and CNCF",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://opentelemetry.io/docs/specs/otel/overview/",
+      "verification_status": "verified"
     },
     {
-      "id": "RES-05", "title": "Rigorous Benchmarking in Reasonable Time", "author_or_publisher": "Tomas Kalibera and Richard E. Jones; ACM ISMM and University of Kent", "type": "original research paper", "url": "https://kar.kent.ac.uk/33611/", "required": true, "access": "free", "week": 16, "estimated_minutes": 55,
+      "id": "RES-05",
+      "title": "Rigorous Benchmarking in Reasonable Time",
+      "author_or_publisher": "Tomas Kalibera and Richard E. Jones; ACM ISMM and University of Kent",
+      "type": "original research paper",
+      "url": "https://kar.kent.ac.uk/33611/",
+      "required": true,
+      "access": "free",
+      "week": 16,
+      "estimated_minutes": 55,
       "purpose": "Model multiple sources of benchmark variation and efficient repetition.",
       "assignment": "Read the abstract, experimental dimensions, repetition guidance, and reporting recommendations; identify three variation levels.",
-      "last_verified": "2026-07-31", "text_alternative": "lessons/07-benchmarks-regression-budgets.md"
+      "last_verified": "2026-07-31",
+      "text_alternative": "lessons/07-benchmarks-regression-budgets.md",
+      "verified_title": "Rigorous Benchmarking in Reasonable Time",
+      "verified_publisher": "Tomas Kalibera and Richard E. Jones; ACM ISMM and University of Kent",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://kar.kent.ac.uk/33611/",
+      "verification_status": "verified"
     },
     {
-      "id": "RES-06", "title": "The Art of Performance Monitoring", "author_or_publisher": "Brian Smith, Facebook; USENIX Association", "type": "conference video, audio, and slides", "url": "https://www.usenix.org/conference/srecon16/program/presentation/smith", "required": true, "access": "free", "week": 14, "estimated_minutes": 35,
+      "id": "RES-06",
+      "title": "The Art of Performance Monitoring",
+      "author_or_publisher": "Brian Smith, Facebook; USENIX Association",
+      "type": "conference video, audio, and slides",
+      "url": "https://www.usenix.org/conference/srecon16/program/presentation/smith",
+      "required": true,
+      "access": "free",
+      "week": 14,
+      "estimated_minutes": 35,
       "purpose": "Examine production performance monitoring as a designed and owned system.",
       "assignment": "Watch the complete talk or use all slides with the local alternative; record one design rule, its cost, and a counterexample.",
-      "last_verified": "2026-07-31", "text_alternative": "lessons/04-signals-cardinality-cost.md"
+      "last_verified": "2026-07-31",
+      "text_alternative": "lessons/04-signals-cardinality-cost.md",
+      "verified_title": "The Art of Performance Monitoring",
+      "verified_publisher": "Brian Smith, Facebook; USENIX Association",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://www.usenix.org/conference/srecon16/program/presentation/smith",
+      "verification_status": "verified"
+    },
+    {
+      "id": "RES-07",
+      "title": "The Python Profilers",
+      "author_or_publisher": "Python Software Foundation",
+      "type": "official documentation",
+      "url": "https://docs.python.org/3/library/profile.html",
+      "required": false,
+      "access": "free",
+      "week": 14,
+      "estimated_minutes": 30,
+      "purpose": "Distinguish deterministic call profiling, cumulative time, and instrumentation overhead in the portable lab.",
+      "assignment": "Read the introduction, instant user manual, and limitations; record what deterministic profiling measures and how its overhead changes the evidence boundary.",
+      "last_verified": "2026-08-04",
+      "text_alternative": "lessons/05-profiling.md",
+      "verified_title": "The Python Profilers",
+      "verified_publisher": "Python Software Foundation",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://docs.python.org/3/library/profile.html",
+      "verification_status": "verified"
+    },
+    {
+      "id": "RES-08",
+      "title": "tracemalloc — Trace memory allocations",
+      "author_or_publisher": "Python Software Foundation",
+      "type": "official documentation",
+      "url": "https://docs.python.org/3/library/tracemalloc.html",
+      "required": false,
+      "access": "free",
+      "week": 14,
+      "estimated_minutes": 25,
+      "purpose": "Interpret allocation snapshots and retained differences without equating total allocation with a leak.",
+      "assignment": "Read tracing allocations, snapshots, and comparing snapshots; state what the tool can attribute and what it cannot establish about object liveness.",
+      "last_verified": "2026-08-04",
+      "text_alternative": "lessons/05-profiling.md",
+      "verified_title": "tracemalloc — Trace memory allocations",
+      "verified_publisher": "Python Software Foundation",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://docs.python.org/3/library/tracemalloc.html",
+      "verification_status": "verified"
+    },
+    {
+      "id": "RES-09",
+      "title": "EXPLAIN QUERY PLAN",
+      "author_or_publisher": "SQLite project",
+      "type": "official documentation",
+      "url": "https://www.sqlite.org/eqp.html",
+      "required": false,
+      "access": "free",
+      "week": 14,
+      "estimated_minutes": 25,
+      "purpose": "Interpret scan, search, index, join-order, and temporary-structure evidence in the dependency lab.",
+      "assignment": "Read the warning and Sections 1.1–1.3; identify the chosen access path and explain why output formatting is not a stable application API.",
+      "last_verified": "2026-08-04",
+      "text_alternative": "lessons/06-dependencies-query-plans.md",
+      "verified_title": "EXPLAIN QUERY PLAN",
+      "verified_publisher": "SQLite project",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://www.sqlite.org/eqp.html",
+      "verification_status": "verified"
     }
   ],
   "artifacts": [
-    {"id": "A01", "week": 13, "required": true, "template_path": "modules/04-performance-methodology-observability/worksheets/week-13-investigation-plan.md", "submission_path": "reports/module-04-investigation-plan.md", "immutable_after_submission": true},
-    {"id": "A02", "week": 14, "required": true, "template_path": "modules/04-performance-methodology-observability/lab/README.md", "submission_path": "labs/module-04/"},
-    {"id": "A03", "week": 14, "required": true, "template_path": "modules/04-performance-methodology-observability/worksheets/week-14-instrumentation-build.md", "submission_path": "labs/module-04/build-review.md"},
-    {"id": "A04", "week": 15, "required": true, "template_path": "modules/04-performance-methodology-observability/worksheets/week-15-blind-diagnosis.md", "submission_path": "experiments/module-04/"},
-    {"id": "A05", "week": 15, "required": true, "template_path": "modules/04-performance-methodology-observability/worksheets/week-15-blind-diagnosis.md", "submission_path": "reports/module-04-failure-matrix.md", "immutable_after_submission": true},
-    {"id": "A06", "week": 16, "required": true, "template_path": "modules/04-performance-methodology-observability/worksheets/week-16-performance-review.md", "submission_path": "experiments/module-04/benchmark-result.json"},
-    {"id": "A07", "week": 16, "required": true, "template_path": "templates/performance-review-template.md", "submission_path": "reports/module-04-performance-review.md"},
-    {"id": "A08", "week": 16, "required": true, "template_path": "modules/04-performance-methodology-observability/worksheets/week-16-performance-review.md", "submission_path": "reviews/module-04-defense.md"},
-    {"id": "A09", "week": 16, "required": true, "template_path": "modules/04-performance-methodology-observability/assessment/report-template.md", "submission_path": "reviews/module-04-evaluation.md"},
-    {"id": "A10", "week": 16, "required": true, "template_path": "templates/learning-log-template.md", "submission_path": "learning-log/week-13.md through learning-log/week-16.md"}
+    {
+      "id": "A01",
+      "week": 13,
+      "required": true,
+      "template_path": "modules/04-performance-methodology-observability/worksheets/week-13-investigation-plan.md",
+      "submission_path": "reports/module-04-investigation-plan.md",
+      "immutable_after_submission": true,
+      "portfolio_category": "model"
+    },
+    {
+      "id": "A02",
+      "week": 14,
+      "required": true,
+      "template_path": "modules/04-performance-methodology-observability/lab/README.md",
+      "submission_path": "labs/module-04/",
+      "portfolio_category": "implementation"
+    },
+    {
+      "id": "A03",
+      "week": 14,
+      "required": true,
+      "template_path": "modules/04-performance-methodology-observability/worksheets/week-14-instrumentation-build.md",
+      "submission_path": "labs/module-04/build-review.md",
+      "portfolio_category": "implementation"
+    },
+    {
+      "id": "A04",
+      "week": 15,
+      "required": true,
+      "template_path": "modules/04-performance-methodology-observability/worksheets/week-15-blind-diagnosis.md",
+      "submission_path": "experiments/module-04/",
+      "portfolio_category": "failure_matrix"
+    },
+    {
+      "id": "A05",
+      "week": 15,
+      "required": true,
+      "template_path": "modules/04-performance-methodology-observability/worksheets/week-15-blind-diagnosis.md",
+      "submission_path": "reports/module-04-failure-matrix.md",
+      "immutable_after_submission": true,
+      "portfolio_category": "failure_matrix"
+    },
+    {
+      "id": "A06",
+      "week": 16,
+      "required": true,
+      "template_path": "modules/04-performance-methodology-observability/worksheets/week-16-performance-review.md",
+      "submission_path": "experiments/module-04/benchmark-result.json",
+      "portfolio_category": "performance_investigation"
+    },
+    {
+      "id": "A07",
+      "week": 16,
+      "required": true,
+      "template_path": "templates/performance-review-template.md",
+      "submission_path": "reports/module-04-performance-review.md",
+      "portfolio_category": "performance_investigation"
+    },
+    {
+      "id": "A08",
+      "week": 16,
+      "required": true,
+      "template_path": "modules/04-performance-methodology-observability/worksheets/week-16-performance-review.md",
+      "submission_path": "reviews/module-04-defense.md",
+      "portfolio_category": "teach_back"
+    },
+    {
+      "id": "A09",
+      "week": 16,
+      "required": true,
+      "template_path": "modules/04-performance-methodology-observability/assessment/report-template.md",
+      "submission_path": "reviews/module-04-evaluation.md",
+      "portfolio_category": "evaluation"
+    },
+    {
+      "id": "A10",
+      "week": 16,
+      "required": true,
+      "template_path": "templates/learning-log-template.md",
+      "submission_path": "learning-log/week-13.md through learning-log/week-16.md",
+      "portfolio_category": "learning_log"
+    },
+    {
+      "id": "A11",
+      "week": 16,
+      "required": true,
+      "template_path": "templates/adr-template.md",
+      "submission_path": "adr/module-04-performance-regression-policy.md",
+      "portfolio_category": "adr"
+    }
   ],
   "failure_experiments": [
-    {"id": "F01", "scenario": "CPU work hidden in request processing", "evidence": "Journey effect, process CPU, hot profile stack, stable dependency timing, equivalent checksum, and discriminating rerun"},
-    {"id": "F02", "scenario": "Allocation pressure and retention", "evidence": "Allocation rate/sites, retained bytes, memory boundary, cleanup, journey effect, and churn-versus-leak test"},
-    {"id": "F03", "scenario": "Lock contention", "evidence": "Lock wait, concurrency, server spans, CPU evidence, critical-section variation, and alternative explanation"},
-    {"id": "F04", "scenario": "Slow bounded local I/O", "evidence": "File child spans, process CPU, bytes, cache/durability limits, user effect, and equivalent-work rerun"},
-    {"id": "F05", "scenario": "Bounded connection retention", "evidence": "Active/peak/retained connections, request completion, descriptor boundary, shutdown cleanup, and second-run proof"},
-    {"id": "F06", "scenario": "High-cardinality metric label", "evidence": "Unique series, encoded-byte estimate, budget violation, safe aggregation replacement, trace exemplar, privacy and owner"}
+    {
+      "id": "F01",
+      "scenario": "CPU work hidden in request processing",
+      "evidence": "Journey effect, process CPU, hot profile stack, stable dependency timing, equivalent checksum, and discriminating rerun"
+    },
+    {
+      "id": "F02",
+      "scenario": "Allocation pressure and retention",
+      "evidence": "Allocation rate/sites, retained bytes, memory boundary, cleanup, journey effect, and churn-versus-leak test"
+    },
+    {
+      "id": "F03",
+      "scenario": "Lock contention",
+      "evidence": "Lock wait, concurrency, server spans, CPU evidence, critical-section variation, and alternative explanation"
+    },
+    {
+      "id": "F04",
+      "scenario": "Slow bounded local I/O",
+      "evidence": "File child spans, process CPU, bytes, cache/durability limits, user effect, and equivalent-work rerun"
+    },
+    {
+      "id": "F05",
+      "scenario": "Bounded connection retention",
+      "evidence": "Active/peak/retained connections, request completion, descriptor boundary, shutdown cleanup, and second-run proof"
+    },
+    {
+      "id": "F06",
+      "scenario": "High-cardinality metric label",
+      "evidence": "Unique series, encoded-byte estimate, budget violation, safe aggregation replacement, trace exemplar, privacy and owner"
+    }
   ],
   "assessment": {
     "rubric_path": "modules/04-performance-methodology-observability/assessment/rubric.md",
@@ -157,8 +836,15 @@
     "evaluation_schema_path": "schemas/evaluation.schema.json",
     "calibration_path": "modules/04-performance-methodology-observability/assessment/calibration",
     "pass_average": 3,
-    "safety_critical_criteria": ["R06", "R07"],
-    "required_result_bands": ["Pass", "Revise", "Repeat"]
+    "safety_critical_criteria": [
+      "R06",
+      "R07"
+    ],
+    "required_result_bands": [
+      "Pass",
+      "Revise",
+      "Repeat"
+    ]
   },
   "solo_review": {
     "challenge_questions": [
@@ -204,5 +890,176 @@
     "questions_per_attempt": 5,
     "live_ai_allowed": false,
     "record_template_path": "templates/solo-review-record-template.md"
-  }
+  },
+  "factual_claims_path": "modules/04-performance-methodology-observability/assessment/factual-claims.json",
+  "lesson_catalog": [
+    {
+      "id": "L01",
+      "path": "lessons/01-question-first-investigations.md",
+      "estimated_minutes": 30
+    },
+    {
+      "id": "L02",
+      "path": "lessons/02-controlled-experiments.md",
+      "estimated_minutes": 30
+    },
+    {
+      "id": "L03",
+      "path": "lessons/03-trace-context.md",
+      "estimated_minutes": 30
+    },
+    {
+      "id": "L04",
+      "path": "lessons/04-signals-cardinality-cost.md",
+      "estimated_minutes": 30
+    },
+    {
+      "id": "L05",
+      "path": "lessons/05-profiling.md",
+      "estimated_minutes": 30
+    },
+    {
+      "id": "L06",
+      "path": "lessons/06-dependencies-query-plans.md",
+      "estimated_minutes": 30
+    },
+    {
+      "id": "L07",
+      "path": "lessons/07-benchmarks-regression-budgets.md",
+      "estimated_minutes": 30
+    },
+    {
+      "id": "L08",
+      "path": "lessons/08-causal-decisions.md",
+      "estimated_minutes": 30
+    }
+  ],
+  "citation_catalog": [
+    {
+      "id": "CIT-01",
+      "title": "timeit — Measure execution time of small code snippets",
+      "author_or_publisher": "Python Software Foundation",
+      "type": "primary-source citation",
+      "url": "https://docs.python.org/3/library/timeit.html",
+      "required": true,
+      "access": "free",
+      "purpose": "Provide primary-source support for the bounded mechanism discussed in the cited local lesson.",
+      "reading_boundary": "Read the command-line interface, default repetition behavior, and timing caveats; do not generalize microbenchmarks to production.",
+      "last_verified": "2026-08-04",
+      "text_alternative": "lessons/02-controlled-experiments.md",
+      "verified_title": "timeit — Measure execution time of small code snippets",
+      "verified_publisher": "Python Software Foundation",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://docs.python.org/3/library/timeit.html",
+      "verification_status": "verified"
+    },
+    {
+      "id": "CIT-02",
+      "title": "Tracing API",
+      "author_or_publisher": "OpenTelemetry",
+      "type": "primary-source citation",
+      "url": "https://opentelemetry.io/docs/specs/otel/trace/api/",
+      "required": true,
+      "access": "free",
+      "purpose": "Provide primary-source support for the bounded mechanism discussed in the cited local lesson.",
+      "reading_boundary": "Read TracerProvider, Tracer, Span creation, context propagation, links, events, status, and shutdown boundaries.",
+      "last_verified": "2026-08-04",
+      "text_alternative": "lessons/03-trace-context.md",
+      "verified_title": "Tracing API",
+      "verified_publisher": "OpenTelemetry",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://opentelemetry.io/docs/specs/otel/trace/api/",
+      "verification_status": "verified"
+    },
+    {
+      "id": "CIT-03",
+      "title": "OpenTelemetry Metrics",
+      "author_or_publisher": "OpenTelemetry",
+      "type": "primary-source citation",
+      "url": "https://opentelemetry.io/docs/specs/otel/metrics/",
+      "required": true,
+      "access": "free",
+      "purpose": "Provide primary-source support for the bounded mechanism discussed in the cited local lesson.",
+      "reading_boundary": "Read the data model overview, instrument guidance, attribute requirements, aggregation, and cardinality limits.",
+      "last_verified": "2026-08-04",
+      "text_alternative": "lessons/04-signals-cardinality-cost.md",
+      "verified_title": "OpenTelemetry Metrics",
+      "verified_publisher": "OpenTelemetry",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://opentelemetry.io/docs/specs/otel/metrics/",
+      "verification_status": "verified"
+    },
+    {
+      "id": "CIT-04",
+      "title": "OpenTelemetry Logging",
+      "author_or_publisher": "OpenTelemetry",
+      "type": "primary-source citation",
+      "url": "https://opentelemetry.io/docs/specs/otel/logs/",
+      "required": true,
+      "access": "free",
+      "purpose": "Provide primary-source support for the bounded mechanism discussed in the cited local lesson.",
+      "reading_boundary": "Read the log data model, severity, trace correlation, resource, and attribute guidance.",
+      "last_verified": "2026-08-04",
+      "text_alternative": "lessons/04-signals-cardinality-cost.md",
+      "verified_title": "OpenTelemetry Logging",
+      "verified_publisher": "OpenTelemetry",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://opentelemetry.io/docs/specs/otel/logs/",
+      "verification_status": "verified"
+    },
+    {
+      "id": "CIT-05",
+      "title": "OpenTelemetry Profiles",
+      "author_or_publisher": "OpenTelemetry",
+      "type": "primary-source citation",
+      "url": "https://opentelemetry.io/docs/specs/otel/profiles/",
+      "required": true,
+      "access": "free",
+      "purpose": "Provide primary-source support for the bounded mechanism discussed in the cited local lesson.",
+      "reading_boundary": "Read the profile data model overview, mappings, timestamps, stack traces, and stability statements.",
+      "last_verified": "2026-08-04",
+      "text_alternative": "lessons/05-profiling.md",
+      "verified_title": "OpenTelemetry Profiles",
+      "verified_publisher": "OpenTelemetry",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://opentelemetry.io/docs/specs/otel/profiles/",
+      "verification_status": "verified"
+    },
+    {
+      "id": "CIT-06",
+      "title": "sqlite3 — DB-API 2.0 interface for SQLite databases",
+      "author_or_publisher": "Python Software Foundation",
+      "type": "primary-source citation",
+      "url": "https://docs.python.org/3/library/sqlite3.html",
+      "required": true,
+      "access": "free",
+      "purpose": "Provide primary-source support for the bounded mechanism discussed in the cited local lesson.",
+      "reading_boundary": "Read transaction control and EXPLAIN-related API boundaries used by the local SQLite experiment.",
+      "last_verified": "2026-08-04",
+      "text_alternative": "lessons/06-dependencies-query-plans.md",
+      "verified_title": "sqlite3 — DB-API 2.0 interface for SQLite databases",
+      "verified_publisher": "Python Software Foundation",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://docs.python.org/3/library/sqlite3.html",
+      "verification_status": "verified"
+    },
+    {
+      "id": "CIT-07",
+      "title": "statistics — Mathematical statistics functions",
+      "author_or_publisher": "Python Software Foundation",
+      "type": "primary-source citation",
+      "url": "https://docs.python.org/3/library/statistics.html",
+      "required": true,
+      "access": "free",
+      "purpose": "Provide primary-source support for the bounded mechanism discussed in the cited local lesson.",
+      "reading_boundary": "Read median and quantiles contracts, including method and small-sample caveats used by the deterministic checker.",
+      "last_verified": "2026-08-04",
+      "text_alternative": "lessons/07-benchmarks-regression-budgets.md",
+      "verified_title": "statistics — Mathematical statistics functions",
+      "verified_publisher": "Python Software Foundation",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://docs.python.org/3/library/statistics.html",
+      "verification_status": "verified"
+    }
+  ]
 }

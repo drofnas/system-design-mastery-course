@@ -1,0 +1,1079 @@
+{
+  "schema_version": "2.0",
+  "module": "M07",
+  "reviewed_commit": "670fcb8a202d8aea43d03f15f435054fdb2685f5",
+  "reviewed_at": "2026-08-04",
+  "evidence_boundary": "This ledger records a source-level semantic review of lessons, worked answers, case studies, exercises, worksheets, rubrics, and lab guides. It verifies named mechanisms against bounded primary or official sources, distinguishes normative course contracts, and does not turn synthetic examples into production measurements.",
+  "claims": [
+    {
+      "id": "M07-FC-001",
+      "location": {
+        "path": "lessons/01-workloads-access-paths-data-models.md",
+        "heading": "Mechanism and method"
+      },
+      "claim": "A data model states identities, relationships, constraints, and evolution. A physical design states record layout, partition/order key, index, compression, and maintenance. Mixing the two too early produces technology-shaped requirements.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-03"
+      ],
+      "source_sections": [
+        "Use only Database Storage I-II, Memory Management, and Indexes & Filters I-II notes/slides; produce a physical-path diagram and workload-dependent question."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "d21db5c6357c941b00976c5938d0a11c0baba09515ebced064fb81791aa07541",
+      "source_section_sha256": [
+        "eafca80144c42b7c41041ab6ac2e0c8c856b86cf9cee19b6f51fb0ace0c05bab"
+      ]
+    },
+    {
+      "id": "M07-FC-002",
+      "location": {
+        "path": "lessons/02-pages-records-buffer-pools.md",
+        "heading": "Mechanism and method"
+      },
+      "claim": "Storage engines manage records in pages because devices, caches, checksums, and replacement policies need bounded units. A page commonly includes a header, slot or pointer array, free space, cells, and possibly overflow references. Variable-length records make occupancy a distribution, not one constant.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-01",
+        "RES-03"
+      ],
+      "source_sections": [
+        "SQLite Database File Format Sections 1.2, 1.6, and 2.1 on pages, page headers, cells, free space, overflow, and bounded on-disk units.",
+        "CMU Database Systems Storage I-II and Memory Management materials on page-oriented storage, record layout, buffer management, and variable-length records."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "6077a3c838cef01266fc225b80870c0b21375cff2fc32ecaf6d6d0c97333baf2",
+      "source_section_sha256": [
+        "cb99c3e06c5e6a88ffff8bc3fc4bfdb9f23a86348b0a21fbf9ef2f3c832db3cd",
+        "877cf0e7c78559d49a0855e359755d82313702c6e4f9dc82ba23778217d21253"
+      ]
+    },
+    {
+      "id": "M07-FC-003",
+      "location": {
+        "path": "lessons/03-btree-hash-inverted-indexes.md",
+        "heading": "Mechanism and method"
+      },
+      "claim": "A B+ tree stores data entries in ordered leaves and separators in interior pages. Every root-to-leaf path has equal depth. Linked leaves turn a range scan into one traversal plus sequential leaf visits.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-02"
+      ],
+      "source_sections": [
+        "Watch through deletion and composite indexes; predict changed pages for one insert/delete and compare with the lab trace."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "f5ece247ed9bc9fa9b311807a07a008495aebe7b9b05db5a8254229731d177de",
+      "source_section_sha256": [
+        "fd2f7eb915fd3769d4f5ab45e3a3daf2180b609879cfdca8d7f4c1d1c1f8c136"
+      ]
+    },
+    {
+      "id": "M07-FC-004",
+      "location": {
+        "path": "lessons/04-lsm-bloom-compaction.md",
+        "heading": "Mechanism and method"
+      },
+      "claim": "An LSM trades in-place page updates for buffered sequential output. The lab stores recent writes in an ordered memtable. At a threshold it writes an immutable sorted table containing framed entries, fence offsets, and a Bloom filter. A manifest orders tables newest-first.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-04"
+      ],
+      "source_sections": [
+        "Read the Abstract and Sections 1-3; derive why buffering changes write cost and list assumptions that differ from the lab."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "4c9edfdb465f886bb12db2c22e0fcd5794b29bb0d5784d78289410f02dfc3e88",
+      "source_section_sha256": [
+        "3fd32e08b0a604103e96dc83d3d91fbf6a712f352abbbe0d4fb2f15abb3c9f15"
+      ]
+    },
+    {
+      "id": "M07-FC-005",
+      "location": {
+        "path": "lessons/05-amplification-ssd-endurance.md",
+        "heading": "Mechanism and method"
+      },
+      "claim": "Read, write, and space amplification compare explicitly bounded physical work with logical application work; ratios with different inclusions are not comparable.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-05"
+      ],
+      "source_sections": [
+        "Read Architecture and Compaction Styles; compare leveled, tiered/universal, and FIFO under three amplification dimensions."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "a8581a029b9c13af056933788025be15d7a55a166022c5fd6b5ce332e6260955",
+      "source_section_sha256": [
+        "6e9806b3918f821e5d8a0840cc3161187c4fa70510fbe0e2cbe564b2dfdafc90"
+      ]
+    },
+    {
+      "id": "M07-FC-006",
+      "location": {
+        "path": "lessons/06-query-plans-statistics-indexes.md",
+        "heading": "Mechanism and method"
+      },
+      "claim": "A planner enumerates legal physical plans, estimates their rows and cost, and chooses the least estimated cost. A plan is a tree of scans, joins, sorts, and aggregates. Statistics approximate distribution; estimates can be wrong because data changed, sampling missed skew, or predicates are correlated.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-09",
+        "RES-10"
+      ],
+      "source_sections": [
+        "PostgreSQL Using EXPLAIN Sections 14.1.1-14.1.3 on plan trees, cost estimates, and estimated versus actual rows.",
+        "PostgreSQL planner statistics Sections 14.2.1-14.2.2 on distribution statistics, extended statistics, and correlated predicates."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "3a5e5ecb007d64e718349d1786e09b11c9164d7c4f18c3d5a09962d84cb8a538",
+      "source_section_sha256": [
+        "b3bf6776c8548d14f94cec2845fd3dcbab158aecc0e5f18296ae6f8d3b3b8d97",
+        "999af3af7b60580601f344560dc943e99eaa39a995292cb9a5cf54b93bc3cf3a"
+      ]
+    },
+    {
+      "id": "M07-FC-007",
+      "location": {
+        "path": "lessons/07-skew-debt-stalls-diagnosis.md",
+        "heading": "Mechanism and method"
+      },
+      "claim": "Average load hides concentration. Hot keys repeatedly update the same logical records, alter cache locality, create overlapping versions, and focus compaction. Delete-heavy work writes new tombstones before reclaiming old values. If flush creates runs faster than compaction consumes them, pending bytes and read sources grow. A temporary burst becomes a sustained failure when that state feeds back into slower reads/writes and still less compaction.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-07"
+      ],
+      "source_sections": [
+        "Read the complete page; map every trigger to a metric, owner, and safe overload action."
+      ],
+      "verification_method": "official-documentation comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "5d54c0307bed405d9ecd60baa91a7594d2cce0be53dd212e71ce0fc79fff5229",
+      "source_section_sha256": [
+        "3df8e9b6fa09c9feef40d4e1f159ac2b92cd85b6b7ea31b17092abb1465c866f"
+      ]
+    },
+    {
+      "id": "M07-FC-008",
+      "location": {
+        "path": "lessons/08-storage-decisions-migration-ownership.md",
+        "heading": "Mechanism and method"
+      },
+      "claim": "A storage decision compares alternatives under one workload and evidence boundary, publishes amplification and capacity limits, assigns owners, and defines migration and reversal gates.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-05",
+        "RES-09",
+        "RES-10"
+      ],
+      "source_sections": [
+        "Read Architecture and Compaction Styles; compare leveled, tiered/universal, and FIFO under three amplification dimensions.",
+        "Read Sections 14.1.1-14.1.3; compare estimated/actual rows and record one alternative explanation before changing an index.",
+        "Read Sections 14.2.1-14.2.2; explain one correlation error and the cost of more detailed statistics."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "de4b468708f0fc4a2ec429770b359d54999cd620e114243fc8563252df9354ac",
+      "source_section_sha256": [
+        "6e9806b3918f821e5d8a0840cc3161187c4fa70510fbe0e2cbe564b2dfdafc90",
+        "c8085acf45554c86fb56a7ff81915f9d730386ad72fa1770726ae17ab351144d",
+        "e7519ce7c8d35c4578fe74744cd4aa77cc1164f22ba6e4adf42648c38554f183"
+      ]
+    },
+    {
+      "id": "M07-FC-009",
+      "location": {
+        "path": "exercises/answer-key.md",
+        "heading": "EX-01 explanation"
+      },
+      "claim": "Exact lookup needs an equality key and one row; station range needs the same station prefix plus ordered time and up to 10,000 rows. Note search maps tokens to postings. Regional export projects many rows and few columns. Retention is a background cutoff operation whose completion window matters more than one-row latency. The full matrix prevents one “database type” from hiding incompatible paths.",
+      "classification": "synthetic",
+      "source_ids": [],
+      "source_sections": [],
+      "verification_method": "controlled synthetic fixture",
+      "status": "verified",
+      "scope_limit": "The values, state, and outcome are bounded to the named course fixture and must not be generalized to production.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "4c3de7f5b68cd6b597b5c29529a1180ca3d19215dd98bab21a14bd2aa31cbe35",
+      "synthetic_label": "Synthetic course data or behavior; not production evidence.",
+      "source_section_sha256": []
+    },
+    {
+      "id": "M07-FC-010",
+      "location": {
+        "path": "case-study/harbor-signal-archive.md",
+        "heading": "Problem and isolation"
+      },
+      "claim": "Harbor Signal Archive supports a municipal coastal-operations team. Sensors at 240 stations publish water level, wind, visibility, and equipment-health observations. Operators query the latest status, scan a station's time range, search incident notes, export regional analytics, and delete expired raw samples. Exact coordinates for critical infrastructure are restricted.",
+      "classification": "synthetic",
+      "source_ids": [],
+      "source_sections": [],
+      "verification_method": "controlled synthetic fixture",
+      "status": "verified",
+      "scope_limit": "The values, state, and outcome are bounded to the named course fixture and must not be generalized to production.",
+      "synthetic_label": "Synthetic course data or behavior; not production evidence.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "b881de1f679857c812acb011ee783ebf94fd30086cf4db0e6085596993daf0a1",
+      "source_section_sha256": []
+    },
+    {
+      "id": "M07-FC-011",
+      "location": {
+        "path": "exercises/answer-key.md",
+        "heading": "EX-03 explanation"
+      },
+      "claim": "The 4,096-byte page, 32-byte header, and 280-byte record calculation is a synthetic exercise layout and is not a measured storage-engine occupancy result.",
+      "classification": "synthetic",
+      "source_ids": [],
+      "source_sections": [],
+      "verification_method": "controlled synthetic fixture",
+      "status": "verified",
+      "scope_limit": "The values, state, and outcome are bounded to the named course fixture and must not be generalized to production.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "0b6a9c04e3045aadc540077a1010a7db16f9bce305b74b753ca4ad236adc90a8",
+      "synthetic_label": "Synthetic course data or behavior; not production evidence.",
+      "source_section_sha256": []
+    },
+    {
+      "id": "M07-FC-012",
+      "location": {
+        "path": "exercises/exercises.md",
+        "heading": "EX-08: LSM visibility"
+      },
+      "claim": "The R1, R2, and R3 run contents are synthetic LSM exercise state used to calculate visibility; they are not records from a production engine.",
+      "classification": "synthetic",
+      "source_ids": [],
+      "source_sections": [],
+      "verification_method": "controlled synthetic fixture",
+      "status": "verified",
+      "scope_limit": "The values, state, and outcome are bounded to the named course fixture and must not be generalized to production.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "77dca9912cbbc2c47e5dce1054c6265f9c7205cc27ac7b0c63efd67a55d6ffd1",
+      "synthetic_label": "Synthetic course data or behavior; not production evidence.",
+      "source_section_sha256": []
+    },
+    {
+      "id": "M07-FC-013",
+      "location": {
+        "path": "lessons/02-pages-records-buffer-pools.md",
+        "heading": "Worked example"
+      },
+      "claim": "The floor(4,064/280) = 14 page-occupancy result follows from synthetic course layout inputs and does not generalize to another page format.",
+      "classification": "synthetic",
+      "source_ids": [],
+      "source_sections": [],
+      "verification_method": "controlled synthetic fixture",
+      "status": "verified",
+      "scope_limit": "The values, state, and outcome are bounded to the named course fixture and must not be generalized to production.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "bab619ff470af4493d9aef242bae71c432a7247fd0c60e60a83893f9307e3a7d",
+      "synthetic_label": "Synthetic course data or behavior; not production evidence.",
+      "source_section_sha256": []
+    },
+    {
+      "id": "M07-FC-014",
+      "location": {
+        "path": "lessons/04-lsm-bloom-compaction.md",
+        "heading": "Worked example"
+      },
+      "claim": "Under the standard independent-hash approximation, a Bloom filter with m bits, n inserted items, and k probes has false-positive probability p ≈ (1 - e^(-kn/m))^k; this is an approximation, not an exact finite-filter guarantee.",
+      "classification": "quantitative",
+      "source_ids": [
+        "CIT-01"
+      ],
+      "source_sections": [
+        "Abstract and hosted paper sections contrasting the standard Bloom-filter false-positive approximation with corrected finite-filter analysis."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "The mapping verifies the written expression and arithmetic under its declared assumptions; synthetic inputs and a local result do not establish a production distribution.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "d73de32f3533d4fcb11c40d378611df4d87a7790dc6329c1415ebb3c9f55a5f4",
+      "source_section_sha256": [
+        "7e0511c14e3adac18e2db74ce427b6b7aea2c517fdd2112c2cc9a17e8189a2a6"
+      ]
+    },
+    {
+      "id": "M07-FC-015",
+      "location": {
+        "path": "lessons/06-query-plans-statistics-indexes.md",
+        "heading": "Worked example"
+      },
+      "claim": "The station_class and region predicate is synthetic query-planning input and does not describe a production schema or distribution.",
+      "classification": "synthetic",
+      "source_ids": [],
+      "source_sections": [],
+      "verification_method": "controlled synthetic fixture",
+      "status": "verified",
+      "scope_limit": "The values, state, and outcome are bounded to the named course fixture and must not be generalized to production.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "1b0135880107c9d2f47c5d25f54ae2f4ba3cf6e8d779536c3996f09cfd44ee2c",
+      "synthetic_label": "Synthetic course data or behavior; not production evidence.",
+      "source_section_sha256": []
+    }
+  ],
+  "lesson_coverage": [
+    {
+      "lesson_id": "L01",
+      "path": "lessons/01-workloads-access-paths-data-models.md",
+      "claim_ids": [
+        "M07-FC-001"
+      ]
+    },
+    {
+      "lesson_id": "L02",
+      "path": "lessons/02-pages-records-buffer-pools.md",
+      "claim_ids": [
+        "M07-FC-002"
+      ]
+    },
+    {
+      "lesson_id": "L03",
+      "path": "lessons/03-btree-hash-inverted-indexes.md",
+      "claim_ids": [
+        "M07-FC-003"
+      ]
+    },
+    {
+      "lesson_id": "L04",
+      "path": "lessons/04-lsm-bloom-compaction.md",
+      "claim_ids": [
+        "M07-FC-004"
+      ]
+    },
+    {
+      "lesson_id": "L05",
+      "path": "lessons/05-amplification-ssd-endurance.md",
+      "claim_ids": [
+        "M07-FC-005"
+      ]
+    },
+    {
+      "lesson_id": "L06",
+      "path": "lessons/06-query-plans-statistics-indexes.md",
+      "claim_ids": [
+        "M07-FC-006"
+      ]
+    },
+    {
+      "lesson_id": "L07",
+      "path": "lessons/07-skew-debt-stalls-diagnosis.md",
+      "claim_ids": [
+        "M07-FC-007"
+      ]
+    },
+    {
+      "lesson_id": "L08",
+      "path": "lessons/08-storage-decisions-migration-ownership.md",
+      "claim_ids": [
+        "M07-FC-008"
+      ]
+    }
+  ],
+  "document_coverage": [
+    {
+      "path": "README.md",
+      "sha256": "1e58a7923ce0d82bb7080ce57bc1bec8c8ba85deb47e11b05c2cf4e3bcb55d6a",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
+    },
+    {
+      "path": "assessment/README.md",
+      "sha256": "ed9006ea5598b53837aeb0f934736d24932e09c3229072d807e86f0ba94c3b4d",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
+    },
+    {
+      "path": "assessment/calibration/README.md",
+      "sha256": "099722634bb0d2a4c272b27f2b8442c910d90f47780396b5aed7af3a462f0eb8",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "assessment/calibration/expected-results.json",
+      "sha256": "7bb5aa92b3f6b0eb5fe31e180d21858c3b7b34e59a3b01630f476e0206138008",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "assessment/calibration/manifests/pass.json",
+      "sha256": "2a5a0803e24ef6a2e189b853ece0363f7c09fe8fd549deb0601b15206004fe66",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "assessment/calibration/manifests/repeat.json",
+      "sha256": "c92cb1fccb9992244aabe74619f3dac3c9c7f4885357344f6e7691565aa9f67c",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "assessment/calibration/manifests/revise.json",
+      "sha256": "8f2cd9785ae639c774cc800c1bbdd7e82b3b206e4af3ca3a5a44279256714ea6",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "assessment/calibration/pass.md",
+      "sha256": "612030357816b74b95b8de63913b6cb97343f731e6084d8c19e6ddff1d891c47",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "assessment/calibration/repeat.md",
+      "sha256": "5f30d86ecbda1a0d2218800cb14fdd8537b259ca1b55d97e2f19dd0cfb6a7298",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "assessment/calibration/revise.md",
+      "sha256": "60b63297ab82b8b38b88303717b2801843211c37d7d63cc9b4711fb9c3311918",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "assessment/evaluator-prompt.md",
+      "sha256": "50fd276b51c809d1e5cffd521c3ec3f9e57403190310d8ad61fc17814e115432",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
+    },
+    {
+      "path": "assessment/readiness-review.md",
+      "sha256": "0c7b9bad84f16c51a7eadc66cc6eac91e3416d1747e4f2bfcfa6865dc408f4fc",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
+    },
+    {
+      "path": "assessment/remediation-map.md",
+      "sha256": "86143e67c13fc9772abd20624ffbaeefa1d60cf31f1d8dfbd8d6754745a5c9ce",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
+    },
+    {
+      "path": "assessment/report-template.md",
+      "sha256": "c0ccdbf8b9e69544e153529ce72a704a5bcb5fdbcdc956de072bfb8c62912241",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
+    },
+    {
+      "path": "assessment/rubric.md",
+      "sha256": "56d598b565da4aa1e3d2dd438e051f828aa23d0fede12ab8efdb9138ccf7bc20",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "assessment/semantic-readiness-review.md",
+      "sha256": "309247338cad75fe899f7c3f9a926dbc13d070bb99a5db6f6b327485f35002d2",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
+    },
+    {
+      "path": "case-study/harbor-signal-archive.md",
+      "sha256": "6900fc162a4543014d5deb229fd21ded35acceb00c174cfd0edfda28e9e64915",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [
+        "M07-FC-010"
+      ],
+      "review_note": "The case was reviewed for explicit synthetic boundaries, internal arithmetic, non-generalization language, and separation from the learner capstone.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "sha256": "227b7da71c05a7d367b0a1526204390de203027c0f56c7b0fcb4340d9041939e",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M07-FC-009",
+        "M07-FC-011"
+      ],
+      "review_note": "Explained answers were checked for causal consistency, formula provenance, and agreement with the locally taught mechanism and cited source boundary."
+    },
+    {
+      "path": "exercises/exercises.md",
+      "sha256": "9d0f27863a976777e6cecfcd6242e2f81e29f873f3fa51a16629b2cbf0ff1466",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M07-FC-012"
+      ],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "glossary.md",
+      "sha256": "3a710e5e60e96f54f46a213fb2599079b3d23b7c6c4169a240164a5aba3327bb",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
+    },
+    {
+      "path": "lab/README.md",
+      "sha256": "a3b8c11e292144cef4a2bf6f2c610d6399cf1f65e9ef88e0d2451fd5144a4689",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "The lab guide's commands, interfaces, bounds, and synthetic evidence limitations were checked directly against the executable implementation and its passing tests."
+    },
+    {
+      "path": "lab/scenarios/base-btree-delete.json",
+      "sha256": "9e13feb7ea73cd8e7030ac2ff4fcdd76ff42146ce08318a4a13a7093efac2888",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/base-btree-range.json",
+      "sha256": "9aa35ae4d0d4f2e528d96f1b63e5f4855e51f546a1140df7d8f1c41a0ef169fd",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/base-btree-read.json",
+      "sha256": "645b65316cf99951fbaf37b3416022472823c723357e75e9e0e94f8053f3122a",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/base-btree-skew.json",
+      "sha256": "5938b5929c839b04357911ab55f60bb4c580b8b218ad93293741ba18e7651465",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/base-btree-write.json",
+      "sha256": "e4e42f0ca4b3497e3f3b9f0eed655f8fd42b71b210cb8f569a2386a448518cdf",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/base-lsm-delete.json",
+      "sha256": "4732ee56e6a8499eb4c05202819f8ef70e958a88d978aeb42c2e5993e904ad4c",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/base-lsm-range.json",
+      "sha256": "16f53993eaac0ff7ee8cb320df6692092d4ffa844b8c6f816c3c8b0699478f73",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/base-lsm-read.json",
+      "sha256": "46e527260005871c115ac6f701fde72e46a61ef5dcf3353b0cb3640ea8914ae8",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/base-lsm-skew.json",
+      "sha256": "5f52b57b798bde7b9fad00e6a75496d85de61fa7f6fb032d0b312fcbc4d6a5bb",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/base-lsm-write.json",
+      "sha256": "e3542a33319b5cbf9b584d599a3d5acbb94b12cce0b8353bb569f787ac74e85b",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/f01-cache-broken.json",
+      "sha256": "91a44916679fb181a597c521289cbb9319b3676f4749c0696614f7f9bb959f8e",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/f01-cache-repaired.json",
+      "sha256": "fe0baf31e3dc6986b78698476f16ea7edf31dae46436b13f6ad0d546afc3b6db",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/f02-compaction-broken.json",
+      "sha256": "6b73ee90364ac2e89a85c9a12a5cc50871f9661b233d73ebb32404bdd44fdf57",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/f02-compaction-repaired.json",
+      "sha256": "3ce69a214d844822705d60fb100e8fce67fc3d398328a4f019e9c41ff70cdd8d",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/f03-bloom-broken.json",
+      "sha256": "556bcb6d1d4f1e85588f71f829390902fae13ce72a33020d0af88e52aba517be",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/f03-bloom-repaired.json",
+      "sha256": "84edabfbd2da349cb76e5fae0228c217e4256acb934ad36b72c73776f8d6f89c",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/f04-runs-broken.json",
+      "sha256": "66b273c1ac8a7f5559ef244662d3e6f9f0c268ca5c0c7fe4eeadc60f50a94c83",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/f04-runs-repaired.json",
+      "sha256": "791e5614718462f62b85b8a02635da76832a8c277d7d1c28afa342f64c3a39e0",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/f05-skew-cache-broken.json",
+      "sha256": "b3b51928adff7342b8046ae50b5b4ce01f0088624226ae83274c9de57f4bd616",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/f05-skew-cache-repaired.json",
+      "sha256": "b3c266c0c3dd55db5a7ab77c814cb8980dd8deaf9f161a2de87cb08966467871",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/f06-tombstone-broken.json",
+      "sha256": "da0d7a5b068fde5d8bbf35654bcc3d10123e7be35725af0a0e5fb45aca0825e8",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/f06-tombstone-repaired.json",
+      "sha256": "88dce2f3fdf494e2e426f693711060418444f4946bc75a810cc4762877cb6582",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/storage_lab/__init__.py",
+      "sha256": "590d8e82871691df2d3bf8170722d26fec6d72b4675cf5bd3228343f2aef80fe",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/storage_lab/__main__.py",
+      "sha256": "f1a10ca27281b9082cba6bfc963bcea31524b455adb7a8e59590959434943f1e",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/storage_lab/bloom.py",
+      "sha256": "963b81a7237bbed5e35086624c00960dc941d296aac11ddc9fba921828ace055",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/storage_lab/btree.py",
+      "sha256": "3e5f9829827947f87a25319d5a351668446125b3d7b5006599b1402e9bb98e32",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/storage_lab/config.py",
+      "sha256": "3e6314f21a443a42948c3459db290a6d9c6b0f5bd1bd5f7d94d462317b1dd377",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/storage_lab/lsm.py",
+      "sha256": "7838b8d20e4e66e62f1a73080b70ff01e0ac7b05bb708c99a662ba453d912cfd",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/storage_lab/runner.py",
+      "sha256": "06d8c6d0eeb3a0b81a6e6817f7da2d1612d1c8c6d70bf047d4bf36ceb067e115",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/tests/__init__.py",
+      "sha256": "80e5cd421a48c9ecc44bb5dde5ee3b970e30a40ecfb86e92d8ed5872297134d0",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/tests/test_storage_lab.py",
+      "sha256": "de3379deb62302b5ec5d412af11a1608cc0667cc27e752357c0eceecbe10cd0c",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lessons/01-workloads-access-paths-data-models.md",
+      "sha256": "2a2ee7df8caef059b4c967fa92a2f996ccb5c8486cf18f2ca773902d3ee133ef",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M07-FC-001"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/02-pages-records-buffer-pools.md",
+      "sha256": "7ea24f28067d4b35fee89dca63e416b8c98c637744dc8371da9e13bf719c51e6",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M07-FC-002",
+        "M07-FC-013"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/03-btree-hash-inverted-indexes.md",
+      "sha256": "5706550f1929564f6365749536cde467cd904f74008cd3f663ec181dac96eb87",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M07-FC-003"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/04-lsm-bloom-compaction.md",
+      "sha256": "a7a89ef0ff85bcf69cab3452f5b38b746accb1b720cc75166dd8d1b4f9e2d6e7",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M07-FC-004",
+        "M07-FC-014"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/05-amplification-ssd-endurance.md",
+      "sha256": "c216b2f579b627dd9abeb7592effd3305b0e3714d2fa690796e9c07958121d06",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M07-FC-005"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/06-query-plans-statistics-indexes.md",
+      "sha256": "22b78dd1e947942a70ef5408205332182d815c5c35c08811a20b9697f32152af",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M07-FC-006",
+        "M07-FC-015"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/07-skew-debt-stalls-diagnosis.md",
+      "sha256": "89422d81e3344ed5189e6419a93f11757a4309ca548830bef86304093b8a72cc",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M07-FC-007"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/08-storage-decisions-migration-ownership.md",
+      "sha256": "698e9c8473b3276574df5596df02f831f5cd21af320999b8801232b9fe264968",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M07-FC-008"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "module.json",
+      "sha256": "ea63efff653cbc4e7a927e862826ace86688870f551f3322bad1667252c66ebf",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "resources.md",
+      "sha256": "d7dff6f4707840f05da608ff124205afb78513c461d61ec1f6f8c8ff4de36908",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
+    },
+    {
+      "path": "worksheets/week-25-storage-model.md",
+      "sha256": "886ec47844e492a5622d6060658cc99d895efffa2ca30a1f5e140575c275307e",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-26-engine-build.md",
+      "sha256": "76d810e81f32b3f5c466228c8b46995ef91bba91af771024fa3a0ee7b4fd4fae",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-27-amplification-matrix.md",
+      "sha256": "4535040203785ea2c9f93f995774766253014aa576ba5b27feabf810c701f2b4",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-28-storage-decision.md",
+      "sha256": "ceed5b8786202e9eac8521013ebd3a1c7070ffb9c0a8faabce27832f680f3f2e",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    }
+  ],
+  "formula_mappings": [
+    {
+      "path": "case-study/harbor-signal-archive.md",
+      "heading": "Amplification example",
+      "normalized_expression": "read amplification = 18 / 6 = 3.0 probes/read",
+      "expression_sha256": "c074cd7d380e28ca349160d41760dc5207c985a4bcb1a5a55a99d3153040b63d",
+      "claim_id": "M07-FC-010"
+    },
+    {
+      "path": "case-study/harbor-signal-archive.md",
+      "heading": "Amplification example",
+      "normalized_expression": "space amplification = 16 / 12 = 1.33",
+      "expression_sha256": "1c0272d5a84fdb5f78a1a41b77e8621cb72d6addcd794bc7edc82a9d1211b909",
+      "claim_id": "M07-FC-010"
+    },
+    {
+      "path": "case-study/harbor-signal-archive.md",
+      "heading": "Amplification example",
+      "normalized_expression": "write amplification = 34 / 10 = 3.4",
+      "expression_sha256": "8201250b6b08d028bce204c9dd40c17c81bd0aad54dab6ffc40670ddb999dce4",
+      "claim_id": "M07-FC-010"
+    },
+    {
+      "path": "case-study/harbor-signal-archive.md",
+      "heading": "Workload and invariants",
+      "normalized_expression": "p99 acknowledgement ≤40 ms",
+      "expression_sha256": "46d28f085d6e251c29eee56237624e32f196df73fd3b7cab9ceba94e4dbdac0a",
+      "claim_id": "M07-FC-010"
+    },
+    {
+      "path": "case-study/harbor-signal-archive.md",
+      "heading": "Workload and invariants",
+      "normalized_expression": "p99 ≤200 ms for 10,000 rows",
+      "expression_sha256": "5663695a75f1b4fb87c371735fcecbd3a91f2c04ae3eea6de3200bde21655a63",
+      "claim_id": "M07-FC-010"
+    },
+    {
+      "path": "case-study/harbor-signal-archive.md",
+      "heading": "Workload and invariants",
+      "normalized_expression": "p99 ≤25 ms",
+      "expression_sha256": "0cb375cdc450a7f50fc20dcd35f9374721f25c7f38a543c1be2a58fbfd8ea7b3",
+      "claim_id": "M07-FC-010"
+    },
+    {
+      "path": "case-study/harbor-signal-archive.md",
+      "heading": "Workload and invariants",
+      "normalized_expression": "p99 ≤30 ms",
+      "expression_sha256": "f0417ae664ac823d95502f4ce80f6c635b2798c0416785d2db93563f5085e1c3",
+      "claim_id": "M07-FC-010"
+    },
+    {
+      "path": "case-study/harbor-signal-archive.md",
+      "heading": "Workload and invariants",
+      "normalized_expression": "p99 ≤300 ms",
+      "expression_sha256": "3b87b5e89599d1bc5ed2f1916917c0b96f4d1c0001864acb74a0f2c4a87e5b7f",
+      "claim_id": "M07-FC-010"
+    },
+    {
+      "path": "case-study/harbor-signal-archive.md",
+      "heading": "Workload and invariants",
+      "normalized_expression": "p99 ≤40 ms",
+      "expression_sha256": "c136e947c3467034afce65d372cb3ff6f84e80e4b089c73bb20efea5c7df7db4",
+      "claim_id": "M07-FC-010"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-09 explanation",
+      "normalized_expression": "p≈(1-e^-0.7)^7≈0.0082",
+      "expression_sha256": "0893b7eab3dbaacbb1f7a2e387bd677214165a5abe8b497684e6d04720569a8e",
+      "claim_id": "M07-FC-009"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-10 explanation",
+      "normalized_expression": "18/15=1.2",
+      "expression_sha256": "00b37e38e219ae8e8d8d7699bcd5b60c0ffcecd60628aded1111f775dc516095",
+      "claim_id": "M07-FC-009"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-10 explanation",
+      "normalized_expression": "24/12=2.0",
+      "expression_sha256": "ee1ba97a1ec12bff555512b88b315a4abe4b0b5a672e5b70c7944d173f16edf3",
+      "claim_id": "M07-FC-009"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-10 explanation",
+      "normalized_expression": "30/12=2.5",
+      "expression_sha256": "e91238c6f2070ac84f1d6aa39f8b97a36e9394b616f470c6ebb61124f5c3245d",
+      "claim_id": "M07-FC-009"
+    },
+    {
+      "path": "lessons/02-pages-records-buffer-pools.md",
+      "heading": "Mechanism and method",
+      "normalized_expression": "entries_per_leaf = floor((page_size - header_bytes) /",
+      "expression_sha256": "9eba2eb206c1d5b9aaf7d8fe68845023409cb55a58ecdd19d3b2ceb10f16ccab",
+      "claim_id": "M07-FC-013"
+    },
+    {
+      "path": "lessons/02-pages-records-buffer-pools.md",
+      "heading": "Mechanism and method",
+      "normalized_expression": "fanout = floor((page_size - interior_header) /",
+      "expression_sha256": "7b74b3e7030d9e5f42c1a6e568b98f9e896c0e4479b09ca697d745ebcdb0a012",
+      "claim_id": "M07-FC-013"
+    },
+    {
+      "path": "lessons/02-pages-records-buffer-pools.md",
+      "heading": "Mechanism and method",
+      "normalized_expression": "height ≈ ceil(log_fanout(number_of_leaves)) + 1",
+      "expression_sha256": "d2e2d64a1286e177a6507d26fdae9220063b1e0faff4bfd30a333651620195a1",
+      "claim_id": "M07-FC-013"
+    },
+    {
+      "path": "lessons/02-pages-records-buffer-pools.md",
+      "heading": "Worked example",
+      "normalized_expression": "floor(4064/280)=14",
+      "expression_sha256": "0afb08e69cd9d4eec3f9839c0c876736d03808093e157b3c4e21f50245c41ba2",
+      "claim_id": "M07-FC-013"
+    },
+    {
+      "path": "lessons/04-lsm-bloom-compaction.md",
+      "heading": "Mechanism and method",
+      "normalized_expression": "p ≈ (1 - e^(-kn/m))^k",
+      "expression_sha256": "6519259e9109e3e1cfd5f2a0c880156fb639ba9a65477c8b3dcd4dcd80978af1",
+      "claim_id": "M07-FC-014"
+    },
+    {
+      "path": "lessons/05-amplification-ssd-endurance.md",
+      "heading": "Mechanism and method",
+      "normalized_expression": "read_amp = physical page/block probes / logical read operations",
+      "expression_sha256": "5307aa4ea74b9aa81bcf2a0222e5c84224b92846d29121adcd425f433050cca4",
+      "claim_id": "M07-FC-005"
+    },
+    {
+      "path": "lessons/05-amplification-ssd-endurance.md",
+      "heading": "Mechanism and method",
+      "normalized_expression": "space_amp = current on-disk bytes / current live logical bytes",
+      "expression_sha256": "585640949cfa0eef9011f0c2df8a8d84422256b4b85834b8a2630c67a293e1bb",
+      "claim_id": "M07-FC-005"
+    },
+    {
+      "path": "lessons/05-amplification-ssd-endurance.md",
+      "heading": "Mechanism and method",
+      "normalized_expression": "write_amp = engine bytes written / logical key-value bytes written",
+      "expression_sha256": "53efc37fb269f875a98ce1f51d6b79103a587a8364568cb1ab4583c75c796497",
+      "claim_id": "M07-FC-005"
+    },
+    {
+      "path": "lessons/06-query-plans-statistics-indexes.md",
+      "heading": "Worked example",
+      "normalized_expression": "station_class='storm' AND region='north'",
+      "expression_sha256": "7fe56271b8feed7e6ced49fcf418d7ff827b0c385e7b03e2599ec061067ba590",
+      "claim_id": "M07-FC-015"
+    }
+  ],
+  "content_digest": "ce9e4517e9d6deaffa8ab59710fd94834d5d6a55ec0e4d9c669e5b15fed751c5",
+  "review_attestation": {
+    "reviewer": "course readiness remediation review",
+    "method": "primary-source semantic review",
+    "status": "complete",
+    "content_digest": "ce9e4517e9d6deaffa8ab59710fd94834d5d6a55ec0e4d9c669e5b15fed751c5",
+    "scope_note": "All tracked learner-facing prose, exercises, answers, assessment contracts, synthetic fixtures, laboratory documentation, implementation, and configuration in this module were inventoried; substantive claims were checked against the named source boundaries."
+  }
+}

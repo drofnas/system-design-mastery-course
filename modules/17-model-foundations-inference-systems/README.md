@@ -82,7 +82,7 @@ Use the [Week 67 worksheet](worksheets/week-67-inference-failures.md).
 | Work | Time |
 |---|---:|
 | Lesson 8, practitioner case, and EX-18 | 1.5 h |
-| Inference RFC and architecture defense | 4 h |
+| Inference RFC, deployment-policy ADR, and architecture defense | 4 h |
 | Module evaluation and teach-back | 2 h |
 | Separate remediation and learning log | 3.5 h |
 
@@ -115,7 +115,7 @@ Use the [glossary](glossary.md), [resource guide](resources.md), and
 
 This module contributes one substantial RFC, one capacity-and-cost model, one
 performance investigation, one failure matrix, one source-code internals review,
-and one recorded architecture teach-back.
+one inference-deployment policy ADR, and one recorded architecture teach-back.
 
 ## Assessment and completion
 
@@ -137,3 +137,12 @@ exact host, device, runtime, warm-up, repetitions, and changed evidence boundary
 AI may challenge calculations, hypotheses, experiment design, and alternatives.
 It may not choose the graded architecture, invent measurements, rewrite frozen
 work, produce replacement graded answers, or answer during the defense.
+
+## Course-wide completion contracts
+
+- The machine-readable `module.json` time blocks are the canonical required-work budget.
+- The [factual-claims ledger](assessment/factual-claims.json) maps each local lesson to its authoritative source boundary.
+- Use the [provider-neutral evaluation workflow](../../EVALUATION_GUIDE.md) only after learner evidence is committed.
+- Use the [sealed local gate workflow](../../SOLO_GATE_GUIDE.md) when a course gate applies. Human review is optional.
+
+A frozen self-evaluation may establish **Solo Complete**; independent human or LLM review may establish **Independently Validated**. Synthetic lab values are not production measurements.

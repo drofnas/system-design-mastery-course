@@ -1,0 +1,858 @@
+{
+  "schema_version": "2.0",
+  "module": "M14",
+  "reviewed_commit": "670fcb8a202d8aea43d03f15f435054fdb2685f5",
+  "reviewed_at": "2026-08-04",
+  "evidence_boundary": "This ledger records a source-level semantic review of lessons, worked answers, case studies, exercises, worksheets, rubrics, and lab guides. It verifies named mechanisms against bounded primary or official sources, distinguishes normative course contracts, and does not turn synthetic examples into production measurements.",
+  "claims": [
+    {
+      "id": "M14-FC-001",
+      "location": {
+        "path": "lessons/01-boundaries-outcomes-coupling.md",
+        "heading": "Mechanism: a boundary buys independence and creates an interface"
+      },
+      "claim": "A module can hide implementation without adding a network or a new operator. A deployable service buys independent rollout and scaling, but adds partial failure, compatibility, telemetry, authorization, and on-call work. An event boundary buys time and failure decoupling only when the producer's fact, the consumer's lag tolerance, replay semantics, and authority are explicit.",
+      "classification": "security",
+      "source_ids": [
+        "RES-01"
+      ],
+      "source_sections": [
+        "Read the complete article; record three boundary drivers, two reasons to remain modular, and one extraction threshold."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "c1d8452673bc7f61921a6b49d449a83e20b4f6129691431c7fda3c85d592c8d2",
+      "source_section_sha256": [
+        "f28e053380f5e85792802cfb4b55df60cf32b7f9373dd42a8f0062b43c6c7b1b"
+      ]
+    },
+    {
+      "id": "M14-FC-002",
+      "location": {
+        "path": "lessons/02-social-architecture-ownership.md",
+        "heading": "Mechanism: interfaces are maintained by conversations"
+      },
+      "claim": "Conway's observation is predictive, not prescriptive: systems tend to reflect communication structures because an interface cannot remain coherent without communication among its designers and operators. A service boundary imposed across teams that must coordinate every change creates a distributed monolith.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-02"
+      ],
+      "source_sections": [
+        "Read the author page and linked original paper; map three required technical interfaces to their human communication paths."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "46b4821b43be8cd70ca8640c2454da3f97110ce2b393a650d5fd723c48d2e09d",
+      "source_section_sha256": [
+        "2a68a4393bf2aca2ad0b561417da9baf6a0c92e30cbeb63a17ea160d93073b9d"
+      ]
+    },
+    {
+      "id": "M14-FC-003",
+      "location": {
+        "path": "lessons/03-sourcing-platforms-governance.md",
+        "heading": "Mechanism: buy operations, not responsibility"
+      },
+      "claim": "A sourcing comparison begins with required capability and exit obligations, then compares managed, operated open-source, custom, and internal-platform choices without transferring responsibility.",
+      "classification": "inference",
+      "source_ids": [
+        "RES-01",
+        "RES-04",
+        "RES-05"
+      ],
+      "source_sections": [
+        "Read the complete article; record three boundary drivers, two reasons to remain modular, and one extraction threshold.",
+        "Read Definition, Functional Activities, and Inputs and Outputs; define one business unit metric, one resource metric, sources, owner, and threshold.",
+        "Read Breaking the Cycle, Successfully Deliver the Parts, and the middleware example; produce a seam, transition asset, removal condition, and cost-of-risk argument."
+      ],
+      "verification_method": "bounded inference from cited premises",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence.",
+      "premises": [
+        "Architecture boundaries and sourcing choices add different delivery and operating obligations.",
+        "Unit economics and incremental migration evidence constrain the feasible technical sequence."
+      ],
+      "verified_at": "2026-08-04",
+      "claim_sha256": "265c7d8135e6f06025effe49b749c29401d2eb5f283a1058fde39721e7e36b34",
+      "source_section_sha256": [
+        "f28e053380f5e85792802cfb4b55df60cf32b7f9373dd42a8f0062b43c6c7b1b",
+        "6fb3a3e48f041de145a05810142349c285823043970c6889145c49f6abe8b9c5",
+        "468031ed49c8cd58ecacde1e07aa18122b8371aede78745277659abc94b396a9"
+      ]
+    },
+    {
+      "id": "M14-FC-004",
+      "location": {
+        "path": "lessons/04-total-cost-unit-economics.md",
+        "heading": "Derivation"
+      },
+      "claim": "A cost comparison separates recurring and transition costs, defines allocation and the useful-outcome denominator, and varies uncertain inputs before using unit cost in a decision.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-04"
+      ],
+      "source_sections": [
+        "Read Definition, Functional Activities, and Inputs and Outputs; define one business unit metric, one resource metric, sources, owner, and threshold."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "e8c7ec404d055f2f8cf116193f53c85c497dbab9f0291690ef40f9001e307981",
+      "source_section_sha256": [
+        "6fb3a3e48f041de145a05810142349c285823043970c6889145c49f6abe8b9c5"
+      ]
+    },
+    {
+      "id": "M14-FC-005",
+      "location": {
+        "path": "lessons/05-compatibility-schema-evolution.md",
+        "heading": "Mechanism: compatibility is a quantified mixed-version property"
+      },
+      "claim": "Compatibility is a mixed-version property across supported producers, consumers, stored records, and replay paths during a declared window, not a consequence of version labels alone.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-07"
+      ],
+      "source_sections": [
+        "Read the Summary and specification items 1-11; classify six changes and state two cases where SemVer cannot prove runtime compatibility."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "8e0c1367b53c96b2daa4ac6a56b94d39fd15be3cfc28351dcd70c1a42ef478dc",
+      "source_section_sha256": [
+        "75744e1cde5726802238f99034fa17a2b97ba20b835d8e2ae4ba02a05e4c5342"
+      ]
+    },
+    {
+      "id": "M14-FC-006",
+      "location": {
+        "path": "lessons/06-incremental-migration-backfills.md",
+        "heading": "Mechanism: each state preserves a safe next move"
+      },
+      "claim": "Use the state sequence Baseline → Expand → Backfill → Shadow → Cutover → Contract → Decommission. Each state defines allowed writers, read routing, entry evidence, exit gate, stop condition, and rollback. A calendar milestone cannot replace those properties.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-05"
+      ],
+      "source_sections": [
+        "Read Breaking the Cycle, Successfully Deliver the Parts, and the middleware example; produce a seam, transition asset, removal condition, and cost-of-risk argument."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "c5da7535a490afad9ffddaaf095476f4924163edeea32795749b848018ba7e59",
+      "source_section_sha256": [
+        "468031ed49c8cd58ecacde1e07aa18122b8371aede78745277659abc94b396a9"
+      ]
+    },
+    {
+      "id": "M14-FC-007",
+      "location": {
+        "path": "lessons/07-shadow-cutover-rollback.md",
+        "heading": "Mechanism: promotion is a decision over comparable evidence"
+      },
+      "claim": "Shadow traffic copies an input to a candidate while the old path remains authoritative. Remove or isolate irreversible effects. Normalize nondeterminism before comparison: timestamps, ordering, generated IDs, and tolerated precision. Measure population, coverage, mismatch classes, latency, freshness, resource use, and cost. A small global mismatch percentage can hide a complete failure for one tenant or operation, so segment results.",
+      "classification": "security",
+      "source_ids": [
+        "RES-08"
+      ],
+      "source_sections": [
+        "Read Canary Release through Canary Implementation; define population, duration, comparison metrics, budget exposure, promotion, and rollback thresholds."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "bc8ca29e91caa9ef3ec87e571c01c5f7789d9b84c8c19026cd31a23e10d4f6ba",
+      "source_section_sha256": [
+        "d9f25ea25f350ea7f1d87a4ae3bd84d327f8b45bc3073a79aa085a36156064e0"
+      ]
+    },
+    {
+      "id": "M14-FC-008",
+      "location": {
+        "path": "lessons/08-technical-strategy-teach-back.md",
+        "heading": "Decision procedure"
+      },
+      "claim": "A technical strategy connects an outcome to a sequence of reversible investments with shared alternatives, owners, evidence gates, and stop, reversal, and decommission conditions.",
+      "classification": "inference",
+      "source_ids": [
+        "RES-04",
+        "RES-05"
+      ],
+      "source_sections": [
+        "Read Definition, Functional Activities, and Inputs and Outputs; define one business unit metric, one resource metric, sources, owner, and threshold.",
+        "Read Breaking the Cycle, Successfully Deliver the Parts, and the middleware example; produce a seam, transition asset, removal condition, and cost-of-risk argument."
+      ],
+      "verification_method": "bounded inference from cited premises",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence.",
+      "premises": [
+        "Architecture boundaries and sourcing choices add different delivery and operating obligations.",
+        "Unit economics and incremental migration evidence constrain the feasible technical sequence."
+      ],
+      "verified_at": "2026-08-04",
+      "claim_sha256": "32c1d6c23df4b1badf575d466dadf699cb068dc125f8c7cc2e10ea4b532f32e9",
+      "source_section_sha256": [
+        "6fb3a3e48f041de145a05810142349c285823043970c6889145c49f6abe8b9c5",
+        "468031ed49c8cd58ecacde1e07aa18122b8371aede78745277659abc94b396a9"
+      ]
+    },
+    {
+      "id": "M14-FC-009",
+      "location": {
+        "path": "exercises/answer-key.md",
+        "heading": "EX-01 explained answer"
+      },
+      "claim": "The modular and candidate monthly cost totals and per-1,000-good-read figures are synthetic exercise calculations whose allocations and workload cannot be generalized as market or production prices.",
+      "classification": "synthetic",
+      "source_ids": [],
+      "source_sections": [],
+      "verification_method": "controlled synthetic fixture",
+      "status": "verified",
+      "scope_limit": "The values, state, and outcome are bounded to the named course fixture and must not be generalized to production.",
+      "verified_at": "2026-08-04",
+      "synthetic_label": "Synthetic course data or behavior; not production evidence.",
+      "claim_sha256": "64521ec3fdfca4946f2bf173078b5eaed47a3bffbc7bcc9c9b659cab06d6137d",
+      "source_section_sha256": []
+    },
+    {
+      "id": "M14-FC-010",
+      "location": {
+        "path": "case-study/northstar-catalog-evolution.md",
+        "heading": "Outcome, workload, and current state"
+      },
+      "claim": "Northstar's operations registry validates observations, approves publication, builds the public catalog, and emits subscriber bulletins. The registry owns the authoritative accepted observation and publication decision. The catalog and bulletins are derived.",
+      "classification": "synthetic",
+      "source_ids": [],
+      "source_sections": [],
+      "verification_method": "controlled synthetic fixture",
+      "status": "verified",
+      "scope_limit": "The values, state, and outcome are bounded to the named course fixture and must not be generalized to production.",
+      "synthetic_label": "Synthetic course data or behavior; not production evidence.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "7488fc3c3a436767fc7a3a57e2b55f5a3bb7b8718c32b8cba5bf2fdf8629b63a",
+      "source_section_sha256": []
+    },
+    {
+      "id": "M14-FC-011",
+      "location": {
+        "path": "lessons/05-compatibility-schema-evolution.md",
+        "heading": "Worked example"
+      },
+      "claim": "public=true|false is a synthetic mixed-version field example and not a claim about a deployed schema.",
+      "classification": "synthetic",
+      "source_ids": [],
+      "source_sections": [],
+      "verification_method": "controlled synthetic fixture",
+      "status": "verified",
+      "scope_limit": "The values, state, and outcome are bounded to the named course fixture and must not be generalized to production.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "6bca89491ce8184169bc8f2c4a388ddfeef925eff4b9d349e474c6f44eb8aeb6",
+      "synthetic_label": "Synthetic course data or behavior; not production evidence.",
+      "source_section_sha256": []
+    }
+  ],
+  "lesson_coverage": [
+    {
+      "lesson_id": "L01",
+      "path": "lessons/01-boundaries-outcomes-coupling.md",
+      "claim_ids": [
+        "M14-FC-001"
+      ]
+    },
+    {
+      "lesson_id": "L02",
+      "path": "lessons/02-social-architecture-ownership.md",
+      "claim_ids": [
+        "M14-FC-002"
+      ]
+    },
+    {
+      "lesson_id": "L03",
+      "path": "lessons/03-sourcing-platforms-governance.md",
+      "claim_ids": [
+        "M14-FC-003"
+      ]
+    },
+    {
+      "lesson_id": "L04",
+      "path": "lessons/04-total-cost-unit-economics.md",
+      "claim_ids": [
+        "M14-FC-004"
+      ]
+    },
+    {
+      "lesson_id": "L05",
+      "path": "lessons/05-compatibility-schema-evolution.md",
+      "claim_ids": [
+        "M14-FC-005"
+      ]
+    },
+    {
+      "lesson_id": "L06",
+      "path": "lessons/06-incremental-migration-backfills.md",
+      "claim_ids": [
+        "M14-FC-006"
+      ]
+    },
+    {
+      "lesson_id": "L07",
+      "path": "lessons/07-shadow-cutover-rollback.md",
+      "claim_ids": [
+        "M14-FC-007"
+      ]
+    },
+    {
+      "lesson_id": "L08",
+      "path": "lessons/08-technical-strategy-teach-back.md",
+      "claim_ids": [
+        "M14-FC-008"
+      ]
+    }
+  ],
+  "document_coverage": [
+    {
+      "path": "README.md",
+      "sha256": "9bd4ac4f17a31a6cfccdccd923e10229ee3f9954fd8dae967b2a26c686f4422d",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
+    },
+    {
+      "path": "assessment/README.md",
+      "sha256": "9a27036ae2ab86e6433777398f3e4792352267274bc8bb584a3dcda9583f97ed",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
+    },
+    {
+      "path": "assessment/calibration/README.md",
+      "sha256": "8748d6e66fb855091d2724ff951b9beda7735be6f7c052402fe133e492c932bd",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "assessment/calibration/expected-results.json",
+      "sha256": "ef72a8ce8694e7bc5f95f497241c7ca2b0e8069eb0ec8fbdfb39e7c500e05a96",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "assessment/calibration/manifests/pass.json",
+      "sha256": "c0ceef2e4e5ffb4bac34d1106292e1021b9fd56629399b98b5d8ad964f478134",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "assessment/calibration/manifests/repeat.json",
+      "sha256": "82281bf30e9253f992ff6e320ba3819f633ee6dfbf759d1360d148f22e95d21a",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "assessment/calibration/manifests/revise.json",
+      "sha256": "efec775ef7a39072956cb9d5be238f7f78b76c11999cdbc2597175d887a9a00d",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "assessment/calibration/pass.md",
+      "sha256": "4af6ab109e7a169e2877d84e0e16e0660e8fec67a5d1ccb383e751bfa57284be",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "assessment/calibration/repeat.md",
+      "sha256": "b711b44f156e4533cb78f0e0e43cb27e8287b5d4cc3f92369d300a4dfe4acf0b",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "assessment/calibration/revise.md",
+      "sha256": "d89e8c7590db42cf87adf7ae5689e549292b29ab67535b5a92bdc33aeb7a7462",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "assessment/evaluator-prompt.md",
+      "sha256": "00b6d70168cbdaefe3dc18233131d54f6432096add40b6ee111d49574e8e8dd4",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
+    },
+    {
+      "path": "assessment/readiness-review.md",
+      "sha256": "a4be5e99f918bb5fa3a9943e6bedda9d1a41204a1f149e8f280300b7a7e64619",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
+    },
+    {
+      "path": "assessment/remediation-map.md",
+      "sha256": "77f1534ee4b387e5f80954f28715922426792d349f212d8a29cd617174587e14",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
+    },
+    {
+      "path": "assessment/report-template.md",
+      "sha256": "f0e2cf1dc2136404007d36d69d7dabedcad5df359ae4762e9b502fd790533729",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
+    },
+    {
+      "path": "assessment/rubric.md",
+      "sha256": "309dd8f04408abd322fb70fae8af87eb8df341f8936dd14e73157230e5084b73",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "assessment/semantic-readiness-review.md",
+      "sha256": "8c292bac4c0acbf98e683ce3fc61abe522b4184ee92b040d89b4c79ea384810f",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
+    },
+    {
+      "path": "case-study/northstar-catalog-evolution.md",
+      "sha256": "67be22c129470b37d34763dc170859bf49409eb4cc436dab469581c06399874f",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [
+        "M14-FC-010"
+      ],
+      "review_note": "The case was reviewed for explicit synthetic boundaries, internal arithmetic, non-generalization language, and separation from the learner capstone.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "sha256": "b343780086f90943ffcc52585f866fd3963d9a6091057bee3123909e886b73fd",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M14-FC-009"
+      ],
+      "review_note": "Explained answers were checked for causal consistency, formula provenance, and agreement with the locally taught mechanism and cited source boundary."
+    },
+    {
+      "path": "exercises/exercises.md",
+      "sha256": "e2d2fe89aa7ad310e88105f5ff537575c1f59c05650a3ccb0918bb4a8d8edc1b",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "glossary.md",
+      "sha256": "fc2ee408a5513a6e6f452cebec88a96e5d9e7db5c9ba37b0ed47e07326516eb0",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
+    },
+    {
+      "path": "lab/README.md",
+      "sha256": "d0d5b47acd599eb482873ce73cdd1ec57f611a051f1f1f67529fa5bce2a66267",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "The lab guide's commands, interfaces, bounds, and synthetic evidence limitations were checked directly against the executable implementation and its passing tests."
+    },
+    {
+      "path": "lab/evolution_lab/__init__.py",
+      "sha256": "07c627ae9ccc876deec69d714977e5d0df512d1b40b741b20706c0b3167f53a4",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/evolution_lab/__main__.py",
+      "sha256": "593920742d5fce01379692ffec8c18fe15679d8f084d73b9793f33719f2443fe",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/evolution_lab/config.py",
+      "sha256": "085a36c46535c43459d6943693fadd5e92263e7454a5957850e5d6aa9b648690",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/evolution_lab/runner.py",
+      "sha256": "eb454c901e93e056684142a4fb5888cdaff9b3f4d8a8877357501ebf9edcdc6c",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/scenarios/f01-incompatible-deployment-broken.json",
+      "sha256": "962ee6cecbce618fb87b602c0b96f39e6be2e55a782e52f03e16c135fd0aea94",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/f01-incompatible-deployment-repaired.json",
+      "sha256": "52c9a001f83c03d42ba4352c733aee51484b80928b549edfc1e0c76899e1bdd5",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/f02-unsafe-contraction-broken.json",
+      "sha256": "9f0a39ea9eaf8074b1f87448c2d42b4406b77e3485b8fd006a7ca65700dd4fae",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/f02-unsafe-contraction-repaired.json",
+      "sha256": "60e9b9fdb65d3e909d9546bef40da9dd640982f463268d22bb1c13a1491dc1f7",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/f03-partial-backfill-broken.json",
+      "sha256": "87490855aae37a64834e8a6184de5d9811bd1af83aca05ba7cbffa35faf2a6b4",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/f03-partial-backfill-repaired.json",
+      "sha256": "4ee9074a85d4e2d0ccd3ed28a340d2cce71e6393e1bca045f1b45c4053ac026c",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/f04-dual-write-divergence-broken.json",
+      "sha256": "abea0c0e228fbea3480513e4d9ff977dbe369059741cb49f33d7f27802e2bc78",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/f04-dual-write-divergence-repaired.json",
+      "sha256": "a024c06661a7b7777caab9179dd6d8e32fe8620ad670bdca5cc31919afaccebe",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/f05-shadow-mismatch-broken.json",
+      "sha256": "de514b172854bee2b7cfda39bb8a047e3981cbd04a4aea0e4a83c6ce4611293f",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/f05-shadow-mismatch-repaired.json",
+      "sha256": "88691ec7c48a256f8e8105b02cccf55d4bc3e88c2e9f93e9d24e645036675eb2",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/f06-lossy-rollback-broken.json",
+      "sha256": "4f9263c18a12fb178fe464ab76b1f37d971fc3e521cbc727b86c3b3b3f77f553",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/f06-lossy-rollback-repaired.json",
+      "sha256": "7fb00884c6e5eac9c6081ab740b336cca6e8e4f1d9dd3c5bd078f05e460a7738",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/f07-cost-spike-broken.json",
+      "sha256": "49a0dbcac85cd5da5b62dd74b243d5c8b00ffc5ec9e40673b25eaf8c512d808c",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/f07-cost-spike-repaired.json",
+      "sha256": "b0fed57c189f8bc9ee96abf62ca1ed7d02cbf9c0804a0372ebd99a5675e0d9e4",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/f08-dependency-exit-broken.json",
+      "sha256": "f45381bf28cb5ca9c3385b5062130344f64fbb6ce018cd4e78017b15e27b78ae",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/f08-dependency-exit-repaired.json",
+      "sha256": "99b442655d01a07501f78c2d4a1929d0de12f946ae59241f2e50c4e02c8d2e36",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/f09-owner-loss-broken.json",
+      "sha256": "f5ebcb123716b0b24e697a300532ee9350263967c038a41d379ee28d4402a3a7",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/f09-owner-loss-repaired.json",
+      "sha256": "5e5cdabc98d17d0aea651cc85a142a47b2428658fe46d8fc4dc5537fdfa219cb",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/tests/__init__.py",
+      "sha256": "6d8d69a1dddca34eed43e3a2d6bc0ea55ae7777db17eb3903dde08b998cc09a5",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/tests/test_evolution_lab.py",
+      "sha256": "724ddbbf1c5c89049c7ace6949cbb725eec9b248cb03029c0c77cba11eb97c8f",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lessons/01-boundaries-outcomes-coupling.md",
+      "sha256": "1d10205655d2a360d8a10a2e4eb0f10213feddab3521f21be4cb01000e0ba664",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M14-FC-001"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/02-social-architecture-ownership.md",
+      "sha256": "7f731718848b33e3a4de330aa049a78fa763173d16f6f2efe3f5f22d92f94d7e",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M14-FC-002"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/03-sourcing-platforms-governance.md",
+      "sha256": "1b1da80c3762dbab2cba9d405ba258ed8f893f3a07e7a5396cb889544f28ab16",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M14-FC-003"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/04-total-cost-unit-economics.md",
+      "sha256": "acc5d02cc30f249cd090c6e9ae932f5c720ae0fcdbcd0e01d8a098df7e3ce540",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M14-FC-004"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/05-compatibility-schema-evolution.md",
+      "sha256": "64c9b3e123d498d623b990c8cd2e51a3f27d9483045ff7758892c0dcc5117bf9",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M14-FC-005",
+        "M14-FC-011"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/06-incremental-migration-backfills.md",
+      "sha256": "4d15150d3599c1938a6fba61c7c9b88d786f5a0eb406be1d0fc910b95451491c",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M14-FC-006"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/07-shadow-cutover-rollback.md",
+      "sha256": "a139c4c9baa2ffa52b909dbe696c288fa92c33b468b94da93bf6a45a7696275e",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M14-FC-007"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/08-technical-strategy-teach-back.md",
+      "sha256": "b920a74c3baef8ee400bfbc685fcde09ecabc76c995ec88706012fc76f936564",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M14-FC-008"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "module.json",
+      "sha256": "859aaa17bf572fa498d972054c71ddc416feebbf7b1b1621fcd06373615bc737",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "resources.md",
+      "sha256": "72ed59b1d53a5f75318b55ffe794ab19032bdc728162926a35264daebab7b5e9",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
+    },
+    {
+      "path": "worksheets/week-53-evolution-model.md",
+      "sha256": "79d6fc1b4b16df128b551715932d0e04af0531e5b83cc9c6f437dbc2fd1feea8",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-54-migration-build.md",
+      "sha256": "399e8864666d6b70fb38c1c06b569998340cfc89a37449c14b04f2698219c2a0",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-55-evolution-failure-matrix.md",
+      "sha256": "ba42a958b2d1d3fd2c4a06d736f17ac23babf8807b6c4346cebb1f6069b675ee",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-56-strategy-defense.md",
+      "sha256": "55990468a946e2cbc7a73210d55703db5637d58cd2297a5becc41a0a5099c3bf",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    }
+  ],
+  "formula_mappings": [
+    {
+      "path": "case-study/northstar-catalog-evolution.md",
+      "heading": "Fully loaded economics",
+      "normalized_expression": "Current comparison cost is $30,000 / 530,000 × 1,000 = **$56.60 per 1,000",
+      "expression_sha256": "32a31c3a4ffcb0081fe384ec0f571e37f489718c5657ed7c6f90d9cf381a85ca",
+      "claim_id": "M14-FC-010"
+    },
+    {
+      "path": "case-study/northstar-catalog-evolution.md",
+      "heading": "Fully loaded economics",
+      "normalized_expression": "good reads**. During transition the candidate is $54,000 / 538,000 × 1,000 =",
+      "expression_sha256": "4d8e335f9a1cd1ad21cba4c653d26ecfecc178e7a4f94266c8d5d4b1f807a3d6",
+      "claim_id": "M14-FC-010"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-07 explained answer",
+      "normalized_expression": "$54,000 / 538,000 × 1,000 = $100.37. Failed, stale, or slow reads consumed",
+      "expression_sha256": "6d6ba8c69f7430e4d0f8ac4b60ced6905b5aa73dc3999442fbb31e72eac94405",
+      "claim_id": "M14-FC-009"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-07 explained answer",
+      "normalized_expression": "$56.60. Candidate: $15,000 + $24,000 + $3,000 + $12,000 = $54,000;",
+      "expression_sha256": "89fb5b512605d42ac676d227dd1d87a49d070cbab9db7d04c9123abebe9728f4",
+      "claim_id": "M14-FC-009"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-07 explained answer",
+      "normalized_expression": "Modular: $9,000 + $16,000 + $5,000 = $30,000; $30,000 / 530,000 × 1,000 =",
+      "expression_sha256": "20df19d532dd50eed4d641c53ddf2b4c5f60a38e4e7bea9b1b6072277ebfe077",
+      "claim_id": "M14-FC-009"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-15 explained answer",
+      "normalized_expression": "presentation mismatch, freshness and p95 targets, unit cost ≤$105, and exercised",
+      "expression_sha256": "a03c3f303be58f17abac7fc1b851b34d3758693e369765bb7836d19018460b4d",
+      "claim_id": "M14-FC-009"
+    },
+    {
+      "path": "lessons/04-total-cost-unit-economics.md",
+      "heading": "Derivation",
+      "normalized_expression": "comparison cost = recurring cost + transition cost / amortization windows",
+      "expression_sha256": "ead59e8bda4e6bdea466402fff93e07ee351b52f9f9faa2fbbba664a14a8d014",
+      "claim_id": "M14-FC-004"
+    },
+    {
+      "path": "lessons/04-total-cost-unit-economics.md",
+      "heading": "Derivation",
+      "normalized_expression": "recurring cost = direct variable + direct fixed + allocated shared",
+      "expression_sha256": "6c4737bee937ec46d29148c9fc8912bd73fee11a020ef49e1a975682341f6f18",
+      "claim_id": "M14-FC-004"
+    },
+    {
+      "path": "lessons/04-total-cost-unit-economics.md",
+      "heading": "Derivation",
+      "normalized_expression": "unit cost = comparison cost / good useful outcomes",
+      "expression_sha256": "4b7a4213eea3f58ba35493e46c39c6e7c53d986d532270ea8e354bc9287b1339",
+      "claim_id": "M14-FC-004"
+    }
+  ],
+  "content_digest": "7b6f0ef2c43afba17898492139f20c872a4f6e95156123f3a3b5aa176a71ca54",
+  "review_attestation": {
+    "reviewer": "course readiness remediation review",
+    "method": "primary-source semantic review",
+    "status": "complete",
+    "content_digest": "7b6f0ef2c43afba17898492139f20c872a4f6e95156123f3a3b5aa176a71ca54",
+    "scope_note": "All tracked learner-facing prose, exercises, answers, assessment contracts, synthetic fixtures, laboratory documentation, implementation, and configuration in this module were inventoried; substantive claims were checked against the named source boundaries."
+  }
+}

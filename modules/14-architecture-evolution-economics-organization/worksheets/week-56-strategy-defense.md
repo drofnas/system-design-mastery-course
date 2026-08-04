@@ -9,8 +9,10 @@ decommissioning, and review cadence.
 
 ## Defense protocol
 
-Record a 20–30 minute review with at least one engineer outside the chosen stack.
-The learner presents for no more than ten minutes. Reviewers challenge:
+Record a 20–30 minute solo defense using the module's deterministic frozen
+five-question packet. A live engineer outside the chosen stack may participate
+as optional stronger evidence. The learner's opening takes no more than ten
+minutes. The packet challenges:
 
 - why a boundary is needed and why the no-migration option loses;
 - authority during mixed versions, backfill, cutover, and rollback;

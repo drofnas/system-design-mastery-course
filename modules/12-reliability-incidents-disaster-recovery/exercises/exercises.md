@@ -97,5 +97,6 @@ reconstitution for an active/passive archive. Include operator-error guards.
 
 Write a game-day charter for regional unavailability plus a failed workflow.
 Then compare single-region restore, warm standby, and active regional service.
-Defend one option to product, data/security, finance, and on-call reviewers;
-record dissent and reversal evidence.
+Answer the frozen solo-review questions from product, data/security, finance,
+and on-call perspectives; record dissent and reversal evidence. A live panel is
+optional.

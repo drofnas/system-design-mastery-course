@@ -35,3 +35,5 @@ The DR review calls active/active “most reliable” without cost, shared fate,
 security, migration, or ownership. The hidden Gate 4 workflow duplicates an
 irreversible effect. The Week 48 file overwrites an earlier revision instead of
 creating separate evidence.
+The required A12 recovery-tier and degradation ADR is absent, and the DR review
+is incorrectly double-counted as a decision record.

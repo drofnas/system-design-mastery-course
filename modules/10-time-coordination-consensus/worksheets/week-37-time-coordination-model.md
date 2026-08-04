@@ -44,4 +44,5 @@ consensus log, and reconciliation. Freeze F01–F08 predictions before trials.
 
 - Which prior belief changed?
 - Which uncertainty remains?
-- Which property will you teach to another engineer?
+- Which property will you teach through the frozen solo-review transfer
+  exercise? An optional engineer may review it after freezing.

@@ -1,144 +1,133 @@
-# Module 1 Resource Guide
+# Architectural Judgment Resource Guide
 
-## How to use this guide
+Local lessons are sufficient to complete the module. External sources reinforce
+the instruction and provide a checkable primary or practitioner reference; they
+never replace the local explanation, practice, or answer key.
 
-Local lessons are the primary instruction. External sources show how established
-architecture and operations communities frame the same problems. Complete each
-bounded assignment and record the requested evidence. Do not read every linked
-page on a source site.
+## Required authoritative spine
 
-All required material was free and reachable on 2026-07-31. If a link fails,
-use the named local lesson and note the failure in your learning log.
+The required records are RES-01, RES-04, RES-06, RES-07.
+Every required record is free and has a local written alternative. All other
+records below are optional enrichment and do not consume required module time.
 
-The course links to external works and supplies original summaries and
-exercises; it does not redistribute their text, slides, transcripts, or video.
-Publisher copyright and access terms continue to govern each external work.
+| Week | Required resources | Assigned minutes |
+|---:|---|---:|
+| 1 | RES-01, RES-04 | 65 |
+| 2 | RES-06 | 20 |
+| 3 | RES-07 | 45 |
+| 4 | None | 0 |
 
-## Week 1 required resources
+For each assigned source, preserve the requested evidence, one transfer limit,
+and one observation that would falsify the claim. A required source that is
+temporarily unavailable is replaced by its local alternative and the same evidence
+task; record the substitution.
 
-### CMU SEI: Reasoning About Software Quality Attributes
+## Resource records
 
-- Type: authoritative written source
-- Time: 35 minutes
-- Read: overview and “General Scenarios,” then read far enough to understand
-  that a mechanism may improve one quality while weakening another
-- Purpose: distinguish a quality name from a scenario that can influence design
-- Evidence: one vague quality claim rewritten as a specific scenario; one
-  plausible trade-off
-- Link: [Reasoning About Software Quality Attributes](https://www.sei.cmu.edu/library/reasoning-about-software-quality-attributes/)
-- Local fallback: [Lesson 4](lessons/04-quality-attribute-scenarios.md)
+### RES-01: Reasoning About Software Quality Attributes
 
-### CMU SEI webcast: Eliciting Quality Attribute Requirements
+- **Author/publisher:** Software Engineering Institute, Carnegie Mellon University
+- **URL:** https://www.sei.cmu.edu/library/reasoning-about-software-quality-attributes/
+- **Type/status:** authoritative written source; Required
+- **Access:** free
+- **Week/time:** Week 1; 35 minutes assigned
+- **Purpose:** Read the overview and General Scenarios sections through the discussion of trade-offs.
+- **Boundary and evidence:** Read the overview and General Scenarios sections through the discussion of trade-offs. Record one quality name that remains ambiguous until expressed as a scenario.
+- **Local alternative:** [lessons/04-quality-attribute-scenarios.md](lessons/04-quality-attribute-scenarios.md)
+- **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-07-31
+- **Reflection:** Which claim transfers to this module, which assumption limits it, and what evidence would falsify it?
 
-- Type: creator/practitioner webcast with supplemental slides
-- Time: 60 minutes
-- View: complete webcast or study the complete slide deck
-- Purpose: see how stakeholder goals become prioritized scenarios
-- Evidence: list the workshop steps that prevent the loudest stakeholder from
-  defining all priorities
-- Link: [Architecting in a Complex World](https://www.sei.cmu.edu/library/architecting-in-a-complex-world-eliciting-and-specifying-quality-attribute-requirements/)
-- Accessibility: use supplemental slides or the local written lesson when video
-  playback or captions are unsuitable
-- Local fallback: [Lesson 4](lessons/04-quality-attribute-scenarios.md)
+### RES-04: The C4 model for visualising software architecture
 
-### Google SRE Workbook: Implementing SLOs
+- **Author/publisher:** Simon Brown and the C4 model project
+- **URL:** https://c4model.com/
+- **Type/status:** official documentation; Required
+- **Access:** free
+- **Week/time:** Week 1; 30 minutes assigned
+- **Purpose:** Read the overview, abstractions, system-context guidance, notation guidance, and diagram-review checklist.
+- **Boundary and evidence:** Read the overview, abstractions, system-context guidance, notation guidance, and diagram-review checklist. Identify which details do not belong on a context diagram.
+- **Local alternative:** [lessons/05-context-and-boundaries.md](lessons/05-context-and-boundaries.md)
+- **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-07-31
+- **Reflection:** Which claim transfers to this module, which assumption limits it, and what evidence would falsify it?
 
-- Type: first-person practitioner handbook
-- Time: 45 minutes
-- Read: “Getting Started,” “SLI Specification and SLI Implementation,” and
-  “Modeling User Journeys”
-- Purpose: connect user-visible outcomes to measurable signals while exposing
-  measurement limitations
-- Evidence: explain one case where a server-side success metric overstates user
-  success
-- Link: [Implementing SLOs](https://sre.google/workbook/implementing-slos/)
-- Local fallback: [Lesson 2](lessons/02-problem-framing-and-workloads.md) and
-  [Lesson 4](lessons/04-quality-attribute-scenarios.md)
+### RES-06: Documenting Architecture Decisions
 
-### Official C4 model
+- **Author/publisher:** Michael Nygard; Cognitect
+- **URL:** https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions
+- **Type/status:** original practitioner article; Required
+- **Access:** free
+- **Week/time:** Week 2; 20 minutes assigned
+- **Purpose:** Read the complete article.
+- **Boundary and evidence:** Read the complete article. Explain why preserving a superseded decision is useful and identify one decision too small to deserve an ADR.
+- **Local alternative:** [lessons/08-decisions-rfcs-and-defense.md](lessons/08-decisions-rfcs-and-defense.md)
+- **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-07-31
+- **Reflection:** Which claim transfers to this module, which assumption limits it, and what evidence would falsify it?
 
-- Type: creator-maintained documentation
-- Time: 30 minutes
-- Read: overview, abstractions, system context, notation, and diagram-review
-  guidance
-- Purpose: communicate people, systems, relationships, and boundaries without
-  mixing abstraction levels
-- Evidence: identify three details that do not belong on a context diagram
-- Link: [C4 model](https://c4model.com/)
-- License note: the official site states that its website and example diagrams
-  use Creative Commons Attribution 4.0; this course still uses original examples
-- Local fallback: [Lesson 5](lessons/05-context-and-boundaries.md)
+### RES-07: Challenges with Distributed Systems
 
-## Week 1 optional video
+- **Author/publisher:** Amazon Web Services
+- **URL:** https://builder.aws.com/content/3F08f7GPFiZMCgXD8gny6OjxR0Z/challenges-with-distributed-systems
+- **Type/status:** first-person engineering case; Required
+- **Access:** free
+- **Week/time:** Week 3; 45 minutes assigned
+- **Purpose:** Read the complete article.
+- **Boundary and evidence:** Read the complete article. Add three independent failure combinations and one unknown-outcome case to the transit case failure matrix.
+- **Local alternative:** [lessons/07-failure-models-and-adversarial-review.md](lessons/07-failure-models-and-adversarial-review.md)
+- **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-07-31
+- **Reflection:** Which claim transfers to this module, which assumption limits it, and what evidence would falsify it?
 
-### Simon Brown: The C4 model for visualising software architecture
+### RES-02: Architecting in a Complex World: Eliciting and Specifying Quality Attribute Requirements
 
-- Type: creator-led conference talk hosted by Devoxx
-- Time: approximately 60 minutes
-- View: complete talk
-- Purpose: observe diagram critique and communication failures in practice
-- Evidence: record three diagram smells and the review problem each creates
-- Link: [C4 model video](https://www.youtube.com/watch?v=KvoBrUd1-5E)
-- Accessibility: [Lesson 5](lessons/05-context-and-boundaries.md) covers the
-  assigned concepts in text
+- **Author/publisher:** Software Engineering Institute, Carnegie Mellon University
+- **URL:** https://www.sei.cmu.edu/library/architecting-in-a-complex-world-eliciting-and-specifying-quality-attribute-requirements/
+- **Type/status:** webcast; Optional enrichment
+- **Access:** free
+- **Week/time:** Week 1; 60 minutes optional
+- **Purpose:** Watch the complete webcast or study the supplemental slides.
+- **Boundary and evidence:** Watch the complete webcast or study the supplemental slides. Write down the workshop steps that prevent the loudest stakeholder from defining every priority.
+- **Local alternative:** [lessons/04-quality-attribute-scenarios.md](lessons/04-quality-attribute-scenarios.md)
+- **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-07-31
+- **Reflection:** Which claim transfers to this module, which assumption limits it, and what evidence would falsify it?
 
-## Week 2 required resource
+### RES-03: Implementing SLOs
 
-### Michael Nygard: Documenting Architecture Decisions
+- **Author/publisher:** Google Site Reliability Engineering
+- **URL:** https://sre.google/workbook/implementing-slos/
+- **Type/status:** practitioner handbook chapter; Optional enrichment
+- **Access:** free
+- **Week/time:** Week 1; 45 minutes optional
+- **Purpose:** Read Getting Started, SLI Specification versus Implementation, and Modeling User Journeys.
+- **Boundary and evidence:** Read Getting Started, SLI Specification versus Implementation, and Modeling User Journeys. Explain why a server metric may misrepresent a user's outcome.
+- **Local alternative:** [lessons/02-problem-framing-and-workloads.md](lessons/02-problem-framing-and-workloads.md)
+- **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-07-31
+- **Reflection:** Which claim transfers to this module, which assumption limits it, and what evidence would falsify it?
 
-- Type: original practitioner article
-- Time: 20 minutes
-- Read: complete article
-- Purpose: understand the value, scope, lifecycle, and immutability of ADRs
-- Evidence: explain why a superseded decision remains useful; name one decision
-  too small to justify an ADR
-- Link: [Documenting Architecture Decisions](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions)
-- License note: the publisher states that the article is dedicated to the
-  public domain to the extent possible
-- Local fallback: [Lesson 8](lessons/08-decisions-rfcs-and-defense.md)
+### RES-05: The C4 model for visualising software architecture
 
-## Week 3 required resource
+- **Author/publisher:** Simon Brown and the C4 model project
+- **URL:** https://www.youtube.com/watch?v=KvoBrUd1-5E
+- **Type/status:** conference video; Optional enrichment
+- **Access:** free
+- **Week/time:** Week 1; 60 minutes optional
+- **Purpose:** Watch the complete creator-led talk.
+- **Boundary and evidence:** Watch the complete creator-led talk. Capture three diagram smells and how each impairs a design review.
+- **Local alternative:** [lessons/05-context-and-boundaries.md](lessons/05-context-and-boundaries.md)
+- **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-07-31
+- **Reflection:** Which claim transfers to this module, which assumption limits it, and what evidence would falsify it?
 
-### AWS Builder Center: Challenges with Distributed Systems
+### RES-08: ISO/IEC 25010:2023 Product quality model
 
-- Type: first-person engineering case by an AWS Senior Principal Engineer
-- Time: 45 minutes
-- Read: complete article
-- Purpose: understand independent failures, nondeterminism, unknown outcomes,
-  combinations, and why distributed designs enlarge the failure matrix
-- Evidence: add three combined faults and one unknown-outcome case to the
-  transit failure matrix
-- Link: [Challenges with Distributed Systems](https://builder.aws.com/content/3F08f7GPFiZMCgXD8gny6OjxR0Z/challenges-with-distributed-systems)
-- Local fallback: [Lesson 7](lessons/07-failure-models-and-adversarial-review.md)
+- **Author/publisher:** ISO/IEC
+- **URL:** https://www.iso.org/standard/78176.html
+- **Type/status:** standard; Optional enrichment
+- **Access:** paid
+- **Week/time:** Week 1; 60 minutes optional
+- **Purpose:** Optional: review the current product-quality taxonomy and compare its categories with the scenarios you wrote.
+- **Boundary and evidence:** Optional: review the current product-quality taxonomy and compare its categories with the scenarios you wrote.
+- **Local alternative:** [lessons/04-quality-attribute-scenarios.md](lessons/04-quality-attribute-scenarios.md)
+- **Verification:** verified manually optional; manual primary-source verification; last checked 2026-07-31
+- **Reflection:** Which claim transfers to this module, which assumption limits it, and what evidence would falsify it?
 
-## Optional paid enrichment
-
-### ISO/IEC 25010:2023
-
-- Type: international product-quality standard
-- Time: 60 minutes
-- Use: compare its current quality taxonomy with your quality scenarios
-- Link: [ISO/IEC 25010:2023](https://www.iso.org/standard/78176.html)
-- Access: the abstract and preview are free; the full standard is paid and is
-  never required
-
-### Designing Data-Intensive Applications, Chapter 1
-
-- Type: syllabus spine book
-- Time: 90 minutes
-- Use: compare the chapter’s treatment of reliability, scalability, and
-  maintainability with your measurable scenarios
-- Access: optional paid book; use the local lessons if unavailable
-
-## Source-review record
-
-For each source, record:
-
-```text
-Source:
-Date accessed:
-Claim or method learned:
-Evidence in the source:
-How it changes or challenges my model:
-Limitations, context, or vendor-specific assumptions:
-```
+Do not copy articles, chapters, slides, or transcripts into learner artifacts.
+Use short attributed quotations only when necessary and otherwise paraphrase with
+the source ID, exact section boundary, and stated evidence limit.

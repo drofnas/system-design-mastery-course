@@ -1,0 +1,839 @@
+{
+  "schema_version": "2.0",
+  "module": "M17",
+  "reviewed_commit": "670fcb8a202d8aea43d03f15f435054fdb2685f5",
+  "reviewed_at": "2026-08-04",
+  "evidence_boundary": "This ledger records a source-level semantic review of lessons, worked answers, case studies, exercises, worksheets, rubrics, and lab guides. It verifies named mechanisms against bounded primary or official sources, distinguishes normative course contracts, and does not turn synthetic examples into production measurements.",
+  "claims": [
+    {
+      "id": "M17-FC-001",
+      "location": {
+        "path": "lessons/01-mathematics-for-inference.md",
+        "heading": "Mechanism: keep a shape-and-units ledger"
+      },
+      "claim": "A vector is an ordered list; a matrix is a rectangular map between vector spaces. For X[m,n] @ W[n,p], the shared n dimension contracts and the result has shape [m,p]. Record both arithmetic and traffic: a dense product performs approximately 2mnp floating-point operations when a multiply and add count separately, while reading and writing depends on precision and reuse.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-01"
+      ],
+      "source_sections": [
+        "Read Chapter 2 Sections 2.1-2.5, Chapter 3 Sections 3.1-3.4 and 3.13, and Chapter 4 Sections 4.1-4.3; reproduce one matrix, entropy, and gradient calculation."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "00b5821713a3e069cad0e118b68ca8da37eb61093ae637b8d4e92e30ae2c1ed5",
+      "source_section_sha256": [
+        "c48dd78613dd507be649e686665c2c3d6363f88453eb7548e7924f6905f38e76"
+      ]
+    },
+    {
+      "id": "M17-FC-002",
+      "location": {
+        "path": "lessons/02-tokens-embeddings-attention.md",
+        "heading": "Mechanism: discrete identity enters continuous computation"
+      },
+      "claim": "A tokenizer maps normalized text to integer IDs under a versioned vocabulary. Changing normalization, special tokens, or vocabulary changes model input and invalidates caches. An embedding table selects one dense row per ID. Position information makes order observable.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "CIT-01",
+        "RES-02"
+      ],
+      "source_sections": [
+        "Hugging Face Tokenizers pipeline sections Normalization, Pre-Tokenization, The Model, and Post-Processing on text transformation, vocabulary-to-ID mapping, and special tokens.",
+        "Attention Is All You Need Sections 3.1-3.5 on token embeddings, positional encodings, and the ordered model input consumed by attention."
+      ],
+      "verification_method": "official-documentation comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "7ee55d25835d1522f0a046f0117e498342add73d28a65734a05272c9d26339bf",
+      "source_section_sha256": [
+        "f52e6c2b8364f41433f7ae145a99bba57e423630d2590243cbd91e0d139269a9",
+        "e53ac83a4a54b15dac3b64913ad6b5b06de790aa4c7a86e02c1e2bdbafa97a7b"
+      ]
+    },
+    {
+      "id": "M17-FC-003",
+      "location": {
+        "path": "lessons/03-transformer-inference-path.md",
+        "heading": "Mechanism: one parallel phase followed by a serial dependency chain"
+      },
+      "claim": "A decoder block combines normalized hidden state, masked self-attention, residual connections, and a feed-forward network. A final projection produces vocabulary logits. Training and inference use the same parameters but different workflows: inference fixes weights and repeatedly chooses the next token.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-02"
+      ],
+      "source_sections": [
+        "Read Sections 3.1-3.5 only; annotate tensor shapes, scaling, masking, and parallelism claims."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "6685138603d323ef1e2203a11ff8dbb4ce5ae1b54edba3cadf504a516c4ad876",
+      "source_section_sha256": [
+        "a086803258aafbd4227bd9c20cee45d86996d49ad614618a79c27c0be4a92545"
+      ]
+    },
+    {
+      "id": "M17-FC-004",
+      "location": {
+        "path": "lessons/04-compute-memory-capacity.md",
+        "heading": "Mechanism: reserve bytes before requests"
+      },
+      "claim": "Inference admission must reserve bounded weight, runtime, activation, and key-value cache memory before work begins; memory fit alone does not prove latency capacity.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-03",
+        "RES-05"
+      ],
+      "source_sections": [
+        "Use only Lectures 1-5 and 10 materials; separate token, operator, memory, hardware, and serving claims in a concept ledger.",
+        "Read Sections 2-4 and 7; reproduce the fragmentation argument and list the assumptions that differ from Atlas."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "d4694187c02ad90a19231c0c07b6c2d80eaa7d87f4da1dbccad72853f677e92b",
+      "source_section_sha256": [
+        "ca567224b48ba62b786b67dd710f8b83dff9ed7607164adfc17edcc5710541be",
+        "b2b34d09c2664b6ec9680f2ee5a17b93590fb5d3fe08a77de7385f581bc0e24f"
+      ]
+    },
+    {
+      "id": "M17-FC-005",
+      "location": {
+        "path": "lessons/05-profiling-inference-metrics.md",
+        "heading": "Mechanism: one request needs several clocks"
+      },
+      "claim": "Record monotonic timestamps for arrival, admission, execution start, prefill end, each token, terminal result, and resource release. Under this module, TTFT is firsttoken - arrival; queue time is not hidden. ITL is the distribution of differences between adjacent output-token timestamps. End-to-end latency ends at the terminal event. Report accepted, rejected, failed, cancelled, and deadline outcomes separately.",
+      "classification": "normative",
+      "source_ids": [],
+      "source_sections": [],
+      "verification_method": "course-contract review",
+      "status": "verified",
+      "scope_limit": "This is a published course evidence-quality or decision rule, not an empirical statement about an external system.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "4cde85c920e0769eef23f5c7174e0adaac66520bd052ad1672c14cefa72a8928",
+      "source_section_sha256": []
+    },
+    {
+      "id": "M17-FC-006",
+      "location": {
+        "path": "lessons/06-scheduling-admission-fairness.md",
+        "heading": "Mechanism: choose who consumes the next token budget"
+      },
+      "claim": "Fixed batching waits for a group and often releases capacity only when the whole group finishes. Continuous batching can add and remove sequences at iteration boundaries. Token-budget batching caps total scheduled prompt/decode tokens, a more faithful resource control than request count.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-05",
+        "RES-09"
+      ],
+      "source_sections": [
+        "Read Sections 2-4 and 7; reproduce the fragmentation argument and list the assumptions that differ from Atlas.",
+        "Read the full case; separate measurements, interventions, outcomes, scale assumptions, and claims that do not transfer to generative Atlas workloads."
+      ],
+      "verification_method": "official-documentation comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "71c20c6cd43d2f1ca01b96d6c7be56fefa0c408a9845514711d1deea42e37849",
+      "source_section_sha256": [
+        "b2b34d09c2664b6ec9680f2ee5a17b93590fb5d3fe08a77de7385f581bc0e24f",
+        "751f6deb7fcc098cc2b6f9673ac89c09a56c1202a98c09bc973b7e3e41f5f9c3"
+      ]
+    },
+    {
+      "id": "M17-FC-007",
+      "location": {
+        "path": "lessons/07-caches-quantization-failover.md",
+        "heading": "Mechanism: optimizations change correctness boundaries"
+      },
+      "claim": "A prefix cache may reuse KV state only when the entire computation prefix is compatible.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-05",
+        "RES-06",
+        "RES-08",
+        "RES-09"
+      ],
+      "source_sections": [
+        "Read Sections 2-4 and 7; reproduce the fragmentation argument and list the assumptions that differ from Atlas.",
+        "Read preemption, chunked prefill, and input processing only; map each current control to the Atlas failure it could affect.",
+        "Read Sections 1-4 and 5.3-5.5; identify the precision, hardware, corpus, and metric boundaries behind each claim.",
+        "Read the full case; separate measurements, interventions, outcomes, scale assumptions, and claims that do not transfer to generative Atlas workloads."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "ee98fc56d342fdd102277d44f5f732d05826c1bed3b4df26fc5bfaef28f08a10",
+      "source_section_sha256": [
+        "b2b34d09c2664b6ec9680f2ee5a17b93590fb5d3fe08a77de7385f581bc0e24f",
+        "a5e1d8c830b8f6ee1d9e1e4a7379c6696db2d5a0712c428280332b9899334277",
+        "cc89c4b93d8d56c82da33a43bd8b4eead393ece4ed730e46ea2fad15d3802ef7",
+        "751f6deb7fcc098cc2b6f9673ac89c09a56c1202a98c09bc973b7e3e41f5f9c3"
+      ]
+    },
+    {
+      "id": "M17-FC-008",
+      "location": {
+        "path": "lessons/08-atlas-inference-decision.md",
+        "heading": "Mechanism: evidence closes the decision loop"
+      },
+      "claim": "An inference decision reconciles predictions with measured evidence, compares deployment alternatives under one workload, assigns owners, and defines shadow, canary, rollback, and reversal gates.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-09"
+      ],
+      "source_sections": [
+        "Read the full case; separate measurements, interventions, outcomes, scale assumptions, and claims that do not transfer to generative Atlas workloads."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "cf6c2796f9146649723176875218a7252d9cd24bde5c6e08b77efbd90ca8a78a",
+      "source_section_sha256": [
+        "751f6deb7fcc098cc2b6f9673ac89c09a56c1202a98c09bc973b7e3e41f5f9c3"
+      ]
+    },
+    {
+      "id": "M17-FC-009",
+      "location": {
+        "path": "exercises/answer-key.md",
+        "heading": "EX-01–EX-04"
+      },
+      "claim": "EX-01 should show a 2x2 output and six multiply-add terms per row pair; operations and bytes depend on the stated counting convention and precision.",
+      "classification": "synthetic",
+      "source_ids": [],
+      "source_sections": [],
+      "verification_method": "controlled synthetic fixture",
+      "status": "verified",
+      "scope_limit": "The values, state, and outcome are bounded to the named course fixture and must not be generalized to production.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "f8697f55744e127e517d58402d87344cb4f92d50b54726f993565d12f78d38e2",
+      "synthetic_label": "Synthetic course data or behavior; not production evidence.",
+      "source_section_sha256": []
+    },
+    {
+      "id": "M17-FC-010",
+      "location": {
+        "path": "case-study/atlas-museum-service.md",
+        "heading": "Context and workload"
+      },
+      "claim": "Atlas serves four museums. Curators submit public object metadata and private draft notes to produce 80–120 word label drafts. Interactive preview targets a 750 ms p95 TTFT and 120 ms p95 ITL; overnight batch work has no interactive latency objective. Peak demand is 18 interactive and 45 batch arrivals per second. Prompts range from 64 to 2,048 tokens; outputs are capped at 160 tokens.",
+      "classification": "synthetic",
+      "source_ids": [],
+      "source_sections": [],
+      "verification_method": "controlled synthetic fixture",
+      "status": "verified",
+      "scope_limit": "The values, state, and outcome are bounded to the named course fixture and must not be generalized to production.",
+      "synthetic_label": "Synthetic course data or behavior; not production evidence.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "784f5ab850d16a8eeb2f404926c996c2f0c83c5c522a2974a20fd9406fef5575",
+      "source_section_sha256": []
+    },
+    {
+      "id": "M17-FC-011",
+      "location": {
+        "path": "lessons/01-mathematics-for-inference.md",
+        "heading": "Worked example"
+      },
+      "claim": "The W matrix and its worked product are synthetic arithmetic inputs used to check shapes and operations, not model-quality or hardware evidence.",
+      "classification": "synthetic",
+      "source_ids": [],
+      "source_sections": [],
+      "verification_method": "controlled synthetic fixture",
+      "status": "verified",
+      "scope_limit": "The values, state, and outcome are bounded to the named course fixture and must not be generalized to production.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "008348373dfaaf61064dc27121cbda669516e34ebbbb2e24ff104fad1e9377e0",
+      "synthetic_label": "Synthetic course data or behavior; not production evidence.",
+      "source_section_sha256": []
+    },
+    {
+      "id": "M17-FC-012",
+      "location": {
+        "path": "lessons/02-tokens-embeddings-attention.md",
+        "heading": "Mechanism: discrete identity enters continuous computation"
+      },
+      "claim": "The document uses the bounded expression Attention(Q,K,V) = softmax((QK^T / sqrt(d_k)) + mask)V; its semantics, substitution where arithmetic applies, and stated assumptions were checked as a reproducible derivation.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-02"
+      ],
+      "source_sections": [
+        "Read Sections 3.1-3.5 only; annotate tensor shapes, scaling, masking, and parallelism claims."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "The mapping verifies the written expression and arithmetic under its declared assumptions; synthetic inputs and a local result do not establish a production distribution.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "ce2de2722c1c3aab6af951f11edb31544190a507fa1b632874345c691fd25bc4",
+      "source_section_sha256": [
+        "a086803258aafbd4227bd9c20cee45d86996d49ad614618a79c27c0be4a92545"
+      ]
+    },
+    {
+      "id": "M17-FC-013",
+      "location": {
+        "path": "lessons/04-compute-memory-capacity.md",
+        "heading": "Mechanism: reserve bytes before requests"
+      },
+      "claim": "The document uses the bounded expression KV bytes = 2 * layers * kv_heads * head_dim * live_tokens * bytes_per_value; its semantics, substitution where arithmetic applies, and stated assumptions were checked as a reproducible derivation.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-05"
+      ],
+      "source_sections": [
+        "Read Sections 2-4 and 7; reproduce the fragmentation argument and list the assumptions that differ from Atlas."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "The mapping verifies the written expression and arithmetic under its declared assumptions; synthetic inputs and a local result do not establish a production distribution.",
+      "verified_at": "2026-08-04",
+      "claim_sha256": "a71e2d6f16d7f49b9187a713072efbd0c17521c214cd2591cba56796c1d84c50",
+      "source_section_sha256": [
+        "b2b34d09c2664b6ec9680f2ee5a17b93590fb5d3fe08a77de7385f581bc0e24f"
+      ]
+    }
+  ],
+  "lesson_coverage": [
+    {
+      "lesson_id": "L01",
+      "path": "lessons/01-mathematics-for-inference.md",
+      "claim_ids": [
+        "M17-FC-001"
+      ]
+    },
+    {
+      "lesson_id": "L02",
+      "path": "lessons/02-tokens-embeddings-attention.md",
+      "claim_ids": [
+        "M17-FC-002"
+      ]
+    },
+    {
+      "lesson_id": "L03",
+      "path": "lessons/03-transformer-inference-path.md",
+      "claim_ids": [
+        "M17-FC-003"
+      ]
+    },
+    {
+      "lesson_id": "L04",
+      "path": "lessons/04-compute-memory-capacity.md",
+      "claim_ids": [
+        "M17-FC-004"
+      ]
+    },
+    {
+      "lesson_id": "L05",
+      "path": "lessons/05-profiling-inference-metrics.md",
+      "claim_ids": [
+        "M17-FC-005"
+      ]
+    },
+    {
+      "lesson_id": "L06",
+      "path": "lessons/06-scheduling-admission-fairness.md",
+      "claim_ids": [
+        "M17-FC-006"
+      ]
+    },
+    {
+      "lesson_id": "L07",
+      "path": "lessons/07-caches-quantization-failover.md",
+      "claim_ids": [
+        "M17-FC-007"
+      ]
+    },
+    {
+      "lesson_id": "L08",
+      "path": "lessons/08-atlas-inference-decision.md",
+      "claim_ids": [
+        "M17-FC-008"
+      ]
+    }
+  ],
+  "document_coverage": [
+    {
+      "path": "README.md",
+      "sha256": "4b77396896957d3dffaf5e9da3ffe7185ba7a61523f70bc6d8d2095df0a72f45",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
+    },
+    {
+      "path": "assessment/README.md",
+      "sha256": "d61e62bc51fa93abf0e72d11279bbcf971fa07922e055789c4a2a7fcfe363f1e",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
+    },
+    {
+      "path": "assessment/calibration/README.md",
+      "sha256": "c08776294baf76f7f26fe9387440b01cd42b697ece36c92a88cb0ee99c640dc1",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "assessment/calibration/expected-results.json",
+      "sha256": "64e73f6f74a24ebca29c4f23535378d66059ad883e5451a9cb8f1c217ac5aa95",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "assessment/calibration/manifests/pass.json",
+      "sha256": "8150a269b9aec36ba08fe2f3880fec268e7ca2757c8e607fa947b1a8e5e2abcc",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "assessment/calibration/manifests/repeat.json",
+      "sha256": "0d7e173427670b6d9c87f75cb05f9229dd0ccd411037680e1646714b88fb50f1",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "assessment/calibration/manifests/revise.json",
+      "sha256": "f6b32efffccaa8f484d1078972fdcf3a5f5102c6b436908295591123b39310f2",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "assessment/calibration/pass.md",
+      "sha256": "81067ffd71c497358baf09caea34720fdc5b9168f1dd90e07a7b39389eb98a33",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "assessment/calibration/repeat.md",
+      "sha256": "d3c5544d807e6035091d1f8a0a6dc68d6de07af7812fec5afafe874abf911de5",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "assessment/calibration/revise.md",
+      "sha256": "2b03a8bf8b0200dc25956f1b1f9113ae19998f3752dfd46de18e316b0435b788",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "assessment/evaluator-prompt.md",
+      "sha256": "1ffd6a5ae61ab0ed32250012d0fa20f48a3b418ff9009ef53ae4cdeb02092f11",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
+    },
+    {
+      "path": "assessment/readiness-review.md",
+      "sha256": "de07018fe9c1ecdc3fd7c9a320626e19a2554ee7882a4bc4abf85973ed071f85",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
+    },
+    {
+      "path": "assessment/remediation-map.md",
+      "sha256": "311141143523e9406f557ec954e0868841bc2f52b03443449e7dfca37ab67cd9",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
+    },
+    {
+      "path": "assessment/report-template.md",
+      "sha256": "48824e799e4245991edf7d9716b4a2b42da9401c1e102301d485700aa67e4442",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
+    },
+    {
+      "path": "assessment/rubric.md",
+      "sha256": "66d310f756d464c50306f7a128d1a42d8b61e919f571db98db3d4ff5ca6da30b",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "assessment/semantic-readiness-review.md",
+      "sha256": "2f24ae2d31fb72080708e25455328b56d44319e6475c1d95b3db2b2b55dd64ad",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
+    },
+    {
+      "path": "case-study/atlas-museum-service.md",
+      "sha256": "68ca17bee3403cd96ddfafbd8a7e05c9ff6936e854a03bbe733888c22fd2d37a",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [
+        "M17-FC-010"
+      ],
+      "review_note": "The case was reviewed for explicit synthetic boundaries, internal arithmetic, non-generalization language, and separation from the learner capstone.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "sha256": "33075c3f4305cf83cbc757b101e61935403a7f1b11c14678e803ef43ce41851c",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M17-FC-009"
+      ],
+      "review_note": "Explained answers were checked for causal consistency, formula provenance, and agreement with the locally taught mechanism and cited source boundary."
+    },
+    {
+      "path": "exercises/exercises.md",
+      "sha256": "6b0a18185919c2c4cf89571e10b28dbda6c8042d739f86194f6dc52fb05f64de",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "glossary.md",
+      "sha256": "4664bace6e64607bf1119eeff59f1120a67850fdc6f99968372cb1aaa2cd5c09",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
+    },
+    {
+      "path": "lab/README.md",
+      "sha256": "662a0d74f110344aaa717fbb064356e8acae7953ad2ba2ce9ef4adee3bc9c44a",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "The lab guide's commands, interfaces, bounds, and synthetic evidence limitations were checked directly against the executable implementation and its passing tests."
+    },
+    {
+      "path": "lab/inference_lab/__init__.py",
+      "sha256": "7a337188ce94542e5ec1f2c2e293d9eadb18647d6d61de297df1f05f7406f89d",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/inference_lab/__main__.py",
+      "sha256": "f3044d830277ddfc8fe6f8c7467d98bc0bcf829d962ac41047a1571a01b5f063",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/inference_lab/config.py",
+      "sha256": "44db0be84c30205fad12d40b150b09e8ad447e1b38189734327157f683087aa3",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/inference_lab/model.py",
+      "sha256": "55de236f041f6f5b9629010c027411e1e4214b2024382a96f85e62c8fc8ce92c",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/inference_lab/profile.py",
+      "sha256": "571ddf7b167e6ffe3470a3ecaec8d33fa08fba4d0f1a043c81f78dc63a3b4fa3",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/inference_lab/runner.py",
+      "sha256": "bda0afb8273f97d548b3d373ab72f03a105d9f93d1718306fd34f18ed20d1c62",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/inference_lab/server.py",
+      "sha256": "450af6fd6a7acbebc8a9697ac31d24c69fea190beba1da06293c9a658e1a7a24",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/inference_lab/tensor.py",
+      "sha256": "db21d6df2fc3d690e05125d0bd6d0a23da6f69c397628e2879ea051425c35b53",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/scenarios/f01-memory-exhaustion-broken.json",
+      "sha256": "cfbf95fd180016eb29c7f24f476072b676f66c06365d0bb8f8d15c44ad7d3a38",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/f01-memory-exhaustion-repaired.json",
+      "sha256": "1666665f3de7d2cb9fcbb3b8d14959a9f0b05bd1c482916935d1304283f26693",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/f02-mixed-length-starvation-broken.json",
+      "sha256": "c0966aa7b6833a37dfd1081e7a33826c3bff510de95ba889a3c6ed51e4ea8614",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/f02-mixed-length-starvation-repaired.json",
+      "sha256": "4cf303379dbacb7f69ad7cf1eff895d8328332a015174c88225ded6e682a5bf1",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/f03-queue-overload-broken.json",
+      "sha256": "ac61f00c48f5789062023ca34cbbcef43865e95d72d68b8f860de8ee1070e229",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/f03-queue-overload-repaired.json",
+      "sha256": "3d7df0ff235d318a00bee632cdb321d9a5a78f0ea2959cff9aa6b59bf8fe3f10",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/f04-cache-identity-broken.json",
+      "sha256": "c996c22bfffa87a91ccef6164ea5dc66bfe6d7acec6f135d46049ab405d237c2",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/f04-cache-identity-repaired.json",
+      "sha256": "c5b2c892fa7f077ef7ffcc1a4d64cb38f2cccf1b54bf8bfe70add62b765725e7",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/f05-precision-quality-broken.json",
+      "sha256": "4c4b647cb21b6b9adda0b2a0f883d5935dc7c1fd6d52d5176ddd22e5a9aeeeb2",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/f05-precision-quality-repaired.json",
+      "sha256": "63f6cf714234c47d122042ac6b4daf9a8919a16ebbc563377df5e675eeef4172",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/f06-provider-loss-broken.json",
+      "sha256": "62610fa5e987c0d48ece1d31d3035b933747f5220b80e021a8d6dc1141125abe",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/scenarios/f06-provider-loss-repaired.json",
+      "sha256": "e3c4f71d047ef07abd78e503fa3c9ce9161ca80abe0bcfb6a386ff6ac7dbcf79",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [],
+      "review_note": "Reviewed as a deterministic synthetic fixture; values and outcomes are not production evidence.",
+      "synthetic_label": "Synthetic course fixture; do not generalize as production evidence."
+    },
+    {
+      "path": "lab/tests/__init__.py",
+      "sha256": "2c92e5b74f0737ce621bf18ae0abfa5a4c918b9db4fbff3946b07fe2ad5c04d2",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/tests/test_scenarios_server.py",
+      "sha256": "56c1bc81f491f7bc4c959284b503d9687553144c9437f793470fbd6fd38f8d5c",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/tests/test_tensor_model.py",
+      "sha256": "15ff39d64fa1711880653bacdab381304558f48a4d6b2037c8793430758f7457",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lessons/01-mathematics-for-inference.md",
+      "sha256": "e05073ed5a25b1cf6e13b596fe0c568bb6f253c1f8262edb111d5c10ac9e0dd5",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M17-FC-001",
+        "M17-FC-011"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/02-tokens-embeddings-attention.md",
+      "sha256": "abbfad96bf124df9955422ca8d6865fc78401965c15d6769fc3f7f041114ea14",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M17-FC-002",
+        "M17-FC-012"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/03-transformer-inference-path.md",
+      "sha256": "13cc65efe7ebb0db8077dd4afe95e050ef0ef78185c05a51727bfbd396de454b",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M17-FC-003"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/04-compute-memory-capacity.md",
+      "sha256": "88ef0d8d15abb3380de2f2df7be95006f489d83d3ec96cf7d22028be17b07678",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M17-FC-004",
+        "M17-FC-013"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/05-profiling-inference-metrics.md",
+      "sha256": "5ba1c52fcec7aa73bd94b227cdcb4e61c101c1c403647a48a9e14b8ead822bfa",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M17-FC-005"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/06-scheduling-admission-fairness.md",
+      "sha256": "0691d6aa4fcfcce6a9eadde0d38f13629da103cdb70a4fd7b9436c962148e209",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M17-FC-006"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/07-caches-quantization-failover.md",
+      "sha256": "95fa67eec61d92db5c08f23aa57a4fe3edc9cb1be1b71ee0be076bbe06571ac5",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M17-FC-007"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/08-atlas-inference-decision.md",
+      "sha256": "62f9c0107e3fca455a7bda0fb177b43b98f35423f2675b840d48317d87bc5799",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M17-FC-008"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "module.json",
+      "sha256": "8370b524881e17f4a6666cedc91537953bbeeb607e96280a5227ed71a81549e4",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "resources.md",
+      "sha256": "1d4fce5c1800423bb68d30f9baa359161723c5b62f28d0287f3fee4077820166",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
+    },
+    {
+      "path": "worksheets/week-65-inference-model.md",
+      "sha256": "b940667adcef7e7bef2d6d62d26024953bf4e0c8adda2bd007915a4fe1758071",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-66-inference-build.md",
+      "sha256": "ce07beed01e2be773569abb28bbfb279a635dd43253cc1082886062dbdbdd10d",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-67-inference-failures.md",
+      "sha256": "70b78242653945378adb661bd322d912ecc5e5d966d4f19732cc8aa88d1cc763",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-68-inference-defense.md",
+      "sha256": "b79c677d40762abcdde8bde8408e2f378183b4d6c7712398e1b7eadb4b938737",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    }
+  ],
+  "formula_mappings": [
+    {
+      "path": "lessons/02-tokens-embeddings-attention.md",
+      "heading": "Mechanism: discrete identity enters continuous computation",
+      "normalized_expression": "Attention(Q,K,V) = softmax((QK^T / sqrt(d_k)) + mask)V",
+      "expression_sha256": "15a1e8ff3e6145a7303001513ac66f02b5af6ad6170f89fe6c86a3b4628aca52",
+      "claim_id": "M17-FC-012"
+    },
+    {
+      "path": "lessons/04-compute-memory-capacity.md",
+      "heading": "Mechanism: reserve bytes before requests",
+      "normalized_expression": "KV bytes = 2 * layers * kv_heads * head_dim * live_tokens * bytes_per_value",
+      "expression_sha256": "185f86025dfbb92438ae8f652d983967a75adce45f8e1311d1343bf5b85991f9",
+      "claim_id": "M17-FC-013"
+    }
+  ],
+  "content_digest": "c2c15ab37d44a367b410b31312a3441eb5d3ef56e14916da1bc30c7a678af58f",
+  "review_attestation": {
+    "reviewer": "course readiness remediation review",
+    "method": "primary-source semantic review",
+    "status": "complete",
+    "content_digest": "c2c15ab37d44a367b410b31312a3441eb5d3ef56e14916da1bc30c7a678af58f",
+    "scope_note": "All tracked learner-facing prose, exercises, answers, assessment contracts, synthetic fixtures, laboratory documentation, implementation, and configuration in this module were inventoried; substantive claims were checked against the named source boundaries."
+  }
+}

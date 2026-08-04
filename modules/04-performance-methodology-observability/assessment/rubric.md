@@ -94,7 +94,8 @@ can invalidate decisions and harm users.
 - **2:** interleaving and threshold exist but uncertainty or inconclusive handling
   is weak.
 - **3:** raw interleaved repetitions, effect ratio, dispersion/uncertainty,
-  meaningful threshold, and block/rerun/rollback action are reproducible.
+  meaningful threshold, and block/rerun/rollback action are reproducible; A11
+  records the resulting policy decision without treating the report as an ADR.
 - **4:** the budget is integrated into a stable release gate and validated against
   pass, regression, and inconclusive fixtures.
 
@@ -116,8 +117,9 @@ can invalidate decisions and harm users.
 - **2:** understandable summary with weak challenge handling or uncertainty.
 - **3:** concise evidence chain withstands questions without changing workload or
   failure model; feedback and follow-up owners are recorded.
-- **4:** another engineer can apply the method to a different stack and identify
-  where the evidence would stop transferring.
+- **4:** the frozen role-based transfer exercise applies the method to a
+  different stack, identifies where evidence stops transferring, and improves
+  the explanation. Optional human application upgrades attestation, not score.
 
 ## Result thresholds
 

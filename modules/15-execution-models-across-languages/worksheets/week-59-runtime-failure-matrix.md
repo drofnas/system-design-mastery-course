@@ -5,6 +5,8 @@
 Preserve predictions and raw trials. Each F01–F09 pair uses the same seed,
 logical input, and limits and changes exactly one control. Record scenario,
 shared-input, config, and output hashes.
+Run `run_conformance.py --mode matrix --runtime all --scenario all --output
+NEW_DIRECTORY`. Public request fields may not select a fault.
 
 ## Pair record
 

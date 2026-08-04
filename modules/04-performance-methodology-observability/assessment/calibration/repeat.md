@@ -35,3 +35,5 @@ timing difference a production-safe improvement and defines no regression budget
 The recommendation is to deploy globally. There is no owner, cost, failover,
 privacy, retention, migration, canary, rollback, or reversal condition. During
 review, the workload changes whenever a question challenges the conclusion.
+The required distinct A11 regression-policy ADR is absent; the benchmark report
+is incorrectly relabeled as both experiment evidence and a decision record.

@@ -4,6 +4,9 @@ Freeze each part before feedback. The practical uses Beacon Dispatch and a new
 seed/configuration; it is not a commerce solution. Submit exact headings and
 commits through the Module 6 evaluator.
 
+Use the [sealed-local gate workflow](../../../SOLO_GATE_GUIDE.md). Human review
+is optional and stronger portfolio evidence, but it is not required.
+
 ## Part 1: Written examination — 90 minutes
 
 Answer from mechanisms, arithmetic, and stated failure models.
@@ -27,24 +30,27 @@ Answer from mechanisms, arithmetic, and stated failure models.
 
 ## Part 2: Hidden-fault practical — 150 minutes
 
-Have a reviewer choose one new F01–F06 configuration without revealing its
-identity. Freeze your prediction and diagnostic plan. Collect raw trial/runtime
-evidence, identify observation versus cause, rank two alternatives, reveal the
-fault, apply one repair, and rerun identical useful work. Include evidence-kind
-and all relevant deadline, attempt, pool, effect, completeness, and cleanup data.
+Run `scripts/solo_gate.py prepare --gate G02`, freeze and commit the challenge,
+prediction, and diagnostic plan, then use `reveal` and `check`. Collect raw
+trial/runtime evidence, identify observation versus cause, rank two alternatives,
+apply one repair, and rerun identical useful work. Include evidence-kind and all
+relevant deadline, attempt, pool, effect, completeness, and cleanup data.
 
 ## Part 3: Architecture defense — 60 minutes
 
-Defend the independent commerce remote-call policy to reviewers playing
-dependency owner, security reviewer, finance partner, and on-call lead. Derive
+Defend the independent commerce remote-call policy against the frozen solo-review
+questions for dependency, security, finance, and on-call roles. An optional
+human panel may ask adaptive follow-ups. Derive
 one deadline, retry, idempotency, and overload decision. Record challenges,
 dissent, changed claims, follow-ups, owners, and reversal evidence.
 
 ## Part 4: Portfolio and revision review — 60 minutes
 
-Index Modules 4–6 evidence by file heading and commit. Show frozen predictions,
+Index Modules 4–6 evidence by file heading and commit, then validate the index
+through the frozen self-evaluation workflow. Show frozen predictions,
 builds/tests, failure investigations, decisions/revisions, and learning logs.
 Complete `capstone/revisions/week-24-gate-02.md` without editing earlier evidence.
+An optional independent evaluator may later review the identical bundle.
 
 ## Scoring
 

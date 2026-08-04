@@ -90,10 +90,14 @@ inference conclusion.
 - **1:** model/vendor preference without shared drivers or obligations.
 - **2:** useful RFC with weak operations, security, cost, ownership, migration, dissent, or reversal.
 - **3:** decision, alternatives, evidence, owners, cost, migration, rollback, stops, defense, and revision align.
-- **4:** another team applies the method and resulting dissent materially improves the decision.
+- A passing submission distinguishes the architecture RFC from A12's narrower
+  deployment-policy ADR and links both to the same measured evidence.
+- **4:** the frozen role-based transfer exercise applies the method and resulting
+  dissent materially improves the decision. Optional team review upgrades
+  attestation, not score.
 
 ## Thresholds
 
-Pass requires every G01–G06 gate, every A01–A11 artifact, average ≥3.0, and no
+Pass requires every G01–G06 gate, every A01–A12 artifact, average ≥3.0, and no
 zero in R05, R06, R08, or R09. G02–G05 failure or a safety-critical zero yields
 Repeat; other material gaps yield Revise.

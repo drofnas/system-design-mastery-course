@@ -76,10 +76,18 @@ requests a term-6 vote. Decide each response using lexicographic
 3. Timeout selection/separation helps one candidate win; it does not establish
    the one-leader property.
 
-`n2` rejects because term 5 is newer than candidate term 4. `n3` grants because
-candidate term 4 matches and index 9 is not at least 11? It rejects: equal last
-term requires candidate index >= voter index. Candidate `n1` gets only its own
-vote and cannot lead.
+Raft compares `(last_log_term, last_log_index)` lexicographically: term first,
+then index only when terms match.
+
+| Voter | Voter pair | Candidate pair | Comparison | Vote |
+|---|---:|---:|---|---|
+| `n1` | `(4,9)` | `(4,9)` | equal | grants itself |
+| `n2` | `(5,7)` | `(4,9)` | candidate term is older | rejects |
+| `n3` | `(4,11)` | `(4,9)` | equal term, candidate index is lower | rejects |
+
+Candidate `n1` gets only its own vote and cannot lead. This is the RequestVote
+up-to-date rule in Ongaro and Ousterhout, §5.4.1; a longer log with an older last
+term is not considered more up to date, while equal last terms compare index.
 
 ## Sources and next work
 

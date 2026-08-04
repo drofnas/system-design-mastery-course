@@ -35,3 +35,9 @@ peak workload, and break-glass expiry evidence is cited imprecisely.
 Gate 4 parts exist and safety holds. The DR review compares three tiers but cost
 omits recovery staffing, and one dissent has no owner or resolution evidence.
 These are material but remediable gaps in dated addenda.
+
+## Recovery-tier and degradation ADR
+
+A12 exists separately and agrees with the DR evidence, but it lacks the
+degradation-exception expiry and a quantified reversal observation window.
+Owners and rollback remain present, so the gap is remediable.

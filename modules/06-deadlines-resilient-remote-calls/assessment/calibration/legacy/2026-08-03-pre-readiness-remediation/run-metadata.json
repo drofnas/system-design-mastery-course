@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "runtime": {
+    "provider": "openai",
+    "model": "gpt-5.6-sol",
+    "client": "codex-cli 0.146.0-alpha.9.2"
+  },
+  "deterministic_settings": {
+    "temperature": "not exposed by Codex CLI; evaluator requested temperature 0 or closest deterministic setting",
+    "reasoning_effort": "high",
+    "output_constraint": "schemas/evaluation.schema.json"
+  },
+  "isolation_method": "Each response came from a separate --ephemeral Codex process in a read-only sandbox. The prompt limited reads to the evaluator contract, rubric, remediation map, shared schema, one manifest, and one fixture; expected bands, other fixtures, and prior responses were withheld.",
+  "invocations": [
+    {"isolation_id": "m06-pass-run-1", "fixture": "pass", "run": 1, "invoked_at": "2026-08-02T05:26:58Z", "raw_response": "runs/pass-run-1.json", "sha256": "c28945e6fe74cd734a1fe2846ab61a2eb8a0f08246c5815a8f2397b0b86f26ea"},
+    {"isolation_id": "m06-revise-run-1", "fixture": "revise", "run": 1, "invoked_at": "2026-08-02T05:27:46Z", "raw_response": "runs/revise-run-1.json", "sha256": "e21b7a915a682ced9c7b05fb97a49ff9eb4a7e38d923f3415c4341dde4f97970"},
+    {"isolation_id": "m06-repeat-run-1", "fixture": "repeat", "run": 1, "invoked_at": "2026-08-02T05:28:31Z", "raw_response": "runs/repeat-run-1.json", "sha256": "92b5ad75df410305dcb08b1b75a02cb92b7037aef15336574f50bc2083efc266"},
+    {"isolation_id": "m06-pass-run-2", "fixture": "pass", "run": 2, "invoked_at": "2026-08-02T05:29:14Z", "raw_response": "runs/pass-run-2.json", "sha256": "816c05f39910c71f50e2f24dde92ccb052d1fea591526d727efcebd1e749ea86"},
+    {"isolation_id": "m06-revise-run-2", "fixture": "revise", "run": 2, "invoked_at": "2026-08-02T05:31:37Z", "raw_response": "runs/revise-run-2.json", "sha256": "74e14282cc3dedab4552a5a169b43df0cce35cc34a843c32fc2ff010e0612f0e"},
+    {"isolation_id": "m06-repeat-run-2", "fixture": "repeat", "run": 2, "invoked_at": "2026-08-02T05:32:19Z", "raw_response": "runs/repeat-run-2.json", "sha256": "6c1828d08187f82c90e92485b2c50f6026004dde95749d605d88a21f942af8b9"}
+  ]
+}

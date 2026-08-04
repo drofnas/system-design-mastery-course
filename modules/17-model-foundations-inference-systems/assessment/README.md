@@ -8,7 +8,8 @@ before semantic scoring. Every gate, score, and finding cites an exact
 
 ### G01: Identity and completeness
 
-A01–A11 exist, including all four learning logs, and identify artifact commit,
+A01–A12 exist, including the distinct deployment-policy ADR and all four
+learning logs, and identify artifact commit,
 baseline tag, source/toolchain versions, assistance disclosure, scenario/trial
 hashes, evidence kind, and reachable raw evidence.
 
@@ -40,7 +41,7 @@ identity and deadline and cannot amplify without an explicit bound.
 
 ### G06: RFC, defense, evaluation, and remediation
 
-A07–A11 contain same-driver alternatives including no-change, owners, cost,
+A07–A12 contain same-driver alternatives including no-change, owners, cost,
 migration, rollback, stop and reversal conditions, dissent, teach-back evidence,
 an evaluation, and a separate remediation revision.
 
@@ -60,3 +61,7 @@ The deterministic runner proves repository contracts, not hardware behavior.
 The required CPU path is one tiny measured implementation, not a production
 model or population benchmark. Optional accelerator results remain separate.
 No evidence in this module establishes retrieval or agent correctness.
+
+## Evaluation packaging and independence
+
+Use the [provider-neutral bundle and validation workflow](../../../EVALUATION_GUIDE.md). The evaluator returns JSON only; the validator renders the report. A frozen self-evaluated Pass establishes **Solo Complete** and remains explicitly self-attested. A passing independent human or LLM review of the same bundle establishes **Independently Validated**.

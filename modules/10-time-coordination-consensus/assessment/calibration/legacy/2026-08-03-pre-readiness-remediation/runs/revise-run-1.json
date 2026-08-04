@@ -1,0 +1,195 @@
+{
+  "module_id": "M10",
+  "artifact_commit": "northstar-m10-revise-001",
+  "baseline_tag": "northstar-week37-revise",
+  "evaluated_at": "2026-08-02T20:20:00-07:00",
+  "structural_gates": [
+    {
+      "id": "G01",
+      "passed": true,
+      "evidence": [
+        "modules/10-time-coordination-consensus/assessment/calibration/revise.md#submission-identity-and-preservation: G01 evidence from isolated revise fixture run 1"
+      ]
+    },
+    {
+      "id": "G02",
+      "passed": true,
+      "evidence": [
+        "modules/10-time-coordination-consensus/assessment/calibration/revise.md#submission-identity-and-preservation: G02 evidence from isolated revise fixture run 1"
+      ]
+    },
+    {
+      "id": "G03",
+      "passed": true,
+      "evidence": [
+        "modules/10-time-coordination-consensus/assessment/calibration/revise.md#clock-and-causal-model: G03 evidence from isolated revise fixture run 1"
+      ]
+    },
+    {
+      "id": "G04",
+      "passed": true,
+      "evidence": [
+        "modules/10-time-coordination-consensus/assessment/calibration/revise.md#failure-evidence-and-diagnosis: G04 evidence from isolated revise fixture run 1"
+      ]
+    },
+    {
+      "id": "G05",
+      "passed": true,
+      "evidence": [
+        "modules/10-time-coordination-consensus/assessment/calibration/revise.md#log-commitment-and-application-evidence: G05 evidence from isolated revise fixture run 1"
+      ]
+    },
+    {
+      "id": "G06",
+      "passed": false,
+      "evidence": [
+        "modules/10-time-coordination-consensus/assessment/calibration/revise.md#coordination-rfc-defense-and-remediation: G06 evidence from isolated revise fixture run 1"
+      ]
+    }
+  ],
+  "rubric_scores": [
+    {
+      "criterion_id": "R01",
+      "score": 2,
+      "evidence": [
+        "modules/10-time-coordination-consensus/assessment/calibration/revise.md#clock-and-causal-model: R01 evidence from isolated revise fixture run 1"
+      ],
+      "findings": [
+        "incorrect_reasoning: one annotation treats Lamport order as proof of causality and omits vector identity-change limits."
+      ],
+      "remediation": [
+        "Lesson 1 and EX-02"
+      ]
+    },
+    {
+      "criterion_id": "R02",
+      "score": 2,
+      "evidence": [
+        "modules/10-time-coordination-consensus/assessment/calibration/revise.md#safety-liveness-and-consensus-boundary: R02 evidence from isolated revise fixture run 1"
+      ],
+      "findings": [
+        "missing_evidence: progress assumptions do not name a stable majority, eventual delivery, or timeout fairness."
+      ],
+      "remediation": [
+        "Lesson 3 and EX-05"
+      ]
+    },
+    {
+      "criterion_id": "R03",
+      "score": 2,
+      "evidence": [
+        "modules/10-time-coordination-consensus/assessment/calibration/revise.md#election-and-persistence-evidence: R03 evidence from isolated revise fixture run 1"
+      ],
+      "findings": [
+        "missing_evidence: last-log eligibility and split-vote progress are not explained."
+      ],
+      "remediation": [
+        "Lesson 5 and EX-08"
+      ]
+    },
+    {
+      "criterion_id": "R04",
+      "score": 3,
+      "evidence": [
+        "modules/10-time-coordination-consensus/assessment/calibration/revise.md#log-commitment-and-application-evidence: R04 evidence from isolated revise fixture run 1"
+      ],
+      "findings": [
+        "missing_evidence: the proof ledger does not connect leader completeness to vote eligibility."
+      ],
+      "remediation": [
+        "Lesson 6 and EX-10"
+      ]
+    },
+    {
+      "criterion_id": "R05",
+      "score": 2,
+      "evidence": [
+        "modules/10-time-coordination-consensus/assessment/calibration/revise.md#client-and-read-evidence: R05 evidence from isolated revise fixture run 1"
+      ],
+      "findings": [
+        "missing_evidence: retention expiry, sequence gaps, and apply-lag deadlines are unspecified."
+      ],
+      "remediation": [
+        "Lesson 7 and EX-11"
+      ]
+    },
+    {
+      "criterion_id": "R06",
+      "score": 2,
+      "evidence": [
+        "modules/10-time-coordination-consensus/assessment/calibration/revise.md#snapshot-and-membership-evidence: R06 evidence from isolated revise fixture run 1"
+      ],
+      "findings": [
+        "missing_evidence: learner catch-up omits client/fence state and rollback ownership."
+      ],
+      "remediation": [
+        "Lesson 8 and EX-14"
+      ]
+    },
+    {
+      "criterion_id": "R07",
+      "score": 2,
+      "evidence": [
+        "modules/10-time-coordination-consensus/assessment/calibration/revise.md#lease-and-fencing-evidence: R07 evidence from isolated revise fixture run 1"
+      ],
+      "findings": [
+        "missing_evidence: process-pause evidence and the lease-disable policy are absent."
+      ],
+      "remediation": [
+        "Lesson 8 and EX-13"
+      ]
+    },
+    {
+      "criterion_id": "R08",
+      "score": 2,
+      "evidence": [
+        "modules/10-time-coordination-consensus/assessment/calibration/revise.md#failure-evidence-and-diagnosis: R08 evidence from isolated revise fixture run 1"
+      ],
+      "findings": [
+        "communication_gap: three investigations omit first-divergence and alternative-cause evidence."
+      ],
+      "remediation": [
+        "Lesson 6 and EX-15"
+      ]
+    },
+    {
+      "criterion_id": "R09",
+      "score": 3,
+      "evidence": [
+        "modules/10-time-coordination-consensus/assessment/calibration/revise.md#failure-evidence-and-diagnosis: R09 evidence from isolated revise fixture run 1"
+      ],
+      "findings": [
+        "missing_evidence: safe trials exist, but several independent safety explanations remain thin."
+      ],
+      "remediation": [
+        "Lesson 8 and EX-15"
+      ]
+    },
+    {
+      "criterion_id": "R10",
+      "score": 2,
+      "evidence": [
+        "modules/10-time-coordination-consensus/assessment/calibration/revise.md#coordination-rfc-defense-and-remediation: R10 evidence from isolated revise fixture run 1"
+      ],
+      "findings": [
+        "missing_evidence: capacity, incident telemetry, finance ownership, reversal thresholds, and one defense challenge are absent."
+      ],
+      "remediation": [
+        "Lesson 8 and EX-16"
+      ]
+    }
+  ],
+  "average_score": 2.2,
+  "safety_critical_zero": false,
+  "result": "Revise",
+  "confidence": {
+    "level": "medium",
+    "reasons": [
+      "Run 1 used only the immutable revise fixture, its manifest, and the published Module 10 contracts."
+    ]
+  },
+  "summary": "The Northstar design remains safe in the submitted repaired trials, but causal explanation, liveness assumptions, operations, and decision evidence need targeted revision.",
+  "next_actions": [
+    "Complete the cited lessons and exercises in new dated artifacts; do not overwrite frozen evidence."
+  ]
+}

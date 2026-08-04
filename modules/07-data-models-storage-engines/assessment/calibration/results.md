@@ -1,16 +1,19 @@
-# Module 7 Calibration Results
+# M07 Current Calibration Results
 
-Two isolated evaluations of each Harbor fixture produced the required stable
-bands. The deterministic checker accepted schemas, manifests, heading-level
-citations, finding classes, remediation references, arithmetic, thresholds,
-raw-result agreement, and category drift.
+The deterministic checker passed the six current raw evaluator records.
 
-| Fixture | Run 1 | Run 2 | Maximum criterion drift |
-|---|---:|---:|---:|
-| Pass | Pass, 3.60 | Pass, 3.20 | 1 |
-| Revise | Revise, 2.10 | Revise, 2.10 | 0 |
-| Repeat | Repeat, 0.00 | Repeat, 0.00 | 0 |
+## run-1
 
-Exact evaluator responses remain under `runs/`; provenance and SHA-256 hashes
-are in `run-metadata.json`. Expected bands and prior responses were withheld
-from every isolated context.
+- Pass: Pass, average 3.3
+- Revise: Revise, average 2.1
+- Repeat: Repeat, average 0.0
+
+## run-2
+
+- Pass: Pass, average 3.4
+- Revise: Revise, average 2.1
+- Repeat: Repeat, average 0.1
+
+Maximum per-category drift: 1.
+
+Raw JSON and invocation provenance are authoritative; this file is rendered from them.

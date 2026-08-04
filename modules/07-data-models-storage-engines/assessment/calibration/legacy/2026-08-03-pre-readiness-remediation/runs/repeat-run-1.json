@@ -1,0 +1,219 @@
+{
+  "module_id": "M07",
+  "artifact_commit": "fixture-m07-repeat",
+  "baseline_tag": null,
+  "evaluated_at": "2026-08-02T00:00:00Z",
+  "structural_gates": [
+    {
+      "id": "G01",
+      "passed": false,
+      "evidence": [
+        "modules/07-data-models-storage-engines/assessment/calibration/repeat.md#submission-identity: The submission lacks learner, environment, workload, evidence-kind, raw-hash, runtime, schema-version, baseline-tag, and assistance-disclosure evidence."
+      ]
+    },
+    {
+      "id": "G02",
+      "passed": false,
+      "evidence": [
+        "modules/07-data-models-storage-engines/assessment/calibration/repeat.md#overwritten-baseline-and-inconsistent-evidence: The workload baseline was rewritten after implementation results and therefore is not a preserved independent baseline."
+      ]
+    },
+    {
+      "id": "G03",
+      "passed": false,
+      "evidence": [
+        "modules/07-data-models-storage-engines/assessment/calibration/repeat.md#overwritten-baseline-and-inconsistent-evidence: Reported write-amplification and read-total arithmetic contradict the stated counters.",
+        "modules/07-data-models-storage-engines/assessment/calibration/repeat.md#missing-workload-and-fault-evidence: Raw trials, seeds, pair hashes, configuration hashes, counters, and underlying percentile samples are absent."
+      ]
+    },
+    {
+      "id": "G04",
+      "passed": false,
+      "evidence": [
+        "modules/07-data-models-storage-engines/assessment/calibration/repeat.md#broken-b-tree-and-missing-lsm-build: The B+ tree contract is not implemented and no LSM implementation or clean-reopen evidence is submitted.",
+        "modules/07-data-models-storage-engines/assessment/calibration/repeat.md#missing-workload-and-fault-evidence: The required base workloads and F01-F06 paired trials are absent."
+      ]
+    },
+    {
+      "id": "G05",
+      "passed": false,
+      "evidence": [
+        "modules/07-data-models-storage-engines/assessment/calibration/repeat.md#broken-b-tree-and-missing-lsm-build: A 20-key range loses three keys and returns the remaining keys out of order.",
+        "modules/07-data-models-storage-engines/assessment/calibration/repeat.md#resurrection-restricted-data-leak-and-false-durability: Deleted data resurrects after reopen, a present key receives a false-negative filter result, restricted coordinates leak, and a file handle remains open."
+      ]
+    },
+    {
+      "id": "G06",
+      "passed": false,
+      "evidence": [
+        "modules/07-data-models-storage-engines/assessment/calibration/repeat.md#technology-preference-without-decision: The decision omits alternatives, security, cost, recovery requirements, ownership, migration, rollback, dissent, uncertainty, and reversal conditions.",
+        "modules/07-data-models-storage-engines/assessment/calibration/repeat.md#missing-defense-and-remediation: Defense, evaluation, learning logs, and separate remediation are absent, and the original failed evidence was overwritten."
+      ]
+    }
+  ],
+  "rubric_scores": [
+    {
+      "criterion_id": "R01",
+      "score": 0,
+      "evidence": [
+        "modules/07-data-models-storage-engines/assessment/calibration/repeat.md#overwritten-baseline-and-inconsistent-evidence: The post-result baseline contains no quantified operations, distributions, invariants, access paths, retention, security boundary, or alternatives."
+      ],
+      "findings": [
+        "missing_evidence: No preserved workload, invariant, authority, access-path, or candidate-model analysis exists.",
+        "incorrect_reasoning: The model choice was rewritten after results and is unsupported by workload behavior."
+      ],
+      "remediation": [
+        "Repeat Lesson 1 and EX-01-EX-02; create a new independent baseline with bounded workloads, invariants, authority, access paths, candidate models, and reversal conditions before any new implementation results."
+      ]
+    },
+    {
+      "criterion_id": "R02",
+      "score": 0,
+      "evidence": [
+        "modules/07-data-models-storage-engines/assessment/calibration/repeat.md#broken-b-tree-and-missing-lsm-build: The submitted tree is an in-memory binary search tree serialized as one JSON object, with no pages, layout, cache, counters, or controlled locality trials."
+      ],
+      "findings": [
+        "incorrect_reasoning: The implementation does not model the required page and buffer behavior.",
+        "missing_evidence: Page layout, occupancy, fan-out, cache limits, warm/cold boundaries, requests, hits, misses, and evictions are absent."
+      ],
+      "remediation": [
+        "Repeat Lesson 2 and EX-03-EX-04; produce new page-layout derivations and controlled occupancy, warm/cold, and cache-pollution evidence."
+      ]
+    },
+    {
+      "criterion_id": "R03",
+      "score": 0,
+      "evidence": [
+        "modules/07-data-models-storage-engines/assessment/calibration/repeat.md#broken-b-tree-and-missing-lsm-build: The implementation lacks B+ tree page structure, splits, linked leaves, validation, delete tests, and reopen comparison, and its range loses and misorders keys."
+      ],
+      "findings": [
+        "invariant_failure: Range lookup loses live keys and violates key ordering.",
+        "missing_evidence: Fixed pages, separators, recursive/root splits, linked ranges, delete semantics, validation, and clean reopen are absent."
+      ],
+      "remediation": [
+        "Repeat Lesson 3 and EX-05-EX-07; implement and test fixed-page split, delete, linked-range, validation, and reopen behavior with new immutable evidence."
+      ]
+    },
+    {
+      "criterion_id": "R04",
+      "score": 0,
+      "evidence": [
+        "modules/07-data-models-storage-engines/assessment/calibration/repeat.md#broken-b-tree-and-missing-lsm-build: No LSM implementation, Bloom filter, tombstone, compaction, manifest, or clean-reopen evidence is submitted.",
+        "modules/07-data-models-storage-engines/assessment/calibration/repeat.md#resurrection-restricted-data-leak-and-false-durability: A deleted value becomes visible after reopen and a present key receives a false-negative filter result."
+      ],
+      "findings": [
+        "invariant_failure: Deleted data resurrects and the Bloom-like filter produces a false negative.",
+        "unsupported_claim: Clean close is presented as crash-proof exactly-once durability without WAL, sync, crash, backup, or restore evidence."
+      ],
+      "remediation": [
+        "Repeat Lesson 4 and EX-08-EX-09; build a new LSM evidence set covering framed sorted tables, recency, tombstones, Bloom safety, manifest publication, compaction, and reopen."
+      ]
+    },
+    {
+      "criterion_id": "R05",
+      "score": 0,
+      "evidence": [
+        "modules/07-data-models-storage-engines/assessment/calibration/repeat.md#overwritten-baseline-and-inconsistent-evidence: 10,000 logical bytes and 20,000 physical bytes are incorrectly reported as write amplification 1.5, and 40 reads plus 30 scans are incorrectly reported as 50 reads."
+      ],
+      "findings": [
+        "internal_contradiction: Amplification and read totals do not reconcile with the submitted counters.",
+        "missing_evidence: Capacity, temporary-space, endurance, recovery, device-boundary, and unit-cost sensitivity evidence is absent."
+      ],
+      "remediation": [
+        "Repeat Lesson 5 and EX-10; collect new raw counters, reconcile every ratio with units and inclusions, and test capacity, temporary-space, endurance, and cost sensitivity."
+      ]
+    },
+    {
+      "criterion_id": "R06",
+      "score": 0,
+      "evidence": [
+        "modules/07-data-models-storage-engines/assessment/calibration/repeat.md#overwritten-baseline-and-inconsistent-evidence: Predictions were rewritten after results and submitted arithmetic contradicts the reported counters.",
+        "modules/07-data-models-storage-engines/assessment/calibration/repeat.md#missing-defense-and-remediation: The original code and report were overwritten, so failed evidence cannot be reconstructed."
+      ],
+      "findings": [
+        "invariant_failure: The independent baseline and original failed evidence were overwritten, invalidating causal diagnosis.",
+        "missing_evidence: Immutable raw workload and F01-F06 pairs, same-input hashes, alternatives, isolated changes, recovery, and uncertainty are absent."
+      ],
+      "remediation": [
+        "Repeat Lesson 7 and EX-13-EX-14; start a new independent baseline and new immutable raw trials with pair hashes, one-variable isolation, alternatives, correctness-first diagnosis, recovery, and discriminating reruns."
+      ]
+    },
+    {
+      "criterion_id": "R07",
+      "score": 0,
+      "evidence": [
+        "modules/07-data-models-storage-engines/assessment/calibration/repeat.md#broken-b-tree-and-missing-lsm-build: Range results omit and misorder live keys, while validation and reopen comparison are absent.",
+        "modules/07-data-models-storage-engines/assessment/calibration/repeat.md#resurrection-restricted-data-leak-and-false-durability: Reopen resurrects deleted data, a filter returns a false negative, restricted coordinates leak, and cleanup leaves a file handle open."
+      ],
+      "findings": [
+        "invariant_failure: Live-key completeness, key order, Bloom safety, non-resurrection, restricted-data handling, and cleanup invariants fail.",
+        "unsupported_claim: Durability is asserted beyond the submitted close-path evidence."
+      ],
+      "remediation": [
+        "Repeat Lessons 3-4 and 7 with EX-06, EX-08, and EX-14; create new reference-map, point/range/reopen, filter, tombstone, redaction, cleanup, and non-resurrection evidence."
+      ]
+    },
+    {
+      "criterion_id": "R08",
+      "score": 0,
+      "evidence": [
+        "modules/07-data-models-storage-engines/assessment/calibration/repeat.md#technology-preference-without-decision: The technology preference has no query plans or workload evidence.",
+        "modules/07-data-models-storage-engines/assessment/calibration/repeat.md#broken-b-tree-and-missing-lsm-build: The only submitted range access path loses keys and returns them out of order."
+      ],
+      "findings": [
+        "invariant_failure: The submitted range access path cannot correctly serve the demonstrated operation.",
+        "missing_evidence: Operators, ordering, estimates, actual work, selectivity, statistics, alternatives, and total index cost are absent."
+      ],
+      "remediation": [
+        "Repeat Lesson 6 and EX-11-EX-12; produce estimate-versus-actual plan evidence and diagnose composite order, selectivity, statistics, alternatives, security, write cost, and storage cost."
+      ]
+    },
+    {
+      "criterion_id": "R09",
+      "score": 0,
+      "evidence": [
+        "modules/07-data-models-storage-engines/assessment/calibration/repeat.md#technology-preference-without-decision: The decision is an unsupported technology preference with no alternatives, cost, security, recovery requirements, owners, migration, rollback, compatibility, decommissioning, dissent, or reversal conditions.",
+        "modules/07-data-models-storage-engines/assessment/calibration/repeat.md#resurrection-restricted-data-leak-and-false-durability: Restricted station coordinates are exposed to the general operator role."
+      ],
+      "findings": [
+        "invariant_failure: Restricted data is exposed outside its stated boundary.",
+        "missing_evidence: The decision has no safe authority model, owners, recovery contract, migration validation, rollback, decommissioning, or cost basis."
+      ],
+      "remediation": [
+        "Repeat Lesson 8 and EX-15; create a dated ADR with evidence-based alternatives, security, cost, recovery requirements, owners, staged migration, rollback rehearsal, dissent, and reversal conditions."
+      ]
+    },
+    {
+      "criterion_id": "R10",
+      "score": 0,
+      "evidence": [
+        "modules/07-data-models-storage-engines/assessment/calibration/repeat.md#missing-defense-and-remediation: No teach-back, cross-functional challenge, evaluation report, learning logs, or separate remediation exists."
+      ],
+      "findings": [
+        "missing_evidence: No defense or teach-back demonstrates derivation, challenge handling, dissent, uncertainty, changed belief, or dated remediation.",
+        "invariant_failure: The claimed repair overwrote the original evidence instead of preserving it for evaluation."
+      ],
+      "remediation": [
+        "Repeat Lesson 8 and EX-16; conduct a follow-up defense that derives mechanisms, addresses database, application, security, finance, and on-call challenges, and records dissent and dated remediation separately."
+      ]
+    }
+  ],
+  "average_score": 0.0,
+  "safety_critical_zero": true,
+  "result": "Repeat",
+  "confidence": {
+    "level": "high",
+    "reasons": [
+      "The submission explicitly states that the independent baseline and failed evidence were overwritten.",
+      "Multiple hard-gate correctness failures are directly reported, including lost and misordered range keys, data resurrection, a false-negative filter result, restricted-data exposure, and incomplete cleanup.",
+      "The LSM build, required workload trials, and all F01-F06 fault pairs are explicitly absent."
+    ]
+  },
+  "summary": "Repeat. G02-G05 fail, and both safety-critical criteria R06 and R07 score zero. The evidence is invalidated by an overwritten baseline and raw work, missing required engine and trial coverage, contradictory arithmetic, and direct correctness and security failures.",
+  "next_actions": [
+    "Preserve a new independent baseline before implementation and collect new immutable raw trials because the original evidence ordering and integrity are invalid.",
+    "Rebuild and validate both required engines against a reference map, including ordered ranges, reopen, Bloom safety, tombstone precedence, non-resurrection, restricted-data exclusion, and cleanup.",
+    "Run all ten base workloads and F01-F06 paired failure experiments with seeds, shared-input hashes, configuration hashes, counters, alternatives, recovery evidence, and bounded uncertainty.",
+    "Submit separate dated ADR, defense, evaluation, learning-log, and remediation artifacts without overwriting the new baseline or raw evidence."
+  ]
+}
