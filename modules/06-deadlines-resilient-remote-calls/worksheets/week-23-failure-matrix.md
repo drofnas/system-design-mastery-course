@@ -30,3 +30,12 @@ cancellation drain, unit cost, and recovery time.
 
 Record scenario/trial hashes, changed variables, cleanup, and whether every
 result is measured runtime evidence or deterministic model evidence.
+
+## A11: Retry-storm controlled postmortem — 45 minutes
+
+After freezing F01 broken/repaired evidence, create
+`reports/module-06-retry-storm-postmortem.md` with the incident-postmortem
+template. A failure matrix compares trials; this postmortem reconstructs one
+controlled incident's user impact, timeline, trigger, contributing conditions,
+detection/mitigation gaps, uncertainty, and owned corrective work. Cite the raw
+trial and preserve it unchanged.

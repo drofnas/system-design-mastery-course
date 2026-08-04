@@ -11,6 +11,7 @@ percentage, programming style, or cloud architecture.
 - [Rubric](rubric.md): Module 2 score anchors and remediation
 - [Evaluator prompt](evaluator-prompt.md): evidence-bound review contract
 - [Report template](report-template.md): saved human-readable result
+- [Remediation map](remediation-map.md): new evidence paths that preserve frozen work
 - [Evaluation schema](../../../schemas/evaluation.schema.json): JSON contract
 - [Calibration fixtures](calibration/README.md): Transit Signal Pass, Revise,
   and Repeat cases
@@ -48,3 +49,7 @@ percentage, programming style, or cloud architecture.
   decision evidence prevents a defensible capacity claim.
 - **Repeat:** prediction or required evidence is missing, overload/retry safety
   fails, raw evidence is altered or invented, or the model is materially false.
+
+## Evaluation packaging and independence
+
+Use the [provider-neutral bundle and validation workflow](../../../EVALUATION_GUIDE.md). The evaluator returns JSON only; the validator renders the report. An independent LLM or human critique after the freeze is required for formal Pass. Self-scoring remains provisional.

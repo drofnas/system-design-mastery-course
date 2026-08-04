@@ -1,0 +1,431 @@
+{
+  "schema_version": "1.0",
+  "module": "M15",
+  "reviewed_commit": "WORKTREE",
+  "reviewed_at": "2026-08-04",
+  "evidence_boundary": "This ledger records a source-level semantic review of lessons, worked answers, case studies, exercises, worksheets, rubrics, and lab guides. It verifies named mechanisms against bounded primary or official sources, distinguishes normative course contracts, and does not turn synthetic examples into production measurements.",
+  "claims": [
+    {
+      "id": "M15-FC-001",
+      "location": {
+        "path": "lessons/01-memory-lifetime-management.md",
+        "heading": "Mechanism and method"
+      },
+      "claim": "Separate four questions that architecture discussions often collapse: where a value is stored, who can reach it, who may mutate it, and what event releases it. Stack versus heap is placement. Ownership is authority and lifetime. A collector is a reclamation mechanism. None alone predicts locality or latency.",
+      "classification": "versioned",
+      "source_ids": [
+        "RES-03"
+      ],
+      "source_sections": [
+        "Read Chapter 4; annotate ownership transfer, borrow lifetime, Drop point, and one resource whose operational release still needs explicit evidence."
+      ],
+      "verification_method": "official-documentation comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M15-FC-002",
+      "location": {
+        "path": "lessons/02-schedulers-event-loops-tasks.md",
+        "heading": "Mechanism and method"
+      },
+      "claim": "Concurrency describes overlapping lifetimes; parallelism describes simultaneous execution. A runtime maps tasks onto finite processors and often onto finite worker pools. Cheap task creation changes overhead, not CPU, memory, dependency, or downstream capacity.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-01"
+      ],
+      "source_sections": [
+        "Read Should you read this guide through Don't block the Worker Pool; classify each Northstar operation and record one bound per scheduler."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M15-FC-003",
+      "location": {
+        "path": "lessons/03-bounded-fanout-structured-cleanup.md",
+        "heading": "Mechanism and method"
+      },
+      "claim": "A fan-out request consumes at least one admission slot, child task, response buffer, dependency attempt, and result record per child. Parallel latency is bounded by the slowest required child; resource cost includes every child.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-01",
+        "RES-04"
+      ],
+      "source_sections": [
+        "Read Should you read this guide through Don't block the Worker Pool; classify each Northstar operation and record one bound per scheduler.",
+        "Read What Is a Virtual Thread through Guidelines; identify carrier scheduling, blocking concerns, cancellation obligations, and the admission bound still required."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M15-FC-004",
+      "location": {
+        "path": "lessons/04-memory-visibility-races.md",
+        "heading": "Mechanism and method"
+      },
+      "claim": "Two operations being “close in time” says nothing about visibility. Language memory models define which synchronization actions order writes before reads. Without the required edge, a compiler, runtime, or CPU may expose outcomes that sequential source reading did not predict.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-02"
+      ],
+      "source_sections": [
+        "Read the introduction, advice, and synchronization sections; draw two valid edges and one behavior the model does not promise."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M15-FC-005",
+      "location": {
+        "path": "lessons/05-types-serialization-validation.md",
+        "heading": "Mechanism and method"
+      },
+      "claim": "Static typing checks a program before execution; dynamic typing associates checks with runtime values. Nominal systems use declared relationships; structural systems use shape. These dimensions are independent. None makes untrusted bytes a valid domain value.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-05",
+        "RES-16"
+      ],
+      "source_sections": [
+        "Read Starting Out, A Note on Soundness, function compatibility, and classes; construct one value that type-checks locally but must be rejected after JSON decoding.",
+        "Read Sections 4, 7, 8, and 10; map instance evaluation, object applicators, and unknown-property rejection to the shared request schema, then name the behavior enforced separately by service code."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M15-FC-006",
+      "location": {
+        "path": "lessons/06-equivalent-work-measurement.md",
+        "heading": "Mechanism and method"
+      },
+      "claim": "A benchmark compares systems only when inputs, required effects, success rules, limits, and measurement boundaries match. Source code that “looks similar” may perform different parsing, copies, retries, buffering, or validation.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-11",
+        "RES-17"
+      ],
+      "source_sections": [
+        "Read the introduction and Factors Affecting Garbage Collection Performance; connect one factor to F05 and record what telemetry would falsify the first explanation.",
+        "Read Sections 1–3 and 6; identify the levels of experimental variation, justify repeated invocations, and record why five local repetitions establish only bounded evidence rather than a universal language ranking."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M15-FC-007",
+      "location": {
+        "path": "lessons/07-northstar-polyglot-tutorial.md",
+        "heading": "Mechanism and method"
+      },
+      "claim": "The lab separates a stable HTTP/JSON contract from runtime-specific mechanisms. The harness owns the dependency emulator, canonical workload, repetitions, hashes, and trial schema. Each service owns admission, child tasks, cancellation, validation, result assembly, and cleanup.",
+      "classification": "synthetic",
+      "source_ids": [],
+      "source_sections": [],
+      "verification_method": "controlled synthetic fixture",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence.",
+      "synthetic_label": "The named Northstar tutorial and all of its values are synthetic course fixtures, not production observations."
+    },
+    {
+      "id": "M15-FC-008",
+      "location": {
+        "path": "lessons/08-runtime-decision-teach-back.md",
+        "heading": "Mechanism and method"
+      },
+      "claim": "A runtime decision is a workload, operating model, and team decision. A small latency difference may be irrelevant beside memory safety, diagnostic maturity, dependency support, build latency, licensing, hiring, incident response, or migration risk. Conversely, familiarity does not excuse a failed invariant.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-06"
+      ],
+      "source_sections": [
+        "Read the complete article including version notes; extract workload, measurement, migration, ecosystem, and team evidence, then name three reasons the result cannot be generalized to current toolchains."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M15-FC-009",
+      "location": {
+        "path": "exercises/answer-key.md",
+        "heading": "EX-01–EX-02"
+      },
+      "claim": "The inventory must include external resources and tasks, not only objects. Minimum bytes are 4 × 256 KiB × 2 + 128 KiB = 2,176 KiB; at 40 concurrent requests, 85 MiB. Missing classes include encoded bytes, object headers, collections, stacks, allocator/runtime metadata, telemetry, and native buffers.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-08"
+      ],
+      "source_sections": [
+        "Read 17.4.2 through 17.4.7; explain program order, synchronization order, volatile edges, and why repeated observations are not evidence of race freedom."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "The review covers the causal mechanism and derivation used by the explained answers; exercise numbers and worked values are synthetic and are not production measurements."
+    },
+    {
+      "id": "M15-FC-010",
+      "location": {
+        "path": "case-study/northstar-observation-enrichment.md",
+        "heading": "Problem"
+      },
+      "claim": "Northstar's accepted observation registry is authoritative. A read-only gateway enriches one accepted observation with ephemeris, weather, calibration, and quality evidence for an operator review. Ephemeris and calibration are required; weather and quality are optional. The gateway cannot modify registry state.",
+      "classification": "synthetic",
+      "source_ids": [],
+      "source_sections": [],
+      "verification_method": "controlled synthetic fixture",
+      "status": "verified",
+      "scope_limit": "The case exists to exercise a reasoning method under declared constraints; none of its organizations, loads, timings, incidents, or results are production evidence.",
+      "synthetic_label": "This non-capstone case and every unattributed workload, incident, cost, latency, and organization detail in it are synthetic course fixtures."
+    },
+    {
+      "id": "M15-FC-011",
+      "location": {
+        "path": "case-study/northstar-observation-enrichment.md",
+        "heading": "Worked calculation"
+      },
+      "claim": "The document uses the bounded expression 500 - 120 - 50 = 330 ms; its semantics, substitution where arithmetic applies, and stated assumptions were checked as a reproducible derivation.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-01"
+      ],
+      "source_sections": [
+        "Read Should you read this guide through Don't block the Worker Pool; classify each Northstar operation and record one bound per scheduler."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "The mapping verifies the written expression and arithmetic under its declared assumptions; synthetic inputs and a local result do not establish a production distribution."
+    },
+    {
+      "id": "M15-FC-012",
+      "location": {
+        "path": "exercises/answer-key.md",
+        "heading": "EX-01–EX-02"
+      },
+      "claim": "The document uses the bounded expression 4 × 256 KiB × 2 + 128 KiB = 2,176 KiB; its semantics, substitution where arithmetic applies, and stated assumptions were checked as a reproducible derivation.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-01",
+        "RES-04"
+      ],
+      "source_sections": [
+        "Read Should you read this guide through Don't block the Worker Pool; classify each Northstar operation and record one bound per scheduler.",
+        "Read What Is a Virtual Thread through Guidelines; identify carrier scheduling, blocking concerns, cancellation obligations, and the admission bound still required."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "The mapping verifies the written expression and arithmetic under its declared assumptions; synthetic inputs and a local result do not establish a production distribution."
+    }
+  ],
+  "lesson_coverage": [
+    {
+      "lesson_id": "L01",
+      "path": "lessons/01-memory-lifetime-management.md",
+      "claim_ids": [
+        "M15-FC-001"
+      ]
+    },
+    {
+      "lesson_id": "L02",
+      "path": "lessons/02-schedulers-event-loops-tasks.md",
+      "claim_ids": [
+        "M15-FC-002"
+      ]
+    },
+    {
+      "lesson_id": "L03",
+      "path": "lessons/03-bounded-fanout-structured-cleanup.md",
+      "claim_ids": [
+        "M15-FC-003"
+      ]
+    },
+    {
+      "lesson_id": "L04",
+      "path": "lessons/04-memory-visibility-races.md",
+      "claim_ids": [
+        "M15-FC-004"
+      ]
+    },
+    {
+      "lesson_id": "L05",
+      "path": "lessons/05-types-serialization-validation.md",
+      "claim_ids": [
+        "M15-FC-005"
+      ]
+    },
+    {
+      "lesson_id": "L06",
+      "path": "lessons/06-equivalent-work-measurement.md",
+      "claim_ids": [
+        "M15-FC-006"
+      ]
+    },
+    {
+      "lesson_id": "L07",
+      "path": "lessons/07-northstar-polyglot-tutorial.md",
+      "claim_ids": [
+        "M15-FC-007"
+      ]
+    },
+    {
+      "lesson_id": "L08",
+      "path": "lessons/08-runtime-decision-teach-back.md",
+      "claim_ids": [
+        "M15-FC-008"
+      ]
+    }
+  ],
+  "document_coverage": [
+    {
+      "path": "assessment/rubric.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "case-study/northstar-observation-enrichment.md",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [
+        "M15-FC-010",
+        "M15-FC-011"
+      ],
+      "review_note": "The case was reviewed for explicit synthetic boundaries, internal arithmetic, non-generalization language, and separation from the learner capstone."
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M15-FC-009",
+        "M15-FC-012"
+      ],
+      "review_note": "Explained answers were checked for causal consistency, formula provenance, and agreement with the locally taught mechanism and cited source boundary."
+    },
+    {
+      "path": "exercises/exercises.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "lab/README.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "The lab guide's commands, interfaces, bounds, and synthetic evidence limitations were checked directly against the executable implementation and its passing tests."
+    },
+    {
+      "path": "lessons/01-memory-lifetime-management.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M15-FC-001"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/02-schedulers-event-loops-tasks.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M15-FC-002"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/03-bounded-fanout-structured-cleanup.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M15-FC-003"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/04-memory-visibility-races.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M15-FC-004"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/05-types-serialization-validation.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M15-FC-005"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/06-equivalent-work-measurement.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M15-FC-006"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/07-northstar-polyglot-tutorial.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M15-FC-007"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/08-runtime-decision-teach-back.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M15-FC-008"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "worksheets/week-57-execution-model.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-58-polyglot-build.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-59-runtime-failure-matrix.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-60-runtime-decision-gate-05.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    }
+  ],
+  "formula_mappings": [
+    {
+      "path": "case-study/northstar-observation-enrichment.md",
+      "heading": "Worked calculation",
+      "expression_sha256": "613d78f0c0c403f6a604e1d7412ca5691bfe4545a85a28844dc91f939e322ac8",
+      "claim_id": "M15-FC-011"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-01–EX-02",
+      "expression_sha256": "610080c177eea0eb9764d10abe66383a9d627bd11b86c534f0c5f13ef3b0951b",
+      "claim_id": "M15-FC-012"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-05–EX-09",
+      "expression_sha256": "613d78f0c0c403f6a604e1d7412ca5691bfe4545a85a28844dc91f939e322ac8",
+      "claim_id": "M15-FC-012"
+    }
+  ]
+}

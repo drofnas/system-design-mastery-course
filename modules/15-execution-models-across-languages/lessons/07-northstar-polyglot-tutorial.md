@@ -39,21 +39,24 @@ telemetry; only then compare or inject a fault.
    ```
 
    If module-path punctuation prevents import in your shell, use the exact
-   command in the [lab guide](../lab/README.md). The trial shows hashes,
-   `max_in_flight`, cleanup, and I01–I10.
+   command in the [lab guide](../lab/README.md). The model shows the expected
+   causal mapping only. It is not a trial and is rejected anywhere measured
+   evidence is required.
 
 3. Run container conformance:
 
    ```bash
-   python3 modules/15-execution-models-across-languages/lab/run_conformance.py --all
+   python3 modules/15-execution-models-across-languages/lab/run_conformance.py \
+     --mode all --runtime all --scenario all --output evidence/m15-run-01
    ```
 
    The tool builds pinned TypeScript, Go, Rust, and Java services, runs the same
    baseline, and writes raw evidence only to the learner-specified output path.
 
-Trace the admission semaphore in each implementation: a counter/promise gate in
-Node, a buffered channel in Go, a Tokio semaphore permit in Rust, and a Java
-semaphore around virtual-thread work. Syntax differs; the invariant does not.
+Trace the admission mechanism in each implementation: a fixed worker set in
+Node, a buffered channel in Go, an admitted worker queue plus owned `JoinSet` in
+Rust, and local/global semaphores around Java virtual-thread work. Syntax
+differs; the invariant does not.
 
 The failed approach spawns all children and acquires a permit inside the task.
 Execution is bounded, but captured request payload and queued task count are not.

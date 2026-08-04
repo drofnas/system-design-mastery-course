@@ -1,0 +1,357 @@
+{
+  "schema_version": "1.0",
+  "module": "M01",
+  "reviewed_commit": "WORKTREE",
+  "reviewed_at": "2026-08-04",
+  "evidence_boundary": "This ledger records a source-level semantic review of lessons, worked answers, case studies, exercises, worksheets, rubrics, and lab guides. It verifies named mechanisms against bounded primary or official sources, distinguishes normative course contracts, and does not turn synthetic examples into production measurements.",
+  "claims": [
+    {
+      "id": "M01-FC-001",
+      "location": {
+        "path": "lessons/01-architectural-judgment.md",
+        "heading": "The job is to improve decisions"
+      },
+      "claim": "Architecture work begins when consequences outlive the code change that created them. The consequences may affect data correctness, user trust, incident blast radius, team ownership, cost, delivery speed, or the ability to migrate later.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-06"
+      ],
+      "source_sections": [
+        "Read the complete article. Explain why preserving a superseded decision is useful and identify one decision too small to deserve an ADR."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M01-FC-002",
+      "location": {
+        "path": "lessons/02-problem-framing-and-workloads.md",
+        "heading": "Start from a journey, not a feature list"
+      },
+      "claim": "A feature list describes what teams intend to build. A critical user journey describes what a user must accomplish across several interactions.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-03"
+      ],
+      "source_sections": [
+        "Read Getting Started, SLI Specification versus Implementation, and Modeling User Journeys. Explain why a server metric may misrepresent a user's outcome."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M01-FC-003",
+      "location": {
+        "path": "lessons/03-invariants-and-state-ownership.md",
+        "heading": "Invariants define forbidden states"
+      },
+      "claim": "An invariant is a proposition that must remain true across every allowed state transition and every failure covered by the design.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-02"
+      ],
+      "source_sections": [
+        "Watch the complete webcast or study the supplemental slides. Write down the workshop steps that prevent the loudest stakeholder from defining every priority."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M01-FC-004",
+      "location": {
+        "path": "lessons/04-quality-attribute-scenarios.md",
+        "heading": "Quality names do not constrain a design"
+      },
+      "claim": "Most systems should be reliable, secure, maintainable, usable, and affordable. That list does not distinguish one architecture from another.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-02"
+      ],
+      "source_sections": [
+        "Watch the complete webcast or study the supplemental slides. Write down the workshop steps that prevent the loudest stakeholder from defining every priority."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M01-FC-005",
+      "location": {
+        "path": "lessons/05-context-and-boundaries.md",
+        "heading": "A diagram answers a question"
+      },
+      "claim": "Architecture cannot be captured in one picture. A useful diagram selects a question and an audience.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-04"
+      ],
+      "source_sections": [
+        "Read the overview, abstractions, system-context guidance, notation guidance, and diagram-review checklist. Identify which details do not belong on a context diagram."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M01-FC-006",
+      "location": {
+        "path": "lessons/06-constraints-options-and-reversibility.md",
+        "heading": "Constraints remove choices"
+      },
+      "claim": "A constraint is imposed by the current decision context:",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-06"
+      ],
+      "source_sections": [
+        "Read the complete article. Explain why preserving a superseded decision is useful and identify one decision too small to deserve an ADR."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M01-FC-007",
+      "location": {
+        "path": "lessons/07-failure-models-and-adversarial-review.md",
+        "heading": "Reliability claims are conditional"
+      },
+      "claim": "“The system survives failure” is meaningless until the failure is named.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-07"
+      ],
+      "source_sections": [
+        "Read the complete article. Add three independent failure combinations and one unknown-outcome case to the transit case failure matrix."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M01-FC-008",
+      "location": {
+        "path": "lessons/08-decisions-rfcs-and-defense.md",
+        "heading": "Documents serve decisions"
+      },
+      "claim": "Choose the smallest artifact that preserves the needed reasoning.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-06"
+      ],
+      "source_sections": [
+        "Read the complete article. Explain why preserving a superseded decision is useful and identify one decision too small to deserve an ADR."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M01-FC-009",
+      "location": {
+        "path": "exercises/answer-key.md",
+        "heading": "EX-01"
+      },
+      "claim": "A defensible rewrite:",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-01"
+      ],
+      "source_sections": [
+        "Read the overview and General Scenarios sections through the discussion of trade-offs. Record one quality name that remains ambiguous until expressed as a scenario."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "The review covers the causal mechanism and derivation used by the explained answers; exercise numbers and worked values are synthetic and are not production measurements."
+    },
+    {
+      "id": "M01-FC-010",
+      "location": {
+        "path": "case-study/transit-alerting.md",
+        "heading": "Step 3: Model the workload"
+      },
+      "claim": "### Sensitivity",
+      "classification": "synthetic",
+      "source_ids": [],
+      "source_sections": [],
+      "verification_method": "controlled synthetic fixture",
+      "status": "verified",
+      "scope_limit": "The case exists to exercise a reasoning method under declared constraints; none of its organizations, loads, timings, incidents, or results are production evidence.",
+      "synthetic_label": "This non-capstone case and every unattributed workload, incident, cost, latency, and organization detail in it are synthetic course fixtures."
+    }
+  ],
+  "lesson_coverage": [
+    {
+      "lesson_id": "L01",
+      "path": "lessons/01-architectural-judgment.md",
+      "claim_ids": [
+        "M01-FC-001"
+      ]
+    },
+    {
+      "lesson_id": "L02",
+      "path": "lessons/02-problem-framing-and-workloads.md",
+      "claim_ids": [
+        "M01-FC-002"
+      ]
+    },
+    {
+      "lesson_id": "L03",
+      "path": "lessons/03-invariants-and-state-ownership.md",
+      "claim_ids": [
+        "M01-FC-003"
+      ]
+    },
+    {
+      "lesson_id": "L04",
+      "path": "lessons/04-quality-attribute-scenarios.md",
+      "claim_ids": [
+        "M01-FC-004"
+      ]
+    },
+    {
+      "lesson_id": "L05",
+      "path": "lessons/05-context-and-boundaries.md",
+      "claim_ids": [
+        "M01-FC-005"
+      ]
+    },
+    {
+      "lesson_id": "L06",
+      "path": "lessons/06-constraints-options-and-reversibility.md",
+      "claim_ids": [
+        "M01-FC-006"
+      ]
+    },
+    {
+      "lesson_id": "L07",
+      "path": "lessons/07-failure-models-and-adversarial-review.md",
+      "claim_ids": [
+        "M01-FC-007"
+      ]
+    },
+    {
+      "lesson_id": "L08",
+      "path": "lessons/08-decisions-rfcs-and-defense.md",
+      "claim_ids": [
+        "M01-FC-008"
+      ]
+    }
+  ],
+  "document_coverage": [
+    {
+      "path": "assessment/rubric.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "case-study/transit-alerting.md",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [
+        "M01-FC-010"
+      ],
+      "review_note": "The case was reviewed for explicit synthetic boundaries, internal arithmetic, non-generalization language, and separation from the learner capstone."
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M01-FC-009"
+      ],
+      "review_note": "Explained answers were checked for causal consistency, formula provenance, and agreement with the locally taught mechanism and cited source boundary."
+    },
+    {
+      "path": "exercises/exercises.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "lessons/01-architectural-judgment.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M01-FC-001"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/02-problem-framing-and-workloads.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M01-FC-002"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/03-invariants-and-state-ownership.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M01-FC-003"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/04-quality-attribute-scenarios.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M01-FC-004"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/05-context-and-boundaries.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M01-FC-005"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/06-constraints-options-and-reversibility.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M01-FC-006"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/07-failure-models-and-adversarial-review.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M01-FC-007"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/08-decisions-rfcs-and-defense.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M01-FC-008"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "worksheets/week-02-candidate-designs.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-03-failure-review.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-04-rfc-defense.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    }
+  ],
+  "formula_mappings": []
+}

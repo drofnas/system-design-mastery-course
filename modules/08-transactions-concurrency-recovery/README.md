@@ -147,3 +147,12 @@ business RTO/RPO. Those claims require evidence from the chosen environment.
 AI may challenge schedules, test cases, or competing explanations. It may not
 choose the graded commerce design, invent trials, modify raw evidence, write a
 replacement graded answer, or answer during the defense. Disclose assistance.
+
+## Course-wide completion contracts
+
+- The machine-readable `module.json` time blocks are the canonical required-work budget.
+- The [factual-claims ledger](assessment/factual-claims.json) maps each local lesson to its authoritative source boundary.
+- Use the [provider-neutral evaluation workflow](../../EVALUATION_GUIDE.md) only after learner evidence is committed.
+- Use the [sealed local gate workflow](../../SOLO_GATE_GUIDE.md) when a course gate applies. Human review is optional.
+
+Self-scoring is provisional and cannot establish Pass. Synthetic lab values are not production measurements.

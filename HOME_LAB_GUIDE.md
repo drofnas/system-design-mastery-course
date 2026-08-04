@@ -1,5 +1,9 @@
 # Home Lab Guide
 
+The canonical capstone revision points are Weeks 12, 24, 48, and 72. Preserve
+the Week 1 baseline and every earlier revision; later evidence belongs in a new
+file rather than an edit to a frozen artifact.
+
 All 17 executable course labs are designed to run on one ordinary home
 computer. A discrete GPU, cloud account, Kubernetes cluster, Kafka cluster, or
 second person is not required. Run the local preflight before beginning a lab:

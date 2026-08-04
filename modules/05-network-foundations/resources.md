@@ -1,84 +1,120 @@
-# Module 5 Resource Guide
+# Network Foundations Resource Guide
 
-External work reinforces the local lessons; it never substitutes for them. All
-required resources were opened on 2026-08-01, are free, and have the cited local
-lesson as a written fallback. If a link or video is unavailable, complete the
-same evidence prompt from that local lesson and record the substitution.
+Local lessons are sufficient to complete the module. External sources reinforce
+the instruction and provide a checkable primary or practitioner reference; they
+never replace the local explanation, practice, or answer key.
 
-## Week 17
+## Required authoritative spine
+
+The required records are RES-01, RES-02, RES-03, RES-04, RES-05, RES-06, RES-07.
+Every required record is free and has a local written alternative. All other
+records below are optional enrichment and do not consume required module time.
+
+| Week | Required resources | Assigned minutes |
+|---:|---|---:|
+| 17 | RES-01 | 40 |
+| 18 | RES-02, RES-03 | 95 |
+| 19 | RES-04, RES-05 | 90 |
+| 20 | RES-06, RES-07 | 80 |
+
+For each assigned source, preserve the requested evidence, one transfer limit,
+and one observation that would falsify the claim. A required source that is
+temporarily unavailable is replaced by its local alternative and the same evidence
+task; record the substitution.
+
+## Resource records
 
 ### RES-01: Domain Names—Concepts and Facilities
 
-- Author/publisher: P. Mockapetris; IETF
-- URL: https://datatracker.ietf.org/doc/html/rfc1034
-- Type/status/access: Internet standard; required; free
-- Boundary/time: Sections 2 and 4.3.2; 40 minutes
-- Purpose: separate resolver actors, authority, caching, referrals, and failures
-- Evidence: draw the actors and classify positive, referral, name-error, and temporary-failure responses; answer which response does not prove endpoint health
-- Local fallback: Lesson 2
-
-## Week 18
+- **Author/publisher:** P. Mockapetris; IETF
+- **URL:** https://datatracker.ietf.org/doc/html/rfc1034
+- **Type/status:** Internet standard; Required
+- **Access:** free
+- **Week/time:** Week 17; 40 minutes assigned
+- **Purpose:** Separate stub, recursive, authoritative, referral, and cache behavior.
+- **Boundary and evidence:** Read Sections 2 and 4.3.2; draw the resolver actors and classify positive, referral, name-error, and temporary-failure outcomes.
+- **Local alternative:** [lessons/02-dns-routing-and-discovery.md](lessons/02-dns-routing-and-discovery.md)
+- **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-08-01
+- **Reflection:** Which claim transfers to this module, which assumption limits it, and what evidence would falsify it?
 
 ### RES-02: Transmission Control Protocol (TCP)
 
-- Author/publisher: W. Eddy, editor; IETF
-- URL: https://www.rfc-editor.org/rfc/rfc9293.html
-- Type/status/access: Internet standard; required; free
-- Boundary/time: Sections 2.2, 3.5, 3.7, and 3.8; 50 minutes
-- Purpose: connect connection, ordering, retransmission, flow, and congestion mechanisms to observations
-- Evidence: map each mechanism to one lab observation and one boundary the lab cannot observe
-- Local fallback: Lesson 3
+- **Author/publisher:** W. Eddy, editor; IETF
+- **URL:** https://www.rfc-editor.org/rfc/rfc9293.html
+- **Type/status:** Internet standard; Required
+- **Access:** free
+- **Week/time:** Week 18; 50 minutes assigned
+- **Purpose:** Ground connection, ordering, retransmission, flow, and congestion claims in the current base specification.
+- **Boundary and evidence:** Read Sections 2.2, 3.5, 3.7, and 3.8; map each mechanism to one lab observation and one unobserved kernel boundary.
+- **Local alternative:** [lessons/03-tcp-flow-congestion-goodput.md](lessons/03-tcp-flow-congestion-goodput.md)
+- **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-08-01
+- **Reflection:** Which claim transfers to this module, which assumption limits it, and what evidence would falsify it?
 
-### RES-03: TLS 1.3
+### RES-03: The Transport Layer Security (TLS) Protocol Version 1.3
 
-- Author/publisher: E. Rescorla; IETF
-- URL: https://www.rfc-editor.org/rfc/rfc9846.html
-- Type/status/access: Internet standard; required; free
-- Boundary/time: Sections 2, 4.1–4.4, and 9; 45 minutes
-- Purpose: trace negotiation, authentication, key establishment, and resumption
-- Evidence: annotate authenticated identity, key owner, hostname check, and failure behavior
-- Local fallback: Lesson 4
-
-## Week 19
+- **Author/publisher:** E. Rescorla; IETF
+- **URL:** https://www.rfc-editor.org/rfc/rfc9846.html
+- **Type/status:** Internet standard; Required
+- **Access:** free
+- **Week/time:** Week 18; 45 minutes assigned
+- **Purpose:** Trace negotiation, authentication, key establishment, and resumption without weakening trust.
+- **Boundary and evidence:** Read Sections 2, 4.1–4.4, and 9; annotate the lab handshake with authenticated identity, key ownership, and failure behavior.
+- **Local alternative:** [lessons/04-tls-trust-and-handshakes.md](lessons/04-tls-trust-and-handshakes.md)
+- **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-08-01
+- **Reflection:** Which claim transfers to this module, which assumption limits it, and what evidence would falsify it?
 
 ### RES-04: HTTP/2
 
-- Author/publisher: M. Thomson and C. Benfield; IETF
-- URL: https://www.rfc-editor.org/rfc/rfc9113.html
-- Type/status/access: Internet standard; required; free
-- Boundary/time: Sections 2, 5, and 8.2; 40 minutes
-- Purpose: reason about multiplexing, flow control, and ordering boundaries
-- Evidence: predict which stream progresses after a loss and name the TCP boundary
-- Local fallback: Lesson 6
+- **Author/publisher:** M. Thomson and C. Benfield; IETF
+- **URL:** https://www.rfc-editor.org/rfc/rfc9113.html
+- **Type/status:** Internet standard; Required
+- **Access:** free
+- **Week/time:** Week 19; 40 minutes assigned
+- **Purpose:** Reason about streams, multiplexing, concurrency, flow control, and TCP-level blocking.
+- **Boundary and evidence:** Read Sections 2, 5, and 8.2; predict which independent stream can and cannot progress after one packet loss.
+- **Local alternative:** [lessons/06-http1-http2-multiplexing.md](lessons/06-http1-http2-multiplexing.md)
+- **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-08-01
+- **Reflection:** Which claim transfers to this module, which assumption limits it, and what evidence would falsify it?
 
-### RES-05: QUIC
+### RES-05: QUIC: A UDP-Based Multiplexed and Secure Transport
 
-- Author/publisher: J. Iyengar and M. Thomson; IETF
-- URL: https://www.rfc-editor.org/rfc/rfc9000.html
-- Type/status/access: Internet standard; required; free
-- Boundary/time: Sections 2, 6, 13, and 21; 50 minutes
-- Purpose: compare connection and per-stream recovery with TCP-carried multiplexing
-- Evidence: classify each lab claim as measured, modeled, or unsupported
-- Local fallback: Lesson 7
-
-## Week 20
+- **Author/publisher:** J. Iyengar and M. Thomson; IETF
+- **URL:** https://www.rfc-editor.org/rfc/rfc9000.html
+- **Type/status:** Internet standard; Required
+- **Access:** free
+- **Week/time:** Week 19; 50 minutes assigned
+- **Purpose:** Compare QUIC connection and stream recovery boundaries with TCP-carried multiplexing.
+- **Boundary and evidence:** Read Sections 2, 6, 13, and 21; identify what the lab models, measures, and deliberately does not claim.
+- **Local alternative:** [lessons/07-quic-http3-streams.md](lessons/07-quic-http3-streams.md)
+- **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-08-01
+- **Reflection:** Which claim transfers to this module, which assumption limits it, and what evidence would falsify it?
 
 ### RES-06: The Road to QUIC
 
-- Author/publisher: Cloudflare engineering
-- URL: https://blog.cloudflare.com/the-road-to-quic/
-- Type/status/access: first-person practitioner case; required; free
-- Boundary/time: complete article; 35 minutes
-- Purpose: connect protocol mechanics to deployment constraints and operational evidence
-- Evidence: record one deployment constraint, measurement boundary, and reversal signal
-- Local fallback: Lesson 8
+- **Author/publisher:** Cloudflare engineering
+- **URL:** https://blog.cloudflare.com/the-road-to-quic/
+- **Type/status:** first-person practitioner case; Required
+- **Access:** free
+- **Week/time:** Week 20; 35 minutes assigned
+- **Purpose:** Connect protocol mechanics to deployability, middleboxes, fallback, and operational learning.
+- **Boundary and evidence:** Read the complete article; record one deployment constraint, one measurement boundary, and one reversal signal for Transit Signal.
+- **Local alternative:** [lessons/08-protocol-topology-decisions.md](lessons/08-protocol-topology-decisions.md)
+- **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-08-01
+- **Reflection:** Which claim transfers to this module, which assumption limits it, and what evidence would falsify it?
 
 ### RES-07: Deploying and Debugging HTTP/3
 
-- Author/publisher: Robin Marx, Akamai; USENIX Association
-- URL: https://www.usenix.org/conference/srecon23emea/presentation/marx
-- Type/status/access: conference video and slides; required; free
-- Boundary/time: complete talk or all slides plus Lesson 8; 45 minutes
-- Purpose: study HTTP/3 load-balancing, firewall, fallback, and debugging failures
-- Evidence: write a fallback ladder and name the telemetry and owner for each transition
-- Local fallback/written equivalent: Lesson 8
+- **Author/publisher:** Robin Marx, Akamai; USENIX Association
+- **URL:** https://www.usenix.org/conference/srecon23emea/presentation/marx
+- **Type/status:** conference video and slides; Required
+- **Access:** free
+- **Week/time:** Week 20; 45 minutes assigned
+- **Purpose:** Study real deployment, load-balancing, firewall, and debugging failure modes.
+- **Boundary and evidence:** Watch the talk or use all slides with Lesson 8; write a fallback ladder and name the telemetry needed to operate it.
+- **Local alternative:** [lessons/08-protocol-topology-decisions.md](lessons/08-protocol-topology-decisions.md)
+- **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-08-01
+- **Reflection:** Which claim transfers to this module, which assumption limits it, and what evidence would falsify it?
+
+Do not copy articles, chapters, slides, or transcripts into learner artifacts.
+Use short attributed quotations only when necessary and otherwise paraphrase with
+the source ID, exact section boundary, and stated evidence limit.

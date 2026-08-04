@@ -1,0 +1,510 @@
+{
+  "schema_version": "1.0",
+  "module": "M11",
+  "reviewed_commit": "WORKTREE",
+  "reviewed_at": "2026-08-04",
+  "evidence_boundary": "This ledger records a source-level semantic review of lessons, worked answers, case studies, exercises, worksheets, rubrics, and lab guides. It verifies named mechanisms against bounded primary or official sources, distinguishes normative course contracts, and does not turn synthetic examples into production measurements.",
+  "claims": [
+    {
+      "id": "M11-FC-001",
+      "location": {
+        "path": "lessons/01-authority-events-queues-logs-streams.md",
+        "heading": "Mechanism and decision procedure"
+      },
+      "claim": "Start with the fact that must remain true. Name its authority, transaction, identity, version, and recovery source. Then classify every downstream copy. Only after this map exists should you choose a transport.",
+      "classification": "versioned",
+      "source_ids": [
+        "RES-01",
+        "RES-02",
+        "RES-03"
+      ],
+      "source_sections": [
+        "Read The Producer through Message Delivery Semantics; draw one partition/consumer-group trace and identify the participating state in each guarantee.",
+        "Read Basic outbox table through Configuration options; produce a field-by-field envelope and partition-key review.",
+        "Read the complete page; map snapshot, LSN, slot, consumer acknowledgement, retention risk, and recovery owner to the lab."
+      ],
+      "verification_method": "official-documentation comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M11-FC-002",
+      "location": {
+        "path": "lessons/02-delivery-semantics-and-identities.md",
+        "heading": "Mechanism and derivation"
+      },
+      "claim": "Let P mean the effect completed and A mean progress was acknowledged. Acknowledging before processing gives a crash window A -> crash -> not P: work is lost. Processing before acknowledging gives P -> crash -> not A: work repeats. Networks cannot reveal whether a lost response preceded or followed commitment, so ambiguity is normal.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-01"
+      ],
+      "source_sections": [
+        "Read The Producer through Message Delivery Semantics; draw one partition/consumer-group trace and identify the participating state in each guarantee."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M11-FC-003",
+      "location": {
+        "path": "lessons/03-ordering-partitions-consumer-groups.md",
+        "heading": "Mechanism and decision procedure"
+      },
+      "claim": "A partitioned log usually offers total order only inside one partition. A consumer group assigns each partition to at most one active member of that group, so maximum useful parallelism is bounded by partition count and skew. Global order is expensive and rarely required; per-aggregate version monotonicity often preserves the real invariant.",
+      "classification": "versioned",
+      "source_ids": [
+        "RES-01"
+      ],
+      "source_sections": [
+        "Read The Producer through Message Delivery Semantics; draw one partition/consumer-group trace and identify the participating state in each guarantee."
+      ],
+      "verification_method": "official-documentation comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M11-FC-004",
+      "location": {
+        "path": "lessons/04-outbox-inbox-cdc.md",
+        "heading": "Mechanism and implementation technique"
+      },
+      "claim": "Directly writing a database and broker creates two authorities with a crash gap. The transactional outbox instead inserts the domain change and immutable event intent in one database transaction. A publisher or CDC connector may repeat delivery, but it cannot silently omit a committed fact while the outbox remains queryable.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-02"
+      ],
+      "source_sections": [
+        "Read Basic outbox table through Configuration options; produce a field-by-field envelope and partition-key review."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M11-FC-005",
+      "location": {
+        "path": "lessons/05-replay-poison-reconciliation.md",
+        "heading": "Mechanism and procedure"
+      },
+      "claim": "Replay is a migration and recovery operation, not simply resetting an offset. Freeze the source range and hashes, select code/schema versions, disable or idempotently gate irreversible effects, isolate capacity, write to a shadow view when possible, compare with authority, then cut over or discard.",
+      "classification": "versioned",
+      "source_ids": [
+        "RES-07"
+      ],
+      "source_sections": [
+        "Watch 00:00–45:00 or review the linked slides; draw authority and derivation boundaries and name one unsafe equivalence."
+      ],
+      "verification_method": "official-documentation comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M11-FC-006",
+      "location": {
+        "path": "lessons/06-workflows-sagas-compensation.md",
+        "heading": "Mechanism and decision procedure"
+      },
+      "claim": "A workflow spans multiple local transactions. Its correctness comes from recorded state, valid transitions, stable step identities, retry rules, compensation, and reconciliation—not from pretending the entire sequence is one ACID transaction.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-05"
+      ],
+      "source_sections": [
+        "Read Sections 1–4; write a forward/compensation ledger and identify one action that cannot restore prior state."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M11-FC-007",
+      "location": {
+        "path": "lessons/07-event-time-watermarks-backpressure.md",
+        "heading": "Mechanism and calculations"
+      },
+      "claim": "Event time belongs to the domain occurrence; processing time belongs to the system observing it. A watermark W asserts or estimates that events earlier than W are unlikely or impossible under a named source contract. It is never stronger than that contract.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-04"
+      ],
+      "source_sections": [
+        "Read Sections 1–2.3; specify when, in event time, a result is computed and how later data changes it."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M11-FC-008",
+      "location": {
+        "path": "lessons/08-async-decisions-migration-ownership.md",
+        "heading": "Decision procedure"
+      },
+      "claim": "Begin with user outcome, authority, invariant, latency, failure, recovery, and ownership—not a preference for events. Compare at least a simple synchronous or single-database option, a bounded queue option, and a retained-log/workflow option using the same drivers.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-06"
+      ],
+      "source_sections": [
+        "Read What is Cadence, Feature Set, Scale, and Robustness; record three platform guarantees, their prerequisites, and their owners."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M11-FC-009",
+      "location": {
+        "path": "exercises/answer-key.md",
+        "heading": "EX-01"
+      },
+      "claim": "The registry owns publication truth; outbox owns pending publication intent; broker is retained transport; catalog is derived; gateway receipt owns the external effect; workflow history owns progress. Rebuild catalog from registry, not from a possibly incomplete broker log.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-04"
+      ],
+      "source_sections": [
+        "Read Sections 1–2.3; specify when, in event time, a result is computed and how later data changes it."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "The review covers the causal mechanism and derivation used by the explained answers; exercise numbers and worked values are synthetic and are not production measurements."
+    },
+    {
+      "id": "M11-FC-010",
+      "location": {
+        "path": "case-study/northstar-publication-workflow.md",
+        "heading": "Problem and isolation"
+      },
+      "claim": "Northstar publishes validated telescope observations to a public sky catalog and sends one research bulletin after review. The operations registry remains authoritative for publication state. A catalog view, windowed counts, and delivery status are derived. This case contains no commerce entities or capstone answer.",
+      "classification": "synthetic",
+      "source_ids": [],
+      "source_sections": [],
+      "verification_method": "controlled synthetic fixture",
+      "status": "verified",
+      "scope_limit": "The case exists to exercise a reasoning method under declared constraints; none of its organizations, loads, timings, incidents, or results are production evidence.",
+      "synthetic_label": "This non-capstone case and every unattributed workload, incident, cost, latency, and organization detail in it are synthetic course fixtures."
+    },
+    {
+      "id": "M11-FC-011",
+      "location": {
+        "path": "exercises/answer-key.md",
+        "heading": "EX-14"
+      },
+      "claim": "The document uses the bounded expression 18,000/60 = 300s; its semantics, substitution where arithmetic applies, and stated assumptions were checked as a reproducible derivation.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-04"
+      ],
+      "source_sections": [
+        "Read Sections 1–2.3; specify when, in event time, a result is computed and how later data changes it."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "The mapping verifies the written expression and arithmetic under its declared assumptions; synthetic inputs and a local result do not establish a production distribution."
+    },
+    {
+      "id": "M11-FC-012",
+      "location": {
+        "path": "exercises/exercises.md",
+        "heading": "EX-14: Backlog recovery"
+      },
+      "claim": "The document uses the bounded expression B=18,000; its semantics, substitution where arithmetic applies, and stated assumptions were checked as a reproducible derivation.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-01"
+      ],
+      "source_sections": [
+        "Read The Producer through Message Delivery Semantics; draw one partition/consumer-group trace and identify the participating state in each guarantee."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "The mapping verifies the written expression and arithmetic under its declared assumptions; synthetic inputs and a local result do not establish a production distribution."
+    },
+    {
+      "id": "M11-FC-013",
+      "location": {
+        "path": "lessons/07-event-time-watermarks-backpressure.md",
+        "heading": "Mechanism and calculations"
+      },
+      "claim": "The document uses the bounded expression T = B / (mu - lambda); its semantics, substitution where arithmetic applies, and stated assumptions were checked as a reproducible derivation.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-04"
+      ],
+      "source_sections": [
+        "Read Sections 1–2.3; specify when, in event time, a result is computed and how later data changes it."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "The mapping verifies the written expression and arithmetic under its declared assumptions; synthetic inputs and a local result do not establish a production distribution."
+    }
+  ],
+  "lesson_coverage": [
+    {
+      "lesson_id": "L01",
+      "path": "lessons/01-authority-events-queues-logs-streams.md",
+      "claim_ids": [
+        "M11-FC-001"
+      ]
+    },
+    {
+      "lesson_id": "L02",
+      "path": "lessons/02-delivery-semantics-and-identities.md",
+      "claim_ids": [
+        "M11-FC-002"
+      ]
+    },
+    {
+      "lesson_id": "L03",
+      "path": "lessons/03-ordering-partitions-consumer-groups.md",
+      "claim_ids": [
+        "M11-FC-003"
+      ]
+    },
+    {
+      "lesson_id": "L04",
+      "path": "lessons/04-outbox-inbox-cdc.md",
+      "claim_ids": [
+        "M11-FC-004"
+      ]
+    },
+    {
+      "lesson_id": "L05",
+      "path": "lessons/05-replay-poison-reconciliation.md",
+      "claim_ids": [
+        "M11-FC-005"
+      ]
+    },
+    {
+      "lesson_id": "L06",
+      "path": "lessons/06-workflows-sagas-compensation.md",
+      "claim_ids": [
+        "M11-FC-006"
+      ]
+    },
+    {
+      "lesson_id": "L07",
+      "path": "lessons/07-event-time-watermarks-backpressure.md",
+      "claim_ids": [
+        "M11-FC-007"
+      ]
+    },
+    {
+      "lesson_id": "L08",
+      "path": "lessons/08-async-decisions-migration-ownership.md",
+      "claim_ids": [
+        "M11-FC-008"
+      ]
+    }
+  ],
+  "document_coverage": [
+    {
+      "path": "assessment/rubric.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "case-study/northstar-publication-workflow.md",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [
+        "M11-FC-010"
+      ],
+      "review_note": "The case was reviewed for explicit synthetic boundaries, internal arithmetic, non-generalization language, and separation from the learner capstone."
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M11-FC-009",
+        "M11-FC-011"
+      ],
+      "review_note": "Explained answers were checked for causal consistency, formula provenance, and agreement with the locally taught mechanism and cited source boundary."
+    },
+    {
+      "path": "exercises/exercises.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [
+        "M11-FC-012"
+      ],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "lab/README.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "The lab guide's commands, interfaces, bounds, and synthetic evidence limitations were checked directly against the executable implementation and its passing tests."
+    },
+    {
+      "path": "lessons/01-authority-events-queues-logs-streams.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M11-FC-001"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/02-delivery-semantics-and-identities.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M11-FC-002"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/03-ordering-partitions-consumer-groups.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M11-FC-003"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/04-outbox-inbox-cdc.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M11-FC-004"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/05-replay-poison-reconciliation.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M11-FC-005"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/06-workflows-sagas-compensation.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M11-FC-006"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/07-event-time-watermarks-backpressure.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M11-FC-007",
+        "M11-FC-013"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/08-async-decisions-migration-ownership.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M11-FC-008"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "worksheets/week-41-messaging-model.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-42-publication-build.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-43-messaging-failure-matrix.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-44-async-workflow-rfc-defense.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    }
+  ],
+  "formula_mappings": [
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-14",
+      "expression_sha256": "df494d0da7962fdb32ba9b9fa924e5e3f10b876a407e89bf84e97f97f9bd01b7",
+      "claim_id": "M11-FC-011"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-14",
+      "expression_sha256": "c84738f8a4398aa6f33f51274a86b329bda0a8f51b3c700cbb6c5fb38f458c5d",
+      "claim_id": "M11-FC-011"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-14",
+      "expression_sha256": "384b65b9e25d3b302e046fa06f8b89b2c0ed90092d13a141a3e8fe5f2b79fcfc",
+      "claim_id": "M11-FC-011"
+    },
+    {
+      "path": "exercises/exercises.md",
+      "heading": "EX-14: Backlog recovery",
+      "expression_sha256": "e3fc9ef4a7a772ae93ea1f0ecc1b742c67139b8dbaebb1da6bf5ce206f8cafb7",
+      "claim_id": "M11-FC-012"
+    },
+    {
+      "path": "exercises/exercises.md",
+      "heading": "EX-14: Backlog recovery",
+      "expression_sha256": "d2a5fb2774076ea5f43053dafc0666c825e3a8e343d4099c82f518c2884654d8",
+      "claim_id": "M11-FC-012"
+    },
+    {
+      "path": "exercises/exercises.md",
+      "heading": "EX-14: Backlog recovery",
+      "expression_sha256": "05baa4cab8b750f2aea02009beca5828e43465114e2f963cc273781d6939047e",
+      "claim_id": "M11-FC-012"
+    },
+    {
+      "path": "exercises/exercises.md",
+      "heading": "EX-14: Backlog recovery",
+      "expression_sha256": "384b65b9e25d3b302e046fa06f8b89b2c0ed90092d13a141a3e8fe5f2b79fcfc",
+      "claim_id": "M11-FC-012"
+    },
+    {
+      "path": "lessons/07-event-time-watermarks-backpressure.md",
+      "heading": "Mechanism and calculations",
+      "expression_sha256": "7cd1d62f6b5d50ab07509a11a9e256dd103b645de8d4112d28b5b9112d0ea5a8",
+      "claim_id": "M11-FC-013"
+    },
+    {
+      "path": "lessons/07-event-time-watermarks-backpressure.md",
+      "heading": "Mechanism and calculations",
+      "expression_sha256": "eb3887e7d8f85f94e001ecd3cfc95b4cca3b47e0973b692e3d5bf5577b291b1f",
+      "claim_id": "M11-FC-013"
+    },
+    {
+      "path": "lessons/07-event-time-watermarks-backpressure.md",
+      "heading": "Guided practice",
+      "expression_sha256": "389fad59319283d319c8e2c65e32655a8981632f9273d9e67a7dd5786fd2c14d",
+      "claim_id": "M11-FC-013"
+    },
+    {
+      "path": "lessons/07-event-time-watermarks-backpressure.md",
+      "heading": "Guided practice",
+      "expression_sha256": "a1fcca0ae8848d60f05a0549a4de33fc2c0378fd972543d2d90d94ae7f6b8dbe",
+      "claim_id": "M11-FC-013"
+    },
+    {
+      "path": "lessons/07-event-time-watermarks-backpressure.md",
+      "heading": "Guided practice",
+      "expression_sha256": "43efdee5183561b5865e32524e0a7deaf3bf10bc05f2a4bf8914935ab8de267c",
+      "claim_id": "M11-FC-013"
+    },
+    {
+      "path": "lessons/07-event-time-watermarks-backpressure.md",
+      "heading": "Self-check",
+      "expression_sha256": "487f1317de315255e0bb8b29f47614ea622c01fb4aded239ca38cf27b410e785",
+      "claim_id": "M11-FC-013"
+    }
+  ]
+}

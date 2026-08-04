@@ -1,116 +1,146 @@
-# Module 4 Resource Guide
+# Performance Methodology and Observability Resource Guide
 
-Every required source is free. Local lessons contain the required teaching; the
-sources provide standards text, maintainer contracts, and production experience.
+Local lessons are sufficient to complete the module. External sources reinforce
+the instruction and provide a checkable primary or practitioner reference; they
+never replace the local explanation, practice, or answer key.
 
-## RES-01: The USE Method
+## Required authoritative spine
 
-- Author/publisher: Brendan Gregg
-- URL: https://www.brendangregg.com/usemethod.html
-- Type/status: practitioner methodology; required
-- Boundary: read Summary, Metrics, In Practice, and Other Methodologies
-- Time/week: 35 minutes, Week 13
-- Access: free
-- Purpose: start from resource questions rather than available dashboards
-- Evidence: build a utilization/saturation/errors table and name two gaps
-- Local alternative: Lesson 1
-- Reflection: Which user symptom cannot be diagnosed by USE alone?
-- Last verified: 2026-07-31
+The required records are RES-01, RES-02, RES-03, RES-04, RES-05, RES-06.
+Every required record is free and has a local written alternative. All other
+records below are optional enrichment and do not consume required module time.
 
-## RES-02: Monitoring Systems with Advanced Analytics
+| Week | Required resources | Assigned minutes |
+|---:|---|---:|
+| 13 | RES-01, RES-02 | 80 |
+| 14 | RES-03, RES-04, RES-06 | 120 |
+| 15 | None | 0 |
+| 16 | RES-05 | 55 |
 
-- Authors/publisher: Jess Frame, Anthony Lenton, Steven Thurgood, Anton
-  Tolchanov, Nejc Trdin, and Carmela Quinito; Google SRE Workbook
-- URL: https://sre.google/workbook/monitoring/
-- Type/status: practitioner handbook chapter; required
-- Boundary: read Desirable Features, Sources of Monitoring Data, and Metrics
-  with Purpose through Saturation
-- Time/week: 45 minutes, Week 13
-- Access: free
-- Purpose: connect user symptoms, diagnostic signals, and operating cost
-- Evidence: classify five proposed signals by user, cause, and capacity purpose
-- Local alternative: Lessons 1 and 4
-- Reflection: Which signal is useful for diagnosis but unsafe for paging?
-- Last verified: 2026-07-31
+For each assigned source, preserve the requested evidence, one transfer limit,
+and one observation that would falsify the claim. A required source that is
+temporarily unavailable is replaced by its local alternative and the same evidence
+task; record the substitution.
 
-## RES-03: Trace Context
+## Resource records
 
-- Author/publisher: W3C Distributed Tracing Working Group
-- URL: https://www.w3.org/TR/trace-context/
-- Type/status: W3C Recommendation; required
-- Boundary: read Abstract, Trace Context HTTP Headers Format, Processing Model,
-  and Privacy Considerations
-- Time/week: 40 minutes, Week 14
-- Access: free
-- Purpose: define interoperable trace identity and safe propagation behavior
-- Evidence: validate three `traceparent` examples and document one trust boundary
-- Local alternative: Lesson 3
-- Reflection: Why must an inbound trace identifier not grant authorization?
-- Last verified: 2026-07-31
+### RES-01: The USE Method
 
-## RES-04: OpenTelemetry Specification Overview
+- **Author/publisher:** Brendan Gregg
+- **URL:** https://www.brendangregg.com/usemethod.html
+- **Type/status:** practitioner performance methodology; Required
+- **Access:** free
+- **Week/time:** Week 13; 35 minutes assigned
+- **Purpose:** Start investigation from resource questions rather than available dashboards.
+- **Boundary and evidence:** Read Summary, Metrics, In Practice, and Other Methodologies; build a USE table and name two gaps.
+- **Local alternative:** [lessons/01-question-first-investigations.md](lessons/01-question-first-investigations.md)
+- **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-07-31
+- **Reflection:** Which claim transfers to this module, which assumption limits it, and what evidence would falsify it?
 
-- Author/publisher: OpenTelemetry maintainers, Cloud Native Computing Foundation
-- URL: https://opentelemetry.io/docs/specs/otel/overview/
-- Type/status: maintainer specification; required
-- Boundary: read Client Architecture, Tracing Signal, Metric Signal, Log Signal,
-  Resources, Context Propagation, and Propagators
-- Time/week: 45 minutes, Week 14
-- Access: free
-- Purpose: map the lab's provider-neutral records to common signal semantics
-- Evidence: map each lab field to resource, scope, context, span, metric, or log
-- Local alternative: Lessons 3 and 4
-- Reflection: Which correlation survives aggregation, and which detail does not?
-- Last verified: 2026-07-31
+### RES-02: Monitoring Systems with Advanced Analytics
 
-## RES-05: Rigorous Benchmarking in Reasonable Time
+- **Author/publisher:** Google SRE Workbook contributors
+- **URL:** https://sre.google/workbook/monitoring/
+- **Type/status:** practitioner handbook chapter; Required
+- **Access:** free
+- **Week/time:** Week 13; 45 minutes assigned
+- **Purpose:** Connect user symptoms, diagnostic signals, and operating cost.
+- **Boundary and evidence:** Read Desirable Features, Sources of Monitoring Data, and Metrics with Purpose through Saturation; classify five signals.
+- **Local alternative:** [lessons/04-signals-cardinality-cost.md](lessons/04-signals-cardinality-cost.md)
+- **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-07-31
+- **Reflection:** Which claim transfers to this module, which assumption limits it, and what evidence would falsify it?
 
-- Authors/publisher: Tomas Kalibera and Richard E. Jones; ACM ISMM, accepted
-  manuscript hosted by the University of Kent
-- URL: https://kar.kent.ac.uk/33611/
-- Type/status: original research paper; required
-- Boundary: read the abstract, experimental-dimension model, repetition guidance,
-  and reporting recommendations; skip formal derivations on first pass
-- Time/week: 55 minutes, Week 16
-- Access: free
-- Purpose: treat multiple sources of performance variation explicitly
-- Evidence: identify process-, iteration-, and environment-level variation in
-  the learner's benchmark
-- Local alternative: Lessons 2 and 7
-- Reflection: Which repetition level would a single long run miss?
-- Last verified: 2026-07-31
+### RES-03: Trace Context
 
-## RES-06: The Art of Performance Monitoring
+- **Author/publisher:** W3C Distributed Tracing Working Group
+- **URL:** https://www.w3.org/TR/trace-context/
+- **Type/status:** W3C Recommendation; Required
+- **Access:** free
+- **Week/time:** Week 14; 40 minutes assigned
+- **Purpose:** Define interoperable trace identity, parsing, and privacy behavior.
+- **Boundary and evidence:** Read Abstract, header format, processing model, and privacy considerations; validate three contexts and identify one trust boundary.
+- **Local alternative:** [lessons/03-trace-context.md](lessons/03-trace-context.md)
+- **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-07-31
+- **Reflection:** Which claim transfers to this module, which assumption limits it, and what evidence would falsify it?
 
-- Author/publisher: Brian Smith, Facebook; USENIX Association
-- URL: https://www.usenix.org/conference/srecon16/program/presentation/smith
-- Type/status: conference video, audio, and slides; required
-- Boundary: watch the complete talk or use all slides plus the local written
-  alternative
-- Time/week: 35 minutes, Week 14
-- Access: free
-- Purpose: examine production performance monitoring as a designed system
-- Evidence: record one monitoring design rule, its cost, and one counterexample
-- Local alternative: Lesson 4 and the Transit case
-- Reflection: Which useful production signal should not become a metric label?
-- Last verified: 2026-07-31
+### RES-04: OpenTelemetry Specification Overview
 
-## Optional enrichment
+- **Author/publisher:** OpenTelemetry maintainers and CNCF
+- **URL:** https://opentelemetry.io/docs/specs/otel/overview/
+- **Type/status:** maintainer specification; Required
+- **Access:** free
+- **Week/time:** Week 14; 45 minutes assigned
+- **Purpose:** Map provider-neutral lab records to trace, metric, log, resource, and context semantics.
+- **Boundary and evidence:** Read the named signal, resource, context, and propagator sections; map every lab record field.
+- **Local alternative:** [lessons/03-trace-context.md](lessons/03-trace-context.md)
+- **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-07-31
+- **Reflection:** Which claim transfers to this module, which assumption limits it, and what evidence would falsify it?
 
-### Python debugging and profiling documentation
+### RES-05: Rigorous Benchmarking in Reasonable Time
 
-- Author/publisher: Python Software Foundation
-- URL: https://docs.python.org/3/library/debug.html
-- Type/status: maintainer documentation index; optional enrichment
-- Boundary: follow only the `cProfile` and `tracemalloc` entries, then read the
-  measurement-boundary sections for the learner's Python version
-- Time/week: 25 minutes, Week 14
-- Access: free
-- Purpose: inspect exact profiler boundaries before mapping the technique to a
-  non-Python production equivalent
-- Evidence: add two profiler limitations and one non-Python mapping to the Week
-  14 build review
-- Local alternative: Lesson 5 and the lab reference's output-contract section
-- Reflection: Which allocation or CPU claim remains outside the selected tool's
-  measurement boundary?
-- Last verified: 2026-07-31
+- **Author/publisher:** Tomas Kalibera and Richard E. Jones; ACM ISMM and University of Kent
+- **URL:** https://kar.kent.ac.uk/33611/
+- **Type/status:** original research paper; Required
+- **Access:** free
+- **Week/time:** Week 16; 55 minutes assigned
+- **Purpose:** Model multiple sources of benchmark variation and efficient repetition.
+- **Boundary and evidence:** Read the abstract, experimental dimensions, repetition guidance, and reporting recommendations; identify three variation levels.
+- **Local alternative:** [lessons/07-benchmarks-regression-budgets.md](lessons/07-benchmarks-regression-budgets.md)
+- **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-07-31
+- **Reflection:** Which claim transfers to this module, which assumption limits it, and what evidence would falsify it?
+
+### RES-06: The Art of Performance Monitoring
+
+- **Author/publisher:** Brian Smith, Facebook; USENIX Association
+- **URL:** https://www.usenix.org/conference/srecon16/program/presentation/smith
+- **Type/status:** conference video, audio, and slides; Required
+- **Access:** free
+- **Week/time:** Week 14; 35 minutes assigned
+- **Purpose:** Examine production performance monitoring as a designed and owned system.
+- **Boundary and evidence:** Watch the complete talk or use all slides with the local alternative; record one design rule, its cost, and a counterexample.
+- **Local alternative:** [lessons/04-signals-cardinality-cost.md](lessons/04-signals-cardinality-cost.md)
+- **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-07-31
+- **Reflection:** Which claim transfers to this module, which assumption limits it, and what evidence would falsify it?
+
+### RES-07: The Python Profilers
+
+- **Author/publisher:** Python Software Foundation
+- **URL:** https://docs.python.org/3/library/profile.html
+- **Type/status:** official documentation; Optional enrichment
+- **Access:** free
+- **Week/time:** Week 14; 30 minutes optional
+- **Purpose:** Distinguish deterministic call profiling, cumulative time, and instrumentation overhead in the portable lab.
+- **Boundary and evidence:** Read the introduction, instant user manual, and limitations; record what deterministic profiling measures and how its overhead changes the evidence boundary.
+- **Local alternative:** [lessons/05-profiling.md](lessons/05-profiling.md)
+- **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-08-04
+- **Reflection:** Which claim transfers to this module, which assumption limits it, and what evidence would falsify it?
+
+### RES-08: tracemalloc — Trace memory allocations
+
+- **Author/publisher:** Python Software Foundation
+- **URL:** https://docs.python.org/3/library/tracemalloc.html
+- **Type/status:** official documentation; Optional enrichment
+- **Access:** free
+- **Week/time:** Week 14; 25 minutes optional
+- **Purpose:** Interpret allocation snapshots and retained differences without equating total allocation with a leak.
+- **Boundary and evidence:** Read tracing allocations, snapshots, and comparing snapshots; state what the tool can attribute and what it cannot establish about object liveness.
+- **Local alternative:** [lessons/05-profiling.md](lessons/05-profiling.md)
+- **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-08-04
+- **Reflection:** Which claim transfers to this module, which assumption limits it, and what evidence would falsify it?
+
+### RES-09: EXPLAIN QUERY PLAN
+
+- **Author/publisher:** SQLite project
+- **URL:** https://www.sqlite.org/eqp.html
+- **Type/status:** official documentation; Optional enrichment
+- **Access:** free
+- **Week/time:** Week 14; 25 minutes optional
+- **Purpose:** Interpret scan, search, index, join-order, and temporary-structure evidence in the dependency lab.
+- **Boundary and evidence:** Read the warning and Sections 1.1–1.3; identify the chosen access path and explain why output formatting is not a stable application API.
+- **Local alternative:** [lessons/06-dependencies-query-plans.md](lessons/06-dependencies-query-plans.md)
+- **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-08-04
+- **Reflection:** Which claim transfers to this module, which assumption limits it, and what evidence would falsify it?
+
+Do not copy articles, chapters, slides, or transcripts into learner artifacts.
+Use short attributed quotations only when necessary and otherwise paraphrase with
+the source ID, exact section boundary, and stated evidence limit.

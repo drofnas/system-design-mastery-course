@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/system-design-course/evaluation-attestation.schema.json",
+  "title": "Evaluation independence attestation",
+  "type": "object",
+  "required": ["schema_version", "module", "bundle_sha256", "review_mode", "reviewer", "evaluated_at", "formal"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "module": {"type": "string", "pattern": "^M(0[1-9]|1[0-8])$"},
+    "bundle_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "review_mode": {"enum": ["independent_llm", "independent_human", "self"]},
+    "reviewer": {"type": "string", "minLength": 2},
+    "evaluated_at": {"type": "string", "format": "date-time"},
+    "formal": {"type": "boolean"}
+  },
+  "allOf": [
+    {"if": {"properties": {"review_mode": {"const": "self"}}}, "then": {"properties": {"formal": {"const": false}}}},
+    {"if": {"properties": {"review_mode": {"enum": ["independent_llm", "independent_human"]}}}, "then": {"properties": {"formal": {"const": true}}}}
+  ],
+  "additionalProperties": false
+}

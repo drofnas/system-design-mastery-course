@@ -1,0 +1,403 @@
+{
+  "schema_version": "1.0",
+  "module": "M08",
+  "reviewed_commit": "WORKTREE",
+  "reviewed_at": "2026-08-04",
+  "evidence_boundary": "This ledger records a source-level semantic review of lessons, worked answers, case studies, exercises, worksheets, rubrics, and lab guides. It verifies named mechanisms against bounded primary or official sources, distinguishes normative course contracts, and does not turn synthetic examples into production measurements.",
+  "claims": [
+    {
+      "id": "M08-FC-001",
+      "location": {
+        "path": "lessons/01-invariants-transaction-boundaries.md",
+        "heading": "Mechanism and decision procedure"
+      },
+      "claim": "A transaction is a visibility and recovery boundary, not a bag of related code. Start with a statement that can be false. Name the authoritative facts needed to decide it, every concurrent writer, and the smallest update that must be all-or-nothing. Then classify enforcement:",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-09"
+      ],
+      "source_sections": [
+        "Read the check, not-null, unique, primary-key, and foreign-key sections; map each mechanism to the facts it can and cannot enforce."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M08-FC-002",
+      "location": {
+        "path": "lessons/02-histories-isolation-anomalies.md",
+        "heading": "Mechanism and decision procedure"
+      },
+      "claim": "Represent each transaction as reads rT(x), writes wT(x), and a commit or abort. A conflict exists when two committed transactions access the same logical fact and at least one writes. Add an edge from the earlier effect to the later dependent effect. A cycle in the serialization graph proves that the history is not conflict-serializable.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-01"
+      ],
+      "source_sections": [
+        "Read Sections 13.2.1-13.2.3; draw one admitted history per level and state which Northstar invariant it can violate."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M08-FC-003",
+      "location": {
+        "path": "lessons/03-locks-deadlocks-retries.md",
+        "heading": "Mechanism and decision procedure"
+      },
+      "claim": "Shared locks permit compatible readers; exclusive locks exclude conflicting readers/writers. In strict 2PL, a transaction acquires locks and retains write locks until commit or abort, preventing other transactions from observing an uncommitted write. Predicate/range protection may be required when absence is part of the invariant.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-02"
+      ],
+      "source_sections": [
+        "Read Sections 13.3.2 and 13.3.4; build a wait-for graph and write a complete-transaction retry boundary."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M08-FC-004",
+      "location": {
+        "path": "lessons/04-occ-mvcc-write-skew.md",
+        "heading": "Mechanism and decision procedure"
+      },
+      "claim": "MVCC stores logical objects with version metadata. A snapshot selects versions visible at a read timestamp; uncommitted versions from other transactions are hidden. OCC records read/write sets in a private workspace, validates that the assumptions still hold, then publishes or aborts.",
+      "classification": "versioned",
+      "source_ids": [
+        "RES-01",
+        "RES-02",
+        "RES-03"
+      ],
+      "source_sections": [
+        "Read Sections 13.2.1-13.2.3; draw one admitted history per level and state which Northstar invariant it can violate.",
+        "Read Sections 13.3.2 and 13.3.4; build a wait-for graph and write a complete-transaction retry boundary.",
+        "Use only Lectures 17, 18, 20, 22, and 23; watch selected mechanism segments or use the linked notes, then annotate one schedule and one recovery trace."
+      ],
+      "verification_method": "official-documentation comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M08-FC-005",
+      "location": {
+        "path": "lessons/05-constraints-atomic-workflows.md",
+        "heading": "Mechanism and decision procedure"
+      },
+      "claim": "Constraints are executable invariant fragments. Prefer declarative enforcement at the authority: types/NOT NULL, CHECK, uniqueness, foreign keys, and database-specific exclusion or deferred constraints. Application validation is still useful for errors and authorization, but it cannot replace commit-time protection against concurrent writes.",
+      "classification": "security",
+      "source_ids": [
+        "RES-09"
+      ],
+      "source_sections": [
+        "Read the check, not-null, unique, primary-key, and foreign-key sections; map each mechanism to the facts it can and cannot enforce."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M08-FC-006",
+      "location": {
+        "path": "lessons/06-wal-checkpoints-recovery.md",
+        "heading": "Mechanism and decision procedure"
+      },
+      "claim": "WAL requires the log record describing a change to reach the durable boundary before the changed data page. A commit is durable only after its commit record is within the flushed LSN. Acknowledgement must not outrun that LSN.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-04"
+      ],
+      "source_sections": [
+        "Read the complete section; order log, data, flush, commit, and acknowledgement events and identify the unsafe permutation."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M08-FC-007",
+      "location": {
+        "path": "lessons/07-backups-pitr-restore.md",
+        "heading": "Mechanism and decision procedure"
+      },
+      "claim": "A backup claim has four parts: recoverable material, independent retention and access, a tested procedure, and an application-valid result. For physical PITR, retain a consistent base backup plus every required WAL segment to the target. Verify identity, version, configuration, permissions, encryption keys, checksums, archive continuity, target, and timeline before replay.",
+      "classification": "versioned",
+      "source_ids": [
+        "RES-06",
+        "RES-07"
+      ],
+      "source_sections": [
+        "Read Sections 25.3.1, 25.3.2, and 25.3.5; draw the minimum recoverable set and calculate a bounded RPO and replay workload.",
+        "Read Broken recovery procedures through Root cause analysis; classify each failed control as prevention, detection, recovery, or ownership evidence."
+      ],
+      "verification_method": "official-documentation comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M08-FC-008",
+      "location": {
+        "path": "lessons/08-decisions-migration-ownership.md",
+        "heading": "Mechanism and decision procedure"
+      },
+      "claim": "Build one row per invariant: authority, writers, transaction boundary, constraint, admitted concurrency, retry rule, acknowledgement boundary, backup material, tested target, telemetry, owner, and reversal evidence. Compare at least three concurrency/enforcement options and two recovery options against the same drivers.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-07",
+        "RES-08"
+      ],
+      "source_sections": [
+        "Read Broken recovery procedures through Root cause analysis; classify each failed control as prevention, detection, recovery, or ownership evidence.",
+        "Read the recovery plan through Next steps; separate RTO, consistency, replay, backlog, and user-communication decisions."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M08-FC-009",
+      "location": {
+        "path": "exercises/answer-key.md",
+        "heading": "EX-01"
+      },
+      "claim": "N-02 fits uniqueness; N-03 needs one result/audit transaction plus a completeness oracle; N-01 spans rows and needs serializable validation or safe materialization. N-05 treats result rows as authority and summary as derived. N-04/N-06 require log/restore evidence, not a schema label. Owners differ across application, database, security, and incident response.",
+      "classification": "security",
+      "source_ids": [
+        "RES-01"
+      ],
+      "source_sections": [
+        "Read Sections 13.2.1-13.2.3; draw one admitted history per level and state which Northstar invariant it can violate."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "The review covers the causal mechanism and derivation used by the explained answers; exercise numbers and worked values are synthetic and are not production measurements."
+    },
+    {
+      "id": "M08-FC-010",
+      "location": {
+        "path": "case-study/northstar-observatory.md",
+        "heading": "Problem and isolation"
+      },
+      "claim": "Northstar coordinates public research observations across two telescopes. The registry owns controller certification, control windows, exposure results, and audit evidence. A nightly summary is derived. This case deliberately contains no commerce entities or flows and is not a capstone answer.",
+      "classification": "synthetic",
+      "source_ids": [],
+      "source_sections": [],
+      "verification_method": "controlled synthetic fixture",
+      "status": "verified",
+      "scope_limit": "The case exists to exercise a reasoning method under declared constraints; none of its organizations, loads, timings, incidents, or results are production evidence.",
+      "synthetic_label": "This non-capstone case and every unattributed workload, incident, cost, latency, and organization detail in it are synthetic course fixtures."
+    },
+    {
+      "id": "M08-FC-011",
+      "location": {
+        "path": "case-study/northstar-observatory.md",
+        "heading": "Lost update schedule"
+      },
+      "claim": "The document uses the bounded expression completed_exposures = 0; its semantics, substitution where arithmetic applies, and stated assumptions were checked as a reproducible derivation.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-01"
+      ],
+      "source_sections": [
+        "Read Sections 13.2.1-13.2.3; draw one admitted history per level and state which Northstar invariant it can violate."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "The mapping verifies the written expression and arithmetic under its declared assumptions; synthetic inputs and a local result do not establish a production distribution."
+    }
+  ],
+  "lesson_coverage": [
+    {
+      "lesson_id": "L01",
+      "path": "lessons/01-invariants-transaction-boundaries.md",
+      "claim_ids": [
+        "M08-FC-001"
+      ]
+    },
+    {
+      "lesson_id": "L02",
+      "path": "lessons/02-histories-isolation-anomalies.md",
+      "claim_ids": [
+        "M08-FC-002"
+      ]
+    },
+    {
+      "lesson_id": "L03",
+      "path": "lessons/03-locks-deadlocks-retries.md",
+      "claim_ids": [
+        "M08-FC-003"
+      ]
+    },
+    {
+      "lesson_id": "L04",
+      "path": "lessons/04-occ-mvcc-write-skew.md",
+      "claim_ids": [
+        "M08-FC-004"
+      ]
+    },
+    {
+      "lesson_id": "L05",
+      "path": "lessons/05-constraints-atomic-workflows.md",
+      "claim_ids": [
+        "M08-FC-005"
+      ]
+    },
+    {
+      "lesson_id": "L06",
+      "path": "lessons/06-wal-checkpoints-recovery.md",
+      "claim_ids": [
+        "M08-FC-006"
+      ]
+    },
+    {
+      "lesson_id": "L07",
+      "path": "lessons/07-backups-pitr-restore.md",
+      "claim_ids": [
+        "M08-FC-007"
+      ]
+    },
+    {
+      "lesson_id": "L08",
+      "path": "lessons/08-decisions-migration-ownership.md",
+      "claim_ids": [
+        "M08-FC-008"
+      ]
+    }
+  ],
+  "document_coverage": [
+    {
+      "path": "assessment/rubric.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "case-study/northstar-observatory.md",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [
+        "M08-FC-010",
+        "M08-FC-011"
+      ],
+      "review_note": "The case was reviewed for explicit synthetic boundaries, internal arithmetic, non-generalization language, and separation from the learner capstone."
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M08-FC-009"
+      ],
+      "review_note": "Explained answers were checked for causal consistency, formula provenance, and agreement with the locally taught mechanism and cited source boundary."
+    },
+    {
+      "path": "exercises/exercises.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "lab/README.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "The lab guide's commands, interfaces, bounds, and synthetic evidence limitations were checked directly against the executable implementation and its passing tests."
+    },
+    {
+      "path": "lessons/01-invariants-transaction-boundaries.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M08-FC-001"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/02-histories-isolation-anomalies.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M08-FC-002"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/03-locks-deadlocks-retries.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M08-FC-003"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/04-occ-mvcc-write-skew.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M08-FC-004"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/05-constraints-atomic-workflows.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M08-FC-005"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/06-wal-checkpoints-recovery.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M08-FC-006"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/07-backups-pitr-restore.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M08-FC-007"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/08-decisions-migration-ownership.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M08-FC-008"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "worksheets/week-29-transaction-model.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-30-concurrency-build.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-31-failure-restore-matrix.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-32-transaction-recovery-decision.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    }
+  ],
+  "formula_mappings": [
+    {
+      "path": "case-study/northstar-observatory.md",
+      "heading": "Lost update schedule",
+      "expression_sha256": "ff5ae45997cac046f14f19ff74e932914a36f539b9ca3ee0729ebf9d9515f20f",
+      "claim_id": "M08-FC-011"
+    }
+  ]
+}

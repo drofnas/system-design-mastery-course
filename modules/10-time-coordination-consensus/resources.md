@@ -1,115 +1,120 @@
-# Module 10 Resource Guide
+# Time, Coordination, and Consensus Resource Guide
 
-External sources reinforce the local lessons; none is required to understand or
-complete the module. All required sources were free and reachable on
-2026-08-02. If access changes, use the named local alternative and record that
-substitution.
+Local lessons are sufficient to complete the module. External sources reinforce
+the instruction and provide a checkable primary or practitioner reference; they
+never replace the local explanation, practice, or answer key.
 
-## Week 37
+## Required authoritative spine
 
-### RES-01 — Time, Clocks, and the Ordering of Events
+The required records are RES-01, RES-04, RES-06, RES-07.
+Every required record is free and has a local written alternative. All other
+records below are optional enrichment and do not consume required module time.
+
+| Week | Required resources | Assigned minutes |
+|---:|---|---:|
+| 37 | RES-01 | 70 |
+| 38 | RES-04 | 110 |
+| 39 | RES-06 | 45 |
+| 40 | RES-07 | 75 |
+
+For each assigned source, preserve the requested evidence, one transfer limit,
+and one observation that would falsify the claim. A required source that is
+temporarily unavailable is replaced by its local alternative and the same evidence
+task; record the substitution.
+
+## Resource records
+
+### RES-01: Time, Clocks, and the Ordering of Events in a Distributed System
 
 - **Author/publisher:** Leslie Lamport; Communications of the ACM
-- **Type/status/access:** Original paper; required; free
-- **Boundary/time:** Pages 558–563; 70 minutes
-- **Purpose:** Derive happened-before, scalar logical clocks, total-order limits,
-  and assumptions behind ordering claims.
-- **Evidence:** Draw one event/message graph. Mark causal and concurrent pairs;
-  explain why scalar timestamps cannot prove the converse of happened-before.
-- **Reflection:** Which product requirement needs causality, and which merely
-  needs a stable presentation order?
-- **Fallback:** Lessons 1–2 and EX-01–EX-04.
 - **URL:** https://lamport.azurewebsites.net/pubs/time-clocks.pdf
+- **Type/status:** original research paper; Required
+- **Access:** free
+- **Week/time:** Week 37; 70 minutes assigned
+- **Purpose:** Derive happened-before, logical-clock rules, total-order limits, and explicit physical-clock assumptions.
+- **Boundary and evidence:** Read pages 558–563; construct one happened-before graph and identify two concurrent events that a scalar timestamp cannot distinguish.
+- **Local alternative:** [lessons/02-logical-vector-clocks.md](lessons/02-logical-vector-clocks.md)
+- **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-08-02
+- **Reflection:** Which claim transfers to this module, which assumption limits it, and what evidence would falsify it?
 
-### RES-02 — Spanner
-
-- **Author/publisher:** James C. Corbett et al.; Google/USENIX
-- **Type/status/access:** Original systems paper; required; free
-- **Boundary/time:** Sections 3 and 4.1–4.2; 55 minutes
-- **Purpose:** See how a production system exposes an uncertainty interval and
-  waits for a guarantee rather than assuming a perfect clock.
-- **Evidence:** Record the interval, wait condition, claimed ordering property,
-  and infrastructure/failure assumptions.
-- **Reflection:** What would fail if the uncertainty bound were unavailable?
-- **Fallback:** Lesson 1 and EX-02.
-- **URL:** https://research.google/pubs/spanner-googles-globally-distributed-database-2/
-
-## Week 38
-
-### RES-03 — Paxos Made Simple
-
-- **Author/publisher:** Leslie Lamport; Microsoft Research/ACM SIGACT
-- **Type/status/access:** Original paper; required; free
-- **Boundary/time:** Complete paper; 65 minutes
-- **Purpose:** Isolate the promise and accepted-value constraints that keep one
-  consensus instance safe.
-- **Evidence:** Produce an acceptor ledger and one counterexample prevented by
-  the value-selection rule.
-- **Reflection:** Which practical replicated-log concerns are intentionally
-  absent?
-- **Fallback:** Lesson 4 and EX-07.
-- **URL:** https://www.microsoft.com/en-us/research/publication/paxos-made-simple/
-
-### RES-04 — In Search of an Understandable Consensus Algorithm
+### RES-04: In Search of an Understandable Consensus Algorithm
 
 - **Author/publisher:** Diego Ongaro and John Ousterhout; USENIX ATC
-- **Type/status/access:** Original systems paper; required; free
-- **Boundary/time:** Sections 2–8; 110 minutes
-- **Purpose:** Connect elections, log replication, safety, clients, snapshots,
-  and membership.
-- **Evidence:** Trace election safety, log matching, leader completeness, and
-  state-machine safety through one leader change.
-- **Reflection:** Which rules protect safety and which only improve progress?
-- **Fallback:** Lessons 4–8 and EX-08–EX-14.
 - **URL:** https://raft.github.io/raft.pdf
+- **Type/status:** original systems paper; Required
+- **Access:** free
+- **Week/time:** Week 38; 110 minutes assigned
+- **Purpose:** Connect elections, log replication, safety, clients, snapshots, and membership to explicit Raft properties.
+- **Boundary and evidence:** Read Sections 2–8; trace election safety, log matching, leader completeness, and state-machine safety through one leader change.
+- **Local alternative:** [lessons/04-paxos-raft-foundations.md](lessons/04-paxos-raft-foundations.md)
+- **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-08-02
+- **Reflection:** Which claim transfers to this module, which assumption limits it, and what evidence would falsify it?
 
-### RES-05 — Designing for Understandability
-
-- **Author/publisher:** John Ousterhout; CS at Illinois
-- **Type/status/access:** Recorded lecture with official slides; required; free
-- **Boundary/time:** Video 00:00–35:00 or slides 3–20; 45 minutes
-- **Purpose:** Rehearse the visual event sequence for elections and log repair.
-- **Evidence:** Narrate one election and one conflicting-log repair using terms,
-  votes, indexes, and quorums.
-- **Reflection:** Which diagram hides a persistence or timing assumption?
-- **Fallback:** Official slides and Lessons 5–6.
-- **URLs:** https://www.youtube.com/watch?v=vYp4LYbnnW8 and
-  https://raft.github.io/slides/uiuc2016.pdf
-
-## Week 39
-
-### RES-06 — Formal TLA+ Specification for Raft
+### RES-06: Formal TLA+ Specification for the Raft Consensus Algorithm
 
 - **Author/publisher:** Diego Ongaro
-- **Type/status/access:** Maintainer formal specification; required; free
-- **Boundary/time:** README plus state variables, `TypeOK`, and state-machine
-  safety portions; 45 minutes
-- **Purpose:** Map implementation state and observable traces to a formal model.
-- **Evidence:** Map five variables to lab fields and name one excluded liveness
-  claim. Running TLA+ is not required.
-- **Reflection:** Which implementation detail is refinement evidence rather than
-  part of the abstract safety property?
-- **Fallback:** Lesson 6 and EX-10.
 - **URL:** https://github.com/ongardie/raft.tla
+- **Type/status:** maintainer formal specification; Required
+- **Access:** free
+- **Week/time:** Week 39; 45 minutes assigned
+- **Purpose:** Map implementation state to formal variables and invariants without requiring prior TLA+ fluency.
+- **Boundary and evidence:** Read README and the state-variable, TypeOK, and state-machine-safety portions of raft.tla; map five variables to lab evidence and name one omitted liveness claim.
+- **Local alternative:** [lessons/06-raft-log-safety.md](lessons/06-raft-log-safety.md)
+- **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-08-02
+- **Reflection:** Which claim transfers to this module, which assumption limits it, and what evidence would falsify it?
 
-## Week 40
+### RES-07: The Chubby Lock Service for Loosely-Coupled Distributed Systems
 
-### RES-07 — The Chubby Lock Service
-
-- **Author/publisher:** Mike Burrows; Google/USENIX OSDI
-- **Type/status/access:** First-person engineering case; required; free
-- **Boundary/time:** Sections 2–5; 75 minutes
-- **Purpose:** Study leases, sequencers, caching, client behavior, and the gap
-  between intended and actual production use.
-- **Evidence:** Record one lease assumption, fencing obligation, cache risk,
-  operating limit, and owner.
-- **Reflection:** Which failure must the protected resource reject even when the
-  lock service is correct?
-- **Fallback:** Lesson 8 and EX-13–EX-16.
+- **Author/publisher:** Mike Burrows; Google and USENIX OSDI
 - **URL:** https://research.google/pubs/the-chubby-lock-service-for-loosely-coupled-distributed-systems/
+- **Type/status:** first-person engineering case; Required
+- **Access:** free
+- **Week/time:** Week 40; 75 minutes assigned
+- **Purpose:** Study operated leases, sequencers, caching, client behavior, and the gap between intended and actual use.
+- **Boundary and evidence:** Read Sections 2–5; record one lease assumption, one fencing/sequencer obligation, one cache risk, one operational limit, and the responsible owner.
+- **Local alternative:** [lessons/08-membership-leases-fencing-decisions.md](lessons/08-membership-leases-fencing-decisions.md)
+- **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-08-02
+- **Reflection:** Which claim transfers to this module, which assumption limits it, and what evidence would falsify it?
 
-## Source and license notes
+### RES-02: Spanner: Google's Globally-Distributed Database
 
-These records link to third-party works under their publishers' terms. The
-course provides original explanations and does not reproduce papers, slides,
-transcripts, or source files.
+- **Author/publisher:** James C. Corbett et al.; Google and USENIX OSDI
+- **URL:** https://research.google/pubs/spanner-googles-globally-distributed-database-2/
+- **Type/status:** original systems paper; Optional enrichment
+- **Access:** free
+- **Week/time:** Week 37; 55 minutes optional
+- **Purpose:** Study a production system that exposes clock uncertainty instead of assuming perfect wall time.
+- **Boundary and evidence:** Read Sections 3 and 4.1–4.2; write the uncertainty interval, wait condition, guarantee, and infrastructure assumptions.
+- **Local alternative:** [lessons/01-physical-clocks-uncertainty.md](lessons/01-physical-clocks-uncertainty.md)
+- **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-08-02
+- **Reflection:** Which claim transfers to this module, which assumption limits it, and what evidence would falsify it?
+
+### RES-03: Paxos Made Simple
+
+- **Author/publisher:** Leslie Lamport; Microsoft Research and ACM SIGACT
+- **URL:** https://www.microsoft.com/en-us/research/publication/paxos-made-simple/
+- **Type/status:** original consensus paper; Optional enrichment
+- **Access:** free
+- **Week/time:** Week 38; 65 minutes optional
+- **Purpose:** Expose the single-value safety invariant behind quorum agreement and compare it with a replicated log.
+- **Boundary and evidence:** Read the complete paper; produce an acceptor promise/accepted-value ledger and one counterexample prevented by P2b.
+- **Local alternative:** [lessons/04-paxos-raft-foundations.md](lessons/04-paxos-raft-foundations.md)
+- **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-08-02
+- **Reflection:** Which claim transfers to this module, which assumption limits it, and what evidence would falsify it?
+
+### RES-05: Designing for Understandability: The Raft Consensus Algorithm
+
+- **Author/publisher:** John Ousterhout; CS at Illinois
+- **URL:** https://www.youtube.com/watch?v=vYp4LYbnnW8
+- **Type/status:** recorded lecture with official slides; Optional enrichment
+- **Access:** free
+- **Week/time:** Week 38; 45 minutes optional
+- **Purpose:** Rehearse the visual event sequence for elections, log repair, and the five named safety properties.
+- **Boundary and evidence:** Watch 00:00–35:00 or read official slides 3–20; narrate one election and one conflicting-log repair without using architecture labels alone.
+- **Local alternative:** [lessons/06-raft-log-safety.md](lessons/06-raft-log-safety.md)
+- **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-08-02
+- **Reflection:** Which claim transfers to this module, which assumption limits it, and what evidence would falsify it?
+
+Do not copy articles, chapters, slides, or transcripts into learner artifacts.
+Use short attributed quotations only when necessary and otherwise paraphrase with
+the source ID, exact section boundary, and stated evidence limit.

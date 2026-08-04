@@ -1,0 +1,409 @@
+{
+  "schema_version": "1.0",
+  "module": "M14",
+  "reviewed_commit": "WORKTREE",
+  "reviewed_at": "2026-08-04",
+  "evidence_boundary": "This ledger records a source-level semantic review of lessons, worked answers, case studies, exercises, worksheets, rubrics, and lab guides. It verifies named mechanisms against bounded primary or official sources, distinguishes normative course contracts, and does not turn synthetic examples into production measurements.",
+  "claims": [
+    {
+      "id": "M14-FC-001",
+      "location": {
+        "path": "lessons/01-boundaries-outcomes-coupling.md",
+        "heading": "Mechanism: a boundary buys independence and creates an interface"
+      },
+      "claim": "A module can hide implementation without adding a network or a new operator. A deployable service buys independent rollout and scaling, but adds partial failure, compatibility, telemetry, authorization, and on-call work. An event boundary buys time and failure decoupling only when the producer's fact, the consumer's lag tolerance, replay semantics, and authority are explicit.",
+      "classification": "security",
+      "source_ids": [
+        "RES-01"
+      ],
+      "source_sections": [
+        "Read the complete article; record three boundary drivers, two reasons to remain modular, and one extraction threshold."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M14-FC-002",
+      "location": {
+        "path": "lessons/02-social-architecture-ownership.md",
+        "heading": "Mechanism: interfaces are maintained by conversations"
+      },
+      "claim": "Conway's observation is predictive, not prescriptive: systems tend to reflect communication structures because an interface cannot remain coherent without communication among its designers and operators. A service boundary imposed across teams that must coordinate every change creates a distributed monolith.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-02"
+      ],
+      "source_sections": [
+        "Read the author page and linked original paper; map three required technical interfaces to their human communication paths."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M14-FC-003",
+      "location": {
+        "path": "lessons/03-sourcing-platforms-governance.md",
+        "heading": "Mechanism: buy operations, not responsibility"
+      },
+      "claim": "A sourcing label hides a bundle of obligations. Define the required capability first: correctness, throughput, latency, recovery, residency, authorization, observability, change cadence, support, and exit time. Then compare:",
+      "classification": "inference",
+      "source_ids": [
+        "RES-01",
+        "RES-04",
+        "RES-05"
+      ],
+      "source_sections": [
+        "Read the complete article; record three boundary drivers, two reasons to remain modular, and one extraction threshold.",
+        "Read Definition, Functional Activities, and Inputs and Outputs; define one business unit metric, one resource metric, sources, owner, and threshold.",
+        "Read Breaking the Cycle, Successfully Deliver the Parts, and the middleware example; produce a seam, transition asset, removal condition, and cost-of-risk argument."
+      ],
+      "verification_method": "bounded inference from cited premises",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence.",
+      "premises": [
+        "Architecture boundaries and sourcing choices add different delivery and operating obligations.",
+        "Unit economics and incremental migration evidence constrain the feasible technical sequence."
+      ]
+    },
+    {
+      "id": "M14-FC-004",
+      "location": {
+        "path": "lessons/04-total-cost-unit-economics.md",
+        "heading": "Derivation"
+      },
+      "claim": "Separate recurring and one-time cost:",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-04"
+      ],
+      "source_sections": [
+        "Read Definition, Functional Activities, and Inputs and Outputs; define one business unit metric, one resource metric, sources, owner, and threshold."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M14-FC-005",
+      "location": {
+        "path": "lessons/05-compatibility-schema-evolution.md",
+        "heading": "Mechanism: compatibility is a quantified mixed-version property"
+      },
+      "claim": "A change is compatible when every supported producer, consumer, stored record, and replay path behaves within its contract during the declared window. Define:",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-07"
+      ],
+      "source_sections": [
+        "Read the Summary and specification items 1-11; classify six changes and state two cases where SemVer cannot prove runtime compatibility."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M14-FC-006",
+      "location": {
+        "path": "lessons/06-incremental-migration-backfills.md",
+        "heading": "Mechanism: each state preserves a safe next move"
+      },
+      "claim": "Use the state sequence Baseline → Expand → Backfill → Shadow → Cutover → Contract → Decommission. Each state defines allowed writers, read routing, entry evidence, exit gate, stop condition, and rollback. A calendar milestone cannot replace those properties.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-05"
+      ],
+      "source_sections": [
+        "Read Breaking the Cycle, Successfully Deliver the Parts, and the middleware example; produce a seam, transition asset, removal condition, and cost-of-risk argument."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M14-FC-007",
+      "location": {
+        "path": "lessons/07-shadow-cutover-rollback.md",
+        "heading": "Mechanism: promotion is a decision over comparable evidence"
+      },
+      "claim": "Shadow traffic copies an input to a candidate while the old path remains authoritative. Remove or isolate irreversible effects. Normalize nondeterminism before comparison: timestamps, ordering, generated IDs, and tolerated precision. Measure population, coverage, mismatch classes, latency, freshness, resource use, and cost. A small global mismatch percentage can hide a complete failure for one tenant or operation, so segment results.",
+      "classification": "security",
+      "source_ids": [
+        "RES-08"
+      ],
+      "source_sections": [
+        "Read Canary Release through Canary Implementation; define population, duration, comparison metrics, budget exposure, promotion, and rollback thresholds."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M14-FC-008",
+      "location": {
+        "path": "lessons/08-technical-strategy-teach-back.md",
+        "heading": "Decision procedure"
+      },
+      "claim": "A strategy explains why a sequence of technical investments should change a product or organizational outcome. Use this order:",
+      "classification": "inference",
+      "source_ids": [
+        "RES-04",
+        "RES-05"
+      ],
+      "source_sections": [
+        "Read Definition, Functional Activities, and Inputs and Outputs; define one business unit metric, one resource metric, sources, owner, and threshold.",
+        "Read Breaking the Cycle, Successfully Deliver the Parts, and the middleware example; produce a seam, transition asset, removal condition, and cost-of-risk argument."
+      ],
+      "verification_method": "bounded inference from cited premises",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence.",
+      "premises": [
+        "Architecture boundaries and sourcing choices add different delivery and operating obligations.",
+        "Unit economics and incremental migration evidence constrain the feasible technical sequence."
+      ]
+    },
+    {
+      "id": "M14-FC-009",
+      "location": {
+        "path": "exercises/answer-key.md",
+        "heading": "EX-01 explained answer"
+      },
+      "claim": "The document defines the bounded course behavior named EX-01 explained answer.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-07"
+      ],
+      "source_sections": [
+        "Read the Summary and specification items 1-11; classify six changes and state two cases where SemVer cannot prove runtime compatibility."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "The review covers the causal mechanism and derivation used by the explained answers; exercise numbers and worked values are synthetic and are not production measurements."
+    },
+    {
+      "id": "M14-FC-010",
+      "location": {
+        "path": "case-study/northstar-catalog-evolution.md",
+        "heading": "Outcome, workload, and current state"
+      },
+      "claim": "Northstar's operations registry validates observations, approves publication, builds the public catalog, and emits subscriber bulletins. The registry owns the authoritative accepted observation and publication decision. The catalog and bulletins are derived.",
+      "classification": "synthetic",
+      "source_ids": [],
+      "source_sections": [],
+      "verification_method": "controlled synthetic fixture",
+      "status": "verified",
+      "scope_limit": "The case exists to exercise a reasoning method under declared constraints; none of its organizations, loads, timings, incidents, or results are production evidence.",
+      "synthetic_label": "This non-capstone case and every unattributed workload, incident, cost, latency, and organization detail in it are synthetic course fixtures."
+    },
+    {
+      "id": "M14-FC-011",
+      "location": {
+        "path": "lessons/05-compatibility-schema-evolution.md",
+        "heading": "Worked example"
+      },
+      "claim": "The document uses the bounded expression public=true|false; its semantics, substitution where arithmetic applies, and stated assumptions were checked as a reproducible derivation.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-07"
+      ],
+      "source_sections": [
+        "Read the Summary and specification items 1-11; classify six changes and state two cases where SemVer cannot prove runtime compatibility."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "The mapping verifies the written expression and arithmetic under its declared assumptions; synthetic inputs and a local result do not establish a production distribution."
+    }
+  ],
+  "lesson_coverage": [
+    {
+      "lesson_id": "L01",
+      "path": "lessons/01-boundaries-outcomes-coupling.md",
+      "claim_ids": [
+        "M14-FC-001"
+      ]
+    },
+    {
+      "lesson_id": "L02",
+      "path": "lessons/02-social-architecture-ownership.md",
+      "claim_ids": [
+        "M14-FC-002"
+      ]
+    },
+    {
+      "lesson_id": "L03",
+      "path": "lessons/03-sourcing-platforms-governance.md",
+      "claim_ids": [
+        "M14-FC-003"
+      ]
+    },
+    {
+      "lesson_id": "L04",
+      "path": "lessons/04-total-cost-unit-economics.md",
+      "claim_ids": [
+        "M14-FC-004"
+      ]
+    },
+    {
+      "lesson_id": "L05",
+      "path": "lessons/05-compatibility-schema-evolution.md",
+      "claim_ids": [
+        "M14-FC-005"
+      ]
+    },
+    {
+      "lesson_id": "L06",
+      "path": "lessons/06-incremental-migration-backfills.md",
+      "claim_ids": [
+        "M14-FC-006"
+      ]
+    },
+    {
+      "lesson_id": "L07",
+      "path": "lessons/07-shadow-cutover-rollback.md",
+      "claim_ids": [
+        "M14-FC-007"
+      ]
+    },
+    {
+      "lesson_id": "L08",
+      "path": "lessons/08-technical-strategy-teach-back.md",
+      "claim_ids": [
+        "M14-FC-008"
+      ]
+    }
+  ],
+  "document_coverage": [
+    {
+      "path": "assessment/rubric.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "case-study/northstar-catalog-evolution.md",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [
+        "M14-FC-010"
+      ],
+      "review_note": "The case was reviewed for explicit synthetic boundaries, internal arithmetic, non-generalization language, and separation from the learner capstone."
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M14-FC-009"
+      ],
+      "review_note": "Explained answers were checked for causal consistency, formula provenance, and agreement with the locally taught mechanism and cited source boundary."
+    },
+    {
+      "path": "exercises/exercises.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "lab/README.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "The lab guide's commands, interfaces, bounds, and synthetic evidence limitations were checked directly against the executable implementation and its passing tests."
+    },
+    {
+      "path": "lessons/01-boundaries-outcomes-coupling.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M14-FC-001"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/02-social-architecture-ownership.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M14-FC-002"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/03-sourcing-platforms-governance.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M14-FC-003"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/04-total-cost-unit-economics.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M14-FC-004"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/05-compatibility-schema-evolution.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M14-FC-005",
+        "M14-FC-011"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/06-incremental-migration-backfills.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M14-FC-006"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/07-shadow-cutover-rollback.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M14-FC-007"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/08-technical-strategy-teach-back.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M14-FC-008"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "worksheets/week-53-evolution-model.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-54-migration-build.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-55-evolution-failure-matrix.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-56-strategy-defense.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    }
+  ],
+  "formula_mappings": [
+    {
+      "path": "lessons/05-compatibility-schema-evolution.md",
+      "heading": "Worked example",
+      "expression_sha256": "b260269f3888e2c05492c1d6dc8c084f7811d88afa3236f141c19a20b3ebe5b6",
+      "claim_id": "M14-FC-011"
+    }
+  ]
+}

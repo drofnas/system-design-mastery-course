@@ -5,10 +5,10 @@ Northstar calibrates the evaluator and is never a required commerce answer.
 
 ## Required submission
 
-Provide one manifest resolving A01–A11 to commits or hashes: frozen Week 45
+Provide one manifest resolving A01–A12 to commits or hashes: frozen Week 45
 model/predictions, reliability build/tests, implementation review, eighteen raw
 paired trials, incident postmortem, recovery evidence, DR review, defense,
-evaluation/remediation, Gate 4, learning logs, and assistance disclosure.
+evaluation/remediation, Gate 4, recovery-tier ADR, learning logs, and assistance disclosure.
 
 ## Structural gates
 
@@ -45,8 +45,9 @@ preserves workflow and irreversible-effect invariants. Failure is hard.
 
 ### G06: Decisions, Gate 4, revision, and remediation integrity
 
-The postmortem and DR review cover alternatives, impact, capacity, security,
-cost, migration, rollback, owners, dissent, uncertainty, and reversal. All four
+The postmortem, DR review, and distinct A12 recovery-tier ADR cover alternatives,
+impact, capacity, security, cost, migration, rollback, owners, dissent,
+uncertainty, and reversal. All four
 Gate 4 parts and the separate Week 48 revision resolve. Remediation never
 overwrites frozen evidence.
 
@@ -67,3 +68,7 @@ remediable gaps. Repeat applies when G02–G05 fails or a safety-critical score 
   human performance, security enforcement, or compliance from the toy lab.
 - Accept defensible alternatives; never require Northstar thresholds or topology.
 - Recommend named lessons and EX exercises without writing replacement graded work.
+
+## Evaluation packaging and independence
+
+Use the [provider-neutral bundle and validation workflow](../../../EVALUATION_GUIDE.md). The evaluator returns JSON only; the validator renders the report. An independent LLM or human critique after the freeze is required for formal Pass. Self-scoring remains provisional.

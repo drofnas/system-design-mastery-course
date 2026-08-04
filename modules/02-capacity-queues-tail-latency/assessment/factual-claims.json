@@ -1,0 +1,475 @@
+{
+  "schema_version": "1.0",
+  "module": "M02",
+  "reviewed_commit": "WORKTREE",
+  "reviewed_at": "2026-08-04",
+  "evidence_boundary": "This ledger records a source-level semantic review of lessons, worked answers, case studies, exercises, worksheets, rubrics, and lab guides. It verifies named mechanisms against bounded primary or official sources, distinguishes normative course contracts, and does not turn synthetic examples into production measurements.",
+  "claims": [
+    {
+      "id": "M02-FC-001",
+      "location": {
+        "path": "lessons/01-workload-and-useful-work.md",
+        "heading": "Mechanism"
+      },
+      "claim": "A capacity model begins with work crossing a named boundary. “One million users” does not state how often they act, which operations they choose, how requests cluster in time, or how much resource each operation consumes.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-01"
+      ],
+      "source_sections": [
+        "Study queue terminology, Little's Law, dynamic behavior, and strengths/weaknesses; skip Markov derivations. Explain one invalid use and calculate one boundary two ways."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M02-FC-002",
+      "location": {
+        "path": "lessons/02-littles-law-and-saturation.md",
+        "heading": "Mechanism"
+      },
+      "claim": "For a stable long-run boundary:",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-06"
+      ],
+      "source_sections": [
+        "Watch the complete presentation or read all slides with speaker notes. Explain why run at 80% is not a general policy."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M02-FC-003",
+      "location": {
+        "path": "lessons/03-latency-measurement.md",
+        "heading": "Mechanism"
+      },
+      "claim": "A latency distribution needs:",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-02"
+      ],
+      "source_sections": [
+        "Read the complete article. Choose one tail technique and state its extra work, correctness assumption, and rejection condition."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M02-FC-004",
+      "location": {
+        "path": "lessons/04-fanout-and-tail-amplification.md",
+        "heading": "Mechanism"
+      },
+      "claim": "If one branch completes within threshold t with probability F(t), and n parallel branches are independent, a request that waits for all branches completes within t with probability:",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-02"
+      ],
+      "source_sections": [
+        "Read the complete article. Choose one tail technique and state its extra work, correctness assumption, and rejection condition."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M02-FC-005",
+      "location": {
+        "path": "lessons/05-bounded-overload-control.md",
+        "heading": "Mechanism"
+      },
+      "claim": "When arrivals exceed completions, one of four things happens:",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-04"
+      ],
+      "source_sections": [
+        "Read the complete article. Calculate net drain and clearance for one backlog and identify the fragile assumption."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M02-FC-006",
+      "location": {
+        "path": "lessons/06-retries-and-downstream-protection.md",
+        "heading": "Mechanism"
+      },
+      "claim": "A retry is additional load created during a failure. It is useful only when:",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-07"
+      ],
+      "source_sections": [
+        "Optional: read the complete article and record one timeout failure and one question for Module 6."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M02-FC-007",
+      "location": {
+        "path": "lessons/07-failover-headroom-and-unit-cost.md",
+        "heading": "Mechanism"
+      },
+      "claim": "Normal-state success does not prove failover safety. For a declared retained capacity fraction f:",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-04"
+      ],
+      "source_sections": [
+        "Read the complete article. Calculate net drain and clearance for one backlog and identify the fragile assumption."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M02-FC-008",
+      "location": {
+        "path": "lessons/08-capacity-decisions-and-defense.md",
+        "heading": "Mechanism"
+      },
+      "claim": "A capacity report is a decision artifact, not a benchmark dump. It connects:",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-03"
+      ],
+      "source_sections": [
+        "Read Resource Exhaustion, Queue Management, Load Shedding and Graceful Degradation, and Retries. Draw one retry feedback loop and its earliest control."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M02-FC-009",
+      "location": {
+        "path": "exercises/answer-key.md",
+        "heading": "EX-01"
+      },
+      "claim": "Useful throughput is distinct successful journey lookups per second. User success uses attempted logical journeys as its denominator, not server attempts or branches. Otherwise retries make failure look like added demand or value.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-06"
+      ],
+      "source_sections": [
+        "Watch the complete presentation or read all slides with speaker notes. Explain why run at 80% is not a general policy."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "The review covers the causal mechanism and derivation used by the explained answers; exercise numbers and worked values are synthetic and are not production measurements."
+    },
+    {
+      "id": "M02-FC-010",
+      "location": {
+        "path": "case-study/transit-capacity.md",
+        "heading": "1. Workload and user threshold"
+      },
+      "claim": "From Module 1:",
+      "classification": "synthetic",
+      "source_ids": [],
+      "source_sections": [],
+      "verification_method": "controlled synthetic fixture",
+      "status": "verified",
+      "scope_limit": "The case exists to exercise a reasoning method under declared constraints; none of its organizations, loads, timings, incidents, or results are production evidence.",
+      "synthetic_label": "This non-capstone case and every unattributed workload, incident, cost, latency, and organization detail in it are synthetic course fixtures."
+    },
+    {
+      "id": "M02-FC-011",
+      "location": {
+        "path": "lessons/02-littles-law-and-saturation.md",
+        "heading": "Repeatable technique"
+      },
+      "claim": "The document uses the bounded expression L = λW; its semantics, substitution where arithmetic applies, and stated assumptions were checked as a reproducible derivation.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-06"
+      ],
+      "source_sections": [
+        "Watch the complete presentation or read all slides with speaker notes. Explain why run at 80% is not a general policy."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "The mapping verifies the written expression and arithmetic under its declared assumptions; synthetic inputs and a local result do not establish a production distribution."
+    },
+    {
+      "id": "M02-FC-012",
+      "location": {
+        "path": "lessons/05-bounded-overload-control.md",
+        "heading": "Explained answers"
+      },
+      "claim": "The document uses the bounded expression 0.15 s × 80/s = 12; its semantics, substitution where arithmetic applies, and stated assumptions were checked as a reproducible derivation.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-04"
+      ],
+      "source_sections": [
+        "Read the complete article. Calculate net drain and clearance for one backlog and identify the fragile assumption."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "The mapping verifies the written expression and arithmetic under its declared assumptions; synthetic inputs and a local result do not establish a production distribution."
+    },
+    {
+      "id": "M02-FC-013",
+      "location": {
+        "path": "lessons/06-retries-and-downstream-protection.md",
+        "heading": "Explained answers"
+      },
+      "claim": "The document uses the bounded expression 3^3 = 27; its semantics, substitution where arithmetic applies, and stated assumptions were checked as a reproducible derivation.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-07"
+      ],
+      "source_sections": [
+        "Optional: read the complete article and record one timeout failure and one question for Module 6."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "The mapping verifies the written expression and arithmetic under its declared assumptions; synthetic inputs and a local result do not establish a production distribution."
+    }
+  ],
+  "lesson_coverage": [
+    {
+      "lesson_id": "L01",
+      "path": "lessons/01-workload-and-useful-work.md",
+      "claim_ids": [
+        "M02-FC-001"
+      ]
+    },
+    {
+      "lesson_id": "L02",
+      "path": "lessons/02-littles-law-and-saturation.md",
+      "claim_ids": [
+        "M02-FC-002"
+      ]
+    },
+    {
+      "lesson_id": "L03",
+      "path": "lessons/03-latency-measurement.md",
+      "claim_ids": [
+        "M02-FC-003"
+      ]
+    },
+    {
+      "lesson_id": "L04",
+      "path": "lessons/04-fanout-and-tail-amplification.md",
+      "claim_ids": [
+        "M02-FC-004"
+      ]
+    },
+    {
+      "lesson_id": "L05",
+      "path": "lessons/05-bounded-overload-control.md",
+      "claim_ids": [
+        "M02-FC-005"
+      ]
+    },
+    {
+      "lesson_id": "L06",
+      "path": "lessons/06-retries-and-downstream-protection.md",
+      "claim_ids": [
+        "M02-FC-006"
+      ]
+    },
+    {
+      "lesson_id": "L07",
+      "path": "lessons/07-failover-headroom-and-unit-cost.md",
+      "claim_ids": [
+        "M02-FC-007"
+      ]
+    },
+    {
+      "lesson_id": "L08",
+      "path": "lessons/08-capacity-decisions-and-defense.md",
+      "claim_ids": [
+        "M02-FC-008"
+      ]
+    }
+  ],
+  "document_coverage": [
+    {
+      "path": "assessment/rubric.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "case-study/transit-capacity.md",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [
+        "M02-FC-010"
+      ],
+      "review_note": "The case was reviewed for explicit synthetic boundaries, internal arithmetic, non-generalization language, and separation from the learner capstone."
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M02-FC-009"
+      ],
+      "review_note": "Explained answers were checked for causal consistency, formula provenance, and agreement with the locally taught mechanism and cited source boundary."
+    },
+    {
+      "path": "exercises/exercises.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "lab/README.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "The lab guide's commands, interfaces, bounds, and synthetic evidence limitations were checked directly against the executable implementation and its passing tests."
+    },
+    {
+      "path": "lab/scenarios/fixtures/README.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "The lab guide's commands, interfaces, bounds, and synthetic evidence limitations were checked directly against the executable implementation and its passing tests."
+    },
+    {
+      "path": "lessons/01-workload-and-useful-work.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M02-FC-001"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/02-littles-law-and-saturation.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M02-FC-002",
+        "M02-FC-011"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/03-latency-measurement.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M02-FC-003"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/04-fanout-and-tail-amplification.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M02-FC-004"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/05-bounded-overload-control.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M02-FC-005",
+        "M02-FC-012"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/06-retries-and-downstream-protection.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M02-FC-006",
+        "M02-FC-013"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/07-failover-headroom-and-unit-cost.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M02-FC-007"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/08-capacity-decisions-and-defense.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M02-FC-008"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "worksheets/week-05-capacity-prediction.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-06-bounded-build.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-07-load-sweep.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-08-capacity-report.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-08-defense.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    }
+  ],
+  "formula_mappings": [
+    {
+      "path": "lessons/02-littles-law-and-saturation.md",
+      "heading": "Repeatable technique",
+      "expression_sha256": "14a196b838dbf02e707e9b83c3bf9900f66063dd73e3b33d4e8a28c5ffbfe398",
+      "claim_id": "M02-FC-011"
+    },
+    {
+      "path": "lessons/02-littles-law-and-saturation.md",
+      "heading": "Self-check",
+      "expression_sha256": "14a196b838dbf02e707e9b83c3bf9900f66063dd73e3b33d4e8a28c5ffbfe398",
+      "claim_id": "M02-FC-011"
+    },
+    {
+      "path": "lessons/02-littles-law-and-saturation.md",
+      "heading": "Explained answers",
+      "expression_sha256": "d38264c5f4cb3880ca49439c74512de35ead9db6f44753d53af81b7eed6f465c",
+      "claim_id": "M02-FC-011"
+    },
+    {
+      "path": "lessons/02-littles-law-and-saturation.md",
+      "heading": "Explained answers",
+      "expression_sha256": "9c7d8559fb39c56f41a744812ed6b292d53c05ee88ec1e424eb69600f6894a26",
+      "claim_id": "M02-FC-011"
+    },
+    {
+      "path": "lessons/05-bounded-overload-control.md",
+      "heading": "Explained answers",
+      "expression_sha256": "af781d94edce77370bba84898021c433c503894f31bcdfe151ed50a79bb2ee4a",
+      "claim_id": "M02-FC-012"
+    },
+    {
+      "path": "lessons/06-retries-and-downstream-protection.md",
+      "heading": "Explained answers",
+      "expression_sha256": "62fe0fcbfaef597bc09da0877b0b55cf94d96a863c4cfb26c4e2d66bdf3508f3",
+      "claim_id": "M02-FC-013"
+    }
+  ]
+}

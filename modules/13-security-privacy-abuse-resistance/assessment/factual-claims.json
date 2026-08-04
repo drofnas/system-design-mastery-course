@@ -1,0 +1,420 @@
+{
+  "schema_version": "1.0",
+  "module": "M13",
+  "reviewed_commit": "WORKTREE",
+  "reviewed_at": "2026-08-04",
+  "evidence_boundary": "This ledger records a source-level semantic review of lessons, worked answers, case studies, exercises, worksheets, rubrics, and lab guides. It verifies named mechanisms against bounded primary or official sources, distinguishes normative course contracts, and does not turn synthetic examples into production measurements.",
+  "claims": [
+    {
+      "id": "M13-FC-001",
+      "location": {
+        "path": "lessons/01-threat-models-abuse-cases.md",
+        "heading": "Mechanism and repeatable method"
+      },
+      "claim": "A threat model is a maintained decision artifact, not a catalog of famous attacks. Use four passes:",
+      "classification": "security",
+      "source_ids": [
+        "RES-01"
+      ],
+      "source_sections": [
+        "Read Overview through Review and Validation; submit one data-flow boundary, three contextual threats, responses, owners, and validation tests."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M13-FC-002",
+      "location": {
+        "path": "lessons/02-identity-authentication-sessions.md",
+        "heading": "Mechanism and repeatable method"
+      },
+      "claim": "Authentication establishes evidence that a claimant controls one or more authenticators. A session carries bounded continuity from that event. Neither answers whether a subject may perform a particular action.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-03"
+      ],
+      "source_sections": [
+        "Read Sections 2, 4, and 5; produce one assurance choice, recovery abuse case, session-binding contract, timeout, and revocation test."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M13-FC-003",
+      "location": {
+        "path": "lessons/03-authorization-models-enforcement.md",
+        "heading": "Mechanism and repeatable method"
+      },
+      "claim": "Authorization evaluates a complete tuple:",
+      "classification": "security",
+      "source_ids": [
+        "RES-04"
+      ],
+      "source_sections": [
+        "Read all Recommendations; submit an allow/deny matrix and four negative regression tests, including policy failure behavior."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M13-FC-004",
+      "location": {
+        "path": "lessons/04-tenant-isolation-scoped-access.md",
+        "heading": "Mechanism and repeatable method"
+      },
+      "claim": "Tenant isolation is an end-to-end invariant: no subject or workload for tenant A may disclose or mutate tenant B's protected state without explicit, tested cross-tenant authority. A tenant ID supplied in a URL or header is a requested resource locator, not trusted identity.",
+      "classification": "security",
+      "source_ids": [
+        "RES-05"
+      ],
+      "source_sections": [
+        "Read Key Risks, Best Practices, and Do's and Don'ts; audit API, database, cache, file, queue, search, and administrative paths."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M13-FC-005",
+      "location": {
+        "path": "lessons/05-secrets-keys-encryption.md",
+        "heading": "Mechanism and repeatable method"
+      },
+      "claim": "A secret is a bearer of authority or confidentiality. Its risk is determined by what it authorizes, where plaintext exists, how long it remains valid, who can retrieve it, and whether compromise can be contained.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-07"
+      ],
+      "source_sections": [
+        "Read General Secrets Management, CI/CD, Detection, and Incident Response; create one lifecycle and rotation-without-outage experiment."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M13-FC-006",
+      "location": {
+        "path": "lessons/06-audit-privacy-data-lifecycle.md",
+        "heading": "Mechanism and repeatable method"
+      },
+      "claim": "Audit evidence answers who or what attempted which action on which object, under which authority and policy, at what time, with what outcome. It must be useful for investigation without becoming a second sensitive database.",
+      "classification": "security",
+      "source_ids": [
+        "RES-09"
+      ],
+      "source_sections": [
+        "Read Event Data Sources through Verification; define an audit event, prohibited fields, tamper signal, logging-failure test, retention, and access rule."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M13-FC-007",
+      "location": {
+        "path": "lessons/07-supply-chain-abuse-security-response.md",
+        "heading": "Mechanism and repeatable method"
+      },
+      "claim": "Software provenance says where an artifact came from and how it was produced. It does not decide whether the source, builder, inputs, or process are acceptable. Verification compares signed or otherwise protected evidence with an explicit expectation: repository, revision, builder, dependencies, review state, and allowed exceptions.",
+      "classification": "security",
+      "source_ids": [
+        "RES-11"
+      ],
+      "source_sections": [
+        "Read About SLSA, Build Track Basics, Provenance, and Verifying Source; define one dependency acceptance policy and negative test."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M13-FC-008",
+      "location": {
+        "path": "lessons/08-prompt-injection-tool-authorization-decisions.md",
+        "heading": "Mechanism and repeatable method"
+      },
+      "claim": "A model can interpret text but cannot turn text into authority. Instructions in documents, search results, email, web pages, tool output, or memory are controlled by external actors and can conflict with the user's intent. Delimiters and prompts help the model reason; they are not security boundaries.",
+      "classification": "security",
+      "source_ids": [
+        "RES-12"
+      ],
+      "source_sections": [
+        "Read Common Attack Types, Primary Defenses, Agent-Specific Defenses, and Testing; submit one indirect-injection test and deterministic denial trace."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M13-FC-009",
+      "location": {
+        "path": "exercises/answer-key.md",
+        "heading": "EX-01"
+      },
+      "claim": "A complete model includes researcher, operator, service and attacker identities; API, authoritative state, publication worker, catalog, index, assistant, tool gate, audit, build and administrative paths; and labels for tenant, data class, identity, authority, and trust changes. Missing restore or support paths is a material gap because both can bypass normal controls.",
+      "classification": "security",
+      "source_ids": [
+        "RES-05"
+      ],
+      "source_sections": [
+        "Read Key Risks, Best Practices, and Do's and Don'ts; audit API, database, cache, file, queue, search, and administrative paths."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "The review covers the causal mechanism and derivation used by the explained answers; exercise numbers and worked values are synthetic and are not production measurements."
+    },
+    {
+      "id": "M13-FC-010",
+      "location": {
+        "path": "case-study/northstar-security-data-governance.md",
+        "heading": "Problem and protected outcomes"
+      },
+      "claim": "Northstar coordinates observations for three research consortia. Researchers upload private observations, collaborate selectively, and request publication. Operators schedule telescope arrays and approve publication. A public catalog serves released observations. An assistant retrieves operating notes and can create a structured proposal, but cannot operate an array.",
+      "classification": "synthetic",
+      "source_ids": [],
+      "source_sections": [],
+      "verification_method": "controlled synthetic fixture",
+      "status": "verified",
+      "scope_limit": "The case exists to exercise a reasoning method under declared constraints; none of its organizations, loads, timings, incidents, or results are production evidence.",
+      "synthetic_label": "This non-capstone case and every unattributed workload, incident, cost, latency, and organization detail in it are synthetic course fixtures."
+    },
+    {
+      "id": "M13-FC-011",
+      "location": {
+        "path": "lessons/03-authorization-models-enforcement.md",
+        "heading": "Mechanism and repeatable method"
+      },
+      "claim": "The document uses the bounded expression decision = policy(subject, object, action, context, policy_version); its semantics, substitution where arithmetic applies, and stated assumptions were checked as a reproducible derivation.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-04"
+      ],
+      "source_sections": [
+        "Read all Recommendations; submit an allow/deny matrix and four negative regression tests, including policy failure behavior."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "The mapping verifies the written expression and arithmetic under its declared assumptions; synthetic inputs and a local result do not establish a production distribution."
+    },
+    {
+      "id": "M13-FC-012",
+      "location": {
+        "path": "lessons/04-tenant-isolation-scoped-access.md",
+        "heading": "Worked example"
+      },
+      "claim": "The document uses the bounded expression requested_tenant=south; its semantics, substitution where arithmetic applies, and stated assumptions were checked as a reproducible derivation.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-05"
+      ],
+      "source_sections": [
+        "Read Key Risks, Best Practices, and Do's and Don'ts; audit API, database, cache, file, queue, search, and administrative paths."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "The mapping verifies the written expression and arithmetic under its declared assumptions; synthetic inputs and a local result do not establish a production distribution."
+    }
+  ],
+  "lesson_coverage": [
+    {
+      "lesson_id": "L01",
+      "path": "lessons/01-threat-models-abuse-cases.md",
+      "claim_ids": [
+        "M13-FC-001"
+      ]
+    },
+    {
+      "lesson_id": "L02",
+      "path": "lessons/02-identity-authentication-sessions.md",
+      "claim_ids": [
+        "M13-FC-002"
+      ]
+    },
+    {
+      "lesson_id": "L03",
+      "path": "lessons/03-authorization-models-enforcement.md",
+      "claim_ids": [
+        "M13-FC-003"
+      ]
+    },
+    {
+      "lesson_id": "L04",
+      "path": "lessons/04-tenant-isolation-scoped-access.md",
+      "claim_ids": [
+        "M13-FC-004"
+      ]
+    },
+    {
+      "lesson_id": "L05",
+      "path": "lessons/05-secrets-keys-encryption.md",
+      "claim_ids": [
+        "M13-FC-005"
+      ]
+    },
+    {
+      "lesson_id": "L06",
+      "path": "lessons/06-audit-privacy-data-lifecycle.md",
+      "claim_ids": [
+        "M13-FC-006"
+      ]
+    },
+    {
+      "lesson_id": "L07",
+      "path": "lessons/07-supply-chain-abuse-security-response.md",
+      "claim_ids": [
+        "M13-FC-007"
+      ]
+    },
+    {
+      "lesson_id": "L08",
+      "path": "lessons/08-prompt-injection-tool-authorization-decisions.md",
+      "claim_ids": [
+        "M13-FC-008"
+      ]
+    }
+  ],
+  "document_coverage": [
+    {
+      "path": "assessment/rubric.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "case-study/northstar-security-data-governance.md",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [
+        "M13-FC-010"
+      ],
+      "review_note": "The case was reviewed for explicit synthetic boundaries, internal arithmetic, non-generalization language, and separation from the learner capstone."
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M13-FC-009"
+      ],
+      "review_note": "Explained answers were checked for causal consistency, formula provenance, and agreement with the locally taught mechanism and cited source boundary."
+    },
+    {
+      "path": "exercises/exercises.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "lab/README.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "The lab guide's commands, interfaces, bounds, and synthetic evidence limitations were checked directly against the executable implementation and its passing tests."
+    },
+    {
+      "path": "lessons/01-threat-models-abuse-cases.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M13-FC-001"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/02-identity-authentication-sessions.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M13-FC-002"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/03-authorization-models-enforcement.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M13-FC-003",
+        "M13-FC-011"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/04-tenant-isolation-scoped-access.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M13-FC-004",
+        "M13-FC-012"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/05-secrets-keys-encryption.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M13-FC-005"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/06-audit-privacy-data-lifecycle.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M13-FC-006"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/07-supply-chain-abuse-security-response.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M13-FC-007"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/08-prompt-injection-tool-authorization-decisions.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M13-FC-008"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "worksheets/week-49-security-model.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-50-security-controls.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-51-security-failure-matrix.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-52-security-decision-defense.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    }
+  ],
+  "formula_mappings": [
+    {
+      "path": "lessons/03-authorization-models-enforcement.md",
+      "heading": "Mechanism and repeatable method",
+      "expression_sha256": "c146470f31be753c8ef9cf9ed2838ea107e1c70130dcb9318b1df4bf51d9b209",
+      "claim_id": "M13-FC-011"
+    },
+    {
+      "path": "lessons/04-tenant-isolation-scoped-access.md",
+      "heading": "Worked example",
+      "expression_sha256": "510c2c75c633aabb93c8d271931be5db4e672afa28234bc45656319dc9d06621",
+      "claim_id": "M13-FC-012"
+    }
+  ]
+}

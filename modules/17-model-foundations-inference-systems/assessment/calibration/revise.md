@@ -34,3 +34,9 @@ F01–F06 have matching hashes and repaired targets, but F02 and F06 lack a repe
 same-work run and credible alternative cause. The RFC compares three candidates
 and names serving/model owners, while security review ownership, decommission
 criteria, cost sensitivity, strongest dissent, and quantified reversal remain weak.
+
+## Inference deployment-policy ADR
+
+A12 is distinct from the RFC and names the chosen boundary, owners, and
+rollback, but its quality-stop corpus version, exception expiry, and quantified
+cost reversal are incomplete. Those omissions require a dated addendum.

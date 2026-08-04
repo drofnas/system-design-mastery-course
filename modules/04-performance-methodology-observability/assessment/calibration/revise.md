@@ -74,3 +74,9 @@ The recording explains symptom, CPU hypothesis, and proposed experiment. A
 reviewer exposes the allocation-retention gap. The learner records that gap and
 keeps the original diagnosis unchanged, but follow-up exercises and due dates
 are not yet assigned.
+
+## Regression-policy ADR
+
+A separate A11 ADR exists and selects a 10% regression gate, but it omits the
+inconclusive-dispersion branch, exception owner, and expiry. Those are decision
+record gaps for a dated addendum; the preserved benchmark evidence remains valid.

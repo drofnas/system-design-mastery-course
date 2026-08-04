@@ -4,6 +4,9 @@ Gate 3 closes Week 36. Complete it after freezing Module 9 evidence. Freeze each
 part before feedback. The practical uses a new Northstar seed/configuration and
 does not expose a commerce answer. Total learner time: 3.5 hours.
 
+Use the [sealed-local gate workflow](../../../SOLO_GATE_GUIDE.md). Human review
+is optional and stronger portfolio evidence, but it is not required.
+
 ## Part 1: Written examination — 75 minutes
 
 Answer from mechanisms, arithmetic, and the stated failure model.
@@ -21,8 +24,8 @@ Answer from mechanisms, arithmetic, and the stated failure model.
 
 ## Part 2: Hidden-seed Northstar practical — 90 minutes
 
-A reviewer selects an unpublished variant combining one Module 8 concurrency
-fault with one F01–F06 replication/partition fault. Before reveal, freeze the
+Run `scripts/solo_gate.py prepare --gate G03` to select one of three synthetic
+cross-module variants. Before reveal, freeze and commit the
 invariant, predicted history, diagnostic plan, and evidence boundaries. Run or
 implement the scenario, preserve raw evidence, identify two causal alternatives,
 reveal the faults, apply one isolated repair per cause, and rerun identical
@@ -35,8 +38,9 @@ consensus, legal compliance, or regional survival.
 
 ## Part 3: Architecture defense — 45 minutes
 
-Defend the independent commerce data design to reviewers playing data-platform
-owner, security/residency reviewer, finance partner, and on-call lead. Derive
+Defend the independent commerce data design against the frozen solo-review
+questions for data-platform, security/residency, finance, and on-call roles. An
+optional human panel may ask adaptive follow-ups. Derive
 one storage-engine, transaction/isolation, replication/consistency, and
 partition/hotspot decision. Record challenges, dissent, changed claims,
 follow-ups, owners, migration/rollback, and reversal evidence. Do not change the
@@ -46,8 +50,8 @@ workload or failure model to evade a question.
 
 Index Modules 7–9 evidence by exact file heading and commit: frozen predictions,
 builds/tests, internals reviews, failure matrices/raw trials, ADRs/revisions,
-evaluations, learning logs, and assistance disclosures. The reviewer samples
-one item per class and checks chronological integrity. Record the result in
+evaluations, learning logs, and assistance disclosures. The learner samples one
+item per class and the independent post-freeze evaluator checks chronological integrity. Record the result in
 `reviews/gate-03-submission.md`; do not edit prior baselines. The next scheduled
 capstone revision remains Week 48.
 

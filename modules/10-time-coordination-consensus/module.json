@@ -3,55 +3,815 @@
   "id": "M10",
   "title": "Time, Coordination, and Consensus",
   "weeks": [
-    {"number":37,"focus":"Model and freeze physical-time assumptions, causal order, safety, liveness, failure detection, and consensus boundaries","hours":10.5,"evidence":["Frozen clock and order analysis","Safety/liveness and failure-detector specification","Consensus-necessity decision","Week 37 learning log"]},
-    {"number":38,"focus":"Build persistent elections, replicated-log commitment, and deterministic state-machine application","hours":11.5,"evidence":["Raft-backed key/value implementation","Automated election and log checks","Internals and safety proof ledger","Week 38 learning log"]},
-    {"number":39,"focus":"Break leadership, clients, leases, snapshots, and membership, then diagnose invariant failures","hours":11.5,"evidence":["Sixteen immutable raw trials","Eight broken/repaired comparisons","Failure matrix and causal investigation","Week 39 learning log"]},
-    {"number":40,"focus":"Decide, migrate, operate, teach, evaluate, and remediate coordination choices","hours":10,"evidence":["Coordination RFC","Security, cost, migration, ownership, and reversal plan","Recorded defense and module evaluation","Week 40 learning log"]}
+    {
+      "number": 37,
+      "focus": "Model and freeze physical-time assumptions, causal order, safety, liveness, failure detection, and consensus boundaries",
+      "hours": 10.5,
+      "evidence": [
+        "Frozen clock and order analysis",
+        "Safety/liveness and failure-detector specification",
+        "Consensus-necessity decision",
+        "Week 37 learning log"
+      ],
+      "time_blocks": [
+        {
+          "id": "W37-T01",
+          "label": "Bounded authoritative resources",
+          "minutes": 70,
+          "activity": "required_resource",
+          "resource_ids": [
+            "RES-01"
+          ]
+        },
+        {
+          "id": "W37-T02",
+          "label": "Local lesson instruction",
+          "minutes": 120,
+          "activity": "local_instruction",
+          "lesson_ids": [
+            "L01",
+            "L02",
+            "L03",
+            "L04"
+          ]
+        },
+        {
+          "id": "W37-T03",
+          "label": "Guided practice",
+          "minutes": 90,
+          "activity": "guided_practice",
+          "exercise_ids": [
+            "EX-01",
+            "EX-02",
+            "EX-03",
+            "EX-04",
+            "EX-05",
+            "EX-06"
+          ]
+        },
+        {
+          "id": "W37-T04",
+          "label": "Reflection and learning log",
+          "minutes": 30,
+          "activity": "reflection"
+        },
+        {
+          "id": "W37-T05",
+          "label": "Independent Work",
+          "minutes": 320,
+          "activity": "independent_work",
+          "artifact_ids": [
+            "A01"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "focus": "Build persistent elections, replicated-log commitment, and deterministic state-machine application",
+      "hours": 11.5,
+      "evidence": [
+        "Raft-backed key/value implementation",
+        "Automated election and log checks",
+        "Internals and safety proof ledger",
+        "Week 38 learning log"
+      ],
+      "time_blocks": [
+        {
+          "id": "W38-T01",
+          "label": "Bounded authoritative resources",
+          "minutes": 110,
+          "activity": "required_resource",
+          "resource_ids": [
+            "RES-04"
+          ]
+        },
+        {
+          "id": "W38-T02",
+          "label": "Local lesson instruction",
+          "minutes": 90,
+          "activity": "local_instruction",
+          "lesson_ids": [
+            "L03",
+            "L05",
+            "L07"
+          ]
+        },
+        {
+          "id": "W38-T03",
+          "label": "Guided practice",
+          "minutes": 90,
+          "activity": "guided_practice",
+          "exercise_ids": [
+            "EX-07",
+            "EX-08",
+            "EX-09",
+            "EX-10",
+            "EX-11"
+          ]
+        },
+        {
+          "id": "W38-T04",
+          "label": "Reflection and learning log",
+          "minutes": 30,
+          "activity": "reflection"
+        },
+        {
+          "id": "W38-T05",
+          "label": "Decision Artifact",
+          "minutes": 30,
+          "activity": "decision_artifact",
+          "artifact_ids": [
+            "A03"
+          ]
+        },
+        {
+          "id": "W38-T06",
+          "label": "Independent Work",
+          "minutes": 340,
+          "activity": "independent_work",
+          "artifact_ids": [
+            "A02"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "focus": "Break leadership, clients, leases, snapshots, and membership, then diagnose invariant failures",
+      "hours": 11.5,
+      "evidence": [
+        "Sixteen immutable raw trials",
+        "Eight broken/repaired comparisons",
+        "Failure matrix and causal investigation",
+        "Week 39 learning log"
+      ],
+      "time_blocks": [
+        {
+          "id": "W39-T01",
+          "label": "Bounded authoritative resources",
+          "minutes": 45,
+          "activity": "required_resource",
+          "resource_ids": [
+            "RES-06"
+          ]
+        },
+        {
+          "id": "W39-T02",
+          "label": "Local lesson instruction",
+          "minutes": 90,
+          "activity": "local_instruction",
+          "lesson_ids": [
+            "L01",
+            "L04",
+            "L06"
+          ]
+        },
+        {
+          "id": "W39-T03",
+          "label": "Guided practice",
+          "minutes": 90,
+          "activity": "guided_practice",
+          "exercise_ids": [
+            "EX-12",
+            "EX-13",
+            "EX-14",
+            "EX-15"
+          ]
+        },
+        {
+          "id": "W39-T04",
+          "label": "Reflection and learning log",
+          "minutes": 30,
+          "activity": "reflection"
+        },
+        {
+          "id": "W39-T05",
+          "label": "Failure Experiment",
+          "minutes": 405,
+          "activity": "failure_experiment",
+          "artifact_ids": [
+            "A04"
+          ]
+        },
+        {
+          "id": "W39-T06",
+          "label": "Independent Work",
+          "minutes": 30,
+          "activity": "independent_work",
+          "artifact_ids": [
+            "A05"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "focus": "Decide, migrate, operate, teach, evaluate, and remediate coordination choices",
+      "hours": 10,
+      "evidence": [
+        "Coordination RFC",
+        "Security, cost, migration, ownership, and reversal plan",
+        "Recorded defense and module evaluation",
+        "Week 40 learning log"
+      ],
+      "time_blocks": [
+        {
+          "id": "W40-T01",
+          "label": "Bounded authoritative resources",
+          "minutes": 75,
+          "activity": "required_resource",
+          "resource_ids": [
+            "RES-07"
+          ]
+        },
+        {
+          "id": "W40-T02",
+          "label": "Local lesson instruction",
+          "minutes": 45,
+          "activity": "local_instruction",
+          "lesson_ids": [
+            "L08"
+          ]
+        },
+        {
+          "id": "W40-T03",
+          "label": "Guided practice",
+          "minutes": 45,
+          "activity": "guided_practice",
+          "exercise_ids": [
+            "EX-16"
+          ]
+        },
+        {
+          "id": "W40-T04",
+          "label": "Reflection and learning log",
+          "minutes": 30,
+          "activity": "reflection",
+          "artifact_ids": [
+            "A09"
+          ]
+        },
+        {
+          "id": "W40-T05",
+          "label": "Assessment",
+          "minutes": 60,
+          "activity": "assessment",
+          "artifact_ids": [
+            "A08"
+          ]
+        },
+        {
+          "id": "W40-T06",
+          "label": "Decision Artifact",
+          "minutes": 225,
+          "activity": "decision_artifact",
+          "artifact_ids": [
+            "A06"
+          ]
+        },
+        {
+          "id": "W40-T07",
+          "label": "Review Remediation",
+          "minutes": 60,
+          "activity": "review_remediation"
+        },
+        {
+          "id": "W40-T08",
+          "label": "Teach Back",
+          "minutes": 60,
+          "activity": "teach_back",
+          "artifact_ids": [
+            "A07"
+          ]
+        }
+      ]
+    }
   ],
   "target_hours": 43.5,
-  "status": "ready",
+  "status": "review",
   "readiness_note": "Ready on 2026-08-02 after teaching, lab, sixteen paired trials, six isolated calibration records, semantic review, resource verification, focused validation, and full-course validation passed.",
   "outcomes": [
-    {"id":"M10-O1","statement":"Calculate physical-clock drift, skew, and uncertainty and diagnose conclusions that exceed the available clock contract.","graduate_profile":[3,5,7,8],"mastery_levels":["Define","Calculate","Diagnose"],"lessons":["L01"],"exercises":["EX-01","EX-02"],"artifacts":["A01","A05"],"rubric":["R01"]},
-    {"id":"M10-O2","statement":"Derive happened-before, Lamport-clock, and vector-clock relationships without treating display order as causality.","graduate_profile":[3,5,7],"mastery_levels":["Define","Calculate","Decide and Teach"],"lessons":["L02"],"exercises":["EX-03","EX-04"],"artifacts":["A01","A05"],"rubric":["R01"]},
-    {"id":"M10-O3","statement":"Separate safety, liveness, and failure-detector assumptions and select consensus only for properties that require agreement.","graduate_profile":[1,5,7,8],"mastery_levels":["Define","Diagnose","Decide and Teach"],"lessons":["L03","L04"],"exercises":["EX-05","EX-06","EX-07"],"artifacts":["A01","A06"],"rubric":["R02"]},
-    {"id":"M10-O4","statement":"Implement and diagnose Raft elections, persistent hard state, log matching, commitment, and state-machine application.","graduate_profile":[3,7,8,11],"mastery_levels":["Implement","Diagnose"],"lessons":["L04","L05","L06"],"exercises":["EX-08","EX-09","EX-10"],"artifacts":["A02","A03","A04"],"rubric":["R03","R04"]},
-    {"id":"M10-O5","statement":"Implement client deduplication and linearizable reads with explicit ambiguous-outcome and quorum barriers.","graduate_profile":[3,5,7,8],"mastery_levels":["Implement","Diagnose"],"lessons":["L07"],"exercises":["EX-11"],"artifacts":["A02","A03","A04"],"rubric":["R05"]},
-    {"id":"M10-O6","statement":"Protect snapshots, membership changes, leases, and external resources with atomic state, overlapping quorums, and fencing.","graduate_profile":[7,8,9,14],"mastery_levels":["Implement","Diagnose","Decide and Teach"],"lessons":["L07","L08"],"exercises":["EX-12","EX-13","EX-14"],"artifacts":["A02","A04","A05"],"rubric":["R06","R07"]},
-    {"id":"M10-O7","statement":"Diagnose eight coordination failures from immutable same-input evidence and scoped safety oracles.","graduate_profile":[7,8],"mastery_levels":["Diagnose","Decide and Teach"],"lessons":["L05","L06","L07","L08"],"exercises":["EX-15"],"artifacts":["A04","A05"],"rubric":["R08","R09"]},
-    {"id":"M10-O8","statement":"Defend a coordination architecture covering alternatives, operating limits, security, cost, migration, ownership, dissent, and reversal evidence.","graduate_profile":[1,5,10,14,15,16],"mastery_levels":["Calculate","Decide and Teach"],"lessons":["L08"],"exercises":["EX-16"],"artifacts":["A06","A07","A08","A09"],"rubric":["R10"]}
+    {
+      "id": "M10-O1",
+      "statement": "Calculate physical-clock drift, skew, and uncertainty and diagnose conclusions that exceed the available clock contract.",
+      "graduate_profile": [
+        3,
+        5,
+        7,
+        8
+      ],
+      "mastery_levels": [
+        "Define",
+        "Calculate",
+        "Diagnose"
+      ],
+      "lessons": [
+        "L01"
+      ],
+      "exercises": [
+        "EX-01",
+        "EX-02"
+      ],
+      "artifacts": [
+        "A01",
+        "A05"
+      ],
+      "rubric": [
+        "R01"
+      ]
+    },
+    {
+      "id": "M10-O2",
+      "statement": "Derive happened-before, Lamport-clock, and vector-clock relationships without treating display order as causality.",
+      "graduate_profile": [
+        3,
+        5,
+        7
+      ],
+      "mastery_levels": [
+        "Define",
+        "Calculate",
+        "Decide and Teach"
+      ],
+      "lessons": [
+        "L02"
+      ],
+      "exercises": [
+        "EX-03",
+        "EX-04"
+      ],
+      "artifacts": [
+        "A01",
+        "A05"
+      ],
+      "rubric": [
+        "R01"
+      ]
+    },
+    {
+      "id": "M10-O3",
+      "statement": "Separate safety, liveness, and failure-detector assumptions and select consensus only for properties that require agreement.",
+      "graduate_profile": [
+        1,
+        5,
+        7,
+        8
+      ],
+      "mastery_levels": [
+        "Define",
+        "Diagnose",
+        "Decide and Teach"
+      ],
+      "lessons": [
+        "L03",
+        "L04"
+      ],
+      "exercises": [
+        "EX-05",
+        "EX-06",
+        "EX-07"
+      ],
+      "artifacts": [
+        "A01",
+        "A06"
+      ],
+      "rubric": [
+        "R02"
+      ]
+    },
+    {
+      "id": "M10-O4",
+      "statement": "Implement and diagnose Raft elections, persistent hard state, log matching, commitment, and state-machine application.",
+      "graduate_profile": [
+        3,
+        7,
+        8,
+        11
+      ],
+      "mastery_levels": [
+        "Implement",
+        "Diagnose"
+      ],
+      "lessons": [
+        "L04",
+        "L05",
+        "L06"
+      ],
+      "exercises": [
+        "EX-08",
+        "EX-09",
+        "EX-10"
+      ],
+      "artifacts": [
+        "A02",
+        "A03",
+        "A04"
+      ],
+      "rubric": [
+        "R03",
+        "R04"
+      ]
+    },
+    {
+      "id": "M10-O5",
+      "statement": "Implement client deduplication and linearizable reads with explicit ambiguous-outcome and quorum barriers.",
+      "graduate_profile": [
+        3,
+        5,
+        7,
+        8
+      ],
+      "mastery_levels": [
+        "Implement",
+        "Diagnose"
+      ],
+      "lessons": [
+        "L07"
+      ],
+      "exercises": [
+        "EX-11"
+      ],
+      "artifacts": [
+        "A02",
+        "A03",
+        "A04"
+      ],
+      "rubric": [
+        "R05"
+      ]
+    },
+    {
+      "id": "M10-O6",
+      "statement": "Protect snapshots, membership changes, leases, and external resources with atomic state, overlapping quorums, and fencing.",
+      "graduate_profile": [
+        7,
+        8,
+        9,
+        14
+      ],
+      "mastery_levels": [
+        "Implement",
+        "Diagnose",
+        "Decide and Teach"
+      ],
+      "lessons": [
+        "L07",
+        "L08"
+      ],
+      "exercises": [
+        "EX-12",
+        "EX-13",
+        "EX-14"
+      ],
+      "artifacts": [
+        "A02",
+        "A04",
+        "A05"
+      ],
+      "rubric": [
+        "R06",
+        "R07"
+      ]
+    },
+    {
+      "id": "M10-O7",
+      "statement": "Diagnose eight coordination failures from immutable same-input evidence and scoped safety oracles.",
+      "graduate_profile": [
+        7,
+        8
+      ],
+      "mastery_levels": [
+        "Diagnose",
+        "Decide and Teach"
+      ],
+      "lessons": [
+        "L05",
+        "L06",
+        "L07",
+        "L08"
+      ],
+      "exercises": [
+        "EX-15"
+      ],
+      "artifacts": [
+        "A04",
+        "A05"
+      ],
+      "rubric": [
+        "R08",
+        "R09"
+      ]
+    },
+    {
+      "id": "M10-O8",
+      "statement": "Defend a coordination architecture covering alternatives, operating limits, security, cost, migration, ownership, dissent, and reversal evidence.",
+      "graduate_profile": [
+        1,
+        5,
+        10,
+        14,
+        15,
+        16
+      ],
+      "mastery_levels": [
+        "Calculate",
+        "Decide and Teach"
+      ],
+      "lessons": [
+        "L08"
+      ],
+      "exercises": [
+        "EX-16"
+      ],
+      "artifacts": [
+        "A06",
+        "A07",
+        "A08",
+        "A09"
+      ],
+      "rubric": [
+        "R10"
+      ]
+    }
   ],
   "resources": [
-    {"id":"RES-01","title":"Time, Clocks, and the Ordering of Events in a Distributed System","author_or_publisher":"Leslie Lamport; Communications of the ACM","type":"original research paper","url":"https://lamport.azurewebsites.net/pubs/time-clocks.pdf","required":true,"access":"free","week":37,"estimated_minutes":70,"purpose":"Derive happened-before, logical-clock rules, total-order limits, and explicit physical-clock assumptions.","assignment":"Read pages 558–563; construct one happened-before graph and identify two concurrent events that a scalar timestamp cannot distinguish.","last_verified":"2026-08-02","text_alternative":"lessons/02-logical-vector-clocks.md"},
-    {"id":"RES-02","title":"Spanner: Google's Globally-Distributed Database","author_or_publisher":"James C. Corbett et al.; Google and USENIX OSDI","type":"original systems paper","url":"https://research.google/pubs/spanner-googles-globally-distributed-database-2/","required":true,"access":"free","week":37,"estimated_minutes":55,"purpose":"Study a production system that exposes clock uncertainty instead of assuming perfect wall time.","assignment":"Read Sections 3 and 4.1–4.2; write the uncertainty interval, wait condition, guarantee, and infrastructure assumptions.","last_verified":"2026-08-02","text_alternative":"lessons/01-physical-clocks-uncertainty.md"},
-    {"id":"RES-03","title":"Paxos Made Simple","author_or_publisher":"Leslie Lamport; Microsoft Research and ACM SIGACT","type":"original consensus paper","url":"https://www.microsoft.com/en-us/research/publication/paxos-made-simple/","required":true,"access":"free","week":38,"estimated_minutes":65,"purpose":"Expose the single-value safety invariant behind quorum agreement and compare it with a replicated log.","assignment":"Read the complete paper; produce an acceptor promise/accepted-value ledger and one counterexample prevented by P2b.","last_verified":"2026-08-02","text_alternative":"lessons/04-paxos-raft-foundations.md"},
-    {"id":"RES-04","title":"In Search of an Understandable Consensus Algorithm","author_or_publisher":"Diego Ongaro and John Ousterhout; USENIX ATC","type":"original systems paper","url":"https://raft.github.io/raft.pdf","required":true,"access":"free","week":38,"estimated_minutes":110,"purpose":"Connect elections, log replication, safety, clients, snapshots, and membership to explicit Raft properties.","assignment":"Read Sections 2–8; trace election safety, log matching, leader completeness, and state-machine safety through one leader change.","last_verified":"2026-08-02","text_alternative":"lessons/04-paxos-raft-foundations.md"},
-    {"id":"RES-05","title":"Designing for Understandability: The Raft Consensus Algorithm","author_or_publisher":"John Ousterhout; CS at Illinois","type":"recorded lecture with official slides","url":"https://www.youtube.com/watch?v=vYp4LYbnnW8","required":true,"access":"free","week":38,"estimated_minutes":45,"purpose":"Rehearse the visual event sequence for elections, log repair, and the five named safety properties.","assignment":"Watch 00:00–35:00 or read official slides 3–20; narrate one election and one conflicting-log repair without using architecture labels alone.","last_verified":"2026-08-02","text_alternative":"lessons/06-raft-log-safety.md"},
-    {"id":"RES-06","title":"Formal TLA+ Specification for the Raft Consensus Algorithm","author_or_publisher":"Diego Ongaro","type":"maintainer formal specification","url":"https://github.com/ongardie/raft.tla","required":true,"access":"free","week":39,"estimated_minutes":45,"purpose":"Map implementation state to formal variables and invariants without requiring prior TLA+ fluency.","assignment":"Read README and the state-variable, TypeOK, and state-machine-safety portions of raft.tla; map five variables to lab evidence and name one omitted liveness claim.","last_verified":"2026-08-02","text_alternative":"lessons/06-raft-log-safety.md"},
-    {"id":"RES-07","title":"The Chubby Lock Service for Loosely-Coupled Distributed Systems","author_or_publisher":"Mike Burrows; Google and USENIX OSDI","type":"first-person engineering case","url":"https://research.google/pubs/the-chubby-lock-service-for-loosely-coupled-distributed-systems/","required":true,"access":"free","week":40,"estimated_minutes":75,"purpose":"Study operated leases, sequencers, caching, client behavior, and the gap between intended and actual use.","assignment":"Read Sections 2–5; record one lease assumption, one fencing/sequencer obligation, one cache risk, one operational limit, and the responsible owner.","last_verified":"2026-08-02","text_alternative":"lessons/08-membership-leases-fencing-decisions.md"}
+    {
+      "id": "RES-01",
+      "title": "Time, Clocks, and the Ordering of Events in a Distributed System",
+      "author_or_publisher": "Leslie Lamport; Communications of the ACM",
+      "type": "original research paper",
+      "url": "https://lamport.azurewebsites.net/pubs/time-clocks.pdf",
+      "required": true,
+      "access": "free",
+      "week": 37,
+      "estimated_minutes": 70,
+      "purpose": "Derive happened-before, logical-clock rules, total-order limits, and explicit physical-clock assumptions.",
+      "assignment": "Read pages 558–563; construct one happened-before graph and identify two concurrent events that a scalar timestamp cannot distinguish.",
+      "last_verified": "2026-08-02",
+      "text_alternative": "lessons/02-logical-vector-clocks.md",
+      "verified_title": "Time, Clocks, and the Ordering of Events in a Distributed System",
+      "verified_publisher": "Leslie Lamport; Communications of the ACM",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://lamport.azurewebsites.net/pubs/time-clocks.pdf",
+      "verification_status": "verified"
+    },
+    {
+      "id": "RES-02",
+      "title": "Spanner: Google's Globally-Distributed Database",
+      "author_or_publisher": "James C. Corbett et al.; Google and USENIX OSDI",
+      "type": "original systems paper",
+      "url": "https://research.google/pubs/spanner-googles-globally-distributed-database-2/",
+      "required": false,
+      "access": "free",
+      "week": 37,
+      "estimated_minutes": 55,
+      "purpose": "Study a production system that exposes clock uncertainty instead of assuming perfect wall time.",
+      "assignment": "Read Sections 3 and 4.1–4.2; write the uncertainty interval, wait condition, guarantee, and infrastructure assumptions.",
+      "last_verified": "2026-08-02",
+      "text_alternative": "lessons/01-physical-clocks-uncertainty.md",
+      "verified_title": "Spanner: Google's Globally-Distributed Database",
+      "verified_publisher": "James C. Corbett et al.; Google and USENIX OSDI",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://research.google/pubs/spanner-googles-globally-distributed-database-2/",
+      "verification_status": "verified"
+    },
+    {
+      "id": "RES-03",
+      "title": "Paxos Made Simple",
+      "author_or_publisher": "Leslie Lamport; Microsoft Research and ACM SIGACT",
+      "type": "original consensus paper",
+      "url": "https://www.microsoft.com/en-us/research/publication/paxos-made-simple/",
+      "required": false,
+      "access": "free",
+      "week": 38,
+      "estimated_minutes": 65,
+      "purpose": "Expose the single-value safety invariant behind quorum agreement and compare it with a replicated log.",
+      "assignment": "Read the complete paper; produce an acceptor promise/accepted-value ledger and one counterexample prevented by P2b.",
+      "last_verified": "2026-08-02",
+      "text_alternative": "lessons/04-paxos-raft-foundations.md",
+      "verified_title": "Paxos Made Simple",
+      "verified_publisher": "Leslie Lamport; Microsoft Research and ACM SIGACT",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://www.microsoft.com/en-us/research/publication/paxos-made-simple/",
+      "verification_status": "verified"
+    },
+    {
+      "id": "RES-04",
+      "title": "In Search of an Understandable Consensus Algorithm",
+      "author_or_publisher": "Diego Ongaro and John Ousterhout; USENIX ATC",
+      "type": "original systems paper",
+      "url": "https://raft.github.io/raft.pdf",
+      "required": true,
+      "access": "free",
+      "week": 38,
+      "estimated_minutes": 110,
+      "purpose": "Connect elections, log replication, safety, clients, snapshots, and membership to explicit Raft properties.",
+      "assignment": "Read Sections 2–8; trace election safety, log matching, leader completeness, and state-machine safety through one leader change.",
+      "last_verified": "2026-08-02",
+      "text_alternative": "lessons/04-paxos-raft-foundations.md",
+      "verified_title": "In Search of an Understandable Consensus Algorithm",
+      "verified_publisher": "Diego Ongaro and John Ousterhout; USENIX ATC",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://raft.github.io/raft.pdf",
+      "verification_status": "verified"
+    },
+    {
+      "id": "RES-05",
+      "title": "Designing for Understandability: The Raft Consensus Algorithm",
+      "author_or_publisher": "John Ousterhout; CS at Illinois",
+      "type": "recorded lecture with official slides",
+      "url": "https://www.youtube.com/watch?v=vYp4LYbnnW8",
+      "required": false,
+      "access": "free",
+      "week": 38,
+      "estimated_minutes": 45,
+      "purpose": "Rehearse the visual event sequence for elections, log repair, and the five named safety properties.",
+      "assignment": "Watch 00:00–35:00 or read official slides 3–20; narrate one election and one conflicting-log repair without using architecture labels alone.",
+      "last_verified": "2026-08-02",
+      "text_alternative": "lessons/06-raft-log-safety.md",
+      "verified_title": "Designing for Understandability: The Raft Consensus Algorithm",
+      "verified_publisher": "John Ousterhout; CS at Illinois",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://www.youtube.com/watch?v=vYp4LYbnnW8",
+      "verification_status": "verified"
+    },
+    {
+      "id": "RES-06",
+      "title": "Formal TLA+ Specification for the Raft Consensus Algorithm",
+      "author_or_publisher": "Diego Ongaro",
+      "type": "maintainer formal specification",
+      "url": "https://github.com/ongardie/raft.tla",
+      "required": true,
+      "access": "free",
+      "week": 39,
+      "estimated_minutes": 45,
+      "purpose": "Map implementation state to formal variables and invariants without requiring prior TLA+ fluency.",
+      "assignment": "Read README and the state-variable, TypeOK, and state-machine-safety portions of raft.tla; map five variables to lab evidence and name one omitted liveness claim.",
+      "last_verified": "2026-08-02",
+      "text_alternative": "lessons/06-raft-log-safety.md",
+      "verified_title": "Formal TLA+ Specification for the Raft Consensus Algorithm",
+      "verified_publisher": "Diego Ongaro",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://github.com/ongardie/raft.tla",
+      "verification_status": "verified"
+    },
+    {
+      "id": "RES-07",
+      "title": "The Chubby Lock Service for Loosely-Coupled Distributed Systems",
+      "author_or_publisher": "Mike Burrows; Google and USENIX OSDI",
+      "type": "first-person engineering case",
+      "url": "https://research.google/pubs/the-chubby-lock-service-for-loosely-coupled-distributed-systems/",
+      "required": true,
+      "access": "free",
+      "week": 40,
+      "estimated_minutes": 75,
+      "purpose": "Study operated leases, sequencers, caching, client behavior, and the gap between intended and actual use.",
+      "assignment": "Read Sections 2–5; record one lease assumption, one fencing/sequencer obligation, one cache risk, one operational limit, and the responsible owner.",
+      "last_verified": "2026-08-02",
+      "text_alternative": "lessons/08-membership-leases-fencing-decisions.md",
+      "verified_title": "The Chubby Lock Service for Loosely-Coupled Distributed Systems",
+      "verified_publisher": "Mike Burrows; Google and USENIX OSDI",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://research.google/pubs/the-chubby-lock-service-for-loosely-coupled-distributed-systems/",
+      "verification_status": "verified"
+    }
   ],
   "artifacts": [
-    {"id":"A01","week":37,"required":true,"template_path":"modules/10-time-coordination-consensus/worksheets/week-37-time-coordination-model.md","submission_path":"reports/module-10-time-coordination-baseline.md","immutable_after_submission":true},
-    {"id":"A02","week":38,"required":true,"template_path":"modules/10-time-coordination-consensus/worksheets/week-38-raft-kv-build.md","submission_path":"labs/module-10/raft-kv/"},
-    {"id":"A03","week":38,"required":true,"template_path":"modules/10-time-coordination-consensus/worksheets/week-38-raft-kv-build.md","submission_path":"reports/module-10-raft-internals-proof.md"},
-    {"id":"A04","week":39,"required":true,"template_path":"modules/10-time-coordination-consensus/worksheets/week-39-consensus-failure-matrix.md","submission_path":"experiments/module-10/","immutable_after_submission":true},
-    {"id":"A05","week":39,"required":true,"template_path":"modules/10-time-coordination-consensus/worksheets/week-39-consensus-failure-matrix.md","submission_path":"reports/module-10-consensus-failure-investigation.md","immutable_after_submission":true},
-    {"id":"A06","week":40,"required":true,"template_path":"templates/rfc-template.md","submission_path":"rfc/module-10-coordination-design.md"},
-    {"id":"A07","week":40,"required":true,"template_path":"modules/10-time-coordination-consensus/worksheets/week-40-coordination-rfc-defense.md","submission_path":"reviews/module-10-defense.md"},
-    {"id":"A08","week":40,"required":true,"template_path":"modules/10-time-coordination-consensus/assessment/report-template.md","submission_path":"reviews/module-10-evaluation.md"},
-    {"id":"A09","week":40,"required":true,"template_path":"templates/learning-log-template.md","submission_path":"learning-log/week-37.md through learning-log/week-40.md"}
+    {
+      "id": "A01",
+      "week": 37,
+      "required": true,
+      "template_path": "modules/10-time-coordination-consensus/worksheets/week-37-time-coordination-model.md",
+      "submission_path": "reports/module-10-time-coordination-baseline.md",
+      "immutable_after_submission": true,
+      "portfolio_category": "model"
+    },
+    {
+      "id": "A02",
+      "week": 38,
+      "required": true,
+      "template_path": "modules/10-time-coordination-consensus/worksheets/week-38-raft-kv-build.md",
+      "submission_path": "labs/module-10/raft-kv/",
+      "portfolio_category": "implementation"
+    },
+    {
+      "id": "A03",
+      "week": 38,
+      "required": true,
+      "template_path": "modules/10-time-coordination-consensus/worksheets/week-38-raft-kv-build.md",
+      "submission_path": "reports/module-10-raft-internals-proof.md",
+      "portfolio_category": "runtime_comparison"
+    },
+    {
+      "id": "A04",
+      "week": 39,
+      "required": true,
+      "template_path": "modules/10-time-coordination-consensus/worksheets/week-39-consensus-failure-matrix.md",
+      "submission_path": "experiments/module-10/",
+      "immutable_after_submission": true,
+      "portfolio_category": "failure_matrix"
+    },
+    {
+      "id": "A05",
+      "week": 39,
+      "required": true,
+      "template_path": "modules/10-time-coordination-consensus/worksheets/week-39-consensus-failure-matrix.md",
+      "submission_path": "reports/module-10-consensus-failure-investigation.md",
+      "immutable_after_submission": true,
+      "portfolio_category": "model"
+    },
+    {
+      "id": "A06",
+      "week": 40,
+      "required": true,
+      "template_path": "templates/rfc-template.md",
+      "submission_path": "rfc/module-10-coordination-design.md",
+      "portfolio_category": "rfc"
+    },
+    {
+      "id": "A07",
+      "week": 40,
+      "required": true,
+      "template_path": "modules/10-time-coordination-consensus/worksheets/week-40-coordination-rfc-defense.md",
+      "submission_path": "reviews/module-10-defense.md",
+      "portfolio_category": "teach_back"
+    },
+    {
+      "id": "A08",
+      "week": 40,
+      "required": true,
+      "template_path": "modules/10-time-coordination-consensus/assessment/report-template.md",
+      "submission_path": "reviews/module-10-evaluation.md",
+      "portfolio_category": "evaluation"
+    },
+    {
+      "id": "A09",
+      "week": 40,
+      "required": true,
+      "template_path": "templates/learning-log-template.md",
+      "submission_path": "learning-log/week-37.md through learning-log/week-40.md",
+      "portfolio_category": "learning_log"
+    }
   ],
   "failure_experiments": [
-    {"id":"F01","scenario":"leader termination around acknowledgement","evidence":"term, log, quorum, commit/application index, response boundary, recovered state, and acknowledgement invariant"},
-    {"id":"F02","scenario":"network partition with a stale minority leader","evidence":"memberships, reachable sets, accepted/rejected commands, epoch, fence, resource response, and single-authority invariant"},
-    {"id":"F03","scenario":"restart with volatile versus persisted hard state","evidence":"term, vote, log, persistence events, post-restart election, conflicting authority, and election-safety invariant"},
-    {"id":"F04","scenario":"lost response and duplicate client command","evidence":"client/session sequence, log indexes, cached result, logical effects, responses, and deduplication invariant"},
-    {"id":"F05","scenario":"delayed messages and unsafe clock-only lease","evidence":"local clocks, uncertainty, message delay, lease claims, quorum/read barrier, fences, and stale-owner invariant"},
-    {"id":"F06","scenario":"reordered AppendEntries and conflicting suffix","evidence":"message order, prev index/term checks, truncation, committed prefix, final logs, and log-matching invariant"},
-    {"id":"F07","scenario":"interrupted snapshot installation and restart","evidence":"snapshot identity/checksum, temporary and active state, last included index/term, restart state, application count, and snapshot invariant"},
-    {"id":"F08","scenario":"membership replacement without overlapping quorums","evidence":"old/joint/new voters, quorum proofs, committed configuration entries, competing decisions, rollback, and membership invariant"}
+    {
+      "id": "F01",
+      "scenario": "leader termination around acknowledgement",
+      "evidence": "term, log, quorum, commit/application index, response boundary, recovered state, and acknowledgement invariant"
+    },
+    {
+      "id": "F02",
+      "scenario": "network partition with a stale minority leader",
+      "evidence": "memberships, reachable sets, accepted/rejected commands, epoch, fence, resource response, and single-authority invariant"
+    },
+    {
+      "id": "F03",
+      "scenario": "restart with volatile versus persisted hard state",
+      "evidence": "term, vote, log, persistence events, post-restart election, conflicting authority, and election-safety invariant"
+    },
+    {
+      "id": "F04",
+      "scenario": "lost response and duplicate client command",
+      "evidence": "client/session sequence, log indexes, cached result, logical effects, responses, and deduplication invariant"
+    },
+    {
+      "id": "F05",
+      "scenario": "delayed messages and unsafe clock-only lease",
+      "evidence": "local clocks, uncertainty, message delay, lease claims, quorum/read barrier, fences, and stale-owner invariant"
+    },
+    {
+      "id": "F06",
+      "scenario": "reordered AppendEntries and conflicting suffix",
+      "evidence": "message order, prev index/term checks, truncation, committed prefix, final logs, and log-matching invariant"
+    },
+    {
+      "id": "F07",
+      "scenario": "interrupted snapshot installation and restart",
+      "evidence": "snapshot identity/checksum, temporary and active state, last included index/term, restart state, application count, and snapshot invariant"
+    },
+    {
+      "id": "F08",
+      "scenario": "membership replacement without overlapping quorums",
+      "evidence": "old/joint/new voters, quorum proofs, committed configuration entries, competing decisions, rollback, and membership invariant"
+    }
   ],
-  "assessment": {"rubric_path":"modules/10-time-coordination-consensus/assessment/rubric.md","evaluator_prompt_path":"modules/10-time-coordination-consensus/assessment/evaluator-prompt.md","evaluation_schema_path":"schemas/evaluation.schema.json","calibration_path":"modules/10-time-coordination-consensus/assessment/calibration","pass_average":3,"safety_critical_criteria":["R08","R09"],"required_result_bands":["Pass","Revise","Repeat"]},
+  "assessment": {
+    "rubric_path": "modules/10-time-coordination-consensus/assessment/rubric.md",
+    "evaluator_prompt_path": "modules/10-time-coordination-consensus/assessment/evaluator-prompt.md",
+    "evaluation_schema_path": "schemas/evaluation.schema.json",
+    "calibration_path": "modules/10-time-coordination-consensus/assessment/calibration",
+    "pass_average": 3,
+    "safety_critical_criteria": [
+      "R08",
+      "R09"
+    ],
+    "required_result_bands": [
+      "Pass",
+      "Revise",
+      "Repeat"
+    ]
+  },
   "solo_review": {
     "challenge_questions": [
       {
@@ -96,5 +856,48 @@
     "questions_per_attempt": 5,
     "live_ai_allowed": false,
     "record_template_path": "templates/solo-review-record-template.md"
-  }
+  },
+  "factual_claims_path": "modules/10-time-coordination-consensus/assessment/factual-claims.json",
+  "lesson_catalog": [
+    {
+      "id": "L01",
+      "path": "lessons/01-physical-clocks-uncertainty.md",
+      "estimated_minutes": 30
+    },
+    {
+      "id": "L02",
+      "path": "lessons/02-logical-vector-clocks.md",
+      "estimated_minutes": 30
+    },
+    {
+      "id": "L03",
+      "path": "lessons/03-safety-liveness-consensus-boundaries.md",
+      "estimated_minutes": 30
+    },
+    {
+      "id": "L04",
+      "path": "lessons/04-paxos-raft-foundations.md",
+      "estimated_minutes": 30
+    },
+    {
+      "id": "L05",
+      "path": "lessons/05-raft-election-persistence.md",
+      "estimated_minutes": 30
+    },
+    {
+      "id": "L06",
+      "path": "lessons/06-raft-log-safety.md",
+      "estimated_minutes": 30
+    },
+    {
+      "id": "L07",
+      "path": "lessons/07-clients-reads-snapshots.md",
+      "estimated_minutes": 30
+    },
+    {
+      "id": "L08",
+      "path": "lessons/08-membership-leases-fencing-decisions.md",
+      "estimated_minutes": 30
+    }
+  ]
 }

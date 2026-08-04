@@ -94,7 +94,8 @@ can invalidate decisions and harm users.
 - **2:** interleaving and threshold exist but uncertainty or inconclusive handling
   is weak.
 - **3:** raw interleaved repetitions, effect ratio, dispersion/uncertainty,
-  meaningful threshold, and block/rerun/rollback action are reproducible.
+  meaningful threshold, and block/rerun/rollback action are reproducible; A11
+  records the resulting policy decision without treating the report as an ADR.
 - **4:** the budget is integrated into a stable release gate and validated against
   pass, regression, and inconclusive fixtures.
 

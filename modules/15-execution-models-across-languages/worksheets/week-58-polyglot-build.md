@@ -16,6 +16,8 @@ resource cleanup, response order, telemetry, and safe errors.
 Run the canonical baseline using three warm-ups and five measured repetitions.
 Record toolchain/container identity, wire/logical/config hashes, schema results,
 I01–I10, and runtime-specific telemetry. Missing runtime evidence prevents Pass.
+Use `run_conformance.py --mode contract --runtime all --output NEW_DIRECTORY`;
+the directory must not already exist.
 
 ## Implementation review
 

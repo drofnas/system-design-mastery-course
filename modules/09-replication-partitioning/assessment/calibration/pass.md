@@ -48,3 +48,10 @@ owners, mixed-version compatibility, copy/verify/canary/cutover/rollback, dissen
 and quantified reversal thresholds. All four Gate 3 parts cite Modules 7–9 by
 heading and commit. The report states that the toy lab cannot prove durability,
 consensus, legal compliance, production latency, or regional survival.
+
+## Controlled replica-partition postmortem
+
+The distinct A11 postmortem reconstructs the controlled partition timeline,
+impact, detection gap, trigger, contributing repair and placement conditions,
+alternative explanations, and owned corrective actions with verification dates.
+It links the failure matrix and ADR while preserving their separate purposes.

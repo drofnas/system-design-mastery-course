@@ -1,0 +1,530 @@
+{
+  "schema_version": "1.0",
+  "module": "M06",
+  "reviewed_commit": "WORKTREE",
+  "reviewed_at": "2026-08-04",
+  "evidence_boundary": "This ledger records a source-level semantic review of lessons, worked answers, case studies, exercises, worksheets, rubrics, and lab guides. It verifies named mechanisms against bounded primary or official sources, distinguishes normative course contracts, and does not turn synthetic examples into production measurements.",
+  "claims": [
+    {
+      "id": "M06-FC-001",
+      "location": {
+        "path": "lessons/01-end-to-end-deadlines.md",
+        "heading": "Mechanism"
+      },
+      "claim": "A deadline answers “after what instant is this result no longer useful?” A timeout answers “how long will this component wait?” Resetting a full timeout at each hop lets a request live longer than the user promise. Instead carry one absolute logical deadline, convert it to a local remaining duration at each boundary, subtract explicit response/cleanup reserve, and refuse work that cannot plausibly finish.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-05"
+      ],
+      "source_sections": [
+        "Read Retry Cascades, Latency and Deadlines, and Testing for Cascading Failures; map each positive feedback loop to a lab metric and mitigation owner."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M06-FC-002",
+      "location": {
+        "path": "lessons/02-cancellation-and-cleanup.md",
+        "heading": "Mechanism"
+      },
+      "claim": "Cancellation is cooperative. A caller signal changes the value of continuing; it does not generally interrupt application code, roll back an external effect, or close every acquired resource. Each queue wait, loop, child call, and blocking adapter needs an observation point and cleanup owner.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-02"
+      ],
+      "source_sections": [
+        "Read Overview and client/server cancellation sections; list every loop, queue, and child call in your build that must observe cancellation."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M06-FC-003",
+      "location": {
+        "path": "lessons/03-retry-budgets-backoff-jitter.md",
+        "heading": "Mechanism"
+      },
+      "claim": "A retry is a new unit of load issued when the system is already uncertain or unhealthy. If ai is attempts per layer, the worst lowest-layer amplification is product(ai). Three layers with one original plus two retries produce 3^3 = 27 attempts per logical request.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-04"
+      ],
+      "source_sections": [
+        "Read the complete article; produce an attempt-amplification tree and identify one policy whose safe value depends on your latency distribution."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M06-FC-004",
+      "location": {
+        "path": "lessons/04-idempotency-and-deduplication.md",
+        "heading": "Mechanism"
+      },
+      "claim": "An HTTP method classified as idempotent means repeated identical requests have the same intended server effect. It does not prove an application command is safe, that intermediaries will not repeat it, or that per-attempt side effects are absent. A lost response creates ambiguity: the caller cannot infer “not applied” from “no success observed.”",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-03"
+      ],
+      "source_sections": [
+        "Read Sections 9.2.1–9.2.3 and 10.2.3; classify each independent operation and explain what remains unknown after connection loss."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M06-FC-005",
+      "location": {
+        "path": "lessons/05-bulkheads-pools-health.md",
+        "heading": "Mechanism"
+      },
+      "claim": "Every remote-call protection consumes a finite resource: task, thread, socket, connection, queue position, rate token, or downstream capacity. A pool limits simultaneous ownership; a semaphore limits in-flight work; a bulkhead partitions capacity so one workload cannot take all of it. A bound without an admission policy merely moves waiting elsewhere.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-05"
+      ],
+      "source_sections": [
+        "Read Retry Cascades, Latency and Deadlines, and Testing for Cascading Failures; map each positive feedback loop to a lab metric and mitigation owner."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M06-FC-006",
+      "location": {
+        "path": "lessons/06-circuit-breakers-hedges-partials.md",
+        "heading": "Mechanism"
+      },
+      "claim": "A circuit breaker converts recent observations into local admission state. It can fail fast and reduce wasted work, but its window, scope, thresholds, and half-open probes create a second control system. Many callers may open and probe together; a broad breaker can reject healthy partitions; stale state can slow recovery. Compare it with simpler concurrency limits, load shedding, and clear overload responses before adoption.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-06"
+      ],
+      "source_sections": [
+        "Read Sections 1–3 and 6; classify the retry-storm trial's trigger, vulnerable state, sustaining effect, and recovery action."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M06-FC-007",
+      "location": {
+        "path": "lessons/07-rate-limits-quotas-fairness.md",
+        "heading": "Mechanism"
+      },
+      "claim": "A rate limit bounds arrivals per interval; a concurrency limit bounds active work; a quota bounds cumulative entitlement; a cost budget bounds weighted consumption. A cheap read and expensive fan-out should not consume identical tokens if their risk differs.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-07"
+      ],
+      "source_sections": [
+        "Watch the presentation or use its audio/slides with Lesson 8; record one containment boundary, one coordination risk, and one migration gate."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M06-FC-008",
+      "location": {
+        "path": "lessons/08-policy-migration-ownership.md",
+        "heading": "Reasoning method"
+      },
+      "claim": "A policy is a cross-team contract, not a library-default inventory. It must name which caller owns the deadline and retries, how dependencies advertise semantics, how commands handle ambiguity, where resources are bounded, what users see under partial failure, and who can approve exceptions.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-07"
+      ],
+      "source_sections": [
+        "Watch the presentation or use its audio/slides with Lesson 8; record one containment boundary, one coordination risk, and one migration gate."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M06-FC-009",
+      "location": {
+        "path": "exercises/answer-key.md",
+        "heading": "EX-01"
+      },
+      "claim": "Available dependency stage is 420 - 60 - 40 - 20 = 300 ms. A child dispatched at 95 ms sees 420 - 95 - 60 = 265 ms; its 260 ms operation cap wins. This does not promise completion—load-test the whole journey distribution.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-04"
+      ],
+      "source_sections": [
+        "Read the complete article; produce an attempt-amplification tree and identify one policy whose safe value depends on your latency distribution."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "The review covers the causal mechanism and derivation used by the explained answers; exercise numbers and worked values are synthetic and are not production measurements."
+    },
+    {
+      "id": "M06-FC-010",
+      "location": {
+        "path": "case-study/beacon-dispatch.md",
+        "heading": "Problem"
+      },
+      "claim": "Beacon Dispatch serves a municipal dispatcher who needs a status card before assigning an emergency unit. One request fans out to:",
+      "classification": "synthetic",
+      "source_ids": [],
+      "source_sections": [],
+      "verification_method": "controlled synthetic fixture",
+      "status": "verified",
+      "scope_limit": "The case exists to exercise a reasoning method under declared constraints; none of its organizations, loads, timings, incidents, or results are production evidence.",
+      "synthetic_label": "This non-capstone case and every unattributed workload, incident, cost, latency, and organization detail in it are synthetic course fixtures."
+    },
+    {
+      "id": "M06-FC-011",
+      "location": {
+        "path": "exercises/answer-key.md",
+        "heading": "EX-01"
+      },
+      "claim": "The document uses the bounded expression 420 - 60 - 40 - 20 = 300 ms; its semantics, substitution where arithmetic applies, and stated assumptions were checked as a reproducible derivation.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-04"
+      ],
+      "source_sections": [
+        "Read the complete article; produce an attempt-amplification tree and identify one policy whose safe value depends on your latency distribution."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "The mapping verifies the written expression and arithmetic under its declared assumptions; synthetic inputs and a local result do not establish a production distribution."
+    },
+    {
+      "id": "M06-FC-012",
+      "location": {
+        "path": "lessons/01-end-to-end-deadlines.md",
+        "heading": "Mechanism"
+      },
+      "claim": "The document uses the bounded expression D_user >= Q_ingress + L_local + sum(C_i) + A_response + R_cleanup; its semantics, substitution where arithmetic applies, and stated assumptions were checked as a reproducible derivation.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-05"
+      ],
+      "source_sections": [
+        "Read Retry Cascades, Latency and Deadlines, and Testing for Cascading Failures; map each positive feedback loop to a lab metric and mitigation owner."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "The mapping verifies the written expression and arithmetic under its declared assumptions; synthetic inputs and a local result do not establish a production distribution."
+    },
+    {
+      "id": "M06-FC-013",
+      "location": {
+        "path": "lessons/03-retry-budgets-backoff-jitter.md",
+        "heading": "Mechanism"
+      },
+      "claim": "The document uses the bounded expression 3^3 = 27; its semantics, substitution where arithmetic applies, and stated assumptions were checked as a reproducible derivation.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-04"
+      ],
+      "source_sections": [
+        "Read the complete article; produce an attempt-amplification tree and identify one policy whose safe value depends on your latency distribution."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "The mapping verifies the written expression and arithmetic under its declared assumptions; synthetic inputs and a local result do not establish a production distribution."
+    },
+    {
+      "id": "M06-FC-014",
+      "location": {
+        "path": "lessons/05-bulkheads-pools-health.md",
+        "heading": "Mechanism"
+      },
+      "claim": "The document uses the bounded expression L = lambda * W; its semantics, substitution where arithmetic applies, and stated assumptions were checked as a reproducible derivation.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-05"
+      ],
+      "source_sections": [
+        "Read Retry Cascades, Latency and Deadlines, and Testing for Cascading Failures; map each positive feedback loop to a lab metric and mitigation owner."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "The mapping verifies the written expression and arithmetic under its declared assumptions; synthetic inputs and a local result do not establish a production distribution."
+    }
+  ],
+  "lesson_coverage": [
+    {
+      "lesson_id": "L01",
+      "path": "lessons/01-end-to-end-deadlines.md",
+      "claim_ids": [
+        "M06-FC-001"
+      ]
+    },
+    {
+      "lesson_id": "L02",
+      "path": "lessons/02-cancellation-and-cleanup.md",
+      "claim_ids": [
+        "M06-FC-002"
+      ]
+    },
+    {
+      "lesson_id": "L03",
+      "path": "lessons/03-retry-budgets-backoff-jitter.md",
+      "claim_ids": [
+        "M06-FC-003"
+      ]
+    },
+    {
+      "lesson_id": "L04",
+      "path": "lessons/04-idempotency-and-deduplication.md",
+      "claim_ids": [
+        "M06-FC-004"
+      ]
+    },
+    {
+      "lesson_id": "L05",
+      "path": "lessons/05-bulkheads-pools-health.md",
+      "claim_ids": [
+        "M06-FC-005"
+      ]
+    },
+    {
+      "lesson_id": "L06",
+      "path": "lessons/06-circuit-breakers-hedges-partials.md",
+      "claim_ids": [
+        "M06-FC-006"
+      ]
+    },
+    {
+      "lesson_id": "L07",
+      "path": "lessons/07-rate-limits-quotas-fairness.md",
+      "claim_ids": [
+        "M06-FC-007"
+      ]
+    },
+    {
+      "lesson_id": "L08",
+      "path": "lessons/08-policy-migration-ownership.md",
+      "claim_ids": [
+        "M06-FC-008"
+      ]
+    }
+  ],
+  "document_coverage": [
+    {
+      "path": "assessment/rubric.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "case-study/beacon-dispatch.md",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [
+        "M06-FC-010"
+      ],
+      "review_note": "The case was reviewed for explicit synthetic boundaries, internal arithmetic, non-generalization language, and separation from the learner capstone."
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M06-FC-009",
+        "M06-FC-011"
+      ],
+      "review_note": "Explained answers were checked for causal consistency, formula provenance, and agreement with the locally taught mechanism and cited source boundary."
+    },
+    {
+      "path": "exercises/exercises.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "lab/README.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "The lab guide's commands, interfaces, bounds, and synthetic evidence limitations were checked directly against the executable implementation and its passing tests."
+    },
+    {
+      "path": "lessons/01-end-to-end-deadlines.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M06-FC-001",
+        "M06-FC-012"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/02-cancellation-and-cleanup.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M06-FC-002"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/03-retry-budgets-backoff-jitter.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M06-FC-003",
+        "M06-FC-013"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/04-idempotency-and-deduplication.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M06-FC-004"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/05-bulkheads-pools-health.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M06-FC-005",
+        "M06-FC-014"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/06-circuit-breakers-hedges-partials.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M06-FC-006"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/07-rate-limits-quotas-fairness.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M06-FC-007"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/08-policy-migration-ownership.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M06-FC-008"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "worksheets/week-21-deadline-model.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-22-bounded-build.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-23-failure-matrix.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-24-policy-defense.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    }
+  ],
+  "formula_mappings": [
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-01",
+      "expression_sha256": "bdfcfd780b9e009121a0f28c788d0d93e06611013dbb1b3191582899a1279c28",
+      "claim_id": "M06-FC-011"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-01",
+      "expression_sha256": "2b0ba46b70eaeb63e7ff312c6423b22848f59135e0c9add3d06fff44815583cb",
+      "claim_id": "M06-FC-011"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-03",
+      "expression_sha256": "0f846aeeeddf4f8a9fdc1182abe221331cd343283bdcb69433fc27ccb1a397f3",
+      "claim_id": "M06-FC-011"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-05",
+      "expression_sha256": "62fe0fcbfaef597bc09da0877b0b55cf94d96a863c4cfb26c4e2d66bdf3508f3",
+      "claim_id": "M06-FC-011"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-06",
+      "expression_sha256": "95fc971b8605e2c4eb6fbb3bd120bb4949e048fcb18fdafdbf3618eca2734c26",
+      "claim_id": "M06-FC-011"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-09",
+      "expression_sha256": "49f54c8fa892de2b99e67db1cb2211b0a192d4b2ce60e128991cd08ffc80be99",
+      "claim_id": "M06-FC-011"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-09",
+      "expression_sha256": "23b6956dde11501162c6209ccea292e797ed8e06e59dc326acfb691c34117b27",
+      "claim_id": "M06-FC-011"
+    },
+    {
+      "path": "lessons/01-end-to-end-deadlines.md",
+      "heading": "Mechanism",
+      "expression_sha256": "9ab211d7666bb0f58c9b4b846c1a97975b2d0d374325bb6a67c7968febde262c",
+      "claim_id": "M06-FC-012"
+    },
+    {
+      "path": "lessons/01-end-to-end-deadlines.md",
+      "heading": "Mechanism",
+      "expression_sha256": "b600e85cb272ab1279f97f45e84d74e6a44c73c88c9947f126254cd01ff22299",
+      "claim_id": "M06-FC-012"
+    },
+    {
+      "path": "lessons/01-end-to-end-deadlines.md",
+      "heading": "Worked example",
+      "expression_sha256": "b26c387ae493607d8170c8fb2a30e1381831c165a22df41b2a30ea83eced27c9",
+      "claim_id": "M06-FC-012"
+    },
+    {
+      "path": "lessons/03-retry-budgets-backoff-jitter.md",
+      "heading": "Mechanism",
+      "expression_sha256": "62fe0fcbfaef597bc09da0877b0b55cf94d96a863c4cfb26c4e2d66bdf3508f3",
+      "claim_id": "M06-FC-013"
+    },
+    {
+      "path": "lessons/03-retry-budgets-backoff-jitter.md",
+      "heading": "Mechanism",
+      "expression_sha256": "d569abc1c786bd0a490c5a1084ff4a0b706fc4d1f56e5b2e5cc3866bfb0f94a1",
+      "claim_id": "M06-FC-013"
+    },
+    {
+      "path": "lessons/03-retry-budgets-backoff-jitter.md",
+      "heading": "Mechanism",
+      "expression_sha256": "2e90afff3a0b6ccbdc3f1906782f1f0620a0bf80751b1102cabf3879a7e7c7bc",
+      "claim_id": "M06-FC-013"
+    },
+    {
+      "path": "lessons/05-bulkheads-pools-health.md",
+      "heading": "Mechanism",
+      "expression_sha256": "1360db99c8434d4ae3abef6d040dbf51c2fa17f003dc42f4f01c133fd97f5634",
+      "claim_id": "M06-FC-014"
+    }
+  ]
+}

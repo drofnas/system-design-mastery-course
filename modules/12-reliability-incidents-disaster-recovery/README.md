@@ -86,7 +86,7 @@ Use the [Week 47 worksheet](worksheets/week-47-incident-recovery-experiments.md)
 | Work | Time |
 |---|---:|
 | Lesson 8, bounded sources, and EX-16 | 1.5 h |
-| Final incident postmortem and disaster-recovery review | 2.5 h |
+| Final postmortem, disaster-recovery review, and recovery-tier ADR | 2.5 h |
 | Recorded defense and module evaluation | 1.5 h |
 | Four-part Gate 4 | 3.5 h |
 | Remediation and learning log | 1 h |
@@ -122,7 +122,8 @@ Use the [glossary](glossary.md) as reference after studying the mechanisms.
 
 This module contributes one controlled-incident postmortem, one
 disaster-recovery exercise report, one reliability investigation, one Gate 4
-submission, one Week 48 capstone revision, and one recorded teach-back.
+submission, one recovery-tier ADR, one Week 48 capstone revision, and one
+recorded teach-back.
 
 ## Assessment and completion
 
@@ -146,3 +147,12 @@ AI may challenge calculations, hypotheses, failure coverage, and alternatives.
 It may not choose the graded design, invent incident or recovery evidence,
 modify frozen artifacts, write replacement graded answers, or answer during the
 defense. Disclose assistance and verify generated claims.
+
+## Course-wide completion contracts
+
+- The machine-readable `module.json` time blocks are the canonical required-work budget.
+- The [factual-claims ledger](assessment/factual-claims.json) maps each local lesson to its authoritative source boundary.
+- Use the [provider-neutral evaluation workflow](../../EVALUATION_GUIDE.md) only after learner evidence is committed.
+- Use the [sealed local gate workflow](../../SOLO_GATE_GUIDE.md) when a course gate applies. Human review is optional.
+
+Self-scoring is provisional and cannot establish Pass. Synthetic lab values are not production measurements.

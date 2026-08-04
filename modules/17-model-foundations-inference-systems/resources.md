@@ -1,48 +1,146 @@
-# Module 17 Resource Guide
+# Model Foundations and Inference Systems Resource Guide
 
-Every required resource is free. The local lesson named in each row is the
-complete text alternative; the external source supplies primary evidence or a
-practitioner comparison. Verification records access, title, publisher, and the
-assigned boundary on 2026-08-03, not permanent availability.
+Local lessons are sufficient to complete the module. External sources reinforce
+the instruction and provide a checkable primary or practitioner reference; they
+never replace the local explanation, practice, or answer key.
 
-| ID | Resource and boundary | Week | Time | Required | Evidence to produce | Local fallback |
-|---|---|---:|---:|---|---|---|
-| RES-01 | Goodfellow, Bengio, and Courville, *Deep Learning*: Ch. 2 §2.1–2.5, Ch. 3 §3.1–3.4 and 3.13, Ch. 4 §4.1–4.3 | 65 | 90 min | Yes | Re-derive one matrix product, entropy example, and gradient approximation | Lesson 1 |
-| RES-02 | Vaswani et al., *Attention Is All You Need*: §3.1–3.5 only | 65 | 60 min | Yes | Annotate shapes and derive the scale and causal mask | Lessons 2–3 |
-| RES-03 | Stanford CS336 Spring 2026: lectures 1–5 and 10 materials only | 65–66 | 90 min | Yes | Separate token, operator, memory, hardware, and serving claims | Lessons 2–5 |
-| RES-04 | Stanford Online CS336 Lecture 10, *Inference*: watch with captions | 66 | 75 min | Yes | Produce a prefill/decode/batching concept map and two transfer limits | Lessons 3–6 |
-| RES-05 | Kwon et al., *Efficient Memory Management for Large Language Model Serving with PagedAttention*: §2–4 and §7 | 66 | 75 min | Yes | Reproduce the KV fragmentation argument and record assumptions | Lessons 4 and 6 |
-| RES-06 | vLLM, *Optimization and Tuning*: preemption, chunked prefill, input processing | 67 | 45 min | Yes | Compare current controls with the module's portable scheduler | Lesson 6 |
-| RES-07 | PyTorch, *Profiler recipe*: timing, shapes, memory, warm-up, trace export | 67 | 45 min | Yes | Write a measured-profile protocol and overhead limitations | Lesson 5 |
-| RES-08 | Xiao et al., *SmoothQuant*: §1–4 and §5.3–5.5 | 67 | 60 min | Yes | Tie a precision change to both memory/performance and quality evidence | Lesson 7 |
-| RES-09 | Meta Engineering, *Taming the tail utilization of ads inference at Meta scale* | 68 | 45 min | Yes | Separate measured intervention, outcome, scale, and non-transferable assumptions | Lesson 8 |
+## Required authoritative spine
 
-## Source records
+The required records are RES-02, RES-03, RES-05, RES-07, RES-09.
+Every required record is free and has a local written alternative. All other
+records below are optional enrichment and do not consume required module time.
 
-- **RES-01:** Ian Goodfellow, Yoshua Bengio, and Aaron Courville; MIT Press;
-  online book; <https://www.deeplearningbook.org/>; free; verified 2026-08-03.
-- **RES-02:** Ashish Vaswani et al.; original paper;
-  <https://arxiv.org/abs/1706.03762>; free; verified 2026-08-03.
-- **RES-03:** Stanford University; course materials;
-  <https://cs336.stanford.edu/>; free; verified 2026-08-03.
-- **RES-04:** Stanford Online; captioned video;
-  <https://www.youtube.com/watch?v=fcgPYo3OtV0>; free; verified 2026-08-03.
-- **RES-05:** Woosuk Kwon et al.; SOSP paper;
-  <https://arxiv.org/abs/2309.06180>; free; verified 2026-08-03.
-- **RES-06:** vLLM project; maintainer documentation;
-  <https://docs.vllm.ai/en/latest/configuration/optimization/>; free; verified 2026-08-03.
-- **RES-07:** PyTorch project; maintainer tutorial;
-  <https://docs.pytorch.org/tutorials/recipes/recipes/profiler_recipe.html>;
-  free; verified 2026-08-03.
-- **RES-08:** Guangxuan Xiao et al.; original quantization paper;
-  <https://arxiv.org/abs/2211.10438>; free; verified 2026-08-03.
-- **RES-09:** Meta Engineering; first-person practitioner case;
-  <https://engineering.fb.com/2024/07/10/production-engineering/tail-utilization-ads-inference-meta/>;
-  free; verified 2026-08-03.
+| Week | Required resources | Assigned minutes |
+|---:|---|---:|
+| 65 | RES-02, RES-03 | 150 |
+| 66 | RES-05 | 75 |
+| 67 | RES-07 | 45 |
+| 68 | RES-09 | 45 |
 
-## Reflection questions
+For each assigned source, preserve the requested evidence, one transfer limit,
+and one observation that would falsify the claim. A required source that is
+temporarily unavailable is replaced by its local alternative and the same evidence
+task; record the substitution.
 
-1. Which source claim depends most strongly on model, hardware, or workload shape?
-2. Which measurement would be invalid if queue time were excluded from TTFT?
-3. Which cache optimization changes a correctness or privacy boundary?
-4. What evidence would reverse the selected precision or provider decision?
+## Resource records
+
+### RES-02: Attention Is All You Need
+
+- **Author/publisher:** Ashish Vaswani et al.
+- **URL:** https://arxiv.org/abs/1706.03762
+- **Type/status:** original research paper; Required
+- **Access:** free
+- **Week/time:** Week 65; 60 minutes assigned
+- **Purpose:** Connect the local attention implementation to the original transformer mechanism and notation.
+- **Boundary and evidence:** Read Sections 3.1-3.5 only; annotate tensor shapes, scaling, masking, and parallelism claims.
+- **Local alternative:** [lessons/02-tokens-embeddings-attention.md](lessons/02-tokens-embeddings-attention.md)
+- **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-08-03
+- **Reflection:** Which claim transfers to this module, which assumption limits it, and what evidence would falsify it?
+
+### RES-03: CS336: Language Modeling from Scratch
+
+- **Author/publisher:** Stanford University
+- **URL:** https://cs336.stanford.edu/
+- **Type/status:** course materials; Required
+- **Access:** free
+- **Week/time:** Week 65; 90 minutes assigned
+- **Purpose:** Reinforce tokenization, resource accounting, architectures, hardware, and current inference-system reasoning.
+- **Boundary and evidence:** Use only Lectures 1-5 and 10 materials; separate token, operator, memory, hardware, and serving claims in a concept ledger.
+- **Local alternative:** [lessons/03-transformer-inference-path.md](lessons/03-transformer-inference-path.md)
+- **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-08-03
+- **Reflection:** Which claim transfers to this module, which assumption limits it, and what evidence would falsify it?
+
+### RES-05: Efficient Memory Management for Large Language Model Serving with PagedAttention
+
+- **Author/publisher:** Woosuk Kwon et al. / SOSP
+- **URL:** https://arxiv.org/abs/2309.06180
+- **Type/status:** original systems paper; Required
+- **Access:** free
+- **Week/time:** Week 66; 75 minutes assigned
+- **Purpose:** Study KV-cache allocation, fragmentation, batching, scheduling, and their workload assumptions.
+- **Boundary and evidence:** Read Sections 2-4 and 7; reproduce the fragmentation argument and list the assumptions that differ from Atlas.
+- **Local alternative:** [lessons/04-compute-memory-capacity.md](lessons/04-compute-memory-capacity.md)
+- **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-08-03
+- **Reflection:** Which claim transfers to this module, which assumption limits it, and what evidence would falsify it?
+
+### RES-07: PyTorch Profiler
+
+- **Author/publisher:** PyTorch project
+- **URL:** https://docs.pytorch.org/tutorials/recipes/recipes/profiler_recipe.html
+- **Type/status:** maintainer tutorial; Required
+- **Access:** free
+- **Week/time:** Week 67; 45 minutes assigned
+- **Purpose:** Define timing, shape, memory, warm-up, and trace-export evidence for the optional adapter.
+- **Boundary and evidence:** Read timing, memory, trace, and long-running sections; write the Atlas measured-profile procedure and its overhead boundary.
+- **Local alternative:** [lessons/05-profiling-inference-metrics.md](lessons/05-profiling-inference-metrics.md)
+- **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-08-03
+- **Reflection:** Which claim transfers to this module, which assumption limits it, and what evidence would falsify it?
+
+### RES-09: Taming the tail utilization of ads inference at Meta scale
+
+- **Author/publisher:** Meta Engineering
+- **URL:** https://engineering.fb.com/2024/07/10/production-engineering/tail-utilization-ads-inference-meta/
+- **Type/status:** first-person engineering case; Required
+- **Access:** free
+- **Week/time:** Week 68; 45 minutes assigned
+- **Purpose:** Examine operator evidence connecting tail utilization, capacity, reliability, and user latency.
+- **Boundary and evidence:** Read the full case; separate measurements, interventions, outcomes, scale assumptions, and claims that do not transfer to generative Atlas workloads.
+- **Local alternative:** [lessons/08-atlas-inference-decision.md](lessons/08-atlas-inference-decision.md)
+- **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-08-03
+- **Reflection:** Which claim transfers to this module, which assumption limits it, and what evidence would falsify it?
+
+### RES-01: Deep Learning: Chapters 2-4 bounded sections
+
+- **Author/publisher:** Ian Goodfellow, Yoshua Bengio, Aaron Courville / MIT Press
+- **URL:** https://www.deeplearningbook.org/
+- **Type/status:** free online textbook; Optional enrichment
+- **Access:** free
+- **Week/time:** Week 65; 90 minutes optional
+- **Purpose:** Ground linear algebra, probability, entropy, gradients, and numerical stability used in local derivations.
+- **Boundary and evidence:** Read Chapter 2 Sections 2.1-2.5, Chapter 3 Sections 3.1-3.4 and 3.13, and Chapter 4 Sections 4.1-4.3; reproduce one matrix, entropy, and gradient calculation.
+- **Local alternative:** [lessons/01-mathematics-for-inference.md](lessons/01-mathematics-for-inference.md)
+- **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-08-03
+- **Reflection:** Which claim transfers to this module, which assumption limits it, and what evidence would falsify it?
+
+### RES-04: CS336 Lecture 10: Inference
+
+- **Author/publisher:** Stanford Online
+- **URL:** https://www.youtube.com/watch?v=fcgPYo3OtV0
+- **Type/status:** captioned technical video; Optional enrichment
+- **Access:** free
+- **Week/time:** Week 66; 75 minutes optional
+- **Purpose:** Visualize prefill, decode, batching, and serving trade-offs with a written equivalent.
+- **Boundary and evidence:** Watch with captions; produce a prefill/decode/batching map and two claims that do not transfer to the Atlas portable CPU lab.
+- **Local alternative:** [lessons/03-transformer-inference-path.md](lessons/03-transformer-inference-path.md)
+- **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-08-03
+- **Reflection:** Which claim transfers to this module, which assumption limits it, and what evidence would falsify it?
+
+### RES-06: Optimization and Tuning
+
+- **Author/publisher:** vLLM project
+- **URL:** https://docs.vllm.ai/en/latest/configuration/optimization/
+- **Type/status:** maintainer documentation; Optional enrichment
+- **Access:** free
+- **Week/time:** Week 67; 45 minutes optional
+- **Purpose:** Compare current preemption, chunked-prefill, and input-processing controls with the local scheduler model.
+- **Boundary and evidence:** Read preemption, chunked prefill, and input processing only; map each current control to the Atlas failure it could affect.
+- **Local alternative:** [lessons/06-scheduling-admission-fairness.md](lessons/06-scheduling-admission-fairness.md)
+- **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-08-03
+- **Reflection:** Which claim transfers to this module, which assumption limits it, and what evidence would falsify it?
+
+### RES-08: SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models
+
+- **Author/publisher:** Guangxuan Xiao et al.
+- **URL:** https://arxiv.org/abs/2211.10438
+- **Type/status:** original research paper; Optional enrichment
+- **Access:** free
+- **Week/time:** Week 67; 60 minutes optional
+- **Purpose:** Tie numerical representation changes to both hardware efficiency and protected quality evidence.
+- **Boundary and evidence:** Read Sections 1-4 and 5.3-5.5; identify the precision, hardware, corpus, and metric boundaries behind each claim.
+- **Local alternative:** [lessons/07-caches-quantization-failover.md](lessons/07-caches-quantization-failover.md)
+- **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-08-03
+- **Reflection:** Which claim transfers to this module, which assumption limits it, and what evidence would falsify it?
+
+Do not copy articles, chapters, slides, or transcripts into learner artifacts.
+Use short attributed quotations only when necessary and otherwise paraphrase with
+the source ID, exact section boundary, and stated evidence limit.

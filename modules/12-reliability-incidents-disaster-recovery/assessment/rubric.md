@@ -90,6 +90,8 @@ failed repaired invariants invalidate every recovery claim.
 - **1:** preferred tier without shared drivers, evidence, or owners.
 - **2:** decision exists but security, cost, staffing, migration, dissent, or reversal is weak.
 - **3:** postmortem, DR review, Gate 4, revision, and defense cover alternatives, risk, cost, owners, dissent, and remediation.
+- A passing decision also includes A12 as a distinct recovery-tier ADR linked
+  to, but not substituted by, the postmortem and DR review.
 - **4:** cross-team review resolves disagreement and transfers consensus-to-recovery reasoning to another stack.
 
 ## Result thresholds

@@ -3,55 +3,851 @@
   "id": "M07",
   "title": "Data Models and Storage Engines",
   "weeks": [
-    {"number": 25, "focus": "Model and freeze workloads, access paths, and physical predictions", "hours": 10.5, "evidence": ["Frozen workload and access-path matrix", "Data-model and invariant map", "Page and amplification estimates", "Week 25 learning log"]},
-    {"number": 26, "focus": "Build persistent B+ tree and LSM mechanisms", "hours": 11, "evidence": ["B+ tree implementation and tests", "LSM implementation and tests", "Clean-close reopen evidence", "Internals review and Week 26 learning log"]},
-    {"number": 27, "focus": "Break, measure, diagnose, and recover", "hours": 11, "evidence": ["Ten base workload trials", "Six broken/repaired pairs", "Amplification and failure matrix", "Week 27 learning log"]},
-    {"number": 28, "focus": "Decide, migrate, teach, and assess", "hours": 10.5, "evidence": ["Storage-engine ADR", "Migration and rollback plan", "Recorded defense", "Evaluation, remediation, and Week 28 learning log"]}
+    {
+      "number": 25,
+      "focus": "Model and freeze workloads, access paths, and physical predictions",
+      "hours": 10.5,
+      "evidence": [
+        "Frozen workload and access-path matrix",
+        "Data-model and invariant map",
+        "Page and amplification estimates",
+        "Week 25 learning log"
+      ],
+      "time_blocks": [
+        {
+          "id": "W25-T01",
+          "label": "Bounded authoritative resources",
+          "minutes": 50,
+          "activity": "required_resource",
+          "resource_ids": [
+            "RES-01"
+          ]
+        },
+        {
+          "id": "W25-T02",
+          "label": "Local lesson instruction",
+          "minutes": 120,
+          "activity": "local_instruction",
+          "lesson_ids": [
+            "L01",
+            "L02",
+            "L03",
+            "L04"
+          ]
+        },
+        {
+          "id": "W25-T03",
+          "label": "Guided practice",
+          "minutes": 90,
+          "activity": "guided_practice",
+          "exercise_ids": [
+            "EX-01",
+            "EX-02",
+            "EX-03",
+            "EX-04",
+            "EX-05",
+            "EX-06"
+          ]
+        },
+        {
+          "id": "W25-T04",
+          "label": "Reflection and learning log",
+          "minutes": 30,
+          "activity": "reflection"
+        },
+        {
+          "id": "W25-T05",
+          "label": "Independent Work",
+          "minutes": 340,
+          "activity": "independent_work",
+          "artifact_ids": [
+            "A01"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "focus": "Build persistent B+ tree and LSM mechanisms",
+      "hours": 11,
+      "evidence": [
+        "B+ tree implementation and tests",
+        "LSM implementation and tests",
+        "Clean-close reopen evidence",
+        "Internals review and Week 26 learning log"
+      ],
+      "time_blocks": [
+        {
+          "id": "W26-T01",
+          "label": "Bounded authoritative resources",
+          "minutes": 70,
+          "activity": "required_resource",
+          "resource_ids": [
+            "RES-04"
+          ]
+        },
+        {
+          "id": "W26-T02",
+          "label": "Local lesson instruction",
+          "minutes": 90,
+          "activity": "local_instruction",
+          "lesson_ids": [
+            "L03",
+            "L05",
+            "L07"
+          ]
+        },
+        {
+          "id": "W26-T03",
+          "label": "Guided practice",
+          "minutes": 90,
+          "activity": "guided_practice",
+          "exercise_ids": [
+            "EX-07",
+            "EX-08",
+            "EX-09",
+            "EX-10",
+            "EX-11"
+          ]
+        },
+        {
+          "id": "W26-T04",
+          "label": "Reflection and learning log",
+          "minutes": 30,
+          "activity": "reflection"
+        },
+        {
+          "id": "W26-T05",
+          "label": "Decision Artifact",
+          "minutes": 30,
+          "activity": "decision_artifact",
+          "artifact_ids": [
+            "A04"
+          ]
+        },
+        {
+          "id": "W26-T06",
+          "label": "Independent Work",
+          "minutes": 350,
+          "activity": "independent_work",
+          "artifact_ids": [
+            "A02",
+            "A03"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "focus": "Break, measure, diagnose, and recover",
+      "hours": 11,
+      "evidence": [
+        "Ten base workload trials",
+        "Six broken/repaired pairs",
+        "Amplification and failure matrix",
+        "Week 27 learning log"
+      ],
+      "time_blocks": [
+        {
+          "id": "W27-T01",
+          "label": "Bounded authoritative resources",
+          "minutes": 75,
+          "activity": "required_resource",
+          "resource_ids": [
+            "RES-05",
+            "RES-07"
+          ]
+        },
+        {
+          "id": "W27-T02",
+          "label": "Local lesson instruction",
+          "minutes": 90,
+          "activity": "local_instruction",
+          "lesson_ids": [
+            "L01",
+            "L04",
+            "L06"
+          ]
+        },
+        {
+          "id": "W27-T03",
+          "label": "Guided practice",
+          "minutes": 90,
+          "activity": "guided_practice",
+          "exercise_ids": [
+            "EX-12",
+            "EX-13",
+            "EX-14",
+            "EX-15"
+          ]
+        },
+        {
+          "id": "W27-T04",
+          "label": "Reflection and learning log",
+          "minutes": 30,
+          "activity": "reflection"
+        },
+        {
+          "id": "W27-T05",
+          "label": "Failure Experiment",
+          "minutes": 375,
+          "activity": "failure_experiment",
+          "artifact_ids": [
+            "A05"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "focus": "Decide, migrate, teach, and assess",
+      "hours": 10.5,
+      "evidence": [
+        "Storage-engine ADR",
+        "Migration and rollback plan",
+        "Recorded defense",
+        "Evaluation, remediation, and Week 28 learning log"
+      ],
+      "time_blocks": [
+        {
+          "id": "W28-T01",
+          "label": "Bounded authoritative resources",
+          "minutes": 85,
+          "activity": "required_resource",
+          "resource_ids": [
+            "RES-09",
+            "RES-10"
+          ]
+        },
+        {
+          "id": "W28-T02",
+          "label": "Local lesson instruction",
+          "minutes": 45,
+          "activity": "local_instruction",
+          "lesson_ids": [
+            "L08"
+          ]
+        },
+        {
+          "id": "W28-T03",
+          "label": "Guided practice",
+          "minutes": 45,
+          "activity": "guided_practice",
+          "exercise_ids": [
+            "EX-16"
+          ]
+        },
+        {
+          "id": "W28-T04",
+          "label": "Reflection and learning log",
+          "minutes": 30,
+          "activity": "reflection",
+          "artifact_ids": [
+            "A09"
+          ]
+        },
+        {
+          "id": "W28-T05",
+          "label": "Assessment",
+          "minutes": 60,
+          "activity": "assessment",
+          "artifact_ids": [
+            "A08"
+          ]
+        },
+        {
+          "id": "W28-T06",
+          "label": "Decision Artifact",
+          "minutes": 245,
+          "activity": "decision_artifact",
+          "artifact_ids": [
+            "A06"
+          ]
+        },
+        {
+          "id": "W28-T07",
+          "label": "Review Remediation",
+          "minutes": 60,
+          "activity": "review_remediation"
+        },
+        {
+          "id": "W28-T08",
+          "label": "Teach Back",
+          "minutes": 60,
+          "activity": "teach_back",
+          "artifact_ids": [
+            "A07"
+          ]
+        }
+      ]
+    }
   ],
   "target_hours": 43,
-  "status": "ready",
+  "status": "review",
   "readiness_note": "Ready on 2026-08-02 after semantic review, 11 storage-lab tests across 22 strict scenarios, six isolated evaluator invocations with stable calibration bands, two calibration checks, focused validation, full-course validation, resource verification, and evidence-safety review.",
   "outcomes": [
-    {"id": "M07-O1", "statement": "Derive logical and physical data models from quantified access paths, invariants, retention, growth, and ownership.", "graduate_profile": [1, 2, 4, 9, 10], "mastery_levels": ["Define", "Calculate", "Decide and Teach"], "lessons": ["L01"], "exercises": ["EX-01", "EX-02"], "artifacts": ["A01", "A06"], "rubric": ["R01"]},
-    {"id": "M07-O2", "statement": "Explain and measure how pages, records, buffer pools, locality, and cache policy shape physical work.", "graduate_profile": [2, 3, 8], "mastery_levels": ["Define", "Calculate", "Diagnose"], "lessons": ["L02"], "exercises": ["EX-03", "EX-04"], "artifacts": ["A01", "A04"], "rubric": ["R02"]},
-    {"id": "M07-O3", "statement": "Implement and validate a persistent paged B+ tree with point lookup, range scan, splits, cache behavior, deletion, and clean reopen.", "graduate_profile": [3, 4, 7, 8, 11], "mastery_levels": ["Implement", "Diagnose"], "lessons": ["L03"], "exercises": ["EX-05", "EX-06", "EX-07"], "artifacts": ["A02", "A04"], "rubric": ["R03", "R07"]},
-    {"id": "M07-O4", "statement": "Implement and validate an LSM store with memtable, SSTables, sparse indexes, Bloom filters, tombstones, and compaction.", "graduate_profile": [3, 4, 7, 8, 11], "mastery_levels": ["Implement", "Diagnose"], "lessons": ["L04"], "exercises": ["EX-08", "EX-09"], "artifacts": ["A03", "A04"], "rubric": ["R04", "R07"]},
-    {"id": "M07-O5", "statement": "Calculate read, write, and space amplification and connect them to tail latency, capacity, cost, and SSD endurance.", "graduate_profile": [2, 3, 8, 10], "mastery_levels": ["Calculate", "Diagnose"], "lessons": ["L05"], "exercises": ["EX-10"], "artifacts": ["A05", "A06"], "rubric": ["R05"]},
-    {"id": "M07-O6", "statement": "Choose indexes and diagnose query plans whose estimates, statistics, or access paths do not match the workload.", "graduate_profile": [4, 8, 10], "mastery_levels": ["Calculate", "Diagnose", "Decide and Teach"], "lessons": ["L06"], "exercises": ["EX-11", "EX-12"], "artifacts": ["A05", "A06"], "rubric": ["R08"]},
-    {"id": "M07-O7", "statement": "Diagnose read, write, range, skew, delete, cache, Bloom, compaction, and tombstone behavior from preserved same-input evidence.", "graduate_profile": [2, 7, 8], "mastery_levels": ["Diagnose", "Decide and Teach"], "lessons": ["L07"], "exercises": ["EX-13", "EX-14"], "artifacts": ["A05"], "rubric": ["R06", "R07"]},
-    {"id": "M07-O8", "statement": "Defend a storage-engine decision covering security, operations, cost, ownership, migration, rollback, recovery requirements, and reversal evidence.", "graduate_profile": [9, 10, 14, 15, 16], "mastery_levels": ["Decide and Teach"], "lessons": ["L08"], "exercises": ["EX-15", "EX-16"], "artifacts": ["A06", "A07", "A08", "A09"], "rubric": ["R09", "R10"]}
+    {
+      "id": "M07-O1",
+      "statement": "Derive logical and physical data models from quantified access paths, invariants, retention, growth, and ownership.",
+      "graduate_profile": [
+        1,
+        2,
+        4,
+        9,
+        10
+      ],
+      "mastery_levels": [
+        "Define",
+        "Calculate",
+        "Decide and Teach"
+      ],
+      "lessons": [
+        "L01"
+      ],
+      "exercises": [
+        "EX-01",
+        "EX-02"
+      ],
+      "artifacts": [
+        "A01",
+        "A06"
+      ],
+      "rubric": [
+        "R01"
+      ]
+    },
+    {
+      "id": "M07-O2",
+      "statement": "Explain and measure how pages, records, buffer pools, locality, and cache policy shape physical work.",
+      "graduate_profile": [
+        2,
+        3,
+        8
+      ],
+      "mastery_levels": [
+        "Define",
+        "Calculate",
+        "Diagnose"
+      ],
+      "lessons": [
+        "L02"
+      ],
+      "exercises": [
+        "EX-03",
+        "EX-04"
+      ],
+      "artifacts": [
+        "A01",
+        "A04"
+      ],
+      "rubric": [
+        "R02"
+      ]
+    },
+    {
+      "id": "M07-O3",
+      "statement": "Implement and validate a persistent paged B+ tree with point lookup, range scan, splits, cache behavior, deletion, and clean reopen.",
+      "graduate_profile": [
+        3,
+        4,
+        7,
+        8,
+        11
+      ],
+      "mastery_levels": [
+        "Implement",
+        "Diagnose"
+      ],
+      "lessons": [
+        "L03"
+      ],
+      "exercises": [
+        "EX-05",
+        "EX-06",
+        "EX-07"
+      ],
+      "artifacts": [
+        "A02",
+        "A04"
+      ],
+      "rubric": [
+        "R03",
+        "R07"
+      ]
+    },
+    {
+      "id": "M07-O4",
+      "statement": "Implement and validate an LSM store with memtable, SSTables, sparse indexes, Bloom filters, tombstones, and compaction.",
+      "graduate_profile": [
+        3,
+        4,
+        7,
+        8,
+        11
+      ],
+      "mastery_levels": [
+        "Implement",
+        "Diagnose"
+      ],
+      "lessons": [
+        "L04"
+      ],
+      "exercises": [
+        "EX-08",
+        "EX-09"
+      ],
+      "artifacts": [
+        "A03",
+        "A04"
+      ],
+      "rubric": [
+        "R04",
+        "R07"
+      ]
+    },
+    {
+      "id": "M07-O5",
+      "statement": "Calculate read, write, and space amplification and connect them to tail latency, capacity, cost, and SSD endurance.",
+      "graduate_profile": [
+        2,
+        3,
+        8,
+        10
+      ],
+      "mastery_levels": [
+        "Calculate",
+        "Diagnose"
+      ],
+      "lessons": [
+        "L05"
+      ],
+      "exercises": [
+        "EX-10"
+      ],
+      "artifacts": [
+        "A05",
+        "A06"
+      ],
+      "rubric": [
+        "R05"
+      ]
+    },
+    {
+      "id": "M07-O6",
+      "statement": "Choose indexes and diagnose query plans whose estimates, statistics, or access paths do not match the workload.",
+      "graduate_profile": [
+        4,
+        8,
+        10
+      ],
+      "mastery_levels": [
+        "Calculate",
+        "Diagnose",
+        "Decide and Teach"
+      ],
+      "lessons": [
+        "L06"
+      ],
+      "exercises": [
+        "EX-11",
+        "EX-12"
+      ],
+      "artifacts": [
+        "A05",
+        "A06"
+      ],
+      "rubric": [
+        "R08"
+      ]
+    },
+    {
+      "id": "M07-O7",
+      "statement": "Diagnose read, write, range, skew, delete, cache, Bloom, compaction, and tombstone behavior from preserved same-input evidence.",
+      "graduate_profile": [
+        2,
+        7,
+        8
+      ],
+      "mastery_levels": [
+        "Diagnose",
+        "Decide and Teach"
+      ],
+      "lessons": [
+        "L07"
+      ],
+      "exercises": [
+        "EX-13",
+        "EX-14"
+      ],
+      "artifacts": [
+        "A05"
+      ],
+      "rubric": [
+        "R06",
+        "R07"
+      ]
+    },
+    {
+      "id": "M07-O8",
+      "statement": "Defend a storage-engine decision covering security, operations, cost, ownership, migration, rollback, recovery requirements, and reversal evidence.",
+      "graduate_profile": [
+        9,
+        10,
+        14,
+        15,
+        16
+      ],
+      "mastery_levels": [
+        "Decide and Teach"
+      ],
+      "lessons": [
+        "L08"
+      ],
+      "exercises": [
+        "EX-15",
+        "EX-16"
+      ],
+      "artifacts": [
+        "A06",
+        "A07",
+        "A08",
+        "A09"
+      ],
+      "rubric": [
+        "R09",
+        "R10"
+      ]
+    }
   ],
   "resources": [
-    {"id": "RES-01", "title": "Database File Format", "author_or_publisher": "SQLite Authors", "type": "maintainer specification", "url": "https://www.sqlite.org/fileformat.html", "required": true, "access": "free", "week": 25, "estimated_minutes": 50, "purpose": "Ground pages, B-tree cells, and record boundaries in a stable implementation contract.", "assignment": "Read Sections 1.2, 1.6, and 2.1; sketch a page and name two choices the format does not prescribe for this lab.", "last_verified": "2026-08-02", "text_alternative": "lessons/02-pages-records-buffer-pools.md"},
-    {"id": "RES-02", "title": "B+Tree Indexes", "author_or_publisher": "CMU Database Group", "type": "captioned course video", "url": "https://www.youtube.com/watch?v=scUtG_6M_lU", "required": true, "access": "free", "week": 26, "estimated_minutes": 80, "purpose": "Observe insertion, split, deletion, and composite-index reasoning from a database-internals course.", "assignment": "Watch through deletion and composite indexes; predict changed pages for one insert/delete and compare with the lab trace.", "last_verified": "2026-08-02", "text_alternative": "lessons/03-btree-hash-inverted-indexes.md"},
-    {"id": "RES-03", "title": "Database Systems Spring 2026 Schedule and Materials", "author_or_publisher": "Carnegie Mellon University", "type": "course notes and slides", "url": "https://15445.courses.cs.cmu.edu/spring2026/schedule.html", "required": true, "access": "free", "week": 26, "estimated_minutes": 90, "purpose": "Connect storage, memory management, and indexes in one primary teaching sequence.", "assignment": "Use only Database Storage I-II, Memory Management, and Indexes & Filters I-II notes/slides; produce a physical-path diagram and workload-dependent question.", "last_verified": "2026-08-02", "text_alternative": "lessons/02-pages-records-buffer-pools.md"},
-    {"id": "RES-04", "title": "The Log-Structured Merge-Tree", "author_or_publisher": "P. O'Neil, E. Cheng, D. Gawlick, E. O'Neil", "type": "original research paper", "url": "https://dsf.berkeley.edu/cs286/papers/lsm-acta1996.pdf", "required": true, "access": "free", "week": 26, "estimated_minutes": 70, "purpose": "Derive the buffered write mechanism and original cost assumptions.", "assignment": "Read the Abstract and Sections 1-3; derive why buffering changes write cost and list assumptions that differ from the lab.", "last_verified": "2026-08-02", "text_alternative": "lessons/04-lsm-bloom-compaction.md"},
-    {"id": "RES-05", "title": "RocksDB Overview", "author_or_publisher": "RocksDB Maintainers; Meta", "type": "maintainer documentation", "url": "https://github.com/facebook/rocksdb/wiki/RocksDB-Overview", "required": true, "access": "free", "week": 27, "estimated_minutes": 40, "purpose": "Compare operated LSM compaction shapes and amplification trade-offs.", "assignment": "Read Architecture and Compaction Styles; compare leveled, tiered/universal, and FIFO under three amplification dimensions.", "last_verified": "2026-08-02", "text_alternative": "lessons/04-lsm-bloom-compaction.md"},
-    {"id": "RES-06", "title": "Compaction", "author_or_publisher": "RocksDB Maintainers; Meta", "type": "maintainer documentation", "url": "https://github.com/facebook/rocksdb/wiki/Compaction", "required": true, "access": "free", "week": 27, "estimated_minutes": 45, "purpose": "Expose bytes, run shapes, and temporary space involved in compaction.", "assignment": "Read Overview through Tiered+Leveled; draw one merge and identify temporary-space exposure.", "last_verified": "2026-08-02", "text_alternative": "lessons/05-amplification-ssd-endurance.md"},
-    {"id": "RES-07", "title": "Write Stalls", "author_or_publisher": "RocksDB Maintainers; Meta", "type": "first-person practitioner documentation", "url": "https://github.com/facebook/rocksdb/wiki/Write-Stalls", "required": true, "access": "free", "week": 27, "estimated_minutes": 35, "purpose": "Relate compaction debt to bounded admission and operator-owned recovery.", "assignment": "Read the complete page; map every trigger to a metric, owner, and safe overload action.", "last_verified": "2026-08-02", "text_alternative": "lessons/07-skew-debt-stalls-diagnosis.md"},
-    {"id": "RES-08", "title": "Indexes", "author_or_publisher": "PostgreSQL Global Development Group", "type": "maintainer documentation", "url": "https://www.postgresql.org/docs/current/indexes.html", "required": true, "access": "free", "week": 28, "estimated_minutes": 45, "purpose": "Connect index operator/order support to update and storage costs.", "assignment": "Read Sections 11.1-11.5; design equality and ordered-range indexes and explain their write/storage cost.", "last_verified": "2026-08-02", "text_alternative": "lessons/06-query-plans-statistics-indexes.md"},
-    {"id": "RES-09", "title": "Using EXPLAIN", "author_or_publisher": "PostgreSQL Global Development Group", "type": "maintainer documentation", "url": "https://www.postgresql.org/docs/current/using-explain.html", "required": true, "access": "free", "week": 28, "estimated_minutes": 50, "purpose": "Ground query-plan diagnosis in estimated and actual physical work.", "assignment": "Read Sections 14.1.1-14.1.3; compare estimated/actual rows and record one alternative explanation before changing an index.", "last_verified": "2026-08-02", "text_alternative": "lessons/06-query-plans-statistics-indexes.md"},
-    {"id": "RES-10", "title": "Statistics Used by the Planner", "author_or_publisher": "PostgreSQL Global Development Group", "type": "maintainer documentation", "url": "https://www.postgresql.org/docs/current/planner-stats.html", "required": true, "access": "free", "week": 28, "estimated_minutes": 35, "purpose": "Explain selectivity, correlation, and extended-statistics trade-offs.", "assignment": "Read Sections 14.2.1-14.2.2; explain one correlation error and the cost of more detailed statistics.", "last_verified": "2026-08-02", "text_alternative": "lessons/06-query-plans-statistics-indexes.md"},
-    {"id": "RES-11", "title": "Overcoming the Write Amplification Problem with NVM Express Flexible Data Placement", "author_or_publisher": "Amber Huffman and Chris Sabol; NVM Express", "type": "standards-body technical article", "url": "https://nvmexpress.org/nvmeflexible-data-placement-fdp-blog/", "required": true, "access": "free", "week": 27, "estimated_minutes": 35, "purpose": "Separate host/engine amplification from device media amplification.", "assignment": "Read through the WAF definition and FDP mechanism; state which level the lab can measure and which remains unknown.", "last_verified": "2026-08-02", "text_alternative": "lessons/05-amplification-ssd-endurance.md"}
+    {
+      "id": "RES-01",
+      "title": "Database File Format",
+      "author_or_publisher": "SQLite Authors",
+      "type": "maintainer specification",
+      "url": "https://www.sqlite.org/fileformat.html",
+      "required": true,
+      "access": "free",
+      "week": 25,
+      "estimated_minutes": 50,
+      "purpose": "Ground pages, B-tree cells, and record boundaries in a stable implementation contract.",
+      "assignment": "Read Sections 1.2, 1.6, and 2.1; sketch a page and name two choices the format does not prescribe for this lab.",
+      "last_verified": "2026-08-02",
+      "text_alternative": "lessons/02-pages-records-buffer-pools.md",
+      "verified_title": "Database File Format",
+      "verified_publisher": "SQLite Authors",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://www.sqlite.org/fileformat.html",
+      "verification_status": "verified"
+    },
+    {
+      "id": "RES-02",
+      "title": "B+Tree Indexes",
+      "author_or_publisher": "CMU Database Group",
+      "type": "captioned course video",
+      "url": "https://www.youtube.com/watch?v=scUtG_6M_lU",
+      "required": false,
+      "access": "free",
+      "week": 26,
+      "estimated_minutes": 80,
+      "purpose": "Observe insertion, split, deletion, and composite-index reasoning from a database-internals course.",
+      "assignment": "Watch through deletion and composite indexes; predict changed pages for one insert/delete and compare with the lab trace.",
+      "last_verified": "2026-08-02",
+      "text_alternative": "lessons/03-btree-hash-inverted-indexes.md",
+      "verified_title": "B+Tree Indexes",
+      "verified_publisher": "CMU Database Group",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://www.youtube.com/watch?v=scUtG_6M_lU",
+      "verification_status": "verified"
+    },
+    {
+      "id": "RES-03",
+      "title": "Database Systems Spring 2026 Schedule and Materials",
+      "author_or_publisher": "Carnegie Mellon University",
+      "type": "course notes and slides",
+      "url": "https://15445.courses.cs.cmu.edu/spring2026/schedule.html",
+      "required": false,
+      "access": "free",
+      "week": 26,
+      "estimated_minutes": 90,
+      "purpose": "Connect storage, memory management, and indexes in one primary teaching sequence.",
+      "assignment": "Use only Database Storage I-II, Memory Management, and Indexes & Filters I-II notes/slides; produce a physical-path diagram and workload-dependent question.",
+      "last_verified": "2026-08-02",
+      "text_alternative": "lessons/02-pages-records-buffer-pools.md",
+      "verified_title": "Database Systems Spring 2026 Schedule and Materials",
+      "verified_publisher": "Carnegie Mellon University",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://15445.courses.cs.cmu.edu/spring2026/schedule.html",
+      "verification_status": "verified"
+    },
+    {
+      "id": "RES-04",
+      "title": "The Log-Structured Merge-Tree",
+      "author_or_publisher": "P. O'Neil, E. Cheng, D. Gawlick, E. O'Neil",
+      "type": "original research paper",
+      "url": "https://dsf.berkeley.edu/cs286/papers/lsm-acta1996.pdf",
+      "required": true,
+      "access": "free",
+      "week": 26,
+      "estimated_minutes": 70,
+      "purpose": "Derive the buffered write mechanism and original cost assumptions.",
+      "assignment": "Read the Abstract and Sections 1-3; derive why buffering changes write cost and list assumptions that differ from the lab.",
+      "last_verified": "2026-08-02",
+      "text_alternative": "lessons/04-lsm-bloom-compaction.md",
+      "verified_title": "The Log-Structured Merge-Tree",
+      "verified_publisher": "P. O'Neil, E. Cheng, D. Gawlick, E. O'Neil",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://dsf.berkeley.edu/cs286/papers/lsm-acta1996.pdf",
+      "verification_status": "verified"
+    },
+    {
+      "id": "RES-05",
+      "title": "RocksDB Overview",
+      "author_or_publisher": "RocksDB Maintainers; Meta",
+      "type": "maintainer documentation",
+      "url": "https://github.com/facebook/rocksdb/wiki/RocksDB-Overview",
+      "required": true,
+      "access": "free",
+      "week": 27,
+      "estimated_minutes": 40,
+      "purpose": "Compare operated LSM compaction shapes and amplification trade-offs.",
+      "assignment": "Read Architecture and Compaction Styles; compare leveled, tiered/universal, and FIFO under three amplification dimensions.",
+      "last_verified": "2026-08-02",
+      "text_alternative": "lessons/04-lsm-bloom-compaction.md",
+      "verified_title": "RocksDB Overview",
+      "verified_publisher": "RocksDB Maintainers; Meta",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://github.com/facebook/rocksdb/wiki/RocksDB-Overview",
+      "verification_status": "verified"
+    },
+    {
+      "id": "RES-06",
+      "title": "Compaction",
+      "author_or_publisher": "RocksDB Maintainers; Meta",
+      "type": "maintainer documentation",
+      "url": "https://github.com/facebook/rocksdb/wiki/Compaction",
+      "required": false,
+      "access": "free",
+      "week": 27,
+      "estimated_minutes": 45,
+      "purpose": "Expose bytes, run shapes, and temporary space involved in compaction.",
+      "assignment": "Read Overview through Tiered+Leveled; draw one merge and identify temporary-space exposure.",
+      "last_verified": "2026-08-02",
+      "text_alternative": "lessons/05-amplification-ssd-endurance.md",
+      "verified_title": "Compaction",
+      "verified_publisher": "RocksDB Maintainers; Meta",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://github.com/facebook/rocksdb/wiki/Compaction",
+      "verification_status": "verified"
+    },
+    {
+      "id": "RES-07",
+      "title": "Write Stalls",
+      "author_or_publisher": "RocksDB Maintainers; Meta",
+      "type": "first-person practitioner documentation",
+      "url": "https://github.com/facebook/rocksdb/wiki/Write-Stalls",
+      "required": true,
+      "access": "free",
+      "week": 27,
+      "estimated_minutes": 35,
+      "purpose": "Relate compaction debt to bounded admission and operator-owned recovery.",
+      "assignment": "Read the complete page; map every trigger to a metric, owner, and safe overload action.",
+      "last_verified": "2026-08-02",
+      "text_alternative": "lessons/07-skew-debt-stalls-diagnosis.md",
+      "verified_title": "Write Stalls",
+      "verified_publisher": "RocksDB Maintainers; Meta",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://github.com/facebook/rocksdb/wiki/Write-Stalls",
+      "verification_status": "verified"
+    },
+    {
+      "id": "RES-08",
+      "title": "Indexes",
+      "author_or_publisher": "PostgreSQL Global Development Group",
+      "type": "maintainer documentation",
+      "url": "https://www.postgresql.org/docs/current/indexes.html",
+      "required": false,
+      "access": "free",
+      "week": 28,
+      "estimated_minutes": 45,
+      "purpose": "Connect index operator/order support to update and storage costs.",
+      "assignment": "Read Sections 11.1-11.5; design equality and ordered-range indexes and explain their write/storage cost.",
+      "last_verified": "2026-08-02",
+      "text_alternative": "lessons/06-query-plans-statistics-indexes.md",
+      "verified_title": "Indexes",
+      "verified_publisher": "PostgreSQL Global Development Group",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://www.postgresql.org/docs/current/indexes.html",
+      "verification_status": "verified"
+    },
+    {
+      "id": "RES-09",
+      "title": "Using EXPLAIN",
+      "author_or_publisher": "PostgreSQL Global Development Group",
+      "type": "maintainer documentation",
+      "url": "https://www.postgresql.org/docs/current/using-explain.html",
+      "required": true,
+      "access": "free",
+      "week": 28,
+      "estimated_minutes": 50,
+      "purpose": "Ground query-plan diagnosis in estimated and actual physical work.",
+      "assignment": "Read Sections 14.1.1-14.1.3; compare estimated/actual rows and record one alternative explanation before changing an index.",
+      "last_verified": "2026-08-02",
+      "text_alternative": "lessons/06-query-plans-statistics-indexes.md",
+      "verified_title": "Using EXPLAIN",
+      "verified_publisher": "PostgreSQL Global Development Group",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://www.postgresql.org/docs/current/using-explain.html",
+      "verification_status": "verified"
+    },
+    {
+      "id": "RES-10",
+      "title": "Statistics Used by the Planner",
+      "author_or_publisher": "PostgreSQL Global Development Group",
+      "type": "maintainer documentation",
+      "url": "https://www.postgresql.org/docs/current/planner-stats.html",
+      "required": true,
+      "access": "free",
+      "week": 28,
+      "estimated_minutes": 35,
+      "purpose": "Explain selectivity, correlation, and extended-statistics trade-offs.",
+      "assignment": "Read Sections 14.2.1-14.2.2; explain one correlation error and the cost of more detailed statistics.",
+      "last_verified": "2026-08-02",
+      "text_alternative": "lessons/06-query-plans-statistics-indexes.md",
+      "verified_title": "Statistics Used by the Planner",
+      "verified_publisher": "PostgreSQL Global Development Group",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://www.postgresql.org/docs/current/planner-stats.html",
+      "verification_status": "verified"
+    },
+    {
+      "id": "RES-11",
+      "title": "Overcoming the Write Amplification Problem with NVM Express Flexible Data Placement",
+      "author_or_publisher": "Amber Huffman and Chris Sabol; NVM Express",
+      "type": "standards-body technical article",
+      "url": "https://nvmexpress.org/nvmeflexible-data-placement-fdp-blog/",
+      "required": false,
+      "access": "free",
+      "week": 27,
+      "estimated_minutes": 35,
+      "purpose": "Separate host/engine amplification from device media amplification.",
+      "assignment": "Read through the WAF definition and FDP mechanism; state which level the lab can measure and which remains unknown.",
+      "last_verified": "2026-08-02",
+      "text_alternative": "lessons/05-amplification-ssd-endurance.md",
+      "verified_title": "Overcoming the Write Amplification Problem with NVM Express Flexible Data Placement",
+      "verified_publisher": "Amber Huffman and Chris Sabol; NVM Express",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://nvmexpress.org/nvmeflexible-data-placement-fdp-blog/",
+      "verification_status": "verified"
+    }
   ],
   "artifacts": [
-    {"id": "A01", "week": 25, "required": true, "template_path": "modules/07-data-models-storage-engines/worksheets/week-25-storage-model.md", "submission_path": "reports/module-07-storage-baseline.md", "immutable_after_submission": true},
-    {"id": "A02", "week": 26, "required": true, "template_path": "modules/07-data-models-storage-engines/worksheets/week-26-engine-build.md", "submission_path": "labs/module-07/btree/"},
-    {"id": "A03", "week": 26, "required": true, "template_path": "modules/07-data-models-storage-engines/worksheets/week-26-engine-build.md", "submission_path": "labs/module-07/lsm/"},
-    {"id": "A04", "week": 26, "required": true, "template_path": "modules/07-data-models-storage-engines/worksheets/week-26-engine-build.md", "submission_path": "reports/module-07-engine-internals-review.md"},
-    {"id": "A05", "week": 27, "required": true, "template_path": "modules/07-data-models-storage-engines/worksheets/week-27-amplification-matrix.md", "submission_path": "experiments/module-07/", "immutable_after_submission": true},
-    {"id": "A06", "week": 28, "required": true, "template_path": "templates/adr-template.md", "submission_path": "adr/module-07-storage-engine-decision.md"},
-    {"id": "A07", "week": 28, "required": true, "template_path": "modules/07-data-models-storage-engines/worksheets/week-28-storage-decision.md", "submission_path": "reviews/module-07-defense.md"},
-    {"id": "A08", "week": 28, "required": true, "template_path": "modules/07-data-models-storage-engines/assessment/report-template.md", "submission_path": "reviews/module-07-evaluation.md"},
-    {"id": "A09", "week": 28, "required": true, "template_path": "templates/learning-log-template.md", "submission_path": "learning-log/week-25.md through learning-log/week-28.md"}
+    {
+      "id": "A01",
+      "week": 25,
+      "required": true,
+      "template_path": "modules/07-data-models-storage-engines/worksheets/week-25-storage-model.md",
+      "submission_path": "reports/module-07-storage-baseline.md",
+      "immutable_after_submission": true,
+      "portfolio_category": "model"
+    },
+    {
+      "id": "A02",
+      "week": 26,
+      "required": true,
+      "template_path": "modules/07-data-models-storage-engines/worksheets/week-26-engine-build.md",
+      "submission_path": "labs/module-07/btree/",
+      "portfolio_category": "implementation"
+    },
+    {
+      "id": "A03",
+      "week": 26,
+      "required": true,
+      "template_path": "modules/07-data-models-storage-engines/worksheets/week-26-engine-build.md",
+      "submission_path": "labs/module-07/lsm/",
+      "portfolio_category": "implementation"
+    },
+    {
+      "id": "A04",
+      "week": 26,
+      "required": true,
+      "template_path": "modules/07-data-models-storage-engines/worksheets/week-26-engine-build.md",
+      "submission_path": "reports/module-07-engine-internals-review.md",
+      "portfolio_category": "runtime_comparison"
+    },
+    {
+      "id": "A05",
+      "week": 27,
+      "required": true,
+      "template_path": "modules/07-data-models-storage-engines/worksheets/week-27-amplification-matrix.md",
+      "submission_path": "experiments/module-07/",
+      "immutable_after_submission": true,
+      "portfolio_category": "failure_matrix"
+    },
+    {
+      "id": "A06",
+      "week": 28,
+      "required": true,
+      "template_path": "templates/adr-template.md",
+      "submission_path": "adr/module-07-storage-engine-decision.md",
+      "portfolio_category": "adr"
+    },
+    {
+      "id": "A07",
+      "week": 28,
+      "required": true,
+      "template_path": "modules/07-data-models-storage-engines/worksheets/week-28-storage-decision.md",
+      "submission_path": "reviews/module-07-defense.md",
+      "portfolio_category": "teach_back"
+    },
+    {
+      "id": "A08",
+      "week": 28,
+      "required": true,
+      "template_path": "modules/07-data-models-storage-engines/assessment/report-template.md",
+      "submission_path": "reviews/module-07-evaluation.md",
+      "portfolio_category": "evaluation"
+    },
+    {
+      "id": "A09",
+      "week": 28,
+      "required": true,
+      "template_path": "templates/learning-log-template.md",
+      "submission_path": "learning-log/week-25.md through learning-log/week-28.md",
+      "portfolio_category": "learning_log"
+    }
   ],
   "failure_experiments": [
-    {"id": "F01", "scenario": "undersized buffer pool", "evidence": "same-input cache pair, page reads, hit/miss/eviction, warm and post-scan behavior, correctness, and recovery"},
-    {"id": "F02", "scenario": "compaction backlog", "evidence": "same-input compaction pair, runs, pending bytes, stalls, amplification, temporary space, foreground tail, and recovery"},
-    {"id": "F03", "scenario": "negative lookups without Bloom filters", "evidence": "same-input Bloom pair, filter checks/negatives/false positives, table probes, latency, and zero false negatives"},
-    {"id": "F04", "scenario": "range scans across overlapping runs", "evidence": "same-input compaction pair, merge sources, table probes, ordered results, bytes, and range tail"},
-    {"id": "F05", "scenario": "hot-key cache pollution", "evidence": "same-input skew/cache pair, distribution, page hits/misses, splits/writes, post-scan state, and alternatives"},
-    {"id": "F06", "scenario": "tombstone debt", "evidence": "same-input delete/compaction pair, tombstones, live/disk bytes, point/range/reopen absence, zero resurrection, and safe reclamation"}
+    {
+      "id": "F01",
+      "scenario": "undersized buffer pool",
+      "evidence": "same-input cache pair, page reads, hit/miss/eviction, warm and post-scan behavior, correctness, and recovery"
+    },
+    {
+      "id": "F02",
+      "scenario": "compaction backlog",
+      "evidence": "same-input compaction pair, runs, pending bytes, stalls, amplification, temporary space, foreground tail, and recovery"
+    },
+    {
+      "id": "F03",
+      "scenario": "negative lookups without Bloom filters",
+      "evidence": "same-input Bloom pair, filter checks/negatives/false positives, table probes, latency, and zero false negatives"
+    },
+    {
+      "id": "F04",
+      "scenario": "range scans across overlapping runs",
+      "evidence": "same-input compaction pair, merge sources, table probes, ordered results, bytes, and range tail"
+    },
+    {
+      "id": "F05",
+      "scenario": "hot-key cache pollution",
+      "evidence": "same-input skew/cache pair, distribution, page hits/misses, splits/writes, post-scan state, and alternatives"
+    },
+    {
+      "id": "F06",
+      "scenario": "tombstone debt",
+      "evidence": "same-input delete/compaction pair, tombstones, live/disk bytes, point/range/reopen absence, zero resurrection, and safe reclamation"
+    }
   ],
   "assessment": {
     "rubric_path": "modules/07-data-models-storage-engines/assessment/rubric.md",
@@ -59,8 +855,15 @@
     "evaluation_schema_path": "schemas/evaluation.schema.json",
     "calibration_path": "modules/07-data-models-storage-engines/assessment/calibration",
     "pass_average": 3,
-    "safety_critical_criteria": ["R06", "R07"],
-    "required_result_bands": ["Pass", "Revise", "Repeat"]
+    "safety_critical_criteria": [
+      "R06",
+      "R07"
+    ],
+    "required_result_bands": [
+      "Pass",
+      "Revise",
+      "Repeat"
+    ]
   },
   "solo_review": {
     "challenge_questions": [
@@ -106,5 +909,48 @@
     "questions_per_attempt": 5,
     "live_ai_allowed": false,
     "record_template_path": "templates/solo-review-record-template.md"
-  }
+  },
+  "factual_claims_path": "modules/07-data-models-storage-engines/assessment/factual-claims.json",
+  "lesson_catalog": [
+    {
+      "id": "L01",
+      "path": "lessons/01-workloads-access-paths-data-models.md",
+      "estimated_minutes": 30
+    },
+    {
+      "id": "L02",
+      "path": "lessons/02-pages-records-buffer-pools.md",
+      "estimated_minutes": 30
+    },
+    {
+      "id": "L03",
+      "path": "lessons/03-btree-hash-inverted-indexes.md",
+      "estimated_minutes": 30
+    },
+    {
+      "id": "L04",
+      "path": "lessons/04-lsm-bloom-compaction.md",
+      "estimated_minutes": 30
+    },
+    {
+      "id": "L05",
+      "path": "lessons/05-amplification-ssd-endurance.md",
+      "estimated_minutes": 30
+    },
+    {
+      "id": "L06",
+      "path": "lessons/06-query-plans-statistics-indexes.md",
+      "estimated_minutes": 30
+    },
+    {
+      "id": "L07",
+      "path": "lessons/07-skew-debt-stalls-diagnosis.md",
+      "estimated_minutes": 30
+    },
+    {
+      "id": "L08",
+      "path": "lessons/08-storage-decisions-migration-ownership.md",
+      "estimated_minutes": 30
+    }
+  ]
 }

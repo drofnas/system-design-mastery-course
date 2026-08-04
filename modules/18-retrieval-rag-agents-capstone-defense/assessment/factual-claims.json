@@ -1,0 +1,446 @@
+{
+  "schema_version": "1.0",
+  "module": "M18",
+  "reviewed_commit": "WORKTREE",
+  "reviewed_at": "2026-08-04",
+  "evidence_boundary": "This ledger records a source-level semantic review of lessons, worked answers, case studies, exercises, worksheets, rubrics, and lab guides. It verifies named mechanisms against bounded primary or official sources, distinguishes normative course contracts, and does not turn synthetic examples into production measurements.",
+  "claims": [
+    {
+      "id": "M18-FC-001",
+      "location": {
+        "path": "lessons/01-retrieval-contracts-evaluation.md",
+        "heading": "Mechanism: define the evidence contract before the retriever"
+      },
+      "claim": "A query string is not the information need. “Solar permit” may mean eligibility, required drawings, current fees, or the status of a private application. Define the population, task, eligible evidence, success/failure labels, and decision before choosing an index.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-01"
+      ],
+      "source_sections": [
+        "Read Chapter 6 Sections 6.1-6.2 and Chapter 8 Sections 8.1-8.4; derive one BM25 score and one nDCG example, then name the judgment assumption behind each."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M18-FC-002",
+      "location": {
+        "path": "lessons/02-chunking-lexical-vector-filters.md",
+        "heading": "Mechanism: preserve identity while creating retrieval units"
+      },
+      "claim": "A source document and a retrieval chunk are different records. Every chunk needs chunkid, source ID/version, heading or structural path, content hash, validity interval, required scope, tenant/subject boundary, ingestion time, and revocation epoch. Overlap can protect context but also duplicates evidence and inflates ranking.",
+      "classification": "security",
+      "source_ids": [
+        "RES-01"
+      ],
+      "source_sections": [
+        "Read Chapter 6 Sections 6.1-6.2 and Chapter 8 Sections 8.1-8.4; derive one BM25 score and one nDCG example, then name the judgment assumption behind each."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M18-FC-003",
+      "location": {
+        "path": "lessons/03-exact-ann-hnsw.md",
+        "heading": "Mechanism: exchange complete comparison for measured graph search"
+      },
+      "claim": "Exact search compares the query with every eligible vector. For N vectors of dimension D, work is proportional to ND; it establishes the top-k oracle for a fixed snapshot. Approximate search visits fewer candidates and must report recall against that oracle.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-02"
+      ],
+      "source_sections": [
+        "Read Sections 1-4; annotate layer assignment, neighbor selection, efConstruction, efSearch, and claims that the small CivicAid lab cannot validate."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M18-FC-004",
+      "location": {
+        "path": "lessons/04-hybrid-reranking-release-gates.md",
+        "heading": "Mechanism: combine complementary errors, then gate the whole system"
+      },
+      "claim": "Reciprocal-rank fusion assigns document d the score sum(1/(c + ranki(d))) across rankings. It uses position rather than raw score, so BM25 and cosine scales need not match. A reranker then applies a more expensive query/document scorer to a bounded candidate set.",
+      "classification": "versioned",
+      "source_ids": [
+        "RES-07"
+      ],
+      "source_sections": [
+        "Read the full case; separate measured outcomes, labeling process, scale assumptions, and practices that do or do not transfer to CivicAid."
+      ],
+      "verification_method": "official-documentation comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M18-FC-005",
+      "location": {
+        "path": "lessons/05-provenance-grounding-freshness.md",
+        "heading": "Mechanism"
+      },
+      "claim": "RAG does not make a generated sentence true. It creates an inspectable path from a request to retrieved evidence and then to claims. Treat that path as a chain of custody. Every chunk needs a stable source identifier, exact content version, validity interval, revocation state, access policy, index version, and extraction coordinates. Every answer claim needs zero or more citations to those exact versions.",
+      "classification": "versioned",
+      "source_ids": [
+        "RES-04"
+      ],
+      "source_sections": [
+        "Read the introduction and Sections 2-4; trace retrieval, conditioning, provenance, and update assumptions into the CivicAid evidence envelope."
+      ],
+      "verification_method": "official-documentation comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M18-FC-006",
+      "location": {
+        "path": "lessons/06-tools-authorization-prompt-injection.md",
+        "heading": "Mechanism"
+      },
+      "claim": "An agent is a planner connected to side effects. The model may propose a tool call; it must never decide whether that call is authorized. A deterministic executor validates the versioned JSON Schema, authenticates the principal, resolves policy from trusted state, checks scoped credentials, verifies approval when required, enforces idempotency, executes, and appends a secret-free audit record.",
+      "classification": "security",
+      "source_ids": [
+        "RES-05"
+      ],
+      "source_sections": [
+        "Read indirect injection, RAG poisoning, agent-specific attacks, least privilege, and testing sections; map each defense to a deterministic enforcement point and residual risk."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M18-FC-007",
+      "location": {
+        "path": "lessons/07-durable-agent-workflows.md",
+        "heading": "Mechanism"
+      },
+      "claim": "A durable workflow separates deterministic orchestration from nondeterministic activities. The workflow history records decisions and activity results. On restart, orchestration replays that history instead of calling providers or tools again. Checkpoints accelerate recovery but do not replace the authoritative append-only history.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-06"
+      ],
+      "source_sections": [
+        "Read architecture overview, orchestrator, activities, and human approval sections; identify which claims are general durable-execution principles and which depend on Temporal."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M18-FC-008",
+      "location": {
+        "path": "lessons/08-civicaid-capstone-defense.md",
+        "heading": "Decision method"
+      },
+      "claim": "A final architecture defense is not a tour of components. It is an argument connecting a declared product outcome to workload facts, quantitative models, failure evidence, explicit trade-offs, operating ownership, and a reversible delivery path.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-01",
+        "RES-02",
+        "RES-04",
+        "RES-05",
+        "RES-07"
+      ],
+      "source_sections": [
+        "Read Chapter 6 Sections 6.1-6.2 and Chapter 8 Sections 8.1-8.4; derive one BM25 score and one nDCG example, then name the judgment assumption behind each.",
+        "Read Sections 1-4; annotate layer assignment, neighbor selection, efConstruction, efSearch, and claims that the small CivicAid lab cannot validate.",
+        "Read the introduction and Sections 2-4; trace retrieval, conditioning, provenance, and update assumptions into the CivicAid evidence envelope.",
+        "Read indirect injection, RAG poisoning, agent-specific attacks, least privilege, and testing sections; map each defense to a deterministic enforcement point and residual risk.",
+        "Read the full case; separate measured outcomes, labeling process, scale assumptions, and practices that do or do not transfer to CivicAid."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M18-FC-009",
+      "location": {
+        "path": "exercises/answer-key.md",
+        "heading": "EX-01–EX-04"
+      },
+      "claim": "The outcome contract must identify a decision affected by retrieval, not merely “good search.” For EX-02, use gain 2^rel - 1 and discount log2(rank+1): reciprocal rank is 1 because the first result is relevant; DCG is computed in returned order and nDCG divides by the ideal [3,2,1,0] DCG. Recall requires the total number of judged-relevant items, so it cannot be derived from the returned list alone unless that total is supplied. Strong answers call out this missing denominator.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-08"
+      ],
+      "source_sections": [
+        "Watch 00:41-33:33; draw one search path and compare each tuning claim with the original paper and local Lesson 3. Use the local lesson if video access or captions are unsuitable."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "The review covers the causal mechanism and derivation used by the explained answers; exercise numbers and worked values are synthetic and are not production measurements."
+    },
+    {
+      "id": "M18-FC-010",
+      "location": {
+        "path": "case-study/civicaid-permit-assistant.md",
+        "heading": "Initial problem"
+      },
+      "claim": "CivicAid helps residents understand solar-permit requirements. It searches versioned public codes and bulletins, may read the authenticated resident's private application draft, and can save a draft or submit an official application after explicit approval.",
+      "classification": "synthetic",
+      "source_ids": [],
+      "source_sections": [],
+      "verification_method": "controlled synthetic fixture",
+      "status": "verified",
+      "scope_limit": "The case exists to exercise a reasoning method under declared constraints; none of its organizations, loads, timings, incidents, or results are production evidence.",
+      "synthetic_label": "This non-capstone case and every unattributed workload, incident, cost, latency, and organization detail in it are synthetic course fixtures."
+    },
+    {
+      "id": "M18-FC-011",
+      "location": {
+        "path": "lessons/01-retrieval-contracts-evaluation.md",
+        "heading": "Mechanism: define the evidence contract before the retriever"
+      },
+      "claim": "The document uses the bounded expression Recall@k = |R ∩ P_k| / |R|; its semantics, substitution where arithmetic applies, and stated assumptions were checked as a reproducible derivation.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-01"
+      ],
+      "source_sections": [
+        "Read Chapter 6 Sections 6.1-6.2 and Chapter 8 Sections 8.1-8.4; derive one BM25 score and one nDCG example, then name the judgment assumption behind each."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "The mapping verifies the written expression and arithmetic under its declared assumptions; synthetic inputs and a local result do not establish a production distribution."
+    },
+    {
+      "id": "M18-FC-012",
+      "location": {
+        "path": "lessons/03-exact-ann-hnsw.md",
+        "heading": "Worked example"
+      },
+      "claim": "The document uses the bounded expression M=3; its semantics, substitution where arithmetic applies, and stated assumptions were checked as a reproducible derivation.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-02"
+      ],
+      "source_sections": [
+        "Read Sections 1-4; annotate layer assignment, neighbor selection, efConstruction, efSearch, and claims that the small CivicAid lab cannot validate."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "The mapping verifies the written expression and arithmetic under its declared assumptions; synthetic inputs and a local result do not establish a production distribution."
+    }
+  ],
+  "lesson_coverage": [
+    {
+      "lesson_id": "L01",
+      "path": "lessons/01-retrieval-contracts-evaluation.md",
+      "claim_ids": [
+        "M18-FC-001"
+      ]
+    },
+    {
+      "lesson_id": "L02",
+      "path": "lessons/02-chunking-lexical-vector-filters.md",
+      "claim_ids": [
+        "M18-FC-002"
+      ]
+    },
+    {
+      "lesson_id": "L03",
+      "path": "lessons/03-exact-ann-hnsw.md",
+      "claim_ids": [
+        "M18-FC-003"
+      ]
+    },
+    {
+      "lesson_id": "L04",
+      "path": "lessons/04-hybrid-reranking-release-gates.md",
+      "claim_ids": [
+        "M18-FC-004"
+      ]
+    },
+    {
+      "lesson_id": "L05",
+      "path": "lessons/05-provenance-grounding-freshness.md",
+      "claim_ids": [
+        "M18-FC-005"
+      ]
+    },
+    {
+      "lesson_id": "L06",
+      "path": "lessons/06-tools-authorization-prompt-injection.md",
+      "claim_ids": [
+        "M18-FC-006"
+      ]
+    },
+    {
+      "lesson_id": "L07",
+      "path": "lessons/07-durable-agent-workflows.md",
+      "claim_ids": [
+        "M18-FC-007"
+      ]
+    },
+    {
+      "lesson_id": "L08",
+      "path": "lessons/08-civicaid-capstone-defense.md",
+      "claim_ids": [
+        "M18-FC-008"
+      ]
+    }
+  ],
+  "document_coverage": [
+    {
+      "path": "assessment/rubric.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "case-study/civicaid-permit-assistant.md",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [
+        "M18-FC-010"
+      ],
+      "review_note": "The case was reviewed for explicit synthetic boundaries, internal arithmetic, non-generalization language, and separation from the learner capstone."
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M18-FC-009"
+      ],
+      "review_note": "Explained answers were checked for causal consistency, formula provenance, and agreement with the locally taught mechanism and cited source boundary."
+    },
+    {
+      "path": "exercises/exercises.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "lab/README.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "The lab guide's commands, interfaces, bounds, and synthetic evidence limitations were checked directly against the executable implementation and its passing tests."
+    },
+    {
+      "path": "lessons/01-retrieval-contracts-evaluation.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M18-FC-001",
+        "M18-FC-011"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/02-chunking-lexical-vector-filters.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M18-FC-002"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/03-exact-ann-hnsw.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M18-FC-003",
+        "M18-FC-012"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/04-hybrid-reranking-release-gates.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M18-FC-004"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/05-provenance-grounding-freshness.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M18-FC-005"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/06-tools-authorization-prompt-injection.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M18-FC-006"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/07-durable-agent-workflows.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M18-FC-007"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/08-civicaid-capstone-defense.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M18-FC-008"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "worksheets/week-69-retrieval-model.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-70-assistant-build.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-71-retrieval-agent-failures.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-72-capstone-defense.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    }
+  ],
+  "formula_mappings": [
+    {
+      "path": "lessons/01-retrieval-contracts-evaluation.md",
+      "heading": "Mechanism: define the evidence contract before the retriever",
+      "expression_sha256": "ec63b50637d47cf46d79d21595f9b2a5555efca2608638ab9df4a6d1fcfdcc99",
+      "claim_id": "M18-FC-011"
+    },
+    {
+      "path": "lessons/01-retrieval-contracts-evaluation.md",
+      "heading": "Mechanism: define the evidence contract before the retriever",
+      "expression_sha256": "66ec91766b7b18589f6be2d4720fd3cdf634e1b232a40ab7f5b6aa7c8296433b",
+      "claim_id": "M18-FC-011"
+    },
+    {
+      "path": "lessons/01-retrieval-contracts-evaluation.md",
+      "heading": "Worked example",
+      "expression_sha256": "988ecaa15f95a7d6ab0008c2b12aa512887d428e10d82f4080b341ad5a4ef2fa",
+      "claim_id": "M18-FC-011"
+    },
+    {
+      "path": "lessons/03-exact-ann-hnsw.md",
+      "heading": "Worked example",
+      "expression_sha256": "ad4cd57256f3756e95086ded1fd052f9fae426619c010fdb4a3b5dd9276e62a7",
+      "claim_id": "M18-FC-012"
+    },
+    {
+      "path": "lessons/03-exact-ann-hnsw.md",
+      "heading": "Worked example",
+      "expression_sha256": "070a739501c708fb2b67e133ae19c5fbce201a3bb81df406569b1662700a3bbc",
+      "claim_id": "M18-FC-012"
+    }
+  ]
+}

@@ -5,10 +5,10 @@ Northstar fixtures calibrate the evaluator and are not commerce answers.
 
 ## Required submission
 
-Provide one manifest resolving A01–A10 to commits or hashes: frozen Week 33
+Provide one manifest resolving A01–A11 to commits or hashes: frozen Week 33
 model, build/tests, internals review, twelve raw paired trials, failure matrix,
-convergence/hotspot/reshard report, ADR, defense, evaluation, learning logs,
-Gate 3 submission, and assistance disclosure.
+convergence/hotspot/reshard report, controlled replica-partition postmortem, ADR,
+defense, evaluation, learning logs, Gate 3 submission, and assistance disclosure.
 
 ## Structural gates
 
@@ -66,3 +66,7 @@ remediable gaps. Repeat applies when G02–G05 fails or R07/R08 is zero.
   regional survival, or authorization from the toy lab.
 - Accept defensible alternatives; never require Northstar's design.
 - Recommend named lessons/exercises without writing replacement graded work.
+
+## Evaluation packaging and independence
+
+Use the [provider-neutral bundle and validation workflow](../../../EVALUATION_GUIDE.md). The evaluator returns JSON only; the validator renders the report. An independent LLM or human critique after the freeze is required for formal Pass. Self-scoring remains provisional.

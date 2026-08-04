@@ -40,3 +40,10 @@ RFC compares no-change, managed, bounded shared, and split deployments using the
 same drivers. Named owners, cost sensitivity, shadow/canary migration, drain,
 rollback, decommission, dissent, and a quantified reversal condition align with
 the defense, evaluation, and separate remediation revision.
+
+## Inference deployment-policy ADR
+
+The distinct A12 ADR selects a bounded inference deployment policy, preserves
+the RFC as option exploration, and records quality and data stops, capacity and
+unit cost, owners, migration, rollback, decommission, dissent, exception expiry,
+and quantified reversal evidence.

@@ -12,6 +12,14 @@ State chosen design, evidence, residual risks, SLOs, alerts, runbook triggers,
 admission/degradation behavior, incident ownership, provider contract, and cost
 sensitivity.
 
+## A12: Inference-deployment policy ADR — 45 minutes
+
+Create `adr/module-17-inference-deployment-policy.md`. The architecture RFC
+describes the full serving proposal; this ADR freezes the deployment and traffic
+policy selected for the measured workload. Compare managed, single bounded, and
+separated interactive/batch choices. Record quality/latency/cost evidence,
+admission and fallback behavior, owner, rollout, rollback, and reversal threshold.
+
 ## Migration and reversal
 
 Define shadow, canary, cohort expansion, cache/version handling, stop thresholds,

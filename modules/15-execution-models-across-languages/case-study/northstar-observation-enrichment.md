@@ -25,10 +25,11 @@ logical request, and records wire/logical/config hashes. Each service validates,
 admits, derives one absolute deadline, starts owned child work, propagates
 cancellation, assembles deterministic child order, and closes all resources.
 
-TypeScript uses the Node event loop plus worker threads for configured CPU work.
-Go uses contexts, admitted goroutines, and an owner channel. Rust uses Tokio
-tasks, semaphore permits, Serde validation, and owned join handles. Java uses
-virtual threads, a semaphore, `HttpClient`, and lexical resource handling.
+TypeScript uses the Node event loop, a fixed admitted worker set, and abort-aware
+timers. Go uses contexts, admission before goroutine creation, and an owner
+channel. Rust uses Tokio tasks, an admitted worker queue, Serde validation, and
+an owned `JoinSet`. Java uses virtual threads, local and global semaphores, the
+JDK HTTP server, and lexical resource handling.
 
 ## Worked calculation
 

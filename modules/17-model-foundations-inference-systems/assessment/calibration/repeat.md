@@ -24,3 +24,5 @@ Provider loss starts three overlapping attempts without shared identity or one
 deadline, crosses an unstated region, and counts all duplicate tokens as useful.
 Repaired trials are absent. There is no defensible RFC, owner, migration, rollback,
 teach-back, evaluation, or separate remediation artifact.
+The required A12 inference deployment-policy ADR is also absent; no frozen
+decision evidence separates the chosen policy from unbounded option claims.

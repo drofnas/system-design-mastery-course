@@ -5,9 +5,10 @@ Dispatch fixtures calibrate the evaluator; they are not commerce answers.
 
 ## Required submission
 
-Provide a manifest resolving A01–A10 to commits/hashes: frozen Week 21 model,
+Provide a manifest resolving A01–A12 to commits/hashes: frozen Week 21 model,
 build/tests, six raw fault pairs, failure matrix, remote-call policy, defense,
-Gate 2 revision, learning logs, and AI/tool disclosure.
+Gate 2 revision, learning logs, controlled retry-storm postmortem, containment
+ADR, and AI/tool disclosure.
 
 ## Structural gates
 
@@ -42,9 +43,10 @@ security/privacy and cleanup controls hold. Failure is a hard gate.
 
 ### G06: Decision, defense, and remediation integrity
 
-The policy covers alternatives, security, cost, ownership, migration, rollback,
-exceptions, reversal, dissent, uncertainty, teach-back, Gate 2, and separate
-remediation without overwriting frozen evidence.
+The policy, A11 postmortem, and A12 ADR remain distinct and cover alternatives,
+security, cost, ownership, migration, rollback, exceptions, reversal, dissent,
+uncertainty, teach-back, Gate 2, and separate remediation without overwriting
+frozen evidence.
 
 ## Scoring and result
 
@@ -60,3 +62,7 @@ remediable gaps. Repeat applies when G02–G05 fails or R06/R07 is zero.
 - Do not infer unsubmitted runtime, durability, production, or intent evidence.
 - Accept defensible alternatives; never require Beacon's allocations or choices.
 - Recommend named lessons/exercises without drafting replacement graded work.
+
+## Evaluation packaging and independence
+
+Use the [provider-neutral bundle and validation workflow](../../../EVALUATION_GUIDE.md). The evaluator returns JSON only; the validator renders the report. An independent LLM or human critique after the freeze is required for formal Pass. Self-scoring remains provisional.

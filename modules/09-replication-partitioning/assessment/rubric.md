@@ -57,6 +57,8 @@ or contradictory arithmetic invalidate every distributed-systems conclusion.
 - **1:** fault labels restate symptoms without hashes, histories, alternatives, or uncertainty.
 - **2:** most pairs exist but ordering, same-input proof, ratios, causal alternatives, or evidence boundary is incomplete.
 - **3:** F01–F06 preserve predictions, scenarios, raw pairs, hashes, calculations, isolated repairs, reruns, alternatives, and uncertainty.
+- A passing evidence chain also links A11 to the unchanged F01 pair and keeps
+  postmortem causality distinct from the cross-trial failure matrix.
 - **4:** discriminating variants falsify strong alternatives and explain failed predictions across implementation boundaries.
 
 ## R08: Distributed correctness and convergence

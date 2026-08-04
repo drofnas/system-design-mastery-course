@@ -1,0 +1,590 @@
+{
+  "schema_version": "1.0",
+  "module": "M07",
+  "reviewed_commit": "WORKTREE",
+  "reviewed_at": "2026-08-04",
+  "evidence_boundary": "This ledger records a source-level semantic review of lessons, worked answers, case studies, exercises, worksheets, rubrics, and lab guides. It verifies named mechanisms against bounded primary or official sources, distinguishes normative course contracts, and does not turn synthetic examples into production measurements.",
+  "claims": [
+    {
+      "id": "M07-FC-001",
+      "location": {
+        "path": "lessons/01-workloads-access-paths-data-models.md",
+        "heading": "Mechanism and method"
+      },
+      "claim": "A data model states identities, relationships, constraints, and evolution. A physical design states record layout, partition/order key, index, compression, and maintenance. Mixing the two too early produces technology-shaped requirements.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-03"
+      ],
+      "source_sections": [
+        "Use only Database Storage I-II, Memory Management, and Indexes & Filters I-II notes/slides; produce a physical-path diagram and workload-dependent question."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M07-FC-002",
+      "location": {
+        "path": "lessons/02-pages-records-buffer-pools.md",
+        "heading": "Mechanism and method"
+      },
+      "claim": "Storage engines manage records in pages because devices, caches, checksums, and replacement policies need bounded units. A page commonly includes a header, slot or pointer array, free space, cells, and possibly overflow references. Variable-length records make occupancy a distribution, not one constant.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-01"
+      ],
+      "source_sections": [
+        "Read Sections 1.2, 1.6, and 2.1; sketch a page and name two choices the format does not prescribe for this lab."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M07-FC-003",
+      "location": {
+        "path": "lessons/03-btree-hash-inverted-indexes.md",
+        "heading": "Mechanism and method"
+      },
+      "claim": "A B+ tree stores data entries in ordered leaves and separators in interior pages. Every root-to-leaf path has equal depth. Linked leaves turn a range scan into one traversal plus sequential leaf visits.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-02"
+      ],
+      "source_sections": [
+        "Watch through deletion and composite indexes; predict changed pages for one insert/delete and compare with the lab trace."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M07-FC-004",
+      "location": {
+        "path": "lessons/04-lsm-bloom-compaction.md",
+        "heading": "Mechanism and method"
+      },
+      "claim": "An LSM trades in-place page updates for buffered sequential output. The lab stores recent writes in an ordered memtable. At a threshold it writes an immutable sorted table containing framed entries, fence offsets, and a Bloom filter. A manifest orders tables newest-first.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-04"
+      ],
+      "source_sections": [
+        "Read the Abstract and Sections 1-3; derive why buffering changes write cost and list assumptions that differ from the lab."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M07-FC-005",
+      "location": {
+        "path": "lessons/05-amplification-ssd-endurance.md",
+        "heading": "Mechanism and method"
+      },
+      "claim": "Amplification compares physical work with application intent:",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-05"
+      ],
+      "source_sections": [
+        "Read Architecture and Compaction Styles; compare leveled, tiered/universal, and FIFO under three amplification dimensions."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M07-FC-006",
+      "location": {
+        "path": "lessons/06-query-plans-statistics-indexes.md",
+        "heading": "Mechanism and method"
+      },
+      "claim": "A planner enumerates legal physical plans, estimates their rows and cost, and chooses the least estimated cost. A plan is a tree of scans, joins, sorts, and aggregates. Statistics approximate distribution; estimates can be wrong because data changed, sampling missed skew, or predicates are correlated.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-08"
+      ],
+      "source_sections": [
+        "Read Sections 11.1-11.5; design equality and ordered-range indexes and explain their write/storage cost."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M07-FC-007",
+      "location": {
+        "path": "lessons/07-skew-debt-stalls-diagnosis.md",
+        "heading": "Mechanism and method"
+      },
+      "claim": "Average load hides concentration. Hot keys repeatedly update the same logical records, alter cache locality, create overlapping versions, and focus compaction. Delete-heavy work writes new tombstones before reclaiming old values. If flush creates runs faster than compaction consumes them, pending bytes and read sources grow. A temporary burst becomes a sustained failure when that state feeds back into slower reads/writes and still less compaction.",
+      "classification": "versioned",
+      "source_ids": [
+        "RES-07"
+      ],
+      "source_sections": [
+        "Read the complete page; map every trigger to a metric, owner, and safe overload action."
+      ],
+      "verification_method": "official-documentation comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M07-FC-008",
+      "location": {
+        "path": "lessons/08-storage-decisions-migration-ownership.md",
+        "heading": "Mechanism and method"
+      },
+      "claim": "A defensible storage decision connects each conclusion to drivers and evidence. Use this structure:",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-05",
+        "RES-09",
+        "RES-10"
+      ],
+      "source_sections": [
+        "Read Architecture and Compaction Styles; compare leveled, tiered/universal, and FIFO under three amplification dimensions.",
+        "Read Sections 14.1.1-14.1.3; compare estimated/actual rows and record one alternative explanation before changing an index.",
+        "Read Sections 14.2.1-14.2.2; explain one correlation error and the cost of more detailed statistics."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M07-FC-009",
+      "location": {
+        "path": "exercises/answer-key.md",
+        "heading": "EX-01 explanation"
+      },
+      "claim": "Exact lookup needs an equality key and one row; station range needs the same station prefix plus ordered time and up to 10,000 rows. Note search maps tokens to postings. Regional export projects many rows and few columns. Retention is a background cutoff operation whose completion window matters more than one-row latency. The full matrix prevents one “database type” from hiding incompatible paths.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-11"
+      ],
+      "source_sections": [
+        "Read through the WAF definition and FDP mechanism; state which level the lab can measure and which remains unknown."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "The review covers the causal mechanism and derivation used by the explained answers; exercise numbers and worked values are synthetic and are not production measurements."
+    },
+    {
+      "id": "M07-FC-010",
+      "location": {
+        "path": "case-study/harbor-signal-archive.md",
+        "heading": "Problem and isolation"
+      },
+      "claim": "Harbor Signal Archive supports a municipal coastal-operations team. Sensors at 240 stations publish water level, wind, visibility, and equipment-health observations. Operators query the latest status, scan a station's time range, search incident notes, export regional analytics, and delete expired raw samples. Exact coordinates for critical infrastructure are restricted.",
+      "classification": "synthetic",
+      "source_ids": [],
+      "source_sections": [],
+      "verification_method": "controlled synthetic fixture",
+      "status": "verified",
+      "scope_limit": "The case exists to exercise a reasoning method under declared constraints; none of its organizations, loads, timings, incidents, or results are production evidence.",
+      "synthetic_label": "This non-capstone case and every unattributed workload, incident, cost, latency, and organization detail in it are synthetic course fixtures."
+    },
+    {
+      "id": "M07-FC-011",
+      "location": {
+        "path": "exercises/answer-key.md",
+        "heading": "EX-03 explanation"
+      },
+      "claim": "The document uses the bounded expression 4096-32=4064; its semantics, substitution where arithmetic applies, and stated assumptions were checked as a reproducible derivation.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-01"
+      ],
+      "source_sections": [
+        "Read Sections 1.2, 1.6, and 2.1; sketch a page and name two choices the format does not prescribe for this lab."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "The mapping verifies the written expression and arithmetic under its declared assumptions; synthetic inputs and a local result do not establish a production distribution."
+    },
+    {
+      "id": "M07-FC-012",
+      "location": {
+        "path": "exercises/exercises.md",
+        "heading": "EX-08: LSM visibility"
+      },
+      "claim": "The document uses the bounded expression R3={a:T,c:7}; its semantics, substitution where arithmetic applies, and stated assumptions were checked as a reproducible derivation.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-04"
+      ],
+      "source_sections": [
+        "Read the Abstract and Sections 1-3; derive why buffering changes write cost and list assumptions that differ from the lab."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "The mapping verifies the written expression and arithmetic under its declared assumptions; synthetic inputs and a local result do not establish a production distribution."
+    },
+    {
+      "id": "M07-FC-013",
+      "location": {
+        "path": "lessons/02-pages-records-buffer-pools.md",
+        "heading": "Worked example"
+      },
+      "claim": "The document uses the bounded expression floor(4064/280)=14; its semantics, substitution where arithmetic applies, and stated assumptions were checked as a reproducible derivation.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-01"
+      ],
+      "source_sections": [
+        "Read Sections 1.2, 1.6, and 2.1; sketch a page and name two choices the format does not prescribe for this lab."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "The mapping verifies the written expression and arithmetic under its declared assumptions; synthetic inputs and a local result do not establish a production distribution."
+    },
+    {
+      "id": "M07-FC-014",
+      "location": {
+        "path": "lessons/04-lsm-bloom-compaction.md",
+        "heading": "Worked example"
+      },
+      "claim": "The document uses the bounded expression H12|09:00=v1; its semantics, substitution where arithmetic applies, and stated assumptions were checked as a reproducible derivation.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-07"
+      ],
+      "source_sections": [
+        "Read the complete page; map every trigger to a metric, owner, and safe overload action."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "The mapping verifies the written expression and arithmetic under its declared assumptions; synthetic inputs and a local result do not establish a production distribution."
+    },
+    {
+      "id": "M07-FC-015",
+      "location": {
+        "path": "lessons/06-query-plans-statistics-indexes.md",
+        "heading": "Worked example"
+      },
+      "claim": "The document uses the bounded expression station_class='storm' AND region='north'; its semantics, substitution where arithmetic applies, and stated assumptions were checked as a reproducible derivation.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-09"
+      ],
+      "source_sections": [
+        "Read Sections 14.1.1-14.1.3; compare estimated/actual rows and record one alternative explanation before changing an index."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "The mapping verifies the written expression and arithmetic under its declared assumptions; synthetic inputs and a local result do not establish a production distribution."
+    }
+  ],
+  "lesson_coverage": [
+    {
+      "lesson_id": "L01",
+      "path": "lessons/01-workloads-access-paths-data-models.md",
+      "claim_ids": [
+        "M07-FC-001"
+      ]
+    },
+    {
+      "lesson_id": "L02",
+      "path": "lessons/02-pages-records-buffer-pools.md",
+      "claim_ids": [
+        "M07-FC-002"
+      ]
+    },
+    {
+      "lesson_id": "L03",
+      "path": "lessons/03-btree-hash-inverted-indexes.md",
+      "claim_ids": [
+        "M07-FC-003"
+      ]
+    },
+    {
+      "lesson_id": "L04",
+      "path": "lessons/04-lsm-bloom-compaction.md",
+      "claim_ids": [
+        "M07-FC-004"
+      ]
+    },
+    {
+      "lesson_id": "L05",
+      "path": "lessons/05-amplification-ssd-endurance.md",
+      "claim_ids": [
+        "M07-FC-005"
+      ]
+    },
+    {
+      "lesson_id": "L06",
+      "path": "lessons/06-query-plans-statistics-indexes.md",
+      "claim_ids": [
+        "M07-FC-006"
+      ]
+    },
+    {
+      "lesson_id": "L07",
+      "path": "lessons/07-skew-debt-stalls-diagnosis.md",
+      "claim_ids": [
+        "M07-FC-007"
+      ]
+    },
+    {
+      "lesson_id": "L08",
+      "path": "lessons/08-storage-decisions-migration-ownership.md",
+      "claim_ids": [
+        "M07-FC-008"
+      ]
+    }
+  ],
+  "document_coverage": [
+    {
+      "path": "assessment/rubric.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "case-study/harbor-signal-archive.md",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [
+        "M07-FC-010"
+      ],
+      "review_note": "The case was reviewed for explicit synthetic boundaries, internal arithmetic, non-generalization language, and separation from the learner capstone."
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M07-FC-009",
+        "M07-FC-011"
+      ],
+      "review_note": "Explained answers were checked for causal consistency, formula provenance, and agreement with the locally taught mechanism and cited source boundary."
+    },
+    {
+      "path": "exercises/exercises.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [
+        "M07-FC-012"
+      ],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "lab/README.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "The lab guide's commands, interfaces, bounds, and synthetic evidence limitations were checked directly against the executable implementation and its passing tests."
+    },
+    {
+      "path": "lessons/01-workloads-access-paths-data-models.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M07-FC-001"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/02-pages-records-buffer-pools.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M07-FC-002",
+        "M07-FC-013"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/03-btree-hash-inverted-indexes.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M07-FC-003"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/04-lsm-bloom-compaction.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M07-FC-004",
+        "M07-FC-014"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/05-amplification-ssd-endurance.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M07-FC-005"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/06-query-plans-statistics-indexes.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M07-FC-006",
+        "M07-FC-015"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/07-skew-debt-stalls-diagnosis.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M07-FC-007"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/08-storage-decisions-migration-ownership.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M07-FC-008"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "worksheets/week-25-storage-model.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-26-engine-build.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-27-amplification-matrix.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-28-storage-decision.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    }
+  ],
+  "formula_mappings": [
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-03 explanation",
+      "expression_sha256": "967de33d4162ad5ffa12a3d1fd687264c25f8902648f797739c7c5fc5fad0b22",
+      "claim_id": "M07-FC-011"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-08 explanation",
+      "expression_sha256": "e5b2f4ff7223147b3a335cd5ead5f11ec4c5c1194b02da6ed276b71cb259ecd6",
+      "claim_id": "M07-FC-011"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-08 explanation",
+      "expression_sha256": "6045dc68b9aaa03f4cdc210f62bce7b8af69885d0d533656536606b20f9335e5",
+      "claim_id": "M07-FC-011"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-08 explanation",
+      "expression_sha256": "2ee7887f0ac5b7af597e41588e4985ff0211ef0e0eebfdc7d69dac0354f5146e",
+      "claim_id": "M07-FC-011"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-09 explanation",
+      "expression_sha256": "0893b7eab3dbaacbb1f7a2e387bd677214165a5abe8b497684e6d04720569a8e",
+      "claim_id": "M07-FC-011"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-10 explanation",
+      "expression_sha256": "e91238c6f2070ac84f1d6aa39f8b97a36e9394b616f470c6ebb61124f5c3245d",
+      "claim_id": "M07-FC-011"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-10 explanation",
+      "expression_sha256": "ee1ba97a1ec12bff555512b88b315a4abe4b0b5a672e5b70c7944d173f16edf3",
+      "claim_id": "M07-FC-011"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-10 explanation",
+      "expression_sha256": "00b37e38e219ae8e8d8d7699bcd5b60c0ffcecd60628aded1111f775dc516095",
+      "claim_id": "M07-FC-011"
+    },
+    {
+      "path": "exercises/exercises.md",
+      "heading": "EX-08: LSM visibility",
+      "expression_sha256": "65a12174e18099fa303207f0097b0b5ff2894290a3f8eebbc8412a65522a48de",
+      "claim_id": "M07-FC-012"
+    },
+    {
+      "path": "exercises/exercises.md",
+      "heading": "EX-08: LSM visibility",
+      "expression_sha256": "3a77ddfaac120ed762ec4430f0e8da457e9a6ff5acbffa8a62a97dc7100c1776",
+      "claim_id": "M07-FC-012"
+    },
+    {
+      "path": "exercises/exercises.md",
+      "heading": "EX-08: LSM visibility",
+      "expression_sha256": "a4de5679438a2113a9cc21188ea16e25bc7fb233fbe4afac766fe5de98de1997",
+      "claim_id": "M07-FC-012"
+    },
+    {
+      "path": "lessons/02-pages-records-buffer-pools.md",
+      "heading": "Worked example",
+      "expression_sha256": "0afb08e69cd9d4eec3f9839c0c876736d03808093e157b3c4e21f50245c41ba2",
+      "claim_id": "M07-FC-013"
+    },
+    {
+      "path": "lessons/04-lsm-bloom-compaction.md",
+      "heading": "Worked example",
+      "expression_sha256": "c2fde437a5331664f779da10cb31abde239c04729e8f5b3db4332e851ff3daf3",
+      "claim_id": "M07-FC-014"
+    },
+    {
+      "path": "lessons/04-lsm-bloom-compaction.md",
+      "heading": "Guided practice",
+      "expression_sha256": "65a12174e18099fa303207f0097b0b5ff2894290a3f8eebbc8412a65522a48de",
+      "claim_id": "M07-FC-014"
+    },
+    {
+      "path": "lessons/04-lsm-bloom-compaction.md",
+      "heading": "Guided practice",
+      "expression_sha256": "3a77ddfaac120ed762ec4430f0e8da457e9a6ff5acbffa8a62a97dc7100c1776",
+      "claim_id": "M07-FC-014"
+    },
+    {
+      "path": "lessons/04-lsm-bloom-compaction.md",
+      "heading": "Guided practice",
+      "expression_sha256": "a4de5679438a2113a9cc21188ea16e25bc7fb233fbe4afac766fe5de98de1997",
+      "claim_id": "M07-FC-014"
+    },
+    {
+      "path": "lessons/04-lsm-bloom-compaction.md",
+      "heading": "Guided practice",
+      "expression_sha256": "025fe42f880f2621c897f3a6c1f045e3a1f346be70f68aa250c648b31ec484b4",
+      "claim_id": "M07-FC-014"
+    },
+    {
+      "path": "lessons/04-lsm-bloom-compaction.md",
+      "heading": "Guided practice",
+      "expression_sha256": "43df7e7488cca7667cdcf9d659dcd633c206b86492148e74f912942c18856c99",
+      "claim_id": "M07-FC-014"
+    },
+    {
+      "path": "lessons/04-lsm-bloom-compaction.md",
+      "heading": "Guided practice",
+      "expression_sha256": "63676d1a73bb2a62bfd3fcd62d297a31e901ef5382ad220f9016298bd5afd08f",
+      "claim_id": "M07-FC-014"
+    },
+    {
+      "path": "lessons/06-query-plans-statistics-indexes.md",
+      "heading": "Worked example",
+      "expression_sha256": "7fe56271b8feed7e6ced49fcf418d7ff827b0c385e7b03e2599ec061067ba590",
+      "claim_id": "M07-FC-015"
+    }
+  ]
+}

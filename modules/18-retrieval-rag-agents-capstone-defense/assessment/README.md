@@ -41,3 +41,7 @@ Finding classes are `missing_evidence`, `incorrect_reasoning`, `unsupported_clai
 ## Evidence boundary
 
 The portable lab proves contracts and causal behavior under its frozen inputs. It does not prove production relevance, model quality, HNSW scale behavior, provider reliability, or organizational readiness.
+
+## Evaluation packaging and independence
+
+Use the [provider-neutral bundle and validation workflow](../../../EVALUATION_GUIDE.md). The evaluator returns JSON only; the validator renders the report. An independent LLM or human critique after the freeze is required for formal Pass. Self-scoring remains provisional.

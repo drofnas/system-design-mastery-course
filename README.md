@@ -1,5 +1,12 @@
 # Principal Engineer and Systems Design Mastery
 
+Course-wide learner contracts:
+
+- [Supported one-computer setup](HOME_LAB_GUIDE.md)
+- [Sealed local course gates](SOLO_GATE_GUIDE.md)
+- [Provider-neutral evaluation workflow](EVALUATION_GUIDE.md)
+- [Module authoring and readiness standard](MODULE_STANDARD.md)
+
 This repository contains the teaching materials for the 72-week
 **Principal Engineer and Systems Design Mastery** course. It is also designed
 to become each learner's version-controlled record of coursework: notes, labs,

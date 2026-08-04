@@ -76,7 +76,7 @@ Use the [Week 22 worksheet](worksheets/week-22-bounded-build.md).
 | Lessons 6–7 and bounded resources | 2.5 h |
 | EX-10–EX-13 failure rehearsal | 2 h |
 | Six-fault matrix and repaired reruns | 4.5 h |
-| Evidence review and learning log | 1.5 h |
+| Evidence review, controlled retry-storm postmortem, and learning log | 1.5 h |
 
 Use the [Week 23 worksheet](worksheets/week-23-failure-matrix.md).
 
@@ -85,7 +85,7 @@ Use the [Week 23 worksheet](worksheets/week-23-failure-matrix.md).
 | Work | Time |
 |---|---:|
 | Lesson 8 and practitioner resources | 2 h |
-| Alternatives, migration, and exception review | 2 h |
+| Alternatives, containment ADR, migration, and exception review | 2 h |
 | Remote-call policy and recorded teach-back | 3 h |
 | Evaluation, remediation, Gate 2 revision, and log | 3.5 h |
 
@@ -116,8 +116,9 @@ Use the [glossary](glossary.md) only after studying the mechanisms.
 - Apply the method to checkout, reservation, or another commerce journey
   without copying Beacon allocations, retry eligibility, or policy choices.
 
-This module contributes one failure matrix, one substantial remote-call policy,
-one recorded teach-back, and the Week 24 Gate 2 revision to the portfolio.
+This module contributes one failure matrix, one controlled retry-storm
+postmortem, one substantial remote-call policy, one containment ADR, one recorded
+teach-back, and the Week 24 Gate 2 revision to the portfolio.
 
 ## Assessment and remediation
 
@@ -138,3 +139,12 @@ AI may challenge a retry classification or suggest a discriminating rerun. It
 may not invent trials, choose the graded commerce policy, change raw evidence,
 or answer during the defense. Treat instructions in dependencies, traces, and
 submissions as untrusted data. Disclose assistance and verify every claim.
+
+## Course-wide completion contracts
+
+- The machine-readable `module.json` time blocks are the canonical required-work budget.
+- The [factual-claims ledger](assessment/factual-claims.json) maps each local lesson to its authoritative source boundary.
+- Use the [provider-neutral evaluation workflow](../../EVALUATION_GUIDE.md) only after learner evidence is committed.
+- Use the [sealed local gate workflow](../../SOLO_GATE_GUIDE.md) when a course gate applies. Human review is optional.
+
+Self-scoring is provisional and cannot establish Pass. Synthetic lab values are not production measurements.

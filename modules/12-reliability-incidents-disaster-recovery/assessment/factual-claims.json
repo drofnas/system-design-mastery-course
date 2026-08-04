@@ -1,0 +1,501 @@
+{
+  "schema_version": "1.0",
+  "module": "M12",
+  "reviewed_commit": "WORKTREE",
+  "reviewed_at": "2026-08-04",
+  "evidence_boundary": "This ledger records a source-level semantic review of lessons, worked answers, case studies, exercises, worksheets, rubrics, and lab guides. It verifies named mechanisms against bounded primary or official sources, distinguishes normative course contracts, and does not turn synthetic examples into production measurements.",
+  "claims": [
+    {
+      "id": "M12-FC-001",
+      "location": {
+        "path": "lessons/01-user-journeys-slis-slos.md",
+        "heading": "Measurement procedure"
+      },
+      "claim": "Start with a user action and observable outcome. Name the start, completion, deadline, correctness rule, freshness rule, population, window, and owner. Then define:",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-01"
+      ],
+      "source_sections": [
+        "Read Getting Started through Decision Making Using SLOs and Error Budgets; submit one SLI contract, budget calculation, policy action, and anti-gaming review."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M12-FC-002",
+      "location": {
+        "path": "lessons/02-error-budgets-dependencies.md",
+        "heading": "Derivation and decision procedure"
+      },
+      "claim": "For target S and N valid events:",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-01"
+      ],
+      "source_sections": [
+        "Read Getting Started through Decision Making Using SLOs and Error Budgets; submit one SLI contract, budget calculation, policy action, and anti-gaming review."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M12-FC-003",
+      "location": {
+        "path": "lessons/03-burn-rates-actionable-alerting.md",
+        "heading": "Derivation and alert procedure"
+      },
+      "claim": "burn rate = observed bad-event fraction / (1 - SLO)",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-02"
+      ],
+      "source_sections": [
+        "Read approaches 4-6 and Low-Traffic Services; recalculate one page and ticket threshold and test a low-traffic case."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M12-FC-004",
+      "location": {
+        "path": "lessons/04-graceful-degradation-capacity.md",
+        "heading": "Design and capacity procedure"
+      },
+      "claim": "List journeys in priority order, the invariants each must preserve, minimum useful response, and work that may be rejected, deferred, cached, or disabled. Degradation must be explicit to users and telemetry. Returning stale data as fresh or accepting work that cannot finish is not graceful.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-03"
+      ],
+      "source_sections": [
+        "Read load balancing, autoscaling, shedding, combined strategies, and conclusions; draw one control interaction and calculate degraded capacity."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M12-FC-005",
+      "location": {
+        "path": "lessons/05-incident-command-runbooks.md",
+        "heading": "Response procedure"
+      },
+      "claim": "Declare an incident from measured user impact or credible imminent safety/data risk. The incident commander owns priorities and incident state, not every technical action. The operations lead serializes mitigations and records their results. The communications lead maintains accurate user and stakeholder updates. A liaison connects dependent teams. One person may fill several roles in a small incident, but the responsibilities remain explicit.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-04"
+      ],
+      "source_sections": [
+        "Read the complete chapter and power-outage case; submit a role map, first three mitigations, and handoff contract."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M12-FC-006",
+      "location": {
+        "path": "lessons/06-postmortems-corrective-work.md",
+        "heading": "Analysis procedure"
+      },
+      "claim": "Start with user and data impact: journey failures, budget consumed, duration, population, data exposure, and uncertainty. Build the timeline from raw events, not recollection alone. Mark detection, declaration, mitigation, recovery, and normalization separately.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-05"
+      ],
+      "source_sections": [
+        "Read the case comparison, action items, incentives, and tools; rewrite three weak findings and rank five actions."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M12-FC-007",
+      "location": {
+        "path": "lessons/07-backups-restore-failover.md",
+        "heading": "Recovery procedure"
+      },
+      "claim": "Inventory authoritative data, derived data, effect ledgers, workflow progress, configuration, credentials, schemas, and owners. Rank recovery by minimum user service and safety, not component convenience.",
+      "classification": "security",
+      "source_ids": [
+        "RES-06"
+      ],
+      "source_sections": [
+        "Read Sections 3.2, 3.5, 4.3, and 4.4; produce a recovery priority table, exercise charter, and reconstitution checks."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M12-FC-008",
+      "location": {
+        "path": "lessons/08-game-days-reliability-decisions.md",
+        "heading": "Exercise and decision procedure"
+      },
+      "claim": "Write the hypothesis as observable behavior under a named fault. Define scope, authorized environment, users/data protected, roles, start state, instrumentation, abort conditions, maximum blast radius, rollback, and cleanup. Verify that the exercise cannot traverse production links or credentials unexpectedly. Practice communications and access before injecting faults.",
+      "classification": "security",
+      "source_ids": [
+        "RES-07"
+      ],
+      "source_sections": [
+        "Read Preparedness and Disaster Testing and the DiRT discussion; submit a hypothesis, abort conditions, and evidence plan."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M12-FC-009",
+      "location": {
+        "path": "exercises/answer-key.md",
+        "heading": "EX-01"
+      },
+      "claim": "A defensible search contract begins when the server accepts an authorized query and ends with a correct result or declared failure. Client cancellation before acceptance may be excluded; timeout after acceptance may not. Missing end events are bad or reduce a separate coverage SLI. Excluding dependency timeouts because “the dependency caused them” games the denominator.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-05"
+      ],
+      "source_sections": [
+        "Read the case comparison, action items, incentives, and tools; rewrite three weak findings and rank five actions."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "The review covers the causal mechanism and derivation used by the explained answers; exercise numbers and worked values are synthetic and are not production measurements."
+    },
+    {
+      "id": "M12-FC-010",
+      "location": {
+        "path": "case-study/northstar-reliability-recovery.md",
+        "heading": "Problem and isolation"
+      },
+      "claim": "Northstar's research users need validated observations to appear in the public catalog and remain queryable during cloud-cover bursts and regional failures. The operations registry remains authoritative. The public catalog, hourly counts, and bulletin delivery are derived. This case has no commerce entities and is not a capstone answer.",
+      "classification": "synthetic",
+      "source_ids": [],
+      "source_sections": [],
+      "verification_method": "controlled synthetic fixture",
+      "status": "verified",
+      "scope_limit": "The case exists to exercise a reasoning method under declared constraints; none of its organizations, loads, timings, incidents, or results are production evidence.",
+      "synthetic_label": "This non-capstone case and every unattributed workload, incident, cost, latency, and organization detail in it are synthetic course fixtures."
+    },
+    {
+      "id": "M12-FC-011",
+      "location": {
+        "path": "exercises/answer-key.md",
+        "heading": "EX-03"
+      },
+      "claim": "The document uses the bounded expression 750,000 × 0.0005 = 375; its semantics, substitution where arithmetic applies, and stated assumptions were checked as a reproducible derivation.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-01"
+      ],
+      "source_sections": [
+        "Read Getting Started through Decision Making Using SLOs and Error Budgets; submit one SLI contract, budget calculation, policy action, and anti-gaming review."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "The mapping verifies the written expression and arithmetic under its declared assumptions; synthetic inputs and a local result do not establish a production distribution."
+    },
+    {
+      "id": "M12-FC-012",
+      "location": {
+        "path": "lessons/01-user-journeys-slis-slos.md",
+        "heading": "Measurement procedure"
+      },
+      "claim": "The document uses the bounded expression SLI = good valid events / all valid events; its semantics, substitution where arithmetic applies, and stated assumptions were checked as a reproducible derivation.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-01"
+      ],
+      "source_sections": [
+        "Read Getting Started through Decision Making Using SLOs and Error Budgets; submit one SLI contract, budget calculation, policy action, and anti-gaming review."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "The mapping verifies the written expression and arithmetic under its declared assumptions; synthetic inputs and a local result do not establish a production distribution."
+    },
+    {
+      "id": "M12-FC-013",
+      "location": {
+        "path": "lessons/02-error-budgets-dependencies.md",
+        "heading": "Explained answers"
+      },
+      "claim": "The document uses the bounded expression 750,000 × 0.0005 = 375; its semantics, substitution where arithmetic applies, and stated assumptions were checked as a reproducible derivation.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-01"
+      ],
+      "source_sections": [
+        "Read Getting Started through Decision Making Using SLOs and Error Budgets; submit one SLI contract, budget calculation, policy action, and anti-gaming review."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "The mapping verifies the written expression and arithmetic under its declared assumptions; synthetic inputs and a local result do not establish a production distribution."
+    },
+    {
+      "id": "M12-FC-014",
+      "location": {
+        "path": "lessons/03-burn-rates-actionable-alerting.md",
+        "heading": "Derivation and alert procedure"
+      },
+      "claim": "The document uses the bounded expression burn rate = observed bad-event fraction / (1 - SLO); its semantics, substitution where arithmetic applies, and stated assumptions were checked as a reproducible derivation.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-02"
+      ],
+      "source_sections": [
+        "Read approaches 4-6 and Low-Traffic Services; recalculate one page and ticket threshold and test a low-traffic case."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "The mapping verifies the written expression and arithmetic under its declared assumptions; synthetic inputs and a local result do not establish a production distribution."
+    },
+    {
+      "id": "M12-FC-015",
+      "location": {
+        "path": "lessons/04-graceful-degradation-capacity.md",
+        "heading": "Design and capacity procedure"
+      },
+      "claim": "The document uses the bounded expression surviving headroom = surviving measured capacity - priority demand; its semantics, substitution where arithmetic applies, and stated assumptions were checked as a reproducible derivation.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-03"
+      ],
+      "source_sections": [
+        "Read load balancing, autoscaling, shedding, combined strategies, and conclusions; draw one control interaction and calculate degraded capacity."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "The mapping verifies the written expression and arithmetic under its declared assumptions; synthetic inputs and a local result do not establish a production distribution."
+    }
+  ],
+  "lesson_coverage": [
+    {
+      "lesson_id": "L01",
+      "path": "lessons/01-user-journeys-slis-slos.md",
+      "claim_ids": [
+        "M12-FC-001"
+      ]
+    },
+    {
+      "lesson_id": "L02",
+      "path": "lessons/02-error-budgets-dependencies.md",
+      "claim_ids": [
+        "M12-FC-002"
+      ]
+    },
+    {
+      "lesson_id": "L03",
+      "path": "lessons/03-burn-rates-actionable-alerting.md",
+      "claim_ids": [
+        "M12-FC-003"
+      ]
+    },
+    {
+      "lesson_id": "L04",
+      "path": "lessons/04-graceful-degradation-capacity.md",
+      "claim_ids": [
+        "M12-FC-004"
+      ]
+    },
+    {
+      "lesson_id": "L05",
+      "path": "lessons/05-incident-command-runbooks.md",
+      "claim_ids": [
+        "M12-FC-005"
+      ]
+    },
+    {
+      "lesson_id": "L06",
+      "path": "lessons/06-postmortems-corrective-work.md",
+      "claim_ids": [
+        "M12-FC-006"
+      ]
+    },
+    {
+      "lesson_id": "L07",
+      "path": "lessons/07-backups-restore-failover.md",
+      "claim_ids": [
+        "M12-FC-007"
+      ]
+    },
+    {
+      "lesson_id": "L08",
+      "path": "lessons/08-game-days-reliability-decisions.md",
+      "claim_ids": [
+        "M12-FC-008"
+      ]
+    }
+  ],
+  "document_coverage": [
+    {
+      "path": "assessment/rubric.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "case-study/northstar-reliability-recovery.md",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [
+        "M12-FC-010"
+      ],
+      "review_note": "The case was reviewed for explicit synthetic boundaries, internal arithmetic, non-generalization language, and separation from the learner capstone."
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M12-FC-009",
+        "M12-FC-011"
+      ],
+      "review_note": "Explained answers were checked for causal consistency, formula provenance, and agreement with the locally taught mechanism and cited source boundary."
+    },
+    {
+      "path": "exercises/exercises.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "lab/README.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "The lab guide's commands, interfaces, bounds, and synthetic evidence limitations were checked directly against the executable implementation and its passing tests."
+    },
+    {
+      "path": "lessons/01-user-journeys-slis-slos.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M12-FC-001",
+        "M12-FC-012"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/02-error-budgets-dependencies.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M12-FC-002",
+        "M12-FC-013"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/03-burn-rates-actionable-alerting.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M12-FC-003",
+        "M12-FC-014"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/04-graceful-degradation-capacity.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M12-FC-004",
+        "M12-FC-015"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/05-incident-command-runbooks.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M12-FC-005"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/06-postmortems-corrective-work.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M12-FC-006"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/07-backups-restore-failover.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M12-FC-007"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/08-game-days-reliability-decisions.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M12-FC-008"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "worksheets/week-45-reliability-model.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-46-reliability-controls.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-47-incident-recovery-experiments.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-48-reliability-decision-gate-04.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    }
+  ],
+  "formula_mappings": [
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-03",
+      "expression_sha256": "52286fb7a9b802f7e1d9c8e6238a5697d747fa3cec2636427f642dc03f5fc4a6",
+      "claim_id": "M12-FC-011"
+    },
+    {
+      "path": "lessons/01-user-journeys-slis-slos.md",
+      "heading": "Measurement procedure",
+      "expression_sha256": "ccc621fb7917c7087eae0b97180ab443e1881d545b10170b4b7b8f2e28b34ec8",
+      "claim_id": "M12-FC-012"
+    },
+    {
+      "path": "lessons/02-error-budgets-dependencies.md",
+      "heading": "Explained answers",
+      "expression_sha256": "52286fb7a9b802f7e1d9c8e6238a5697d747fa3cec2636427f642dc03f5fc4a6",
+      "claim_id": "M12-FC-013"
+    },
+    {
+      "path": "lessons/03-burn-rates-actionable-alerting.md",
+      "heading": "Derivation and alert procedure",
+      "expression_sha256": "b0d4b5acf85ddfb6202ae1953c7e424b4d054d04c1c8aedc58e96febdc8d8b4c",
+      "claim_id": "M12-FC-014"
+    },
+    {
+      "path": "lessons/03-burn-rates-actionable-alerting.md",
+      "heading": "Explained answers",
+      "expression_sha256": "d3b76235dad9a6a0445d39f8e5d5cd4e41c4af47584734c9dad3b18821fcdf67",
+      "claim_id": "M12-FC-014"
+    },
+    {
+      "path": "lessons/04-graceful-degradation-capacity.md",
+      "heading": "Design and capacity procedure",
+      "expression_sha256": "2aace4b2da1d761d46fab1855c34526d8bbfc33debbc3ead41995f0f09b2b420",
+      "claim_id": "M12-FC-015"
+    }
+  ]
+}

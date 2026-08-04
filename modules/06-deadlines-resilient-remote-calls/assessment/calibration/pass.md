@@ -74,3 +74,11 @@ handles dependency, security, finance, and on-call challenges; and records one
 dissent and a reversal experiment. The Week 24 revision cites unchanged prior
 evidence and changed beliefs. Evaluation and extensions live in dated addenda;
 the baseline, raw trials, and policy remain unchanged.
+
+## Controlled postmortem and containment ADR
+
+A11 reconstructs the controlled retry storm from immutable timestamps, separates
+trigger from contributing retry ownership, tests alternatives, and assigns
+verified corrective actions. The distinct A12 ADR selects remote-call
+containment, states exceptions, owners, cost, migration, rollback, expiry, and
+reversal evidence, and links rather than duplicates the postmortem and policy.

@@ -76,6 +76,9 @@ or unbounded amplification can harm users.
 - **1:** preferred defaults without operation scope, evidence, or owner.
 - **2:** policy exists but security, cost, telemetry, exceptions, migration, rollback, or decommissioning is incomplete.
 - **3:** policy follows evidence and covers operation/error contracts, security, unit cost, telemetry/runbook, owners, staged migration, rollback, exceptions, and reversal.
+- A passing submission distinguishes the cross-team policy RFC, the A11
+  controlled postmortem, and the A12 containment ADR; one file cannot satisfy
+  more than one artifact contract.
 - **4:** mixed-version canary and rollback rehearsal resolve cross-team disagreement under failure.
 
 ## R10: Defense, Gate 2, and teach-back

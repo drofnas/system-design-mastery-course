@@ -3,9 +3,10 @@
 Before setup, run the repository [Home Lab Guide](../../../HOME_LAB_GUIDE.md)
 preflight for `M15`.
 
-This lab has two layers. `runtime_lab` is a deterministic contract model used by
-course validation. `implementations/` contains measured services in TypeScript,
-Go, Rust, and Java. Model output is never accepted as runtime performance evidence.
+This lab has two layers. `runtime_lab.runner` is a deterministic causal model
+used only for fast scenario-inventory checks. `run_conformance.py` launches and
+measures the real services in `implementations/`. Model output is never accepted
+as runtime behavior or performance evidence.
 
 ## Public interface
 
@@ -26,31 +27,37 @@ tenant or credential field.
 
 ```bash
 python3 -m unittest discover modules/15-execution-models-across-languages/lab/tests
-python3 modules/15-execution-models-across-languages/lab/run_conformance.py --check-sources
+python3 modules/15-execution-models-across-languages/lab/run_conformance.py --mode sources
 ```
 
-Run all pinned builds and behavior checks:
+Run the shared contract against all four services into a new evidence directory:
 
 ```bash
-python3 modules/15-execution-models-across-languages/lab/run_conformance.py --all
+python3 modules/15-execution-models-across-languages/lab/run_conformance.py \
+  --mode contract --runtime all --output evidence/m15-contract-01
 ```
 
-Run one runtime when memory or disk-cache pressure makes the full sequence
-inconvenient:
+Run the complete measured failure matrix, or select one designated pair:
 
 ```bash
-python3 modules/15-execution-models-across-languages/lab/run_conformance.py --runtime rust
+python3 modules/15-execution-models-across-languages/lab/run_conformance.py \
+  --mode matrix --runtime all --scenario all --output evidence/m15-matrix-01
+python3 modules/15-execution-models-across-languages/lab/run_conformance.py \
+  --mode matrix --runtime go --scenario F06 --output evidence/m15-f06-01
 ```
 
-`--runtime` and `--all` are mutually exclusive. `--all` preserves the required
-TypeScript, Go, Rust, then Java order and executes them serially. Every runtime
-container is capped by the versioned lock at 2 CPUs, 3 GiB memory and swap, and
-256 PIDs. Execution refuses to start with less than 10 GiB free on the lab
-filesystem; free local space without deleting frozen evidence.
+`--mode all --runtime all --scenario all --output NEW_DIRECTORY` runs contract
+and matrix in TypeScript, Go, Rust, then Java service order. The compatibility
+aliases `--check-sources` and `--all` remain available; measured aliases still
+require `--output`. Every measured mode refuses an existing output directory.
+Every runtime container is capped by the versioned lock at 2 CPUs, 3 GiB memory
+and swap, and 256 PIDs. Execution refuses to start with less than 10 GiB free.
 
-The first run may download official toolchain images. It writes build caches and
-temporary results outside learner evidence unless `--output` names an explicit
-directory. Never overwrite frozen raw trials.
+The first run may download official toolchain images. Tags are never executed
+alone: every container reference includes the immutable digest in
+`toolchains.lock.json`. Builds occur in an ephemeral container filesystem. Raw
+results are written only below the required `--output` directory. Never
+overwrite or edit frozen raw trials.
 
 ## Platform paths
 
@@ -81,12 +88,21 @@ native and container measurements silently.
 
 1. Record `toolchains.lock.json`, container digest, host architecture, CPU/memory
    limit, and Docker/OS boundary.
-2. Compile and run one service. Verify health, invalid-request rejection,
+2. Compile and run one service on an ephemeral host-loopback port. Verify health,
+   invalid-request rejection,
    baseline fan-out, deterministic child ordering, bounds, and zero cleanup.
 3. Run three warm-ups and five measured repetitions of the same canonical request.
 4. Repeat for all runtimes. Preserve wire, logical-input, configuration, and
    output hashes.
-5. Run F01–F09 pairs. Each pair changes one control and retains identical work.
+5. Run F01–F09 pairs. Each pair changes one process-only test control and retains
+   identical workload, seed, runtime, and limits. No public request field can
+   enable a fault.
+
+Each contract and trial file contains raw request and response bodies,
+timestamps, telemetry, code/schema/image/scenario/config hashes, the host and
+container boundary, resource limits, three excluded warm-ups, five measured
+repetitions, and cleanup results. A run is incomplete if its named container is
+not removed.
 
 ## Runtime mechanisms
 
@@ -94,8 +110,8 @@ native and container measurements silently.
   ownership, and worker-thread seam for CPU work.
 - Go: `net/http`, `context`, goroutines admitted through a channel semaphore,
   owner aggregation, and `go test -race`.
-- Rust: Tokio/Axum/Reqwest/Serde, semaphore permits, owned join handles, and a
-  compile-fail Send/Sync fixture.
+- Rust: Tokio/Axum/Serde, an admitted worker queue, owned `JoinSet`, cancellation
+  cleanup, and a compile-fail Send/Sync fixture.
 - Java: JDK HTTP server/client, virtual-thread executor, semaphore admission,
   explicit validation, and lexical cleanup.
 

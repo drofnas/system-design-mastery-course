@@ -3,13 +3,20 @@
   "$id":"https://example.invalid/system-design-course/runtime-trial.schema.json",
   "title":"Module 15 runtime trial",
   "type":"object",
-  "required":["schema_version","scenario_id","pair_id","variant","runtime","seed","scenario_sha256","shared_input_sha256","config_sha256","toolchain","useful_work","scheduler","memory","cancellation","resources","race","validation","invariants","evidence_boundaries"],
+  "required":["schema_version","scenario_id","pair_id","variant","runtime","seed","scenario_sha256","shared_input_sha256","config_sha256","toolchain","useful_work","scheduler","memory","cancellation","resources","race","validation","invariants","evidence_boundaries","hashes","host_boundary","resource_limits","warmups","repetitions","measurement_policy","cleanup_results"],
   "properties":{
     "schema_version":{"const":"1.0"},"scenario_id":{"type":"string"},"pair_id":{"type":"string","pattern":"^F0[1-9]$"},"variant":{"enum":["broken","repaired"]},"runtime":{"enum":["typescript","go","rust","java"]},"seed":{"type":"integer"},
     "scenario_sha256":{"type":"string","pattern":"^[0-9a-f]{64}$"},"shared_input_sha256":{"type":"string","pattern":"^[0-9a-f]{64}$"},"config_sha256":{"type":"string","pattern":"^[0-9a-f]{64}$"},
     "toolchain":{"type":"object"},"useful_work":{"type":"object"},"scheduler":{"type":"object"},"memory":{"type":"object"},"cancellation":{"type":"object"},"resources":{"type":"object"},"race":{"type":"object"},"validation":{"type":"object"},
     "invariants":{"type":"array","minItems":10,"maxItems":10,"items":{"type":"object","required":["id","name","passed","evidence"],"properties":{"id":{"type":"string","pattern":"^I(0[1-9]|10)$"},"name":{"type":"string"},"passed":{"type":"boolean"},"evidence":{"type":"string"}},"additionalProperties":false}},
-    "evidence_boundaries":{"type":"array","minItems":4,"items":{"type":"string"}}
+    "evidence_boundaries":{"type":"array","minItems":4,"items":{"type":"string"}},
+    "hashes":{"type":"object","required":["code_sha256","schema_sha256","image_sha256"],"properties":{"code_sha256":{"type":"string","pattern":"^[0-9a-f]{64}$"},"schema_sha256":{"type":"string","pattern":"^[0-9a-f]{64}$"},"image_sha256":{"type":"string","pattern":"^[0-9a-f]{64}$"}},"additionalProperties":false},
+    "host_boundary":{"type":"object"},
+    "resource_limits":{"type":"object"},
+    "warmups":{"type":"array","minItems":3,"maxItems":3},
+    "repetitions":{"type":"array","minItems":5,"maxItems":5},
+    "measurement_policy":{"type":"object","required":["warmups_excluded","measured_repetitions"],"properties":{"warmups_excluded":{"const":3},"measured_repetitions":{"const":5}},"additionalProperties":false},
+    "cleanup_results":{"type":"object","required":["removed"],"properties":{"removed":{"const":true}},"additionalProperties":true}
   },
   "additionalProperties":false
 }

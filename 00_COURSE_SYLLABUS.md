@@ -1062,4 +1062,6 @@ Choose the capstone or a familiar production problem. Write:
 - The simplest design you believe will work
 - Your strongest reasons for and against that design
 
-Date the document and preserve it without later edits. Create revised copies at Weeks 24, 48, and 72 so that the course produces evidence of how your judgment changed.
+Date the document and preserve it without later edits. Create separate revised
+copies at Weeks 12, 24, 48, and 72 so that the course produces evidence of how
+your judgment changed. The Week 1 baseline is never replaced.

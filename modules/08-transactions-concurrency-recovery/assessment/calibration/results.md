@@ -1,15 +1,19 @@
-# Module 8 Calibration Results
+# M08 Current Calibration Results
 
-Two evaluator passes produced stable expected bands:
+The deterministic checker passed the six current raw evaluator records.
 
-| Fixture | Run 1 | Run 2 | Averages | Maximum category drift |
-|---|---|---|---|---:|
-| Pass | Pass | Pass | 3.8 / 3.7 | 1 |
-| Revise | Revise | Revise | 2.3 / 2.2 | 1 |
-| Repeat | Repeat | Repeat | 0.1 / 0.1 | 0 |
+## run-1
 
-The deterministic checker passed after validating shared-schema fields,
-manifest identity, headings/citations, structural gates, averages, result
-rules, safety-critical R07/R08, finding classes, remediation references, and
-cross-run drift. Raw records and SHA-256 provenance are preserved under `runs/`
-and `run-metadata.json`.
+- Pass: Pass, average 3.5
+- Revise: Revise, average 2.0
+- Repeat: Repeat, average 0.0
+
+## run-2
+
+- Pass: Pass, average 3.0
+- Revise: Revise, average 2.0
+- Repeat: Repeat, average 0.1
+
+Maximum per-category drift: 1.
+
+Raw JSON and invocation provenance are authoritative; this file is rendered from them.

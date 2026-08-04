@@ -34,3 +34,9 @@ residency, repair-budget owner, unit-cost sensitivity, and one reviewer's dissen
 Gate 3 has all parts, but the portfolio index lacks two exact headings and the
 defense leaves a finance follow-up unassigned. These are separate-addendum
 problems, not reasons to discard the preserved trials.
+
+## Controlled replica-partition postmortem
+
+A11 is separate and its timeline agrees with raw partition evidence, but one
+contributing-factor alternative lacks a discriminating rerun and two corrective
+actions lack verification dates. A dated addendum can repair those gaps.

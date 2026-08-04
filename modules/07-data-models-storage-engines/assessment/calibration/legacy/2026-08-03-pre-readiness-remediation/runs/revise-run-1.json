@@ -1,0 +1,204 @@
+{
+  "module_id": "M07",
+  "artifact_commit": "fixture-m07-revise",
+  "baseline_tag": "fixture-m07-revise-baseline",
+  "evaluated_at": "2026-08-02T00:00:00Z",
+  "structural_gates": [
+    {
+      "id": "G01",
+      "passed": true,
+      "evidence": [
+        "modules/07-data-models-storage-engines/assessment/calibration/revise.md#submission-identity: A01-A09 paths, hashes, environment and schema labels, evidence kind, commit, baseline tag, and assistance disclosure are reported present."
+      ]
+    },
+    {
+      "id": "G02",
+      "passed": true,
+      "evidence": [
+        "modules/07-data-models-storage-engines/assessment/calibration/revise.md#frozen-workload-and-access-path-model: The baseline is explicitly reported to predate results and contain Harbor operations and invariants.",
+        "modules/07-data-models-storage-engines/assessment/calibration/revise.md#workload-matrix-and-six-fault-diagnosis: Predictions and raw evidence are reported preserved across all six fault pairs."
+      ]
+    },
+    {
+      "id": "G03",
+      "passed": true,
+      "evidence": [
+        "modules/07-data-models-storage-engines/assessment/calibration/revise.md#amplification-and-query-plan-evidence: Reported byte, read, probe, disk, and live-state arithmetic reconciles to 2.4, 2.2, and 1.5.",
+        "modules/07-data-models-storage-engines/assessment/calibration/revise.md#workload-matrix-and-six-fault-diagnosis: Ten base trials and all fault pairs validate with matching pair hashes, one changed setting, preserved raw evidence, and consistent arithmetic."
+      ]
+    },
+    {
+      "id": "G04",
+      "passed": true,
+      "evidence": [
+        "modules/07-data-models-storage-engines/assessment/calibration/revise.md#page-and-b-tree-build: B+ tree point, range, insert, split, delete, and reopen tests are reported present and passing.",
+        "modules/07-data-models-storage-engines/assessment/calibration/revise.md#lsm-bloom-and-compaction-build: LSM persisted structures, read semantics, compaction, and reopen evidence are reported present.",
+        "modules/07-data-models-storage-engines/assessment/calibration/revise.md#workload-matrix-and-six-fault-diagnosis: All ten base trials and F01-F06 pairs are reported present."
+      ]
+    },
+    {
+      "id": "G05",
+      "passed": true,
+      "evidence": [
+        "modules/07-data-models-storage-engines/assessment/calibration/revise.md#correctness-deletion-and-evidence-safety: Reference and reopen matches, sorted ranges, zero resurrection, zero Bloom false negatives, no validation errors, restricted-coordinate exclusion, and clean close are reported."
+      ]
+    },
+    {
+      "id": "G06",
+      "passed": false,
+      "evidence": [
+        "modules/07-data-models-storage-engines/assessment/calibration/revise.md#alternatives-adr-migration-and-cost: The ADR covers alternatives, security, operations, owners, migration, cutover, and rollback, but lacks quantified recovery, compatibility, decommission, exception ownership, cost sensitivity, and measurable reversal evidence.",
+        "modules/07-data-models-storage-engines/assessment/calibration/revise.md#teach-back-and-remediation: Security, finance, and recovery challenges, dissent, changed belief, cross-team application, and a dated remediation addendum are missing while originals remain immutable."
+      ]
+    }
+  ],
+  "rubric_scores": [
+    {
+      "criterion_id": "R01",
+      "score": 2,
+      "evidence": [
+        "modules/07-data-models-storage-engines/assessment/calibration/revise.md#frozen-workload-and-access-path-model: The frozen model lists operations, invariants, rates, and order, but material workload-distribution, ownership, and reversal details are vague."
+      ],
+      "findings": [
+        "missing_evidence: Burst duration, hot-station concentration, result sizes, derived-copy ownership, and model reversal evidence are not established."
+      ],
+      "remediation": [
+        "Lesson 1; EX-01-EX-02: Preserve the baseline and add a bounded workload/model addendum covering the missing distributions, ownership, and reversal conditions."
+      ]
+    },
+    {
+      "criterion_id": "R02",
+      "score": 2,
+      "evidence": [
+        "modules/07-data-models-storage-engines/assessment/calibration/revise.md#page-and-b-tree-build: Page size and cache hit/miss evidence exist, but fill sensitivity and post-scan pollution evidence are absent."
+      ],
+      "findings": [
+        "missing_evidence: The submission does not establish fill sensitivity, post-scan cache pollution, or sufficiently controlled locality boundaries."
+      ],
+      "remediation": [
+        "Lesson 2; EX-03-EX-04: Add an immutable occupancy and warm/cold/pollution rerun that varies fill and records cache counters and limits."
+      ]
+    },
+    {
+      "criterion_id": "R03",
+      "score": 2,
+      "evidence": [
+        "modules/07-data-models-storage-engines/assessment/calibration/revise.md#page-and-b-tree-build: Core B+ tree operations and reopen pass, but interior split stress and a precise simplified-delete limitation are missing."
+      ],
+      "findings": [
+        "missing_evidence: Interior split depth is not stress-tested and simplified delete limitations are not precisely explained."
+      ],
+      "remediation": [
+        "Lesson 3; EX-05-EX-07: Add separate split, delete-limit, cache, and reopen evidence without changing the original build record."
+      ]
+    },
+    {
+      "criterion_id": "R04",
+      "score": 2,
+      "evidence": [
+        "modules/07-data-models-storage-engines/assessment/calibration/revise.md#lsm-bloom-and-compaction-build: Flush/read semantics, Bloom safety, recency, tombstones, merging, compaction, and reopen pass, while sparse-index and publication evidence remain incomplete."
+      ],
+      "findings": [
+        "missing_evidence: Sparse-index behavior, manifest publication reasoning, false-positive measurement, and compaction-policy sensitivity are incomplete."
+      ],
+      "remediation": [
+        "Lesson 4; EX-08-EX-09: Add a version, tombstone, filter, manifest-publication, and merge rerun with measured false positives and bounded policy variation."
+      ]
+    },
+    {
+      "criterion_id": "R05",
+      "score": 2,
+      "evidence": [
+        "modules/07-data-models-storage-engines/assessment/calibration/revise.md#amplification-and-query-plan-evidence: Read, write, and space ratios reconcile, but temporary space, recovery, device boundary, and unit-cost sensitivity receive only brief treatment."
+      ],
+      "findings": [
+        "missing_evidence: Reconciled ratios are not carried through temporary-space, peak-recovery, device-boundary, endurance, and unit-cost sensitivity analysis."
+      ],
+      "remediation": [
+        "Lesson 5; EX-10: Add a reconciled capacity and cost sensitivity addendum using the preserved counters and explicit device and recovery boundaries."
+      ]
+    },
+    {
+      "criterion_id": "R06",
+      "score": 2,
+      "evidence": [
+        "modules/07-data-models-storage-engines/assessment/calibration/revise.md#workload-matrix-and-six-fault-diagnosis: All trials and fault pairs preserve predictions, hashes, isolated changes, raw evidence, and arithmetic, but four pairs lack alternatives, recovery windows, temperature distinctions, and discriminating reruns."
+      ],
+      "findings": [
+        "incorrect_reasoning: Four diagnoses mostly restate counter direction instead of distinguishing causal alternatives with correctness-first evidence.",
+        "missing_evidence: Four fault pairs lack recovery windows, cold/warm distinctions, and discriminating reruns."
+      ],
+      "remediation": [
+        "Lesson 7; EX-13-EX-14: Preserve all original trials and add the smallest immutable discriminating reruns needed to test alternatives and recovery behavior for the four weak pairs."
+      ]
+    },
+    {
+      "criterion_id": "R07",
+      "score": 3,
+      "evidence": [
+        "modules/07-data-models-storage-engines/assessment/calibration/revise.md#correctness-deletion-and-evidence-safety: Reference, point/range/reopen, ordering, non-resurrection, Bloom safety, validation, restricted-data exclusion, and clean close all agree."
+      ],
+      "findings": [
+        "missing_evidence: Empty-page, wide-value, repeated overwrite/delete, and corrupted-input boundary tests needed for adversarial depth are absent."
+      ],
+      "remediation": [
+        "Lessons 3-4 and 7; EX-06, EX-08, and EX-14: Sustain the passing contract with separate adversarial boundary and appropriate corruption evidence while preserving existing trials."
+      ]
+    },
+    {
+      "criterion_id": "R08",
+      "score": 2,
+      "evidence": [
+        "modules/07-data-models-storage-engines/assessment/calibration/revise.md#amplification-and-query-plan-evidence: Query-plan treatment is brief for estimated versus actual rows, correlation, and alternative index cost."
+      ],
+      "findings": [
+        "missing_evidence: Estimate/actual work, data correlation, and total alternative index cost are not developed enough to support a score-3 index decision."
+      ],
+      "remediation": [
+        "Lesson 6; EX-11-EX-12: Add estimate/actual plan evidence and a bounded alternative-index diagnosis including correlation and write/storage cost."
+      ]
+    },
+    {
+      "criterion_id": "R09",
+      "score": 2,
+      "evidence": [
+        "modules/07-data-models-storage-engines/assessment/calibration/revise.md#alternatives-adr-migration-and-cost: The ADR compares four options and covers core security, operations, ownership, migration, cutover, and rollback, but several operating and reversal contracts remain incomplete."
+      ],
+      "findings": [
+        "missing_evidence: Quantified recovery requirements, compatibility window, decommission criteria, exception ownership, unit-cost sensitivity, and measurable reversal thresholds are absent or incomplete."
+      ],
+      "remediation": [
+        "Lesson 8; EX-15: Add a dated ADR addendum and rollback rehearsal that assigns the missing contracts and measurable thresholds without replacing the original ADR."
+      ]
+    },
+    {
+      "criterion_id": "R10",
+      "score": 2,
+      "evidence": [
+        "modules/07-data-models-storage-engines/assessment/calibration/revise.md#teach-back-and-remediation: The defense explains core mechanisms and handles database and application questions, but broader challenges, dissent, changed belief, transfer, and dated remediation are missing."
+      ],
+      "findings": [
+        "missing_evidence: Security, finance, and recovery challenges, dissent, changed belief, another-team application, and a dated remediation record are not submitted."
+      ],
+      "remediation": [
+        "Lesson 8; EX-16: Conduct a follow-up defense and record dated remediation, dissent, changed belief, and bounded cross-team application while retaining the original defense."
+      ]
+    }
+  ],
+  "average_score": 2.1,
+  "safety_critical_zero": false,
+  "result": "Revise",
+  "confidence": {
+    "level": "high",
+    "reasons": [
+      "The submission explicitly reports baseline ordering, artifact coverage, reconciled arithmetic, correctness outcomes, and immutable raw evidence.",
+      "The material gaps are explicitly enumerated under headings that map directly to each rubric criterion and G06."
+    ]
+  },
+  "summary": "The immutable baseline, both engine implementations, required workloads and fault pairs, arithmetic, and storage-safety evidence satisfy the hard gates. Revision is required because the decision/defense gate is incomplete and the scored evidence lacks workload sensitivity, deeper physical-engine experiments, discriminating failure diagnosis, cost and query-plan analysis, complete operational contracts, and broader teach-back evidence.",
+  "next_actions": [
+    "Preserve every original artifact and add only dated addenda or narrowly scoped immutable reruns.",
+    "Prioritize the four weak fault-pair diagnoses and the missing recovery, compatibility, ownership, cost, and reversal contracts.",
+    "Complete the follow-up defense and then resubmit the manifest with the new evidence hashes."
+  ]
+}

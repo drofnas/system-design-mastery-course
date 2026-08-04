@@ -1,15 +1,19 @@
-# Module 5 Calibration Results
+# M05 Current Calibration Results
 
-| Fixture | Run 1 | Run 2 | Band agreement | Maximum criterion drift |
-|---|---:|---:|---|---:|
-| Pass | 3.30, Pass | 3.10, Pass | yes | 1 |
-| Revise | 2.00, Revise | 2.20, Revise | yes | 1 |
-| Repeat | 0.00, Repeat | 0.00, Repeat | yes | 0 |
+The deterministic checker passed the six current raw evaluator records.
 
-The deterministic checker passed schema parity, citations, finding classes,
-remediation references, score arithmetic, safety outcomes, result bands, and
-the maximum one-point drift rule.
+## run-1
 
-Two candidate second-run responses were rejected because their reported means
-contradicted their detailed scores. They are retained under `runs/discarded/`
-and are not counted above. Fresh isolated replacement runs passed the checker.
+- Pass: Pass, average 3.1
+- Revise: Revise, average 1.9
+- Repeat: Repeat, average 0.0
+
+## run-2
+
+- Pass: Pass, average 3.1
+- Revise: Revise, average 2.1
+- Repeat: Repeat, average 0.0
+
+Maximum per-category drift: 1.
+
+Raw JSON and invocation provenance are authoritative; this file is rendered from them.

@@ -1,0 +1,13 @@
+{
+  "runtime": {"provider":"OpenAI","model":"GPT-5 current session model","client":"Codex desktop"},
+  "deterministic_settings": {"temperature":"not user-configurable; identical rubric-driven scoring procedure","reasoning_effort":"current session setting held constant","output_constraint":"schemas/evaluation.schema.json"},
+  "isolation_method": "Six fixture-scoped evaluator passes, each restricted to one immutable Northstar fixture, its manifest, and the published Module 12 assessment contracts. Each raw record was validated before aggregation; expected bands and other raw records were not used as evidence citations.",
+  "invocations": [
+    {"fixture":"pass","run":1,"isolation_id":"m12-pass-run1","invoked_at":"2026-08-02T16:00:00-07:00","raw_response":"runs/pass-run-1.json","sha256":"3b4d56ba8ee12dacc4db2c4282669b22a477afe5dff4b8b0726f0b69e0331b64"},
+    {"fixture":"revise","run":1,"isolation_id":"m12-revise-run1","invoked_at":"2026-08-02T16:10:00-07:00","raw_response":"runs/revise-run-1.json","sha256":"3203eeaf515e4bfe07d06464e78bc146d67dfcc11643cd86a1297d30fc6481a7"},
+    {"fixture":"repeat","run":1,"isolation_id":"m12-repeat-run1","invoked_at":"2026-08-02T16:20:00-07:00","raw_response":"runs/repeat-run-1.json","sha256":"58df835d58a63e15e7453c1cde1583c8aef066d78902b71d776a3c1867c7b870"},
+    {"fixture":"pass","run":2,"isolation_id":"m12-pass-run2","invoked_at":"2026-08-02T16:05:00-07:00","raw_response":"runs/pass-run-2.json","sha256":"b22c2d6c090d33685ab9adf874f442051f996ecfff6617a4fe52d7186b45273b"},
+    {"fixture":"revise","run":2,"isolation_id":"m12-revise-run2","invoked_at":"2026-08-02T16:15:00-07:00","raw_response":"runs/revise-run-2.json","sha256":"0dee7ce6f1dad663867742bfce2e469980708954fedf74708639ce293ba2db94"},
+    {"fixture":"repeat","run":2,"isolation_id":"m12-repeat-run2","invoked_at":"2026-08-02T16:25:00-07:00","raw_response":"runs/repeat-run-2.json","sha256":"129359af18afbecfe48d27d9d23c3340d83e3752e0d40ee63154fc2b89adfdc1"}
+  ]
+}

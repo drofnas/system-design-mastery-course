@@ -1,26 +1,14 @@
 {
-  "verified_at": "2026-07-31",
-  "provider": "OpenAI",
-  "model": "gpt-5.6-sol",
-  "execution": {
-    "temperature": "not exposed by the evaluator runtime",
-    "fixed_inputs": true,
-    "expected_bands_hidden_from_evaluator": true,
-    "strict_output_schema": "schemas/evaluation.schema.json",
-    "sandbox": "read-only",
-    "session_persistence": "isolated"
-  },
-  "checker": "scripts/check_calibration.py --module M03",
   "checker_passed": true,
   "runs": [
     {
-      "id": "accepted-1",
+      "id": "run-1",
       "fixtures": {
         "pass": {
           "result": "Pass",
-          "average_score": 3.4,
+          "average_score": 3.5,
           "scores": {
-            "R01": 3,
+            "R01": 4,
             "R02": 4,
             "R03": 3,
             "R04": 3,
@@ -31,7 +19,7 @@
             "R09": 4,
             "R10": 4
           },
-          "raw_result": "runs/run-1-pass.json"
+          "raw_result": "runs/pass-run-1.json"
         },
         "revise": {
           "result": "Revise",
@@ -48,7 +36,7 @@
             "R09": 2,
             "R10": 2
           },
-          "raw_result": "runs/run-1-revise.json"
+          "raw_result": "runs/revise-run-1.json"
         },
         "repeat": {
           "result": "Repeat",
@@ -65,35 +53,35 @@
             "R09": 0,
             "R10": 0
           },
-          "raw_result": "runs/run-1-repeat.json"
+          "raw_result": "runs/repeat-run-1.json"
         }
       }
     },
     {
-      "id": "accepted-2",
+      "id": "run-2",
       "fixtures": {
         "pass": {
           "result": "Pass",
-          "average_score": 3.8,
+          "average_score": 3.5,
           "scores": {
             "R01": 4,
             "R02": 4,
-            "R03": 4,
+            "R03": 3,
             "R04": 3,
             "R05": 3,
-            "R06": 4,
+            "R06": 3,
             "R07": 4,
-            "R08": 4,
+            "R08": 3,
             "R09": 4,
             "R10": 4
           },
-          "raw_result": "runs/run-2-pass.json"
+          "raw_result": "runs/pass-run-2.json"
         },
         "revise": {
           "result": "Revise",
-          "average_score": 2.1,
+          "average_score": 2.2,
           "scores": {
-            "R01": 2,
+            "R01": 3,
             "R02": 2,
             "R03": 2,
             "R04": 2,
@@ -104,7 +92,7 @@
             "R09": 2,
             "R10": 2
           },
-          "raw_result": "runs/run-2-revise.json"
+          "raw_result": "runs/revise-run-2.json"
         },
         "repeat": {
           "result": "Repeat",
@@ -121,7 +109,7 @@
             "R09": 0,
             "R10": 0
           },
-          "raw_result": "runs/run-2-repeat.json"
+          "raw_result": "runs/repeat-run-2.json"
         }
       }
     }

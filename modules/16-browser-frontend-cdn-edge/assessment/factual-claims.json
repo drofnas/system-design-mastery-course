@@ -1,0 +1,448 @@
+{
+  "schema_version": "1.0",
+  "module": "M16",
+  "reviewed_commit": "WORKTREE",
+  "reviewed_at": "2026-08-04",
+  "evidence_boundary": "This ledger records a source-level semantic review of lessons, worked answers, case studies, exercises, worksheets, rubrics, and lab guides. It verifies named mechanisms against bounded primary or official sources, distinguishes normative course contracts, and does not turn synthetic examples into production measurements.",
+  "claims": [
+    {
+      "id": "M16-FC-001",
+      "location": {
+        "path": "lessons/01-browser-work-rendering-pipeline.md",
+        "heading": "Mechanism: an interaction competes for a rendering opportunity"
+      },
+      "claim": "The browser does not run “JavaScript, then render” as two indivisible steps. A window agent selects tasks from task sources. After a task callback finishes, the browser performs a microtask checkpoint. The user agent may then update rendering. Rendering itself can require style calculation, layout, pre-paint, paint, raster, and compositing; some changes can reuse prior work or run mostly on the compositor path.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-01"
+      ],
+      "source_sections": [
+        "Read definitions, queuing tasks, and the processing model; trace one input through task, microtask checkpoint, and rendering opportunity."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M16-FC-002",
+      "location": {
+        "path": "lessons/02-performance-budgets-evidence.md",
+        "heading": "Mechanism: a budget is a decision rule, not a score"
+      },
+      "claim": "A useful budget names the route, population, journey milestone, percentile, window, environment, measurement method, and action on breach. “LCP under 2.5 seconds” is incomplete until it says whose page views, which routes, and what happens when telemetry is missing.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-03"
+      ],
+      "source_sections": [
+        "Read through the interaction anatomy and thresholds; map input delay, processing, and presentation delay to the Northstar filter interaction."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M16-FC-003",
+      "location": {
+        "path": "lessons/03-route-rendering-hydration.md",
+        "heading": "Mechanism: rendering places work and commits information"
+      },
+      "claim": "Rendering choices place compute, data access, bytes, and failure on different machines and times:",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-05"
+      ],
+      "source_sections": [
+        "Read reference, caveats, and error recovery; identify when response status and headers become irreversible."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M16-FC-004",
+      "location": {
+        "path": "lessons/04-http-cdn-cache-safety.md",
+        "heading": "Mechanism: a cache reuses a representation under a declared equivalence"
+      },
+      "claim": "A cache key states which requests are equivalent for reuse. A freshness policy states how long the cache may act without consulting authority. Validation asks whether the stored representation remains current. Invalidation attempts to shorten exposure after a change; it does not erase clients that already received data.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-04"
+      ],
+      "source_sections": [
+        "Read Sections 3–5 and 7; produce the cache decision table for all four Northstar routes."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M16-FC-005",
+      "location": {
+        "path": "lessons/05-accessibility-resilient-interaction.md",
+        "heading": "Mechanism: the journey must survive alternate perception and input"
+      },
+      "claim": "Accessibility is not a final scan. HTML semantics define names, roles, relationships, and state before styling. Keyboard interaction defines reachability and order. Focus and live status connect state changes over time. Responsive layout, zoom, motion preferences, contrast, and target size affect whether the same operation remains usable under different conditions.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-07"
+      ],
+      "source_sections": [
+        "Read Principles, Conformance, 1.3.1, 2.1.1, 2.4.3, 2.4.7, 2.5.8, 3.3.1, and 4.1.2; create manual and automated checks."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M16-FC-006",
+      "location": {
+        "path": "lessons/06-memory-third-parties-observability.md",
+        "heading": "Mechanism: browser state needs owners and release conditions"
+      },
+      "claim": "Heap size can rise during useful work and fall after collection. A leak claim requires a repeated lifecycle in which objects or resources that should be dead remain reachable or active. DOM nodes, listeners, timers, observers, network requests, workers, sockets, and caches each need an owner and release event.",
+      "classification": "versioned",
+      "source_ids": [
+        "RES-08"
+      ],
+      "source_sections": [
+        "Read the overview and leak workflow; define a repeated-navigation test and the evidence that distinguishes growth from a leak."
+      ],
+      "verification_method": "official-documentation comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M16-FC-007",
+      "location": {
+        "path": "lessons/07-northstar-browser-edge-tutorial.md",
+        "heading": "Mechanism: one route contract must agree across layers"
+      },
+      "claim": "Northstar uses five linked contracts:",
+      "classification": "synthetic",
+      "source_ids": [],
+      "source_sections": [],
+      "verification_method": "controlled synthetic fixture",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence.",
+      "synthetic_label": "The named Northstar tutorial and all of its values are synthetic course fixtures, not production observations."
+    },
+    {
+      "id": "M16-FC-008",
+      "location": {
+        "path": "lessons/08-frontend-edge-decision-teachback.md",
+        "heading": "Mechanism: boundaries must buy independent outcomes"
+      },
+      "claim": "A frontend boundary is justified when it changes independent delivery, failure, security, workload, or ownership. A repository, bundle, or framework name alone does not establish independence. A BFF can reduce client round trips and translate contracts, but can also duplicate authority, couple releases, and become an unowned bottleneck. Edge compute reduces distance only for work whose data, consistency, security, runtime, cost, and failure semantics fit the edge.",
+      "classification": "security",
+      "source_ids": [
+        "RES-11"
+      ],
+      "source_sections": [
+        "Read the full case; separate measurements, interventions, product outcomes, and claims that do not transfer to Northstar."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M16-FC-009",
+      "location": {
+        "path": "exercises/answer-key.md",
+        "heading": "EX-01–EX-02"
+      },
+      "claim": "The trace separates input delay, the filter task, promise microtasks, DOM writes, render work, and next paint. The pair retains event data, query, result order, profile, and semantics; only yieldlongtasks changes. The repaired version shows the visible count before deferred enrichment and verifies identical results.",
+      "classification": "versioned",
+      "source_ids": [
+        "RES-03"
+      ],
+      "source_sections": [
+        "Read through the interaction anatomy and thresholds; map input delay, processing, and presentation delay to the Northstar filter interaction."
+      ],
+      "verification_method": "official-documentation comparison",
+      "status": "verified",
+      "scope_limit": "The review covers the causal mechanism and derivation used by the explained answers; exercise numbers and worked values are synthetic and are not production measurements."
+    },
+    {
+      "id": "M16-FC-010",
+      "location": {
+        "path": "case-study/northstar-sky-portal.md",
+        "heading": "Problem and users"
+      },
+      "claim": "Northstar publishes sky events for the public and maintains a private staff schedule. Public visitors include screen-reader and keyboard users, older mobile devices, and rural connections. Staff need current schedules and safe edits.",
+      "classification": "synthetic",
+      "source_ids": [],
+      "source_sections": [],
+      "verification_method": "controlled synthetic fixture",
+      "status": "verified",
+      "scope_limit": "The case exists to exercise a reasoning method under declared constraints; none of its organizations, loads, timings, incidents, or results are production evidence.",
+      "synthetic_label": "This non-capstone case and every unattributed workload, incident, cost, latency, and organization detail in it are synthetic course fixtures."
+    },
+    {
+      "id": "M16-FC-011",
+      "location": {
+        "path": "exercises/answer-key.md",
+        "heading": "EX-03–EX-04"
+      },
+      "claim": "The document uses the bounded expression 2*140ms + 160*1024*8/1,200,000 ~= 1.37s; its semantics, substitution where arithmetic applies, and stated assumptions were checked as a reproducible derivation.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-03"
+      ],
+      "source_sections": [
+        "Read through the interaction anatomy and thresholds; map input delay, processing, and presentation delay to the Northstar filter interaction."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "The mapping verifies the written expression and arithmetic under its declared assumptions; synthetic inputs and a local result do not establish a production distribution."
+    },
+    {
+      "id": "M16-FC-012",
+      "location": {
+        "path": "lessons/02-performance-budgets-evidence.md",
+        "heading": "Mechanism: a budget is a decision rule, not a score"
+      },
+      "claim": "The document uses the bounded expression transfer_time >= RTT_dependencies + critical_bytes * 8 / effective_bits_per_second; its semantics, substitution where arithmetic applies, and stated assumptions were checked as a reproducible derivation.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-03"
+      ],
+      "source_sections": [
+        "Read through the interaction anatomy and thresholds; map input delay, processing, and presentation delay to the Northstar filter interaction."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "The mapping verifies the written expression and arithmetic under its declared assumptions; synthetic inputs and a local result do not establish a production distribution."
+    },
+    {
+      "id": "M16-FC-013",
+      "location": {
+        "path": "lessons/05-accessibility-resilient-interaction.md",
+        "heading": "Worked example"
+      },
+      "claim": "The document uses the bounded expression aria-busy=true; its semantics, substitution where arithmetic applies, and stated assumptions were checked as a reproducible derivation.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-07"
+      ],
+      "source_sections": [
+        "Read Principles, Conformance, 1.3.1, 2.1.1, 2.4.3, 2.4.7, 2.5.8, 3.3.1, and 4.1.2; create manual and automated checks."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "The mapping verifies the written expression and arithmetic under its declared assumptions; synthetic inputs and a local result do not establish a production distribution."
+    }
+  ],
+  "lesson_coverage": [
+    {
+      "lesson_id": "L01",
+      "path": "lessons/01-browser-work-rendering-pipeline.md",
+      "claim_ids": [
+        "M16-FC-001"
+      ]
+    },
+    {
+      "lesson_id": "L02",
+      "path": "lessons/02-performance-budgets-evidence.md",
+      "claim_ids": [
+        "M16-FC-002"
+      ]
+    },
+    {
+      "lesson_id": "L03",
+      "path": "lessons/03-route-rendering-hydration.md",
+      "claim_ids": [
+        "M16-FC-003"
+      ]
+    },
+    {
+      "lesson_id": "L04",
+      "path": "lessons/04-http-cdn-cache-safety.md",
+      "claim_ids": [
+        "M16-FC-004"
+      ]
+    },
+    {
+      "lesson_id": "L05",
+      "path": "lessons/05-accessibility-resilient-interaction.md",
+      "claim_ids": [
+        "M16-FC-005"
+      ]
+    },
+    {
+      "lesson_id": "L06",
+      "path": "lessons/06-memory-third-parties-observability.md",
+      "claim_ids": [
+        "M16-FC-006"
+      ]
+    },
+    {
+      "lesson_id": "L07",
+      "path": "lessons/07-northstar-browser-edge-tutorial.md",
+      "claim_ids": [
+        "M16-FC-007"
+      ]
+    },
+    {
+      "lesson_id": "L08",
+      "path": "lessons/08-frontend-edge-decision-teachback.md",
+      "claim_ids": [
+        "M16-FC-008"
+      ]
+    }
+  ],
+  "document_coverage": [
+    {
+      "path": "assessment/rubric.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "case-study/northstar-sky-portal.md",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [
+        "M16-FC-010"
+      ],
+      "review_note": "The case was reviewed for explicit synthetic boundaries, internal arithmetic, non-generalization language, and separation from the learner capstone."
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M16-FC-009",
+        "M16-FC-011"
+      ],
+      "review_note": "Explained answers were checked for causal consistency, formula provenance, and agreement with the locally taught mechanism and cited source boundary."
+    },
+    {
+      "path": "exercises/exercises.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "lab/README.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "The lab guide's commands, interfaces, bounds, and synthetic evidence limitations were checked directly against the executable implementation and its passing tests."
+    },
+    {
+      "path": "lessons/01-browser-work-rendering-pipeline.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M16-FC-001"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/02-performance-budgets-evidence.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M16-FC-002",
+        "M16-FC-012"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/03-route-rendering-hydration.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M16-FC-003"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/04-http-cdn-cache-safety.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M16-FC-004"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/05-accessibility-resilient-interaction.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M16-FC-005",
+        "M16-FC-013"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/06-memory-third-parties-observability.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M16-FC-006"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/07-northstar-browser-edge-tutorial.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M16-FC-007"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/08-frontend-edge-decision-teachback.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M16-FC-008"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "worksheets/week-61-browser-edge-model.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-62-storefront-build.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-63-browser-edge-failures.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-64-architecture-defense.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    }
+  ],
+  "formula_mappings": [
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-03–EX-04",
+      "expression_sha256": "a29bba44cb69fd8c1ee991aefeaaea00d567e52ded702be98ea707563c3cd349",
+      "claim_id": "M16-FC-011"
+    },
+    {
+      "path": "lessons/02-performance-budgets-evidence.md",
+      "heading": "Mechanism: a budget is a decision rule, not a score",
+      "expression_sha256": "ad917a1cb612e737a0d02e61bf41f1987ac8dbbf04336ebfe1205dec47f050f9",
+      "claim_id": "M16-FC-012"
+    },
+    {
+      "path": "lessons/02-performance-budgets-evidence.md",
+      "heading": "Worked example",
+      "expression_sha256": "d3e935c0a9e6794a7511945811403465ebfcce43e67ea7ea7b57badd1b671052",
+      "claim_id": "M16-FC-012"
+    },
+    {
+      "path": "lessons/05-accessibility-resilient-interaction.md",
+      "heading": "Worked example",
+      "expression_sha256": "84e60ece965417fb80792f960da3a6ee8bb89c916d6753c1c7aeb9b08e6546b9",
+      "claim_id": "M16-FC-013"
+    }
+  ]
+}

@@ -13,7 +13,7 @@ Submit file paths and immutable commit identifiers for:
 4. Blind diagnosis matrix frozen before fixture reveal.
 5. Query-plan comparison, profiles, and instrumentation-overhead evidence.
 6. Raw interleaved benchmark samples and regression-budget result.
-7. Performance review and recorded teach-back.
+7. Performance review, distinct A11 regression-policy ADR, and recorded teach-back.
 8. Weekly learning logs, evaluator output, and separate remediation if needed.
 
 ## Structural gates
@@ -52,3 +52,7 @@ The [provider-neutral prompt](evaluator-prompt.md) accepts only submitted files,
 the rubric, and the shared evaluation schema. It must cite a submitted file and
 heading for every gate and score, classify findings, express uncertainty, and
 recommend lessons/exercises rather than authoring replacement work.
+
+## Evaluation packaging and independence
+
+Use the [provider-neutral bundle and validation workflow](../../../EVALUATION_GUIDE.md). The evaluator returns JSON only; the validator renders the report. An independent LLM or human critique after the freeze is required for formal Pass. Self-scoring remains provisional.

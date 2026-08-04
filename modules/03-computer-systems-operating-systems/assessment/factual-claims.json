@@ -1,0 +1,436 @@
+{
+  "schema_version": "1.0",
+  "module": "M03",
+  "reviewed_commit": "WORKTREE",
+  "reviewed_at": "2026-08-04",
+  "evidence_boundary": "This ledger records a source-level semantic review of lessons, worked answers, case studies, exercises, worksheets, rubrics, and lab guides. It verifies named mechanisms against bounded primary or official sources, distinguishes normative course contracts, and does not turn synthetic examples into production measurements.",
+  "claims": [
+    {
+      "id": "M03-FC-001",
+      "location": {
+        "path": "lessons/01-benchmark-contracts-and-locality.md",
+        "heading": "Mechanism and decision method"
+      },
+      "claim": "A processor overlaps instruction fetch, decode, execution, and retirement. It speculates about branches and serves memory through a hierarchy. The useful question is not “how many nanoseconds is RAM?” It is which dependency prevents this workload from making progress on this machine.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-07"
+      ],
+      "source_sections": [
+        "Optional: read only the front-end, memory hierarchy/data access, and multithreading sections; label what does not transfer to ARM."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M03-FC-002",
+      "location": {
+        "path": "lessons/02-processes-scheduling-and-syscalls.md",
+        "heading": "Mechanism and decision method"
+      },
+      "claim": "A process owns an address space and kernel-managed resources. Threads share much of that state while retaining independent execution contexts. The scheduler maps runnable threads onto finite logical CPUs. Threads waiting for locks or I/O are blocked; cgroup quota exhaustion can leave runnable work throttled.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-06"
+      ],
+      "source_sections": [
+        "Watch the presentation or use all slides with the local written lesson; record one hypothesis, predicted trace, and competing explanation."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M03-FC-003",
+      "location": {
+        "path": "lessons/03-virtual-memory-allocation-and-faults.md",
+        "heading": "Mechanism and decision method"
+      },
+      "claim": "Virtual memory gives each process an address space. Page tables translate virtual pages to physical frames while enforcing access permissions and controlled sharing. Translation caches reduce repeated page-table work. A fault transfers control to the kernel because a mapping is absent or disallowed; it is not always a storage read.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-02"
+      ],
+      "source_sections": [
+        "Watch or read the named virtual-memory segments; draw an address-translation path and classify one minor and one major fault."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M03-FC-004",
+      "location": {
+        "path": "lessons/04-contention-deadlock-and-false-sharing.md",
+        "heading": "Mechanism and decision method"
+      },
+      "claim": "A lock protects an invariant by serializing a critical section. Contention adds waiting when multiple actors need the lock. Replacing a lock is valid only if the new mechanism preserves ordering, visibility, lifetime, and failure semantics.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-05",
+        "RES-07"
+      ],
+      "source_sections": [
+        "Read the complete article; reconstruct its driver-to-evidence chain and name one alternative explanation.",
+        "Optional: read only the front-end, memory hierarchy/data access, and multithreading sections; label what does not transfer to ARM."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M03-FC-005",
+      "location": {
+        "path": "lessons/05-files-page-cache-and-durability.md",
+        "heading": "Mechanism and decision method"
+      },
+      "claim": "write copies or maps bytes into an operating-system path and may return before nonvolatile storage has accepted them. Dirty cached pages are written back later. fsync requests file data and required metadata synchronization, but a newly created filename may also require synchronizing its directory. Filesystems, network storage, virtualization, controllers, and device caches define the final failure boundary.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-03"
+      ],
+      "source_sections": [
+        "Read Description, Errors, and Notes for write(2) and fsync(2); draw a failure timeline and identify delayed error reporting."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M03-FC-006",
+      "location": {
+        "path": "lessons/06-device-queues-and-io-latency.md",
+        "heading": "Mechanism and decision method"
+      },
+      "claim": "An I/O request may wait in an application queue, filesystem writeback, a block layer, a hypervisor, a controller, or a device. Queue depth can increase device throughput by exposing parallel work, then increase latency once the bottleneck is saturated. Buffered completion can move waiting away from the request path without removing it.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-08"
+      ],
+      "source_sections": [
+        "Read the complete writeback-cache control page; identify the volatile-cache, flush, and force-unit-access assumptions that bound one lab result."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M03-FC-007",
+      "location": {
+        "path": "lessons/07-containers-quotas-and-limits.md",
+        "heading": "Mechanism and decision method"
+      },
+      "claim": "Namespaces change visibility and identity; cgroups account and control resource use. A container still shares a kernel and underlying capacity. CPU quota grants a time budget over a period. When exhausted, runnable work is throttled until the next period. A memory maximum can trigger reclaim, allocation failure, or cgroup OOM termination. Page cache and kernel memory may be charged to the group.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-04"
+      ],
+      "source_sections": [
+        "Read Introduction plus CPU, Memory, and IO controller sections; map each configured limit to an observable and failure outcome."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M03-FC-008",
+      "location": {
+        "path": "lessons/08-causal-diagnosis-and-decisions.md",
+        "heading": "Mechanism and decision method"
+      },
+      "claim": "A systems-performance report is an argument from evidence, not a catalog of counters. Use this sequence:",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-01",
+        "RES-05"
+      ],
+      "source_sections": [
+        "Read Description through maintained ru_* fields and Notes; create a counter-versus-claim table and identify one unmaintained-field risk.",
+        "Read the complete article; reconstruct its driver-to-evidence chain and name one alternative explanation."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M03-FC-009",
+      "location": {
+        "path": "exercises/answer-key.md",
+        "heading": "EX-01"
+      },
+      "claim": "A valid contract fixes 2,000,000 updates and the same final checksum, excludes setup/output serialization from the timed region, uses one warm-up and seven recorded repetitions with alternating order, and records machine/compiler state. “Contiguous is lower median elapsed time because it reuses nearby lines” is falsified by stable overlapping distributions or evidence of a stronger changed mechanism. Exact speedup is deliberately not predicted.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-08"
+      ],
+      "source_sections": [
+        "Read the complete writeback-cache control page; identify the volatile-cache, flush, and force-unit-access assumptions that bound one lab result."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "The review covers the causal mechanism and derivation used by the explained answers; exercise numbers and worked values are synthetic and are not production measurements."
+    },
+    {
+      "id": "M03-FC-010",
+      "location": {
+        "path": "case-study/transit-replay-worker.md",
+        "heading": "Problem statement"
+      },
+      "claim": "Transit Signal receives archived vehicle-position events after an upstream outage. A replay worker rebuilds per-route arrival state and periodically writes a checkpoint so operators can restart without replaying the entire archive.",
+      "classification": "synthetic",
+      "source_ids": [],
+      "source_sections": [],
+      "verification_method": "controlled synthetic fixture",
+      "status": "verified",
+      "scope_limit": "The case exists to exercise a reasoning method under declared constraints; none of its organizations, loads, timings, incidents, or results are production evidence.",
+      "synthetic_label": "This non-capstone case and every unattributed workload, incident, cost, latency, and organization detail in it are synthetic course fixtures."
+    },
+    {
+      "id": "M03-FC-011",
+      "location": {
+        "path": "exercises/answer-key.md",
+        "heading": "EX-02"
+      },
+      "claim": "The document uses the bounded expression C = 2.4 ms; its semantics, substitution where arithmetic applies, and stated assumptions were checked as a reproducible derivation.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-07"
+      ],
+      "source_sections": [
+        "Optional: read only the front-end, memory hierarchy/data access, and multithreading sections; label what does not transfer to ARM."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "The mapping verifies the written expression and arithmetic under its declared assumptions; synthetic inputs and a local result do not establish a production distribution."
+    },
+    {
+      "id": "M03-FC-012",
+      "location": {
+        "path": "lessons/01-benchmark-contracts-and-locality.md",
+        "heading": "Mechanism and decision method"
+      },
+      "claim": "The document uses the bounded expression Δ = D - P; its semantics, substitution where arithmetic applies, and stated assumptions were checked as a reproducible derivation.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-07"
+      ],
+      "source_sections": [
+        "Optional: read only the front-end, memory hierarchy/data access, and multithreading sections; label what does not transfer to ARM."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "The mapping verifies the written expression and arithmetic under its declared assumptions; synthetic inputs and a local result do not establish a production distribution."
+    }
+  ],
+  "lesson_coverage": [
+    {
+      "lesson_id": "L01",
+      "path": "lessons/01-benchmark-contracts-and-locality.md",
+      "claim_ids": [
+        "M03-FC-001"
+      ]
+    },
+    {
+      "lesson_id": "L02",
+      "path": "lessons/02-processes-scheduling-and-syscalls.md",
+      "claim_ids": [
+        "M03-FC-002"
+      ]
+    },
+    {
+      "lesson_id": "L03",
+      "path": "lessons/03-virtual-memory-allocation-and-faults.md",
+      "claim_ids": [
+        "M03-FC-003"
+      ]
+    },
+    {
+      "lesson_id": "L04",
+      "path": "lessons/04-contention-deadlock-and-false-sharing.md",
+      "claim_ids": [
+        "M03-FC-004"
+      ]
+    },
+    {
+      "lesson_id": "L05",
+      "path": "lessons/05-files-page-cache-and-durability.md",
+      "claim_ids": [
+        "M03-FC-005"
+      ]
+    },
+    {
+      "lesson_id": "L06",
+      "path": "lessons/06-device-queues-and-io-latency.md",
+      "claim_ids": [
+        "M03-FC-006"
+      ]
+    },
+    {
+      "lesson_id": "L07",
+      "path": "lessons/07-containers-quotas-and-limits.md",
+      "claim_ids": [
+        "M03-FC-007"
+      ]
+    },
+    {
+      "lesson_id": "L08",
+      "path": "lessons/08-causal-diagnosis-and-decisions.md",
+      "claim_ids": [
+        "M03-FC-008"
+      ]
+    }
+  ],
+  "document_coverage": [
+    {
+      "path": "assessment/rubric.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "case-study/transit-replay-worker.md",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [
+        "M03-FC-010"
+      ],
+      "review_note": "The case was reviewed for explicit synthetic boundaries, internal arithmetic, non-generalization language, and separation from the learner capstone."
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M03-FC-009",
+        "M03-FC-011"
+      ],
+      "review_note": "Explained answers were checked for causal consistency, formula provenance, and agreement with the locally taught mechanism and cited source boundary."
+    },
+    {
+      "path": "exercises/exercises.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "lab/README.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "The lab guide's commands, interfaces, bounds, and synthetic evidence limitations were checked directly against the executable implementation and its passing tests."
+    },
+    {
+      "path": "lessons/01-benchmark-contracts-and-locality.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M03-FC-001",
+        "M03-FC-012"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/02-processes-scheduling-and-syscalls.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M03-FC-002"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/03-virtual-memory-allocation-and-faults.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M03-FC-003"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/04-contention-deadlock-and-false-sharing.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M03-FC-004"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/05-files-page-cache-and-durability.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M03-FC-005"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/06-device-queues-and-io-latency.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M03-FC-006"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/07-containers-quotas-and-limits.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M03-FC-007"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/08-causal-diagnosis-and-decisions.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M03-FC-008"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "worksheets/week-09-benchmark-prediction.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-10-portable-build.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-11-systems-matrix.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-12-report-defense.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    }
+  ],
+  "formula_mappings": [
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-02",
+      "expression_sha256": "ec673e3a3c4c4087c63b7c168d39291819a3bdb0ad78c283dac21e33c04cf232",
+      "claim_id": "M03-FC-011"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-02",
+      "expression_sha256": "e04b6f21543f21680f615357d04cc3c73cb0a2b36aafc05d08e59d1fda6f425f",
+      "claim_id": "M03-FC-011"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-02",
+      "expression_sha256": "01dd1e81301458a9448a745fbd94c8ef5bcebbafe3e104c699e4acea63cd4c52",
+      "claim_id": "M03-FC-011"
+    },
+    {
+      "path": "lessons/01-benchmark-contracts-and-locality.md",
+      "heading": "Mechanism and decision method",
+      "expression_sha256": "5d9f4a79920423074022c2fc8711e2d89f02b2d3b1380ea1fd83e80ad0872fc5",
+      "claim_id": "M03-FC-012"
+    }
+  ]
+}

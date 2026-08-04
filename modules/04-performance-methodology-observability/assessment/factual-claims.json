@@ -1,0 +1,371 @@
+{
+  "schema_version": "1.0",
+  "module": "M04",
+  "reviewed_commit": "WORKTREE",
+  "reviewed_at": "2026-08-04",
+  "evidence_boundary": "This ledger records a source-level semantic review of lessons, worked answers, case studies, exercises, worksheets, rubrics, and lab guides. It verifies named mechanisms against bounded primary or official sources, distinguishes normative course contracts, and does not turn synthetic examples into production measurements.",
+  "claims": [
+    {
+      "id": "M04-FC-001",
+      "location": {
+        "path": "lessons/01-question-first-investigations.md",
+        "heading": "Mechanism and method"
+      },
+      "claim": "Start with the journey and the change: workload, percentile, useful work, environment, comparison, and time window. Then list mechanisms that could produce it. For every mechanism, predict a combination of signals and a falsifier. Collection follows the ledger; available dashboards do not choose the question.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-01"
+      ],
+      "source_sections": [
+        "Read Summary, Metrics, In Practice, and Other Methodologies; build a USE table and name two gaps."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M04-FC-002",
+      "location": {
+        "path": "lessons/02-controlled-experiments.md",
+        "heading": "Mechanism and method"
+      },
+      "claim": "A performance result varies within a process, between process starts, across candidate order, and across environments. One long run samples only some of those dimensions. A controlled experiment fixes or records every material dimension and changes one intended factor.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-05"
+      ],
+      "source_sections": [
+        "Read the abstract, experimental dimensions, repetition guidance, and reporting recommendations; identify three variation levels."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M04-FC-003",
+      "location": {
+        "path": "lessons/03-trace-context.md",
+        "heading": "Mechanism and method"
+      },
+      "claim": "A trace identifier groups related work. A span identifier names one operation; parentage records the causal path. The W3C traceparent format carries version, trace ID, parent ID, and flags. Version 00 identifiers cannot be all zero and must have exact lengths.",
+      "classification": "versioned",
+      "source_ids": [
+        "RES-03"
+      ],
+      "source_sections": [
+        "Read Abstract, header format, processing model, and privacy considerations; validate three contexts and identify one trust boundary."
+      ],
+      "verification_method": "official-documentation comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M04-FC-004",
+      "location": {
+        "path": "lessons/04-signals-cardinality-cost.md",
+        "heading": "Mechanism and method"
+      },
+      "claim": "Metrics aggregate repeated measurements. Logs preserve event detail. Traces preserve a sampled causal path. Profiles attribute resource use to code. Each signal loses information differently, so correlation is designed rather than assumed.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-02"
+      ],
+      "source_sections": [
+        "Read Desirable Features, Sources of Monitoring Data, and Metrics with Purpose through Saturation; classify five signals."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M04-FC-005",
+      "location": {
+        "path": "lessons/05-profiling.md",
+        "heading": "Mechanism and method"
+      },
+      "claim": "A CPU profile attributes execution to call stacks. Deterministic profiling records calls and elapsed time but adds instrumentation overhead; sampling profiles approximate where execution spends time with different bias. An allocation profile attributes created or retained memory to sites. Neither RSS nor total allocated bytes alone proves a leak.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-07",
+        "RES-08"
+      ],
+      "source_sections": [
+        "Read the introduction, instant user manual, and limitations; record what deterministic profiling measures and how its overhead changes the evidence boundary.",
+        "Read tracing allocations, snapshots, and comparing snapshots; state what the tool can attribute and what it cannot establish about object liveness."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M04-FC-006",
+      "location": {
+        "path": "lessons/06-dependencies-query-plans.md",
+        "heading": "Mechanism and method"
+      },
+      "claim": "End-to-end latency is a path, not a single timer:",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-09"
+      ],
+      "source_sections": [
+        "Read the warning and Sections 1.1–1.3; identify the chosen access path and explain why output formatting is not a stable application API."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M04-FC-007",
+      "location": {
+        "path": "lessons/07-benchmarks-regression-budgets.md",
+        "heading": "Mechanism and method"
+      },
+      "claim": "A regression budget is an executable decision boundary, not \"avoid making it slower.\" Define:",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-05"
+      ],
+      "source_sections": [
+        "Read the abstract, experimental dimensions, repetition guidance, and reporting recommendations; identify three variation levels."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M04-FC-008",
+      "location": {
+        "path": "lessons/08-causal-decisions.md",
+        "heading": "Mechanism and method"
+      },
+      "claim": "A performance review is a decision record with an evidence chain:",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-06"
+      ],
+      "source_sections": [
+        "Watch the complete talk or use all slides with the local alternative; record one design rule, its cost, and a counterexample."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M04-FC-009",
+      "location": {
+        "path": "exercises/answer-key.md",
+        "heading": "EX-01"
+      },
+      "claim": "One defensible question is: \"Under the 30 requests/second three-leg workload, why did rider p95 rise from the preserved baseline by more than 15% while useful throughput and outcome mix stayed stable?\" It excludes unrelated journeys, traffic changes, and claims about production scale.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-03"
+      ],
+      "source_sections": [
+        "Read Abstract, header format, processing model, and privacy considerations; validate three contexts and identify one trust boundary."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "The review covers the causal mechanism and derivation used by the explained answers; exercise numbers and worked values are synthetic and are not production measurements."
+    },
+    {
+      "id": "M04-FC-010",
+      "location": {
+        "path": "case-study/transit-observability.md",
+        "heading": "Case boundary"
+      },
+      "claim": "Transit Signal's route-impact endpoint receives a rider journey with three route legs. It fans out to one approved-impact lookup per leg and returns only after every branch completes. Module 2 established its queue and concurrency bounds. Module 4 keeps those semantics and adds evidence collection.",
+      "classification": "synthetic",
+      "source_ids": [],
+      "source_sections": [],
+      "verification_method": "controlled synthetic fixture",
+      "status": "verified",
+      "scope_limit": "The case exists to exercise a reasoning method under declared constraints; none of its organizations, loads, timings, incidents, or results are production evidence.",
+      "synthetic_label": "This non-capstone case and every unattributed workload, incident, cost, latency, and organization detail in it are synthetic course fixtures."
+    }
+  ],
+  "lesson_coverage": [
+    {
+      "lesson_id": "L01",
+      "path": "lessons/01-question-first-investigations.md",
+      "claim_ids": [
+        "M04-FC-001"
+      ]
+    },
+    {
+      "lesson_id": "L02",
+      "path": "lessons/02-controlled-experiments.md",
+      "claim_ids": [
+        "M04-FC-002"
+      ]
+    },
+    {
+      "lesson_id": "L03",
+      "path": "lessons/03-trace-context.md",
+      "claim_ids": [
+        "M04-FC-003"
+      ]
+    },
+    {
+      "lesson_id": "L04",
+      "path": "lessons/04-signals-cardinality-cost.md",
+      "claim_ids": [
+        "M04-FC-004"
+      ]
+    },
+    {
+      "lesson_id": "L05",
+      "path": "lessons/05-profiling.md",
+      "claim_ids": [
+        "M04-FC-005"
+      ]
+    },
+    {
+      "lesson_id": "L06",
+      "path": "lessons/06-dependencies-query-plans.md",
+      "claim_ids": [
+        "M04-FC-006"
+      ]
+    },
+    {
+      "lesson_id": "L07",
+      "path": "lessons/07-benchmarks-regression-budgets.md",
+      "claim_ids": [
+        "M04-FC-007"
+      ]
+    },
+    {
+      "lesson_id": "L08",
+      "path": "lessons/08-causal-decisions.md",
+      "claim_ids": [
+        "M04-FC-008"
+      ]
+    }
+  ],
+  "document_coverage": [
+    {
+      "path": "assessment/rubric.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "case-study/transit-observability.md",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [
+        "M04-FC-010"
+      ],
+      "review_note": "The case was reviewed for explicit synthetic boundaries, internal arithmetic, non-generalization language, and separation from the learner capstone."
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M04-FC-009"
+      ],
+      "review_note": "Explained answers were checked for causal consistency, formula provenance, and agreement with the locally taught mechanism and cited source boundary."
+    },
+    {
+      "path": "exercises/exercises.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "lab/README.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "The lab guide's commands, interfaces, bounds, and synthetic evidence limitations were checked directly against the executable implementation and its passing tests."
+    },
+    {
+      "path": "lessons/01-question-first-investigations.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M04-FC-001"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/02-controlled-experiments.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M04-FC-002"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/03-trace-context.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M04-FC-003"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/04-signals-cardinality-cost.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M04-FC-004"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/05-profiling.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M04-FC-005"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/06-dependencies-query-plans.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M04-FC-006"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/07-benchmarks-regression-budgets.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M04-FC-007"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/08-causal-decisions.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M04-FC-008"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "worksheets/week-13-investigation-plan.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-14-instrumentation-build.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-15-blind-diagnosis.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-16-performance-review.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    }
+  ],
+  "formula_mappings": []
+}

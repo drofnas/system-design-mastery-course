@@ -84,7 +84,7 @@ def build_prompt(
         "- Include exactly G01 through G06 once each and exactly R01 through R10 once each.",
         "- Use integer rubric scores and set average_score to their arithmetic mean rounded to two decimals.",
         "- Every gate and rubric row must cite at least one exact path#heading.",
-        f"- Cite only {relative_fixture}; G01 may also cite {relative_manifest}.",
+        f"- Cite only {relative_fixture}; G01 and G02 may also cite {relative_manifest} for identity and chronology only.",
         "- Prefix every finding with one allowed classification followed by a colon.",
         "- Every remediation array, including rows with no findings, must name a published",
         f"  Module {int(str(module['id'])[1:])} Lesson and an EX- exercise.",
@@ -237,6 +237,7 @@ def main() -> int:
     module_root = resolve_module(args.module)
     calibration = module_root / "assessment" / "calibration"
     raw_path = calibration / "runs" / f"{args.fixture}-run-{args.run}.json"
+    raw_path.parent.mkdir(exist_ok=True)
     if raw_path.exists():
         raise ValueError(f"refusing to overwrite existing evaluator record: {raw_path}")
 

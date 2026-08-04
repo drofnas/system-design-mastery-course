@@ -132,7 +132,7 @@ def validate_run(
         for citation in citations:
             if not isinstance(citation, str):
                 fail(f"{path}: {label} evidence must contain strings")
-            if label == "G01" and manifest_prefix.lower() in citation.lower():
+            if label in {"G01", "G02"} and manifest_prefix.lower() in citation.lower():
                 continue
             if expected_prefix.lower() not in citation.lower():
                 fail(f"{path}: {label} cites outside the fixture: {citation}")

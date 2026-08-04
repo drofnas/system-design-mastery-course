@@ -1,0 +1,401 @@
+{
+  "schema_version": "1.0",
+  "module": "M09",
+  "reviewed_commit": "WORKTREE",
+  "reviewed_at": "2026-08-04",
+  "evidence_boundary": "This ledger records a source-level semantic review of lessons, worked answers, case studies, exercises, worksheets, rubrics, and lab guides. It verifies named mechanisms against bounded primary or official sources, distinguishes normative course contracts, and does not turn synthetic examples into production measurements.",
+  "claims": [
+    {
+      "id": "M09-FC-001",
+      "location": {
+        "path": "lessons/01-operation-semantics-session-guarantees.md",
+        "heading": "Mechanism and decision procedure"
+      },
+      "claim": "A consistency contract is a set of histories the system admits. Start with an operation, not a datastore label:",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-02"
+      ],
+      "source_sections": [
+        "Read Sections 1–4; draw one admitted history and one rejection/routing rule for each guarantee."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M09-FC-002",
+      "location": {
+        "path": "lessons/02-replication-topologies-acknowledgements.md",
+        "heading": "Mechanism and decision procedure"
+      },
+      "claim": "Replication copies state; topology decides where operations may enter and how copies coordinate. For every design, draw an event sequence:",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-01"
+      ],
+      "source_sections": [
+        "Read Sections 2.2, 4.2–4.7, 6.3, and 6.5; produce an assumption ledger and map each mechanism to an application obligation."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M09-FC-003",
+      "location": {
+        "path": "lessons/03-quorums-and-assumptions.md",
+        "heading": "Mechanism and decision procedure"
+      },
+      "claim": "For an intended replica set of size N, any read set of size R intersects any write set of size W when R + W > N. Any two write sets intersect when 2W > N. These are set facts, not complete consistency protocols.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-03"
+      ],
+      "source_sections": [
+        "Read Sections 1–4; write the theorem's definitions and explain which production claims they do not imply."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M09-FC-004",
+      "location": {
+        "path": "lessons/04-versions-conflicts-repair.md",
+        "heading": "Mechanism and decision procedure"
+      },
+      "claim": "Replication needs metadata that answers at least: which object, which version, which replica or authority produced it, and whether one version supersedes another. A single counter from one authority can order that authority's writes. Multi-writer systems need richer causal metadata or must retain ambiguity. This module treats causal context as an input; Module 10 derives clock algorithms.",
+      "classification": "versioned",
+      "source_ids": [
+        "RES-05"
+      ],
+      "source_sections": [
+        "Read the Dynamo architecture page and linked Repair overview; build a foreground/background repair table with failure and cost boundaries."
+      ],
+      "verification_method": "official-documentation comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M09-FC-005",
+      "location": {
+        "path": "lessons/05-partitioning-and-resharding.md",
+        "heading": "Mechanism and decision procedure"
+      },
+      "claim": "Partitioning maps keys to ownership. Replication then maps each partition to multiple replicas. Keep the layers separate: a balanced primary-key mapping can still create correlated replica placement or a shared failure domain.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-06"
+      ],
+      "source_sections": [
+        "Read the complete article; identify the state owner, placement controller, load signals, failure assumptions, and one migration risk."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M09-FC-006",
+      "location": {
+        "path": "lessons/06-hot-keys-fairness-isolation.md",
+        "heading": "Mechanism and decision procedure"
+      },
+      "claim": "A partitioner balances its input metric, often key count or hash space. Workload cost is multi-dimensional: requests, bytes, read/write ratio, fan-out, storage, repair, compaction, and tenant priority. Measure all relevant dimensions by key, partition, node, replica role, tenant, and operation.",
+      "classification": "security",
+      "source_ids": [
+        "RES-06"
+      ],
+      "source_sections": [
+        "Read the complete article; identify the state owner, placement controller, load signals, failure assumptions, and one migration risk."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M09-FC-007",
+      "location": {
+        "path": "lessons/07-cap-pacelc-regional-placement.md",
+        "heading": "Mechanism and decision procedure"
+      },
+      "claim": "Gilbert and Lynch formalize an asynchronous model in which messages may be lost and prove that a read/write object cannot provide both atomic consistency and availability during a partition. The definitions matter. Atomic consistency is linearizability. Availability requires every request to a non-failing node to eventually return a non-error response. A product's 500-ms SLO or ability to return an explicit error is a different measure.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-03"
+      ],
+      "source_sections": [
+        "Read Sections 1–4; write the theorem's definitions and explain which production claims they do not imply."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M09-FC-008",
+      "location": {
+        "path": "lessons/08-decisions-migration-ownership.md",
+        "heading": "Mechanism and decision procedure"
+      },
+      "claim": "The ADR must let another team operate and reverse the design. Organize it by operation, not by vendor feature:",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-07"
+      ],
+      "source_sections": [
+        "Read the open paper; optionally watch the presentation. Extract one fairness mechanism, one customer-visible metric, one automation risk, and one owner."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "This verification is limited to the mechanism and failure assumptions stated in the lesson; examples and lab values are synthetic unless explicitly identified as measured evidence."
+    },
+    {
+      "id": "M09-FC-009",
+      "location": {
+        "path": "exercises/answer-key.md",
+        "heading": "EX-01: Operation histories"
+      },
+      "claim": "A complete history shows enough ordering to falsify the outcome. Controller transfer fails if two sides acknowledge different owners. Operator refresh fails if the same session reads v2 then v1. Public browse fails only when its declared staleness bound is exceeded. Annotation reply fails if B is visible without causal parent A. Names alone receive little credit.",
+      "classification": "algorithmic",
+      "source_ids": [
+        "RES-02"
+      ],
+      "source_sections": [
+        "Read Sections 1–4; draw one admitted history and one rejection/routing rule for each guarantee."
+      ],
+      "verification_method": "primary-source comparison",
+      "status": "verified",
+      "scope_limit": "The review covers the causal mechanism and derivation used by the explained answers; exercise numbers and worked values are synthetic and are not production measurements."
+    },
+    {
+      "id": "M09-FC-010",
+      "location": {
+        "path": "case-study/northstar-distributed-catalog.md",
+        "heading": "Problem and isolation"
+      },
+      "claim": "Northstar now operates telescope sites in west, central, and east regions. The catalog stores controller-window authority, public exposure metadata, scientific annotations, and researcher-private metadata. It extends Module 8's non-commerce observatory case and contains no products, inventory, checkout, orders, payments, merchants, or capstone solution.",
+      "classification": "synthetic",
+      "source_ids": [],
+      "source_sections": [],
+      "verification_method": "controlled synthetic fixture",
+      "status": "verified",
+      "scope_limit": "The case exists to exercise a reasoning method under declared constraints; none of its organizations, loads, timings, incidents, or results are production evidence.",
+      "synthetic_label": "This non-capstone case and every unattributed workload, incident, cost, latency, and organization detail in it are synthetic course fixtures."
+    },
+    {
+      "id": "M09-FC-011",
+      "location": {
+        "path": "exercises/answer-key.md",
+        "heading": "EX-13: Hot-key and tenant fairness"
+      },
+      "claim": "The document uses the bounded expression 120/5 = 24; its semantics, substitution where arithmetic applies, and stated assumptions were checked as a reproducible derivation.",
+      "classification": "quantitative",
+      "source_ids": [
+        "RES-06"
+      ],
+      "source_sections": [
+        "Read the complete article; identify the state owner, placement controller, load signals, failure assumptions, and one migration risk."
+      ],
+      "verification_method": "reproducible derivation",
+      "status": "verified",
+      "scope_limit": "The mapping verifies the written expression and arithmetic under its declared assumptions; synthetic inputs and a local result do not establish a production distribution."
+    }
+  ],
+  "lesson_coverage": [
+    {
+      "lesson_id": "L01",
+      "path": "lessons/01-operation-semantics-session-guarantees.md",
+      "claim_ids": [
+        "M09-FC-001"
+      ]
+    },
+    {
+      "lesson_id": "L02",
+      "path": "lessons/02-replication-topologies-acknowledgements.md",
+      "claim_ids": [
+        "M09-FC-002"
+      ]
+    },
+    {
+      "lesson_id": "L03",
+      "path": "lessons/03-quorums-and-assumptions.md",
+      "claim_ids": [
+        "M09-FC-003"
+      ]
+    },
+    {
+      "lesson_id": "L04",
+      "path": "lessons/04-versions-conflicts-repair.md",
+      "claim_ids": [
+        "M09-FC-004"
+      ]
+    },
+    {
+      "lesson_id": "L05",
+      "path": "lessons/05-partitioning-and-resharding.md",
+      "claim_ids": [
+        "M09-FC-005"
+      ]
+    },
+    {
+      "lesson_id": "L06",
+      "path": "lessons/06-hot-keys-fairness-isolation.md",
+      "claim_ids": [
+        "M09-FC-006"
+      ]
+    },
+    {
+      "lesson_id": "L07",
+      "path": "lessons/07-cap-pacelc-regional-placement.md",
+      "claim_ids": [
+        "M09-FC-007"
+      ]
+    },
+    {
+      "lesson_id": "L08",
+      "path": "lessons/08-decisions-migration-ownership.md",
+      "claim_ids": [
+        "M09-FC-008"
+      ]
+    }
+  ],
+  "document_coverage": [
+    {
+      "path": "assessment/rubric.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "case-study/northstar-distributed-catalog.md",
+      "review_scope": "synthetic_fixture",
+      "claim_ids": [
+        "M09-FC-010"
+      ],
+      "review_note": "The case was reviewed for explicit synthetic boundaries, internal arithmetic, non-generalization language, and separation from the learner capstone."
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M09-FC-009",
+        "M09-FC-011"
+      ],
+      "review_note": "Explained answers were checked for causal consistency, formula provenance, and agreement with the locally taught mechanism and cited source boundary."
+    },
+    {
+      "path": "exercises/exercises.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "lab/README.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "The lab guide's commands, interfaces, bounds, and synthetic evidence limitations were checked directly against the executable implementation and its passing tests."
+    },
+    {
+      "path": "lessons/01-operation-semantics-session-guarantees.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M09-FC-001"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/02-replication-topologies-acknowledgements.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M09-FC-002"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/03-quorums-and-assumptions.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M09-FC-003"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/04-versions-conflicts-repair.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M09-FC-004"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/05-partitioning-and-resharding.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M09-FC-005"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/06-hot-keys-fairness-isolation.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M09-FC-006"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/07-cap-pacelc-regional-placement.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M09-FC-007"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "lessons/08-decisions-migration-ownership.md",
+      "review_scope": "substantive_claims",
+      "claim_ids": [
+        "M09-FC-008"
+      ],
+      "review_note": "The mechanism claim, quantitative boundaries, examples, and source section were checked; synthetic values remain explicitly non-production evidence."
+    },
+    {
+      "path": "worksheets/week-33-consistency-placement-model.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-34-replicated-kv-build.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-35-replication-failure-matrix.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    },
+    {
+      "path": "worksheets/week-36-placement-decision-defense.md",
+      "review_scope": "normative_or_assignment_only",
+      "claim_ids": [],
+      "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
+    }
+  ],
+  "formula_mappings": [
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-13: Hot-key and tenant fairness",
+      "expression_sha256": "24ba36df2c9f84e7885208d075d7f024efd2ced16884ae9dc896004e77f02abd",
+      "claim_id": "M09-FC-011"
+    },
+    {
+      "path": "exercises/answer-key.md",
+      "heading": "EX-13: Hot-key and tenant fairness",
+      "expression_sha256": "e03a5e8592be4abb9c25cf2a780eb90e2c5dca86479aa170a4490a8fe5f86c4d",
+      "claim_id": "M09-FC-011"
+    }
+  ]
+}
