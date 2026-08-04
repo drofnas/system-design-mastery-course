@@ -36,6 +36,18 @@ python3 -m network_lab analyze /tmp/transit-h2-loss.json /tmp/transit-h3-loss.js
 python3 -m unittest discover -s tests
 ```
 
+### macOS and supported Linux
+
+Run the commands above unchanged. The lab uses the host Python and OpenSSL CLI,
+creates temporary certificates, and binds only ephemeral loopback ports.
+
+### Windows through WSL2
+
+Run the same commands inside Ubuntu on WSL2 with the repository stored in the
+WSL filesystem. Python and OpenSSL must be installed inside Ubuntu. Windows
+firewall software must permit local loopback traffic; do not change the bind
+address to expose the lab. Native PowerShell is not a supported path.
+
 Output paths belong outside the repository or in learner submission directories.
 The lab never writes certificates into the repository.
 

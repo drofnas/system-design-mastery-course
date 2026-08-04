@@ -31,11 +31,35 @@ Use the Node version in `toolchains.lock.json`.
 
 ```bash
 npm ci
-npx playwright install chromium
+npx playwright install --only-shell chromium
 npm test
 python3 -m unittest discover -s tests -v
 python3 -m browser_edge_lab scenarios/f05-public-cache-key-broken.json
 ```
+
+### macOS
+
+Install only the required headless shell with
+`npx playwright install --only-shell chromium`, then run `npm test`. Automated
+tests use one worker. Perform the manual evidence in a normal macOS browser.
+
+### Supported Linux
+
+Install Chromium and its Linux dependencies with
+`npx playwright install --with-deps --only-shell chromium`, then run `npm test`.
+Perform manual checks in a normal host browser.
+
+### Windows through WSL2
+
+Run `npm ci`, `npx playwright install --with-deps --only-shell chromium`, and
+`npm test` inside Ubuntu on WSL2. Keep the repository in the WSL filesystem.
+For manual checks, serve the site from WSL loopback and open it through
+`localhost` in a normal Windows browser. Native PowerShell is not supported.
+
+The automated harness uses one worker, keeps traces only on failure, and leaves
+video and screenshots disabled by default. Manual keyboard, 200% zoom/reflow,
+JavaScript-disabled, and accessibility evidence must come from a normal host
+browser rather than the headless shell.
 
 The server binds to loopback only. `NORTHSTAR_PORT` may select the edge port;
 the origin uses the following port. Test-only fault controls use the

@@ -14,8 +14,10 @@
   },
   "browser": {
     "engine": "chromium",
+    "automated_evidence": "Playwright Chromium headless shell, one worker, traces retained only on failure; no video or screenshots by default.",
+    "manual_evidence": "A normal host browser supplies keyboard, 200% zoom/reflow, JavaScript-disabled, and accessibility checks; on WSL2 this is the Windows browser through localhost.",
     "playwright_revision": "1234",
     "actual_version": "151.0.7922.34"
   },
-  "evidence_boundary": "The deterministic Python model validates contracts. The pinned Chromium harness validates this lab on its recorded host; neither establishes universal browser or production-CDN behavior."
+  "evidence_boundary": "The deterministic Python model validates contracts. Headless automated evidence and host-browser manual evidence are distinct. The pinned Chromium harness validates this lab on its recorded host; neither establishes universal browser or production-CDN behavior."
 }
