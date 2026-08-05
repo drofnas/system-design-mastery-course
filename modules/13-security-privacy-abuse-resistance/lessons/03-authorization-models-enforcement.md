@@ -1,6 +1,6 @@
 ---
 lesson_id: L03
-title: Authorization models and enforcement
+title: "Authorization models and enforcement"
 ---
 
 # Authorization models and enforcement

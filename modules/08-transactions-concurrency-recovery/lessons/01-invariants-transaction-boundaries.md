@@ -1,4 +1,7 @@
+---
 lesson_id: L01
+title: "Invariants and Transaction Boundaries"
+---
 
 # Invariants and Transaction Boundaries
 
@@ -68,8 +71,41 @@ evaluated at the commit/write boundary against concurrent database state;
 pre-checks can become stale. 3. Coupling it enlarges contention and recovery
 scope while adding no authoritative correctness if it can be reconstructed.
 
+## Failure-mode bridge to the lab
+
+The transaction lab is easiest to understand when you begin from the invariant,
+not from the database feature. An invariant names what must remain true after
+every committed operation: one active reservation per seat, no negative balance,
+no shipment without paid authorization, no duplicate published effect. The
+transaction boundary is the smallest unit of work that can preserve that truth.
+
+The first failure mode is splitting one invariant across two commits. Each
+commit can look valid alone while the pair permits an impossible state. The
+second is putting unrelated work inside the boundary and turning a correctness
+tool into a throughput bottleneck. The third is assigning authority to a derived
+projection and then being surprised when recovery rebuilds a different answer.
+In the lab, every scenario should be read as: which state is authoritative, what
+condition must be atomically checked, and what effect must wait until the commit
+is durable?
+
+## Second worked example
+
+Consider a coupon system where a customer may redeem one first-purchase coupon.
+If the application reads "no redemption yet" and later inserts a redemption row,
+two concurrent requests can both pass the read unless the invariant is made
+atomic. A unique constraint on `(customer_id, coupon_id)` makes the rule
+enforceable. The transaction boundary should include the insert and any
+authoritative balance change. Email, analytics, and search indexing can follow
+through durable effects because they are derived from the committed fact.
+
+## Decision checklist
+
+Name the invariant, authority table, atomic read/write set, constraint, external
+effect, and replay path. If the invariant crosses boundaries, explain which
+boundary owns the commit decision.
+
 ## Sources and next work
 
 - PostgreSQL, [Constraints](https://www.postgresql.org/docs/current/ddl-constraints.html).
-- Continue with EX-01–EX-02 and Lesson 2; freeze the Week 29 map before the
+- Continue with EX-01–EX-02 and Lesson 2; freeze the transaction map before the
   completed case or answers.

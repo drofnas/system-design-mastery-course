@@ -6,9 +6,9 @@ Northstar has three regional controllers for two telescope mounts. Module 9
 left controller failover, clock assumptions, and fencing out of scope. This
 worked case adds a low-volume consensus-backed control log while leaving public
 catalog reads and multi-site scientific annotations on their existing weaker
-contracts. It contains no commerce entities or capstone answer.
+contracts. It contains no commerce entities or optional project answer.
 
-Do not read further until the learner's Week 37 commerce coordination baseline
+Do not read further until the learner's coordination baseline
 is frozen. Northstar is one defensible design, not a prescribed topology.
 
 ## Workload and failure model

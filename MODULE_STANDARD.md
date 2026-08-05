@@ -17,6 +17,10 @@ Each module must include:
 - `quiz/llm-grader-prompt.md` for optional LLM grading and remediation feedback.
 - A lab README when an executable reinforcement lab exists.
 
+Draft modules may omit the quiz package while their question banks are being
+authored. Their lessons, practice files, resources, and links still follow this
+standard and stay under validation.
+
 ## Quiz Contract
 
 Quiz banks use mixed question types:
@@ -31,7 +35,7 @@ Every question maps to at least one lesson and includes a correct answer, explan
 
 ## Optional Projects
 
-Projects are optional transfer exercises. They may use ADRs, RFCs, reports, or code, but no module requires history locks, artifact ledgers, review panels, or external validation.
+Projects are optional transfer exercises. They may use ADRs, RFCs, reports, or code, but no module requires Git-based submission freezes, formal evidence logs, external review boards, or external validation.
 
 ## Quality Bar
 

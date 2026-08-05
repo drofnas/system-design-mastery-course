@@ -1,4 +1,7 @@
+---
 lesson_id: L03
+title: "Trace Context and Causal Request Paths"
+---
 
 # Trace Context and Causal Request Paths
 
@@ -65,6 +68,38 @@ every attribute by bounded, high-cardinality, or sensitive.
    bounds.
 3. Correlation joins evidence about work. Authorization decides whether an actor
    may perform an action; trace data cannot grant that permission.
+
+## Failure-mode bridge to the lab
+
+Trace context is the lab's causal spine. A span without parentage is a timestamp
+with a name; a span with parentage shows where work entered, which dependency it
+visited, and which operation owned the wait. The point is not to produce a large
+trace. The point is to preserve enough structure to separate server work,
+dependency work, queueing, retries, and cleanup.
+
+Two failure modes are worth watching. First, high-cardinality labels can make
+the trace backend expensive or unusable, even when the local example is small.
+Second, missing propagation turns a distributed path into several unrelated
+fragments. In the lab, a correct diagnosis should be able to say whether a child
+span widened with the parent or whether the parent widened alone. That
+difference decides whether you investigate the dependency, the caller, or the
+instrumentation path itself.
+
+## Second worked example
+
+A request has a 900 ms server span and a 700 ms child span named `inventory`.
+That does not automatically mean inventory owns the incident. Check whether the
+parent started before queue wait, whether the child includes retries, and whether
+the caller held a connection while doing CPU work before issuing the dependency
+call. If retry spans appear as siblings, the caller policy may be multiplying
+work. If they appear inside the child, the dependency client may own the retry
+decision. Parentage turns a slow box into an accountable path.
+
+## Decision checklist
+
+Check root span, child span, dependency identity, retry shape, queue location,
+and missing propagation. If a span is absent, say whether the absence is evidence
+of no work or merely a gap in instrumentation.
 
 ## Sources and next work
 

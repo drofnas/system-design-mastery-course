@@ -93,7 +93,7 @@ complete standards.
 1. Use the complete supplied scenario directory; preparation selects one canonical case for each F01–F09 fault.
 2. Run `blind-prepare` with `--reveal-file` outside the bundle directory, then
    have a facilitator retain that file.
-3. Diagnose each bundle using the Week 19 worksheet and freeze it in version control.
+3. Diagnose each bundle using the network worksheet and freeze it in version control.
 4. Run `blind-reveal` with the frozen diagnosis path.
 5. Preserve the reveal record and run discriminating scenarios after reveal.
 

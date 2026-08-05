@@ -1,4 +1,7 @@
+---
 lesson_id: L04
+title: "TLS Trust and Connection Establishment"
+---
 
 # TLS Trust and Connection Establishment
 

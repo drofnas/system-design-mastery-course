@@ -1,7 +1,6 @@
 ---
 lesson_id: L02
-title: Delivery Semantics, Identities, and Exactly-Once Boundaries
-week: 41
+title: "Delivery Semantics, Identities, and Exactly-Once Boundaries"
 ---
 
 # Delivery Semantics, Identities, and Exactly-Once Boundaries

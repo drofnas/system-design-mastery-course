@@ -1,4 +1,7 @@
+---
 lesson_id: L07
+title: "Caches, Quantization, and Provider Failure"
+---
 
 # Caches, Quantization, and Provider Failure
 

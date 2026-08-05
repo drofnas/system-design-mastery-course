@@ -5,9 +5,9 @@
 Northstar coordinates public research observations across two telescopes. The
 registry owns controller certification, control windows, exposure results, and
 audit evidence. A nightly summary is derived. This case deliberately contains
-no commerce entities or flows and is not a capstone answer.
+no commerce entities or flows and is not a optional project answer.
 
-Do not continue until the learner's Week 29 commerce baseline is frozen. The
+Do not continue until the learner's transaction baseline is frozen. The
 case shows one defensible design, not a mandatory architecture.
 
 ## Workload and failure model

@@ -115,11 +115,3 @@ bounds, then canary retry ownership. Roll back extra attempts on dependency load
 late-work, or user-success regression while preserving dedup safety. Exceptions
 name owner, cap, evidence, expiry, and review. Decommission old retry defaults
 only when attempt traces show no mixed-client use.
-
-## PESD 2.0 extension answer
-
-A defensible answer covers per-tenant work and cost budgets, identity-aware quotas, provider compatibility, residency-safe fallback, and fairness across critical traffic classes. It distinguishes the
-requirement, enforcement mechanism, evidence, and owner; keeps modeled and
-measured results separate; and names the failed condition that would reverse
-the decision. Different architectures are acceptable when their invariants,
-evidence boundaries, migration, and residual risk are explicit.

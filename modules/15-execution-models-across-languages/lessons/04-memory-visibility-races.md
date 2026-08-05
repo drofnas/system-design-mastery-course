@@ -1,4 +1,7 @@
+---
 lesson_id: L04
+title: "Memory Visibility and Races"
+---
 
 # Memory Visibility and Races
 

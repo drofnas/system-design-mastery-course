@@ -1,4 +1,7 @@
+---
 lesson_id: L03
+title: "Quorums, Intersections, and Hidden Assumptions"
+---
 
 # Quorums, Intersections, and Hidden Assumptions
 

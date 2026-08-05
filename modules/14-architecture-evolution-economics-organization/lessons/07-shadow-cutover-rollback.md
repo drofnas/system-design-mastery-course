@@ -1,4 +1,7 @@
+---
 lesson_id: L07
+title: "Shadowing, Cutover, Rollback, and Decommissioning"
+---
 
 # Shadowing, Cutover, Rollback, and Decommissioning
 

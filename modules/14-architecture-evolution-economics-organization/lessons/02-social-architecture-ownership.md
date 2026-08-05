@@ -1,4 +1,7 @@
+---
 lesson_id: L02
+title: "Social Architecture, Ownership, and Cognitive Load"
+---
 
 # Social Architecture, Ownership, and Cognitive Load
 

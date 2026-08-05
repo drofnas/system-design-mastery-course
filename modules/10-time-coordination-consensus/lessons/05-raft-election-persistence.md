@@ -1,6 +1,9 @@
-# Lesson 5: Raft Leader Election and Persistent Hard State
-
+---
 lesson_id: L05
+title: "Raft Leader Election and Persistent Hard State"
+---
+
+# Raft Leader Election and Persistent Hard State
 
 ## Outcomes
 

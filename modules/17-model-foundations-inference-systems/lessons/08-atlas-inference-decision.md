@@ -1,10 +1,13 @@
+---
 lesson_id: L08
+title: "Atlas Tutorial, Architecture Decision, and Teach-Back"
+---
 
 # Atlas Tutorial, Architecture Decision, and Teach-Back
 
 ## Outcomes
 
-- Execute the full Atlas learning loop without leaking a capstone answer.
+- Execute the full Atlas learning loop without leaking a optional project answer.
 - Compare provider and deployment alternatives using shared drivers.
 - Defend ownership, cost, migration, rollback, and reversal conditions.
 
@@ -79,42 +82,3 @@ unresolved risk, owner, and due date. Live reviewers are optional.
 
 Study RES-09 and revisit all bounded sources as needed. Submit A07–A11, evaluate
 with the published rubric, and create remediation only as a separate artifact.
-
-## PESD 2.0 extension: modern constraints and ownership
-
-PESD 2.0 adds **an actual streaming tiny-transformer path with incremental KV state, token scheduling, byte-budget admission, tenant/version cache identity, bounded provider failure, profiling, and an AI System Dossier**.
-
-### Repeatable decision procedure
-
-1. Inventory the affected data, tenants, identities, providers, jurisdictions,
-   control planes, evidence owners, and cost owners before selecting a mechanism.
-2. State the invariant and the authority that may change it. Separate a claimed
-   policy from the enforcement point and from the evidence that proves execution.
-3. Freeze a prediction, implement or model the named mechanism, and record the
-   accepted evidence mode and runtime boundary.
-4. Inject one policy, isolation, recovery, or supplier failure in addition to the
-   module's mechanism failure. Preserve raw evidence before interpretation.
-5. Compare at least two options across product outcome, technical mechanism,
-   security and governance, operations and recovery, economics, ownership,
-   migration, and reversal triggers.
-
-### Non-capstone extension
-
-Apply the procedure to the module's continuing case. Add one tenant or governed
-data class, one supplier or control-plane dependency, and one deletion, recovery,
-or exit obligation. The completed case may demonstrate the method, but its
-topology, thresholds, policy choices, and answer are not defaults for Global
-Commerce.
-
-### Evidence boundary
-
-Use `derived`, `executed_deterministic`, `measured_loopback`,
-`measured_container`, `modeled_capacity`, `fixture_replay`, or
-`measured_accelerator` exactly as defined by the course. Fixture replay supports
-practice and remediation only. Modeled remote scale is not local measurement.
-Every trial records commit and input/configuration hashes, runtime and resource
-limits, clock, warm-up/repetition policy, raw outcomes, and limitations.
-
-### Source boundary
-
-Use the NIST AI RMF lifecycle as a primary anchor for inventory, monitoring, incident handling, rollback, and decommissioning.

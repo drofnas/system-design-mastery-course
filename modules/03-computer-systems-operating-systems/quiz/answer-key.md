@@ -273,7 +273,7 @@ This key covers all 100 questions for **Computer Systems and Operating Systems**
 
 **Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for save a falsifiable benchmark contract with equivalent work, machine boundaries, measurement limits, and production-transfer uncertainty..
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Intel, Optimization Reference Manual, current Volume 1 sections on front end and data access: https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html - Continue with EX-01 and EX-02, then save the Week 9 prediction.
+**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Intel, Optimization Reference Manual, current Volume 1 sections on front end and data access: https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html - Continue with EX-01 and EX-02, then save the systems prediction.
 
 **Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
 
@@ -713,7 +713,7 @@ This key covers all 100 questions for **Computer Systems and Operating Systems**
 
 **Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for save a falsifiable benchmark contract with equivalent work, machine boundaries, measurement limits, and production-transfer uncertainty..
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Intel, Optimization Reference Manual, current Volume 1 sections on front end and data access: https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html - Continue with EX-01 and EX-02, then save the Week 9 prediction.
+**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Intel, Optimization Reference Manual, current Volume 1 sections on front end and data access: https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html - Continue with EX-01 and EX-02, then save the systems prediction.
 
 **Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
 

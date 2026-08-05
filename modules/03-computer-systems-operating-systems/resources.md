@@ -28,7 +28,7 @@ task; record the substitution.
 - **URL:** https://man7.org/linux/man-pages/man2/getrusage.2.html
 - **Type/status:** maintainer interface documentation; Required
 - **Access:** free
-- **Week/time:** Week 12; 25 minutes assigned
+- **Lesson/time:** the relevant lesson; 25 minutes assigned
 - **Purpose:** Bound what process resource counters can and cannot establish.
 - **Boundary and evidence:** Read Description through maintained ru_* fields and Notes; create a counter-versus-claim table and identify one unmaintained-field risk.
 - **Local alternative:** [lessons/02-processes-scheduling-and-syscalls.md](lessons/02-processes-scheduling-and-syscalls.md)
@@ -41,7 +41,7 @@ task; record the substitution.
 - **URL:** https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c16/c16s2/c16s2v2/
 - **Type/status:** captioned lecture videos and transcripts; Required
 - **Access:** free
-- **Week/time:** Week 12; 40 minutes assigned
+- **Lesson/time:** the relevant lesson; 40 minutes assigned
 - **Purpose:** Trace address translation and distinguish translation events from storage faults.
 - **Boundary and evidence:** Watch or read the named virtual-memory segments; draw an address-translation path and classify one minor and one major fault.
 - **Local alternative:** [lessons/03-virtual-memory-allocation-and-faults.md](lessons/03-virtual-memory-allocation-and-faults.md)
@@ -54,7 +54,7 @@ task; record the substitution.
 - **URL:** https://www.man7.org/linux/man-pages/man2/fsync.2.html
 - **Type/status:** maintainer interface documentation; Required
 - **Access:** free
-- **Week/time:** Week 11; 30 minutes assigned
+- **Lesson/time:** the relevant lesson; 30 minutes assigned
 - **Purpose:** Define data, metadata, file, and directory durability boundaries.
 - **Boundary and evidence:** Read Description, Errors, and Notes for write(2) and fsync(2); draw a failure timeline and identify delayed error reporting.
 - **Local alternative:** [lessons/05-files-page-cache-and-durability.md](lessons/05-files-page-cache-and-durability.md)
@@ -67,7 +67,7 @@ task; record the substitution.
 - **URL:** https://www.kernel.org/doc/html/latest/admin-guide/cgroup-v2.html
 - **Type/status:** kernel interface documentation; Required
 - **Access:** free
-- **Week/time:** Week 11; 45 minutes assigned
+- **Lesson/time:** the relevant lesson; 45 minutes assigned
 - **Purpose:** Connect resource constraints to controller evidence and outcomes.
 - **Boundary and evidence:** Read Introduction plus CPU, Memory, and IO controller sections; map each configured limit to an observable and failure outcome.
 - **Local alternative:** [lessons/07-containers-quotas-and-limits.md](lessons/07-containers-quotas-and-limits.md)
@@ -80,7 +80,7 @@ task; record the substitution.
 - **URL:** https://engineering.fb.com/2015/03/10/production-engineering/serving-facebook-multifeed-efficiency-performance-gains-through-redesign/
 - **Type/status:** first-person production case study; Required
 - **Access:** free
-- **Week/time:** Week 11; 30 minutes assigned
+- **Lesson/time:** the relevant lesson; 30 minutes assigned
 - **Purpose:** Trace heterogeneous work, cache contention, switches, resource ratios, and redesign evidence.
 - **Boundary and evidence:** Read the complete article; reconstruct its driver-to-evidence chain and name one alternative explanation.
 - **Local alternative:** [lessons/08-causal-diagnosis-and-decisions.md](lessons/08-causal-diagnosis-and-decisions.md)
@@ -93,7 +93,7 @@ task; record the substitution.
 - **URL:** https://www.usenix.org/conference/srecon24emea/presentation/lawall
 - **Type/status:** conference video and slides; Required
 - **Access:** free
-- **Week/time:** Week 12; 40 minutes assigned
+- **Lesson/time:** the relevant lesson; 40 minutes assigned
 - **Purpose:** Form scheduler hypotheses from observable traces and alternatives.
 - **Boundary and evidence:** Watch the presentation or use all slides with the local written lesson; record one hypothesis, predicted trace, and competing explanation.
 - **Local alternative:** [lessons/02-processes-scheduling-and-syscalls.md](lessons/02-processes-scheduling-and-syscalls.md)
@@ -106,7 +106,7 @@ task; record the substitution.
 - **URL:** https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html
 - **Type/status:** processor-vendor reference; Optional enrichment
 - **Access:** free
-- **Week/time:** Week 15; 40 minutes optional
+- **Lesson/time:** the relevant lesson; 40 minutes optional
 - **Purpose:** Compare a vendor-specific optimization model with portable reasoning.
 - **Boundary and evidence:** Optional: read only the front-end, memory hierarchy/data access, and multithreading sections; label what does not transfer to ARM.
 - **Local alternative:** [lessons/01-benchmark-contracts-and-locality.md](lessons/01-benchmark-contracts-and-locality.md)
@@ -119,7 +119,7 @@ task; record the substitution.
 - **URL:** https://www.kernel.org/doc/html/latest/block/writeback_cache_control.html
 - **Type/status:** maintainer documentation; Optional enrichment
 - **Access:** free
-- **Week/time:** Week 15; 30 minutes optional
+- **Lesson/time:** the relevant lesson; 30 minutes optional
 - **Purpose:** Bound device write-cache acknowledgement and flush behavior when interpreting buffered I/O evidence.
 - **Boundary and evidence:** Read the complete writeback-cache control page; identify the volatile-cache, flush, and force-unit-access assumptions that bound one lab result.
 - **Local alternative:** [lessons/06-device-queues-and-io-latency.md](lessons/06-device-queues-and-io-latency.md)

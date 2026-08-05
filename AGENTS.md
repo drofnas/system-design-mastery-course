@@ -11,7 +11,7 @@ Before changing course content, read:
 3. The target module's `README.md` and `module.json`
 4. Any lesson, exercise, lab, quiz, or resource file affected by the change
 
-Do not reintroduce mandatory review gates, history locks, artifact ledgers, calibrated evaluator fixtures, external review panels, or title/credential claims.
+Do not reintroduce mandatory review gates, Git-based submission freezes, formal evidence logs, calibrated assessment fixtures, external external review boards, or title/credential claims.
 
 ## Module Shape
 

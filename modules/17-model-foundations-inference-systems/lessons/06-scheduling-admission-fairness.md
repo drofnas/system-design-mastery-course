@@ -1,4 +1,7 @@
+---
 lesson_id: L06
+title: "Scheduling, Batching, Admission, and Fairness"
+---
 
 # Scheduling, Batching, Admission, and Fairness
 

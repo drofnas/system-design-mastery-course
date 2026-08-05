@@ -1,10 +1,9 @@
 ---
 lesson_id: L07
-week: 3
-estimated_hours: 1.5
+title: "Failure Models and Adversarial Review"
 ---
 
-# Lesson 7: Failure Models and Adversarial Review
+# Failure Models and Adversarial Review
 
 ## Outcomes
 
@@ -18,7 +17,7 @@ After this lesson, you can:
 
 ## Prerequisites
 
-Complete Lessons 1–6 and freeze the Week 1 baseline. Read the assigned AWS
+Complete Lessons 1–6 and freeze the initial baseline. Read the assigned AWS
 Builder Center article in the [resource guide](../resources.md).
 
 ## Reliability claims are conditional

@@ -1,6 +1,6 @@
 ---
 lesson_id: L05
-title: Secrets, keys, certificates, and encryption
+title: "Secrets, keys, certificates, and encryption"
 ---
 
 # Secrets, keys, certificates, and encryption

@@ -1,10 +1,9 @@
 ---
 lesson_id: L01
 title: "Workload and Useful Work"
-week: 5
 ---
 
-# Lesson 1: Workload and Useful Work
+# Workload and Useful Work
 
 ## Outcomes
 

@@ -1,7 +1,7 @@
 # Atlas Museum Exhibit Label Service: Completed Case
 
-Open this only after freezing A01. It is a worked non-capstone case, not a
-canonical architecture for the Global Commerce Platform.
+Open this only after freezing A01. It is a worked non-optional project case, not a
+canonical architecture for the the external commerce example.
 
 ## Context and workload
 
@@ -64,5 +64,5 @@ objective without reserving more than 70% of capacity away from the other.
 
 A separate batch deployment or managed provider can be defensible when its
 measurements, data boundary, capacity, cost, compatibility, and exit plan are
-explicit. Copying Atlas thresholds or components into the capstone without
+explicit. Copying Atlas thresholds or components into the optional project without
 independent workload evidence is not defensible.

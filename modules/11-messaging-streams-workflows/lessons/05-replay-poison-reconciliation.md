@@ -1,7 +1,6 @@
 ---
 lesson_id: L05
-title: Replay, Poison Records, and Reconciliation
-week: 42
+title: "Replay, Poison Records, and Reconciliation"
 ---
 
 # Replay, Poison Records, and Reconciliation
@@ -74,5 +73,5 @@ owner. Classify one poison record and one reconciliation diff.
 
 ## Sources and next work
 
-Complete EX-09–EX-10 and the replay/reconciliation sections of the Week 42
+Complete EX-09–EX-10 and the replay/reconciliation sections of the workflow practice
 worksheet before opening failure fixtures.

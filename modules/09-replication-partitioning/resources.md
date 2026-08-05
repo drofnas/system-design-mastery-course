@@ -28,7 +28,7 @@ task; record the substitution.
 - **URL:** https://www.amazon.science/publications/dynamo-amazons-highly-available-key-value-store
 - **Type/status:** original systems paper; Required
 - **Access:** free
-- **Week/time:** Week 45; 110 minutes assigned
+- **Lesson/time:** the relevant lesson; 110 minutes assigned
 - **Purpose:** Connect workload, N/R/W, versioning, conflict handling, consistent hashing, hinted handoff, repair, and production trade-offs.
 - **Boundary and evidence:** Read Sections 2.2, 4.2–4.7, 6.3, and 6.5; produce an assumption ledger and map each mechanism to an application obligation.
 - **Local alternative:** [lessons/02-replication-topologies-acknowledgements.md](lessons/02-replication-topologies-acknowledgements.md)
@@ -41,7 +41,7 @@ task; record the substitution.
 - **URL:** https://cassandra.apache.org/doc/latest/cassandra/architecture/dynamo.html
 - **Type/status:** maintainer documentation; Required
 - **Access:** free
-- **Week/time:** Week 46; 70 minutes assigned
+- **Lesson/time:** the relevant lesson; 70 minutes assigned
 - **Purpose:** Connect multi-primary versioned replication to concrete hints, read repair, Merkle-tree anti-entropy, and repair ownership.
 - **Boundary and evidence:** Read the Dynamo architecture page and linked Repair overview; build a foreground/background repair table with failure and cost boundaries.
 - **Local alternative:** [lessons/04-versions-conflicts-repair.md](lessons/04-versions-conflicts-repair.md)
@@ -54,7 +54,7 @@ task; record the substitution.
 - **URL:** https://engineering.fb.com/2020/08/24/production-engineering/scaling-services-with-shard-manager/
 - **Type/status:** first-person engineering case; Required
 - **Access:** free
-- **Week/time:** Week 45; 40 minutes assigned
+- **Lesson/time:** the relevant lesson; 40 minutes assigned
 - **Purpose:** Relate shard ownership, replicas, hotspots, rebalancing, and operating responsibility in production.
 - **Boundary and evidence:** Read the complete article; identify the state owner, placement controller, load signals, failure assumptions, and one migration risk.
 - **Local alternative:** [lessons/06-hot-keys-fairness-isolation.md](lessons/06-hot-keys-fairness-isolation.md)
@@ -67,7 +67,7 @@ task; record the substitution.
 - **URL:** https://www.usenix.org/conference/atc22/presentation/elhemali
 - **Type/status:** open paper with optional presentation; Required
 - **Access:** free
-- **Week/time:** Week 46; 65 minutes assigned
+- **Lesson/time:** the relevant lesson; 65 minutes assigned
 - **Purpose:** Study operated responses to traffic imbalance, fairness, monitoring, and automated placement at large scale.
 - **Boundary and evidence:** Read the open paper; optionally watch the presentation. Extract one fairness mechanism, one customer-visible metric, one automation risk, and one owner.
 - **Local alternative:** [lessons/08-decisions-migration-ownership.md](lessons/08-decisions-migration-ownership.md)
@@ -80,7 +80,7 @@ task; record the substitution.
 - **URL:** https://classes.cs.uchicago.edu/archive/2026/spring/23380-1/papers/terry_sessionguarantees.pdf
 - **Type/status:** original research paper; Optional enrichment
 - **Access:** free
-- **Week/time:** Week 49; 55 minutes optional
+- **Lesson/time:** the relevant lesson; 55 minutes optional
 - **Purpose:** Define read-your-writes, monotonic reads/writes, and writes-follow-reads as session contracts.
 - **Boundary and evidence:** Read Sections 1–4; draw one admitted history and one rejection/routing rule for each guarantee.
 - **Local alternative:** [lessons/01-operation-semantics-session-guarantees.md](lessons/01-operation-semantics-session-guarantees.md)
@@ -93,7 +93,7 @@ task; record the substitution.
 - **URL:** https://groups.csail.mit.edu/tds/papers/Gilbert/Brewer6.pdf
 - **Type/status:** original proof; Optional enrichment
 - **Access:** free
-- **Week/time:** Week 49; 45 minutes optional
+- **Lesson/time:** the relevant lesson; 45 minutes optional
 - **Purpose:** Scope consistency, availability, and partition behavior to an explicit asynchronous model.
 - **Boundary and evidence:** Read Sections 1–4; write the theorem's definitions and explain which production claims they do not imply.
 - **Local alternative:** [lessons/07-cap-pacelc-regional-placement.md](lessons/07-cap-pacelc-regional-placement.md)
@@ -106,7 +106,7 @@ task; record the substitution.
 - **URL:** https://www.cs.umd.edu/~abadi/papers/abadi-pacelc.pdf
 - **Type/status:** research perspective; Optional enrichment
 - **Access:** free
-- **Week/time:** Week 49; 45 minutes optional
+- **Lesson/time:** the relevant lesson; 45 minutes optional
 - **Purpose:** Add the normal-operation latency/consistency decision omitted by CAP-only labels.
 - **Boundary and evidence:** Read the complete article; write separate partition and normal-operation choices for two Northstar operations.
 - **Local alternative:** [lessons/07-cap-pacelc-regional-placement.md](lessons/07-cap-pacelc-regional-placement.md)

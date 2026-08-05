@@ -6,7 +6,7 @@ Transit Signal receives archived vehicle-position events after an upstream
 outage. A replay worker rebuilds per-route arrival state and periodically writes
 a checkpoint so operators can restart without replaying the entire archive.
 
-This is a teaching system, not the commerce capstone. It favors observable
+This is a teaching system, not the external commerce example. It favors observable
 mechanisms over feature completeness.
 
 ## Workload and invariants

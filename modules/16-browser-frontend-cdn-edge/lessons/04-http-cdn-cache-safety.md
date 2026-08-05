@@ -1,4 +1,7 @@
+---
 lesson_id: L04
+title: "HTTP and CDN Cache Safety"
+---
 
 # HTTP and CDN Cache Safety
 

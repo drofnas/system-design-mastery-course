@@ -19,7 +19,7 @@ This module is part of the solo Computer Science and System Design Mastery path.
 3. Implement and test fixed workers, explicit bounded waiting, fan-out, downstream admission, logical identities, and timing instrumentation.
 4. Design an open-loop latency experiment that exposes coordinated omission, generator limits, rejection, and uncertainty.
 5. Predict and measure fan-out tail amplification, downstream branch demand, and correlation limits.
-6. Locate saturation from useful throughput, latency, queue, rejection, concurrency, and generator evidence across the required load sweep.
+6. Locate saturation from useful throughput, latency, queue, rejection, concurrency, and generator evidence across the load sweep.
 7. Keep overload, priority, retries, downstream work, and recovery bounded under burst and dependency failure.
 8. Defend a workload-scoped safe operating region, actionable scaling signal, overload policy, failover reserve, ownership model, and cost per useful request.
 

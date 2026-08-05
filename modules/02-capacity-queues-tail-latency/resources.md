@@ -28,7 +28,7 @@ task; record the substitution.
 - **URL:** https://ocw.mit.edu/courses/1-203j-logistical-and-transportation-planning-methods-fall-2006/resources/lec5/
 - **Type/status:** authoritative graduate lecture notes; Required
 - **Access:** free
-- **Week/time:** Week 7; 35 minutes assigned
+- **Lesson/time:** the relevant lesson; 35 minutes assigned
 - **Purpose:** Distinguish Little's Law from a full queueing prediction.
 - **Boundary and evidence:** Study queue terminology, Little's Law, dynamic behavior, and strengths/weaknesses; skip Markov derivations. Explain one invalid use and calculate one boundary two ways.
 - **Local alternative:** [lessons/02-littles-law-and-saturation.md](lessons/02-littles-law-and-saturation.md)
@@ -41,7 +41,7 @@ task; record the substitution.
 - **URL:** https://research.google/pubs/the-tail-at-scale/
 - **Type/status:** original research article; Required
 - **Access:** free
-- **Week/time:** Week 7; 40 minutes assigned
+- **Lesson/time:** the relevant lesson; 40 minutes assigned
 - **Purpose:** Connect branch variance and fan-out to user-journey latency.
 - **Boundary and evidence:** Read the complete article. Choose one tail technique and state its extra work, correctness assumption, and rejection condition.
 - **Local alternative:** [lessons/04-fanout-and-tail-amplification.md](lessons/04-fanout-and-tail-amplification.md)
@@ -54,7 +54,7 @@ task; record the substitution.
 - **URL:** https://sre.google/sre-book/addressing-cascading-failures/
 - **Type/status:** practitioner handbook chapter; Required
 - **Access:** free
-- **Week/time:** Week 6; 55 minutes assigned
+- **Lesson/time:** the relevant lesson; 55 minutes assigned
 - **Purpose:** Relate finite resources and retry feedback to overload controls.
 - **Boundary and evidence:** Read Resource Exhaustion, Queue Management, Load Shedding and Graceful Degradation, and Retries. Draw one retry feedback loop and its earliest control.
 - **Local alternative:** [lessons/05-bounded-overload-control.md](lessons/05-bounded-overload-control.md)
@@ -67,7 +67,7 @@ task; record the substitution.
 - **URL:** https://aws.amazon.com/builders-library/avoiding-insurmountable-queue-backlogs/
 - **Type/status:** first-person engineering case; Required
 - **Access:** free
-- **Week/time:** Week 6; 35 minutes assigned
+- **Lesson/time:** the relevant lesson; 35 minutes assigned
 - **Purpose:** Treat backlog recovery as capacity work with a clearance objective.
 - **Boundary and evidence:** Read the complete article. Calculate net drain and clearance for one backlog and identify the fragile assumption.
 - **Local alternative:** [lessons/07-failover-headroom-and-unit-cost.md](lessons/07-failover-headroom-and-unit-cost.md)
@@ -80,7 +80,7 @@ task; record the substitution.
 - **URL:** https://github.com/HdrHistogram/HdrHistogram
 - **Type/status:** maintainer documentation; Required
 - **Access:** free
-- **Week/time:** Week 6; 25 minutes assigned
+- **Lesson/time:** the relevant lesson; 25 minutes assigned
 - **Purpose:** Understand coordinated omission and corrected recording.
 - **Boundary and evidence:** Read the overview and Corrected vs. Raw value recording calls. Describe missing arrivals under a ten-second closed-loop stall.
 - **Local alternative:** [lessons/03-latency-measurement.md](lessons/03-latency-measurement.md)
@@ -93,7 +93,7 @@ task; record the substitution.
 - **URL:** https://www.usenix.org/conference/srecon19asia/presentation/plenz
 - **Type/status:** conference video and slides; Required
 - **Access:** free
-- **Week/time:** Week 7; 30 minutes assigned
+- **Lesson/time:** the relevant lesson; 30 minutes assigned
 - **Purpose:** Build intuition for utilization and waiting-time distributions.
 - **Boundary and evidence:** Watch the complete presentation or read all slides with speaker notes. Explain why run at 80% is not a general policy.
 - **Local alternative:** [lessons/07-failover-headroom-and-unit-cost.md](lessons/07-failover-headroom-and-unit-cost.md)
@@ -106,7 +106,7 @@ task; record the substitution.
 - **URL:** https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/
 - **Type/status:** practitioner article; Optional enrichment
 - **Access:** free
-- **Week/time:** Week 6; 35 minutes optional
+- **Lesson/time:** the relevant lesson; 35 minutes optional
 - **Purpose:** Extend the bounded retry model toward Module 6.
 - **Boundary and evidence:** Optional: read the complete article and record one timeout failure and one question for Module 6.
 - **Local alternative:** [lessons/06-retries-and-downstream-protection.md](lessons/06-retries-and-downstream-protection.md)

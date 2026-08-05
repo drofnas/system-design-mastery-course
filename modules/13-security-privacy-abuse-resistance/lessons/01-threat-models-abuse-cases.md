@@ -1,6 +1,6 @@
 ---
 lesson_id: L01
-title: Threat models, trust boundaries, and abuse cases
+title: "Threat models, trust boundaries, and abuse cases"
 ---
 
 # Threat models, trust boundaries, and abuse cases
@@ -102,4 +102,4 @@ PEP, negative test, detective evidence, recovery action, owner, and review date.
 - [OWASP Threat Modeling Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html)
 - [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/)
 
-Complete EX-01 and EX-02, then freeze the Week 49 model before opening the case.
+Complete EX-01 and EX-02, then freeze the threat model before opening the case.

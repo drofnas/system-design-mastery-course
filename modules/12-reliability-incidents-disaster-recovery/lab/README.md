@@ -1,6 +1,6 @@
 # Reliability, Incidents, and Disaster Recovery Lab
 
-PESD 2.0 reuses the [shared three-node process/storage/fault boundary](../../../shared-labs/three-node-cluster/README.md)
+This lab reuses the [shared three-node process/storage/fault boundary](../../../shared-labs/three-node-cluster/README.md)
 for Modules 9–12. Recovery trials must preserve isolated node storage and route
 delay, drop, and reorder through the unprivileged proxy.
 

@@ -1,6 +1,6 @@
 # Replication and Partitioning Lab
 
-PESD 2.0 reuses the [shared three-node process/storage/fault boundary](../../../shared-labs/three-node-cluster/README.md)
+This lab reuses the [shared three-node process/storage/fault boundary](../../../shared-labs/three-node-cluster/README.md)
 for Modules 9–12. Connect this module's learner replication mechanism to that
 proxy; fixture replay alone is not independent Build or Break evidence.
 

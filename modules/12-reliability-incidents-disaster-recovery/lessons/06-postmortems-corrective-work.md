@@ -1,7 +1,6 @@
 ---
 lesson_id: L06
-title: Postmortems and Corrective Work
-week: 47
+title: "Postmortems and Corrective Work"
 ---
 
 # Postmortems and Corrective Work

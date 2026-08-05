@@ -1,6 +1,6 @@
 ---
 lesson_id: L05
-title: Bulkheads, Pools, Health, and Bounded Fan-Out
+title: "Bulkheads, Pools, Health, and Bounded Fan-Out"
 ---
 
 # Bulkheads, Pools, Health, and Bounded Fan-Out

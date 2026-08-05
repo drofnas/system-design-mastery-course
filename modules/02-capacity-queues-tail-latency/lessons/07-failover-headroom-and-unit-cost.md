@@ -1,10 +1,9 @@
 ---
 lesson_id: L07
 title: "Failover Headroom and Unit Cost"
-week: 7
 ---
 
-# Lesson 7: Failover Headroom and Unit Cost
+# Failover Headroom and Unit Cost
 
 ## Outcomes
 
@@ -141,4 +140,4 @@ without shedding new work or adding recovery supply.
 - David Yanacek, [Avoiding Insurmountable Queue Backlogs](https://aws.amazon.com/builders-library/avoiding-insurmountable-queue-backlogs/)
 - Julius Plenz, [How to Trade off Server Utilization and Tail Latency](https://www.usenix.org/conference/srecon19asia/presentation/plenz)
 
-Complete EX-10 and EX-11 during the required sweep.
+Complete EX-10 and EX-11 during the sensitivity sweep.

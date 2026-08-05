@@ -1,4 +1,7 @@
+---
 lesson_id: L02
+title: "Tokens, Embeddings, and Attention"
+---
 
 # Tokens, Embeddings, and Attention
 

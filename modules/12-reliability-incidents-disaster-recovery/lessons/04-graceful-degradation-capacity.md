@@ -1,7 +1,6 @@
 ---
 lesson_id: L04
-title: Graceful Degradation and Degraded Capacity
-week: 46
+title: "Graceful Degradation and Degraded Capacity"
 ---
 
 # Graceful Degradation and Degraded Capacity

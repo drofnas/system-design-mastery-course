@@ -1,7 +1,6 @@
 ---
 lesson_id: L07
-title: Event Time, Watermarks, Lag, and Bounded Recovery
-week: 43
+title: "Event Time, Watermarks, Lag, and Bounded Recovery"
 ---
 
 # Event Time, Watermarks, Lag, and Bounded Recovery

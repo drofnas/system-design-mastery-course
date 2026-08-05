@@ -1,7 +1,6 @@
 ---
 lesson_id: L03
-title: Burn Rates and Actionable Alerting
-week: 45
+title: "Burn Rates and Actionable Alerting"
 ---
 
 # Burn Rates and Actionable Alerting

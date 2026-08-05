@@ -1,6 +1,6 @@
 ---
 lesson_id: L03
-title: Retry Classification, Budgets, Backoff, and Jitter
+title: "Retry Classification, Budgets, Backoff, and Jitter"
 ---
 
 # Retry Classification, Budgets, Backoff, and Jitter

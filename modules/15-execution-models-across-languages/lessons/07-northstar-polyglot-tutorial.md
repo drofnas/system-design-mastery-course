@@ -1,4 +1,7 @@
+---
 lesson_id: L07
+title: "Northstar Polyglot Fan-out Tutorial"
+---
 
 # Northstar Polyglot Fan-out Tutorial
 

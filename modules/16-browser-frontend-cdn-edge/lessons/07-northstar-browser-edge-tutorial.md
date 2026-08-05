@@ -1,4 +1,7 @@
+---
 lesson_id: L07
+title: "Northstar Browser-Edge Tutorial"
+---
 
 # Northstar Browser-Edge Tutorial
 

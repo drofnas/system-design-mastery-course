@@ -1,4 +1,5 @@
 {
+  "$schema": "../../../schemas/quiz-bank.schema.json",
   "module_id": "M02",
   "title": "Capacity, Queues, and Tail Latency",
   "questions": [
@@ -36,12 +37,12 @@
       "difficulty": "application",
       "tags": [
         "capacity-queues-and-tail-latency",
-        "little\u2019s-law-and-saturation",
+        "little’s-law-and-saturation",
         "application"
       ],
-      "prompt": "In 3-5 sentences, explain how 'Little\u2019s Law and Saturation' supports this outcome: Calculate concurrency, per-resource service demand, nominal capacity, and failover exposure using consistent boundaries.",
-      "correct_answer": "A strong answer defines the mechanism from 'Little\u2019s Law and Saturation', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "For a stable long-run boundary: text L = \u03bbW L is average work in the boundary, \u03bb is the rate that enters and eventually leaves that boundary, and W is average time in it.",
+      "prompt": "In 3-5 sentences, explain how 'Little’s Law and Saturation' supports this outcome: Calculate concurrency, per-resource service demand, nominal capacity, and failover exposure using consistent boundaries.",
+      "correct_answer": "A strong answer defines the mechanism from 'Little’s Law and Saturation', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "For a stable long-run boundary: text L = λW L is average work in the boundary, λ is the rate that enters and eventually leaves that boundary, and W is average time in it.",
       "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
     },
     {
@@ -186,10 +187,10 @@
       "difficulty": "synthesis",
       "tags": [
         "capacity-queues-and-tail-latency",
-        "little\u2019s-law-and-saturation",
+        "little’s-law-and-saturation",
         "synthesis"
       ],
-      "prompt": "You must make a design choice involving 'Little\u2019s Law and Saturation'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "prompt": "You must make a design choice involving 'Little’s Law and Saturation'. What tradeoff would you document, and what evidence would make you reverse the choice?",
       "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for calculate concurrency, per-resource service demand, nominal capacity, and failover exposure using consistent boundaries..",
       "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - MIT OpenCourseWare, Queueing Systems lecture noteshttps://ocw.mit.edu/courses/1-203j-logistical-and-transportation-planning-methods-fall-2006/resources/lec5/ - Julius Plenz, How to Trade off Server Utilization and Tail Latencyhttps://www.usenix.org/conferenc",
       "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
@@ -233,7 +234,7 @@
       ],
       "prompt": "In 3-5 sentences, explain how 'Fan-out and Tail Amplification' supports this outcome: Design an open-loop latency experiment that exposes coordinated omission, generator limits, rejection, and uncertainty.",
       "correct_answer": "A strong answer defines the mechanism from 'Fan-out and Tail Amplification', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "If one branch completes within threshold t with probability Ft, and n parallel branches are independent, a request that waits for all branches completes within t with probability: text Pmax branch \u2264 t = Ft^n Pany branch t = 1 - Ft^n For a branch-tail probabili",
+      "explanation": "If one branch completes within threshold t with probability Ft, and n parallel branches are independent, a request that waits for all branches completes within t with probability: text Pmax branch ≤ t = Ft^n Pany branch t = 1 - Ft^n For a branch-tail probabili",
       "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
     },
     {
@@ -342,12 +343,12 @@
       "difficulty": "synthesis",
       "tags": [
         "capacity-queues-and-tail-latency",
-        "little\u2019s-law-and-saturation",
+        "little’s-law-and-saturation",
         "synthesis"
       ],
-      "prompt": "For 'Little\u2019s Law and Saturation', what quantities, units, or thresholds would you calculate before trusting a design claim about: Calculate concurrency, per-resource service demand, nominal capacity, and failover exposure using consistent boundaries.",
+      "prompt": "For 'Little’s Law and Saturation', what quantities, units, or thresholds would you calculate before trusting a design claim about: Calculate concurrency, per-resource service demand, nominal capacity, and failover exposure using consistent boundaries.",
       "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. You can apply Little\u2019s Law to consistent boundaries, calculate service-demand limits, distinguish utilization from latency, and state the limits of the model.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. You can apply Little’s Law to consistent boundaries, calculate service-demand limits, distinguish utilization from latency, and state the limits of the model.",
       "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
     },
     {
@@ -383,7 +384,7 @@
       ],
       "prompt": "You must make a design choice involving 'Fan-out and Tail Amplification'. What tradeoff would you document, and what evidence would make you reverse the choice?",
       "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for design an open-loop latency experiment that exposes coordinated omission, generator limits, rejection, and uncertainty..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Jeffrey Dean and Luiz Andr\u00e9 Barroso, The Tail at Scalehttps://research.google/pubs/the-tail-at-scale/ Complete EX-06 and run the Transit baseline before Lesson 5.",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Jeffrey Dean and Luiz André Barroso, The Tail at Scalehttps://research.google/pubs/the-tail-at-scale/ Complete EX-06 and run the Transit baseline before Lesson 5.",
       "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
     },
     {
@@ -492,10 +493,10 @@
       "difficulty": "recall",
       "tags": [
         "capacity-queues-and-tail-latency",
-        "little\u2019s-law-and-saturation",
+        "little’s-law-and-saturation",
         "recall"
       ],
-      "prompt": "Which approach best applies 'Little\u2019s Law and Saturation' in Capacity, Queues, and Tail Latency?",
+      "prompt": "Which approach best applies 'Little’s Law and Saturation' in Capacity, Queues, and Tail Latency?",
       "choices": [
         "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate concurrency, per-resource service demand, nominal capacity, and failover exposure using consistent boundaries.",
         "Choose the most familiar technology first, then justify it with broad labels.",
@@ -503,7 +504,7 @@
         "Treat a successful local run as proof that all production conditions are covered."
       ],
       "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate concurrency, per-resource service demand, nominal capacity, and failover exposure using consistent boundaries.",
-      "explanation": "For a stable long-run boundary: text L = \u03bbW L is average work in the boundary, \u03bb is the rate that enters and eventually leaves that boundary, and W is average time in it. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "explanation": "For a stable long-run boundary: text L = λW L is average work in the boundary, λ is the rate that enters and eventually leaves that boundary, and W is average time in it. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
       "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
     },
     {
@@ -648,10 +649,10 @@
       "difficulty": "application",
       "tags": [
         "capacity-queues-and-tail-latency",
-        "little\u2019s-law-and-saturation",
+        "little’s-law-and-saturation",
         "application"
       ],
-      "prompt": "A learner applies 'Little\u2019s Law and Saturation' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "prompt": "A learner applies 'Little’s Law and Saturation' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
       "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Combine different boundaries:** server concurrency with client end-to-end",
       "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
       "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
@@ -695,7 +696,7 @@
         "Treat a successful local run as proof that all production conditions are covered."
       ],
       "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to design an open-loop latency experiment that exposes coordinated omission, generator limits, rejection, and uncertainty.",
-      "explanation": "If one branch completes within threshold t with probability Ft, and n parallel branches are independent, a request that waits for all branches completes within t with probability: text Pmax branch \u2264 t = Ft^n Pany branch t = 1 - Ft^n For a branch-tail probabili The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "explanation": "If one branch completes within threshold t with probability Ft, and n parallel branches are independent, a request that waits for all branches completes within t with probability: text Pmax branch ≤ t = Ft^n Pany branch t = 1 - Ft^n For a branch-tail probabili The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
       "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
     },
     {
@@ -804,12 +805,12 @@
       "difficulty": "application",
       "tags": [
         "capacity-queues-and-tail-latency",
-        "little\u2019s-law-and-saturation",
+        "little’s-law-and-saturation",
         "application"
       ],
-      "prompt": "In 3-5 sentences, explain how 'Little\u2019s Law and Saturation' supports this outcome: Calculate concurrency, per-resource service demand, nominal capacity, and failover exposure using consistent boundaries.",
-      "correct_answer": "A strong answer defines the mechanism from 'Little\u2019s Law and Saturation', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "For a stable long-run boundary: text L = \u03bbW L is average work in the boundary, \u03bb is the rate that enters and eventually leaves that boundary, and W is average time in it.",
+      "prompt": "In 3-5 sentences, explain how 'Little’s Law and Saturation' supports this outcome: Calculate concurrency, per-resource service demand, nominal capacity, and failover exposure using consistent boundaries.",
+      "correct_answer": "A strong answer defines the mechanism from 'Little’s Law and Saturation', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "For a stable long-run boundary: text L = λW L is average work in the boundary, λ is the rate that enters and eventually leaves that boundary, and W is average time in it.",
       "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
     },
     {
@@ -954,10 +955,10 @@
       "difficulty": "synthesis",
       "tags": [
         "capacity-queues-and-tail-latency",
-        "little\u2019s-law-and-saturation",
+        "little’s-law-and-saturation",
         "synthesis"
       ],
-      "prompt": "You must make a design choice involving 'Little\u2019s Law and Saturation'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "prompt": "You must make a design choice involving 'Little’s Law and Saturation'. What tradeoff would you document, and what evidence would make you reverse the choice?",
       "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for calculate concurrency, per-resource service demand, nominal capacity, and failover exposure using consistent boundaries..",
       "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - MIT OpenCourseWare, Queueing Systems lecture noteshttps://ocw.mit.edu/courses/1-203j-logistical-and-transportation-planning-methods-fall-2006/resources/lec5/ - Julius Plenz, How to Trade off Server Utilization and Tail Latencyhttps://www.usenix.org/conferenc",
       "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
@@ -1001,7 +1002,7 @@
       ],
       "prompt": "In 3-5 sentences, explain how 'Fan-out and Tail Amplification' supports this outcome: Design an open-loop latency experiment that exposes coordinated omission, generator limits, rejection, and uncertainty.",
       "correct_answer": "A strong answer defines the mechanism from 'Fan-out and Tail Amplification', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "If one branch completes within threshold t with probability Ft, and n parallel branches are independent, a request that waits for all branches completes within t with probability: text Pmax branch \u2264 t = Ft^n Pany branch t = 1 - Ft^n For a branch-tail probabili",
+      "explanation": "If one branch completes within threshold t with probability Ft, and n parallel branches are independent, a request that waits for all branches completes within t with probability: text Pmax branch ≤ t = Ft^n Pany branch t = 1 - Ft^n For a branch-tail probabili",
       "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
     },
     {
@@ -1110,12 +1111,12 @@
       "difficulty": "synthesis",
       "tags": [
         "capacity-queues-and-tail-latency",
-        "little\u2019s-law-and-saturation",
+        "little’s-law-and-saturation",
         "synthesis"
       ],
-      "prompt": "For 'Little\u2019s Law and Saturation', what quantities, units, or thresholds would you calculate before trusting a design claim about: Calculate concurrency, per-resource service demand, nominal capacity, and failover exposure using consistent boundaries.",
+      "prompt": "For 'Little’s Law and Saturation', what quantities, units, or thresholds would you calculate before trusting a design claim about: Calculate concurrency, per-resource service demand, nominal capacity, and failover exposure using consistent boundaries.",
       "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. You can apply Little\u2019s Law to consistent boundaries, calculate service-demand limits, distinguish utilization from latency, and state the limits of the model.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. You can apply Little’s Law to consistent boundaries, calculate service-demand limits, distinguish utilization from latency, and state the limits of the model.",
       "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
     },
     {
@@ -1151,7 +1152,7 @@
       ],
       "prompt": "You must make a design choice involving 'Fan-out and Tail Amplification'. What tradeoff would you document, and what evidence would make you reverse the choice?",
       "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for design an open-loop latency experiment that exposes coordinated omission, generator limits, rejection, and uncertainty..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Jeffrey Dean and Luiz Andr\u00e9 Barroso, The Tail at Scalehttps://research.google/pubs/the-tail-at-scale/ Complete EX-06 and run the Transit baseline before Lesson 5.",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Jeffrey Dean and Luiz André Barroso, The Tail at Scalehttps://research.google/pubs/the-tail-at-scale/ Complete EX-06 and run the Transit baseline before Lesson 5.",
       "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
     },
     {
@@ -1260,10 +1261,10 @@
       "difficulty": "recall",
       "tags": [
         "capacity-queues-and-tail-latency",
-        "little\u2019s-law-and-saturation",
+        "little’s-law-and-saturation",
         "recall"
       ],
-      "prompt": "Which approach best applies 'Little\u2019s Law and Saturation' in Capacity, Queues, and Tail Latency?",
+      "prompt": "Which approach best applies 'Little’s Law and Saturation' in Capacity, Queues, and Tail Latency?",
       "choices": [
         "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate concurrency, per-resource service demand, nominal capacity, and failover exposure using consistent boundaries.",
         "Choose the most familiar technology first, then justify it with broad labels.",
@@ -1271,7 +1272,7 @@
         "Treat a successful local run as proof that all production conditions are covered."
       ],
       "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate concurrency, per-resource service demand, nominal capacity, and failover exposure using consistent boundaries.",
-      "explanation": "For a stable long-run boundary: text L = \u03bbW L is average work in the boundary, \u03bb is the rate that enters and eventually leaves that boundary, and W is average time in it. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "explanation": "For a stable long-run boundary: text L = λW L is average work in the boundary, λ is the rate that enters and eventually leaves that boundary, and W is average time in it. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
       "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
     },
     {
@@ -1416,10 +1417,10 @@
       "difficulty": "application",
       "tags": [
         "capacity-queues-and-tail-latency",
-        "little\u2019s-law-and-saturation",
+        "little’s-law-and-saturation",
         "application"
       ],
-      "prompt": "A learner applies 'Little\u2019s Law and Saturation' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "prompt": "A learner applies 'Little’s Law and Saturation' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
       "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Combine different boundaries:** server concurrency with client end-to-end",
       "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
       "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
@@ -1463,7 +1464,7 @@
         "Treat a successful local run as proof that all production conditions are covered."
       ],
       "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to design an open-loop latency experiment that exposes coordinated omission, generator limits, rejection, and uncertainty.",
-      "explanation": "If one branch completes within threshold t with probability Ft, and n parallel branches are independent, a request that waits for all branches completes within t with probability: text Pmax branch \u2264 t = Ft^n Pany branch t = 1 - Ft^n For a branch-tail probabili The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "explanation": "If one branch completes within threshold t with probability Ft, and n parallel branches are independent, a request that waits for all branches completes within t with probability: text Pmax branch ≤ t = Ft^n Pany branch t = 1 - Ft^n For a branch-tail probabili The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
       "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
     },
     {
@@ -1572,12 +1573,12 @@
       "difficulty": "application",
       "tags": [
         "capacity-queues-and-tail-latency",
-        "little\u2019s-law-and-saturation",
+        "little’s-law-and-saturation",
         "application"
       ],
-      "prompt": "In 3-5 sentences, explain how 'Little\u2019s Law and Saturation' supports this outcome: Calculate concurrency, per-resource service demand, nominal capacity, and failover exposure using consistent boundaries.",
-      "correct_answer": "A strong answer defines the mechanism from 'Little\u2019s Law and Saturation', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "For a stable long-run boundary: text L = \u03bbW L is average work in the boundary, \u03bb is the rate that enters and eventually leaves that boundary, and W is average time in it.",
+      "prompt": "In 3-5 sentences, explain how 'Little’s Law and Saturation' supports this outcome: Calculate concurrency, per-resource service demand, nominal capacity, and failover exposure using consistent boundaries.",
+      "correct_answer": "A strong answer defines the mechanism from 'Little’s Law and Saturation', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "For a stable long-run boundary: text L = λW L is average work in the boundary, λ is the rate that enters and eventually leaves that boundary, and W is average time in it.",
       "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
     },
     {
@@ -1722,10 +1723,10 @@
       "difficulty": "synthesis",
       "tags": [
         "capacity-queues-and-tail-latency",
-        "little\u2019s-law-and-saturation",
+        "little’s-law-and-saturation",
         "synthesis"
       ],
-      "prompt": "You must make a design choice involving 'Little\u2019s Law and Saturation'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "prompt": "You must make a design choice involving 'Little’s Law and Saturation'. What tradeoff would you document, and what evidence would make you reverse the choice?",
       "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for calculate concurrency, per-resource service demand, nominal capacity, and failover exposure using consistent boundaries..",
       "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - MIT OpenCourseWare, Queueing Systems lecture noteshttps://ocw.mit.edu/courses/1-203j-logistical-and-transportation-planning-methods-fall-2006/resources/lec5/ - Julius Plenz, How to Trade off Server Utilization and Tail Latencyhttps://www.usenix.org/conferenc",
       "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
@@ -1769,7 +1770,7 @@
       ],
       "prompt": "In 3-5 sentences, explain how 'Fan-out and Tail Amplification' supports this outcome: Design an open-loop latency experiment that exposes coordinated omission, generator limits, rejection, and uncertainty.",
       "correct_answer": "A strong answer defines the mechanism from 'Fan-out and Tail Amplification', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "If one branch completes within threshold t with probability Ft, and n parallel branches are independent, a request that waits for all branches completes within t with probability: text Pmax branch \u2264 t = Ft^n Pany branch t = 1 - Ft^n For a branch-tail probabili",
+      "explanation": "If one branch completes within threshold t with probability Ft, and n parallel branches are independent, a request that waits for all branches completes within t with probability: text Pmax branch ≤ t = Ft^n Pany branch t = 1 - Ft^n For a branch-tail probabili",
       "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
     },
     {
@@ -1878,12 +1879,12 @@
       "difficulty": "synthesis",
       "tags": [
         "capacity-queues-and-tail-latency",
-        "little\u2019s-law-and-saturation",
+        "little’s-law-and-saturation",
         "synthesis"
       ],
-      "prompt": "For 'Little\u2019s Law and Saturation', what quantities, units, or thresholds would you calculate before trusting a design claim about: Calculate concurrency, per-resource service demand, nominal capacity, and failover exposure using consistent boundaries.",
+      "prompt": "For 'Little’s Law and Saturation', what quantities, units, or thresholds would you calculate before trusting a design claim about: Calculate concurrency, per-resource service demand, nominal capacity, and failover exposure using consistent boundaries.",
       "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. You can apply Little\u2019s Law to consistent boundaries, calculate service-demand limits, distinguish utilization from latency, and state the limits of the model.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. You can apply Little’s Law to consistent boundaries, calculate service-demand limits, distinguish utilization from latency, and state the limits of the model.",
       "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
     },
     {
@@ -1919,7 +1920,7 @@
       ],
       "prompt": "You must make a design choice involving 'Fan-out and Tail Amplification'. What tradeoff would you document, and what evidence would make you reverse the choice?",
       "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for design an open-loop latency experiment that exposes coordinated omission, generator limits, rejection, and uncertainty..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Jeffrey Dean and Luiz Andr\u00e9 Barroso, The Tail at Scalehttps://research.google/pubs/the-tail-at-scale/ Complete EX-06 and run the Transit baseline before Lesson 5.",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Jeffrey Dean and Luiz André Barroso, The Tail at Scalehttps://research.google/pubs/the-tail-at-scale/ Complete EX-06 and run the Transit baseline before Lesson 5.",
       "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
     }
   ]

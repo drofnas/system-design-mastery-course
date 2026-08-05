@@ -1,4 +1,5 @@
 {
+  "$schema": "../../../schemas/quiz-bank.schema.json",
   "module_id": "M11",
   "title": "Messaging, Streams, and Workflows",
   "questions": [
@@ -95,7 +96,7 @@
       ],
       "prompt": "You must make a design choice involving 'Replay, Poison Records, and Reconciliation'. What tradeoff would you document, and what evidence would make you reverse the choice?",
       "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for design safe replay, poison handling, schema evolution, derived-state rebuild, and reconciliation..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Complete EX-09\u2013EX-10 and the replay/reconciliation sections of the Week 42 worksheet before opening failure fixtures.",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Complete EX-09–EX-10 and the replay/reconciliation sections of the Week 42 worksheet before opening failure fixtures.",
       "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
     },
     {
@@ -191,7 +192,7 @@
       ],
       "prompt": "You must make a design choice involving 'Delivery Semantics, Identities, and Exactly-Once Boundaries'. What tradeoff would you document, and what evidence would make you reverse the choice?",
       "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for derive delivery failure windows, stable identities, ordering scope, and defensible exactly-once boundaries..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Read RES-01's consumer-position and delivery-semantics sections, then complete EX-03\u2013EX-04 and save the delivery table.",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Read RES-01's consumer-position and delivery-semantics sections, then complete EX-03–EX-04 and save the delivery table.",
       "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
     },
     {
@@ -287,7 +288,7 @@
       ],
       "prompt": "You must make a design choice involving 'Event Time, Watermarks, Lag, and Bounded Recovery'. What tradeoff would you document, and what evidence would make you reverse the choice?",
       "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for calculate lag and drain time and apply explicit event-time, watermark, late-data, backpressure, and recovery policies..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-04, complete EX-13\u2013EX-15, and save calculations and late-data rules before F06 and F08.",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-04, complete EX-13–EX-15, and save calculations and late-data rules before F06 and F08.",
       "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
     },
     {
@@ -383,7 +384,7 @@
       ],
       "prompt": "You must make a design choice involving 'Transactional Outbox, Inbox, and Change Data Capture'. What tradeoff would you document, and what evidence would make you reverse the choice?",
       "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement an atomic outbox, stable envelope, publisher, idempotent inbox, derived view, and cdc checkpoint boundary..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-02 and RES-03, complete EX-07\u2013EX-08, then build and inspect the Week 42 publication path.",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-02 and RES-03, complete EX-07–EX-08, then build and inspect the Week 42 publication path.",
       "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
     },
     {
@@ -479,7 +480,7 @@
       ],
       "prompt": "You must make a design choice involving 'Authority, Events, Queues, Logs, and Streams'. What tradeoff would you document, and what evidence would make you reverse the choice?",
       "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for separate authoritative facts, commands, events, queues, logs, streams, and derived state, with explicit owners and rebuild contracts..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-07 within its published boundary, then complete EX-01\u2013EX-02 and the authority section of the Week 41 worksheet.",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-07 within its published boundary, then complete EX-01–EX-02 and the authority section of the Week 41 worksheet.",
       "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
     },
     {
@@ -575,7 +576,7 @@
       ],
       "prompt": "You must make a design choice involving 'Workflow State, Sagas, and Compensation'. What tradeoff would you document, and what evidence would make you reverse the choice?",
       "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for model durable workflows, orchestration or choreography, idempotent compensation, and explicit points of no return..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-05, complete EX-11\u2013EX-12, and save the workflow/compensation matrix before F07.",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-05, complete EX-11–EX-12, and save the workflow/compensation matrix before F07.",
       "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
     },
     {
@@ -671,7 +672,7 @@
       ],
       "prompt": "You must make a design choice involving 'Ordering, Partition Keys, and Consumer Groups'. What tradeoff would you document, and what evidence would make you reverse the choice?",
       "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for select partition keys and consumer-group topology from workload, fairness, and per-aggregate invariants..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Use RES-01's producer, consumer, and partition sections; complete EX-05\u2013EX-06 and the Week 41 partition/fairness review.",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Use RES-01's producer, consumer, and partition sections; complete EX-05–EX-06 and the Week 41 partition/fairness review.",
       "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
     },
     {
@@ -863,7 +864,7 @@
       ],
       "prompt": "You must make a design choice involving 'Replay, Poison Records, and Reconciliation'. What tradeoff would you document, and what evidence would make you reverse the choice?",
       "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for design safe replay, poison handling, schema evolution, derived-state rebuild, and reconciliation..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Complete EX-09\u2013EX-10 and the replay/reconciliation sections of the Week 42 worksheet before opening failure fixtures.",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Complete EX-09–EX-10 and the replay/reconciliation sections of the Week 42 worksheet before opening failure fixtures.",
       "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
     },
     {
@@ -959,7 +960,7 @@
       ],
       "prompt": "You must make a design choice involving 'Delivery Semantics, Identities, and Exactly-Once Boundaries'. What tradeoff would you document, and what evidence would make you reverse the choice?",
       "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for derive delivery failure windows, stable identities, ordering scope, and defensible exactly-once boundaries..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Read RES-01's consumer-position and delivery-semantics sections, then complete EX-03\u2013EX-04 and save the delivery table.",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Read RES-01's consumer-position and delivery-semantics sections, then complete EX-03–EX-04 and save the delivery table.",
       "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
     },
     {
@@ -1055,7 +1056,7 @@
       ],
       "prompt": "You must make a design choice involving 'Event Time, Watermarks, Lag, and Bounded Recovery'. What tradeoff would you document, and what evidence would make you reverse the choice?",
       "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for calculate lag and drain time and apply explicit event-time, watermark, late-data, backpressure, and recovery policies..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-04, complete EX-13\u2013EX-15, and save calculations and late-data rules before F06 and F08.",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-04, complete EX-13–EX-15, and save calculations and late-data rules before F06 and F08.",
       "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
     },
     {
@@ -1151,7 +1152,7 @@
       ],
       "prompt": "You must make a design choice involving 'Transactional Outbox, Inbox, and Change Data Capture'. What tradeoff would you document, and what evidence would make you reverse the choice?",
       "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement an atomic outbox, stable envelope, publisher, idempotent inbox, derived view, and cdc checkpoint boundary..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-02 and RES-03, complete EX-07\u2013EX-08, then build and inspect the Week 42 publication path.",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-02 and RES-03, complete EX-07–EX-08, then build and inspect the Week 42 publication path.",
       "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
     },
     {
@@ -1247,7 +1248,7 @@
       ],
       "prompt": "You must make a design choice involving 'Authority, Events, Queues, Logs, and Streams'. What tradeoff would you document, and what evidence would make you reverse the choice?",
       "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for separate authoritative facts, commands, events, queues, logs, streams, and derived state, with explicit owners and rebuild contracts..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-07 within its published boundary, then complete EX-01\u2013EX-02 and the authority section of the Week 41 worksheet.",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-07 within its published boundary, then complete EX-01–EX-02 and the authority section of the Week 41 worksheet.",
       "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
     },
     {
@@ -1343,7 +1344,7 @@
       ],
       "prompt": "You must make a design choice involving 'Workflow State, Sagas, and Compensation'. What tradeoff would you document, and what evidence would make you reverse the choice?",
       "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for model durable workflows, orchestration or choreography, idempotent compensation, and explicit points of no return..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-05, complete EX-11\u2013EX-12, and save the workflow/compensation matrix before F07.",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-05, complete EX-11–EX-12, and save the workflow/compensation matrix before F07.",
       "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
     },
     {
@@ -1439,7 +1440,7 @@
       ],
       "prompt": "You must make a design choice involving 'Ordering, Partition Keys, and Consumer Groups'. What tradeoff would you document, and what evidence would make you reverse the choice?",
       "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for select partition keys and consumer-group topology from workload, fairness, and per-aggregate invariants..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Use RES-01's producer, consumer, and partition sections; complete EX-05\u2013EX-06 and the Week 41 partition/fairness review.",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Use RES-01's producer, consumer, and partition sections; complete EX-05–EX-06 and the Week 41 partition/fairness review.",
       "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
     },
     {
@@ -1631,7 +1632,7 @@
       ],
       "prompt": "You must make a design choice involving 'Replay, Poison Records, and Reconciliation'. What tradeoff would you document, and what evidence would make you reverse the choice?",
       "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for design safe replay, poison handling, schema evolution, derived-state rebuild, and reconciliation..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Complete EX-09\u2013EX-10 and the replay/reconciliation sections of the Week 42 worksheet before opening failure fixtures.",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Complete EX-09–EX-10 and the replay/reconciliation sections of the Week 42 worksheet before opening failure fixtures.",
       "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
     },
     {
@@ -1727,7 +1728,7 @@
       ],
       "prompt": "You must make a design choice involving 'Delivery Semantics, Identities, and Exactly-Once Boundaries'. What tradeoff would you document, and what evidence would make you reverse the choice?",
       "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for derive delivery failure windows, stable identities, ordering scope, and defensible exactly-once boundaries..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Read RES-01's consumer-position and delivery-semantics sections, then complete EX-03\u2013EX-04 and save the delivery table.",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Read RES-01's consumer-position and delivery-semantics sections, then complete EX-03–EX-04 and save the delivery table.",
       "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
     },
     {
@@ -1823,7 +1824,7 @@
       ],
       "prompt": "You must make a design choice involving 'Event Time, Watermarks, Lag, and Bounded Recovery'. What tradeoff would you document, and what evidence would make you reverse the choice?",
       "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for calculate lag and drain time and apply explicit event-time, watermark, late-data, backpressure, and recovery policies..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-04, complete EX-13\u2013EX-15, and save calculations and late-data rules before F06 and F08.",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-04, complete EX-13–EX-15, and save calculations and late-data rules before F06 and F08.",
       "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
     },
     {
@@ -1919,7 +1920,7 @@
       ],
       "prompt": "You must make a design choice involving 'Transactional Outbox, Inbox, and Change Data Capture'. What tradeoff would you document, and what evidence would make you reverse the choice?",
       "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement an atomic outbox, stable envelope, publisher, idempotent inbox, derived view, and cdc checkpoint boundary..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-02 and RES-03, complete EX-07\u2013EX-08, then build and inspect the Week 42 publication path.",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-02 and RES-03, complete EX-07–EX-08, then build and inspect the Week 42 publication path.",
       "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
     }
   ]

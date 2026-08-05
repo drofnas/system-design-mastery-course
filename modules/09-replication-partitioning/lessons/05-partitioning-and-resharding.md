@@ -1,4 +1,7 @@
+---
 lesson_id: L05
+title: "Partitioning, Consistent Hashing, and Resharding"
+---
 
 # Partitioning, Consistent Hashing, and Resharding
 

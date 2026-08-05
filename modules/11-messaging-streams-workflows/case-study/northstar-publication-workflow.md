@@ -6,9 +6,9 @@ Northstar publishes validated telescope observations to a public sky catalog
 and sends one research bulletin after review. The operations registry remains
 authoritative for publication state. A catalog view, windowed counts, and
 delivery status are derived. This case contains no commerce entities or
-capstone answer.
+optional project answer.
 
-Do not continue until the learner's Week 41 commerce baseline is frozen. The
+Do not continue until the learner's workflow practice commerce baseline is frozen. The
 case demonstrates one defensible design, not a mandatory broker or workflow.
 
 ## Workload and failure model

@@ -1,7 +1,6 @@
 ---
 lesson_id: L07
-title: Backups, Restore, Failover, and Failback
-week: 47
+title: "Backups, Restore, Failover, and Failback"
 ---
 
 # Backups, Restore, Failover, and Failback

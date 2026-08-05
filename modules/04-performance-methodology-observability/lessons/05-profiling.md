@@ -1,4 +1,7 @@
+---
 lesson_id: L05
+title: "CPU, Allocation, and Lock Profiles"
+---
 
 # CPU, Allocation, and Lock Profiles
 
@@ -64,6 +67,39 @@ and three it cannot support.
    allocation volume alone measures churn.
 3. A CPU profile attributes executing code, while waiting tasks may consume
    little CPU and disappear from the hot stacks.
+
+## Failure-mode bridge to the lab
+
+Profiles answer a different question from traces. A trace says where time sat in
+one request path. A CPU or allocation profile says which code consumed a sample
+of resource over an interval. The lab uses both because a wide span can be
+caused by CPU, allocation pressure, lock wait, dependency wait, or measurement
+distortion.
+
+The common trap is treating a profile hotspot as a root cause without checking
+equivalent work. A function can dominate samples because it is doing necessary
+work, because it is accidentally repeated, or because the rest of the system is
+blocked. Allocation profiles need the same care: retained objects matter more
+than short-lived objects unless allocation churn itself creates latency. A good
+lab diagnosis names the profile mode, sample window, top frame, and the
+discriminating change that would reduce the hotspot while preserving response
+checksum.
+
+## Second worked example
+
+Imagine a profile where JSON encoding dominates CPU after a schema change. The
+wrong conclusion is "replace the JSON library" before checking payload shape.
+First compare object count, field count, byte size, and checksum. If the new
+schema emits twice as many fields, the profile is reporting changed work. If the
+payload is equivalent and the encoder frame still grows, test allocation rate,
+string conversion, and repeated serialization. A profile points to where samples
+land; the investigation must still prove whether those samples are waste.
+
+## Decision checklist
+
+Record profile type, duration, workload, top frame, equivalent-work check, and
+the falsifier. Then decide whether the next experiment changes code, input,
+allocation, or instrumentation.
 
 ## Sources and next work
 

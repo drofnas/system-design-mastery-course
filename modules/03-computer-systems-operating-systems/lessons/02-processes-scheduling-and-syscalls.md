@@ -1,6 +1,6 @@
 ---
 lesson_id: L02
-title: Processes, Scheduling, Context Switches, and System Calls
+title: "Processes, Scheduling, Context Switches, and System Calls"
 ---
 
 # Processes, Scheduling, Context Switches, and System Calls

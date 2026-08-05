@@ -1,6 +1,6 @@
 ---
 lesson_id: L02
-title: Cancellation and Useful-Work Boundaries
+title: "Cancellation and Useful-Work Boundaries"
 ---
 
 # Cancellation and Useful-Work Boundaries
@@ -87,4 +87,4 @@ atomic section, and which metrics prove all permits return.
 
 - gRPC Authors, [Cancellation](https://grpc.io/docs/guides/cancellation/).
 - gRPC Authors, [Deadlines](https://grpc.io/docs/guides/deadlines/), server responsibility.
-- Next: complete EX-03 and EX-04 and define the Week 21 cancellation contract.
+- Next: complete EX-03 and EX-04 and define the the relevant lesson cancellation contract.

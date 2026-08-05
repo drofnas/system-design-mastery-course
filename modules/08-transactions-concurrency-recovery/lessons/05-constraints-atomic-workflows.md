@@ -1,4 +1,7 @@
+---
 lesson_id: L05
+title: "Constraints, Authority, and Atomic Workflows"
+---
 
 # Constraints, Authority, and Atomic Workflows
 
@@ -60,6 +63,37 @@ Name the constraint/oracle and failure repair for each.
 concurrency-safe final guard. 2. No; it creates a durable intent and a
 retriable/reconcilable workflow. 3. Authority identity/version or LSN, rebuild
 rule, and freshness/validity state.
+
+## Failure-mode bridge to the lab
+
+Constraints are executable design decisions. A unique constraint, foreign key,
+check constraint, exclusion constraint, or idempotency table turns an assumption
+into something the storage system can reject. That matters because application
+checks can be stale by the time a concurrent commit lands.
+
+Atomic workflows extend the same idea beyond one database row. If a committed
+fact must later trigger an email, shipment, message, or index update, the system
+needs a durable handoff. Otherwise a crash can commit the fact and lose the
+intent, or replay the intent twice. In the lab, separate authoritative facts
+from derived effects. A repair should make the fact durable, make the effect
+idempotent, and provide reconciliation for any derived state that can fall
+behind. This is the bridge from transactions to M11's outbox and replay work.
+
+## Second worked example
+
+A payment row commits, then the process crashes before publishing
+`PaymentCaptured`. If downstream fulfillment depends only on the event, the
+order stalls. If the process publishes before commit, fulfillment can observe an
+event for a payment that later aborts. The outbox pattern stores the event
+intent in the same transaction as the authoritative fact. A relay publishes it
+later, and consumers deduplicate by event identity. The transaction stays small,
+but the workflow remains recoverable.
+
+## Decision checklist
+
+Name the durable fact, constraint, outbox or handoff row, relay retry behavior,
+consumer idempotency key, and reconciliation query. Every external effect should
+be either committed, retryable, or safely absent.
 
 ## Sources and next work
 

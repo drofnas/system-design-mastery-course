@@ -1,6 +1,6 @@
 ---
 lesson_id: L06
-title: Audit, privacy, and data lifecycles
+title: "Audit, privacy, and data lifecycles"
 ---
 
 # Audit, privacy, and data lifecycles

@@ -99,11 +99,3 @@ cost and privacy; both name rollback evidence.
 A strong teach-back moves from outcome to workload, observation, mechanism,
 alternatives, discriminating test, validated change, and reversal. Vocabulary
 without that chain does not demonstrate diagnosis.
-
-## PESD 2.0 extension answer
-
-A defensible answer covers telemetry as a governed data product: schema ownership, PII restrictions, retention, sampling bias, lineage, cardinality, and cost budgets. It distinguishes the
-requirement, enforcement mechanism, evidence, and owner; keeps modeled and
-measured results separate; and names the failed condition that would reverse
-the decision. Different architectures are acceptable when their invariants,
-evidence boundaries, migration, and residual risk are explicit.

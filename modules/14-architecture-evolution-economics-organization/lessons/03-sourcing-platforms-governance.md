@@ -1,4 +1,7 @@
+---
 lesson_id: L03
+title: "Sourcing, Platforms, and Governance"
+---
 
 # Sourcing, Platforms, and Governance
 

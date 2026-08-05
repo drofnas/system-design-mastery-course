@@ -1,4 +1,7 @@
+---
 lesson_id: L04
+title: "Metrics, Logs, Cardinality, and Cost"
+---
 
 # Metrics, Logs, Cardinality, and Cost
 
@@ -68,6 +71,37 @@ retention, privacy class, and deletion owner.
    not as a normal metric dimension.
 3. A controlled comparison of collection disabled/enabled covering user latency,
    process resources, bytes, series, and loss.
+
+## Failure-mode bridge to the lab
+
+Metrics, logs, and traces each lose information in different ways. Metrics are
+cheap to aggregate but can hide the single request that explains a failure. Logs
+can preserve details but explode in volume or leak sensitive values. Traces can
+connect causality but become hard to store when every user, query, or payload
+becomes a dimension.
+
+The lab asks you to notice when observability itself becomes part of the failure.
+A cardinality fault is not merely a bill problem; it can drop the exact signal
+you need during the incident. A disabled collection path is not proof that the
+system behaved well; it is a measurement gap. When writing a diagnosis, include
+the cost and retention limit that made a signal trustworthy enough to use. If a
+signal was sampled, capped, or suppressed, say how that affects the claim.
+
+## Second worked example
+
+A team adds `user_id`, `query_text`, and `session_id` to a metric label set so
+they can debug one customer's complaint. The first dashboard looks wonderful:
+every request is distinguishable. A day later the metrics backend drops series,
+cost rises, and aggregates become unreliable. The better design keeps bounded
+labels such as route, status class, dependency, and tenant tier, then sends
+request-specific detail to logs or traces with retention controls. The question
+is not "can we attach the field?" but "which signal can afford this dimension?"
+
+## Decision checklist
+
+For every proposed signal, name its owner, retention period, sensitive fields,
+cardinality limit, sampling rule, and expected action. A signal with no action
+is documentation, not observability.
 
 ## Sources and next work
 

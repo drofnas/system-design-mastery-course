@@ -1,4 +1,7 @@
+---
 lesson_id: L05
+title: "Amplification and SSD Endurance"
+---
 
 # Amplification and SSD Endurance
 

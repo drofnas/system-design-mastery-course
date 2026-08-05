@@ -6,9 +6,9 @@ Northstar's research users need validated observations to appear in the public
 catalog and remain queryable during cloud-cover bursts and regional failures.
 The operations registry remains authoritative. The public catalog, hourly
 counts, and bulletin delivery are derived. This case has no commerce entities
-and is not a capstone answer.
+and is not a optional project answer.
 
-Do not continue until the learner's Week 45 commerce baseline is frozen. The
+Do not continue until the learner's reliability baseline is frozen. The
 case demonstrates one defensible contract, not mandatory SLOs or topology.
 
 ## User journeys and workload

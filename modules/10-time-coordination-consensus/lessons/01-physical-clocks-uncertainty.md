@@ -1,6 +1,9 @@
-# Lesson 1: Physical Clocks, Drift, Skew, and Uncertainty
-
+---
 lesson_id: L01
+title: "Physical Clocks, Drift, Skew, and Uncertainty"
+---
+
+# Physical Clocks, Drift, Skew, and Uncertainty
 
 ## Outcomes
 

@@ -22,7 +22,7 @@ The course is not a classroom package or credentialing program. It is designed t
 | Standard | You want solid mastery | Lessons, guided practice, answer key review, one or more quizzes |
 | Deep | You want implementation depth | Standard path plus labs and optional projects |
 
-Move at the pace that fits your life. There are no review gates, artifact ledgers, history locks, or mandatory final-project submissions.
+Move at the pace that fits your life. There are no review gates, formal evidence logs, Git-based submission freezes, or mandatory final-project submissions.
 
 ## Quiz Workflow
 
@@ -42,6 +42,7 @@ Use `--seed` to reproduce a quiz attempt. Each module has:
 
 | Module | Topic | Entry Point |
 |---|---|---|
+| M00 | Algorithmic Foundations | [Start](modules/00-algorithmic-foundations/README.md) |
 | M01 | Architectural Judgment | [Start](modules/01-architectural-judgment/README.md) |
 | M02 | Capacity, Queues, and Tail Latency | [Start](modules/02-capacity-queues-tail-latency/README.md) |
 | M03 | Computer Systems and Operating Systems | [Start](modules/03-computer-systems-operating-systems/README.md) |
@@ -59,7 +60,8 @@ Use `--seed` to reproduce a quiz attempt. Each module has:
 | M15 | Execution Models Across Languages | [Start](modules/15-execution-models-across-languages/README.md) |
 | M16 | Browser, Frontend, CDN, and Edge Architecture | [Start](modules/16-browser-frontend-cdn-edge/README.md) |
 | M17 | Model Foundations and Inference Systems | [Start](modules/17-model-foundations-inference-systems/README.md) |
-| M18 | Retrieval, RAG, and Agent Systems | [Start](modules/18-retrieval-rag-agents-capstone-defense/README.md) |
+| M18 | Retrieval, RAG, and Agent Systems | [Start](modules/18-retrieval-rag-agents/README.md) |
+| M19 | Caching and Invalidation | [Start](modules/19-caching-and-invalidation/README.md) |
 
 ## Local Setup
 

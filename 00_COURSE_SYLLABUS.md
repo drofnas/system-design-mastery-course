@@ -1,7 +1,7 @@
 ---
 title: "Computer Science and System Design Mastery"
 course_id: "CSSDM"
-version: "3.0-solo"
+version: "3.1-solo"
 format: "Solo self-study"
 status: "Active"
 ---
@@ -41,6 +41,7 @@ There is no fixed calendar. Use one of three paths:
 
 | Module | Topic | Focus |
 |---|---|---|
+| M00 | Algorithmic Foundations | Asymptotic analysis, locality, hash tables, trees, heaps, graphs, sorting, and tractability as practical system-design tools. |
 | M01 | Architectural Judgment | Problem framing, workloads, invariants, quality attributes, and architectural tradeoffs. |
 | M02 | Capacity, Queues, and Tail Latency | Model logical work, attempts, operation mix, normal, peak, burst, projected, skewed, and recovery demand with visible uncertainty. |
 | M03 | Computer Systems and Operating Systems | save a falsifiable benchmark contract with equivalent work, machine boundaries, measurement limits, and production-transfer uncertainty. |
@@ -59,6 +60,7 @@ There is no fixed calendar. Use one of three paths:
 | M16 | Browser, Frontend, CDN, and Edge Architecture | Trace tasks, microtasks, input dispatch, style, layout, paint, raster, and compositing from browser evidence. |
 | M17 | Model Foundations and Inference Systems | Derive vectors, matrices, norms, probability, entropy, gradients, and scaled dot-product attention with explicit shapes, units, and numerical limits. |
 | M18 | Retrieval, RAG, and Agent Systems | Retrieval, RAG, tool authorization, workflow durability, grounding, and agent failure modes. |
+| M19 | Caching and Invalidation | Cache placement, eviction economics, invalidation, coherence, stampede protection, and cache failure modes. |
 
 ## Completion
 

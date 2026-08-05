@@ -273,7 +273,7 @@ This key covers all 100 questions for **Reliability, Incidents, and Disaster Rec
 
 **Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for define user-journey slis and slos with valid populations, windows, exclusions, latency, availability, freshness, and correctness..
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-01, complete EX-01–EX-02, and save the Week 45 SLI population before opening the Northstar case or answer key.
+**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-01, complete EX-01–EX-02, and save the SLI population before opening the Northstar case or answer key.
 
 **Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
 
@@ -438,7 +438,7 @@ This key covers all 100 questions for **Reliability, Incidents, and Disaster Rec
 
 **Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose nine reliability failures and defend cumulative review across consensus, messaging, operations, security, cost, ownership, and recovery..
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-07, complete EX-16, finalize the disaster-recovery review, conduct the defense, save cumulative review in Week 68, and write the separate Week 69 synthesis project delta.
+**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-07, complete EX-16, finalize the disaster-recovery review, conduct the defense, save cumulative review in recovery review, and write the separate recovery review synthesis project delta.
 
 **Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
 
@@ -713,7 +713,7 @@ This key covers all 100 questions for **Reliability, Incidents, and Disaster Rec
 
 **Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for define user-journey slis and slos with valid populations, windows, exclusions, latency, availability, freshness, and correctness..
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-01, complete EX-01–EX-02, and save the Week 45 SLI population before opening the Northstar case or answer key.
+**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-01, complete EX-01–EX-02, and save the SLI population before opening the Northstar case or answer key.
 
 **Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
 
@@ -878,7 +878,7 @@ This key covers all 100 questions for **Reliability, Incidents, and Disaster Rec
 
 **Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose nine reliability failures and defend cumulative review across consensus, messaging, operations, security, cost, ownership, and recovery..
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-07, complete EX-16, finalize the disaster-recovery review, conduct the defense, save cumulative review in Week 68, and write the separate Week 69 synthesis project delta.
+**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-07, complete EX-16, finalize the disaster-recovery review, conduct the defense, save cumulative review in recovery review, and write the separate recovery review synthesis project delta.
 
 **Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
 

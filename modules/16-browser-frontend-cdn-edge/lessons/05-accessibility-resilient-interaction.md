@@ -1,4 +1,7 @@
+---
 lesson_id: L05
+title: "Accessibility and Resilient Interaction"
+---
 
 # Accessibility and Resilient Interaction
 
@@ -95,4 +98,4 @@ axe rules, manual keyboard steps, zoom/reflow, and assistive-technology evidence
 ## Sources and next work
 
 Study RES-07 within its bounded criteria. Complete EX-11 and EX-12, then add
-manual evidence boundaries to the Week 62 conformance review.
+manual evidence boundaries to the conformance review.

@@ -1,4 +1,7 @@
+---
 lesson_id: L02
+title: "Schedulers, Event Loops, and Tasks"
+---
 
 # Schedulers, Event Loops, and Tasks
 

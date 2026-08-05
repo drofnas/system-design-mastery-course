@@ -1,6 +1,9 @@
-# Lesson 6: Raft Log Replication, Commitment, and Application
-
+---
 lesson_id: L06
+title: "Raft Log Replication, Commitment, and Application"
+---
+
+# Raft Log Replication, Commitment, and Application
 
 ## Outcomes
 

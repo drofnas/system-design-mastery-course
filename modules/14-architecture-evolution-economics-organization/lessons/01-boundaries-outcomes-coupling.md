@@ -1,4 +1,7 @@
+---
 lesson_id: L01
+title: "Boundaries from Outcomes and Coupling"
+---
 
 # Boundaries from Outcomes and Coupling
 
@@ -97,4 +100,4 @@ and identify one threshold that favors each option.
 ## Sources and next work
 
 Study RES-01 within its published boundary. Complete EX-01 and EX-02, then use
-the Week 53 worksheet to freeze an independent boundary ledger.
+the boundary worksheet to freeze an independent boundary ledger.

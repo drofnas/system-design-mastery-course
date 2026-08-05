@@ -1,4 +1,7 @@
+---
 lesson_id: L01
+title: "Mathematics for Inference Decisions"
+---
 
 # Mathematics for Inference Decisions
 

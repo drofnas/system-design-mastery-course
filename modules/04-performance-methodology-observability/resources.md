@@ -28,7 +28,7 @@ task; record the substitution.
 - **URL:** https://www.brendangregg.com/usemethod.html
 - **Type/status:** practitioner performance methodology; Required
 - **Access:** free
-- **Week/time:** Week 19; 35 minutes assigned
+- **Lesson/time:** network; 35 minutes assigned
 - **Purpose:** Start investigation from resource questions rather than available dashboards.
 - **Boundary and evidence:** Read Summary, Metrics, In Practice, and Other Methodologies; build a USE table and name two gaps.
 - **Local alternative:** [lessons/01-question-first-investigations.md](lessons/01-question-first-investigations.md)
@@ -41,7 +41,7 @@ task; record the substitution.
 - **URL:** https://sre.google/workbook/monitoring/
 - **Type/status:** practitioner handbook chapter; Required
 - **Access:** free
-- **Week/time:** Week 19; 45 minutes assigned
+- **Lesson/time:** network; 45 minutes assigned
 - **Purpose:** Connect user symptoms, diagnostic signals, and operating cost.
 - **Boundary and evidence:** Read Desirable Features, Sources of Monitoring Data, and Metrics with Purpose through Saturation; classify five signals.
 - **Local alternative:** [lessons/04-signals-cardinality-cost.md](lessons/04-signals-cardinality-cost.md)
@@ -54,7 +54,7 @@ task; record the substitution.
 - **URL:** https://www.w3.org/TR/trace-context/
 - **Type/status:** W3C Recommendation; Required
 - **Access:** free
-- **Week/time:** Week 18; 40 minutes assigned
+- **Lesson/time:** the relevant lesson; 40 minutes assigned
 - **Purpose:** Define interoperable trace identity, parsing, and privacy behavior.
 - **Boundary and evidence:** Read Abstract, header format, processing model, and privacy considerations; validate three contexts and identify one trust boundary.
 - **Local alternative:** [lessons/03-trace-context.md](lessons/03-trace-context.md)
@@ -67,7 +67,7 @@ task; record the substitution.
 - **URL:** https://opentelemetry.io/docs/specs/otel/overview/
 - **Type/status:** maintainer specification; Required
 - **Access:** free
-- **Week/time:** Week 19; 45 minutes assigned
+- **Lesson/time:** network; 45 minutes assigned
 - **Purpose:** Map provider-neutral lab records to trace, metric, log, resource, and context semantics.
 - **Boundary and evidence:** Read the named signal, resource, context, and propagator sections; map every lab record field.
 - **Local alternative:** [lessons/03-trace-context.md](lessons/03-trace-context.md)
@@ -80,7 +80,7 @@ task; record the substitution.
 - **URL:** https://kar.kent.ac.uk/33611/
 - **Type/status:** original research paper; Required
 - **Access:** free
-- **Week/time:** Week 18; 55 minutes assigned
+- **Lesson/time:** the relevant lesson; 55 minutes assigned
 - **Purpose:** Model multiple sources of benchmark variation and efficient repetition.
 - **Boundary and evidence:** Read the abstract, experimental dimensions, repetition guidance, and reporting recommendations; identify three variation levels.
 - **Local alternative:** [lessons/07-benchmarks-regression-budgets.md](lessons/07-benchmarks-regression-budgets.md)
@@ -93,7 +93,7 @@ task; record the substitution.
 - **URL:** https://www.usenix.org/conference/srecon16/program/presentation/smith
 - **Type/status:** conference video, audio, and slides; Required
 - **Access:** free
-- **Week/time:** Week 18; 35 minutes assigned
+- **Lesson/time:** the relevant lesson; 35 minutes assigned
 - **Purpose:** Examine production performance monitoring as a designed and owned system.
 - **Boundary and evidence:** Watch the complete talk or use all slides with the local alternative; record one design rule, its cost, and a counterexample.
 - **Local alternative:** [lessons/04-signals-cardinality-cost.md](lessons/04-signals-cardinality-cost.md)
@@ -106,9 +106,9 @@ task; record the substitution.
 - **URL:** https://docs.python.org/3/library/profile.html
 - **Type/status:** official documentation; Optional enrichment
 - **Access:** free
-- **Week/time:** Week 22; 30 minutes optional
+- **Lesson/time:** the relevant lesson; 30 minutes optional
 - **Purpose:** Distinguish deterministic call profiling, cumulative time, and instrumentation overhead in the portable lab.
-- **Boundary and evidence:** Read the introduction, instant user manual, and limitations; record what deterministic profiling measures and how its overhead changes the evidence boundary.
+- **Boundary and evidence:** Read the introduction, instant user manual, and limitations; record what deterministic profiling measures and how its overhead changes the evidence limit.
 - **Local alternative:** [lessons/05-profiling.md](lessons/05-profiling.md)
 - **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-08-04
 - **Reflection:** Which claim transfers to this module, which assumption limits it, and what evidence would falsify it?
@@ -119,7 +119,7 @@ task; record the substitution.
 - **URL:** https://docs.python.org/3/library/tracemalloc.html
 - **Type/status:** official documentation; Optional enrichment
 - **Access:** free
-- **Week/time:** Week 22; 25 minutes optional
+- **Lesson/time:** the relevant lesson; 25 minutes optional
 - **Purpose:** Interpret allocation snapshots and retained differences without equating total allocation with a leak.
 - **Boundary and evidence:** Read tracing allocations, snapshots, and comparing snapshots; state what the tool can attribute and what it cannot establish about object liveness.
 - **Local alternative:** [lessons/05-profiling.md](lessons/05-profiling.md)
@@ -132,7 +132,7 @@ task; record the substitution.
 - **URL:** https://www.sqlite.org/eqp.html
 - **Type/status:** official documentation; Optional enrichment
 - **Access:** free
-- **Week/time:** Week 22; 25 minutes optional
+- **Lesson/time:** the relevant lesson; 25 minutes optional
 - **Purpose:** Interpret scan, search, index, join-order, and temporary-structure evidence in the dependency lab.
 - **Boundary and evidence:** Read the warning and Sections 1.1–1.3; identify the chosen access path and explain why output formatting is not a stable application API.
 - **Local alternative:** [lessons/06-dependencies-query-plans.md](lessons/06-dependencies-query-plans.md)

@@ -1,10 +1,9 @@
 ---
 lesson_id: L03
-week: 1
-estimated_hours: 0.75
+title: "Invariants and State Ownership"
 ---
 
-# Lesson 3: Invariants and State Ownership
+# Invariants and State Ownership
 
 ## Outcomes
 
@@ -269,7 +268,7 @@ For EX-05, include a duplicate and a concurrent transition.
 
 ## Sources and next work
 
-- Capstone invariant requirements:
+- Optional project invariant requirements:
   [`00_COURSE_SYLLABUS.md`](../../../00_COURSE_SYLLABUS.md)
 - Security depth appears in Module 13; transaction enforcement appears in
   Module 8.

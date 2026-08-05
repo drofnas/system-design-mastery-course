@@ -1,4 +1,7 @@
+---
 lesson_id: L03
+title: "Transformer Inference from Prefill to Decode"
+---
 
 # Transformer Inference from Prefill to Decode
 

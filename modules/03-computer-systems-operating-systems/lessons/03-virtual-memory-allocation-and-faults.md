@@ -1,6 +1,6 @@
 ---
 lesson_id: L03
-title: Virtual Memory, Allocation, Page Faults, and RSS
+title: "Virtual Memory, Allocation, Page Faults, and RSS"
 ---
 
 # Virtual Memory, Allocation, Page Faults, and RSS

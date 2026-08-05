@@ -1,6 +1,9 @@
-# Lesson 2: Logical Clocks, Vector Clocks, and Causal Order
-
+---
 lesson_id: L02
+title: "Logical Clocks, Vector Clocks, and Causal Order"
+---
+
+# Logical Clocks, Vector Clocks, and Causal Order
 
 ## Outcomes
 

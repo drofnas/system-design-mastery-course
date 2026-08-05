@@ -1,4 +1,7 @@
+---
 lesson_id: L02
+title: "Performance Budgets and Evidence"
+---
 
 # Performance Budgets and Evidence
 
@@ -111,4 +114,4 @@ omitted work, and define one field target and one lab guardrail.
 ## Sources and next work
 
 Study RES-03. Complete EX-03 and EX-04, then record explicit field targets and
-separate lab guardrails in the Week 61 baseline.
+separate lab guardrails in the browser baseline.

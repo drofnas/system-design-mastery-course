@@ -1,4 +1,7 @@
+---
 lesson_id: L01
+title: "Question-First Performance Investigations"
+---
 
 # Question-First Performance Investigations
 
@@ -70,6 +73,41 @@ from different evidence classes and one observation that would weaken it.
    changes the next action.
 3. When the symptom comes from software latency, dependency behavior, correctness,
    or another mechanism not distinguished by the resource checklist.
+
+## Failure-mode bridge to the lab
+
+The lab will tempt you to start by reading every emitted field. Resist that.
+Begin with a question that names the user-visible symptom, the candidate change,
+and the comparison you expect to make. A useful question is narrow enough that a
+single trace, metric, or profile can falsify part of it. "Why is the service
+slow?" is too broad. "Did the candidate move useful work from dependency wait to
+CPU normalization during validated observation writes?" gives you something to
+test.
+
+The first failure mode is confirmation drift. Once a field looks suspicious, it
+is easy to reinterpret every later signal as support. Write one falsifier before
+opening the next artifact. The second is scope creep: adding more signals after
+the fact can hide that the original question had no decision path. The third is
+mixing production transfer with local evidence. A loopback result can support a
+causal claim about this lab scenario; it cannot certify fleet-wide impact. Your
+diagnosis should preserve that line.
+
+## Second worked example
+
+A team reports that "search is slower after ranking changed." A question-first
+investigation rewrites that as: for the same query set and result count, did the
+new ranker increase server CPU, dependency wait, or response bytes? That framing
+creates three competing hypotheses and one invariant: the result set must remain
+equivalent for the comparison to mean anything. If the candidate returns fewer
+results, the faster run is not evidence of a faster ranker. If the dependency
+span is unchanged but CPU grows, profiling becomes the next move. If response
+bytes grow, serialization and network evidence matter more than ranking code.
+
+## Decision checklist
+
+Before deciding, confirm the question names a user-visible outcome, one bounded
+system path, one preserved-work condition, and at least one falsifier. If any of
+those are missing, keep the result as a clue rather than a conclusion.
 
 ## Sources and next work
 

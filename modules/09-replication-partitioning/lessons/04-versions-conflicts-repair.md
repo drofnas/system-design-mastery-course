@@ -1,4 +1,7 @@
+---
 lesson_id: L04
+title: "Versions, Conflicts, Repair, and Convergence"
+---
 
 # Versions, Conflicts, Repair, and Convergence
 

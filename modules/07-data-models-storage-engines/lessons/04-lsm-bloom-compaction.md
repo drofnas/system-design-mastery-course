@@ -1,4 +1,7 @@
+---
 lesson_id: L04
+title: "LSM Paths, Bloom Filters, Tombstones, and Compaction"
+---
 
 # LSM Paths, Bloom Filters, Tombstones, and Compaction
 

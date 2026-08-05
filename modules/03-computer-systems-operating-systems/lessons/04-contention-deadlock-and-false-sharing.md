@@ -1,6 +1,6 @@
 ---
 lesson_id: L04
-title: Locks, Contention, Deadlock, and False Sharing
+title: "Locks, Contention, Deadlock, and False Sharing"
 ---
 
 # Locks, Contention, Deadlock, and False Sharing

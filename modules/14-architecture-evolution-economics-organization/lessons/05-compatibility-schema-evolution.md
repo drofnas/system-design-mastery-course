@@ -1,4 +1,7 @@
+---
 lesson_id: L05
+title: "Compatibility, Versioning, and Schema Evolution"
+---
 
 # Compatibility, Versioning, and Schema Evolution
 

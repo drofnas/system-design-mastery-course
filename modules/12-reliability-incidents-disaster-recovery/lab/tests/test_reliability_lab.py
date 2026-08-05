@@ -13,6 +13,9 @@ from reliability_lab.runner import run_scenario
 
 
 class ReliabilityLabTests(unittest.TestCase):
+    def trial(self, name: str) -> dict:
+        return run_scenario(load_scenario(ROOT / "scenarios" / name))
+
     def test_all_pairs_are_deterministic_and_repaired(self) -> None:
         pairs: dict[str, list[tuple[dict, dict]]] = {}
         for path in sorted((ROOT / "scenarios").glob("*.json")):
@@ -51,6 +54,97 @@ class ReliabilityLabTests(unittest.TestCase):
                 load_scenario(temporary)
         finally:
             temporary.unlink(missing_ok=True)
+
+    def test_slow_dependency_load_preserves_priority_work_with_bounded_degradation(self) -> None:
+        broken = self.trial("f01-slow-dependency-load-broken.json")
+        repaired = self.trial("f01-slow-dependency-load-repaired.json")
+        self.assertFalse(broken["mitigations"]["degraded_mode"])
+        self.assertFalse(broken["mitigations"]["priority_preserved"])
+        self.assertFalse(broken["mitigations"]["queue_bounded"])
+        self.assertEqual(0, broken["mitigations"]["optional_shed"])
+        self.assertTrue(repaired["mitigations"]["degraded_mode"])
+        self.assertTrue(repaired["mitigations"]["priority_preserved"])
+        self.assertTrue(repaired["mitigations"]["queue_bounded"])
+        self.assertGreater(repaired["mitigations"]["optional_shed"], 0)
+
+    def test_budget_burn_pages_only_when_multiwindow_alerts_are_actionable(self) -> None:
+        broken = self.trial("f02-budget-burn-broken.json")
+        repaired = self.trial("f02-budget-burn-repaired.json")
+        self.assertGreater(broken["error_budget"]["burn_rate"], 6)
+        self.assertFalse(broken["alerts"]["page_fired"])
+        self.assertFalse(broken["alerts"]["actionable"])
+        self.assertTrue(repaired["alerts"]["page_fired"])
+        self.assertTrue(repaired["alerts"]["ticket_fired"])
+        self.assertTrue(repaired["alerts"]["actionable"])
+
+    def test_hidden_journey_failure_is_not_hidden_after_sli_repair(self) -> None:
+        broken = self.trial("f03-hidden-journey-failure-broken.json")
+        repaired = self.trial("f03-hidden-journey-failure-repaired.json")
+        self.assertGreater(broken["sli_windows"]["reported_sli"], broken["sli_windows"]["actual_sli"])
+        self.assertEqual(0, broken["user_journey_results"]["reported_bad"])
+        self.assertEqual(repaired["sli_windows"]["reported_sli"], repaired["sli_windows"]["actual_sli"])
+        self.assertEqual(
+            repaired["user_journey_results"]["actual_bad"],
+            repaired["user_journey_results"]["reported_bad"],
+        )
+
+    def test_incident_handoff_serializes_changes_and_updates(self) -> None:
+        broken = self.trial("f04-incident-handoff-broken.json")
+        repaired = self.trial("f04-incident-handoff-repaired.json")
+        self.assertFalse(broken["incident"]["handoff_complete"])
+        self.assertEqual(0, broken["incident"]["updates"])
+        self.assertTrue(repaired["incident"]["serialized_changes"])
+        self.assertTrue(repaired["incident"]["handoff_complete"])
+        self.assertEqual(2, repaired["incident"]["updates"])
+
+    def test_corrupt_backup_is_not_selected_after_restore_verification(self) -> None:
+        broken = self.trial("f05-corrupt-backup-broken.json")
+        repaired = self.trial("f05-corrupt-backup-repaired.json")
+        self.assertFalse(broken["backup_restore"]["backup_valid"])
+        self.assertFalse(broken["backup_restore"]["verification_enabled"])
+        self.assertTrue(broken["backup_restore"]["selected"])
+        self.assertFalse(repaired["backup_restore"]["backup_valid"])
+        self.assertTrue(repaired["backup_restore"]["verification_enabled"])
+        self.assertFalse(repaired["backup_restore"]["selected"])
+        self.assertTrue(repaired["backup_restore"]["isolated_restore"])
+
+    def test_point_in_time_recovery_reaches_required_version_with_zero_rpo(self) -> None:
+        broken = self.trial("f06-point-in-time-loss-broken.json")
+        repaired = self.trial("f06-point-in-time-loss-repaired.json")
+        self.assertLess(
+            broken["authority_state"]["restored_version"],
+            broken["authority_state"]["last_required_version"],
+        )
+        self.assertGreater(broken["backup_restore"]["observed_rpo_minutes"], 0)
+        self.assertEqual(
+            repaired["authority_state"]["last_required_version"],
+            repaired["authority_state"]["restored_version"],
+        )
+        self.assertEqual(0, repaired["backup_restore"]["observed_rpo_minutes"])
+
+    def test_regional_capacity_reserve_supports_minimum_service(self) -> None:
+        broken = self.trial("f07-regional-capacity-broken.json")
+        repaired = self.trial("f07-regional-capacity-repaired.json")
+        self.assertFalse(broken["regional_capacity"]["reserve_enabled"])
+        self.assertFalse(broken["regional_capacity"]["minimum_service_supported"])
+        self.assertTrue(repaired["regional_capacity"]["reserve_enabled"])
+        self.assertTrue(repaired["regional_capacity"]["minimum_service_supported"])
+
+    def test_dual_authority_failback_rejects_stale_owner_and_stages_return(self) -> None:
+        broken = self.trial("f08-dual-authority-failback-broken.json")
+        repaired = self.trial("f08-dual-authority-failback-repaired.json")
+        self.assertFalse(broken["authority_state"]["stale_owner_rejected"])
+        self.assertFalse(broken["recovery_failback"]["staged_failback"])
+        self.assertTrue(repaired["authority_state"]["stale_owner_rejected"])
+        self.assertTrue(repaired["recovery_failback"]["staged_failback"])
+
+    def test_wrong_recovery_target_requires_operator_approval_and_rollback(self) -> None:
+        broken = self.trial("f09-wrong-recovery-target-broken.json")
+        repaired = self.trial("f09-wrong-recovery-target-repaired.json")
+        self.assertFalse(broken["recovery_failback"]["operator_approved"])
+        self.assertFalse(broken["recovery_failback"]["rollback_available"])
+        self.assertTrue(repaired["recovery_failback"]["operator_approved"])
+        self.assertTrue(repaired["recovery_failback"]["rollback_available"])
 
 
 if __name__ == "__main__":

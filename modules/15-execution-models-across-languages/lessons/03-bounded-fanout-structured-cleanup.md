@@ -1,4 +1,7 @@
+---
 lesson_id: L03
+title: "Bounded Fan-out and Structured Cleanup"
+---
 
 # Bounded Fan-out and Structured Cleanup
 

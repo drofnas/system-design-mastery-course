@@ -79,11 +79,3 @@ cost, and failover CPU. Identify the decision drivers and owner.
 
 Prepare a five-minute explanation that begins with the rider outcome, traces the
 mechanism through resource evidence, and ends with uncertainty and reversal.
-
-## PESD 2.0 extension to the final exercise
-
-Extend the final guided exercise with telemetry as a governed data product: schema ownership, PII restrictions, retention, sampling bias, lineage, cardinality, and cost budgets. Produce an
-obligation/control/evidence row, a named owner, a bounded cost or capacity
-effect, a failure or policy-drift test, a migration step, and a reversal trigger.
-Label every observation with an accepted evidence mode and do not use fixture
-replay as independent Build, Break, Implement, or Measure evidence.

@@ -1,10 +1,9 @@
 ---
 lesson_id: L02
-title: "Little's Law and Saturation"
-week: 5
+title: "Little’s Law and Saturation"
 ---
 
-# Lesson 2: Little’s Law and Saturation
+# Little’s Law and Saturation
 
 ## Outcomes
 

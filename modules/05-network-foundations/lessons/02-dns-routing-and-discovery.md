@@ -1,4 +1,7 @@
+---
 lesson_id: L02
+title: "DNS, Addressing, Routing, and Discovery"
+---
 
 # DNS, Addressing, Routing, and Discovery
 

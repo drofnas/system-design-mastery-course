@@ -1,6 +1,6 @@
 ---
 lesson_id: L06
-title: Device Queues and I/O Latency
+title: "Device Queues and I/O Latency"
 ---
 
 # Device Queues and I/O Latency

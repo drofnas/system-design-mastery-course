@@ -1,6 +1,6 @@
 # Module 13 Explained Answers
 
-These are reasoning checks, not capstone answers. Other designs are acceptable
+These are reasoning checks, not optional project answers. Other designs are acceptable
 when their properties and evidence are defensible.
 
 ## EX-01
@@ -120,11 +120,3 @@ No-tools, proposal-only, and bounded-tools are compared with the same drivers.
 Northstar chooses proposal-only because current demand does not justify the
 authority and operating cost. Another answer can pass with stronger need,
 evidence, approval, containment, incident response, and reversal conditions.
-
-## PESD 2.0 extension answer
-
-A defensible answer covers obligation-to-control-to-evidence mapping, privacy impact reasoning, secure SDLC, source-to-deployment identity, cryptographic inventory, crypto agility, and post-quantum migration planning. It distinguishes the
-requirement, enforcement mechanism, evidence, and owner; keeps modeled and
-measured results separate; and names the failed condition that would reverse
-the decision. Different architectures are acceptable when their invariants,
-evidence boundaries, migration, and residual risk are explicit.

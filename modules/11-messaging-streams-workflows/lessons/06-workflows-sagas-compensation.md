@@ -1,7 +1,6 @@
 ---
 lesson_id: L06
-title: Workflow State, Sagas, and Compensation
-week: 43
+title: "Workflow State, Sagas, and Compensation"
 ---
 
 # Workflow State, Sagas, and Compensation

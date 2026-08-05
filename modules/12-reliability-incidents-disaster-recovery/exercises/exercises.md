@@ -1,7 +1,7 @@
 # Module 12 Guided Exercises
 
 Complete each exercise before opening the answer key. Use Northstar or the
-named archive transfer case, never the commerce capstone.
+named archive transfer case, never the external commerce example.
 
 ## EX-01: Journey event contract
 
@@ -100,11 +100,3 @@ Then compare single-region restore, warm standby, and active regional service.
 Answer the frozen solo-review questions from product, data/security, finance,
 and on-call perspectives; record dissent and reversal evidence. A live panel is
 optional.
-
-## PESD 2.0 extension to the final exercise
-
-Extend the final guided exercise with cyber recovery, corrupted-backup recovery, provider concentration, control-plane outages, clean-room assumptions, evidence preservation, and notification ownership. Produce an
-obligation/control/evidence row, a named owner, a bounded cost or capacity
-effect, a failure or policy-drift test, a migration step, and a reversal trigger.
-Label every observation with an accepted evidence mode and do not use fixture
-replay as independent Build, Break, Implement, or Measure evidence.

@@ -1,4 +1,7 @@
+---
 lesson_id: L02
+title: "Replication Topologies and Acknowledgement Boundaries"
+---
 
 # Replication Topologies and Acknowledgement Boundaries
 

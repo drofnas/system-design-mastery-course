@@ -1,4 +1,7 @@
+---
 lesson_id: L01
+title: "Request Paths, Round Trips, and Byte Budgets"
+---
 
 # Request Paths, Round Trips, and Byte Budgets
 

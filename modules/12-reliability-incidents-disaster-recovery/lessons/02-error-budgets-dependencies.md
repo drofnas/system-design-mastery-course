@@ -1,7 +1,6 @@
 ---
 lesson_id: L02
-title: Error Budgets, Dependencies, and Composite Reliability
-week: 45
+title: "Error Budgets, Dependencies, and Composite Reliability"
 ---
 
 # Error Budgets, Dependencies, and Composite Reliability

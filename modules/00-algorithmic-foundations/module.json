@@ -1,0 +1,190 @@
+{
+  "$schema": "../../schemas/module.schema.json",
+  "course_id": "CSSDM",
+  "course_version": "3.1-solo",
+  "id": "M00",
+  "title": "Algorithmic Foundations",
+  "status": "draft",
+  "focus": "Asymptotic reasoning, core data structures, graph algorithms, sorting, and tractability as practical design tools.",
+  "pacing": {
+    "review": "Skim the mechanism sections and run the lab once.",
+    "standard": "Study all lessons, complete exercises, run the lab, and explain each tradeoff in your own words.",
+    "deep": "Extend the lab with one additional data structure or graph workload."
+  },
+  "lessons": [
+    {
+      "id": "L01",
+      "title": "Asymptotic Analysis and Its Limits",
+      "path": "lessons/01-asymptotic-analysis-and-limits.md"
+    },
+    {
+      "id": "L02",
+      "title": "Arrays, Dynamic Arrays, and Locality",
+      "path": "lessons/02-arrays-dynamic-arrays-locality.md"
+    },
+    {
+      "id": "L03",
+      "title": "Hash Tables",
+      "path": "lessons/03-hash-tables.md"
+    },
+    {
+      "id": "L04",
+      "title": "Trees and Balanced Search",
+      "path": "lessons/04-trees-balanced-search.md"
+    },
+    {
+      "id": "L05",
+      "title": "Heaps and Priority Queues",
+      "path": "lessons/05-heaps-priority-queues.md"
+    },
+    {
+      "id": "L06",
+      "title": "Graphs and Traversal",
+      "path": "lessons/06-graphs-traversal.md"
+    },
+    {
+      "id": "L07",
+      "title": "Sorting and Selection",
+      "path": "lessons/07-sorting-selection.md"
+    },
+    {
+      "id": "L08",
+      "title": "Tractability and Design Decisions",
+      "path": "lessons/08-tractability-design-decisions.md"
+    }
+  ],
+  "learning_outcomes": [
+    {
+      "id": "M00-O1",
+      "statement": "Use Big-O, theta, omega, and amortized analysis without confusing them for measured runtime.",
+      "lesson_ids": [
+        "L01",
+        "L02"
+      ],
+      "exercise_ids": [
+        "EX-01",
+        "EX-02"
+      ]
+    },
+    {
+      "id": "M00-O2",
+      "statement": "Choose arrays, linked structures, hash tables, trees, heaps, or graphs from workload shape and invariants.",
+      "lesson_ids": [
+        "L02",
+        "L03",
+        "L04",
+        "L05",
+        "L06"
+      ],
+      "exercise_ids": [
+        "EX-03",
+        "EX-04",
+        "EX-05"
+      ]
+    },
+    {
+      "id": "M00-O3",
+      "statement": "Explain why locality, hashing assumptions, balancing, and priority semantics change system behavior.",
+      "lesson_ids": [
+        "L02",
+        "L03",
+        "L04",
+        "L05"
+      ],
+      "exercise_ids": [
+        "EX-06",
+        "EX-07"
+      ]
+    },
+    {
+      "id": "M00-O4",
+      "statement": "Recognize graph, sorting, selection, and intractable subproblems inside system-design work.",
+      "lesson_ids": [
+        "L06",
+        "L07",
+        "L08"
+      ],
+      "exercise_ids": [
+        "EX-08",
+        "EX-09",
+        "EX-10"
+      ]
+    },
+    {
+      "id": "M00-O5",
+      "statement": "Measure a local algorithmic claim and state what the measurement does and does not prove.",
+      "lesson_ids": [
+        "L01",
+        "L08"
+      ],
+      "exercise_ids": [
+        "EX-11",
+        "EX-12"
+      ]
+    }
+  ],
+  "practice": {
+    "exercises_path": "exercises/exercises.md",
+    "answer_key_path": "exercises/answer-key.md"
+  },
+  "lab": {
+    "required": false,
+    "path": "lab/README.md",
+    "note": "Run the deterministic complexity harness to compare logical operations, locality-sensitive traversal, and hash lookup assumptions."
+  },
+  "quiz": {
+    "question_bank_path": "quiz/question-bank.json",
+    "answer_key_path": "quiz/answer-key.md",
+    "llm_grader_prompt_path": "quiz/llm-grader-prompt.md",
+    "question_count": 100,
+    "default_draw_count": 20,
+    "types": [
+      "multiple_choice",
+      "short_answer",
+      "calculation",
+      "scenario_diagnosis",
+      "design_judgment"
+    ]
+  },
+  "optional_project": {
+    "description": "Analyze a data-heavy workflow you know, name the hidden algorithmic decisions, and replace one assumption with a measurement."
+  },
+  "resources": [
+    {
+      "id": "RES-01",
+      "title": "Open Data Structures",
+      "url": "https://opendatastructures.org/",
+      "required": true,
+      "estimated_minutes": 90,
+      "purpose": "Use chapters on arrays, lists, hash tables, trees, heaps, and graphs as a precise reference.",
+      "local_alternative": "lessons/"
+    },
+    {
+      "id": "RES-02",
+      "title": "CLRS Lecture Notes",
+      "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/pages/lecture-notes/",
+      "required": false,
+      "estimated_minutes": 120,
+      "purpose": "Review formal treatments for asymptotic analysis, sorting, hashing, and graph traversal.",
+      "local_alternative": "lessons/"
+    },
+    {
+      "id": "RES-03",
+      "title": "What Every Programmer Should Know About Memory",
+      "url": "https://people.freebsd.org/~lstewart/articles/cpumemory.pdf",
+      "required": false,
+      "estimated_minutes": 60,
+      "purpose": "Connect algorithmic access patterns to cache, locality, and memory latency.",
+      "local_alternative": "lessons/02-arrays-dynamic-arrays-locality.md"
+    },
+    {
+      "id": "RES-04",
+      "title": "Computational Complexity",
+      "url": "https://plato.stanford.edu/entries/computational-complexity/",
+      "required": false,
+      "estimated_minutes": 45,
+      "purpose": "Use as a readable reference for P, NP, reductions, and why intractability changes engineering choices.",
+      "local_alternative": "lessons/08-tractability-design-decisions.md"
+    }
+  ]
+}

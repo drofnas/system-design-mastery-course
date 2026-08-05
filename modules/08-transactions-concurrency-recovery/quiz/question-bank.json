@@ -1,4 +1,5 @@
 {
+  "$schema": "../../../schemas/quiz-bank.schema.json",
   "module_id": "M08",
   "title": "Transactions, Concurrency, and Recovery",
   "questions": [
@@ -76,7 +77,7 @@
         "application"
       ],
       "prompt": "A learner applies 'Optimistic Control, MVCC, Snapshots, and Write Skew' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Saying MVCC means \u201creaders never block\u201d without vacuum/version limits.",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Saying MVCC means “readers never block” without vacuum/version limits.",
       "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
       "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
     },
@@ -172,7 +173,7 @@
         "application"
       ],
       "prompt": "A learner applies 'Invariants and Transaction Boundaries' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Calling a transaction \u201cACID\u201d without naming the admitted histories.",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Calling a transaction “ACID” without naming the admitted histories.",
       "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
       "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
     },
@@ -844,7 +845,7 @@
         "application"
       ],
       "prompt": "A learner applies 'Optimistic Control, MVCC, Snapshots, and Write Skew' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Saying MVCC means \u201creaders never block\u201d without vacuum/version limits.",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Saying MVCC means “readers never block” without vacuum/version limits.",
       "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
       "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
     },
@@ -940,7 +941,7 @@
         "application"
       ],
       "prompt": "A learner applies 'Invariants and Transaction Boundaries' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Calling a transaction \u201cACID\u201d without naming the admitted histories.",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Calling a transaction “ACID” without naming the admitted histories.",
       "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
       "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
     },
@@ -1612,7 +1613,7 @@
         "application"
       ],
       "prompt": "A learner applies 'Optimistic Control, MVCC, Snapshots, and Write Skew' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Saying MVCC means \u201creaders never block\u201d without vacuum/version limits.",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Saying MVCC means “readers never block” without vacuum/version limits.",
       "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
       "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
     },
@@ -1708,7 +1709,7 @@
         "application"
       ],
       "prompt": "A learner applies 'Invariants and Transaction Boundaries' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Calling a transaction \u201cACID\u201d without naming the admitted histories.",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Calling a transaction “ACID” without naming the admitted histories.",
       "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
       "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
     },

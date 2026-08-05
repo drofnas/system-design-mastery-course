@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run a module scenario through the shared three-process evidence boundary."""
+"""Run a module scenario through the shared three-process evidence limit."""
 
 from __future__ import annotations
 

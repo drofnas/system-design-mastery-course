@@ -1,10 +1,9 @@
 ---
 lesson_id: L04
 title: "Fan-out and Tail Amplification"
-week: 6
 ---
 
-# Lesson 4: Fan-out and Tail Amplification
+# Fan-out and Tail Amplification
 
 ## Outcomes
 

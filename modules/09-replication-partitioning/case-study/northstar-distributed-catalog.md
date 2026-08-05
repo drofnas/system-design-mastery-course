@@ -6,9 +6,9 @@ Northstar now operates telescope sites in west, central, and east regions. The
 catalog stores controller-window authority, public exposure metadata,
 scientific annotations, and researcher-private metadata. It extends Module 8's
 non-commerce observatory case and contains no products, inventory, checkout,
-orders, payments, merchants, or capstone solution.
+orders, payments, merchants, or project solution.
 
-Do not continue until the learner's independent Week 33 commerce baseline is
+Do not continue until the learner's independent replication baseline is
 frozen. This is one defensible design, not a required architecture.
 
 ## Workload, topology, and failure model

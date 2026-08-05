@@ -1,6 +1,9 @@
-# Lesson 3: Safety, Liveness, Failure Detectors, and Consensus Boundaries
-
+---
 lesson_id: L03
+title: "Safety, Liveness, Failure Detectors, and Consensus Boundaries"
+---
+
+# Safety, Liveness, Failure Detectors, and Consensus Boundaries
 
 ## Outcomes
 

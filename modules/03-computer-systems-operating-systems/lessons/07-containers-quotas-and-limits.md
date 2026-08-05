@@ -1,6 +1,6 @@
 ---
 lesson_id: L07
-title: Containers, Quotas, Throttling, and Memory Limits
+title: "Containers, Quotas, Throttling, and Memory Limits"
 ---
 
 # Containers, Quotas, Throttling, and Memory Limits

@@ -1,4 +1,7 @@
+---
 lesson_id: L06
+title: "Incremental Migration and Backfills"
+---
 
 # Incremental Migration and Backfills
 
