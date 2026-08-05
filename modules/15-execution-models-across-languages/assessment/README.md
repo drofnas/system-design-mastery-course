@@ -1,5 +1,7 @@
 # Module 15 Assessment Contract
 
+> **PESD 2.0 evaluation ownership:** G05 invokes this module-specific rubric and evaluator exactly once as its domain score. Do not run or submit a separate module semantic evaluation report.
+
 Evaluate only submitted evidence against the published rubric. Run structural
 gates before semantic scoring and cite `path#heading` for every gate, score, and
 finding. Do not infer a hidden bound or prefer a language.

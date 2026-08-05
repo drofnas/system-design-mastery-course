@@ -29,6 +29,12 @@ Run one scenario from this directory:
 python3 -m consensus_lab scenarios/f01-leader-termination-broken.json --pretty
 ```
 
+Drive the same scenario through the required shared process boundary:
+
+```bash
+python3 ../../../shared-labs/three-node-cluster/run_boundary.py --module M10 --scenario scenarios/f01-leader-termination-broken.json --output ../../../experiments/m10-f01-cluster-boundary.json
+```
+
 Run all automated checks:
 
 ```bash

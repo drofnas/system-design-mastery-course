@@ -12,10 +12,8 @@ records below are optional enrichment and do not consume required module time.
 
 | Week | Required resources | Assigned minutes |
 |---:|---|---:|
-| 5 | RES-01, RES-05 | 60 |
-| 6 | RES-02, RES-03 | 95 |
-| 7 | RES-04, RES-06 | 65 |
-| 8 | None | 0 |
+| 6 | RES-03, RES-04, RES-05 | 115 |
+| 7 | RES-01, RES-02, RES-06 | 105 |
 
 For each assigned source, preserve the requested evidence, one transfer limit,
 and one observation that would falsify the claim. A required source that is
@@ -30,7 +28,7 @@ task; record the substitution.
 - **URL:** https://ocw.mit.edu/courses/1-203j-logistical-and-transportation-planning-methods-fall-2006/resources/lec5/
 - **Type/status:** authoritative graduate lecture notes; Required
 - **Access:** free
-- **Week/time:** Week 5; 35 minutes assigned
+- **Week/time:** Week 7; 35 minutes assigned
 - **Purpose:** Distinguish Little's Law from a full queueing prediction.
 - **Boundary and evidence:** Study queue terminology, Little's Law, dynamic behavior, and strengths/weaknesses; skip Markov derivations. Explain one invalid use and calculate one boundary two ways.
 - **Local alternative:** [lessons/02-littles-law-and-saturation.md](lessons/02-littles-law-and-saturation.md)
@@ -43,7 +41,7 @@ task; record the substitution.
 - **URL:** https://research.google/pubs/the-tail-at-scale/
 - **Type/status:** original research article; Required
 - **Access:** free
-- **Week/time:** Week 6; 40 minutes assigned
+- **Week/time:** Week 7; 40 minutes assigned
 - **Purpose:** Connect branch variance and fan-out to user-journey latency.
 - **Boundary and evidence:** Read the complete article. Choose one tail technique and state its extra work, correctness assumption, and rejection condition.
 - **Local alternative:** [lessons/04-fanout-and-tail-amplification.md](lessons/04-fanout-and-tail-amplification.md)
@@ -69,7 +67,7 @@ task; record the substitution.
 - **URL:** https://aws.amazon.com/builders-library/avoiding-insurmountable-queue-backlogs/
 - **Type/status:** first-person engineering case; Required
 - **Access:** free
-- **Week/time:** Week 7; 35 minutes assigned
+- **Week/time:** Week 6; 35 minutes assigned
 - **Purpose:** Treat backlog recovery as capacity work with a clearance objective.
 - **Boundary and evidence:** Read the complete article. Calculate net drain and clearance for one backlog and identify the fragile assumption.
 - **Local alternative:** [lessons/07-failover-headroom-and-unit-cost.md](lessons/07-failover-headroom-and-unit-cost.md)
@@ -82,7 +80,7 @@ task; record the substitution.
 - **URL:** https://github.com/HdrHistogram/HdrHistogram
 - **Type/status:** maintainer documentation; Required
 - **Access:** free
-- **Week/time:** Week 5; 25 minutes assigned
+- **Week/time:** Week 6; 25 minutes assigned
 - **Purpose:** Understand coordinated omission and corrected recording.
 - **Boundary and evidence:** Read the overview and Corrected vs. Raw value recording calls. Describe missing arrivals under a ten-second closed-loop stall.
 - **Local alternative:** [lessons/03-latency-measurement.md](lessons/03-latency-measurement.md)

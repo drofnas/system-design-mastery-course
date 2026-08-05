@@ -14,13 +14,18 @@ Windows 11 host. Run the local preflight before beginning a lab:
 python3 scripts/check_home_lab.py
 python3 scripts/check_home_lab.py --module M03 --module M15
 python3 scripts/check_home_lab.py --json --output home-lab-preflight.json
+python3 scripts/check_home_lab.py --module M16 --wsl-browser-callback modules/16-browser-frontend-cdn-edge/lab/wsl-browser-callback.json
 ```
 
-The preflight is read-only. It does not install packages, pull images, contact
-the network, or include a hostname, username, or home-directory path in its
-report. Exit status `0` means no blocker was found (warnings are allowed), `1`
-means at least one blocker needs remediation, and `2` means the invocation or
-preflight itself was invalid.
+The preflight is non-installing. It does not pull images, contact an LLM, or
+upload data. On WSL2 it launches and removes one bounded, network-disabled
+container from the already-cached M03 image, launches and closes the pinned
+Chromium binary, and performs an npm offline dry run. These probes verify actual
+resource enforcement and cache readiness without downloading a missing input.
+The report contains only coarse platform/tool/resource facts and does not emit
+usernames, hostnames, tokens, or absolute home paths. Exit status `0` means no
+blocker was found (warnings are allowed), `1` means at least one blocker needs
+remediation, and `2` means the invocation or preflight itself was invalid.
 
 ## Hardware lanes
 
@@ -87,6 +92,20 @@ Windows 11 with Ubuntu on WSL2 for the provisional support matrix.
    guest loopback; the Windows-browser callback; Chromium launch; free disk;
    and the pinned offline cache before collecting evidence.
 
+For M16, first run the one-time callback from the module lab and open the printed
+URL in a normal Windows browser:
+
+```bash
+python3 host_browser_callback.py --output wsl-browser-callback.json
+```
+
+Then pass that source-bound, token-free record to the root preflight with
+`--wsl-browser-callback`. A missing, malformed, stale-commit, or failed callback
+is a blocking M16 result. The cgroup probe also blocks M03/M15 evidence unless
+the cached container proves all three effective limits; file visibility alone
+is not enough. Offline readiness is evaluated only for selected M03, M15, and
+M16 lanes and fails closed on any missing pinned image, package, or browser.
+
 The preflight reports native Windows as unsupported and points to WSL2. Windows
 on ARM, Hyper-V-only Docker, and locked-down managed devices are outside the
 supported baseline until separately verified.
@@ -111,6 +130,26 @@ Decide but are not local measurements.
 Every executed or measured trial records source commit, scenario/input/config
 hashes, runtime boundary, CPU/memory/PID limits, clock, warm-up/repetition policy,
 raw outcomes, and limitations.
+
+Lab-specific JSON is the raw mechanism result, not the complete provenance
+record. Freeze it with `scripts/write_evidence_envelope.py`; the writer verifies
+that every declared input and configuration is byte-identical to the recorded
+source commit, hashes the raw outcomes, refuses overwrite, and marks fixture
+replay, derived work, and modeled capacity as ineligible for independent
+Build/Break/Implement/Measure credit. For example:
+
+```bash
+python3 scripts/write_evidence_envelope.py --module M10 \
+  --mode executed_deterministic --input modules/10-time-coordination-consensus/lab/scenarios/f01-leader-termination-repaired.json \
+  --config modules/10-time-coordination-consensus/lab/consensus_lab/config.py \
+  --raw-outcome experiments/m10-f01-raw.json --runtime-boundary local_native \
+  --runtime "Python 3.11+" --cpu-limit host-controlled --memory-limit host-controlled \
+  --pid-limit host-controlled --clock-source logical-ticks \
+  --timing-boundary "scenario start through oracle completion" --warmups 0 \
+  --repetitions 1 --exclusion-policy none \
+  --limitation "Local deterministic execution does not establish regional or physical-durability behavior." \
+  --output experiments/m10-f01-evidence-envelope.json
+```
 
 ## Module dependency matrix
 

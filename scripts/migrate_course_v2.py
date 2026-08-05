@@ -363,7 +363,14 @@ def build_weeks(module: dict[str, Any], buckets: dict[str, list[dict[str, Any]]]
         blocks: list[dict[str, Any]] = []
         block_index = 1
 
-        def add_block(label: str, minutes: int, activity: str, **extra: Any) -> None:
+        def add_block(
+            label: str,
+            minutes: int,
+            activity: str,
+            *,
+            required: bool = True,
+            **extra: Any,
+        ) -> None:
             nonlocal block_index
             if minutes <= 0:
                 return
@@ -372,6 +379,7 @@ def build_weeks(module: dict[str, Any], buckets: dict[str, list[dict[str, Any]]]
                 "label": label,
                 "minutes": minutes,
                 "activity": activity,
+                "required": required,
                 **extra,
             }
             blocks.append(block)
@@ -435,6 +443,12 @@ def build_weeks(module: dict[str, Any], buckets: dict[str, list[dict[str, Any]]]
             blocks[-1]["minutes"] -= 60
             add_block("Module teach-back", 30, "teach_back")
             add_block("Learning log and freeze check", 30, "reflection")
+        add_block(
+            "Optional contingency capacity",
+            12 * 60 - target_minutes,
+            "contingency",
+            required=False,
+        )
         result.append({
             "number": week_number,
             "phase": focus,
@@ -458,7 +472,15 @@ def schedule_markdown(module: dict[str, Any]) -> str:
             "|---|---:|",
         ])
         for block in week["time_blocks"]:
+            if not block["required"]:
+                continue
             lines.append(f"| {block['label']} | {block['minutes']} min |")
+        contingency = sum(block["minutes"] for block in week["time_blocks"] if not block["required"])
+        lines.append("")
+        lines.append(
+            f"Optional contingency capacity: {contingency} minutes. It is not core work, "
+            "carries no required evidence, and may remain unused."
+        )
         lines.append("")
     return "\n".join(lines).rstrip()
 
@@ -477,6 +499,116 @@ def replace_schedule(readme: Path, module: dict[str, Any]) -> None:
     if count != 1:
         raise ValueError(f"{readme}: schedule section not found")
     readme.write_text(updated, encoding="utf-8")
+
+
+def rewrite_resources_guide(module_root: Path, module: dict[str, Any]) -> None:
+    """Keep the learner-facing resource guide identical to the migrated manifest."""
+
+    path = module_root / "resources.md"
+    text = path.read_text(encoding="utf-8")
+    required_by_week: dict[int, list[dict[str, Any]]] = {}
+    for resource in module.get("resources", []):
+        if resource.get("required"):
+            required_by_week.setdefault(int(resource["week"]), []).append(resource)
+    table_rows = []
+    for week in sorted(required_by_week):
+        rows = sorted(required_by_week[week], key=lambda row: row["id"])
+        table_rows.append(
+            f"| {week} | {', '.join(row['id'] for row in rows)} | "
+            f"{sum(int(row['estimated_minutes']) for row in rows)} |"
+        )
+    table = (
+        "| Week | Required resources | Assigned minutes |\n"
+        "|---:|---|---:|\n" + "\n".join(table_rows)
+    )
+    required_ids = sorted(
+        str(resource["id"]) for resource in module.get("resources", []) if resource.get("required")
+    )
+    text, count = re.subn(
+        r"The required records are .*?\.\nEvery required record",
+        f"The required records are {', '.join(required_ids)}.\nEvery required record",
+        text,
+        count=1,
+        flags=re.DOTALL,
+    )
+    if count != 1:
+        raise ValueError(f"{path}: required-resource spine sentence not found")
+    text, count = re.subn(
+        r"\| Week \| Required resources \| Assigned minutes \|\n"
+        r"\|---:\|---\|---:\|\n.*?(?=\n\nFor each assigned source)",
+        table,
+        text,
+        count=1,
+        flags=re.DOTALL,
+    )
+    if count != 1:
+        raise ValueError(f"{path}: required-resource table not found")
+
+    existing_ids = set(re.findall(r"^### (RES-\d{2}):", text, re.MULTILINE))
+    v2_rows = [row for row in module.get("resources", []) if row["id"] not in existing_ids]
+    if v2_rows:
+        generated = ["## PESD 2.0 primary anchors", ""]
+        for resource in sorted(v2_rows, key=lambda row: row["id"]):
+            status = "Required" if resource["required"] else "Optional enrichment"
+            allocation = "assigned" if resource["required"] else "optional"
+            generated.extend([
+                f"### {resource['id']}: {resource['title']}", "",
+                f"- **Author/publisher:** {resource['author_or_publisher']}",
+                f"- **URL:** {resource['url']}",
+                f"- **Type/status:** {resource['type']}; {status}",
+                f"- **Access:** {resource['access']}",
+                f"- **Week/time:** Week {resource['week']}; {resource['estimated_minutes']} minutes {allocation}",
+                f"- **Purpose:** {resource['purpose']}",
+                f"- **Boundary and evidence:** {resource['assignment']}",
+                f"- **Local alternative:** [{resource['text_alternative']}]({resource['text_alternative']})",
+                f"- **Verification:** {resource.get('verification_status', 'verified')}; "
+                f"{resource.get('verification_method', 'primary-source metadata comparison')}; "
+                f"last checked {resource['last_verified']}",
+                "- **Reflection:** Which obligation applies, which evidence proves its control, "
+                "and what uncertainty or failure would reverse the decision?", "",
+            ])
+        replacement = "\n".join(generated).rstrip() + "\n"
+        if "## PESD 2.0 primary anchors" in text:
+            text = text.split("## PESD 2.0 primary anchors", 1)[0].rstrip() + "\n\n" + replacement
+        else:
+            text = text.rstrip() + "\n\n" + replacement
+
+    for resource in module.get("resources", []):
+        pattern = rf"(^### {re.escape(resource['id'])}:.*?^- \*\*Week/time:\*\* Week )\d+(; )\d+( minutes (?:assigned|optional))"
+        replacement = rf"\g<1>{resource['week']}\g<2>{resource['estimated_minutes']}\g<3>"
+        text, count = re.subn(pattern, replacement, text, count=1, flags=re.MULTILINE | re.DOTALL)
+        if count != 1:
+            raise ValueError(f"{path}: structured record for {resource['id']} not found")
+    path.write_text(text, encoding="utf-8")
+
+
+def rewrite_subsumed_evaluation_docs(module_root: Path, module_id: str) -> None:
+    gate_number = (int(module_id[1:]) + 2) // 3
+    gate_id = f"G{gate_number:02d}"
+    boundary = (
+        f"> **PESD 2.0 evaluation ownership:** {gate_id} invokes this module-specific "
+        "rubric and evaluator exactly once as its domain score. Do not run or "
+        "submit a separate module semantic evaluation report."
+    )
+    for relative in ("assessment/README.md", "assessment/evaluator-prompt.md"):
+        path = module_root / relative
+        text = path.read_text(encoding="utf-8")
+        if boundary not in text:
+            first, remainder = text.split("\n", 1)
+            path.write_text(first + "\n\n" + boundary + "\n\n" + remainder.lstrip(), encoding="utf-8")
+    report = module_root / "assessment" / "report-template.md"
+    text = report.read_text(encoding="utf-8")
+    text = re.sub(
+        r"^# .+$",
+        f"# {module_id} {gate_id} Domain Evaluation Record",
+        text,
+        count=1,
+        flags=re.MULTILINE,
+    )
+    if boundary not in text:
+        first, remainder = text.split("\n", 1)
+        text = first + "\n\n" + boundary + "\n\n" + remainder.lstrip()
+    report.write_text(text, encoding="utf-8")
 
 
 def v2_extension(module_id: str) -> str:
@@ -526,6 +658,10 @@ limits, clock, warm-up/repetition policy, raw outcomes, and limitations.
 def migrate_module(module_path: Path) -> None:
     module = json.loads(module_path.read_text(encoding="utf-8"))
     module_id = module["id"]
+    if module_id == "M09":
+        module = json.loads(
+            json.dumps(module).replace("Week 36 Gate 3", "Week 50 Gate 3")
+        )
     module_root = module_path.parent
     add_v2_resources(module, module_root)
     removed = REMOVED_GATE_DUPLICATES.get(module_id, set())
@@ -559,6 +695,7 @@ def migrate_module(module_path: Path) -> None:
     module["pesd_v2_additions"] = ADDITIONS[module_id]
     module["semantic_evaluation"] = "subsumed_by_gate" if module_id in {"M03", "M06", "M09", "M12", "M15", "M18"} else "module_specific"
     dump(module_path, module)
+    rewrite_resources_guide(module_root, module)
 
     replace_schedule(module_root / "README.md", module)
     readme_note = f"""
@@ -570,6 +707,17 @@ decision is {PRIMARY[module_id][1].upper()} {PRIMARY[module_id][0]}. The added g
 rubric anchors, and remediation map for the integrated evidence contract.
 """
     append_once(module_root / "README.md", "## PESD 2.0 scope addition", readme_note)
+    if module["semantic_evaluation"] == "subsumed_by_gate":
+        rewrite_subsumed_evaluation_docs(module_root, module_id)
+        gate_number = (int(module_id[1:]) + 2) // 3
+        append_once(module_root / "README.md", "## PESD 2.0 evaluation ownership", f"""
+## PESD 2.0 evaluation ownership
+
+Gate G{gate_number:02d} invokes this module's rubric and provider-neutral
+evaluator once for its domain score. Do not create a second module semantic
+evaluation report. The gate result is authoritative; remediation remains a
+separate dated artifact only for Revise or Repeat.
+""")
 
     lesson8 = sorted((module_root / "lessons").glob("08-*.md"))
     if len(lesson8) != 1:
@@ -693,6 +841,10 @@ def build_calendar() -> None:
 
 
 def gate_assessment_brief(gate_id: str, week: int, modules: list[str], final: bool) -> str:
+    current = ROOT / "gates" / gate_id / "assessment-brief.md"
+    embedded = sorted((ROOT / "modules").glob(f"*/assessment/gate-{gate_id[1:]}.md"))
+    if current.is_file() and not embedded:
+        return current.read_text(encoding="utf-8")
     sources = {
         "G01": ROOT / "modules/03-computer-systems-operating-systems/assessment/gate-01.md",
         "G02": ROOT / "modules/06-deadlines-resilient-remote-calls/assessment/gate-02.md",
@@ -768,6 +920,53 @@ the [gate overview](README.md); this brief contains the four scored parts.
     return text.split("\n", 1)[0] + "\n\n" + preamble.strip() + "\n\n" + text.split("\n", 1)[1].lstrip() + "\n\n" + result.strip() + "\n"
 
 
+def gate_assessor_guide(gate_id: str, modules: list[str]) -> str:
+    current = ROOT / "gates" / gate_id / "assessor-guide.md"
+    if current.is_file():
+        return current.read_text(encoding="utf-8")
+    source_paths = {
+        "G02": ROOT / "modules/06-deadlines-resilient-remote-calls/assessment/gate-02-answer-key.md",
+        "G03": ROOT / "modules/09-replication-partitioning/assessment/gate-03-answer-key.md",
+        "G04": ROOT / "modules/12-reliability-incidents-disaster-recovery/assessment/gate-04-answer-key.md",
+        "G05": ROOT / "modules/15-execution-models-across-languages/assessment/gate-05-answer-key.md",
+        "G06": ROOT / "modules/18-retrieval-rag-agents-capstone-defense/assessment/gate-06-answer-key.md",
+    }
+    if gate_id == "G01":
+        body = """## Review boundaries
+
+- Credit competing causal models only when each predicts discriminating evidence.
+- Keep buffered completion, durable acknowledgement, and recovery guarantees separate.
+- Require container and host-controlled evidence boundaries for every systems claim.
+- Accept different architecture decisions when the submitted workload, invariant,
+  causal model, operations, cost, ownership, migration, and reversal evidence support them.
+"""
+    else:
+        body = source_paths[gate_id].read_text(encoding="utf-8")
+        body = re.sub(
+            r"\n> \*\*PESD V1 historical contract:\*\*.*?\n\n", "\n", body,
+            flags=re.DOTALL,
+        )
+        body = re.sub(r"^# .+$", "## Review boundaries", body, count=1, flags=re.MULTILINE)
+        replacements = {
+            "G02": {"Week 24 revision": "Week 34 delta"},
+            "G03": {},
+            "G04": {"Week 48 revision": "Week 68 freeze and later Week 69 delta"},
+            "G05": {},
+            "G06": {"Week 1, 12, 24, 48, and 72 artifacts": "Week 1 baseline, all six gate freezes, and all six flex-week deltas"},
+        }
+        for old, new in replacements[gate_id].items():
+            body = body.replace(old, new)
+    return f"""# {gate_id} Assessor Guide
+
+Use this guide only after the learner freezes every submitted part. Score only
+the published module rubrics and evidence for {', '.join(modules)}. Cite a file
+and heading for every finding, preserve reasonable alternatives, and recommend
+remediation without drafting replacement graded answers. A Pass creates no
+required remediation artifact.
+
+{body.lstrip()}"""
+
+
 def build_gates() -> None:
     gate_root = ROOT / "gates"
     gate_root.mkdir(exist_ok=True)
@@ -805,6 +1004,7 @@ def build_gates() -> None:
                 "Repeat": "An invariant fails, chronology is invalid, evidence is fabricated or mismatched, or the causal model is materially incorrect.",
             },
             "remediation_reserve_hours": 6,
+            "pass_remediation_required": False,
         }
         if final:
             manifest["hard_floors"]["longitudinal_capstone"] = 3.5
@@ -822,6 +1022,9 @@ def build_gates() -> None:
         (destination / "assessment-brief.md").write_text(
             gate_assessment_brief(gate_id, week, modules, final), encoding="utf-8"
         )
+        (destination / "assessor-guide.md").write_text(
+            gate_assessor_guide(gate_id, modules), encoding="utf-8"
+        )
         schedule = "\n".join(f"| {title} | {minutes} min |" for _, title, minutes, _ in parts)
         (destination / "README.md").write_text(f"""# {gate_id}: Standalone Course Gate
 
@@ -830,7 +1033,8 @@ teaching or build work. Freeze the submitted commit before opening the hidden
 practical or defense prompts.
 
 Use the [assessment brief](assessment-brief.md) for the written, practical,
-defense, and portfolio prompts. The hidden practical is selected through the
+defense, and portfolio prompts. After freezing, use the
+[assessor guide](assessor-guide.md) for explained reasoning boundaries. The hidden practical is selected through the
 [sealed-local gate workflow](../../SOLO_GATE_GUIDE.md).
 
 | Part | Time |
@@ -995,6 +1199,9 @@ def rewrite_current_pacing_references() -> None:
         "modules/12-reliability-incidents-disaster-recovery/assessment/README.md": [
             ("Gate 4 parts and the separate Week 48 revision", "Gate 4 Week 68 parts and the separate Week 69 delta"),
         ],
+        "modules/12-reliability-incidents-disaster-recovery/worksheets/week-48-reliability-decision-gate-04.md": [
+            ("Run the module evaluator after freezing A01–A08. Revise only in dated addenda;\nRepeat uses new seeds.", "Gate 4 invokes the Module 12 evaluator once for its domain score after A01–A08 are frozen. Do not create a duplicate module evaluation report. Revise only in dated addenda; Repeat uses new seeds."),
+        ],
         "modules/12-reliability-incidents-disaster-recovery/lessons/08-game-days-reliability-decisions.md": [
             ("freeze Gate 4, and write the separate Week 48 capstone revision", "freeze Gate 4 in Week 68, and write the separate Week 69 capstone delta"),
         ],
@@ -1025,6 +1232,9 @@ def rewrite_current_pacing_references() -> None:
         "modules/15-execution-models-across-languages/assessment/README.md": [
             ("The Week 57 baseline", "The Week 81 baseline"),
         ],
+        "modules/15-execution-models-across-languages/worksheets/week-60-runtime-decision-gate-05.md": [
+            ("Freeze the module submission, run the evaluator, preserve its output, and create\na separate remediation revision. Then complete", "Freeze the module submission. Gate 5 invokes the Module 15 evaluator once for its domain score; do not create a duplicate module evaluation report. Preserve the gate output and create a separate remediation revision only when required. Then complete"),
+        ],
         "modules/15-execution-models-across-languages/lessons/08-runtime-decision-teach-back.md": [
             ("[Gate 5](../assessment/gate-05.md)", "[Gate 5](../../../gates/G05/assessment-brief.md)"),
         ],
@@ -1050,6 +1260,9 @@ def rewrite_current_pacing_references() -> None:
         "modules/18-retrieval-rag-agents-capstone-defense/lessons/08-civicaid-capstone-defense.md": [
             ("Build the Week 72 revision as a new artifact that cites the Week 1, 12, 24, and 48 baselines", "Build the Week 104 final delta as a new artifact that cites the Week 1 baseline and every Week 16–103 freeze and flex-week delta"),
             ("the Week 72 worksheet, and the Gate 6 submission. Use [week-72-final.md](../../../capstone/revisions/week-72-final.md) only as a new revision contract.", "the final worksheet, and the Week 103 Gate 6 submission. Use [week-104-delta.md](../../../capstone/revisions/week-104-delta.md) only after the Gate 6 freeze as a new final-delta contract."),
+        ],
+        "modules/18-retrieval-rag-agents-capstone-defense/worksheets/week-72-capstone-defense.md": [
+            ("Link Gate 6, module evaluation, separate remediation artifact, and reassessment result.", "Link the single Gate 6 Module 18 domain evaluation, any required separate remediation artifact, and the reassessment result. Do not create a duplicate module evaluation report."),
         ],
     }
     for relative, pairs in replacements.items():
@@ -1108,6 +1321,37 @@ def mark_v1_evidence() -> None:
         path.write_text(first + "\n\n" + banner + "\n" + remainder.lstrip(), encoding="utf-8")
 
 
+def retire_embedded_v1_gates() -> None:
+    """The V1 tag preserves these files; PESD 2.0 owns only top-level gates."""
+
+    for path in sorted((ROOT / "modules").glob("*/assessment/gate-*.md")):
+        path.unlink()
+
+
+def supersede_pre_v2_readiness_reviews() -> None:
+    banner = (
+        "> **PESD 2.0 status: Review.** This pre-migration readiness record is "
+        "historical, not a current Ready decision. Fresh evaluator repetitions, "
+        "platform/offline/cleanup matrices, and timed learner pilots remain pending."
+    )
+    for path in sorted((ROOT / "modules").glob("*/assessment/*readiness-review.md")):
+        text = path.read_text(encoding="utf-8")
+        if banner not in text:
+            first, remainder = text.split("\n", 1)
+            text = first + "\n\n" + banner + "\n\n" + remainder.lstrip()
+        text = text.replace("Current decision: **Ready**", "Historical decision (superseded): **Ready**")
+        text = text.replace("## Current status: ready", "## Historical status (superseded): ready")
+        text = text.replace("- Final result: ready.", "- Historical final result (superseded): ready.")
+        text = re.sub(
+            r"## Result\n\n(\*\*Ready on [^\n]+\*\*)",
+            r"## Historical result (superseded)\n\n\1",
+            text,
+        )
+        text = text.replace("the module is ready for learners", "the historical review found the module ready for learners")
+        text = text.replace("The module is ready within", "The historical review found the module ready within")
+        path.write_text(text, encoding="utf-8")
+
+
 def main() -> int:
     module_paths = sorted((ROOT / "modules").glob("*/module.json"))
     if len(module_paths) != 18:
@@ -1122,6 +1366,8 @@ def main() -> int:
     build_capstone_chronology()
     migrate_m18_invariant_names()
     mark_v1_evidence()
+    retire_embedded_v1_gates()
+    supersede_pre_v2_readiness_reviews()
     print("generated calendar, gates, and portfolio registry")
     return 0
 

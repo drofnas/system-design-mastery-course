@@ -9,6 +9,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 from scripts import check_home_lab
+from scripts.schema_contract import validate_instance
 
 
 def snapshot(platform_name="ubuntu", architecture="x86_64", **changes):
@@ -20,7 +21,9 @@ def snapshot(platform_name="ubuntu", architecture="x86_64", **changes):
                      "node": "v24.19.0", "npm": "11.0"},
         "docker_daemon": True, "docker_memory_gib": 4.0, "openssl_addext": True,
         "loopback": True, "temporary_files": True, "repo_on_wsl_filesystem": True,
-        "cgroup_controls": True, "chromium_available": True, "windows_browser_callback": True,
+        "cgroup_enforcement": True, "chromium_launch": True,
+        "offline_cache_ready": {"M03": True, "M15": True, "M16": True},
+        "windows_browser_callback": True,
     }
     value.update(changes)
     return value
@@ -41,6 +44,43 @@ class PreflightTests(unittest.TestCase):
     def test_windows_arm_wsl_is_out_of_scope(self):
         report = check_home_lab.evaluate(snapshot("wsl2-ubuntu", "arm64"), ["M02"])
         self.assertEqual("fail", report["summary"]["result"])
+
+    def test_wsl_runtime_checks_fail_closed(self):
+        cases = (
+            ({"repo_on_wsl_filesystem": False}, ["M02"], "wsl-filesystem"),
+            ({"cgroup_enforcement": False}, ["M03"], "wsl-cgroups"),
+            ({"docker_memory_gib": 3.9}, ["M15"], "wsl-docker-memory"),
+            ({"chromium_launch": False}, ["M16"], "wsl-chromium"),
+            ({"windows_browser_callback": False}, ["M16"], "wsl-windows-browser-callback"),
+            ({"offline_cache_ready": {"M15": False}}, ["M15"], "wsl-offline-cache"),
+        )
+        for changes, modules, check_id in cases:
+            with self.subTest(check=check_id):
+                report = check_home_lab.evaluate(snapshot("wsl2-ubuntu", **changes), modules)
+                check = next(item for item in report["checks"] if item["id"] == check_id)
+                self.assertEqual("fail", check["status"])
+                self.assertEqual("fail", report["summary"]["result"])
+
+    def test_wsl_browser_callback_is_source_bound_and_token_free(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "callback.json"
+            record = {
+                "schema_version": "1.0",
+                "source_commit": "a" * 40,
+                "recorded_at": "2026-08-04T12:34:56Z",
+                "result": "pass",
+                "boundary": "windows-browser-to-wsl-loopback",
+                "token_persisted": False,
+            }
+            path.write_text(json.dumps(record), encoding="utf-8")
+            schema = json.loads((check_home_lab.ROOT / "schemas/wsl-browser-callback.schema.json").read_text(encoding="utf-8"))
+            validate_instance(record, schema, label="WSL browser callback")
+            with patch.object(check_home_lab, "_git_head", return_value="a" * 40):
+                self.assertTrue(check_home_lab._wsl_browser_callback_verified(path))
+            record["source_commit"] = "b" * 40
+            path.write_text(json.dumps(record), encoding="utf-8")
+            with patch.object(check_home_lab, "_git_head", return_value="a" * 40):
+                self.assertFalse(check_home_lab._wsl_browser_callback_verified(path))
 
     def test_wsl1_is_not_mistaken_for_wsl2(self):
         report = check_home_lab.evaluate(snapshot("wsl1-unsupported", "x86_64"), ["M02"])

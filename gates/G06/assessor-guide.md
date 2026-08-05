@@ -1,6 +1,12 @@
-# Gate 6 assessor reasoning guide
+# G06 Assessor Guide
 
-> **PESD V1 historical contract:** Preserve this file for V1 learners and immutable evidence. PESD 2.0 uses [gates/G06/README.md](../../../gates/G06/README.md).
+Use this guide only after the learner freezes every submitted part. Score only
+the published module rubrics and evidence for M16, M17, M18. Cite a file
+and heading for every finding, preserve reasonable alternatives, and recommend
+remediation without drafting replacement graded answers. A Pass creates no
+required remediation artifact.
+
+## Review boundaries
 
 This guide defines boundaries, not a canonical commerce architecture.
 

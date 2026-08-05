@@ -58,6 +58,8 @@ budgeted below that ceiling; unused time is recovery buffer, not hidden work.
 | Guided practice | 60 min |
 | Model and derive core work | 200 min |
 
+Optional contingency capacity: 210 minutes. It is not core work, carries no required evidence, and may remain unused.
+
 ### Week 19: Guided build and prediction freeze — 9 hours
 
 | Work | Time |
@@ -68,6 +70,8 @@ budgeted below that ceiling; unused time is recovery buffer, not hidden work.
 | Required evidence components | 90 min |
 | Guided build and prediction freeze core work | 145 min |
 
+Optional contingency capacity: 180 minutes. It is not core work, carries no required evidence, and may remain unused.
+
 ### Week 20: Independent build and integration — 10 hours
 
 | Work | Time |
@@ -75,12 +79,16 @@ budgeted below that ceiling; unused time is recovery buffer, not hidden work.
 | Independent build and integration core work | 540 min |
 | Independent build and integration verification checkpoint | 60 min |
 
+Optional contingency capacity: 120 minutes. It is not core work, carries no required evidence, and may remain unused.
+
 ### Week 21: Break, repair, measure, and diagnose — 10 hours
 
 | Work | Time |
 |---|---:|
 | Required evidence components | 120 min |
 | Break, repair, measure, and diagnose core work | 480 min |
+
+Optional contingency capacity: 120 minutes. It is not core work, carries no required evidence, and may remain unused.
 
 ### Week 22: Decide, teach, assess, and freeze — 9.5 hours
 
@@ -90,6 +98,8 @@ budgeted below that ceiling; unused time is recovery buffer, not hidden work.
 | Decide, teach, assess, and freeze core work | 390 min |
 | Module teach-back | 30 min |
 | Learning log and freeze check | 30 min |
+
+Optional contingency capacity: 150 minutes. It is not core work, carries no required evidence, and may remain unused.
 ## Learn
 
 1. [Question-first performance investigations](lessons/01-question-first-investigations.md)

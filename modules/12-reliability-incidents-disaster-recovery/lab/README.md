@@ -16,6 +16,12 @@ safety. Its public CLI is:
 python3 -m reliability_lab scenarios/f01-slow-dependency-load-broken.json --pretty
 ```
 
+Drive the same scenario through the required shared process boundary:
+
+```bash
+python3 ../../../shared-labs/three-node-cluster/run_boundary.py --module M12 --scenario scenarios/f01-slow-dependency-load-broken.json --output ../../../experiments/m12-f01-cluster-boundary.json
+```
+
 Run all checks with:
 
 ```bash

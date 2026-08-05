@@ -139,7 +139,7 @@ You should know algebra, functions, exponents, logarithms, basic probability, an
 You may substitute tools when your environment imposes limits. Record the substitution and explain which behavior it changes.
 
 The complete supported home-computer baseline, macOS/Linux/Windows-through-WSL2
-setup, module dependency matrix, and read-only preflight are in
+setup, module dependency matrix, and non-installing preflight are in
 [`HOME_LAB_GUIDE.md`](HOME_LAB_GUIDE.md). A discrete GPU and multi-machine lab
 are not required.
 
@@ -941,7 +941,7 @@ and closure 60. The top-level [`gates`](gates/) manifests are authoritative.
 
 Use three result bands:
 
-- **Pass:** all structural, scored-part, module-domain, safety, invariant, and average floors pass.
+- **Pass:** all structural, scored-part, module-domain, safety, invariant, and average floors pass. A Pass creates no required remediation artifact.
 - **Revise:** evidence is complete and chronology is valid, but one or more non-safety score floors are missed.
 - **Repeat:** an invariant fails, chronology is invalid, evidence is fabricated or mismatched, or the causal model is materially incorrect.
 
@@ -1117,6 +1117,8 @@ Choose the capstone or a familiar production problem. Write:
 - The simplest design you believe will work
 - Your strongest reasons for and against that design
 
-Date the document and preserve it without later edits. Create separate revised
-copies at Weeks 12, 24, 48, and 72 so that the course produces evidence of how
-your judgment changed. The Week 1 baseline is never replaced.
+Date the document and preserve it without later edits. Freeze separate capstone
+submissions at Gates 1–6 in Weeks 16, 33, 50, 68, 85, and 103. Write distinct
+delta revisions in Weeks 17, 34, 51, 69, 86, and 104 so that the course shows
+how judgment changed without overwriting any earlier baseline or freeze. The
+Week 1 baseline is never replaced.

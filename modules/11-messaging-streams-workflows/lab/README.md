@@ -22,6 +22,12 @@ Run one scenario from this directory:
 python3 -m messaging_lab scenarios/f01-atomic-outbox-broken.json --pretty
 ```
 
+Drive the same scenario through the required shared process boundary:
+
+```bash
+python3 ../../../shared-labs/three-node-cluster/run_boundary.py --module M11 --scenario scenarios/f01-atomic-outbox-broken.json --output ../../../experiments/m11-f01-cluster-boundary.json
+```
+
 Run all automated checks:
 
 ```bash

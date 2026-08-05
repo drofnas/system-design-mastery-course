@@ -16,7 +16,7 @@ authoritative course requirements are in
 [`00_COURSE_SYLLABUS.md`](00_COURSE_SYLLABUS.md).
 
 Before running any executable lab, use the cross-platform
-[`HOME_LAB_GUIDE.md`](HOME_LAB_GUIDE.md) and its read-only preflight. The course
+[`HOME_LAB_GUIDE.md`](HOME_LAB_GUIDE.md) and its non-installing preflight. The course
 supports one ordinary macOS or Ubuntu computer, and Windows through Ubuntu on
 WSL2; no discrete GPU or second learner is required.
 

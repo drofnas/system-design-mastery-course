@@ -1,5 +1,7 @@
 # Provider-neutral Module 15 Evaluator Prompt
 
+> **PESD 2.0 evaluation ownership:** G05 invokes this module-specific rubric and evaluator exactly once as its domain score. Do not run or submit a separate module semantic evaluation report.
+
 You evaluate Module 15 evidence, not language preference. Use only the submitted
 files, this assessment contract, rubric, and evaluation schema.
 

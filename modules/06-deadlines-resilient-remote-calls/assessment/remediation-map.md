@@ -14,7 +14,7 @@ smallest evidence needed.
 | Breaker/hedge/partial outcome | Lesson 6 | EX-10–EX-11 | controlled alternative experiment |
 | Failure evidence integrity | Lessons 1–6 | EX-13–EX-14 | new raw trial and discriminating rerun |
 | Policy/migration/cost | Lesson 8 | EX-15–EX-16 | dated policy revision and rollback rehearsal |
-| Defense/Gate 2 | Lesson 8 | EX-16 | follow-up defense and Week 24 addendum |
+| Defense/Gate 2 | Lesson 8 | EX-16 | follow-up defense and separate Week 34 flex-delta addendum |
 
 Repeat requires a new independent baseline and new raw trials only when the
 original ordering/evidence is invalid. Never reconstruct missing raw data.

@@ -1,5 +1,7 @@
 # Module 12 Assessment Contract
 
+> **PESD 2.0 evaluation ownership:** G04 invokes this module-specific rubric and evaluator exactly once as its domain score. Do not run or submit a separate module semantic evaluation report.
+
 Assessment uses only frozen submitted evidence and this published contract.
 Northstar calibrates the evaluator and is never a required commerce answer.
 

@@ -57,6 +57,8 @@ budgeted below that ceiling; unused time is recovery buffer, not hidden work.
 | Guided practice | 60 min |
 | Model and derive core work | 200 min |
 
+Optional contingency capacity: 210 minutes. It is not core work, carries no required evidence, and may remain unused.
+
 ### Week 29: Guided build and prediction freeze — 9 hours
 
 | Work | Time |
@@ -67,6 +69,8 @@ budgeted below that ceiling; unused time is recovery buffer, not hidden work.
 | Required evidence components | 120 min |
 | Guided build and prediction freeze core work | 120 min |
 
+Optional contingency capacity: 180 minutes. It is not core work, carries no required evidence, and may remain unused.
+
 ### Week 30: Independent build and integration — 10 hours
 
 | Work | Time |
@@ -74,12 +78,16 @@ budgeted below that ceiling; unused time is recovery buffer, not hidden work.
 | Independent build and integration core work | 540 min |
 | Independent build and integration verification checkpoint | 60 min |
 
+Optional contingency capacity: 120 minutes. It is not core work, carries no required evidence, and may remain unused.
+
 ### Week 31: Break, repair, measure, and diagnose — 10 hours
 
 | Work | Time |
 |---|---:|
 | Required evidence components | 60 min |
 | Break, repair, measure, and diagnose core work | 540 min |
+
+Optional contingency capacity: 120 minutes. It is not core work, carries no required evidence, and may remain unused.
 
 ### Week 32: Decide, teach, assess, and freeze — 9.5 hours
 
@@ -89,6 +97,8 @@ budgeted below that ceiling; unused time is recovery buffer, not hidden work.
 | Decide, teach, assess, and freeze core work | 420 min |
 | Module teach-back | 30 min |
 | Learning log and freeze check | 30 min |
+
+Optional contingency capacity: 150 minutes. It is not core work, carries no required evidence, and may remain unused.
 ## Learn
 
 1. [End-to-end deadlines and allocation](lessons/01-end-to-end-deadlines.md)
@@ -152,3 +162,10 @@ This 5-week module schedules 47 core hours. Its primary
 decision is RFC A05. The added graded scope is
 per-tenant work and cost budgets, identity-aware quotas, provider compatibility, residency-safe fallback, and fairness across critical traffic classes. See Lesson 8, the final guided exercise, final worksheet,
 rubric anchors, and remediation map for the integrated evidence contract.
+
+## PESD 2.0 evaluation ownership
+
+Gate G02 invokes this module's rubric and provider-neutral
+evaluator once for its domain score. Do not create a second module semantic
+evaluation report. The gate result is authoritative; remediation remains a
+separate dated artifact only for Revise or Repeat.

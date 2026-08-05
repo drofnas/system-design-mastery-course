@@ -36,8 +36,7 @@ RPO/RTO, authority epoch, and failback for a different domain and stack.
 
 ## Evaluation and remediation
 
-Run the module evaluator after freezing A01–A08. Revise only in dated addenda;
-Repeat uses new seeds. Never overwrite predictions, raw trials, incident logs,
+Gate 4 invokes the Module 12 evaluator once for its domain score after A01–A08 are frozen. Do not create a duplicate module evaluation report. Revise only in dated addenda; Repeat uses new seeds. Never overwrite predictions, raw trials, incident logs,
 or the recovery record.
 
 ## Gate 4

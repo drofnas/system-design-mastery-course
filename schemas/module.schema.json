@@ -56,12 +56,13 @@
             "minItems": 2,
             "items": {
               "type": "object",
-              "required": ["id", "label", "minutes", "activity"],
+              "required": ["id", "label", "minutes", "activity", "required"],
               "properties": {
                 "id": {"type": "string", "pattern": "^W[0-9]{3}-T[0-9]{2}$"},
                 "label": {"type": "string", "minLength": 3},
                 "minutes": {"type": "integer", "minimum": 15},
                 "activity": {"enum": ["local_instruction", "required_resource", "guided_practice", "independent_work", "failure_experiment", "decision_artifact", "assessment", "teach_back", "review_remediation", "reflection", "contingency"]},
+                "required": {"type": "boolean"},
                 "lesson_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^L[0-9]{2}$"}},
                 "resource_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^RES-[0-9]{2}$"}},
                 "exercise_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^EX-[0-9]{2}$"}},

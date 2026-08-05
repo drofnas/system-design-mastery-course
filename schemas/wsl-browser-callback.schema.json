@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/system-design-course/wsl-browser-callback.schema.json",
+  "title": "Sanitized Windows browser to WSL callback attestation",
+  "type": "object",
+  "required": ["schema_version", "source_commit", "recorded_at", "result", "boundary", "token_persisted"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "source_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "recorded_at": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$"},
+    "result": {"const": "pass"},
+    "boundary": {"const": "windows-browser-to-wsl-loopback"},
+    "token_persisted": {"const": false}
+  },
+  "additionalProperties": false
+}

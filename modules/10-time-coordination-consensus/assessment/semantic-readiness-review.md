@@ -1,5 +1,7 @@
 # Module 10 Semantic Readiness Review
 
+> **PESD 2.0 status: Review.** This pre-migration readiness record is historical, not a current Ready decision. Fresh evaluator repetitions, platform/offline/cleanup matrices, and timed learner pilots remain pending.
+
 Reviewed on 2026-08-02 against the syllabus, `MODULE_STANDARD.md`, Module 9's
 replication/partitioning handoff, learner-artifact preservation rules, and the
 Module 10 assessment contract.

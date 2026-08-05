@@ -19,6 +19,7 @@
           "label": "Bounded authoritative resources",
           "minutes": 145,
           "activity": "required_resource",
+          "required": true,
           "resource_ids": [
             "RES-04",
             "RES-05",
@@ -30,6 +31,7 @@
           "label": "Local mechanism instruction",
           "minutes": 120,
           "activity": "local_instruction",
+          "required": true,
           "lesson_ids": [
             "L01",
             "L02",
@@ -42,6 +44,7 @@
           "label": "Guided practice",
           "minutes": 60,
           "activity": "guided_practice",
+          "required": true,
           "exercise_ids": [
             "EX-01",
             "EX-02",
@@ -58,6 +61,7 @@
           "label": "Required evidence components",
           "minutes": 30,
           "activity": "independent_work",
+          "required": true,
           "artifact_allocations": [
             {
               "artifact_id": "A10",
@@ -69,7 +73,15 @@
           "id": "W035-T05",
           "label": "Model and derive core work",
           "minutes": 155,
-          "activity": "independent_work"
+          "activity": "independent_work",
+          "required": true
+        },
+        {
+          "id": "W035-T06",
+          "label": "Optional contingency capacity",
+          "minutes": 210,
+          "activity": "contingency",
+          "required": false
         }
       ]
     },
@@ -89,6 +101,7 @@
           "label": "Bounded authoritative resources",
           "minutes": 135,
           "activity": "required_resource",
+          "required": true,
           "resource_ids": [
             "RES-01",
             "RES-07",
@@ -100,6 +113,7 @@
           "label": "Local mechanism instruction",
           "minutes": 120,
           "activity": "local_instruction",
+          "required": true,
           "lesson_ids": [
             "L05",
             "L06",
@@ -112,6 +126,7 @@
           "label": "Guided practice",
           "minutes": 60,
           "activity": "guided_practice",
+          "required": true,
           "exercise_ids": [
             "EX-09",
             "EX-10",
@@ -128,6 +143,7 @@
           "label": "Required evidence components",
           "minutes": 90,
           "activity": "independent_work",
+          "required": true,
           "artifact_allocations": [
             {
               "artifact_id": "A01",
@@ -147,7 +163,15 @@
           "id": "W036-T05",
           "label": "Guided build and prediction freeze core work",
           "minutes": 135,
-          "activity": "independent_work"
+          "activity": "independent_work",
+          "required": true
+        },
+        {
+          "id": "W036-T06",
+          "label": "Optional contingency capacity",
+          "minutes": 180,
+          "activity": "contingency",
+          "required": false
         }
       ]
     },
@@ -166,13 +190,22 @@
           "id": "W037-T01",
           "label": "Independent build and integration core work",
           "minutes": 540,
-          "activity": "independent_work"
+          "activity": "independent_work",
+          "required": true
         },
         {
           "id": "W037-T02",
           "label": "Independent build and integration verification checkpoint",
           "minutes": 60,
-          "activity": "independent_work"
+          "activity": "independent_work",
+          "required": true
+        },
+        {
+          "id": "W037-T03",
+          "label": "Optional contingency capacity",
+          "minutes": 120,
+          "activity": "contingency",
+          "required": false
         }
       ]
     },
@@ -192,6 +225,7 @@
           "label": "Required evidence components",
           "minutes": 60,
           "activity": "failure_experiment",
+          "required": true,
           "artifact_allocations": [
             {
               "artifact_id": "A04",
@@ -207,7 +241,15 @@
           "id": "W038-T02",
           "label": "Break, repair, measure, and diagnose core work",
           "minutes": 540,
-          "activity": "failure_experiment"
+          "activity": "failure_experiment",
+          "required": true
+        },
+        {
+          "id": "W038-T03",
+          "label": "Optional contingency capacity",
+          "minutes": 120,
+          "activity": "contingency",
+          "required": false
         }
       ]
     },
@@ -227,6 +269,7 @@
           "label": "Required evidence components",
           "minutes": 120,
           "activity": "decision_artifact",
+          "required": true,
           "artifact_allocations": [
             {
               "artifact_id": "A06",
@@ -250,19 +293,29 @@
           "id": "W039-T02",
           "label": "Decide, teach, assess, and freeze core work",
           "minutes": 390,
-          "activity": "assessment"
+          "activity": "assessment",
+          "required": true
         },
         {
           "id": "W039-T03",
           "label": "Module teach-back",
           "minutes": 30,
-          "activity": "teach_back"
+          "activity": "teach_back",
+          "required": true
         },
         {
           "id": "W039-T04",
           "label": "Learning log and freeze check",
           "minutes": 30,
-          "activity": "reflection"
+          "activity": "reflection",
+          "required": true
+        },
+        {
+          "id": "W039-T05",
+          "label": "Optional contingency capacity",
+          "minutes": 150,
+          "activity": "contingency",
+          "required": false
         }
       ]
     }

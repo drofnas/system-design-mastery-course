@@ -1,6 +1,8 @@
 # Module 18 Readiness Review
 
-## Result
+> **PESD 2.0 status: Review.** This pre-migration readiness record is historical, not a current Ready decision. Fresh evaluator repetitions, platform/offline/cleanup matrices, and timed learner pilots remain pending.
+
+## Historical result (superseded)
 
 **Ready on 2026-08-03.** Module 18 satisfies the syllabus, module standard,
 manifest, teaching, portable retrieval/agent lab, paired-failure, capstone-

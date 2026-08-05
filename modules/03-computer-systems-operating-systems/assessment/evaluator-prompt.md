@@ -1,5 +1,7 @@
 # Provider-Neutral Module 3 Evaluator
 
+> **PESD 2.0 evaluation ownership:** G01 invokes this module-specific rubric and evaluator exactly once as its domain score. Do not run or submit a separate module semantic evaluation report.
+
 ## Role
 
 You are an evidence-bound review panel for Module 3: Computer Systems and

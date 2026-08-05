@@ -24,8 +24,7 @@ is optional.
 
 ## Assessment and remediation
 
-Freeze the module submission, run the evaluator, preserve its output, and create
-a separate remediation revision. Then complete [Gate 5](../../../gates/G05/assessment-brief.md).
+Freeze the module submission. Gate 5 invokes the Module 15 evaluator once for its domain score; do not create a duplicate module evaluation report. Preserve the gate output and create a separate remediation revision only when required. Then complete [Gate 5](../../../gates/G05/assessment-brief.md).
 Do not edit the Week 85 gate freeze; create the Week 86 delta separately.
 
 ## PESD 2.0 decision and assurance check

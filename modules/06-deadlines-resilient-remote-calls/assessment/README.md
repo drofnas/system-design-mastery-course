@@ -1,5 +1,7 @@
 # Module 6 Assessment Contract
 
+> **PESD 2.0 evaluation ownership:** G02 invokes this module-specific rubric and evaluator exactly once as its domain score. Do not run or submit a separate module semantic evaluation report.
+
 Assessment uses only immutable submitted evidence and this rubric. Beacon
 Dispatch fixtures calibrate the evaluator; they are not commerce answers.
 

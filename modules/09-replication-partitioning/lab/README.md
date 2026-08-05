@@ -20,6 +20,12 @@ From this directory, run one scenario:
 python3 -m replication_lab scenarios/f01-replica-partition-broken.json --pretty
 ```
 
+Drive the same scenario through the required shared process boundary:
+
+```bash
+python3 ../../../shared-labs/three-node-cluster/run_boundary.py --module M09 --scenario scenarios/f01-replica-partition-broken.json --output ../../../experiments/m09-f01-cluster-boundary.json
+```
+
 Run the automated checks:
 
 ```bash

@@ -1,5 +1,7 @@
 # Module 18 assessment contract
 
+> **PESD 2.0 evaluation ownership:** G06 invokes this module-specific rubric and evaluator exactly once as its domain score. Do not run or submit a separate module semantic evaluation report.
+
 Evaluate only submitted evidence against the published rubric. Run G01–G06 before semantic scoring. Cite an exact `path#heading` for every gate, score, and finding.
 
 ## Structural gates

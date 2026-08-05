@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/system-design-course/v2-bridge-plan.schema.json",
+  "title": "PESD V1 to V2 learner bridge plan",
+  "type": "object",
+  "required": [
+    "schema_version", "from_course", "to_course", "learner_v1_commit",
+    "generated_from_course_commit", "completed_modules", "historical_passed_gates",
+    "next_v2_gate", "bridge_packs", "immutability_rules"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "from_course": {"const": "PESD-72"},
+    "to_course": {"const": "PESD-104"},
+    "learner_v1_commit": {"type": "string", "pattern": "^[a-f0-9]{40}$"},
+    "generated_from_course_commit": {"type": "string", "pattern": "^[a-f0-9]{40}$"},
+    "completed_modules": {
+      "type": "array", "uniqueItems": true,
+      "items": {"type": "string", "pattern": "^M(0[1-9]|1[0-8])$"}
+    },
+    "historical_passed_gates": {
+      "type": "array", "uniqueItems": true,
+      "items": {"type": "string", "pattern": "^G0[1-6]$"}
+    },
+    "next_v2_gate": {
+      "oneOf": [
+        {"type": "string", "pattern": "^G0[1-6]$"},
+        {"type": "null"}
+      ]
+    },
+    "bridge_packs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["module", "v2_weeks", "new_outcomes", "path", "status", "verification_target"],
+        "properties": {
+          "module": {"type": "string", "pattern": "^M(0[1-9]|1[0-8])$"},
+          "v2_weeks": {"type": "array", "minItems": 5, "maxItems": 6, "items": {"type": "integer", "minimum": 1, "maximum": 104}},
+          "new_outcomes": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 10}},
+          "path": {"type": "string", "pattern": "^M(0[1-9]|1[0-8])-bridge\\.md$"},
+          "status": {"const": "pending"},
+          "verification_target": {"type": "string", "pattern": "^(G0[1-6]|course_upgrade_review)$"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "immutability_rules": {
+      "type": "array", "minItems": 3,
+      "items": {"type": "string", "minLength": 15}
+    }
+  },
+  "additionalProperties": false
+}

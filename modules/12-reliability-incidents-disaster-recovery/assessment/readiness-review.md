@@ -1,6 +1,8 @@
 # Module 12 Readiness Review
 
-## Result
+> **PESD 2.0 status: Review.** This pre-migration readiness record is historical, not a current Ready decision. Fresh evaluator repetitions, platform/offline/cleanup matrices, and timed learner pilots remain pending.
+
+## Historical result (superseded)
 
 **Ready on 2026-08-02.** Module 12 satisfies the syllabus, module standard,
 manifest, teaching, lab, failure, decision, Gate 4, assessment, calibration,

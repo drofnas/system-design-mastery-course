@@ -93,6 +93,12 @@ boundary, resource limits, clock, warm-up/repetition policy, raw outcomes, and
 limitations. Optional accelerators, cloud accounts, Kubernetes, and second
 machines never become completion prerequisites.
 
+The lab-specific result is a raw outcome. A completed local trial MUST also use
+`scripts/write_evidence_envelope.py` and the evidence-envelope schema. The writer
+binds tracked inputs and configurations to the source commit and hashes, but
+never edits, the raw result. Fixture replay, derived work, and modeled capacity
+remain ineligible for independent Build, Break, Implement, or Measure credit.
+
 ## Outcomes and mastery evidence
 
 Each outcome must identify:

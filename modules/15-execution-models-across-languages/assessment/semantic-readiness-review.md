@@ -1,7 +1,9 @@
 # Module 15 Semantic and Resource Readiness Review
 
+> **PESD 2.0 status: Review.** This pre-migration readiness record is historical, not a current Ready decision. Fresh evaluator repetitions, platform/offline/cleanup matrices, and timed learner pilots remain pending.
+
 Review date: 2026-08-04
-Current decision: **Ready**
+Historical decision (superseded): **Ready**
 
 ## Teaching and evidence review
 
@@ -73,5 +75,5 @@ and response, fixture, contract, prompt, and schema hashes are preserved in
 `assessment/calibration/run-metadata.json`.
 
 Focused and full-course validation pass. Semantic and resource review therefore
-passes, and the module is ready for learners within its published evidence
+passes, and the historical review found the module ready for learners within its published evidence
 boundary.

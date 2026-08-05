@@ -6,16 +6,14 @@ never replace the local explanation, practice, or answer key.
 
 ## Required authoritative spine
 
-The required records are RES-02, RES-05, RES-07, RES-08, RES-09.
+The required records are RES-02, RES-05, RES-07, RES-08, RES-09, RES-10, RES-11.
 Every required record is free and has a local written alternative. All other
 records below are optional enrichment and do not consume required module time.
 
 | Week | Required resources | Assigned minutes |
 |---:|---|---:|
-| 53 | RES-02 | 45 |
-| 54 | RES-05, RES-07 | 120 |
-| 55 | RES-08, RES-09 | 105 |
-| 56 | None | 0 |
+| 75 | RES-05, RES-07, RES-10, RES-11 | 160 |
+| 76 | RES-02, RES-08, RES-09 | 150 |
 
 For each assigned source, preserve the requested evidence, one transfer limit,
 and one observation that would falsify the claim. A required source that is
@@ -30,7 +28,7 @@ task; record the substitution.
 - **URL:** https://melconway.com/Home/Conways_Law.html
 - **Type/status:** original paper and author commentary; Required
 - **Access:** free
-- **Week/time:** Week 53; 45 minutes assigned
+- **Week/time:** Week 76; 45 minutes assigned
 - **Purpose:** Connect communication paths to interface structure without treating organization as destiny.
 - **Boundary and evidence:** Read the author page and linked original paper; map three required technical interfaces to their human communication paths.
 - **Local alternative:** [lessons/02-social-architecture-ownership.md](lessons/02-social-architecture-ownership.md)
@@ -43,7 +41,7 @@ task; record the substitution.
 - **URL:** https://martinfowler.com/articles/patterns-legacy-displacement/
 - **Type/status:** practitioner pattern collection; Required
 - **Access:** free
-- **Week/time:** Week 54; 75 minutes assigned
+- **Week/time:** Week 75; 75 minutes assigned
 - **Purpose:** Design incremental seams and transitional architecture tied to outcomes and removal conditions.
 - **Boundary and evidence:** Read Breaking the Cycle, Successfully Deliver the Parts, and the middleware example; produce a seam, transition asset, removal condition, and cost-of-risk argument.
 - **Local alternative:** [lessons/06-incremental-migration-backfills.md](lessons/06-incremental-migration-backfills.md)
@@ -56,7 +54,7 @@ task; record the substitution.
 - **URL:** https://semver.org/
 - **Type/status:** open specification; Required
 - **Access:** free
-- **Week/time:** Week 54; 45 minutes assigned
+- **Week/time:** Week 75; 45 minutes assigned
 - **Purpose:** Use a declared public contract and explicit compatibility signal while recognizing limits for data and protocols.
 - **Boundary and evidence:** Read the Summary and specification items 1-11; classify six changes and state two cases where SemVer cannot prove runtime compatibility.
 - **Local alternative:** [lessons/05-compatibility-schema-evolution.md](lessons/05-compatibility-schema-evolution.md)
@@ -69,7 +67,7 @@ task; record the substitution.
 - **URL:** https://sre.google/workbook/canarying-releases/
 - **Type/status:** practitioner book chapter; Required
 - **Access:** free
-- **Week/time:** Week 55; 60 minutes assigned
+- **Week/time:** Week 76; 60 minutes assigned
 - **Purpose:** Bound blast radius and connect promotion or rollback to measured candidate-versus-control evidence.
 - **Boundary and evidence:** Read Canary Release through Canary Implementation; define population, duration, comparison metrics, budget exposure, promotion, and rollback thresholds.
 - **Local alternative:** [lessons/07-shadow-cutover-rollback.md](lessons/07-shadow-cutover-rollback.md)
@@ -82,7 +80,7 @@ task; record the substitution.
 - **URL:** https://sre.google/prodcast/transcripts/sre-prodcast-01-05/
 - **Type/status:** recorded practitioner interview with HTML transcript; Required
 - **Access:** free
-- **Week/time:** Week 55; 45 minutes assigned
+- **Week/time:** Week 76; 45 minutes assigned
 - **Purpose:** Treat traffic replay, discrepancy measurement, gradual cutover, and fast rollback as client-transparency controls.
 - **Boundary and evidence:** Listen to the episode or read the transcript; enumerate user-visible states, mismatch measures, rollout stages, rollback trigger, and one unknown not captured server-side.
 - **Local alternative:** [lessons/07-shadow-cutover-rollback.md](lessons/07-shadow-cutover-rollback.md)
@@ -95,7 +93,7 @@ task; record the substitution.
 - **URL:** https://shopify.engineering/shopify-monolith
 - **Type/status:** first-person engineering case; Optional enrichment
 - **Access:** free
-- **Week/time:** Week 53; 60 minutes optional
+- **Week/time:** Week 79; 60 minutes optional
 - **Purpose:** Compare modularization with service extraction using observed change and complexity costs.
 - **Boundary and evidence:** Read the complete article; record three boundary drivers, two reasons to remain modular, and one extraction threshold.
 - **Local alternative:** [lessons/01-boundaries-outcomes-coupling.md](lessons/01-boundaries-outcomes-coupling.md)
@@ -108,7 +106,7 @@ task; record the substitution.
 - **URL:** https://teamtopologies.com/key-concepts-content/team-interaction-modeling-with-team-topologies
 - **Type/status:** maintainer guidance; Optional enrichment
 - **Access:** free
-- **Week/time:** Week 53; 60 minutes optional
+- **Week/time:** Week 79; 60 minutes optional
 - **Purpose:** Make cognitive load, ownership, and temporary versus durable interactions visible.
 - **Boundary and evidence:** Read the interaction-modeling and cognitive-load sections; draw current and target interaction maps with one expiry condition.
 - **Local alternative:** [lessons/02-social-architecture-ownership.md](lessons/02-social-architecture-ownership.md)
@@ -121,7 +119,7 @@ task; record the substitution.
 - **URL:** https://www.finops.org/framework/capabilities/unit-economics/
 - **Type/status:** foundation framework; Optional enrichment
 - **Access:** free
-- **Week/time:** Week 53; 60 minutes optional
+- **Week/time:** Week 79; 60 minutes optional
 - **Purpose:** Connect technical spend to a useful product outcome and decision threshold.
 - **Boundary and evidence:** Read Definition, Functional Activities, and Inputs and Outputs; define one business unit metric, one resource metric, sources, owner, and threshold.
 - **Local alternative:** [lessons/04-total-cost-unit-economics.md](lessons/04-total-cost-unit-economics.md)
@@ -134,7 +132,7 @@ task; record the substitution.
 - **URL:** https://stripe.com/blog/online-migrations
 - **Type/status:** first-person engineering case; Optional enrichment
 - **Access:** free
-- **Week/time:** Week 54; 75 minutes optional
+- **Week/time:** Week 79; 75 minutes optional
 - **Purpose:** Examine phased writes, backfill, comparison, cutover, and cleanup in a live migration.
 - **Boundary and evidence:** Read the complete article; identify authority in each phase, backfill verification, divergence risk, cutover gate, and cleanup proof.
 - **Local alternative:** [lessons/06-incremental-migration-backfills.md](lessons/06-incremental-migration-backfills.md)
@@ -147,9 +145,28 @@ the source ID, exact section boundary, and stated evidence limit.
 
 ## PESD 2.0 primary anchors
 
-- [CNCF Platforms White Paper](https://tag-app-delivery.cncf.io/whitepapers/platforms/) — CNCF TAG App Delivery; required, free, 20 minutes; Read why platforms, successful platform/team attributes, challenges, measurement, and capabilities; extract user-value and support hypotheses. Local alternative: Lesson 8 PESD 2.0 extension. Last verified 2026-08-04.
-- [Allocation FinOps Framework Capability](https://www.finops.org/framework/capabilities/allocation/) — FinOps Foundation; required, free, 20 minutes; Read definition, allocation/tagging/shared-cost strategies, and measures; define one transparent allocation and exception policy. Local alternative: Lesson 8 PESD 2.0 extension. Last verified 2026-08-04.
+### RES-10: CNCF Platforms White Paper
 
-For each source, submit the named control/evidence mapping and applicability or
-scope uncertainty. A framework name is not evidence of implementation or legal
-compliance.
+- **Author/publisher:** CNCF TAG App Delivery
+- **URL:** https://tag-app-delivery.cncf.io/whitepapers/platforms/
+- **Type/status:** official primary guidance; Required
+- **Access:** free
+- **Week/time:** Week 75; 20 minutes assigned
+- **Purpose:** Ground the PESD 2.0 cross-cutting decision in current primary guidance and produce scoped evidence rather than framework vocabulary.
+- **Boundary and evidence:** Read why platforms, successful platform/team attributes, challenges, measurement, and capabilities; extract user-value and support hypotheses.
+- **Local alternative:** [lessons/08-technical-strategy-teach-back.md](lessons/08-technical-strategy-teach-back.md)
+- **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-08-04
+- **Reflection:** Which obligation applies, which evidence proves its control, and what uncertainty or failure would reverse the decision?
+
+### RES-11: Allocation FinOps Framework Capability
+
+- **Author/publisher:** FinOps Foundation
+- **URL:** https://www.finops.org/framework/capabilities/allocation/
+- **Type/status:** official primary guidance; Required
+- **Access:** free
+- **Week/time:** Week 75; 20 minutes assigned
+- **Purpose:** Ground the PESD 2.0 cross-cutting decision in current primary guidance and produce scoped evidence rather than framework vocabulary.
+- **Boundary and evidence:** Read definition, allocation/tagging/shared-cost strategies, and measures; define one transparent allocation and exception policy.
+- **Local alternative:** [lessons/08-technical-strategy-teach-back.md](lessons/08-technical-strategy-teach-back.md)
+- **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-08-04
+- **Reflection:** Which obligation applies, which evidence proves its control, and what uncertainty or failure would reverse the decision?

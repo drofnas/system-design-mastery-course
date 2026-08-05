@@ -89,6 +89,10 @@ def _authored_paths(root: Path) -> list[str]:
     authored: list[str] = []
     for repository_path in sorted(repository_paths):
         path = Path(repository_path)
+        if not (ROOT / path).is_file():
+            # A migration may intentionally retire a tracked course file before
+            # the follow-up commit records the deletion.
+            continue
         try:
             relative = path.relative_to(relative_root)
         except ValueError:

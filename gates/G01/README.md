@@ -5,7 +5,8 @@ teaching or build work. Freeze the submitted commit before opening the hidden
 practical or defense prompts.
 
 Use the [assessment brief](assessment-brief.md) for the written, practical,
-defense, and portfolio prompts. The hidden practical is selected through the
+defense, and portfolio prompts. After freezing, use the
+[assessor guide](assessor-guide.md) for explained reasoning boundaries. The hidden practical is selected through the
 [sealed-local gate workflow](../../SOLO_GATE_GUIDE.md).
 
 | Part | Time |

@@ -1,5 +1,7 @@
 # Provider-Neutral Evaluator Prompt
 
+> **PESD 2.0 evaluation ownership:** G03 invokes this module-specific rubric and evaluator exactly once as its domain score. Do not run or submit a separate module semantic evaluation report.
+
 Evaluate one Module 9 submission using only the submission manifest/files,
 assessment contract, anchored rubric, remediation map, and shared
 `schemas/evaluation.schema.json`. Northstar calibration files are permitted only

@@ -29,7 +29,7 @@ Link the new revision. Cite but do not edit Week 1, 12, 24, or 48 artifacts. Lis
 
 ## Evaluation and remediation
 
-Link Gate 6, module evaluation, separate remediation artifact, and reassessment result.
+Link the single Gate 6 Module 18 domain evaluation, any required separate remediation artifact, and the reassessment result. Do not create a duplicate module evaluation report.
 
 ## Next-year practice plan
 

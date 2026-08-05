@@ -1,6 +1,8 @@
 # Module 18 semantic readiness review
 
-## Current status: ready
+> **PESD 2.0 status: Review.** This pre-migration readiness record is historical, not a current Ready decision. Fresh evaluator repetitions, platform/offline/cleanup matrices, and timed learner pilots remain pending.
+
+## Historical status (superseded): ready
 
 Local instruction, executable contracts, tests, fixtures, six isolated evaluator
 records, deterministic calibration, and focused/full validation pass. Package
@@ -27,5 +29,5 @@ readiness does not pre-judge a learner's Module 18, Gate 6, or capstone result.
 - Calibration review: Pass, Revise, and Repeat CivicAid fixtures each agree over
   two isolated runs, category drift is zero, response hashes verify, and the
   deterministic checker passes.
-- Final result: ready. The synthetic-fixture convention does not relax the
+- Historical final result (superseded): ready. The synthetic-fixture convention does not relax the
   underlying-artifact requirement for a real learner submission.

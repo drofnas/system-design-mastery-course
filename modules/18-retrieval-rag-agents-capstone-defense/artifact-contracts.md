@@ -20,7 +20,10 @@ Assessment evidence cites `path#heading`. Findings distinguish missing evidence,
 
 ## Frozen capstone history
 
-The Week 72 revision cites the Week 1, 12, 24, and 48 files but never edits them. It records prior claim, new evidence, changed reasoning, consequence, and reversal trigger for each decision change.
+The Week 104 final delta cites the immutable Week 1 baseline, Gate 1–6 freezes,
+and Weeks 17, 34, 51, 69, and 86 deltas but never edits them. It records the
+prior claim, new evidence, changed reasoning, consequence, and reversal trigger
+for each decision change.
 
 ## Minimum manifest
 

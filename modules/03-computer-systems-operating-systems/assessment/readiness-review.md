@@ -1,5 +1,7 @@
 # Module 3 Readiness Review
 
+> **PESD 2.0 status: Review.** This pre-migration readiness record is historical, not a current Ready decision. Fresh evaluator repetitions, platform/offline/cleanup matrices, and timed learner pilots remain pending.
+
 Verified 2026-07-31 against branch commit `b3fade4` before the readiness-only
 metadata commit.
 

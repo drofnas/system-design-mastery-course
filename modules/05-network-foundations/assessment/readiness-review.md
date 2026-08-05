@@ -1,5 +1,7 @@
 # Module 5 Readiness Review
 
+> **PESD 2.0 status: Review.** This pre-migration readiness record is historical, not a current Ready decision. Fresh evaluator repetitions, platform/offline/cleanup matrices, and timed learner pilots remain pending.
+
 Date: 2026-08-01
 
 Branch: `feature/module-05-network-foundations`

@@ -28,11 +28,25 @@ class ReadinessContractTests(unittest.TestCase):
         errors: list[str] = []
         validate_course.validate_time_contract(root, manifest, errors)
         self.assertEqual(errors, [])
+        for week in manifest["weeks"]:
+            contingency = [block for block in week["time_blocks"] if block["activity"] == "contingency"]
+            self.assertEqual(1, len(contingency))
+            self.assertFalse(contingency[0]["required"])
+            self.assertEqual(12 * 60, sum(block["minutes"] for block in week["time_blocks"]))
         broken = copy.deepcopy(manifest)
         broken["weeks"][0]["time_blocks"][0]["minutes"] += 1
         errors = []
         validate_course.validate_time_contract(root, broken, errors)
-        self.assertTrue(any("do not equal published hours" in error or "minutes must equal" in error for error in errors))
+        self.assertTrue(any("do not equal published core hours" in error or "minutes must equal" in error for error in errors))
+
+        required_contingency = copy.deepcopy(manifest)
+        next(
+            block for week in required_contingency["weeks"] for block in week["time_blocks"]
+            if block["activity"] == "contingency"
+        )["required"] = True
+        errors = []
+        validate_course.validate_time_contract(root, required_contingency, errors)
+        self.assertTrue(any("contingency" in error and "non-required" in error for error in errors))
 
         allocation = copy.deepcopy(manifest)
         allocation_block = next(
@@ -52,6 +66,29 @@ class ReadinessContractTests(unittest.TestCase):
         errors: list[str] = []
         validate_course.validate_artifacts(broken, errors)
         self.assertTrue(any("fixture replay cannot satisfy" in error for error in errors))
+
+    def test_resource_guide_week_and_minutes_match_manifest(self) -> None:
+        source_root, manifest = self.manifest("M18")
+        errors: list[str] = []
+        validate_course.validate_resources(source_root, manifest, errors)
+        self.assertEqual(errors, [])
+
+        temporary = tempfile.TemporaryDirectory()
+        self.addCleanup(temporary.cleanup)
+        module_root = Path(temporary.name) / source_root.name
+        shutil.copytree(source_root, module_root)
+        guide = module_root / "resources.md"
+        guide.write_text(
+            guide.read_text(encoding="utf-8").replace(
+                "**Week/time:** Week 98; 90 minutes assigned",
+                "**Week/time:** Week 97; 90 minutes assigned",
+                1,
+            ),
+            encoding="utf-8",
+        )
+        errors = []
+        validate_course.validate_resources(module_root, manifest, errors)
+        self.assertTrue(any("timing disagrees" in error for error in errors))
 
     def test_time_contract_rejects_missing_work_and_readme_hidden_minutes(self) -> None:
         source_root, manifest = self.manifest("M07")
@@ -259,6 +296,38 @@ class ReadinessContractTests(unittest.TestCase):
             self.assertTrue(any("gate-part" in error for error in errors))
 
             shutil.copy2(ROOT / "gates" / "G01" / "gate.json", gate_path)
+            gate = json.loads(gate_path.read_text())
+            gate["pass_remediation_required"] = True
+            gate_path.write_text(json.dumps(gate))
+            errors = []
+            validate_course.validate_v2_course_contract(manifests, errors)
+            self.assertTrue(any("pass_remediation_required" in error for error in errors))
+
+            shutil.copy2(ROOT / "gates" / "G01" / "gate.json", gate_path)
+            overview_path = root / "gates" / "G01" / "README.md"
+            overview_path.write_text(overview_path.read_text().replace("| Written examination | 75 min |", "| Written examination | 76 min |"))
+            errors = []
+            validate_course.validate_v2_course_contract(manifests, errors)
+            self.assertTrue(any("overview time table" in error for error in errors))
+            shutil.copy2(ROOT / "gates" / "G01" / "README.md", overview_path)
+
+            embedded = root / "modules" / "03" / "assessment" / "gate-01.md"
+            embedded.parent.mkdir(parents=True)
+            embedded.write_text("obsolete embedded gate", encoding="utf-8")
+            errors = []
+            validate_course.validate_v2_course_contract(manifests, errors)
+            self.assertTrue(any("standalone gate material" in error for error in errors))
+            embedded.unlink()
+
+            assessor = root / "gates" / "G01" / "assessor-guide.md"
+            original_assessor = assessor.read_text(encoding="utf-8")
+            assessor.write_text("missing boundaries", encoding="utf-8")
+            errors = []
+            validate_course.validate_v2_course_contract(manifests, errors)
+            self.assertTrue(any("assessor guide" in error for error in errors))
+            assessor.write_text(original_assessor, encoding="utf-8")
+
+            shutil.copy2(ROOT / "gates" / "G01" / "gate.json", gate_path)
             gate6_path = root / "gates" / "G06" / "gate.json"
             gate6 = json.loads(gate6_path.read_text())
             gate6["invariant_sets"][1]["invariants"].pop()
@@ -323,6 +392,30 @@ class ReadinessContractTests(unittest.TestCase):
             errors = []
             validate_course.validate_solo_completion_contract([module_root], errors)
             self.assertTrue(any("depends on a partner" in error for error in errors))
+
+    def test_review_status_supersedes_historical_ready_claims(self) -> None:
+        manifests = [json.loads(path.read_text()) for path in sorted((ROOT / "modules").glob("*/module.json"))]
+        errors: list[str] = []
+        validate_course.validate_v2_readiness_status(manifests, errors)
+        self.assertEqual(errors, [])
+
+        source_root, _ = self.manifest("M16")
+        temporary = tempfile.TemporaryDirectory()
+        self.addCleanup(temporary.cleanup)
+        root = Path(temporary.name)
+        module_root = root / "modules" / source_root.name
+        shutil.copytree(source_root, module_root)
+        review = module_root / "assessment" / "readiness-review.md"
+        review.write_text(
+            review.read_text(encoding="utf-8") + "\nCurrent decision: **Ready**\n",
+            encoding="utf-8",
+        )
+        with patch.object(validate_course, "ROOT", root):
+            errors = []
+            validate_course.validate_v2_readiness_status([
+                json.loads((module_root / "module.json").read_text(encoding="utf-8"))
+            ], errors)
+            self.assertTrue(any("unsuperseded Ready" in error for error in errors))
 
 
 if __name__ == "__main__":

@@ -63,3 +63,17 @@ module and gate IDs are the stable identity.
 5. Submit accumulated bridge evidence at the next V2 gate.
 6. Continue with the canonical V2 calendar. If bridge remediation exceeds the
    six-hour flex reserve, pause rather than borrowing from the next module.
+
+Generate the learner-specific plan and blank bridge packs in a new directory:
+
+```bash
+python3 scripts/prepare_v2_bridge.py \
+  --learner-v1-commit 0123456789abcdef0123456789abcdef01234567 \
+  --completed-module M04 --passed-gate G01 \
+  --output-dir migration/pesd-v2-bridge
+```
+
+Repeat `--completed-module` and `--passed-gate` as needed. Passed gates must be
+a contiguous historical prefix. The tool adds modules implied by those gates,
+uses stable IDs, validates the plan, and refuses to overwrite an existing bridge
+directory. It never reads or edits the learner's frozen V1 evidence.

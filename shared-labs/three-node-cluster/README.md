@@ -10,6 +10,12 @@ requires root, or pretends to be a regional network.
 python3 -m unittest discover -s shared-labs/three-node-cluster/tests -v
 ```
 
+Each M09–M12 experiment must also execute its scenario through this boundary.
+From the module's `lab` directory, run the command published in that lab README.
+`run_boundary.py` binds the trial to the learner commit, scenario and control
+hashes, three live processes, isolated node-storage hashes, and raw proxy
+outcomes. It refuses to overwrite a frozen output.
+
 Learner labs may wrap the workers with replication, consensus, messaging, or
 recovery mechanisms, but they must preserve the proxy and storage evidence
 boundary. Record source commit, scenario/configuration hashes, Python/runtime,

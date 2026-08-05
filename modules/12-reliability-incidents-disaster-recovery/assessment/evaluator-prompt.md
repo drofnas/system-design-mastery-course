@@ -1,5 +1,7 @@
 # Provider-Neutral Module 12 Evaluator Prompt
 
+> **PESD 2.0 evaluation ownership:** G04 invokes this module-specific rubric and evaluator exactly once as its domain score. Do not run or submit a separate module semantic evaluation report.
+
 Evaluate only the submitted artifact manifest and files against the Module 12
 assessment contract and R01–R10 rubric. Do not use architecture preference,
 outside knowledge, or Northstar as a required answer.

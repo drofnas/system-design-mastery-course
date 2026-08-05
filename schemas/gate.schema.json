@@ -6,7 +6,7 @@
   "required": [
     "id", "week", "modules", "core_minutes", "parts", "domain_matrix",
     "rubric_rows", "hard_floors", "invariant_sets", "result_rules",
-    "remediation_reserve_hours"
+    "remediation_reserve_hours", "pass_remediation_required"
   ],
   "properties": {
     "$schema": {"type": "string"},
@@ -107,7 +107,8 @@
       },
       "additionalProperties": false
     },
-    "remediation_reserve_hours": {"const": 6}
+    "remediation_reserve_hours": {"const": 6},
+    "pass_remediation_required": {"const": false}
   },
   "additionalProperties": false
 }

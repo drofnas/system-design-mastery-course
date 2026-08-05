@@ -1,6 +1,12 @@
-# Gate 2 Assessor Notes and Explained Boundaries
+# G02 Assessor Guide
 
-> **PESD V1 historical contract:** Preserve this file for V1 learners and immutable evidence. PESD 2.0 uses [gates/G02/README.md](../../../gates/G02/README.md).
+Use this guide only after the learner freezes every submitted part. Score only
+the published module rubrics and evidence for M04, M05, M06. Cite a file
+and heading for every finding, preserve reasonable alternatives, and recommend
+remediation without drafting replacement graded answers. A Pass creates no
+required remediation artifact.
+
+## Review boundaries
 
 Use after the learner freezes all four parts. These notes identify reasoning
 boundaries, not one required architecture.
@@ -37,4 +43,4 @@ reveal cannot repair broken ordering.
 Accept policy alternatives that preserve invariants and bounds under the stated
 failure/workload model. Do not require Beacon values. Look for cross-functional
 ownership, cost per useful outcome, security/privacy, staged compatibility,
-rollback, exception expiry, changed belief, and a separate Week 24 revision.
+rollback, exception expiry, changed belief, and a separate Week 34 delta.

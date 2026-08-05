@@ -1,5 +1,7 @@
 # Module 12 Semantic Readiness Review
 
+> **PESD 2.0 status: Review.** This pre-migration readiness record is historical, not a current Ready decision. Fresh evaluator repetitions, platform/offline/cleanup matrices, and timed learner pilots remain pending.
+
 ## Curriculum alignment
 
 The package covers every Module 12 syllabus question and required topic. It

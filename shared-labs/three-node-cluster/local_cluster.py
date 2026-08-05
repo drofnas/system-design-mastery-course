@@ -94,6 +94,11 @@ class ThreeNodeCluster:
             process.join(timeout=2)
             if process.is_alive():
                 raise RuntimeError("worker did not stop cleanly")
+        for inbox in self.inboxes.values():
+            inbox.close()
+            inbox.join_thread()
+        self.outbox.close()
+        self.outbox.join_thread()
         self.temporary.cleanup()
 
     def __enter__(self) -> "ThreeNodeCluster":

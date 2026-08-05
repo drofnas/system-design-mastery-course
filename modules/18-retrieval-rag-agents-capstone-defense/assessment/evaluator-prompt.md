@@ -1,5 +1,7 @@
 # Provider-neutral Module 18 evaluator prompt
 
+> **PESD 2.0 evaluation ownership:** G06 invokes this module-specific rubric and evaluator exactly once as its domain score. Do not run or submit a separate module semantic evaluation report.
+
 Evaluate retrieval, agent, and architecture judgment—not model, embedding, database, framework, or vendor preference. Use only the submission, assessment contract, rubric, and schema.
 
 1. Validate output against `schemas/evaluation.schema.json`.
