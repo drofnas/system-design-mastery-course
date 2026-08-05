@@ -72,3 +72,11 @@ Return only one object conforming to `schemas/evaluation.schema.json` with
 `module_id` M05, artifact/baseline commits, exactly G01–G06 and R01–R10,
 calculated result, confidence, summary, and bounded next actions. No Markdown or
 extra fields.
+
+## PESD 2.0 evaluator instruction
+
+Score the published criteria against evidence for workload identity, egress policy, residency-aware routing, encrypted naming implications, and a network certificate and algorithm inventory.
+Classify missing evidence, incorrect reasoning, unsupported claims, and
+reasonable uncertainty separately. Reject fixture replay presented as
+independent build or break evidence. Do not invent legal applicability or treat
+a named framework as proof of compliance.

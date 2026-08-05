@@ -113,3 +113,11 @@ A complete defense cites raw evidence, separates lab and production claims,
 handles restricted-data and recovery questions, records dissent without forcing
 consensus, assigns follow-up owners/dates, and preserves the original ADR before
 any revision.
+
+## PESD 2.0 extension answer
+
+A defensible answer covers analytical projections, versioned data contracts, quality SLOs, lineage, stewardship, rebuild and backfill, deletion propagation, and ownership while preserving B+ tree and LSM mechanisms. It distinguishes the
+requirement, enforcement mechanism, evidence, and owner; keeps modeled and
+measured results separate; and names the failed condition that would reverse
+the decision. Different architectures are acceptable when their invariants,
+evidence boundaries, migration, and residual risk are explicit.

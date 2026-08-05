@@ -29,9 +29,9 @@ remain necessary outside the course.
 
 ## Mandatory module shape
 
-Every four-week module MUST:
+Every standard five-week module, and each six-week deep module, MUST:
 
-- Budget 40–48 learner hours and publish a week-by-week schedule.
+- Budget exactly 47 core learner hours, or 57 for Modules 10 and 17, and publish a week-by-week schedule.
 - Map outcomes to the syllabus graduate profile and applicable mastery levels:
   Define, Calculate, Implement, Diagnose, and Decide and Teach.
 - Teach concepts locally before grading their application.

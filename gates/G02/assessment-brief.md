@@ -1,13 +1,18 @@
-# Gate 2 Assessment: Performance, Networks, and Remote Calls
+# G02 Assessment Brief
+
+This is the learner-facing prompt set for the standalone Week 33 gate over
+M04, M05, M06. The exact time boxes and hard floors in [gate.json](gate.json)
+control. The 30-minute freeze and final scoring/closure block are managed from
+the [gate overview](README.md); this brief contains the four scored parts.
 
 Freeze each part before feedback. The practical uses Beacon Dispatch and a new
 seed/configuration; it is not a commerce solution. Submit exact headings and
 commits through the Module 6 evaluator.
 
-Use the [sealed-local gate workflow](../../../SOLO_GATE_GUIDE.md). Human review
+Use the [sealed-local gate workflow](../../SOLO_GATE_GUIDE.md). Human review
 is optional and stronger portfolio evidence, but it is not required.
 
-## Part 1: Written examination — 90 minutes
+## Part 1: Written examination — 75 minutes
 
 Answer from mechanisms, arithmetic, and stated failure models.
 
@@ -44,17 +49,19 @@ human panel may ask adaptive follow-ups. Derive
 one deadline, retry, idempotency, and overload decision. Record challenges,
 dissent, changed claims, follow-ups, owners, and reversal evidence.
 
-## Part 4: Portfolio and revision review — 60 minutes
+## Part 4: Portfolio and revision review — 45 minutes
 
 Index Modules 4–6 evidence by file heading and commit, then validate the index
 through the frozen self-evaluation workflow. Show frozen predictions,
 builds/tests, failure investigations, decisions/revisions, and learning logs.
-Complete `capstone/revisions/week-24-gate-02.md` without editing earlier evidence.
+After gate scoring, complete `capstone/revisions/week-034-delta.md` without editing earlier evidence.
 An optional independent evaluator may later review the identical bundle.
 
-## Scoring
+## Result
 
-The evaluator applies R01–R10 and G01–G06. Pass requires all four parts, all
-structural gates, average ≥3.0, and no safety-critical zero. Revise creates dated
-addenda. Repeat creates a new baseline/trials only when evidence ordering or a
-safety invariant failed.
+Pass only when all structural gates, scored parts, three module-domain
+subscores, safety-critical rows, and the overall average meet their published
+floors. Revise applies only when evidence and chronology are complete and a
+non-safety floor is missed. Repeat applies when an invariant fails, chronology
+is invalid, evidence is fabricated or mismatched, or the causal model is
+materially incorrect. A Pass creates no required remediation artifact.

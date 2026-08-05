@@ -1,4 +1,7 @@
-# Week 72 — Capstone defense and continued practice
+# PESD 2.0 Weeks 102–104 — Capstone defense and final delta
+
+The filename remains stable for V1 crosswalks. Freeze Module 18 in Week 102,
+complete Gate 6 in Week 103, and write the separate final delta in Week 104.
 
 ## Final decision claim
 
@@ -20,16 +23,27 @@ Record stages, compatibility, shadow/dual-run evidence, validation gates, rollba
 
 For product, technical, security, cost, ownership, and operating review: question, evidence cited, reasoning boundary, unknown, and follow-up owner.
 
-## Week 72 revision
+## Week 104 final delta
 
 Link the new revision. Cite but do not edit Week 1, 12, 24, or 48 artifacts. List every changed decision and its new evidence.
 
 ## Evaluation and remediation
 
-Link Gate 6, module evaluation, separate remediation artifact, and reassessment result.
+Link the single Gate 6 Module 18 domain evaluation, any required separate remediation artifact, and the reassessment result. Do not create a duplicate module evaluation report.
 
 ## Next-year practice plan
 
 Define two production-scope goals and two influence goals. For each: current baseline, quarterly experiment, evidence, stakeholder/owner, feedback loop, safety boundary, and stop/revise condition. Do not claim the course awards a title.
 
 ## Teach-back and learning log links
+
+## PESD 2.0 decision and assurance check
+
+- Added scope: a complete AI assurance case covering tool/model inventory, provider supply chain, ongoing evaluation, human-approval efficacy, transparency, deletion, incident response, policy drift, rollback, and retirement
+- Requirement or obligation and applicability:
+- Enforcement point and failure mode:
+- Evidence owner, source commit, hashes, and evidence mode:
+- Tenant/data/provider boundary:
+- Cost allocation and operating owner:
+- Migration, rollback, and decommissioning step:
+- Uncertainty and reversal trigger:

@@ -1,4 +1,7 @@
-# Week 12 Systems Report and Defense
+# PESD 2.0 Week 15 Systems Report and Defense
+
+The filename remains stable for V1 crosswalks; the canonical V2 schedule places
+this module decision in Week 15 and Gate 1 in Week 16.
 
 ## Report contract
 
@@ -28,3 +31,14 @@ Record 12–15 minutes. Answer without changing submitted workload or failure mo
 
 Keep prediction, raw evidence, and first report unchanged. Create a separately
 named revision that cites the evaluator finding, lesson, exercise, and new evidence.
+
+## PESD 2.0 decision and assurance check
+
+- Added scope: cgroup enforcement, virtualization and steal time, noisy-neighbor isolation, architecture-specific limits, and measured-versus-host-controlled evidence boundaries
+- Requirement or obligation and applicability:
+- Enforcement point and failure mode:
+- Evidence owner, source commit, hashes, and evidence mode:
+- Tenant/data/provider boundary:
+- Cost allocation and operating owner:
+- Migration, rollback, and decommissioning step:
+- Uncertainty and reversal trigger:

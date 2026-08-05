@@ -1,6 +1,8 @@
 # Module 18 Readiness Review
 
-## Result
+> **PESD 2.0 status: Review.** This pre-migration readiness record is historical, not a current Ready decision. Fresh evaluator repetitions, platform/offline/cleanup matrices, and timed learner pilots remain pending.
+
+## Historical result (superseded)
 
 **Ready on 2026-08-03.** Module 18 satisfies the syllabus, module standard,
 manifest, teaching, portable retrieval/agent lab, paired-failure, capstone-
@@ -14,7 +16,7 @@ focused-validation, and full-course contracts.
   guided exercises with explained answers, and four weekly worksheets.
 - Lab: eleven Python tests pass. Retrieval oracles, seeded HNSW, grounding,
   versioning, authorization, approval, idempotency, replay, cancellation, and
-  all F01–F08 repairs restore I01–I12 deterministically.
+  all F01–F08 repairs restore AI01–AI12 deterministically.
 - Assessment: G01–G06, R01–R10, provider-neutral evaluator, structured report,
   remediation map, and three CivicAid calibration fixtures resolve.
 - Calibration: six raw records pass deterministic checking; bands are stable,

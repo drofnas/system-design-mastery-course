@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/system-design-course/cluster-boundary-trial.schema.json",
+  "title": "PESD-104 shared three-node boundary trial",
+  "type": "object",
+  "required": [
+    "schema_version", "module_id", "scenario_path", "source_commit",
+    "scenario_sha256", "configuration_sha256", "evidence_mode",
+    "runtime_boundary", "resource_limits", "clock", "execution_policy",
+    "fault_proxy", "node_storage", "raw_outcomes", "limitations"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "module_id": {"enum": ["M09", "M10", "M11", "M12"]},
+    "scenario_path": {"type": "string", "pattern": "^modules/.+/lab/scenarios/.+\\.json$"},
+    "source_commit": {"type": "string", "pattern": "^[a-f0-9]{40}$"},
+    "scenario_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "configuration_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "evidence_mode": {"const": "executed_deterministic"},
+    "runtime_boundary": {
+      "type": "object",
+      "required": ["python", "platform", "process_start_method"],
+      "properties": {
+        "python": {"type": "string", "minLength": 3},
+        "platform": {"type": "string", "minLength": 3},
+        "process_start_method": {"const": "fork"}
+      },
+      "additionalProperties": false
+    },
+    "resource_limits": {
+      "type": "object",
+      "required": ["cpu", "memory", "processes"],
+      "properties": {
+        "cpu": {"const": "host-controlled; record preflight limits separately"},
+        "memory": {"const": "host-controlled; record preflight limits separately"},
+        "processes": {"const": 3}
+      },
+      "additionalProperties": false
+    },
+    "clock": {
+      "type": "object",
+      "required": ["kind", "wall_clock"],
+      "properties": {
+        "kind": {"const": "logical_ticks"},
+        "wall_clock": {"const": "not used to select outcomes"}
+      },
+      "additionalProperties": false
+    },
+    "execution_policy": {
+      "type": "object",
+      "required": ["warmups", "repetitions", "cleanup_verified"],
+      "properties": {
+        "warmups": {"const": 0},
+        "repetitions": {"const": 1},
+        "cleanup_verified": {"const": true}
+      },
+      "additionalProperties": false
+    },
+    "fault_proxy": {
+      "type": "object",
+      "required": ["delay", "drop", "reorder", "delivered", "dropped"],
+      "properties": {
+        "delay": {"const": true},
+        "drop": {"const": true},
+        "reorder": {"const": true},
+        "delivered": {"const": 3},
+        "dropped": {"const": 1}
+      },
+      "additionalProperties": false
+    },
+    "node_storage": {
+      "type": "object",
+      "required": ["isolated", "sha256"],
+      "properties": {
+        "isolated": {"const": true},
+        "sha256": {
+          "type": "object",
+          "required": ["n1", "n2", "n3"],
+          "properties": {
+            "n1": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+            "n2": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+            "n3": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "raw_outcomes": {
+      "type": "object",
+      "required": ["proxy_delivery_order", "node_event_ids"],
+      "properties": {
+        "proxy_delivery_order": {
+          "type": "array", "minItems": 3, "maxItems": 3,
+          "items": {"type": "string", "minLength": 3}
+        },
+        "node_event_ids": {
+          "type": "object",
+          "required": ["n1", "n2", "n3"],
+          "properties": {
+            "n1": {"type": "array", "minItems": 2, "maxItems": 2, "items": {"type": "string"}},
+            "n2": {"type": "array", "maxItems": 0},
+            "n3": {"type": "array", "minItems": 1, "maxItems": 1, "items": {"type": "string"}}
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "limitations": {"type": "array", "minItems": 2, "items": {"type": "string", "minLength": 10}}
+  },
+  "additionalProperties": false
+}

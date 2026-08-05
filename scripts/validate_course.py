@@ -8,6 +8,7 @@ import asyncio
 import hashlib
 import json
 import re
+import subprocess
 import sys
 from pathlib import Path
 from typing import Any
@@ -33,11 +34,18 @@ ALLOWED_PORTFOLIO_CATEGORIES = {
     "threat_model", "dr_exercise",
     "migration_plan", "runtime_comparison", "teach_back", "capstone",
     "implementation", "model", "learning_log", "evaluation",
+    "data_governance_dossier", "assurance_case", "platform_product_experiment",
+    "ai_system_dossier",
 }
 ALLOWED_TIME_ACTIVITIES = {
     "local_instruction", "required_resource", "guided_practice", "independent_work",
     "failure_experiment", "decision_artifact", "assessment", "teach_back",
-    "review_remediation", "reflection",
+    "review_remediation", "reflection", "contingency",
+}
+ALLOWED_EVIDENCE_MODES = {
+    "derived", "executed_deterministic", "measured_loopback",
+    "measured_container", "modeled_capacity", "fixture_replay",
+    "measured_accelerator",
 }
 EXPECTED_REQUIRED_SPINE = {
     "M01": {"RES-01", "RES-04", "RES-06", "RES-07"},
@@ -52,12 +60,12 @@ EXPECTED_REQUIRED_SPINE = {
     "M10": {"RES-01", "RES-04", "RES-06", "RES-07"},
     "M11": {"RES-01", "RES-02", "RES-03", "RES-04", "RES-06"},
     "M12": {"RES-01", "RES-03", "RES-06", "RES-07"},
-    "M13": {"RES-01", "RES-02", "RES-03", "RES-10", "RES-12"},
-    "M14": {"RES-02", "RES-05", "RES-07", "RES-08", "RES-09"},
+    "M13": {"RES-01", "RES-02", "RES-03", "RES-10", "RES-12", "RES-14", "RES-15"},
+    "M14": {"RES-02", "RES-05", "RES-07", "RES-08", "RES-09", "RES-10", "RES-11"},
     "M15": {"RES-01", "RES-02", "RES-06", "RES-08"},
-    "M16": {"RES-01", "RES-02", "RES-04", "RES-07", "RES-09", "RES-11"},
-    "M17": {"RES-02", "RES-03", "RES-05", "RES-07", "RES-09"},
-    "M18": {"RES-01", "RES-02", "RES-04", "RES-05"},
+    "M16": {"RES-01", "RES-02", "RES-04", "RES-07", "RES-09", "RES-11", "RES-14"},
+    "M17": {"RES-02", "RES-03", "RES-05", "RES-07", "RES-09", "RES-10"},
+    "M18": {"RES-01", "RES-02", "RES-04", "RES-05", "RES-09", "RES-10"},
 }
 
 
@@ -116,6 +124,8 @@ def validate_manifest(module_root: Path, errors: list[str]) -> dict[str, Any]:
         return {}
 
     required = {
+        "course_id",
+        "course_version",
         "id",
         "title",
         "weeks",
@@ -140,23 +150,27 @@ def validate_manifest(module_root: Path, errors: list[str]) -> dict[str, Any]:
         fail(errors, f"{relative(path)}: invalid status {manifest.get('status')!r}")
 
     weeks = manifest.get("weeks", [])
-    if not isinstance(weeks, list) or len(weeks) != 4:
-        fail(errors, f"{module_id}: weeks must contain exactly four entries")
+    expected_week_count = 6 if module_id in {"M10", "M17"} else 5
+    expected_hours = 57 if expected_week_count == 6 else 47
+    if not isinstance(weeks, list) or len(weeks) != expected_week_count:
+        fail(errors, f"{module_id}: weeks must contain exactly {expected_week_count} entries")
     else:
         try:
             total = sum(float(week.get("hours", 0)) for week in weeks)
         except (AttributeError, TypeError, ValueError):
             total = -1
-        if not 40 <= total <= 48:
-            fail(errors, f"{module_id}: scheduled hours {total} are outside 40–48")
+        if total != expected_hours:
+            fail(errors, f"{module_id}: scheduled hours must equal {expected_hours}, found {total}")
         if total != float(manifest.get("target_hours", -1)):
             fail(errors, f"{module_id}: target_hours must equal week-hour sum")
         for week in weeks:
             if not isinstance(week, dict):
                 fail(errors, f"{module_id}: each week must be an object")
                 continue
-            if not 10 <= float(week.get("hours", 0)) <= 12:
-                fail(errors, f"{module_id}: week {week.get('number')} is outside 10–12 hours")
+            if not 8.5 <= float(week.get("hours", 0)) <= 10:
+                fail(errors, f"{module_id}: week {week.get('number')} is outside 8.5–10 core hours")
+            if week.get("core_hours") != week.get("hours") or week.get("capacity_hours") != 12:
+                fail(errors, f"{module_id}: week {week.get('number')} must distinguish core hours from 12-hour capacity")
             if not week.get("evidence"):
                 fail(errors, f"{module_id}: week {week.get('number')} has no evidence")
 
@@ -301,6 +315,56 @@ def validate_resources(
     required_ids = {str(row.get("id")) for row in resources if isinstance(row, dict) and row.get("required")}
     if required_ids != EXPECTED_REQUIRED_SPINE.get(str(manifest.get("id"))):
         fail(errors, f"{manifest.get('id')}: required resource spine differs from the published course contract")
+    module_weeks = {int(row.get("number")) for row in manifest.get("weeks", []) if isinstance(row, dict)}
+    for resource in resources:
+        if isinstance(resource, dict) and resource.get("week") not in module_weeks:
+            fail(errors, f"{manifest.get('id')} {resource.get('id')}: resource week is outside the module calendar")
+    guide_path = module_root / "resources.md"
+    guide = guide_path.read_text(encoding="utf-8") if guide_path.is_file() else ""
+    expected_required_table: dict[int, tuple[list[str], int]] = {}
+    for resource in resources:
+        if isinstance(resource, dict) and resource.get("required"):
+            week = int(resource["week"])
+            ids, minutes = expected_required_table.setdefault(week, ([], 0))
+            ids.append(str(resource["id"]))
+            expected_required_table[week] = (ids, minutes + int(resource["estimated_minutes"]))
+    observed_required_table = {
+        int(week): ([identifier.strip() for identifier in identifiers.split(",")], int(minutes))
+        for week, identifiers, minutes in re.findall(
+            r"^\|\s*(\d+)\s*\|\s*((?:RES-\d{2})(?:\s*,\s*RES-\d{2})*)\s*\|\s*(\d+)\s*\|$",
+            guide,
+            re.MULTILINE,
+        )
+    }
+    normalized_expected = {
+        week: (sorted(ids), minutes) for week, (ids, minutes) in expected_required_table.items()
+    }
+    normalized_observed = {
+        week: (sorted(ids), minutes) for week, (ids, minutes) in observed_required_table.items()
+    }
+    if normalized_observed != normalized_expected:
+        fail(errors, f"{manifest.get('id')}: resources.md required table disagrees with module.json")
+    for resource in resources:
+        if not isinstance(resource, dict):
+            continue
+        section = re.search(
+            rf"^### {re.escape(str(resource.get('id')))}:.*?(?=^### RES-|^## |\Z)",
+            guide,
+            re.MULTILINE | re.DOTALL,
+        )
+        if not section:
+            fail(errors, f"{manifest.get('id')} {resource.get('id')}: resources.md lacks a structured record")
+            continue
+        timing = re.search(
+            r"^- \*\*Week/time:\*\* Week (\d+); (\d+) minutes (assigned|optional)$",
+            section.group(0),
+            re.MULTILINE,
+        )
+        expected_allocation = "assigned" if resource.get("required") else "optional"
+        if not timing or (
+            int(timing.group(1)), int(timing.group(2)), timing.group(3)
+        ) != (int(resource.get("week", 0)), int(resource.get("estimated_minutes", 0)), expected_allocation):
+            fail(errors, f"{manifest.get('id')} {resource.get('id')}: resources.md timing disagrees with module.json")
     citations = manifest.get("citation_catalog")
     if not isinstance(citations, list):
         fail(errors, f"{manifest.get('id')}: citation_catalog must be an array")
@@ -354,20 +418,26 @@ def validate_time_contract(module_root: Path, manifest: dict[str, Any], errors: 
             fail(errors, f"{module_id}: lesson estimate is outside 15–180 minutes")
     resource_rows = {str(row.get("id")): row for row in manifest.get("resources", []) if isinstance(row, dict)}
     required_resources = {identifier for identifier, row in resource_rows.items() if row.get("required")}
-    artifact_ids = {str(row.get("id")) for row in manifest.get("artifacts", []) if isinstance(row, dict) and row.get("required")}
+    artifacts_by_id = {
+        str(row.get("id")): row for row in manifest.get("artifacts", [])
+        if isinstance(row, dict) and row.get("required")
+    }
+    artifact_ids = set(artifacts_by_id)
     exercise_path = module_root / "exercises" / "exercises.md"
     exercise_ids = set(EXERCISE_ID.findall(exercise_path.read_text(encoding="utf-8"))) if exercise_path.is_file() else set()
     seen_lessons: set[str] = set()
     seen_resources: list[str] = []
     seen_exercises: set[str] = set()
-    seen_artifacts: list[str] = []
+    artifact_minutes: dict[str, int] = {}
     block_ids: set[str] = set()
+    module_activities: set[str] = set()
     for week in manifest.get("weeks", []):
         blocks = week.get("time_blocks") if isinstance(week, dict) else None
-        if not isinstance(blocks, list) or len(blocks) < 4:
-            fail(errors, f"{module_id}: week {week.get('number')} needs at least four time blocks")
+        if not isinstance(blocks, list) or len(blocks) < 2:
+            fail(errors, f"{module_id}: week {week.get('number')} needs at least two time blocks")
             continue
-        total_minutes = 0
+        core_minutes = 0
+        capacity_minutes = 0
         activities: set[str] = set()
         week_resources: list[str] = []
         resource_minutes = 0
@@ -383,11 +453,25 @@ def validate_time_contract(module_root: Path, manifest: dict[str, Any], errors: 
             if not isinstance(minutes, int) or minutes < 15:
                 fail(errors, f"{module_id}: time block {identifier} has invalid minutes")
                 continue
-            total_minutes += minutes
+            capacity_minutes += minutes
             activity = block.get("activity")
             if activity not in ALLOWED_TIME_ACTIVITIES:
                 fail(errors, f"{module_id}: time block {identifier} has invalid activity")
-            activities.add(str(activity))
+            required = block.get("required")
+            if not isinstance(required, bool):
+                fail(errors, f"{module_id}: time block {identifier} must declare required true or false")
+                required = True
+            if activity == "contingency":
+                if required:
+                    fail(errors, f"{module_id}: contingency block {identifier} must be non-required")
+                if any(block.get(field) for field in ("lesson_ids", "resource_ids", "exercise_ids", "artifact_allocations")):
+                    fail(errors, f"{module_id}: contingency block {identifier} cannot carry required learning or evidence")
+            elif not required:
+                fail(errors, f"{module_id}: only contingency may be a non-required time activity")
+            if required:
+                core_minutes += minutes
+                activities.add(str(activity))
+                module_activities.add(str(activity))
             for lesson in block.get("lesson_ids", []):
                 if lesson not in lesson_ids:
                     fail(errors, f"{module_id}: time block {identifier} references unknown lesson {lesson}")
@@ -402,21 +486,40 @@ def validate_time_contract(module_root: Path, manifest: dict[str, Any], errors: 
                 if exercise not in exercise_ids:
                     fail(errors, f"{module_id}: time block {identifier} references unknown exercise {exercise}")
                 seen_exercises.add(exercise)
-            for artifact in block.get("artifact_ids", []):
+            allocations = block.get("artifact_allocations", [])
+            if allocations and not isinstance(allocations, list):
+                fail(errors, f"{module_id}: time block {identifier} artifact_allocations must be a list")
+                allocations = []
+            allocated_in_block = 0
+            for allocation in allocations:
+                if not isinstance(allocation, dict):
+                    fail(errors, f"{module_id}: time block {identifier} has an invalid artifact allocation")
+                    continue
+                artifact = allocation.get("artifact_id")
+                allocation_minutes = allocation.get("minutes")
                 if artifact not in artifact_ids:
                     fail(errors, f"{module_id}: time block {identifier} references unknown required artifact {artifact}")
-                seen_artifacts.append(artifact)
+                    continue
+                if artifacts_by_id.get(str(artifact), {}).get("week") != week.get("number"):
+                    fail(errors, f"{module_id}: time block {identifier} schedules {artifact} outside its declared week")
+                if not isinstance(allocation_minutes, int) or allocation_minutes < 15:
+                    fail(errors, f"{module_id}: time block {identifier} has invalid artifact minutes for {artifact}")
+                    continue
+                allocated_in_block += allocation_minutes
+                artifact_minutes[artifact] = artifact_minutes.get(artifact, 0) + allocation_minutes
+            if allocated_in_block > minutes:
+                fail(errors, f"{module_id}: time block {identifier} allocates more artifact time than the block contains")
             if activity == "required_resource":
                 declared = sum(int(resource_rows[resource]["estimated_minutes"]) for resource in block.get("resource_ids", []))
                 if minutes != declared:
                     fail(errors, f"{module_id}: required-resource block {identifier} minutes must equal source estimates")
-        if total_minutes != round(float(week.get("hours", 0)) * 60):
-            fail(errors, f"{module_id}: week {week.get('number')} time blocks do not equal published hours")
-        for required_activity in ("local_instruction", "guided_practice", "reflection"):
-            if required_activity not in activities:
-                fail(errors, f"{module_id}: week {week.get('number')} lacks {required_activity}")
-        if not activities.intersection({"independent_work", "failure_experiment", "decision_artifact"}):
-            fail(errors, f"{module_id}: week {week.get('number')} lacks application work")
+        if core_minutes != round(float(week.get("core_hours", week.get("hours", 0))) * 60):
+            fail(errors, f"{module_id}: week {week.get('number')} required time blocks do not equal published core hours")
+        if capacity_minutes != round(float(week.get("capacity_hours", 0)) * 60):
+            fail(errors, f"{module_id}: week {week.get('number')} core plus contingency does not equal capacity hours")
+        contingency_blocks = [block for block in blocks if block.get("activity") == "contingency"]
+        if len(contingency_blocks) != 1:
+            fail(errors, f"{module_id}: week {week.get('number')} must publish exactly one non-required contingency block")
         expected_week_resources = {identifier for identifier in required_resources if resource_rows[identifier].get("week") == week.get("number")}
         if set(week_resources) != expected_week_resources:
             fail(errors, f"{module_id}: week {week.get('number')} resource time does not cover its required sources")
@@ -426,8 +529,19 @@ def validate_time_contract(module_root: Path, manifest: dict[str, Any], errors: 
         fail(errors, f"{module_id}: every required resource must be scheduled exactly once")
     if seen_exercises != exercise_ids:
         fail(errors, f"{module_id}: time blocks do not cover every guided exercise")
-    if set(seen_artifacts) != artifact_ids or len(seen_artifacts) != len(set(seen_artifacts)):
-        fail(errors, f"{module_id}: every required artifact must be scheduled exactly once")
+    required_module_activities = {
+        "local_instruction", "guided_practice", "independent_work",
+        "failure_experiment", "decision_artifact", "assessment", "teach_back",
+        "reflection",
+    }
+    missing_activities = required_module_activities - module_activities
+    if missing_activities:
+        fail(errors, f"{module_id}: module schedule lacks phase-appropriate activities {sorted(missing_activities)}")
+    if set(artifact_minutes) != artifact_ids:
+        fail(errors, f"{module_id}: every required artifact must receive an explicit time allocation")
+    for artifact, row in artifacts_by_id.items():
+        if artifact_minutes.get(artifact) != row.get("estimated_minutes"):
+            fail(errors, f"{module_id}: {artifact} scheduled minutes do not match estimated_minutes")
     readme = (module_root / "README.md").read_text(encoding="utf-8")
     headings = {int(number): float(hours) for number, hours in re.findall(r"^### Week (\d+):.*?—\s*([0-9.]+) hours", readme, re.MULTILINE)}
     expected_headings = {int(week["number"]): float(week["hours"]) for week in manifest.get("weeks", [])}
@@ -476,6 +590,15 @@ def validate_artifacts(manifest: dict[str, Any], errors: list[str]) -> None:
             fail(errors, f"{artifact.get('id')}: missing submission_path")
         if artifact.get("portfolio_category") not in ALLOWED_PORTFOLIO_CATEGORIES:
             fail(errors, f"{manifest.get('id')} {artifact.get('id')}: invalid portfolio_category")
+        for field in ("evidence_lineage_id", "component_role", "portfolio_credit", "estimated_minutes", "evidence_mode"):
+            if field not in artifact:
+                fail(errors, f"{manifest.get('id')} {artifact.get('id')}: missing {field}")
+        if artifact.get("evidence_mode") not in ALLOWED_EVIDENCE_MODES:
+            fail(errors, f"{manifest.get('id')} {artifact.get('id')}: invalid evidence_mode")
+        if artifact.get("component_role") in {"implementation", "raw_evidence"} and artifact.get("evidence_mode") == "fixture_replay":
+            fail(errors, f"{manifest.get('id')} {artifact.get('id')}: fixture replay cannot satisfy independent build or break evidence")
+        if artifact.get("portfolio_credit") and not artifact.get("portfolio_item_id"):
+            fail(errors, f"{manifest.get('id')} {artifact.get('id')}: credited evidence must name a portfolio item")
 
 
 def validate_assessment_targets(manifest: dict[str, Any], errors: list[str]) -> None:
@@ -1068,6 +1191,18 @@ def validate_consensus_lab(
     observed = {path.name for path in scenario_paths}
     if observed != expected:
         fail(errors, f"M10: consensus scenario inventory differs: {sorted(observed ^ expected)}")
+    harness_path = lab_root / "consensus_lab" / "harness.py"
+    if not harness_path.is_file():
+        fail(errors, "M10: deterministic network, crashable store, and independent oracle harness is missing")
+    else:
+        harness_text = harness_path.read_text(encoding="utf-8")
+        for contract in ("VirtualClock", "DeterministicNetwork", "CrashableStore", "ProtectedResource", "InvariantOracle", "generated_schedules", "executable_small_state_check"):
+            if contract not in harness_text:
+                fail(errors, f"M10: harness lacks {contract}")
+    mutation_tests = (lab_root / "tests" / "test_consensus_lab.py").read_text(encoding="utf-8")
+    for control in ("persist_before_response", "commit_before_reply", "validate_prev_log", "deduplicate_clients", "read_barrier", "enforce_fencing", "atomic_snapshot", "joint_consensus"):
+        if control not in mutation_tests:
+            fail(errors, f"M10: mutation tests do not remove {control}")
     sys.path.insert(0, str(lab_root))
     try:
         from consensus_lab.config import load_scenario, validate_trial
@@ -1571,6 +1706,7 @@ def validate_browser_edge_lab(
         "tests/server.test.js",
         "tests/routes.spec.js",
         "tests/failure-pairs.spec.js",
+        "host_browser_callback.py",
     )
     for name in required_files:
         path = lab_root / name
@@ -1707,6 +1843,12 @@ def validate_inference_lab(
         for contract in ("accepted", "token", "completed", "rejected"):
             if contract not in tests_text:
                 fail(errors, f"M17: server tests do not exercise {contract}")
+        for contract in ("extend_kv", "generate_iter", "ByteBudgetAllocator", "TokenBudgetScheduler", "PromptKVCache", "provider_mode", "wfile.flush"):
+            if contract not in server_text and contract not in (lab_root / "inference_lab" / "model.py").read_text(encoding="utf-8"):
+                fail(errors, f"M17: executable serving path lacks {contract}")
+        for evidence in ("incremental_kv_generation", "byte_budget_refuses", "cache_is_tenant", "bounded_fake_provider_failover", "readline"):
+            if evidence not in tests_text:
+                fail(errors, f"M17: tests lack {evidence} evidence")
 
     sys.path.insert(0, str(lab_root))
     try:
@@ -1875,7 +2017,7 @@ def validate_retrieval_agent_lab(
             if broken_results.get(target) is not False:
                 fail(errors, f"M18 {pair_id}: broken trial does not expose {target}")
             if not all(row["passed"] for row in repaired["invariants"]):
-                fail(errors, f"M18 {pair_id}: repaired trial does not restore I01-I12")
+                fail(errors, f"M18 {pair_id}: repaired trial does not restore AI01-AI12")
     finally:
         sys.path.remove(str(lab_root))
 
@@ -1897,9 +2039,11 @@ def validate_home_lab_global_contract(errors: list[str]) -> None:
     required = (
         ROOT / "HOME_LAB_GUIDE.md",
         ROOT / "scripts" / "check_home_lab.py",
+        ROOT / "schemas" / "wsl-browser-callback.schema.json",
         ROOT / "scripts" / "prepare_solo_review.py",
         ROOT / "templates" / "solo-review-record-template.md",
         ROOT / "reviews" / "home-lab-readiness-review.md",
+        ROOT / "modules" / "16-browser-frontend-cdn-edge" / "lab" / "host_browser_callback.py",
     )
     for path in required:
         if not path.is_file():
@@ -1914,80 +2058,290 @@ def validate_home_lab_global_contract(errors: list[str]) -> None:
     for token in ("8 GiB", "WSL2", "Integrated graphics", "Offline", "Accidental-exposure protection"):
         if token.lower() not in guide.lower():
             fail(errors, f"HOME_LAB_GUIDE.md lacks required guidance: {token}")
+    preflight_path = ROOT / "scripts" / "check_home_lab.py"
+    callback_path = ROOT / "modules" / "16-browser-frontend-cdn-edge" / "lab" / "host_browser_callback.py"
+    preflight = preflight_path.read_text(encoding="utf-8") if preflight_path.is_file() else ""
+    callback = callback_path.read_text(encoding="utf-8") if callback_path.is_file() else ""
+    for token in (
+        "_wsl_cgroup_enforcement", "--network", "none", "_chromium_launch_ok",
+        "npm", "--offline", "--wsl-browser-callback", "repo_on_wsl_filesystem",
+    ):
+        if token not in preflight:
+            fail(errors, f"WSL2 preflight does not enforce required probe: {token}")
+    for token in ("--output", "source_commit", "token_persisted", "refusing to overwrite"):
+        if token not in callback:
+            fail(errors, f"M16 host-browser callback does not preserve attestation control: {token}")
+
+
+def validate_shared_cluster_contract(errors: list[str]) -> None:
+    """Prove M09-M12 execute one shared process/storage/fault boundary."""
+
+    boundary_root = ROOT / "shared-labs" / "three-node-cluster"
+    runner_path = boundary_root / "run_boundary.py"
+    implementation_path = boundary_root / "local_cluster.py"
+    schema_path = ROOT / "schemas" / "cluster-boundary-trial.schema.json"
+    for path in (runner_path, implementation_path, schema_path):
+        if not path.is_file():
+            fail(errors, f"shared cluster: missing {relative(path)}")
+    if any(not path.is_file() for path in (runner_path, implementation_path, schema_path)):
+        return
+
+    scenarios = {
+        "M09": ROOT / "modules/09-replication-partitioning/lab/scenarios/f01-replica-partition-repaired.json",
+        "M10": ROOT / "modules/10-time-coordination-consensus/lab/scenarios/f02-stale-partitioned-leader-repaired.json",
+        "M11": ROOT / "modules/11-messaging-streams-workflows/lab/scenarios/f04-reordered-version-repaired.json",
+        "M12": ROOT / "modules/12-reliability-incidents-disaster-recovery/lab/scenarios/f08-dual-authority-failback-repaired.json",
+    }
+    schema = load_json(schema_path, errors)
+    if not isinstance(schema, dict):
+        return
+
+    sys.path.insert(0, str(boundary_root))
+    try:
+        from run_boundary import run_boundary
+
+        for module_id, scenario_path in scenarios.items():
+            readme = scenario_path.parents[1] / "README.md"
+            command = f"run_boundary.py --module {module_id}"
+            if not readme.is_file() or command not in readme.read_text(encoding="utf-8"):
+                fail(errors, f"{module_id}: lab README must publish its shared-cluster execution command")
+            try:
+                first = run_boundary(module_id, scenario_path)
+                second = run_boundary(module_id, scenario_path)
+                if first != second:
+                    fail(errors, f"{module_id}: shared-cluster boundary is not deterministic")
+                validate_instance(first, schema, label=f"{module_id} shared-cluster boundary")
+                events = first["raw_outcomes"]["node_event_ids"]
+                if len(events["n1"]) != 2 or events["n2"] or len(events["n3"]) != 1:
+                    fail(errors, f"{module_id}: delay/drop/reorder did not reach isolated node stores")
+            except (OSError, ValueError, KeyError, RuntimeError, SchemaContractError) as error:
+                fail(errors, f"{module_id}: shared-cluster boundary failed: {error}")
+    finally:
+        sys.path.remove(str(boundary_root))
+
+
+def validate_evidence_envelope_contract(errors: list[str]) -> None:
+    """Require a source-bound provenance envelope around every frozen raw trial."""
+
+    writer_path = ROOT / "scripts" / "write_evidence_envelope.py"
+    schema_path = ROOT / "schemas" / "evidence-envelope.schema.json"
+    guide_path = ROOT / "HOME_LAB_GUIDE.md"
+    standard_path = ROOT / "MODULE_STANDARD.md"
+    for path in (writer_path, schema_path, guide_path, standard_path):
+        if not path.is_file():
+            fail(errors, f"evidence envelope: missing {relative(path)}")
+    if any(not path.is_file() for path in (writer_path, schema_path, guide_path, standard_path)):
+        return
+    writer = writer_path.read_text(encoding="utf-8")
+    for token in ("git", "show", "source_blob_sha256", "INDEPENDENT_MODES", "refusing to overwrite"):
+        if token not in writer:
+            fail(errors, f"evidence envelope: writer does not enforce {token}")
+    for path in (guide_path, standard_path):
+        text = path.read_text(encoding="utf-8")
+        if "write_evidence_envelope.py" not in text or "raw outcome" not in text.lower():
+            fail(errors, f"{relative(path)}: must require the local evidence envelope around raw outcomes")
+
+
+def validate_v1_v2_bridge_contract(errors: list[str]) -> None:
+    """Prove the learner migration tool creates outcome-only, immutable bridge work."""
+
+    script_path = ROOT / "scripts" / "prepare_v2_bridge.py"
+    schema_path = ROOT / "schemas" / "v2-bridge-plan.schema.json"
+    template_path = ROOT / "templates" / "v2-bridge-pack-template.md"
+    guide_path = ROOT / "V1_TO_V2_MIGRATION.md"
+    required = (script_path, schema_path, template_path, guide_path)
+    for path in required:
+        if not path.is_file():
+            fail(errors, f"V1 to V2 bridge: missing {relative(path)}")
+    if any(not path.is_file() for path in required):
+        return
+
+    schema = load_json(schema_path, errors)
+    if not isinstance(schema, dict):
+        return
+    try:
+        from prepare_v2_bridge import ADDITIONS, build
+
+        expected_modules = {f"M{number:02d}" for number in range(1, 19)}
+        if set(ADDITIONS) != expected_modules:
+            fail(errors, "V1 to V2 bridge: every module must publish exactly one new-outcome boundary")
+        plan, documents = build("0" * 40, ["M04"], ["G01"])
+        validate_instance(plan, schema, label="generated V1 to V2 bridge plan")
+        if plan.get("completed_modules") != ["M01", "M02", "M03", "M04"]:
+            fail(errors, "V1 to V2 bridge: passed gates must imply their completed modules")
+        if plan.get("next_v2_gate") != "G02" or len(documents) != 4:
+            fail(errors, "V1 to V2 bridge: next-gate targeting or pack count is incorrect")
+        if any("V1 weeks" in document for document in documents.values()):
+            fail(errors, "V1 to V2 bridge: generated packs must use stable IDs, not V1 week identity")
+    except (ImportError, OSError, ValueError, SchemaContractError, subprocess.SubprocessError) as error:
+        fail(errors, f"V1 to V2 bridge: generator contract failed: {error}")
+
+    guide = guide_path.read_text(encoding="utf-8")
+    template = template_path.read_text(encoding="utf-8")
+    for token in ("prepare_v2_bridge.py", "byte-identical", "module and gate IDs"):
+        if token.lower() not in guide.lower():
+            fail(errors, f"V1_TO_V2_MIGRATION.md lacks bridge contract: {token}")
+    for token in ("New outcome boundary", "V1 evidence remains byte-identical", "Evidence envelope"):
+        if token not in template:
+            fail(errors, f"bridge-pack template lacks required section: {token}")
+
+
+def validate_remote_fallback_contract(errors: list[str]) -> None:
+    """Keep remote execution optional, bounded, reproducible, and evidence-bound."""
+
+    workflow_path = ROOT / ".github" / "workflows" / "pesd-remote-fallback.yml"
+    guide_path = ROOT / "remote-runner" / "README.md"
+    writer_path = ROOT / "scripts" / "write_remote_evidence.py"
+    schema_path = ROOT / "schemas" / "remote-evidence.schema.json"
+    required = (workflow_path, guide_path, writer_path, schema_path)
+    for path in required:
+        if not path.is_file():
+            fail(errors, f"remote fallback: missing {relative(path)}")
+    if any(not path.is_file() for path in required):
+        return
+
+    workflow = workflow_path.read_text(encoding="utf-8")
+    guide = guide_path.read_text(encoding="utf-8")
+    writer = writer_path.read_text(encoding="utf-8")
+    schema = load_json(schema_path, errors)
+    if not isinstance(schema, dict):
+        return
+
+    for module in ("M10", "M15", "M16", "M17"):
+        if module not in workflow or module not in guide or module not in writer:
+            fail(errors, f"remote fallback: {module} must be covered by workflow, guide, and evidence writer")
+    for limit in ("--cpus 2", "--memory 4g", "--pids-limit 256"):
+        if limit not in workflow:
+            fail(errors, f"remote fallback: workflow does not publish the {limit} bound")
+    m15_lock = ROOT / "modules" / "15-execution-models-across-languages" / "lab" / "toolchains.lock.json"
+    if not m15_lock.is_file() or "M15_RUN_DOCKER_TESTS=1" not in workflow:
+        fail(errors, "remote fallback: M15 must run its pinned full four-runtime container matrix")
+
+    pinned_digests = (
+        "sha256:dcc5531e97840b9b5e794f2814476b21571c5124a3fca2267d73041f56e7580e",
+        "sha256:da4221677e02b54ef6335adfa447578d512ad14f251024fb92ea433c2c102760",
+    )
+    for digest in pinned_digests:
+        if digest not in workflow or digest not in writer:
+            fail(errors, f"remote fallback: pinned image digest {digest} must agree across runner and evidence writer")
+    for token in ("source_commit", "input_hashes", "raw_outcomes", "container_images", "limitations"):
+        if token not in schema.get("required", []) or token not in writer:
+            fail(errors, f"remote fallback: evidence envelope must bind {token}")
+
+    normalized_guide = " ".join(guide.lower().split())
+    if "optional and never a prerequisite" not in normalized_guide:
+        fail(errors, "remote fallback: guide must state that the runner is optional and never a prerequisite")
+    if "fixture replay never becomes independent build, break, implement, or measure evidence" not in normalized_guide:
+        fail(errors, "remote fallback: guide must preserve independent evidence boundaries")
 
 
 def validate_portfolio_contract(manifests: list[dict[str, Any]], errors: list[str]) -> None:
     if len(manifests) != 18:
         return
-    paths: list[str] = []
+    registry_path = ROOT / "portfolio-items.json"
+    schema_path = ROOT / "schemas" / "portfolio-items.schema.json"
+    registry = load_json(registry_path, errors)
+    schema = load_json(schema_path, errors)
+    if not isinstance(registry, dict) or not isinstance(schema, dict):
+        return
+    try:
+        validate_instance(registry, schema, label="portfolio-items.json")
+    except SchemaContractError as error:
+        fail(errors, str(error))
+        return
+    artifacts = {
+        f"{manifest.get('id')}:{artifact.get('id')}": artifact
+        for manifest in manifests
+        for artifact in manifest.get("artifacts", [])
+        if isinstance(artifact, dict) and artifact.get("required")
+    }
+    submission_paths: dict[str, str] = {}
+    for key, artifact in artifacts.items():
+        submission_path = str(artifact.get("submission_path"))
+        if submission_path in submission_paths:
+            fail(errors, f"portfolio: submission path {submission_path} is double-counted")
+        submission_paths[submission_path] = key
+    credited_paths: dict[str, str] = {}
+    item_ids = [row.get("id") for row in registry.get("items", [])]
+    if len(item_ids) != len(set(item_ids)):
+        fail(errors, "portfolio: item IDs must be unique")
     categories: dict[str, int] = {}
-    for manifest in manifests:
-        for artifact in manifest.get("artifacts", []):
-            if not isinstance(artifact, dict) or not artifact.get("required"):
-                continue
-            path = str(artifact.get("submission_path"))
-            paths.append(path)
-            category = str(artifact.get("portfolio_category"))
-            categories[category] = categories.get(category, 0) + 1
-    duplicates = sorted({path for path in paths if paths.count(path) > 1})
-    if duplicates:
-        fail(errors, f"portfolio: required submission paths are double-counted: {duplicates}")
-    if categories.get("adr", 0) != 12:
-        fail(errors, f"portfolio: expected exactly 12 ADRs, found {categories.get('adr', 0)}")
-    if categories.get("controlled_incident_postmortem", 0) != 4:
-        fail(errors, "portfolio: expected exactly four controlled incident postmortems, "
-             f"found {categories.get('controlled_incident_postmortem', 0)}")
-    minimums = {
-        "rfc": 6,
-        "capacity_cost_model": 3,
-        "performance_investigation": 6,
-        "failure_matrix": 6,
-        "source_code_internals_review": 3,
-        "runtime_comparison": 2,
-        "threat_model": 1,
-        "dr_exercise": 2,
-        "migration_plan": 2,
-        "teach_back": 6,
-        "capstone": 1,
+    credited_components: set[str] = set()
+    for item in registry.get("items", []):
+        item_id = str(item.get("id"))
+        category = str(item.get("category"))
+        categories[category] = categories.get(category, 0) + 1
+        credit = str(item.get("credit_component"))
+        if credit in credited_components:
+            fail(errors, f"portfolio: credited component {credit} is reused")
+        credited_components.add(credit)
+        matching = [row for row in item.get("components", []) if f"{row.get('owner')}:{row.get('artifact')}" == credit]
+        if len(matching) != 1:
+            fail(errors, f"portfolio: {item_id} must credit exactly one declared component")
+        if credit in artifacts:
+            artifact = artifacts[credit]
+            if artifact.get("portfolio_item_id") != item_id or artifact.get("portfolio_credit") is not True:
+                fail(errors, f"portfolio: {credit} does not point back to credited item {item_id}")
+            if artifact.get("portfolio_category") != category:
+                fail(
+                    errors,
+                    f"portfolio: {credit} category {artifact.get('portfolio_category')!r} "
+                    f"disagrees with {item_id} category {category!r}",
+                )
+            submission_path = str(artifact.get("submission_path"))
+            if submission_path in credited_paths:
+                fail(errors, f"portfolio: submission path {submission_path} is double-counted")
+            credited_paths[submission_path] = credit
+        for component in item.get("components", []):
+            key = f"{component.get('owner')}:{component.get('artifact')}"
+            if key in artifacts:
+                artifact = artifacts[key]
+                if artifact.get("evidence_lineage_id") != item.get("evidence_lineage_id"):
+                    fail(errors, f"portfolio: {key} lineage disagrees with {item_id}")
+                if artifact.get("portfolio_item_id") != item_id:
+                    fail(errors, f"portfolio: {key} item reference disagrees with {item_id}")
+    expected = {
+        "adr": 12, "rfc": 6, "capacity_cost_model": 3,
+        "performance_investigation": 6, "controlled_incident_postmortem": 4,
+        "failure_matrix": 6, "source_code_internals_review": 3,
+        "runtime_comparison": 2, "threat_model": 1, "dr_exercise": 2,
+        "migration_plan": 2, "teach_back": 6, "capstone": 1,
+        "data_governance_dossier": 1, "assurance_case": 1,
+        "platform_product_experiment": 1, "ai_system_dossier": 1,
     }
-    for category, minimum in minimums.items():
-        if categories.get(category, 0) < minimum:
-            fail(
-                errors,
-                f"portfolio: {category} requires at least {minimum} unique artifacts, "
-                f"found {categories.get(category, 0)}",
-            )
-    pinned_categories = {
-        ("M03", "A03"): "source_code_internals_review",
-        ("M07", "A04"): "source_code_internals_review",
-        ("M15", "A03"): "runtime_comparison",
-        ("M15", "A06"): "performance_investigation",
-        ("M15", "A07"): "source_code_internals_review",
-        ("M17", "A03"): "source_code_internals_review",
-    }
+    for category, count in expected.items():
+        if categories.get(category) != count:
+            fail(errors, f"portfolio: expected {count} {category} items, found {categories.get(category, 0)}")
     for manifest in manifests:
-        for artifact in manifest.get("artifacts", []):
-            key = (manifest.get("id"), artifact.get("id"))
-            expected = pinned_categories.get(key)
-            if expected and artifact.get("portfolio_category") != expected:
-                fail(errors, f"portfolio: {key[0]} {key[1]} must remain {expected}")
+        primary = manifest.get("primary_decision", {})
+        decision_artifacts = [
+            row for row in manifest.get("artifacts", [])
+            if isinstance(row, dict) and row.get("portfolio_category") in {"adr", "rfc"}
+        ]
+        if len(decision_artifacts) != 1 or decision_artifacts[0].get("id") != primary.get("artifact_id"):
+            fail(errors, f"portfolio: {manifest.get('id')} must expose exactly one primary ADR or RFC")
+    credits_by_week: dict[int, list[dict[str, Any]]] = {}
+    for artifact in artifacts.values():
+        if artifact.get("portfolio_credit"):
+            credits_by_week.setdefault(int(artifact.get("week", 0)), []).append(artifact)
+    for week, rows in credits_by_week.items():
+        if len(rows) > 2:
+            fail(errors, f"portfolio: Week {week} finalizes more than two featured items")
+        if sum(row.get("portfolio_category") in {"adr", "rfc"} for row in rows) > 1:
+            fail(errors, f"portfolio: Week {week} finalizes more than one primary decision")
 
 
 def validate_revision_chronology(errors: list[str]) -> None:
     baseline = ROOT / "capstone" / "baselines" / "week-01-baseline.md"
-    revisions = {
-        12: ROOT / "capstone" / "revisions" / "week-12-gate-01.md",
-        24: ROOT / "capstone" / "revisions" / "week-24-gate-02.md",
-        48: ROOT / "capstone" / "revisions" / "week-48-gate-04.md",
-        72: ROOT / "capstone" / "revisions" / "week-72-final.md",
-    }
+    freezes = {week: ROOT / "capstone" / "submissions" / f"week-{week:03d}-gate-{gate:02d}-freeze.md" for gate, week in enumerate((16, 33, 50, 68, 85, 103), start=1)}
+    revisions = {week: ROOT / "capstone" / "revisions" / f"week-{week:03d}-delta.md" for week in (17, 34, 51, 69, 86, 104)}
     if not baseline.is_file():
         fail(errors, "revision chronology: immutable Week 1 baseline is missing")
     else:
         baseline_text = baseline.read_text(encoding="utf-8")
         if "never edit this" not in baseline_text.lower() or "separate artifacts" not in baseline_text.lower():
             fail(errors, "revision chronology: Week 1 baseline does not enforce immutable, separate revisions")
-    for week, path in revisions.items():
+    for week, path in {**freezes, **revisions}.items():
         if not path.is_file():
             fail(errors, f"revision chronology: Week {week} revision is missing")
             continue
@@ -1996,21 +2350,145 @@ def validate_revision_chronology(errors: list[str]) -> None:
             fail(errors, f"revision chronology: Week {week} does not preserve earlier frozen artifacts")
     for markdown in (ROOT / "00_COURSE_SYLLABUS.md", ROOT / "HOME_LAB_GUIDE.md"):
         text = markdown.read_text(encoding="utf-8")
-        if "Weeks 12, 24, 48, and 72" not in text:
+        if "Weeks 16, 33, 50, 68, 85, and 103" not in text or "Weeks 17, 34, 51, 69, 86, and 104" not in text:
             fail(errors, f"{relative(markdown)}: canonical revision chronology is not published")
+        if markdown.name == "00_COURSE_SYLLABUS.md" and "Weeks 12, 24, 48, and 72" in text:
+            fail(errors, "00_COURSE_SYLLABUS.md: obsolete V1 capstone chronology remains active")
     readme = ROOT / "README.md"
     readme_text = readme.read_text(encoding="utf-8") if readme.is_file() else ""
-    if not re.search(r"Week 12,\s*Week 24,\s*Week 48,\s*and Week 72", readme_text):
-        fail(errors, "README.md: canonical Week 12/24/48/72 revision chronology is not published")
-    obsolete = re.compile(
-        r"(?:Weeks?\s+24,\s*48,\s*and\s*72|Week 24,\s*Week 48,\s*and Week 72)"
-    )
-    for markdown in sorted(ROOT.rglob("*.md")):
-        if {".git", "node_modules", "target", "dist"} & set(markdown.parts):
+    if "Weeks 17, 34, 51, 69, 86, and 104" not in readme_text:
+        fail(errors, "README.md: canonical flex-week capstone chronology is not published")
+
+
+def validate_v2_course_contract(manifests: list[dict[str, Any]], errors: list[str]) -> None:
+    if len(manifests) != 18:
+        return
+    embedded_gates = sorted((ROOT / "modules").glob("*/assessment/gate-*.md"))
+    if embedded_gates:
+        fail(errors, "gates: PESD 2.0 standalone gate material must not remain inside module assessment directories")
+    calendar_path = ROOT / "course-calendar.json"
+    calendar_schema_path = ROOT / "schemas" / "course-calendar.schema.json"
+    calendar = load_json(calendar_path, errors)
+    calendar_schema = load_json(calendar_schema_path, errors)
+    if not isinstance(calendar, dict) or not isinstance(calendar_schema, dict):
+        return
+    try:
+        validate_instance(calendar, calendar_schema, label="course-calendar.json")
+    except SchemaContractError as error:
+        fail(errors, str(error))
+        return
+    rows = calendar.get("weeks", [])
+    numbers = [row.get("week") for row in rows if isinstance(row, dict)]
+    if numbers != list(range(1, 105)):
+        fail(errors, "calendar: weeks must be exact, ordered, gap-free, and non-overlapping from 1 through 104")
+    by_module = {str(manifest.get("id")): manifest for manifest in manifests}
+    calendar_modules: dict[str, list[int]] = {}
+    for row in rows:
+        if row.get("type") == "module":
+            calendar_modules.setdefault(str(row.get("module")), []).append(int(row.get("week")))
+        elif row.get("type") in {"gate", "flex"} and (row.get("phase") is None or row.get("core_hours", 99) > (9.5 if row.get("type") == "gate" else 2)):
+            fail(errors, f"calendar: Week {row.get('week')} violates standalone gate/flex workload bounds")
+    for module_id, manifest in by_module.items():
+        published = [int(row.get("number")) for row in manifest.get("weeks", [])]
+        if calendar_modules.get(module_id) != published:
+            fail(errors, f"calendar: {module_id} manifest weeks disagree with the canonical calendar")
+    if sum(float(row.get("core_hours", 0)) for row in rows) != 920:
+        fail(errors, "calendar: PESD-104 must contain exactly 920 core hours")
+    for gate_number, expected_week in enumerate((16, 33, 50, 68, 85, 103), start=1):
+        gate_id = f"G{gate_number:02d}"
+        gate_path = ROOT / "gates" / gate_id / "gate.json"
+        gate_schema_path = ROOT / "schemas" / "gate.schema.json"
+        gate = load_json(gate_path, errors)
+        gate_schema = load_json(gate_schema_path, errors)
+        if not isinstance(gate, dict) or not isinstance(gate_schema, dict):
             continue
-        lines = markdown.read_text(encoding="utf-8", errors="replace").splitlines()
-        if any(obsolete.search(line) and "Week 12" not in line and "Weeks 12" not in line for line in lines):
-            fail(errors, f"{relative(markdown)}: obsolete three-revision chronology remains")
+        try:
+            validate_instance(gate, gate_schema, label=relative(gate_path))
+        except SchemaContractError as error:
+            fail(errors, str(error))
+            continue
+        if gate.get("week") != expected_week:
+            fail(errors, f"{gate_id}: expected Week {expected_week}")
+        if sum(int(row.get("minutes", 0)) for row in gate.get("parts", [])) != gate.get("core_minutes"):
+            fail(errors, f"{gate_id}: gate-part minutes do not equal the published total")
+        expected_parts = {
+            "freeze": 30,
+            "written": 90 if gate_id == "G06" else 75,
+            "practical": 180 if gate_id == "G06" else 150,
+            "defense": 120 if gate_id == "G06" else 60,
+            "portfolio": 90 if gate_id == "G06" else 45,
+            "closure": 60 if gate_id == "G06" else 30,
+        }
+        observed_parts = {str(row.get("id")): row.get("minutes") for row in gate.get("parts", [])}
+        if observed_parts != expected_parts:
+            fail(errors, f"{gate_id}: gate-part schedule differs from the published contract")
+        overview_path = gate_path.with_name("README.md")
+        brief_path = gate_path.with_name("assessment-brief.md")
+        assessor_path = gate_path.with_name("assessor-guide.md")
+        overview = overview_path.read_text(encoding="utf-8") if overview_path.is_file() else ""
+        brief = brief_path.read_text(encoding="utf-8") if brief_path.is_file() else ""
+        assessor = assessor_path.read_text(encoding="utf-8") if assessor_path.is_file() else ""
+        if not assessor or "replacement graded answers" not in assessor or "A Pass creates no" not in assessor:
+            fail(errors, f"{gate_id}: standalone assessor guide is missing its evidence/remediation boundary")
+        published_overview = {
+            title.strip(): int(minutes)
+            for title, minutes in re.findall(r"^\|\s*([^|]+?)\s*\|\s*(\d+) min\s*\|$", overview, re.MULTILINE)
+            if title.strip() != "Part"
+        }
+        expected_overview = {str(row.get("title")): int(row.get("minutes", 0)) for row in gate.get("parts", [])}
+        if published_overview != expected_overview:
+            fail(errors, f"{gate_id}: gate overview time table disagrees with gate.json")
+        scored_brief_minutes = [
+            int(minutes)
+            for minutes in re.findall(r"^## Part [^:]+:.*?—\s*(\d+) minutes$", brief, re.MULTILINE)
+        ]
+        expected_scored_minutes = [expected_parts[key] for key in ("written", "practical", "defense", "portfolio")]
+        if scored_brief_minutes != expected_scored_minutes:
+            fail(errors, f"{gate_id}: assessment-brief scored-part minutes disagree with gate.json")
+        pass_remediation_phrase = "a pass creates no required remediation artifact."
+        normalized_overview = " ".join(overview.lower().split())
+        normalized_brief = " ".join(brief.lower().split())
+        if pass_remediation_phrase not in normalized_overview or pass_remediation_phrase not in normalized_brief:
+            fail(errors, f"{gate_id}: published gate contract must forbid required remediation on Pass")
+        if any(row.get("new_teaching") or row.get("new_build_work") for row in gate.get("parts", [])):
+            fail(errors, f"{gate_id}: standalone gate may not introduce required teaching or build work")
+        expected_minutes = 570 if gate_id == "G06" else 390
+        if gate.get("core_minutes") != expected_minutes:
+            fail(errors, f"{gate_id}: expected {expected_minutes} core minutes")
+        expected_modules = [f"M{number:02d}" for number in range((gate_number - 1) * 3 + 1, gate_number * 3 + 1)]
+        if gate.get("modules") != expected_modules or [row.get("module") for row in gate.get("domain_matrix", [])] != expected_modules:
+            fail(errors, f"{gate_id}: domain matrix must cover its three modules exactly once")
+        invariant_sets = {row.get("id"): row.get("invariants") for row in gate.get("invariant_sets", [])}
+        if gate_id == "G06":
+            expected_invariants = {
+                "commerce": [f"C{number:02d}" for number in range(1, 11)],
+                "retrieval_agent": [f"AI{number:02d}" for number in range(1, 13)],
+            }
+            if invariant_sets != expected_invariants:
+                fail(errors, "G06: C01-C10 and AI01-AI12 must both pass")
+        elif invariant_sets:
+            fail(errors, f"{gate_id}: only Gate 6 owns the capstone invariant sets")
+    subsumed = {"M03", "M06", "M09", "M12", "M15", "M18"}
+    for module_id, manifest in by_module.items():
+        expected = "subsumed_by_gate" if module_id in subsumed else "module_specific"
+        if manifest.get("semantic_evaluation") != expected:
+            fail(errors, f"{module_id}: semantic-evaluation ownership must be {expected}")
+        if module_id in subsumed:
+            module_root = next(
+                (path for path in discover_module_roots() if load_json(path / "module.json", []).get("id") == module_id),
+                None,
+            )
+            if module_root is None:
+                continue
+            gate_id = f"G{(int(module_id[1:]) + 2) // 3:02d}"
+            ownership = f"{gate_id} invokes this module-specific rubric and evaluator exactly once"
+            for relative_path in ("assessment/README.md", "assessment/evaluator-prompt.md", "assessment/report-template.md"):
+                text = (module_root / relative_path).read_text(encoding="utf-8")
+                if ownership not in text or "Do not run or submit a separate module semantic evaluation report." not in text:
+                    fail(errors, f"{module_id}: {relative_path} does not enforce gate-owned semantic evaluation")
+            report = (module_root / "assessment/report-template.md").read_text(encoding="utf-8")
+            if not report.startswith(f"# {module_id} {gate_id} Domain Evaluation Record"):
+                fail(errors, f"{module_id}: duplicate module report template was not converted to the gate domain record")
 
 
 def validate_solo_completion_contract(module_roots: list[Path], errors: list[str]) -> None:
@@ -2056,7 +2534,27 @@ def validate_solo_completion_contract(module_roots: list[Path], errors: list[str
                 authored_paths.add(markdown)
     for path in sorted(authored_paths):
         if path.is_file() and partner_required.search(path.read_text(encoding="utf-8", errors="replace")):
-            fail(errors, f"{relative(path)}: required learner work still depends on a partner or external reviewer")
+                fail(errors, f"{relative(path)}: required learner work still depends on a partner or external reviewer")
+
+
+def validate_v2_readiness_status(manifests: list[dict[str, Any]], errors: list[str]) -> None:
+    """Prevent historical readiness reports from overriding current Review status."""
+
+    status_by_module = {str(row.get("id")): row.get("status") for row in manifests}
+    forbidden = (
+        "Current decision: **Ready**",
+        "## Current status: ready",
+        "- Final result: ready.",
+    )
+    for module_root in discover_module_roots():
+        module_id = json.loads((module_root / "module.json").read_text(encoding="utf-8"))["id"]
+        for path in sorted((module_root / "assessment").glob("*readiness-review.md")):
+            text = path.read_text(encoding="utf-8")
+            if status_by_module.get(module_id) == "review":
+                if "**PESD 2.0 status: Review.**" not in text:
+                    fail(errors, f"{relative(path)}: historical readiness evidence must be superseded by current Review status")
+                if any(token in text for token in forbidden) or re.search(r"## Result\n\n\*\*Ready on", text):
+                    fail(errors, f"{relative(path)}: contains an unsuperseded Ready decision")
 
 
 def validate_solo_gate_global_contract(errors: list[str]) -> None:
@@ -2108,6 +2606,13 @@ def main() -> int:
     errors: list[str] = []
     for path in (
         ROOT / "schemas" / "module.schema.json",
+        ROOT / "schemas" / "course-calendar.schema.json",
+        ROOT / "schemas" / "cluster-boundary-trial.schema.json",
+        ROOT / "schemas" / "evidence-envelope.schema.json",
+        ROOT / "schemas" / "v2-bridge-plan.schema.json",
+        ROOT / "schemas" / "gate.schema.json",
+        ROOT / "schemas" / "portfolio-items.schema.json",
+        ROOT / "schemas" / "remote-evidence.schema.json",
         ROOT / "schemas" / "evaluation.schema.json",
         ROOT / "schemas" / "capacity-scenario.schema.json",
         ROOT / "schemas" / "capacity-trial.schema.json",
@@ -2120,6 +2625,7 @@ def main() -> int:
         ROOT / "schemas" / "blind-collection.schema.json",
         ROOT / "schemas" / "blind-reveal.schema.json",
         ROOT / "schemas" / "home-lab-preflight.schema.json",
+        ROOT / "schemas" / "wsl-browser-callback.schema.json",
         ROOT / "schemas" / "solo-review.schema.json",
         ROOT / "schemas" / "solo-blind-envelope.schema.json",
         ROOT / "schemas" / "solo-blind-reveal.schema.json",
@@ -2204,7 +2710,8 @@ def main() -> int:
         validate_home_lab_support(module_root, manifest, errors)
         validate_lesson_contracts(module_root, errors)
         validate_calibration(module_root, manifest, errors)
-        validate_calibration_provenance(module_root, manifest, errors)
+        if manifest.get("status") == "ready":
+            validate_calibration_provenance(module_root, manifest, errors)
         validate_network_lab(module_root, manifest, errors)
         validate_remote_call_lab(module_root, manifest, errors)
         validate_storage_lab(module_root, manifest, errors)
@@ -2222,8 +2729,14 @@ def main() -> int:
 
     validate_baseline(errors)
     validate_home_lab_global_contract(errors)
+    validate_shared_cluster_contract(errors)
+    validate_evidence_envelope_contract(errors)
+    validate_v1_v2_bridge_contract(errors)
+    validate_remote_fallback_contract(errors)
+    validate_v2_course_contract(manifests, errors)
     validate_portfolio_contract(manifests, errors)
     validate_revision_chronology(errors)
+    validate_v2_readiness_status(manifests, errors)
     validate_solo_completion_contract(roots, errors)
     validate_solo_gate_global_contract(errors)
     validate_factual_contracts(roots, errors)

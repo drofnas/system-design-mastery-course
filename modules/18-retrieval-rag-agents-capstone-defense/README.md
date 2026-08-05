@@ -1,8 +1,6 @@
 # Module 18: Retrieval, RAG, Agents, and Capstone Defense
 
-> **Authoring status:** Ready. The portable lab, F01–F08 pairs, six isolated
-> evaluator records, deterministic calibration, semantic/resource review, and
-> focused/full validation all pass.
+> **Authoring status:** Review. PESD 2.0 content and machine-readable contracts are migrated. Refreshed evaluator calibration, full platform matrices, offline reruns, cleanup checks, and timed learner pilots remain required before Ready.
 
 ## What this module changes
 
@@ -25,8 +23,7 @@ key.
 - Modules 1–17, especially retrieval-adjacent storage, deadlines, messaging,
   security, browser/edge, and inference evidence
 - Python 3.11+; the required lab uses only the standard library
-- Frozen Week 1 baseline, Week 12/24/48 revisions, Gate 5 evidence, and
-  independent Module 16–17 capstone evidence
+- Frozen Week 1 baseline; Gate freezes from Weeks 16, 33, 50, 68, and 85; their separate flex-week deltas; and independent Module 16–17 evidence
 - No model download, account, API key, accelerator, or network for required work
 
 ## Learning outcomes
@@ -45,50 +42,60 @@ By the end of the module, you can:
 
 ## Schedule
 
-### Week 69: Model retrieval and freeze predictions — 11 hours
+The 10–12 hour weekly figure is a capacity envelope. Core work is deliberately
+budgeted below that ceiling; unused time is recovery buffer, not hidden work.
+
+### Week 98: Model and derive — 8.5 hours
 
 | Work | Time |
 |---|---:|
-| Lessons 1–4 and bounded sources | 4 h |
-| EX-01–EX-10 with CivicAid calculations | 2 h |
-| Independent dataset, retrieval contract, and F01–F08 predictions | 3.5 h |
-| Freeze, source review, and learning log | 1.5 h |
+| Bounded authoritative resources | 160 min |
+| Local mechanism instruction | 120 min |
+| Guided practice | 60 min |
+| Model and derive core work | 170 min |
 
-Use the [Week 69 worksheet](worksheets/week-69-retrieval-model.md).
+Optional contingency capacity: 210 minutes. It is not core work, carries no required evidence, and may remain unused.
 
-### Week 70: Build retrieval, grounding, and durable tools — 12 hours
-
-| Work | Time |
-|---|---:|
-| Lessons 5–7 and CivicAid tutorial | 3 h |
-| EX-08–EX-16 and lab rehearsal | 2 h |
-| Independent commerce assistant implementation and tests | 6 h |
-| Implementation review and learning log | 1 h |
-
-Use the [Week 70 worksheet](worksheets/week-70-assistant-build.md).
-
-### Week 71: Break and measure system claims — 12 hours
+### Week 99: Guided build and prediction freeze — 9 hours
 
 | Work | Time |
 |---|---:|
-| Lessons 5–8 and bounded sources | 1.5 h |
-| F01–F08 rehearsal and diagnostic plan | 2 h |
-| Sixteen immutable broken/repaired trials | 6 h |
-| Failure matrix, incident, threat, cost, and learning log | 2.5 h |
+| Bounded authoritative resources | 155 min |
+| Local mechanism instruction | 120 min |
+| Guided practice | 60 min |
+| Required evidence components | 120 min |
+| Guided build and prediction freeze core work | 85 min |
 
-Use the [Week 71 worksheet](worksheets/week-71-retrieval-agent-failures.md).
+Optional contingency capacity: 180 minutes. It is not core work, carries no required evidence, and may remain unused.
 
-### Week 72: Decide, defend, assess, and plan — 11 hours
+### Week 100: Independent build and integration — 10 hours
 
 | Work | Time |
 |---|---:|
-| Lesson 8, resource synthesis, and EX-17–EX-20 | 1 h |
-| Final RFC, operations, migration, and Week 72 revision | 3 h |
-| Gate 6 examination, hidden practical, defense, and portfolio review | 3.5 h |
-| Module evaluation, remediation, teach-back, log, and practice plan | 3.5 h |
+| Independent build and integration core work | 540 min |
+| Independent build and integration verification checkpoint | 60 min |
 
-Use the [Week 72 worksheet](worksheets/week-72-capstone-defense.md).
+Optional contingency capacity: 120 minutes. It is not core work, carries no required evidence, and may remain unused.
 
+### Week 101: Break, repair, measure, and diagnose — 10 hours
+
+| Work | Time |
+|---|---:|
+| Required evidence components | 150 min |
+| Break, repair, measure, and diagnose core work | 450 min |
+
+Optional contingency capacity: 120 minutes. It is not core work, carries no required evidence, and may remain unused.
+
+### Week 102: Decide, teach, assess, and freeze — 9.5 hours
+
+| Work | Time |
+|---|---:|
+| Required evidence components | 120 min |
+| Decide, teach, assess, and freeze core work | 390 min |
+| Module teach-back | 30 min |
+| Learning log and freeze check | 30 min |
+
+Optional contingency capacity: 150 minutes. It is not core work, carries no required evidence, and may remain unused.
 ## Learn
 
 1. [Retrieval contracts, outcomes, and evaluation](lessons/01-retrieval-contracts-evaluation.md)
@@ -123,11 +130,11 @@ incident, a failure matrix, a recorded defense, and the next-year practice plan.
 
 - Read the [assessment contract](assessment/README.md), [anchored rubric](assessment/rubric.md),
   [evaluator prompt](assessment/evaluator-prompt.md), [remediation map](assessment/remediation-map.md),
-  and [Gate 6 contract](assessment/gate-06.md).
-- Module Pass requires G01–G06, every A01–A17 artifact, average at least 3.0,
+  and [Gate 6 contract](../../gates/G06/assessment-brief.md).
+- Module Pass requires G01–G06, every required artifact in `module.json`, average at least 3.0,
   and no zero in R04–R07.
 - Gate 6 and the final capstone require all six course gates, average at least
-  3.5, no failed capstone invariant, and no safety-critical zero.
+  3.5, passing C01–C10 and AI01–AI12 evidence, and at least 3.0 in every safety-critical dimension.
 
 ## Evidence boundary and AI use
 
@@ -147,3 +154,17 @@ frozen work, write replacement graded answers, or answer during Gate 6.
 - Use the [sealed local gate workflow](../../SOLO_GATE_GUIDE.md) when a course gate applies. Human review is optional.
 
 A frozen self-evaluation may establish **Solo Complete**; independent human or LLM review may establish **Independently Validated**. Synthetic lab values are not production measurements.
+
+## PESD 2.0 scope addition
+
+This 5-week module schedules 47 core hours. Its primary
+decision is RFC A10. The added graded scope is
+a complete AI assurance case covering tool/model inventory, provider supply chain, ongoing evaluation, human-approval efficacy, transparency, deletion, incident response, policy drift, rollback, and retirement. See Lesson 8, the final guided exercise, final worksheet,
+rubric anchors, and remediation map for the integrated evidence contract.
+
+## PESD 2.0 evaluation ownership
+
+Gate G06 invokes this module's rubric and provider-neutral
+evaluator once for its domain score. Do not create a second module semantic
+evaluation report. The gate result is authoritative; remediation remains a
+separate dated artifact only for Revise or Repeat.

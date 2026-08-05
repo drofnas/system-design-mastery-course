@@ -4,30 +4,33 @@
   "title": "Reliability, Incidents, and Disaster Recovery",
   "weeks": [
     {
-      "number": 45,
-      "focus": "Model and freeze user journeys, SLIs, SLOs, budgets, alerts, dependencies, and recovery priorities",
-      "hours": 10.5,
+      "number": 63,
+      "phase": "Model and derive",
+      "focus": "Model and derive",
+      "hours": 8.5,
+      "core_hours": 8.5,
+      "capacity_hours": 12,
       "evidence": [
-        "Frozen reliability and recovery baseline",
-        "SLI/SLO and error-budget calculations",
-        "F01-F09 predictions",
-        "Week 45 learning log"
+        "Model and derive evidence frozen at source commit"
       ],
       "time_blocks": [
         {
-          "id": "W45-T01",
+          "id": "W063-T01",
           "label": "Bounded authoritative resources",
-          "minutes": 80,
+          "minutes": 130,
           "activity": "required_resource",
+          "required": true,
           "resource_ids": [
-            "RES-01"
+            "RES-06",
+            "RES-07"
           ]
         },
         {
-          "id": "W45-T02",
-          "label": "Local lesson instruction",
+          "id": "W063-T02",
+          "label": "Local mechanism instruction",
           "minutes": 120,
           "activity": "local_instruction",
+          "required": true,
           "lesson_ids": [
             "L01",
             "L02",
@@ -36,277 +39,278 @@
           ]
         },
         {
-          "id": "W45-T03",
+          "id": "W063-T03",
           "label": "Guided practice",
-          "minutes": 90,
+          "minutes": 60,
           "activity": "guided_practice",
+          "required": true,
           "exercise_ids": [
             "EX-01",
             "EX-02",
             "EX-03",
             "EX-04",
             "EX-05",
-            "EX-06"
+            "EX-06",
+            "EX-07",
+            "EX-08"
           ]
         },
         {
-          "id": "W45-T04",
-          "label": "Reflection and learning log",
-          "minutes": 30,
-          "activity": "reflection"
-        },
-        {
-          "id": "W45-T05",
-          "label": "Independent Work",
-          "minutes": 310,
+          "id": "W063-T04",
+          "label": "Model and derive core work",
+          "minutes": 200,
           "activity": "independent_work",
-          "artifact_ids": [
-            "A01"
-          ]
+          "required": true
+        },
+        {
+          "id": "W063-T05",
+          "label": "Optional contingency capacity",
+          "minutes": 210,
+          "activity": "contingency",
+          "required": false
         }
       ]
     },
     {
-      "number": 46,
-      "focus": "Build SLO evaluation, burn alerts, degraded modes, load shedding, runbooks, backups, and recovery automation",
-      "hours": 11.5,
+      "number": 64,
+      "phase": "Guided build and prediction freeze",
+      "focus": "Guided build and prediction freeze",
+      "hours": 9.0,
+      "core_hours": 9.0,
+      "capacity_hours": 12,
       "evidence": [
-        "Reliability controls implementation",
-        "Schema-valid tests and implementation review",
-        "Runbook and recovery automation",
-        "Week 46 learning log"
+        "Guided build and prediction freeze evidence frozen at source commit"
       ],
       "time_blocks": [
         {
-          "id": "W46-T01",
+          "id": "W064-T01",
           "label": "Bounded authoritative resources",
-          "minutes": 65,
+          "minutes": 145,
           "activity": "required_resource",
+          "required": true,
           "resource_ids": [
+            "RES-01",
             "RES-03"
           ]
         },
         {
-          "id": "W46-T02",
-          "label": "Local lesson instruction",
-          "minutes": 90,
+          "id": "W064-T02",
+          "label": "Local mechanism instruction",
+          "minutes": 120,
           "activity": "local_instruction",
+          "required": true,
           "lesson_ids": [
-            "L03",
             "L05",
-            "L07"
-          ]
-        },
-        {
-          "id": "W46-T03",
-          "label": "Guided practice",
-          "minutes": 90,
-          "activity": "guided_practice",
-          "exercise_ids": [
-            "EX-07",
-            "EX-08",
-            "EX-09",
-            "EX-10",
-            "EX-11"
-          ]
-        },
-        {
-          "id": "W46-T04",
-          "label": "Reflection and learning log",
-          "minutes": 30,
-          "activity": "reflection"
-        },
-        {
-          "id": "W46-T05",
-          "label": "Independent Work",
-          "minutes": 415,
-          "activity": "independent_work",
-          "artifact_ids": [
-            "A02",
-            "A03"
-          ]
-        }
-      ]
-    },
-    {
-      "number": 47,
-      "focus": "Run controlled incidents, data-loss recovery, regional failure, failback, and operator-safety experiments",
-      "hours": 11.5,
-      "evidence": [
-        "Eighteen immutable raw trials",
-        "Nine broken/repaired comparisons",
-        "Controlled-incident postmortem and recovery evidence",
-        "Week 47 learning log"
-      ],
-      "time_blocks": [
-        {
-          "id": "W47-T01",
-          "label": "Bounded authoritative resources",
-          "minutes": 90,
-          "activity": "required_resource",
-          "resource_ids": [
-            "RES-06"
-          ]
-        },
-        {
-          "id": "W47-T02",
-          "label": "Local lesson instruction",
-          "minutes": 90,
-          "activity": "local_instruction",
-          "lesson_ids": [
-            "L01",
-            "L04",
-            "L06"
-          ]
-        },
-        {
-          "id": "W47-T03",
-          "label": "Guided practice",
-          "minutes": 90,
-          "activity": "guided_practice",
-          "exercise_ids": [
-            "EX-12",
-            "EX-13",
-            "EX-14",
-            "EX-15"
-          ]
-        },
-        {
-          "id": "W47-T04",
-          "label": "Reflection and learning log",
-          "minutes": 30,
-          "activity": "reflection"
-        },
-        {
-          "id": "W47-T05",
-          "label": "Decision Artifact",
-          "minutes": 30,
-          "activity": "decision_artifact",
-          "artifact_ids": [
-            "A06"
-          ]
-        },
-        {
-          "id": "W47-T06",
-          "label": "Failure Experiment",
-          "minutes": 330,
-          "activity": "failure_experiment",
-          "artifact_ids": [
-            "A04"
-          ]
-        },
-        {
-          "id": "W47-T07",
-          "label": "Review Remediation",
-          "minutes": 30,
-          "activity": "review_remediation",
-          "artifact_ids": [
-            "A05"
-          ]
-        }
-      ]
-    },
-    {
-      "number": 48,
-      "focus": "Decide, teach, evaluate, revise the capstone, and complete Gate 4",
-      "hours": 10,
-      "evidence": [
-        "Disaster-recovery review",
-        "Recorded defense and Module 12 evaluation",
-        "Gate 4 submission and Week 48 capstone revision",
-        "Week 48 learning log"
-      ],
-      "time_blocks": [
-        {
-          "id": "W48-T01",
-          "label": "Bounded authoritative resources",
-          "minutes": 40,
-          "activity": "required_resource",
-          "resource_ids": [
-            "RES-07"
-          ]
-        },
-        {
-          "id": "W48-T02",
-          "label": "Local lesson instruction",
-          "minutes": 45,
-          "activity": "local_instruction",
-          "lesson_ids": [
+            "L06",
+            "L07",
             "L08"
           ]
         },
         {
-          "id": "W48-T03",
+          "id": "W064-T03",
           "label": "Guided practice",
-          "minutes": 45,
+          "minutes": 60,
           "activity": "guided_practice",
+          "required": true,
           "exercise_ids": [
+            "EX-09",
+            "EX-10",
+            "EX-11",
+            "EX-12",
+            "EX-13",
+            "EX-14",
+            "EX-15",
             "EX-16"
           ]
         },
         {
-          "id": "W48-T04",
-          "label": "Required portfolio artifact A11",
-          "minutes": 45,
-          "activity": "reflection",
-          "artifact_ids": [
-            "A11"
+          "id": "W064-T04",
+          "label": "Required evidence components",
+          "minutes": 120,
+          "activity": "independent_work",
+          "required": true,
+          "artifact_allocations": [
+            {
+              "artifact_id": "A01",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A02",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A03",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A04",
+              "minutes": 30
+            }
           ]
         },
         {
-          "id": "W48-T05",
-          "label": "Required portfolio artifact A12",
-          "minutes": 155,
-          "activity": "decision_artifact",
-          "artifact_ids": [
-            "A12"
-          ]
+          "id": "W064-T05",
+          "label": "Guided build and prediction freeze core work",
+          "minutes": 95,
+          "activity": "independent_work",
+          "required": true
         },
         {
-          "id": "W48-T06",
-          "label": "Reflection and learning log",
-          "minutes": 30,
-          "activity": "reflection"
+          "id": "W064-T06",
+          "label": "Optional contingency capacity",
+          "minutes": 180,
+          "activity": "contingency",
+          "required": false
+        }
+      ]
+    },
+    {
+      "number": 65,
+      "phase": "Independent build and integration",
+      "focus": "Independent build and integration",
+      "hours": 10.0,
+      "core_hours": 10.0,
+      "capacity_hours": 12,
+      "evidence": [
+        "Independent build and integration evidence frozen at source commit"
+      ],
+      "time_blocks": [
+        {
+          "id": "W065-T01",
+          "label": "Independent build and integration core work",
+          "minutes": 540,
+          "activity": "independent_work",
+          "required": true
         },
         {
-          "id": "W48-T07",
-          "label": "Assessment",
+          "id": "W065-T02",
+          "label": "Independent build and integration verification checkpoint",
           "minutes": 60,
+          "activity": "independent_work",
+          "required": true
+        },
+        {
+          "id": "W065-T03",
+          "label": "Optional contingency capacity",
+          "minutes": 120,
+          "activity": "contingency",
+          "required": false
+        }
+      ]
+    },
+    {
+      "number": 66,
+      "phase": "Break, repair, measure, and diagnose",
+      "focus": "Break, repair, measure, and diagnose",
+      "hours": 10.0,
+      "core_hours": 10.0,
+      "capacity_hours": 12,
+      "evidence": [
+        "Break, repair, measure, and diagnose evidence frozen at source commit"
+      ],
+      "time_blocks": [
+        {
+          "id": "W066-T01",
+          "label": "Required evidence components",
+          "minutes": 90,
+          "activity": "failure_experiment",
+          "required": true,
+          "artifact_allocations": [
+            {
+              "artifact_id": "A05",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A06",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A07",
+              "minutes": 30
+            }
+          ]
+        },
+        {
+          "id": "W066-T02",
+          "label": "Break, repair, measure, and diagnose core work",
+          "minutes": 510,
+          "activity": "failure_experiment",
+          "required": true
+        },
+        {
+          "id": "W066-T03",
+          "label": "Optional contingency capacity",
+          "minutes": 120,
+          "activity": "contingency",
+          "required": false
+        }
+      ]
+    },
+    {
+      "number": 67,
+      "phase": "Decide, teach, assess, and freeze",
+      "focus": "Decide, teach, assess, and freeze",
+      "hours": 9.5,
+      "core_hours": 9.5,
+      "capacity_hours": 12,
+      "evidence": [
+        "Decide, teach, assess, and freeze evidence frozen at source commit"
+      ],
+      "time_blocks": [
+        {
+          "id": "W067-T01",
+          "label": "Required evidence components",
+          "minutes": 90,
+          "activity": "decision_artifact",
+          "required": true,
+          "artifact_allocations": [
+            {
+              "artifact_id": "A08",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A11",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A12",
+              "minutes": 30
+            }
+          ]
+        },
+        {
+          "id": "W067-T02",
+          "label": "Decide, teach, assess, and freeze core work",
+          "minutes": 420,
           "activity": "assessment",
-          "artifact_ids": [
-            "A09",
-            "A10"
-          ]
+          "required": true
         },
         {
-          "id": "W48-T08",
-          "label": "Decision Artifact",
-          "minutes": 60,
-          "activity": "decision_artifact",
-          "artifact_ids": [
-            "A07"
-          ]
-        },
-        {
-          "id": "W48-T09",
-          "label": "Review Remediation",
-          "minutes": 60,
-          "activity": "review_remediation"
-        },
-        {
-          "id": "W48-T10",
-          "label": "Teach Back",
-          "minutes": 60,
+          "id": "W067-T03",
+          "label": "Module teach-back",
+          "minutes": 30,
           "activity": "teach_back",
-          "artifact_ids": [
-            "A08"
-          ]
+          "required": true
+        },
+        {
+          "id": "W067-T04",
+          "label": "Learning log and freeze check",
+          "minutes": 30,
+          "activity": "reflection",
+          "required": true
+        },
+        {
+          "id": "W067-T05",
+          "label": "Optional contingency capacity",
+          "minutes": 150,
+          "activity": "contingency",
+          "required": false
         }
       ]
     }
   ],
-  "target_hours": 43.5,
-  "status": "ready",
+  "target_hours": 47,
+  "status": "review",
   "readiness_note": "Ready on 2026-08-02 after teaching, eighteen deterministic paired trials, six isolated calibration records, semantic and evidence-safety review, authoritative-resource verification, focused validation, and full-course validation passed.",
   "outcomes": [
     {
@@ -538,10 +542,8 @@
         "A06",
         "A07",
         "A08",
-        "A09",
-        "A10",
-        "A11",
-        "A12"
+        "A12",
+        "A11"
       ],
       "rubric": [
         "R09",
@@ -558,7 +560,7 @@
       "url": "https://sre.google/workbook/implementing-slos/",
       "required": true,
       "access": "free",
-      "week": 45,
+      "week": 64,
       "estimated_minutes": 80,
       "purpose": "Derive a user-centered SLO, budget, owner, and decision policy.",
       "assignment": "Read Getting Started through Decision Making Using SLOs and Error Budgets; submit one SLI contract, budget calculation, policy action, and anti-gaming review.",
@@ -578,7 +580,7 @@
       "url": "https://sre.google/workbook/alerting-on-slos/",
       "required": false,
       "access": "free",
-      "week": 45,
+      "week": 67,
       "estimated_minutes": 70,
       "purpose": "Derive burn-rate windows, notification class, and reset behavior.",
       "assignment": "Read approaches 4-6 and Low-Traffic Services; recalculate one page and ticket threshold and test a low-traffic case.",
@@ -598,7 +600,7 @@
       "url": "https://sre.google/workbook/managing-load/",
       "required": true,
       "access": "free",
-      "week": 46,
+      "week": 64,
       "estimated_minutes": 65,
       "purpose": "Reason about feedback among load controls and reserve after failure.",
       "assignment": "Read load balancing, autoscaling, shedding, combined strategies, and conclusions; draw one control interaction and calculate degraded capacity.",
@@ -618,7 +620,7 @@
       "url": "https://sre.google/workbook/incident-response/",
       "required": false,
       "access": "free",
-      "week": 47,
+      "week": 67,
       "estimated_minutes": 75,
       "purpose": "Separate command, operations, communications, and coordination during user impact.",
       "assignment": "Read the complete chapter and power-outage case; submit a role map, first three mitigations, and handoff contract.",
@@ -638,7 +640,7 @@
       "url": "https://sre.google/workbook/postmortem-culture/",
       "required": false,
       "access": "free",
-      "week": 47,
+      "week": 67,
       "estimated_minutes": 70,
       "purpose": "Write causal, measurable, owned corrective work without blame.",
       "assignment": "Read the case comparison, action items, incentives, and tools; rewrite three weak findings and rank five actions.",
@@ -658,7 +660,7 @@
       "url": "https://nvlpubs.nist.gov/nistpubs/legacy/sp/nistspecialpublication800-34r1.pdf",
       "required": true,
       "access": "free",
-      "week": 47,
+      "week": 63,
       "estimated_minutes": 90,
       "purpose": "Connect business impact, recovery order, exercises, validation, and reconstitution.",
       "assignment": "Read Sections 3.2, 3.5, 4.3, and 4.4; produce a recovery priority table, exercise charter, and reconstitution checks.",
@@ -672,19 +674,19 @@
     },
     {
       "id": "RES-07",
-      "title": "Lessons Learned from Other Industries — Preparedness and Disaster Testing",
+      "title": "Lessons Learned from Other Industries \u2014 Preparedness and Disaster Testing",
       "author_or_publisher": "Google Site Reliability Engineering",
       "type": "first-person engineering experience",
       "url": "https://sre.google/sre-book/lessons-learned/",
       "required": true,
       "access": "free",
-      "week": 48,
+      "week": 63,
       "estimated_minutes": 40,
       "purpose": "Design exercises that reveal unknown weaknesses without uncontrolled harm.",
       "assignment": "Read Preparedness and Disaster Testing and the DiRT discussion; submit a hypothesis, abort conditions, and evidence plan.",
       "last_verified": "2026-08-02",
       "text_alternative": "lessons/08-game-days-reliability-decisions.md",
-      "verified_title": "Lessons Learned from Other Industries — Preparedness and Disaster Testing",
+      "verified_title": "Lessons Learned from Other Industries \u2014 Preparedness and Disaster Testing",
       "verified_publisher": "Google Site Reliability Engineering",
       "verification_method": "HTTP GET plus primary-source metadata comparison",
       "final_url": "https://sre.google/sre-book/lessons-learned/",
@@ -698,7 +700,7 @@
       "url": "https://sre.google/prodcast/transcripts/sre-prodcast-01-08/",
       "required": false,
       "access": "free",
-      "week": 48,
+      "week": 67,
       "estimated_minutes": 45,
       "purpose": "Transfer practiced incident coordination into a runbook and defense.",
       "assignment": "Listen to the complete episode or read the transcript; record communication cadence, role boundaries, and two practice prompts.",
@@ -714,104 +716,147 @@
   "artifacts": [
     {
       "id": "A01",
-      "week": 45,
+      "week": 64,
       "required": true,
       "template_path": "modules/12-reliability-incidents-disaster-recovery/worksheets/week-45-reliability-model.md",
       "submission_path": "reports/module-12-reliability-baseline.md",
       "immutable_after_submission": true,
-      "portfolio_category": "model"
+      "portfolio_category": "model",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M12-A01",
+      "component_role": "prediction",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A02",
-      "week": 46,
+      "week": 64,
       "required": true,
       "template_path": "modules/12-reliability-incidents-disaster-recovery/worksheets/week-46-reliability-controls.md",
       "submission_path": "labs/module-12/reliability-operations/",
-      "portfolio_category": "implementation"
+      "portfolio_category": "implementation",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M12-A02",
+      "component_role": "implementation",
+      "estimated_minutes": 30,
+      "evidence_mode": "executed_deterministic"
     },
     {
       "id": "A03",
-      "week": 46,
+      "week": 64,
       "required": true,
       "template_path": "modules/12-reliability-incidents-disaster-recovery/worksheets/week-46-reliability-controls.md",
       "submission_path": "reports/module-12-reliability-implementation-review.md",
-      "portfolio_category": "model"
+      "portfolio_category": "model",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M12-A03",
+      "component_role": "prediction",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A04",
-      "week": 47,
+      "week": 64,
       "required": true,
       "template_path": "modules/12-reliability-incidents-disaster-recovery/worksheets/week-47-incident-recovery-experiments.md",
       "submission_path": "experiments/module-12/",
       "immutable_after_submission": true,
-      "portfolio_category": "failure_matrix"
+      "portfolio_category": "failure_matrix",
+      "portfolio_item_id": "PI-FAIL-04",
+      "portfolio_credit": true,
+      "evidence_lineage_id": "LIN-FAIL-RECOVERY",
+      "component_role": "raw_evidence",
+      "estimated_minutes": 30,
+      "evidence_mode": "executed_deterministic"
     },
     {
       "id": "A05",
-      "week": 47,
+      "week": 66,
       "required": true,
       "template_path": "templates/incident-postmortem-template.md",
       "submission_path": "reports/module-12-controlled-incident-postmortem.md",
       "immutable_after_submission": true,
-      "portfolio_category": "controlled_incident_postmortem"
+      "portfolio_category": "controlled_incident_postmortem",
+      "portfolio_item_id": "PI-POST-03",
+      "portfolio_credit": true,
+      "evidence_lineage_id": "LIN-POST-RECOVERY",
+      "component_role": "analysis",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A06",
-      "week": 47,
+      "week": 66,
       "required": true,
       "template_path": "modules/12-reliability-incidents-disaster-recovery/worksheets/week-47-incident-recovery-experiments.md",
       "submission_path": "reports/module-12-recovery-exercise-evidence.md",
       "immutable_after_submission": true,
-      "portfolio_category": "dr_exercise"
+      "portfolio_category": "dr_exercise",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M12-A06",
+      "component_role": "raw_evidence",
+      "estimated_minutes": 30,
+      "evidence_mode": "executed_deterministic"
     },
     {
       "id": "A07",
-      "week": 48,
+      "week": 66,
       "required": true,
       "template_path": "templates/disaster-recovery-review-template.md",
       "submission_path": "reports/module-12-disaster-recovery-review.md",
-      "portfolio_category": "dr_exercise"
+      "portfolio_category": "dr_exercise",
+      "portfolio_item_id": "PI-DR-02",
+      "portfolio_credit": true,
+      "evidence_lineage_id": "LIN-DR-FAILOVER",
+      "component_role": "raw_evidence",
+      "estimated_minutes": 30,
+      "evidence_mode": "executed_deterministic"
     },
     {
       "id": "A08",
-      "week": 48,
+      "week": 67,
       "required": true,
       "template_path": "modules/12-reliability-incidents-disaster-recovery/worksheets/week-48-reliability-decision-gate-04.md",
       "submission_path": "reviews/module-12-defense.md",
-      "portfolio_category": "teach_back"
-    },
-    {
-      "id": "A09",
-      "week": 48,
-      "required": true,
-      "template_path": "modules/12-reliability-incidents-disaster-recovery/assessment/report-template.md",
-      "submission_path": "reviews/module-12-evaluation.md",
-      "portfolio_category": "evaluation"
-    },
-    {
-      "id": "A10",
-      "week": 48,
-      "required": true,
-      "template_path": "modules/12-reliability-incidents-disaster-recovery/assessment/gate-04.md",
-      "submission_path": "reviews/gate-04-submission.md",
-      "immutable_after_submission": true,
-      "portfolio_category": "evaluation"
+      "portfolio_category": "teach_back",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M12-A08",
+      "component_role": "final",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A11",
-      "week": 48,
+      "week": 67,
       "required": true,
       "template_path": "templates/learning-log-template.md",
-      "submission_path": "learning-log/week-45.md through learning-log/week-48.md",
-      "portfolio_category": "learning_log"
+      "submission_path": "learning-log/week-063.md through learning-log/week-067.md",
+      "portfolio_category": "learning_log",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M12-A11",
+      "component_role": "final",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A12",
-      "week": 48,
+      "week": 67,
       "required": true,
       "template_path": "templates/adr-template.md",
       "submission_path": "adr/module-12-recovery-tier-and-degradation.md",
-      "portfolio_category": "adr"
+      "portfolio_category": "adr",
+      "portfolio_item_id": "PI-DECISION-M12",
+      "portfolio_credit": true,
+      "evidence_lineage_id": "LIN-DECISION-M12",
+      "component_role": "decision",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     }
   ],
   "failure_experiments": [
@@ -967,5 +1012,13 @@
       "estimated_minutes": 30
     }
   ],
-  "citation_catalog": []
+  "citation_catalog": [],
+  "course_id": "PESD-104",
+  "course_version": "2.0",
+  "primary_decision": {
+    "artifact_id": "A12",
+    "type": "ADR"
+  },
+  "pesd_v2_additions": "cyber recovery, corrupted-backup recovery, provider concentration, control-plane outages, clean-room assumptions, evidence preservation, and notification ownership",
+  "semantic_evaluation": "subsumed_by_gate"
 }

@@ -122,3 +122,14 @@ The Week 1 baseline remains unchanged.
 - Tool:
 - Assistance:
 - Verification:
+
+## PESD 2.0 decision and assurance check
+
+- Added scope: a constraint and assurance ledger covering data classes, tenant boundaries, obligations, AI use, supplier risk, cost allocation, decision rights, evidence owners, uncertainty, and reversal triggers
+- Requirement or obligation and applicability:
+- Enforcement point and failure mode:
+- Evidence owner, source commit, hashes, and evidence mode:
+- Tenant/data/provider boundary:
+- Cost allocation and operating owner:
+- Migration, rollback, and decommissioning step:
+- Uncertainty and reversal trigger:

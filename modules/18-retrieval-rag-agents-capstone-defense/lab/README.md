@@ -41,7 +41,7 @@ fault constant while changing exactly one control.
   grounded claims, and unsupported claims.
 - `workflow.py`: strict object schemas, scoped tool execution, one-use bound
   approvals, idempotency, append-only activity history, checkpoints, and replay.
-- `runner.py`: deterministic CivicAid trials and I01–I12 invariant oracles.
+- `runner.py`: deterministic CivicAid trials and AI01–AI12 invariant oracles.
 - `contracts/`: versioned inputs for status, draft, submission, and inspection
   tools. These files define syntax; policy still lives in the executor.
 
@@ -49,18 +49,18 @@ fault constant while changing exactly one control.
 
 | ID | Contract |
 |---|---|
-| I01 | Retrieval never returns content outside the principal's scope. |
-| I02 | Every citation identifies the exact evidence version used. |
-| I03 | Revoked evidence is absent by the declared revocation objective. |
-| I04 | Unsupported answers abstain and failed quality candidates cannot release. |
-| I05 | The served index version is current or the request degrades explicitly. |
-| I06 | Every tool argument passes its versioned schema. |
-| I07 | Authorization is enforced by deterministic code, not model prose. |
-| I08 | An irreversible action requires a valid bound human approval. |
-| I09 | One idempotency key produces at most one irreversible side effect. |
-| I10 | Replay uses recorded side effects instead of invoking them again. |
-| I11 | Deadline, step, cost, cancellation, and outstanding work remain bounded. |
-| I12 | Audit history is complete and contains no credential or private value. |
+| AI01 | Retrieval never returns content outside the principal's scope. |
+| AI02 | Every citation identifies the exact evidence version used. |
+| AI03 | Revoked evidence is absent by the declared revocation objective. |
+| AI04 | Unsupported answers abstain and failed quality candidates cannot release. |
+| AI05 | The served index version is current or the request degrades explicitly. |
+| AI06 | Every tool argument passes its versioned schema. |
+| AI07 | Authorization is enforced by deterministic code, not model prose. |
+| AI08 | An irreversible action requires a valid bound human approval. |
+| AI09 | One idempotency key produces at most one irreversible side effect. |
+| AI10 | Replay uses recorded side effects instead of invoking them again. |
+| AI11 | Deadline, step, cost, cancellation, and outstanding work remain bounded. |
+| AI12 | Audit history is complete and contains no credential or private value. |
 
 ## Evidence handling
 

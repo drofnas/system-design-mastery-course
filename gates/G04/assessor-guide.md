@@ -1,4 +1,12 @@
-# Gate 4 Assessor Notes and Explained Boundaries
+# G04 Assessor Guide
+
+Use this guide only after the learner freezes every submitted part. Score only
+the published module rubrics and evidence for M10, M11, M12. Cite a file
+and heading for every finding, preserve reasonable alternatives, and recommend
+remediation without drafting replacement graded answers. A Pass creates no
+required remediation artifact.
+
+## Review boundaries
 
 Use only after all four parts are frozen. These notes describe acceptable
 reasoning, not one architecture or capstone answer.
@@ -28,5 +36,5 @@ while acknowledging the model boundary.
 
 Accept designs different from Northstar when user/data consequence, evidence,
 security, cost, staffing, ownership, migration, rollback, dissent, and reversal
-align. Gate 4 and the Week 48 revision must be new artifacts; earlier evidence
-remains untouched.
+align. The Week 68 Gate 4 freeze and later Week 69 delta must be separate new
+artifacts; earlier evidence remains untouched.

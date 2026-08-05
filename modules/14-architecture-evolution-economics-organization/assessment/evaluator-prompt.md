@@ -30,3 +30,11 @@ portability, accurate accounting, legal or security compliance, staffing
 resilience, or organizational outcomes from the toy lab. Accept different
 boundaries, sourcing, cost allocation, sequences, and stopping decisions when
 the submission evidence supports them.
+
+## PESD 2.0 evaluator instruction
+
+Score the published criteria against evidence for a thin local platform product with a service catalog, self-service interface, golden path, policy guardrails, exception path, ownership metadata, platform SLO, adoption and support metrics, FinOps allocation, and an exit plan.
+Classify missing evidence, incorrect reasoning, unsupported claims, and
+reasonable uncertainty separately. Reject fixture replay presented as
+independent build or break evidence. Do not invent legal applicability or treat
+a named framework as proof of compliance.

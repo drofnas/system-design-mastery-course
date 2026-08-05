@@ -1,5 +1,9 @@
 # Reliability, Incidents, and Disaster Recovery Lab
 
+PESD 2.0 reuses the [shared three-node process/storage/fault boundary](../../../shared-labs/three-node-cluster/README.md)
+for Modules 9–12. Recovery trials must preserve isolated node storage and route
+delay, drop, and reorder through the unprivileged proxy.
+
 Before setup, run the repository [Home Lab Guide](../../../HOME_LAB_GUIDE.md)
 preflight for `M12`.
 
@@ -10,6 +14,12 @@ safety. Its public CLI is:
 
 ```bash
 python3 -m reliability_lab scenarios/f01-slow-dependency-load-broken.json --pretty
+```
+
+Drive the same scenario through the required shared process boundary:
+
+```bash
+python3 ../../../shared-labs/three-node-cluster/run_boundary.py --module M12 --scenario scenarios/f01-slow-dependency-load-broken.json --output ../../../experiments/m12-f01-cluster-boundary.json
 ```
 
 Run all checks with:

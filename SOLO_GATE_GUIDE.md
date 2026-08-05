@@ -3,6 +3,27 @@
 The six course gates can be completed by one learner. Human review is preferred
 portfolio evidence, but it is not required for course completion.
 
+## PESD 2.0 standalone schedule
+
+Gates run only after their three modules are frozen. They introduce no required
+teaching or build work. Use each gate's overview, assessment brief, and
+machine-readable scoring contract:
+
+| Gate | Week | Modules | Core time | Contract |
+|---|---:|---|---:|---|
+| G01 | 16 | M01–M03 | 6.5 h | [Gate 1](gates/G01/README.md) |
+| G02 | 33 | M04–M06 | 6.5 h | [Gate 2](gates/G02/README.md) |
+| G03 | 50 | M07–M09 | 6.5 h | [Gate 3](gates/G03/README.md) |
+| G04 | 68 | M10–M12 | 6.5 h | [Gate 4](gates/G04/README.md) |
+| G05 | 85 | M13–M15 | 6.5 h | [Gate 5](gates/G05/README.md) |
+| G06 | 103 | M16–M18 | 9.5 h | [Gate 6](gates/G06/README.md) |
+
+Gates 1–5 allocate 30/75/150/60/45/30 minutes to freeze, written,
+practical, defense, portfolio, and closure. Gate 6 allocates
+30/90/180/120/90/60 minutes. The following flex week owns any separate delta;
+never edit the gate freeze. A Revise may use up to six flex-week hours, after
+which the course calendar pauses.
+
 ## Freeze, reveal, repair, and check
 
 Prepare a gate challenge in the same Git repository that holds learner work:

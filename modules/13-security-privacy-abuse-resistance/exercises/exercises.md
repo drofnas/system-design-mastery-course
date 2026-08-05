@@ -92,3 +92,11 @@ stale approval, duplicate effects, and exhausted budgets. Preserve denials.
 Compare three architectures using protected outcomes, threats, evidence,
 operations, privacy, cost, migration, ownership, residual risk, and reversals.
 Teach the causal model and answer hostile follow-up questions without AI.
+
+## PESD 2.0 extension to the final exercise
+
+Extend the final guided exercise with obligation-to-control-to-evidence mapping, privacy impact reasoning, secure SDLC, source-to-deployment identity, cryptographic inventory, crypto agility, and post-quantum migration planning. Produce an
+obligation/control/evidence row, a named owner, a bounded cost or capacity
+effect, a failure or policy-drift test, a migration step, and a reversal trigger.
+Label every observation with an accepted evidence mode and do not use fixture
+replay as independent Build, Break, Implement, or Measure evidence.

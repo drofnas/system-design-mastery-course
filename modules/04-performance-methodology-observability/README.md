@@ -1,8 +1,6 @@
 # Module 4: Performance Methodology and Observability
 
-> **Authoring status:** Ready. Structural, semantic, lab, regression, evaluator
-> calibration, and course-validation gates passed on 2026-07-31. See the
-> [readiness review](assessment/readiness-review.md).
+> **Authoring status:** Review. PESD 2.0 content and machine-readable contracts are migrated. Refreshed evaluator calibration, full platform matrices, offline reruns, cleanup checks, and timed learner pilots remain required before Ready.
 
 ## What this module changes
 
@@ -48,50 +46,60 @@ By the end of the module, you can:
 
 ## Schedule
 
-### Week 13: Model — 10.5 hours
+The 10–12 hour weekly figure is a capacity envelope. Core work is deliberately
+budgeted below that ceiling; unused time is recovery buffer, not hidden work.
+
+### Week 18: Model and derive — 8.5 hours
 
 | Work | Time |
 |---|---:|
-| Lessons 1–2 and required resources | 3 h |
-| Guided exercises EX-01–EX-04 | 2 h |
-| Frozen baseline, hypotheses, falsifiers, and collection plan | 4 h |
-| Self-check and learning log | 1.5 h |
+| Bounded authoritative resources | 130 min |
+| Local mechanism instruction | 120 min |
+| Guided practice | 60 min |
+| Model and derive core work | 200 min |
 
-Use the [Week 13 investigation worksheet](worksheets/week-13-investigation-plan.md).
+Optional contingency capacity: 210 minutes. It is not core work, carries no required evidence, and may remain unused.
 
-### Week 14: Build — 10.5 hours
-
-| Work | Time |
-|---|---:|
-| Lessons 3–5 | 3 h |
-| Transit instrumentation tutorial and EX-05–EX-08 | 2 h |
-| Instrument the independent Module 2 service | 4.5 h |
-| Build review and learning log | 1 h |
-
-Use the [Week 14 instrumentation worksheet](worksheets/week-14-instrumentation-build.md).
-
-### Week 15: Break and diagnose — 10.5 hours
+### Week 19: Guided build and prediction freeze — 9 hours
 
 | Work | Time |
 |---|---:|
-| Lesson 6 and bounded source work | 2 h |
-| Guided fault rehearsal and EX-09–EX-12 | 2 h |
-| Six-fault blind diagnosis matrix | 5 h |
-| Evidence review and learning log | 1.5 h |
+| Bounded authoritative resources | 125 min |
+| Local mechanism instruction | 120 min |
+| Guided practice | 60 min |
+| Required evidence components | 90 min |
+| Guided build and prediction freeze core work | 145 min |
 
-Use the [Week 15 diagnosis worksheet](worksheets/week-15-blind-diagnosis.md).
+Optional contingency capacity: 180 minutes. It is not core work, carries no required evidence, and may remain unused.
 
-### Week 16: Decide and teach — 10.5 hours
+### Week 20: Independent build and integration — 10 hours
 
 | Work | Time |
 |---|---:|
-| Lessons 7–8 and benchmark resource | 2 h |
-| Controlled validation and regression budget | 2.5 h |
-| Performance review, regression-policy ADR, and recorded teach-back | 3 h |
-| Evaluation, separate remediation, and learning log | 3 h |
+| Independent build and integration core work | 540 min |
+| Independent build and integration verification checkpoint | 60 min |
 
-Use the [Week 16 review worksheet](worksheets/week-16-performance-review.md).
+Optional contingency capacity: 120 minutes. It is not core work, carries no required evidence, and may remain unused.
 
+### Week 21: Break, repair, measure, and diagnose — 10 hours
+
+| Work | Time |
+|---|---:|
+| Required evidence components | 120 min |
+| Break, repair, measure, and diagnose core work | 480 min |
+
+Optional contingency capacity: 120 minutes. It is not core work, carries no required evidence, and may remain unused.
+
+### Week 22: Decide, teach, assess, and freeze — 9.5 hours
+
+| Work | Time |
+|---|---:|
+| Required evidence components | 120 min |
+| Decide, teach, assess, and freeze core work | 390 min |
+| Module teach-back | 30 min |
+| Learning log and freeze check | 30 min |
+
+Optional contingency capacity: 150 minutes. It is not core work, carries no required evidence, and may remain unused.
 ## Learn
 
 1. [Question-first performance investigations](lessons/01-question-first-investigations.md)
@@ -159,3 +167,10 @@ claim against source, schema, or experiment evidence.
 - Use the [sealed local gate workflow](../../SOLO_GATE_GUIDE.md) when a course gate applies. Human review is optional.
 
 A frozen self-evaluation may establish **Solo Complete**; independent human or LLM review may establish **Independently Validated**. Synthetic lab values are not production measurements.
+
+## PESD 2.0 scope addition
+
+This 5-week module schedules 47 core hours. Its primary
+decision is ADR A11. The added graded scope is
+telemetry as a governed data product: schema ownership, PII restrictions, retention, sampling bias, lineage, cardinality, and cost budgets. See Lesson 8, the final guided exercise, final worksheet,
+rubric anchors, and remediation map for the integrated evidence contract.

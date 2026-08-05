@@ -1,28 +1,33 @@
-# Gate 1: Systems Judgment Review
+# G01 Assessment Brief
+
+This is the learner-facing prompt set for the standalone Week 16 gate over
+M01, M02, M03. The exact time boxes and hard floors in [gate.json](gate.json)
+control. The 30-minute freeze and final scoring/closure block are managed from
+the [gate overview](README.md); this brief contains the four scored parts.
 
 ## Purpose and timing
 
-Gate 1 closes Week 12. It tests whether the learner can transfer Module 1–3
+Gate 1 closes Week 16. It tests whether the learner can transfer Module 1–3
 judgment under time pressure without copying a capstone answer. The practical
 uses Transit Signal, not the commerce capstone. Complete the gate in a clean
 workspace after the Module 3 portfolio is frozen.
 
-Total learner time: 3.5 hours. Complete the sealed-local workflow in the
-[solo-gate guide](../../../SOLO_GATE_GUIDE.md). An optional human reviewer may
+Scored-part time: 5.5 hours. Complete the sealed-local workflow in the
+[solo-gate guide](../../SOLO_GATE_GUIDE.md). An optional human reviewer may
 pause between sections but may not coach the learner or provide choices.
 
 ## Required evidence
 
 - The current immutable commerce baseline from Week 1
-- A new [Week 12 Gate 1 revision](../../../capstone/revisions/week-12-gate-01.md)
+- A new [Week 16 Gate 1 freeze](../../capstone/submissions/week-016-gate-01-freeze.md)
 - Module 1–3 decision artifacts, raw evidence, evaluations, and learning logs
 - A repository commit identifying the exact gate submission
 - A disclosed record of tool and AI assistance
 
 Neither the learner nor a reviewer edits the Week 1 baseline. All changed beliefs belong in
-the Week 12 revision.
+the Week 17 delta.
 
-## Part A: Written examination — 60 minutes
+## Part A: Written examination — 75 minutes
 
 Answer all four prompts. State assumptions, show units, name uncertainty, and
 separate mechanism from policy. Each response is capped at 500 words.
@@ -48,7 +53,7 @@ separate mechanism from policy. Each response is capped at 500 words.
 Score 0–4 for each response using R02, R04, R05, R07, and R09 as applicable.
 A passing written section has no material falsehood and a mean of at least 3.0.
 
-## Part B: Transit practical — 75 minutes
+## Part B: Transit practical — 150 minutes
 
 Run `scripts/solo_gate.py prepare --gate G01` to select one of three synthetic
 cross-module scenarios. The public bundle contains the workload, observations,
@@ -76,15 +81,15 @@ Use R01–R09. R06 and R07 remain safety critical. Missing prediction integrity,
 fabricated/altered evidence, unbounded work, or unsafe durability/concurrency
 behavior makes the gate Repeat.
 
-## Part C: Architecture defense — 35 minutes
+## Part C: Architecture defense — 60 minutes
 
-The learner has ten minutes to present and twenty-five minutes to answer review
+The learner has fifteen minutes to present and forty-five minutes to answer review
 questions. The defense must cover:
 
 - a Module 1 architecture boundary and invariant;
 - a Module 2 capacity or overload decision;
 - the Module 3 counterintuitive result and causal chain;
-- one changed belief recorded only in the Week 12 revision;
+- one changed belief recorded only in the Week 17 delta;
 - operational, security, cost, ownership, migration, and organizational effects;
 - a measurable reversal condition.
 
@@ -98,7 +103,7 @@ workload, failure model, or machine boundary are not allowed.
 Use R09 and R10 plus the relevant Module 1 and Module 2 decision rubrics. A
 defensible alternative is not penalized for differing from an exemplar.
 
-## Part D: Portfolio review — 40 minutes
+## Part D: Portfolio review — 45 minutes
 
 The learner provides an index with exact file headings and commit identifiers
 for:
@@ -115,17 +120,11 @@ The learner records a path-and-commit index and samples one item from each row.
 The independent post-freeze evaluator checks chronology and that no evaluation
 or AI loop replaced the preserved first attempt.
 
-## Gate result algorithm
+## Result
 
-1. Repeat if prediction integrity fails, evidence is fabricated/altered, work is
-   materially unbounded, or a safety invariant fails.
-2. Repeat if either safety-critical criterion is zero.
-3. Revise if the complete gate exists but any section mean is below 3.0 or a
-   portfolio item lacks traceable evidence.
-4. Pass only when all four sections pass and the Week 12 revision preserves the
-   Week 1 baseline.
-
-Record citations and remediation using published lessons and exercises. A
-Revise result creates a new dated gate addendum; a Repeat result reruns the
-affected gate parts with new scenarios. Neither result authorizes editing
-frozen evidence.
+Pass only when all structural gates, scored parts, three module-domain
+subscores, safety-critical rows, and the overall average meet their published
+floors. Revise applies only when evidence and chronology are complete and a
+non-safety floor is missed. Repeat applies when an invariant fails, chronology
+is invalid, evidence is fabricated or mismatched, or the causal model is
+materially incorrect. A Pass creates no required remediation artifact.

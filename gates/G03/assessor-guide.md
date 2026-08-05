@@ -1,4 +1,12 @@
-# Gate 3 Assessor Notes and Explained Boundaries
+# G03 Assessor Guide
+
+Use this guide only after the learner freezes every submitted part. Score only
+the published module rubrics and evidence for M07, M08, M09. Cite a file
+and heading for every finding, preserve reasonable alternatives, and recommend
+remediation without drafting replacement graded answers. A Pass creates no
+required remediation artifact.
+
+## Review boundaries
 
 Use only after all four parts are frozen. These notes describe acceptable
 reasoning, not one architecture.

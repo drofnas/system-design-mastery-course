@@ -9,7 +9,7 @@ from pathlib import Path
 
 from inference_lab.config import CONTROL_KEYS, load_scenario, validate_trial
 from inference_lab.runner import run_scenario
-from inference_lab.server import Handler, MODEL, generate_events
+from inference_lab.server import Handler, MODEL, ServingRuntime, generate_events
 
 
 LAB_ROOT = Path(__file__).resolve().parents[1]
@@ -76,6 +76,57 @@ class ScenarioServerTests(unittest.TestCase):
         }
         self.assertEqual(generate_events(request)[0]["type"], "rejected")
 
+    def test_incremental_kv_generation_matches_full_recompute(self) -> None:
+        for prompt in ("bronze owl", "river vessel", "museum"):
+            with self.subTest(prompt=prompt):
+                state = MODEL.prefill(prompt)
+                prompt_tokens = state.token_count
+                incremental = list(MODEL.generate_iter(state, 4))
+                self.assertEqual(MODEL.generate(prompt, 4), incremental)
+                self.assertEqual(prompt_tokens + len(incremental), state.token_count)
+                self.assertGreater(state.byte_size(), 0)
+
+    def test_byte_budget_refuses_without_exhausting_host(self) -> None:
+        runtime = ServingRuntime(byte_capacity=1, token_capacity=64)
+        request = {
+            "request_id": "req-memory", "tenant_id": "museum-a", "prompt": "bronze owl",
+            "max_output_tokens": 3, "deadline_ms": 1000, "traffic_class": "interactive",
+            "model_version": MODEL.version,
+        }
+        events = list(runtime.iter_events(request))
+        self.assertEqual("rejected", events[-1]["type"])
+        self.assertEqual("byte_budget_exhausted", events[-1]["reason"])
+        self.assertEqual(0, runtime.allocator.reserved_bytes)
+
+    def test_cache_is_tenant_and_version_scoped(self) -> None:
+        runtime = ServingRuntime()
+        base = {
+            "request_id": "req-cache", "tenant_id": "museum-a", "prompt": "bronze owl",
+            "max_output_tokens": 2, "deadline_ms": 1000, "traffic_class": "interactive",
+            "model_version": MODEL.version,
+        }
+        first = list(runtime.iter_events(base))[-1]
+        second = list(runtime.iter_events({**base, "request_id": "req-cache-2"}))[-1]
+        other = list(runtime.iter_events({**base, "request_id": "req-cache-3", "tenant_id": "museum-b"}))[-1]
+        self.assertEqual(0, first["kv_reused_tokens"])
+        self.assertGreater(second["kv_reused_tokens"], 0)
+        self.assertEqual(0, other["kv_reused_tokens"])
+
+    def test_bounded_fake_provider_failover(self) -> None:
+        runtime = ServingRuntime()
+        request = {
+            "request_id": "req-failover", "tenant_id": "museum-a", "prompt": "bronze owl",
+            "max_output_tokens": 2, "deadline_ms": 1000, "traffic_class": "interactive",
+            "model_version": MODEL.version, "provider_mode": "fail_once",
+            "fallback_model_version": MODEL.version,
+        }
+        completed = list(runtime.iter_events(request))[-1]
+        self.assertEqual("completed", completed["type"])
+        self.assertEqual(2, completed["provider_attempts"])
+        incompatible = list(runtime.iter_events({**request, "request_id": "req-bad-fallback", "fallback_model_version": "other"}))[-1]
+        self.assertEqual("failed", incompatible["type"])
+        self.assertEqual(2, incompatible["provider_attempts"])
+
     def test_loopback_http_contract(self) -> None:
         server = ThreadingHTTPServer(("127.0.0.1", 0), Handler)
         thread = threading.Thread(target=server.serve_forever, daemon=True)
@@ -100,7 +151,9 @@ class ScenarioServerTests(unittest.TestCase):
             )
             with urllib.request.urlopen(request, timeout=2) as response:
                 self.assertEqual(response.headers.get_content_type(), "application/x-ndjson")
-                events = [json.loads(line) for line in response.read().splitlines()]
+                first_event = json.loads(response.readline())
+                self.assertEqual("accepted", first_event["type"])
+                events = [first_event, *[json.loads(line) for line in response.read().splitlines()]]
             self.assertEqual(events[0]["type"], "accepted")
             self.assertEqual(events[-1]["type"], "completed")
             with urllib.request.urlopen(f"{base}/metrics", timeout=2) as response:

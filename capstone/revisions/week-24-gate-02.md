@@ -1,5 +1,7 @@
 # Week 24 Gate 2 Revision
 
+> **PESD V1 historical contract:** Preserve this file for V1 learners and immutable evidence. PESD 2.0 uses [V1_TO_V2_MIGRATION.md](../../V1_TO_V2_MIGRATION.md).
+
 > Create this artifact after freezing the Gate 2 submission. Do not edit the
 > Week 1 baseline or Week 12 revision. Describe changes and cite evidence; do
 > not copy Beacon Dispatch policies into the commerce capstone.

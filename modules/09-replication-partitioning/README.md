@@ -1,8 +1,6 @@
 # Module 9: Replication and Partitioning
 
-> **Authoring status:** Ready. Teaching, practice, executable lab, Gate 3,
-> semantic review, evaluator calibration, focused validation, and full-course
-> gates passed on 2026-08-02. See the [readiness review](assessment/readiness-review.md).
+> **Authoring status:** Review. PESD 2.0 content and machine-readable contracts are migrated. Refreshed evaluator calibration, full platform matrices, offline reruns, cleanup checks, and timed learner pilots remain required before Ready.
 
 ## What this module changes
 
@@ -44,56 +42,65 @@ By the end of the module, you can:
    trials.
 7. Design tenant isolation, regional placement, residency controls, migration,
    rollback, ownership, and cost.
-8. Defend a Week 36 Gate 3 invariant through storage, transaction, and
+8. Defend a Week 50 Gate 3 invariant through storage, transaction, and
    partition evidence.
 
 ## Schedule
 
-### Week 33: Model and freeze — 10.5 hours
+The 10–12 hour weekly figure is a capacity envelope. Core work is deliberately
+budgeted below that ceiling; unused time is recovery buffer, not hidden work.
+
+### Week 45: Model and derive — 8.5 hours
 
 | Work | Time |
 |---|---:|
-| Lessons 1–3 and bounded sources | 3 h |
-| EX-01–EX-06 and Northstar operation tutorial | 2 h |
-| Independent consistency, topology, quorum, and failure baseline | 4 h |
-| Self-check and learning log | 1.5 h |
+| Bounded authoritative resources | 150 min |
+| Local mechanism instruction | 120 min |
+| Guided practice | 60 min |
+| Model and derive core work | 180 min |
 
-Use the [Week 33 worksheet](worksheets/week-33-consistency-placement-model.md).
+Optional contingency capacity: 210 minutes. It is not core work, carries no required evidence, and may remain unused.
 
-### Week 34: Build replication and placement — 11 hours
-
-| Work | Time |
-|---|---:|
-| Lessons 4–5 | 2.5 h |
-| EX-07–EX-10 and lab walkthrough | 2.5 h |
-| Independent replicated key/value build and automated checks | 5 h |
-| Internals review and learning log | 1 h |
-
-Use the [Week 34 worksheet](worksheets/week-34-replicated-kv-build.md).
-
-### Week 35: Break, repair, and measure — 11.5 hours
+### Week 46: Guided build and prediction freeze — 9 hours
 
 | Work | Time |
 |---|---:|
-| Lesson 6 and practitioner evidence | 2 h |
-| EX-11–EX-14 failure rehearsal | 2 h |
-| Six broken/repaired pairs and raw evidence | 5 h |
-| Controlled partition postmortem, convergence, reshard analysis, and log | 2.5 h |
+| Bounded authoritative resources | 135 min |
+| Local mechanism instruction | 120 min |
+| Guided practice | 60 min |
+| Required evidence components | 90 min |
+| Guided build and prediction freeze core work | 135 min |
 
-Use the [Week 35 worksheet](worksheets/week-35-replication-failure-matrix.md).
+Optional contingency capacity: 180 minutes. It is not core work, carries no required evidence, and may remain unused.
 
-### Week 36: Decide, teach, and complete Gate 3 — 10.5 hours
+### Week 47: Independent build and integration — 10 hours
 
 | Work | Time |
 |---|---:|
-| Lessons 7–8 and bounded sources | 2 h |
-| EX-15–EX-16, alternatives, migration, security, and cost | 1.5 h |
-| ADR and recorded defense | 2.5 h |
-| Module evaluation and four-part Gate 3 | 3.5 h |
-| Remediation and learning log | 1 h |
+| Independent build and integration core work | 540 min |
+| Independent build and integration verification checkpoint | 60 min |
 
-Use the [Week 36 worksheet](worksheets/week-36-placement-decision-defense.md).
+Optional contingency capacity: 120 minutes. It is not core work, carries no required evidence, and may remain unused.
 
+### Week 48: Break, repair, measure, and diagnose — 10 hours
+
+| Work | Time |
+|---|---:|
+| Required evidence components | 90 min |
+| Break, repair, measure, and diagnose core work | 510 min |
+
+Optional contingency capacity: 120 minutes. It is not core work, carries no required evidence, and may remain unused.
+
+### Week 49: Decide, teach, assess, and freeze — 9.5 hours
+
+| Work | Time |
+|---|---:|
+| Required evidence components | 90 min |
+| Decide, teach, assess, and freeze core work | 420 min |
+| Module teach-back | 30 min |
+| Learning log and freeze check | 30 min |
+
+Optional contingency capacity: 150 minutes. It is not core work, carries no required evidence, and may remain unused.
 ## Learn
 
 1. [Operation semantics and session guarantees](lessons/01-operation-semantics-session-guarantees.md)
@@ -127,13 +134,12 @@ internals report, and one recorded teach-back.
 ## Assessment and completion
 
 - Read the [assessment contract](assessment/README.md), [anchored rubric](assessment/rubric.md),
-  and [Gate 3](assessment/gate-03.md) before independent work.
+  and [Gate 3](../../gates/G03/assessment-brief.md) before independent work.
 - Use the provider-neutral [evaluator prompt](assessment/evaluator-prompt.md),
   shared evaluation schema, [report template](assessment/report-template.md),
   and [remediation map](assessment/remediation-map.md).
 - Pass G01–G06, average at least 3.0, and avoid a zero in R07 or R08.
-- Gate 3 reviews Modules 7–9 without editing prior baselines. The next planned
-  capstone revision remains Week 48.
+- Gate 3 reviews Modules 7–9 without editing prior baselines. Accepted Gate 3 findings belong in the separate Week 51 capstone delta.
 
 ## Evidence boundary and AI use
 
@@ -155,3 +161,17 @@ assistance and verify generated claims against sources, code, or experiments.
 - Use the [sealed local gate workflow](../../SOLO_GATE_GUIDE.md) when a course gate applies. Human review is optional.
 
 A frozen self-evaluation may establish **Solo Complete**; independent human or LLM review may establish **Independently Validated**. Synthetic lab values are not production measurements.
+
+## PESD 2.0 scope addition
+
+This 5-week module schedules 47 core hours. Its primary
+decision is ADR A06. The added graded scope is
+tenant onboarding, suspension, export, offboarding, region movement, cells, control-plane/data-plane separation, tenant keys, quotas, SLOs, and cost attribution. See Lesson 8, the final guided exercise, final worksheet,
+rubric anchors, and remediation map for the integrated evidence contract.
+
+## PESD 2.0 evaluation ownership
+
+Gate G03 invokes this module's rubric and provider-neutral
+evaluator once for its domain score. Do not create a second module semantic
+evaluation report. The gate result is authoritative; remediation remains a
+separate dated artifact only for Revise or Repeat.

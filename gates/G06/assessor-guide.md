@@ -1,4 +1,12 @@
-# Gate 6 assessor reasoning guide
+# G06 Assessor Guide
+
+Use this guide only after the learner freezes every submitted part. Score only
+the published module rubrics and evidence for M16, M17, M18. Cite a file
+and heading for every finding, preserve reasonable alternatives, and recommend
+remediation without drafting replacement graded answers. A Pass creates no
+required remediation artifact.
+
+## Review boundaries
 
 This guide defines boundaries, not a canonical commerce architecture.
 

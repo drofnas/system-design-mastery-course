@@ -1,5 +1,7 @@
 # Provider-Neutral Module 12 Evaluator Prompt
 
+> **PESD 2.0 evaluation ownership:** G04 invokes this module-specific rubric and evaluator exactly once as its domain score. Do not run or submit a separate module semantic evaluation report.
+
 Evaluate only the submitted artifact manifest and files against the Module 12
 assessment contract and R01–R10 rubric. Do not use architecture preference,
 outside knowledge, or Northstar as a required answer.
@@ -28,3 +30,11 @@ Never infer production availability, physical media durability, regional
 isolation, human performance, security enforcement, or compliance from the toy
 lab. Accept different SLOs, alert windows, degradation, incident structures,
 and recovery tiers when the submission's evidence supports them.
+
+## PESD 2.0 evaluator instruction
+
+Score the published criteria against evidence for cyber recovery, corrupted-backup recovery, provider concentration, control-plane outages, clean-room assumptions, evidence preservation, and notification ownership.
+Classify missing evidence, incorrect reasoning, unsupported claims, and
+reasonable uncertainty separately. Reject fixture replay presented as
+independent build or break evidence. Do not invent legal applicability or treat
+a named framework as proof of compliance.

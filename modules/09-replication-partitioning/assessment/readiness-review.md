@@ -1,6 +1,8 @@
 # Module 9 Readiness Review
 
-## Result
+> **PESD 2.0 status: Review.** This pre-migration readiness record is historical, not a current Ready decision. Fresh evaluator repetitions, platform/offline/cleanup matrices, and timed learner pilots remain pending.
+
+## Historical result (superseded)
 
 **Ready on 2026-08-02.** Module 9 satisfies the syllabus, authoring standard,
 manifest, teaching, lab, failure, decision, Gate 3, assessment, calibration,

@@ -1,0 +1,86 @@
+name: PESD remote fallback
+
+on:
+  workflow_dispatch:
+    inputs:
+      module:
+        description: Module evidence lane to run
+        required: true
+        default: all
+        type: choice
+        options: [all, M10, M15, M16, M17]
+
+permissions:
+  contents: read
+
+jobs:
+  fallback:
+    if: inputs.module == 'all' || inputs.module == matrix.module
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      matrix:
+        module: [M10, M15, M16, M17]
+    steps:
+      - name: Check out learner commit
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+
+      - name: Prepare evidence directory
+        run: mkdir -p remote-evidence
+
+      - name: Run M10 deterministic consensus lane
+        if: matrix.module == 'M10'
+        run: |
+          docker run --rm --cpus 2 --memory 4g --memory-swap 4g --pids-limit 256 \
+            -v "$GITHUB_WORKSPACE:/course" -w /course \
+            mcr.microsoft.com/playwright:v1.62.1-noble@sha256:dcc5531e97840b9b5e794f2814476b21571c5124a3fca2267d73041f56e7580e \
+            python3 -m unittest discover -s modules/10-time-coordination-consensus/lab/tests -v \
+            > remote-evidence/M10.log 2>&1
+
+      - name: Run M15 four-runtime container lane
+        if: matrix.module == 'M15'
+        run: |
+          M15_RUN_DOCKER_TESTS=1 python3 -m unittest discover \
+            -s modules/15-execution-models-across-languages/lab/tests -v \
+            > remote-evidence/M15.log 2>&1
+
+      - name: Run M16 pinned Chromium lane
+        if: matrix.module == 'M16'
+        run: |
+          docker run --rm --cpus 2 --memory 4g --memory-swap 4g --pids-limit 256 \
+            -v "$GITHUB_WORKSPACE:/course" \
+            -w /course/modules/16-browser-frontend-cdn-edge/lab \
+            node:24.19.0-bookworm@sha256:da4221677e02b54ef6335adfa447578d512ad14f251024fb92ea433c2c102760 \
+            sh -lc 'npm ci && npx playwright install --with-deps --only-shell chromium && npm test' \
+            > remote-evidence/M16.log 2>&1
+          python3 -m unittest discover \
+            -s modules/16-browser-frontend-cdn-edge/lab/tests -v \
+            >> remote-evidence/M16.log 2>&1
+
+      - name: Run M17 streaming inference lane
+        if: matrix.module == 'M17'
+        run: |
+          docker run --rm --cpus 2 --memory 4g --memory-swap 4g --pids-limit 256 \
+            -v "$GITHUB_WORKSPACE:/course" \
+            -w /course/modules/17-model-foundations-inference-systems/lab \
+            mcr.microsoft.com/playwright:v1.62.1-noble@sha256:dcc5531e97840b9b5e794f2814476b21571c5124a3fca2267d73041f56e7580e \
+            python3 -m unittest discover -s tests -v \
+            > remote-evidence/M17.log 2>&1
+
+      - name: Bind raw output to source and images
+        env:
+          RUNNER_VERSION: ${{ runner.os }}-${{ runner.arch }}-${{ runner.name }}
+        run: |
+          python3 scripts/write_remote_evidence.py \
+            --module "${{ matrix.module }}" \
+            --raw-log "remote-evidence/${{ matrix.module }}.log" \
+            --output "remote-evidence/${{ matrix.module }}-evidence.json"
+
+      - name: Upload immutable evidence bundle
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: pesd-${{ matrix.module }}-${{ github.sha }}
+          path: remote-evidence/
+          if-no-files-found: error
+          retention-days: 30

@@ -23,3 +23,11 @@ submission; `baseline_tag` may be null. Preserve defensible alternatives and
 reasonable uncertainty.
 Return exactly one JSON object conforming to the schema. Do not append Markdown
 or any text outside that object.
+
+## PESD 2.0 evaluator instruction
+
+Score the published criteria against evidence for an actual streaming tiny-transformer path with incremental KV state, token scheduling, byte-budget admission, tenant/version cache identity, bounded provider failure, profiling, and an AI System Dossier.
+Classify missing evidence, incorrect reasoning, unsupported claims, and
+reasonable uncertainty separately. Reject fixture replay presented as
+independent build or break evidence. Do not invent legal applicability or treat
+a named framework as proof of compliance.

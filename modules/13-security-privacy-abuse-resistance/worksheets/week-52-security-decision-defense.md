@@ -43,3 +43,14 @@ The generated five-question record completes the solo defense when every answer
 is recorded and frozen without live AI. Human review is optional stronger
 portfolio evidence. Provider-neutral LLM critique is also optional, may occur
 only after freezing, and must be disclosed with the solo-review limitations.
+
+## PESD 2.0 decision and assurance check
+
+- Added scope: obligation-to-control-to-evidence mapping, privacy impact reasoning, secure SDLC, source-to-deployment identity, cryptographic inventory, crypto agility, and post-quantum migration planning
+- Requirement or obligation and applicability:
+- Enforcement point and failure mode:
+- Evidence owner, source commit, hashes, and evidence mode:
+- Tenant/data/provider boundary:
+- Cost allocation and operating owner:
+- Migration, rollback, and decommissioning step:
+- Uncertainty and reversal trigger:

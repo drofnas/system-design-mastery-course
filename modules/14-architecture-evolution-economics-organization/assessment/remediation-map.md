@@ -14,3 +14,11 @@
 Repeat findings first repair the failed invariant and create a new trial. Revise
 findings add missing traceability, depth, or communication. Never edit the
 frozen Week 53 baseline, raw evidence, original strategy, or evaluator report.
+
+## PESD 2.0 remediation
+
+When a cross-cutting floor is missed, return to Lesson 8's PESD 2.0 extension
+and the final exercise. Create a separate dated revision containing the missing
+requirement/control/evidence mapping, owner, evidence boundary, failure check,
+cost consequence, migration, and reversal trigger. Never edit the frozen
+baseline or raw trial. A Pass creates no required remediation artifact.

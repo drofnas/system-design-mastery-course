@@ -2,8 +2,28 @@ from __future__ import annotations
 
 import math
 import random
+from dataclasses import dataclass, field
 
 from .tensor import Matrix, matmul, scaled_dot_product_attention
+
+
+@dataclass
+class KVState:
+    """Incremental one-layer attention state for one request identity."""
+
+    token_ids: list[int] = field(default_factory=list)
+    keys: Matrix = field(default_factory=list)
+    values: Matrix = field(default_factory=list)
+    last_logits: list[float] = field(default_factory=list)
+
+    @property
+    def token_count(self) -> int:
+        return len(self.token_ids)
+
+    def byte_size(self) -> int:
+        # Python objects use more memory; this is the declared numeric payload.
+        width = len(self.keys[0]) if self.keys else 0
+        return 2 * len(self.keys) * width * 8
 
 
 class TinyTokenizer:
@@ -90,6 +110,46 @@ class TinyTransformer:
         feed_forward = matmul(_relu(matmul(_layer_norm(residual), self.ff1)), self.ff2)
         final = _layer_norm(_add(residual, feed_forward))
         return matmul([final[-1]], self.output)[0]
+
+    def extend_kv(self, state: KVState, token_id: int) -> list[float]:
+        """Append one token and compute only its new K/V row and output logits."""
+
+        position = len(state.token_ids)
+        if position >= len(self.positions):
+            raise ValueError("token sequence cannot exceed 64 tokens")
+        if not 0 <= token_id < len(self.tokenizer.id_to_token):
+            raise ValueError("token id is outside the vocabulary")
+        hidden = [[self.embeddings[token_id][column] + self.positions[position][column] for column in range(self.hidden_size)]]
+        normalized = _layer_norm(hidden)
+        query = matmul(normalized, self.wq)
+        state.keys.extend(matmul(normalized, self.wk))
+        state.values.extend(matmul(normalized, self.wv))
+        # This query is for the newest position, so every cached key precedes it.
+        attention = scaled_dot_product_attention(query, state.keys, state.values, causal=False)
+        residual = _add(hidden, matmul(attention, self.wo))
+        feed_forward = matmul(_relu(matmul(_layer_norm(residual), self.ff1)), self.ff2)
+        final = _layer_norm(_add(residual, feed_forward))
+        state.token_ids.append(token_id)
+        state.last_logits = matmul(final, self.output)[0]
+        return state.last_logits
+
+    def prefill(self, prompt: str) -> KVState:
+        state = KVState()
+        for token_id in self.tokenizer.encode(prompt):
+            self.extend_kv(state, token_id)
+        return state
+
+    def generate_iter(self, state: KVState, max_output_tokens: int = 4):
+        if not 1 <= max_output_tokens <= 16:
+            raise ValueError("max_output_tokens must be between 1 and 16")
+        if not state.last_logits:
+            raise ValueError("prefill state is empty")
+        for _ in range(max_output_tokens):
+            next_token = max(range(len(self.tokenizer.id_to_token)), key=state.last_logits.__getitem__)
+            self.extend_kv(state, next_token)
+            yield next_token
+            if next_token == 2 or state.token_count >= 64:
+                break
 
     def generate(self, prompt: str, max_output_tokens: int = 4) -> list[int]:
         if not 1 <= max_output_tokens <= 16:

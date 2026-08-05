@@ -1,7 +1,9 @@
 # Module 16 Semantic and Resource Readiness Review
 
+> **PESD 2.0 status: Review.** This pre-migration readiness record is historical, not a current Ready decision. Fresh evaluator repetitions, platform/offline/cleanup matrices, and timed learner pilots remain pending.
+
 Review date: 2026-08-03
-Current decision: **Ready**
+Historical decision (superseded): **Ready**
 
 ## Teaching and evidence review
 
@@ -47,5 +49,5 @@ records: Pass scored 3.0/3.0, Revise 2.4/2.6, and Repeat 0.2/0.2. Result bands
 agree and maximum per-criterion drift is one. Raw responses and prompt, fixture,
 contract, schema, and response hashes are preserved in `run-metadata.json`.
 
-Focused and full-course validation pass. The module is ready within its
+Focused and full-course validation pass. The historical review found the module ready within its
 published browser, CDN, accessibility, privacy, and field-evidence boundaries.

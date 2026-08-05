@@ -35,3 +35,14 @@ unresolved question as missing evidence and define the next bounded experiment.
 - Disagreements and resolution evidence:
 - Evaluation:
 - Separate revision:
+
+## PESD 2.0 decision and assurance check
+
+- Added scope: per-tenant allocation, forecast variance, useful-outcome economics, shared-cost policy, and modeled energy/carbon sensitivity
+- Requirement or obligation and applicability:
+- Enforcement point and failure mode:
+- Evidence owner, source commit, hashes, and evidence mode:
+- Tenant/data/provider boundary:
+- Cost allocation and operating owner:
+- Migration, rollback, and decommissioning step:
+- Uncertainty and reversal trigger:

@@ -1,13 +1,18 @@
-# Gate 4: Consensus, Messaging, Reliability, and Recovery
+# G04 Assessment Brief
 
-Gate 4 closes Week 48. Complete it after freezing Module 12 evidence. Freeze
+This is the learner-facing prompt set for the standalone Week 68 gate over
+M10, M11, M12. The exact time boxes and hard floors in [gate.json](gate.json)
+control. The 30-minute freeze and final scoring/closure block are managed from
+the [gate overview](README.md); this brief contains the four scored parts.
+
+Gate 4 runs in Week 68. Complete it after freezing Module 12 evidence. Freeze
 each part before feedback. The practical uses an unpublished Northstar variant
-and does not expose a commerce answer. Total learner time: 3.5 hours.
+and does not expose a commerce answer. Scored-part time: 5.5 hours.
 
-Use the [sealed-local gate workflow](../../../SOLO_GATE_GUIDE.md). Human review
+Use the [sealed-local gate workflow](../../SOLO_GATE_GUIDE.md). Human review
 is optional and stronger portfolio evidence, but it is not required.
 
-## Part 1: Written examination — 60 minutes
+## Part 1: Written examination — 75 minutes
 
 1. Define a user-journey SLI whose denominator cannot exclude dependency
    failures; calculate budget and burn for a supplied workload.
@@ -20,7 +25,7 @@ is optional and stronger portfolio evidence, but it is not required.
 5. Given backup/log versions and timestamps, calculate RPO/RTO and design
    verified failover/failback with degraded capacity and operator controls.
 
-## Part 2: Hidden Northstar workflow-recovery practical — 90 minutes
+## Part 2: Hidden Northstar workflow-recovery practical — 150 minutes
 
 Run `scripts/solo_gate.py prepare --gate G04` to select one of three synthetic
 cross-module variants. Before reveal,
@@ -33,7 +38,7 @@ identity, authority and derived versions, alert/incident timing, backup/replay,
 RPO/RTO, regional capacity, degraded admissions, reconciliation, hashes,
 operator approvals, and uncertainty. The model cannot prove production or regional guarantees.
 
-## Part 3: Architecture defense — 30 minutes
+## Part 3: Architecture defense — 60 minutes
 
 Defend independent commerce reliability and DR decisions against frozen
 solo-review questions for product, on-call, data/security, and finance roles.
@@ -42,18 +47,19 @@ incident ownership, recovery tiers, capacity, security, cost, migration,
 rollback, dissent, and reversal evidence. Do not copy Northstar or change the
 failure model to evade a challenge.
 
-## Part 4: Portfolio review — 30 minutes
+## Part 4: Portfolio review — 45 minutes
 
 Index Modules 10–12 evidence by exact file heading and commit: predictions,
 builds/tests, failure experiments, incident/recovery records, decisions,
-evaluations, learning logs, assistance disclosures, Gate 4, and the separately
-frozen Week 48 capstone revision. Sample one item per class and have the
+evaluations, learning logs, assistance disclosures, Gate 4, and the Week 68 gate freeze; accepted findings belong in the later
+Week 69 capstone delta. Sample one item per class and have the
 independent post-freeze evaluator verify chronology.
 
-## Result algorithm
+## Result
 
-Repeat if chronology is broken, raw evidence is fabricated/altered, G02–G05
-fails, a safety invariant fails, or R04/R07/R08/R09 is zero. Revise if every
-part exists but a section or average is below 3.0 or traceability is incomplete.
-Pass only when every part and gate passes, average is at least 3.0, and
-confidence is not low. Revisions are dated addenda; repeats use new hidden seeds.
+Pass only when all structural gates, scored parts, three module-domain
+subscores, safety-critical rows, and the overall average meet their published
+floors. Revise applies only when evidence and chronology are complete and a
+non-safety floor is missed. Repeat applies when an invariant fails, chronology
+is invalid, evidence is fabricated or mismatched, or the causal model is
+materially incorrect. A Pass creates no required remediation artifact.

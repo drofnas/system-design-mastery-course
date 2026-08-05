@@ -15,3 +15,11 @@ Corrections belong in a new dated artifact.
 
 An evaluator may identify a lesson and exercise but may not write the repaired
 systems explanation or alter evidence that already failed.
+
+## PESD 2.0 remediation
+
+When a cross-cutting floor is missed, return to Lesson 8's PESD 2.0 extension
+and the final exercise. Create a separate dated revision containing the missing
+requirement/control/evidence mapping, owner, evidence boundary, failure check,
+cost consequence, migration, and reversal trigger. Never edit the frozen
+baseline or raw trial. A Pass creates no required remediation artifact.

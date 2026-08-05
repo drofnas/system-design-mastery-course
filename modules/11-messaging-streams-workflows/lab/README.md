@@ -1,5 +1,9 @@
 # Messaging, Streams, and Workflows Lab
 
+PESD 2.0 reuses the [shared three-node process/storage/fault boundary](../../../shared-labs/three-node-cluster/README.md)
+for Modules 9–12. Connect publication, consumption, workflow, and reconciliation
+mechanisms to the shared proxy without treating the fixture as graded evidence.
+
 Before setup, run the repository [Home Lab Guide](../../../HOME_LAB_GUIDE.md)
 preflight for `M11`.
 
@@ -16,6 +20,12 @@ Run one scenario from this directory:
 
 ```bash
 python3 -m messaging_lab scenarios/f01-atomic-outbox-broken.json --pretty
+```
+
+Drive the same scenario through the required shared process boundary:
+
+```bash
+python3 ../../../shared-labs/three-node-cluster/run_boundary.py --module M11 --scenario scenarios/f01-atomic-outbox-broken.json --output ../../../experiments/m11-f01-cluster-boundary.json
 ```
 
 Run all automated checks:

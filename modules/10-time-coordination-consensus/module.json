@@ -4,30 +4,33 @@
   "title": "Time, Coordination, and Consensus",
   "weeks": [
     {
-      "number": 37,
-      "focus": "Model and freeze physical-time assumptions, causal order, safety, liveness, failure detection, and consensus boundaries",
-      "hours": 10.5,
+      "number": 52,
+      "phase": "Model and derive",
+      "focus": "Model and derive",
+      "hours": 8.5,
+      "core_hours": 8.5,
+      "capacity_hours": 12,
       "evidence": [
-        "Frozen clock and order analysis",
-        "Safety/liveness and failure-detector specification",
-        "Consensus-necessity decision",
-        "Week 37 learning log"
+        "Model and derive evidence frozen at source commit"
       ],
       "time_blocks": [
         {
-          "id": "W37-T01",
+          "id": "W052-T01",
           "label": "Bounded authoritative resources",
-          "minutes": 70,
+          "minutes": 155,
           "activity": "required_resource",
+          "required": true,
           "resource_ids": [
-            "RES-01"
+            "RES-04",
+            "RES-06"
           ]
         },
         {
-          "id": "W37-T02",
-          "label": "Local lesson instruction",
+          "id": "W052-T02",
+          "label": "Local mechanism instruction",
           "minutes": 120,
           "activity": "local_instruction",
+          "required": true,
           "lesson_ids": [
             "L01",
             "L02",
@@ -36,260 +39,310 @@
           ]
         },
         {
-          "id": "W37-T03",
+          "id": "W052-T03",
           "label": "Guided practice",
-          "minutes": 90,
+          "minutes": 60,
           "activity": "guided_practice",
+          "required": true,
           "exercise_ids": [
             "EX-01",
             "EX-02",
             "EX-03",
             "EX-04",
             "EX-05",
-            "EX-06"
-          ]
-        },
-        {
-          "id": "W37-T04",
-          "label": "Reflection and learning log",
-          "minutes": 30,
-          "activity": "reflection"
-        },
-        {
-          "id": "W37-T05",
-          "label": "Independent Work",
-          "minutes": 320,
-          "activity": "independent_work",
-          "artifact_ids": [
-            "A01"
-          ]
-        }
-      ]
-    },
-    {
-      "number": 38,
-      "focus": "Build persistent elections, replicated-log commitment, and deterministic state-machine application",
-      "hours": 11.5,
-      "evidence": [
-        "Raft-backed key/value implementation",
-        "Automated election and log checks",
-        "Internals and safety proof ledger",
-        "Week 38 learning log"
-      ],
-      "time_blocks": [
-        {
-          "id": "W38-T01",
-          "label": "Bounded authoritative resources",
-          "minutes": 110,
-          "activity": "required_resource",
-          "resource_ids": [
-            "RES-04"
-          ]
-        },
-        {
-          "id": "W38-T02",
-          "label": "Local lesson instruction",
-          "minutes": 90,
-          "activity": "local_instruction",
-          "lesson_ids": [
-            "L03",
-            "L05",
-            "L07"
-          ]
-        },
-        {
-          "id": "W38-T03",
-          "label": "Guided practice",
-          "minutes": 90,
-          "activity": "guided_practice",
-          "exercise_ids": [
+            "EX-06",
             "EX-07",
-            "EX-08",
-            "EX-09",
-            "EX-10",
-            "EX-11"
+            "EX-08"
           ]
         },
         {
-          "id": "W38-T04",
-          "label": "Reflection and learning log",
-          "minutes": 30,
-          "activity": "reflection"
-        },
-        {
-          "id": "W38-T05",
-          "label": "Decision Artifact",
-          "minutes": 30,
-          "activity": "decision_artifact",
-          "artifact_ids": [
-            "A03"
-          ]
-        },
-        {
-          "id": "W38-T06",
-          "label": "Independent Work",
-          "minutes": 340,
+          "id": "W052-T04",
+          "label": "Model and derive core work",
+          "minutes": 175,
           "activity": "independent_work",
-          "artifact_ids": [
-            "A02"
-          ]
+          "required": true
+        },
+        {
+          "id": "W052-T05",
+          "label": "Optional contingency capacity",
+          "minutes": 210,
+          "activity": "contingency",
+          "required": false
         }
       ]
     },
     {
-      "number": 39,
-      "focus": "Break leadership, clients, leases, snapshots, and membership, then diagnose invariant failures",
-      "hours": 11.5,
+      "number": 53,
+      "phase": "Guided build and prediction freeze",
+      "focus": "Guided build and prediction freeze",
+      "hours": 9.0,
+      "core_hours": 9.0,
+      "capacity_hours": 12,
       "evidence": [
-        "Sixteen immutable raw trials",
-        "Eight broken/repaired comparisons",
-        "Failure matrix and causal investigation",
-        "Week 39 learning log"
+        "Guided build and prediction freeze evidence frozen at source commit"
       ],
       "time_blocks": [
         {
-          "id": "W39-T01",
+          "id": "W053-T01",
           "label": "Bounded authoritative resources",
-          "minutes": 45,
+          "minutes": 145,
           "activity": "required_resource",
+          "required": true,
           "resource_ids": [
-            "RES-06"
-          ]
-        },
-        {
-          "id": "W39-T02",
-          "label": "Local lesson instruction",
-          "minutes": 90,
-          "activity": "local_instruction",
-          "lesson_ids": [
-            "L01",
-            "L04",
-            "L06"
-          ]
-        },
-        {
-          "id": "W39-T03",
-          "label": "Guided practice",
-          "minutes": 90,
-          "activity": "guided_practice",
-          "exercise_ids": [
-            "EX-12",
-            "EX-13",
-            "EX-14",
-            "EX-15"
-          ]
-        },
-        {
-          "id": "W39-T04",
-          "label": "Reflection and learning log",
-          "minutes": 30,
-          "activity": "reflection"
-        },
-        {
-          "id": "W39-T05",
-          "label": "Failure Experiment",
-          "minutes": 405,
-          "activity": "failure_experiment",
-          "artifact_ids": [
-            "A04"
-          ]
-        },
-        {
-          "id": "W39-T06",
-          "label": "Independent Work",
-          "minutes": 30,
-          "activity": "independent_work",
-          "artifact_ids": [
-            "A05"
-          ]
-        }
-      ]
-    },
-    {
-      "number": 40,
-      "focus": "Decide, migrate, operate, teach, evaluate, and remediate coordination choices",
-      "hours": 10,
-      "evidence": [
-        "Coordination RFC",
-        "Security, cost, migration, ownership, and reversal plan",
-        "Recorded defense and module evaluation",
-        "Week 40 learning log"
-      ],
-      "time_blocks": [
-        {
-          "id": "W40-T01",
-          "label": "Bounded authoritative resources",
-          "minutes": 75,
-          "activity": "required_resource",
-          "resource_ids": [
+            "RES-01",
             "RES-07"
           ]
         },
         {
-          "id": "W40-T02",
-          "label": "Local lesson instruction",
-          "minutes": 45,
+          "id": "W053-T02",
+          "label": "Local mechanism instruction",
+          "minutes": 120,
           "activity": "local_instruction",
+          "required": true,
           "lesson_ids": [
+            "L05",
+            "L06",
+            "L07",
             "L08"
           ]
         },
         {
-          "id": "W40-T03",
+          "id": "W053-T03",
           "label": "Guided practice",
-          "minutes": 45,
+          "minutes": 60,
           "activity": "guided_practice",
+          "required": true,
           "exercise_ids": [
+            "EX-09",
+            "EX-10",
+            "EX-11",
+            "EX-12",
+            "EX-13",
+            "EX-14",
+            "EX-15",
             "EX-16"
           ]
         },
         {
-          "id": "W40-T04",
-          "label": "Reflection and learning log",
+          "id": "W053-T04",
+          "label": "Required evidence components",
+          "minutes": 60,
+          "activity": "independent_work",
+          "required": true,
+          "artifact_allocations": [
+            {
+              "artifact_id": "A01",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A05",
+              "minutes": 30
+            }
+          ]
+        },
+        {
+          "id": "W053-T05",
+          "label": "Guided build and prediction freeze core work",
+          "minutes": 155,
+          "activity": "independent_work",
+          "required": true
+        },
+        {
+          "id": "W053-T06",
+          "label": "Optional contingency capacity",
+          "minutes": 180,
+          "activity": "contingency",
+          "required": false
+        }
+      ]
+    },
+    {
+      "number": 54,
+      "phase": "Independent build and integration",
+      "focus": "Independent build and integration",
+      "hours": 10.0,
+      "core_hours": 10.0,
+      "capacity_hours": 12,
+      "evidence": [
+        "Independent build and integration evidence frozen at source commit"
+      ],
+      "time_blocks": [
+        {
+          "id": "W054-T01",
+          "label": "Required evidence components",
+          "minutes": 30,
+          "activity": "independent_work",
+          "required": true,
+          "artifact_allocations": [
+            {
+              "artifact_id": "A02",
+              "minutes": 30
+            }
+          ]
+        },
+        {
+          "id": "W054-T02",
+          "label": "Independent build and integration core work",
+          "minutes": 570,
+          "activity": "independent_work",
+          "required": true
+        },
+        {
+          "id": "W054-T03",
+          "label": "Optional contingency capacity",
+          "minutes": 120,
+          "activity": "contingency",
+          "required": false
+        }
+      ]
+    },
+    {
+      "number": 55,
+      "phase": "Independent build and integration II",
+      "focus": "Independent build and integration II",
+      "hours": 10.0,
+      "core_hours": 10.0,
+      "capacity_hours": 12,
+      "evidence": [
+        "Independent build and integration II evidence frozen at source commit"
+      ],
+      "time_blocks": [
+        {
+          "id": "W055-T01",
+          "label": "Independent build and integration II core work",
+          "minutes": 540,
+          "activity": "independent_work",
+          "required": true
+        },
+        {
+          "id": "W055-T02",
+          "label": "Independent build and integration II verification checkpoint",
+          "minutes": 60,
+          "activity": "independent_work",
+          "required": true
+        },
+        {
+          "id": "W055-T03",
+          "label": "Optional contingency capacity",
+          "minutes": 120,
+          "activity": "contingency",
+          "required": false
+        }
+      ]
+    },
+    {
+      "number": 56,
+      "phase": "Break, repair, measure, and diagnose",
+      "focus": "Break, repair, measure, and diagnose",
+      "hours": 10.0,
+      "core_hours": 10.0,
+      "capacity_hours": 12,
+      "evidence": [
+        "Break, repair, measure, and diagnose evidence frozen at source commit"
+      ],
+      "time_blocks": [
+        {
+          "id": "W056-T01",
+          "label": "Required evidence components",
+          "minutes": 60,
+          "activity": "failure_experiment",
+          "required": true,
+          "artifact_allocations": [
+            {
+              "artifact_id": "A03",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A04",
+              "minutes": 30
+            }
+          ]
+        },
+        {
+          "id": "W056-T02",
+          "label": "Break, repair, measure, and diagnose core work",
+          "minutes": 540,
+          "activity": "failure_experiment",
+          "required": true
+        },
+        {
+          "id": "W056-T03",
+          "label": "Optional contingency capacity",
+          "minutes": 120,
+          "activity": "contingency",
+          "required": false
+        }
+      ]
+    },
+    {
+      "number": 57,
+      "phase": "Decide, teach, assess, and freeze",
+      "focus": "Decide, teach, assess, and freeze",
+      "hours": 9.5,
+      "core_hours": 9.5,
+      "capacity_hours": 12,
+      "evidence": [
+        "Decide, teach, assess, and freeze evidence frozen at source commit"
+      ],
+      "time_blocks": [
+        {
+          "id": "W057-T01",
+          "label": "Required evidence components",
+          "minutes": 120,
+          "activity": "decision_artifact",
+          "required": true,
+          "artifact_allocations": [
+            {
+              "artifact_id": "A06",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A07",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A08",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A09",
+              "minutes": 30
+            }
+          ]
+        },
+        {
+          "id": "W057-T02",
+          "label": "Decide, teach, assess, and freeze core work",
+          "minutes": 390,
+          "activity": "assessment",
+          "required": true
+        },
+        {
+          "id": "W057-T03",
+          "label": "Module teach-back",
+          "minutes": 30,
+          "activity": "teach_back",
+          "required": true
+        },
+        {
+          "id": "W057-T04",
+          "label": "Learning log and freeze check",
           "minutes": 30,
           "activity": "reflection",
-          "artifact_ids": [
-            "A09"
-          ]
+          "required": true
         },
         {
-          "id": "W40-T05",
-          "label": "Assessment",
-          "minutes": 60,
-          "activity": "assessment",
-          "artifact_ids": [
-            "A08"
-          ]
-        },
-        {
-          "id": "W40-T06",
-          "label": "Decision Artifact",
-          "minutes": 225,
-          "activity": "decision_artifact",
-          "artifact_ids": [
-            "A06"
-          ]
-        },
-        {
-          "id": "W40-T07",
-          "label": "Review Remediation",
-          "minutes": 60,
-          "activity": "review_remediation"
-        },
-        {
-          "id": "W40-T08",
-          "label": "Teach Back",
-          "minutes": 60,
-          "activity": "teach_back",
-          "artifact_ids": [
-            "A07"
-          ]
+          "id": "W057-T05",
+          "label": "Optional contingency capacity",
+          "minutes": 150,
+          "activity": "contingency",
+          "required": false
         }
       ]
     }
   ],
-  "target_hours": 43.5,
-  "status": "ready",
+  "target_hours": 57,
+  "status": "review",
   "readiness_note": "Ready on 2026-08-02 after teaching, lab, sixteen paired trials, six isolated calibration records, semantic review, resource verification, focused validation, and full-course validation passed.",
   "outcomes": [
     {
@@ -544,10 +597,10 @@
       "url": "https://lamport.azurewebsites.net/pubs/time-clocks.pdf",
       "required": true,
       "access": "free",
-      "week": 37,
+      "week": 53,
       "estimated_minutes": 70,
       "purpose": "Derive happened-before, logical-clock rules, total-order limits, and explicit physical-clock assumptions.",
-      "assignment": "Read pages 558–563; construct one happened-before graph and identify two concurrent events that a scalar timestamp cannot distinguish.",
+      "assignment": "Read pages 558\u2013563; construct one happened-before graph and identify two concurrent events that a scalar timestamp cannot distinguish.",
       "last_verified": "2026-08-02",
       "text_alternative": "lessons/02-logical-vector-clocks.md",
       "verified_title": "Time, Clocks, and the Ordering of Events in a Distributed System",
@@ -564,10 +617,10 @@
       "url": "https://research.google/pubs/spanner-googles-globally-distributed-database-2/",
       "required": false,
       "access": "free",
-      "week": 37,
+      "week": 57,
       "estimated_minutes": 55,
       "purpose": "Study a production system that exposes clock uncertainty instead of assuming perfect wall time.",
-      "assignment": "Read Sections 3 and 4.1–4.2; write the uncertainty interval, wait condition, guarantee, and infrastructure assumptions.",
+      "assignment": "Read Sections 3 and 4.1\u20134.2; write the uncertainty interval, wait condition, guarantee, and infrastructure assumptions.",
       "last_verified": "2026-08-02",
       "text_alternative": "lessons/01-physical-clocks-uncertainty.md",
       "verified_title": "Spanner: Google's Globally-Distributed Database",
@@ -584,7 +637,7 @@
       "url": "https://www.microsoft.com/en-us/research/publication/paxos-made-simple/",
       "required": false,
       "access": "free",
-      "week": 38,
+      "week": 57,
       "estimated_minutes": 65,
       "purpose": "Expose the single-value safety invariant behind quorum agreement and compare it with a replicated log.",
       "assignment": "Read the complete paper; produce an acceptor promise/accepted-value ledger and one counterexample prevented by P2b.",
@@ -604,10 +657,10 @@
       "url": "https://raft.github.io/raft.pdf",
       "required": true,
       "access": "free",
-      "week": 38,
+      "week": 52,
       "estimated_minutes": 110,
       "purpose": "Connect elections, log replication, safety, clients, snapshots, and membership to explicit Raft properties.",
-      "assignment": "Read Sections 2–8; trace election safety, log matching, leader completeness, and state-machine safety through one leader change.",
+      "assignment": "Read Sections 2\u20138; trace election safety, log matching, leader completeness, and state-machine safety through one leader change.",
       "last_verified": "2026-08-02",
       "text_alternative": "lessons/04-paxos-raft-foundations.md",
       "verified_title": "In Search of an Understandable Consensus Algorithm",
@@ -624,10 +677,10 @@
       "url": "https://www.youtube.com/watch?v=vYp4LYbnnW8",
       "required": false,
       "access": "free",
-      "week": 38,
+      "week": 57,
       "estimated_minutes": 45,
       "purpose": "Rehearse the visual event sequence for elections, log repair, and the five named safety properties.",
-      "assignment": "Watch 00:00–35:00 or read official slides 3–20; narrate one election and one conflicting-log repair without using architecture labels alone.",
+      "assignment": "Watch 00:00\u201335:00 or read official slides 3\u201320; narrate one election and one conflicting-log repair without using architecture labels alone.",
       "last_verified": "2026-08-02",
       "text_alternative": "lessons/06-raft-log-safety.md",
       "verified_title": "Designing for Understandability: The Raft Consensus Algorithm",
@@ -644,7 +697,7 @@
       "url": "https://github.com/ongardie/raft.tla",
       "required": true,
       "access": "free",
-      "week": 39,
+      "week": 52,
       "estimated_minutes": 45,
       "purpose": "Map implementation state to formal variables and invariants without requiring prior TLA+ fluency.",
       "assignment": "Read README and the state-variable, TypeOK, and state-machine-safety portions of raft.tla; map five variables to lab evidence and name one omitted liveness claim.",
@@ -664,10 +717,10 @@
       "url": "https://research.google/pubs/the-chubby-lock-service-for-loosely-coupled-distributed-systems/",
       "required": true,
       "access": "free",
-      "week": 40,
+      "week": 53,
       "estimated_minutes": 75,
       "purpose": "Study operated leases, sequencers, caching, client behavior, and the gap between intended and actual use.",
-      "assignment": "Read Sections 2–5; record one lease assumption, one fencing/sequencer obligation, one cache risk, one operational limit, and the responsible owner.",
+      "assignment": "Read Sections 2\u20135; record one lease assumption, one fencing/sequencer obligation, one cache risk, one operational limit, and the responsible owner.",
       "last_verified": "2026-08-02",
       "text_alternative": "lessons/08-membership-leases-fencing-decisions.md",
       "verified_title": "The Chubby Lock Service for Loosely-Coupled Distributed Systems",
@@ -680,78 +733,132 @@
   "artifacts": [
     {
       "id": "A01",
-      "week": 37,
+      "week": 53,
       "required": true,
       "template_path": "modules/10-time-coordination-consensus/worksheets/week-37-time-coordination-model.md",
       "submission_path": "reports/module-10-time-coordination-baseline.md",
       "immutable_after_submission": true,
-      "portfolio_category": "model"
+      "portfolio_category": "model",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M10-A01",
+      "component_role": "prediction",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A02",
-      "week": 38,
+      "week": 54,
       "required": true,
       "template_path": "modules/10-time-coordination-consensus/worksheets/week-38-raft-kv-build.md",
       "submission_path": "labs/module-10/raft-kv/",
-      "portfolio_category": "implementation"
+      "portfolio_category": "implementation",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M10-A02",
+      "component_role": "implementation",
+      "estimated_minutes": 30,
+      "evidence_mode": "executed_deterministic"
     },
     {
       "id": "A03",
-      "week": 38,
+      "week": 56,
       "required": true,
       "template_path": "modules/10-time-coordination-consensus/worksheets/week-38-raft-kv-build.md",
       "submission_path": "reports/module-10-raft-internals-proof.md",
-      "portfolio_category": "runtime_comparison"
+      "portfolio_category": "source_code_internals_review",
+      "portfolio_item_id": "PI-INT-02",
+      "portfolio_credit": true,
+      "evidence_lineage_id": "LIN-INT-CONSENSUS",
+      "component_role": "analysis",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A04",
-      "week": 39,
+      "week": 56,
       "required": true,
       "template_path": "modules/10-time-coordination-consensus/worksheets/week-39-consensus-failure-matrix.md",
       "submission_path": "experiments/module-10/",
       "immutable_after_submission": true,
-      "portfolio_category": "failure_matrix"
+      "portfolio_category": "failure_matrix",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M10-A04",
+      "component_role": "raw_evidence",
+      "estimated_minutes": 30,
+      "evidence_mode": "executed_deterministic"
     },
     {
       "id": "A05",
-      "week": 39,
+      "week": 53,
       "required": true,
       "template_path": "modules/10-time-coordination-consensus/worksheets/week-39-consensus-failure-matrix.md",
       "submission_path": "reports/module-10-consensus-failure-investigation.md",
       "immutable_after_submission": true,
-      "portfolio_category": "model"
+      "portfolio_category": "model",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M10-A05",
+      "component_role": "prediction",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A06",
-      "week": 40,
+      "week": 57,
       "required": true,
       "template_path": "templates/rfc-template.md",
       "submission_path": "rfc/module-10-coordination-design.md",
-      "portfolio_category": "rfc"
+      "portfolio_category": "adr",
+      "portfolio_item_id": "PI-DECISION-M10",
+      "portfolio_credit": true,
+      "evidence_lineage_id": "LIN-DECISION-M10",
+      "component_role": "decision",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A07",
-      "week": 40,
+      "week": 57,
       "required": true,
       "template_path": "modules/10-time-coordination-consensus/worksheets/week-40-coordination-rfc-defense.md",
       "submission_path": "reviews/module-10-defense.md",
-      "portfolio_category": "teach_back"
+      "portfolio_category": "teach_back",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M10-A07",
+      "component_role": "final",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A08",
-      "week": 40,
+      "week": 57,
       "required": true,
       "template_path": "modules/10-time-coordination-consensus/assessment/report-template.md",
       "submission_path": "reviews/module-10-evaluation.md",
-      "portfolio_category": "evaluation"
+      "portfolio_category": "evaluation",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M10-A08",
+      "component_role": "final",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A09",
-      "week": 40,
+      "week": 57,
       "required": true,
       "template_path": "templates/learning-log-template.md",
-      "submission_path": "learning-log/week-37.md through learning-log/week-40.md",
-      "portfolio_category": "learning_log"
+      "submission_path": "learning-log/week-052.md through learning-log/week-057.md",
+      "portfolio_category": "learning_log",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M10-A09",
+      "component_role": "final",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     }
   ],
   "failure_experiments": [
@@ -900,5 +1007,13 @@
       "estimated_minutes": 30
     }
   ],
-  "citation_catalog": []
+  "citation_catalog": [],
+  "course_id": "PESD-104",
+  "course_version": "2.0",
+  "primary_decision": {
+    "artifact_id": "A06",
+    "type": "ADR"
+  },
+  "pesd_v2_additions": "learner-written elections through membership under deterministic scheduling, crashable persistence, fencing, an independent invariant oracle, executable small-state safety checks, and mutation tests",
+  "semantic_evaluation": "module_specific"
 }

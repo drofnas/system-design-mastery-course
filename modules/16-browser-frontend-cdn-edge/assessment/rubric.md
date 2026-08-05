@@ -99,3 +99,18 @@ browser or edge conclusion.
 Pass requires every G01–G06 gate, every A01–A11 artifact, average ≥3.0, and no
 zero in R04–R06 or R09. G02–G05 failure or a safety-critical zero yields Repeat;
 other material gaps yield Revise.
+
+## PESD 2.0 cross-cutting anchors
+
+Apply these anchors inside the published module-specific criteria; they do not
+create a generic substitute rubric.
+
+- **0–1:** ignores or merely names offline and degraded client state, browser-storage lifecycle, third-party governance, AI-content transparency and provenance, edge residency, and energy/performance budgets without an enforceable
+  causal model, evidence boundary, or owner.
+- **2:** covers the happy path but leaves a material tenant, governance,
+  recovery, supplier, cost, migration, or evidence gap.
+- **3:** connects the requirement to a mechanism, failure evidence, ownership,
+  cost, migration, and a scoped residual risk.
+- **4:** additionally tests policy drift or isolation failure, quantifies useful
+  outcome and uncertainty, preserves lineage, and gives teachable reversal and
+  decommissioning triggers.

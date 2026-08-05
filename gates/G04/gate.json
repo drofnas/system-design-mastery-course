@@ -1,0 +1,130 @@
+{
+  "$schema": "../../schemas/gate.schema.json",
+  "id": "G04",
+  "week": 68,
+  "modules": [
+    "M10",
+    "M11",
+    "M12"
+  ],
+  "core_minutes": 390,
+  "parts": [
+    {
+      "id": "freeze",
+      "title": "Evidence freeze",
+      "minutes": 30,
+      "minimum_score": 0,
+      "new_teaching": false,
+      "new_build_work": false
+    },
+    {
+      "id": "written",
+      "title": "Written examination",
+      "minutes": 75,
+      "minimum_score": 3,
+      "new_teaching": false,
+      "new_build_work": false
+    },
+    {
+      "id": "practical",
+      "title": "Hidden practical",
+      "minutes": 150,
+      "minimum_score": 3,
+      "new_teaching": false,
+      "new_build_work": false
+    },
+    {
+      "id": "defense",
+      "title": "Architecture defense",
+      "minutes": 60,
+      "minimum_score": 3,
+      "new_teaching": false,
+      "new_build_work": false
+    },
+    {
+      "id": "portfolio",
+      "title": "Portfolio review",
+      "minutes": 45,
+      "minimum_score": 3,
+      "new_teaching": false,
+      "new_build_work": false
+    },
+    {
+      "id": "closure",
+      "title": "Scoring and feedback review",
+      "minutes": 30,
+      "minimum_score": 0,
+      "new_teaching": false,
+      "new_build_work": false
+    }
+  ],
+  "domain_matrix": [
+    {
+      "module": "M10",
+      "criteria": [
+        "module_specific_rubric"
+      ],
+      "minimum_score": 3
+    },
+    {
+      "module": "M11",
+      "criteria": [
+        "module_specific_rubric"
+      ],
+      "minimum_score": 3
+    },
+    {
+      "module": "M12",
+      "criteria": [
+        "module_specific_rubric"
+      ],
+      "minimum_score": 3
+    }
+  ],
+  "rubric_rows": [
+    {
+      "id": "GR01",
+      "title": "Product and user outcome",
+      "safety_critical": false
+    },
+    {
+      "id": "GR02",
+      "title": "Technical causal model",
+      "safety_critical": false
+    },
+    {
+      "id": "GR03",
+      "title": "Security and governance",
+      "safety_critical": true
+    },
+    {
+      "id": "GR04",
+      "title": "Operations and recovery",
+      "safety_critical": true
+    },
+    {
+      "id": "GR05",
+      "title": "Economics and capacity",
+      "safety_critical": false
+    },
+    {
+      "id": "GR06",
+      "title": "Ownership, migration, and teaching",
+      "safety_critical": false
+    }
+  ],
+  "hard_floors": {
+    "part": 3,
+    "domain": 3,
+    "safety": 3,
+    "overall": 3
+  },
+  "invariant_sets": [],
+  "result_rules": {
+    "Pass": "All structural, scored-part, domain, safety, invariant, and average floors pass.",
+    "Revise": "Evidence is complete, chronology is valid, and only one or more non-safety scoring floors are missed.",
+    "Repeat": "An invariant fails, chronology is invalid, evidence is fabricated or mismatched, or the causal model is materially incorrect."
+  },
+  "remediation_reserve_hours": 6,
+  "pass_remediation_required": false
+}

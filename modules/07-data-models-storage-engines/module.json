@@ -4,30 +4,34 @@
   "title": "Data Models and Storage Engines",
   "weeks": [
     {
-      "number": 25,
-      "focus": "Model and freeze workloads, access paths, and physical predictions",
-      "hours": 10.5,
+      "number": 35,
+      "phase": "Model and derive",
+      "focus": "Model and derive",
+      "hours": 8.5,
+      "core_hours": 8.5,
+      "capacity_hours": 12,
       "evidence": [
-        "Frozen workload and access-path matrix",
-        "Data-model and invariant map",
-        "Page and amplification estimates",
-        "Week 25 learning log"
+        "Model and derive evidence frozen at source commit"
       ],
       "time_blocks": [
         {
-          "id": "W25-T01",
+          "id": "W035-T01",
           "label": "Bounded authoritative resources",
-          "minutes": 50,
+          "minutes": 145,
           "activity": "required_resource",
+          "required": true,
           "resource_ids": [
-            "RES-01"
+            "RES-04",
+            "RES-05",
+            "RES-10"
           ]
         },
         {
-          "id": "W25-T02",
-          "label": "Local lesson instruction",
+          "id": "W035-T02",
+          "label": "Local mechanism instruction",
           "minutes": 120,
           "activity": "local_instruction",
+          "required": true,
           "lesson_ids": [
             "L01",
             "L02",
@@ -36,254 +40,288 @@
           ]
         },
         {
-          "id": "W25-T03",
+          "id": "W035-T03",
           "label": "Guided practice",
-          "minutes": 90,
+          "minutes": 60,
           "activity": "guided_practice",
+          "required": true,
           "exercise_ids": [
             "EX-01",
             "EX-02",
             "EX-03",
             "EX-04",
             "EX-05",
-            "EX-06"
-          ]
-        },
-        {
-          "id": "W25-T04",
-          "label": "Reflection and learning log",
-          "minutes": 30,
-          "activity": "reflection"
-        },
-        {
-          "id": "W25-T05",
-          "label": "Independent Work",
-          "minutes": 340,
-          "activity": "independent_work",
-          "artifact_ids": [
-            "A01"
-          ]
-        }
-      ]
-    },
-    {
-      "number": 26,
-      "focus": "Build persistent B+ tree and LSM mechanisms",
-      "hours": 11,
-      "evidence": [
-        "B+ tree implementation and tests",
-        "LSM implementation and tests",
-        "Clean-close reopen evidence",
-        "Internals review and Week 26 learning log"
-      ],
-      "time_blocks": [
-        {
-          "id": "W26-T01",
-          "label": "Bounded authoritative resources",
-          "minutes": 70,
-          "activity": "required_resource",
-          "resource_ids": [
-            "RES-04"
-          ]
-        },
-        {
-          "id": "W26-T02",
-          "label": "Local lesson instruction",
-          "minutes": 90,
-          "activity": "local_instruction",
-          "lesson_ids": [
-            "L03",
-            "L05",
-            "L07"
-          ]
-        },
-        {
-          "id": "W26-T03",
-          "label": "Guided practice",
-          "minutes": 90,
-          "activity": "guided_practice",
-          "exercise_ids": [
+            "EX-06",
             "EX-07",
-            "EX-08",
-            "EX-09",
-            "EX-10",
-            "EX-11"
+            "EX-08"
           ]
         },
         {
-          "id": "W26-T04",
-          "label": "Reflection and learning log",
+          "id": "W035-T04",
+          "label": "Required evidence components",
           "minutes": 30,
-          "activity": "reflection"
-        },
-        {
-          "id": "W26-T05",
-          "label": "Decision Artifact",
-          "minutes": 30,
-          "activity": "decision_artifact",
-          "artifact_ids": [
-            "A04"
-          ]
-        },
-        {
-          "id": "W26-T06",
-          "label": "Independent Work",
-          "minutes": 350,
           "activity": "independent_work",
-          "artifact_ids": [
-            "A02",
-            "A03"
+          "required": true,
+          "artifact_allocations": [
+            {
+              "artifact_id": "A10",
+              "minutes": 30
+            }
           ]
+        },
+        {
+          "id": "W035-T05",
+          "label": "Model and derive core work",
+          "minutes": 155,
+          "activity": "independent_work",
+          "required": true
+        },
+        {
+          "id": "W035-T06",
+          "label": "Optional contingency capacity",
+          "minutes": 210,
+          "activity": "contingency",
+          "required": false
         }
       ]
     },
     {
-      "number": 27,
-      "focus": "Break, measure, diagnose, and recover",
-      "hours": 11,
+      "number": 36,
+      "phase": "Guided build and prediction freeze",
+      "focus": "Guided build and prediction freeze",
+      "hours": 9.0,
+      "core_hours": 9.0,
+      "capacity_hours": 12,
       "evidence": [
-        "Ten base workload trials",
-        "Six broken/repaired pairs",
-        "Amplification and failure matrix",
-        "Week 27 learning log"
+        "Guided build and prediction freeze evidence frozen at source commit"
       ],
       "time_blocks": [
         {
-          "id": "W27-T01",
+          "id": "W036-T01",
           "label": "Bounded authoritative resources",
-          "minutes": 75,
+          "minutes": 135,
           "activity": "required_resource",
+          "required": true,
           "resource_ids": [
-            "RES-05",
-            "RES-07"
+            "RES-01",
+            "RES-07",
+            "RES-09"
           ]
         },
         {
-          "id": "W27-T02",
-          "label": "Local lesson instruction",
-          "minutes": 90,
+          "id": "W036-T02",
+          "label": "Local mechanism instruction",
+          "minutes": 120,
           "activity": "local_instruction",
+          "required": true,
           "lesson_ids": [
-            "L01",
-            "L04",
-            "L06"
-          ]
-        },
-        {
-          "id": "W27-T03",
-          "label": "Guided practice",
-          "minutes": 90,
-          "activity": "guided_practice",
-          "exercise_ids": [
-            "EX-12",
-            "EX-13",
-            "EX-14",
-            "EX-15"
-          ]
-        },
-        {
-          "id": "W27-T04",
-          "label": "Reflection and learning log",
-          "minutes": 30,
-          "activity": "reflection"
-        },
-        {
-          "id": "W27-T05",
-          "label": "Failure Experiment",
-          "minutes": 375,
-          "activity": "failure_experiment",
-          "artifact_ids": [
-            "A05"
-          ]
-        }
-      ]
-    },
-    {
-      "number": 28,
-      "focus": "Decide, migrate, teach, and assess",
-      "hours": 10.5,
-      "evidence": [
-        "Storage-engine ADR",
-        "Migration and rollback plan",
-        "Recorded defense",
-        "Evaluation, remediation, and Week 28 learning log"
-      ],
-      "time_blocks": [
-        {
-          "id": "W28-T01",
-          "label": "Bounded authoritative resources",
-          "minutes": 85,
-          "activity": "required_resource",
-          "resource_ids": [
-            "RES-09",
-            "RES-10"
-          ]
-        },
-        {
-          "id": "W28-T02",
-          "label": "Local lesson instruction",
-          "minutes": 45,
-          "activity": "local_instruction",
-          "lesson_ids": [
+            "L05",
+            "L06",
+            "L07",
             "L08"
           ]
         },
         {
-          "id": "W28-T03",
+          "id": "W036-T03",
           "label": "Guided practice",
-          "minutes": 45,
+          "minutes": 60,
           "activity": "guided_practice",
+          "required": true,
           "exercise_ids": [
+            "EX-09",
+            "EX-10",
+            "EX-11",
+            "EX-12",
+            "EX-13",
+            "EX-14",
+            "EX-15",
             "EX-16"
           ]
         },
         {
-          "id": "W28-T04",
-          "label": "Reflection and learning log",
+          "id": "W036-T04",
+          "label": "Required evidence components",
+          "minutes": 90,
+          "activity": "independent_work",
+          "required": true,
+          "artifact_allocations": [
+            {
+              "artifact_id": "A01",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A02",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A03",
+              "minutes": 30
+            }
+          ]
+        },
+        {
+          "id": "W036-T05",
+          "label": "Guided build and prediction freeze core work",
+          "minutes": 135,
+          "activity": "independent_work",
+          "required": true
+        },
+        {
+          "id": "W036-T06",
+          "label": "Optional contingency capacity",
+          "minutes": 180,
+          "activity": "contingency",
+          "required": false
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "phase": "Independent build and integration",
+      "focus": "Independent build and integration",
+      "hours": 10.0,
+      "core_hours": 10.0,
+      "capacity_hours": 12,
+      "evidence": [
+        "Independent build and integration evidence frozen at source commit"
+      ],
+      "time_blocks": [
+        {
+          "id": "W037-T01",
+          "label": "Independent build and integration core work",
+          "minutes": 540,
+          "activity": "independent_work",
+          "required": true
+        },
+        {
+          "id": "W037-T02",
+          "label": "Independent build and integration verification checkpoint",
+          "minutes": 60,
+          "activity": "independent_work",
+          "required": true
+        },
+        {
+          "id": "W037-T03",
+          "label": "Optional contingency capacity",
+          "minutes": 120,
+          "activity": "contingency",
+          "required": false
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "phase": "Break, repair, measure, and diagnose",
+      "focus": "Break, repair, measure, and diagnose",
+      "hours": 10.0,
+      "core_hours": 10.0,
+      "capacity_hours": 12,
+      "evidence": [
+        "Break, repair, measure, and diagnose evidence frozen at source commit"
+      ],
+      "time_blocks": [
+        {
+          "id": "W038-T01",
+          "label": "Required evidence components",
+          "minutes": 60,
+          "activity": "failure_experiment",
+          "required": true,
+          "artifact_allocations": [
+            {
+              "artifact_id": "A04",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A05",
+              "minutes": 30
+            }
+          ]
+        },
+        {
+          "id": "W038-T02",
+          "label": "Break, repair, measure, and diagnose core work",
+          "minutes": 540,
+          "activity": "failure_experiment",
+          "required": true
+        },
+        {
+          "id": "W038-T03",
+          "label": "Optional contingency capacity",
+          "minutes": 120,
+          "activity": "contingency",
+          "required": false
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "phase": "Decide, teach, assess, and freeze",
+      "focus": "Decide, teach, assess, and freeze",
+      "hours": 9.5,
+      "core_hours": 9.5,
+      "capacity_hours": 12,
+      "evidence": [
+        "Decide, teach, assess, and freeze evidence frozen at source commit"
+      ],
+      "time_blocks": [
+        {
+          "id": "W039-T01",
+          "label": "Required evidence components",
+          "minutes": 120,
+          "activity": "decision_artifact",
+          "required": true,
+          "artifact_allocations": [
+            {
+              "artifact_id": "A06",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A07",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A08",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A09",
+              "minutes": 30
+            }
+          ]
+        },
+        {
+          "id": "W039-T02",
+          "label": "Decide, teach, assess, and freeze core work",
+          "minutes": 390,
+          "activity": "assessment",
+          "required": true
+        },
+        {
+          "id": "W039-T03",
+          "label": "Module teach-back",
+          "minutes": 30,
+          "activity": "teach_back",
+          "required": true
+        },
+        {
+          "id": "W039-T04",
+          "label": "Learning log and freeze check",
           "minutes": 30,
           "activity": "reflection",
-          "artifact_ids": [
-            "A09"
-          ]
+          "required": true
         },
         {
-          "id": "W28-T05",
-          "label": "Assessment",
-          "minutes": 60,
-          "activity": "assessment",
-          "artifact_ids": [
-            "A08"
-          ]
-        },
-        {
-          "id": "W28-T06",
-          "label": "Decision Artifact",
-          "minutes": 245,
-          "activity": "decision_artifact",
-          "artifact_ids": [
-            "A06"
-          ]
-        },
-        {
-          "id": "W28-T07",
-          "label": "Review Remediation",
-          "minutes": 60,
-          "activity": "review_remediation"
-        },
-        {
-          "id": "W28-T08",
-          "label": "Teach Back",
-          "minutes": 60,
-          "activity": "teach_back",
-          "artifact_ids": [
-            "A07"
-          ]
+          "id": "W039-T05",
+          "label": "Optional contingency capacity",
+          "minutes": 150,
+          "activity": "contingency",
+          "required": false
         }
       ]
     }
   ],
-  "target_hours": 43,
-  "status": "ready",
+  "target_hours": 47,
+  "status": "review",
   "readiness_note": "Ready on 2026-08-02 after semantic review, 11 storage-lab tests across 22 strict scenarios, six isolated evaluator invocations with stable calibration bands, two calibration checks, focused validation, full-course validation, resource verification, and evidence-safety review.",
   "outcomes": [
     {
@@ -528,7 +566,7 @@
       "url": "https://www.sqlite.org/fileformat.html",
       "required": true,
       "access": "free",
-      "week": 25,
+      "week": 36,
       "estimated_minutes": 50,
       "purpose": "Ground pages, B-tree cells, and record boundaries in a stable implementation contract.",
       "assignment": "Read Sections 1.2, 1.6, and 2.1; sketch a page and name two choices the format does not prescribe for this lab.",
@@ -548,7 +586,7 @@
       "url": "https://www.youtube.com/watch?v=scUtG_6M_lU",
       "required": false,
       "access": "free",
-      "week": 26,
+      "week": 39,
       "estimated_minutes": 80,
       "purpose": "Observe insertion, split, deletion, and composite-index reasoning from a database-internals course.",
       "assignment": "Watch through deletion and composite indexes; predict changed pages for one insert/delete and compare with the lab trace.",
@@ -568,7 +606,7 @@
       "url": "https://15445.courses.cs.cmu.edu/spring2026/schedule.html",
       "required": false,
       "access": "free",
-      "week": 26,
+      "week": 39,
       "estimated_minutes": 90,
       "purpose": "Connect storage, memory management, and indexes in one primary teaching sequence.",
       "assignment": "Use only Database Storage I-II, Memory Management, and Indexes & Filters I-II notes/slides; produce a physical-path diagram and workload-dependent question.",
@@ -588,7 +626,7 @@
       "url": "https://dsf.berkeley.edu/cs286/papers/lsm-acta1996.pdf",
       "required": true,
       "access": "free",
-      "week": 26,
+      "week": 35,
       "estimated_minutes": 70,
       "purpose": "Derive the buffered write mechanism and original cost assumptions.",
       "assignment": "Read the Abstract and Sections 1-3; derive why buffering changes write cost and list assumptions that differ from the lab.",
@@ -608,7 +646,7 @@
       "url": "https://github.com/facebook/rocksdb/wiki/RocksDB-Overview",
       "required": true,
       "access": "free",
-      "week": 27,
+      "week": 35,
       "estimated_minutes": 40,
       "purpose": "Compare operated LSM compaction shapes and amplification trade-offs.",
       "assignment": "Read Architecture and Compaction Styles; compare leveled, tiered/universal, and FIFO under three amplification dimensions.",
@@ -628,7 +666,7 @@
       "url": "https://github.com/facebook/rocksdb/wiki/Compaction",
       "required": false,
       "access": "free",
-      "week": 27,
+      "week": 39,
       "estimated_minutes": 45,
       "purpose": "Expose bytes, run shapes, and temporary space involved in compaction.",
       "assignment": "Read Overview through Tiered+Leveled; draw one merge and identify temporary-space exposure.",
@@ -648,7 +686,7 @@
       "url": "https://github.com/facebook/rocksdb/wiki/Write-Stalls",
       "required": true,
       "access": "free",
-      "week": 27,
+      "week": 36,
       "estimated_minutes": 35,
       "purpose": "Relate compaction debt to bounded admission and operator-owned recovery.",
       "assignment": "Read the complete page; map every trigger to a metric, owner, and safe overload action.",
@@ -668,7 +706,7 @@
       "url": "https://www.postgresql.org/docs/current/indexes.html",
       "required": false,
       "access": "free",
-      "week": 28,
+      "week": 39,
       "estimated_minutes": 45,
       "purpose": "Connect index operator/order support to update and storage costs.",
       "assignment": "Read Sections 11.1-11.5; design equality and ordered-range indexes and explain their write/storage cost.",
@@ -688,7 +726,7 @@
       "url": "https://www.postgresql.org/docs/current/using-explain.html",
       "required": true,
       "access": "free",
-      "week": 28,
+      "week": 36,
       "estimated_minutes": 50,
       "purpose": "Ground query-plan diagnosis in estimated and actual physical work.",
       "assignment": "Read Sections 14.1.1-14.1.3; compare estimated/actual rows and record one alternative explanation before changing an index.",
@@ -708,7 +746,7 @@
       "url": "https://www.postgresql.org/docs/current/planner-stats.html",
       "required": true,
       "access": "free",
-      "week": 28,
+      "week": 35,
       "estimated_minutes": 35,
       "purpose": "Explain selectivity, correlation, and extended-statistics trade-offs.",
       "assignment": "Read Sections 14.2.1-14.2.2; explain one correlation error and the cost of more detailed statistics.",
@@ -728,7 +766,7 @@
       "url": "https://nvmexpress.org/nvmeflexible-data-placement-fdp-blog/",
       "required": false,
       "access": "free",
-      "week": 27,
+      "week": 39,
       "estimated_minutes": 35,
       "purpose": "Separate host/engine amplification from device media amplification.",
       "assignment": "Read through the WAF definition and FDP mechanism; state which level the lab can measure and which remains unknown.",
@@ -744,77 +782,145 @@
   "artifacts": [
     {
       "id": "A01",
-      "week": 25,
+      "week": 36,
       "required": true,
       "template_path": "modules/07-data-models-storage-engines/worksheets/week-25-storage-model.md",
       "submission_path": "reports/module-07-storage-baseline.md",
       "immutable_after_submission": true,
-      "portfolio_category": "model"
+      "portfolio_category": "model",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M07-A01",
+      "component_role": "prediction",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A02",
-      "week": 26,
+      "week": 36,
       "required": true,
       "template_path": "modules/07-data-models-storage-engines/worksheets/week-26-engine-build.md",
       "submission_path": "labs/module-07/btree/",
-      "portfolio_category": "implementation"
+      "portfolio_category": "implementation",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M07-A02",
+      "component_role": "implementation",
+      "estimated_minutes": 30,
+      "evidence_mode": "executed_deterministic"
     },
     {
       "id": "A03",
-      "week": 26,
+      "week": 36,
       "required": true,
       "template_path": "modules/07-data-models-storage-engines/worksheets/week-26-engine-build.md",
       "submission_path": "labs/module-07/lsm/",
-      "portfolio_category": "implementation"
+      "portfolio_category": "implementation",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M07-A03",
+      "component_role": "implementation",
+      "estimated_minutes": 30,
+      "evidence_mode": "executed_deterministic"
     },
     {
       "id": "A04",
-      "week": 26,
+      "week": 38,
       "required": true,
       "template_path": "modules/07-data-models-storage-engines/worksheets/week-26-engine-build.md",
       "submission_path": "reports/module-07-engine-internals-review.md",
-      "portfolio_category": "source_code_internals_review"
+      "portfolio_category": "source_code_internals_review",
+      "portfolio_item_id": "PI-INT-01",
+      "portfolio_credit": true,
+      "evidence_lineage_id": "LIN-INT-STORAGE",
+      "component_role": "analysis",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A05",
-      "week": 27,
+      "week": 38,
       "required": true,
       "template_path": "modules/07-data-models-storage-engines/worksheets/week-27-amplification-matrix.md",
       "submission_path": "experiments/module-07/",
       "immutable_after_submission": true,
-      "portfolio_category": "failure_matrix"
+      "portfolio_category": "failure_matrix",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M07-A05",
+      "component_role": "raw_evidence",
+      "estimated_minutes": 30,
+      "evidence_mode": "executed_deterministic"
     },
     {
       "id": "A06",
-      "week": 28,
+      "week": 39,
       "required": true,
       "template_path": "templates/adr-template.md",
       "submission_path": "adr/module-07-storage-engine-decision.md",
-      "portfolio_category": "adr"
+      "portfolio_category": "adr",
+      "portfolio_item_id": "PI-DECISION-M07",
+      "portfolio_credit": true,
+      "evidence_lineage_id": "LIN-DECISION-M07",
+      "component_role": "decision",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A07",
-      "week": 28,
+      "week": 39,
       "required": true,
       "template_path": "modules/07-data-models-storage-engines/worksheets/week-28-storage-decision.md",
       "submission_path": "reviews/module-07-defense.md",
-      "portfolio_category": "teach_back"
+      "portfolio_category": "teach_back",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M07-A07",
+      "component_role": "final",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A08",
-      "week": 28,
+      "week": 39,
       "required": true,
       "template_path": "modules/07-data-models-storage-engines/assessment/report-template.md",
       "submission_path": "reviews/module-07-evaluation.md",
-      "portfolio_category": "evaluation"
+      "portfolio_category": "evaluation",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M07-A08",
+      "component_role": "final",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A09",
-      "week": 28,
+      "week": 39,
       "required": true,
       "template_path": "templates/learning-log-template.md",
-      "submission_path": "learning-log/week-25.md through learning-log/week-28.md",
-      "portfolio_category": "learning_log"
+      "submission_path": "learning-log/week-035.md through learning-log/week-039.md",
+      "portfolio_category": "learning_log",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M07-A09",
+      "component_role": "final",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
+    },
+    {
+      "id": "A10",
+      "week": 35,
+      "required": true,
+      "template_path": "templates/pesd-v2-dossier-template.md",
+      "submission_path": "reports/module-07-data-governance-dossier.md",
+      "portfolio_category": "data_governance_dossier",
+      "portfolio_item_id": "PI-GOV-01",
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-GOV-DATA",
+      "component_role": "baseline",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     }
   ],
   "failure_experiments": [
@@ -972,5 +1078,13 @@
       "final_url": "https://www.nist.gov/publications/new-analysis-false-positive-rate-bloom-filter",
       "verification_status": "verified"
     }
-  ]
+  ],
+  "course_id": "PESD-104",
+  "course_version": "2.0",
+  "primary_decision": {
+    "artifact_id": "A06",
+    "type": "ADR"
+  },
+  "pesd_v2_additions": "analytical projections, versioned data contracts, quality SLOs, lineage, stewardship, rebuild and backfill, deletion propagation, and ownership while preserving B+ tree and LSM mechanisms",
+  "semantic_evaluation": "module_specific"
 }

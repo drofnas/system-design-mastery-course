@@ -35,7 +35,7 @@ The team rejects an autonomous submission default because the user benefit does 
 
 ## Capstone integration procedure
 
-Freeze a copy of the current independent work before review. Build the Week 72 revision as a new artifact that cites the Week 1, 12, 24, and 48 baselines by path and heading. For every changed decision, record the old claim, new evidence, changed reasoning, migration consequence, and reversal trigger. Never edit history to make the final architecture look inevitable.
+Freeze a copy of the current independent work before review. Build the Week 104 final delta as a new artifact that cites the Week 1 baseline and every Week 16–103 freeze and flex-week delta by path and heading. For every changed decision, record the old claim, new evidence, changed reasoning, migration consequence, and reversal trigger. Never edit history to make the final architecture look inevitable.
 
 Prepare three defense layers: a two-minute product and risk summary; a ten-minute causal architecture walkthrough; and evidence packets for quantitative, security, failure, cost, operating, migration, and organizational challenges. Use the commerce assistant only for the independent graded architecture. CivicAid remains the tutorial and evaluator-calibration case.
 
@@ -73,4 +73,43 @@ have new evidence. A peer may add adaptive questions after freezing.
 
 ## Sources and next work
 
-Read the bounded Dropbox Dash assignment in [resources.md](../resources.md). Complete EX-19 and EX-20, the Week 72 worksheet, and the Gate 6 submission. Use [week-72-final.md](../../../capstone/revisions/week-72-final.md) only as a new revision contract.
+Read the bounded Dropbox Dash assignment in [resources.md](../resources.md). Complete EX-19 and EX-20, the final worksheet, and the Week 103 Gate 6 submission. Use [week-104-delta.md](../../../capstone/revisions/week-104-delta.md) only after the Gate 6 freeze as a new final-delta contract.
+
+## PESD 2.0 extension: modern constraints and ownership
+
+PESD 2.0 adds **a complete AI assurance case covering tool/model inventory, provider supply chain, ongoing evaluation, human-approval efficacy, transparency, deletion, incident response, policy drift, rollback, and retirement**.
+
+### Repeatable decision procedure
+
+1. Inventory the affected data, tenants, identities, providers, jurisdictions,
+   control planes, evidence owners, and cost owners before selecting a mechanism.
+2. State the invariant and the authority that may change it. Separate a claimed
+   policy from the enforcement point and from the evidence that proves execution.
+3. Freeze a prediction, implement or model the named mechanism, and record the
+   accepted evidence mode and runtime boundary.
+4. Inject one policy, isolation, recovery, or supplier failure in addition to the
+   module's mechanism failure. Preserve raw evidence before interpretation.
+5. Compare at least two options across product outcome, technical mechanism,
+   security and governance, operations and recovery, economics, ownership,
+   migration, and reversal triggers.
+
+### Non-capstone extension
+
+Apply the procedure to the module's continuing case. Add one tenant or governed
+data class, one supplier or control-plane dependency, and one deletion, recovery,
+or exit obligation. The completed case may demonstrate the method, but its
+topology, thresholds, policy choices, and answer are not defaults for Global
+Commerce.
+
+### Evidence boundary
+
+Use `derived`, `executed_deterministic`, `measured_loopback`,
+`measured_container`, `modeled_capacity`, `fixture_replay`, or
+`measured_accelerator` exactly as defined by the course. Fixture replay supports
+practice and remediation only. Modeled remote scale is not local measurement.
+Every trial records commit and input/configuration hashes, runtime and resource
+limits, clock, warm-up/repetition policy, raw outcomes, and limitations.
+
+### Source boundary
+
+Use the NIST AI RMF lifecycle and applicable AI transparency guidance; jurisdictional analysis must be scoped and must not claim universal legal compliance.

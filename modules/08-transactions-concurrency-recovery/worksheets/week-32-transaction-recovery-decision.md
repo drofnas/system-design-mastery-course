@@ -10,3 +10,14 @@ archive/storage/abort/restore cost, capacity during recovery, mixed-version
 migration, rollback, compatibility, decommissioning, and exception handling.
 Record database, application, security, finance, and on-call challenge
 questions; dissent; changed belief; unresolved risk; and teach-back evidence.
+
+## PESD 2.0 decision and assurance check
+
+- Added scope: retention, deletion, legal holds, key rotation, logs, replicas, exports, backups, restore-time policy replay, and resurrection prevention
+- Requirement or obligation and applicability:
+- Enforcement point and failure mode:
+- Evidence owner, source commit, hashes, and evidence mode:
+- Tenant/data/provider boundary:
+- Cost allocation and operating owner:
+- Migration, rollback, and decommissioning step:
+- Uncertainty and reversal trigger:

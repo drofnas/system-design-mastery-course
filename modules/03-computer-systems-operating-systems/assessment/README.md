@@ -1,5 +1,7 @@
 # Module 3 Assessment
 
+> **PESD 2.0 evaluation ownership:** G01 invokes this module-specific rubric and evaluator exactly once as its domain score. Do not run or submit a separate module semantic evaluation report.
+
 ## Purpose
 
 Assessment determines whether the learner can connect measured systems
@@ -12,7 +14,7 @@ processor, operating system, filesystem, container runtime, or faster result.
 - [Evaluator prompt](evaluator-prompt.md): evidence-bound review contract
 - [Report template](report-template.md): saved human-readable result
 - [Remediation map](remediation-map.md): new evidence paths that preserve frozen work
-- [Gate 1](gate-01.md): written exam, Transit practical, architecture defense,
+- [Gate 1](../../../gates/G01/assessment-brief.md): written exam, Transit practical, architecture defense,
   and portfolio review
 - [Evaluation schema](../../../schemas/evaluation.schema.json): JSON contract
 - [Calibration fixtures](calibration/README.md): Transit Signal Pass, Revise,
@@ -20,7 +22,7 @@ processor, operating system, filesystem, container runtime, or faster result.
 
 ## Required input bundle
 
-- Frozen Week 9 benchmark prediction and its commit
+- Frozen Week 12 benchmark prediction and its commit
 - Machine inventory, source, build flags, scenarios, and automated tests
 - Raw `systems-trial` JSON for the required matrix and repetition summaries
 - Equivalent-work, safety, timeout, and sanitizer evidence
@@ -28,7 +30,7 @@ processor, operating system, filesystem, container runtime, or faster result.
 - Systems-performance decision artifact with rollout, rollback, cost, owners,
   and reversal conditions
 - Recorded teach-back, challenge record, evaluation target, and separate revision
-- Weeks 9–12 learning logs
+- Weeks 11–15 learning logs
 - Gate 1 artifacts when Gate 1 is being assessed
 - Commit identifiers for all graded artifacts
 

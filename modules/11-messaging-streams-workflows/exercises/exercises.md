@@ -83,3 +83,11 @@ F01–F09 without using scenario filenames as diagnosis.
 Compare synchronous, queue, log/choreography, and orchestration options. Define
 shadow publication, compatibility, rollback, owners, costs, security, dissent,
 and reversal evidence.
+
+## PESD 2.0 extension to the final exercise
+
+Extend the final guided exercise with semantic event contracts, producer and consumer ownership, data quality, lineage, policy-version-aware replay, lifecycle disposition, and batch/stream reconciliation. Produce an
+obligation/control/evidence row, a named owner, a bounded cost or capacity
+effect, a failure or policy-drift test, a migration step, and a reversal trigger.
+Label every observation with an accepted evidence mode and do not use fixture
+replay as independent Build, Break, Implement, or Measure evidence.

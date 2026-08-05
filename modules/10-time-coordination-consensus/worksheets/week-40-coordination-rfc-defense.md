@@ -42,3 +42,14 @@ to a different stack. Optional team feedback is recorded separately.
 Reference the immutable submission manifest and evaluator result. Each revision
 must cite a finding, named lesson, and EX exercise. Preserve the original RFC,
 defense, trials, and evaluation.
+
+## PESD 2.0 decision and assurance check
+
+- Added scope: learner-written elections through membership under deterministic scheduling, crashable persistence, fencing, an independent invariant oracle, executable small-state safety checks, and mutation tests
+- Requirement or obligation and applicability:
+- Enforcement point and failure mode:
+- Evidence owner, source commit, hashes, and evidence mode:
+- Tenant/data/provider boundary:
+- Cost allocation and operating owner:
+- Migration, rollback, and decommissioning step:
+- Uncertainty and reversal trigger:

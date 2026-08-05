@@ -13,3 +13,11 @@
 
 Never edit the frozen Week 33 baseline, raw trials, first ADR, first evaluation,
 or Gate 3 submission. Repeat uses new scenarios; Revise adds evidence.
+
+## PESD 2.0 remediation
+
+When a cross-cutting floor is missed, return to Lesson 8's PESD 2.0 extension
+and the final exercise. Create a separate dated revision containing the missing
+requirement/control/evidence mapping, owner, evidence boundary, failure check,
+cost consequence, migration, and reversal trigger. Never edit the frozen
+baseline or raw trial. A Pass creates no required remediation artifact.

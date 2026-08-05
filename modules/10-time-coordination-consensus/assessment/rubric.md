@@ -93,3 +93,18 @@ authority, corrupt snapshots, or disjoint membership can cause irreversible harm
 - **Pass:** every gate passes, average at least 3.0, and R08/R09 are nonzero.
 - **Revise:** no hard/safety failure, but average is below 3.0 or material gaps remain.
 - **Repeat:** G02–G05 fails or R08/R09 is zero.
+
+## PESD 2.0 cross-cutting anchors
+
+Apply these anchors inside the published module-specific criteria; they do not
+create a generic substitute rubric.
+
+- **0–1:** ignores or merely names learner-written elections through membership under deterministic scheduling, crashable persistence, fencing, an independent invariant oracle, executable small-state safety checks, and mutation tests without an enforceable
+  causal model, evidence boundary, or owner.
+- **2:** covers the happy path but leaves a material tenant, governance,
+  recovery, supplier, cost, migration, or evidence gap.
+- **3:** connects the requirement to a mechanism, failure evidence, ownership,
+  cost, migration, and a scoped residual risk.
+- **4:** additionally tests policy drift or isolation failure, quantifies useful
+  outcome and uncertainty, preserves lineage, and gives teachable reversal and
+  decommissioning triggers.

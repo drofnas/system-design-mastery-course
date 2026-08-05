@@ -1,5 +1,7 @@
 # Module 9 Assessment Contract
 
+> **PESD 2.0 evaluation ownership:** G03 invokes this module-specific rubric and evaluator exactly once as its domain score. Do not run or submit a separate module semantic evaluation report.
+
 Assessment uses only immutable submitted evidence and the published rubric.
 Northstar fixtures calibrate the evaluator and are not commerce answers.
 

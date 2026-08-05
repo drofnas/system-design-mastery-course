@@ -1,5 +1,7 @@
 # Module 17 Semantic Readiness Review
 
+> **PESD 2.0 status: Review.** This pre-migration readiness record is historical, not a current Ready decision. Fresh evaluator repetitions, platform/offline/cleanup matrices, and timed learner pilots remain pending.
+
 Reviewed 2026-08-03 against the syllabus, module standard, and authoring contract.
 
 - Local lessons teach every graded mechanism before exercises and assessment.

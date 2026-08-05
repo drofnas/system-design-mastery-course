@@ -1,5 +1,7 @@
 # Week 72 final capstone revision
 
+> **PESD V1 historical contract:** Preserve this file for V1 learners and immutable evidence. PESD 2.0 uses [V1_TO_V2_MIGRATION.md](../../V1_TO_V2_MIGRATION.md).
+
 This is a blank revision contract. Create new evidence here; never edit the frozen Week 1, Week 12, Week 24, or Week 48 artifacts.
 
 ## Revision identity

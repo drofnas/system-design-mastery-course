@@ -4,30 +4,35 @@
   "title": "Network Foundations",
   "weeks": [
     {
-      "number": 17,
-      "focus": "Model and freeze the network path",
-      "hours": 10.5,
+      "number": 23,
+      "phase": "Model and derive",
+      "focus": "Model and derive",
+      "hours": 8.5,
+      "core_hours": 8.5,
+      "capacity_hours": 12,
       "evidence": [
-        "Frozen client and path model",
-        "Round-trip and byte budget",
-        "DNS and route assumptions",
-        "Week 17 learning log"
+        "Model and derive evidence frozen at source commit"
       ],
       "time_blocks": [
         {
-          "id": "W17-T01",
+          "id": "W023-T01",
           "label": "Bounded authoritative resources",
-          "minutes": 40,
+          "minutes": 170,
           "activity": "required_resource",
+          "required": true,
           "resource_ids": [
-            "RES-01"
+            "RES-01",
+            "RES-02",
+            "RES-03",
+            "RES-06"
           ]
         },
         {
-          "id": "W17-T02",
-          "label": "Local lesson instruction",
+          "id": "W023-T02",
+          "label": "Local mechanism instruction",
           "minutes": 120,
           "activity": "local_instruction",
+          "required": true,
           "lesson_ids": [
             "L01",
             "L02",
@@ -36,245 +41,270 @@
           ]
         },
         {
-          "id": "W17-T03",
+          "id": "W023-T03",
           "label": "Guided practice",
-          "minutes": 90,
+          "minutes": 60,
           "activity": "guided_practice",
+          "required": true,
           "exercise_ids": [
             "EX-01",
             "EX-02",
             "EX-03",
             "EX-04",
             "EX-05",
-            "EX-06"
-          ]
-        },
-        {
-          "id": "W17-T04",
-          "label": "Reflection and learning log",
-          "minutes": 30,
-          "activity": "reflection"
-        },
-        {
-          "id": "W17-T05",
-          "label": "Independent Work",
-          "minutes": 350,
-          "activity": "independent_work",
-          "artifact_ids": [
-            "A01"
-          ]
-        }
-      ]
-    },
-    {
-      "number": 18,
-      "focus": "Build and trace the request",
-      "hours": 10.5,
-      "evidence": [
-        "Measured loopback trace",
-        "TLS and trust validation",
-        "Connection reuse experiment",
-        "Build review and Week 18 learning log"
-      ],
-      "time_blocks": [
-        {
-          "id": "W18-T01",
-          "label": "Bounded authoritative resources",
-          "minutes": 95,
-          "activity": "required_resource",
-          "resource_ids": [
-            "RES-02",
-            "RES-03"
-          ]
-        },
-        {
-          "id": "W18-T02",
-          "label": "Local lesson instruction",
-          "minutes": 90,
-          "activity": "local_instruction",
-          "lesson_ids": [
-            "L03",
-            "L05",
-            "L07"
-          ]
-        },
-        {
-          "id": "W18-T03",
-          "label": "Guided practice",
-          "minutes": 90,
-          "activity": "guided_practice",
-          "exercise_ids": [
+            "EX-06",
             "EX-07",
-            "EX-08",
-            "EX-09",
-            "EX-10"
+            "EX-08"
           ]
         },
         {
-          "id": "W18-T04",
-          "label": "Reflection and learning log",
-          "minutes": 30,
-          "activity": "reflection"
-        },
-        {
-          "id": "W18-T05",
-          "label": "Independent Work",
-          "minutes": 325,
+          "id": "W023-T04",
+          "label": "Model and derive core work",
+          "minutes": 160,
           "activity": "independent_work",
-          "artifact_ids": [
-            "A02",
-            "A03"
-          ]
+          "required": true
+        },
+        {
+          "id": "W023-T05",
+          "label": "Optional contingency capacity",
+          "minutes": 210,
+          "activity": "contingency",
+          "required": false
         }
       ]
     },
     {
-      "number": 19,
-      "focus": "Break and diagnose",
-      "hours": 10.5,
+      "number": 24,
+      "phase": "Guided build and prediction freeze",
+      "focus": "Guided build and prediction freeze",
+      "hours": 9.0,
+      "core_hours": 9.0,
+      "capacity_hours": 12,
       "evidence": [
-        "Nine raw fault bundles",
-        "Frozen blind diagnosis matrix",
-        "Discriminating reruns and reveal record",
-        "Week 19 learning log"
+        "Guided build and prediction freeze evidence frozen at source commit"
       ],
       "time_blocks": [
         {
-          "id": "W19-T01",
+          "id": "W024-T01",
           "label": "Bounded authoritative resources",
-          "minutes": 90,
+          "minutes": 135,
           "activity": "required_resource",
+          "required": true,
           "resource_ids": [
             "RES-04",
-            "RES-05"
-          ]
-        },
-        {
-          "id": "W19-T02",
-          "label": "Local lesson instruction",
-          "minutes": 90,
-          "activity": "local_instruction",
-          "lesson_ids": [
-            "L01",
-            "L04",
-            "L06"
-          ]
-        },
-        {
-          "id": "W19-T03",
-          "label": "Guided practice",
-          "minutes": 90,
-          "activity": "guided_practice",
-          "exercise_ids": [
-            "EX-11",
-            "EX-12",
-            "EX-13",
-            "EX-14"
-          ]
-        },
-        {
-          "id": "W19-T04",
-          "label": "Reflection and learning log",
-          "minutes": 30,
-          "activity": "reflection"
-        },
-        {
-          "id": "W19-T05",
-          "label": "Failure Experiment",
-          "minutes": 330,
-          "activity": "failure_experiment",
-          "artifact_ids": [
-            "A04"
-          ]
-        }
-      ]
-    },
-    {
-      "number": 20,
-      "focus": "Decide, migrate, and teach",
-      "hours": 10.5,
-      "evidence": [
-        "Protocol and topology ADR",
-        "Migration, rollback, and reversal plan",
-        "Recorded teach-back",
-        "Evaluation, remediation, and Week 20 learning log"
-      ],
-      "time_blocks": [
-        {
-          "id": "W20-T01",
-          "label": "Bounded authoritative resources",
-          "minutes": 80,
-          "activity": "required_resource",
-          "resource_ids": [
-            "RES-06",
+            "RES-05",
             "RES-07"
           ]
         },
         {
-          "id": "W20-T02",
-          "label": "Local lesson instruction",
-          "minutes": 45,
+          "id": "W024-T02",
+          "label": "Local mechanism instruction",
+          "minutes": 120,
           "activity": "local_instruction",
+          "required": true,
           "lesson_ids": [
+            "L05",
+            "L06",
+            "L07",
             "L08"
           ]
         },
         {
-          "id": "W20-T03",
+          "id": "W024-T03",
           "label": "Guided practice",
-          "minutes": 45,
+          "minutes": 60,
           "activity": "guided_practice",
+          "required": true,
           "exercise_ids": [
+            "EX-09",
+            "EX-10",
+            "EX-11",
+            "EX-12",
+            "EX-13",
+            "EX-14",
             "EX-15"
           ]
         },
         {
-          "id": "W20-T04",
-          "label": "Reflection and learning log",
+          "id": "W024-T04",
+          "label": "Required evidence components",
+          "minutes": 60,
+          "activity": "independent_work",
+          "required": true,
+          "artifact_allocations": [
+            {
+              "artifact_id": "A01",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A02",
+              "minutes": 30
+            }
+          ]
+        },
+        {
+          "id": "W024-T05",
+          "label": "Guided build and prediction freeze core work",
+          "minutes": 165,
+          "activity": "independent_work",
+          "required": true
+        },
+        {
+          "id": "W024-T06",
+          "label": "Optional contingency capacity",
+          "minutes": 180,
+          "activity": "contingency",
+          "required": false
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "phase": "Independent build and integration",
+      "focus": "Independent build and integration",
+      "hours": 10.0,
+      "core_hours": 10.0,
+      "capacity_hours": 12,
+      "evidence": [
+        "Independent build and integration evidence frozen at source commit"
+      ],
+      "time_blocks": [
+        {
+          "id": "W025-T01",
+          "label": "Independent build and integration core work",
+          "minutes": 540,
+          "activity": "independent_work",
+          "required": true
+        },
+        {
+          "id": "W025-T02",
+          "label": "Independent build and integration verification checkpoint",
+          "minutes": 60,
+          "activity": "independent_work",
+          "required": true
+        },
+        {
+          "id": "W025-T03",
+          "label": "Optional contingency capacity",
+          "minutes": 120,
+          "activity": "contingency",
+          "required": false
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "phase": "Break, repair, measure, and diagnose",
+      "focus": "Break, repair, measure, and diagnose",
+      "hours": 10.0,
+      "core_hours": 10.0,
+      "capacity_hours": 12,
+      "evidence": [
+        "Break, repair, measure, and diagnose evidence frozen at source commit"
+      ],
+      "time_blocks": [
+        {
+          "id": "W026-T01",
+          "label": "Required evidence components",
+          "minutes": 60,
+          "activity": "failure_experiment",
+          "required": true,
+          "artifact_allocations": [
+            {
+              "artifact_id": "A03",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A04",
+              "minutes": 30
+            }
+          ]
+        },
+        {
+          "id": "W026-T02",
+          "label": "Break, repair, measure, and diagnose core work",
+          "minutes": 540,
+          "activity": "failure_experiment",
+          "required": true
+        },
+        {
+          "id": "W026-T03",
+          "label": "Optional contingency capacity",
+          "minutes": 120,
+          "activity": "contingency",
+          "required": false
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "phase": "Decide, teach, assess, and freeze",
+      "focus": "Decide, teach, assess, and freeze",
+      "hours": 9.5,
+      "core_hours": 9.5,
+      "capacity_hours": 12,
+      "evidence": [
+        "Decide, teach, assess, and freeze evidence frozen at source commit"
+      ],
+      "time_blocks": [
+        {
+          "id": "W027-T01",
+          "label": "Required evidence components",
+          "minutes": 120,
+          "activity": "decision_artifact",
+          "required": true,
+          "artifact_allocations": [
+            {
+              "artifact_id": "A05",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A06",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A07",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A08",
+              "minutes": 30
+            }
+          ]
+        },
+        {
+          "id": "W027-T02",
+          "label": "Decide, teach, assess, and freeze core work",
+          "minutes": 390,
+          "activity": "assessment",
+          "required": true
+        },
+        {
+          "id": "W027-T03",
+          "label": "Module teach-back",
+          "minutes": 30,
+          "activity": "teach_back",
+          "required": true
+        },
+        {
+          "id": "W027-T04",
+          "label": "Learning log and freeze check",
           "minutes": 30,
           "activity": "reflection",
-          "artifact_ids": [
-            "A08"
-          ]
+          "required": true
         },
         {
-          "id": "W20-T05",
-          "label": "Assessment",
-          "minutes": 60,
-          "activity": "assessment",
-          "artifact_ids": [
-            "A07"
-          ]
-        },
-        {
-          "id": "W20-T06",
-          "label": "Decision Artifact",
-          "minutes": 250,
-          "activity": "decision_artifact",
-          "artifact_ids": [
-            "A05"
-          ]
-        },
-        {
-          "id": "W20-T07",
-          "label": "Review Remediation",
-          "minutes": 60,
-          "activity": "review_remediation"
-        },
-        {
-          "id": "W20-T08",
-          "label": "Teach Back",
-          "minutes": 60,
-          "activity": "teach_back",
-          "artifact_ids": [
-            "A06"
-          ]
+          "id": "W027-T05",
+          "label": "Optional contingency capacity",
+          "minutes": 150,
+          "activity": "contingency",
+          "required": false
         }
       ]
     }
   ],
-  "target_hours": 42,
-  "status": "ready",
+  "target_hours": 47,
+  "status": "review",
   "readiness_note": "Ready on 2026-08-01 after structural and semantic review, 22 lab tests, six accepted isolated calibration runs, deterministic checking, focused and full course validation, and evidence-safety review.",
   "outcomes": [
     {
@@ -508,19 +538,19 @@
   "resources": [
     {
       "id": "RES-01",
-      "title": "Domain Names—Concepts and Facilities",
+      "title": "Domain Names\u2014Concepts and Facilities",
       "author_or_publisher": "P. Mockapetris; IETF",
       "type": "Internet standard",
       "url": "https://datatracker.ietf.org/doc/html/rfc1034",
       "required": true,
       "access": "free",
-      "week": 17,
+      "week": 23,
       "estimated_minutes": 40,
       "purpose": "Separate stub, recursive, authoritative, referral, and cache behavior.",
       "assignment": "Read Sections 2 and 4.3.2; draw the resolver actors and classify positive, referral, name-error, and temporary-failure outcomes.",
       "last_verified": "2026-08-01",
       "text_alternative": "lessons/02-dns-routing-and-discovery.md",
-      "verified_title": "Domain Names—Concepts and Facilities",
+      "verified_title": "Domain Names\u2014Concepts and Facilities",
       "verified_publisher": "P. Mockapetris; IETF",
       "verification_method": "HTTP GET plus primary-source metadata comparison",
       "final_url": "https://datatracker.ietf.org/doc/html/rfc1034",
@@ -534,7 +564,7 @@
       "url": "https://www.rfc-editor.org/rfc/rfc9293.html",
       "required": true,
       "access": "free",
-      "week": 18,
+      "week": 23,
       "estimated_minutes": 50,
       "purpose": "Ground connection, ordering, retransmission, flow, and congestion claims in the current base specification.",
       "assignment": "Read Sections 2.2, 3.5, 3.7, and 3.8; map each mechanism to one lab observation and one unobserved kernel boundary.",
@@ -554,10 +584,10 @@
       "url": "https://www.rfc-editor.org/rfc/rfc9846.html",
       "required": true,
       "access": "free",
-      "week": 18,
+      "week": 23,
       "estimated_minutes": 45,
       "purpose": "Trace negotiation, authentication, key establishment, and resumption without weakening trust.",
-      "assignment": "Read Sections 2, 4.1–4.4, and 9; annotate the lab handshake with authenticated identity, key ownership, and failure behavior.",
+      "assignment": "Read Sections 2, 4.1\u20134.4, and 9; annotate the lab handshake with authenticated identity, key ownership, and failure behavior.",
       "last_verified": "2026-08-01",
       "text_alternative": "lessons/04-tls-trust-and-handshakes.md",
       "verified_title": "The Transport Layer Security (TLS) Protocol Version 1.3",
@@ -574,7 +604,7 @@
       "url": "https://www.rfc-editor.org/rfc/rfc9113.html",
       "required": true,
       "access": "free",
-      "week": 19,
+      "week": 24,
       "estimated_minutes": 40,
       "purpose": "Reason about streams, multiplexing, concurrency, flow control, and TCP-level blocking.",
       "assignment": "Read Sections 2, 5, and 8.2; predict which independent stream can and cannot progress after one packet loss.",
@@ -594,7 +624,7 @@
       "url": "https://www.rfc-editor.org/rfc/rfc9000.html",
       "required": true,
       "access": "free",
-      "week": 19,
+      "week": 24,
       "estimated_minutes": 50,
       "purpose": "Compare QUIC connection and stream recovery boundaries with TCP-carried multiplexing.",
       "assignment": "Read Sections 2, 6, 13, and 21; identify what the lab models, measures, and deliberately does not claim.",
@@ -614,7 +644,7 @@
       "url": "https://blog.cloudflare.com/the-road-to-quic/",
       "required": true,
       "access": "free",
-      "week": 20,
+      "week": 23,
       "estimated_minutes": 35,
       "purpose": "Connect protocol mechanics to deployability, middleboxes, fallback, and operational learning.",
       "assignment": "Read the complete article; record one deployment constraint, one measurement boundary, and one reversal signal for Transit Signal.",
@@ -634,7 +664,7 @@
       "url": "https://www.usenix.org/conference/srecon23emea/presentation/marx",
       "required": true,
       "access": "free",
-      "week": 20,
+      "week": 24,
       "estimated_minutes": 45,
       "purpose": "Study real deployment, load-balancing, firewall, and debugging failure modes.",
       "assignment": "Watch the talk or use all slides with Lesson 8; write a fallback ladder and name the telemetry needed to operate it.",
@@ -650,69 +680,117 @@
   "artifacts": [
     {
       "id": "A01",
-      "week": 17,
+      "week": 24,
       "required": true,
       "template_path": "modules/05-network-foundations/worksheets/week-17-path-budget.md",
       "submission_path": "reports/module-05-path-budget.md",
       "immutable_after_submission": true,
-      "portfolio_category": "model"
+      "portfolio_category": "model",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M05-A01",
+      "component_role": "prediction",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A02",
-      "week": 18,
+      "week": 24,
       "required": true,
       "template_path": "modules/05-network-foundations/worksheets/week-18-trace-build.md",
       "submission_path": "labs/module-05/",
-      "portfolio_category": "implementation"
+      "portfolio_category": "implementation",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M05-A02",
+      "component_role": "implementation",
+      "estimated_minutes": 30,
+      "evidence_mode": "executed_deterministic"
     },
     {
       "id": "A03",
-      "week": 18,
+      "week": 26,
       "required": true,
       "template_path": "modules/05-network-foundations/worksheets/week-18-trace-build.md",
       "submission_path": "reports/module-05-trace-review.md",
-      "portfolio_category": "model"
+      "portfolio_category": "performance_investigation",
+      "portfolio_item_id": "PI-PERF-03",
+      "portfolio_credit": true,
+      "evidence_lineage_id": "LIN-PERF-NETWORK",
+      "component_role": "analysis",
+      "estimated_minutes": 30,
+      "evidence_mode": "measured_loopback"
     },
     {
       "id": "A04",
-      "week": 19,
+      "week": 26,
       "required": true,
       "template_path": "modules/05-network-foundations/worksheets/week-19-network-failures.md",
       "submission_path": "experiments/module-05/",
       "immutable_after_submission": true,
-      "portfolio_category": "failure_matrix"
+      "portfolio_category": "failure_matrix",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M05-A04",
+      "component_role": "raw_evidence",
+      "estimated_minutes": 30,
+      "evidence_mode": "executed_deterministic"
     },
     {
       "id": "A05",
-      "week": 20,
+      "week": 27,
       "required": true,
       "template_path": "templates/protocol-topology-decision-template.md",
       "submission_path": "adr/module-05-protocol-topology.md",
-      "portfolio_category": "adr"
+      "portfolio_category": "adr",
+      "portfolio_item_id": "PI-DECISION-M05",
+      "portfolio_credit": true,
+      "evidence_lineage_id": "LIN-DECISION-M05",
+      "component_role": "decision",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A06",
-      "week": 20,
+      "week": 27,
       "required": true,
       "template_path": "modules/05-network-foundations/worksheets/week-20-protocol-decision.md",
       "submission_path": "reviews/module-05-defense.md",
-      "portfolio_category": "teach_back"
+      "portfolio_category": "teach_back",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M05-A06",
+      "component_role": "final",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A07",
-      "week": 20,
+      "week": 27,
       "required": true,
       "template_path": "modules/05-network-foundations/assessment/report-template.md",
       "submission_path": "reviews/module-05-evaluation.md",
-      "portfolio_category": "evaluation"
+      "portfolio_category": "evaluation",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M05-A07",
+      "component_role": "final",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A08",
-      "week": 20,
+      "week": 27,
       "required": true,
       "template_path": "templates/learning-log-template.md",
-      "submission_path": "learning-log/week-17.md through learning-log/week-20.md",
-      "portfolio_category": "learning_log"
+      "submission_path": "learning-log/week-023.md through learning-log/week-027.md",
+      "portfolio_category": "learning_log",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M05-A08",
+      "component_role": "final",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     }
   ],
   "failure_experiments": [
@@ -966,7 +1044,7 @@
       "required": true,
       "access": "free",
       "purpose": "Support the use of Little's Law for average retained connection inventory.",
-      "reading_boundary": "Study the Queueing Systems notes sections defining system occupancy, throughput, time in system, and Little's Law L = λW.",
+      "reading_boundary": "Study the Queueing Systems notes sections defining system occupancy, throughput, time in system, and Little's Law L = \u03bbW.",
       "last_verified": "2026-08-04",
       "text_alternative": "lessons/05-proxies-nat-and-pools.md",
       "verified_title": "lec5.pdf | Logistical and Transportation Planning Methods",
@@ -1011,5 +1089,13 @@
       "final_url": "https://www.rfc-editor.org/rfc/rfc9110.html",
       "verification_status": "verified"
     }
-  ]
+  ],
+  "course_id": "PESD-104",
+  "course_version": "2.0",
+  "primary_decision": {
+    "artifact_id": "A05",
+    "type": "ADR"
+  },
+  "pesd_v2_additions": "workload identity, egress policy, residency-aware routing, encrypted naming implications, and a network certificate and algorithm inventory",
+  "semantic_evaluation": "module_specific"
 }

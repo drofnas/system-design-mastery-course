@@ -190,3 +190,11 @@ For each response:
 - Explain the causal mechanism.
 - Cite evidence or state what is missing.
 - Name the consequence and follow-up.
+
+## PESD 2.0 extension to the final exercise
+
+Extend the final guided exercise with a constraint and assurance ledger covering data classes, tenant boundaries, obligations, AI use, supplier risk, cost allocation, decision rights, evidence owners, uncertainty, and reversal triggers. Produce an
+obligation/control/evidence row, a named owner, a bounded cost or capacity
+effect, a failure or policy-drift test, a migration step, and a reversal trigger.
+Label every observation with an accepted evidence mode and do not use fixture
+replay as independent Build, Break, Implement, or Measure evidence.

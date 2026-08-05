@@ -1,16 +1,18 @@
 # Module 18 assessment contract
 
+> **PESD 2.0 evaluation ownership:** G06 invokes this module-specific rubric and evaluator exactly once as its domain score. Do not run or submit a separate module semantic evaluation report.
+
 Evaluate only submitted evidence against the published rubric. Run G01–G06 before semantic scoring. Cite an exact `path#heading` for every gate, score, and finding.
 
 ## Structural gates
 
 ### G01: Completeness and identity
 
-A01–A17 and Weeks 69–72 logs exist and identify artifact commit, baseline tag, assistance disclosure, versions, scenario/trial hashes, evidence kind, and reachable raw evidence.
+Every required manifest artifact and Weeks 98–102 logs exist and identify artifact commit, baseline tag, assistance disclosure, versions, scenario/trial hashes, evidence kind, and reachable raw evidence.
 
 ### G02: Frozen chronology (hard gate)
 
-A01 and F01–F08 predictions predate execution. The Week 72 artifact cites but does not alter Week 1, 12, 24, or 48 evidence. Raw trials are immutable. Rewritten or fabricated evidence yields Repeat.
+A01 and F01–F08 predictions predate execution. The Week 103 freeze cites but does not alter the Week 1 baseline or any earlier freeze and delta. Raw trials are immutable. Rewritten or fabricated evidence yields Repeat.
 
 ### G03: Executable retrieval contracts (hard gate)
 
@@ -18,19 +20,19 @@ BM25, exact cosine, seeded educational HNSW, hybrid fusion, reranking, metric ca
 
 ### G04: Provenance and authorization safety (hard gate)
 
-Access precedes ranking; citations bind exact eligible versions; revocation and index freshness meet published objectives; unsupported claims abstain; tool schemas, executor authorization, bound one-use approval, scoped credentials, and secret-free audit preserve I01–I08. Any unresolved violation yields Repeat.
+Access precedes ranking; citations bind exact eligible versions; revocation and index freshness meet published objectives; unsupported claims abstain; tool schemas, executor authorization, bound one-use approval, scoped credentials, and secret-free audit preserve AI01–AI08. Any unresolved violation yields Repeat.
 
 ### G05: Paired durable-failure evidence (hard gate)
 
-F01–F08 contain immutable broken/repaired trials with identical workload, seed, corpus, and evaluation hashes and exactly one control difference. Broken targets fail; repaired trials restore I01–I12. Replay cannot repeat side effects and provider/cancellation/budget work remains bounded.
+F01–F08 contain immutable broken/repaired trials with identical workload, seed, corpus, and evaluation hashes and exactly one control difference. Broken targets fail; repaired trials restore AI01–AI12. Replay cannot repeat side effects and provider/cancellation/budget work remains bounded.
 
 ### G06: Final decision, defense, evaluation, and remediation
 
-The final RFC, operations evidence, migration plan, Gate 6 submission, Week 72 revision, evaluation, separate remediation, practice plan, and teach-back exist. Alternatives include no-change and use common drivers. Owners, cost, rollback or forward recovery, stop/reversal conditions, dissent, and unresolved uncertainty are explicit.
+The final RFC, operations evidence, migration plan, Week 103 Gate 6 freeze, separate Week 104 final delta, evaluation, remediation when required, practice plan, and teach-back exist. Alternatives include no-change and use common drivers. Owners, cost, rollback or forward recovery, stop/reversal conditions, dissent, and unresolved uncertainty are explicit.
 
 ## Module result
 
-Pass requires G01–G06, A01–A17, average ≥3.0, non-low confidence, and no zero in R04–R07. G02–G05 failure or a safety-critical zero yields Repeat. Other material gaps yield Revise.
+Pass requires G01–G06, every required manifest artifact, average ≥3.0, non-low confidence, and at least 3.0 in R04–R07. G02–G05 failure or a safety-critical zero yields Repeat. Other material gaps yield Revise.
 
 ## Gate 6 and final capstone result
 

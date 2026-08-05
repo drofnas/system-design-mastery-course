@@ -4,6 +4,8 @@
   "title": "Course module manifest",
   "type": "object",
   "required": [
+    "course_id",
+    "course_version",
     "id",
     "title",
     "weeks",
@@ -20,6 +22,8 @@
     "assessment"
   ],
   "properties": {
+    "course_id": {"const": "PESD-104"},
+    "course_version": {"const": "2.0"},
     "id": {
       "type": "string",
       "pattern": "^M[0-9]{2}$"
@@ -30,15 +34,18 @@
     },
     "weeks": {
       "type": "array",
-      "minItems": 4,
-      "maxItems": 4,
+      "minItems": 5,
+      "maxItems": 6,
       "items": {
         "type": "object",
-        "required": ["number", "focus", "hours", "evidence", "time_blocks"],
+        "required": ["number", "phase", "focus", "hours", "core_hours", "capacity_hours", "evidence", "time_blocks"],
         "properties": {
-          "number": {"type": "integer", "minimum": 1, "maximum": 72},
+          "number": {"type": "integer", "minimum": 1, "maximum": 104},
+          "phase": {"type": "string", "minLength": 3},
           "focus": {"type": "string"},
-          "hours": {"type": "number", "minimum": 10, "maximum": 12},
+          "hours": {"type": "number", "minimum": 8.5, "maximum": 10},
+          "core_hours": {"type": "number", "minimum": 8.5, "maximum": 10},
+          "capacity_hours": {"const": 12},
           "evidence": {
             "type": "array",
             "minItems": 1,
@@ -46,19 +53,32 @@
           },
           "time_blocks": {
             "type": "array",
-            "minItems": 4,
+            "minItems": 2,
             "items": {
               "type": "object",
-              "required": ["id", "label", "minutes", "activity"],
+              "required": ["id", "label", "minutes", "activity", "required"],
               "properties": {
-                "id": {"type": "string", "pattern": "^W[0-9]{2}-T[0-9]{2}$"},
+                "id": {"type": "string", "pattern": "^W[0-9]{3}-T[0-9]{2}$"},
                 "label": {"type": "string", "minLength": 3},
                 "minutes": {"type": "integer", "minimum": 15},
-                "activity": {"enum": ["local_instruction", "required_resource", "guided_practice", "independent_work", "failure_experiment", "decision_artifact", "assessment", "teach_back", "review_remediation", "reflection"]},
+                "activity": {"enum": ["local_instruction", "required_resource", "guided_practice", "independent_work", "failure_experiment", "decision_artifact", "assessment", "teach_back", "review_remediation", "reflection", "contingency"]},
+                "required": {"type": "boolean"},
                 "lesson_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^L[0-9]{2}$"}},
                 "resource_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^RES-[0-9]{2}$"}},
                 "exercise_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^EX-[0-9]{2}$"}},
-                "artifact_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^A[0-9]{2}$"}}
+                "artifact_allocations": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "type": "object",
+                    "required": ["artifact_id", "minutes"],
+                    "properties": {
+                      "artifact_id": {"type": "string", "pattern": "^A[0-9]{2}$"},
+                      "minutes": {"type": "integer", "minimum": 15}
+                    },
+                    "additionalProperties": false
+                  }
+                }
               },
               "additionalProperties": false
             }
@@ -82,8 +102,8 @@
     },
     "target_hours": {
       "type": "number",
-      "minimum": 40,
-      "maximum": 48
+      "minimum": 47,
+      "maximum": 57
     },
     "status": {
       "enum": ["draft", "review", "ready", "retired"]
@@ -154,9 +174,20 @@
       "minItems": 4,
       "items": {
         "type": "object",
-        "required": ["id", "week", "required", "template_path", "submission_path", "portfolio_category"],
+        "required": ["id", "week", "required", "template_path", "submission_path", "portfolio_category", "evidence_lineage_id", "component_role", "portfolio_item_id", "portfolio_credit", "estimated_minutes", "evidence_mode"],
         "properties": {
-          "portfolio_category": {"enum": ["adr", "rfc", "controlled_incident_postmortem", "capacity_cost_model", "performance_investigation", "failure_matrix", "source_code_internals_review", "threat_model", "dr_exercise", "migration_plan", "runtime_comparison", "teach_back", "capstone", "implementation", "model", "learning_log", "evaluation"]}
+          "id": {"type": "string", "pattern": "^A[0-9]{2}$"},
+          "week": {"type": "integer", "minimum": 1, "maximum": 104},
+          "required": {"type": "boolean"},
+          "template_path": {"type": "string", "minLength": 1},
+          "submission_path": {"type": "string", "minLength": 1},
+          "portfolio_category": {"enum": ["adr", "rfc", "controlled_incident_postmortem", "capacity_cost_model", "performance_investigation", "failure_matrix", "source_code_internals_review", "threat_model", "dr_exercise", "migration_plan", "runtime_comparison", "teach_back", "capstone", "implementation", "model", "learning_log", "evaluation", "data_governance_dossier", "assurance_case", "platform_product_experiment", "ai_system_dossier"]},
+          "evidence_lineage_id": {"type": "string", "pattern": "^LIN-[A-Z0-9-]+$"},
+          "component_role": {"enum": ["baseline", "prediction", "implementation", "raw_evidence", "analysis", "decision", "revision", "final"]},
+          "portfolio_item_id": {"type": ["string", "null"], "pattern": "^PI-[A-Z0-9-]+$"},
+          "portfolio_credit": {"type": "boolean"},
+          "estimated_minutes": {"type": "integer", "minimum": 15},
+          "evidence_mode": {"enum": ["derived", "executed_deterministic", "measured_loopback", "measured_container", "modeled_capacity", "fixture_replay", "measured_accelerator"]}
         }
       }
     },

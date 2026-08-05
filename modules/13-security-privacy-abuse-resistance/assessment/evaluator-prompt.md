@@ -31,3 +31,11 @@ real provenance, legal compliance, human response, or adaptive-adversary
 resistance from the toy lab. Accept different authorization models, isolation
 tiers, credential systems, retention policies, supply-chain controls, and tool
 boundaries when the submission's evidence supports them.
+
+## PESD 2.0 evaluator instruction
+
+Score the published criteria against evidence for obligation-to-control-to-evidence mapping, privacy impact reasoning, secure SDLC, source-to-deployment identity, cryptographic inventory, crypto agility, and post-quantum migration planning.
+Classify missing evidence, incorrect reasoning, unsupported claims, and
+reasonable uncertainty separately. Reject fixture replay presented as
+independent build or break evidence. Do not invent legal applicability or treat
+a named framework as proof of compliance.

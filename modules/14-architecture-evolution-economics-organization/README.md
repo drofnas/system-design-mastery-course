@@ -1,8 +1,6 @@
 # Module 14: Architecture Evolution, Economics, and Organization
 
-> **Authoring status:** Ready. Deterministic lab tests, six isolated evaluator
-> runs, calibration checking, semantic and resource review, and focused and
-> full-course validation passed on 2026-08-03.
+> **Authoring status:** Review. PESD 2.0 content and machine-readable contracts are migrated. Refreshed evaluator calibration, full platform matrices, offline reruns, cleanup checks, and timed learner pilots remain required before Ready.
 
 ## What this module changes
 
@@ -24,7 +22,7 @@ decisions before opening the case or answer key.
 - Modules 1–13, especially architecture drivers, cost, transactions,
   replication, messaging, recovery, and security ownership
 - Python 3.11 or newer; the reference lab uses only the standard library
-- Preserved Week 1 baseline and Week 48 revision; neither may be edited
+- Preserved Week 1 baseline, Week 68 Gate 4 freeze, and Week 69 delta; neither may be edited
 - Ability to read JSON contracts, cost tables, deployment sequences, and
   evidence-backed technical decisions
 
@@ -51,50 +49,60 @@ By the end of the module, you can:
 
 ## Schedule
 
-### Week 53: Model boundaries, ownership, sourcing, and economics — 10.5 hours
+The 10–12 hour weekly figure is a capacity envelope. Core work is deliberately
+budgeted below that ceiling; unused time is recovery buffer, not hidden work.
+
+### Week 75: Model and derive — 8.5 hours
 
 | Work | Time |
 |---|---:|
-| Lessons 1–4 and bounded sources | 3 h |
-| EX-01–EX-08 and Northstar modeling tutorial | 2 h |
-| Independent baseline, boundary, ownership, sourcing, and cost model | 4 h |
-| Freeze, self-check, and learning log | 1.5 h |
+| Bounded authoritative resources | 160 min |
+| Local mechanism instruction | 120 min |
+| Guided practice | 60 min |
+| Model and derive core work | 170 min |
 
-Use the [Week 53 worksheet](worksheets/week-53-evolution-model.md).
+Optional contingency capacity: 210 minutes. It is not core work, carries no required evidence, and may remain unused.
 
-### Week 54: Build compatibility and migration controls — 11.5 hours
-
-| Work | Time |
-|---|---:|
-| Lessons 5–6 and bounded sources | 3 h |
-| EX-09–EX-12 and lab walkthrough | 2.5 h |
-| Independent compatibility, backfill, cost, and migration build | 5 h |
-| Implementation review and learning log | 1 h |
-
-Use the [Week 54 worksheet](worksheets/week-54-migration-build.md).
-
-### Week 55: Break migration, cost, dependency, and ownership controls — 11.5 hours
+### Week 76: Guided build and prediction freeze — 9 hours
 
 | Work | Time |
 |---|---:|
-| Lesson 7 and bounded sources | 2.5 h |
-| EX-13–EX-16 and experiment rehearsal | 2 h |
-| Nine broken/repaired pairs and immutable raw evidence | 5 h |
-| Failure matrix, reconciliation report, and learning log | 2 h |
+| Bounded authoritative resources | 150 min |
+| Local mechanism instruction | 120 min |
+| Guided practice | 60 min |
+| Required evidence components | 60 min |
+| Guided build and prediction freeze core work | 150 min |
 
-Use the [Week 55 worksheet](worksheets/week-55-evolution-failure-matrix.md).
+Optional contingency capacity: 180 minutes. It is not core work, carries no required evidence, and may remain unused.
 
-### Week 56: Decide, teach, assess, and remediate — 10 hours
+### Week 77: Independent build and integration — 10 hours
 
 | Work | Time |
 |---|---:|
-| Lesson 8, bounded sources, and EX-17–EX-18 | 2 h |
-| Technical-strategy memo | 3 h |
-| Recorded defense and evaluator run | 2 h |
-| Remediation, separate revision, and learning log | 3 h |
+| Independent build and integration core work | 540 min |
+| Independent build and integration verification checkpoint | 60 min |
 
-Use the [Week 56 worksheet](worksheets/week-56-strategy-defense.md).
+Optional contingency capacity: 120 minutes. It is not core work, carries no required evidence, and may remain unused.
 
+### Week 78: Break, repair, measure, and diagnose — 10 hours
+
+| Work | Time |
+|---|---:|
+| Required evidence components | 90 min |
+| Break, repair, measure, and diagnose core work | 510 min |
+
+Optional contingency capacity: 120 minutes. It is not core work, carries no required evidence, and may remain unused.
+
+### Week 79: Decide, teach, assess, and freeze — 9.5 hours
+
+| Work | Time |
+|---|---:|
+| Required evidence components | 150 min |
+| Decide, teach, assess, and freeze core work | 360 min |
+| Module teach-back | 30 min |
+| Learning log and freeze check | 30 min |
+
+Optional contingency capacity: 150 minutes. It is not core work, carries no required evidence, and may remain unused.
 ## Learn
 
 1. [Boundaries from outcomes and coupling](lessons/01-boundaries-outcomes-coupling.md)
@@ -132,8 +140,7 @@ technical-strategy memo, one failure matrix, and one recorded teach-back.
   [evaluator prompt](assessment/evaluator-prompt.md), and
   [remediation map](assessment/remediation-map.md) before independent work.
 - Pass G01–G06, average at least 3.0, and avoid a zero in R05–R09.
-- Gate 5 remains at Week 60. Week 56 does not create or edit a capstone gate
-  revision; Module 14 evidence feeds the later assessment.
+- Gate 5 runs in Week 85. Module 14 evidence feeds that later assessment; accepted findings belong in the separate Week 86 delta.
 
 ## Evidence boundary and AI use
 
@@ -154,3 +161,10 @@ replacement graded answers, or answer during the defense.
 - Use the [sealed local gate workflow](../../SOLO_GATE_GUIDE.md) when a course gate applies. Human review is optional.
 
 A frozen self-evaluation may establish **Solo Complete**; independent human or LLM review may establish **Independently Validated**. Synthetic lab values are not production measurements.
+
+## PESD 2.0 scope addition
+
+This 5-week module schedules 47 core hours. Its primary
+decision is ADR A07. The added graded scope is
+a thin local platform product with a service catalog, self-service interface, golden path, policy guardrails, exception path, ownership metadata, platform SLO, adoption and support metrics, FinOps allocation, and an exit plan. See Lesson 8, the final guided exercise, final worksheet,
+rubric anchors, and remediation map for the integrated evidence contract.

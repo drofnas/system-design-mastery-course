@@ -60,3 +60,11 @@ when R06 or R07 is zero.
 Return only one object conforming to `schemas/evaluation.schema.json` with
 `module_id` M07, commits, exactly G01–G06 and R01–R10, calculated result,
 confidence, summary, and bounded next actions. No Markdown or extra fields.
+
+## PESD 2.0 evaluator instruction
+
+Score the published criteria against evidence for analytical projections, versioned data contracts, quality SLOs, lineage, stewardship, rebuild and backfill, deletion propagation, and ownership while preserving B+ tree and LSM mechanisms.
+Classify missing evidence, incorrect reasoning, unsupported claims, and
+reasonable uncertainty separately. Reject fixture replay presented as
+independent build or break evidence. Do not invent legal applicability or treat
+a named framework as proof of compliance.

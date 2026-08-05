@@ -1,5 +1,7 @@
 # Provider-Neutral Evaluator Prompt
 
+> **PESD 2.0 evaluation ownership:** G03 invokes this module-specific rubric and evaluator exactly once as its domain score. Do not run or submit a separate module semantic evaluation report.
+
 Evaluate one Module 9 submission using only the submission manifest/files,
 assessment contract, anchored rubric, remediation map, and shared
 `schemas/evaluation.schema.json`. Northstar calibration files are permitted only
@@ -29,3 +31,11 @@ when the submitted manifest identifies one calibration fixture.
 - Verify average, result band, citations, finding classes, and remediation agree.
 - Accept a defensible alternative when its invariant, failure model, and evidence
   meet the rubric; never require Northstar's topology or thresholds.
+
+## PESD 2.0 evaluator instruction
+
+Score the published criteria against evidence for tenant onboarding, suspension, export, offboarding, region movement, cells, control-plane/data-plane separation, tenant keys, quotas, SLOs, and cost attribution.
+Classify missing evidence, incorrect reasoning, unsupported claims, and
+reasonable uncertainty separately. Reject fixture replay presented as
+independent build or break evidence. Do not invent legal applicability or treat
+a named framework as proof of compliance.

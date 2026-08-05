@@ -23,7 +23,7 @@
     "budget": {"type": "object", "required": ["max_steps", "used_steps", "max_cost_microunits", "used_cost_microunits", "deadline_ms", "elapsed_ms"], "additionalProperties": true},
     "audit": {"type": "object", "required": ["records", "secrets_exposed", "complete"], "additionalProperties": true},
     "cost": {"type": "object", "required": ["index_units", "query_units", "provider_units", "total_microunits", "cost_per_supported_answer"], "additionalProperties": true},
-    "invariants": {"type": "array", "minItems": 12, "maxItems": 12, "items": {"type": "object", "required": ["id", "passed", "evidence"], "properties": {"id": {"type": "string", "pattern": "^I(0[1-9]|1[0-2])$"}, "passed": {"type": "boolean"}, "evidence": {"type": "string"}}, "additionalProperties": false}},
+    "invariants": {"type": "array", "minItems": 12, "maxItems": 12, "items": {"type": "object", "required": ["id", "passed", "evidence"], "properties": {"id": {"type": "string", "pattern": "^AI(0[1-9]|1[0-2])$"}, "passed": {"type": "boolean"}, "evidence": {"type": "string"}}, "additionalProperties": false}},
     "limitations": {"type": "array", "minItems": 1, "items": {"type": "string"}}
   },
   "additionalProperties": false

@@ -1,4 +1,6 @@
-# Module 15 Evaluation or Remediation Revision
+# M15 G05 Domain Evaluation Record
+
+> **PESD 2.0 evaluation ownership:** G05 invokes this module-specific rubric and evaluator exactly once as its domain score. Do not run or submit a separate module semantic evaluation report.
 
 ## Identity
 

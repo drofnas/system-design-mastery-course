@@ -111,3 +111,11 @@ Role-play a research-access lead asking for immediate extraction, a registry
 lead asking to remain modular, finance challenging transition cost, and security
 challenging the event boundary. Resolve the decision with shared drivers and
 name one unresolved dissent item.
+
+## PESD 2.0 extension to the final exercise
+
+Extend the final guided exercise with a thin local platform product with a service catalog, self-service interface, golden path, policy guardrails, exception path, ownership metadata, platform SLO, adoption and support metrics, FinOps allocation, and an exit plan. Produce an
+obligation/control/evidence row, a named owner, a bounded cost or capacity
+effect, a failure or policy-drift test, a migration step, and a reversal trigger.
+Label every observation with an accepted evidence mode and do not use fixture
+replay as independent Build, Break, Implement, or Measure evidence.

@@ -4,31 +4,34 @@
   "title": "Deadlines and Resilient Remote Calls",
   "weeks": [
     {
-      "number": 21,
-      "focus": "Model and freeze end-to-end call budgets",
-      "hours": 10.5,
+      "number": 28,
+      "phase": "Model and derive",
+      "focus": "Model and derive",
+      "hours": 8.5,
+      "core_hours": 8.5,
+      "capacity_hours": 12,
       "evidence": [
-        "Frozen call graph and deadline budget",
-        "Cancellation contract",
-        "Retry eligibility table",
-        "Week 21 learning log"
+        "Model and derive evidence frozen at source commit"
       ],
       "time_blocks": [
         {
-          "id": "W21-T01",
+          "id": "W028-T01",
           "label": "Bounded authoritative resources",
-          "minutes": 60,
+          "minutes": 130,
           "activity": "required_resource",
+          "required": true,
           "resource_ids": [
             "RES-01",
-            "RES-02"
+            "RES-03",
+            "RES-05"
           ]
         },
         {
-          "id": "W21-T02",
-          "label": "Local lesson instruction",
+          "id": "W028-T02",
+          "label": "Local mechanism instruction",
           "minutes": 120,
           "activity": "local_instruction",
+          "required": true,
           "lesson_ids": [
             "L01",
             "L02",
@@ -37,264 +40,275 @@
           ]
         },
         {
-          "id": "W21-T03",
+          "id": "W028-T03",
           "label": "Guided practice",
-          "minutes": 90,
+          "minutes": 60,
           "activity": "guided_practice",
+          "required": true,
           "exercise_ids": [
             "EX-01",
             "EX-02",
             "EX-03",
             "EX-04",
             "EX-05",
-            "EX-06"
-          ]
-        },
-        {
-          "id": "W21-T04",
-          "label": "Reflection and learning log",
-          "minutes": 30,
-          "activity": "reflection"
-        },
-        {
-          "id": "W21-T05",
-          "label": "Independent Work",
-          "minutes": 330,
-          "activity": "independent_work",
-          "artifact_ids": [
-            "A01"
-          ]
-        }
-      ]
-    },
-    {
-      "number": 22,
-      "focus": "Build bounded fan-out and deduplication",
-      "hours": 10.5,
-      "evidence": [
-        "Fan-out implementation",
-        "Concurrency and pool bounds",
-        "Idempotency tests",
-        "Build review and Week 22 learning log"
-      ],
-      "time_blocks": [
-        {
-          "id": "W22-T01",
-          "label": "Bounded authoritative resources",
-          "minutes": 80,
-          "activity": "required_resource",
-          "resource_ids": [
-            "RES-03",
-            "RES-04"
-          ]
-        },
-        {
-          "id": "W22-T02",
-          "label": "Local lesson instruction",
-          "minutes": 90,
-          "activity": "local_instruction",
-          "lesson_ids": [
-            "L03",
-            "L05",
-            "L07"
-          ]
-        },
-        {
-          "id": "W22-T03",
-          "label": "Guided practice",
-          "minutes": 90,
-          "activity": "guided_practice",
-          "exercise_ids": [
+            "EX-06",
             "EX-07",
-            "EX-08",
-            "EX-09",
-            "EX-10",
-            "EX-11"
+            "EX-08"
           ]
         },
         {
-          "id": "W22-T04",
-          "label": "Reflection and learning log",
-          "minutes": 30,
-          "activity": "reflection"
-        },
-        {
-          "id": "W22-T05",
-          "label": "Independent Work",
-          "minutes": 340,
+          "id": "W028-T04",
+          "label": "Model and derive core work",
+          "minutes": 200,
           "activity": "independent_work",
-          "artifact_ids": [
-            "A02",
-            "A03"
-          ]
+          "required": true
+        },
+        {
+          "id": "W028-T05",
+          "label": "Optional contingency capacity",
+          "minutes": 210,
+          "activity": "contingency",
+          "required": false
         }
       ]
     },
     {
-      "number": 23,
-      "focus": "Break, measure, and repair amplification",
-      "hours": 10.5,
+      "number": 29,
+      "phase": "Guided build and prediction freeze",
+      "focus": "Guided build and prediction freeze",
+      "hours": 9.0,
+      "core_hours": 9.0,
+      "capacity_hours": 12,
       "evidence": [
-        "Six raw fault trials",
-        "Failure matrix",
-        "Repaired same-work reruns",
-        "Week 23 learning log"
+        "Guided build and prediction freeze evidence frozen at source commit"
       ],
       "time_blocks": [
         {
-          "id": "W23-T01",
+          "id": "W029-T01",
           "label": "Bounded authoritative resources",
-          "minutes": 60,
+          "minutes": 120,
           "activity": "required_resource",
+          "required": true,
           "resource_ids": [
-            "RES-05"
-          ]
-        },
-        {
-          "id": "W23-T02",
-          "label": "Local lesson instruction",
-          "minutes": 90,
-          "activity": "local_instruction",
-          "lesson_ids": [
-            "L01",
-            "L04",
-            "L06"
-          ]
-        },
-        {
-          "id": "W23-T03",
-          "label": "Guided practice",
-          "minutes": 90,
-          "activity": "guided_practice",
-          "exercise_ids": [
-            "EX-12",
-            "EX-13",
-            "EX-14",
-            "EX-15"
-          ]
-        },
-        {
-          "id": "W23-T04",
-          "label": "Required portfolio artifact A11",
-          "minutes": 45,
-          "activity": "review_remediation",
-          "artifact_ids": [
-            "A11"
-          ]
-        },
-        {
-          "id": "W23-T05",
-          "label": "Reflection and learning log",
-          "minutes": 30,
-          "activity": "reflection"
-        },
-        {
-          "id": "W23-T06",
-          "label": "Failure Experiment",
-          "minutes": 315,
-          "activity": "failure_experiment",
-          "artifact_ids": [
-            "A04"
-          ]
-        }
-      ]
-    },
-    {
-      "number": 24,
-      "focus": "Decide, teach, and complete Gate 2",
-      "hours": 10.5,
-      "evidence": [
-        "Remote-call policy",
-        "Migration and rollback plan",
-        "Recorded defense",
-        "Gate 2 revision and Week 24 learning log"
-      ],
-      "time_blocks": [
-        {
-          "id": "W24-T01",
-          "label": "Bounded authoritative resources",
-          "minutes": 50,
-          "activity": "required_resource",
-          "resource_ids": [
+            "RES-02",
+            "RES-04",
             "RES-07"
           ]
         },
         {
-          "id": "W24-T02",
-          "label": "Local lesson instruction",
-          "minutes": 45,
+          "id": "W029-T02",
+          "label": "Local mechanism instruction",
+          "minutes": 120,
           "activity": "local_instruction",
+          "required": true,
           "lesson_ids": [
+            "L05",
+            "L06",
+            "L07",
             "L08"
           ]
         },
         {
-          "id": "W24-T03",
+          "id": "W029-T03",
           "label": "Guided practice",
-          "minutes": 45,
+          "minutes": 60,
           "activity": "guided_practice",
+          "required": true,
           "exercise_ids": [
+            "EX-09",
+            "EX-10",
+            "EX-11",
+            "EX-12",
+            "EX-13",
+            "EX-14",
+            "EX-15",
             "EX-16"
           ]
         },
         {
-          "id": "W24-T04",
-          "label": "Required portfolio artifact A12",
-          "minutes": 220,
-          "activity": "decision_artifact",
-          "artifact_ids": [
-            "A12"
+          "id": "W029-T04",
+          "label": "Required evidence components",
+          "minutes": 120,
+          "activity": "independent_work",
+          "required": true,
+          "artifact_allocations": [
+            {
+              "artifact_id": "A01",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A02",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A03",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A12",
+              "minutes": 30
+            }
           ]
         },
         {
-          "id": "W24-T05",
-          "label": "Reflection and learning log",
+          "id": "W029-T05",
+          "label": "Guided build and prediction freeze core work",
+          "minutes": 120,
+          "activity": "independent_work",
+          "required": true
+        },
+        {
+          "id": "W029-T06",
+          "label": "Optional contingency capacity",
+          "minutes": 180,
+          "activity": "contingency",
+          "required": false
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "phase": "Independent build and integration",
+      "focus": "Independent build and integration",
+      "hours": 10.0,
+      "core_hours": 10.0,
+      "capacity_hours": 12,
+      "evidence": [
+        "Independent build and integration evidence frozen at source commit"
+      ],
+      "time_blocks": [
+        {
+          "id": "W030-T01",
+          "label": "Independent build and integration core work",
+          "minutes": 540,
+          "activity": "independent_work",
+          "required": true
+        },
+        {
+          "id": "W030-T02",
+          "label": "Independent build and integration verification checkpoint",
+          "minutes": 60,
+          "activity": "independent_work",
+          "required": true
+        },
+        {
+          "id": "W030-T03",
+          "label": "Optional contingency capacity",
+          "minutes": 120,
+          "activity": "contingency",
+          "required": false
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "phase": "Break, repair, measure, and diagnose",
+      "focus": "Break, repair, measure, and diagnose",
+      "hours": 10.0,
+      "core_hours": 10.0,
+      "capacity_hours": 12,
+      "evidence": [
+        "Break, repair, measure, and diagnose evidence frozen at source commit"
+      ],
+      "time_blocks": [
+        {
+          "id": "W031-T01",
+          "label": "Required evidence components",
+          "minutes": 60,
+          "activity": "failure_experiment",
+          "required": true,
+          "artifact_allocations": [
+            {
+              "artifact_id": "A04",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A11",
+              "minutes": 30
+            }
+          ]
+        },
+        {
+          "id": "W031-T02",
+          "label": "Break, repair, measure, and diagnose core work",
+          "minutes": 540,
+          "activity": "failure_experiment",
+          "required": true
+        },
+        {
+          "id": "W031-T03",
+          "label": "Optional contingency capacity",
+          "minutes": 120,
+          "activity": "contingency",
+          "required": false
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "phase": "Decide, teach, assess, and freeze",
+      "focus": "Decide, teach, assess, and freeze",
+      "hours": 9.5,
+      "core_hours": 9.5,
+      "capacity_hours": 12,
+      "evidence": [
+        "Decide, teach, assess, and freeze evidence frozen at source commit"
+      ],
+      "time_blocks": [
+        {
+          "id": "W032-T01",
+          "label": "Required evidence components",
+          "minutes": 90,
+          "activity": "decision_artifact",
+          "required": true,
+          "artifact_allocations": [
+            {
+              "artifact_id": "A05",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A06",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A09",
+              "minutes": 30
+            }
+          ]
+        },
+        {
+          "id": "W032-T02",
+          "label": "Decide, teach, assess, and freeze core work",
+          "minutes": 420,
+          "activity": "assessment",
+          "required": true
+        },
+        {
+          "id": "W032-T03",
+          "label": "Module teach-back",
+          "minutes": 30,
+          "activity": "teach_back",
+          "required": true
+        },
+        {
+          "id": "W032-T04",
+          "label": "Learning log and freeze check",
           "minutes": 30,
           "activity": "reflection",
-          "artifact_ids": [
-            "A09"
-          ]
+          "required": true
         },
         {
-          "id": "W24-T06",
-          "label": "Assessment",
-          "minutes": 60,
-          "activity": "assessment",
-          "artifact_ids": [
-            "A08",
-            "A10"
-          ]
-        },
-        {
-          "id": "W24-T07",
-          "label": "Decision Artifact",
-          "minutes": 60,
-          "activity": "decision_artifact",
-          "artifact_ids": [
-            "A05",
-            "A07"
-          ]
-        },
-        {
-          "id": "W24-T08",
-          "label": "Review Remediation",
-          "minutes": 60,
-          "activity": "review_remediation"
-        },
-        {
-          "id": "W24-T09",
-          "label": "Teach Back",
-          "minutes": 60,
-          "activity": "teach_back",
-          "artifact_ids": [
-            "A06"
-          ]
+          "id": "W032-T05",
+          "label": "Optional contingency capacity",
+          "minutes": 150,
+          "activity": "contingency",
+          "required": false
         }
       ]
     }
   ],
-  "target_hours": 42,
-  "status": "ready",
+  "target_hours": 47,
+  "status": "review",
   "readiness_note": "Ready on 2026-08-01 after semantic review, 13 async lab tests across 13 scenarios, six isolated evaluator invocations with stable calibration bands, two calibration checks, focused validation, full-course validation, and evidence-safety review.",
   "outcomes": [
     {
@@ -529,8 +543,6 @@
       "artifacts": [
         "A05",
         "A06",
-        "A07",
-        "A10",
         "A11",
         "A12"
       ],
@@ -550,7 +562,7 @@
       "url": "https://grpc.io/docs/guides/deadlines/",
       "required": true,
       "access": "free",
-      "week": 21,
+      "week": 28,
       "estimated_minutes": 35,
       "purpose": "Ground deadline and propagation behavior in an explicit RPC contract.",
       "assignment": "Read Overview through Deadline Propagation; annotate which behavior the library provides and which cleanup remains application-owned.",
@@ -570,7 +582,7 @@
       "url": "https://grpc.io/docs/guides/cancellation/",
       "required": true,
       "access": "free",
-      "week": 21,
+      "week": 29,
       "estimated_minutes": 25,
       "purpose": "Separate a cancellation signal from interruption and cleanup completion.",
       "assignment": "Read Overview and client/server cancellation sections; list every loop, queue, and child call in your build that must observe cancellation.",
@@ -590,10 +602,10 @@
       "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
       "required": true,
       "access": "free",
-      "week": 22,
+      "week": 28,
       "estimated_minutes": 35,
       "purpose": "Scope safe and idempotent request semantics without equating a method name to business deduplication.",
-      "assignment": "Read Sections 9.2.1–9.2.3 and 10.2.3; classify each independent operation and explain what remains unknown after connection loss.",
+      "assignment": "Read Sections 9.2.1\u20139.2.3 and 10.2.3; classify each independent operation and explain what remains unknown after connection loss.",
       "last_verified": "2026-08-01",
       "text_alternative": "lessons/04-idempotency-and-deduplication.md",
       "verified_title": "HTTP Semantics",
@@ -610,7 +622,7 @@
       "url": "https://builder.aws.com/content/3EumjoZascWd1oZiEgL8ORlv3qE/timeouts-retries-and-backoff-with-jitter",
       "required": true,
       "access": "free",
-      "week": 22,
+      "week": 29,
       "estimated_minutes": 45,
       "purpose": "Connect timeout selection, ambiguous outcomes, retry placement, token budgets, and jitter to operated systems.",
       "assignment": "Read the complete article; produce an attempt-amplification tree and identify one policy whose safe value depends on your latency distribution.",
@@ -630,7 +642,7 @@
       "url": "https://sre.google/sre-book/addressing-cascading-failures/",
       "required": true,
       "access": "free",
-      "week": 23,
+      "week": 28,
       "estimated_minutes": 60,
       "purpose": "Relate deadlines, retries, health checks, load shedding, and resource exhaustion to cascading failure.",
       "assignment": "Read Retry Cascades, Latency and Deadlines, and Testing for Cascading Failures; map each positive feedback loop to a lab metric and mitigation owner.",
@@ -650,10 +662,10 @@
       "url": "https://www.usenix.org/system/files/osdi22-huang-lexiang.pdf",
       "required": false,
       "access": "free",
-      "week": 23,
+      "week": 32,
       "estimated_minutes": 55,
       "purpose": "Distinguish a temporary trigger from the sustaining effect that prevents recovery.",
-      "assignment": "Read Sections 1–3 and 6; classify the retry-storm trial's trigger, vulnerable state, sustaining effect, and recovery action.",
+      "assignment": "Read Sections 1\u20133 and 6; classify the retry-storm trial's trigger, vulnerable state, sustaining effect, and recovery action.",
       "last_verified": "2026-08-01",
       "text_alternative": "lessons/06-circuit-breakers-hedges-partials.md",
       "verified_title": "Metastable Failures in the Wild",
@@ -670,7 +682,7 @@
       "url": "https://www.usenix.org/conference/srecon16/program/presentation/fender",
       "required": true,
       "access": "free",
-      "week": 24,
+      "week": 29,
       "estimated_minutes": 50,
       "purpose": "Examine failure containment, traffic shifting, operational ownership, and recovery in a large commerce platform without using it as a capstone answer.",
       "assignment": "Watch the presentation or use its audio/slides with Lesson 8; record one containment boundary, one coordination risk, and one migration gate.",
@@ -686,102 +698,132 @@
   "artifacts": [
     {
       "id": "A01",
-      "week": 21,
+      "week": 29,
       "required": true,
       "template_path": "modules/06-deadlines-resilient-remote-calls/worksheets/week-21-deadline-model.md",
       "submission_path": "reports/module-06-call-budget.md",
       "immutable_after_submission": true,
-      "portfolio_category": "model"
+      "portfolio_category": "model",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M06-A01",
+      "component_role": "prediction",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A02",
-      "week": 22,
+      "week": 29,
       "required": true,
       "template_path": "modules/06-deadlines-resilient-remote-calls/worksheets/week-22-bounded-build.md",
       "submission_path": "labs/module-06/",
-      "portfolio_category": "implementation"
+      "portfolio_category": "implementation",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M06-A02",
+      "component_role": "implementation",
+      "estimated_minutes": 30,
+      "evidence_mode": "executed_deterministic"
     },
     {
       "id": "A03",
-      "week": 22,
+      "week": 29,
       "required": true,
       "template_path": "modules/06-deadlines-resilient-remote-calls/worksheets/week-22-bounded-build.md",
       "submission_path": "reports/module-06-build-review.md",
-      "portfolio_category": "model"
+      "portfolio_category": "model",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M06-A03",
+      "component_role": "prediction",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A04",
-      "week": 23,
+      "week": 31,
       "required": true,
       "template_path": "modules/06-deadlines-resilient-remote-calls/worksheets/week-23-failure-matrix.md",
       "submission_path": "experiments/module-06/",
       "immutable_after_submission": true,
-      "portfolio_category": "failure_matrix"
+      "portfolio_category": "failure_matrix",
+      "portfolio_item_id": "PI-FAIL-02",
+      "portfolio_credit": true,
+      "evidence_lineage_id": "LIN-FAIL-REMOTE-CALLS",
+      "component_role": "raw_evidence",
+      "estimated_minutes": 30,
+      "evidence_mode": "executed_deterministic"
     },
     {
       "id": "A05",
-      "week": 24,
+      "week": 32,
       "required": true,
       "template_path": "templates/remote-call-policy-template.md",
       "submission_path": "rfc/module-06-remote-call-policy.md",
-      "portfolio_category": "rfc"
+      "portfolio_category": "rfc",
+      "portfolio_item_id": "PI-DECISION-M06",
+      "portfolio_credit": true,
+      "evidence_lineage_id": "LIN-DECISION-M06",
+      "component_role": "decision",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A06",
-      "week": 24,
+      "week": 32,
       "required": true,
       "template_path": "modules/06-deadlines-resilient-remote-calls/worksheets/week-24-policy-defense.md",
       "submission_path": "reviews/module-06-defense.md",
-      "portfolio_category": "teach_back"
-    },
-    {
-      "id": "A07",
-      "week": 24,
-      "required": true,
-      "template_path": "capstone/revisions/week-24-gate-02.md",
-      "submission_path": "capstone/revisions/week-24-gate-02.md",
-      "portfolio_category": "capstone"
-    },
-    {
-      "id": "A08",
-      "week": 24,
-      "required": true,
-      "template_path": "modules/06-deadlines-resilient-remote-calls/assessment/report-template.md",
-      "submission_path": "reviews/module-06-evaluation.md",
-      "portfolio_category": "evaluation"
+      "portfolio_category": "teach_back",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M06-A06",
+      "component_role": "final",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A09",
-      "week": 24,
+      "week": 32,
       "required": true,
       "template_path": "templates/learning-log-template.md",
-      "submission_path": "learning-log/week-21.md through learning-log/week-24.md",
-      "portfolio_category": "learning_log"
-    },
-    {
-      "id": "A10",
-      "week": 24,
-      "required": true,
-      "template_path": "modules/06-deadlines-resilient-remote-calls/assessment/gate-02.md",
-      "submission_path": "reviews/gate-02-submission.md",
-      "portfolio_category": "evaluation"
+      "submission_path": "learning-log/week-028.md through learning-log/week-032.md",
+      "portfolio_category": "learning_log",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M06-A09",
+      "component_role": "final",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A11",
-      "week": 23,
+      "week": 31,
       "required": true,
       "template_path": "templates/incident-postmortem-template.md",
       "submission_path": "reports/module-06-retry-storm-postmortem.md",
       "portfolio_category": "controlled_incident_postmortem",
-      "immutable_after_submission": true
+      "immutable_after_submission": true,
+      "portfolio_item_id": "PI-POST-01",
+      "portfolio_credit": true,
+      "evidence_lineage_id": "LIN-POST-REMOTE-CALLS",
+      "component_role": "analysis",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A12",
-      "week": 24,
+      "week": 29,
       "required": true,
       "template_path": "templates/adr-template.md",
       "submission_path": "adr/module-06-remote-call-containment.md",
-      "portfolio_category": "adr"
+      "portfolio_category": "model",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M06-A12",
+      "component_role": "prediction",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     }
   ],
   "failure_experiments": [
@@ -948,7 +990,7 @@
       "required": true,
       "access": "free",
       "purpose": "Support the use of Little's Law for average bounded-resource inventory.",
-      "reading_boundary": "Study the Queueing Systems notes sections defining system occupancy, throughput, time in system, and Little's Law L = λW.",
+      "reading_boundary": "Study the Queueing Systems notes sections defining system occupancy, throughput, time in system, and Little's Law L = \u03bbW.",
       "last_verified": "2026-08-04",
       "text_alternative": "lessons/05-bulkheads-pools-health.md",
       "verified_title": "lec5.pdf | Logistical and Transportation Planning Methods",
@@ -957,5 +999,13 @@
       "final_url": "https://ocw.mit.edu/courses/1-203j-logistical-and-transportation-planning-methods-fall-2006/resources/lec5/",
       "verification_status": "verified"
     }
-  ]
+  ],
+  "course_id": "PESD-104",
+  "course_version": "2.0",
+  "primary_decision": {
+    "artifact_id": "A05",
+    "type": "RFC"
+  },
+  "pesd_v2_additions": "per-tenant work and cost budgets, identity-aware quotas, provider compatibility, residency-safe fallback, and fairness across critical traffic classes",
+  "semantic_evaluation": "subsumed_by_gate"
 }

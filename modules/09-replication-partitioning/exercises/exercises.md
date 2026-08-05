@@ -85,3 +85,11 @@ Build a per-operation decision table and answer the frozen solo-review
 challenges from data-platform, security/residency, finance, and on-call
 perspectives. Record dissent, uncertainty, owners, migration/rollback, and one
 quantified reversal threshold. A live panel is optional.
+
+## PESD 2.0 extension to the final exercise
+
+Extend the final guided exercise with tenant onboarding, suspension, export, offboarding, region movement, cells, control-plane/data-plane separation, tenant keys, quotas, SLOs, and cost attribution. Produce an
+obligation/control/evidence row, a named owner, a bounded cost or capacity
+effect, a failure or policy-drift test, a migration step, and a reversal trigger.
+Label every observation with an accepted evidence mode and do not use fixture
+replay as independent Build, Break, Implement, or Measure evidence.

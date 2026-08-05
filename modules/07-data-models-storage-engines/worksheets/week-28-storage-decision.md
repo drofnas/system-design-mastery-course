@@ -32,3 +32,14 @@ follow-up evidence, and teach-back link.
 
 Freeze the ADR and defense. Store evaluator output separately. Apply findings
 only through dated addenda linked to named lessons/exercises.
+
+## PESD 2.0 decision and assurance check
+
+- Added scope: analytical projections, versioned data contracts, quality SLOs, lineage, stewardship, rebuild and backfill, deletion propagation, and ownership while preserving B+ tree and LSM mechanisms
+- Requirement or obligation and applicability:
+- Enforcement point and failure mode:
+- Evidence owner, source commit, hashes, and evidence mode:
+- Tenant/data/provider boundary:
+- Cost allocation and operating owner:
+- Migration, rollback, and decommissioning step:
+- Uncertainty and reversal trigger:

@@ -80,10 +80,23 @@ def _authored_paths(root: Path) -> list[str]:
     )
     if result.returncode:
         raise ValueError(f"cannot inventory tracked module files: {result.stderr.strip()}")
+    repository_paths = set(result.stdout.splitlines())
+    repository_paths.update(
+        path.relative_to(ROOT).as_posix()
+        for path in root.rglob("*")
+        if path.is_file()
+    )
     authored: list[str] = []
-    for repository_path in result.stdout.splitlines():
+    for repository_path in sorted(repository_paths):
         path = Path(repository_path)
-        relative = path.relative_to(relative_root)
+        if not (ROOT / path).is_file():
+            # A migration may intentionally retire a tracked course file before
+            # the follow-up commit records the deletion.
+            continue
+        try:
+            relative = path.relative_to(relative_root)
+        except ValueError:
+            continue
         parts = set(relative.parts)
         if relative.as_posix() == "assessment/factual-claims.json":
             continue

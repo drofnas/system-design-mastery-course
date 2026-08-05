@@ -1,7 +1,7 @@
 # Home-Lab Readiness Review
 
 - Review date: 2026-08-04
-- Epic branch: `feature/home-lab-readiness`
+- Epic branch: `feature/course-v2-104-week-redesign`
 - Overall gate: **Awaiting platform verification**
 - Privacy rule: summaries omit hostnames, usernames, repository/home paths, IP
   details, and machine identifiers.
@@ -80,6 +80,10 @@ declared ready from mocked WSL2 tests.
 Required before acceptance:
 
 - [ ] Store the repository inside the WSL filesystem and run the full preflight.
+- [ ] Use the cached, network-disabled probe to prove effective CPU, memory, and
+  PID cgroup limits; merely seeing controller files does not pass.
+- [ ] Confirm the selected M03/M15 image digests and M16 npm/Chromium inputs are
+  present by passing the offline-cache check without downloads.
 - [ ] Run every Python lab suite inside Ubuntu on WSL2.
 - [ ] Run the complete Docker-backed Module 3 matrix.
 - [ ] Run Module 15 `--all` through Docker Desktop WSL integration and confirm
@@ -88,7 +92,8 @@ Required before acceptance:
   all Module 16 automated checks with the pinned Node version.
 - [ ] Serve Module 16 on WSL loopback and record keyboard, 200% zoom/reflow,
   JavaScript-disabled, and accessibility checks in a normal Windows browser
-  through `localhost`.
+  through `localhost`; bind the sanitized callback to the current source commit
+  and feed it back into the preflight.
 - [ ] Record WSL2, Docker Linux VM, and Windows host-browser boundaries without
   private host data.
 
@@ -99,7 +104,9 @@ native Windows, but those mocks are not substituted for this gate.
 
 - Preflight tests cover macOS ARM64/x86_64, Ubuntu ARM64/x86_64, WSL2 x86_64,
   native Windows rejection, unknown/low resources, missing and incompatible
-  tools, blocked loopback, privacy, output overwrite, and module scoping.
+  tools, blocked loopback, privacy, output overwrite, module scoping, `/mnt/c`
+  rejection, effective cgroup limits, Docker allocation, actual Chromium
+  launch, source-bound host callback, and selected offline-cache failures.
 - Solo-review tests cover artifact/commit identity, deterministic unique
   selection, seed variation, invalid modules/commits, uncommitted artifacts,
   and answer-field exclusion.
@@ -115,7 +122,7 @@ native Windows, but those mocks are not substituted for this gate.
   guidance for Modules 3/5/15/16, Module 15 limits, and Module 16 one-worker and
   evidence-plane configuration.
 
-Rubrics, evaluator prompts, capstone baselines, required workload matrices, and
-calibration fixtures did not change. Existing deterministic calibration checks
-still pass inside the course validator; LLM calibration was intentionally not
-rerun.
+Capstone baselines remain immutable. PESD 2.0 rubrics, evaluator prompts,
+workload matrices, and calibration fixtures pass the deterministic repository
+contracts; the required twice-per-band fresh LLM calibration has not yet run
+and remains a course-readiness blocker.

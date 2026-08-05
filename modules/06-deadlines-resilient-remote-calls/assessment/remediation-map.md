@@ -14,7 +14,15 @@ smallest evidence needed.
 | Breaker/hedge/partial outcome | Lesson 6 | EX-10–EX-11 | controlled alternative experiment |
 | Failure evidence integrity | Lessons 1–6 | EX-13–EX-14 | new raw trial and discriminating rerun |
 | Policy/migration/cost | Lesson 8 | EX-15–EX-16 | dated policy revision and rollback rehearsal |
-| Defense/Gate 2 | Lesson 8 | EX-16 | follow-up defense and Week 24 addendum |
+| Defense/Gate 2 | Lesson 8 | EX-16 | follow-up defense and separate Week 34 flex-delta addendum |
 
 Repeat requires a new independent baseline and new raw trials only when the
 original ordering/evidence is invalid. Never reconstruct missing raw data.
+
+## PESD 2.0 remediation
+
+When a cross-cutting floor is missed, return to Lesson 8's PESD 2.0 extension
+and the final exercise. Create a separate dated revision containing the missing
+requirement/control/evidence mapping, owner, evidence boundary, failure check,
+cost consequence, migration, and reversal trigger. Never edit the frozen
+baseline or raw trial. A Pass creates no required remediation artifact.

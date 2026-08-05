@@ -35,3 +35,14 @@ and evidence that reverses the decision.
 Record a 12–15 minute explanation, reviewer questions, unresolved disagreement,
 and evidence assigned to an owner. Do not change the submitted workload or
 failure model during defense.
+
+## PESD 2.0 decision and assurance check
+
+- Added scope: telemetry as a governed data product: schema ownership, PII restrictions, retention, sampling bias, lineage, cardinality, and cost budgets
+- Requirement or obligation and applicability:
+- Enforcement point and failure mode:
+- Evidence owner, source commit, hashes, and evidence mode:
+- Tenant/data/provider boundary:
+- Cost allocation and operating owner:
+- Migration, rollback, and decommissioning step:
+- Uncertainty and reversal trigger:

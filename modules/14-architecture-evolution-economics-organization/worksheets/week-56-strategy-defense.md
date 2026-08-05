@@ -40,3 +40,14 @@ baseline, raw trials, or original strategy.
 - Average is at least 3.0 and R05–R09 have no zero.
 - Learning logs for Weeks 53–56 are complete.
 - No Week 56 capstone gate revision was created.
+
+## PESD 2.0 decision and assurance check
+
+- Added scope: a thin local platform product with a service catalog, self-service interface, golden path, policy guardrails, exception path, ownership metadata, platform SLO, adoption and support metrics, FinOps allocation, and an exit plan
+- Requirement or obligation and applicability:
+- Enforcement point and failure mode:
+- Evidence owner, source commit, hashes, and evidence mode:
+- Tenant/data/provider boundary:
+- Cost allocation and operating owner:
+- Migration, rollback, and decommissioning step:
+- Uncertainty and reversal trigger:

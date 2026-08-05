@@ -12,10 +12,8 @@ records below are optional enrichment and do not consume required module time.
 
 | Week | Required resources | Assigned minutes |
 |---:|---|---:|
-| 1 | RES-01, RES-04 | 65 |
-| 2 | RES-06 | 20 |
-| 3 | RES-07 | 45 |
-| 4 | None | 0 |
+| 1 | RES-06, RES-07 | 65 |
+| 2 | RES-01, RES-04 | 65 |
 
 For each assigned source, preserve the requested evidence, one transfer limit,
 and one observation that would falsify the claim. A required source that is
@@ -30,7 +28,7 @@ task; record the substitution.
 - **URL:** https://www.sei.cmu.edu/library/reasoning-about-software-quality-attributes/
 - **Type/status:** authoritative written source; Required
 - **Access:** free
-- **Week/time:** Week 1; 35 minutes assigned
+- **Week/time:** Week 2; 35 minutes assigned
 - **Purpose:** Read the overview and General Scenarios sections through the discussion of trade-offs.
 - **Boundary and evidence:** Read the overview and General Scenarios sections through the discussion of trade-offs. Record one quality name that remains ambiguous until expressed as a scenario.
 - **Local alternative:** [lessons/04-quality-attribute-scenarios.md](lessons/04-quality-attribute-scenarios.md)
@@ -43,7 +41,7 @@ task; record the substitution.
 - **URL:** https://c4model.com/
 - **Type/status:** official documentation; Required
 - **Access:** free
-- **Week/time:** Week 1; 30 minutes assigned
+- **Week/time:** Week 2; 30 minutes assigned
 - **Purpose:** Read the overview, abstractions, system-context guidance, notation guidance, and diagram-review checklist.
 - **Boundary and evidence:** Read the overview, abstractions, system-context guidance, notation guidance, and diagram-review checklist. Identify which details do not belong on a context diagram.
 - **Local alternative:** [lessons/05-context-and-boundaries.md](lessons/05-context-and-boundaries.md)
@@ -56,7 +54,7 @@ task; record the substitution.
 - **URL:** https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions
 - **Type/status:** original practitioner article; Required
 - **Access:** free
-- **Week/time:** Week 2; 20 minutes assigned
+- **Week/time:** Week 1; 20 minutes assigned
 - **Purpose:** Read the complete article.
 - **Boundary and evidence:** Read the complete article. Explain why preserving a superseded decision is useful and identify one decision too small to deserve an ADR.
 - **Local alternative:** [lessons/08-decisions-rfcs-and-defense.md](lessons/08-decisions-rfcs-and-defense.md)
@@ -69,7 +67,7 @@ task; record the substitution.
 - **URL:** https://builder.aws.com/content/3F08f7GPFiZMCgXD8gny6OjxR0Z/challenges-with-distributed-systems
 - **Type/status:** first-person engineering case; Required
 - **Access:** free
-- **Week/time:** Week 3; 45 minutes assigned
+- **Week/time:** Week 1; 45 minutes assigned
 - **Purpose:** Read the complete article.
 - **Boundary and evidence:** Read the complete article. Add three independent failure combinations and one unknown-outcome case to the transit case failure matrix.
 - **Local alternative:** [lessons/07-failure-models-and-adversarial-review.md](lessons/07-failure-models-and-adversarial-review.md)

@@ -8,6 +8,7 @@ from copy import deepcopy
 from typing import Any
 
 from .model import Cluster
+from .harness import InvariantOracle, generated_schedules
 
 
 INVARIANTS = {
@@ -192,9 +193,17 @@ def run_scenario(scenario: dict[str, Any]) -> dict[str, Any]:
         scenario["cluster"]["initial_voters"],
         scenario["initial_state"],
     )
-    for event in scenario["events"]:
+    schedules = generated_schedules(scenario["seed"], scenario["events"])
+    for event in schedules[0]:
         cluster.emit(event["tick"], f"input_{event['type']}", f"scheduled {event['type']}")
-    failed = HANDLERS[scenario["pair_id"]](cluster, scenario["controls"])
+    HANDLERS[scenario["pair_id"]](cluster, scenario["controls"])
+    failed = InvariantOracle().evaluate(
+        events=cluster.events,
+        nodes=[cluster.nodes[node_id].record() for node_id in scenario["cluster"]["nodes"]],
+        client_results=cluster.client_results,
+        resource=cluster.resource,
+        membership=cluster.membership,
+    )
     invariants = [
         {
             "id": invariant_id,
@@ -226,6 +235,7 @@ def run_scenario(scenario: dict[str, Any]) -> dict[str, Any]:
         "resource":cluster.resource,
         "membership":cluster.membership,
         "metrics":cluster.metrics,
+        "generated_schedule_count":len(schedules),
         "invariants":invariants,
         "evidence_boundary":[
             "logical-tick mechanism evidence only",

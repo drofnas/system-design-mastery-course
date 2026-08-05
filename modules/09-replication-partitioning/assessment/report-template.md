@@ -1,4 +1,6 @@
-# Module 9 Evaluation Report
+# M09 G03 Domain Evaluation Record
+
+> **PESD 2.0 evaluation ownership:** G03 invokes this module-specific rubric and evaluator exactly once as its domain score. Do not run or submit a separate module semantic evaluation report.
 
 ## Submission identity
 

@@ -27,3 +27,11 @@ remediation names a Module 11 lesson and EX exercise.
 Never infer hidden intent or production guarantees from the toy lab. Accept a
 defensible database queue, log, choreography, orchestration, or hybrid when the
 submission's evidence supports it.
+
+## PESD 2.0 evaluator instruction
+
+Score the published criteria against evidence for semantic event contracts, producer and consumer ownership, data quality, lineage, policy-version-aware replay, lifecycle disposition, and batch/stream reconciliation.
+Classify missing evidence, incorrect reasoning, unsupported claims, and
+reasonable uncertainty separately. Reject fixture replay presented as
+independent build or break evidence. Do not invent legal applicability or treat
+a named framework as proof of compliance.

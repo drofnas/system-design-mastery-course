@@ -85,3 +85,11 @@ Build the invariant decision matrix; compare three concurrency and two recovery
 options; answer the frozen solo-review questions from application, database,
 security, finance, and on-call perspectives. Record dissent, changed belief,
 and a reversal experiment. A live panel is optional.
+
+## PESD 2.0 extension to the final exercise
+
+Extend the final guided exercise with retention, deletion, legal holds, key rotation, logs, replicas, exports, backups, restore-time policy replay, and resurrection prevention. Produce an
+obligation/control/evidence row, a named owner, a bounded cost or capacity
+effect, a failure or policy-drift test, a migration step, and a reversal trigger.
+Label every observation with an accepted evidence mode and do not use fixture
+replay as independent Build, Break, Implement, or Measure evidence.

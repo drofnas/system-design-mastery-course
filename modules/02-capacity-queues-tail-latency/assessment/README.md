@@ -27,7 +27,7 @@ percentage, programming style, or cloud architecture.
 - Failure matrix and experiment report
 - Capacity report and overload-policy ADR
 - Defense record, evaluation target, and separate revision
-- Weeks 5–8 learning logs
+- Weeks 6–10 learning logs
 - Commit identifiers for all graded artifacts
 
 ## Evaluation sequence

@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
   "module": "M03",
-  "reviewed_commit": "670fcb8a202d8aea43d03f15f435054fdb2685f5",
+  "reviewed_commit": "WORKTREE",
   "reviewed_at": "2026-08-04",
   "evidence_boundary": "This ledger records a source-level semantic review of lessons, worked answers, case studies, exercises, worksheets, rubrics, and lab guides. It verifies named mechanisms against bounded primary or official sources, distinguishes normative course contracts, and does not turn synthetic examples into production measurements.",
   "claims": [
@@ -329,14 +329,14 @@
   "document_coverage": [
     {
       "path": "README.md",
-      "sha256": "7b00be1c2cca95f8e14052b63bc6bdd911f720532e1f95f6c85674da39846987",
+      "sha256": "049e7ab2857ddbcba75f5a9cdbbf9697437fee61a6cd0f19ddff17bdf949a8c5",
       "review_scope": "normative_or_assignment_only",
       "claim_ids": [],
       "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
     },
     {
       "path": "assessment/README.md",
-      "sha256": "fe94499963fe64483aa287db65747d6264c48f9c9b244d1dfac264ff52dd9fb7",
+      "sha256": "ea159840fdf8c1f9a2612d0020a8a39100dae78739477077d440bf05be13345c",
       "review_scope": "normative_or_assignment_only",
       "claim_ids": [],
       "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
@@ -407,42 +407,35 @@
     },
     {
       "path": "assessment/evaluator-prompt.md",
-      "sha256": "97d7f33efe203a91eab9adedcdd211676281d5686ec610b9d18f9bc1d1bf0b71",
-      "review_scope": "normative_or_assignment_only",
-      "claim_ids": [],
-      "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
-    },
-    {
-      "path": "assessment/gate-01.md",
-      "sha256": "d0d6fc838f3b78514d8041d71056f957f4cd5fe185269269f5634ac75cf3ba3e",
+      "sha256": "a0477f5ab98f6f9d421e74b7519e2333478af65953b598f2eb815432c80506c5",
       "review_scope": "normative_or_assignment_only",
       "claim_ids": [],
       "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
     },
     {
       "path": "assessment/readiness-review.md",
-      "sha256": "f9cd245c3add8285a13bb86ab0aeb3a4f672a794c679adc38516351b2c04807d",
+      "sha256": "1f85e911864df4098326151b0e6a1d74b61a434df260adb853db9f6dfd20a261",
       "review_scope": "normative_or_assignment_only",
       "claim_ids": [],
       "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
     },
     {
       "path": "assessment/remediation-map.md",
-      "sha256": "7271e18f6f19fc72304f07c7675ad89280bf8deb17a30c6aa062325e1285557e",
+      "sha256": "0e4d3cbdef6ede65d2427bd7d7acd0a502f71d32a5ed1bb8b0b400a68c4ecc2b",
       "review_scope": "normative_or_assignment_only",
       "claim_ids": [],
       "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
     },
     {
       "path": "assessment/report-template.md",
-      "sha256": "709cbeebddf4767f2310a1965154c02ee5db7f43cb3bdfe92b04a9ffa68a6429",
+      "sha256": "bc5797ad9384f18a968e3905eafcf2d5d7a4d7e98c4c6818bb75712694439e12",
       "review_scope": "normative_or_assignment_only",
       "claim_ids": [],
       "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
     },
     {
       "path": "assessment/rubric.md",
-      "sha256": "887aae352c4b49c31679b625a54a76d575abbc16d9d76f4810bef2cb73161abc",
+      "sha256": "5068e827f58b4e1f578f7f643aca18f558a7497011831141e0a7c26aaacc4005",
       "review_scope": "normative_or_assignment_only",
       "claim_ids": [],
       "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
@@ -459,7 +452,7 @@
     },
     {
       "path": "exercises/answer-key.md",
-      "sha256": "5fffa32f21b170056f1165b87ef7c96e0e3804f1adaf32475346291e1c4d308a",
+      "sha256": "ba06a8fab0d3b7074554928d2e2c0c290ff82019dbb9698992597ba280502bcb",
       "review_scope": "substantive_claims",
       "claim_ids": [
         "M03-FC-009",
@@ -469,7 +462,7 @@
     },
     {
       "path": "exercises/exercises.md",
-      "sha256": "e29847571c6b9f400878a7ae79698c75f7954e0ce6462f93a52d495ca1a61bce",
+      "sha256": "346a3dc5222147bde4404c19beb269156de0eab3a6cf03e0576f2ed11cd2f1ac",
       "review_scope": "normative_or_assignment_only",
       "claim_ids": [],
       "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
@@ -494,6 +487,286 @@
       "review_scope": "normative_or_assignment_only",
       "claim_ids": [],
       "review_note": "The lab guide's commands, interfaces, bounds, and synthetic evidence limitations were checked directly against the executable implementation and its passing tests."
+    },
+    {
+      "path": "lab/build/io-contended-linux.json",
+      "sha256": "4c9465f93ec71850145ed407a36e38126c5f468126b17b98dd9698f58b75a96f",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/build/matrix/allocation-per-iteration.json",
+      "sha256": "cf9fe5978470f4c8c13a8deb7c24e5e6b4c0ab92ee069a664f7849148a6513d9",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/build/matrix/allocation-reuse.json",
+      "sha256": "025fd3ee18996589c753482f785020f200f5dcdc2ed86be0c356bd207ad39215",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/build/matrix/allocation-working-set-128.json",
+      "sha256": "29fdbd270b755d5b508f3f7c461a379e99021e0b13cb4fc9e7f075540f31e19f",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/build/matrix/allocation-working-set-16.json",
+      "sha256": "c81daff569e64fe93c0e39fe6482553bad222d5821eab279c3a308c4f9e63ef3",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/build/matrix/allocation-working-set-256.json",
+      "sha256": "ddf09a59cda998c95e7d4b0fae4ff6783a2f5aac2a046433380439104ad6f118",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/build/matrix/allocation-working-set-64.json",
+      "sha256": "150c618ce2352440da83f527d9bc02120022cc8ae159269432bc470c16a785a3",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/build/matrix/branch-mixed.json",
+      "sha256": "7ab85d647d39cf718c7acee5d87e45b0b1c8212a61d526b62cc07a98c867a201",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/build/matrix/branch-predictable.json",
+      "sha256": "0e357ca15f3dd62c5dc1ff4133a4743470818d3005b4df4c5187386d39f98c10",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/build/matrix/contention-sharded-1.json",
+      "sha256": "c350d61d446458d94767456223f44eec6e857f55e22e6b88df3404a5773217a4",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/build/matrix/contention-sharded-16.json",
+      "sha256": "50725a6697aba5c58169dcfe90212e8961d16227e1fc33b85962515dcc36c7f5",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/build/matrix/contention-sharded.json",
+      "sha256": "62522b793119d7d678f39acb48d1deb92632cd297c8f2d9ff9d3584d5f79bd63",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/build/matrix/contention-shared-1.json",
+      "sha256": "e8d90e1de60242dfe0c05f3607e4eb4c443e7ba52d88d5878c85f2bc182e7753",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/build/matrix/contention-shared-16.json",
+      "sha256": "c3874030dccde97d42f243294ee21cfc552cac92f82a40e16a0e6b9a8febf30b",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/build/matrix/contention-shared.json",
+      "sha256": "2622f34f229b0d75b3b2e6b86c22e265b753c990c6b7fbf0aca7f9731a29693e",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/build/matrix/cpu-quota-half.json",
+      "sha256": "4d1dbcb303f3471ba591d19433e6b3b3a587d164fda2928675a96d9d81b8d0ff",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/build/matrix/cpu-quota-one.json",
+      "sha256": "6901b25ddea4846e32fca2d5bfe422d6183368291b115efcedaf3b350dd78f94",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/build/matrix/cpu-quota-two.json",
+      "sha256": "fafdbe028cbe9500c63da9b00d3663144337b2559a93dfc6772cba7198c0c6d6",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/build/matrix/deadlock-watchdog.json",
+      "sha256": "2121eceee2217557e9eb24d929f9c18d4c67aabe8d1fbcbbf118bf7a4e03e51d",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/build/matrix/false-sharing-adjacent.json",
+      "sha256": "60f759c7d885fb6fb83d51d7e64e7d62c2973bae240750ba4b071b062945dcb1",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/build/matrix/false-sharing-padded.json",
+      "sha256": "4387d812ddea34e2ae21a94839b8cbe7263a9bdcb8d26ec12b3edb7b35c0dd82",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/build/matrix/io-batch-sync.json",
+      "sha256": "a74b3a6a668c21f1d8a844140bce86dd51cc94e897054eee3995e8071e47d3d2",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/build/matrix/io-buffered.json",
+      "sha256": "9faa4ff59eab61f1aeb9921c0595c4bbb94615a8573e73a447847f3e7d9a2878",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/build/matrix/io-contended-linux.json",
+      "sha256": "0c364624a3775834a23e4d0dfef47dc7db9e2f6f71fee1fd93ababaf11bcf3c1",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/build/matrix/io-contended.json",
+      "sha256": "50e956b1f668525fcef139181aaa976ab5e9c3d6aa1cee0e7940f34d89ad1990",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/build/matrix/io-crash-before-rename.json",
+      "sha256": "ac2be107c36a999e492dd60f9db17dc79317fc3193d0e891cce0407fda125378",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/build/matrix/io-per-record-sync.json",
+      "sha256": "2038dfa1514e134bcbf40fcf0edb43448de587fd97703c8ee014bc364b0af036",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/build/matrix/locality-contiguous.json",
+      "sha256": "4f0bd6780634b626a584910b48497d31dedbb2f8b2af59c2cf4be0a2056d8dd2",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/build/matrix/locality-copy-then-scan.json",
+      "sha256": "5e47825bcaacbaef66f8e78401810ceeb3840a1f0751f057ce6af27447df960a",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/build/matrix/locality-direct-scan.json",
+      "sha256": "a7c53ccb49b7b3e90e54cd2b0b8c5d15f9cb657e2dd7f59bedf2ddfb47563905",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/build/matrix/locality-strided.json",
+      "sha256": "3f82227060621665c9183323f48abe5e93d627868f03bf03549fcd7d23699f8f",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/build/matrix/memory-limit-128.json",
+      "sha256": "b7a883ac39e5993eb7889c5ca687d9b1f8994b858bde0afbe44fa8bf74b1acdb",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/build/matrix/memory-limit-256.json",
+      "sha256": "b12a063f5f8d830833b31c06ebfc52309f2a1ce63a3159597654db8815cb1bd1",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/build/matrix/memory-limit-64.json",
+      "sha256": "05900c36cd3c7c54f18802002896d63c86ea5a0af6670d5f422b4089004dad09",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/build/matrix/memory-oom-64.json",
+      "sha256": "54fd9ffa051b65f686e8503b79e9bf8caaaa224409f30558598536d31a6a97cc",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/build/matrix/memory-pressure.json",
+      "sha256": "8d842028957765eb7820c61299e746c71f38f7cb6db4c84c6a308eab500c8ec8",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/build/matrix/oversized-concurrency.json",
+      "sha256": "9231ebdf0d6061181228d646482f7dd52d22a7140a5bf972c6685c63a131cc5f",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/build/matrix/syscall-batched.json",
+      "sha256": "e827f4421180a3b377988dc12a13355c2d7c966c57ba9db41b578b06bad9224f",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/build/matrix/syscall-small.json",
+      "sha256": "cc440017d2b9cfecbe12789b7c105122b71380b4ffcbbd3977590ff8df47eb05",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/build/memory-oom-64.json",
+      "sha256": "1c94a20ddc7206856be1776fe76825f763adaa1be9f812b3c2541d884046b684",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
     },
     {
       "path": "lab/scenarios/allocation-per-iteration.json",
@@ -907,7 +1180,7 @@
     },
     {
       "path": "lessons/08-causal-diagnosis-and-decisions.md",
-      "sha256": "bf5660e2abc683a12aa6ed5f382f30efbbc6dc24bd30d9e798e134155b341e05",
+      "sha256": "00ab85f516057bd124e3667e8f91845abc228e0c2a81205cdf7f03c7409e21e8",
       "review_scope": "substantive_claims",
       "claim_ids": [
         "M03-FC-008"
@@ -916,14 +1189,14 @@
     },
     {
       "path": "module.json",
-      "sha256": "487a8005d45ee0c866da48652d8914bf0e1d1cb1ceeb6234dd6c2368e9012e20",
+      "sha256": "73945e43e1553319b38df0cbc785dfa041d77eb4e8d7369350251884c7172770",
       "review_scope": "implementation_evidence",
       "claim_ids": [],
       "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
     },
     {
       "path": "resources.md",
-      "sha256": "92c47aa5ca20ae0918092be548a898671329ee4c925ef3d82893559b77db230b",
+      "sha256": "80bc38eeb68163102e5fdd44b11af3b5d39fd92d3b975c06fee41281652020ca",
       "review_scope": "normative_or_assignment_only",
       "claim_ids": [],
       "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
@@ -951,7 +1224,7 @@
     },
     {
       "path": "worksheets/week-12-report-defense.md",
-      "sha256": "b897ac3970c6d947c68b92022d7447f5532ae9f983307e8041ca38f90caad46d",
+      "sha256": "b79eb176d08c414e8d77157466e81951d54e525787b52d73fbfc2cbe4be6822f",
       "review_scope": "normative_or_assignment_only",
       "claim_ids": [],
       "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
@@ -1001,12 +1274,12 @@
       "claim_id": "M03-FC-012"
     }
   ],
-  "content_digest": "323f987bfe65bad410144a85641003e5f09388262b23279434353b783acc09a9",
+  "content_digest": "250b7ae318929979dc85a832b31dac08ccb27a31df9ab190dcde73409b78958e",
   "review_attestation": {
     "reviewer": "course readiness remediation review",
     "method": "primary-source semantic review",
     "status": "complete",
-    "content_digest": "323f987bfe65bad410144a85641003e5f09388262b23279434353b783acc09a9",
+    "content_digest": "250b7ae318929979dc85a832b31dac08ccb27a31df9ab190dcde73409b78958e",
     "scope_note": "All tracked learner-facing prose, exercises, answers, assessment contracts, synthetic fixtures, laboratory documentation, implementation, and configuration in this module were inventoried; substantive claims were checked against the named source boundaries."
   }
 }

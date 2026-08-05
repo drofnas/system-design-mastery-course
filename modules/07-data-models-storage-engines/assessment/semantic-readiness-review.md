@@ -1,5 +1,7 @@
 # Module 7 Semantic Readiness Review
 
+> **PESD 2.0 status: Review.** This pre-migration readiness record is historical, not a current Ready decision. Fresh evaluator repetitions, platform/offline/cleanup matrices, and timed learner pilots remain pending.
+
 - Reviewer: course-authoring review
 - Date: 2026-08-02
 - Scope: syllabus fidelity, local teaching, executable behavior, evidence

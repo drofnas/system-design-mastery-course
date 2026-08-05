@@ -1,10 +1,15 @@
-# Gate 3: Storage, Transactions, Replication, and Partitioning
+# G03 Assessment Brief
 
-Gate 3 closes Week 36. Complete it after freezing Module 9 evidence. Freeze each
+This is the learner-facing prompt set for the standalone Week 50 gate over
+M07, M08, M09. The exact time boxes and hard floors in [gate.json](gate.json)
+control. The 30-minute freeze and final scoring/closure block are managed from
+the [gate overview](README.md); this brief contains the four scored parts.
+
+Gate 3 runs in Week 50. Complete it after freezing Module 9 evidence. Freeze each
 part before feedback. The practical uses a new Northstar seed/configuration and
-does not expose a commerce answer. Total learner time: 3.5 hours.
+does not expose a commerce answer. Scored-part time: 5.5 hours.
 
-Use the [sealed-local gate workflow](../../../SOLO_GATE_GUIDE.md). Human review
+Use the [sealed-local gate workflow](../../SOLO_GATE_GUIDE.md). Human review
 is optional and stronger portfolio evidence, but it is not required.
 
 ## Part 1: Written examination — 75 minutes
@@ -22,7 +27,7 @@ Answer from mechanisms, arithmetic, and the stated failure model.
 5. A node is added during load. Design copy/catch-up/verify/cutover/rollback and
    quantify moved keys, transfer capacity, duplicate authority, and hot-key risk.
 
-## Part 2: Hidden-seed Northstar practical — 90 minutes
+## Part 2: Hidden-seed Northstar practical — 150 minutes
 
 Run `scripts/solo_gate.py prepare --gate G03` to select one of three synthetic
 cross-module variants. Before reveal, freeze and commit the
@@ -36,7 +41,7 @@ order, replica/partition maps, pair hashes, repair/convergence, load/movement,
 and explicit uncertainty. The model cannot prove production durability,
 consensus, legal compliance, or regional survival.
 
-## Part 3: Architecture defense — 45 minutes
+## Part 3: Architecture defense — 60 minutes
 
 Defend the independent commerce data design against the frozen solo-review
 questions for data-platform, security/residency, finance, and on-call roles. An
@@ -46,20 +51,20 @@ partition/hotspot decision. Record challenges, dissent, changed claims,
 follow-ups, owners, migration/rollback, and reversal evidence. Do not change the
 workload or failure model to evade a question.
 
-## Part 4: Portfolio review — 30 minutes
+## Part 4: Portfolio review — 45 minutes
 
 Index Modules 7–9 evidence by exact file heading and commit: frozen predictions,
 builds/tests, internals reviews, failure matrices/raw trials, ADRs/revisions,
 evaluations, learning logs, and assistance disclosures. The learner samples one
 item per class and the independent post-freeze evaluator checks chronological integrity. Record the result in
 `reviews/gate-03-submission.md`; do not edit prior baselines. The next scheduled
-capstone revision remains Week 48.
+separate capstone delta is Week 51.
 
-## Result algorithm
+## Result
 
-Repeat if evidence ordering is broken, raw evidence is fabricated/altered, a
-safety invariant fails, G02–G05 fails, or R07/R08 is zero. Revise if all parts
-exist but a section or rubric average is below 3.0 or traceability is incomplete.
-Pass only when all four parts and structural gates pass, average is at least
-3.0, and confidence is not low. Revisions are dated addenda; repeats use new
-hidden seeds.
+Pass only when all structural gates, scored parts, three module-domain
+subscores, safety-critical rows, and the overall average meet their published
+floors. Revise applies only when evidence and chronology are complete and a
+non-safety floor is missed. Repeat applies when an invariant fails, chronology
+is invalid, evidence is fabricated or mismatched, or the causal model is
+materially incorrect. A Pass creates no required remediation artifact.

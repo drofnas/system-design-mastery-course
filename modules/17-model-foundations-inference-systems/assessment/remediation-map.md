@@ -15,3 +15,11 @@
 
 Repeat from a new baseline after any evidence-integrity or unresolved safety
 failure. Otherwise preserve the original and submit a dated revision.
+
+## PESD 2.0 remediation
+
+When a cross-cutting floor is missed, return to Lesson 8's PESD 2.0 extension
+and the final exercise. Create a separate dated revision containing the missing
+requirement/control/evidence mapping, owner, evidence boundary, failure check,
+cost consequence, migration, and reversal trigger. Never edit the frozen
+baseline or raw trial. A Pass creates no required remediation artifact.
