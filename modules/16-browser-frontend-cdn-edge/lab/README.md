@@ -63,9 +63,6 @@ preflight with `--module M16 --wsl-browser-callback
 modules/16-browser-frontend-cdn-edge/lab/wsl-browser-callback.json`. Preserve
 only the sanitized, source-bound pass/fail record; the token is never written to
 the attestation.
-If Chromium cannot launch or the callback is blocked, use the official remote
-container fallback with learner commit, image digest, runner version, hashes,
-raw output, and limitations; remote evidence is not a hidden cloud prerequisite.
 
 The automated harness uses one worker, keeps traces only on failure, and leaves
 video and screenshots disabled by default. Manual keyboard, 200% zoom/reflow,

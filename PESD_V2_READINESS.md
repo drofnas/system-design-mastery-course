@@ -17,13 +17,12 @@ Last updated: 2026-08-04
 | Artifact contracts | Explicit core minutes, non-required contingency capacity, component roles, source-bound evidence envelopes, immutable freezes, and separate flex deltas | Pass |
 | Existing-learner migration | ID-based V1-to-V2 crosswalk plus a validated generator for outcome-only bridge plans and blank packs; frozen V1 evidence is never read or edited | Pass |
 | Shared cluster boundary | M09–M12 execute the same three-process, isolated-storage, unprivileged delay/drop/reorder boundary and validate source/config-bound output | Pass on macOS ARM64 |
-| Validator mutations | Calendar, hours, contingency, gate totals/publication, Pass remediation, invariants, lineage, allocations, evidence mode/provenance, chronology, bridge, and remote-fallback regressions | Pass |
+| Validator mutations | Calendar, hours, contingency, gate totals/publication, Pass remediation, invariants, lineage, allocations, evidence mode/provenance, chronology, and bridge regressions | Pass |
 | M10 consensus | Deterministic scheduler, crashable persistence, fencing, independent oracle, small-state checks, and seven required mutation classes | Pass on macOS ARM64 |
 | M15 runtimes | TypeScript, Go, Rust, and Java full cached F01–F09 container matrix, run serially with bounded resources | Pass on macOS ARM64 |
 | M17 inference | Incremental streaming, KV reuse, bounded allocator, scheduler recovery, cache isolation, quality gate, and bounded provider failover | Pass on macOS ARM64 |
 | M18 retrieval/agents | Retrieval oracle, deterministic workflow faults, tool authorization, approval, idempotency, cancellation, and AI01–AI12 | Pass on macOS ARM64 |
 | Resources | 207 registered records checked; zero blocking failures and three documented warnings with local fallbacks or optional status | Pass with warnings |
-| Remote fallback contract | Optional M10/M15/M16/M17 workflow, pinned images/actions, resource bounds, input/raw hashes, and evidence envelope | Structural and schema smoke pass |
 | WSL2 preflight contract | Fail-closed tests cover `/mnt/c`, bounded CPU/memory/PID enforcement, Docker allocation, loopback, actual Chromium launch, source-bound Windows callback, free disk, and selected offline caches | Logic/mutation pass; no real Windows claim |
 
 ## Required before `ready`
@@ -34,7 +33,6 @@ Last updated: 2026-08-04
 | macOS platform completion | Pinned Chromium automation, cached-offline rerun, and cleanup checks join the already-passing critical Python/container paths | Partial |
 | Ubuntu x86_64 matrix | All required labs, evaluator checks, cached-offline reruns, and cleanup checks pass | Pending |
 | Windows 11/WSL2 matrix | Real host runs the bounded cgroup probe and verifies filesystem placement, Docker allocation, guest loopback, source-bound Windows-browser callback, Chromium, disk, selected offline caches, complete labs, and cleanup | Pending; preflight implemented, support remains provisional |
-| Remote workflow execution | Manual workflow runs M10, M15, M16, and M17 at a committed source revision and emits valid evidence bundles | Pending remote run |
 | Timed learner pilots | Experienced senior engineers show p80 core completion at or below 10 hours/week and p95 at or below 12 | Pending human pilots |
 
 If any required row fails, keep the affected module and course in Review,

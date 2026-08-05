@@ -110,15 +110,6 @@ The preflight reports native Windows as unsupported and points to WSL2. Windows
 on ARM, Hyper-V-only Docker, and locked-down managed devices are outside the
 supported baseline until separately verified.
 
-## Remote fallback runner
-
-An official remote container runner may be used when a machine cannot run
-Docker, loopback, or Chromium. It is a fallback, not a cloud prerequisite.
-Accepted remote evidence records the learner commit, image digest, runner
-version, scenario/input/configuration hashes, resource limits, clock, raw output,
-and limitations. The remote runner cannot turn fixture replay into independent
-Build, Break, Implement, or Measure evidence.
-
 ## Evidence modes and trial record
 
 Declare exactly one of `derived`, `executed_deterministic`,

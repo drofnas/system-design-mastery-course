@@ -336,31 +336,6 @@ class ReadinessContractTests(unittest.TestCase):
             validate_course.validate_v2_course_contract(manifests, errors)
             self.assertTrue(any("AI01-AI12" in error for error in errors))
 
-    def test_remote_fallback_is_pinned_optional_and_evidence_bound(self) -> None:
-        errors: list[str] = []
-        validate_course.validate_remote_fallback_contract(errors)
-        self.assertEqual(errors, [])
-
-        temporary = tempfile.TemporaryDirectory()
-        self.addCleanup(temporary.cleanup)
-        root = Path(temporary.name)
-        for source in (
-            ROOT / ".github" / "workflows" / "pesd-remote-fallback.yml",
-            ROOT / "remote-runner" / "README.md",
-            ROOT / "scripts" / "write_remote_evidence.py",
-            ROOT / "schemas" / "remote-evidence.schema.json",
-            ROOT / "modules" / "15-execution-models-across-languages" / "lab" / "toolchains.lock.json",
-        ):
-            target = root / source.relative_to(ROOT)
-            target.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copy2(source, target)
-        guide = root / "remote-runner" / "README.md"
-        guide.write_text(guide.read_text().replace("optional and never a prerequisite", "available to every learner"))
-        with patch.object(validate_course, "ROOT", root):
-            errors = []
-            validate_course.validate_remote_fallback_contract(errors)
-            self.assertTrue(any("optional and never a prerequisite" in error for error in errors))
-
     def test_solo_completion_contract_rejects_a_reviewer_requirement(self) -> None:
         source_root, _ = self.manifest("M01")
         temporary = tempfile.TemporaryDirectory()
