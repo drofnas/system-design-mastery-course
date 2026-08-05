@@ -1,0 +1,1926 @@
+{
+  "module_id": "M10",
+  "title": "Time, Coordination, and Consensus",
+  "questions": [
+    {
+      "question_id": "M10-Q001",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "time-coordination-and-consensus",
+        "physical-clocks-drift-skew-and-uncertainty",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Physical Clocks, Drift, Skew, and Uncertainty' in Time, Coordination, and Consensus?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate physical-clock drift, skew, and uncertainty and diagnose conclusions that exceed the available clock contract.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate physical-clock drift, skew, and uncertainty and diagnose conclusions that exceed the available clock contract.",
+      "explanation": "Use Physical Clocks, Drift, Skew, and Uncertainty to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M10-Q002",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "time-coordination-and-consensus",
+        "logical-clocks-vector-clocks-and-causal-order",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Logical Clocks, Vector Clocks, and Causal Order' supports this outcome: Derive happened-before, Lamport-clock, and vector-clock relationships without treating display order as causality.",
+      "correct_answer": "A strong answer defines the mechanism from 'Logical Clocks, Vector Clocks, and Causal Order', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Logical Clocks, Vector Clocks, and Causal Order to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M10-Q003",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "time-coordination-and-consensus",
+        "safety-liveness-failure-detectors-and-consensus-",
+        "synthesis"
+      ],
+      "prompt": "For 'Safety, Liveness, Failure Detectors, and Consensus Boundaries', what quantities, units, or thresholds would you calculate before trusting a design claim about: Separate safety, liveness, and failure-detector assumptions and select consensus only for properties that require agreement.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Write falsifiable safety and conditional liveness properties.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M10-Q004",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "time-coordination-and-consensus",
+        "paxos-raft-and-replicated-state-machine-foundati",
+        "application"
+      ],
+      "prompt": "A learner applies 'Paxos, Raft, and Replicated-State-Machine Foundations' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **\u201cMajorities overlap, therefore safe.\u201d** The intersection must retain and",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M10-Q005",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "time-coordination-and-consensus",
+        "raft-leader-election-and-persistent-hard-state",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Raft Leader Election and Persistent Hard State'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement client deduplication and linearizable reads with explicit ambiguous-outcome and quorum barriers..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Ongaro and Ousterhout, Sections 5.2 and 5.4.1.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M10-Q006",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "time-coordination-and-consensus",
+        "raft-log-replication-commitment-and-application",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Raft Log Replication, Commitment, and Application' in Time, Coordination, and Consensus?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to protect snapshots, membership changes, leases, and external resources with atomic state, overlapping quorums, and fencing.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to protect snapshots, membership changes, leases, and external resources with atomic state, overlapping quorums, and fencing.",
+      "explanation": "Use Raft Log Replication, Commitment, and Application to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M10-Q007",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "time-coordination-and-consensus",
+        "clients-linearizable-reads-snapshots-and-compact",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Clients, Linearizable Reads, Snapshots, and Compaction' supports this outcome: Diagnose eight coordination failures from immutable same-input evidence and scoped safety oracles.",
+      "correct_answer": "A strong answer defines the mechanism from 'Clients, Linearizable Reads, Snapshots, and Compaction', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Clients, Linearizable Reads, Snapshots, and Compaction to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M10-Q008",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "time-coordination-and-consensus",
+        "membership-leases-fencing-and-coordination-decis",
+        "synthesis"
+      ],
+      "prompt": "For 'Membership, Leases, Fencing, and Coordination Decisions', what quantities, units, or thresholds would you calculate before trusting a design claim about: Defend a coordination architecture covering alternatives, operating limits, security, cost, migration, ownership, dissent, and reversal evidence.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Prove quorum overlap through a membership transition.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M10-Q009",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "time-coordination-and-consensus",
+        "physical-clocks-drift-skew-and-uncertainty",
+        "application"
+      ],
+      "prompt": "A learner applies 'Physical Clocks, Drift, Skew, and Uncertainty' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Treating NTP success as perfect time.** Synchronization has error, age, and",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M10-Q010",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "time-coordination-and-consensus",
+        "logical-clocks-vector-clocks-and-causal-order",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Logical Clocks, Vector Clocks, and Causal Order'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for derive happened-before, lamport-clock, and vector-clock relationships without treating display order as causality..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Lamport, Time, Clocks, and the Ordering of Events, pages 558\u2013563.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M10-Q011",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "time-coordination-and-consensus",
+        "safety-liveness-failure-detectors-and-consensus-",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Safety, Liveness, Failure Detectors, and Consensus Boundaries' in Time, Coordination, and Consensus?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to separate safety, liveness, and failure-detector assumptions and select consensus only for properties that require agreement.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to separate safety, liveness, and failure-detector assumptions and select consensus only for properties that require agreement.",
+      "explanation": "Use Safety, Liveness, Failure Detectors, and Consensus Boundaries to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M10-Q012",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "time-coordination-and-consensus",
+        "paxos-raft-and-replicated-state-machine-foundati",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Paxos, Raft, and Replicated-State-Machine Foundations' supports this outcome: Implement and diagnose Raft elections, persistent hard state, log matching, commitment, and state-machine application.",
+      "correct_answer": "A strong answer defines the mechanism from 'Paxos, Raft, and Replicated-State-Machine Foundations', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Paxos, Raft, and Replicated-State-Machine Foundations to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M10-Q013",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "time-coordination-and-consensus",
+        "raft-leader-election-and-persistent-hard-state",
+        "synthesis"
+      ],
+      "prompt": "For 'Raft Leader Election and Persistent Hard State', what quantities, units, or thresholds would you calculate before trusting a design claim about: Implement client deduplication and linearizable reads with explicit ambiguous-outcome and quorum barriers.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Trace follower, candidate, and leader transitions across terms.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M10-Q014",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "time-coordination-and-consensus",
+        "raft-log-replication-commitment-and-application",
+        "application"
+      ],
+      "prompt": "A learner applies 'Raft Log Replication, Commitment, and Application' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Equating majority storage with commitment in every term.** The current-term",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M10-Q015",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "time-coordination-and-consensus",
+        "clients-linearizable-reads-snapshots-and-compact",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Clients, Linearizable Reads, Snapshots, and Compaction'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose eight coordination failures from immutable same-input evidence and scoped safety oracles..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Ongaro and Ousterhout, Sections 6\u20137.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M10-Q016",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "time-coordination-and-consensus",
+        "membership-leases-fencing-and-coordination-decis",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Membership, Leases, Fencing, and Coordination Decisions' in Time, Coordination, and Consensus?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend a coordination architecture covering alternatives, operating limits, security, cost, migration, ownership, dissent, and reversal evidence.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend a coordination architecture covering alternatives, operating limits, security, cost, migration, ownership, dissent, and reversal evidence.",
+      "explanation": "Use Membership, Leases, Fencing, and Coordination Decisions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M10-Q017",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "time-coordination-and-consensus",
+        "physical-clocks-drift-skew-and-uncertainty",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Physical Clocks, Drift, Skew, and Uncertainty' supports this outcome: Calculate physical-clock drift, skew, and uncertainty and diagnose conclusions that exceed the available clock contract.",
+      "correct_answer": "A strong answer defines the mechanism from 'Physical Clocks, Drift, Skew, and Uncertainty', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Physical Clocks, Drift, Skew, and Uncertainty to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M10-Q018",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "time-coordination-and-consensus",
+        "logical-clocks-vector-clocks-and-causal-order",
+        "synthesis"
+      ],
+      "prompt": "For 'Logical Clocks, Vector Clocks, and Causal Order', what quantities, units, or thresholds would you calculate before trusting a design claim about: Derive happened-before, Lamport-clock, and vector-clock relationships without treating display order as causality.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Derive happened-before from process and message events.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M10-Q019",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "time-coordination-and-consensus",
+        "safety-liveness-failure-detectors-and-consensus-",
+        "application"
+      ],
+      "prompt": "A learner applies 'Safety, Liveness, Failure Detectors, and Consensus Boundaries' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Writing \u201cthe system is consistent.\u201d** Properties apply to operations and",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M10-Q020",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "time-coordination-and-consensus",
+        "paxos-raft-and-replicated-state-machine-foundati",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Paxos, Raft, and Replicated-State-Machine Foundations'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement and diagnose raft elections, persistent hard state, log matching, commitment, and state-machine application..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Lamport, Paxos Made Simple.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M10-Q021",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "time-coordination-and-consensus",
+        "raft-leader-election-and-persistent-hard-state",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Raft Leader Election and Persistent Hard State' in Time, Coordination, and Consensus?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement client deduplication and linearizable reads with explicit ambiguous-outcome and quorum barriers.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement client deduplication and linearizable reads with explicit ambiguous-outcome and quorum barriers.",
+      "explanation": "Use Raft Leader Election and Persistent Hard State to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M10-Q022",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "time-coordination-and-consensus",
+        "raft-log-replication-commitment-and-application",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Raft Log Replication, Commitment, and Application' supports this outcome: Protect snapshots, membership changes, leases, and external resources with atomic state, overlapping quorums, and fencing.",
+      "correct_answer": "A strong answer defines the mechanism from 'Raft Log Replication, Commitment, and Application', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Raft Log Replication, Commitment, and Application to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M10-Q023",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "time-coordination-and-consensus",
+        "clients-linearizable-reads-snapshots-and-compact",
+        "synthesis"
+      ],
+      "prompt": "For 'Clients, Linearizable Reads, Snapshots, and Compaction', what quantities, units, or thresholds would you calculate before trusting a design claim about: Diagnose eight coordination failures from immutable same-input evidence and scoped safety oracles.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Make duplicate delivery produce one logical state-machine effect.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M10-Q024",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "time-coordination-and-consensus",
+        "membership-leases-fencing-and-coordination-decis",
+        "application"
+      ],
+      "prompt": "A learner applies 'Membership, Leases, Fencing, and Coordination Decisions' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Changing local config files independently.** Consensus quorums may no longer",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M10-Q025",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "time-coordination-and-consensus",
+        "physical-clocks-drift-skew-and-uncertainty",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Physical Clocks, Drift, Skew, and Uncertainty'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for calculate physical-clock drift, skew, and uncertainty and diagnose conclusions that exceed the available clock contract..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Corbett et al., Spanner, Sections 3 and 4.1\u20134.2.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M10-Q026",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "time-coordination-and-consensus",
+        "logical-clocks-vector-clocks-and-causal-order",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Logical Clocks, Vector Clocks, and Causal Order' in Time, Coordination, and Consensus?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to derive happened-before, lamport-clock, and vector-clock relationships without treating display order as causality.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to derive happened-before, lamport-clock, and vector-clock relationships without treating display order as causality.",
+      "explanation": "Use Logical Clocks, Vector Clocks, and Causal Order to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M10-Q027",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "time-coordination-and-consensus",
+        "safety-liveness-failure-detectors-and-consensus-",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Safety, Liveness, Failure Detectors, and Consensus Boundaries' supports this outcome: Separate safety, liveness, and failure-detector assumptions and select consensus only for properties that require agreement.",
+      "correct_answer": "A strong answer defines the mechanism from 'Safety, Liveness, Failure Detectors, and Consensus Boundaries', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Safety, Liveness, Failure Detectors, and Consensus Boundaries to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M10-Q028",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "time-coordination-and-consensus",
+        "paxos-raft-and-replicated-state-machine-foundati",
+        "synthesis"
+      ],
+      "prompt": "For 'Paxos, Raft, and Replicated-State-Machine Foundations', what quantities, units, or thresholds would you calculate before trusting a design claim about: Implement and diagnose Raft elections, persistent hard state, log matching, commitment, and state-machine application.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Explain quorum agreement as an intersection plus value-selection rules.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M10-Q029",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "time-coordination-and-consensus",
+        "raft-leader-election-and-persistent-hard-state",
+        "application"
+      ],
+      "prompt": "A learner applies 'Raft Leader Election and Persistent Hard State' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Treating randomized timeout as safety.** Vote persistence and quorum",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M10-Q030",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "time-coordination-and-consensus",
+        "raft-log-replication-commitment-and-application",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Raft Log Replication, Commitment, and Application'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for protect snapshots, membership changes, leases, and external resources with atomic state, overlapping quorums, and fencing..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Ongaro and Ousterhout, Sections 5.3\u20135.4 and Figure 2.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M10-Q031",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "time-coordination-and-consensus",
+        "clients-linearizable-reads-snapshots-and-compact",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Clients, Linearizable Reads, Snapshots, and Compaction' in Time, Coordination, and Consensus?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose eight coordination failures from immutable same-input evidence and scoped safety oracles.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose eight coordination failures from immutable same-input evidence and scoped safety oracles.",
+      "explanation": "Use Clients, Linearizable Reads, Snapshots, and Compaction to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M10-Q032",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "time-coordination-and-consensus",
+        "membership-leases-fencing-and-coordination-decis",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Membership, Leases, Fencing, and Coordination Decisions' supports this outcome: Defend a coordination architecture covering alternatives, operating limits, security, cost, migration, ownership, dissent, and reversal evidence.",
+      "correct_answer": "A strong answer defines the mechanism from 'Membership, Leases, Fencing, and Coordination Decisions', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Membership, Leases, Fencing, and Coordination Decisions to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M10-Q033",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "time-coordination-and-consensus",
+        "physical-clocks-drift-skew-and-uncertainty",
+        "synthesis"
+      ],
+      "prompt": "For 'Physical Clocks, Drift, Skew, and Uncertainty', what quantities, units, or thresholds would you calculate before trusting a design claim about: Calculate physical-clock drift, skew, and uncertainty and diagnose conclusions that exceed the available clock contract.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Calculate worst-case drift and pairwise skew over a stated interval.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M10-Q034",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "time-coordination-and-consensus",
+        "logical-clocks-vector-clocks-and-causal-order",
+        "application"
+      ],
+      "prompt": "A learner applies 'Logical Clocks, Vector Clocks, and Causal Order' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Reading causality from scalar order.** `L(a) < L(b)` can hold for concurrent",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M10-Q035",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "time-coordination-and-consensus",
+        "safety-liveness-failure-detectors-and-consensus-",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Safety, Liveness, Failure Detectors, and Consensus Boundaries'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for separate safety, liveness, and failure-detector assumptions and select consensus only for properties that require agreement..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Ongaro and Ousterhout, In Search of an Understandable Consensus Algorithm.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M10-Q036",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "time-coordination-and-consensus",
+        "paxos-raft-and-replicated-state-machine-foundati",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Paxos, Raft, and Replicated-State-Machine Foundations' in Time, Coordination, and Consensus?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement and diagnose raft elections, persistent hard state, log matching, commitment, and state-machine application.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement and diagnose raft elections, persistent hard state, log matching, commitment, and state-machine application.",
+      "explanation": "Use Paxos, Raft, and Replicated-State-Machine Foundations to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M10-Q037",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "time-coordination-and-consensus",
+        "raft-leader-election-and-persistent-hard-state",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Raft Leader Election and Persistent Hard State' supports this outcome: Implement client deduplication and linearizable reads with explicit ambiguous-outcome and quorum barriers.",
+      "correct_answer": "A strong answer defines the mechanism from 'Raft Leader Election and Persistent Hard State', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Raft Leader Election and Persistent Hard State to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M10-Q038",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "time-coordination-and-consensus",
+        "raft-log-replication-commitment-and-application",
+        "synthesis"
+      ],
+      "prompt": "For 'Raft Log Replication, Commitment, and Application', what quantities, units, or thresholds would you calculate before trusting a design claim about: Protect snapshots, membership changes, leases, and external resources with atomic state, overlapping quorums, and fencing.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Execute AppendEntries predecessor checks and safe suffix repair.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M10-Q039",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "time-coordination-and-consensus",
+        "clients-linearizable-reads-snapshots-and-compact",
+        "application"
+      ],
+      "prompt": "A learner applies 'Clients, Linearizable Reads, Snapshots, and Compaction' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Claiming exactly-once transport.** The contract is one logical effect for a",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M10-Q040",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "time-coordination-and-consensus",
+        "membership-leases-fencing-and-coordination-decis",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Membership, Leases, Fencing, and Coordination Decisions'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for defend a coordination architecture covering alternatives, operating limits, security, cost, migration, ownership, dissent, and reversal evidence..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Ongaro and Ousterhout, Section 6 and dissertation membership extension.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M10-Q041",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "time-coordination-and-consensus",
+        "physical-clocks-drift-skew-and-uncertainty",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Physical Clocks, Drift, Skew, and Uncertainty' in Time, Coordination, and Consensus?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate physical-clock drift, skew, and uncertainty and diagnose conclusions that exceed the available clock contract.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate physical-clock drift, skew, and uncertainty and diagnose conclusions that exceed the available clock contract.",
+      "explanation": "Use Physical Clocks, Drift, Skew, and Uncertainty to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M10-Q042",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "time-coordination-and-consensus",
+        "logical-clocks-vector-clocks-and-causal-order",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Logical Clocks, Vector Clocks, and Causal Order' supports this outcome: Derive happened-before, Lamport-clock, and vector-clock relationships without treating display order as causality.",
+      "correct_answer": "A strong answer defines the mechanism from 'Logical Clocks, Vector Clocks, and Causal Order', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Logical Clocks, Vector Clocks, and Causal Order to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M10-Q043",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "time-coordination-and-consensus",
+        "safety-liveness-failure-detectors-and-consensus-",
+        "synthesis"
+      ],
+      "prompt": "For 'Safety, Liveness, Failure Detectors, and Consensus Boundaries', what quantities, units, or thresholds would you calculate before trusting a design claim about: Separate safety, liveness, and failure-detector assumptions and select consensus only for properties that require agreement.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Write falsifiable safety and conditional liveness properties.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M10-Q044",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "time-coordination-and-consensus",
+        "paxos-raft-and-replicated-state-machine-foundati",
+        "application"
+      ],
+      "prompt": "A learner applies 'Paxos, Raft, and Replicated-State-Machine Foundations' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **\u201cMajorities overlap, therefore safe.\u201d** The intersection must retain and",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M10-Q045",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "time-coordination-and-consensus",
+        "raft-leader-election-and-persistent-hard-state",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Raft Leader Election and Persistent Hard State'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement client deduplication and linearizable reads with explicit ambiguous-outcome and quorum barriers..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Ongaro and Ousterhout, Sections 5.2 and 5.4.1.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M10-Q046",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "time-coordination-and-consensus",
+        "raft-log-replication-commitment-and-application",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Raft Log Replication, Commitment, and Application' in Time, Coordination, and Consensus?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to protect snapshots, membership changes, leases, and external resources with atomic state, overlapping quorums, and fencing.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to protect snapshots, membership changes, leases, and external resources with atomic state, overlapping quorums, and fencing.",
+      "explanation": "Use Raft Log Replication, Commitment, and Application to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M10-Q047",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "time-coordination-and-consensus",
+        "clients-linearizable-reads-snapshots-and-compact",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Clients, Linearizable Reads, Snapshots, and Compaction' supports this outcome: Diagnose eight coordination failures from immutable same-input evidence and scoped safety oracles.",
+      "correct_answer": "A strong answer defines the mechanism from 'Clients, Linearizable Reads, Snapshots, and Compaction', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Clients, Linearizable Reads, Snapshots, and Compaction to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M10-Q048",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "time-coordination-and-consensus",
+        "membership-leases-fencing-and-coordination-decis",
+        "synthesis"
+      ],
+      "prompt": "For 'Membership, Leases, Fencing, and Coordination Decisions', what quantities, units, or thresholds would you calculate before trusting a design claim about: Defend a coordination architecture covering alternatives, operating limits, security, cost, migration, ownership, dissent, and reversal evidence.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Prove quorum overlap through a membership transition.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M10-Q049",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "time-coordination-and-consensus",
+        "physical-clocks-drift-skew-and-uncertainty",
+        "application"
+      ],
+      "prompt": "A learner applies 'Physical Clocks, Drift, Skew, and Uncertainty' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Treating NTP success as perfect time.** Synchronization has error, age, and",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M10-Q050",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "time-coordination-and-consensus",
+        "logical-clocks-vector-clocks-and-causal-order",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Logical Clocks, Vector Clocks, and Causal Order'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for derive happened-before, lamport-clock, and vector-clock relationships without treating display order as causality..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Lamport, Time, Clocks, and the Ordering of Events, pages 558\u2013563.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M10-Q051",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "time-coordination-and-consensus",
+        "safety-liveness-failure-detectors-and-consensus-",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Safety, Liveness, Failure Detectors, and Consensus Boundaries' in Time, Coordination, and Consensus?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to separate safety, liveness, and failure-detector assumptions and select consensus only for properties that require agreement.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to separate safety, liveness, and failure-detector assumptions and select consensus only for properties that require agreement.",
+      "explanation": "Use Safety, Liveness, Failure Detectors, and Consensus Boundaries to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M10-Q052",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "time-coordination-and-consensus",
+        "paxos-raft-and-replicated-state-machine-foundati",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Paxos, Raft, and Replicated-State-Machine Foundations' supports this outcome: Implement and diagnose Raft elections, persistent hard state, log matching, commitment, and state-machine application.",
+      "correct_answer": "A strong answer defines the mechanism from 'Paxos, Raft, and Replicated-State-Machine Foundations', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Paxos, Raft, and Replicated-State-Machine Foundations to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M10-Q053",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "time-coordination-and-consensus",
+        "raft-leader-election-and-persistent-hard-state",
+        "synthesis"
+      ],
+      "prompt": "For 'Raft Leader Election and Persistent Hard State', what quantities, units, or thresholds would you calculate before trusting a design claim about: Implement client deduplication and linearizable reads with explicit ambiguous-outcome and quorum barriers.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Trace follower, candidate, and leader transitions across terms.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M10-Q054",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "time-coordination-and-consensus",
+        "raft-log-replication-commitment-and-application",
+        "application"
+      ],
+      "prompt": "A learner applies 'Raft Log Replication, Commitment, and Application' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Equating majority storage with commitment in every term.** The current-term",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M10-Q055",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "time-coordination-and-consensus",
+        "clients-linearizable-reads-snapshots-and-compact",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Clients, Linearizable Reads, Snapshots, and Compaction'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose eight coordination failures from immutable same-input evidence and scoped safety oracles..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Ongaro and Ousterhout, Sections 6\u20137.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M10-Q056",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "time-coordination-and-consensus",
+        "membership-leases-fencing-and-coordination-decis",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Membership, Leases, Fencing, and Coordination Decisions' in Time, Coordination, and Consensus?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend a coordination architecture covering alternatives, operating limits, security, cost, migration, ownership, dissent, and reversal evidence.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend a coordination architecture covering alternatives, operating limits, security, cost, migration, ownership, dissent, and reversal evidence.",
+      "explanation": "Use Membership, Leases, Fencing, and Coordination Decisions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M10-Q057",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "time-coordination-and-consensus",
+        "physical-clocks-drift-skew-and-uncertainty",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Physical Clocks, Drift, Skew, and Uncertainty' supports this outcome: Calculate physical-clock drift, skew, and uncertainty and diagnose conclusions that exceed the available clock contract.",
+      "correct_answer": "A strong answer defines the mechanism from 'Physical Clocks, Drift, Skew, and Uncertainty', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Physical Clocks, Drift, Skew, and Uncertainty to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M10-Q058",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "time-coordination-and-consensus",
+        "logical-clocks-vector-clocks-and-causal-order",
+        "synthesis"
+      ],
+      "prompt": "For 'Logical Clocks, Vector Clocks, and Causal Order', what quantities, units, or thresholds would you calculate before trusting a design claim about: Derive happened-before, Lamport-clock, and vector-clock relationships without treating display order as causality.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Derive happened-before from process and message events.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M10-Q059",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "time-coordination-and-consensus",
+        "safety-liveness-failure-detectors-and-consensus-",
+        "application"
+      ],
+      "prompt": "A learner applies 'Safety, Liveness, Failure Detectors, and Consensus Boundaries' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Writing \u201cthe system is consistent.\u201d** Properties apply to operations and",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M10-Q060",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "time-coordination-and-consensus",
+        "paxos-raft-and-replicated-state-machine-foundati",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Paxos, Raft, and Replicated-State-Machine Foundations'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement and diagnose raft elections, persistent hard state, log matching, commitment, and state-machine application..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Lamport, Paxos Made Simple.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M10-Q061",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "time-coordination-and-consensus",
+        "raft-leader-election-and-persistent-hard-state",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Raft Leader Election and Persistent Hard State' in Time, Coordination, and Consensus?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement client deduplication and linearizable reads with explicit ambiguous-outcome and quorum barriers.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement client deduplication and linearizable reads with explicit ambiguous-outcome and quorum barriers.",
+      "explanation": "Use Raft Leader Election and Persistent Hard State to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M10-Q062",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "time-coordination-and-consensus",
+        "raft-log-replication-commitment-and-application",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Raft Log Replication, Commitment, and Application' supports this outcome: Protect snapshots, membership changes, leases, and external resources with atomic state, overlapping quorums, and fencing.",
+      "correct_answer": "A strong answer defines the mechanism from 'Raft Log Replication, Commitment, and Application', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Raft Log Replication, Commitment, and Application to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M10-Q063",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "time-coordination-and-consensus",
+        "clients-linearizable-reads-snapshots-and-compact",
+        "synthesis"
+      ],
+      "prompt": "For 'Clients, Linearizable Reads, Snapshots, and Compaction', what quantities, units, or thresholds would you calculate before trusting a design claim about: Diagnose eight coordination failures from immutable same-input evidence and scoped safety oracles.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Make duplicate delivery produce one logical state-machine effect.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M10-Q064",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "time-coordination-and-consensus",
+        "membership-leases-fencing-and-coordination-decis",
+        "application"
+      ],
+      "prompt": "A learner applies 'Membership, Leases, Fencing, and Coordination Decisions' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Changing local config files independently.** Consensus quorums may no longer",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M10-Q065",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "time-coordination-and-consensus",
+        "physical-clocks-drift-skew-and-uncertainty",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Physical Clocks, Drift, Skew, and Uncertainty'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for calculate physical-clock drift, skew, and uncertainty and diagnose conclusions that exceed the available clock contract..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Corbett et al., Spanner, Sections 3 and 4.1\u20134.2.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M10-Q066",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "time-coordination-and-consensus",
+        "logical-clocks-vector-clocks-and-causal-order",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Logical Clocks, Vector Clocks, and Causal Order' in Time, Coordination, and Consensus?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to derive happened-before, lamport-clock, and vector-clock relationships without treating display order as causality.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to derive happened-before, lamport-clock, and vector-clock relationships without treating display order as causality.",
+      "explanation": "Use Logical Clocks, Vector Clocks, and Causal Order to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M10-Q067",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "time-coordination-and-consensus",
+        "safety-liveness-failure-detectors-and-consensus-",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Safety, Liveness, Failure Detectors, and Consensus Boundaries' supports this outcome: Separate safety, liveness, and failure-detector assumptions and select consensus only for properties that require agreement.",
+      "correct_answer": "A strong answer defines the mechanism from 'Safety, Liveness, Failure Detectors, and Consensus Boundaries', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Safety, Liveness, Failure Detectors, and Consensus Boundaries to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M10-Q068",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "time-coordination-and-consensus",
+        "paxos-raft-and-replicated-state-machine-foundati",
+        "synthesis"
+      ],
+      "prompt": "For 'Paxos, Raft, and Replicated-State-Machine Foundations', what quantities, units, or thresholds would you calculate before trusting a design claim about: Implement and diagnose Raft elections, persistent hard state, log matching, commitment, and state-machine application.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Explain quorum agreement as an intersection plus value-selection rules.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M10-Q069",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "time-coordination-and-consensus",
+        "raft-leader-election-and-persistent-hard-state",
+        "application"
+      ],
+      "prompt": "A learner applies 'Raft Leader Election and Persistent Hard State' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Treating randomized timeout as safety.** Vote persistence and quorum",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M10-Q070",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "time-coordination-and-consensus",
+        "raft-log-replication-commitment-and-application",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Raft Log Replication, Commitment, and Application'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for protect snapshots, membership changes, leases, and external resources with atomic state, overlapping quorums, and fencing..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Ongaro and Ousterhout, Sections 5.3\u20135.4 and Figure 2.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M10-Q071",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "time-coordination-and-consensus",
+        "clients-linearizable-reads-snapshots-and-compact",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Clients, Linearizable Reads, Snapshots, and Compaction' in Time, Coordination, and Consensus?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose eight coordination failures from immutable same-input evidence and scoped safety oracles.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose eight coordination failures from immutable same-input evidence and scoped safety oracles.",
+      "explanation": "Use Clients, Linearizable Reads, Snapshots, and Compaction to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M10-Q072",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "time-coordination-and-consensus",
+        "membership-leases-fencing-and-coordination-decis",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Membership, Leases, Fencing, and Coordination Decisions' supports this outcome: Defend a coordination architecture covering alternatives, operating limits, security, cost, migration, ownership, dissent, and reversal evidence.",
+      "correct_answer": "A strong answer defines the mechanism from 'Membership, Leases, Fencing, and Coordination Decisions', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Membership, Leases, Fencing, and Coordination Decisions to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M10-Q073",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "time-coordination-and-consensus",
+        "physical-clocks-drift-skew-and-uncertainty",
+        "synthesis"
+      ],
+      "prompt": "For 'Physical Clocks, Drift, Skew, and Uncertainty', what quantities, units, or thresholds would you calculate before trusting a design claim about: Calculate physical-clock drift, skew, and uncertainty and diagnose conclusions that exceed the available clock contract.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Calculate worst-case drift and pairwise skew over a stated interval.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M10-Q074",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "time-coordination-and-consensus",
+        "logical-clocks-vector-clocks-and-causal-order",
+        "application"
+      ],
+      "prompt": "A learner applies 'Logical Clocks, Vector Clocks, and Causal Order' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Reading causality from scalar order.** `L(a) < L(b)` can hold for concurrent",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M10-Q075",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "time-coordination-and-consensus",
+        "safety-liveness-failure-detectors-and-consensus-",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Safety, Liveness, Failure Detectors, and Consensus Boundaries'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for separate safety, liveness, and failure-detector assumptions and select consensus only for properties that require agreement..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Ongaro and Ousterhout, In Search of an Understandable Consensus Algorithm.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M10-Q076",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "time-coordination-and-consensus",
+        "paxos-raft-and-replicated-state-machine-foundati",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Paxos, Raft, and Replicated-State-Machine Foundations' in Time, Coordination, and Consensus?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement and diagnose raft elections, persistent hard state, log matching, commitment, and state-machine application.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement and diagnose raft elections, persistent hard state, log matching, commitment, and state-machine application.",
+      "explanation": "Use Paxos, Raft, and Replicated-State-Machine Foundations to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M10-Q077",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "time-coordination-and-consensus",
+        "raft-leader-election-and-persistent-hard-state",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Raft Leader Election and Persistent Hard State' supports this outcome: Implement client deduplication and linearizable reads with explicit ambiguous-outcome and quorum barriers.",
+      "correct_answer": "A strong answer defines the mechanism from 'Raft Leader Election and Persistent Hard State', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Raft Leader Election and Persistent Hard State to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M10-Q078",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "time-coordination-and-consensus",
+        "raft-log-replication-commitment-and-application",
+        "synthesis"
+      ],
+      "prompt": "For 'Raft Log Replication, Commitment, and Application', what quantities, units, or thresholds would you calculate before trusting a design claim about: Protect snapshots, membership changes, leases, and external resources with atomic state, overlapping quorums, and fencing.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Execute AppendEntries predecessor checks and safe suffix repair.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M10-Q079",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "time-coordination-and-consensus",
+        "clients-linearizable-reads-snapshots-and-compact",
+        "application"
+      ],
+      "prompt": "A learner applies 'Clients, Linearizable Reads, Snapshots, and Compaction' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Claiming exactly-once transport.** The contract is one logical effect for a",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M10-Q080",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "time-coordination-and-consensus",
+        "membership-leases-fencing-and-coordination-decis",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Membership, Leases, Fencing, and Coordination Decisions'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for defend a coordination architecture covering alternatives, operating limits, security, cost, migration, ownership, dissent, and reversal evidence..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Ongaro and Ousterhout, Section 6 and dissertation membership extension.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M10-Q081",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "time-coordination-and-consensus",
+        "physical-clocks-drift-skew-and-uncertainty",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Physical Clocks, Drift, Skew, and Uncertainty' in Time, Coordination, and Consensus?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate physical-clock drift, skew, and uncertainty and diagnose conclusions that exceed the available clock contract.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate physical-clock drift, skew, and uncertainty and diagnose conclusions that exceed the available clock contract.",
+      "explanation": "Use Physical Clocks, Drift, Skew, and Uncertainty to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M10-Q082",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "time-coordination-and-consensus",
+        "logical-clocks-vector-clocks-and-causal-order",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Logical Clocks, Vector Clocks, and Causal Order' supports this outcome: Derive happened-before, Lamport-clock, and vector-clock relationships without treating display order as causality.",
+      "correct_answer": "A strong answer defines the mechanism from 'Logical Clocks, Vector Clocks, and Causal Order', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Logical Clocks, Vector Clocks, and Causal Order to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M10-Q083",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "time-coordination-and-consensus",
+        "safety-liveness-failure-detectors-and-consensus-",
+        "synthesis"
+      ],
+      "prompt": "For 'Safety, Liveness, Failure Detectors, and Consensus Boundaries', what quantities, units, or thresholds would you calculate before trusting a design claim about: Separate safety, liveness, and failure-detector assumptions and select consensus only for properties that require agreement.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Write falsifiable safety and conditional liveness properties.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M10-Q084",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "time-coordination-and-consensus",
+        "paxos-raft-and-replicated-state-machine-foundati",
+        "application"
+      ],
+      "prompt": "A learner applies 'Paxos, Raft, and Replicated-State-Machine Foundations' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **\u201cMajorities overlap, therefore safe.\u201d** The intersection must retain and",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M10-Q085",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "time-coordination-and-consensus",
+        "raft-leader-election-and-persistent-hard-state",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Raft Leader Election and Persistent Hard State'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement client deduplication and linearizable reads with explicit ambiguous-outcome and quorum barriers..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Ongaro and Ousterhout, Sections 5.2 and 5.4.1.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M10-Q086",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "time-coordination-and-consensus",
+        "raft-log-replication-commitment-and-application",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Raft Log Replication, Commitment, and Application' in Time, Coordination, and Consensus?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to protect snapshots, membership changes, leases, and external resources with atomic state, overlapping quorums, and fencing.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to protect snapshots, membership changes, leases, and external resources with atomic state, overlapping quorums, and fencing.",
+      "explanation": "Use Raft Log Replication, Commitment, and Application to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M10-Q087",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "time-coordination-and-consensus",
+        "clients-linearizable-reads-snapshots-and-compact",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Clients, Linearizable Reads, Snapshots, and Compaction' supports this outcome: Diagnose eight coordination failures from immutable same-input evidence and scoped safety oracles.",
+      "correct_answer": "A strong answer defines the mechanism from 'Clients, Linearizable Reads, Snapshots, and Compaction', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Clients, Linearizable Reads, Snapshots, and Compaction to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M10-Q088",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "time-coordination-and-consensus",
+        "membership-leases-fencing-and-coordination-decis",
+        "synthesis"
+      ],
+      "prompt": "For 'Membership, Leases, Fencing, and Coordination Decisions', what quantities, units, or thresholds would you calculate before trusting a design claim about: Defend a coordination architecture covering alternatives, operating limits, security, cost, migration, ownership, dissent, and reversal evidence.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Prove quorum overlap through a membership transition.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M10-Q089",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "time-coordination-and-consensus",
+        "physical-clocks-drift-skew-and-uncertainty",
+        "application"
+      ],
+      "prompt": "A learner applies 'Physical Clocks, Drift, Skew, and Uncertainty' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Treating NTP success as perfect time.** Synchronization has error, age, and",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M10-Q090",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "time-coordination-and-consensus",
+        "logical-clocks-vector-clocks-and-causal-order",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Logical Clocks, Vector Clocks, and Causal Order'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for derive happened-before, lamport-clock, and vector-clock relationships without treating display order as causality..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Lamport, Time, Clocks, and the Ordering of Events, pages 558\u2013563.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M10-Q091",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "time-coordination-and-consensus",
+        "safety-liveness-failure-detectors-and-consensus-",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Safety, Liveness, Failure Detectors, and Consensus Boundaries' in Time, Coordination, and Consensus?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to separate safety, liveness, and failure-detector assumptions and select consensus only for properties that require agreement.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to separate safety, liveness, and failure-detector assumptions and select consensus only for properties that require agreement.",
+      "explanation": "Use Safety, Liveness, Failure Detectors, and Consensus Boundaries to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M10-Q092",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "time-coordination-and-consensus",
+        "paxos-raft-and-replicated-state-machine-foundati",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Paxos, Raft, and Replicated-State-Machine Foundations' supports this outcome: Implement and diagnose Raft elections, persistent hard state, log matching, commitment, and state-machine application.",
+      "correct_answer": "A strong answer defines the mechanism from 'Paxos, Raft, and Replicated-State-Machine Foundations', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Paxos, Raft, and Replicated-State-Machine Foundations to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M10-Q093",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "time-coordination-and-consensus",
+        "raft-leader-election-and-persistent-hard-state",
+        "synthesis"
+      ],
+      "prompt": "For 'Raft Leader Election and Persistent Hard State', what quantities, units, or thresholds would you calculate before trusting a design claim about: Implement client deduplication and linearizable reads with explicit ambiguous-outcome and quorum barriers.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Trace follower, candidate, and leader transitions across terms.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M10-Q094",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "time-coordination-and-consensus",
+        "raft-log-replication-commitment-and-application",
+        "application"
+      ],
+      "prompt": "A learner applies 'Raft Log Replication, Commitment, and Application' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Equating majority storage with commitment in every term.** The current-term",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M10-Q095",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "time-coordination-and-consensus",
+        "clients-linearizable-reads-snapshots-and-compact",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Clients, Linearizable Reads, Snapshots, and Compaction'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose eight coordination failures from immutable same-input evidence and scoped safety oracles..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Ongaro and Ousterhout, Sections 6\u20137.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M10-Q096",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "time-coordination-and-consensus",
+        "membership-leases-fencing-and-coordination-decis",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Membership, Leases, Fencing, and Coordination Decisions' in Time, Coordination, and Consensus?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend a coordination architecture covering alternatives, operating limits, security, cost, migration, ownership, dissent, and reversal evidence.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend a coordination architecture covering alternatives, operating limits, security, cost, migration, ownership, dissent, and reversal evidence.",
+      "explanation": "Use Membership, Leases, Fencing, and Coordination Decisions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M10-Q097",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "time-coordination-and-consensus",
+        "physical-clocks-drift-skew-and-uncertainty",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Physical Clocks, Drift, Skew, and Uncertainty' supports this outcome: Calculate physical-clock drift, skew, and uncertainty and diagnose conclusions that exceed the available clock contract.",
+      "correct_answer": "A strong answer defines the mechanism from 'Physical Clocks, Drift, Skew, and Uncertainty', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Physical Clocks, Drift, Skew, and Uncertainty to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M10-Q098",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "time-coordination-and-consensus",
+        "logical-clocks-vector-clocks-and-causal-order",
+        "synthesis"
+      ],
+      "prompt": "For 'Logical Clocks, Vector Clocks, and Causal Order', what quantities, units, or thresholds would you calculate before trusting a design claim about: Derive happened-before, Lamport-clock, and vector-clock relationships without treating display order as causality.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Derive happened-before from process and message events.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M10-Q099",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "time-coordination-and-consensus",
+        "safety-liveness-failure-detectors-and-consensus-",
+        "application"
+      ],
+      "prompt": "A learner applies 'Safety, Liveness, Failure Detectors, and Consensus Boundaries' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Writing \u201cthe system is consistent.\u201d** Properties apply to operations and",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M10-Q100",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "time-coordination-and-consensus",
+        "paxos-raft-and-replicated-state-machine-foundati",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Paxos, Raft, and Replicated-State-Machine Foundations'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement and diagnose raft elections, persistent hard state, log matching, commitment, and state-machine application..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Lamport, Paxos Made Simple.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    }
+  ]
+}

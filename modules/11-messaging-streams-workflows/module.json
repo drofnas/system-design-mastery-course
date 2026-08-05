@@ -1,997 +1,240 @@
 {
   "$schema": "../../schemas/module.schema.json",
+  "course_id": "CSSDM",
+  "course_version": "3.0-solo",
   "id": "M11",
   "title": "Messaging, Streams, and Workflows",
-  "weeks": [
+  "status": "ready",
+  "focus": "Separate authoritative facts, commands, events, queues, logs, streams, and derived state, with explicit owners and rebuild contracts.",
+  "pacing": {
+    "review": "Skim lessons, answer self-checks, and take one generated quiz.",
+    "standard": "Study lessons, complete guided practice, use the answer key, and take one or more generated quizzes.",
+    "deep": "Complete standard work plus the reinforcement lab and optional project."
+  },
+  "lessons": [
     {
-      "number": 58,
-      "phase": "Model and derive",
-      "focus": "Model and derive",
-      "hours": 8.5,
-      "core_hours": 8.5,
-      "capacity_hours": 12,
-      "evidence": [
-        "Model and derive evidence frozen at source commit"
-      ],
-      "time_blocks": [
-        {
-          "id": "W058-T01",
-          "label": "Bounded authoritative resources",
-          "minutes": 160,
-          "activity": "required_resource",
-          "required": true,
-          "resource_ids": [
-            "RES-01",
-            "RES-03",
-            "RES-06"
-          ]
-        },
-        {
-          "id": "W058-T02",
-          "label": "Local mechanism instruction",
-          "minutes": 120,
-          "activity": "local_instruction",
-          "required": true,
-          "lesson_ids": [
-            "L01",
-            "L02",
-            "L03",
-            "L04"
-          ]
-        },
-        {
-          "id": "W058-T03",
-          "label": "Guided practice",
-          "minutes": 60,
-          "activity": "guided_practice",
-          "required": true,
-          "exercise_ids": [
-            "EX-01",
-            "EX-02",
-            "EX-03",
-            "EX-04",
-            "EX-05",
-            "EX-06",
-            "EX-07",
-            "EX-08"
-          ]
-        },
-        {
-          "id": "W058-T04",
-          "label": "Model and derive core work",
-          "minutes": 170,
-          "activity": "independent_work",
-          "required": true
-        },
-        {
-          "id": "W058-T05",
-          "label": "Optional contingency capacity",
-          "minutes": 210,
-          "activity": "contingency",
-          "required": false
-        }
-      ]
+      "id": "L01",
+      "title": "Authority, Events, Queues, Logs, and Streams",
+      "path": "lessons/01-authority-events-queues-logs-streams.md"
     },
     {
-      "number": 59,
-      "phase": "Guided build and prediction freeze",
-      "focus": "Guided build and prediction freeze",
-      "hours": 9.0,
-      "core_hours": 9.0,
-      "capacity_hours": 12,
-      "evidence": [
-        "Guided build and prediction freeze evidence frozen at source commit"
-      ],
-      "time_blocks": [
-        {
-          "id": "W059-T01",
-          "label": "Bounded authoritative resources",
-          "minutes": 120,
-          "activity": "required_resource",
-          "required": true,
-          "resource_ids": [
-            "RES-02",
-            "RES-04"
-          ]
-        },
-        {
-          "id": "W059-T02",
-          "label": "Local mechanism instruction",
-          "minutes": 120,
-          "activity": "local_instruction",
-          "required": true,
-          "lesson_ids": [
-            "L05",
-            "L06",
-            "L07",
-            "L08"
-          ]
-        },
-        {
-          "id": "W059-T03",
-          "label": "Guided practice",
-          "minutes": 60,
-          "activity": "guided_practice",
-          "required": true,
-          "exercise_ids": [
-            "EX-09",
-            "EX-10",
-            "EX-11",
-            "EX-12",
-            "EX-13",
-            "EX-14",
-            "EX-15",
-            "EX-16"
-          ]
-        },
-        {
-          "id": "W059-T04",
-          "label": "Required evidence components",
-          "minutes": 90,
-          "activity": "independent_work",
-          "required": true,
-          "artifact_allocations": [
-            {
-              "artifact_id": "A01",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A02",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A05",
-              "minutes": 30
-            }
-          ]
-        },
-        {
-          "id": "W059-T05",
-          "label": "Guided build and prediction freeze core work",
-          "minutes": 150,
-          "activity": "independent_work",
-          "required": true
-        },
-        {
-          "id": "W059-T06",
-          "label": "Optional contingency capacity",
-          "minutes": 180,
-          "activity": "contingency",
-          "required": false
-        }
-      ]
+      "id": "L02",
+      "title": "Delivery Semantics, Identities, and Exactly-Once Boundaries",
+      "path": "lessons/02-delivery-semantics-and-identities.md"
     },
     {
-      "number": 60,
-      "phase": "Independent build and integration",
-      "focus": "Independent build and integration",
-      "hours": 10.0,
-      "core_hours": 10.0,
-      "capacity_hours": 12,
-      "evidence": [
-        "Independent build and integration evidence frozen at source commit"
-      ],
-      "time_blocks": [
-        {
-          "id": "W060-T01",
-          "label": "Independent build and integration core work",
-          "minutes": 540,
-          "activity": "independent_work",
-          "required": true
-        },
-        {
-          "id": "W060-T02",
-          "label": "Independent build and integration verification checkpoint",
-          "minutes": 60,
-          "activity": "independent_work",
-          "required": true
-        },
-        {
-          "id": "W060-T03",
-          "label": "Optional contingency capacity",
-          "minutes": 120,
-          "activity": "contingency",
-          "required": false
-        }
-      ]
+      "id": "L03",
+      "title": "Ordering, Partition Keys, and Consumer Groups",
+      "path": "lessons/03-ordering-partitions-consumer-groups.md"
     },
     {
-      "number": 61,
-      "phase": "Break, repair, measure, and diagnose",
-      "focus": "Break, repair, measure, and diagnose",
-      "hours": 10.0,
-      "core_hours": 10.0,
-      "capacity_hours": 12,
-      "evidence": [
-        "Break, repair, measure, and diagnose evidence frozen at source commit"
-      ],
-      "time_blocks": [
-        {
-          "id": "W061-T01",
-          "label": "Required evidence components",
-          "minutes": 60,
-          "activity": "failure_experiment",
-          "required": true,
-          "artifact_allocations": [
-            {
-              "artifact_id": "A03",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A04",
-              "minutes": 30
-            }
-          ]
-        },
-        {
-          "id": "W061-T02",
-          "label": "Break, repair, measure, and diagnose core work",
-          "minutes": 540,
-          "activity": "failure_experiment",
-          "required": true
-        },
-        {
-          "id": "W061-T03",
-          "label": "Optional contingency capacity",
-          "minutes": 120,
-          "activity": "contingency",
-          "required": false
-        }
-      ]
+      "id": "L04",
+      "title": "Transactional Outbox, Inbox, and Change Data Capture",
+      "path": "lessons/04-outbox-inbox-cdc.md"
     },
     {
-      "number": 62,
-      "phase": "Decide, teach, assess, and freeze",
-      "focus": "Decide, teach, assess, and freeze",
-      "hours": 9.5,
-      "core_hours": 9.5,
-      "capacity_hours": 12,
-      "evidence": [
-        "Decide, teach, assess, and freeze evidence frozen at source commit"
-      ],
-      "time_blocks": [
-        {
-          "id": "W062-T01",
-          "label": "Required evidence components",
-          "minutes": 120,
-          "activity": "decision_artifact",
-          "required": true,
-          "artifact_allocations": [
-            {
-              "artifact_id": "A06",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A07",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A08",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A09",
-              "minutes": 30
-            }
-          ]
-        },
-        {
-          "id": "W062-T02",
-          "label": "Decide, teach, assess, and freeze core work",
-          "minutes": 390,
-          "activity": "assessment",
-          "required": true
-        },
-        {
-          "id": "W062-T03",
-          "label": "Module teach-back",
-          "minutes": 30,
-          "activity": "teach_back",
-          "required": true
-        },
-        {
-          "id": "W062-T04",
-          "label": "Learning log and freeze check",
-          "minutes": 30,
-          "activity": "reflection",
-          "required": true
-        },
-        {
-          "id": "W062-T05",
-          "label": "Optional contingency capacity",
-          "minutes": 150,
-          "activity": "contingency",
-          "required": false
-        }
-      ]
+      "id": "L05",
+      "title": "Replay, Poison Records, and Reconciliation",
+      "path": "lessons/05-replay-poison-reconciliation.md"
+    },
+    {
+      "id": "L06",
+      "title": "Workflow State, Sagas, and Compensation",
+      "path": "lessons/06-workflows-sagas-compensation.md"
+    },
+    {
+      "id": "L07",
+      "title": "Event Time, Watermarks, Lag, and Bounded Recovery",
+      "path": "lessons/07-event-time-watermarks-backpressure.md"
+    },
+    {
+      "id": "L08",
+      "title": "Asynchronous Architecture Decisions",
+      "path": "lessons/08-async-decisions-migration-ownership.md"
     }
   ],
-  "target_hours": 47,
-  "status": "review",
-  "readiness_note": "Ready on 2026-08-02 after teaching, lab, eighteen paired trials, six isolated calibration records, semantic review, resource verification, focused validation, and full-course validation passed.",
-  "outcomes": [
+  "learning_outcomes": [
     {
       "id": "M11-O1",
       "statement": "Separate authoritative facts, commands, events, queues, logs, streams, and derived state, with explicit owners and rebuild contracts.",
-      "graduate_profile": [
-        1,
-        4,
-        5,
-        7,
-        10
-      ],
-      "mastery_levels": [
-        "Define",
-        "Decide and Teach"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L01"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-01",
         "EX-02"
-      ],
-      "artifacts": [
-        "A01",
-        "A06"
-      ],
-      "rubric": [
-        "R01"
       ]
     },
     {
       "id": "M11-O2",
       "statement": "Derive delivery failure windows, stable identities, ordering scope, and defensible exactly-once boundaries.",
-      "graduate_profile": [
-        3,
-        5,
-        6,
-        7
-      ],
-      "mastery_levels": [
-        "Define",
-        "Calculate",
-        "Diagnose"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L02",
         "L03"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-03",
         "EX-04",
         "EX-05",
         "EX-06"
-      ],
-      "artifacts": [
-        "A01",
-        "A05"
-      ],
-      "rubric": [
-        "R02"
       ]
     },
     {
       "id": "M11-O3",
       "statement": "Select partition keys and consumer-group topology from workload, fairness, and per-aggregate invariants.",
-      "graduate_profile": [
-        2,
-        5,
-        6,
-        10
-      ],
-      "mastery_levels": [
-        "Calculate",
-        "Diagnose",
-        "Decide and Teach"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L03"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-05",
         "EX-06"
-      ],
-      "artifacts": [
-        "A01",
-        "A06"
-      ],
-      "rubric": [
-        "R03"
       ]
     },
     {
       "id": "M11-O4",
       "statement": "Implement an atomic outbox, stable envelope, publisher, idempotent inbox, derived view, and CDC checkpoint boundary.",
-      "graduate_profile": [
-        4,
-        6,
-        7,
-        8,
-        11
-      ],
-      "mastery_levels": [
-        "Implement",
-        "Diagnose"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L04"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-07",
         "EX-08"
-      ],
-      "artifacts": [
-        "A02",
-        "A03",
-        "A04"
-      ],
-      "rubric": [
-        "R04"
       ]
     },
     {
       "id": "M11-O5",
       "statement": "Design safe replay, poison handling, schema evolution, derived-state rebuild, and reconciliation.",
-      "graduate_profile": [
-        6,
-        7,
-        8,
-        9
-      ],
-      "mastery_levels": [
-        "Implement",
-        "Diagnose",
-        "Decide and Teach"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L05"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-09",
         "EX-10"
-      ],
-      "artifacts": [
-        "A02",
-        "A04",
-        "A05"
-      ],
-      "rubric": [
-        "R05"
       ]
     },
     {
       "id": "M11-O6",
       "statement": "Model durable workflows, orchestration or choreography, idempotent compensation, and explicit points of no return.",
-      "graduate_profile": [
-        1,
-        5,
-        6,
-        7,
-        14
-      ],
-      "mastery_levels": [
-        "Define",
-        "Implement",
-        "Diagnose",
-        "Decide and Teach"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L06"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-11",
         "EX-12"
-      ],
-      "artifacts": [
-        "A02",
-        "A04",
-        "A06"
-      ],
-      "rubric": [
-        "R06"
       ]
     },
     {
       "id": "M11-O7",
       "statement": "Calculate lag and drain time and apply explicit event-time, watermark, late-data, backpressure, and recovery policies.",
-      "graduate_profile": [
-        2,
-        3,
-        6,
-        8
-      ],
-      "mastery_levels": [
-        "Define",
-        "Calculate",
-        "Implement",
-        "Diagnose"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L07"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-13",
         "EX-14",
         "EX-15"
-      ],
-      "artifacts": [
-        "A01",
-        "A04",
-        "A05"
-      ],
-      "rubric": [
-        "R07",
-        "R08"
       ]
     },
     {
       "id": "M11-O8",
       "statement": "Diagnose nine asynchronous failures and defend an RFC covering semantics, operations, security, cost, migration, ownership, dissent, and reversal evidence.",
-      "graduate_profile": [
-        8,
-        9,
-        10,
-        14,
-        15,
-        16
-      ],
-      "mastery_levels": [
-        "Diagnose",
-        "Decide and Teach"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L08"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-16"
-      ],
-      "artifacts": [
-        "A04",
-        "A05",
-        "A06",
-        "A07",
-        "A08",
-        "A09"
-      ],
-      "rubric": [
-        "R09",
-        "R10"
       ]
     }
   ],
+  "practice": {
+    "exercises_path": "exercises/exercises.md",
+    "answer_key_path": "exercises/answer-key.md"
+  },
+  "lab": {
+    "required": true,
+    "path": "lab/README.md",
+    "note": "Use the lab to reinforce the local mechanism; treat expanded matrices and platform-specific evidence as optional deep-dive work."
+  },
+  "quiz": {
+    "question_bank_path": "quiz/question-bank.json",
+    "answer_key_path": "quiz/answer-key.md",
+    "llm_grader_prompt_path": "quiz/llm-grader-prompt.md",
+    "question_count": 100,
+    "default_draw_count": 20,
+    "types": [
+      "multiple_choice",
+      "short_answer",
+      "calculation",
+      "scenario_diagnosis",
+      "design_judgment"
+    ]
+  },
+  "optional_project": {
+    "description": "Apply Messaging, Streams, and Workflows to a small system you know. Write a short design note, experiment report, or implementation summary only if you want deeper practice."
+  },
   "resources": [
     {
       "id": "RES-01",
       "title": "Apache Kafka Design",
-      "author_or_publisher": "Apache Kafka; Apache Software Foundation",
-      "type": "maintainer design documentation",
       "url": "https://kafka.apache.org/42/design/design/",
       "required": true,
-      "access": "free",
-      "week": 58,
       "estimated_minutes": 80,
       "purpose": "Derive log, partition, consumer-position, delivery, replay, and exactly-once boundaries from an operated design.",
-      "assignment": "Read The Producer through Message Delivery Semantics; draw one partition/consumer-group trace and identify the participating state in each guarantee.",
-      "last_verified": "2026-08-02",
-      "text_alternative": "lessons/02-delivery-semantics-and-identities.md",
-      "verified_title": "Apache Kafka Design",
-      "verified_publisher": "Apache Kafka; Apache Software Foundation",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://kafka.apache.org/42/design/design/",
-      "verification_status": "verified"
+      "local_alternative": "lessons/02-delivery-semantics-and-identities.md"
     },
     {
       "id": "RES-02",
       "title": "Outbox Event Router",
-      "author_or_publisher": "Debezium project maintainers",
-      "type": "maintainer documentation",
       "url": "https://debezium.io/documentation/reference/stable/transformations/outbox-event-router.html",
       "required": true,
-      "access": "free",
-      "week": 59,
       "estimated_minutes": 45,
       "purpose": "Connect an application transaction, outbox envelope, routing key, CDC position, and downstream consumer identity.",
-      "assignment": "Read Basic outbox table through Configuration options; produce a field-by-field envelope and partition-key review.",
-      "last_verified": "2026-08-02",
-      "text_alternative": "lessons/04-outbox-inbox-cdc.md",
-      "verified_title": "Outbox Event Router",
-      "verified_publisher": "Debezium project maintainers",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://debezium.io/documentation/reference/stable/transformations/outbox-event-router.html",
-      "verification_status": "verified"
+      "local_alternative": "lessons/04-outbox-inbox-cdc.md"
     },
     {
       "id": "RES-03",
       "title": "Logical Decoding Concepts",
-      "author_or_publisher": "PostgreSQL Global Development Group",
-      "type": "official database documentation",
       "url": "https://www.postgresql.org/docs/current/logicaldecoding-explanation.html",
       "required": true,
-      "access": "free",
-      "week": 58,
       "estimated_minutes": 40,
       "purpose": "Reason about transaction order, snapshots, replication slots, acknowledgement, and retained WAL at a CDC boundary.",
-      "assignment": "Read the complete page; map snapshot, LSN, slot, consumer acknowledgement, retention risk, and recovery owner to the lab.",
-      "last_verified": "2026-08-02",
-      "text_alternative": "lessons/04-outbox-inbox-cdc.md",
-      "verified_title": "Logical Decoding Concepts",
-      "verified_publisher": "PostgreSQL Global Development Group",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://www.postgresql.org/docs/current/logicaldecoding-explanation.html",
-      "verification_status": "verified"
+      "local_alternative": "lessons/04-outbox-inbox-cdc.md"
     },
     {
       "id": "RES-04",
       "title": "The Dataflow Model: A Practical Approach to Balancing Correctness, Latency, and Cost in Massive-Scale, Unbounded, Out-of-Order Data Processing",
-      "author_or_publisher": "Tyler Akidau et al.; Google and PVLDB",
-      "type": "original systems paper",
       "url": "https://research.google/pubs/the-dataflow-model-a-practical-approach-to-balancing-correctness-latency-and-cost-in-massive-scale-unbounded-out-of-order-data-processing/",
       "required": true,
-      "access": "free",
-      "week": 59,
       "estimated_minutes": 75,
       "purpose": "Distinguish event time, processing time, windows, triggers, watermarks, late data, and their correctness/latency/cost trade-offs.",
-      "assignment": "Read Sections 1\u20132.3; specify when, in event time, a result is computed and how later data changes it.",
-      "last_verified": "2026-08-02",
-      "text_alternative": "lessons/07-event-time-watermarks-backpressure.md",
-      "verified_title": "The Dataflow Model: A Practical Approach to Balancing Correctness, Latency, and Cost in Massive-Scale, Unbounded, Out-of-Order Data Processing",
-      "verified_publisher": "Tyler Akidau et al.; Google and PVLDB",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://research.google/pubs/the-dataflow-model-a-practical-approach-to-balancing-correctness-latency-and-cost-in-massive-scale-unbounded-out-of-order-data-processing/",
-      "verification_status": "verified"
+      "local_alternative": "lessons/07-event-time-watermarks-backpressure.md"
     },
     {
       "id": "RES-05",
       "title": "Sagas",
-      "author_or_publisher": "Princeton University",
-      "type": "original research paper",
       "url": "https://www.cs.princeton.edu/research/techreps/598",
       "required": false,
-      "access": "free",
-      "week": 62,
       "estimated_minutes": 65,
       "purpose": "Separate local atomic transactions, long-lived workflow progress, compensation, and interleaving.",
-      "assignment": "Read Sections 1\u20134; write a forward/compensation ledger and identify one action that cannot restore prior state.",
-      "last_verified": "2026-08-02",
-      "text_alternative": "lessons/06-workflows-sagas-compensation.md",
-      "verified_title": "Sagas",
-      "verified_publisher": "Princeton University",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://www.cs.princeton.edu/research/techreps/598",
-      "verification_status": "verified"
+      "local_alternative": "lessons/06-workflows-sagas-compensation.md"
     },
     {
       "id": "RES-06",
       "title": "Announcing Cadence 1.0: The Powerful Workflow Platform Built for Scale and Reliability",
-      "author_or_publisher": "Cadence team; Uber Engineering",
-      "type": "first-person engineering case",
       "url": "https://www.uber.com/us/en/blog/announcing-cadence/",
       "required": true,
-      "access": "free",
-      "week": 58,
       "estimated_minutes": 40,
       "purpose": "Study workflow history, replay, versioning, capacity isolation, visibility, and platform ownership in an operated system.",
-      "assignment": "Read What is Cadence, Feature Set, Scale, and Robustness; record three platform guarantees, their prerequisites, and their owners.",
-      "last_verified": "2026-08-02",
-      "text_alternative": "lessons/08-async-decisions-migration-ownership.md",
-      "verified_title": "Announcing Cadence 1.0: The Powerful Workflow Platform Built for Scale and Reliability",
-      "verified_publisher": "Cadence team; Uber Engineering",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://www.uber.com/us/en/blog/announcing-cadence/",
-      "verification_status": "verified"
+      "local_alternative": "lessons/08-async-decisions-migration-ownership.md"
     },
     {
       "id": "RES-07",
       "title": "Event Sourcing and Stream Processing at Scale",
-      "author_or_publisher": "Martin Kleppmann; Domain-Driven Design Europe",
-      "type": "recorded practitioner talk with slides",
       "url": "https://martin.kleppmann.com/2016/01/29/event-sourcing-stream-processing-at-ddd-europe.html",
       "required": false,
-      "access": "free",
-      "week": 62,
       "estimated_minutes": 55,
       "purpose": "Compare database state, event logs, derived views, replay, event sourcing, and stream processing without relying on labels.",
-      "assignment": "Watch 00:00\u201345:00 or review the linked slides; draw authority and derivation boundaries and name one unsafe equivalence.",
-      "last_verified": "2026-08-02",
-      "text_alternative": "lessons/01-authority-events-queues-logs-streams.md",
-      "verified_title": "Event Sourcing and Stream Processing at Scale",
-      "verified_publisher": "Martin Kleppmann; Domain-Driven Design Europe",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://martin.kleppmann.com/2016/01/29/event-sourcing-stream-processing-at-ddd-europe.html",
-      "verification_status": "verified"
+      "local_alternative": "lessons/01-authority-events-queues-logs-streams.md"
     }
-  ],
-  "artifacts": [
-    {
-      "id": "A01",
-      "week": 59,
-      "required": true,
-      "template_path": "modules/11-messaging-streams-workflows/worksheets/week-41-messaging-model.md",
-      "submission_path": "reports/module-11-messaging-baseline.md",
-      "immutable_after_submission": true,
-      "portfolio_category": "model",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M11-A01",
-      "component_role": "prediction",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A02",
-      "week": 59,
-      "required": true,
-      "template_path": "modules/11-messaging-streams-workflows/worksheets/week-42-publication-build.md",
-      "submission_path": "labs/module-11/publication-workflow/",
-      "portfolio_category": "implementation",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M11-A02",
-      "component_role": "implementation",
-      "estimated_minutes": 30,
-      "evidence_mode": "executed_deterministic"
-    },
-    {
-      "id": "A03",
-      "week": 61,
-      "required": true,
-      "template_path": "modules/11-messaging-streams-workflows/worksheets/week-42-publication-build.md",
-      "submission_path": "reports/module-11-messaging-internals.md",
-      "portfolio_category": "data_governance_dossier",
-      "portfolio_item_id": "PI-GOV-01",
-      "portfolio_credit": true,
-      "evidence_lineage_id": "LIN-GOV-DATA",
-      "component_role": "analysis",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A04",
-      "week": 61,
-      "required": true,
-      "template_path": "modules/11-messaging-streams-workflows/worksheets/week-43-messaging-failure-matrix.md",
-      "submission_path": "experiments/module-11/",
-      "immutable_after_submission": true,
-      "portfolio_category": "failure_matrix",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M11-A04",
-      "component_role": "raw_evidence",
-      "estimated_minutes": 30,
-      "evidence_mode": "executed_deterministic"
-    },
-    {
-      "id": "A05",
-      "week": 59,
-      "required": true,
-      "template_path": "modules/11-messaging-streams-workflows/worksheets/week-43-messaging-failure-matrix.md",
-      "submission_path": "reports/module-11-messaging-failure-investigation.md",
-      "immutable_after_submission": true,
-      "portfolio_category": "model",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M11-A05",
-      "component_role": "prediction",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A06",
-      "week": 62,
-      "required": true,
-      "template_path": "templates/rfc-template.md",
-      "submission_path": "rfc/module-11-asynchronous-workflow.md",
-      "portfolio_category": "rfc",
-      "portfolio_item_id": "PI-DECISION-M11",
-      "portfolio_credit": true,
-      "evidence_lineage_id": "LIN-DECISION-M11",
-      "component_role": "decision",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A07",
-      "week": 62,
-      "required": true,
-      "template_path": "modules/11-messaging-streams-workflows/worksheets/week-44-async-workflow-rfc-defense.md",
-      "submission_path": "reviews/module-11-defense.md",
-      "portfolio_category": "teach_back",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M11-A07",
-      "component_role": "final",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A08",
-      "week": 62,
-      "required": true,
-      "template_path": "modules/11-messaging-streams-workflows/assessment/report-template.md",
-      "submission_path": "reviews/module-11-evaluation.md",
-      "portfolio_category": "evaluation",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M11-A08",
-      "component_role": "final",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A09",
-      "week": 62,
-      "required": true,
-      "template_path": "templates/learning-log-template.md",
-      "submission_path": "learning-log/week-058.md through learning-log/week-062.md",
-      "portfolio_category": "learning_log",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M11-A09",
-      "component_role": "final",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    }
-  ],
-  "failure_experiments": [
-    {
-      "id": "F01",
-      "scenario": "crash between authority commit and publish",
-      "evidence": "authority transaction, outbox row, event identity, publish state, pending visibility, and atomic-publication invariant"
-    },
-    {
-      "id": "F02",
-      "scenario": "lost broker acknowledgement and republish",
-      "evidence": "stable event identity, append attempts, offsets, inbox state, logical applications, and duplicate-delivery invariant"
-    },
-    {
-      "id": "F03",
-      "scenario": "crash after external effect before consumer acknowledgement",
-      "evidence": "effect key, effect ledger, inbox transaction, offset, responses, and irreversible-effect count"
-    },
-    {
-      "id": "F04",
-      "scenario": "reordered updates for one aggregate",
-      "evidence": "aggregate identity/version, partition, arrival/application order, projection version, and monotonicity invariant"
-    },
-    {
-      "id": "F05",
-      "scenario": "poison record blocks progress",
-      "evidence": "attempt count, classification, quarantine record, offset, audit, replay owner, and bounded-progress invariant"
-    },
-    {
-      "id": "F06",
-      "scenario": "consumer stop, backlog growth, and drain",
-      "evidence": "arrival/service rates, lag, age, admission, resource reserve, drain calculation, fairness, and bounded-work invariant"
-    },
-    {
-      "id": "F07",
-      "scenario": "workflow crash during forward and compensation steps",
-      "evidence": "workflow history, state/version, step identity, compensation attempts, point of no return, and terminal-state invariant"
-    },
-    {
-      "id": "F08",
-      "scenario": "event delayed beyond watermark",
-      "evidence": "event/processing times, watermark, window, late-data action, correction, and declared-time-policy invariant"
-    },
-    {
-      "id": "F09",
-      "scenario": "dropped CDC record and corrupted derived state",
-      "evidence": "authority/outbox/log/projection checksums, missing identity, reconciliation diff, rebuild evidence, and convergence invariant"
-    }
-  ],
-  "assessment": {
-    "rubric_path": "modules/11-messaging-streams-workflows/assessment/rubric.md",
-    "evaluator_prompt_path": "modules/11-messaging-streams-workflows/assessment/evaluator-prompt.md",
-    "evaluation_schema_path": "schemas/evaluation.schema.json",
-    "calibration_path": "modules/11-messaging-streams-workflows/assessment/calibration",
-    "pass_average": 3,
-    "safety_critical_criteria": [
-      "R04",
-      "R06",
-      "R09"
-    ],
-    "required_result_bands": [
-      "Pass",
-      "Revise",
-      "Repeat"
-    ]
-  },
-  "solo_review": {
-    "challenge_questions": [
-      {
-        "id": "M11-SR-Q01",
-        "prompt": "Which claim in your artifact most directly supports this outcome, and what evidence could falsify it: Separate authoritative facts, commands, events, queues, logs, streams, and derived state, with explicit owners and rebuild contracts."
-      },
-      {
-        "id": "M11-SR-Q02",
-        "prompt": "What unstated assumption could invalidate your treatment of this outcome, and how would you test it: Derive delivery failure windows, stable identities, ordering scope, and defensible exactly-once boundaries."
-      },
-      {
-        "id": "M11-SR-Q03",
-        "prompt": "Defend the causal chain behind your evidence for this outcome, including the first likely failure: Select partition keys and consumer-group topology from workload, fairness, and per-aggregate invariants."
-      },
-      {
-        "id": "M11-SR-Q04",
-        "prompt": "Which reasonable alternative would challenge your treatment of this outcome, and under what evidence would it win: Implement an atomic outbox, stable envelope, publisher, idempotent inbox, derived view, and CDC checkpoint boundary."
-      },
-      {
-        "id": "M11-SR-Q05",
-        "prompt": "What operational, security, cost, or ownership consequence is least supported in your treatment of this outcome: Design safe replay, poison handling, schema evolution, derived-state rebuild, and reconciliation."
-      },
-      {
-        "id": "M11-SR-Q06",
-        "prompt": "Where does your evidence stop transferring to production for this outcome, and how is that boundary disclosed: Model durable workflows, orchestration or choreography, idempotent compensation, and explicit points of no return."
-      },
-      {
-        "id": "M11-SR-Q07",
-        "prompt": "What dissent should a skeptical reviewer raise about your treatment of this outcome, and what follow-up evidence would resolve it: Calculate lag and drain time and apply explicit event-time, watermark, late-data, backpressure, and recovery policies."
-      },
-      {
-        "id": "M11-SR-Q08",
-        "prompt": "What changed belief or reversal condition follows from your work on this outcome, and where is it recorded: Diagnose nine asynchronous failures and defend an RFC covering semantics, operations, security, cost, migration, ownership, dissent, and reversal evidence."
-      }
-    ],
-    "required_reviewer_roles": [
-      "Messaging, Streams, and Workflows domain reviewer",
-      "operations and reliability owner",
-      "security and privacy reviewer",
-      "delivery and cost stakeholder"
-    ],
-    "questions_per_attempt": 5,
-    "live_ai_allowed": false,
-    "record_template_path": "templates/solo-review-record-template.md"
-  },
-  "factual_claims_path": "modules/11-messaging-streams-workflows/assessment/factual-claims.json",
-  "lesson_catalog": [
-    {
-      "id": "L01",
-      "path": "lessons/01-authority-events-queues-logs-streams.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L02",
-      "path": "lessons/02-delivery-semantics-and-identities.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L03",
-      "path": "lessons/03-ordering-partitions-consumer-groups.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L04",
-      "path": "lessons/04-outbox-inbox-cdc.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L05",
-      "path": "lessons/05-replay-poison-reconciliation.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L06",
-      "path": "lessons/06-workflows-sagas-compensation.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L07",
-      "path": "lessons/07-event-time-watermarks-backpressure.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L08",
-      "path": "lessons/08-async-decisions-migration-ownership.md",
-      "estimated_minutes": 30
-    }
-  ],
-  "citation_catalog": [],
-  "course_id": "PESD-104",
-  "course_version": "2.0",
-  "primary_decision": {
-    "artifact_id": "A06",
-    "type": "RFC"
-  },
-  "pesd_v2_additions": "semantic event contracts, producer and consumer ownership, data quality, lineage, policy-version-aware replay, lifecycle disposition, and batch/stream reconciliation",
-  "semantic_evaluation": "module_specific"
+  ]
 }

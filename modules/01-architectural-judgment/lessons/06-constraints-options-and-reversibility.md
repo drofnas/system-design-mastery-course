@@ -254,7 +254,7 @@ Complete:
 - [EX-08](../exercises/exercises.md#ex-08-decision-drivers-and-candidates)
 - [EX-09](../exercises/exercises.md#ex-09-reversal-conditions)
 
-Then use the [Week 2 candidate worksheet](../worksheets/week-02-candidate-designs.md).
+Then compare your candidate-design reasoning with the practice answer key.
 
 ## Self-check
 

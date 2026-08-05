@@ -7,7 +7,7 @@ environment, and tool/AI disclosure.
 
 ## Baseline and question
 
-Cite the frozen baseline and investigation question. State exclusions and the
+Cite the saved starting point and investigation question. State exclusions and the
 smallest meaningful effect.
 
 ## Observations

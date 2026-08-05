@@ -1,1195 +1,312 @@
 {
   "$schema": "../../schemas/module.schema.json",
+  "course_id": "CSSDM",
+  "course_version": "3.0-solo",
   "id": "M13",
   "title": "Security, Privacy, and Abuse Resistance",
-  "weeks": [
+  "status": "ready",
+  "focus": "Build a repeatable threat model from assets, actors, data flows, trust boundaries, abuse cases, risk owners, and reversal evidence.",
+  "pacing": {
+    "review": "Skim lessons, answer self-checks, and take one generated quiz.",
+    "standard": "Study lessons, complete guided practice, use the answer key, and take one or more generated quizzes.",
+    "deep": "Complete standard work plus the reinforcement lab and optional project."
+  },
+  "lessons": [
     {
-      "number": 70,
-      "phase": "Model and derive",
-      "focus": "Model and derive",
-      "hours": 8.5,
-      "core_hours": 8.5,
-      "capacity_hours": 12,
-      "evidence": [
-        "Model and derive evidence frozen at source commit"
-      ],
-      "time_blocks": [
-        {
-          "id": "W070-T01",
-          "label": "Bounded authoritative resources",
-          "minutes": 200,
-          "activity": "required_resource",
-          "required": true,
-          "resource_ids": [
-            "RES-03",
-            "RES-12",
-            "RES-14",
-            "RES-15"
-          ]
-        },
-        {
-          "id": "W070-T02",
-          "label": "Local mechanism instruction",
-          "minutes": 120,
-          "activity": "local_instruction",
-          "required": true,
-          "lesson_ids": [
-            "L01",
-            "L02",
-            "L03",
-            "L04"
-          ]
-        },
-        {
-          "id": "W070-T03",
-          "label": "Guided practice",
-          "minutes": 60,
-          "activity": "guided_practice",
-          "required": true,
-          "exercise_ids": [
-            "EX-01",
-            "EX-02",
-            "EX-03",
-            "EX-04",
-            "EX-05",
-            "EX-06",
-            "EX-07",
-            "EX-08",
-            "EX-09"
-          ]
-        },
-        {
-          "id": "W070-T04",
-          "label": "Required evidence components",
-          "minutes": 30,
-          "activity": "independent_work",
-          "required": true,
-          "artifact_allocations": [
-            {
-              "artifact_id": "A05",
-              "minutes": 30
-            }
-          ]
-        },
-        {
-          "id": "W070-T05",
-          "label": "Model and derive core work",
-          "minutes": 100,
-          "activity": "independent_work",
-          "required": true
-        },
-        {
-          "id": "W070-T06",
-          "label": "Optional contingency capacity",
-          "minutes": 210,
-          "activity": "contingency",
-          "required": false
-        }
-      ]
+      "id": "L01",
+      "title": "Threat models, trust boundaries, and abuse cases",
+      "path": "lessons/01-threat-models-abuse-cases.md"
     },
     {
-      "number": 71,
-      "phase": "Guided build and prediction freeze",
-      "focus": "Guided build and prediction freeze",
-      "hours": 9.0,
-      "core_hours": 9.0,
-      "capacity_hours": 12,
-      "evidence": [
-        "Guided build and prediction freeze evidence frozen at source commit"
-      ],
-      "time_blocks": [
-        {
-          "id": "W071-T01",
-          "label": "Bounded authoritative resources",
-          "minutes": 205,
-          "activity": "required_resource",
-          "required": true,
-          "resource_ids": [
-            "RES-01",
-            "RES-02",
-            "RES-10"
-          ]
-        },
-        {
-          "id": "W071-T02",
-          "label": "Local mechanism instruction",
-          "minutes": 120,
-          "activity": "local_instruction",
-          "required": true,
-          "lesson_ids": [
-            "L05",
-            "L06",
-            "L07",
-            "L08"
-          ]
-        },
-        {
-          "id": "W071-T03",
-          "label": "Guided practice",
-          "minutes": 60,
-          "activity": "guided_practice",
-          "required": true,
-          "exercise_ids": [
-            "EX-10",
-            "EX-11",
-            "EX-12",
-            "EX-13",
-            "EX-14",
-            "EX-15",
-            "EX-16",
-            "EX-17",
-            "EX-18"
-          ]
-        },
-        {
-          "id": "W071-T04",
-          "label": "Required evidence components",
-          "minutes": 90,
-          "activity": "independent_work",
-          "required": true,
-          "artifact_allocations": [
-            {
-              "artifact_id": "A01",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A02",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A03",
-              "minutes": 30
-            }
-          ]
-        },
-        {
-          "id": "W071-T05",
-          "label": "Guided build and prediction freeze core work",
-          "minutes": 65,
-          "activity": "independent_work",
-          "required": true
-        },
-        {
-          "id": "W071-T06",
-          "label": "Optional contingency capacity",
-          "minutes": 180,
-          "activity": "contingency",
-          "required": false
-        }
-      ]
+      "id": "L02",
+      "title": "Identity, authentication, recovery, and sessions",
+      "path": "lessons/02-identity-authentication-sessions.md"
     },
     {
-      "number": 72,
-      "phase": "Independent build and integration",
-      "focus": "Independent build and integration",
-      "hours": 10.0,
-      "core_hours": 10.0,
-      "capacity_hours": 12,
-      "evidence": [
-        "Independent build and integration evidence frozen at source commit"
-      ],
-      "time_blocks": [
-        {
-          "id": "W072-T01",
-          "label": "Independent build and integration core work",
-          "minutes": 540,
-          "activity": "independent_work",
-          "required": true
-        },
-        {
-          "id": "W072-T02",
-          "label": "Independent build and integration verification checkpoint",
-          "minutes": 60,
-          "activity": "independent_work",
-          "required": true
-        },
-        {
-          "id": "W072-T03",
-          "label": "Optional contingency capacity",
-          "minutes": 120,
-          "activity": "contingency",
-          "required": false
-        }
-      ]
+      "id": "L03",
+      "title": "Authorization models and enforcement",
+      "path": "lessons/03-authorization-models-enforcement.md"
     },
     {
-      "number": 73,
-      "phase": "Break, repair, measure, and diagnose",
-      "focus": "Break, repair, measure, and diagnose",
-      "hours": 10.0,
-      "core_hours": 10.0,
-      "capacity_hours": 12,
-      "evidence": [
-        "Break, repair, measure, and diagnose evidence frozen at source commit"
-      ],
-      "time_blocks": [
-        {
-          "id": "W073-T01",
-          "label": "Required evidence components",
-          "minutes": 60,
-          "activity": "failure_experiment",
-          "required": true,
-          "artifact_allocations": [
-            {
-              "artifact_id": "A04",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A06",
-              "minutes": 30
-            }
-          ]
-        },
-        {
-          "id": "W073-T02",
-          "label": "Break, repair, measure, and diagnose core work",
-          "minutes": 540,
-          "activity": "failure_experiment",
-          "required": true
-        },
-        {
-          "id": "W073-T03",
-          "label": "Optional contingency capacity",
-          "minutes": 120,
-          "activity": "contingency",
-          "required": false
-        }
-      ]
+      "id": "L04",
+      "title": "Tenant isolation and scoped access",
+      "path": "lessons/04-tenant-isolation-scoped-access.md"
     },
     {
-      "number": 74,
-      "phase": "Decide, teach, assess, and freeze",
-      "focus": "Decide, teach, assess, and freeze",
-      "hours": 9.5,
-      "core_hours": 9.5,
-      "capacity_hours": 12,
-      "evidence": [
-        "Decide, teach, assess, and freeze evidence frozen at source commit"
-      ],
-      "time_blocks": [
-        {
-          "id": "W074-T01",
-          "label": "Required evidence components",
-          "minutes": 120,
-          "activity": "decision_artifact",
-          "required": true,
-          "artifact_allocations": [
-            {
-              "artifact_id": "A07",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A08",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A09",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A10",
-              "minutes": 30
-            }
-          ]
-        },
-        {
-          "id": "W074-T02",
-          "label": "Decide, teach, assess, and freeze core work",
-          "minutes": 390,
-          "activity": "assessment",
-          "required": true
-        },
-        {
-          "id": "W074-T03",
-          "label": "Module teach-back",
-          "minutes": 30,
-          "activity": "teach_back",
-          "required": true
-        },
-        {
-          "id": "W074-T04",
-          "label": "Learning log and freeze check",
-          "minutes": 30,
-          "activity": "reflection",
-          "required": true
-        },
-        {
-          "id": "W074-T05",
-          "label": "Optional contingency capacity",
-          "minutes": 150,
-          "activity": "contingency",
-          "required": false
-        }
-      ]
+      "id": "L05",
+      "title": "Secrets, keys, certificates, and encryption",
+      "path": "lessons/05-secrets-keys-encryption.md"
+    },
+    {
+      "id": "L06",
+      "title": "Audit, privacy, and data lifecycles",
+      "path": "lessons/06-audit-privacy-data-lifecycle.md"
+    },
+    {
+      "id": "L07",
+      "title": "Supply chains, economic abuse, and security response",
+      "path": "lessons/07-supply-chain-abuse-security-response.md"
+    },
+    {
+      "id": "L08",
+      "title": "Prompt injection, tool authorization, and security decisions",
+      "path": "lessons/08-prompt-injection-tool-authorization-decisions.md"
     }
   ],
-  "target_hours": 47,
-  "status": "review",
-  "readiness_note": "Ready on 2026-08-03 after isolated six-run calibration, deterministic lab checks, semantic review, and focused and full course validation.",
-  "outcomes": [
+  "learning_outcomes": [
     {
       "id": "M13-O1",
       "statement": "Build a repeatable threat model from assets, actors, data flows, trust boundaries, abuse cases, risk owners, and reversal evidence.",
-      "graduate_profile": [
-        1,
-        7,
-        9,
-        15
-      ],
-      "mastery_levels": [
-        "Define",
-        "Diagnose",
-        "Decide and Teach"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L01"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-01",
         "EX-02"
-      ],
-      "artifacts": [
-        "A01",
-        "A05",
-        "A07"
-      ],
-      "rubric": [
-        "R01"
       ]
     },
     {
       "id": "M13-O2",
       "statement": "Design identity, authentication, recovery, session binding, assurance, expiry, revocation, and replay controls.",
-      "graduate_profile": [
-        7,
-        9,
-        11
-      ],
-      "mastery_levels": [
-        "Define",
-        "Implement",
-        "Diagnose"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L02"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-03",
         "EX-04"
-      ],
-      "artifacts": [
-        "A01",
-        "A02",
-        "A03",
-        "A04"
-      ],
-      "rubric": [
-        "R02"
       ]
     },
     {
       "id": "M13-O3",
       "statement": "Select role, attribute, or relationship authorization and enforce deny-by-default checks for every object and action.",
-      "graduate_profile": [
-        5,
-        7,
-        9
-      ],
-      "mastery_levels": [
-        "Define",
-        "Implement",
-        "Diagnose"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L03"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-05",
         "EX-06"
-      ],
-      "artifacts": [
-        "A02",
-        "A03",
-        "A04",
-        "A07"
-      ],
-      "rubric": [
-        "R03"
       ]
     },
     {
       "id": "M13-O4",
       "statement": "Preserve tenant isolation and least privilege through data, cache, file, queue, search, administrative, and break-glass paths.",
-      "graduate_profile": [
-        7,
-        9,
-        14
-      ],
-      "mastery_levels": [
-        "Implement",
-        "Diagnose"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L04"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-07",
         "EX-08"
-      ],
-      "artifacts": [
-        "A02",
-        "A04",
-        "A05",
-        "A06"
-      ],
-      "rubric": [
-        "R04"
       ]
     },
     {
       "id": "M13-O5",
       "statement": "Operate scoped secrets, certificates, and encryption keys through issuance, rotation, revocation, recovery, and retirement without inventing cryptography.",
-      "graduate_profile": [
-        7,
-        9,
-        14
-      ],
-      "mastery_levels": [
-        "Define",
-        "Implement",
-        "Diagnose"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L05"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-09",
         "EX-10"
-      ],
-      "artifacts": [
-        "A02",
-        "A04",
-        "A06"
-      ],
-      "rubric": [
-        "R05"
       ]
     },
     {
       "id": "M13-O6",
       "statement": "Design attributable tamper-detectable audit evidence and verified classification, minimization, retention, deletion, residency, and backup handling.",
-      "graduate_profile": [
-        7,
-        8,
-        9,
-        14
-      ],
-      "mastery_levels": [
-        "Calculate",
-        "Implement",
-        "Diagnose"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L06"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-11",
         "EX-12",
         "EX-13"
-      ],
-      "artifacts": [
-        "A02",
-        "A04",
-        "A05",
-        "A06"
-      ],
-      "rubric": [
-        "R06",
-        "R07"
       ]
     },
     {
       "id": "M13-O7",
       "statement": "Bound dependency, supply-chain, economic-abuse, prompt-injection, and tool-authorization risk with deterministic enforcement and security response.",
-      "graduate_profile": [
-        2,
-        7,
-        8,
-        9,
-        10,
-        13
-      ],
-      "mastery_levels": [
-        "Calculate",
-        "Implement",
-        "Diagnose"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L07",
         "L08"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-14",
         "EX-15",
         "EX-16",
         "EX-17"
-      ],
-      "artifacts": [
-        "A02",
-        "A04",
-        "A06",
-        "A07"
-      ],
-      "rubric": [
-        "R08",
-        "R09"
       ]
     },
     {
       "id": "M13-O8",
       "statement": "Diagnose nine adversarial failures and defend a security architecture with residual risk, ownership, cost, migration, and reversal conditions.",
-      "graduate_profile": [
-        8,
-        9,
-        10,
-        14,
-        15,
-        16
-      ],
-      "mastery_levels": [
-        "Diagnose",
-        "Decide and Teach"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L08"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-18"
-      ],
-      "artifacts": [
-        "A04",
-        "A05",
-        "A06",
-        "A07",
-        "A08",
-        "A09",
-        "A10"
-      ],
-      "rubric": [
-        "R10"
       ]
     }
   ],
+  "practice": {
+    "exercises_path": "exercises/exercises.md",
+    "answer_key_path": "exercises/answer-key.md"
+  },
+  "lab": {
+    "required": true,
+    "path": "lab/README.md",
+    "note": "Use the lab to reinforce the local mechanism; treat expanded matrices and platform-specific evidence as optional deep-dive work."
+  },
+  "quiz": {
+    "question_bank_path": "quiz/question-bank.json",
+    "answer_key_path": "quiz/answer-key.md",
+    "llm_grader_prompt_path": "quiz/llm-grader-prompt.md",
+    "question_count": 100,
+    "default_draw_count": 20,
+    "types": [
+      "multiple_choice",
+      "short_answer",
+      "calculation",
+      "scenario_diagnosis",
+      "design_judgment"
+    ]
+  },
+  "optional_project": {
+    "description": "Apply Security, Privacy, and Abuse Resistance to a small system you know. Write a short design note, experiment report, or implementation summary only if you want deeper practice."
+  },
   "resources": [
     {
       "id": "RES-01",
       "title": "Threat Modeling Cheat Sheet",
-      "author_or_publisher": "OWASP Cheat Sheet Series",
-      "type": "maintainer guidance",
       "url": "https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html",
       "required": true,
-      "access": "free",
-      "week": 71,
       "estimated_minutes": 70,
       "purpose": "Apply the four-question process to concrete assets, flows, boundaries, threats, and testable responses.",
-      "assignment": "Read Overview through Review and Validation; submit one data-flow boundary, three contextual threats, responses, owners, and validation tests.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/01-threat-models-abuse-cases.md",
-      "verified_title": "Threat Modeling Cheat Sheet",
-      "verified_publisher": "OWASP Cheat Sheet Series",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html",
-      "verification_status": "verified"
+      "local_alternative": "lessons/01-threat-models-abuse-cases.md"
     },
     {
       "id": "RES-02",
       "title": "Application Security Verification Standard 5.0.0",
-      "author_or_publisher": "OWASP Foundation",
-      "type": "open verification standard",
       "url": "https://owasp.org/www-project-application-security-verification-standard/",
       "required": true,
-      "access": "free",
-      "week": 71,
       "estimated_minutes": 60,
       "purpose": "Turn threats into versioned verification requirements rather than generic control labels.",
-      "assignment": "Read What is ASVS and How to Reference Requirements; select and version five requirements that test the Northstar model, explaining exclusions.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/01-threat-models-abuse-cases.md",
-      "verified_title": "Application Security Verification Standard 5.0.0",
-      "verified_publisher": "OWASP Foundation",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://owasp.org/www-project-application-security-verification-standard/",
-      "verification_status": "verified"
+      "local_alternative": "lessons/01-threat-models-abuse-cases.md"
     },
     {
       "id": "RES-03",
       "title": "NIST Special Publication 800-63B",
-      "author_or_publisher": "National Institute of Standards and Technology",
-      "type": "standards-body guidance",
       "url": "https://pages.nist.gov/800-63-4/sp800-63b.html",
       "required": true,
-      "access": "free",
-      "week": 70,
       "estimated_minutes": 90,
       "purpose": "Separate authentication assurance, authenticator lifecycle, recovery, and session continuity.",
-      "assignment": "Read Sections 2, 4, and 5; produce one assurance choice, recovery abuse case, session-binding contract, timeout, and revocation test.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/02-identity-authentication-sessions.md",
-      "verified_title": "NIST Special Publication 800-63B",
-      "verified_publisher": "National Institute of Standards and Technology",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://pages.nist.gov/800-63-4/sp800-63b.html",
-      "verification_status": "verified"
+      "local_alternative": "lessons/02-identity-authentication-sessions.md"
     },
     {
       "id": "RES-04",
       "title": "Authorization Cheat Sheet",
-      "author_or_publisher": "OWASP Cheat Sheet Series",
-      "type": "maintainer guidance",
       "url": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html",
       "required": false,
-      "access": "free",
-      "week": 74,
       "estimated_minutes": 65,
       "purpose": "Design per-request, per-object, per-action authorization with explicit deny behavior and tests.",
-      "assignment": "Read all Recommendations; submit an allow/deny matrix and four negative regression tests, including policy failure behavior.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/03-authorization-models-enforcement.md",
-      "verified_title": "Authorization Cheat Sheet",
-      "verified_publisher": "OWASP Cheat Sheet Series",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html",
-      "verification_status": "verified"
+      "local_alternative": "lessons/03-authorization-models-enforcement.md"
     },
     {
       "id": "RES-05",
       "title": "Multi-Tenant Application Security Cheat Sheet",
-      "author_or_publisher": "OWASP Cheat Sheet Series",
-      "type": "maintainer guidance",
       "url": "https://cheatsheetseries.owasp.org/cheatsheets/Multi_Tenant_Security_Cheat_Sheet.html",
       "required": false,
-      "access": "free",
-      "week": 74,
       "estimated_minutes": 70,
       "purpose": "Trace tenant identity through every shared data and execution surface.",
-      "assignment": "Read Key Risks, Best Practices, and Do's and Don'ts; audit API, database, cache, file, queue, search, and administrative paths.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/04-tenant-isolation-scoped-access.md",
-      "verified_title": "Multi-Tenant Application Security Cheat Sheet",
-      "verified_publisher": "OWASP Cheat Sheet Series",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://cheatsheetseries.owasp.org/cheatsheets/Multi_Tenant_Security_Cheat_Sheet.html",
-      "verification_status": "verified"
+      "local_alternative": "lessons/04-tenant-isolation-scoped-access.md"
     },
     {
       "id": "RES-06",
       "title": "Zanzibar: Google's Consistent, Global Authorization System",
-      "author_or_publisher": "Ruoming Pang et al.; USENIX and Google",
-      "type": "open paper and recorded practitioner presentation",
       "url": "https://www.usenix.org/conference/atc19/presentation/pang",
       "required": false,
-      "access": "free",
-      "week": 74,
       "estimated_minutes": 90,
       "purpose": "Evaluate relationship authorization, consistency, caching, and centralized policy as operated-system trade-offs.",
-      "assignment": "Watch the presentation or read Sections 1-3 and 5-7 of the paper; record the data model, stale-decision risk, operating cost, and one simpler alternative.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/03-authorization-models-enforcement.md",
-      "verified_title": "Zanzibar: Google's Consistent, Global Authorization System",
-      "verified_publisher": "Ruoming Pang et al.; USENIX and Google",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://www.usenix.org/conference/atc19/presentation/pang",
-      "verification_status": "verified"
+      "local_alternative": "lessons/03-authorization-models-enforcement.md"
     },
     {
       "id": "RES-07",
       "title": "Secrets Management Cheat Sheet",
-      "author_or_publisher": "OWASP Cheat Sheet Series",
-      "type": "maintainer guidance",
       "url": "https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html",
       "required": false,
-      "access": "free",
-      "week": 74,
       "estimated_minutes": 70,
       "purpose": "Design secret scope, custody, rotation, revocation, auditing, and exposure response.",
-      "assignment": "Read General Secrets Management, CI/CD, Detection, and Incident Response; create one lifecycle and rotation-without-outage experiment.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/05-secrets-keys-encryption.md",
-      "verified_title": "Secrets Management Cheat Sheet",
-      "verified_publisher": "OWASP Cheat Sheet Series",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html",
-      "verification_status": "verified"
+      "local_alternative": "lessons/05-secrets-keys-encryption.md"
     },
     {
       "id": "RES-08",
       "title": "NIST Key Management Guidelines",
-      "author_or_publisher": "National Institute of Standards and Technology",
-      "type": "standards-body guidance",
       "url": "https://csrc.nist.gov/projects/key-management/key-management-guidelines",
       "required": false,
-      "access": "free",
-      "week": 74,
       "estimated_minutes": 55,
       "purpose": "Distinguish key material, cryptoperiods, protection, compromise, recovery, and destruction.",
-      "assignment": "Read the SP 800-57 Part 1 Rev. 5 overview and lifecycle guidance; map one key from generation through destruction and name its owner.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/05-secrets-keys-encryption.md",
-      "verified_title": "NIST Key Management Guidelines",
-      "verified_publisher": "National Institute of Standards and Technology",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://csrc.nist.gov/projects/key-management/key-management-guidelines",
-      "verification_status": "verified"
+      "local_alternative": "lessons/05-secrets-keys-encryption.md"
     },
     {
       "id": "RES-09",
       "title": "Logging Cheat Sheet",
-      "author_or_publisher": "OWASP Cheat Sheet Series",
-      "type": "maintainer guidance",
       "url": "https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html",
       "required": false,
-      "access": "free",
-      "week": 74,
       "estimated_minutes": 65,
       "purpose": "Make security events attributable and useful without logging secrets or unbounded sensitive data.",
-      "assignment": "Read Event Data Sources through Verification; define an audit event, prohibited fields, tamper signal, logging-failure test, retention, and access rule.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/06-audit-privacy-data-lifecycle.md",
-      "verified_title": "Logging Cheat Sheet",
-      "verified_publisher": "OWASP Cheat Sheet Series",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html",
-      "verification_status": "verified"
+      "local_alternative": "lessons/06-audit-privacy-data-lifecycle.md"
     },
     {
       "id": "RES-10",
       "title": "NIST Privacy Framework 1.0",
-      "author_or_publisher": "National Institute of Standards and Technology",
-      "type": "standards-body framework",
       "url": "https://www.nist.gov/privacy-framework/privacy-framework",
       "required": true,
-      "access": "free",
-      "week": 71,
       "estimated_minutes": 75,
       "purpose": "Connect data processing, privacy outcomes, owners, and lifecycle verification without assuming one jurisdiction.",
-      "assignment": "Read the Framework Core Identify-P, Govern-P, Control-P, Communicate-P, and Protect-P outcomes; produce a data-action inventory and deletion exception register.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/06-audit-privacy-data-lifecycle.md",
-      "verified_title": "NIST Privacy Framework 1.0",
-      "verified_publisher": "National Institute of Standards and Technology",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://www.nist.gov/privacy-framework/privacy-framework",
-      "verification_status": "verified"
+      "local_alternative": "lessons/06-audit-privacy-data-lifecycle.md"
     },
     {
       "id": "RES-11",
       "title": "SLSA Specification 1.2",
-      "author_or_publisher": "OpenSSF SLSA project",
-      "type": "open supply-chain specification",
       "url": "https://slsa.dev/spec/v1.2/",
       "required": false,
-      "access": "free",
-      "week": 74,
       "estimated_minutes": 65,
       "purpose": "Separate provenance evidence from trust decisions and verify source/build expectations.",
-      "assignment": "Read About SLSA, Build Track Basics, Provenance, and Verifying Source; define one dependency acceptance policy and negative test.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/07-supply-chain-abuse-security-response.md",
-      "verified_title": "SLSA Specification 1.2",
-      "verified_publisher": "OpenSSF SLSA project",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://slsa.dev/spec/v1.2/",
-      "verification_status": "verified"
+      "local_alternative": "lessons/07-supply-chain-abuse-security-response.md"
     },
     {
       "id": "RES-12",
       "title": "LLM Prompt Injection Prevention Cheat Sheet",
-      "author_or_publisher": "OWASP Cheat Sheet Series",
-      "type": "maintainer guidance",
       "url": "https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html",
       "required": true,
-      "access": "free",
-      "week": 70,
       "estimated_minutes": 70,
       "purpose": "Treat instructions in retrieved content as adversarial data and preserve deterministic authorization.",
-      "assignment": "Read Common Attack Types, Primary Defenses, Agent-Specific Defenses, and Testing; submit one indirect-injection test and deterministic denial trace.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/08-prompt-injection-tool-authorization-decisions.md",
-      "verified_title": "LLM Prompt Injection Prevention Cheat Sheet",
-      "verified_publisher": "OWASP Cheat Sheet Series",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html",
-      "verification_status": "verified"
+      "local_alternative": "lessons/08-prompt-injection-tool-authorization-decisions.md"
     },
     {
       "id": "RES-13",
       "title": "AI Agent Security Cheat Sheet",
-      "author_or_publisher": "OWASP Cheat Sheet Series",
-      "type": "maintainer guidance",
       "url": "https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html",
       "required": false,
-      "access": "free",
-      "week": 74,
       "estimated_minutes": 65,
       "purpose": "Bound tool identity, privilege, approvals, memory, budgets, audit, and recovery independently of model behavior.",
-      "assignment": "Read Threat Model, Least Privilege, Tool Authorization, Memory, Observability, and Adversarial Validation; produce a high-risk tool contract and failure matrix.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/08-prompt-injection-tool-authorization-decisions.md",
-      "verified_title": "AI Agent Security Cheat Sheet",
-      "verified_publisher": "OWASP Cheat Sheet Series",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html",
-      "verification_status": "verified"
+      "local_alternative": "lessons/08-prompt-injection-tool-authorization-decisions.md"
     },
     {
       "id": "RES-14",
       "title": "Secure Software Development Framework",
-      "author_or_publisher": "NIST",
-      "type": "official primary guidance",
       "url": "https://csrc.nist.gov/projects/ssdf",
       "required": true,
-      "access": "free",
-      "week": 70,
       "estimated_minutes": 20,
-      "purpose": "Ground the PESD 2.0 cross-cutting decision in current primary guidance and produce scoped evidence rather than framework vocabulary.",
-      "assignment": "Read the SSDF practices and use sections; map applicable outcomes to source, build, release, and vulnerability-response evidence.",
-      "last_verified": "2026-08-04",
-      "text_alternative": "lessons/08-prompt-injection-tool-authorization-decisions.md",
-      "verified_title": "Secure Software Development Framework",
-      "verified_publisher": "NIST",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://csrc.nist.gov/projects/ssdf",
-      "verification_status": "verified"
+      "purpose": "Ground the solo course cross-cutting decision in current primary guidance and produce scoped evidence rather than framework vocabulary.",
+      "local_alternative": "lessons/08-prompt-injection-tool-authorization-decisions.md"
     },
     {
       "id": "RES-15",
       "title": "Crypto Agility",
-      "author_or_publisher": "NIST",
-      "type": "official primary guidance",
       "url": "https://csrc.nist.gov/Projects/crypto-agility",
       "required": true,
-      "access": "free",
-      "week": 70,
       "estimated_minutes": 20,
-      "purpose": "Ground the PESD 2.0 cross-cutting decision in current primary guidance and produce scoped evidence rather than framework vocabulary.",
-      "assignment": "Read the overview and current publications boundary; inventory algorithms and plan replacement without claiming a universal migration schedule.",
-      "last_verified": "2026-08-04",
-      "text_alternative": "lessons/08-prompt-injection-tool-authorization-decisions.md",
-      "verified_title": "Crypto Agility",
-      "verified_publisher": "NIST",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://csrc.nist.gov/Projects/crypto-agility",
-      "verification_status": "verified"
+      "purpose": "Ground the solo course cross-cutting decision in current primary guidance and produce scoped evidence rather than framework vocabulary.",
+      "local_alternative": "lessons/08-prompt-injection-tool-authorization-decisions.md"
     }
-  ],
-  "artifacts": [
-    {
-      "id": "A01",
-      "week": 71,
-      "required": true,
-      "template_path": "modules/13-security-privacy-abuse-resistance/worksheets/week-49-security-model.md",
-      "submission_path": "reports/module-13-security-baseline.md",
-      "immutable_after_submission": true,
-      "portfolio_category": "model",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M13-A01",
-      "component_role": "prediction",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A02",
-      "week": 71,
-      "required": true,
-      "template_path": "modules/13-security-privacy-abuse-resistance/worksheets/week-50-security-controls.md",
-      "submission_path": "labs/module-13/security-controls/",
-      "portfolio_category": "implementation",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M13-A02",
-      "component_role": "implementation",
-      "estimated_minutes": 30,
-      "evidence_mode": "executed_deterministic"
-    },
-    {
-      "id": "A03",
-      "week": 71,
-      "required": true,
-      "template_path": "modules/13-security-privacy-abuse-resistance/worksheets/week-50-security-controls.md",
-      "submission_path": "reports/module-13-security-implementation-review.md",
-      "portfolio_category": "model",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M13-A03",
-      "component_role": "prediction",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A04",
-      "week": 73,
-      "required": true,
-      "template_path": "modules/13-security-privacy-abuse-resistance/worksheets/week-51-security-failure-matrix.md",
-      "submission_path": "experiments/module-13/",
-      "immutable_after_submission": true,
-      "portfolio_category": "failure_matrix",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M13-A04",
-      "component_role": "raw_evidence",
-      "estimated_minutes": 30,
-      "evidence_mode": "executed_deterministic"
-    },
-    {
-      "id": "A05",
-      "week": 70,
-      "required": true,
-      "template_path": "templates/security-threat-model-template.md",
-      "submission_path": "reports/module-13-threat-model.md",
-      "immutable_after_submission": true,
-      "portfolio_category": "threat_model",
-      "portfolio_item_id": "PI-THREAT-01",
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-THREAT-ASSISTANT",
-      "component_role": "baseline",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A06",
-      "week": 73,
-      "required": true,
-      "template_path": "modules/13-security-privacy-abuse-resistance/worksheets/week-51-security-failure-matrix.md",
-      "submission_path": "reports/module-13-security-verification.md",
-      "immutable_after_submission": true,
-      "portfolio_category": "assurance_case",
-      "portfolio_item_id": "PI-ASSURE-01",
-      "portfolio_credit": true,
-      "evidence_lineage_id": "LIN-ASSURE-SYSTEM",
-      "component_role": "analysis",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A07",
-      "week": 74,
-      "required": true,
-      "template_path": "templates/rfc-template.md",
-      "submission_path": "rfc/module-13-security-architecture.md",
-      "portfolio_category": "rfc",
-      "portfolio_item_id": "PI-DECISION-M13",
-      "portfolio_credit": true,
-      "evidence_lineage_id": "LIN-DECISION-M13",
-      "component_role": "decision",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A08",
-      "week": 74,
-      "required": true,
-      "template_path": "modules/13-security-privacy-abuse-resistance/worksheets/week-52-security-decision-defense.md",
-      "submission_path": "reviews/module-13-defense.md",
-      "portfolio_category": "teach_back",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M13-A08",
-      "component_role": "final",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A09",
-      "week": 74,
-      "required": true,
-      "template_path": "modules/13-security-privacy-abuse-resistance/assessment/report-template.md",
-      "submission_path": "reviews/module-13-evaluation.md",
-      "portfolio_category": "evaluation",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M13-A09",
-      "component_role": "final",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A10",
-      "week": 74,
-      "required": true,
-      "template_path": "templates/learning-log-template.md",
-      "submission_path": "learning-log/week-070.md through learning-log/week-074.md",
-      "portfolio_category": "learning_log",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M13-A10",
-      "component_role": "final",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    }
-  ],
-  "failure_experiments": [
-    {
-      "id": "F01",
-      "scenario": "cross-tenant object access through attacker-selected tenant context",
-      "evidence": "identity-bound tenant, requested/resource tenant, authorization decision, returned object count, denial audit, and I03-I04"
-    },
-    {
-      "id": "F02",
-      "scenario": "vertical privilege escalation on a high-risk object action",
-      "evidence": "subject role/attributes/relationships, object/action, policy version, enforcement point, deny result, and I02"
-    },
-    {
-      "id": "F03",
-      "scenario": "replayed, expired, or revoked session and credential",
-      "evidence": "authentication event, session age/binding, credential status, reauthentication/revocation result, audit, and I01"
-    },
-    {
-      "id": "F04",
-      "scenario": "exposed or over-scoped secret during rotation",
-      "evidence": "credential identity/scope/version, old/new acceptance windows, revocation, consumer rollout, recovery, and I05"
-    },
-    {
-      "id": "F05",
-      "scenario": "missing, sensitive, or tampered security audit evidence",
-      "evidence": "actor/action/object/outcome, prohibited fields, integrity link, access, tamper alert, logging failure, and I06"
-    },
-    {
-      "id": "F06",
-      "scenario": "deletion gap across authoritative data, cache, index, export, log, or backup",
-      "evidence": "data inventory, deletion request, copy status, exception/expiry, verification owner, rebuilt query, and I07"
-    },
-    {
-      "id": "F07",
-      "scenario": "dependency digest or provenance differs from approved expectations",
-      "evidence": "dependency identity, digest, provenance, policy, quarantine decision, rebuild/rollback, owner, and I08"
-    },
-    {
-      "id": "F08",
-      "scenario": "per-actor or per-tenant economic abuse bypasses one global limit",
-      "evidence": "actor/tenant identity, admitted/denied work, resource and cost units, fairness, alerts, recovery, and I09"
-    },
-    {
-      "id": "F09",
-      "scenario": "malicious retrieved instructions request an unauthorized high-risk tool",
-      "evidence": "untrusted source, original intent, proposed tool arguments, deterministic policy, approval/idempotency, denial audit, and I10-I11"
-    }
-  ],
-  "assessment": {
-    "rubric_path": "modules/13-security-privacy-abuse-resistance/assessment/rubric.md",
-    "evaluator_prompt_path": "modules/13-security-privacy-abuse-resistance/assessment/evaluator-prompt.md",
-    "evaluation_schema_path": "schemas/evaluation.schema.json",
-    "calibration_path": "modules/13-security-privacy-abuse-resistance/assessment/calibration",
-    "pass_average": 3,
-    "safety_critical_criteria": [
-      "R02",
-      "R03",
-      "R04",
-      "R05",
-      "R07",
-      "R09"
-    ],
-    "required_result_bands": [
-      "Pass",
-      "Revise",
-      "Repeat"
-    ]
-  },
-  "solo_review": {
-    "challenge_questions": [
-      {
-        "id": "M13-SR-Q01",
-        "prompt": "Which claim in your artifact most directly supports this outcome, and what evidence could falsify it: Build a repeatable threat model from assets, actors, data flows, trust boundaries, abuse cases, risk owners, and reversal evidence."
-      },
-      {
-        "id": "M13-SR-Q02",
-        "prompt": "What unstated assumption could invalidate your treatment of this outcome, and how would you test it: Design identity, authentication, recovery, session binding, assurance, expiry, revocation, and replay controls."
-      },
-      {
-        "id": "M13-SR-Q03",
-        "prompt": "Defend the causal chain behind your evidence for this outcome, including the first likely failure: Select role, attribute, or relationship authorization and enforce deny-by-default checks for every object and action."
-      },
-      {
-        "id": "M13-SR-Q04",
-        "prompt": "Which reasonable alternative would challenge your treatment of this outcome, and under what evidence would it win: Preserve tenant isolation and least privilege through data, cache, file, queue, search, administrative, and break-glass paths."
-      },
-      {
-        "id": "M13-SR-Q05",
-        "prompt": "What operational, security, cost, or ownership consequence is least supported in your treatment of this outcome: Operate scoped secrets, certificates, and encryption keys through issuance, rotation, revocation, recovery, and retirement without inventing cryptography."
-      },
-      {
-        "id": "M13-SR-Q06",
-        "prompt": "Where does your evidence stop transferring to production for this outcome, and how is that boundary disclosed: Design attributable tamper-detectable audit evidence and verified classification, minimization, retention, deletion, residency, and backup handling."
-      },
-      {
-        "id": "M13-SR-Q07",
-        "prompt": "What dissent should a skeptical reviewer raise about your treatment of this outcome, and what follow-up evidence would resolve it: Bound dependency, supply-chain, economic-abuse, prompt-injection, and tool-authorization risk with deterministic enforcement and security response."
-      },
-      {
-        "id": "M13-SR-Q08",
-        "prompt": "What changed belief or reversal condition follows from your work on this outcome, and where is it recorded: Diagnose nine adversarial failures and defend a security architecture with residual risk, ownership, cost, migration, and reversal conditions."
-      }
-    ],
-    "required_reviewer_roles": [
-      "Security, Privacy, and Abuse Resistance domain reviewer",
-      "operations and reliability owner",
-      "security and privacy reviewer",
-      "delivery and cost stakeholder"
-    ],
-    "questions_per_attempt": 5,
-    "live_ai_allowed": false,
-    "record_template_path": "templates/solo-review-record-template.md"
-  },
-  "factual_claims_path": "modules/13-security-privacy-abuse-resistance/assessment/factual-claims.json",
-  "lesson_catalog": [
-    {
-      "id": "L01",
-      "path": "lessons/01-threat-models-abuse-cases.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L02",
-      "path": "lessons/02-identity-authentication-sessions.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L03",
-      "path": "lessons/03-authorization-models-enforcement.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L04",
-      "path": "lessons/04-tenant-isolation-scoped-access.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L05",
-      "path": "lessons/05-secrets-keys-encryption.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L06",
-      "path": "lessons/06-audit-privacy-data-lifecycle.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L07",
-      "path": "lessons/07-supply-chain-abuse-security-response.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L08",
-      "path": "lessons/08-prompt-injection-tool-authorization-decisions.md",
-      "estimated_minutes": 30
-    }
-  ],
-  "citation_catalog": [],
-  "course_id": "PESD-104",
-  "course_version": "2.0",
-  "primary_decision": {
-    "artifact_id": "A07",
-    "type": "RFC"
-  },
-  "pesd_v2_additions": "obligation-to-control-to-evidence mapping, privacy impact reasoning, secure SDLC, source-to-deployment identity, cryptographic inventory, crypto agility, and post-quantum migration planning",
-  "semantic_evaluation": "module_specific"
+  ]
 }

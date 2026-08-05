@@ -1,0 +1,1926 @@
+{
+  "module_id": "M05",
+  "title": "Network Foundations",
+  "questions": [
+    {
+      "question_id": "M05-Q001",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "network-foundations",
+        "request-paths-round-trips-and-byte-budgets",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Request Paths, Round Trips, and Byte Budgets' in Network Foundations?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to model a client journey as a layered path with round-trip, byte, bandwidth-delay-product, and tail-latency budgets.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to model a client journey as a layered path with round-trip, byte, bandwidth-delay-product, and tail-latency budgets.",
+      "explanation": "Use Request Paths, Round Trips, and Byte Budgets to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M05-Q002",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "network-foundations",
+        "dns-addressing-routing-and-discovery",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'DNS, Addressing, Routing, and Discovery' supports this outcome: Trace DNS resolution, addressing, routing, caching, and discovery with explicit authority, expiry, and failure boundaries.",
+      "correct_answer": "A strong answer defines the mechanism from 'DNS, Addressing, Routing, and Discovery', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use DNS, Addressing, Routing, and Discovery to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M05-Q003",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "network-foundations",
+        "tcp-ordering-flow-congestion-and-goodput",
+        "synthesis"
+      ],
+      "prompt": "For 'TCP Ordering, Flow, Congestion, and Goodput', what quantities, units, or thresholds would you calculate before trusting a design claim about: Relate TCP ordering, loss recovery, flow control, congestion control, and receiver behavior to measured goodput and tail latency.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Explain TCP's reliable ordered byte stream without claiming message boundaries.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M05-Q004",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "network-foundations",
+        "tls-trust-and-connection-establishment",
+        "application"
+      ],
+      "prompt": "A learner applies 'TLS Trust and Connection Establishment' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Disabling verification to \u201ctest TLS\u201d removes the property under test.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M05-Q005",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "network-foundations",
+        "proxies-nat-pooling-and-exhaustion",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Proxies, NAT, Pooling, and Exhaustion'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose proxy, load-balancer, nat, connection-pool, and slow-reader behavior with capacity, ownership, and cost evidence..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RFC 9293 keep-alive and connection behavior: https://www.rfc-editor.org/rfc/rfc9293.html - Continue with Lesson 6 to compare request concurrency over connections.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M05-Q006",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "network-foundations",
+        "http/1.1-and-http/2-multiplexing",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'HTTP/1.1 and HTTP/2 Multiplexing' in Network Foundations?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to compare http/1.1, http/2, and http/3 through setup, multiplexing, stream isolation, fallback, observability, and client-network constraints.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to compare http/1.1, http/2, and http/3 through setup, multiplexing, stream isolation, fallback, observability, and client-network constraints.",
+      "explanation": "Use HTTP/1.1 and HTTP/2 Multiplexing to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M05-Q007",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "network-foundations",
+        "quic-and-http/3-stream-behavior",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'QUIC and HTTP/3 Stream Behavior' supports this outcome: Diagnose nine hidden network faults from preserved evidence before reveal and design reruns that separate credible causes.",
+      "correct_answer": "A strong answer defines the mechanism from 'QUIC and HTTP/3 Stream Behavior', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use QUIC and HTTP/3 Stream Behavior to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M05-Q008",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "network-foundations",
+        "protocol-and-topology-decisions",
+        "synthesis"
+      ],
+      "prompt": "For 'Protocol and Topology Decisions', what quantities, units, or thresholds would you calculate before trusting a design claim about: Defend a protocol and topology decision through client outcomes, security, cost, ownership, migration, rollback, and reversal conditions.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Compare protocols and topologies under shared client and operating drivers.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M05-Q009",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "network-foundations",
+        "request-paths-round-trips-and-byte-budgets",
+        "application"
+      ],
+      "prompt": "A learner applies 'Request Paths, Round Trips, and Byte Budgets' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Adding marginal percentiles from different requests creates a journey that",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M05-Q010",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "network-foundations",
+        "dns-addressing-routing-and-discovery",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'DNS, Addressing, Routing, and Discovery'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for trace dns resolution, addressing, routing, caching, and discovery with explicit authority, expiry, and failure boundaries..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RFC 1034, concepts and server algorithm: https://datatracker.ietf.org/doc/html/rfc1034 - RFC 6724, default address-selection policy: https://www.rfc-editor.org/rfc/rfc6724.html - RFC 8305, connection racing across address families: https://www.rfc-editor.org",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M05-Q011",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "network-foundations",
+        "tcp-ordering-flow-congestion-and-goodput",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'TCP Ordering, Flow, Congestion, and Goodput' in Network Foundations?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to relate tcp ordering, loss recovery, flow control, congestion control, and receiver behavior to measured goodput and tail latency.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to relate tcp ordering, loss recovery, flow control, congestion control, and receiver behavior to measured goodput and tail latency.",
+      "explanation": "Use TCP Ordering, Flow, Congestion, and Goodput to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M05-Q012",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "network-foundations",
+        "tls-trust-and-connection-establishment",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'TLS Trust and Connection Establishment' supports this outcome: Trace TLS authentication and handshake costs while preserving hostname, certificate, key, resumption, and trust boundaries.",
+      "correct_answer": "A strong answer defines the mechanism from 'TLS Trust and Connection Establishment', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use TLS Trust and Connection Establishment to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M05-Q013",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "network-foundations",
+        "proxies-nat-pooling-and-exhaustion",
+        "synthesis"
+      ],
+      "prompt": "For 'Proxies, NAT, Pooling, and Exhaustion', what quantities, units, or thresholds would you calculate before trusting a design claim about: Diagnose proxy, load-balancer, NAT, connection-pool, and slow-reader behavior with capacity, ownership, and cost evidence.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Trace connection ownership across client, proxy, application, and dependency.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M05-Q014",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "network-foundations",
+        "http/1.1-and-http/2-multiplexing",
+        "application"
+      ],
+      "prompt": "A learner applies 'HTTP/1.1 and HTTP/2 Multiplexing' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: \u201cMultiplexed\u201d does not mean independent at every lower layer.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M05-Q015",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "network-foundations",
+        "quic-and-http/3-stream-behavior",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'QUIC and HTTP/3 Stream Behavior'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose nine hidden network faults from preserved evidence before reveal and design reruns that separate credible causes..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RFC 9000, QUIC: https://www.rfc-editor.org/rfc/rfc9000.html - RFC 9114, HTTP/3: https://www.rfc-editor.org/rfc/rfc9114.html - Continue with Lesson 8 to turn mechanics into a migration decision.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M05-Q016",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "network-foundations",
+        "protocol-and-topology-decisions",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Protocol and Topology Decisions' in Network Foundations?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend a protocol and topology decision through client outcomes, security, cost, ownership, migration, rollback, and reversal conditions.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend a protocol and topology decision through client outcomes, security, cost, ownership, migration, rollback, and reversal conditions.",
+      "explanation": "Use Protocol and Topology Decisions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M05-Q017",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "network-foundations",
+        "request-paths-round-trips-and-byte-budgets",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Request Paths, Round Trips, and Byte Budgets' supports this outcome: Model a client journey as a layered path with round-trip, byte, bandwidth-delay-product, and tail-latency budgets.",
+      "correct_answer": "A strong answer defines the mechanism from 'Request Paths, Round Trips, and Byte Budgets', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Request Paths, Round Trips, and Byte Budgets to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M05-Q018",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "network-foundations",
+        "dns-addressing-routing-and-discovery",
+        "synthesis"
+      ],
+      "prompt": "For 'DNS, Addressing, Routing, and Discovery', what quantities, units, or thresholds would you calculate before trusting a design claim about: Trace DNS resolution, addressing, routing, caching, and discovery with explicit authority, expiry, and failure boundaries.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Distinguish names, cached records, addresses, routes, and healthy endpoints.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M05-Q019",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "network-foundations",
+        "tcp-ordering-flow-congestion-and-goodput",
+        "application"
+      ],
+      "prompt": "A learner applies 'TCP Ordering, Flow, Congestion, and Goodput' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Equating socket writes with peer receipt ignores buffering and acknowledgments.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M05-Q020",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "network-foundations",
+        "tls-trust-and-connection-establishment",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'TLS Trust and Connection Establishment'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for trace tls authentication and handshake costs while preserving hostname, certificate, key, resumption, and trust boundaries..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RFC 9846, TLS 1.3: https://www.rfc-editor.org/rfc/rfc9846.html - RFC 9525, Service Identity in TLS: https://www.rfc-editor.org/rfc/rfc9525.html - Continue with Lesson 5 for connection ownership beyond the TLS endpoint.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M05-Q021",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "network-foundations",
+        "proxies-nat-pooling-and-exhaustion",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Proxies, NAT, Pooling, and Exhaustion' in Network Foundations?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose proxy, load-balancer, nat, connection-pool, and slow-reader behavior with capacity, ownership, and cost evidence.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose proxy, load-balancer, nat, connection-pool, and slow-reader behavior with capacity, ownership, and cost evidence.",
+      "explanation": "Use Proxies, NAT, Pooling, and Exhaustion to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M05-Q022",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "network-foundations",
+        "http/1.1-and-http/2-multiplexing",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'HTTP/1.1 and HTTP/2 Multiplexing' supports this outcome: Compare HTTP/1.1, HTTP/2, and HTTP/3 through setup, multiplexing, stream isolation, fallback, observability, and client-network constraints.",
+      "correct_answer": "A strong answer defines the mechanism from 'HTTP/1.1 and HTTP/2 Multiplexing', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use HTTP/1.1 and HTTP/2 Multiplexing to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M05-Q023",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "network-foundations",
+        "quic-and-http/3-stream-behavior",
+        "synthesis"
+      ],
+      "prompt": "For 'QUIC and HTTP/3 Stream Behavior', what quantities, units, or thresholds would you calculate before trusting a design claim about: Diagnose nine hidden network faults from preserved evidence before reveal and design reruns that separate credible causes.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Explain QUIC connection, packet-number-space, and stream recovery boundaries.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M05-Q024",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "network-foundations",
+        "protocol-and-topology-decisions",
+        "application"
+      ],
+      "prompt": "A learner applies 'Protocol and Topology Decisions' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Choosing one protocol for every operation hides different correctness and payload needs.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M05-Q025",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "network-foundations",
+        "request-paths-round-trips-and-byte-budgets",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Request Paths, Round Trips, and Byte Budgets'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for model a client journey as a layered path with round-trip, byte, bandwidth-delay-product, and tail-latency budgets..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RFC 9293, TCP concepts and data communication: https://www.rfc-editor.org/rfc/rfc9293.html - Continue with Lesson 2 before interpreting a DNS phase.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M05-Q026",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "network-foundations",
+        "dns-addressing-routing-and-discovery",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'DNS, Addressing, Routing, and Discovery' in Network Foundations?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to trace dns resolution, addressing, routing, caching, and discovery with explicit authority, expiry, and failure boundaries.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to trace dns resolution, addressing, routing, caching, and discovery with explicit authority, expiry, and failure boundaries.",
+      "explanation": "Use DNS, Addressing, Routing, and Discovery to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M05-Q027",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "network-foundations",
+        "tcp-ordering-flow-congestion-and-goodput",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'TCP Ordering, Flow, Congestion, and Goodput' supports this outcome: Relate TCP ordering, loss recovery, flow control, congestion control, and receiver behavior to measured goodput and tail latency.",
+      "correct_answer": "A strong answer defines the mechanism from 'TCP Ordering, Flow, Congestion, and Goodput', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use TCP Ordering, Flow, Congestion, and Goodput to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M05-Q028",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "network-foundations",
+        "tls-trust-and-connection-establishment",
+        "synthesis"
+      ],
+      "prompt": "For 'TLS Trust and Connection Establishment', what quantities, units, or thresholds would you calculate before trusting a design claim about: Trace TLS authentication and handshake costs while preserving hostname, certificate, key, resumption, and trust boundaries.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Trace TLS 1.3 negotiation, key establishment, certificate authentication, and hostname validation.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M05-Q029",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "network-foundations",
+        "proxies-nat-pooling-and-exhaustion",
+        "application"
+      ],
+      "prompt": "A learner applies 'Proxies, NAT, Pooling, and Exhaustion' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Counting requests but not held connections misses slow-reader capacity.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M05-Q030",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "network-foundations",
+        "http/1.1-and-http/2-multiplexing",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'HTTP/1.1 and HTTP/2 Multiplexing'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for compare http/1.1, http/2, and http/3 through setup, multiplexing, stream isolation, fallback, observability, and client-network constraints..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RFC 9113, HTTP/2: https://www.rfc-editor.org/rfc/rfc9113.html - Continue with Lesson 7 for QUIC's different ordering boundary.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M05-Q031",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "network-foundations",
+        "quic-and-http/3-stream-behavior",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'QUIC and HTTP/3 Stream Behavior' in Network Foundations?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose nine hidden network faults from preserved evidence before reveal and design reruns that separate credible causes.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose nine hidden network faults from preserved evidence before reveal and design reruns that separate credible causes.",
+      "explanation": "Use QUIC and HTTP/3 Stream Behavior to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M05-Q032",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "network-foundations",
+        "protocol-and-topology-decisions",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Protocol and Topology Decisions' supports this outcome: Defend a protocol and topology decision through client outcomes, security, cost, ownership, migration, rollback, and reversal conditions.",
+      "correct_answer": "A strong answer defines the mechanism from 'Protocol and Topology Decisions', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Protocol and Topology Decisions to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M05-Q033",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "network-foundations",
+        "request-paths-round-trips-and-byte-budgets",
+        "synthesis"
+      ],
+      "prompt": "For 'Request Paths, Round Trips, and Byte Budgets', what quantities, units, or thresholds would you calculate before trusting a design claim about: Model a client journey as a layered path with round-trip, byte, bandwidth-delay-product, and tail-latency budgets.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Decompose one user operation into observable network phases.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M05-Q034",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "network-foundations",
+        "dns-addressing-routing-and-discovery",
+        "application"
+      ],
+      "prompt": "A learner applies 'DNS, Addressing, Routing, and Discovery' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: \u201cDNS is down\u201d collapses authoritative, recursive, network, validation, and cache failures.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M05-Q035",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "network-foundations",
+        "tcp-ordering-flow-congestion-and-goodput",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'TCP Ordering, Flow, Congestion, and Goodput'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for relate tcp ordering, loss recovery, flow control, congestion control, and receiver behavior to measured goodput and tail latency..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RFC 9293, Sections 2.2, 3.5, 3.7, and 3.8: https://www.rfc-editor.org/rfc/rfc9293.html - Continue with Lesson 4 for trust establishment over the connection.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M05-Q036",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "network-foundations",
+        "tls-trust-and-connection-establishment",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'TLS Trust and Connection Establishment' in Network Foundations?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to trace tls authentication and handshake costs while preserving hostname, certificate, key, resumption, and trust boundaries.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to trace tls authentication and handshake costs while preserving hostname, certificate, key, resumption, and trust boundaries.",
+      "explanation": "Use TLS Trust and Connection Establishment to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M05-Q037",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "network-foundations",
+        "proxies-nat-pooling-and-exhaustion",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Proxies, NAT, Pooling, and Exhaustion' supports this outcome: Diagnose proxy, load-balancer, NAT, connection-pool, and slow-reader behavior with capacity, ownership, and cost evidence.",
+      "correct_answer": "A strong answer defines the mechanism from 'Proxies, NAT, Pooling, and Exhaustion', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Proxies, NAT, Pooling, and Exhaustion to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M05-Q038",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "network-foundations",
+        "http/1.1-and-http/2-multiplexing",
+        "synthesis"
+      ],
+      "prompt": "For 'HTTP/1.1 and HTTP/2 Multiplexing', what quantities, units, or thresholds would you calculate before trusting a design claim about: Compare HTTP/1.1, HTTP/2, and HTTP/3 through setup, multiplexing, stream isolation, fallback, observability, and client-network constraints.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Compare connection reuse, pipelining constraints, and multiplexed streams.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M05-Q039",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "network-foundations",
+        "quic-and-http/3-stream-behavior",
+        "application"
+      ],
+      "prompt": "A learner applies 'QUIC and HTTP/3 Stream Behavior' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: \u201cQUIC fixes packet loss\u201d confuses isolation with loss removal.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M05-Q040",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "network-foundations",
+        "protocol-and-topology-decisions",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Protocol and Topology Decisions'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for defend a protocol and topology decision through client outcomes, security, cost, ownership, migration, rollback, and reversal conditions..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Cloudflare, The Road to QUIC: https://blog.cloudflare.com/the-road-to-quic/ - USENIX, Deploying and Debugging HTTP/3: https://www.usenix.org/conference/srecon23emea/presentation/marx - Complete the Week 20 ADR and defense before evaluation.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M05-Q041",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "network-foundations",
+        "request-paths-round-trips-and-byte-budgets",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Request Paths, Round Trips, and Byte Budgets' in Network Foundations?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to model a client journey as a layered path with round-trip, byte, bandwidth-delay-product, and tail-latency budgets.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to model a client journey as a layered path with round-trip, byte, bandwidth-delay-product, and tail-latency budgets.",
+      "explanation": "Use Request Paths, Round Trips, and Byte Budgets to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M05-Q042",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "network-foundations",
+        "dns-addressing-routing-and-discovery",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'DNS, Addressing, Routing, and Discovery' supports this outcome: Trace DNS resolution, addressing, routing, caching, and discovery with explicit authority, expiry, and failure boundaries.",
+      "correct_answer": "A strong answer defines the mechanism from 'DNS, Addressing, Routing, and Discovery', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use DNS, Addressing, Routing, and Discovery to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M05-Q043",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "network-foundations",
+        "tcp-ordering-flow-congestion-and-goodput",
+        "synthesis"
+      ],
+      "prompt": "For 'TCP Ordering, Flow, Congestion, and Goodput', what quantities, units, or thresholds would you calculate before trusting a design claim about: Relate TCP ordering, loss recovery, flow control, congestion control, and receiver behavior to measured goodput and tail latency.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Explain TCP's reliable ordered byte stream without claiming message boundaries.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M05-Q044",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "network-foundations",
+        "tls-trust-and-connection-establishment",
+        "application"
+      ],
+      "prompt": "A learner applies 'TLS Trust and Connection Establishment' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Disabling verification to \u201ctest TLS\u201d removes the property under test.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M05-Q045",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "network-foundations",
+        "proxies-nat-pooling-and-exhaustion",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Proxies, NAT, Pooling, and Exhaustion'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose proxy, load-balancer, nat, connection-pool, and slow-reader behavior with capacity, ownership, and cost evidence..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RFC 9293 keep-alive and connection behavior: https://www.rfc-editor.org/rfc/rfc9293.html - Continue with Lesson 6 to compare request concurrency over connections.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M05-Q046",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "network-foundations",
+        "http/1.1-and-http/2-multiplexing",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'HTTP/1.1 and HTTP/2 Multiplexing' in Network Foundations?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to compare http/1.1, http/2, and http/3 through setup, multiplexing, stream isolation, fallback, observability, and client-network constraints.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to compare http/1.1, http/2, and http/3 through setup, multiplexing, stream isolation, fallback, observability, and client-network constraints.",
+      "explanation": "Use HTTP/1.1 and HTTP/2 Multiplexing to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M05-Q047",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "network-foundations",
+        "quic-and-http/3-stream-behavior",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'QUIC and HTTP/3 Stream Behavior' supports this outcome: Diagnose nine hidden network faults from preserved evidence before reveal and design reruns that separate credible causes.",
+      "correct_answer": "A strong answer defines the mechanism from 'QUIC and HTTP/3 Stream Behavior', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use QUIC and HTTP/3 Stream Behavior to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M05-Q048",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "network-foundations",
+        "protocol-and-topology-decisions",
+        "synthesis"
+      ],
+      "prompt": "For 'Protocol and Topology Decisions', what quantities, units, or thresholds would you calculate before trusting a design claim about: Defend a protocol and topology decision through client outcomes, security, cost, ownership, migration, rollback, and reversal conditions.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Compare protocols and topologies under shared client and operating drivers.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M05-Q049",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "network-foundations",
+        "request-paths-round-trips-and-byte-budgets",
+        "application"
+      ],
+      "prompt": "A learner applies 'Request Paths, Round Trips, and Byte Budgets' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Adding marginal percentiles from different requests creates a journey that",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M05-Q050",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "network-foundations",
+        "dns-addressing-routing-and-discovery",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'DNS, Addressing, Routing, and Discovery'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for trace dns resolution, addressing, routing, caching, and discovery with explicit authority, expiry, and failure boundaries..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RFC 1034, concepts and server algorithm: https://datatracker.ietf.org/doc/html/rfc1034 - RFC 6724, default address-selection policy: https://www.rfc-editor.org/rfc/rfc6724.html - RFC 8305, connection racing across address families: https://www.rfc-editor.org",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M05-Q051",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "network-foundations",
+        "tcp-ordering-flow-congestion-and-goodput",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'TCP Ordering, Flow, Congestion, and Goodput' in Network Foundations?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to relate tcp ordering, loss recovery, flow control, congestion control, and receiver behavior to measured goodput and tail latency.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to relate tcp ordering, loss recovery, flow control, congestion control, and receiver behavior to measured goodput and tail latency.",
+      "explanation": "Use TCP Ordering, Flow, Congestion, and Goodput to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M05-Q052",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "network-foundations",
+        "tls-trust-and-connection-establishment",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'TLS Trust and Connection Establishment' supports this outcome: Trace TLS authentication and handshake costs while preserving hostname, certificate, key, resumption, and trust boundaries.",
+      "correct_answer": "A strong answer defines the mechanism from 'TLS Trust and Connection Establishment', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use TLS Trust and Connection Establishment to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M05-Q053",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "network-foundations",
+        "proxies-nat-pooling-and-exhaustion",
+        "synthesis"
+      ],
+      "prompt": "For 'Proxies, NAT, Pooling, and Exhaustion', what quantities, units, or thresholds would you calculate before trusting a design claim about: Diagnose proxy, load-balancer, NAT, connection-pool, and slow-reader behavior with capacity, ownership, and cost evidence.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Trace connection ownership across client, proxy, application, and dependency.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M05-Q054",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "network-foundations",
+        "http/1.1-and-http/2-multiplexing",
+        "application"
+      ],
+      "prompt": "A learner applies 'HTTP/1.1 and HTTP/2 Multiplexing' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: \u201cMultiplexed\u201d does not mean independent at every lower layer.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M05-Q055",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "network-foundations",
+        "quic-and-http/3-stream-behavior",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'QUIC and HTTP/3 Stream Behavior'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose nine hidden network faults from preserved evidence before reveal and design reruns that separate credible causes..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RFC 9000, QUIC: https://www.rfc-editor.org/rfc/rfc9000.html - RFC 9114, HTTP/3: https://www.rfc-editor.org/rfc/rfc9114.html - Continue with Lesson 8 to turn mechanics into a migration decision.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M05-Q056",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "network-foundations",
+        "protocol-and-topology-decisions",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Protocol and Topology Decisions' in Network Foundations?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend a protocol and topology decision through client outcomes, security, cost, ownership, migration, rollback, and reversal conditions.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend a protocol and topology decision through client outcomes, security, cost, ownership, migration, rollback, and reversal conditions.",
+      "explanation": "Use Protocol and Topology Decisions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M05-Q057",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "network-foundations",
+        "request-paths-round-trips-and-byte-budgets",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Request Paths, Round Trips, and Byte Budgets' supports this outcome: Model a client journey as a layered path with round-trip, byte, bandwidth-delay-product, and tail-latency budgets.",
+      "correct_answer": "A strong answer defines the mechanism from 'Request Paths, Round Trips, and Byte Budgets', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Request Paths, Round Trips, and Byte Budgets to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M05-Q058",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "network-foundations",
+        "dns-addressing-routing-and-discovery",
+        "synthesis"
+      ],
+      "prompt": "For 'DNS, Addressing, Routing, and Discovery', what quantities, units, or thresholds would you calculate before trusting a design claim about: Trace DNS resolution, addressing, routing, caching, and discovery with explicit authority, expiry, and failure boundaries.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Distinguish names, cached records, addresses, routes, and healthy endpoints.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M05-Q059",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "network-foundations",
+        "tcp-ordering-flow-congestion-and-goodput",
+        "application"
+      ],
+      "prompt": "A learner applies 'TCP Ordering, Flow, Congestion, and Goodput' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Equating socket writes with peer receipt ignores buffering and acknowledgments.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M05-Q060",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "network-foundations",
+        "tls-trust-and-connection-establishment",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'TLS Trust and Connection Establishment'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for trace tls authentication and handshake costs while preserving hostname, certificate, key, resumption, and trust boundaries..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RFC 9846, TLS 1.3: https://www.rfc-editor.org/rfc/rfc9846.html - RFC 9525, Service Identity in TLS: https://www.rfc-editor.org/rfc/rfc9525.html - Continue with Lesson 5 for connection ownership beyond the TLS endpoint.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M05-Q061",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "network-foundations",
+        "proxies-nat-pooling-and-exhaustion",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Proxies, NAT, Pooling, and Exhaustion' in Network Foundations?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose proxy, load-balancer, nat, connection-pool, and slow-reader behavior with capacity, ownership, and cost evidence.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose proxy, load-balancer, nat, connection-pool, and slow-reader behavior with capacity, ownership, and cost evidence.",
+      "explanation": "Use Proxies, NAT, Pooling, and Exhaustion to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M05-Q062",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "network-foundations",
+        "http/1.1-and-http/2-multiplexing",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'HTTP/1.1 and HTTP/2 Multiplexing' supports this outcome: Compare HTTP/1.1, HTTP/2, and HTTP/3 through setup, multiplexing, stream isolation, fallback, observability, and client-network constraints.",
+      "correct_answer": "A strong answer defines the mechanism from 'HTTP/1.1 and HTTP/2 Multiplexing', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use HTTP/1.1 and HTTP/2 Multiplexing to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M05-Q063",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "network-foundations",
+        "quic-and-http/3-stream-behavior",
+        "synthesis"
+      ],
+      "prompt": "For 'QUIC and HTTP/3 Stream Behavior', what quantities, units, or thresholds would you calculate before trusting a design claim about: Diagnose nine hidden network faults from preserved evidence before reveal and design reruns that separate credible causes.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Explain QUIC connection, packet-number-space, and stream recovery boundaries.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M05-Q064",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "network-foundations",
+        "protocol-and-topology-decisions",
+        "application"
+      ],
+      "prompt": "A learner applies 'Protocol and Topology Decisions' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Choosing one protocol for every operation hides different correctness and payload needs.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M05-Q065",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "network-foundations",
+        "request-paths-round-trips-and-byte-budgets",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Request Paths, Round Trips, and Byte Budgets'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for model a client journey as a layered path with round-trip, byte, bandwidth-delay-product, and tail-latency budgets..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RFC 9293, TCP concepts and data communication: https://www.rfc-editor.org/rfc/rfc9293.html - Continue with Lesson 2 before interpreting a DNS phase.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M05-Q066",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "network-foundations",
+        "dns-addressing-routing-and-discovery",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'DNS, Addressing, Routing, and Discovery' in Network Foundations?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to trace dns resolution, addressing, routing, caching, and discovery with explicit authority, expiry, and failure boundaries.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to trace dns resolution, addressing, routing, caching, and discovery with explicit authority, expiry, and failure boundaries.",
+      "explanation": "Use DNS, Addressing, Routing, and Discovery to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M05-Q067",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "network-foundations",
+        "tcp-ordering-flow-congestion-and-goodput",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'TCP Ordering, Flow, Congestion, and Goodput' supports this outcome: Relate TCP ordering, loss recovery, flow control, congestion control, and receiver behavior to measured goodput and tail latency.",
+      "correct_answer": "A strong answer defines the mechanism from 'TCP Ordering, Flow, Congestion, and Goodput', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use TCP Ordering, Flow, Congestion, and Goodput to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M05-Q068",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "network-foundations",
+        "tls-trust-and-connection-establishment",
+        "synthesis"
+      ],
+      "prompt": "For 'TLS Trust and Connection Establishment', what quantities, units, or thresholds would you calculate before trusting a design claim about: Trace TLS authentication and handshake costs while preserving hostname, certificate, key, resumption, and trust boundaries.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Trace TLS 1.3 negotiation, key establishment, certificate authentication, and hostname validation.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M05-Q069",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "network-foundations",
+        "proxies-nat-pooling-and-exhaustion",
+        "application"
+      ],
+      "prompt": "A learner applies 'Proxies, NAT, Pooling, and Exhaustion' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Counting requests but not held connections misses slow-reader capacity.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M05-Q070",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "network-foundations",
+        "http/1.1-and-http/2-multiplexing",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'HTTP/1.1 and HTTP/2 Multiplexing'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for compare http/1.1, http/2, and http/3 through setup, multiplexing, stream isolation, fallback, observability, and client-network constraints..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RFC 9113, HTTP/2: https://www.rfc-editor.org/rfc/rfc9113.html - Continue with Lesson 7 for QUIC's different ordering boundary.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M05-Q071",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "network-foundations",
+        "quic-and-http/3-stream-behavior",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'QUIC and HTTP/3 Stream Behavior' in Network Foundations?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose nine hidden network faults from preserved evidence before reveal and design reruns that separate credible causes.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose nine hidden network faults from preserved evidence before reveal and design reruns that separate credible causes.",
+      "explanation": "Use QUIC and HTTP/3 Stream Behavior to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M05-Q072",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "network-foundations",
+        "protocol-and-topology-decisions",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Protocol and Topology Decisions' supports this outcome: Defend a protocol and topology decision through client outcomes, security, cost, ownership, migration, rollback, and reversal conditions.",
+      "correct_answer": "A strong answer defines the mechanism from 'Protocol and Topology Decisions', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Protocol and Topology Decisions to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M05-Q073",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "network-foundations",
+        "request-paths-round-trips-and-byte-budgets",
+        "synthesis"
+      ],
+      "prompt": "For 'Request Paths, Round Trips, and Byte Budgets', what quantities, units, or thresholds would you calculate before trusting a design claim about: Model a client journey as a layered path with round-trip, byte, bandwidth-delay-product, and tail-latency budgets.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Decompose one user operation into observable network phases.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M05-Q074",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "network-foundations",
+        "dns-addressing-routing-and-discovery",
+        "application"
+      ],
+      "prompt": "A learner applies 'DNS, Addressing, Routing, and Discovery' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: \u201cDNS is down\u201d collapses authoritative, recursive, network, validation, and cache failures.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M05-Q075",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "network-foundations",
+        "tcp-ordering-flow-congestion-and-goodput",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'TCP Ordering, Flow, Congestion, and Goodput'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for relate tcp ordering, loss recovery, flow control, congestion control, and receiver behavior to measured goodput and tail latency..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RFC 9293, Sections 2.2, 3.5, 3.7, and 3.8: https://www.rfc-editor.org/rfc/rfc9293.html - Continue with Lesson 4 for trust establishment over the connection.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M05-Q076",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "network-foundations",
+        "tls-trust-and-connection-establishment",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'TLS Trust and Connection Establishment' in Network Foundations?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to trace tls authentication and handshake costs while preserving hostname, certificate, key, resumption, and trust boundaries.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to trace tls authentication and handshake costs while preserving hostname, certificate, key, resumption, and trust boundaries.",
+      "explanation": "Use TLS Trust and Connection Establishment to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M05-Q077",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "network-foundations",
+        "proxies-nat-pooling-and-exhaustion",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Proxies, NAT, Pooling, and Exhaustion' supports this outcome: Diagnose proxy, load-balancer, NAT, connection-pool, and slow-reader behavior with capacity, ownership, and cost evidence.",
+      "correct_answer": "A strong answer defines the mechanism from 'Proxies, NAT, Pooling, and Exhaustion', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Proxies, NAT, Pooling, and Exhaustion to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M05-Q078",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "network-foundations",
+        "http/1.1-and-http/2-multiplexing",
+        "synthesis"
+      ],
+      "prompt": "For 'HTTP/1.1 and HTTP/2 Multiplexing', what quantities, units, or thresholds would you calculate before trusting a design claim about: Compare HTTP/1.1, HTTP/2, and HTTP/3 through setup, multiplexing, stream isolation, fallback, observability, and client-network constraints.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Compare connection reuse, pipelining constraints, and multiplexed streams.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M05-Q079",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "network-foundations",
+        "quic-and-http/3-stream-behavior",
+        "application"
+      ],
+      "prompt": "A learner applies 'QUIC and HTTP/3 Stream Behavior' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: \u201cQUIC fixes packet loss\u201d confuses isolation with loss removal.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M05-Q080",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "network-foundations",
+        "protocol-and-topology-decisions",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Protocol and Topology Decisions'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for defend a protocol and topology decision through client outcomes, security, cost, ownership, migration, rollback, and reversal conditions..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Cloudflare, The Road to QUIC: https://blog.cloudflare.com/the-road-to-quic/ - USENIX, Deploying and Debugging HTTP/3: https://www.usenix.org/conference/srecon23emea/presentation/marx - Complete the Week 20 ADR and defense before evaluation.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M05-Q081",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "network-foundations",
+        "request-paths-round-trips-and-byte-budgets",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Request Paths, Round Trips, and Byte Budgets' in Network Foundations?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to model a client journey as a layered path with round-trip, byte, bandwidth-delay-product, and tail-latency budgets.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to model a client journey as a layered path with round-trip, byte, bandwidth-delay-product, and tail-latency budgets.",
+      "explanation": "Use Request Paths, Round Trips, and Byte Budgets to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M05-Q082",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "network-foundations",
+        "dns-addressing-routing-and-discovery",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'DNS, Addressing, Routing, and Discovery' supports this outcome: Trace DNS resolution, addressing, routing, caching, and discovery with explicit authority, expiry, and failure boundaries.",
+      "correct_answer": "A strong answer defines the mechanism from 'DNS, Addressing, Routing, and Discovery', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use DNS, Addressing, Routing, and Discovery to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M05-Q083",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "network-foundations",
+        "tcp-ordering-flow-congestion-and-goodput",
+        "synthesis"
+      ],
+      "prompt": "For 'TCP Ordering, Flow, Congestion, and Goodput', what quantities, units, or thresholds would you calculate before trusting a design claim about: Relate TCP ordering, loss recovery, flow control, congestion control, and receiver behavior to measured goodput and tail latency.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Explain TCP's reliable ordered byte stream without claiming message boundaries.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M05-Q084",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "network-foundations",
+        "tls-trust-and-connection-establishment",
+        "application"
+      ],
+      "prompt": "A learner applies 'TLS Trust and Connection Establishment' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Disabling verification to \u201ctest TLS\u201d removes the property under test.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M05-Q085",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "network-foundations",
+        "proxies-nat-pooling-and-exhaustion",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Proxies, NAT, Pooling, and Exhaustion'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose proxy, load-balancer, nat, connection-pool, and slow-reader behavior with capacity, ownership, and cost evidence..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RFC 9293 keep-alive and connection behavior: https://www.rfc-editor.org/rfc/rfc9293.html - Continue with Lesson 6 to compare request concurrency over connections.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M05-Q086",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "network-foundations",
+        "http/1.1-and-http/2-multiplexing",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'HTTP/1.1 and HTTP/2 Multiplexing' in Network Foundations?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to compare http/1.1, http/2, and http/3 through setup, multiplexing, stream isolation, fallback, observability, and client-network constraints.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to compare http/1.1, http/2, and http/3 through setup, multiplexing, stream isolation, fallback, observability, and client-network constraints.",
+      "explanation": "Use HTTP/1.1 and HTTP/2 Multiplexing to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M05-Q087",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "network-foundations",
+        "quic-and-http/3-stream-behavior",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'QUIC and HTTP/3 Stream Behavior' supports this outcome: Diagnose nine hidden network faults from preserved evidence before reveal and design reruns that separate credible causes.",
+      "correct_answer": "A strong answer defines the mechanism from 'QUIC and HTTP/3 Stream Behavior', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use QUIC and HTTP/3 Stream Behavior to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M05-Q088",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "network-foundations",
+        "protocol-and-topology-decisions",
+        "synthesis"
+      ],
+      "prompt": "For 'Protocol and Topology Decisions', what quantities, units, or thresholds would you calculate before trusting a design claim about: Defend a protocol and topology decision through client outcomes, security, cost, ownership, migration, rollback, and reversal conditions.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Compare protocols and topologies under shared client and operating drivers.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M05-Q089",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "network-foundations",
+        "request-paths-round-trips-and-byte-budgets",
+        "application"
+      ],
+      "prompt": "A learner applies 'Request Paths, Round Trips, and Byte Budgets' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Adding marginal percentiles from different requests creates a journey that",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M05-Q090",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "network-foundations",
+        "dns-addressing-routing-and-discovery",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'DNS, Addressing, Routing, and Discovery'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for trace dns resolution, addressing, routing, caching, and discovery with explicit authority, expiry, and failure boundaries..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RFC 1034, concepts and server algorithm: https://datatracker.ietf.org/doc/html/rfc1034 - RFC 6724, default address-selection policy: https://www.rfc-editor.org/rfc/rfc6724.html - RFC 8305, connection racing across address families: https://www.rfc-editor.org",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M05-Q091",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "network-foundations",
+        "tcp-ordering-flow-congestion-and-goodput",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'TCP Ordering, Flow, Congestion, and Goodput' in Network Foundations?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to relate tcp ordering, loss recovery, flow control, congestion control, and receiver behavior to measured goodput and tail latency.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to relate tcp ordering, loss recovery, flow control, congestion control, and receiver behavior to measured goodput and tail latency.",
+      "explanation": "Use TCP Ordering, Flow, Congestion, and Goodput to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M05-Q092",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "network-foundations",
+        "tls-trust-and-connection-establishment",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'TLS Trust and Connection Establishment' supports this outcome: Trace TLS authentication and handshake costs while preserving hostname, certificate, key, resumption, and trust boundaries.",
+      "correct_answer": "A strong answer defines the mechanism from 'TLS Trust and Connection Establishment', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use TLS Trust and Connection Establishment to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M05-Q093",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "network-foundations",
+        "proxies-nat-pooling-and-exhaustion",
+        "synthesis"
+      ],
+      "prompt": "For 'Proxies, NAT, Pooling, and Exhaustion', what quantities, units, or thresholds would you calculate before trusting a design claim about: Diagnose proxy, load-balancer, NAT, connection-pool, and slow-reader behavior with capacity, ownership, and cost evidence.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Trace connection ownership across client, proxy, application, and dependency.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M05-Q094",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "network-foundations",
+        "http/1.1-and-http/2-multiplexing",
+        "application"
+      ],
+      "prompt": "A learner applies 'HTTP/1.1 and HTTP/2 Multiplexing' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: \u201cMultiplexed\u201d does not mean independent at every lower layer.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M05-Q095",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "network-foundations",
+        "quic-and-http/3-stream-behavior",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'QUIC and HTTP/3 Stream Behavior'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose nine hidden network faults from preserved evidence before reveal and design reruns that separate credible causes..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RFC 9000, QUIC: https://www.rfc-editor.org/rfc/rfc9000.html - RFC 9114, HTTP/3: https://www.rfc-editor.org/rfc/rfc9114.html - Continue with Lesson 8 to turn mechanics into a migration decision.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M05-Q096",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "network-foundations",
+        "protocol-and-topology-decisions",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Protocol and Topology Decisions' in Network Foundations?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend a protocol and topology decision through client outcomes, security, cost, ownership, migration, rollback, and reversal conditions.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend a protocol and topology decision through client outcomes, security, cost, ownership, migration, rollback, and reversal conditions.",
+      "explanation": "Use Protocol and Topology Decisions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M05-Q097",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "network-foundations",
+        "request-paths-round-trips-and-byte-budgets",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Request Paths, Round Trips, and Byte Budgets' supports this outcome: Model a client journey as a layered path with round-trip, byte, bandwidth-delay-product, and tail-latency budgets.",
+      "correct_answer": "A strong answer defines the mechanism from 'Request Paths, Round Trips, and Byte Budgets', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Request Paths, Round Trips, and Byte Budgets to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M05-Q098",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "network-foundations",
+        "dns-addressing-routing-and-discovery",
+        "synthesis"
+      ],
+      "prompt": "For 'DNS, Addressing, Routing, and Discovery', what quantities, units, or thresholds would you calculate before trusting a design claim about: Trace DNS resolution, addressing, routing, caching, and discovery with explicit authority, expiry, and failure boundaries.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Distinguish names, cached records, addresses, routes, and healthy endpoints.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M05-Q099",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "network-foundations",
+        "tcp-ordering-flow-congestion-and-goodput",
+        "application"
+      ],
+      "prompt": "A learner applies 'TCP Ordering, Flow, Congestion, and Goodput' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Equating socket writes with peer receipt ignores buffering and acknowledgments.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M05-Q100",
+      "module_id": "M05",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "network-foundations",
+        "tls-trust-and-connection-establishment",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'TLS Trust and Connection Establishment'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for trace tls authentication and handshake costs while preserving hostname, certificate, key, resumption, and trust boundaries..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RFC 9846, TLS 1.3: https://www.rfc-editor.org/rfc/rfc9846.html - RFC 9525, Service Identity in TLS: https://www.rfc-editor.org/rfc/rfc9525.html - Continue with Lesson 5 for connection ownership beyond the TLS endpoint.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    }
+  ]
+}

@@ -1,0 +1,1926 @@
+{
+  "module_id": "M16",
+  "title": "Browser, Frontend, CDN, and Edge Architecture",
+  "questions": [
+    {
+      "question_id": "M16-Q001",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "browser-work-and-the-rendering-pipeline",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Browser Work and the Rendering Pipeline' in Browser, Frontend, CDN, and Edge Architecture?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to trace tasks, microtasks, input dispatch, style, layout, paint, raster, and compositing from browser evidence.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to trace tasks, microtasks, input dispatch, style, layout, paint, raster, and compositing from browser evidence.",
+      "explanation": "Use Browser Work and the Rendering Pipeline to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M16-Q002",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "performance-budgets-and-evidence",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Performance Budgets and Evidence' supports this outcome: Calculate route-level performance budgets and interpret controlled-lab and field evidence without conflating them.",
+      "correct_answer": "A strong answer defines the mechanism from 'Performance Budgets and Evidence', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Performance Budgets and Evidence to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M16-Q003",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "route-rendering-and-hydration",
+        "synthesis"
+      ],
+      "prompt": "For 'Route Rendering and Hydration', what quantities, units, or thresholds would you calculate before trusting a design claim about: Select and implement static, server, streaming, client, and island-hydration strategies per route from workload and interaction evidence.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Select rendering placement per route rather than per application label.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M16-Q004",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "http-and-cdn-cache-safety",
+        "application"
+      ],
+      "prompt": "A learner applies 'HTTP and CDN Cache Safety' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Keying only by path.** Query, locale, encoding, method, or public variant may",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M16-Q005",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "accessibility-and-resilient-interaction",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Accessibility and Resilient Interaction'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for build keyboard-complete, accessible, resilient interactions and explain the boundary between automated and manual evidence..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-07 within its bounded criteria.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M16-Q006",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "memory-third-parties-and-observability",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Memory, Third Parties, and Observability' in Browser, Frontend, CDN, and Edge Architecture?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose long tasks, hydration mismatches, retained browser resources, and third-party failures from controlled evidence.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose long tasks, hydration mismatches, retained browser resources, and third-party failures from controlled evidence.",
+      "explanation": "Use Memory, Third Parties, and Observability to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M16-Q007",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "northstar-browser-edge-tutorial",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Northstar Browser-Edge Tutorial' supports this outcome: Preserve privacy-aware trace context across browser, edge, and origin while bounding telemetry cost and trust.",
+      "correct_answer": "A strong answer defines the mechanism from 'Northstar Browser-Edge Tutorial', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Northstar Browser-Edge Tutorial to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M16-Q008",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "frontend-edge-decision-and-teach-back",
+        "synthesis"
+      ],
+      "prompt": "For 'Frontend-Edge Decision and Teach-Back', what quantities, units, or thresholds would you calculate before trusting a design claim about: Defend frontend boundaries, BFF and microfrontend choices, edge consistency, ownership, cost, migration, and reversal conditions.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Compare frontend and edge architectures using the same route and ownership evidence.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M16-Q009",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "browser-work-and-the-rendering-pipeline",
+        "application"
+      ],
+      "prompt": "A learner applies 'Browser Work and the Rendering Pipeline' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Calling every callback a macrotask.** The platform contract uses tasks and",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M16-Q010",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "performance-budgets-and-evidence",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Performance Budgets and Evidence'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for calculate route-level performance budgets and interpret controlled-lab and field evidence without conflating them..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-03.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M16-Q011",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "route-rendering-and-hydration",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Route Rendering and Hydration' in Browser, Frontend, CDN, and Edge Architecture?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to select and implement static, server, streaming, client, and island-hydration strategies per route from workload and interaction evidence.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to select and implement static, server, streaming, client, and island-hydration strategies per route from workload and interaction evidence.",
+      "explanation": "Use Route Rendering and Hydration to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M16-Q012",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "http-and-cdn-cache-safety",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'HTTP and CDN Cache Safety' supports this outcome: Implement HTTP and CDN cache keys, freshness, validation, invalidation, and private-response isolation with explicit authority.",
+      "correct_answer": "A strong answer defines the mechanism from 'HTTP and CDN Cache Safety', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use HTTP and CDN Cache Safety to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M16-Q013",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "accessibility-and-resilient-interaction",
+        "synthesis"
+      ],
+      "prompt": "For 'Accessibility and Resilient Interaction', what quantities, units, or thresholds would you calculate before trusting a design claim about: Build keyboard-complete, accessible, resilient interactions and explain the boundary between automated and manual evidence.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Derive an interaction contract from semantics, keyboard use, focus, status, and error recovery.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M16-Q014",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "memory-third-parties-and-observability",
+        "application"
+      ],
+      "prompt": "A learner applies 'Memory, Third Parties, and Observability' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Calling high heap a leak.** Caches and live state may be intentional; show a",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M16-Q015",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "northstar-browser-edge-tutorial",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Northstar Browser-Edge Tutorial'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for preserve privacy-aware trace context across browser, edge, and origin while bounding telemetry cost and trust..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Use the lab guide../lab/README.md and completed Northstar case../case-study/northstar-sky-portal.md.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M16-Q016",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "frontend-edge-decision-and-teach-back",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Frontend-Edge Decision and Teach-Back' in Browser, Frontend, CDN, and Edge Architecture?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend frontend boundaries, bff and microfrontend choices, edge consistency, ownership, cost, migration, and reversal conditions.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend frontend boundaries, bff and microfrontend choices, edge consistency, ownership, cost, migration, and reversal conditions.",
+      "explanation": "Use Frontend-Edge Decision and Teach-Back to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M16-Q017",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "browser-work-and-the-rendering-pipeline",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Browser Work and the Rendering Pipeline' supports this outcome: Trace tasks, microtasks, input dispatch, style, layout, paint, raster, and compositing from browser evidence.",
+      "correct_answer": "A strong answer defines the mechanism from 'Browser Work and the Rendering Pipeline', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Browser Work and the Rendering Pipeline to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M16-Q018",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "performance-budgets-and-evidence",
+        "synthesis"
+      ],
+      "prompt": "For 'Performance Budgets and Evidence', what quantities, units, or thresholds would you calculate before trusting a design claim about: Calculate route-level performance budgets and interpret controlled-lab and field evidence without conflating them.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Derive route budgets from a user journey and constrained client population.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M16-Q019",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "route-rendering-and-hydration",
+        "application"
+      ],
+      "prompt": "A learner applies 'Route Rendering and Hydration' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Declaring the whole site SSR or SPA.** Route data and interaction contracts differ.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M16-Q020",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "http-and-cdn-cache-safety",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'HTTP and CDN Cache Safety'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement http and cdn cache keys, freshness, validation, invalidation, and private-response isolation with explicit authority..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-04.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M16-Q021",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "accessibility-and-resilient-interaction",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Accessibility and Resilient Interaction' in Browser, Frontend, CDN, and Edge Architecture?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to build keyboard-complete, accessible, resilient interactions and explain the boundary between automated and manual evidence.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to build keyboard-complete, accessible, resilient interactions and explain the boundary between automated and manual evidence.",
+      "explanation": "Use Accessibility and Resilient Interaction to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M16-Q022",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "memory-third-parties-and-observability",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Memory, Third Parties, and Observability' supports this outcome: Diagnose long tasks, hydration mismatches, retained browser resources, and third-party failures from controlled evidence.",
+      "correct_answer": "A strong answer defines the mechanism from 'Memory, Third Parties, and Observability', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Memory, Third Parties, and Observability to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M16-Q023",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "northstar-browser-edge-tutorial",
+        "synthesis"
+      ],
+      "prompt": "For 'Northstar Browser-Edge Tutorial', what quantities, units, or thresholds would you calculate before trusting a design claim about: Preserve privacy-aware trace context across browser, edge, and origin while bounding telemetry cost and trust.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Apply the route, cache, accessibility, telemetry, and failure procedures together.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M16-Q024",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "frontend-edge-decision-and-teach-back",
+        "application"
+      ],
+      "prompt": "A learner applies 'Frontend-Edge Decision and Teach-Back' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Mapping teams directly to bundles.** Runtime duplication and inconsistent UX",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M16-Q025",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "browser-work-and-the-rendering-pipeline",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Browser Work and the Rendering Pipeline'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for trace tasks, microtasks, input dispatch, style, layout, paint, raster, and compositing from browser evidence..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-01, RES-02, and RES-10 within their boundaries.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M16-Q026",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "performance-budgets-and-evidence",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Performance Budgets and Evidence' in Browser, Frontend, CDN, and Edge Architecture?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate route-level performance budgets and interpret controlled-lab and field evidence without conflating them.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate route-level performance budgets and interpret controlled-lab and field evidence without conflating them.",
+      "explanation": "Use Performance Budgets and Evidence to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M16-Q027",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "route-rendering-and-hydration",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Route Rendering and Hydration' supports this outcome: Select and implement static, server, streaming, client, and island-hydration strategies per route from workload and interaction evidence.",
+      "correct_answer": "A strong answer defines the mechanism from 'Route Rendering and Hydration', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Route Rendering and Hydration to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M16-Q028",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "http-and-cdn-cache-safety",
+        "synthesis"
+      ],
+      "prompt": "For 'HTTP and CDN Cache Safety', what quantities, units, or thresholds would you calculate before trusting a design claim about: Implement HTTP and CDN cache keys, freshness, validation, invalidation, and private-response isolation with explicit authority.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Derive storage, key, freshness, validation, and invalidation from data authority.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M16-Q029",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "accessibility-and-resilient-interaction",
+        "application"
+      ],
+      "prompt": "A learner applies 'Accessibility and Resilient Interaction' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Using ARIA to recreate native controls.** This transfers keyboard, state,",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M16-Q030",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "memory-third-parties-and-observability",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Memory, Third Parties, and Observability'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose long tasks, hydration mismatches, retained browser resources, and third-party failures from controlled evidence..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-08, RES-09, RES-12, and RES-13.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M16-Q031",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "northstar-browser-edge-tutorial",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Northstar Browser-Edge Tutorial' in Browser, Frontend, CDN, and Edge Architecture?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to preserve privacy-aware trace context across browser, edge, and origin while bounding telemetry cost and trust.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to preserve privacy-aware trace context across browser, edge, and origin while bounding telemetry cost and trust.",
+      "explanation": "Use Northstar Browser-Edge Tutorial to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M16-Q032",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "frontend-edge-decision-and-teach-back",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Frontend-Edge Decision and Teach-Back' supports this outcome: Defend frontend boundaries, BFF and microfrontend choices, edge consistency, ownership, cost, migration, and reversal conditions.",
+      "correct_answer": "A strong answer defines the mechanism from 'Frontend-Edge Decision and Teach-Back', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Frontend-Edge Decision and Teach-Back to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M16-Q033",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "browser-work-and-the-rendering-pipeline",
+        "synthesis"
+      ],
+      "prompt": "For 'Browser Work and the Rendering Pipeline', what quantities, units, or thresholds would you calculate before trusting a design claim about: Trace tasks, microtasks, input dispatch, style, layout, paint, raster, and compositing from browser evidence.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Trace a user interaction through task selection, event callbacks, microtasks, style, layout, paint, raster, compositing, and presentation.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M16-Q034",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "performance-budgets-and-evidence",
+        "application"
+      ],
+      "prompt": "A learner applies 'Performance Budgets and Evidence' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Using Lighthouse score as the contract.** A composite score hides the route,",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M16-Q035",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "route-rendering-and-hydration",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Route Rendering and Hydration'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for select and implement static, server, streaming, client, and island-hydration strategies per route from workload and interaction evidence..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-05 and RES-06.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M16-Q036",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "http-and-cdn-cache-safety",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'HTTP and CDN Cache Safety' in Browser, Frontend, CDN, and Edge Architecture?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement http and cdn cache keys, freshness, validation, invalidation, and private-response isolation with explicit authority.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement http and cdn cache keys, freshness, validation, invalidation, and private-response isolation with explicit authority.",
+      "explanation": "Use HTTP and CDN Cache Safety to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M16-Q037",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "accessibility-and-resilient-interaction",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Accessibility and Resilient Interaction' supports this outcome: Build keyboard-complete, accessible, resilient interactions and explain the boundary between automated and manual evidence.",
+      "correct_answer": "A strong answer defines the mechanism from 'Accessibility and Resilient Interaction', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Accessibility and Resilient Interaction to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M16-Q038",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "memory-third-parties-and-observability",
+        "synthesis"
+      ],
+      "prompt": "For 'Memory, Third Parties, and Observability', what quantities, units, or thresholds would you calculate before trusting a design claim about: Diagnose long tasks, hydration mismatches, retained browser resources, and third-party failures from controlled evidence.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Distinguish retained browser resources from ordinary allocation and collection.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M16-Q039",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "northstar-browser-edge-tutorial",
+        "application"
+      ],
+      "prompt": "A learner applies 'Northstar Browser-Edge Tutorial' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Using model timing as browser timing.** Deterministic values test policy logic,",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M16-Q040",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "frontend-edge-decision-and-teach-back",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Frontend-Edge Decision and Teach-Back'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for defend frontend boundaries, bff and microfrontend choices, edge consistency, ownership, cost, migration, and reversal conditions..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-11 and revisit RES-04/RES-07/RES-09.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M16-Q041",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "browser-work-and-the-rendering-pipeline",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Browser Work and the Rendering Pipeline' in Browser, Frontend, CDN, and Edge Architecture?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to trace tasks, microtasks, input dispatch, style, layout, paint, raster, and compositing from browser evidence.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to trace tasks, microtasks, input dispatch, style, layout, paint, raster, and compositing from browser evidence.",
+      "explanation": "Use Browser Work and the Rendering Pipeline to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M16-Q042",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "performance-budgets-and-evidence",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Performance Budgets and Evidence' supports this outcome: Calculate route-level performance budgets and interpret controlled-lab and field evidence without conflating them.",
+      "correct_answer": "A strong answer defines the mechanism from 'Performance Budgets and Evidence', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Performance Budgets and Evidence to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M16-Q043",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "route-rendering-and-hydration",
+        "synthesis"
+      ],
+      "prompt": "For 'Route Rendering and Hydration', what quantities, units, or thresholds would you calculate before trusting a design claim about: Select and implement static, server, streaming, client, and island-hydration strategies per route from workload and interaction evidence.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Select rendering placement per route rather than per application label.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M16-Q044",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "http-and-cdn-cache-safety",
+        "application"
+      ],
+      "prompt": "A learner applies 'HTTP and CDN Cache Safety' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Keying only by path.** Query, locale, encoding, method, or public variant may",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M16-Q045",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "accessibility-and-resilient-interaction",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Accessibility and Resilient Interaction'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for build keyboard-complete, accessible, resilient interactions and explain the boundary between automated and manual evidence..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-07 within its bounded criteria.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M16-Q046",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "memory-third-parties-and-observability",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Memory, Third Parties, and Observability' in Browser, Frontend, CDN, and Edge Architecture?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose long tasks, hydration mismatches, retained browser resources, and third-party failures from controlled evidence.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose long tasks, hydration mismatches, retained browser resources, and third-party failures from controlled evidence.",
+      "explanation": "Use Memory, Third Parties, and Observability to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M16-Q047",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "northstar-browser-edge-tutorial",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Northstar Browser-Edge Tutorial' supports this outcome: Preserve privacy-aware trace context across browser, edge, and origin while bounding telemetry cost and trust.",
+      "correct_answer": "A strong answer defines the mechanism from 'Northstar Browser-Edge Tutorial', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Northstar Browser-Edge Tutorial to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M16-Q048",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "frontend-edge-decision-and-teach-back",
+        "synthesis"
+      ],
+      "prompt": "For 'Frontend-Edge Decision and Teach-Back', what quantities, units, or thresholds would you calculate before trusting a design claim about: Defend frontend boundaries, BFF and microfrontend choices, edge consistency, ownership, cost, migration, and reversal conditions.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Compare frontend and edge architectures using the same route and ownership evidence.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M16-Q049",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "browser-work-and-the-rendering-pipeline",
+        "application"
+      ],
+      "prompt": "A learner applies 'Browser Work and the Rendering Pipeline' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Calling every callback a macrotask.** The platform contract uses tasks and",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M16-Q050",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "performance-budgets-and-evidence",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Performance Budgets and Evidence'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for calculate route-level performance budgets and interpret controlled-lab and field evidence without conflating them..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-03.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M16-Q051",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "route-rendering-and-hydration",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Route Rendering and Hydration' in Browser, Frontend, CDN, and Edge Architecture?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to select and implement static, server, streaming, client, and island-hydration strategies per route from workload and interaction evidence.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to select and implement static, server, streaming, client, and island-hydration strategies per route from workload and interaction evidence.",
+      "explanation": "Use Route Rendering and Hydration to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M16-Q052",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "http-and-cdn-cache-safety",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'HTTP and CDN Cache Safety' supports this outcome: Implement HTTP and CDN cache keys, freshness, validation, invalidation, and private-response isolation with explicit authority.",
+      "correct_answer": "A strong answer defines the mechanism from 'HTTP and CDN Cache Safety', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use HTTP and CDN Cache Safety to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M16-Q053",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "accessibility-and-resilient-interaction",
+        "synthesis"
+      ],
+      "prompt": "For 'Accessibility and Resilient Interaction', what quantities, units, or thresholds would you calculate before trusting a design claim about: Build keyboard-complete, accessible, resilient interactions and explain the boundary between automated and manual evidence.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Derive an interaction contract from semantics, keyboard use, focus, status, and error recovery.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M16-Q054",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "memory-third-parties-and-observability",
+        "application"
+      ],
+      "prompt": "A learner applies 'Memory, Third Parties, and Observability' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Calling high heap a leak.** Caches and live state may be intentional; show a",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M16-Q055",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "northstar-browser-edge-tutorial",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Northstar Browser-Edge Tutorial'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for preserve privacy-aware trace context across browser, edge, and origin while bounding telemetry cost and trust..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Use the lab guide../lab/README.md and completed Northstar case../case-study/northstar-sky-portal.md.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M16-Q056",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "frontend-edge-decision-and-teach-back",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Frontend-Edge Decision and Teach-Back' in Browser, Frontend, CDN, and Edge Architecture?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend frontend boundaries, bff and microfrontend choices, edge consistency, ownership, cost, migration, and reversal conditions.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend frontend boundaries, bff and microfrontend choices, edge consistency, ownership, cost, migration, and reversal conditions.",
+      "explanation": "Use Frontend-Edge Decision and Teach-Back to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M16-Q057",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "browser-work-and-the-rendering-pipeline",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Browser Work and the Rendering Pipeline' supports this outcome: Trace tasks, microtasks, input dispatch, style, layout, paint, raster, and compositing from browser evidence.",
+      "correct_answer": "A strong answer defines the mechanism from 'Browser Work and the Rendering Pipeline', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Browser Work and the Rendering Pipeline to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M16-Q058",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "performance-budgets-and-evidence",
+        "synthesis"
+      ],
+      "prompt": "For 'Performance Budgets and Evidence', what quantities, units, or thresholds would you calculate before trusting a design claim about: Calculate route-level performance budgets and interpret controlled-lab and field evidence without conflating them.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Derive route budgets from a user journey and constrained client population.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M16-Q059",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "route-rendering-and-hydration",
+        "application"
+      ],
+      "prompt": "A learner applies 'Route Rendering and Hydration' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Declaring the whole site SSR or SPA.** Route data and interaction contracts differ.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M16-Q060",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "http-and-cdn-cache-safety",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'HTTP and CDN Cache Safety'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement http and cdn cache keys, freshness, validation, invalidation, and private-response isolation with explicit authority..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-04.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M16-Q061",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "accessibility-and-resilient-interaction",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Accessibility and Resilient Interaction' in Browser, Frontend, CDN, and Edge Architecture?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to build keyboard-complete, accessible, resilient interactions and explain the boundary between automated and manual evidence.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to build keyboard-complete, accessible, resilient interactions and explain the boundary between automated and manual evidence.",
+      "explanation": "Use Accessibility and Resilient Interaction to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M16-Q062",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "memory-third-parties-and-observability",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Memory, Third Parties, and Observability' supports this outcome: Diagnose long tasks, hydration mismatches, retained browser resources, and third-party failures from controlled evidence.",
+      "correct_answer": "A strong answer defines the mechanism from 'Memory, Third Parties, and Observability', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Memory, Third Parties, and Observability to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M16-Q063",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "northstar-browser-edge-tutorial",
+        "synthesis"
+      ],
+      "prompt": "For 'Northstar Browser-Edge Tutorial', what quantities, units, or thresholds would you calculate before trusting a design claim about: Preserve privacy-aware trace context across browser, edge, and origin while bounding telemetry cost and trust.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Apply the route, cache, accessibility, telemetry, and failure procedures together.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M16-Q064",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "frontend-edge-decision-and-teach-back",
+        "application"
+      ],
+      "prompt": "A learner applies 'Frontend-Edge Decision and Teach-Back' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Mapping teams directly to bundles.** Runtime duplication and inconsistent UX",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M16-Q065",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "browser-work-and-the-rendering-pipeline",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Browser Work and the Rendering Pipeline'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for trace tasks, microtasks, input dispatch, style, layout, paint, raster, and compositing from browser evidence..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-01, RES-02, and RES-10 within their boundaries.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M16-Q066",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "performance-budgets-and-evidence",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Performance Budgets and Evidence' in Browser, Frontend, CDN, and Edge Architecture?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate route-level performance budgets and interpret controlled-lab and field evidence without conflating them.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate route-level performance budgets and interpret controlled-lab and field evidence without conflating them.",
+      "explanation": "Use Performance Budgets and Evidence to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M16-Q067",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "route-rendering-and-hydration",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Route Rendering and Hydration' supports this outcome: Select and implement static, server, streaming, client, and island-hydration strategies per route from workload and interaction evidence.",
+      "correct_answer": "A strong answer defines the mechanism from 'Route Rendering and Hydration', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Route Rendering and Hydration to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M16-Q068",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "http-and-cdn-cache-safety",
+        "synthesis"
+      ],
+      "prompt": "For 'HTTP and CDN Cache Safety', what quantities, units, or thresholds would you calculate before trusting a design claim about: Implement HTTP and CDN cache keys, freshness, validation, invalidation, and private-response isolation with explicit authority.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Derive storage, key, freshness, validation, and invalidation from data authority.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M16-Q069",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "accessibility-and-resilient-interaction",
+        "application"
+      ],
+      "prompt": "A learner applies 'Accessibility and Resilient Interaction' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Using ARIA to recreate native controls.** This transfers keyboard, state,",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M16-Q070",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "memory-third-parties-and-observability",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Memory, Third Parties, and Observability'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose long tasks, hydration mismatches, retained browser resources, and third-party failures from controlled evidence..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-08, RES-09, RES-12, and RES-13.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M16-Q071",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "northstar-browser-edge-tutorial",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Northstar Browser-Edge Tutorial' in Browser, Frontend, CDN, and Edge Architecture?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to preserve privacy-aware trace context across browser, edge, and origin while bounding telemetry cost and trust.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to preserve privacy-aware trace context across browser, edge, and origin while bounding telemetry cost and trust.",
+      "explanation": "Use Northstar Browser-Edge Tutorial to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M16-Q072",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "frontend-edge-decision-and-teach-back",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Frontend-Edge Decision and Teach-Back' supports this outcome: Defend frontend boundaries, BFF and microfrontend choices, edge consistency, ownership, cost, migration, and reversal conditions.",
+      "correct_answer": "A strong answer defines the mechanism from 'Frontend-Edge Decision and Teach-Back', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Frontend-Edge Decision and Teach-Back to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M16-Q073",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "browser-work-and-the-rendering-pipeline",
+        "synthesis"
+      ],
+      "prompt": "For 'Browser Work and the Rendering Pipeline', what quantities, units, or thresholds would you calculate before trusting a design claim about: Trace tasks, microtasks, input dispatch, style, layout, paint, raster, and compositing from browser evidence.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Trace a user interaction through task selection, event callbacks, microtasks, style, layout, paint, raster, compositing, and presentation.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M16-Q074",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "performance-budgets-and-evidence",
+        "application"
+      ],
+      "prompt": "A learner applies 'Performance Budgets and Evidence' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Using Lighthouse score as the contract.** A composite score hides the route,",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M16-Q075",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "route-rendering-and-hydration",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Route Rendering and Hydration'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for select and implement static, server, streaming, client, and island-hydration strategies per route from workload and interaction evidence..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-05 and RES-06.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M16-Q076",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "http-and-cdn-cache-safety",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'HTTP and CDN Cache Safety' in Browser, Frontend, CDN, and Edge Architecture?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement http and cdn cache keys, freshness, validation, invalidation, and private-response isolation with explicit authority.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement http and cdn cache keys, freshness, validation, invalidation, and private-response isolation with explicit authority.",
+      "explanation": "Use HTTP and CDN Cache Safety to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M16-Q077",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "accessibility-and-resilient-interaction",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Accessibility and Resilient Interaction' supports this outcome: Build keyboard-complete, accessible, resilient interactions and explain the boundary between automated and manual evidence.",
+      "correct_answer": "A strong answer defines the mechanism from 'Accessibility and Resilient Interaction', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Accessibility and Resilient Interaction to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M16-Q078",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "memory-third-parties-and-observability",
+        "synthesis"
+      ],
+      "prompt": "For 'Memory, Third Parties, and Observability', what quantities, units, or thresholds would you calculate before trusting a design claim about: Diagnose long tasks, hydration mismatches, retained browser resources, and third-party failures from controlled evidence.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Distinguish retained browser resources from ordinary allocation and collection.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M16-Q079",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "northstar-browser-edge-tutorial",
+        "application"
+      ],
+      "prompt": "A learner applies 'Northstar Browser-Edge Tutorial' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Using model timing as browser timing.** Deterministic values test policy logic,",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M16-Q080",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "frontend-edge-decision-and-teach-back",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Frontend-Edge Decision and Teach-Back'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for defend frontend boundaries, bff and microfrontend choices, edge consistency, ownership, cost, migration, and reversal conditions..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-11 and revisit RES-04/RES-07/RES-09.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M16-Q081",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "browser-work-and-the-rendering-pipeline",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Browser Work and the Rendering Pipeline' in Browser, Frontend, CDN, and Edge Architecture?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to trace tasks, microtasks, input dispatch, style, layout, paint, raster, and compositing from browser evidence.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to trace tasks, microtasks, input dispatch, style, layout, paint, raster, and compositing from browser evidence.",
+      "explanation": "Use Browser Work and the Rendering Pipeline to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M16-Q082",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "performance-budgets-and-evidence",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Performance Budgets and Evidence' supports this outcome: Calculate route-level performance budgets and interpret controlled-lab and field evidence without conflating them.",
+      "correct_answer": "A strong answer defines the mechanism from 'Performance Budgets and Evidence', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Performance Budgets and Evidence to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M16-Q083",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "route-rendering-and-hydration",
+        "synthesis"
+      ],
+      "prompt": "For 'Route Rendering and Hydration', what quantities, units, or thresholds would you calculate before trusting a design claim about: Select and implement static, server, streaming, client, and island-hydration strategies per route from workload and interaction evidence.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Select rendering placement per route rather than per application label.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M16-Q084",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "http-and-cdn-cache-safety",
+        "application"
+      ],
+      "prompt": "A learner applies 'HTTP and CDN Cache Safety' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Keying only by path.** Query, locale, encoding, method, or public variant may",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M16-Q085",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "accessibility-and-resilient-interaction",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Accessibility and Resilient Interaction'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for build keyboard-complete, accessible, resilient interactions and explain the boundary between automated and manual evidence..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-07 within its bounded criteria.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M16-Q086",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "memory-third-parties-and-observability",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Memory, Third Parties, and Observability' in Browser, Frontend, CDN, and Edge Architecture?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose long tasks, hydration mismatches, retained browser resources, and third-party failures from controlled evidence.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose long tasks, hydration mismatches, retained browser resources, and third-party failures from controlled evidence.",
+      "explanation": "Use Memory, Third Parties, and Observability to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M16-Q087",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "northstar-browser-edge-tutorial",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Northstar Browser-Edge Tutorial' supports this outcome: Preserve privacy-aware trace context across browser, edge, and origin while bounding telemetry cost and trust.",
+      "correct_answer": "A strong answer defines the mechanism from 'Northstar Browser-Edge Tutorial', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Northstar Browser-Edge Tutorial to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M16-Q088",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "frontend-edge-decision-and-teach-back",
+        "synthesis"
+      ],
+      "prompt": "For 'Frontend-Edge Decision and Teach-Back', what quantities, units, or thresholds would you calculate before trusting a design claim about: Defend frontend boundaries, BFF and microfrontend choices, edge consistency, ownership, cost, migration, and reversal conditions.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Compare frontend and edge architectures using the same route and ownership evidence.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M16-Q089",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "browser-work-and-the-rendering-pipeline",
+        "application"
+      ],
+      "prompt": "A learner applies 'Browser Work and the Rendering Pipeline' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Calling every callback a macrotask.** The platform contract uses tasks and",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M16-Q090",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "performance-budgets-and-evidence",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Performance Budgets and Evidence'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for calculate route-level performance budgets and interpret controlled-lab and field evidence without conflating them..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-03.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M16-Q091",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "route-rendering-and-hydration",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Route Rendering and Hydration' in Browser, Frontend, CDN, and Edge Architecture?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to select and implement static, server, streaming, client, and island-hydration strategies per route from workload and interaction evidence.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to select and implement static, server, streaming, client, and island-hydration strategies per route from workload and interaction evidence.",
+      "explanation": "Use Route Rendering and Hydration to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M16-Q092",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "http-and-cdn-cache-safety",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'HTTP and CDN Cache Safety' supports this outcome: Implement HTTP and CDN cache keys, freshness, validation, invalidation, and private-response isolation with explicit authority.",
+      "correct_answer": "A strong answer defines the mechanism from 'HTTP and CDN Cache Safety', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use HTTP and CDN Cache Safety to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M16-Q093",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "accessibility-and-resilient-interaction",
+        "synthesis"
+      ],
+      "prompt": "For 'Accessibility and Resilient Interaction', what quantities, units, or thresholds would you calculate before trusting a design claim about: Build keyboard-complete, accessible, resilient interactions and explain the boundary between automated and manual evidence.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Derive an interaction contract from semantics, keyboard use, focus, status, and error recovery.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M16-Q094",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "memory-third-parties-and-observability",
+        "application"
+      ],
+      "prompt": "A learner applies 'Memory, Third Parties, and Observability' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Calling high heap a leak.** Caches and live state may be intentional; show a",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M16-Q095",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "northstar-browser-edge-tutorial",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Northstar Browser-Edge Tutorial'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for preserve privacy-aware trace context across browser, edge, and origin while bounding telemetry cost and trust..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Use the lab guide../lab/README.md and completed Northstar case../case-study/northstar-sky-portal.md.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M16-Q096",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "frontend-edge-decision-and-teach-back",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Frontend-Edge Decision and Teach-Back' in Browser, Frontend, CDN, and Edge Architecture?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend frontend boundaries, bff and microfrontend choices, edge consistency, ownership, cost, migration, and reversal conditions.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend frontend boundaries, bff and microfrontend choices, edge consistency, ownership, cost, migration, and reversal conditions.",
+      "explanation": "Use Frontend-Edge Decision and Teach-Back to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M16-Q097",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "browser-work-and-the-rendering-pipeline",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Browser Work and the Rendering Pipeline' supports this outcome: Trace tasks, microtasks, input dispatch, style, layout, paint, raster, and compositing from browser evidence.",
+      "correct_answer": "A strong answer defines the mechanism from 'Browser Work and the Rendering Pipeline', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Browser Work and the Rendering Pipeline to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M16-Q098",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "performance-budgets-and-evidence",
+        "synthesis"
+      ],
+      "prompt": "For 'Performance Budgets and Evidence', what quantities, units, or thresholds would you calculate before trusting a design claim about: Calculate route-level performance budgets and interpret controlled-lab and field evidence without conflating them.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Derive route budgets from a user journey and constrained client population.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M16-Q099",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "route-rendering-and-hydration",
+        "application"
+      ],
+      "prompt": "A learner applies 'Route Rendering and Hydration' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Declaring the whole site SSR or SPA.** Route data and interaction contracts differ.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M16-Q100",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "http-and-cdn-cache-safety",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'HTTP and CDN Cache Safety'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement http and cdn cache keys, freshness, validation, invalidation, and private-response isolation with explicit authority..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-04.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    }
+  ]
+}

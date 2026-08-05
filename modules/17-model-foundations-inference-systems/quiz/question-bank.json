@@ -1,0 +1,1926 @@
+{
+  "module_id": "M17",
+  "title": "Model Foundations and Inference Systems",
+  "questions": [
+    {
+      "question_id": "M17-Q001",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "mathematics-for-inference-decisions",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Mathematics for Inference Decisions' in Model Foundations and Inference Systems?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to derive vectors, matrices, norms, probability, entropy, gradients, and scaled dot-product attention with explicit shapes, units, and numerical limits.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to derive vectors, matrices, norms, probability, entropy, gradients, and scaled dot-product attention with explicit shapes, units, and numerical limits.",
+      "explanation": "Use Mathematics for Inference Decisions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M17-Q002",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "tokens-embeddings-and-attention",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Tokens, Embeddings, and Attention' supports this outcome: Implement versioned tokenization, embeddings, causal attention, and a deterministic tiny transformer inference path.",
+      "correct_answer": "A strong answer defines the mechanism from 'Tokens, Embeddings, and Attention', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Tokens, Embeddings, and Attention to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M17-Q003",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "transformer-inference-from-prefill-to-decode",
+        "synthesis"
+      ],
+      "prompt": "For 'Transformer Inference from Prefill to Decode', what quantities, units, or thresholds would you calculate before trusting a design claim about: Calculate weights, activations, KV cache, bandwidth, concurrency, headroom, failover reserve, and cost per useful output.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Trace a decoder block and autoregressive generation loop.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M17-Q004",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "compute-memory-and-capacity-accounting",
+        "application"
+      ],
+      "prompt": "A learner applies 'Compute, Memory, and Capacity Accounting' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Using parameter bytes as total serving memory.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M17-Q005",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "profiling-and-inference-metrics",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Profiling and Inference Metrics'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement bounded batching, pre-admission resource reservation, quotas, shedding, and traffic-class fairness..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-07 and the measurement parts of RES-09.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M17-Q006",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "scheduling-batching-admission-and-fairness",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Scheduling, Batching, Admission, and Fairness' in Model Foundations and Inference Systems?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to apply versioned prefix and semantic caches and precision changes without crossing privacy, compatibility, or quality boundaries.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to apply versioned prefix and semantic caches and precision changes without crossing privacy, compatibility, or quality boundaries.",
+      "explanation": "Use Scheduling, Batching, Admission, and Fairness to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M17-Q007",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "caches-quantization-and-provider-failure",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Caches, Quantization, and Provider Failure' supports this outcome: Diagnose memory exhaustion, mixed-length interference, queue overload, cache collision, precision loss, and provider failure from preserved evidence.",
+      "correct_answer": "A strong answer defines the mechanism from 'Caches, Quantization, and Provider Failure', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Caches, Quantization, and Provider Failure to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M17-Q008",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "atlas-tutorial-architecture-decision-and-teach-b",
+        "synthesis"
+      ],
+      "prompt": "For 'Atlas Tutorial, Architecture Decision, and Teach-Back', what quantities, units, or thresholds would you calculate before trusting a design claim about: Defend an inference architecture across quality, latency, availability, security, cost, ownership, migration, rollback, and reversal.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Execute the full Atlas learning loop without leaking a final-project answer.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M17-Q009",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "mathematics-for-inference-decisions",
+        "application"
+      ],
+      "prompt": "A learner applies 'Mathematics for Inference Decisions' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Dropping batch or sequence dimensions from a memory calculation.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M17-Q010",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "tokens-embeddings-and-attention",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Tokens, Embeddings, and Attention'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement versioned tokenization, embeddings, causal attention, and a deterministic tiny transformer inference path..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-02 \u00a73.1\u20133.5 and RES-03 tokenization/architecture material.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M17-Q011",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "transformer-inference-from-prefill-to-decode",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Transformer Inference from Prefill to Decode' in Model Foundations and Inference Systems?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate weights, activations, kv cache, bandwidth, concurrency, headroom, failover reserve, and cost per useful output.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate weights, activations, kv cache, bandwidth, concurrency, headroom, failover reserve, and cost per useful output.",
+      "explanation": "Use Transformer Inference from Prefill to Decode to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M17-Q012",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "compute-memory-and-capacity-accounting",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Compute, Memory, and Capacity Accounting' supports this outcome: Measure queue-inclusive TTFT, inter-token latency, prefill, decode, outcomes, throughput, memory, and profiler limits.",
+      "correct_answer": "A strong answer defines the mechanism from 'Compute, Memory, and Capacity Accounting', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Compute, Memory, and Capacity Accounting to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M17-Q013",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "profiling-and-inference-metrics",
+        "synthesis"
+      ],
+      "prompt": "For 'Profiling and Inference Metrics', what quantities, units, or thresholds would you calculate before trusting a design claim about: Implement bounded batching, pre-admission resource reservation, quotas, shedding, and traffic-class fairness.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Design a reproducible inference measurement protocol.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M17-Q014",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "scheduling-batching-admission-and-fairness",
+        "application"
+      ],
+      "prompt": "A learner applies 'Scheduling, Batching, Admission, and Fairness' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Calling a queue bounded because worker concurrency is bounded.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M17-Q015",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "caches-quantization-and-provider-failure",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Caches, Quantization, and Provider Failure'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose memory exhaustion, mixed-length interference, queue overload, cache collision, precision loss, and provider failure from preserved evidence..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-05, RES-06, and RES-08.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M17-Q016",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "atlas-tutorial-architecture-decision-and-teach-b",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Atlas Tutorial, Architecture Decision, and Teach-Back' in Model Foundations and Inference Systems?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend an inference architecture across quality, latency, availability, security, cost, ownership, migration, rollback, and reversal.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend an inference architecture across quality, latency, availability, security, cost, ownership, migration, rollback, and reversal.",
+      "explanation": "Use Atlas Tutorial, Architecture Decision, and Teach-Back to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M17-Q017",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "mathematics-for-inference-decisions",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Mathematics for Inference Decisions' supports this outcome: Derive vectors, matrices, norms, probability, entropy, gradients, and scaled dot-product attention with explicit shapes, units, and numerical limits.",
+      "correct_answer": "A strong answer defines the mechanism from 'Mathematics for Inference Decisions', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Mathematics for Inference Decisions to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M17-Q018",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "tokens-embeddings-and-attention",
+        "synthesis"
+      ],
+      "prompt": "For 'Tokens, Embeddings, and Attention', what quantities, units, or thresholds would you calculate before trusting a design claim about: Implement versioned tokenization, embeddings, causal attention, and a deterministic tiny transformer inference path.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Trace text through a versioned tokenizer and embedding table.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M17-Q019",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "transformer-inference-from-prefill-to-decode",
+        "application"
+      ],
+      "prompt": "A learner applies 'Transformer Inference from Prefill to Decode' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Reporting model execution time as TTFT while excluding queue and tokenization.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M17-Q020",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "compute-memory-and-capacity-accounting",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Compute, Memory, and Capacity Accounting'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for measure queue-inclusive ttft, inter-token latency, prefill, decode, outcomes, throughput, memory, and profiler limits..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-03 and RES-05.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M17-Q021",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "profiling-and-inference-metrics",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Profiling and Inference Metrics' in Model Foundations and Inference Systems?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement bounded batching, pre-admission resource reservation, quotas, shedding, and traffic-class fairness.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement bounded batching, pre-admission resource reservation, quotas, shedding, and traffic-class fairness.",
+      "explanation": "Use Profiling and Inference Metrics to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M17-Q022",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "scheduling-batching-admission-and-fairness",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Scheduling, Batching, Admission, and Fairness' supports this outcome: Apply versioned prefix and semantic caches and precision changes without crossing privacy, compatibility, or quality boundaries.",
+      "correct_answer": "A strong answer defines the mechanism from 'Scheduling, Batching, Admission, and Fairness', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Scheduling, Batching, Admission, and Fairness to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M17-Q023",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "caches-quantization-and-provider-failure",
+        "synthesis"
+      ],
+      "prompt": "For 'Caches, Quantization, and Provider Failure', what quantities, units, or thresholds would you calculate before trusting a design claim about: Diagnose memory exhaustion, mixed-length interference, queue overload, cache collision, precision loss, and provider failure from preserved evidence.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Define safe prefix and semantic cache identities and invalidation.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M17-Q024",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "atlas-tutorial-architecture-decision-and-teach-b",
+        "application"
+      ],
+      "prompt": "A learner applies 'Atlas Tutorial, Architecture Decision, and Teach-Back' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Comparing candidates with different workloads or quality bars.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M17-Q025",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "mathematics-for-inference-decisions",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Mathematics for Inference Decisions'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for derive vectors, matrices, norms, probability, entropy, gradients, and scaled dot-product attention with explicit shapes, units, and numerical limits..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-01 within its boundary.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M17-Q026",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "tokens-embeddings-and-attention",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Tokens, Embeddings, and Attention' in Model Foundations and Inference Systems?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement versioned tokenization, embeddings, causal attention, and a deterministic tiny transformer inference path.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement versioned tokenization, embeddings, causal attention, and a deterministic tiny transformer inference path.",
+      "explanation": "Use Tokens, Embeddings, and Attention to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M17-Q027",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "transformer-inference-from-prefill-to-decode",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Transformer Inference from Prefill to Decode' supports this outcome: Calculate weights, activations, KV cache, bandwidth, concurrency, headroom, failover reserve, and cost per useful output.",
+      "correct_answer": "A strong answer defines the mechanism from 'Transformer Inference from Prefill to Decode', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Transformer Inference from Prefill to Decode to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M17-Q028",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "compute-memory-and-capacity-accounting",
+        "synthesis"
+      ],
+      "prompt": "For 'Compute, Memory, and Capacity Accounting', what quantities, units, or thresholds would you calculate before trusting a design claim about: Measure queue-inclusive TTFT, inter-token latency, prefill, decode, outcomes, throughput, memory, and profiler limits.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Calculate weight, activation, KV-cache, bandwidth, and headroom requirements.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M17-Q029",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "profiling-and-inference-metrics",
+        "application"
+      ],
+      "prompt": "A learner applies 'Profiling and Inference Metrics' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Benchmarking a closed loop and claiming overload capacity.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M17-Q030",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "scheduling-batching-admission-and-fairness",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Scheduling, Batching, Admission, and Fairness'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for apply versioned prefix and semantic caches and precision changes without crossing privacy, compatibility, or quality boundaries..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-05\u2013RES-06.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M17-Q031",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "caches-quantization-and-provider-failure",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Caches, Quantization, and Provider Failure' in Model Foundations and Inference Systems?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose memory exhaustion, mixed-length interference, queue overload, cache collision, precision loss, and provider failure from preserved evidence.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose memory exhaustion, mixed-length interference, queue overload, cache collision, precision loss, and provider failure from preserved evidence.",
+      "explanation": "Use Caches, Quantization, and Provider Failure to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M17-Q032",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "atlas-tutorial-architecture-decision-and-teach-b",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Atlas Tutorial, Architecture Decision, and Teach-Back' supports this outcome: Defend an inference architecture across quality, latency, availability, security, cost, ownership, migration, rollback, and reversal.",
+      "correct_answer": "A strong answer defines the mechanism from 'Atlas Tutorial, Architecture Decision, and Teach-Back', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Atlas Tutorial, Architecture Decision, and Teach-Back to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M17-Q033",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "mathematics-for-inference-decisions",
+        "synthesis"
+      ],
+      "prompt": "For 'Mathematics for Inference Decisions', what quantities, units, or thresholds would you calculate before trusting a design claim about: Derive vectors, matrices, norms, probability, entropy, gradients, and scaled dot-product attention with explicit shapes, units, and numerical limits.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Calculate vector, matrix, probability, entropy, and numerical-gradient examples.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M17-Q034",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "tokens-embeddings-and-attention",
+        "application"
+      ],
+      "prompt": "A learner applies 'Tokens, Embeddings, and Attention' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating token count as a property of text independent of tokenizer version.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M17-Q035",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "transformer-inference-from-prefill-to-decode",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Transformer Inference from Prefill to Decode'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for calculate weights, activations, kv cache, bandwidth, concurrency, headroom, failover reserve, and cost per useful output..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-02 and RES-04.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M17-Q036",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "compute-memory-and-capacity-accounting",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Compute, Memory, and Capacity Accounting' in Model Foundations and Inference Systems?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to measure queue-inclusive ttft, inter-token latency, prefill, decode, outcomes, throughput, memory, and profiler limits.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to measure queue-inclusive ttft, inter-token latency, prefill, decode, outcomes, throughput, memory, and profiler limits.",
+      "explanation": "Use Compute, Memory, and Capacity Accounting to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M17-Q037",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "profiling-and-inference-metrics",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Profiling and Inference Metrics' supports this outcome: Implement bounded batching, pre-admission resource reservation, quotas, shedding, and traffic-class fairness.",
+      "correct_answer": "A strong answer defines the mechanism from 'Profiling and Inference Metrics', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Profiling and Inference Metrics to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M17-Q038",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "scheduling-batching-admission-and-fairness",
+        "synthesis"
+      ],
+      "prompt": "For 'Scheduling, Batching, Admission, and Fairness', what quantities, units, or thresholds would you calculate before trusting a design claim about: Apply versioned prefix and semantic caches and precision changes without crossing privacy, compatibility, or quality boundaries.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Compare fixed, continuous, and token-budget batching.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M17-Q039",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "caches-quantization-and-provider-failure",
+        "application"
+      ],
+      "prompt": "A learner applies 'Caches, Quantization, and Provider Failure' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating a cache as a performance-only component.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M17-Q040",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "atlas-tutorial-architecture-decision-and-teach-b",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Atlas Tutorial, Architecture Decision, and Teach-Back'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for defend an inference architecture across quality, latency, availability, security, cost, ownership, migration, rollback, and reversal..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-09 and revisit all bounded sources as needed.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M17-Q041",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "mathematics-for-inference-decisions",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Mathematics for Inference Decisions' in Model Foundations and Inference Systems?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to derive vectors, matrices, norms, probability, entropy, gradients, and scaled dot-product attention with explicit shapes, units, and numerical limits.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to derive vectors, matrices, norms, probability, entropy, gradients, and scaled dot-product attention with explicit shapes, units, and numerical limits.",
+      "explanation": "Use Mathematics for Inference Decisions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M17-Q042",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "tokens-embeddings-and-attention",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Tokens, Embeddings, and Attention' supports this outcome: Implement versioned tokenization, embeddings, causal attention, and a deterministic tiny transformer inference path.",
+      "correct_answer": "A strong answer defines the mechanism from 'Tokens, Embeddings, and Attention', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Tokens, Embeddings, and Attention to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M17-Q043",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "transformer-inference-from-prefill-to-decode",
+        "synthesis"
+      ],
+      "prompt": "For 'Transformer Inference from Prefill to Decode', what quantities, units, or thresholds would you calculate before trusting a design claim about: Calculate weights, activations, KV cache, bandwidth, concurrency, headroom, failover reserve, and cost per useful output.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Trace a decoder block and autoregressive generation loop.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M17-Q044",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "compute-memory-and-capacity-accounting",
+        "application"
+      ],
+      "prompt": "A learner applies 'Compute, Memory, and Capacity Accounting' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Using parameter bytes as total serving memory.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M17-Q045",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "profiling-and-inference-metrics",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Profiling and Inference Metrics'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement bounded batching, pre-admission resource reservation, quotas, shedding, and traffic-class fairness..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-07 and the measurement parts of RES-09.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M17-Q046",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "scheduling-batching-admission-and-fairness",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Scheduling, Batching, Admission, and Fairness' in Model Foundations and Inference Systems?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to apply versioned prefix and semantic caches and precision changes without crossing privacy, compatibility, or quality boundaries.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to apply versioned prefix and semantic caches and precision changes without crossing privacy, compatibility, or quality boundaries.",
+      "explanation": "Use Scheduling, Batching, Admission, and Fairness to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M17-Q047",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "caches-quantization-and-provider-failure",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Caches, Quantization, and Provider Failure' supports this outcome: Diagnose memory exhaustion, mixed-length interference, queue overload, cache collision, precision loss, and provider failure from preserved evidence.",
+      "correct_answer": "A strong answer defines the mechanism from 'Caches, Quantization, and Provider Failure', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Caches, Quantization, and Provider Failure to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M17-Q048",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "atlas-tutorial-architecture-decision-and-teach-b",
+        "synthesis"
+      ],
+      "prompt": "For 'Atlas Tutorial, Architecture Decision, and Teach-Back', what quantities, units, or thresholds would you calculate before trusting a design claim about: Defend an inference architecture across quality, latency, availability, security, cost, ownership, migration, rollback, and reversal.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Execute the full Atlas learning loop without leaking a final-project answer.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M17-Q049",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "mathematics-for-inference-decisions",
+        "application"
+      ],
+      "prompt": "A learner applies 'Mathematics for Inference Decisions' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Dropping batch or sequence dimensions from a memory calculation.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M17-Q050",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "tokens-embeddings-and-attention",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Tokens, Embeddings, and Attention'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement versioned tokenization, embeddings, causal attention, and a deterministic tiny transformer inference path..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-02 \u00a73.1\u20133.5 and RES-03 tokenization/architecture material.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M17-Q051",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "transformer-inference-from-prefill-to-decode",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Transformer Inference from Prefill to Decode' in Model Foundations and Inference Systems?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate weights, activations, kv cache, bandwidth, concurrency, headroom, failover reserve, and cost per useful output.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate weights, activations, kv cache, bandwidth, concurrency, headroom, failover reserve, and cost per useful output.",
+      "explanation": "Use Transformer Inference from Prefill to Decode to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M17-Q052",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "compute-memory-and-capacity-accounting",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Compute, Memory, and Capacity Accounting' supports this outcome: Measure queue-inclusive TTFT, inter-token latency, prefill, decode, outcomes, throughput, memory, and profiler limits.",
+      "correct_answer": "A strong answer defines the mechanism from 'Compute, Memory, and Capacity Accounting', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Compute, Memory, and Capacity Accounting to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M17-Q053",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "profiling-and-inference-metrics",
+        "synthesis"
+      ],
+      "prompt": "For 'Profiling and Inference Metrics', what quantities, units, or thresholds would you calculate before trusting a design claim about: Implement bounded batching, pre-admission resource reservation, quotas, shedding, and traffic-class fairness.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Design a reproducible inference measurement protocol.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M17-Q054",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "scheduling-batching-admission-and-fairness",
+        "application"
+      ],
+      "prompt": "A learner applies 'Scheduling, Batching, Admission, and Fairness' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Calling a queue bounded because worker concurrency is bounded.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M17-Q055",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "caches-quantization-and-provider-failure",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Caches, Quantization, and Provider Failure'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose memory exhaustion, mixed-length interference, queue overload, cache collision, precision loss, and provider failure from preserved evidence..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-05, RES-06, and RES-08.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M17-Q056",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "atlas-tutorial-architecture-decision-and-teach-b",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Atlas Tutorial, Architecture Decision, and Teach-Back' in Model Foundations and Inference Systems?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend an inference architecture across quality, latency, availability, security, cost, ownership, migration, rollback, and reversal.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend an inference architecture across quality, latency, availability, security, cost, ownership, migration, rollback, and reversal.",
+      "explanation": "Use Atlas Tutorial, Architecture Decision, and Teach-Back to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M17-Q057",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "mathematics-for-inference-decisions",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Mathematics for Inference Decisions' supports this outcome: Derive vectors, matrices, norms, probability, entropy, gradients, and scaled dot-product attention with explicit shapes, units, and numerical limits.",
+      "correct_answer": "A strong answer defines the mechanism from 'Mathematics for Inference Decisions', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Mathematics for Inference Decisions to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M17-Q058",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "tokens-embeddings-and-attention",
+        "synthesis"
+      ],
+      "prompt": "For 'Tokens, Embeddings, and Attention', what quantities, units, or thresholds would you calculate before trusting a design claim about: Implement versioned tokenization, embeddings, causal attention, and a deterministic tiny transformer inference path.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Trace text through a versioned tokenizer and embedding table.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M17-Q059",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "transformer-inference-from-prefill-to-decode",
+        "application"
+      ],
+      "prompt": "A learner applies 'Transformer Inference from Prefill to Decode' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Reporting model execution time as TTFT while excluding queue and tokenization.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M17-Q060",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "compute-memory-and-capacity-accounting",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Compute, Memory, and Capacity Accounting'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for measure queue-inclusive ttft, inter-token latency, prefill, decode, outcomes, throughput, memory, and profiler limits..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-03 and RES-05.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M17-Q061",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "profiling-and-inference-metrics",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Profiling and Inference Metrics' in Model Foundations and Inference Systems?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement bounded batching, pre-admission resource reservation, quotas, shedding, and traffic-class fairness.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement bounded batching, pre-admission resource reservation, quotas, shedding, and traffic-class fairness.",
+      "explanation": "Use Profiling and Inference Metrics to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M17-Q062",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "scheduling-batching-admission-and-fairness",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Scheduling, Batching, Admission, and Fairness' supports this outcome: Apply versioned prefix and semantic caches and precision changes without crossing privacy, compatibility, or quality boundaries.",
+      "correct_answer": "A strong answer defines the mechanism from 'Scheduling, Batching, Admission, and Fairness', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Scheduling, Batching, Admission, and Fairness to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M17-Q063",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "caches-quantization-and-provider-failure",
+        "synthesis"
+      ],
+      "prompt": "For 'Caches, Quantization, and Provider Failure', what quantities, units, or thresholds would you calculate before trusting a design claim about: Diagnose memory exhaustion, mixed-length interference, queue overload, cache collision, precision loss, and provider failure from preserved evidence.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Define safe prefix and semantic cache identities and invalidation.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M17-Q064",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "atlas-tutorial-architecture-decision-and-teach-b",
+        "application"
+      ],
+      "prompt": "A learner applies 'Atlas Tutorial, Architecture Decision, and Teach-Back' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Comparing candidates with different workloads or quality bars.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M17-Q065",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "mathematics-for-inference-decisions",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Mathematics for Inference Decisions'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for derive vectors, matrices, norms, probability, entropy, gradients, and scaled dot-product attention with explicit shapes, units, and numerical limits..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-01 within its boundary.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M17-Q066",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "tokens-embeddings-and-attention",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Tokens, Embeddings, and Attention' in Model Foundations and Inference Systems?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement versioned tokenization, embeddings, causal attention, and a deterministic tiny transformer inference path.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement versioned tokenization, embeddings, causal attention, and a deterministic tiny transformer inference path.",
+      "explanation": "Use Tokens, Embeddings, and Attention to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M17-Q067",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "transformer-inference-from-prefill-to-decode",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Transformer Inference from Prefill to Decode' supports this outcome: Calculate weights, activations, KV cache, bandwidth, concurrency, headroom, failover reserve, and cost per useful output.",
+      "correct_answer": "A strong answer defines the mechanism from 'Transformer Inference from Prefill to Decode', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Transformer Inference from Prefill to Decode to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M17-Q068",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "compute-memory-and-capacity-accounting",
+        "synthesis"
+      ],
+      "prompt": "For 'Compute, Memory, and Capacity Accounting', what quantities, units, or thresholds would you calculate before trusting a design claim about: Measure queue-inclusive TTFT, inter-token latency, prefill, decode, outcomes, throughput, memory, and profiler limits.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Calculate weight, activation, KV-cache, bandwidth, and headroom requirements.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M17-Q069",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "profiling-and-inference-metrics",
+        "application"
+      ],
+      "prompt": "A learner applies 'Profiling and Inference Metrics' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Benchmarking a closed loop and claiming overload capacity.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M17-Q070",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "scheduling-batching-admission-and-fairness",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Scheduling, Batching, Admission, and Fairness'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for apply versioned prefix and semantic caches and precision changes without crossing privacy, compatibility, or quality boundaries..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-05\u2013RES-06.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M17-Q071",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "caches-quantization-and-provider-failure",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Caches, Quantization, and Provider Failure' in Model Foundations and Inference Systems?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose memory exhaustion, mixed-length interference, queue overload, cache collision, precision loss, and provider failure from preserved evidence.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose memory exhaustion, mixed-length interference, queue overload, cache collision, precision loss, and provider failure from preserved evidence.",
+      "explanation": "Use Caches, Quantization, and Provider Failure to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M17-Q072",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "atlas-tutorial-architecture-decision-and-teach-b",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Atlas Tutorial, Architecture Decision, and Teach-Back' supports this outcome: Defend an inference architecture across quality, latency, availability, security, cost, ownership, migration, rollback, and reversal.",
+      "correct_answer": "A strong answer defines the mechanism from 'Atlas Tutorial, Architecture Decision, and Teach-Back', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Atlas Tutorial, Architecture Decision, and Teach-Back to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M17-Q073",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "mathematics-for-inference-decisions",
+        "synthesis"
+      ],
+      "prompt": "For 'Mathematics for Inference Decisions', what quantities, units, or thresholds would you calculate before trusting a design claim about: Derive vectors, matrices, norms, probability, entropy, gradients, and scaled dot-product attention with explicit shapes, units, and numerical limits.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Calculate vector, matrix, probability, entropy, and numerical-gradient examples.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M17-Q074",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "tokens-embeddings-and-attention",
+        "application"
+      ],
+      "prompt": "A learner applies 'Tokens, Embeddings, and Attention' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating token count as a property of text independent of tokenizer version.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M17-Q075",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "transformer-inference-from-prefill-to-decode",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Transformer Inference from Prefill to Decode'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for calculate weights, activations, kv cache, bandwidth, concurrency, headroom, failover reserve, and cost per useful output..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-02 and RES-04.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M17-Q076",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "compute-memory-and-capacity-accounting",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Compute, Memory, and Capacity Accounting' in Model Foundations and Inference Systems?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to measure queue-inclusive ttft, inter-token latency, prefill, decode, outcomes, throughput, memory, and profiler limits.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to measure queue-inclusive ttft, inter-token latency, prefill, decode, outcomes, throughput, memory, and profiler limits.",
+      "explanation": "Use Compute, Memory, and Capacity Accounting to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M17-Q077",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "profiling-and-inference-metrics",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Profiling and Inference Metrics' supports this outcome: Implement bounded batching, pre-admission resource reservation, quotas, shedding, and traffic-class fairness.",
+      "correct_answer": "A strong answer defines the mechanism from 'Profiling and Inference Metrics', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Profiling and Inference Metrics to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M17-Q078",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "scheduling-batching-admission-and-fairness",
+        "synthesis"
+      ],
+      "prompt": "For 'Scheduling, Batching, Admission, and Fairness', what quantities, units, or thresholds would you calculate before trusting a design claim about: Apply versioned prefix and semantic caches and precision changes without crossing privacy, compatibility, or quality boundaries.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Compare fixed, continuous, and token-budget batching.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M17-Q079",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "caches-quantization-and-provider-failure",
+        "application"
+      ],
+      "prompt": "A learner applies 'Caches, Quantization, and Provider Failure' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating a cache as a performance-only component.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M17-Q080",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "atlas-tutorial-architecture-decision-and-teach-b",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Atlas Tutorial, Architecture Decision, and Teach-Back'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for defend an inference architecture across quality, latency, availability, security, cost, ownership, migration, rollback, and reversal..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-09 and revisit all bounded sources as needed.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M17-Q081",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "mathematics-for-inference-decisions",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Mathematics for Inference Decisions' in Model Foundations and Inference Systems?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to derive vectors, matrices, norms, probability, entropy, gradients, and scaled dot-product attention with explicit shapes, units, and numerical limits.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to derive vectors, matrices, norms, probability, entropy, gradients, and scaled dot-product attention with explicit shapes, units, and numerical limits.",
+      "explanation": "Use Mathematics for Inference Decisions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M17-Q082",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "tokens-embeddings-and-attention",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Tokens, Embeddings, and Attention' supports this outcome: Implement versioned tokenization, embeddings, causal attention, and a deterministic tiny transformer inference path.",
+      "correct_answer": "A strong answer defines the mechanism from 'Tokens, Embeddings, and Attention', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Tokens, Embeddings, and Attention to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M17-Q083",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "transformer-inference-from-prefill-to-decode",
+        "synthesis"
+      ],
+      "prompt": "For 'Transformer Inference from Prefill to Decode', what quantities, units, or thresholds would you calculate before trusting a design claim about: Calculate weights, activations, KV cache, bandwidth, concurrency, headroom, failover reserve, and cost per useful output.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Trace a decoder block and autoregressive generation loop.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M17-Q084",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "compute-memory-and-capacity-accounting",
+        "application"
+      ],
+      "prompt": "A learner applies 'Compute, Memory, and Capacity Accounting' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Using parameter bytes as total serving memory.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M17-Q085",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "profiling-and-inference-metrics",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Profiling and Inference Metrics'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement bounded batching, pre-admission resource reservation, quotas, shedding, and traffic-class fairness..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-07 and the measurement parts of RES-09.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M17-Q086",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "scheduling-batching-admission-and-fairness",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Scheduling, Batching, Admission, and Fairness' in Model Foundations and Inference Systems?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to apply versioned prefix and semantic caches and precision changes without crossing privacy, compatibility, or quality boundaries.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to apply versioned prefix and semantic caches and precision changes without crossing privacy, compatibility, or quality boundaries.",
+      "explanation": "Use Scheduling, Batching, Admission, and Fairness to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M17-Q087",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "caches-quantization-and-provider-failure",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Caches, Quantization, and Provider Failure' supports this outcome: Diagnose memory exhaustion, mixed-length interference, queue overload, cache collision, precision loss, and provider failure from preserved evidence.",
+      "correct_answer": "A strong answer defines the mechanism from 'Caches, Quantization, and Provider Failure', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Caches, Quantization, and Provider Failure to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M17-Q088",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "atlas-tutorial-architecture-decision-and-teach-b",
+        "synthesis"
+      ],
+      "prompt": "For 'Atlas Tutorial, Architecture Decision, and Teach-Back', what quantities, units, or thresholds would you calculate before trusting a design claim about: Defend an inference architecture across quality, latency, availability, security, cost, ownership, migration, rollback, and reversal.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Execute the full Atlas learning loop without leaking a final-project answer.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M17-Q089",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "mathematics-for-inference-decisions",
+        "application"
+      ],
+      "prompt": "A learner applies 'Mathematics for Inference Decisions' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Dropping batch or sequence dimensions from a memory calculation.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M17-Q090",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "tokens-embeddings-and-attention",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Tokens, Embeddings, and Attention'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement versioned tokenization, embeddings, causal attention, and a deterministic tiny transformer inference path..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-02 \u00a73.1\u20133.5 and RES-03 tokenization/architecture material.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M17-Q091",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "transformer-inference-from-prefill-to-decode",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Transformer Inference from Prefill to Decode' in Model Foundations and Inference Systems?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate weights, activations, kv cache, bandwidth, concurrency, headroom, failover reserve, and cost per useful output.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate weights, activations, kv cache, bandwidth, concurrency, headroom, failover reserve, and cost per useful output.",
+      "explanation": "Use Transformer Inference from Prefill to Decode to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M17-Q092",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "compute-memory-and-capacity-accounting",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Compute, Memory, and Capacity Accounting' supports this outcome: Measure queue-inclusive TTFT, inter-token latency, prefill, decode, outcomes, throughput, memory, and profiler limits.",
+      "correct_answer": "A strong answer defines the mechanism from 'Compute, Memory, and Capacity Accounting', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Compute, Memory, and Capacity Accounting to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M17-Q093",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "profiling-and-inference-metrics",
+        "synthesis"
+      ],
+      "prompt": "For 'Profiling and Inference Metrics', what quantities, units, or thresholds would you calculate before trusting a design claim about: Implement bounded batching, pre-admission resource reservation, quotas, shedding, and traffic-class fairness.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Design a reproducible inference measurement protocol.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M17-Q094",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "scheduling-batching-admission-and-fairness",
+        "application"
+      ],
+      "prompt": "A learner applies 'Scheduling, Batching, Admission, and Fairness' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Calling a queue bounded because worker concurrency is bounded.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M17-Q095",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "caches-quantization-and-provider-failure",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Caches, Quantization, and Provider Failure'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose memory exhaustion, mixed-length interference, queue overload, cache collision, precision loss, and provider failure from preserved evidence..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-05, RES-06, and RES-08.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M17-Q096",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "atlas-tutorial-architecture-decision-and-teach-b",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Atlas Tutorial, Architecture Decision, and Teach-Back' in Model Foundations and Inference Systems?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend an inference architecture across quality, latency, availability, security, cost, ownership, migration, rollback, and reversal.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend an inference architecture across quality, latency, availability, security, cost, ownership, migration, rollback, and reversal.",
+      "explanation": "Use Atlas Tutorial, Architecture Decision, and Teach-Back to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M17-Q097",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "mathematics-for-inference-decisions",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Mathematics for Inference Decisions' supports this outcome: Derive vectors, matrices, norms, probability, entropy, gradients, and scaled dot-product attention with explicit shapes, units, and numerical limits.",
+      "correct_answer": "A strong answer defines the mechanism from 'Mathematics for Inference Decisions', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Mathematics for Inference Decisions to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M17-Q098",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "tokens-embeddings-and-attention",
+        "synthesis"
+      ],
+      "prompt": "For 'Tokens, Embeddings, and Attention', what quantities, units, or thresholds would you calculate before trusting a design claim about: Implement versioned tokenization, embeddings, causal attention, and a deterministic tiny transformer inference path.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Trace text through a versioned tokenizer and embedding table.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M17-Q099",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "transformer-inference-from-prefill-to-decode",
+        "application"
+      ],
+      "prompt": "A learner applies 'Transformer Inference from Prefill to Decode' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Reporting model execution time as TTFT while excluding queue and tokenization.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M17-Q100",
+      "module_id": "M17",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "model-foundations-and-inference-systems",
+        "compute-memory-and-capacity-accounting",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Compute, Memory, and Capacity Accounting'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for measure queue-inclusive ttft, inter-token latency, prefill, decode, outcomes, throughput, memory, and profiler limits..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-03 and RES-05.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    }
+  ]
+}

@@ -1,0 +1,1926 @@
+{
+  "module_id": "M15",
+  "title": "Execution Models Across Languages",
+  "questions": [
+    {
+      "question_id": "M15-Q001",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "execution-models-across-languages",
+        "memory-lifetime-and-management",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Memory Lifetime and Management' in Execution Models Across Languages?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to explain and compare stack, heap, allocation, escape, manual lifetime, raii, ownership, reference counting, and tracing collection from workload evidence.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to explain and compare stack, heap, allocation, escape, manual lifetime, raii, ownership, reference counting, and tracing collection from workload evidence.",
+      "explanation": "Use Memory Lifetime and Management to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M15-Q002",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "execution-models-across-languages",
+        "schedulers-event-loops-and-tasks",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Schedulers, Event Loops, and Tasks' supports this outcome: Trace work through operating-system threads, event loops, worker pools, goroutines, async tasks, virtual threads, and runtime schedulers.",
+      "correct_answer": "A strong answer defines the mechanism from 'Schedulers, Event Loops, and Tasks', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Schedulers, Event Loops, and Tasks to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M15-Q003",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "execution-models-across-languages",
+        "bounded-fan-out-and-structured-cleanup",
+        "synthesis"
+      ],
+      "prompt": "For 'Bounded Fan-out and Structured Cleanup', what quantities, units, or thresholds would you calculate before trusting a design claim about: Implement the same bounded fan-out contract in TypeScript, Go, Rust, and Java with bounded admission, deadlines, cancellation, validation, and cleanup.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. Derive admission, deadline, cancellation, and cleanup contracts for child work, then implement them without changing request semantics across runtimes.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M15-Q004",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "execution-models-across-languages",
+        "memory-visibility-and-races",
+        "application"
+      ],
+      "prompt": "A learner applies 'Memory Visibility and Races' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Calling a race detector a proof; it observes executed schedules and supported code.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M15-Q005",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "execution-models-across-languages",
+        "types-serialization-and-validation",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Types, Serialization, and Validation'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose memory-visibility and data-race failures with happens-before reasoning, detector evidence, and explicit detector limits..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Use RES-05 and the public schemas.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M15-Q006",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "execution-models-across-languages",
+        "equivalent-work-runtime-measurement",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Equivalent-work Runtime Measurement' in Execution Models Across Languages?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to preserve contracts across static, dynamic, process, and serialization boundaries through explicit validation and scoped authority.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to preserve contracts across static, dynamic, process, and serialization boundaries through explicit validation and scoped authority.",
+      "explanation": "Use Equivalent-work Runtime Measurement to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M15-Q007",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "execution-models-across-languages",
+        "northstar-polyglot-fan-out-tutorial",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Northstar Polyglot Fan-out Tutorial' supports this outcome: Diagnose nine execution-model failures while bounding operational, security, cost, migration, and ownership consequences.",
+      "correct_answer": "A strong answer defines the mechanism from 'Northstar Polyglot Fan-out Tutorial', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Northstar Polyglot Fan-out Tutorial to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M15-Q008",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "execution-models-across-languages",
+        "runtime-decision-and-teach-back",
+        "synthesis"
+      ],
+      "prompt": "For 'Runtime Decision and Teach-back', what quantities, units, or thresholds would you calculate before trusting a design claim about: Defend and teach a runtime choice from workload behavior, safety, operability, ecosystem, cost, migration, ownership, and team evidence.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. Choose a runtime from evidence, plan adoption or no-change safely, and teach the method without presenting a language ranking.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M15-Q009",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "execution-models-across-languages",
+        "memory-lifetime-and-management",
+        "application"
+      ],
+      "prompt": "A learner applies 'Memory Lifetime and Management' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating heap allocation as inherently slow while ignoring allocation rate,",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M15-Q010",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "execution-models-across-languages",
+        "schedulers-event-loops-and-tasks",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Schedulers, Event Loops, and Tasks'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for trace work through operating-system threads, event loops, worker pools, goroutines, async tasks, virtual threads, and runtime schedulers..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Use RES-01, RES-04, and RES-07.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M15-Q011",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "execution-models-across-languages",
+        "bounded-fan-out-and-structured-cleanup",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Bounded Fan-out and Structured Cleanup' in Execution Models Across Languages?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement the same bounded fan-out contract in typescript, go, rust, and java with bounded admission, deadlines, cancellation, validation, and cleanup.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement the same bounded fan-out contract in typescript, go, rust, and java with bounded admission, deadlines, cancellation, validation, and cleanup.",
+      "explanation": "Use Bounded Fan-out and Structured Cleanup to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M15-Q012",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "execution-models-across-languages",
+        "memory-visibility-and-races",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Memory Visibility and Races' supports this outcome: Measure latency, useful throughput, queueing, memory, allocation, and garbage collection under equivalent work without treating host noise as a language property.",
+      "correct_answer": "A strong answer defines the mechanism from 'Memory Visibility and Races', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Memory Visibility and Races to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M15-Q013",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "execution-models-across-languages",
+        "types-serialization-and-validation",
+        "synthesis"
+      ],
+      "prompt": "For 'Types, Serialization, and Validation', what quantities, units, or thresholds would you calculate before trusting a design claim about: Diagnose memory-visibility and data-race failures with happens-before reasoning, detector evidence, and explicit detector limits.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. Compare static/dynamic and nominal/structural typing, then restore guarantees lost at JSON, process, persistence, and authorization boundaries.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M15-Q014",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "execution-models-across-languages",
+        "equivalent-work-runtime-measurement",
+        "application"
+      ],
+      "prompt": "A learner applies 'Equivalent-work Runtime Measurement' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Mixing cold compilation/startup with steady request service without labeling it.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M15-Q015",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "execution-models-across-languages",
+        "northstar-polyglot-fan-out-tutorial",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Northstar Polyglot Fan-out Tutorial'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose nine execution-model failures while bounding operational, security, cost, migration, and ownership consequences..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Use the lab reference../lab/README.md and completed case study../case-study/northstar-observation-enrichment.md.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M15-Q016",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "execution-models-across-languages",
+        "runtime-decision-and-teach-back",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Runtime Decision and Teach-back' in Execution Models Across Languages?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend and teach a runtime choice from workload behavior, safety, operability, ecosystem, cost, migration, ownership, and team evidence.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend and teach a runtime choice from workload behavior, safety, operability, ecosystem, cost, migration, ownership, and team evidence.",
+      "explanation": "Use Runtime Decision and Teach-back to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M15-Q017",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "execution-models-across-languages",
+        "memory-lifetime-and-management",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Memory Lifetime and Management' supports this outcome: Explain and compare stack, heap, allocation, escape, manual lifetime, RAII, ownership, reference counting, and tracing collection from workload evidence.",
+      "correct_answer": "A strong answer defines the mechanism from 'Memory Lifetime and Management', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Memory Lifetime and Management to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M15-Q018",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "execution-models-across-languages",
+        "schedulers-event-loops-and-tasks",
+        "synthesis"
+      ],
+      "prompt": "For 'Schedulers, Event Loops, and Tasks', what quantities, units, or thresholds would you calculate before trusting a design claim about: Trace work through operating-system threads, event loops, worker pools, goroutines, async tasks, virtual threads, and runtime schedulers.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. Trace runnable, blocked, queued, and executing work from request to runtime task to OS thread; choose a bound for each finite scheduler.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M15-Q019",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "execution-models-across-languages",
+        "bounded-fan-out-and-structured-cleanup",
+        "application"
+      ],
+      "prompt": "A learner applies 'Bounded Fan-out and Structured Cleanup' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Using a semaphore after spawning tasks, which bounds execution but not queued",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M15-Q020",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "execution-models-across-languages",
+        "memory-visibility-and-races",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Memory Visibility and Races'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for measure latency, useful throughput, queueing, memory, allocation, and garbage collection under equivalent work without treating host noise as a language property..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Use RES-02, RES-08, RES-09, and RES-10.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M15-Q021",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "execution-models-across-languages",
+        "types-serialization-and-validation",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Types, Serialization, and Validation' in Execution Models Across Languages?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose memory-visibility and data-race failures with happens-before reasoning, detector evidence, and explicit detector limits.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose memory-visibility and data-race failures with happens-before reasoning, detector evidence, and explicit detector limits.",
+      "explanation": "Use Types, Serialization, and Validation to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M15-Q022",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "execution-models-across-languages",
+        "equivalent-work-runtime-measurement",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Equivalent-work Runtime Measurement' supports this outcome: Preserve contracts across static, dynamic, process, and serialization boundaries through explicit validation and scoped authority.",
+      "correct_answer": "A strong answer defines the mechanism from 'Equivalent-work Runtime Measurement', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Equivalent-work Runtime Measurement to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M15-Q023",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "execution-models-across-languages",
+        "northstar-polyglot-fan-out-tutorial",
+        "synthesis"
+      ],
+      "prompt": "For 'Northstar Polyglot Fan-out Tutorial', what quantities, units, or thresholds would you calculate before trusting a design claim about: Diagnose nine execution-model failures while bounding operational, security, cost, migration, and ownership consequences.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. Run the reference contract, inspect a visible result in three steps, and trace the same control through TypeScript, Go, Rust, and Java.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M15-Q024",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "execution-models-across-languages",
+        "runtime-decision-and-teach-back",
+        "application"
+      ],
+      "prompt": "A learner applies 'Runtime Decision and Teach-back' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Turning one benchmark into a universal \u201cfastest language\u201d claim.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M15-Q025",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "execution-models-across-languages",
+        "memory-lifetime-and-management",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Memory Lifetime and Management'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for explain and compare stack, heap, allocation, escape, manual lifetime, raii, ownership, reference counting, and tracing collection from workload evidence..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Use RES-03 and local lab code.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M15-Q026",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "execution-models-across-languages",
+        "schedulers-event-loops-and-tasks",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Schedulers, Event Loops, and Tasks' in Execution Models Across Languages?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to trace work through operating-system threads, event loops, worker pools, goroutines, async tasks, virtual threads, and runtime schedulers.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to trace work through operating-system threads, event loops, worker pools, goroutines, async tasks, virtual threads, and runtime schedulers.",
+      "explanation": "Use Schedulers, Event Loops, and Tasks to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M15-Q027",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "execution-models-across-languages",
+        "bounded-fan-out-and-structured-cleanup",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Bounded Fan-out and Structured Cleanup' supports this outcome: Implement the same bounded fan-out contract in TypeScript, Go, Rust, and Java with bounded admission, deadlines, cancellation, validation, and cleanup.",
+      "correct_answer": "A strong answer defines the mechanism from 'Bounded Fan-out and Structured Cleanup', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Bounded Fan-out and Structured Cleanup to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M15-Q028",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "execution-models-across-languages",
+        "memory-visibility-and-races",
+        "synthesis"
+      ],
+      "prompt": "For 'Memory Visibility and Races', what quantities, units, or thresholds would you calculate before trusting a design claim about: Measure latency, useful throughput, queueing, memory, allocation, and garbage collection under equivalent work without treating host noise as a language property.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. Build a happens-before graph, distinguish race freedom from business correctness, and use detectors without overstating their coverage.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M15-Q029",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "execution-models-across-languages",
+        "types-serialization-and-validation",
+        "application"
+      ],
+      "prompt": "A learner applies 'Types, Serialization, and Validation' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating a generated type as a wire validator.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M15-Q030",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "execution-models-across-languages",
+        "equivalent-work-runtime-measurement",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Equivalent-work Runtime Measurement'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for preserve contracts across static, dynamic, process, and serialization boundaries through explicit validation and scoped authority..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Use RES-11, reuse Module 4 measurement rules, and continue to Lesson 707-northstar-polyglot-tutorial.md.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M15-Q031",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "execution-models-across-languages",
+        "northstar-polyglot-fan-out-tutorial",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Northstar Polyglot Fan-out Tutorial' in Execution Models Across Languages?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose nine execution-model failures while bounding operational, security, cost, migration, and ownership consequences.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose nine execution-model failures while bounding operational, security, cost, migration, and ownership consequences.",
+      "explanation": "Use Northstar Polyglot Fan-out Tutorial to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M15-Q032",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "execution-models-across-languages",
+        "runtime-decision-and-teach-back",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Runtime Decision and Teach-back' supports this outcome: Defend and teach a runtime choice from workload behavior, safety, operability, ecosystem, cost, migration, ownership, and team evidence.",
+      "correct_answer": "A strong answer defines the mechanism from 'Runtime Decision and Teach-back', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Runtime Decision and Teach-back to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M15-Q033",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "execution-models-across-languages",
+        "memory-lifetime-and-management",
+        "synthesis"
+      ],
+      "prompt": "For 'Memory Lifetime and Management', what quantities, units, or thresholds would you calculate before trusting a design claim about: Explain and compare stack, heap, allocation, escape, manual lifetime, RAII, ownership, reference counting, and tracing collection from workload evidence.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. Explain stack and heap placement, compare manual release, RAII, ownership, reference counting, and tracing collection, and predict workload-visible costs.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M15-Q034",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "execution-models-across-languages",
+        "schedulers-event-loops-and-tasks",
+        "application"
+      ],
+      "prompt": "A learner applies 'Schedulers, Event Loops, and Tasks' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Calling all Node work single-threaded or all Go/Rust/Java work parallel.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M15-Q035",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "execution-models-across-languages",
+        "bounded-fan-out-and-structured-cleanup",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Bounded Fan-out and Structured Cleanup'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement the same bounded fan-out contract in typescript, go, rust, and java with bounded admission, deadlines, cancellation, validation, and cleanup..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Revisit Module 6 deadline derivation and continue to Lesson 404-memory-visibility-races.md.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M15-Q036",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "execution-models-across-languages",
+        "memory-visibility-and-races",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Memory Visibility and Races' in Execution Models Across Languages?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to measure latency, useful throughput, queueing, memory, allocation, and garbage collection under equivalent work without treating host noise as a language property.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to measure latency, useful throughput, queueing, memory, allocation, and garbage collection under equivalent work without treating host noise as a language property.",
+      "explanation": "Use Memory Visibility and Races to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M15-Q037",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "execution-models-across-languages",
+        "types-serialization-and-validation",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Types, Serialization, and Validation' supports this outcome: Diagnose memory-visibility and data-race failures with happens-before reasoning, detector evidence, and explicit detector limits.",
+      "correct_answer": "A strong answer defines the mechanism from 'Types, Serialization, and Validation', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Types, Serialization, and Validation to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M15-Q038",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "execution-models-across-languages",
+        "equivalent-work-runtime-measurement",
+        "synthesis"
+      ],
+      "prompt": "For 'Equivalent-work Runtime Measurement', what quantities, units, or thresholds would you calculate before trusting a design claim about: Preserve contracts across static, dynamic, process, and serialization boundaries through explicit validation and scoped authority.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. Design a fair cross-runtime experiment, calculate useful throughput and latency, and distinguish protocol facts from empirical host observations.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M15-Q039",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "execution-models-across-languages",
+        "northstar-polyglot-fan-out-tutorial",
+        "application"
+      ],
+      "prompt": "A learner applies 'Northstar Polyglot Fan-out Tutorial' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Editing Northstar thresholds into the independent commerce build.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M15-Q040",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "execution-models-across-languages",
+        "runtime-decision-and-teach-back",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Runtime Decision and Teach-back'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for defend and teach a runtime choice from workload behavior, safety, operability, ecosystem, cost, migration, ownership, and team evidence..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Use RES-06 only with its historical boundary.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M15-Q041",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "execution-models-across-languages",
+        "memory-lifetime-and-management",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Memory Lifetime and Management' in Execution Models Across Languages?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to explain and compare stack, heap, allocation, escape, manual lifetime, raii, ownership, reference counting, and tracing collection from workload evidence.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to explain and compare stack, heap, allocation, escape, manual lifetime, raii, ownership, reference counting, and tracing collection from workload evidence.",
+      "explanation": "Use Memory Lifetime and Management to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M15-Q042",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "execution-models-across-languages",
+        "schedulers-event-loops-and-tasks",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Schedulers, Event Loops, and Tasks' supports this outcome: Trace work through operating-system threads, event loops, worker pools, goroutines, async tasks, virtual threads, and runtime schedulers.",
+      "correct_answer": "A strong answer defines the mechanism from 'Schedulers, Event Loops, and Tasks', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Schedulers, Event Loops, and Tasks to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M15-Q043",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "execution-models-across-languages",
+        "bounded-fan-out-and-structured-cleanup",
+        "synthesis"
+      ],
+      "prompt": "For 'Bounded Fan-out and Structured Cleanup', what quantities, units, or thresholds would you calculate before trusting a design claim about: Implement the same bounded fan-out contract in TypeScript, Go, Rust, and Java with bounded admission, deadlines, cancellation, validation, and cleanup.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. Derive admission, deadline, cancellation, and cleanup contracts for child work, then implement them without changing request semantics across runtimes.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M15-Q044",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "execution-models-across-languages",
+        "memory-visibility-and-races",
+        "application"
+      ],
+      "prompt": "A learner applies 'Memory Visibility and Races' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Calling a race detector a proof; it observes executed schedules and supported code.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M15-Q045",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "execution-models-across-languages",
+        "types-serialization-and-validation",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Types, Serialization, and Validation'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose memory-visibility and data-race failures with happens-before reasoning, detector evidence, and explicit detector limits..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Use RES-05 and the public schemas.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M15-Q046",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "execution-models-across-languages",
+        "equivalent-work-runtime-measurement",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Equivalent-work Runtime Measurement' in Execution Models Across Languages?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to preserve contracts across static, dynamic, process, and serialization boundaries through explicit validation and scoped authority.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to preserve contracts across static, dynamic, process, and serialization boundaries through explicit validation and scoped authority.",
+      "explanation": "Use Equivalent-work Runtime Measurement to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M15-Q047",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "execution-models-across-languages",
+        "northstar-polyglot-fan-out-tutorial",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Northstar Polyglot Fan-out Tutorial' supports this outcome: Diagnose nine execution-model failures while bounding operational, security, cost, migration, and ownership consequences.",
+      "correct_answer": "A strong answer defines the mechanism from 'Northstar Polyglot Fan-out Tutorial', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Northstar Polyglot Fan-out Tutorial to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M15-Q048",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "execution-models-across-languages",
+        "runtime-decision-and-teach-back",
+        "synthesis"
+      ],
+      "prompt": "For 'Runtime Decision and Teach-back', what quantities, units, or thresholds would you calculate before trusting a design claim about: Defend and teach a runtime choice from workload behavior, safety, operability, ecosystem, cost, migration, ownership, and team evidence.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. Choose a runtime from evidence, plan adoption or no-change safely, and teach the method without presenting a language ranking.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M15-Q049",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "execution-models-across-languages",
+        "memory-lifetime-and-management",
+        "application"
+      ],
+      "prompt": "A learner applies 'Memory Lifetime and Management' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating heap allocation as inherently slow while ignoring allocation rate,",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M15-Q050",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "execution-models-across-languages",
+        "schedulers-event-loops-and-tasks",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Schedulers, Event Loops, and Tasks'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for trace work through operating-system threads, event loops, worker pools, goroutines, async tasks, virtual threads, and runtime schedulers..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Use RES-01, RES-04, and RES-07.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M15-Q051",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "execution-models-across-languages",
+        "bounded-fan-out-and-structured-cleanup",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Bounded Fan-out and Structured Cleanup' in Execution Models Across Languages?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement the same bounded fan-out contract in typescript, go, rust, and java with bounded admission, deadlines, cancellation, validation, and cleanup.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement the same bounded fan-out contract in typescript, go, rust, and java with bounded admission, deadlines, cancellation, validation, and cleanup.",
+      "explanation": "Use Bounded Fan-out and Structured Cleanup to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M15-Q052",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "execution-models-across-languages",
+        "memory-visibility-and-races",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Memory Visibility and Races' supports this outcome: Measure latency, useful throughput, queueing, memory, allocation, and garbage collection under equivalent work without treating host noise as a language property.",
+      "correct_answer": "A strong answer defines the mechanism from 'Memory Visibility and Races', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Memory Visibility and Races to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M15-Q053",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "execution-models-across-languages",
+        "types-serialization-and-validation",
+        "synthesis"
+      ],
+      "prompt": "For 'Types, Serialization, and Validation', what quantities, units, or thresholds would you calculate before trusting a design claim about: Diagnose memory-visibility and data-race failures with happens-before reasoning, detector evidence, and explicit detector limits.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. Compare static/dynamic and nominal/structural typing, then restore guarantees lost at JSON, process, persistence, and authorization boundaries.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M15-Q054",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "execution-models-across-languages",
+        "equivalent-work-runtime-measurement",
+        "application"
+      ],
+      "prompt": "A learner applies 'Equivalent-work Runtime Measurement' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Mixing cold compilation/startup with steady request service without labeling it.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M15-Q055",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "execution-models-across-languages",
+        "northstar-polyglot-fan-out-tutorial",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Northstar Polyglot Fan-out Tutorial'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose nine execution-model failures while bounding operational, security, cost, migration, and ownership consequences..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Use the lab reference../lab/README.md and completed case study../case-study/northstar-observation-enrichment.md.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M15-Q056",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "execution-models-across-languages",
+        "runtime-decision-and-teach-back",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Runtime Decision and Teach-back' in Execution Models Across Languages?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend and teach a runtime choice from workload behavior, safety, operability, ecosystem, cost, migration, ownership, and team evidence.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend and teach a runtime choice from workload behavior, safety, operability, ecosystem, cost, migration, ownership, and team evidence.",
+      "explanation": "Use Runtime Decision and Teach-back to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M15-Q057",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "execution-models-across-languages",
+        "memory-lifetime-and-management",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Memory Lifetime and Management' supports this outcome: Explain and compare stack, heap, allocation, escape, manual lifetime, RAII, ownership, reference counting, and tracing collection from workload evidence.",
+      "correct_answer": "A strong answer defines the mechanism from 'Memory Lifetime and Management', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Memory Lifetime and Management to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M15-Q058",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "execution-models-across-languages",
+        "schedulers-event-loops-and-tasks",
+        "synthesis"
+      ],
+      "prompt": "For 'Schedulers, Event Loops, and Tasks', what quantities, units, or thresholds would you calculate before trusting a design claim about: Trace work through operating-system threads, event loops, worker pools, goroutines, async tasks, virtual threads, and runtime schedulers.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. Trace runnable, blocked, queued, and executing work from request to runtime task to OS thread; choose a bound for each finite scheduler.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M15-Q059",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "execution-models-across-languages",
+        "bounded-fan-out-and-structured-cleanup",
+        "application"
+      ],
+      "prompt": "A learner applies 'Bounded Fan-out and Structured Cleanup' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Using a semaphore after spawning tasks, which bounds execution but not queued",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M15-Q060",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "execution-models-across-languages",
+        "memory-visibility-and-races",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Memory Visibility and Races'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for measure latency, useful throughput, queueing, memory, allocation, and garbage collection under equivalent work without treating host noise as a language property..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Use RES-02, RES-08, RES-09, and RES-10.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M15-Q061",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "execution-models-across-languages",
+        "types-serialization-and-validation",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Types, Serialization, and Validation' in Execution Models Across Languages?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose memory-visibility and data-race failures with happens-before reasoning, detector evidence, and explicit detector limits.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose memory-visibility and data-race failures with happens-before reasoning, detector evidence, and explicit detector limits.",
+      "explanation": "Use Types, Serialization, and Validation to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M15-Q062",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "execution-models-across-languages",
+        "equivalent-work-runtime-measurement",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Equivalent-work Runtime Measurement' supports this outcome: Preserve contracts across static, dynamic, process, and serialization boundaries through explicit validation and scoped authority.",
+      "correct_answer": "A strong answer defines the mechanism from 'Equivalent-work Runtime Measurement', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Equivalent-work Runtime Measurement to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M15-Q063",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "execution-models-across-languages",
+        "northstar-polyglot-fan-out-tutorial",
+        "synthesis"
+      ],
+      "prompt": "For 'Northstar Polyglot Fan-out Tutorial', what quantities, units, or thresholds would you calculate before trusting a design claim about: Diagnose nine execution-model failures while bounding operational, security, cost, migration, and ownership consequences.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. Run the reference contract, inspect a visible result in three steps, and trace the same control through TypeScript, Go, Rust, and Java.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M15-Q064",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "execution-models-across-languages",
+        "runtime-decision-and-teach-back",
+        "application"
+      ],
+      "prompt": "A learner applies 'Runtime Decision and Teach-back' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Turning one benchmark into a universal \u201cfastest language\u201d claim.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M15-Q065",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "execution-models-across-languages",
+        "memory-lifetime-and-management",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Memory Lifetime and Management'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for explain and compare stack, heap, allocation, escape, manual lifetime, raii, ownership, reference counting, and tracing collection from workload evidence..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Use RES-03 and local lab code.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M15-Q066",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "execution-models-across-languages",
+        "schedulers-event-loops-and-tasks",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Schedulers, Event Loops, and Tasks' in Execution Models Across Languages?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to trace work through operating-system threads, event loops, worker pools, goroutines, async tasks, virtual threads, and runtime schedulers.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to trace work through operating-system threads, event loops, worker pools, goroutines, async tasks, virtual threads, and runtime schedulers.",
+      "explanation": "Use Schedulers, Event Loops, and Tasks to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M15-Q067",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "execution-models-across-languages",
+        "bounded-fan-out-and-structured-cleanup",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Bounded Fan-out and Structured Cleanup' supports this outcome: Implement the same bounded fan-out contract in TypeScript, Go, Rust, and Java with bounded admission, deadlines, cancellation, validation, and cleanup.",
+      "correct_answer": "A strong answer defines the mechanism from 'Bounded Fan-out and Structured Cleanup', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Bounded Fan-out and Structured Cleanup to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M15-Q068",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "execution-models-across-languages",
+        "memory-visibility-and-races",
+        "synthesis"
+      ],
+      "prompt": "For 'Memory Visibility and Races', what quantities, units, or thresholds would you calculate before trusting a design claim about: Measure latency, useful throughput, queueing, memory, allocation, and garbage collection under equivalent work without treating host noise as a language property.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. Build a happens-before graph, distinguish race freedom from business correctness, and use detectors without overstating their coverage.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M15-Q069",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "execution-models-across-languages",
+        "types-serialization-and-validation",
+        "application"
+      ],
+      "prompt": "A learner applies 'Types, Serialization, and Validation' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating a generated type as a wire validator.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M15-Q070",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "execution-models-across-languages",
+        "equivalent-work-runtime-measurement",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Equivalent-work Runtime Measurement'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for preserve contracts across static, dynamic, process, and serialization boundaries through explicit validation and scoped authority..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Use RES-11, reuse Module 4 measurement rules, and continue to Lesson 707-northstar-polyglot-tutorial.md.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M15-Q071",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "execution-models-across-languages",
+        "northstar-polyglot-fan-out-tutorial",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Northstar Polyglot Fan-out Tutorial' in Execution Models Across Languages?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose nine execution-model failures while bounding operational, security, cost, migration, and ownership consequences.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose nine execution-model failures while bounding operational, security, cost, migration, and ownership consequences.",
+      "explanation": "Use Northstar Polyglot Fan-out Tutorial to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M15-Q072",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "execution-models-across-languages",
+        "runtime-decision-and-teach-back",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Runtime Decision and Teach-back' supports this outcome: Defend and teach a runtime choice from workload behavior, safety, operability, ecosystem, cost, migration, ownership, and team evidence.",
+      "correct_answer": "A strong answer defines the mechanism from 'Runtime Decision and Teach-back', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Runtime Decision and Teach-back to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M15-Q073",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "execution-models-across-languages",
+        "memory-lifetime-and-management",
+        "synthesis"
+      ],
+      "prompt": "For 'Memory Lifetime and Management', what quantities, units, or thresholds would you calculate before trusting a design claim about: Explain and compare stack, heap, allocation, escape, manual lifetime, RAII, ownership, reference counting, and tracing collection from workload evidence.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. Explain stack and heap placement, compare manual release, RAII, ownership, reference counting, and tracing collection, and predict workload-visible costs.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M15-Q074",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "execution-models-across-languages",
+        "schedulers-event-loops-and-tasks",
+        "application"
+      ],
+      "prompt": "A learner applies 'Schedulers, Event Loops, and Tasks' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Calling all Node work single-threaded or all Go/Rust/Java work parallel.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M15-Q075",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "execution-models-across-languages",
+        "bounded-fan-out-and-structured-cleanup",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Bounded Fan-out and Structured Cleanup'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement the same bounded fan-out contract in typescript, go, rust, and java with bounded admission, deadlines, cancellation, validation, and cleanup..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Revisit Module 6 deadline derivation and continue to Lesson 404-memory-visibility-races.md.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M15-Q076",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "execution-models-across-languages",
+        "memory-visibility-and-races",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Memory Visibility and Races' in Execution Models Across Languages?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to measure latency, useful throughput, queueing, memory, allocation, and garbage collection under equivalent work without treating host noise as a language property.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to measure latency, useful throughput, queueing, memory, allocation, and garbage collection under equivalent work without treating host noise as a language property.",
+      "explanation": "Use Memory Visibility and Races to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M15-Q077",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "execution-models-across-languages",
+        "types-serialization-and-validation",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Types, Serialization, and Validation' supports this outcome: Diagnose memory-visibility and data-race failures with happens-before reasoning, detector evidence, and explicit detector limits.",
+      "correct_answer": "A strong answer defines the mechanism from 'Types, Serialization, and Validation', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Types, Serialization, and Validation to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M15-Q078",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "execution-models-across-languages",
+        "equivalent-work-runtime-measurement",
+        "synthesis"
+      ],
+      "prompt": "For 'Equivalent-work Runtime Measurement', what quantities, units, or thresholds would you calculate before trusting a design claim about: Preserve contracts across static, dynamic, process, and serialization boundaries through explicit validation and scoped authority.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. Design a fair cross-runtime experiment, calculate useful throughput and latency, and distinguish protocol facts from empirical host observations.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M15-Q079",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "execution-models-across-languages",
+        "northstar-polyglot-fan-out-tutorial",
+        "application"
+      ],
+      "prompt": "A learner applies 'Northstar Polyglot Fan-out Tutorial' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Editing Northstar thresholds into the independent commerce build.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M15-Q080",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "execution-models-across-languages",
+        "runtime-decision-and-teach-back",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Runtime Decision and Teach-back'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for defend and teach a runtime choice from workload behavior, safety, operability, ecosystem, cost, migration, ownership, and team evidence..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Use RES-06 only with its historical boundary.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M15-Q081",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "execution-models-across-languages",
+        "memory-lifetime-and-management",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Memory Lifetime and Management' in Execution Models Across Languages?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to explain and compare stack, heap, allocation, escape, manual lifetime, raii, ownership, reference counting, and tracing collection from workload evidence.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to explain and compare stack, heap, allocation, escape, manual lifetime, raii, ownership, reference counting, and tracing collection from workload evidence.",
+      "explanation": "Use Memory Lifetime and Management to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M15-Q082",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "execution-models-across-languages",
+        "schedulers-event-loops-and-tasks",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Schedulers, Event Loops, and Tasks' supports this outcome: Trace work through operating-system threads, event loops, worker pools, goroutines, async tasks, virtual threads, and runtime schedulers.",
+      "correct_answer": "A strong answer defines the mechanism from 'Schedulers, Event Loops, and Tasks', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Schedulers, Event Loops, and Tasks to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M15-Q083",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "execution-models-across-languages",
+        "bounded-fan-out-and-structured-cleanup",
+        "synthesis"
+      ],
+      "prompt": "For 'Bounded Fan-out and Structured Cleanup', what quantities, units, or thresholds would you calculate before trusting a design claim about: Implement the same bounded fan-out contract in TypeScript, Go, Rust, and Java with bounded admission, deadlines, cancellation, validation, and cleanup.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. Derive admission, deadline, cancellation, and cleanup contracts for child work, then implement them without changing request semantics across runtimes.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M15-Q084",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "execution-models-across-languages",
+        "memory-visibility-and-races",
+        "application"
+      ],
+      "prompt": "A learner applies 'Memory Visibility and Races' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Calling a race detector a proof; it observes executed schedules and supported code.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M15-Q085",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "execution-models-across-languages",
+        "types-serialization-and-validation",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Types, Serialization, and Validation'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose memory-visibility and data-race failures with happens-before reasoning, detector evidence, and explicit detector limits..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Use RES-05 and the public schemas.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M15-Q086",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "execution-models-across-languages",
+        "equivalent-work-runtime-measurement",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Equivalent-work Runtime Measurement' in Execution Models Across Languages?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to preserve contracts across static, dynamic, process, and serialization boundaries through explicit validation and scoped authority.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to preserve contracts across static, dynamic, process, and serialization boundaries through explicit validation and scoped authority.",
+      "explanation": "Use Equivalent-work Runtime Measurement to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M15-Q087",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "execution-models-across-languages",
+        "northstar-polyglot-fan-out-tutorial",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Northstar Polyglot Fan-out Tutorial' supports this outcome: Diagnose nine execution-model failures while bounding operational, security, cost, migration, and ownership consequences.",
+      "correct_answer": "A strong answer defines the mechanism from 'Northstar Polyglot Fan-out Tutorial', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Northstar Polyglot Fan-out Tutorial to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M15-Q088",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "execution-models-across-languages",
+        "runtime-decision-and-teach-back",
+        "synthesis"
+      ],
+      "prompt": "For 'Runtime Decision and Teach-back', what quantities, units, or thresholds would you calculate before trusting a design claim about: Defend and teach a runtime choice from workload behavior, safety, operability, ecosystem, cost, migration, ownership, and team evidence.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. Choose a runtime from evidence, plan adoption or no-change safely, and teach the method without presenting a language ranking.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M15-Q089",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "execution-models-across-languages",
+        "memory-lifetime-and-management",
+        "application"
+      ],
+      "prompt": "A learner applies 'Memory Lifetime and Management' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating heap allocation as inherently slow while ignoring allocation rate,",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M15-Q090",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "execution-models-across-languages",
+        "schedulers-event-loops-and-tasks",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Schedulers, Event Loops, and Tasks'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for trace work through operating-system threads, event loops, worker pools, goroutines, async tasks, virtual threads, and runtime schedulers..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Use RES-01, RES-04, and RES-07.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M15-Q091",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "execution-models-across-languages",
+        "bounded-fan-out-and-structured-cleanup",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Bounded Fan-out and Structured Cleanup' in Execution Models Across Languages?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement the same bounded fan-out contract in typescript, go, rust, and java with bounded admission, deadlines, cancellation, validation, and cleanup.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement the same bounded fan-out contract in typescript, go, rust, and java with bounded admission, deadlines, cancellation, validation, and cleanup.",
+      "explanation": "Use Bounded Fan-out and Structured Cleanup to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M15-Q092",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "execution-models-across-languages",
+        "memory-visibility-and-races",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Memory Visibility and Races' supports this outcome: Measure latency, useful throughput, queueing, memory, allocation, and garbage collection under equivalent work without treating host noise as a language property.",
+      "correct_answer": "A strong answer defines the mechanism from 'Memory Visibility and Races', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Memory Visibility and Races to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M15-Q093",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "execution-models-across-languages",
+        "types-serialization-and-validation",
+        "synthesis"
+      ],
+      "prompt": "For 'Types, Serialization, and Validation', what quantities, units, or thresholds would you calculate before trusting a design claim about: Diagnose memory-visibility and data-race failures with happens-before reasoning, detector evidence, and explicit detector limits.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. Compare static/dynamic and nominal/structural typing, then restore guarantees lost at JSON, process, persistence, and authorization boundaries.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M15-Q094",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "execution-models-across-languages",
+        "equivalent-work-runtime-measurement",
+        "application"
+      ],
+      "prompt": "A learner applies 'Equivalent-work Runtime Measurement' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Mixing cold compilation/startup with steady request service without labeling it.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M15-Q095",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "execution-models-across-languages",
+        "northstar-polyglot-fan-out-tutorial",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Northstar Polyglot Fan-out Tutorial'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose nine execution-model failures while bounding operational, security, cost, migration, and ownership consequences..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Use the lab reference../lab/README.md and completed case study../case-study/northstar-observation-enrichment.md.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M15-Q096",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "execution-models-across-languages",
+        "runtime-decision-and-teach-back",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Runtime Decision and Teach-back' in Execution Models Across Languages?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend and teach a runtime choice from workload behavior, safety, operability, ecosystem, cost, migration, ownership, and team evidence.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend and teach a runtime choice from workload behavior, safety, operability, ecosystem, cost, migration, ownership, and team evidence.",
+      "explanation": "Use Runtime Decision and Teach-back to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M15-Q097",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "execution-models-across-languages",
+        "memory-lifetime-and-management",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Memory Lifetime and Management' supports this outcome: Explain and compare stack, heap, allocation, escape, manual lifetime, RAII, ownership, reference counting, and tracing collection from workload evidence.",
+      "correct_answer": "A strong answer defines the mechanism from 'Memory Lifetime and Management', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Memory Lifetime and Management to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M15-Q098",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "execution-models-across-languages",
+        "schedulers-event-loops-and-tasks",
+        "synthesis"
+      ],
+      "prompt": "For 'Schedulers, Event Loops, and Tasks', what quantities, units, or thresholds would you calculate before trusting a design claim about: Trace work through operating-system threads, event loops, worker pools, goroutines, async tasks, virtual threads, and runtime schedulers.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. Trace runnable, blocked, queued, and executing work from request to runtime task to OS thread; choose a bound for each finite scheduler.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M15-Q099",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "execution-models-across-languages",
+        "bounded-fan-out-and-structured-cleanup",
+        "application"
+      ],
+      "prompt": "A learner applies 'Bounded Fan-out and Structured Cleanup' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Using a semaphore after spawning tasks, which bounds execution but not queued",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M15-Q100",
+      "module_id": "M15",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "execution-models-across-languages",
+        "memory-visibility-and-races",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Memory Visibility and Races'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for measure latency, useful throughput, queueing, memory, allocation, and garbage collection under equivalent work without treating host noise as a language property..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Use RES-02, RES-08, RES-09, and RES-10.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    }
+  ]
+}

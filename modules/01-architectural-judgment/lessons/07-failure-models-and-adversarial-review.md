@@ -255,7 +255,8 @@ Complete:
 - [EX-10](../exercises/exercises.md#ex-10-failure-matrix)
 - [EX-11](../exercises/exercises.md#ex-11-unsupported-claim-audit)
 
-Then complete the [Week 3 failure review](../worksheets/week-03-failure-review.md).
+Then compare your failure review with the practice answer key and note one
+claim you would test next.
 
 ## Self-check
 

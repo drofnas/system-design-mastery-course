@@ -1,0 +1,1926 @@
+{
+  "module_id": "M08",
+  "title": "Transactions, Concurrency, and Recovery",
+  "questions": [
+    {
+      "question_id": "M08-Q001",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "invariants-and-transaction-boundaries",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Invariants and Transaction Boundaries' in Transactions, Concurrency, and Recovery?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to map business invariants to transaction boundaries, authoritative state, and enforceable constraints.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to map business invariants to transaction boundaries, authoritative state, and enforceable constraints.",
+      "explanation": "Use Invariants and Transaction Boundaries to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M08-Q002",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "histories-serializability-and-isolation-anomalie",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Histories, Serializability, and Isolation Anomalies' supports this outcome: Derive isolation anomalies from histories, visibility rules, and serialization dependencies.",
+      "correct_answer": "A strong answer defines the mechanism from 'Histories, Serializability, and Isolation Anomalies', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Histories, Serializability, and Isolation Anomalies to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M08-Q003",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "locks-two-phase-locking-deadlocks-and-retries",
+        "synthesis"
+      ],
+      "prompt": "For 'Locks, Two-Phase Locking, Deadlocks, and Retries', what quantities, units, or thresholds would you calculate before trusting a design claim about: Implement and compare locking, optimistic validation, MVCC, deadlock handling, and bounded transaction retries.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. Derive lock compatibility and wait-for graphs, explain strict 2PL, recover from deadlock, and implement bounded whole-transaction retry.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M08-Q004",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "optimistic-control-mvcc-snapshots-and-write-skew",
+        "application"
+      ],
+      "prompt": "A learner applies 'Optimistic Control, MVCC, Snapshots, and Write Skew' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Saying MVCC means \u201creaders never block\u201d without vacuum/version limits.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M08-Q005",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "constraints-authority-and-atomic-workflows",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Constraints, Authority, and Atomic Workflows'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for explain and test wal ordering, checkpoints, redo/undo, group commit, and durable acknowledgement..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - PostgreSQL, DDL Constraintshttps://www.postgresql.org/docs/current/ddl-constraints.html.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M08-Q006",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "wal-checkpoints-redo/undo-and-group-commit",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'WAL, Checkpoints, Redo/Undo, and Group Commit' in Transactions, Concurrency, and Recovery?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to automate and validate backup, point-in-time recovery, integrity checks, and measured rto/rpo while distinguishing replicas from backups.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to automate and validate backup, point-in-time recovery, integrity checks, and measured rto/rpo while distinguishing replicas from backups.",
+      "explanation": "Use WAL, Checkpoints, Redo/Undo, and Group Commit to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M08-Q007",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "backups-pitr-restore-validation-and-objectives",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Backups, PITR, Restore Validation, and Objectives' supports this outcome: Diagnose seven concurrency and recovery failures from immutable same-input evidence.",
+      "correct_answer": "A strong answer defines the mechanism from 'Backups, PITR, Restore Validation, and Objectives', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Backups, PITR, Restore Validation, and Objectives to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M08-Q008",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "transaction-and-recovery-decisions",
+        "synthesis"
+      ],
+      "prompt": "For 'Transaction and Recovery Decisions', what quantities, units, or thresholds would you calculate before trusting a design claim about: Defend a transaction and recovery strategy covering security, cost, operations, ownership, migration, rollback, and reversal evidence.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. Defend per-invariant isolation, constraint, retry, acknowledgement, backup, and tested recovery choices with ownership, cost, security, migration, and reversal evidence.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M08-Q009",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "invariants-and-transaction-boundaries",
+        "application"
+      ],
+      "prompt": "A learner applies 'Invariants and Transaction Boundaries' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Calling a transaction \u201cACID\u201d without naming the admitted histories.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M08-Q010",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "histories-serializability-and-isolation-anomalie",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Histories, Serializability, and Isolation Anomalies'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for derive isolation anomalies from histories, visibility rules, and serialization dependencies..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - PostgreSQL, Transaction Isolationhttps://www.postgresql.org/docs/current/transaction-iso.html.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M08-Q011",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "locks-two-phase-locking-deadlocks-and-retries",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Locks, Two-Phase Locking, Deadlocks, and Retries' in Transactions, Concurrency, and Recovery?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement and compare locking, optimistic validation, mvcc, deadlock handling, and bounded transaction retries.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement and compare locking, optimistic validation, mvcc, deadlock handling, and bounded transaction retries.",
+      "explanation": "Use Locks, Two-Phase Locking, Deadlocks, and Retries to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M08-Q012",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "optimistic-control-mvcc-snapshots-and-write-skew",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Optimistic Control, MVCC, Snapshots, and Write Skew' supports this outcome: Enforce atomic authoritative workflows with schema constraints and rebuildable derived state.",
+      "correct_answer": "A strong answer defines the mechanism from 'Optimistic Control, MVCC, Snapshots, and Write Skew', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Optimistic Control, MVCC, Snapshots, and Write Skew to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M08-Q013",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "constraints-authority-and-atomic-workflows",
+        "synthesis"
+      ],
+      "prompt": "For 'Constraints, Authority, and Atomic Workflows', what quantities, units, or thresholds would you calculate before trusting a design claim about: Explain and test WAL ordering, checkpoints, redo/undo, group commit, and durable acknowledgement.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. Choose enforceable constraints, keep required authoritative writes atomic, and separate reconstructable state and external effects from the transaction.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M08-Q014",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "wal-checkpoints-redo/undo-and-group-commit",
+        "application"
+      ],
+      "prompt": "A learner applies 'WAL, Checkpoints, Redo/Undo, and Group Commit' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Calling a buffered write durable because the language write call returned.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M08-Q015",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "backups-pitr-restore-validation-and-objectives",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Backups, PITR, Restore Validation, and Objectives'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose seven concurrency and recovery failures from immutable same-input evidence..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - PostgreSQL, Continuous Archiving and PITRhttps://www.postgresql.org/docs/current/continuous-archiving.html.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M08-Q016",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "transaction-and-recovery-decisions",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Transaction and Recovery Decisions' in Transactions, Concurrency, and Recovery?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend a transaction and recovery strategy covering security, cost, operations, ownership, migration, rollback, and reversal evidence.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend a transaction and recovery strategy covering security, cost, operations, ownership, migration, rollback, and reversal evidence.",
+      "explanation": "Use Transaction and Recovery Decisions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M08-Q017",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "invariants-and-transaction-boundaries",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Invariants and Transaction Boundaries' supports this outcome: Map business invariants to transaction boundaries, authoritative state, and enforceable constraints.",
+      "correct_answer": "A strong answer defines the mechanism from 'Invariants and Transaction Boundaries', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Invariants and Transaction Boundaries to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M08-Q018",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "histories-serializability-and-isolation-anomalie",
+        "synthesis"
+      ],
+      "prompt": "For 'Histories, Serializability, and Isolation Anomalies', what quantities, units, or thresholds would you calculate before trusting a design claim about: Derive isolation anomalies from histories, visibility rules, and serialization dependencies.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. Read a history, construct dependencies, identify lost update and write skew, and select an isolation claim per operation rather than per product.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M08-Q019",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "locks-two-phase-locking-deadlocks-and-retries",
+        "application"
+      ],
+      "prompt": "A learner applies 'Locks, Two-Phase Locking, Deadlocks, and Retries' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating a lock timeout as a deadlock detector.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M08-Q020",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "optimistic-control-mvcc-snapshots-and-write-skew",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Optimistic Control, MVCC, Snapshots, and Write Skew'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for enforce atomic authoritative workflows with schema constraints and rebuildable derived state..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - CMU 15-445, MVCC lectures and noteshttps://15445.courses.cs.cmu.edu/spring2026/schedule.html.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M08-Q021",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "constraints-authority-and-atomic-workflows",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Constraints, Authority, and Atomic Workflows' in Transactions, Concurrency, and Recovery?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to explain and test wal ordering, checkpoints, redo/undo, group commit, and durable acknowledgement.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to explain and test wal ordering, checkpoints, redo/undo, group commit, and durable acknowledgement.",
+      "explanation": "Use Constraints, Authority, and Atomic Workflows to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M08-Q022",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "wal-checkpoints-redo/undo-and-group-commit",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'WAL, Checkpoints, Redo/Undo, and Group Commit' supports this outcome: Automate and validate backup, point-in-time recovery, integrity checks, and measured RTO/RPO while distinguishing replicas from backups.",
+      "correct_answer": "A strong answer defines the mechanism from 'WAL, Checkpoints, Redo/Undo, and Group Commit', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use WAL, Checkpoints, Redo/Undo, and Group Commit to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M08-Q023",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "backups-pitr-restore-validation-and-objectives",
+        "synthesis"
+      ],
+      "prompt": "For 'Backups, PITR, Restore Validation, and Objectives', what quantities, units, or thresholds would you calculate before trusting a design claim about: Diagnose seven concurrency and recovery failures from immutable same-input evidence.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. Build a recoverable base-plus-log set, distinguish replicas from backups, measure RTO/RPO, and gate traffic on restore integrity and application probes.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M08-Q024",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "transaction-and-recovery-decisions",
+        "application"
+      ],
+      "prompt": "A learner applies 'Transaction and Recovery Decisions' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Choosing one isolation level for the whole architecture.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M08-Q025",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "invariants-and-transaction-boundaries",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Invariants and Transaction Boundaries'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for map business invariants to transaction boundaries, authoritative state, and enforceable constraints..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - PostgreSQL, Constraintshttps://www.postgresql.org/docs/current/ddl-constraints.html.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M08-Q026",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "histories-serializability-and-isolation-anomalie",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Histories, Serializability, and Isolation Anomalies' in Transactions, Concurrency, and Recovery?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to derive isolation anomalies from histories, visibility rules, and serialization dependencies.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to derive isolation anomalies from histories, visibility rules, and serialization dependencies.",
+      "explanation": "Use Histories, Serializability, and Isolation Anomalies to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M08-Q027",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "locks-two-phase-locking-deadlocks-and-retries",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Locks, Two-Phase Locking, Deadlocks, and Retries' supports this outcome: Implement and compare locking, optimistic validation, MVCC, deadlock handling, and bounded transaction retries.",
+      "correct_answer": "A strong answer defines the mechanism from 'Locks, Two-Phase Locking, Deadlocks, and Retries', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Locks, Two-Phase Locking, Deadlocks, and Retries to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M08-Q028",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "optimistic-control-mvcc-snapshots-and-write-skew",
+        "synthesis"
+      ],
+      "prompt": "For 'Optimistic Control, MVCC, Snapshots, and Write Skew', what quantities, units, or thresholds would you calculate before trusting a design claim about: Enforce atomic authoritative workflows with schema constraints and rebuildable derived state.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. Explain version visibility, implement optimistic validation, diagnose snapshot write skew, and bound conflict/garbage-collection costs.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M08-Q029",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "constraints-authority-and-atomic-workflows",
+        "application"
+      ],
+      "prompt": "A learner applies 'Constraints, Authority, and Atomic Workflows' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Relying on a pre-insert existence check instead of uniqueness.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M08-Q030",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "wal-checkpoints-redo/undo-and-group-commit",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'WAL, Checkpoints, Redo/Undo, and Group Commit'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for automate and validate backup, point-in-time recovery, integrity checks, and measured rto/rpo while distinguishing replicas from backups..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - PostgreSQL, Write-Ahead Logginghttps://www.postgresql.org/docs/current/wal-intro.html.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M08-Q031",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "backups-pitr-restore-validation-and-objectives",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Backups, PITR, Restore Validation, and Objectives' in Transactions, Concurrency, and Recovery?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose seven concurrency and recovery failures from immutable same-input evidence.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose seven concurrency and recovery failures from immutable same-input evidence.",
+      "explanation": "Use Backups, PITR, Restore Validation, and Objectives to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M08-Q032",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "transaction-and-recovery-decisions",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Transaction and Recovery Decisions' supports this outcome: Defend a transaction and recovery strategy covering security, cost, operations, ownership, migration, rollback, and reversal evidence.",
+      "correct_answer": "A strong answer defines the mechanism from 'Transaction and Recovery Decisions', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Transaction and Recovery Decisions to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M08-Q033",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "invariants-and-transaction-boundaries",
+        "synthesis"
+      ],
+      "prompt": "For 'Invariants and Transaction Boundaries', what quantities, units, or thresholds would you calculate before trusting a design claim about: Map business invariants to transaction boundaries, authoritative state, and enforceable constraints.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. Map an invariant to authority, writers, a minimal atomic boundary, an enforcement point, and a falsifiable proof.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M08-Q034",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "histories-serializability-and-isolation-anomalie",
+        "application"
+      ],
+      "prompt": "A learner applies 'Histories, Serializability, and Isolation Anomalies' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Listing ANSI anomaly names without drawing the violating schedule.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M08-Q035",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "locks-two-phase-locking-deadlocks-and-retries",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Locks, Two-Phase Locking, Deadlocks, and Retries'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement and compare locking, optimistic validation, mvcc, deadlock handling, and bounded transaction retries..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - PostgreSQL, Explicit Lockinghttps://www.postgresql.org/docs/current/explicit-locking.html.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M08-Q036",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "optimistic-control-mvcc-snapshots-and-write-skew",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Optimistic Control, MVCC, Snapshots, and Write Skew' in Transactions, Concurrency, and Recovery?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to enforce atomic authoritative workflows with schema constraints and rebuildable derived state.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to enforce atomic authoritative workflows with schema constraints and rebuildable derived state.",
+      "explanation": "Use Optimistic Control, MVCC, Snapshots, and Write Skew to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M08-Q037",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "constraints-authority-and-atomic-workflows",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Constraints, Authority, and Atomic Workflows' supports this outcome: Explain and test WAL ordering, checkpoints, redo/undo, group commit, and durable acknowledgement.",
+      "correct_answer": "A strong answer defines the mechanism from 'Constraints, Authority, and Atomic Workflows', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Constraints, Authority, and Atomic Workflows to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M08-Q038",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "wal-checkpoints-redo/undo-and-group-commit",
+        "synthesis"
+      ],
+      "prompt": "For 'WAL, Checkpoints, Redo/Undo, and Group Commit', what quantities, units, or thresholds would you calculate before trusting a design claim about: Automate and validate backup, point-in-time recovery, integrity checks, and measured RTO/RPO while distinguishing replicas from backups.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. Order WAL, data, flush, commit, and acknowledgement events; recover committed and loser transactions; explain checkpoints and group commit; bound durability claims.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M08-Q039",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "backups-pitr-restore-validation-and-objectives",
+        "application"
+      ],
+      "prompt": "A learner applies 'Backups, PITR, Restore Validation, and Objectives' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Equating green backup jobs with recoverability.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M08-Q040",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "transaction-and-recovery-decisions",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Transaction and Recovery Decisions'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for defend a transaction and recovery strategy covering security, cost, operations, ownership, migration, rollback, and reversal evidence..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - GitHub, October 21 post-incident analysishttps://github.blog/news-insights/company-news/oct21-post-incident-analysis/.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M08-Q041",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "invariants-and-transaction-boundaries",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Invariants and Transaction Boundaries' in Transactions, Concurrency, and Recovery?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to map business invariants to transaction boundaries, authoritative state, and enforceable constraints.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to map business invariants to transaction boundaries, authoritative state, and enforceable constraints.",
+      "explanation": "Use Invariants and Transaction Boundaries to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M08-Q042",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "histories-serializability-and-isolation-anomalie",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Histories, Serializability, and Isolation Anomalies' supports this outcome: Derive isolation anomalies from histories, visibility rules, and serialization dependencies.",
+      "correct_answer": "A strong answer defines the mechanism from 'Histories, Serializability, and Isolation Anomalies', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Histories, Serializability, and Isolation Anomalies to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M08-Q043",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "locks-two-phase-locking-deadlocks-and-retries",
+        "synthesis"
+      ],
+      "prompt": "For 'Locks, Two-Phase Locking, Deadlocks, and Retries', what quantities, units, or thresholds would you calculate before trusting a design claim about: Implement and compare locking, optimistic validation, MVCC, deadlock handling, and bounded transaction retries.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. Derive lock compatibility and wait-for graphs, explain strict 2PL, recover from deadlock, and implement bounded whole-transaction retry.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M08-Q044",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "optimistic-control-mvcc-snapshots-and-write-skew",
+        "application"
+      ],
+      "prompt": "A learner applies 'Optimistic Control, MVCC, Snapshots, and Write Skew' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Saying MVCC means \u201creaders never block\u201d without vacuum/version limits.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M08-Q045",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "constraints-authority-and-atomic-workflows",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Constraints, Authority, and Atomic Workflows'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for explain and test wal ordering, checkpoints, redo/undo, group commit, and durable acknowledgement..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - PostgreSQL, DDL Constraintshttps://www.postgresql.org/docs/current/ddl-constraints.html.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M08-Q046",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "wal-checkpoints-redo/undo-and-group-commit",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'WAL, Checkpoints, Redo/Undo, and Group Commit' in Transactions, Concurrency, and Recovery?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to automate and validate backup, point-in-time recovery, integrity checks, and measured rto/rpo while distinguishing replicas from backups.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to automate and validate backup, point-in-time recovery, integrity checks, and measured rto/rpo while distinguishing replicas from backups.",
+      "explanation": "Use WAL, Checkpoints, Redo/Undo, and Group Commit to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M08-Q047",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "backups-pitr-restore-validation-and-objectives",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Backups, PITR, Restore Validation, and Objectives' supports this outcome: Diagnose seven concurrency and recovery failures from immutable same-input evidence.",
+      "correct_answer": "A strong answer defines the mechanism from 'Backups, PITR, Restore Validation, and Objectives', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Backups, PITR, Restore Validation, and Objectives to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M08-Q048",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "transaction-and-recovery-decisions",
+        "synthesis"
+      ],
+      "prompt": "For 'Transaction and Recovery Decisions', what quantities, units, or thresholds would you calculate before trusting a design claim about: Defend a transaction and recovery strategy covering security, cost, operations, ownership, migration, rollback, and reversal evidence.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. Defend per-invariant isolation, constraint, retry, acknowledgement, backup, and tested recovery choices with ownership, cost, security, migration, and reversal evidence.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M08-Q049",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "invariants-and-transaction-boundaries",
+        "application"
+      ],
+      "prompt": "A learner applies 'Invariants and Transaction Boundaries' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Calling a transaction \u201cACID\u201d without naming the admitted histories.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M08-Q050",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "histories-serializability-and-isolation-anomalie",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Histories, Serializability, and Isolation Anomalies'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for derive isolation anomalies from histories, visibility rules, and serialization dependencies..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - PostgreSQL, Transaction Isolationhttps://www.postgresql.org/docs/current/transaction-iso.html.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M08-Q051",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "locks-two-phase-locking-deadlocks-and-retries",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Locks, Two-Phase Locking, Deadlocks, and Retries' in Transactions, Concurrency, and Recovery?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement and compare locking, optimistic validation, mvcc, deadlock handling, and bounded transaction retries.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement and compare locking, optimistic validation, mvcc, deadlock handling, and bounded transaction retries.",
+      "explanation": "Use Locks, Two-Phase Locking, Deadlocks, and Retries to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M08-Q052",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "optimistic-control-mvcc-snapshots-and-write-skew",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Optimistic Control, MVCC, Snapshots, and Write Skew' supports this outcome: Enforce atomic authoritative workflows with schema constraints and rebuildable derived state.",
+      "correct_answer": "A strong answer defines the mechanism from 'Optimistic Control, MVCC, Snapshots, and Write Skew', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Optimistic Control, MVCC, Snapshots, and Write Skew to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M08-Q053",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "constraints-authority-and-atomic-workflows",
+        "synthesis"
+      ],
+      "prompt": "For 'Constraints, Authority, and Atomic Workflows', what quantities, units, or thresholds would you calculate before trusting a design claim about: Explain and test WAL ordering, checkpoints, redo/undo, group commit, and durable acknowledgement.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. Choose enforceable constraints, keep required authoritative writes atomic, and separate reconstructable state and external effects from the transaction.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M08-Q054",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "wal-checkpoints-redo/undo-and-group-commit",
+        "application"
+      ],
+      "prompt": "A learner applies 'WAL, Checkpoints, Redo/Undo, and Group Commit' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Calling a buffered write durable because the language write call returned.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M08-Q055",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "backups-pitr-restore-validation-and-objectives",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Backups, PITR, Restore Validation, and Objectives'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose seven concurrency and recovery failures from immutable same-input evidence..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - PostgreSQL, Continuous Archiving and PITRhttps://www.postgresql.org/docs/current/continuous-archiving.html.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M08-Q056",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "transaction-and-recovery-decisions",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Transaction and Recovery Decisions' in Transactions, Concurrency, and Recovery?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend a transaction and recovery strategy covering security, cost, operations, ownership, migration, rollback, and reversal evidence.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend a transaction and recovery strategy covering security, cost, operations, ownership, migration, rollback, and reversal evidence.",
+      "explanation": "Use Transaction and Recovery Decisions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M08-Q057",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "invariants-and-transaction-boundaries",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Invariants and Transaction Boundaries' supports this outcome: Map business invariants to transaction boundaries, authoritative state, and enforceable constraints.",
+      "correct_answer": "A strong answer defines the mechanism from 'Invariants and Transaction Boundaries', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Invariants and Transaction Boundaries to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M08-Q058",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "histories-serializability-and-isolation-anomalie",
+        "synthesis"
+      ],
+      "prompt": "For 'Histories, Serializability, and Isolation Anomalies', what quantities, units, or thresholds would you calculate before trusting a design claim about: Derive isolation anomalies from histories, visibility rules, and serialization dependencies.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. Read a history, construct dependencies, identify lost update and write skew, and select an isolation claim per operation rather than per product.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M08-Q059",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "locks-two-phase-locking-deadlocks-and-retries",
+        "application"
+      ],
+      "prompt": "A learner applies 'Locks, Two-Phase Locking, Deadlocks, and Retries' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating a lock timeout as a deadlock detector.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M08-Q060",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "optimistic-control-mvcc-snapshots-and-write-skew",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Optimistic Control, MVCC, Snapshots, and Write Skew'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for enforce atomic authoritative workflows with schema constraints and rebuildable derived state..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - CMU 15-445, MVCC lectures and noteshttps://15445.courses.cs.cmu.edu/spring2026/schedule.html.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M08-Q061",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "constraints-authority-and-atomic-workflows",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Constraints, Authority, and Atomic Workflows' in Transactions, Concurrency, and Recovery?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to explain and test wal ordering, checkpoints, redo/undo, group commit, and durable acknowledgement.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to explain and test wal ordering, checkpoints, redo/undo, group commit, and durable acknowledgement.",
+      "explanation": "Use Constraints, Authority, and Atomic Workflows to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M08-Q062",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "wal-checkpoints-redo/undo-and-group-commit",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'WAL, Checkpoints, Redo/Undo, and Group Commit' supports this outcome: Automate and validate backup, point-in-time recovery, integrity checks, and measured RTO/RPO while distinguishing replicas from backups.",
+      "correct_answer": "A strong answer defines the mechanism from 'WAL, Checkpoints, Redo/Undo, and Group Commit', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use WAL, Checkpoints, Redo/Undo, and Group Commit to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M08-Q063",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "backups-pitr-restore-validation-and-objectives",
+        "synthesis"
+      ],
+      "prompt": "For 'Backups, PITR, Restore Validation, and Objectives', what quantities, units, or thresholds would you calculate before trusting a design claim about: Diagnose seven concurrency and recovery failures from immutable same-input evidence.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. Build a recoverable base-plus-log set, distinguish replicas from backups, measure RTO/RPO, and gate traffic on restore integrity and application probes.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M08-Q064",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "transaction-and-recovery-decisions",
+        "application"
+      ],
+      "prompt": "A learner applies 'Transaction and Recovery Decisions' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Choosing one isolation level for the whole architecture.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M08-Q065",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "invariants-and-transaction-boundaries",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Invariants and Transaction Boundaries'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for map business invariants to transaction boundaries, authoritative state, and enforceable constraints..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - PostgreSQL, Constraintshttps://www.postgresql.org/docs/current/ddl-constraints.html.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M08-Q066",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "histories-serializability-and-isolation-anomalie",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Histories, Serializability, and Isolation Anomalies' in Transactions, Concurrency, and Recovery?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to derive isolation anomalies from histories, visibility rules, and serialization dependencies.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to derive isolation anomalies from histories, visibility rules, and serialization dependencies.",
+      "explanation": "Use Histories, Serializability, and Isolation Anomalies to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M08-Q067",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "locks-two-phase-locking-deadlocks-and-retries",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Locks, Two-Phase Locking, Deadlocks, and Retries' supports this outcome: Implement and compare locking, optimistic validation, MVCC, deadlock handling, and bounded transaction retries.",
+      "correct_answer": "A strong answer defines the mechanism from 'Locks, Two-Phase Locking, Deadlocks, and Retries', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Locks, Two-Phase Locking, Deadlocks, and Retries to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M08-Q068",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "optimistic-control-mvcc-snapshots-and-write-skew",
+        "synthesis"
+      ],
+      "prompt": "For 'Optimistic Control, MVCC, Snapshots, and Write Skew', what quantities, units, or thresholds would you calculate before trusting a design claim about: Enforce atomic authoritative workflows with schema constraints and rebuildable derived state.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. Explain version visibility, implement optimistic validation, diagnose snapshot write skew, and bound conflict/garbage-collection costs.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M08-Q069",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "constraints-authority-and-atomic-workflows",
+        "application"
+      ],
+      "prompt": "A learner applies 'Constraints, Authority, and Atomic Workflows' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Relying on a pre-insert existence check instead of uniqueness.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M08-Q070",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "wal-checkpoints-redo/undo-and-group-commit",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'WAL, Checkpoints, Redo/Undo, and Group Commit'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for automate and validate backup, point-in-time recovery, integrity checks, and measured rto/rpo while distinguishing replicas from backups..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - PostgreSQL, Write-Ahead Logginghttps://www.postgresql.org/docs/current/wal-intro.html.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M08-Q071",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "backups-pitr-restore-validation-and-objectives",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Backups, PITR, Restore Validation, and Objectives' in Transactions, Concurrency, and Recovery?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose seven concurrency and recovery failures from immutable same-input evidence.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose seven concurrency and recovery failures from immutable same-input evidence.",
+      "explanation": "Use Backups, PITR, Restore Validation, and Objectives to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M08-Q072",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "transaction-and-recovery-decisions",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Transaction and Recovery Decisions' supports this outcome: Defend a transaction and recovery strategy covering security, cost, operations, ownership, migration, rollback, and reversal evidence.",
+      "correct_answer": "A strong answer defines the mechanism from 'Transaction and Recovery Decisions', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Transaction and Recovery Decisions to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M08-Q073",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "invariants-and-transaction-boundaries",
+        "synthesis"
+      ],
+      "prompt": "For 'Invariants and Transaction Boundaries', what quantities, units, or thresholds would you calculate before trusting a design claim about: Map business invariants to transaction boundaries, authoritative state, and enforceable constraints.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. Map an invariant to authority, writers, a minimal atomic boundary, an enforcement point, and a falsifiable proof.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M08-Q074",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "histories-serializability-and-isolation-anomalie",
+        "application"
+      ],
+      "prompt": "A learner applies 'Histories, Serializability, and Isolation Anomalies' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Listing ANSI anomaly names without drawing the violating schedule.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M08-Q075",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "locks-two-phase-locking-deadlocks-and-retries",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Locks, Two-Phase Locking, Deadlocks, and Retries'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement and compare locking, optimistic validation, mvcc, deadlock handling, and bounded transaction retries..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - PostgreSQL, Explicit Lockinghttps://www.postgresql.org/docs/current/explicit-locking.html.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M08-Q076",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "optimistic-control-mvcc-snapshots-and-write-skew",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Optimistic Control, MVCC, Snapshots, and Write Skew' in Transactions, Concurrency, and Recovery?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to enforce atomic authoritative workflows with schema constraints and rebuildable derived state.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to enforce atomic authoritative workflows with schema constraints and rebuildable derived state.",
+      "explanation": "Use Optimistic Control, MVCC, Snapshots, and Write Skew to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M08-Q077",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "constraints-authority-and-atomic-workflows",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Constraints, Authority, and Atomic Workflows' supports this outcome: Explain and test WAL ordering, checkpoints, redo/undo, group commit, and durable acknowledgement.",
+      "correct_answer": "A strong answer defines the mechanism from 'Constraints, Authority, and Atomic Workflows', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Constraints, Authority, and Atomic Workflows to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M08-Q078",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "wal-checkpoints-redo/undo-and-group-commit",
+        "synthesis"
+      ],
+      "prompt": "For 'WAL, Checkpoints, Redo/Undo, and Group Commit', what quantities, units, or thresholds would you calculate before trusting a design claim about: Automate and validate backup, point-in-time recovery, integrity checks, and measured RTO/RPO while distinguishing replicas from backups.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. Order WAL, data, flush, commit, and acknowledgement events; recover committed and loser transactions; explain checkpoints and group commit; bound durability claims.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M08-Q079",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "backups-pitr-restore-validation-and-objectives",
+        "application"
+      ],
+      "prompt": "A learner applies 'Backups, PITR, Restore Validation, and Objectives' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Equating green backup jobs with recoverability.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M08-Q080",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "transaction-and-recovery-decisions",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Transaction and Recovery Decisions'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for defend a transaction and recovery strategy covering security, cost, operations, ownership, migration, rollback, and reversal evidence..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - GitHub, October 21 post-incident analysishttps://github.blog/news-insights/company-news/oct21-post-incident-analysis/.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M08-Q081",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "invariants-and-transaction-boundaries",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Invariants and Transaction Boundaries' in Transactions, Concurrency, and Recovery?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to map business invariants to transaction boundaries, authoritative state, and enforceable constraints.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to map business invariants to transaction boundaries, authoritative state, and enforceable constraints.",
+      "explanation": "Use Invariants and Transaction Boundaries to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M08-Q082",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "histories-serializability-and-isolation-anomalie",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Histories, Serializability, and Isolation Anomalies' supports this outcome: Derive isolation anomalies from histories, visibility rules, and serialization dependencies.",
+      "correct_answer": "A strong answer defines the mechanism from 'Histories, Serializability, and Isolation Anomalies', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Histories, Serializability, and Isolation Anomalies to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M08-Q083",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "locks-two-phase-locking-deadlocks-and-retries",
+        "synthesis"
+      ],
+      "prompt": "For 'Locks, Two-Phase Locking, Deadlocks, and Retries', what quantities, units, or thresholds would you calculate before trusting a design claim about: Implement and compare locking, optimistic validation, MVCC, deadlock handling, and bounded transaction retries.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. Derive lock compatibility and wait-for graphs, explain strict 2PL, recover from deadlock, and implement bounded whole-transaction retry.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M08-Q084",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "optimistic-control-mvcc-snapshots-and-write-skew",
+        "application"
+      ],
+      "prompt": "A learner applies 'Optimistic Control, MVCC, Snapshots, and Write Skew' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Saying MVCC means \u201creaders never block\u201d without vacuum/version limits.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M08-Q085",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "constraints-authority-and-atomic-workflows",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Constraints, Authority, and Atomic Workflows'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for explain and test wal ordering, checkpoints, redo/undo, group commit, and durable acknowledgement..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - PostgreSQL, DDL Constraintshttps://www.postgresql.org/docs/current/ddl-constraints.html.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M08-Q086",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "wal-checkpoints-redo/undo-and-group-commit",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'WAL, Checkpoints, Redo/Undo, and Group Commit' in Transactions, Concurrency, and Recovery?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to automate and validate backup, point-in-time recovery, integrity checks, and measured rto/rpo while distinguishing replicas from backups.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to automate and validate backup, point-in-time recovery, integrity checks, and measured rto/rpo while distinguishing replicas from backups.",
+      "explanation": "Use WAL, Checkpoints, Redo/Undo, and Group Commit to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M08-Q087",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "backups-pitr-restore-validation-and-objectives",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Backups, PITR, Restore Validation, and Objectives' supports this outcome: Diagnose seven concurrency and recovery failures from immutable same-input evidence.",
+      "correct_answer": "A strong answer defines the mechanism from 'Backups, PITR, Restore Validation, and Objectives', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Backups, PITR, Restore Validation, and Objectives to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M08-Q088",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "transaction-and-recovery-decisions",
+        "synthesis"
+      ],
+      "prompt": "For 'Transaction and Recovery Decisions', what quantities, units, or thresholds would you calculate before trusting a design claim about: Defend a transaction and recovery strategy covering security, cost, operations, ownership, migration, rollback, and reversal evidence.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. Defend per-invariant isolation, constraint, retry, acknowledgement, backup, and tested recovery choices with ownership, cost, security, migration, and reversal evidence.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M08-Q089",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "invariants-and-transaction-boundaries",
+        "application"
+      ],
+      "prompt": "A learner applies 'Invariants and Transaction Boundaries' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Calling a transaction \u201cACID\u201d without naming the admitted histories.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M08-Q090",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "histories-serializability-and-isolation-anomalie",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Histories, Serializability, and Isolation Anomalies'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for derive isolation anomalies from histories, visibility rules, and serialization dependencies..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - PostgreSQL, Transaction Isolationhttps://www.postgresql.org/docs/current/transaction-iso.html.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M08-Q091",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "locks-two-phase-locking-deadlocks-and-retries",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Locks, Two-Phase Locking, Deadlocks, and Retries' in Transactions, Concurrency, and Recovery?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement and compare locking, optimistic validation, mvcc, deadlock handling, and bounded transaction retries.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement and compare locking, optimistic validation, mvcc, deadlock handling, and bounded transaction retries.",
+      "explanation": "Use Locks, Two-Phase Locking, Deadlocks, and Retries to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M08-Q092",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "optimistic-control-mvcc-snapshots-and-write-skew",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Optimistic Control, MVCC, Snapshots, and Write Skew' supports this outcome: Enforce atomic authoritative workflows with schema constraints and rebuildable derived state.",
+      "correct_answer": "A strong answer defines the mechanism from 'Optimistic Control, MVCC, Snapshots, and Write Skew', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Optimistic Control, MVCC, Snapshots, and Write Skew to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M08-Q093",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "constraints-authority-and-atomic-workflows",
+        "synthesis"
+      ],
+      "prompt": "For 'Constraints, Authority, and Atomic Workflows', what quantities, units, or thresholds would you calculate before trusting a design claim about: Explain and test WAL ordering, checkpoints, redo/undo, group commit, and durable acknowledgement.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. Choose enforceable constraints, keep required authoritative writes atomic, and separate reconstructable state and external effects from the transaction.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M08-Q094",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "wal-checkpoints-redo/undo-and-group-commit",
+        "application"
+      ],
+      "prompt": "A learner applies 'WAL, Checkpoints, Redo/Undo, and Group Commit' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Calling a buffered write durable because the language write call returned.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M08-Q095",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "backups-pitr-restore-validation-and-objectives",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Backups, PITR, Restore Validation, and Objectives'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose seven concurrency and recovery failures from immutable same-input evidence..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - PostgreSQL, Continuous Archiving and PITRhttps://www.postgresql.org/docs/current/continuous-archiving.html.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M08-Q096",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "transaction-and-recovery-decisions",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Transaction and Recovery Decisions' in Transactions, Concurrency, and Recovery?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend a transaction and recovery strategy covering security, cost, operations, ownership, migration, rollback, and reversal evidence.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend a transaction and recovery strategy covering security, cost, operations, ownership, migration, rollback, and reversal evidence.",
+      "explanation": "Use Transaction and Recovery Decisions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M08-Q097",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "invariants-and-transaction-boundaries",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Invariants and Transaction Boundaries' supports this outcome: Map business invariants to transaction boundaries, authoritative state, and enforceable constraints.",
+      "correct_answer": "A strong answer defines the mechanism from 'Invariants and Transaction Boundaries', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Invariants and Transaction Boundaries to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M08-Q098",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "histories-serializability-and-isolation-anomalie",
+        "synthesis"
+      ],
+      "prompt": "For 'Histories, Serializability, and Isolation Anomalies', what quantities, units, or thresholds would you calculate before trusting a design claim about: Derive isolation anomalies from histories, visibility rules, and serialization dependencies.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. Read a history, construct dependencies, identify lost update and write skew, and select an isolation claim per operation rather than per product.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M08-Q099",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "locks-two-phase-locking-deadlocks-and-retries",
+        "application"
+      ],
+      "prompt": "A learner applies 'Locks, Two-Phase Locking, Deadlocks, and Retries' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating a lock timeout as a deadlock detector.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M08-Q100",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "optimistic-control-mvcc-snapshots-and-write-skew",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Optimistic Control, MVCC, Snapshots, and Write Skew'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for enforce atomic authoritative workflows with schema constraints and rebuildable derived state..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - CMU 15-445, MVCC lectures and noteshttps://15445.courses.cs.cmu.edu/spring2026/schedule.html.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    }
+  ]
+}

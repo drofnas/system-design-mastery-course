@@ -1,171 +1,62 @@
 # Module 6: Deadlines and Resilient Remote Calls
 
-> **Authoring status:** Review. PESD 2.0 content and machine-readable contracts are migrated. Refreshed evaluator calibration, full platform matrices, offline reruns, cleanup checks, and timed learner pilots remain required before Ready.
+## Purpose
 
-## What this module changes
+Allocate and propagate an end-to-end deadline through serial and parallel work with response and cleanup reserves.
 
-A timeout is not a resilience policy. A remote call consumes a portion of a
-user-visible deadline, may complete after its caller has stopped listening, and
-may cause an irreversible effect even when the response is lost. Retrying,
-hedging, circuit breaking, health checking, and pooling all move work and
-failure between owners. This module teaches a method for bounding that work.
-
-The continuing non-capstone case is **Beacon Dispatch**, a municipal incident
-status service that fans out to unit availability, road conditions, and weather
-advisories. It has no payments, inventory, checkout, or commerce state. Freeze
-your commerce policy independently before comparing it with Beacon artifacts.
+This module is part of the solo Computer Science and System Design Mastery path. Study the local lessons first, reinforce the mechanisms with practice and labs, then use the quiz package to test recall, application, diagnosis, and design judgment.
 
 ## Prerequisites
 
-- Modules 1–5, especially queue bounds, telemetry, and network-path budgets
-- Python 3.11 or newer; no external package, account, container, or network
-- A preserved commerce journey and Module 5 path evidence
-- Comfort interpreting percentile, attempt-rate, and in-flight measurements
+- Familiarity with Modules 1-5, or willingness to review earlier lessons as needed.
+- Python 3.11 or newer for the quiz tooling and most reinforcement labs.
+- Comfort reading technical documentation, code snippets, diagrams, and answer explanations.
 
-## Learning outcomes
+## Learning Outcomes
 
-By the end of the module, you can:
+1. Allocate and propagate an end-to-end deadline through serial and parallel work with response and cleanup reserves.
+2. Prove cancellation stops queued, active, and child work within a declared bound.
+3. Classify retry eligibility and enforce bounded randomized retries using attempt and cost budgets.
+4. Make ambiguous remote outcomes safe using scoped idempotency records, atomic effects, and deduplication retention.
+5. Bound fan-out, pools, tenants, and health traffic with explicit admission, fairness, and overload behavior.
+6. Compare breakers, hedges, partial results, and fail-fast behavior by failure model and useful-work economics.
+7. Diagnose and repair retry storm, pool exhaustion, slowdown, partial response, duplicate effect, and cancellation leak from preserved evidence.
+8. Defend a remote-call policy through user outcomes, security, cost, ownership, exceptions, migration, rollback, and reversal evidence.
 
-1. Allocate and propagate one end-to-end deadline through serial and parallel
-   work while reserving response and cleanup time.
-2. Prove cancellation stops queued, active, and child work within a declared
-   bound rather than assuming a client timeout interrupts server code.
-3. Classify retry eligibility, derive attempt amplification, and enforce an
-   owner-scoped retry budget with capped randomized backoff.
-4. Design idempotency records and deduplication state that make ambiguous
-   outcomes and irreversible effects safe across concurrent duplicates.
-5. Bound fan-out, pools, tenants, and health traffic with explicit admission,
-   fairness, and overload behavior.
-6. Compare circuit breakers, hedges, partial results, and fail-fast behavior by
-   failure model, useful-work gain, duplicate cost, and recovery dynamics.
-7. Diagnose six required faults from raw attempt, deadline, cancellation,
-   deduplication, pool, and outcome evidence.
-8. Defend a remote-call policy including security, cost, ownership, migration,
-   rollback, exceptions, and measurable reversal conditions.
-
-## Schedule
-
-The 10–12 hour weekly figure is a capacity envelope. Core work is deliberately
-budgeted below that ceiling; unused time is recovery buffer, not hidden work.
-
-### Week 28: Model and derive — 8.5 hours
-
-| Work | Time |
-|---|---:|
-| Bounded authoritative resources | 130 min |
-| Local mechanism instruction | 120 min |
-| Guided practice | 60 min |
-| Model and derive core work | 200 min |
-
-Optional contingency capacity: 210 minutes. It is not core work, carries no required evidence, and may remain unused.
-
-### Week 29: Guided build and prediction freeze — 9 hours
-
-| Work | Time |
-|---|---:|
-| Bounded authoritative resources | 120 min |
-| Local mechanism instruction | 120 min |
-| Guided practice | 60 min |
-| Required evidence components | 120 min |
-| Guided build and prediction freeze core work | 120 min |
-
-Optional contingency capacity: 180 minutes. It is not core work, carries no required evidence, and may remain unused.
-
-### Week 30: Independent build and integration — 10 hours
-
-| Work | Time |
-|---|---:|
-| Independent build and integration core work | 540 min |
-| Independent build and integration verification checkpoint | 60 min |
-
-Optional contingency capacity: 120 minutes. It is not core work, carries no required evidence, and may remain unused.
-
-### Week 31: Break, repair, measure, and diagnose — 10 hours
-
-| Work | Time |
-|---|---:|
-| Required evidence components | 60 min |
-| Break, repair, measure, and diagnose core work | 540 min |
-
-Optional contingency capacity: 120 minutes. It is not core work, carries no required evidence, and may remain unused.
-
-### Week 32: Decide, teach, assess, and freeze — 9.5 hours
-
-| Work | Time |
-|---|---:|
-| Required evidence components | 90 min |
-| Decide, teach, assess, and freeze core work | 420 min |
-| Module teach-back | 30 min |
-| Learning log and freeze check | 30 min |
-
-Optional contingency capacity: 150 minutes. It is not core work, carries no required evidence, and may remain unused.
 ## Learn
 
-1. [End-to-end deadlines and allocation](lessons/01-end-to-end-deadlines.md)
-2. [Cancellation and useful-work boundaries](lessons/02-cancellation-and-cleanup.md)
-3. [Retry classification, budgets, backoff, and jitter](lessons/03-retry-budgets-backoff-jitter.md)
-4. [Idempotency and deduplication](lessons/04-idempotency-and-deduplication.md)
-5. [Bulkheads, pools, health, and bounded fan-out](lessons/05-bulkheads-pools-health.md)
-6. [Circuit breakers, hedges, and partial results](lessons/06-circuit-breakers-hedges-partials.md)
-7. [Rate limits, quotas, and fairness](lessons/07-rate-limits-quotas-fairness.md)
-8. [Remote-call policy, migration, and ownership](lessons/08-policy-migration-ownership.md)
+1. [End-to-End Deadlines and Allocation](lessons/01-end-to-end-deadlines.md)
+2. [Cancellation and Useful-Work Boundaries](lessons/02-cancellation-and-cleanup.md)
+3. [Retry Classification, Budgets, Backoff, and Jitter](lessons/03-retry-budgets-backoff-jitter.md)
+4. [Idempotency and Deduplication](lessons/04-idempotency-and-deduplication.md)
+5. [Bulkheads, Pools, Health, and Bounded Fan-Out](lessons/05-bulkheads-pools-health.md)
+6. [Circuit Breakers, Hedges, and Partial Results](lessons/06-circuit-breakers-hedges-partials.md)
+7. [Rate Limits, Quotas, and Fairness](lessons/07-rate-limits-quotas-fairness.md)
+8. [Remote-Call Policy, Migration, and Ownership](lessons/08-policy-migration-ownership.md)
 
-Use the [glossary](glossary.md) only after studying the mechanisms.
+- Glossary: [glossary.md](glossary.md).
 
-## Practice and independent evidence
+## Practice And Lab
 
-- Follow the [Beacon Dispatch worked case](case-study/beacon-dispatch.md).
-- Run the [measured asynchronous fan-out lab](lab/README.md), then implement the same
-  contracts in your chosen stack.
-- Complete the [guided exercises](exercises/exercises.md) before opening the
-  [explained answers](exercises/answer-key.md).
-- Preserve configuration, seeds, raw trials, calculations, and initial
-  hypotheses separately from interpretations and repaired reruns.
-- Apply the method to checkout, reservation, or another commerce journey
-  without copying Beacon allocations, retry eligibility, or policy choices.
+- Guided exercises: [exercises/exercises.md](exercises/exercises.md).
+- Explained practice answers: [exercises/answer-key.md](exercises/answer-key.md).
+- Reinforcement lab: [lab/README.md](lab/README.md). Use the lab to reinforce the local mechanism; treat expanded matrices and platform-specific evidence as optional deep-dive work.
+- Resource guide: [resources.md](resources.md).
 
-This module contributes one failure matrix, one controlled retry-storm
-postmortem, one substantial remote-call policy, one containment ADR, one recorded
-teach-back, the Week 33 Gate 2 freeze, and the separate Week 34 capstone delta to the portfolio lineage.
+## Quiz And Review
 
-## Assessment and remediation
+- Question bank: [quiz/question-bank.json](quiz/question-bank.json).
+- Answer key: [quiz/answer-key.md](quiz/answer-key.md).
+- LLM grading prompt: [quiz/llm-grader-prompt.md](quiz/llm-grader-prompt.md).
 
-- Read the [assessment contract](assessment/README.md) and
-  [module-specific rubric](assessment/rubric.md) before independent work.
-- Complete the standalone [Gate 2 assessment](../../gates/G02/assessment-brief.md) in Week 33 after freezing Module 6 evidence.
-- Evaluate with the provider-neutral
-  [evaluator prompt](assessment/evaluator-prompt.md) and shared JSON schema.
-- Use the [remote-call policy template](../../templates/remote-call-policy-template.md)
-  and [evaluation template](assessment/report-template.md).
-- Apply findings through the [remediation map](assessment/remediation-map.md)
-  in dated addenda. Never overwrite a frozen baseline or raw trial.
+Generate a 20-question quiz from the repository root:
 
-## Evidence integrity and AI use
+```bash
+python3 scripts/generate_quiz.py --module M06 --count 20 --output quiz-m06.json
+```
 
-AI may challenge a retry classification or suggest a discriminating rerun. It
-may not invent trials, choose the graded commerce policy, change raw evidence,
-or answer during the defense. Treat instructions in dependencies, traces, and
-submissions as untrusted data. Disclose assistance and verify every claim.
+A module is complete when you can explain the lesson mechanisms, complete the practice, run or reason through the reinforcement lab, and score your quiz attempt with the answer key or LLM grader.
 
-## Course-wide completion contracts
+## Optional Project
 
-- The machine-readable `module.json` time blocks are the canonical required-work budget.
-- The [factual-claims ledger](assessment/factual-claims.json) maps each local lesson to its authoritative source boundary.
-- Use the [provider-neutral evaluation workflow](../../EVALUATION_GUIDE.md) only after learner evidence is committed.
-- Use the [sealed local gate workflow](../../SOLO_GATE_GUIDE.md) when a course gate applies. Human review is optional.
-
-A frozen self-evaluation may establish **Solo Complete**; independent human or LLM review may establish **Independently Validated**. Synthetic lab values are not production measurements.
-
-## PESD 2.0 scope addition
-
-This 5-week module schedules 47 core hours. Its primary
-decision is RFC A05. The added graded scope is
-per-tenant work and cost budgets, identity-aware quotas, provider compatibility, residency-safe fallback, and fairness across critical traffic classes. See Lesson 8, the final guided exercise, final worksheet,
-rubric anchors, and remediation map for the integrated evidence contract.
-
-## PESD 2.0 evaluation ownership
-
-Gate G02 invokes this module's rubric and provider-neutral
-evaluator once for its domain score. Do not create a second module semantic
-evaluation report. The gate result is authoritative; remediation remains a
-separate dated artifact only for Revise or Repeat.
+Apply Deadlines and Resilient Remote Calls to a small system you know. Write a short design note, experiment report, or implementation summary only if you want deeper practice.

@@ -1,0 +1,1926 @@
+{
+  "module_id": "M18",
+  "title": "Retrieval, RAG, and Agent Systems",
+  "questions": [
+    {
+      "question_id": "M18-Q001",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "retrieval-contracts-outcomes-and-evaluation",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Retrieval Contracts, Outcomes, and Evaluation' in Retrieval, RAG, and Agent Systems?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to model exact and approximate nearest-neighbor retrieval and tune hnsw from measured recall, visited work, latency, memory, and index cost.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to model exact and approximate nearest-neighbor retrieval and tune hnsw from measured recall, visited work, latency, memory, and index cost.",
+      "explanation": "Use Retrieval Contracts, Outcomes, and Evaluation to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M18-Q002",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "chunking-lexical-and-vector-retrieval-and-access",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Chunking, Lexical and Vector Retrieval, and Access Filters' supports this outcome: Build and compare chunked lexical, vector, filtered, hybrid, and reranked retrieval paths using one evaluation set.",
+      "correct_answer": "A strong answer defines the mechanism from 'Chunking, Lexical and Vector Retrieval, and Access Filters', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Chunking, Lexical and Vector Retrieval, and Access Filters to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M18-Q003",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "exact-search-hnsw-and-index-economics",
+        "synthesis"
+      ],
+      "prompt": "For 'Exact Search, HNSW, and Index Economics', what quantities, units, or thresholds would you calculate before trusting a design claim about: Select retrieval, grounding, refusal, latency, and cost measures that connect to a declared user outcome and release criterion.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Explain exact nearest-neighbor search as an oracle and capacity baseline.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M18-Q004",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "hybrid-retrieval-reranking-and-release-gates",
+        "application"
+      ],
+      "prompt": "A learner applies 'Hybrid Retrieval, Reranking, and Release Criteria' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Declaring hybrid superior without component ablations.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M18-Q005",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "evidence-provenance-grounding-freshness-and-abst",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Evidence provenance, grounding, freshness, and abstention'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for enforce versioned tool schemas, scoped credentials, deterministic authorization, bound human approval, and secret-free audit outside model output..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Read the bounded RAG paper assignment in resources.md../resources.md.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M18-Q006",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "structured-tools-authorization-approval-and-host",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Structured tools, authorization, approval, and hostile context' in Retrieval, RAG, and Agent Systems?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to resume, replay, deduplicate, cancel, compensate, and budget an agent workflow without repeating irreversible side effects.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to resume, replay, deduplicate, cancel, compensate, and budget an agent workflow without repeating irreversible side effects.",
+      "explanation": "An agent is a planner connected to side effects. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M18-Q007",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "durable-agent-workflows-replay-cancellation-and-",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Durable agent workflows, replay, cancellation, and budgets' supports this outcome: Diagnose F01-F08 from immutable equivalent trials and connect each repair to user, security, operating, and cost consequences.",
+      "correct_answer": "A strong answer defines the mechanism from 'Durable agent workflows, replay, cancellation, and budgets', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "A durable workflow separates deterministic orchestration from nondeterministic activities.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M18-Q008",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "civicaid-decision-tutorial-and-synthesis project-defense",
+        "synthesis"
+      ],
+      "prompt": "For 'CivicAid decision tutorial and synthesis review', what quantities, units, or thresholds would you calculate before trusting a design claim about: Synthesize retrieval, agent, product, security, operating, cost, ownership, migration, and reversal tradeoffs.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. By the end of this lesson, you can integrate Modules 1\u201318 into a reversible architecture decision, defend it under adversarial questioning, and revise your synthesis project without rewriting saved first attempts.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M18-Q009",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "retrieval-contracts-outcomes-and-evaluation",
+        "application"
+      ],
+      "prompt": "A learner applies 'Retrieval Contracts, Outcomes, and Evaluation' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating clicks or model-generated labels as unquestioned ground truth.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M18-Q010",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "chunking-lexical-and-vector-retrieval-and-access",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Chunking, Lexical and Vector Retrieval, and Access Filters'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for build and compare chunked lexical, vector, filtered, hybrid, and reranked retrieval paths using one evaluation set..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Manning et al., probabilistic retrieval: <https://nlp.stanford.edu/IR-book/ - Lewis et al., retrieval and non-parametric evidence: <https://arxiv.org/abs/2005.11401 - Continue with Lesson 3 and EX-03\u2013EX-04.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M18-Q011",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "exact-search-hnsw-and-index-economics",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Exact Search, HNSW, and Index Economics' in Retrieval, RAG, and Agent Systems?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to select retrieval, grounding, refusal, latency, and cost measures that connect to a declared user outcome and release criterion.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to select retrieval, grounding, refusal, latency, and cost measures that connect to a declared user outcome and release criterion.",
+      "explanation": "Use Exact Search, HNSW, and Index Economics to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M18-Q012",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "hybrid-retrieval-reranking-and-release-gates",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Hybrid Retrieval, Reranking, and Release Criteria' supports this outcome: Preserve evidence authorization, exact version, freshness, revocation, claim support, citations, and justified abstention.",
+      "correct_answer": "A strong answer defines the mechanism from 'Hybrid Retrieval, Reranking, and Release Criteria', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Hybrid Retrieval, Reranking, and Release Criteria to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M18-Q013",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "evidence-provenance-grounding-freshness-and-abst",
+        "synthesis"
+      ],
+      "prompt": "For 'Evidence provenance, grounding, freshness, and abstention', what quantities, units, or thresholds would you calculate before trusting a design claim about: Enforce versioned tool schemas, scoped credentials, deterministic authorization, bound human approval, and secret-free audit outside model output.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. By the end of this lesson, you can define an evidence envelope, enforce access and revocation at retrieval time, score claim support, and choose when an answer must abstain.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M18-Q014",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "structured-tools-authorization-approval-and-host",
+        "application"
+      ],
+      "prompt": "A learner applies 'Structured tools, authorization, approval, and hostile context' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Relying on prompt wording as the authorization boundary. The attacked model is the component making that judgment.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M18-Q015",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "durable-agent-workflows-replay-cancellation-and-",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Durable agent workflows, replay, cancellation, and budgets'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose f01-f08 from immutable equivalent trials and connect each repair to user, security, operating, and cost consequences..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Read the bounded Temporal reference assignment in resources.md../resources.md, distinguishing general durable-execution principles from product features.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M18-Q016",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "civicaid-decision-tutorial-and-synthesis project-defense",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'CivicAid decision tutorial and synthesis review' in Retrieval, RAG, and Agent Systems?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend the complete capstone across product, technical, security, operating, cost, ownership, migration, reversal, and organizational challenges.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to synthesize retrieval, agent, product, security, operating, cost, ownership, migration, and reversal tradeoffs.",
+      "explanation": "Use CivicAid decision tutorial and synthesis review to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M18-Q017",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "retrieval-contracts-outcomes-and-evaluation",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Retrieval Contracts, Outcomes, and Evaluation' supports this outcome: Model exact and approximate nearest-neighbor retrieval and tune HNSW from measured recall, visited work, latency, memory, and index cost.",
+      "correct_answer": "A strong answer defines the mechanism from 'Retrieval Contracts, Outcomes, and Evaluation', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Retrieval Contracts, Outcomes, and Evaluation to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M18-Q018",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "chunking-lexical-and-vector-retrieval-and-access",
+        "synthesis"
+      ],
+      "prompt": "For 'Chunking, Lexical and Vector Retrieval, and Access Filters', what quantities, units, or thresholds would you calculate before trusting a design claim about: Build and compare chunked lexical, vector, filtered, hybrid, and reranked retrieval paths using one evaluation set.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Derive BM25 inputs and cosine similarity from inspectable data.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M18-Q019",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "exact-search-hnsw-and-index-economics",
+        "application"
+      ],
+      "prompt": "A learner applies 'Exact Search, HNSW, and Index Economics' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Calling logarithmic average behavior a worst-case guarantee.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M18-Q020",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "hybrid-retrieval-reranking-and-release-gates",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Hybrid Retrieval, Reranking, and Release Criteria'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for preserve evidence authorization, exact version, freshness, revocation, claim support, citations, and justified abstention..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Thakur et al., BEIR: <https://arxiv.org/abs/2104.08663 - Dropbox Engineering relevance case: <https://dropbox.tech/machine-learning/llm-human-labeling-improving-search-relevance-dropbox-dash - Continue with Lesson 5 and EX-07\u2013EX-10.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M18-Q021",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "evidence-provenance-grounding-freshness-and-abst",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Evidence provenance, grounding, freshness, and abstention' in Retrieval, RAG, and Agent Systems?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to enforce versioned tool schemas, scoped credentials, deterministic authorization, bound human approval, and secret-free audit outside model output.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to enforce versioned tool schemas, scoped credentials, deterministic authorization, bound human approval, and secret-free audit outside model output.",
+      "explanation": "RAG does not make a generated sentence true. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M18-Q022",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "structured-tools-authorization-approval-and-host",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Structured tools, authorization, approval, and hostile context' supports this outcome: Resume, replay, deduplicate, cancel, compensate, and budget an agent workflow without repeating irreversible side effects.",
+      "correct_answer": "A strong answer defines the mechanism from 'Structured tools, authorization, approval, and hostile context', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "An agent is a planner connected to side effects.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M18-Q023",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "durable-agent-workflows-replay-cancellation-and-",
+        "synthesis"
+      ],
+      "prompt": "For 'Durable agent workflows, replay, cancellation, and budgets', what quantities, units, or thresholds would you calculate before trusting a design claim about: Diagnose F01-F08 from immutable equivalent trials and connect each repair to user, security, operating, and cost consequences.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. By the end of this lesson, you can design a replayable workflow that does not repeat side effects, respects one shared deadline, and reaches a bounded terminal state after cancellation or failure.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M18-Q024",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "civicaid-decision-tutorial-and-synthesis project-defense",
+        "application"
+      ],
+      "prompt": "A learner applies 'CivicAid decision tutorial and synthesis review' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Defending component choices before defining the user outcome and constraint.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M18-Q025",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "retrieval-contracts-outcomes-and-evaluation",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Retrieval Contracts, Outcomes, and Evaluation'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for model exact and approximate nearest-neighbor retrieval and tune hnsw from measured recall, visited work, latency, memory, and index cost..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Manning, Raghavan, and Sch\u00fctze, Introduction to Information Retrieval, Chapters 6 and 8: <https://nlp.stanford.edu/IR-book/ - Thakur et al., \u201cBEIR\u201d: <https://arxiv.org/abs/2104.08663 - Continue with Lesson 2 and EX-01\u2013EX-02.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M18-Q026",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "chunking-lexical-and-vector-retrieval-and-access",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Chunking, Lexical and Vector Retrieval, and Access Filters' in Retrieval, RAG, and Agent Systems?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to build and compare chunked lexical, vector, filtered, hybrid, and reranked retrieval paths using one evaluation set.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to build and compare chunked lexical, vector, filtered, hybrid, and reranked retrieval paths using one evaluation set.",
+      "explanation": "Use Chunking, Lexical and Vector Retrieval, and Access Filters to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M18-Q027",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "exact-search-hnsw-and-index-economics",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Exact Search, HNSW, and Index Economics' supports this outcome: Select retrieval, grounding, refusal, latency, and cost measures that connect to a declared user outcome and release criterion.",
+      "correct_answer": "A strong answer defines the mechanism from 'Exact Search, HNSW, and Index Economics', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Exact Search, HNSW, and Index Economics to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M18-Q028",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "hybrid-retrieval-reranking-and-release-gates",
+        "synthesis"
+      ],
+      "prompt": "For 'Hybrid Retrieval, Reranking, and Release Criteria', what quantities, units, or thresholds would you calculate before trusting a design claim about: Preserve evidence authorization, exact version, freshness, revocation, claim support, citations, and justified abstention.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Combine lexical and vector rankings without comparing incompatible raw scores.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M18-Q029",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "evidence-provenance-grounding-freshness-and-abst",
+        "application"
+      ],
+      "prompt": "A learner applies 'Evidence provenance, grounding, freshness, and abstention' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating a resolvable URL as provenance. A mutable URL does not identify the content evaluated.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M18-Q030",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "structured-tools-authorization-approval-and-host",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Structured tools, authorization, approval, and hostile context'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for resume, replay, deduplicate, cancel, compensate, and budget an agent workflow without repeating irreversible side effects..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Read the bounded OWASP assignment in resources.md../resources.md, then complete EX-13 and EX-14.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M18-Q031",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "durable-agent-workflows-replay-cancellation-and-",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Durable agent workflows, replay, cancellation, and budgets' in Retrieval, RAG, and Agent Systems?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose f01-f08 from immutable equivalent trials and connect each repair to user, security, operating, and cost consequences.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose f01-f08 from immutable equivalent trials and connect each repair to user, security, operating, and cost consequences.",
+      "explanation": "A durable workflow separates deterministic orchestration from nondeterministic activities. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M18-Q032",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "civicaid-decision-tutorial-and-synthesis project-defense",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'CivicAid decision tutorial and synthesis review' supports this outcome: Synthesize retrieval, agent, product, security, operating, cost, ownership, migration, and reversal tradeoffs.",
+      "correct_answer": "A strong answer defines the mechanism from 'CivicAid decision tutorial and synthesis review', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use CivicAid decision tutorial and synthesis review to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M18-Q033",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "retrieval-contracts-outcomes-and-evaluation",
+        "synthesis"
+      ],
+      "prompt": "For 'Retrieval Contracts, Outcomes, and Evaluation', what quantities, units, or thresholds would you calculate before trusting a design claim about: Model exact and approximate nearest-neighbor retrieval and tune HNSW from measured recall, visited work, latency, memory, and index cost.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Translate a user outcome into a query set, judgments, metrics, and release rule.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M18-Q034",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "chunking-lexical-and-vector-retrieval-and-access",
+        "application"
+      ],
+      "prompt": "A learner applies 'Chunking, Lexical and Vector Retrieval, and Access Filters' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Chunking by characters and severing tables, exceptions, or authority context.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M18-Q035",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "exact-search-hnsw-and-index-economics",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Exact Search, HNSW, and Index Economics'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for select retrieval, grounding, refusal, latency, and cost measures that connect to a declared user outcome and release criterion..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Malkov and Yashunin, HNSW: <https://arxiv.org/abs/1603.09320 - Briggs, HNSW video: <https://www.youtube.com/watch?v=QvKMwLjdK-s - Inspect lab/ragagentlab/retrieval.py, then complete EX-05\u2013EX-06.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M18-Q036",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "hybrid-retrieval-reranking-and-release-gates",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Hybrid Retrieval, Reranking, and Release Criteria' in Retrieval, RAG, and Agent Systems?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to preserve evidence authorization, exact version, freshness, revocation, claim support, citations, and justified abstention.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to preserve evidence authorization, exact version, freshness, revocation, claim support, citations, and justified abstention.",
+      "explanation": "Use Hybrid Retrieval, Reranking, and Release Criteria to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M18-Q037",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "evidence-provenance-grounding-freshness-and-abst",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Evidence provenance, grounding, freshness, and abstention' supports this outcome: Enforce versioned tool schemas, scoped credentials, deterministic authorization, bound human approval, and secret-free audit outside model output.",
+      "correct_answer": "A strong answer defines the mechanism from 'Evidence provenance, grounding, freshness, and abstention', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "RAG does not make a generated sentence true.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M18-Q038",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "structured-tools-authorization-approval-and-host",
+        "synthesis"
+      ],
+      "prompt": "For 'Structured tools, authorization, approval, and hostile context', what quantities, units, or thresholds would you calculate before trusting a design claim about: Resume, replay, deduplicate, cancel, compensate, and budget an agent workflow without repeating irreversible side effects.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. By the end of this lesson, you can separate model proposals from executable authority, validate typed tools, bind human approval to one action, and contain prompt injection and exfiltration attempts.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M18-Q039",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "durable-agent-workflows-replay-cancellation-and-",
+        "application"
+      ],
+      "prompt": "A learner applies 'Durable agent workflows, replay, cancellation, and budgets' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating a checkpoint snapshot as sufficient evidence. It can omit the transition that explains a side effect.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M18-Q040",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "civicaid-decision-tutorial-and-synthesis project-defense",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'CivicAid decision tutorial and synthesis review'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for synthesize retrieval, agent, product, security, operating, cost, ownership, migration, and reversal tradeoffs..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Read the bounded Dropbox Dash assignment in resources.md../resources.md.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M18-Q041",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "retrieval-contracts-outcomes-and-evaluation",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Retrieval Contracts, Outcomes, and Evaluation' in Retrieval, RAG, and Agent Systems?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to model exact and approximate nearest-neighbor retrieval and tune hnsw from measured recall, visited work, latency, memory, and index cost.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to model exact and approximate nearest-neighbor retrieval and tune hnsw from measured recall, visited work, latency, memory, and index cost.",
+      "explanation": "Use Retrieval Contracts, Outcomes, and Evaluation to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M18-Q042",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "chunking-lexical-and-vector-retrieval-and-access",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Chunking, Lexical and Vector Retrieval, and Access Filters' supports this outcome: Build and compare chunked lexical, vector, filtered, hybrid, and reranked retrieval paths using one evaluation set.",
+      "correct_answer": "A strong answer defines the mechanism from 'Chunking, Lexical and Vector Retrieval, and Access Filters', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Chunking, Lexical and Vector Retrieval, and Access Filters to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M18-Q043",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "exact-search-hnsw-and-index-economics",
+        "synthesis"
+      ],
+      "prompt": "For 'Exact Search, HNSW, and Index Economics', what quantities, units, or thresholds would you calculate before trusting a design claim about: Select retrieval, grounding, refusal, latency, and cost measures that connect to a declared user outcome and release criterion.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Explain exact nearest-neighbor search as an oracle and capacity baseline.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M18-Q044",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "hybrid-retrieval-reranking-and-release-gates",
+        "application"
+      ],
+      "prompt": "A learner applies 'Hybrid Retrieval, Reranking, and Release Criteria' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Declaring hybrid superior without component ablations.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M18-Q045",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "evidence-provenance-grounding-freshness-and-abst",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Evidence provenance, grounding, freshness, and abstention'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for enforce versioned tool schemas, scoped credentials, deterministic authorization, bound human approval, and secret-free audit outside model output..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Read the bounded RAG paper assignment in resources.md../resources.md.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M18-Q046",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "structured-tools-authorization-approval-and-host",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Structured tools, authorization, approval, and hostile context' in Retrieval, RAG, and Agent Systems?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to resume, replay, deduplicate, cancel, compensate, and budget an agent workflow without repeating irreversible side effects.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to resume, replay, deduplicate, cancel, compensate, and budget an agent workflow without repeating irreversible side effects.",
+      "explanation": "An agent is a planner connected to side effects. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M18-Q047",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "durable-agent-workflows-replay-cancellation-and-",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Durable agent workflows, replay, cancellation, and budgets' supports this outcome: Diagnose F01-F08 from immutable equivalent trials and connect each repair to user, security, operating, and cost consequences.",
+      "correct_answer": "A strong answer defines the mechanism from 'Durable agent workflows, replay, cancellation, and budgets', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "A durable workflow separates deterministic orchestration from nondeterministic activities.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M18-Q048",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "civicaid-decision-tutorial-and-synthesis project-defense",
+        "synthesis"
+      ],
+      "prompt": "For 'CivicAid decision tutorial and synthesis review', what quantities, units, or thresholds would you calculate before trusting a design claim about: Synthesize retrieval, agent, product, security, operating, cost, ownership, migration, and reversal tradeoffs.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. By the end of this lesson, you can integrate Modules 1\u201318 into a reversible architecture decision, defend it under adversarial questioning, and revise your synthesis project without rewriting saved first attempts.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M18-Q049",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "retrieval-contracts-outcomes-and-evaluation",
+        "application"
+      ],
+      "prompt": "A learner applies 'Retrieval Contracts, Outcomes, and Evaluation' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating clicks or model-generated labels as unquestioned ground truth.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M18-Q050",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "chunking-lexical-and-vector-retrieval-and-access",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Chunking, Lexical and Vector Retrieval, and Access Filters'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for build and compare chunked lexical, vector, filtered, hybrid, and reranked retrieval paths using one evaluation set..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Manning et al., probabilistic retrieval: <https://nlp.stanford.edu/IR-book/ - Lewis et al., retrieval and non-parametric evidence: <https://arxiv.org/abs/2005.11401 - Continue with Lesson 3 and EX-03\u2013EX-04.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M18-Q051",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "exact-search-hnsw-and-index-economics",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Exact Search, HNSW, and Index Economics' in Retrieval, RAG, and Agent Systems?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to select retrieval, grounding, refusal, latency, and cost measures that connect to a declared user outcome and release criterion.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to select retrieval, grounding, refusal, latency, and cost measures that connect to a declared user outcome and release criterion.",
+      "explanation": "Use Exact Search, HNSW, and Index Economics to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M18-Q052",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "hybrid-retrieval-reranking-and-release-gates",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Hybrid Retrieval, Reranking, and Release Criteria' supports this outcome: Preserve evidence authorization, exact version, freshness, revocation, claim support, citations, and justified abstention.",
+      "correct_answer": "A strong answer defines the mechanism from 'Hybrid Retrieval, Reranking, and Release Criteria', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Hybrid Retrieval, Reranking, and Release Criteria to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M18-Q053",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "evidence-provenance-grounding-freshness-and-abst",
+        "synthesis"
+      ],
+      "prompt": "For 'Evidence provenance, grounding, freshness, and abstention', what quantities, units, or thresholds would you calculate before trusting a design claim about: Enforce versioned tool schemas, scoped credentials, deterministic authorization, bound human approval, and secret-free audit outside model output.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. By the end of this lesson, you can define an evidence envelope, enforce access and revocation at retrieval time, score claim support, and choose when an answer must abstain.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M18-Q054",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "structured-tools-authorization-approval-and-host",
+        "application"
+      ],
+      "prompt": "A learner applies 'Structured tools, authorization, approval, and hostile context' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Relying on prompt wording as the authorization boundary. The attacked model is the component making that judgment.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M18-Q055",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "durable-agent-workflows-replay-cancellation-and-",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Durable agent workflows, replay, cancellation, and budgets'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose f01-f08 from immutable equivalent trials and connect each repair to user, security, operating, and cost consequences..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Read the bounded Temporal reference assignment in resources.md../resources.md, distinguishing general durable-execution principles from product features.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M18-Q056",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "civicaid-decision-tutorial-and-synthesis project-defense",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'CivicAid decision tutorial and synthesis review' in Retrieval, RAG, and Agent Systems?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend the complete capstone across product, technical, security, operating, cost, ownership, migration, reversal, and organizational challenges.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to synthesize retrieval, agent, product, security, operating, cost, ownership, migration, and reversal tradeoffs.",
+      "explanation": "Use CivicAid decision tutorial and synthesis review to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M18-Q057",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "retrieval-contracts-outcomes-and-evaluation",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Retrieval Contracts, Outcomes, and Evaluation' supports this outcome: Model exact and approximate nearest-neighbor retrieval and tune HNSW from measured recall, visited work, latency, memory, and index cost.",
+      "correct_answer": "A strong answer defines the mechanism from 'Retrieval Contracts, Outcomes, and Evaluation', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Retrieval Contracts, Outcomes, and Evaluation to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M18-Q058",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "chunking-lexical-and-vector-retrieval-and-access",
+        "synthesis"
+      ],
+      "prompt": "For 'Chunking, Lexical and Vector Retrieval, and Access Filters', what quantities, units, or thresholds would you calculate before trusting a design claim about: Build and compare chunked lexical, vector, filtered, hybrid, and reranked retrieval paths using one evaluation set.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Derive BM25 inputs and cosine similarity from inspectable data.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M18-Q059",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "exact-search-hnsw-and-index-economics",
+        "application"
+      ],
+      "prompt": "A learner applies 'Exact Search, HNSW, and Index Economics' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Calling logarithmic average behavior a worst-case guarantee.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M18-Q060",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "hybrid-retrieval-reranking-and-release-gates",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Hybrid Retrieval, Reranking, and Release Criteria'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for preserve evidence authorization, exact version, freshness, revocation, claim support, citations, and justified abstention..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Thakur et al., BEIR: <https://arxiv.org/abs/2104.08663 - Dropbox Engineering relevance case: <https://dropbox.tech/machine-learning/llm-human-labeling-improving-search-relevance-dropbox-dash - Continue with Lesson 5 and EX-07\u2013EX-10.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M18-Q061",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "evidence-provenance-grounding-freshness-and-abst",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Evidence provenance, grounding, freshness, and abstention' in Retrieval, RAG, and Agent Systems?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to enforce versioned tool schemas, scoped credentials, deterministic authorization, bound human approval, and secret-free audit outside model output.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to enforce versioned tool schemas, scoped credentials, deterministic authorization, bound human approval, and secret-free audit outside model output.",
+      "explanation": "RAG does not make a generated sentence true. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M18-Q062",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "structured-tools-authorization-approval-and-host",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Structured tools, authorization, approval, and hostile context' supports this outcome: Resume, replay, deduplicate, cancel, compensate, and budget an agent workflow without repeating irreversible side effects.",
+      "correct_answer": "A strong answer defines the mechanism from 'Structured tools, authorization, approval, and hostile context', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "An agent is a planner connected to side effects.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M18-Q063",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "durable-agent-workflows-replay-cancellation-and-",
+        "synthesis"
+      ],
+      "prompt": "For 'Durable agent workflows, replay, cancellation, and budgets', what quantities, units, or thresholds would you calculate before trusting a design claim about: Diagnose F01-F08 from immutable equivalent trials and connect each repair to user, security, operating, and cost consequences.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. By the end of this lesson, you can design a replayable workflow that does not repeat side effects, respects one shared deadline, and reaches a bounded terminal state after cancellation or failure.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M18-Q064",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "civicaid-decision-tutorial-and-synthesis project-defense",
+        "application"
+      ],
+      "prompt": "A learner applies 'CivicAid decision tutorial and synthesis review' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Defending component choices before defining the user outcome and constraint.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M18-Q065",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "retrieval-contracts-outcomes-and-evaluation",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Retrieval Contracts, Outcomes, and Evaluation'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for model exact and approximate nearest-neighbor retrieval and tune hnsw from measured recall, visited work, latency, memory, and index cost..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Manning, Raghavan, and Sch\u00fctze, Introduction to Information Retrieval, Chapters 6 and 8: <https://nlp.stanford.edu/IR-book/ - Thakur et al., \u201cBEIR\u201d: <https://arxiv.org/abs/2104.08663 - Continue with Lesson 2 and EX-01\u2013EX-02.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M18-Q066",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "chunking-lexical-and-vector-retrieval-and-access",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Chunking, Lexical and Vector Retrieval, and Access Filters' in Retrieval, RAG, and Agent Systems?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to build and compare chunked lexical, vector, filtered, hybrid, and reranked retrieval paths using one evaluation set.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to build and compare chunked lexical, vector, filtered, hybrid, and reranked retrieval paths using one evaluation set.",
+      "explanation": "Use Chunking, Lexical and Vector Retrieval, and Access Filters to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M18-Q067",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "exact-search-hnsw-and-index-economics",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Exact Search, HNSW, and Index Economics' supports this outcome: Select retrieval, grounding, refusal, latency, and cost measures that connect to a declared user outcome and release criterion.",
+      "correct_answer": "A strong answer defines the mechanism from 'Exact Search, HNSW, and Index Economics', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Exact Search, HNSW, and Index Economics to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M18-Q068",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "hybrid-retrieval-reranking-and-release-gates",
+        "synthesis"
+      ],
+      "prompt": "For 'Hybrid Retrieval, Reranking, and Release Criteria', what quantities, units, or thresholds would you calculate before trusting a design claim about: Preserve evidence authorization, exact version, freshness, revocation, claim support, citations, and justified abstention.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Combine lexical and vector rankings without comparing incompatible raw scores.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M18-Q069",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "evidence-provenance-grounding-freshness-and-abst",
+        "application"
+      ],
+      "prompt": "A learner applies 'Evidence provenance, grounding, freshness, and abstention' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating a resolvable URL as provenance. A mutable URL does not identify the content evaluated.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M18-Q070",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "structured-tools-authorization-approval-and-host",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Structured tools, authorization, approval, and hostile context'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for resume, replay, deduplicate, cancel, compensate, and budget an agent workflow without repeating irreversible side effects..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Read the bounded OWASP assignment in resources.md../resources.md, then complete EX-13 and EX-14.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M18-Q071",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "durable-agent-workflows-replay-cancellation-and-",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Durable agent workflows, replay, cancellation, and budgets' in Retrieval, RAG, and Agent Systems?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose f01-f08 from immutable equivalent trials and connect each repair to user, security, operating, and cost consequences.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose f01-f08 from immutable equivalent trials and connect each repair to user, security, operating, and cost consequences.",
+      "explanation": "A durable workflow separates deterministic orchestration from nondeterministic activities. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M18-Q072",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "civicaid-decision-tutorial-and-synthesis project-defense",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'CivicAid decision tutorial and synthesis review' supports this outcome: Synthesize retrieval, agent, product, security, operating, cost, ownership, migration, and reversal tradeoffs.",
+      "correct_answer": "A strong answer defines the mechanism from 'CivicAid decision tutorial and synthesis review', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use CivicAid decision tutorial and synthesis review to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M18-Q073",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "retrieval-contracts-outcomes-and-evaluation",
+        "synthesis"
+      ],
+      "prompt": "For 'Retrieval Contracts, Outcomes, and Evaluation', what quantities, units, or thresholds would you calculate before trusting a design claim about: Model exact and approximate nearest-neighbor retrieval and tune HNSW from measured recall, visited work, latency, memory, and index cost.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Translate a user outcome into a query set, judgments, metrics, and release rule.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M18-Q074",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "chunking-lexical-and-vector-retrieval-and-access",
+        "application"
+      ],
+      "prompt": "A learner applies 'Chunking, Lexical and Vector Retrieval, and Access Filters' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Chunking by characters and severing tables, exceptions, or authority context.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M18-Q075",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "exact-search-hnsw-and-index-economics",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Exact Search, HNSW, and Index Economics'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for select retrieval, grounding, refusal, latency, and cost measures that connect to a declared user outcome and release criterion..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Malkov and Yashunin, HNSW: <https://arxiv.org/abs/1603.09320 - Briggs, HNSW video: <https://www.youtube.com/watch?v=QvKMwLjdK-s - Inspect lab/ragagentlab/retrieval.py, then complete EX-05\u2013EX-06.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M18-Q076",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "hybrid-retrieval-reranking-and-release-gates",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Hybrid Retrieval, Reranking, and Release Criteria' in Retrieval, RAG, and Agent Systems?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to preserve evidence authorization, exact version, freshness, revocation, claim support, citations, and justified abstention.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to preserve evidence authorization, exact version, freshness, revocation, claim support, citations, and justified abstention.",
+      "explanation": "Use Hybrid Retrieval, Reranking, and Release Criteria to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M18-Q077",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "evidence-provenance-grounding-freshness-and-abst",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Evidence provenance, grounding, freshness, and abstention' supports this outcome: Enforce versioned tool schemas, scoped credentials, deterministic authorization, bound human approval, and secret-free audit outside model output.",
+      "correct_answer": "A strong answer defines the mechanism from 'Evidence provenance, grounding, freshness, and abstention', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "RAG does not make a generated sentence true.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M18-Q078",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "structured-tools-authorization-approval-and-host",
+        "synthesis"
+      ],
+      "prompt": "For 'Structured tools, authorization, approval, and hostile context', what quantities, units, or thresholds would you calculate before trusting a design claim about: Resume, replay, deduplicate, cancel, compensate, and budget an agent workflow without repeating irreversible side effects.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. By the end of this lesson, you can separate model proposals from executable authority, validate typed tools, bind human approval to one action, and contain prompt injection and exfiltration attempts.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M18-Q079",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "durable-agent-workflows-replay-cancellation-and-",
+        "application"
+      ],
+      "prompt": "A learner applies 'Durable agent workflows, replay, cancellation, and budgets' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating a checkpoint snapshot as sufficient evidence. It can omit the transition that explains a side effect.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M18-Q080",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "civicaid-decision-tutorial-and-synthesis project-defense",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'CivicAid decision tutorial and synthesis review'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for synthesize retrieval, agent, product, security, operating, cost, ownership, migration, and reversal tradeoffs..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Read the bounded Dropbox Dash assignment in resources.md../resources.md.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M18-Q081",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "retrieval-contracts-outcomes-and-evaluation",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Retrieval Contracts, Outcomes, and Evaluation' in Retrieval, RAG, and Agent Systems?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to model exact and approximate nearest-neighbor retrieval and tune hnsw from measured recall, visited work, latency, memory, and index cost.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to model exact and approximate nearest-neighbor retrieval and tune hnsw from measured recall, visited work, latency, memory, and index cost.",
+      "explanation": "Use Retrieval Contracts, Outcomes, and Evaluation to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M18-Q082",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "chunking-lexical-and-vector-retrieval-and-access",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Chunking, Lexical and Vector Retrieval, and Access Filters' supports this outcome: Build and compare chunked lexical, vector, filtered, hybrid, and reranked retrieval paths using one evaluation set.",
+      "correct_answer": "A strong answer defines the mechanism from 'Chunking, Lexical and Vector Retrieval, and Access Filters', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Chunking, Lexical and Vector Retrieval, and Access Filters to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M18-Q083",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "exact-search-hnsw-and-index-economics",
+        "synthesis"
+      ],
+      "prompt": "For 'Exact Search, HNSW, and Index Economics', what quantities, units, or thresholds would you calculate before trusting a design claim about: Select retrieval, grounding, refusal, latency, and cost measures that connect to a declared user outcome and release criterion.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Explain exact nearest-neighbor search as an oracle and capacity baseline.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M18-Q084",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "hybrid-retrieval-reranking-and-release-gates",
+        "application"
+      ],
+      "prompt": "A learner applies 'Hybrid Retrieval, Reranking, and Release Criteria' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Declaring hybrid superior without component ablations.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M18-Q085",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "evidence-provenance-grounding-freshness-and-abst",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Evidence provenance, grounding, freshness, and abstention'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for enforce versioned tool schemas, scoped credentials, deterministic authorization, bound human approval, and secret-free audit outside model output..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Read the bounded RAG paper assignment in resources.md../resources.md.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M18-Q086",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "structured-tools-authorization-approval-and-host",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Structured tools, authorization, approval, and hostile context' in Retrieval, RAG, and Agent Systems?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to resume, replay, deduplicate, cancel, compensate, and budget an agent workflow without repeating irreversible side effects.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to resume, replay, deduplicate, cancel, compensate, and budget an agent workflow without repeating irreversible side effects.",
+      "explanation": "An agent is a planner connected to side effects. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M18-Q087",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "durable-agent-workflows-replay-cancellation-and-",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Durable agent workflows, replay, cancellation, and budgets' supports this outcome: Diagnose F01-F08 from immutable equivalent trials and connect each repair to user, security, operating, and cost consequences.",
+      "correct_answer": "A strong answer defines the mechanism from 'Durable agent workflows, replay, cancellation, and budgets', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "A durable workflow separates deterministic orchestration from nondeterministic activities.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M18-Q088",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "civicaid-decision-tutorial-and-synthesis project-defense",
+        "synthesis"
+      ],
+      "prompt": "For 'CivicAid decision tutorial and synthesis review', what quantities, units, or thresholds would you calculate before trusting a design claim about: Synthesize retrieval, agent, product, security, operating, cost, ownership, migration, and reversal tradeoffs.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. By the end of this lesson, you can integrate Modules 1\u201318 into a reversible architecture decision, defend it under adversarial questioning, and revise your synthesis project without rewriting saved first attempts.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M18-Q089",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "retrieval-contracts-outcomes-and-evaluation",
+        "application"
+      ],
+      "prompt": "A learner applies 'Retrieval Contracts, Outcomes, and Evaluation' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating clicks or model-generated labels as unquestioned ground truth.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M18-Q090",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "chunking-lexical-and-vector-retrieval-and-access",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Chunking, Lexical and Vector Retrieval, and Access Filters'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for build and compare chunked lexical, vector, filtered, hybrid, and reranked retrieval paths using one evaluation set..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Manning et al., probabilistic retrieval: <https://nlp.stanford.edu/IR-book/ - Lewis et al., retrieval and non-parametric evidence: <https://arxiv.org/abs/2005.11401 - Continue with Lesson 3 and EX-03\u2013EX-04.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M18-Q091",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "exact-search-hnsw-and-index-economics",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Exact Search, HNSW, and Index Economics' in Retrieval, RAG, and Agent Systems?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to select retrieval, grounding, refusal, latency, and cost measures that connect to a declared user outcome and release criterion.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to select retrieval, grounding, refusal, latency, and cost measures that connect to a declared user outcome and release criterion.",
+      "explanation": "Use Exact Search, HNSW, and Index Economics to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M18-Q092",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "hybrid-retrieval-reranking-and-release-gates",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Hybrid Retrieval, Reranking, and Release Criteria' supports this outcome: Preserve evidence authorization, exact version, freshness, revocation, claim support, citations, and justified abstention.",
+      "correct_answer": "A strong answer defines the mechanism from 'Hybrid Retrieval, Reranking, and Release Criteria', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Hybrid Retrieval, Reranking, and Release Criteria to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M18-Q093",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "evidence-provenance-grounding-freshness-and-abst",
+        "synthesis"
+      ],
+      "prompt": "For 'Evidence provenance, grounding, freshness, and abstention', what quantities, units, or thresholds would you calculate before trusting a design claim about: Enforce versioned tool schemas, scoped credentials, deterministic authorization, bound human approval, and secret-free audit outside model output.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. By the end of this lesson, you can define an evidence envelope, enforce access and revocation at retrieval time, score claim support, and choose when an answer must abstain.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M18-Q094",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "structured-tools-authorization-approval-and-host",
+        "application"
+      ],
+      "prompt": "A learner applies 'Structured tools, authorization, approval, and hostile context' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Relying on prompt wording as the authorization boundary. The attacked model is the component making that judgment.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M18-Q095",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "durable-agent-workflows-replay-cancellation-and-",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Durable agent workflows, replay, cancellation, and budgets'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose f01-f08 from immutable equivalent trials and connect each repair to user, security, operating, and cost consequences..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Read the bounded Temporal reference assignment in resources.md../resources.md, distinguishing general durable-execution principles from product features.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M18-Q096",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "civicaid-decision-tutorial-and-synthesis project-defense",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'CivicAid decision tutorial and synthesis review' in Retrieval, RAG, and Agent Systems?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend the complete capstone across product, technical, security, operating, cost, ownership, migration, reversal, and organizational challenges.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to synthesize retrieval, agent, product, security, operating, cost, ownership, migration, and reversal tradeoffs.",
+      "explanation": "Use CivicAid decision tutorial and synthesis review to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M18-Q097",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "retrieval-contracts-outcomes-and-evaluation",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Retrieval Contracts, Outcomes, and Evaluation' supports this outcome: Model exact and approximate nearest-neighbor retrieval and tune HNSW from measured recall, visited work, latency, memory, and index cost.",
+      "correct_answer": "A strong answer defines the mechanism from 'Retrieval Contracts, Outcomes, and Evaluation', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Retrieval Contracts, Outcomes, and Evaluation to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M18-Q098",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "chunking-lexical-and-vector-retrieval-and-access",
+        "synthesis"
+      ],
+      "prompt": "For 'Chunking, Lexical and Vector Retrieval, and Access Filters', what quantities, units, or thresholds would you calculate before trusting a design claim about: Build and compare chunked lexical, vector, filtered, hybrid, and reranked retrieval paths using one evaluation set.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Derive BM25 inputs and cosine similarity from inspectable data.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M18-Q099",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "exact-search-hnsw-and-index-economics",
+        "application"
+      ],
+      "prompt": "A learner applies 'Exact Search, HNSW, and Index Economics' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Calling logarithmic average behavior a worst-case guarantee.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M18-Q100",
+      "module_id": "M18",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "retrieval-rag-agents-and-synthesis project-defense",
+        "hybrid-retrieval-reranking-and-release-gates",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Hybrid Retrieval, Reranking, and Release Criteria'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for preserve evidence authorization, exact version, freshness, revocation, claim support, citations, and justified abstention..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Thakur et al., BEIR: <https://arxiv.org/abs/2104.08663 - Dropbox Engineering relevance case: <https://dropbox.tech/machine-learning/llm-human-labeling-improving-search-relevance-dropbox-dash - Continue with Lesson 5 and EX-07\u2013EX-10.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    }
+  ]
+}

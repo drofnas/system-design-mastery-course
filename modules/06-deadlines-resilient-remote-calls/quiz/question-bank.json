@@ -1,0 +1,1926 @@
+{
+  "module_id": "M06",
+  "title": "Deadlines and Resilient Remote Calls",
+  "questions": [
+    {
+      "question_id": "M06-Q001",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "end-to-end-deadlines-and-allocation",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'End-to-End Deadlines and Allocation' in Deadlines and Resilient Remote Calls?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to allocate and propagate an end-to-end deadline through serial and parallel work with response and cleanup reserves.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to allocate and propagate an end-to-end deadline through serial and parallel work with response and cleanup reserves.",
+      "explanation": "A deadline answers \u201cafter what instant is this result no longer useful?\u201d A timeout answers \u201chow long will this component wait?\u201d Resetting a full timeout at each hop lets a request live longer than the user promise. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M06-Q002",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "cancellation-and-useful-work-boundaries",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Cancellation and Useful-Work Boundaries' supports this outcome: Prove cancellation stops queued, active, and child work within a declared bound.",
+      "correct_answer": "A strong answer defines the mechanism from 'Cancellation and Useful-Work Boundaries', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Cancellation is cooperative.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M06-Q003",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "retry-classification-budgets-backoff-and-jitter",
+        "synthesis"
+      ],
+      "prompt": "For 'Retry Classification, Budgets, Backoff, and Jitter', what quantities, units, or thresholds would you calculate before trusting a design claim about: Classify retry eligibility and enforce bounded randomized retries using attempt and cost budgets.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Classify retry eligibility from error semantics and effect safety.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M06-Q004",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "idempotency-and-deduplication",
+        "application"
+      ],
+      "prompt": "A learner applies 'Idempotency and Deduplication' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **\u201cPOST is not idempotent, PUT is\u201d:** method semantics do not encode the business invariant.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M06-Q005",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "bulkheads-pools-health-and-bounded-fan-out",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Bulkheads, Pools, Health, and Bounded Fan-Out'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for bound fan-out, pools, tenants, and health traffic with explicit admission, fairness, and overload behavior..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Google SRE, Addressing Cascading Failureshttps://sre.google/sre-book/addressing-cascading-failures/, resource exhaustion and health checks.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M06-Q006",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "circuit-breakers-hedges-and-partial-results",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Circuit Breakers, Hedges, and Partial Results' in Deadlines and Resilient Remote Calls?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to compare breakers, hedges, partial results, and fail-fast behavior by failure model and useful-work economics.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to compare breakers, hedges, partial results, and fail-fast behavior by failure model and useful-work economics.",
+      "explanation": "A circuit breaker converts recent observations into local admission state. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M06-Q007",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "rate-limits-quotas-and-fairness",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Rate Limits, Quotas, and Fairness' supports this outcome: Diagnose and repair retry storm, pool exhaustion, slowdown, partial response, duplicate effect, and cancellation leak from preserved evidence.",
+      "correct_answer": "A strong answer defines the mechanism from 'Rate Limits, Quotas, and Fairness', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "A rate limit bounds arrivals per interval; a concurrency limit bounds active work; a quota bounds cumulative entitlement; a cost budget bounds weighted consumption.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M06-Q008",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "remote-call-policy-migration-and-ownership",
+        "synthesis"
+      ],
+      "prompt": "For 'Remote-Call Policy, Migration, and Ownership', what quantities, units, or thresholds would you calculate before trusting a design claim about: Defend a remote-call policy through user outcomes, security, cost, ownership, exceptions, migration, rollback, and reversal evidence.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Compare coherent policies under common user, safety, operating, and cost drivers.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M06-Q009",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "end-to-end-deadlines-and-allocation",
+        "application"
+      ],
+      "prompt": "A learner applies 'End-to-End Deadlines and Allocation' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Resetting 300 ms at each hop:** nested calls outlive the 420 ms promise.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M06-Q010",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "cancellation-and-useful-work-boundaries",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Cancellation and Useful-Work Boundaries'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for prove cancellation stops queued, active, and child work within a declared bound..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - gRPC Authors, Cancellationhttps://grpc.io/docs/guides/cancellation/.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M06-Q011",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "retry-classification-budgets-backoff-and-jitter",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Retry Classification, Budgets, Backoff, and Jitter' in Deadlines and Resilient Remote Calls?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to classify retry eligibility and enforce bounded randomized retries using attempt and cost budgets.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to classify retry eligibility and enforce bounded randomized retries using attempt and cost budgets.",
+      "explanation": "A retry is a new unit of load issued when the system is already uncertain or unhealthy. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M06-Q012",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "idempotency-and-deduplication",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Idempotency and Deduplication' supports this outcome: Make ambiguous remote outcomes safe using scoped idempotency records, atomic effects, and deduplication retention.",
+      "correct_answer": "A strong answer defines the mechanism from 'Idempotency and Deduplication', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "An HTTP method classified as idempotent means repeated identical requests have the same intended server effect.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M06-Q013",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "bulkheads-pools-health-and-bounded-fan-out",
+        "synthesis"
+      ],
+      "prompt": "For 'Bulkheads, Pools, Health, and Bounded Fan-Out', what quantities, units, or thresholds would you calculate before trusting a design claim about: Bound fan-out, pools, tenants, and health traffic with explicit admission, fairness, and overload behavior.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Derive concurrency bounds from capacity, latency, and failover assumptions.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M06-Q014",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "circuit-breakers-hedges-and-partial-results",
+        "application"
+      ],
+      "prompt": "A learner applies 'Circuit Breakers, Hedges, and Partial Results' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Breaker as a universal best practice:** state and recovery can cause new outages.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M06-Q015",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "rate-limits-quotas-and-fairness",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Rate Limits, Quotas, and Fairness'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose and repair retry storm, pool exhaustion, slowdown, partial response, duplicate effect, and cancellation leak from preserved evidence..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Google SRE, Addressing Cascading Failureshttps://sre.google/sre-book/addressing-cascading-failures/, load shedding and client isolation.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M06-Q016",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "remote-call-policy-migration-and-ownership",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Remote-Call Policy, Migration, and Ownership' in Deadlines and Resilient Remote Calls?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend a remote-call policy through user outcomes, security, cost, ownership, exceptions, migration, rollback, and reversal evidence.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend a remote-call policy through user outcomes, security, cost, ownership, exceptions, migration, rollback, and reversal evidence.",
+      "explanation": "Use Remote-Call Policy, Migration, and Ownership to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M06-Q017",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "end-to-end-deadlines-and-allocation",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'End-to-End Deadlines and Allocation' supports this outcome: Allocate and propagate an end-to-end deadline through serial and parallel work with response and cleanup reserves.",
+      "correct_answer": "A strong answer defines the mechanism from 'End-to-End Deadlines and Allocation', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "A deadline answers \u201cafter what instant is this result no longer useful?\u201d A timeout answers \u201chow long will this component wait?\u201d Resetting a full timeout at each hop lets a request live longer than the user promise.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M06-Q018",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "cancellation-and-useful-work-boundaries",
+        "synthesis"
+      ],
+      "prompt": "For 'Cancellation and Useful-Work Boundaries', what quantities, units, or thresholds would you calculate before trusting a design claim about: Prove cancellation stops queued, active, and child work within a declared bound.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Trace cancellation through queued, active, and child work.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M06-Q019",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "retry-classification-budgets-backoff-and-jitter",
+        "application"
+      ],
+      "prompt": "A learner applies 'Retry Classification, Budgets, Backoff, and Jitter' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Retrying every error:** permanent, authorization, and validation failures persist.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M06-Q020",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "idempotency-and-deduplication",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Idempotency and Deduplication'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for make ambiguous remote outcomes safe using scoped idempotency records, atomic effects, and deduplication retention..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - IETF, RFC 9110 HTTP Semanticshttps://www.rfc-editor.org/rfc/rfc9110.html, \u00a7\u00a79.2.1\u20139.2.3.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M06-Q021",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "bulkheads-pools-health-and-bounded-fan-out",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Bulkheads, Pools, Health, and Bounded Fan-Out' in Deadlines and Resilient Remote Calls?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to bound fan-out, pools, tenants, and health traffic with explicit admission, fairness, and overload behavior.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to bound fan-out, pools, tenants, and health traffic with explicit admission, fairness, and overload behavior.",
+      "explanation": "Every remote-call protection consumes a finite resource: task, thread, socket, connection, queue position, rate token, or downstream capacity. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M06-Q022",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "circuit-breakers-hedges-and-partial-results",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Circuit Breakers, Hedges, and Partial Results' supports this outcome: Compare breakers, hedges, partial results, and fail-fast behavior by failure model and useful-work economics.",
+      "correct_answer": "A strong answer defines the mechanism from 'Circuit Breakers, Hedges, and Partial Results', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "A circuit breaker converts recent observations into local admission state.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M06-Q023",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "rate-limits-quotas-and-fairness",
+        "synthesis"
+      ],
+      "prompt": "For 'Rate Limits, Quotas, and Fairness', what quantities, units, or thresholds would you calculate before trusting a design claim about: Diagnose and repair retry storm, pool exhaustion, slowdown, partial response, duplicate effect, and cancellation leak from preserved evidence.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Separate rate, concurrency, quota, and cost controls.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M06-Q024",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "remote-call-policy-migration-and-ownership",
+        "application"
+      ],
+      "prompt": "A learner applies 'Remote-Call Policy, Migration, and Ownership' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Mandating one timeout globally:** operation usefulness and latency differ.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M06-Q025",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "end-to-end-deadlines-and-allocation",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'End-to-End Deadlines and Allocation'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for allocate and propagate an end-to-end deadline through serial and parallel work with response and cleanup reserves..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - gRPC Authors, Deadlineshttps://grpc.io/docs/guides/deadlines/, especially propagation and application cleanup responsibility.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M06-Q026",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "cancellation-and-useful-work-boundaries",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Cancellation and Useful-Work Boundaries' in Deadlines and Resilient Remote Calls?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to prove cancellation stops queued, active, and child work within a declared bound.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to prove cancellation stops queued, active, and child work within a declared bound.",
+      "explanation": "Cancellation is cooperative. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M06-Q027",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "retry-classification-budgets-backoff-and-jitter",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Retry Classification, Budgets, Backoff, and Jitter' supports this outcome: Classify retry eligibility and enforce bounded randomized retries using attempt and cost budgets.",
+      "correct_answer": "A strong answer defines the mechanism from 'Retry Classification, Budgets, Backoff, and Jitter', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "A retry is a new unit of load issued when the system is already uncertain or unhealthy.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M06-Q028",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "idempotency-and-deduplication",
+        "synthesis"
+      ],
+      "prompt": "For 'Idempotency and Deduplication', what quantities, units, or thresholds would you calculate before trusting a design claim about: Make ambiguous remote outcomes safe using scoped idempotency records, atomic effects, and deduplication retention.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Separate protocol idempotency from application effect deduplication.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M06-Q029",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "bulkheads-pools-health-and-bounded-fan-out",
+        "application"
+      ],
+      "prompt": "A learner applies 'Bulkheads, Pools, Health, and Bounded Fan-Out' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **One global pool only:** a hot tenant still starves everyone.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M06-Q030",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "circuit-breakers-hedges-and-partial-results",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Circuit Breakers, Hedges, and Partial Results'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for compare breakers, hedges, partial results, and fail-fast behavior by failure model and useful-work economics..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - L.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M06-Q031",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "rate-limits-quotas-and-fairness",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Rate Limits, Quotas, and Fairness' in Deadlines and Resilient Remote Calls?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose and repair retry storm, pool exhaustion, slowdown, partial response, duplicate effect, and cancellation leak from preserved evidence.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose and repair retry storm, pool exhaustion, slowdown, partial response, duplicate effect, and cancellation leak from preserved evidence.",
+      "explanation": "A rate limit bounds arrivals per interval; a concurrency limit bounds active work; a quota bounds cumulative entitlement; a cost budget bounds weighted consumption. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M06-Q032",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "remote-call-policy-migration-and-ownership",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Remote-Call Policy, Migration, and Ownership' supports this outcome: Defend a remote-call policy through user outcomes, security, cost, ownership, exceptions, migration, rollback, and reversal evidence.",
+      "correct_answer": "A strong answer defines the mechanism from 'Remote-Call Policy, Migration, and Ownership', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Remote-Call Policy, Migration, and Ownership to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M06-Q033",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "end-to-end-deadlines-and-allocation",
+        "synthesis"
+      ],
+      "prompt": "For 'End-to-End Deadlines and Allocation', what quantities, units, or thresholds would you calculate before trusting a design claim about: Allocate and propagate an end-to-end deadline through serial and parallel work with response and cleanup reserves.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Distinguish a user usefulness deadline from local timeout durations.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M06-Q034",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "cancellation-and-useful-work-boundaries",
+        "application"
+      ],
+      "prompt": "A learner applies 'Cancellation and Useful-Work Boundaries' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Canceling only the future:** underlying work and sockets remain alive.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M06-Q035",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "retry-classification-budgets-backoff-and-jitter",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Retry Classification, Budgets, Backoff, and Jitter'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for classify retry eligibility and enforce bounded randomized retries using attempt and cost budgets..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Marc Brooker, Timeouts, retries, and backoff with jitterhttps://builder.aws.com/content/3EumjoZascWd1oZiEgL8ORlv3qE/timeouts-retries-and-backoff-with-jitter.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M06-Q036",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "idempotency-and-deduplication",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Idempotency and Deduplication' in Deadlines and Resilient Remote Calls?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to make ambiguous remote outcomes safe using scoped idempotency records, atomic effects, and deduplication retention.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to make ambiguous remote outcomes safe using scoped idempotency records, atomic effects, and deduplication retention.",
+      "explanation": "An HTTP method classified as idempotent means repeated identical requests have the same intended server effect. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M06-Q037",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "bulkheads-pools-health-and-bounded-fan-out",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Bulkheads, Pools, Health, and Bounded Fan-Out' supports this outcome: Bound fan-out, pools, tenants, and health traffic with explicit admission, fairness, and overload behavior.",
+      "correct_answer": "A strong answer defines the mechanism from 'Bulkheads, Pools, Health, and Bounded Fan-Out', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Every remote-call protection consumes a finite resource: task, thread, socket, connection, queue position, rate token, or downstream capacity.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M06-Q038",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "circuit-breakers-hedges-and-partial-results",
+        "synthesis"
+      ],
+      "prompt": "For 'Circuit Breakers, Hedges, and Partial Results', what quantities, units, or thresholds would you calculate before trusting a design claim about: Compare breakers, hedges, partial results, and fail-fast behavior by failure model and useful-work economics.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Evaluate stateful breakers by scope, sampling, probe, and recovery dynamics.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M06-Q039",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "rate-limits-quotas-and-fairness",
+        "application"
+      ],
+      "prompt": "A learner applies 'Rate Limits, Quotas, and Fairness' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Rate limit only:** slow accepted calls still exhaust concurrency.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M06-Q040",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "remote-call-policy-migration-and-ownership",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Remote-Call Policy, Migration, and Ownership'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for defend a remote-call policy through user outcomes, security, cost, ownership, exceptions, migration, rollback, and reversal evidence..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Craig Fender and Ravindra Punati, Avoiding Cascading Failures at eBay?https://www.usenix.org/conference/srecon16/program/presentation/fender, SREcon 2016.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M06-Q041",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "end-to-end-deadlines-and-allocation",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'End-to-End Deadlines and Allocation' in Deadlines and Resilient Remote Calls?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to allocate and propagate an end-to-end deadline through serial and parallel work with response and cleanup reserves.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to allocate and propagate an end-to-end deadline through serial and parallel work with response and cleanup reserves.",
+      "explanation": "A deadline answers \u201cafter what instant is this result no longer useful?\u201d A timeout answers \u201chow long will this component wait?\u201d Resetting a full timeout at each hop lets a request live longer than the user promise. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M06-Q042",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "cancellation-and-useful-work-boundaries",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Cancellation and Useful-Work Boundaries' supports this outcome: Prove cancellation stops queued, active, and child work within a declared bound.",
+      "correct_answer": "A strong answer defines the mechanism from 'Cancellation and Useful-Work Boundaries', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Cancellation is cooperative.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M06-Q043",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "retry-classification-budgets-backoff-and-jitter",
+        "synthesis"
+      ],
+      "prompt": "For 'Retry Classification, Budgets, Backoff, and Jitter', what quantities, units, or thresholds would you calculate before trusting a design claim about: Classify retry eligibility and enforce bounded randomized retries using attempt and cost budgets.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Classify retry eligibility from error semantics and effect safety.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M06-Q044",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "idempotency-and-deduplication",
+        "application"
+      ],
+      "prompt": "A learner applies 'Idempotency and Deduplication' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **\u201cPOST is not idempotent, PUT is\u201d:** method semantics do not encode the business invariant.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M06-Q045",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "bulkheads-pools-health-and-bounded-fan-out",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Bulkheads, Pools, Health, and Bounded Fan-Out'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for bound fan-out, pools, tenants, and health traffic with explicit admission, fairness, and overload behavior..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Google SRE, Addressing Cascading Failureshttps://sre.google/sre-book/addressing-cascading-failures/, resource exhaustion and health checks.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M06-Q046",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "circuit-breakers-hedges-and-partial-results",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Circuit Breakers, Hedges, and Partial Results' in Deadlines and Resilient Remote Calls?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to compare breakers, hedges, partial results, and fail-fast behavior by failure model and useful-work economics.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to compare breakers, hedges, partial results, and fail-fast behavior by failure model and useful-work economics.",
+      "explanation": "A circuit breaker converts recent observations into local admission state. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M06-Q047",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "rate-limits-quotas-and-fairness",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Rate Limits, Quotas, and Fairness' supports this outcome: Diagnose and repair retry storm, pool exhaustion, slowdown, partial response, duplicate effect, and cancellation leak from preserved evidence.",
+      "correct_answer": "A strong answer defines the mechanism from 'Rate Limits, Quotas, and Fairness', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "A rate limit bounds arrivals per interval; a concurrency limit bounds active work; a quota bounds cumulative entitlement; a cost budget bounds weighted consumption.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M06-Q048",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "remote-call-policy-migration-and-ownership",
+        "synthesis"
+      ],
+      "prompt": "For 'Remote-Call Policy, Migration, and Ownership', what quantities, units, or thresholds would you calculate before trusting a design claim about: Defend a remote-call policy through user outcomes, security, cost, ownership, exceptions, migration, rollback, and reversal evidence.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Compare coherent policies under common user, safety, operating, and cost drivers.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M06-Q049",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "end-to-end-deadlines-and-allocation",
+        "application"
+      ],
+      "prompt": "A learner applies 'End-to-End Deadlines and Allocation' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Resetting 300 ms at each hop:** nested calls outlive the 420 ms promise.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M06-Q050",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "cancellation-and-useful-work-boundaries",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Cancellation and Useful-Work Boundaries'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for prove cancellation stops queued, active, and child work within a declared bound..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - gRPC Authors, Cancellationhttps://grpc.io/docs/guides/cancellation/.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M06-Q051",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "retry-classification-budgets-backoff-and-jitter",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Retry Classification, Budgets, Backoff, and Jitter' in Deadlines and Resilient Remote Calls?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to classify retry eligibility and enforce bounded randomized retries using attempt and cost budgets.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to classify retry eligibility and enforce bounded randomized retries using attempt and cost budgets.",
+      "explanation": "A retry is a new unit of load issued when the system is already uncertain or unhealthy. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M06-Q052",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "idempotency-and-deduplication",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Idempotency and Deduplication' supports this outcome: Make ambiguous remote outcomes safe using scoped idempotency records, atomic effects, and deduplication retention.",
+      "correct_answer": "A strong answer defines the mechanism from 'Idempotency and Deduplication', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "An HTTP method classified as idempotent means repeated identical requests have the same intended server effect.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M06-Q053",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "bulkheads-pools-health-and-bounded-fan-out",
+        "synthesis"
+      ],
+      "prompt": "For 'Bulkheads, Pools, Health, and Bounded Fan-Out', what quantities, units, or thresholds would you calculate before trusting a design claim about: Bound fan-out, pools, tenants, and health traffic with explicit admission, fairness, and overload behavior.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Derive concurrency bounds from capacity, latency, and failover assumptions.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M06-Q054",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "circuit-breakers-hedges-and-partial-results",
+        "application"
+      ],
+      "prompt": "A learner applies 'Circuit Breakers, Hedges, and Partial Results' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Breaker as a universal best practice:** state and recovery can cause new outages.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M06-Q055",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "rate-limits-quotas-and-fairness",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Rate Limits, Quotas, and Fairness'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose and repair retry storm, pool exhaustion, slowdown, partial response, duplicate effect, and cancellation leak from preserved evidence..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Google SRE, Addressing Cascading Failureshttps://sre.google/sre-book/addressing-cascading-failures/, load shedding and client isolation.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M06-Q056",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "remote-call-policy-migration-and-ownership",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Remote-Call Policy, Migration, and Ownership' in Deadlines and Resilient Remote Calls?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend a remote-call policy through user outcomes, security, cost, ownership, exceptions, migration, rollback, and reversal evidence.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend a remote-call policy through user outcomes, security, cost, ownership, exceptions, migration, rollback, and reversal evidence.",
+      "explanation": "Use Remote-Call Policy, Migration, and Ownership to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M06-Q057",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "end-to-end-deadlines-and-allocation",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'End-to-End Deadlines and Allocation' supports this outcome: Allocate and propagate an end-to-end deadline through serial and parallel work with response and cleanup reserves.",
+      "correct_answer": "A strong answer defines the mechanism from 'End-to-End Deadlines and Allocation', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "A deadline answers \u201cafter what instant is this result no longer useful?\u201d A timeout answers \u201chow long will this component wait?\u201d Resetting a full timeout at each hop lets a request live longer than the user promise.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M06-Q058",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "cancellation-and-useful-work-boundaries",
+        "synthesis"
+      ],
+      "prompt": "For 'Cancellation and Useful-Work Boundaries', what quantities, units, or thresholds would you calculate before trusting a design claim about: Prove cancellation stops queued, active, and child work within a declared bound.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Trace cancellation through queued, active, and child work.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M06-Q059",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "retry-classification-budgets-backoff-and-jitter",
+        "application"
+      ],
+      "prompt": "A learner applies 'Retry Classification, Budgets, Backoff, and Jitter' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Retrying every error:** permanent, authorization, and validation failures persist.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M06-Q060",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "idempotency-and-deduplication",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Idempotency and Deduplication'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for make ambiguous remote outcomes safe using scoped idempotency records, atomic effects, and deduplication retention..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - IETF, RFC 9110 HTTP Semanticshttps://www.rfc-editor.org/rfc/rfc9110.html, \u00a7\u00a79.2.1\u20139.2.3.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M06-Q061",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "bulkheads-pools-health-and-bounded-fan-out",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Bulkheads, Pools, Health, and Bounded Fan-Out' in Deadlines and Resilient Remote Calls?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to bound fan-out, pools, tenants, and health traffic with explicit admission, fairness, and overload behavior.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to bound fan-out, pools, tenants, and health traffic with explicit admission, fairness, and overload behavior.",
+      "explanation": "Every remote-call protection consumes a finite resource: task, thread, socket, connection, queue position, rate token, or downstream capacity. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M06-Q062",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "circuit-breakers-hedges-and-partial-results",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Circuit Breakers, Hedges, and Partial Results' supports this outcome: Compare breakers, hedges, partial results, and fail-fast behavior by failure model and useful-work economics.",
+      "correct_answer": "A strong answer defines the mechanism from 'Circuit Breakers, Hedges, and Partial Results', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "A circuit breaker converts recent observations into local admission state.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M06-Q063",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "rate-limits-quotas-and-fairness",
+        "synthesis"
+      ],
+      "prompt": "For 'Rate Limits, Quotas, and Fairness', what quantities, units, or thresholds would you calculate before trusting a design claim about: Diagnose and repair retry storm, pool exhaustion, slowdown, partial response, duplicate effect, and cancellation leak from preserved evidence.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Separate rate, concurrency, quota, and cost controls.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M06-Q064",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "remote-call-policy-migration-and-ownership",
+        "application"
+      ],
+      "prompt": "A learner applies 'Remote-Call Policy, Migration, and Ownership' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Mandating one timeout globally:** operation usefulness and latency differ.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M06-Q065",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "end-to-end-deadlines-and-allocation",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'End-to-End Deadlines and Allocation'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for allocate and propagate an end-to-end deadline through serial and parallel work with response and cleanup reserves..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - gRPC Authors, Deadlineshttps://grpc.io/docs/guides/deadlines/, especially propagation and application cleanup responsibility.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M06-Q066",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "cancellation-and-useful-work-boundaries",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Cancellation and Useful-Work Boundaries' in Deadlines and Resilient Remote Calls?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to prove cancellation stops queued, active, and child work within a declared bound.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to prove cancellation stops queued, active, and child work within a declared bound.",
+      "explanation": "Cancellation is cooperative. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M06-Q067",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "retry-classification-budgets-backoff-and-jitter",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Retry Classification, Budgets, Backoff, and Jitter' supports this outcome: Classify retry eligibility and enforce bounded randomized retries using attempt and cost budgets.",
+      "correct_answer": "A strong answer defines the mechanism from 'Retry Classification, Budgets, Backoff, and Jitter', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "A retry is a new unit of load issued when the system is already uncertain or unhealthy.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M06-Q068",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "idempotency-and-deduplication",
+        "synthesis"
+      ],
+      "prompt": "For 'Idempotency and Deduplication', what quantities, units, or thresholds would you calculate before trusting a design claim about: Make ambiguous remote outcomes safe using scoped idempotency records, atomic effects, and deduplication retention.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Separate protocol idempotency from application effect deduplication.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M06-Q069",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "bulkheads-pools-health-and-bounded-fan-out",
+        "application"
+      ],
+      "prompt": "A learner applies 'Bulkheads, Pools, Health, and Bounded Fan-Out' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **One global pool only:** a hot tenant still starves everyone.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M06-Q070",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "circuit-breakers-hedges-and-partial-results",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Circuit Breakers, Hedges, and Partial Results'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for compare breakers, hedges, partial results, and fail-fast behavior by failure model and useful-work economics..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - L.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M06-Q071",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "rate-limits-quotas-and-fairness",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Rate Limits, Quotas, and Fairness' in Deadlines and Resilient Remote Calls?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose and repair retry storm, pool exhaustion, slowdown, partial response, duplicate effect, and cancellation leak from preserved evidence.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose and repair retry storm, pool exhaustion, slowdown, partial response, duplicate effect, and cancellation leak from preserved evidence.",
+      "explanation": "A rate limit bounds arrivals per interval; a concurrency limit bounds active work; a quota bounds cumulative entitlement; a cost budget bounds weighted consumption. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M06-Q072",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "remote-call-policy-migration-and-ownership",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Remote-Call Policy, Migration, and Ownership' supports this outcome: Defend a remote-call policy through user outcomes, security, cost, ownership, exceptions, migration, rollback, and reversal evidence.",
+      "correct_answer": "A strong answer defines the mechanism from 'Remote-Call Policy, Migration, and Ownership', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Remote-Call Policy, Migration, and Ownership to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M06-Q073",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "end-to-end-deadlines-and-allocation",
+        "synthesis"
+      ],
+      "prompt": "For 'End-to-End Deadlines and Allocation', what quantities, units, or thresholds would you calculate before trusting a design claim about: Allocate and propagate an end-to-end deadline through serial and parallel work with response and cleanup reserves.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Distinguish a user usefulness deadline from local timeout durations.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M06-Q074",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "cancellation-and-useful-work-boundaries",
+        "application"
+      ],
+      "prompt": "A learner applies 'Cancellation and Useful-Work Boundaries' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Canceling only the future:** underlying work and sockets remain alive.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M06-Q075",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "retry-classification-budgets-backoff-and-jitter",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Retry Classification, Budgets, Backoff, and Jitter'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for classify retry eligibility and enforce bounded randomized retries using attempt and cost budgets..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Marc Brooker, Timeouts, retries, and backoff with jitterhttps://builder.aws.com/content/3EumjoZascWd1oZiEgL8ORlv3qE/timeouts-retries-and-backoff-with-jitter.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M06-Q076",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "idempotency-and-deduplication",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Idempotency and Deduplication' in Deadlines and Resilient Remote Calls?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to make ambiguous remote outcomes safe using scoped idempotency records, atomic effects, and deduplication retention.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to make ambiguous remote outcomes safe using scoped idempotency records, atomic effects, and deduplication retention.",
+      "explanation": "An HTTP method classified as idempotent means repeated identical requests have the same intended server effect. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M06-Q077",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "bulkheads-pools-health-and-bounded-fan-out",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Bulkheads, Pools, Health, and Bounded Fan-Out' supports this outcome: Bound fan-out, pools, tenants, and health traffic with explicit admission, fairness, and overload behavior.",
+      "correct_answer": "A strong answer defines the mechanism from 'Bulkheads, Pools, Health, and Bounded Fan-Out', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Every remote-call protection consumes a finite resource: task, thread, socket, connection, queue position, rate token, or downstream capacity.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M06-Q078",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "circuit-breakers-hedges-and-partial-results",
+        "synthesis"
+      ],
+      "prompt": "For 'Circuit Breakers, Hedges, and Partial Results', what quantities, units, or thresholds would you calculate before trusting a design claim about: Compare breakers, hedges, partial results, and fail-fast behavior by failure model and useful-work economics.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Evaluate stateful breakers by scope, sampling, probe, and recovery dynamics.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M06-Q079",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "rate-limits-quotas-and-fairness",
+        "application"
+      ],
+      "prompt": "A learner applies 'Rate Limits, Quotas, and Fairness' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Rate limit only:** slow accepted calls still exhaust concurrency.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M06-Q080",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "remote-call-policy-migration-and-ownership",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Remote-Call Policy, Migration, and Ownership'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for defend a remote-call policy through user outcomes, security, cost, ownership, exceptions, migration, rollback, and reversal evidence..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Craig Fender and Ravindra Punati, Avoiding Cascading Failures at eBay?https://www.usenix.org/conference/srecon16/program/presentation/fender, SREcon 2016.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M06-Q081",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "end-to-end-deadlines-and-allocation",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'End-to-End Deadlines and Allocation' in Deadlines and Resilient Remote Calls?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to allocate and propagate an end-to-end deadline through serial and parallel work with response and cleanup reserves.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to allocate and propagate an end-to-end deadline through serial and parallel work with response and cleanup reserves.",
+      "explanation": "A deadline answers \u201cafter what instant is this result no longer useful?\u201d A timeout answers \u201chow long will this component wait?\u201d Resetting a full timeout at each hop lets a request live longer than the user promise. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M06-Q082",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "cancellation-and-useful-work-boundaries",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Cancellation and Useful-Work Boundaries' supports this outcome: Prove cancellation stops queued, active, and child work within a declared bound.",
+      "correct_answer": "A strong answer defines the mechanism from 'Cancellation and Useful-Work Boundaries', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Cancellation is cooperative.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M06-Q083",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "retry-classification-budgets-backoff-and-jitter",
+        "synthesis"
+      ],
+      "prompt": "For 'Retry Classification, Budgets, Backoff, and Jitter', what quantities, units, or thresholds would you calculate before trusting a design claim about: Classify retry eligibility and enforce bounded randomized retries using attempt and cost budgets.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Classify retry eligibility from error semantics and effect safety.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M06-Q084",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "idempotency-and-deduplication",
+        "application"
+      ],
+      "prompt": "A learner applies 'Idempotency and Deduplication' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **\u201cPOST is not idempotent, PUT is\u201d:** method semantics do not encode the business invariant.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M06-Q085",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "bulkheads-pools-health-and-bounded-fan-out",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Bulkheads, Pools, Health, and Bounded Fan-Out'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for bound fan-out, pools, tenants, and health traffic with explicit admission, fairness, and overload behavior..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Google SRE, Addressing Cascading Failureshttps://sre.google/sre-book/addressing-cascading-failures/, resource exhaustion and health checks.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M06-Q086",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "circuit-breakers-hedges-and-partial-results",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Circuit Breakers, Hedges, and Partial Results' in Deadlines and Resilient Remote Calls?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to compare breakers, hedges, partial results, and fail-fast behavior by failure model and useful-work economics.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to compare breakers, hedges, partial results, and fail-fast behavior by failure model and useful-work economics.",
+      "explanation": "A circuit breaker converts recent observations into local admission state. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M06-Q087",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "rate-limits-quotas-and-fairness",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Rate Limits, Quotas, and Fairness' supports this outcome: Diagnose and repair retry storm, pool exhaustion, slowdown, partial response, duplicate effect, and cancellation leak from preserved evidence.",
+      "correct_answer": "A strong answer defines the mechanism from 'Rate Limits, Quotas, and Fairness', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "A rate limit bounds arrivals per interval; a concurrency limit bounds active work; a quota bounds cumulative entitlement; a cost budget bounds weighted consumption.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M06-Q088",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "remote-call-policy-migration-and-ownership",
+        "synthesis"
+      ],
+      "prompt": "For 'Remote-Call Policy, Migration, and Ownership', what quantities, units, or thresholds would you calculate before trusting a design claim about: Defend a remote-call policy through user outcomes, security, cost, ownership, exceptions, migration, rollback, and reversal evidence.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Compare coherent policies under common user, safety, operating, and cost drivers.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M06-Q089",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "end-to-end-deadlines-and-allocation",
+        "application"
+      ],
+      "prompt": "A learner applies 'End-to-End Deadlines and Allocation' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Resetting 300 ms at each hop:** nested calls outlive the 420 ms promise.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M06-Q090",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "cancellation-and-useful-work-boundaries",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Cancellation and Useful-Work Boundaries'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for prove cancellation stops queued, active, and child work within a declared bound..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - gRPC Authors, Cancellationhttps://grpc.io/docs/guides/cancellation/.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M06-Q091",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "retry-classification-budgets-backoff-and-jitter",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Retry Classification, Budgets, Backoff, and Jitter' in Deadlines and Resilient Remote Calls?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to classify retry eligibility and enforce bounded randomized retries using attempt and cost budgets.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to classify retry eligibility and enforce bounded randomized retries using attempt and cost budgets.",
+      "explanation": "A retry is a new unit of load issued when the system is already uncertain or unhealthy. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M06-Q092",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "idempotency-and-deduplication",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Idempotency and Deduplication' supports this outcome: Make ambiguous remote outcomes safe using scoped idempotency records, atomic effects, and deduplication retention.",
+      "correct_answer": "A strong answer defines the mechanism from 'Idempotency and Deduplication', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "An HTTP method classified as idempotent means repeated identical requests have the same intended server effect.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M06-Q093",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "bulkheads-pools-health-and-bounded-fan-out",
+        "synthesis"
+      ],
+      "prompt": "For 'Bulkheads, Pools, Health, and Bounded Fan-Out', what quantities, units, or thresholds would you calculate before trusting a design claim about: Bound fan-out, pools, tenants, and health traffic with explicit admission, fairness, and overload behavior.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Derive concurrency bounds from capacity, latency, and failover assumptions.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M06-Q094",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "circuit-breakers-hedges-and-partial-results",
+        "application"
+      ],
+      "prompt": "A learner applies 'Circuit Breakers, Hedges, and Partial Results' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Breaker as a universal best practice:** state and recovery can cause new outages.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M06-Q095",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "rate-limits-quotas-and-fairness",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Rate Limits, Quotas, and Fairness'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose and repair retry storm, pool exhaustion, slowdown, partial response, duplicate effect, and cancellation leak from preserved evidence..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Google SRE, Addressing Cascading Failureshttps://sre.google/sre-book/addressing-cascading-failures/, load shedding and client isolation.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M06-Q096",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "remote-call-policy-migration-and-ownership",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Remote-Call Policy, Migration, and Ownership' in Deadlines and Resilient Remote Calls?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend a remote-call policy through user outcomes, security, cost, ownership, exceptions, migration, rollback, and reversal evidence.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend a remote-call policy through user outcomes, security, cost, ownership, exceptions, migration, rollback, and reversal evidence.",
+      "explanation": "Use Remote-Call Policy, Migration, and Ownership to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M06-Q097",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "end-to-end-deadlines-and-allocation",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'End-to-End Deadlines and Allocation' supports this outcome: Allocate and propagate an end-to-end deadline through serial and parallel work with response and cleanup reserves.",
+      "correct_answer": "A strong answer defines the mechanism from 'End-to-End Deadlines and Allocation', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "A deadline answers \u201cafter what instant is this result no longer useful?\u201d A timeout answers \u201chow long will this component wait?\u201d Resetting a full timeout at each hop lets a request live longer than the user promise.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M06-Q098",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "cancellation-and-useful-work-boundaries",
+        "synthesis"
+      ],
+      "prompt": "For 'Cancellation and Useful-Work Boundaries', what quantities, units, or thresholds would you calculate before trusting a design claim about: Prove cancellation stops queued, active, and child work within a declared bound.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Trace cancellation through queued, active, and child work.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M06-Q099",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "retry-classification-budgets-backoff-and-jitter",
+        "application"
+      ],
+      "prompt": "A learner applies 'Retry Classification, Budgets, Backoff, and Jitter' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Retrying every error:** permanent, authorization, and validation failures persist.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M06-Q100",
+      "module_id": "M06",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "deadlines-and-resilient-remote-calls",
+        "idempotency-and-deduplication",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Idempotency and Deduplication'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for make ambiguous remote outcomes safe using scoped idempotency records, atomic effects, and deduplication retention..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - IETF, RFC 9110 HTTP Semanticshttps://www.rfc-editor.org/rfc/rfc9110.html, \u00a7\u00a79.2.1\u20139.2.3.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    }
+  ]
+}

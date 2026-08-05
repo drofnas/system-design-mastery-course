@@ -1,1201 +1,331 @@
 {
   "$schema": "../../schemas/module.schema.json",
+  "course_id": "CSSDM",
+  "course_version": "3.0-solo",
   "id": "M15",
   "title": "Execution Models Across Languages",
-  "weeks": [
+  "status": "ready",
+  "focus": "Runtime execution models, memory lifetime, schedulers, cancellation, validation, and equivalent-work comparison.",
+  "pacing": {
+    "review": "Skim lessons, answer self-checks, and take one generated quiz.",
+    "standard": "Study lessons, complete guided practice, use the answer key, and take one or more generated quizzes.",
+    "deep": "Complete standard work plus the reinforcement lab and optional project."
+  },
+  "lessons": [
     {
-      "number": 80,
-      "phase": "Model and derive",
-      "focus": "Model and derive",
-      "hours": 8.5,
-      "core_hours": 8.5,
-      "capacity_hours": 12,
-      "evidence": [
-        "Model and derive evidence frozen at source commit"
-      ],
-      "time_blocks": [
-        {
-          "id": "W080-T01",
-          "label": "Bounded authoritative resources",
-          "minutes": 115,
-          "activity": "required_resource",
-          "required": true,
-          "resource_ids": [
-            "RES-02",
-            "RES-08"
-          ]
-        },
-        {
-          "id": "W080-T02",
-          "label": "Local mechanism instruction",
-          "minutes": 120,
-          "activity": "local_instruction",
-          "required": true,
-          "lesson_ids": [
-            "L01",
-            "L02",
-            "L03",
-            "L04"
-          ]
-        },
-        {
-          "id": "W080-T03",
-          "label": "Guided practice",
-          "minutes": 60,
-          "activity": "guided_practice",
-          "required": true,
-          "exercise_ids": [
-            "EX-01",
-            "EX-02",
-            "EX-03",
-            "EX-04",
-            "EX-05",
-            "EX-06",
-            "EX-07",
-            "EX-08",
-            "EX-09"
-          ]
-        },
-        {
-          "id": "W080-T04",
-          "label": "Model and derive core work",
-          "minutes": 215,
-          "activity": "independent_work",
-          "required": true
-        },
-        {
-          "id": "W080-T05",
-          "label": "Optional contingency capacity",
-          "minutes": 210,
-          "activity": "contingency",
-          "required": false
-        }
-      ]
+      "id": "L01",
+      "title": "Memory Lifetime and Management",
+      "path": "lessons/01-memory-lifetime-management.md"
     },
     {
-      "number": 81,
-      "phase": "Guided build and prediction freeze",
-      "focus": "Guided build and prediction freeze",
-      "hours": 9.0,
-      "core_hours": 9.0,
-      "capacity_hours": 12,
-      "evidence": [
-        "Guided build and prediction freeze evidence frozen at source commit"
-      ],
-      "time_blocks": [
-        {
-          "id": "W081-T01",
-          "label": "Bounded authoritative resources",
-          "minutes": 115,
-          "activity": "required_resource",
-          "required": true,
-          "resource_ids": [
-            "RES-01",
-            "RES-06"
-          ]
-        },
-        {
-          "id": "W081-T02",
-          "label": "Local mechanism instruction",
-          "minutes": 120,
-          "activity": "local_instruction",
-          "required": true,
-          "lesson_ids": [
-            "L05",
-            "L06",
-            "L07",
-            "L08"
-          ]
-        },
-        {
-          "id": "W081-T03",
-          "label": "Guided practice",
-          "minutes": 60,
-          "activity": "guided_practice",
-          "required": true,
-          "exercise_ids": [
-            "EX-10",
-            "EX-11",
-            "EX-12",
-            "EX-13",
-            "EX-14",
-            "EX-15",
-            "EX-16",
-            "EX-17",
-            "EX-18"
-          ]
-        },
-        {
-          "id": "W081-T04",
-          "label": "Required evidence components",
-          "minutes": 120,
-          "activity": "independent_work",
-          "required": true,
-          "artifact_allocations": [
-            {
-              "artifact_id": "A01",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A02",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A03",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A05",
-              "minutes": 30
-            }
-          ]
-        },
-        {
-          "id": "W081-T05",
-          "label": "Guided build and prediction freeze core work",
-          "minutes": 125,
-          "activity": "independent_work",
-          "required": true
-        },
-        {
-          "id": "W081-T06",
-          "label": "Optional contingency capacity",
-          "minutes": 180,
-          "activity": "contingency",
-          "required": false
-        }
-      ]
+      "id": "L02",
+      "title": "Schedulers, Event Loops, and Tasks",
+      "path": "lessons/02-schedulers-event-loops-tasks.md"
     },
     {
-      "number": 82,
-      "phase": "Independent build and integration",
-      "focus": "Independent build and integration",
-      "hours": 10.0,
-      "core_hours": 10.0,
-      "capacity_hours": 12,
-      "evidence": [
-        "Independent build and integration evidence frozen at source commit"
-      ],
-      "time_blocks": [
-        {
-          "id": "W082-T01",
-          "label": "Independent build and integration core work",
-          "minutes": 540,
-          "activity": "independent_work",
-          "required": true
-        },
-        {
-          "id": "W082-T02",
-          "label": "Independent build and integration verification checkpoint",
-          "minutes": 60,
-          "activity": "independent_work",
-          "required": true
-        },
-        {
-          "id": "W082-T03",
-          "label": "Optional contingency capacity",
-          "minutes": 120,
-          "activity": "contingency",
-          "required": false
-        }
-      ]
+      "id": "L03",
+      "title": "Bounded Fan-out and Structured Cleanup",
+      "path": "lessons/03-bounded-fanout-structured-cleanup.md"
     },
     {
-      "number": 83,
-      "phase": "Break, repair, measure, and diagnose",
-      "focus": "Break, repair, measure, and diagnose",
-      "hours": 10.0,
-      "core_hours": 10.0,
-      "capacity_hours": 12,
-      "evidence": [
-        "Break, repair, measure, and diagnose evidence frozen at source commit"
-      ],
-      "time_blocks": [
-        {
-          "id": "W083-T01",
-          "label": "Required evidence components",
-          "minutes": 90,
-          "activity": "failure_experiment",
-          "required": true,
-          "artifact_allocations": [
-            {
-              "artifact_id": "A04",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A06",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A07",
-              "minutes": 30
-            }
-          ]
-        },
-        {
-          "id": "W083-T02",
-          "label": "Break, repair, measure, and diagnose core work",
-          "minutes": 510,
-          "activity": "failure_experiment",
-          "required": true
-        },
-        {
-          "id": "W083-T03",
-          "label": "Optional contingency capacity",
-          "minutes": 120,
-          "activity": "contingency",
-          "required": false
-        }
-      ]
+      "id": "L04",
+      "title": "Memory Visibility and Races",
+      "path": "lessons/04-memory-visibility-races.md"
     },
     {
-      "number": 84,
-      "phase": "Decide, teach, assess, and freeze",
-      "focus": "Decide, teach, assess, and freeze",
-      "hours": 9.5,
-      "core_hours": 9.5,
-      "capacity_hours": 12,
-      "evidence": [
-        "Decide, teach, assess, and freeze evidence frozen at source commit"
-      ],
-      "time_blocks": [
-        {
-          "id": "W084-T01",
-          "label": "Required evidence components",
-          "minutes": 60,
-          "activity": "decision_artifact",
-          "required": true,
-          "artifact_allocations": [
-            {
-              "artifact_id": "A08",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A09",
-              "minutes": 30
-            }
-          ]
-        },
-        {
-          "id": "W084-T02",
-          "label": "Decide, teach, assess, and freeze core work",
-          "minutes": 450,
-          "activity": "assessment",
-          "required": true
-        },
-        {
-          "id": "W084-T03",
-          "label": "Module teach-back",
-          "minutes": 30,
-          "activity": "teach_back",
-          "required": true
-        },
-        {
-          "id": "W084-T04",
-          "label": "Learning log and freeze check",
-          "minutes": 30,
-          "activity": "reflection",
-          "required": true
-        },
-        {
-          "id": "W084-T05",
-          "label": "Optional contingency capacity",
-          "minutes": 150,
-          "activity": "contingency",
-          "required": false
-        }
-      ]
+      "id": "L05",
+      "title": "Types, Serialization, and Validation",
+      "path": "lessons/05-types-serialization-validation.md"
+    },
+    {
+      "id": "L06",
+      "title": "Equivalent-work Runtime Measurement",
+      "path": "lessons/06-equivalent-work-measurement.md"
+    },
+    {
+      "id": "L07",
+      "title": "Northstar Polyglot Fan-out Tutorial",
+      "path": "lessons/07-northstar-polyglot-tutorial.md"
+    },
+    {
+      "id": "L08",
+      "title": "Runtime Decision and Teach-back",
+      "path": "lessons/08-runtime-decision-teach-back.md"
     }
   ],
-  "target_hours": 47,
-  "status": "review",
-  "readiness_note": "Ready on 2026-08-03 after polyglot conformance, paired failure tests, six isolated evaluator runs, calibration checking, semantic review, resource verification, and focused and full-course validation passed.",
-  "outcomes": [
+  "learning_outcomes": [
     {
       "id": "M15-O1",
       "statement": "Explain and compare stack, heap, allocation, escape, manual lifetime, RAII, ownership, reference counting, and tracing collection from workload evidence.",
-      "graduate_profile": [
-        3,
-        11
-      ],
-      "mastery_levels": [
-        "Define",
-        "Calculate",
-        "Decide and Teach"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L01"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-01",
         "EX-02"
-      ],
-      "artifacts": [
-        "A01",
-        "A07"
-      ],
-      "rubric": [
-        "R02"
       ]
     },
     {
       "id": "M15-O2",
       "statement": "Trace work through operating-system threads, event loops, worker pools, goroutines, async tasks, virtual threads, and runtime schedulers.",
-      "graduate_profile": [
-        3,
-        6,
-        11
-      ],
-      "mastery_levels": [
-        "Define",
-        "Diagnose"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L02"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-03",
         "EX-04"
-      ],
-      "artifacts": [
-        "A01",
-        "A05"
-      ],
-      "rubric": [
-        "R03"
       ]
     },
     {
       "id": "M15-O3",
       "statement": "Implement the same bounded fan-out contract in TypeScript, Go, Rust, and Java with bounded admission, deadlines, cancellation, validation, and cleanup.",
-      "graduate_profile": [
-        6,
-        7,
-        11
-      ],
-      "mastery_levels": [
-        "Implement",
-        "Diagnose"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L03",
         "L07"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-05",
         "EX-06",
         "EX-07",
         "EX-08",
         "EX-09"
-      ],
-      "artifacts": [
-        "A02",
-        "A03"
-      ],
-      "rubric": [
-        "R01",
-        "R05"
       ]
     },
     {
       "id": "M15-O4",
       "statement": "Measure latency, useful throughput, queueing, memory, allocation, and garbage collection under equivalent work without treating host noise as a language property.",
-      "graduate_profile": [
-        2,
-        3,
-        8,
-        11
-      ],
-      "mastery_levels": [
-        "Calculate",
-        "Diagnose"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L06"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-10",
         "EX-11"
-      ],
-      "artifacts": [
-        "A04",
-        "A06"
-      ],
-      "rubric": [
-        "R01",
-        "R08"
       ]
     },
     {
       "id": "M15-O5",
       "statement": "Diagnose memory-visibility and data-race failures with happens-before reasoning, detector evidence, and explicit detector limits.",
-      "graduate_profile": [
-        7,
-        8,
-        11
-      ],
-      "mastery_levels": [
-        "Define",
-        "Implement",
-        "Diagnose"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L04"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-12",
         "EX-13"
-      ],
-      "artifacts": [
-        "A04",
-        "A05"
-      ],
-      "rubric": [
-        "R06"
       ]
     },
     {
       "id": "M15-O6",
       "statement": "Preserve contracts across static, dynamic, process, and serialization boundaries through explicit validation and scoped authority.",
-      "graduate_profile": [
-        1,
-        5,
-        9,
-        11
-      ],
-      "mastery_levels": [
-        "Define",
-        "Implement",
-        "Diagnose"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L05"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-14",
         "EX-15"
-      ],
-      "artifacts": [
-        "A02",
-        "A05"
-      ],
-      "rubric": [
-        "R04"
       ]
     },
     {
       "id": "M15-O7",
       "statement": "Diagnose nine execution-model failures while bounding operational, security, cost, migration, and ownership consequences.",
-      "graduate_profile": [
-        8,
-        9,
-        10,
-        11
-      ],
-      "mastery_levels": [
-        "Diagnose",
-        "Decide and Teach"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L03",
         "L06"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-16",
         "EX-17"
-      ],
-      "artifacts": [
-        "A04",
-        "A05",
-        "A06"
-      ],
-      "rubric": [
-        "R07",
-        "R08",
-        "R09"
       ]
     },
     {
       "id": "M15-O8",
       "statement": "Defend and teach a runtime choice from workload behavior, safety, operability, ecosystem, cost, migration, ownership, and team evidence.",
-      "graduate_profile": [
-        10,
-        11,
-        15,
-        16
-      ],
-      "mastery_levels": [
-        "Decide and Teach"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L08"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-18"
-      ],
-      "artifacts": [
-        "A06",
-        "A07",
-        "A08",
-        "A09"
-      ],
-      "rubric": [
-        "R09",
-        "R10"
       ]
     }
   ],
+  "practice": {
+    "exercises_path": "exercises/exercises.md",
+    "answer_key_path": "exercises/answer-key.md"
+  },
+  "lab": {
+    "required": true,
+    "path": "lab/README.md",
+    "note": "One runtime implementation is the required reinforcement path; two-runtime comparison is recommended; four-runtime matrix is optional."
+  },
+  "quiz": {
+    "question_bank_path": "quiz/question-bank.json",
+    "answer_key_path": "quiz/answer-key.md",
+    "llm_grader_prompt_path": "quiz/llm-grader-prompt.md",
+    "question_count": 100,
+    "default_draw_count": 20,
+    "types": [
+      "multiple_choice",
+      "short_answer",
+      "calculation",
+      "scenario_diagnosis",
+      "design_judgment"
+    ]
+  },
+  "optional_project": {
+    "description": "Implement one runtime shell as required practice. Compare a second runtime if you want deeper contrast. Treat the four-language matrix as optional deep-dive work."
+  },
   "resources": [
     {
       "id": "RES-01",
       "title": "Don't Block the Event Loop (or the Worker Pool)",
-      "author_or_publisher": "Node.js project",
-      "type": "maintainer guidance",
       "url": "https://nodejs.org/en/learn/asynchronous-work/dont-block-the-event-loop",
       "required": true,
-      "access": "free",
-      "week": 81,
       "estimated_minutes": 55,
       "purpose": "Trace event-loop and worker-pool placement and connect blocking to tail latency and denial of service.",
-      "assignment": "Read Should you read this guide through Don't block the Worker Pool; classify each Northstar operation and record one bound per scheduler.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/02-schedulers-event-loops-tasks.md",
-      "verified_title": "Don't Block the Event Loop (or the Worker Pool)",
-      "verified_publisher": "Node.js project",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://nodejs.org/learn/asynchronous-work/dont-block-the-event-loop",
-      "verification_status": "verified"
+      "local_alternative": "lessons/02-schedulers-event-loops-tasks.md"
     },
     {
       "id": "RES-02",
       "title": "The Go Memory Model",
-      "author_or_publisher": "Go project",
-      "type": "language specification",
       "url": "https://go.dev/ref/mem",
       "required": true,
-      "access": "free",
-      "week": 80,
       "estimated_minutes": 45,
       "purpose": "Reason about visibility through happens-before edges.",
-      "assignment": "Read the introduction, advice, and synchronization sections; draw two valid edges and one behavior the model does not promise.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/04-memory-visibility-races.md",
-      "verified_title": "The Go Memory Model",
-      "verified_publisher": "Go project",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://go.dev/ref/mem",
-      "verification_status": "verified"
+      "local_alternative": "lessons/04-memory-visibility-races.md"
     },
     {
       "id": "RES-03",
       "title": "Understanding Ownership",
-      "author_or_publisher": "Rust project",
-      "type": "official language book",
       "url": "https://doc.rust-lang.org/stable/book/ch04-00-understanding-ownership.html",
       "required": false,
-      "access": "free",
-      "week": 84,
       "estimated_minutes": 60,
       "purpose": "Connect ownership and borrowing to release timing and safe sharing.",
-      "assignment": "Read Chapter 4; annotate ownership transfer, borrow lifetime, Drop point, and one resource whose operational release still needs explicit evidence.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/01-memory-lifetime-management.md",
-      "verified_title": "Understanding Ownership",
-      "verified_publisher": "Rust project",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://doc.rust-lang.org/stable/book/ch04-00-understanding-ownership.html",
-      "verification_status": "verified"
+      "local_alternative": "lessons/01-memory-lifetime-management.md"
     },
     {
       "id": "RES-04",
       "title": "Virtual Threads",
-      "author_or_publisher": "Oracle Java documentation",
-      "type": "maintainer documentation",
       "url": "https://docs.oracle.com/en/java/javase/25/core/virtual-threads.html",
       "required": false,
-      "access": "free",
-      "week": 84,
       "estimated_minutes": 60,
       "purpose": "Distinguish virtual from platform threads and avoid treating cheap tasks as unbounded work.",
-      "assignment": "Read What Is a Virtual Thread through Guidelines; identify carrier scheduling, blocking concerns, cancellation obligations, and the admission bound still required.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/02-schedulers-event-loops-tasks.md",
-      "verified_title": "Virtual Threads",
-      "verified_publisher": "Oracle Java documentation",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://docs.oracle.com/en/java/javase/25/core/virtual-threads.html",
-      "verification_status": "verified"
+      "local_alternative": "lessons/02-schedulers-event-loops-tasks.md"
     },
     {
       "id": "RES-05",
       "title": "Type Compatibility",
-      "author_or_publisher": "TypeScript project",
-      "type": "official language handbook",
       "url": "https://www.typescriptlang.org/docs/handbook/type-compatibility.html",
       "required": false,
-      "access": "free",
-      "week": 84,
       "estimated_minutes": 50,
       "purpose": "Separate structural compile-time compatibility from validation of untrusted runtime values.",
-      "assignment": "Read Starting Out, A Note on Soundness, function compatibility, and classes; construct one value that type-checks locally but must be rejected after JSON decoding.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/05-types-serialization-validation.md",
-      "verified_title": "Type Compatibility",
-      "verified_publisher": "TypeScript project",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://www.typescriptlang.org/docs/handbook/type-compatibility.html",
-      "verification_status": "verified"
+      "local_alternative": "lessons/05-types-serialization-validation.md"
     },
     {
       "id": "RES-06",
       "title": "Why Discord Is Switching from Go to Rust",
-      "author_or_publisher": "Discord Engineering",
-      "type": "first-person historical engineering case",
       "url": "https://discord.com/blog/why-discord-is-switching-from-go-to-rust",
       "required": true,
-      "access": "free",
-      "week": 81,
       "estimated_minutes": 60,
       "purpose": "Evaluate a workload-specific runtime change without turning an old result into a universal language ranking.",
-      "assignment": "Read the complete article including version notes; extract workload, measurement, migration, ecosystem, and team evidence, then name three reasons the result cannot be generalized to current toolchains.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/08-runtime-decision-teach-back.md",
-      "verified_title": "Why Discord Is Switching from Go to Rust",
-      "verified_publisher": "Discord Engineering",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://discord.com/blog/why-discord-is-switching-from-go-to-rust",
-      "verification_status": "verified"
+      "local_alternative": "lessons/08-runtime-decision-teach-back.md"
     },
     {
       "id": "RES-07",
       "title": "Queues, Fairness, and the Go Scheduler",
-      "author_or_publisher": "Madhav Jivrajani; GopherCon and Microsoft Learn",
-      "type": "captioned conference video",
       "url": "https://learn.microsoft.com/en-us/shows/gophercon-2021/queues-fairness-and-the-go-scheduler",
       "required": false,
-      "access": "free",
-      "week": 84,
       "estimated_minutes": 55,
       "purpose": "Build a concrete scheduler model and connect fairness telemetry to runnable work.",
-      "assignment": "Watch with captions; draw goroutine-to-thread scheduling, record two fairness mechanisms, and identify one claim requiring current runtime verification.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/02-schedulers-event-loops-tasks.md",
-      "verified_title": "Queues, Fairness, and the Go Scheduler",
-      "verified_publisher": "Madhav Jivrajani; GopherCon and Microsoft Learn",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://learn.microsoft.com/en-us/shows/gophercon-2021/queues-fairness-and-the-go-scheduler",
-      "verification_status": "verified"
+      "local_alternative": "lessons/02-schedulers-event-loops-tasks.md"
     },
     {
       "id": "RES-08",
       "title": "Java Language Specification, Chapter 17: Threads and Locks",
-      "author_or_publisher": "Oracle and the Java Community Process",
-      "type": "language specification",
       "url": "https://docs.oracle.com/javase/specs/jls/se25/html/jls-17.html",
       "required": true,
-      "access": "free",
-      "week": 80,
       "estimated_minutes": 70,
       "purpose": "Use formal happens-before rules when evaluating visibility and synchronization in Java.",
-      "assignment": "Read 17.4.2 through 17.4.7; explain program order, synchronization order, volatile edges, and why repeated observations are not evidence of race freedom.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/04-memory-visibility-races.md",
-      "verified_title": "Java Language Specification, Chapter 17: Threads and Locks",
-      "verified_publisher": "Oracle and the Java Community Process",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://docs.oracle.com/javase/specs/jls/se25/html/jls-17.html",
-      "verification_status": "verified"
+      "local_alternative": "lessons/04-memory-visibility-races.md"
     },
     {
       "id": "RES-09",
       "title": "Data Race Detector",
-      "author_or_publisher": "Go project",
-      "type": "official tool guide",
       "url": "https://go.dev/doc/articles/race_detector",
       "required": false,
-      "access": "free",
-      "week": 84,
       "estimated_minutes": 30,
       "purpose": "Interpret dynamic race evidence without treating an unobserved race as proof of absence.",
-      "assignment": "Read Introduction, Usage, Typical Data Races, and Runtime Overhead; record the F06 command, one observed conflict, and two coverage limits.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/04-memory-visibility-races.md",
-      "verified_title": "Data Race Detector",
-      "verified_publisher": "Go project",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://go.dev/doc/articles/race_detector",
-      "verification_status": "verified"
+      "local_alternative": "lessons/04-memory-visibility-races.md"
     },
     {
       "id": "RES-10",
       "title": "Extensible Concurrency with Send and Sync",
-      "author_or_publisher": "Rust project",
-      "type": "official language book",
       "url": "https://doc.rust-lang.org/book/ch16-04-extensible-concurrency-sync-and-send.html",
       "required": false,
-      "access": "free",
-      "week": 84,
       "estimated_minutes": 30,
       "purpose": "Bound what Rust's Send and Sync traits reject and what protocol invariants remain unproved.",
-      "assignment": "Read the full section; explain the F06 compile-fail fixture and name two runtime or protocol failures static rejection does not exclude.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/04-memory-visibility-races.md",
-      "verified_title": "Extensible Concurrency with Send and Sync",
-      "verified_publisher": "Rust project",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://doc.rust-lang.org/book/ch16-04-extensible-concurrency-sync-and-send.html",
-      "verification_status": "verified"
+      "local_alternative": "lessons/04-memory-visibility-races.md"
     },
     {
       "id": "RES-11",
       "title": "Introduction to Garbage Collection Tuning",
-      "author_or_publisher": "Oracle Java documentation",
-      "type": "maintainer guidance",
       "url": "https://docs.oracle.com/en/java/javase/25/gctuning/introduction-garbage-collection-tuning.html",
       "required": false,
-      "access": "free",
-      "week": 84,
       "estimated_minutes": 35,
       "purpose": "Relate allocation rate, heap pressure, pause evidence, and throughput without inferring a collector result from RSS alone.",
-      "assignment": "Read the introduction and Factors Affecting Garbage Collection Performance; connect one factor to F05 and record what telemetry would falsify the first explanation.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/06-equivalent-work-measurement.md",
-      "verified_title": "Introduction to Garbage Collection Tuning",
-      "verified_publisher": "Oracle Java documentation",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://docs.oracle.com/en/java/javase/25/gctuning/introduction-garbage-collection-tuning.html",
-      "verification_status": "verified"
+      "local_alternative": "lessons/06-equivalent-work-measurement.md"
     },
     {
       "id": "RES-12",
       "title": "Node.js Releases",
-      "author_or_publisher": "Node.js project",
-      "type": "maintainer release policy",
       "url": "https://nodejs.org/en/about/previous-releases",
       "required": false,
-      "access": "free",
-      "week": 84,
       "estimated_minutes": 15,
       "purpose": "Justify the supported production release line used by the reproducible lab.",
-      "assignment": "Inspect the release table and policy; record the pinned line, its support state, and the date on which the choice must be revisited.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lab/README.md",
-      "verified_title": "Node.js Releases",
-      "verified_publisher": "Node.js project",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://nodejs.org/en/about/previous-releases",
-      "verification_status": "verified"
+      "local_alternative": "lab/README.md"
     },
     {
       "id": "RES-13",
       "title": "Go Release History",
-      "author_or_publisher": "Go project",
-      "type": "maintainer release history",
       "url": "https://go.dev/doc/devel/release",
       "required": false,
-      "access": "free",
-      "week": 84,
       "estimated_minutes": 15,
       "purpose": "Verify the exact Go toolchain used by the lab and bound version-specific observations.",
-      "assignment": "Locate the pinned release notes and record one scheduler, runtime, or tool behavior that must not be generalized to another version.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lab/README.md",
-      "verified_title": "Go Release History",
-      "verified_publisher": "Go project",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://go.dev/doc/devel/release",
-      "verification_status": "verified"
+      "local_alternative": "lab/README.md"
     },
     {
       "id": "RES-14",
       "title": "Rust Releases",
-      "author_or_publisher": "Rust project",
-      "type": "maintainer release history",
       "url": "https://blog.rust-lang.org/releases/",
       "required": false,
-      "access": "free",
-      "week": 84,
       "estimated_minutes": 15,
       "purpose": "Verify the pinned Rust compiler and preserve the version boundary of compile-time evidence.",
-      "assignment": "Locate the pinned release and record why compiler identity belongs in both successful and compile-fail evidence.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lab/README.md",
-      "verified_title": "Rust Releases",
-      "verified_publisher": "Rust project",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://blog.rust-lang.org/releases/",
-      "verification_status": "verified"
+      "local_alternative": "lab/README.md"
     },
     {
       "id": "RES-15",
       "title": "Oracle Java SE Support Roadmap",
-      "author_or_publisher": "Oracle",
-      "type": "vendor support roadmap",
       "url": "https://www.oracle.com/java/technologies/java-se-support-roadmap.html",
       "required": false,
-      "access": "free",
-      "week": 84,
       "estimated_minutes": 15,
       "purpose": "Separate language/runtime behavior from vendor lifecycle and support decisions.",
-      "assignment": "Confirm Java 25's lifecycle designation and record one vendor-neutral and one vendor-specific consequence for the ADR.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/08-runtime-decision-teach-back.md",
-      "verified_title": "Oracle Java SE Support Roadmap",
-      "verified_publisher": "Oracle",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://www.oracle.com/java/technologies/java-se-support-roadmap.html",
-      "verification_status": "verified"
+      "local_alternative": "lessons/08-runtime-decision-teach-back.md"
     },
     {
       "id": "RES-16",
       "title": "JSON Schema: A Media Type for Describing JSON Documents",
-      "author_or_publisher": "JSON Schema project",
-      "type": "official specification",
       "url": "https://json-schema.org/draft/2020-12/json-schema-core",
       "required": false,
-      "access": "free",
-      "week": 84,
       "estimated_minutes": 35,
       "purpose": "Ground the shared closed-schema contract in the official JSON Schema vocabulary and evaluation rules.",
-      "assignment": "Read Sections 4, 7, 8, and 10; map instance evaluation, object applicators, and unknown-property rejection to the shared request schema, then name the behavior enforced separately by service code.",
-      "last_verified": "2026-08-04",
-      "text_alternative": "lessons/05-types-serialization-validation.md",
-      "verified_title": "JSON Schema: A Media Type for Describing JSON Documents",
-      "verified_publisher": "JSON Schema project",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://json-schema.org/draft/2020-12/json-schema-core",
-      "verification_status": "verified"
+      "local_alternative": "lessons/05-types-serialization-validation.md"
     },
     {
       "id": "RES-17",
       "title": "Rigorous Benchmarking in Reasonable Time",
-      "author_or_publisher": "Tomas Kalibera and Richard E. Jones; ACM ISMM and University of Kent",
-      "type": "peer-reviewed paper",
       "url": "https://kar.kent.ac.uk/33611/45/p63-kaliber.pdf",
       "required": false,
-      "access": "free",
-      "week": 84,
       "estimated_minutes": 45,
       "purpose": "Support equivalent-work, repetition, variation, and uncertainty requirements for cross-runtime measurement.",
-      "assignment": "Read Sections 1\u20133 and 6; identify the levels of experimental variation, justify repeated invocations, and record why five local repetitions establish only bounded evidence rather than a universal language ranking.",
-      "last_verified": "2026-08-04",
-      "text_alternative": "lessons/06-equivalent-work-measurement.md",
-      "verified_title": "Rigorous Benchmarking in Reasonable Time",
-      "verified_publisher": "Tomas Kalibera and Richard E. Jones; ACM ISMM and University of Kent",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://kar.kent.ac.uk/33611/45/p63-kaliber.pdf",
-      "verification_status": "verified"
+      "local_alternative": "lessons/06-equivalent-work-measurement.md"
     }
-  ],
-  "artifacts": [
-    {
-      "id": "A01",
-      "week": 81,
-      "required": true,
-      "template_path": "modules/15-execution-models-across-languages/worksheets/week-57-execution-model.md",
-      "submission_path": "reports/module-15-execution-model-baseline.md",
-      "immutable_after_submission": true,
-      "portfolio_category": "model",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M15-A01",
-      "component_role": "prediction",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A02",
-      "week": 81,
-      "required": true,
-      "template_path": "modules/15-execution-models-across-languages/worksheets/week-58-polyglot-build.md",
-      "submission_path": "labs/module-15/polyglot-fanout/",
-      "portfolio_category": "implementation",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M15-A02",
-      "component_role": "implementation",
-      "estimated_minutes": 30,
-      "evidence_mode": "executed_deterministic"
-    },
-    {
-      "id": "A03",
-      "week": 81,
-      "required": true,
-      "template_path": "modules/15-execution-models-across-languages/worksheets/week-58-polyglot-build.md",
-      "submission_path": "reports/module-15-conformance-review.md",
-      "portfolio_category": "runtime_comparison",
-      "portfolio_item_id": "PI-RUNTIME-01",
-      "portfolio_credit": true,
-      "evidence_lineage_id": "LIN-RUNTIME-SEMANTICS",
-      "component_role": "analysis",
-      "estimated_minutes": 30,
-      "evidence_mode": "measured_loopback"
-    },
-    {
-      "id": "A04",
-      "week": 83,
-      "required": true,
-      "template_path": "modules/15-execution-models-across-languages/worksheets/week-59-runtime-failure-matrix.md",
-      "submission_path": "experiments/module-15/",
-      "immutable_after_submission": true,
-      "portfolio_category": "failure_matrix",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M15-A04",
-      "component_role": "raw_evidence",
-      "estimated_minutes": 30,
-      "evidence_mode": "executed_deterministic"
-    },
-    {
-      "id": "A05",
-      "week": 81,
-      "required": true,
-      "template_path": "modules/15-execution-models-across-languages/worksheets/week-59-runtime-failure-matrix.md",
-      "submission_path": "reports/module-15-runtime-failure-matrix.md",
-      "portfolio_category": "failure_matrix",
-      "portfolio_item_id": "PI-FAIL-05",
-      "portfolio_credit": true,
-      "evidence_lineage_id": "LIN-FAIL-RUNTIMES",
-      "component_role": "raw_evidence",
-      "estimated_minutes": 30,
-      "evidence_mode": "executed_deterministic"
-    },
-    {
-      "id": "A06",
-      "week": 83,
-      "required": true,
-      "template_path": "templates/runtime-comparison-report-template.md",
-      "submission_path": "reports/module-15-workload-runtime-comparison.md",
-      "portfolio_category": "performance_investigation",
-      "portfolio_item_id": "PI-PERF-04",
-      "portfolio_credit": true,
-      "evidence_lineage_id": "LIN-PERF-RUNTIMES",
-      "component_role": "analysis",
-      "estimated_minutes": 30,
-      "evidence_mode": "measured_loopback"
-    },
-    {
-      "id": "A07",
-      "week": 83,
-      "required": true,
-      "template_path": "templates/runtime-comparison-report-template.md",
-      "submission_path": "reports/module-15-runtime-internals-comparison.md",
-      "portfolio_category": "runtime_comparison",
-      "portfolio_item_id": "PI-RUNTIME-02",
-      "portfolio_credit": true,
-      "evidence_lineage_id": "LIN-RUNTIME-OPERABILITY",
-      "component_role": "analysis",
-      "estimated_minutes": 30,
-      "evidence_mode": "measured_loopback"
-    },
-    {
-      "id": "A08",
-      "week": 84,
-      "required": true,
-      "template_path": "templates/adr-template.md",
-      "submission_path": "adr/module-15-runtime-selection.md",
-      "portfolio_category": "adr",
-      "portfolio_item_id": "PI-DECISION-M15",
-      "portfolio_credit": true,
-      "evidence_lineage_id": "LIN-DECISION-M15",
-      "component_role": "decision",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A09",
-      "week": 84,
-      "required": true,
-      "template_path": "modules/15-execution-models-across-languages/worksheets/week-60-runtime-decision-gate-05.md",
-      "submission_path": "reviews/module-15-defense.md",
-      "portfolio_category": "teach_back",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M15-A09",
-      "component_role": "final",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    }
-  ],
-  "failure_experiments": [
-    {
-      "id": "F01",
-      "scenario": "Node event-loop blocking delays unrelated requests",
-      "evidence": "request hash, injected CPU work, event-loop delay, journey latency, partition decision, and I03"
-    },
-    {
-      "id": "F02",
-      "scenario": "Node or Java worker exhaustion creates an unbounded wait",
-      "evidence": "admissions, queue depth, active workers, explicit overload results, and I02"
-    },
-    {
-      "id": "F03",
-      "scenario": "Go goroutine or detached task survives request cancellation",
-      "evidence": "task identities, cancellation time, cleanup grace, active-task delta, and I04"
-    },
-    {
-      "id": "F04",
-      "scenario": "unbounded allocation pressure exceeds the memory budget",
-      "evidence": "equivalent bytes, allocation mode, peak memory, admission decision, and I08"
-    },
-    {
-      "id": "F05",
-      "scenario": "tracing garbage collection creates an unmeasured latency pause",
-      "evidence": "heap limit, allocation rate, GC count and pause, tail latency, Rust contrast boundary, and I09"
-    },
-    {
-      "id": "F06",
-      "scenario": "unsynchronized shared state produces a data race",
-      "evidence": "conflicting accesses, happens-before graph, detector output, repaired synchronization, Rust compile-fail contrast, and I07"
-    },
-    {
-      "id": "F07",
-      "scenario": "downstream work ignores the caller deadline and cancellation",
-      "evidence": "parent and child deadlines, cancellation reason, completion time, orphan count, and I03-I04"
-    },
-    {
-      "id": "F08",
-      "scenario": "response or file resources remain open after completion",
-      "evidence": "acquisition and release identity, open-resource delta, exception path, and I05"
-    },
-    {
-      "id": "F09",
-      "scenario": "TypeScript shape assumptions accept invalid JSON at the process boundary",
-      "evidence": "wire bytes, compile-time type, validation result, safe rejection, request context, and I06-I10"
-    }
-  ],
-  "assessment": {
-    "rubric_path": "modules/15-execution-models-across-languages/assessment/rubric.md",
-    "evaluator_prompt_path": "modules/15-execution-models-across-languages/assessment/evaluator-prompt.md",
-    "evaluation_schema_path": "schemas/evaluation.schema.json",
-    "calibration_path": "modules/15-execution-models-across-languages/assessment/calibration",
-    "pass_average": 3,
-    "safety_critical_criteria": [
-      "R05",
-      "R06",
-      "R07",
-      "R08"
-    ],
-    "required_result_bands": [
-      "Pass",
-      "Revise",
-      "Repeat"
-    ]
-  },
-  "solo_review": {
-    "challenge_questions": [
-      {
-        "id": "M15-SR-Q01",
-        "prompt": "Which claim in your artifact most directly supports this outcome, and what evidence could falsify it: Explain and compare stack, heap, allocation, escape, manual lifetime, RAII, ownership, reference counting, and tracing collection from workload evidence."
-      },
-      {
-        "id": "M15-SR-Q02",
-        "prompt": "What unstated assumption could invalidate your treatment of this outcome, and how would you test it: Trace work through operating-system threads, event loops, worker pools, goroutines, async tasks, virtual threads, and runtime schedulers."
-      },
-      {
-        "id": "M15-SR-Q03",
-        "prompt": "Defend the causal chain behind your evidence for this outcome, including the first likely failure: Implement the same bounded fan-out contract in TypeScript, Go, Rust, and Java with bounded admission, deadlines, cancellation, validation, and cleanup."
-      },
-      {
-        "id": "M15-SR-Q04",
-        "prompt": "Which reasonable alternative would challenge your treatment of this outcome, and under what evidence would it win: Measure latency, useful throughput, queueing, memory, allocation, and garbage collection under equivalent work without treating host noise as a language property."
-      },
-      {
-        "id": "M15-SR-Q05",
-        "prompt": "What operational, security, cost, or ownership consequence is least supported in your treatment of this outcome: Diagnose memory-visibility and data-race failures with happens-before reasoning, detector evidence, and explicit detector limits."
-      },
-      {
-        "id": "M15-SR-Q06",
-        "prompt": "Where does your evidence stop transferring to production for this outcome, and how is that boundary disclosed: Preserve contracts across static, dynamic, process, and serialization boundaries through explicit validation and scoped authority."
-      },
-      {
-        "id": "M15-SR-Q07",
-        "prompt": "What dissent should a skeptical reviewer raise about your treatment of this outcome, and what follow-up evidence would resolve it: Diagnose nine execution-model failures while bounding operational, security, cost, migration, and ownership consequences."
-      },
-      {
-        "id": "M15-SR-Q08",
-        "prompt": "What changed belief or reversal condition follows from your work on this outcome, and where is it recorded: Defend and teach a runtime choice from workload behavior, safety, operability, ecosystem, cost, migration, ownership, and team evidence."
-      }
-    ],
-    "required_reviewer_roles": [
-      "Execution Models Across Languages domain reviewer",
-      "operations and reliability owner",
-      "security and privacy reviewer",
-      "delivery and cost stakeholder"
-    ],
-    "questions_per_attempt": 5,
-    "live_ai_allowed": false,
-    "record_template_path": "templates/solo-review-record-template.md"
-  },
-  "factual_claims_path": "modules/15-execution-models-across-languages/assessment/factual-claims.json",
-  "lesson_catalog": [
-    {
-      "id": "L01",
-      "path": "lessons/01-memory-lifetime-management.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L02",
-      "path": "lessons/02-schedulers-event-loops-tasks.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L03",
-      "path": "lessons/03-bounded-fanout-structured-cleanup.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L04",
-      "path": "lessons/04-memory-visibility-races.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L05",
-      "path": "lessons/05-types-serialization-validation.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L06",
-      "path": "lessons/06-equivalent-work-measurement.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L07",
-      "path": "lessons/07-northstar-polyglot-tutorial.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L08",
-      "path": "lessons/08-runtime-decision-teach-back.md",
-      "estimated_minutes": 30
-    }
-  ],
-  "citation_catalog": [
-    {
-      "id": "CIT-01",
-      "title": "Announcing TypeScript 7.0",
-      "author_or_publisher": "TypeScript Team; Microsoft",
-      "type": "official release record",
-      "url": "https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/",
-      "required": true,
-      "access": "free",
-      "purpose": "Confirm the stable TypeScript 7 release and the published 7.0.2 package example used by the pinned lab toolchain.",
-      "reading_boundary": "Read the announcement date, installation section, side-by-side migration section naming TypeScript 7.0.2, and compatibility boundary; do not generalize Microsoft's performance examples to this lab.",
-      "last_verified": "2026-08-04",
-      "text_alternative": "assessment/semantic-readiness-review.md",
-      "verified_title": "Announcing TypeScript 7.0",
-      "verified_publisher": "TypeScript Team; Microsoft",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/",
-      "verification_status": "verified"
-    }
-  ],
-  "course_id": "PESD-104",
-  "course_version": "2.0",
-  "primary_decision": {
-    "artifact_id": "A08",
-    "type": "ADR"
-  },
-  "pesd_v2_additions": "four transport/schema shells while the learner implements admission, task ownership, cancellation, cleanup, memory and lifetime behavior, synchronization, and validation in TypeScript, Go, Rust, and Java",
-  "semantic_evaluation": "subsumed_by_gate"
+  ]
 }

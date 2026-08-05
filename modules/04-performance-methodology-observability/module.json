@@ -1,1178 +1,266 @@
 {
   "$schema": "../../schemas/module.schema.json",
+  "course_id": "CSSDM",
+  "course_version": "3.0-solo",
   "id": "M04",
   "title": "Performance Methodology and Observability",
-  "weeks": [
+  "status": "ready",
+  "focus": "save a user-scoped performance question, equivalent-work baseline, competing hypotheses, falsifiers, and bounded collection plan before inspecting a fault.",
+  "pacing": {
+    "review": "Skim lessons, answer self-checks, and take one generated quiz.",
+    "standard": "Study lessons, complete guided practice, use the answer key, and take one or more generated quizzes.",
+    "deep": "Complete standard work plus the reinforcement lab and optional project."
+  },
+  "lessons": [
     {
-      "number": 18,
-      "phase": "Model and derive",
-      "focus": "Model and derive",
-      "hours": 8.5,
-      "core_hours": 8.5,
-      "capacity_hours": 12,
-      "evidence": [
-        "Model and derive evidence frozen at source commit"
-      ],
-      "time_blocks": [
-        {
-          "id": "W018-T01",
-          "label": "Bounded authoritative resources",
-          "minutes": 130,
-          "activity": "required_resource",
-          "required": true,
-          "resource_ids": [
-            "RES-03",
-            "RES-05",
-            "RES-06"
-          ]
-        },
-        {
-          "id": "W018-T02",
-          "label": "Local mechanism instruction",
-          "minutes": 120,
-          "activity": "local_instruction",
-          "required": true,
-          "lesson_ids": [
-            "L01",
-            "L02",
-            "L03",
-            "L04"
-          ]
-        },
-        {
-          "id": "W018-T03",
-          "label": "Guided practice",
-          "minutes": 60,
-          "activity": "guided_practice",
-          "required": true,
-          "exercise_ids": [
-            "EX-01",
-            "EX-02",
-            "EX-03",
-            "EX-04",
-            "EX-05",
-            "EX-06",
-            "EX-07",
-            "EX-08"
-          ]
-        },
-        {
-          "id": "W018-T04",
-          "label": "Model and derive core work",
-          "minutes": 200,
-          "activity": "independent_work",
-          "required": true
-        },
-        {
-          "id": "W018-T05",
-          "label": "Optional contingency capacity",
-          "minutes": 210,
-          "activity": "contingency",
-          "required": false
-        }
-      ]
+      "id": "L01",
+      "title": "Question-First Performance Investigations",
+      "path": "lessons/01-question-first-investigations.md"
     },
     {
-      "number": 19,
-      "phase": "Guided build and prediction freeze",
-      "focus": "Guided build and prediction freeze",
-      "hours": 9.0,
-      "core_hours": 9.0,
-      "capacity_hours": 12,
-      "evidence": [
-        "Guided build and prediction freeze evidence frozen at source commit"
-      ],
-      "time_blocks": [
-        {
-          "id": "W019-T01",
-          "label": "Bounded authoritative resources",
-          "minutes": 125,
-          "activity": "required_resource",
-          "required": true,
-          "resource_ids": [
-            "RES-01",
-            "RES-02",
-            "RES-04"
-          ]
-        },
-        {
-          "id": "W019-T02",
-          "label": "Local mechanism instruction",
-          "minutes": 120,
-          "activity": "local_instruction",
-          "required": true,
-          "lesson_ids": [
-            "L05",
-            "L06",
-            "L07",
-            "L08"
-          ]
-        },
-        {
-          "id": "W019-T03",
-          "label": "Guided practice",
-          "minutes": 60,
-          "activity": "guided_practice",
-          "required": true,
-          "exercise_ids": [
-            "EX-09",
-            "EX-10",
-            "EX-11",
-            "EX-12",
-            "EX-13",
-            "EX-14",
-            "EX-15"
-          ]
-        },
-        {
-          "id": "W019-T04",
-          "label": "Required evidence components",
-          "minutes": 90,
-          "activity": "independent_work",
-          "required": true,
-          "artifact_allocations": [
-            {
-              "artifact_id": "A01",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A02",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A03",
-              "minutes": 30
-            }
-          ]
-        },
-        {
-          "id": "W019-T05",
-          "label": "Guided build and prediction freeze core work",
-          "minutes": 145,
-          "activity": "independent_work",
-          "required": true
-        },
-        {
-          "id": "W019-T06",
-          "label": "Optional contingency capacity",
-          "minutes": 180,
-          "activity": "contingency",
-          "required": false
-        }
-      ]
+      "id": "L02",
+      "title": "Baselines, Hypotheses, and Controlled Experiments",
+      "path": "lessons/02-controlled-experiments.md"
     },
     {
-      "number": 20,
-      "phase": "Independent build and integration",
-      "focus": "Independent build and integration",
-      "hours": 10.0,
-      "core_hours": 10.0,
-      "capacity_hours": 12,
-      "evidence": [
-        "Independent build and integration evidence frozen at source commit"
-      ],
-      "time_blocks": [
-        {
-          "id": "W020-T01",
-          "label": "Independent build and integration core work",
-          "minutes": 540,
-          "activity": "independent_work",
-          "required": true
-        },
-        {
-          "id": "W020-T02",
-          "label": "Independent build and integration verification checkpoint",
-          "minutes": 60,
-          "activity": "independent_work",
-          "required": true
-        },
-        {
-          "id": "W020-T03",
-          "label": "Optional contingency capacity",
-          "minutes": 120,
-          "activity": "contingency",
-          "required": false
-        }
-      ]
+      "id": "L03",
+      "title": "Trace Context and Causal Request Paths",
+      "path": "lessons/03-trace-context.md"
     },
     {
-      "number": 21,
-      "phase": "Break, repair, measure, and diagnose",
-      "focus": "Break, repair, measure, and diagnose",
-      "hours": 10.0,
-      "core_hours": 10.0,
-      "capacity_hours": 12,
-      "evidence": [
-        "Break, repair, measure, and diagnose evidence frozen at source commit"
-      ],
-      "time_blocks": [
-        {
-          "id": "W021-T01",
-          "label": "Required evidence components",
-          "minutes": 120,
-          "activity": "failure_experiment",
-          "required": true,
-          "artifact_allocations": [
-            {
-              "artifact_id": "A04",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A05",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A06",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A07",
-              "minutes": 30
-            }
-          ]
-        },
-        {
-          "id": "W021-T02",
-          "label": "Break, repair, measure, and diagnose core work",
-          "minutes": 480,
-          "activity": "failure_experiment",
-          "required": true
-        },
-        {
-          "id": "W021-T03",
-          "label": "Optional contingency capacity",
-          "minutes": 120,
-          "activity": "contingency",
-          "required": false
-        }
-      ]
+      "id": "L04",
+      "title": "Metrics, Logs, Cardinality, and Cost",
+      "path": "lessons/04-signals-cardinality-cost.md"
     },
     {
-      "number": 22,
-      "phase": "Decide, teach, assess, and freeze",
-      "focus": "Decide, teach, assess, and freeze",
-      "hours": 9.5,
-      "core_hours": 9.5,
-      "capacity_hours": 12,
-      "evidence": [
-        "Decide, teach, assess, and freeze evidence frozen at source commit"
-      ],
-      "time_blocks": [
-        {
-          "id": "W022-T01",
-          "label": "Required evidence components",
-          "minutes": 120,
-          "activity": "decision_artifact",
-          "required": true,
-          "artifact_allocations": [
-            {
-              "artifact_id": "A08",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A09",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A10",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A11",
-              "minutes": 30
-            }
-          ]
-        },
-        {
-          "id": "W022-T02",
-          "label": "Decide, teach, assess, and freeze core work",
-          "minutes": 390,
-          "activity": "assessment",
-          "required": true
-        },
-        {
-          "id": "W022-T03",
-          "label": "Module teach-back",
-          "minutes": 30,
-          "activity": "teach_back",
-          "required": true
-        },
-        {
-          "id": "W022-T04",
-          "label": "Learning log and freeze check",
-          "minutes": 30,
-          "activity": "reflection",
-          "required": true
-        },
-        {
-          "id": "W022-T05",
-          "label": "Optional contingency capacity",
-          "minutes": 150,
-          "activity": "contingency",
-          "required": false
-        }
-      ]
+      "id": "L05",
+      "title": "CPU, Allocation, and Lock Profiles",
+      "path": "lessons/05-profiling.md"
+    },
+    {
+      "id": "L06",
+      "title": "I/O, Dependency Timing, and Query Plans",
+      "path": "lessons/06-dependencies-query-plans.md"
+    },
+    {
+      "id": "L07",
+      "title": "Reproducible Benchmarks and Regression Budgets",
+      "path": "lessons/07-benchmarks-regression-budgets.md"
+    },
+    {
+      "id": "L08",
+      "title": "Causal Decisions, Validation, and Teach-Back",
+      "path": "lessons/08-causal-decisions.md"
     }
   ],
-  "target_hours": 47,
-  "status": "review",
-  "readiness_note": "Ready on 2026-07-31 after structural and semantic review, six isolated calibration runs, deterministic checking, lab and regression suites, and focused and full course validation.",
-  "outcomes": [
+  "learning_outcomes": [
     {
       "id": "M04-O1",
-      "statement": "Freeze a user-scoped performance question, equivalent-work baseline, competing hypotheses, falsifiers, and bounded collection plan before inspecting a fault.",
-      "graduate_profile": [
-        1,
-        2,
-        8
-      ],
-      "mastery_levels": [
-        "Define",
-        "Calculate",
-        "Diagnose"
-      ],
-      "lessons": [
+      "statement": "save a user-scoped performance question, equivalent-work baseline, competing hypotheses, falsifiers, and bounded collection plan before inspecting a fault.",
+      "lesson_ids": [
         "L01",
         "L02"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-01",
         "EX-02",
         "EX-03",
         "EX-04"
-      ],
-      "artifacts": [
-        "A01"
-      ],
-      "rubric": [
-        "R01",
-        "R02"
       ]
     },
     {
       "id": "M04-O2",
       "statement": "Design controlled, interleaved experiments that expose process and environment variation while preserving useful work and raw samples.",
-      "graduate_profile": [
-        2,
-        3,
-        8
-      ],
-      "mastery_levels": [
-        "Calculate",
-        "Implement",
-        "Diagnose"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L02",
         "L07"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-03",
         "EX-04",
         "EX-13"
-      ],
-      "artifacts": [
-        "A01",
-        "A06"
-      ],
-      "rubric": [
-        "R02",
-        "R08"
       ]
     },
     {
       "id": "M04-O3",
       "statement": "Propagate safe trace context across a process boundary and correlate request traces, structured logs, metrics, and exemplars.",
-      "graduate_profile": [
-        3,
-        8,
-        9,
-        11
-      ],
-      "mastery_levels": [
-        "Define",
-        "Implement",
-        "Diagnose"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L03"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-05",
         "EX-06"
-      ],
-      "artifacts": [
-        "A02",
-        "A03"
-      ],
-      "rubric": [
-        "R03"
       ]
     },
     {
       "id": "M04-O4",
       "statement": "Choose metrics and logs with explicit units, purpose, cardinality, overhead, privacy, retention, access, cost, and ownership bounds.",
-      "graduate_profile": [
-        2,
-        8,
-        9,
-        10
-      ],
-      "mastery_levels": [
-        "Calculate",
-        "Implement",
-        "Decide and Teach"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L04"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-07",
         "EX-08"
-      ],
-      "artifacts": [
-        "A02",
-        "A03",
-        "A04"
-      ],
-      "rubric": [
-        "R04",
-        "R07"
       ]
     },
     {
       "id": "M04-O5",
       "statement": "Use CPU, allocation, lock-wait, dependency-span, local-I/O, and query-plan evidence without overstating profiler or cache boundaries.",
-      "graduate_profile": [
-        3,
-        8,
-        11
-      ],
-      "mastery_levels": [
-        "Implement",
-        "Diagnose"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L05",
         "L06"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-09",
         "EX-10",
         "EX-11"
-      ],
-      "artifacts": [
-        "A02",
-        "A03",
-        "A04"
-      ],
-      "rubric": [
-        "R05"
       ]
     },
     {
       "id": "M04-O6",
       "statement": "Diagnose CPU work, allocation pressure, lock contention, slow I/O, connection retention, and metric-cardinality faults before reveal, then design discriminating reruns.",
-      "graduate_profile": [
-        7,
-        8,
-        11
-      ],
-      "mastery_levels": [
-        "Diagnose",
-        "Decide and Teach"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L01",
         "L05",
         "L06"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-09",
         "EX-10",
         "EX-11",
         "EX-12"
-      ],
-      "artifacts": [
-        "A04",
-        "A05"
-      ],
-      "rubric": [
-        "R06",
-        "R07"
       ]
     },
     {
       "id": "M04-O7",
       "statement": "Build a reproducible benchmark and enforce a workload-scoped regression budget with pass, regression, and inconclusive outcomes.",
-      "graduate_profile": [
-        2,
-        8,
-        10
-      ],
-      "mastery_levels": [
-        "Calculate",
-        "Implement",
-        "Diagnose",
-        "Decide and Teach"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L02",
         "L07"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-13"
-      ],
-      "artifacts": [
-        "A06"
-      ],
-      "rubric": [
-        "R08"
       ]
     },
     {
       "id": "M04-O8",
       "statement": "Defend a performance change through user outcome, causal evidence, validation, telemetry safety and cost, ownership, migration, rollout, rollback, and reversal conditions.",
-      "graduate_profile": [
-        8,
-        10,
-        14,
-        15,
-        16
-      ],
-      "mastery_levels": [
-        "Diagnose",
-        "Decide and Teach"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L08"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-14",
         "EX-15"
-      ],
-      "artifacts": [
-        "A07",
-        "A08",
-        "A09",
-        "A11"
-      ],
-      "rubric": [
-        "R09",
-        "R10"
       ]
     }
   ],
+  "practice": {
+    "exercises_path": "exercises/exercises.md",
+    "answer_key_path": "exercises/answer-key.md"
+  },
+  "lab": {
+    "required": true,
+    "path": "lab/README.md",
+    "note": "Use the lab to reinforce the local mechanism; treat expanded matrices and platform-specific evidence as optional deep-dive work."
+  },
+  "quiz": {
+    "question_bank_path": "quiz/question-bank.json",
+    "answer_key_path": "quiz/answer-key.md",
+    "llm_grader_prompt_path": "quiz/llm-grader-prompt.md",
+    "question_count": 100,
+    "default_draw_count": 20,
+    "types": [
+      "multiple_choice",
+      "short_answer",
+      "calculation",
+      "scenario_diagnosis",
+      "design_judgment"
+    ]
+  },
+  "optional_project": {
+    "description": "Apply Performance Methodology and Observability to a small system you know. Write a short design note, experiment report, or implementation summary only if you want deeper practice."
+  },
   "resources": [
     {
       "id": "RES-01",
       "title": "The USE Method",
-      "author_or_publisher": "Brendan Gregg",
-      "type": "practitioner performance methodology",
       "url": "https://www.brendangregg.com/usemethod.html",
       "required": true,
-      "access": "free",
-      "week": 19,
       "estimated_minutes": 35,
       "purpose": "Start investigation from resource questions rather than available dashboards.",
-      "assignment": "Read Summary, Metrics, In Practice, and Other Methodologies; build a USE table and name two gaps.",
-      "last_verified": "2026-07-31",
-      "text_alternative": "lessons/01-question-first-investigations.md",
-      "verified_title": "The USE Method",
-      "verified_publisher": "Brendan Gregg",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://www.brendangregg.com/usemethod.html",
-      "verification_status": "verified"
+      "local_alternative": "lessons/01-question-first-investigations.md"
     },
     {
       "id": "RES-02",
       "title": "Monitoring Systems with Advanced Analytics",
-      "author_or_publisher": "Google SRE Workbook contributors",
-      "type": "practitioner handbook chapter",
       "url": "https://sre.google/workbook/monitoring/",
       "required": true,
-      "access": "free",
-      "week": 19,
       "estimated_minutes": 45,
       "purpose": "Connect user symptoms, diagnostic signals, and operating cost.",
-      "assignment": "Read Desirable Features, Sources of Monitoring Data, and Metrics with Purpose through Saturation; classify five signals.",
-      "last_verified": "2026-07-31",
-      "text_alternative": "lessons/04-signals-cardinality-cost.md",
-      "verified_title": "Monitoring Systems with Advanced Analytics",
-      "verified_publisher": "Google SRE Workbook contributors",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://sre.google/workbook/monitoring/",
-      "verification_status": "verified"
+      "local_alternative": "lessons/04-signals-cardinality-cost.md"
     },
     {
       "id": "RES-03",
       "title": "Trace Context",
-      "author_or_publisher": "W3C Distributed Tracing Working Group",
-      "type": "W3C Recommendation",
       "url": "https://www.w3.org/TR/trace-context/",
       "required": true,
-      "access": "free",
-      "week": 18,
       "estimated_minutes": 40,
       "purpose": "Define interoperable trace identity, parsing, and privacy behavior.",
-      "assignment": "Read Abstract, header format, processing model, and privacy considerations; validate three contexts and identify one trust boundary.",
-      "last_verified": "2026-07-31",
-      "text_alternative": "lessons/03-trace-context.md",
-      "verified_title": "Trace Context",
-      "verified_publisher": "W3C Distributed Tracing Working Group",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://www.w3.org/TR/trace-context/",
-      "verification_status": "verified"
+      "local_alternative": "lessons/03-trace-context.md"
     },
     {
       "id": "RES-04",
       "title": "OpenTelemetry Specification Overview",
-      "author_or_publisher": "OpenTelemetry maintainers and CNCF",
-      "type": "maintainer specification",
       "url": "https://opentelemetry.io/docs/specs/otel/overview/",
       "required": true,
-      "access": "free",
-      "week": 19,
       "estimated_minutes": 45,
       "purpose": "Map provider-neutral lab records to trace, metric, log, resource, and context semantics.",
-      "assignment": "Read the named signal, resource, context, and propagator sections; map every lab record field.",
-      "last_verified": "2026-07-31",
-      "text_alternative": "lessons/03-trace-context.md",
-      "verified_title": "OpenTelemetry Specification Overview",
-      "verified_publisher": "OpenTelemetry maintainers and CNCF",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://opentelemetry.io/docs/specs/otel/overview/",
-      "verification_status": "verified"
+      "local_alternative": "lessons/03-trace-context.md"
     },
     {
       "id": "RES-05",
       "title": "Rigorous Benchmarking in Reasonable Time",
-      "author_or_publisher": "Tomas Kalibera and Richard E. Jones; ACM ISMM and University of Kent",
-      "type": "original research paper",
       "url": "https://kar.kent.ac.uk/33611/",
       "required": true,
-      "access": "free",
-      "week": 18,
       "estimated_minutes": 55,
       "purpose": "Model multiple sources of benchmark variation and efficient repetition.",
-      "assignment": "Read the abstract, experimental dimensions, repetition guidance, and reporting recommendations; identify three variation levels.",
-      "last_verified": "2026-07-31",
-      "text_alternative": "lessons/07-benchmarks-regression-budgets.md",
-      "verified_title": "Rigorous Benchmarking in Reasonable Time",
-      "verified_publisher": "Tomas Kalibera and Richard E. Jones; ACM ISMM and University of Kent",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://kar.kent.ac.uk/33611/",
-      "verification_status": "verified"
+      "local_alternative": "lessons/07-benchmarks-regression-budgets.md"
     },
     {
       "id": "RES-06",
       "title": "The Art of Performance Monitoring",
-      "author_or_publisher": "Brian Smith, Facebook; USENIX Association",
-      "type": "conference video, audio, and slides",
       "url": "https://www.usenix.org/conference/srecon16/program/presentation/smith",
       "required": true,
-      "access": "free",
-      "week": 18,
       "estimated_minutes": 35,
       "purpose": "Examine production performance monitoring as a designed and owned system.",
-      "assignment": "Watch the complete talk or use all slides with the local alternative; record one design rule, its cost, and a counterexample.",
-      "last_verified": "2026-07-31",
-      "text_alternative": "lessons/04-signals-cardinality-cost.md",
-      "verified_title": "The Art of Performance Monitoring",
-      "verified_publisher": "Brian Smith, Facebook; USENIX Association",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://www.usenix.org/conference/srecon16/program/presentation/smith",
-      "verification_status": "verified"
+      "local_alternative": "lessons/04-signals-cardinality-cost.md"
     },
     {
       "id": "RES-07",
       "title": "The Python Profilers",
-      "author_or_publisher": "Python Software Foundation",
-      "type": "official documentation",
       "url": "https://docs.python.org/3/library/profile.html",
       "required": false,
-      "access": "free",
-      "week": 22,
       "estimated_minutes": 30,
       "purpose": "Distinguish deterministic call profiling, cumulative time, and instrumentation overhead in the portable lab.",
-      "assignment": "Read the introduction, instant user manual, and limitations; record what deterministic profiling measures and how its overhead changes the evidence boundary.",
-      "last_verified": "2026-08-04",
-      "text_alternative": "lessons/05-profiling.md",
-      "verified_title": "The Python Profilers",
-      "verified_publisher": "Python Software Foundation",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://docs.python.org/3/library/profile.html",
-      "verification_status": "verified"
+      "local_alternative": "lessons/05-profiling.md"
     },
     {
       "id": "RES-08",
       "title": "tracemalloc \u2014 Trace memory allocations",
-      "author_or_publisher": "Python Software Foundation",
-      "type": "official documentation",
       "url": "https://docs.python.org/3/library/tracemalloc.html",
       "required": false,
-      "access": "free",
-      "week": 22,
       "estimated_minutes": 25,
       "purpose": "Interpret allocation snapshots and retained differences without equating total allocation with a leak.",
-      "assignment": "Read tracing allocations, snapshots, and comparing snapshots; state what the tool can attribute and what it cannot establish about object liveness.",
-      "last_verified": "2026-08-04",
-      "text_alternative": "lessons/05-profiling.md",
-      "verified_title": "tracemalloc \u2014 Trace memory allocations",
-      "verified_publisher": "Python Software Foundation",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://docs.python.org/3/library/tracemalloc.html",
-      "verification_status": "verified"
+      "local_alternative": "lessons/05-profiling.md"
     },
     {
       "id": "RES-09",
       "title": "EXPLAIN QUERY PLAN",
-      "author_or_publisher": "SQLite project",
-      "type": "official documentation",
       "url": "https://www.sqlite.org/eqp.html",
       "required": false,
-      "access": "free",
-      "week": 22,
       "estimated_minutes": 25,
       "purpose": "Interpret scan, search, index, join-order, and temporary-structure evidence in the dependency lab.",
-      "assignment": "Read the warning and Sections 1.1\u20131.3; identify the chosen access path and explain why output formatting is not a stable application API.",
-      "last_verified": "2026-08-04",
-      "text_alternative": "lessons/06-dependencies-query-plans.md",
-      "verified_title": "EXPLAIN QUERY PLAN",
-      "verified_publisher": "SQLite project",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://www.sqlite.org/eqp.html",
-      "verification_status": "verified"
+      "local_alternative": "lessons/06-dependencies-query-plans.md"
     }
-  ],
-  "artifacts": [
-    {
-      "id": "A01",
-      "week": 19,
-      "required": true,
-      "template_path": "modules/04-performance-methodology-observability/worksheets/week-13-investigation-plan.md",
-      "submission_path": "reports/module-04-investigation-plan.md",
-      "immutable_after_submission": true,
-      "portfolio_category": "model",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M04-A01",
-      "component_role": "prediction",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A02",
-      "week": 19,
-      "required": true,
-      "template_path": "modules/04-performance-methodology-observability/lab/README.md",
-      "submission_path": "labs/module-04/",
-      "portfolio_category": "implementation",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M04-A02",
-      "component_role": "implementation",
-      "estimated_minutes": 30,
-      "evidence_mode": "executed_deterministic"
-    },
-    {
-      "id": "A03",
-      "week": 19,
-      "required": true,
-      "template_path": "modules/04-performance-methodology-observability/worksheets/week-14-instrumentation-build.md",
-      "submission_path": "labs/module-04/build-review.md",
-      "portfolio_category": "implementation",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M04-A03",
-      "component_role": "implementation",
-      "estimated_minutes": 30,
-      "evidence_mode": "executed_deterministic"
-    },
-    {
-      "id": "A04",
-      "week": 21,
-      "required": true,
-      "template_path": "modules/04-performance-methodology-observability/worksheets/week-15-blind-diagnosis.md",
-      "submission_path": "experiments/module-04/",
-      "portfolio_category": "failure_matrix",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M04-A04",
-      "component_role": "raw_evidence",
-      "estimated_minutes": 30,
-      "evidence_mode": "executed_deterministic"
-    },
-    {
-      "id": "A05",
-      "week": 21,
-      "required": true,
-      "template_path": "modules/04-performance-methodology-observability/worksheets/week-15-blind-diagnosis.md",
-      "submission_path": "reports/module-04-failure-matrix.md",
-      "immutable_after_submission": true,
-      "portfolio_category": "failure_matrix",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M04-A05",
-      "component_role": "raw_evidence",
-      "estimated_minutes": 30,
-      "evidence_mode": "executed_deterministic"
-    },
-    {
-      "id": "A06",
-      "week": 21,
-      "required": true,
-      "template_path": "modules/04-performance-methodology-observability/worksheets/week-16-performance-review.md",
-      "submission_path": "experiments/module-04/benchmark-result.json",
-      "portfolio_category": "performance_investigation",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M04-A06",
-      "component_role": "analysis",
-      "estimated_minutes": 30,
-      "evidence_mode": "measured_loopback"
-    },
-    {
-      "id": "A07",
-      "week": 21,
-      "required": true,
-      "template_path": "templates/performance-review-template.md",
-      "submission_path": "reports/module-04-performance-review.md",
-      "portfolio_category": "performance_investigation",
-      "portfolio_item_id": "PI-PERF-02",
-      "portfolio_credit": true,
-      "evidence_lineage_id": "LIN-PERF-OBSERVABILITY",
-      "component_role": "analysis",
-      "estimated_minutes": 30,
-      "evidence_mode": "measured_loopback"
-    },
-    {
-      "id": "A08",
-      "week": 22,
-      "required": true,
-      "template_path": "modules/04-performance-methodology-observability/worksheets/week-16-performance-review.md",
-      "submission_path": "reviews/module-04-defense.md",
-      "portfolio_category": "teach_back",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M04-A08",
-      "component_role": "final",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A09",
-      "week": 22,
-      "required": true,
-      "template_path": "modules/04-performance-methodology-observability/assessment/report-template.md",
-      "submission_path": "reviews/module-04-evaluation.md",
-      "portfolio_category": "evaluation",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M04-A09",
-      "component_role": "final",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A10",
-      "week": 22,
-      "required": true,
-      "template_path": "templates/learning-log-template.md",
-      "submission_path": "learning-log/week-018.md through learning-log/week-022.md",
-      "portfolio_category": "learning_log",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M04-A10",
-      "component_role": "final",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A11",
-      "week": 22,
-      "required": true,
-      "template_path": "templates/adr-template.md",
-      "submission_path": "adr/module-04-performance-regression-policy.md",
-      "portfolio_category": "adr",
-      "portfolio_item_id": "PI-DECISION-M04",
-      "portfolio_credit": true,
-      "evidence_lineage_id": "LIN-DECISION-M04",
-      "component_role": "decision",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    }
-  ],
-  "failure_experiments": [
-    {
-      "id": "F01",
-      "scenario": "CPU work hidden in request processing",
-      "evidence": "Journey effect, process CPU, hot profile stack, stable dependency timing, equivalent checksum, and discriminating rerun"
-    },
-    {
-      "id": "F02",
-      "scenario": "Allocation pressure and retention",
-      "evidence": "Allocation rate/sites, retained bytes, memory boundary, cleanup, journey effect, and churn-versus-leak test"
-    },
-    {
-      "id": "F03",
-      "scenario": "Lock contention",
-      "evidence": "Lock wait, concurrency, server spans, CPU evidence, critical-section variation, and alternative explanation"
-    },
-    {
-      "id": "F04",
-      "scenario": "Slow bounded local I/O",
-      "evidence": "File child spans, process CPU, bytes, cache/durability limits, user effect, and equivalent-work rerun"
-    },
-    {
-      "id": "F05",
-      "scenario": "Bounded connection retention",
-      "evidence": "Active/peak/retained connections, request completion, descriptor boundary, shutdown cleanup, and second-run proof"
-    },
-    {
-      "id": "F06",
-      "scenario": "High-cardinality metric label",
-      "evidence": "Unique series, encoded-byte estimate, budget violation, safe aggregation replacement, trace exemplar, privacy and owner"
-    }
-  ],
-  "assessment": {
-    "rubric_path": "modules/04-performance-methodology-observability/assessment/rubric.md",
-    "evaluator_prompt_path": "modules/04-performance-methodology-observability/assessment/evaluator-prompt.md",
-    "evaluation_schema_path": "schemas/evaluation.schema.json",
-    "calibration_path": "modules/04-performance-methodology-observability/assessment/calibration",
-    "pass_average": 3,
-    "safety_critical_criteria": [
-      "R06",
-      "R07"
-    ],
-    "required_result_bands": [
-      "Pass",
-      "Revise",
-      "Repeat"
-    ]
-  },
-  "solo_review": {
-    "challenge_questions": [
-      {
-        "id": "M04-SR-Q01",
-        "prompt": "Which claim in your artifact most directly supports this outcome, and what evidence could falsify it: Freeze a user-scoped performance question, equivalent-work baseline, competing hypotheses, falsifiers, and bounded collection plan before inspecting a fault."
-      },
-      {
-        "id": "M04-SR-Q02",
-        "prompt": "What unstated assumption could invalidate your treatment of this outcome, and how would you test it: Design controlled, interleaved experiments that expose process and environment variation while preserving useful work and raw samples."
-      },
-      {
-        "id": "M04-SR-Q03",
-        "prompt": "Defend the causal chain behind your evidence for this outcome, including the first likely failure: Propagate safe trace context across a process boundary and correlate request traces, structured logs, metrics, and exemplars."
-      },
-      {
-        "id": "M04-SR-Q04",
-        "prompt": "Which reasonable alternative would challenge your treatment of this outcome, and under what evidence would it win: Choose metrics and logs with explicit units, purpose, cardinality, overhead, privacy, retention, access, cost, and ownership bounds."
-      },
-      {
-        "id": "M04-SR-Q05",
-        "prompt": "What operational, security, cost, or ownership consequence is least supported in your treatment of this outcome: Use CPU, allocation, lock-wait, dependency-span, local-I/O, and query-plan evidence without overstating profiler or cache boundaries."
-      },
-      {
-        "id": "M04-SR-Q06",
-        "prompt": "Where does your evidence stop transferring to production for this outcome, and how is that boundary disclosed: Diagnose CPU work, allocation pressure, lock contention, slow I/O, connection retention, and metric-cardinality faults before reveal, then design discriminating reruns."
-      },
-      {
-        "id": "M04-SR-Q07",
-        "prompt": "What dissent should a skeptical reviewer raise about your treatment of this outcome, and what follow-up evidence would resolve it: Build a reproducible benchmark and enforce a workload-scoped regression budget with pass, regression, and inconclusive outcomes."
-      },
-      {
-        "id": "M04-SR-Q08",
-        "prompt": "What changed belief or reversal condition follows from your work on this outcome, and where is it recorded: Defend a performance change through user outcome, causal evidence, validation, telemetry safety and cost, ownership, migration, rollout, rollback, and reversal conditions."
-      }
-    ],
-    "required_reviewer_roles": [
-      "Performance Methodology and Observability domain reviewer",
-      "operations and reliability owner",
-      "security and privacy reviewer",
-      "delivery and cost stakeholder"
-    ],
-    "questions_per_attempt": 5,
-    "live_ai_allowed": false,
-    "record_template_path": "templates/solo-review-record-template.md"
-  },
-  "factual_claims_path": "modules/04-performance-methodology-observability/assessment/factual-claims.json",
-  "lesson_catalog": [
-    {
-      "id": "L01",
-      "path": "lessons/01-question-first-investigations.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L02",
-      "path": "lessons/02-controlled-experiments.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L03",
-      "path": "lessons/03-trace-context.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L04",
-      "path": "lessons/04-signals-cardinality-cost.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L05",
-      "path": "lessons/05-profiling.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L06",
-      "path": "lessons/06-dependencies-query-plans.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L07",
-      "path": "lessons/07-benchmarks-regression-budgets.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L08",
-      "path": "lessons/08-causal-decisions.md",
-      "estimated_minutes": 30
-    }
-  ],
-  "citation_catalog": [
-    {
-      "id": "CIT-01",
-      "title": "timeit \u2014 Measure execution time of small code snippets",
-      "author_or_publisher": "Python Software Foundation",
-      "type": "primary-source citation",
-      "url": "https://docs.python.org/3/library/timeit.html",
-      "required": true,
-      "access": "free",
-      "purpose": "Provide primary-source support for the bounded mechanism discussed in the cited local lesson.",
-      "reading_boundary": "Read the command-line interface, default repetition behavior, and timing caveats; do not generalize microbenchmarks to production.",
-      "last_verified": "2026-08-04",
-      "text_alternative": "lessons/02-controlled-experiments.md",
-      "verified_title": "timeit \u2014 Measure execution time of small code snippets",
-      "verified_publisher": "Python Software Foundation",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://docs.python.org/3/library/timeit.html",
-      "verification_status": "verified"
-    },
-    {
-      "id": "CIT-02",
-      "title": "Tracing API",
-      "author_or_publisher": "OpenTelemetry",
-      "type": "primary-source citation",
-      "url": "https://opentelemetry.io/docs/specs/otel/trace/api/",
-      "required": true,
-      "access": "free",
-      "purpose": "Provide primary-source support for the bounded mechanism discussed in the cited local lesson.",
-      "reading_boundary": "Read TracerProvider, Tracer, Span creation, context propagation, links, events, status, and shutdown boundaries.",
-      "last_verified": "2026-08-04",
-      "text_alternative": "lessons/03-trace-context.md",
-      "verified_title": "Tracing API",
-      "verified_publisher": "OpenTelemetry",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://opentelemetry.io/docs/specs/otel/trace/api/",
-      "verification_status": "verified"
-    },
-    {
-      "id": "CIT-03",
-      "title": "OpenTelemetry Metrics",
-      "author_or_publisher": "OpenTelemetry",
-      "type": "primary-source citation",
-      "url": "https://opentelemetry.io/docs/specs/otel/metrics/",
-      "required": true,
-      "access": "free",
-      "purpose": "Provide primary-source support for the bounded mechanism discussed in the cited local lesson.",
-      "reading_boundary": "Read the data model overview, instrument guidance, attribute requirements, aggregation, and cardinality limits.",
-      "last_verified": "2026-08-04",
-      "text_alternative": "lessons/04-signals-cardinality-cost.md",
-      "verified_title": "OpenTelemetry Metrics",
-      "verified_publisher": "OpenTelemetry",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://opentelemetry.io/docs/specs/otel/metrics/",
-      "verification_status": "verified"
-    },
-    {
-      "id": "CIT-04",
-      "title": "OpenTelemetry Logging",
-      "author_or_publisher": "OpenTelemetry",
-      "type": "primary-source citation",
-      "url": "https://opentelemetry.io/docs/specs/otel/logs/",
-      "required": true,
-      "access": "free",
-      "purpose": "Provide primary-source support for the bounded mechanism discussed in the cited local lesson.",
-      "reading_boundary": "Read the log data model, severity, trace correlation, resource, and attribute guidance.",
-      "last_verified": "2026-08-04",
-      "text_alternative": "lessons/04-signals-cardinality-cost.md",
-      "verified_title": "OpenTelemetry Logging",
-      "verified_publisher": "OpenTelemetry",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://opentelemetry.io/docs/specs/otel/logs/",
-      "verification_status": "verified"
-    },
-    {
-      "id": "CIT-05",
-      "title": "OpenTelemetry Profiles",
-      "author_or_publisher": "OpenTelemetry",
-      "type": "primary-source citation",
-      "url": "https://opentelemetry.io/docs/specs/otel/profiles/",
-      "required": true,
-      "access": "free",
-      "purpose": "Provide primary-source support for the bounded mechanism discussed in the cited local lesson.",
-      "reading_boundary": "Read the profile data model overview, mappings, timestamps, stack traces, and stability statements.",
-      "last_verified": "2026-08-04",
-      "text_alternative": "lessons/05-profiling.md",
-      "verified_title": "OpenTelemetry Profiles",
-      "verified_publisher": "OpenTelemetry",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://opentelemetry.io/docs/specs/otel/profiles/",
-      "verification_status": "verified"
-    },
-    {
-      "id": "CIT-06",
-      "title": "sqlite3 \u2014 DB-API 2.0 interface for SQLite databases",
-      "author_or_publisher": "Python Software Foundation",
-      "type": "primary-source citation",
-      "url": "https://docs.python.org/3/library/sqlite3.html",
-      "required": true,
-      "access": "free",
-      "purpose": "Provide primary-source support for the bounded mechanism discussed in the cited local lesson.",
-      "reading_boundary": "Read transaction control and EXPLAIN-related API boundaries used by the local SQLite experiment.",
-      "last_verified": "2026-08-04",
-      "text_alternative": "lessons/06-dependencies-query-plans.md",
-      "verified_title": "sqlite3 \u2014 DB-API 2.0 interface for SQLite databases",
-      "verified_publisher": "Python Software Foundation",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://docs.python.org/3/library/sqlite3.html",
-      "verification_status": "verified"
-    },
-    {
-      "id": "CIT-07",
-      "title": "statistics \u2014 Mathematical statistics functions",
-      "author_or_publisher": "Python Software Foundation",
-      "type": "primary-source citation",
-      "url": "https://docs.python.org/3/library/statistics.html",
-      "required": true,
-      "access": "free",
-      "purpose": "Provide primary-source support for the bounded mechanism discussed in the cited local lesson.",
-      "reading_boundary": "Read median and quantiles contracts, including method and small-sample caveats used by the deterministic checker.",
-      "last_verified": "2026-08-04",
-      "text_alternative": "lessons/07-benchmarks-regression-budgets.md",
-      "verified_title": "statistics \u2014 Mathematical statistics functions",
-      "verified_publisher": "Python Software Foundation",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://docs.python.org/3/library/statistics.html",
-      "verification_status": "verified"
-    }
-  ],
-  "course_id": "PESD-104",
-  "course_version": "2.0",
-  "primary_decision": {
-    "artifact_id": "A11",
-    "type": "ADR"
-  },
-  "pesd_v2_additions": "telemetry as a governed data product: schema ownership, PII restrictions, retention, sampling bias, lineage, cardinality, and cost budgets",
-  "semantic_evaluation": "module_specific"
+  ]
 }

@@ -1,0 +1,1926 @@
+{
+  "module_id": "M02",
+  "title": "Capacity, Queues, and Tail Latency",
+  "questions": [
+    {
+      "question_id": "M02-Q001",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "workload-and-useful-work",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Workload and Useful Work' in Capacity, Queues, and Tail Latency?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to model logical work, attempts, operation mix, normal, peak, burst, projected, skewed, and recovery demand with visible uncertainty.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to model logical work, attempts, operation mix, normal, peak, burst, projected, skewed, and recovery demand with visible uncertainty.",
+      "explanation": "A capacity model begins with work crossing a named boundary. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M02-Q002",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "little\u2019s-law-and-saturation",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Little\u2019s Law and Saturation' supports this outcome: Calculate concurrency, per-resource service demand, nominal capacity, and failover exposure using consistent boundaries.",
+      "correct_answer": "A strong answer defines the mechanism from 'Little\u2019s Law and Saturation', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "For a stable long-run boundary: text L = \u03bbW L is average work in the boundary, \u03bb is the rate that enters and eventually leaves that boundary, and W is average time in it.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M02-Q003",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "latency-measurement",
+        "synthesis"
+      ],
+      "prompt": "For 'Latency Measurement', what quantities, units, or thresholds would you calculate before trusting a design claim about: Implement and test fixed workers, explicit bounded waiting, fan-out, downstream admission, logical identities, and timing instrumentation.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. You can design an open-loop latency experiment, identify coordinated omission, report generator error, and interpret percentile evidence with scope.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M02-Q004",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "fan-out-and-tail-amplification",
+        "application"
+      ],
+      "prompt": "A learner applies 'Fan-out and Tail Amplification' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Multiply branch p99 by fan-out:** parallel maximum is not a sequential sum.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M02-Q005",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "bounded-overload-control",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Bounded Overload Control'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for predict and measure fan-out tail amplification, downstream branch demand, and correlation limits..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Google SRE, Addressing Cascading Failureshttps://sre.google/sre-book/addressing-cascading-failures/ - David Yanacek, Avoiding Insurmountable Queue Backlogshttps://aws.amazon.com/builders-library/avoiding-insurmountable-queue-backlogs/ Complete EX-07 and EX-0",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M02-Q006",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "retries-and-downstream-protection",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Retries and Downstream Protection' in Capacity, Queues, and Tail Latency?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to locate saturation from useful throughput, latency, queue, rejection, concurrency, and generator evidence across the required load sweep.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to locate saturation from useful throughput, latency, queue, rejection, concurrency, and generator evidence across the required load sweep.",
+      "explanation": "A retry is additional load created during a failure. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M02-Q007",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "failover-headroom-and-unit-cost",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Failover Headroom and Unit Cost' supports this outcome: Keep overload, priority, retries, downstream work, and recovery bounded under burst and dependency failure.",
+      "correct_answer": "A strong answer defines the mechanism from 'Failover Headroom and Unit Cost', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Normal-state success does not prove failover safety.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M02-Q008",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "capacity-decisions-and-defense",
+        "synthesis"
+      ],
+      "prompt": "For 'Capacity Decisions and Defense', what quantities, units, or thresholds would you calculate before trusting a design claim about: Defend a workload-scoped safe operating region, actionable scaling signal, overload policy, failover reserve, ownership model, and cost per useful request.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. You can turn predictions and experiments into a scoped capacity decision with a safe region, scaling signal, overload policy, owners, rollout, and reversal conditions.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M02-Q009",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "workload-and-useful-work",
+        "application"
+      ],
+      "prompt": "A learner applies 'Workload and Useful Work' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Start from host count:** host count is supply, not demand.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M02-Q010",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "little\u2019s-law-and-saturation",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Little\u2019s Law and Saturation'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for calculate concurrency, per-resource service demand, nominal capacity, and failover exposure using consistent boundaries..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - MIT OpenCourseWare, Queueing Systems lecture noteshttps://ocw.mit.edu/courses/1-203j-logistical-and-transportation-planning-methods-fall-2006/resources/lec5/ - Julius Plenz, How to Trade off Server Utilization and Tail Latencyhttps://www.usenix.org/conferenc",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M02-Q011",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "latency-measurement",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Latency Measurement' in Capacity, Queues, and Tail Latency?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement and test fixed workers, explicit bounded waiting, fan-out, downstream admission, logical identities, and timing instrumentation.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement and test fixed workers, explicit bounded waiting, fan-out, downstream admission, logical identities, and timing instrumentation.",
+      "explanation": "A latency distribution needs: - population and operation - start and stop boundary - workload and environment - observation window and sample count - warm-up and repetitions - treatment of timeouts, rejection, and missing observations - measurement location an The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M02-Q012",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "fan-out-and-tail-amplification",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Fan-out and Tail Amplification' supports this outcome: Design an open-loop latency experiment that exposes coordinated omission, generator limits, rejection, and uncertainty.",
+      "correct_answer": "A strong answer defines the mechanism from 'Fan-out and Tail Amplification', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "If one branch completes within threshold t with probability Ft, and n parallel branches are independent, a request that waits for all branches completes within t with probability: text Pmax branch \u2264 t = Ft^n Pany branch t = 1 - Ft^n For a branch-tail probabili",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M02-Q013",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "bounded-overload-control",
+        "synthesis"
+      ],
+      "prompt": "For 'Bounded Overload Control', what quantities, units, or thresholds would you calculate before trusting a design claim about: Predict and measure fan-out tail amplification, downstream branch demand, and correlation limits.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. You can locate every place work waits, choose explicit queue and concurrency bounds, and define admission, priority, degradation, and recovery behavior.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M02-Q014",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "retries-and-downstream-protection",
+        "application"
+      ],
+      "prompt": "A learner applies 'Retries and Downstream Protection' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Retry every error:** permanent and overload errors consume more capacity.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M02-Q015",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "failover-headroom-and-unit-cost",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Failover Headroom and Unit Cost'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for keep overload, priority, retries, downstream work, and recovery bounded under burst and dependency failure..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - David Yanacek, Avoiding Insurmountable Queue Backlogshttps://aws.amazon.com/builders-library/avoiding-insurmountable-queue-backlogs/ - Julius Plenz, How to Trade off Server Utilization and Tail Latencyhttps://www.usenix.org/conference/srecon19asia/presentati",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M02-Q016",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "capacity-decisions-and-defense",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Capacity Decisions and Defense' in Capacity, Queues, and Tail Latency?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend a workload-scoped safe operating region, actionable scaling signal, overload policy, failover reserve, ownership model, and cost per useful request.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend a workload-scoped safe operating region, actionable scaling signal, overload policy, failover reserve, ownership model, and cost per useful request.",
+      "explanation": "A capacity report is a decision artifact, not a benchmark dump. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M02-Q017",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "workload-and-useful-work",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Workload and Useful Work' supports this outcome: Model logical work, attempts, operation mix, normal, peak, burst, projected, skewed, and recovery demand with visible uncertainty.",
+      "correct_answer": "A strong answer defines the mechanism from 'Workload and Useful Work', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "A capacity model begins with work crossing a named boundary.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M02-Q018",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "little\u2019s-law-and-saturation",
+        "synthesis"
+      ],
+      "prompt": "For 'Little\u2019s Law and Saturation', what quantities, units, or thresholds would you calculate before trusting a design claim about: Calculate concurrency, per-resource service demand, nominal capacity, and failover exposure using consistent boundaries.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. You can apply Little\u2019s Law to consistent boundaries, calculate service-demand limits, distinguish utilization from latency, and state the limits of the model.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M02-Q019",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "latency-measurement",
+        "application"
+      ],
+      "prompt": "A learner applies 'Latency Measurement' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Report only averages:** a small slow population can dominate user journeys.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M02-Q020",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "fan-out-and-tail-amplification",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Fan-out and Tail Amplification'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for design an open-loop latency experiment that exposes coordinated omission, generator limits, rejection, and uncertainty..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Jeffrey Dean and Luiz Andr\u00e9 Barroso, The Tail at Scalehttps://research.google/pubs/the-tail-at-scale/ Complete EX-06 and run the Transit baseline before Lesson 5.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M02-Q021",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "bounded-overload-control",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Bounded Overload Control' in Capacity, Queues, and Tail Latency?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to predict and measure fan-out tail amplification, downstream branch demand, and correlation limits.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to predict and measure fan-out tail amplification, downstream branch demand, and correlation limits.",
+      "explanation": "When arrivals exceed completions, one of four things happens: 1. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M02-Q022",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "retries-and-downstream-protection",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Retries and Downstream Protection' supports this outcome: Locate saturation from useful throughput, latency, queue, rejection, concurrency, and generator evidence across the required load sweep.",
+      "correct_answer": "A strong answer defines the mechanism from 'Retries and Downstream Protection', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "A retry is additional load created during a failure.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M02-Q023",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "failover-headroom-and-unit-cost",
+        "synthesis"
+      ],
+      "prompt": "For 'Failover Headroom and Unit Cost', what quantities, units, or thresholds would you calculate before trusting a design claim about: Keep overload, priority, retries, downstream work, and recovery bounded under burst and dependency failure.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. You can calculate degraded-state capacity, backlog clearance, and cost per useful request, then run sensitivity without declaring a universal utilization target.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M02-Q024",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "capacity-decisions-and-defense",
+        "application"
+      ],
+      "prompt": "A learner applies 'Capacity Decisions and Defense' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Select the prettiest chart:** a decision needs falsifying and failure",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M02-Q025",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "workload-and-useful-work",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Workload and Useful Work'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for model logical work, attempts, operation mix, normal, peak, burst, projected, skewed, and recovery demand with visible uncertainty..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - MIT OpenCourseWare, Queueing Systems lecture noteshttps://ocw.mit.edu/courses/1-203j-logistical-and-transportation-planning-methods-fall-2006/resources/lec5/ - Google SRE, Addressing Cascading Failureshttps://sre.google/sre-book/addressing-cascading-failures",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M02-Q026",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "little\u2019s-law-and-saturation",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Little\u2019s Law and Saturation' in Capacity, Queues, and Tail Latency?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate concurrency, per-resource service demand, nominal capacity, and failover exposure using consistent boundaries.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate concurrency, per-resource service demand, nominal capacity, and failover exposure using consistent boundaries.",
+      "explanation": "For a stable long-run boundary: text L = \u03bbW L is average work in the boundary, \u03bb is the rate that enters and eventually leaves that boundary, and W is average time in it. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M02-Q027",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "latency-measurement",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Latency Measurement' supports this outcome: Implement and test fixed workers, explicit bounded waiting, fan-out, downstream admission, logical identities, and timing instrumentation.",
+      "correct_answer": "A strong answer defines the mechanism from 'Latency Measurement', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "A latency distribution needs: - population and operation - start and stop boundary - workload and environment - observation window and sample count - warm-up and repetitions - treatment of timeouts, rejection, and missing observations - measurement location an",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M02-Q028",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "fan-out-and-tail-amplification",
+        "synthesis"
+      ],
+      "prompt": "For 'Fan-out and Tail Amplification', what quantities, units, or thresholds would you calculate before trusting a design claim about: Design an open-loop latency experiment that exposes coordinated omission, generator limits, rejection, and uncertainty.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. You can derive the probability of at least one slow branch, connect branch service demand to journey latency, and state when independence assumptions fail.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M02-Q029",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "bounded-overload-control",
+        "application"
+      ],
+      "prompt": "A learner applies 'Bounded Overload Control' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Treat a queue as capacity:** it changes when work fails, not how fast work",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M02-Q030",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "retries-and-downstream-protection",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Retries and Downstream Protection'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for locate saturation from useful throughput, latency, queue, rejection, concurrency, and generator evidence across the required load sweep..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Google SRE, Addressing Cascading Failureshttps://sre.google/sre-book/addressing-cascading-failures/ - Marc Brooker, Timeouts, retries, and backoff with jitterhttps://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/ Complete EX-09, th",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M02-Q031",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "failover-headroom-and-unit-cost",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Failover Headroom and Unit Cost' in Capacity, Queues, and Tail Latency?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to keep overload, priority, retries, downstream work, and recovery bounded under burst and dependency failure.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to keep overload, priority, retries, downstream work, and recovery bounded under burst and dependency failure.",
+      "explanation": "Normal-state success does not prove failover safety. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M02-Q032",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "capacity-decisions-and-defense",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Capacity Decisions and Defense' supports this outcome: Defend a workload-scoped safe operating region, actionable scaling signal, overload policy, failover reserve, ownership model, and cost per useful request.",
+      "correct_answer": "A strong answer defines the mechanism from 'Capacity Decisions and Defense', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "A capacity report is a decision artifact, not a benchmark dump.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M02-Q033",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "workload-and-useful-work",
+        "synthesis"
+      ],
+      "prompt": "For 'Workload and Useful Work', what quantities, units, or thresholds would you calculate before trusting a design claim about: Model logical work, attempts, operation mix, normal, peak, burst, projected, skewed, and recovery demand with visible uncertainty.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. You can define a workload boundary, distinguish logical work from attempts, and model normal, peak, burst, projected, and skewed demand with visible uncertainty.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M02-Q034",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "little\u2019s-law-and-saturation",
+        "application"
+      ],
+      "prompt": "A learner applies 'Little\u2019s Law and Saturation' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Combine different boundaries:** server concurrency with client end-to-end",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M02-Q035",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "latency-measurement",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Latency Measurement'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement and test fixed workers, explicit bounded waiting, fan-out, downstream admission, logical identities, and timing instrumentation..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - HdrHistogram maintainers, Corrected vs.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M02-Q036",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "fan-out-and-tail-amplification",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Fan-out and Tail Amplification' in Capacity, Queues, and Tail Latency?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to design an open-loop latency experiment that exposes coordinated omission, generator limits, rejection, and uncertainty.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to design an open-loop latency experiment that exposes coordinated omission, generator limits, rejection, and uncertainty.",
+      "explanation": "If one branch completes within threshold t with probability Ft, and n parallel branches are independent, a request that waits for all branches completes within t with probability: text Pmax branch \u2264 t = Ft^n Pany branch t = 1 - Ft^n For a branch-tail probabili The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M02-Q037",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "bounded-overload-control",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Bounded Overload Control' supports this outcome: Predict and measure fan-out tail amplification, downstream branch demand, and correlation limits.",
+      "correct_answer": "A strong answer defines the mechanism from 'Bounded Overload Control', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "When arrivals exceed completions, one of four things happens: 1.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M02-Q038",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "retries-and-downstream-protection",
+        "synthesis"
+      ],
+      "prompt": "For 'Retries and Downstream Protection', what quantities, units, or thresholds would you calculate before trusting a design claim about: Locate saturation from useful throughput, latency, queue, rejection, concurrency, and generator evidence across the required load sweep.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. You can calculate retry amplification, define local and shared retry bounds, and protect a smaller downstream with deadlines, concurrency, and admission.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M02-Q039",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "failover-headroom-and-unit-cost",
+        "application"
+      ],
+      "prompt": "A learner applies 'Failover Headroom and Unit Cost' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Reserve capacity only at the first tier:** a shared downstream still fails.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M02-Q040",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "capacity-decisions-and-defense",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Capacity Decisions and Defense'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for defend a workload-scoped safe operating region, actionable scaling signal, overload policy, failover reserve, ownership model, and cost per useful request..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Google SRE, Addressing Cascading Failureshttps://sre.google/sre-book/addressing-cascading-failures/ - Google Research, The Tail at Scalehttps://research.google/pubs/the-tail-at-scale/ Complete EX-12, the capacity report, ADR, and defense.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M02-Q041",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "workload-and-useful-work",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Workload and Useful Work' in Capacity, Queues, and Tail Latency?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to model logical work, attempts, operation mix, normal, peak, burst, projected, skewed, and recovery demand with visible uncertainty.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to model logical work, attempts, operation mix, normal, peak, burst, projected, skewed, and recovery demand with visible uncertainty.",
+      "explanation": "A capacity model begins with work crossing a named boundary. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M02-Q042",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "little\u2019s-law-and-saturation",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Little\u2019s Law and Saturation' supports this outcome: Calculate concurrency, per-resource service demand, nominal capacity, and failover exposure using consistent boundaries.",
+      "correct_answer": "A strong answer defines the mechanism from 'Little\u2019s Law and Saturation', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "For a stable long-run boundary: text L = \u03bbW L is average work in the boundary, \u03bb is the rate that enters and eventually leaves that boundary, and W is average time in it.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M02-Q043",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "latency-measurement",
+        "synthesis"
+      ],
+      "prompt": "For 'Latency Measurement', what quantities, units, or thresholds would you calculate before trusting a design claim about: Implement and test fixed workers, explicit bounded waiting, fan-out, downstream admission, logical identities, and timing instrumentation.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. You can design an open-loop latency experiment, identify coordinated omission, report generator error, and interpret percentile evidence with scope.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M02-Q044",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "fan-out-and-tail-amplification",
+        "application"
+      ],
+      "prompt": "A learner applies 'Fan-out and Tail Amplification' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Multiply branch p99 by fan-out:** parallel maximum is not a sequential sum.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M02-Q045",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "bounded-overload-control",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Bounded Overload Control'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for predict and measure fan-out tail amplification, downstream branch demand, and correlation limits..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Google SRE, Addressing Cascading Failureshttps://sre.google/sre-book/addressing-cascading-failures/ - David Yanacek, Avoiding Insurmountable Queue Backlogshttps://aws.amazon.com/builders-library/avoiding-insurmountable-queue-backlogs/ Complete EX-07 and EX-0",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M02-Q046",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "retries-and-downstream-protection",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Retries and Downstream Protection' in Capacity, Queues, and Tail Latency?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to locate saturation from useful throughput, latency, queue, rejection, concurrency, and generator evidence across the required load sweep.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to locate saturation from useful throughput, latency, queue, rejection, concurrency, and generator evidence across the required load sweep.",
+      "explanation": "A retry is additional load created during a failure. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M02-Q047",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "failover-headroom-and-unit-cost",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Failover Headroom and Unit Cost' supports this outcome: Keep overload, priority, retries, downstream work, and recovery bounded under burst and dependency failure.",
+      "correct_answer": "A strong answer defines the mechanism from 'Failover Headroom and Unit Cost', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Normal-state success does not prove failover safety.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M02-Q048",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "capacity-decisions-and-defense",
+        "synthesis"
+      ],
+      "prompt": "For 'Capacity Decisions and Defense', what quantities, units, or thresholds would you calculate before trusting a design claim about: Defend a workload-scoped safe operating region, actionable scaling signal, overload policy, failover reserve, ownership model, and cost per useful request.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. You can turn predictions and experiments into a scoped capacity decision with a safe region, scaling signal, overload policy, owners, rollout, and reversal conditions.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M02-Q049",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "workload-and-useful-work",
+        "application"
+      ],
+      "prompt": "A learner applies 'Workload and Useful Work' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Start from host count:** host count is supply, not demand.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M02-Q050",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "little\u2019s-law-and-saturation",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Little\u2019s Law and Saturation'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for calculate concurrency, per-resource service demand, nominal capacity, and failover exposure using consistent boundaries..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - MIT OpenCourseWare, Queueing Systems lecture noteshttps://ocw.mit.edu/courses/1-203j-logistical-and-transportation-planning-methods-fall-2006/resources/lec5/ - Julius Plenz, How to Trade off Server Utilization and Tail Latencyhttps://www.usenix.org/conferenc",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M02-Q051",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "latency-measurement",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Latency Measurement' in Capacity, Queues, and Tail Latency?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement and test fixed workers, explicit bounded waiting, fan-out, downstream admission, logical identities, and timing instrumentation.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement and test fixed workers, explicit bounded waiting, fan-out, downstream admission, logical identities, and timing instrumentation.",
+      "explanation": "A latency distribution needs: - population and operation - start and stop boundary - workload and environment - observation window and sample count - warm-up and repetitions - treatment of timeouts, rejection, and missing observations - measurement location an The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M02-Q052",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "fan-out-and-tail-amplification",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Fan-out and Tail Amplification' supports this outcome: Design an open-loop latency experiment that exposes coordinated omission, generator limits, rejection, and uncertainty.",
+      "correct_answer": "A strong answer defines the mechanism from 'Fan-out and Tail Amplification', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "If one branch completes within threshold t with probability Ft, and n parallel branches are independent, a request that waits for all branches completes within t with probability: text Pmax branch \u2264 t = Ft^n Pany branch t = 1 - Ft^n For a branch-tail probabili",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M02-Q053",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "bounded-overload-control",
+        "synthesis"
+      ],
+      "prompt": "For 'Bounded Overload Control', what quantities, units, or thresholds would you calculate before trusting a design claim about: Predict and measure fan-out tail amplification, downstream branch demand, and correlation limits.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. You can locate every place work waits, choose explicit queue and concurrency bounds, and define admission, priority, degradation, and recovery behavior.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M02-Q054",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "retries-and-downstream-protection",
+        "application"
+      ],
+      "prompt": "A learner applies 'Retries and Downstream Protection' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Retry every error:** permanent and overload errors consume more capacity.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M02-Q055",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "failover-headroom-and-unit-cost",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Failover Headroom and Unit Cost'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for keep overload, priority, retries, downstream work, and recovery bounded under burst and dependency failure..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - David Yanacek, Avoiding Insurmountable Queue Backlogshttps://aws.amazon.com/builders-library/avoiding-insurmountable-queue-backlogs/ - Julius Plenz, How to Trade off Server Utilization and Tail Latencyhttps://www.usenix.org/conference/srecon19asia/presentati",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M02-Q056",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "capacity-decisions-and-defense",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Capacity Decisions and Defense' in Capacity, Queues, and Tail Latency?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend a workload-scoped safe operating region, actionable scaling signal, overload policy, failover reserve, ownership model, and cost per useful request.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend a workload-scoped safe operating region, actionable scaling signal, overload policy, failover reserve, ownership model, and cost per useful request.",
+      "explanation": "A capacity report is a decision artifact, not a benchmark dump. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M02-Q057",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "workload-and-useful-work",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Workload and Useful Work' supports this outcome: Model logical work, attempts, operation mix, normal, peak, burst, projected, skewed, and recovery demand with visible uncertainty.",
+      "correct_answer": "A strong answer defines the mechanism from 'Workload and Useful Work', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "A capacity model begins with work crossing a named boundary.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M02-Q058",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "little\u2019s-law-and-saturation",
+        "synthesis"
+      ],
+      "prompt": "For 'Little\u2019s Law and Saturation', what quantities, units, or thresholds would you calculate before trusting a design claim about: Calculate concurrency, per-resource service demand, nominal capacity, and failover exposure using consistent boundaries.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. You can apply Little\u2019s Law to consistent boundaries, calculate service-demand limits, distinguish utilization from latency, and state the limits of the model.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M02-Q059",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "latency-measurement",
+        "application"
+      ],
+      "prompt": "A learner applies 'Latency Measurement' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Report only averages:** a small slow population can dominate user journeys.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M02-Q060",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "fan-out-and-tail-amplification",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Fan-out and Tail Amplification'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for design an open-loop latency experiment that exposes coordinated omission, generator limits, rejection, and uncertainty..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Jeffrey Dean and Luiz Andr\u00e9 Barroso, The Tail at Scalehttps://research.google/pubs/the-tail-at-scale/ Complete EX-06 and run the Transit baseline before Lesson 5.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M02-Q061",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "bounded-overload-control",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Bounded Overload Control' in Capacity, Queues, and Tail Latency?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to predict and measure fan-out tail amplification, downstream branch demand, and correlation limits.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to predict and measure fan-out tail amplification, downstream branch demand, and correlation limits.",
+      "explanation": "When arrivals exceed completions, one of four things happens: 1. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M02-Q062",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "retries-and-downstream-protection",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Retries and Downstream Protection' supports this outcome: Locate saturation from useful throughput, latency, queue, rejection, concurrency, and generator evidence across the required load sweep.",
+      "correct_answer": "A strong answer defines the mechanism from 'Retries and Downstream Protection', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "A retry is additional load created during a failure.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M02-Q063",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "failover-headroom-and-unit-cost",
+        "synthesis"
+      ],
+      "prompt": "For 'Failover Headroom and Unit Cost', what quantities, units, or thresholds would you calculate before trusting a design claim about: Keep overload, priority, retries, downstream work, and recovery bounded under burst and dependency failure.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. You can calculate degraded-state capacity, backlog clearance, and cost per useful request, then run sensitivity without declaring a universal utilization target.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M02-Q064",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "capacity-decisions-and-defense",
+        "application"
+      ],
+      "prompt": "A learner applies 'Capacity Decisions and Defense' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Select the prettiest chart:** a decision needs falsifying and failure",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M02-Q065",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "workload-and-useful-work",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Workload and Useful Work'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for model logical work, attempts, operation mix, normal, peak, burst, projected, skewed, and recovery demand with visible uncertainty..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - MIT OpenCourseWare, Queueing Systems lecture noteshttps://ocw.mit.edu/courses/1-203j-logistical-and-transportation-planning-methods-fall-2006/resources/lec5/ - Google SRE, Addressing Cascading Failureshttps://sre.google/sre-book/addressing-cascading-failures",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M02-Q066",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "little\u2019s-law-and-saturation",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Little\u2019s Law and Saturation' in Capacity, Queues, and Tail Latency?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate concurrency, per-resource service demand, nominal capacity, and failover exposure using consistent boundaries.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate concurrency, per-resource service demand, nominal capacity, and failover exposure using consistent boundaries.",
+      "explanation": "For a stable long-run boundary: text L = \u03bbW L is average work in the boundary, \u03bb is the rate that enters and eventually leaves that boundary, and W is average time in it. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M02-Q067",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "latency-measurement",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Latency Measurement' supports this outcome: Implement and test fixed workers, explicit bounded waiting, fan-out, downstream admission, logical identities, and timing instrumentation.",
+      "correct_answer": "A strong answer defines the mechanism from 'Latency Measurement', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "A latency distribution needs: - population and operation - start and stop boundary - workload and environment - observation window and sample count - warm-up and repetitions - treatment of timeouts, rejection, and missing observations - measurement location an",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M02-Q068",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "fan-out-and-tail-amplification",
+        "synthesis"
+      ],
+      "prompt": "For 'Fan-out and Tail Amplification', what quantities, units, or thresholds would you calculate before trusting a design claim about: Design an open-loop latency experiment that exposes coordinated omission, generator limits, rejection, and uncertainty.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. You can derive the probability of at least one slow branch, connect branch service demand to journey latency, and state when independence assumptions fail.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M02-Q069",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "bounded-overload-control",
+        "application"
+      ],
+      "prompt": "A learner applies 'Bounded Overload Control' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Treat a queue as capacity:** it changes when work fails, not how fast work",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M02-Q070",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "retries-and-downstream-protection",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Retries and Downstream Protection'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for locate saturation from useful throughput, latency, queue, rejection, concurrency, and generator evidence across the required load sweep..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Google SRE, Addressing Cascading Failureshttps://sre.google/sre-book/addressing-cascading-failures/ - Marc Brooker, Timeouts, retries, and backoff with jitterhttps://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/ Complete EX-09, th",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M02-Q071",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "failover-headroom-and-unit-cost",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Failover Headroom and Unit Cost' in Capacity, Queues, and Tail Latency?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to keep overload, priority, retries, downstream work, and recovery bounded under burst and dependency failure.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to keep overload, priority, retries, downstream work, and recovery bounded under burst and dependency failure.",
+      "explanation": "Normal-state success does not prove failover safety. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M02-Q072",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "capacity-decisions-and-defense",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Capacity Decisions and Defense' supports this outcome: Defend a workload-scoped safe operating region, actionable scaling signal, overload policy, failover reserve, ownership model, and cost per useful request.",
+      "correct_answer": "A strong answer defines the mechanism from 'Capacity Decisions and Defense', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "A capacity report is a decision artifact, not a benchmark dump.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M02-Q073",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "workload-and-useful-work",
+        "synthesis"
+      ],
+      "prompt": "For 'Workload and Useful Work', what quantities, units, or thresholds would you calculate before trusting a design claim about: Model logical work, attempts, operation mix, normal, peak, burst, projected, skewed, and recovery demand with visible uncertainty.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. You can define a workload boundary, distinguish logical work from attempts, and model normal, peak, burst, projected, and skewed demand with visible uncertainty.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M02-Q074",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "little\u2019s-law-and-saturation",
+        "application"
+      ],
+      "prompt": "A learner applies 'Little\u2019s Law and Saturation' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Combine different boundaries:** server concurrency with client end-to-end",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M02-Q075",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "latency-measurement",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Latency Measurement'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement and test fixed workers, explicit bounded waiting, fan-out, downstream admission, logical identities, and timing instrumentation..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - HdrHistogram maintainers, Corrected vs.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M02-Q076",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "fan-out-and-tail-amplification",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Fan-out and Tail Amplification' in Capacity, Queues, and Tail Latency?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to design an open-loop latency experiment that exposes coordinated omission, generator limits, rejection, and uncertainty.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to design an open-loop latency experiment that exposes coordinated omission, generator limits, rejection, and uncertainty.",
+      "explanation": "If one branch completes within threshold t with probability Ft, and n parallel branches are independent, a request that waits for all branches completes within t with probability: text Pmax branch \u2264 t = Ft^n Pany branch t = 1 - Ft^n For a branch-tail probabili The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M02-Q077",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "bounded-overload-control",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Bounded Overload Control' supports this outcome: Predict and measure fan-out tail amplification, downstream branch demand, and correlation limits.",
+      "correct_answer": "A strong answer defines the mechanism from 'Bounded Overload Control', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "When arrivals exceed completions, one of four things happens: 1.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M02-Q078",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "retries-and-downstream-protection",
+        "synthesis"
+      ],
+      "prompt": "For 'Retries and Downstream Protection', what quantities, units, or thresholds would you calculate before trusting a design claim about: Locate saturation from useful throughput, latency, queue, rejection, concurrency, and generator evidence across the required load sweep.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. You can calculate retry amplification, define local and shared retry bounds, and protect a smaller downstream with deadlines, concurrency, and admission.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M02-Q079",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "failover-headroom-and-unit-cost",
+        "application"
+      ],
+      "prompt": "A learner applies 'Failover Headroom and Unit Cost' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Reserve capacity only at the first tier:** a shared downstream still fails.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M02-Q080",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "capacity-decisions-and-defense",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Capacity Decisions and Defense'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for defend a workload-scoped safe operating region, actionable scaling signal, overload policy, failover reserve, ownership model, and cost per useful request..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Google SRE, Addressing Cascading Failureshttps://sre.google/sre-book/addressing-cascading-failures/ - Google Research, The Tail at Scalehttps://research.google/pubs/the-tail-at-scale/ Complete EX-12, the capacity report, ADR, and defense.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M02-Q081",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "workload-and-useful-work",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Workload and Useful Work' in Capacity, Queues, and Tail Latency?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to model logical work, attempts, operation mix, normal, peak, burst, projected, skewed, and recovery demand with visible uncertainty.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to model logical work, attempts, operation mix, normal, peak, burst, projected, skewed, and recovery demand with visible uncertainty.",
+      "explanation": "A capacity model begins with work crossing a named boundary. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M02-Q082",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "little\u2019s-law-and-saturation",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Little\u2019s Law and Saturation' supports this outcome: Calculate concurrency, per-resource service demand, nominal capacity, and failover exposure using consistent boundaries.",
+      "correct_answer": "A strong answer defines the mechanism from 'Little\u2019s Law and Saturation', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "For a stable long-run boundary: text L = \u03bbW L is average work in the boundary, \u03bb is the rate that enters and eventually leaves that boundary, and W is average time in it.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M02-Q083",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "latency-measurement",
+        "synthesis"
+      ],
+      "prompt": "For 'Latency Measurement', what quantities, units, or thresholds would you calculate before trusting a design claim about: Implement and test fixed workers, explicit bounded waiting, fan-out, downstream admission, logical identities, and timing instrumentation.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. You can design an open-loop latency experiment, identify coordinated omission, report generator error, and interpret percentile evidence with scope.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M02-Q084",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "fan-out-and-tail-amplification",
+        "application"
+      ],
+      "prompt": "A learner applies 'Fan-out and Tail Amplification' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Multiply branch p99 by fan-out:** parallel maximum is not a sequential sum.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M02-Q085",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "bounded-overload-control",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Bounded Overload Control'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for predict and measure fan-out tail amplification, downstream branch demand, and correlation limits..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Google SRE, Addressing Cascading Failureshttps://sre.google/sre-book/addressing-cascading-failures/ - David Yanacek, Avoiding Insurmountable Queue Backlogshttps://aws.amazon.com/builders-library/avoiding-insurmountable-queue-backlogs/ Complete EX-07 and EX-0",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M02-Q086",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "retries-and-downstream-protection",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Retries and Downstream Protection' in Capacity, Queues, and Tail Latency?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to locate saturation from useful throughput, latency, queue, rejection, concurrency, and generator evidence across the required load sweep.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to locate saturation from useful throughput, latency, queue, rejection, concurrency, and generator evidence across the required load sweep.",
+      "explanation": "A retry is additional load created during a failure. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M02-Q087",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "failover-headroom-and-unit-cost",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Failover Headroom and Unit Cost' supports this outcome: Keep overload, priority, retries, downstream work, and recovery bounded under burst and dependency failure.",
+      "correct_answer": "A strong answer defines the mechanism from 'Failover Headroom and Unit Cost', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Normal-state success does not prove failover safety.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M02-Q088",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "capacity-decisions-and-defense",
+        "synthesis"
+      ],
+      "prompt": "For 'Capacity Decisions and Defense', what quantities, units, or thresholds would you calculate before trusting a design claim about: Defend a workload-scoped safe operating region, actionable scaling signal, overload policy, failover reserve, ownership model, and cost per useful request.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. You can turn predictions and experiments into a scoped capacity decision with a safe region, scaling signal, overload policy, owners, rollout, and reversal conditions.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M02-Q089",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "workload-and-useful-work",
+        "application"
+      ],
+      "prompt": "A learner applies 'Workload and Useful Work' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Start from host count:** host count is supply, not demand.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M02-Q090",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "little\u2019s-law-and-saturation",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Little\u2019s Law and Saturation'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for calculate concurrency, per-resource service demand, nominal capacity, and failover exposure using consistent boundaries..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - MIT OpenCourseWare, Queueing Systems lecture noteshttps://ocw.mit.edu/courses/1-203j-logistical-and-transportation-planning-methods-fall-2006/resources/lec5/ - Julius Plenz, How to Trade off Server Utilization and Tail Latencyhttps://www.usenix.org/conferenc",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M02-Q091",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "latency-measurement",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Latency Measurement' in Capacity, Queues, and Tail Latency?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement and test fixed workers, explicit bounded waiting, fan-out, downstream admission, logical identities, and timing instrumentation.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement and test fixed workers, explicit bounded waiting, fan-out, downstream admission, logical identities, and timing instrumentation.",
+      "explanation": "A latency distribution needs: - population and operation - start and stop boundary - workload and environment - observation window and sample count - warm-up and repetitions - treatment of timeouts, rejection, and missing observations - measurement location an The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M02-Q092",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "fan-out-and-tail-amplification",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Fan-out and Tail Amplification' supports this outcome: Design an open-loop latency experiment that exposes coordinated omission, generator limits, rejection, and uncertainty.",
+      "correct_answer": "A strong answer defines the mechanism from 'Fan-out and Tail Amplification', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "If one branch completes within threshold t with probability Ft, and n parallel branches are independent, a request that waits for all branches completes within t with probability: text Pmax branch \u2264 t = Ft^n Pany branch t = 1 - Ft^n For a branch-tail probabili",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M02-Q093",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "bounded-overload-control",
+        "synthesis"
+      ],
+      "prompt": "For 'Bounded Overload Control', what quantities, units, or thresholds would you calculate before trusting a design claim about: Predict and measure fan-out tail amplification, downstream branch demand, and correlation limits.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. You can locate every place work waits, choose explicit queue and concurrency bounds, and define admission, priority, degradation, and recovery behavior.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M02-Q094",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "retries-and-downstream-protection",
+        "application"
+      ],
+      "prompt": "A learner applies 'Retries and Downstream Protection' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Retry every error:** permanent and overload errors consume more capacity.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M02-Q095",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "failover-headroom-and-unit-cost",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Failover Headroom and Unit Cost'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for keep overload, priority, retries, downstream work, and recovery bounded under burst and dependency failure..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - David Yanacek, Avoiding Insurmountable Queue Backlogshttps://aws.amazon.com/builders-library/avoiding-insurmountable-queue-backlogs/ - Julius Plenz, How to Trade off Server Utilization and Tail Latencyhttps://www.usenix.org/conference/srecon19asia/presentati",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M02-Q096",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "capacity-decisions-and-defense",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Capacity Decisions and Defense' in Capacity, Queues, and Tail Latency?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend a workload-scoped safe operating region, actionable scaling signal, overload policy, failover reserve, ownership model, and cost per useful request.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend a workload-scoped safe operating region, actionable scaling signal, overload policy, failover reserve, ownership model, and cost per useful request.",
+      "explanation": "A capacity report is a decision artifact, not a benchmark dump. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M02-Q097",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "workload-and-useful-work",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Workload and Useful Work' supports this outcome: Model logical work, attempts, operation mix, normal, peak, burst, projected, skewed, and recovery demand with visible uncertainty.",
+      "correct_answer": "A strong answer defines the mechanism from 'Workload and Useful Work', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "A capacity model begins with work crossing a named boundary.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M02-Q098",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "little\u2019s-law-and-saturation",
+        "synthesis"
+      ],
+      "prompt": "For 'Little\u2019s Law and Saturation', what quantities, units, or thresholds would you calculate before trusting a design claim about: Calculate concurrency, per-resource service demand, nominal capacity, and failover exposure using consistent boundaries.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. You can apply Little\u2019s Law to consistent boundaries, calculate service-demand limits, distinguish utilization from latency, and state the limits of the model.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M02-Q099",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "latency-measurement",
+        "application"
+      ],
+      "prompt": "A learner applies 'Latency Measurement' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Report only averages:** a small slow population can dominate user journeys.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M02-Q100",
+      "module_id": "M02",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "capacity-queues-and-tail-latency",
+        "fan-out-and-tail-amplification",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Fan-out and Tail Amplification'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for design an open-loop latency experiment that exposes coordinated omission, generator limits, rejection, and uncertainty..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Jeffrey Dean and Luiz Andr\u00e9 Barroso, The Tail at Scalehttps://research.google/pubs/the-tail-at-scale/ Complete EX-06 and run the Transit baseline before Lesson 5.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    }
+  ]
+}
