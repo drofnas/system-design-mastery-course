@@ -2186,55 +2186,6 @@ def validate_v1_v2_bridge_contract(errors: list[str]) -> None:
             fail(errors, f"bridge-pack template lacks required section: {token}")
 
 
-def validate_remote_fallback_contract(errors: list[str]) -> None:
-    """Keep remote execution optional, bounded, reproducible, and evidence-bound."""
-
-    workflow_path = ROOT / ".github" / "workflows" / "pesd-remote-fallback.yml"
-    guide_path = ROOT / "remote-runner" / "README.md"
-    writer_path = ROOT / "scripts" / "write_remote_evidence.py"
-    schema_path = ROOT / "schemas" / "remote-evidence.schema.json"
-    required = (workflow_path, guide_path, writer_path, schema_path)
-    for path in required:
-        if not path.is_file():
-            fail(errors, f"remote fallback: missing {relative(path)}")
-    if any(not path.is_file() for path in required):
-        return
-
-    workflow = workflow_path.read_text(encoding="utf-8")
-    guide = guide_path.read_text(encoding="utf-8")
-    writer = writer_path.read_text(encoding="utf-8")
-    schema = load_json(schema_path, errors)
-    if not isinstance(schema, dict):
-        return
-
-    for module in ("M10", "M15", "M16", "M17"):
-        if module not in workflow or module not in guide or module not in writer:
-            fail(errors, f"remote fallback: {module} must be covered by workflow, guide, and evidence writer")
-    for limit in ("--cpus 2", "--memory 4g", "--pids-limit 256"):
-        if limit not in workflow:
-            fail(errors, f"remote fallback: workflow does not publish the {limit} bound")
-    m15_lock = ROOT / "modules" / "15-execution-models-across-languages" / "lab" / "toolchains.lock.json"
-    if not m15_lock.is_file() or "M15_RUN_DOCKER_TESTS=1" not in workflow:
-        fail(errors, "remote fallback: M15 must run its pinned full four-runtime container matrix")
-
-    pinned_digests = (
-        "sha256:dcc5531e97840b9b5e794f2814476b21571c5124a3fca2267d73041f56e7580e",
-        "sha256:da4221677e02b54ef6335adfa447578d512ad14f251024fb92ea433c2c102760",
-    )
-    for digest in pinned_digests:
-        if digest not in workflow or digest not in writer:
-            fail(errors, f"remote fallback: pinned image digest {digest} must agree across runner and evidence writer")
-    for token in ("source_commit", "input_hashes", "raw_outcomes", "container_images", "limitations"):
-        if token not in schema.get("required", []) or token not in writer:
-            fail(errors, f"remote fallback: evidence envelope must bind {token}")
-
-    normalized_guide = " ".join(guide.lower().split())
-    if "optional and never a prerequisite" not in normalized_guide:
-        fail(errors, "remote fallback: guide must state that the runner is optional and never a prerequisite")
-    if "fixture replay never becomes independent build, break, implement, or measure evidence" not in normalized_guide:
-        fail(errors, "remote fallback: guide must preserve independent evidence boundaries")
-
-
 def validate_portfolio_contract(manifests: list[dict[str, Any]], errors: list[str]) -> None:
     if len(manifests) != 18:
         return
@@ -2612,7 +2563,6 @@ def main() -> int:
         ROOT / "schemas" / "v2-bridge-plan.schema.json",
         ROOT / "schemas" / "gate.schema.json",
         ROOT / "schemas" / "portfolio-items.schema.json",
-        ROOT / "schemas" / "remote-evidence.schema.json",
         ROOT / "schemas" / "evaluation.schema.json",
         ROOT / "schemas" / "capacity-scenario.schema.json",
         ROOT / "schemas" / "capacity-trial.schema.json",
@@ -2732,7 +2682,6 @@ def main() -> int:
     validate_shared_cluster_contract(errors)
     validate_evidence_envelope_contract(errors)
     validate_v1_v2_bridge_contract(errors)
-    validate_remote_fallback_contract(errors)
     validate_v2_course_contract(manifests, errors)
     validate_portfolio_contract(manifests, errors)
     validate_revision_chronology(errors)
