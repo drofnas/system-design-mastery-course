@@ -10,9 +10,8 @@ lesson_id: L08
 
 ## Prerequisites
 
-Bring the frozen baseline, cost model, migration evidence, failure matrix, and
-either a frozen solo-review record or optional feedback from an engineer outside
-the chosen stack.
+Bring your saved starting point, cost model, migration evidence, failure
+matrix, and optional feedback from an engineer outside the chosen stack.
 
 ## Decision procedure
 

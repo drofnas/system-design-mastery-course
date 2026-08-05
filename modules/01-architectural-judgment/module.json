@@ -1,1015 +1,244 @@
 {
   "$schema": "../../schemas/module.schema.json",
+  "course_id": "CSSDM",
+  "course_version": "3.0-solo",
   "id": "M01",
   "title": "Architectural Judgment",
-  "weeks": [
+  "status": "ready",
+  "focus": "Problem framing, workloads, invariants, quality attributes, and architectural tradeoffs.",
+  "pacing": {
+    "review": "Skim lessons, answer self-checks, and take one generated quiz.",
+    "standard": "Study lessons, complete guided practice, use the answer key, and take one or more generated quizzes.",
+    "deep": "Complete standard work plus the reinforcement lab and optional project."
+  },
+  "lessons": [
     {
-      "number": 1,
-      "phase": "Model and derive",
-      "focus": "Model and derive",
-      "hours": 8.5,
-      "core_hours": 8.5,
-      "capacity_hours": 12,
-      "evidence": [
-        "Model and derive evidence frozen at source commit"
-      ],
-      "time_blocks": [
-        {
-          "id": "W001-T01",
-          "label": "Bounded authoritative resources",
-          "minutes": 65,
-          "activity": "required_resource",
-          "required": true,
-          "resource_ids": [
-            "RES-06",
-            "RES-07"
-          ]
-        },
-        {
-          "id": "W001-T02",
-          "label": "Local mechanism instruction",
-          "minutes": 120,
-          "activity": "local_instruction",
-          "required": true,
-          "lesson_ids": [
-            "L01",
-            "L02",
-            "L03",
-            "L04"
-          ]
-        },
-        {
-          "id": "W001-T03",
-          "label": "Guided practice",
-          "minutes": 60,
-          "activity": "guided_practice",
-          "required": true,
-          "exercise_ids": [
-            "EX-01",
-            "EX-02",
-            "EX-03",
-            "EX-04",
-            "EX-05",
-            "EX-06"
-          ]
-        },
-        {
-          "id": "W001-T04",
-          "label": "Required evidence components",
-          "minutes": 30,
-          "activity": "independent_work",
-          "required": true,
-          "artifact_allocations": [
-            {
-              "artifact_id": "A01",
-              "minutes": 30
-            }
-          ]
-        },
-        {
-          "id": "W001-T05",
-          "label": "Model and derive core work",
-          "minutes": 235,
-          "activity": "independent_work",
-          "required": true
-        },
-        {
-          "id": "W001-T06",
-          "label": "Optional contingency capacity",
-          "minutes": 210,
-          "activity": "contingency",
-          "required": false
-        }
-      ]
+      "id": "L01",
+      "title": "Architectural Judgment",
+      "path": "lessons/01-architectural-judgment.md"
     },
     {
-      "number": 2,
-      "phase": "Guided build and prediction freeze",
-      "focus": "Guided build and prediction freeze",
-      "hours": 9.0,
-      "core_hours": 9.0,
-      "capacity_hours": 12,
-      "evidence": [
-        "Guided build and prediction freeze evidence frozen at source commit"
-      ],
-      "time_blocks": [
-        {
-          "id": "W002-T01",
-          "label": "Bounded authoritative resources",
-          "minutes": 65,
-          "activity": "required_resource",
-          "required": true,
-          "resource_ids": [
-            "RES-01",
-            "RES-04"
-          ]
-        },
-        {
-          "id": "W002-T02",
-          "label": "Local mechanism instruction",
-          "minutes": 120,
-          "activity": "local_instruction",
-          "required": true,
-          "lesson_ids": [
-            "L05",
-            "L06",
-            "L07",
-            "L08"
-          ]
-        },
-        {
-          "id": "W002-T03",
-          "label": "Guided practice",
-          "minutes": 60,
-          "activity": "guided_practice",
-          "required": true,
-          "exercise_ids": [
-            "EX-07",
-            "EX-08",
-            "EX-09",
-            "EX-10",
-            "EX-11",
-            "EX-12"
-          ]
-        },
-        {
-          "id": "W002-T04",
-          "label": "Required evidence components",
-          "minutes": 60,
-          "activity": "independent_work",
-          "required": true,
-          "artifact_allocations": [
-            {
-              "artifact_id": "A02",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A03",
-              "minutes": 30
-            }
-          ]
-        },
-        {
-          "id": "W002-T05",
-          "label": "Guided build and prediction freeze core work",
-          "minutes": 235,
-          "activity": "independent_work",
-          "required": true
-        },
-        {
-          "id": "W002-T06",
-          "label": "Optional contingency capacity",
-          "minutes": 180,
-          "activity": "contingency",
-          "required": false
-        }
-      ]
+      "id": "L02",
+      "title": "Problem Framing and Workloads",
+      "path": "lessons/02-problem-framing-and-workloads.md"
     },
     {
-      "number": 3,
-      "phase": "Independent build and integration",
-      "focus": "Independent build and integration",
-      "hours": 10.0,
-      "core_hours": 10.0,
-      "capacity_hours": 12,
-      "evidence": [
-        "Independent build and integration evidence frozen at source commit"
-      ],
-      "time_blocks": [
-        {
-          "id": "W003-T01",
-          "label": "Independent build and integration core work",
-          "minutes": 540,
-          "activity": "independent_work",
-          "required": true
-        },
-        {
-          "id": "W003-T02",
-          "label": "Independent build and integration verification checkpoint",
-          "minutes": 60,
-          "activity": "independent_work",
-          "required": true
-        },
-        {
-          "id": "W003-T03",
-          "label": "Optional contingency capacity",
-          "minutes": 120,
-          "activity": "contingency",
-          "required": false
-        }
-      ]
+      "id": "L03",
+      "title": "Invariants and State Ownership",
+      "path": "lessons/03-invariants-and-state-ownership.md"
     },
     {
-      "number": 4,
-      "phase": "Break, repair, measure, and diagnose",
-      "focus": "Break, repair, measure, and diagnose",
-      "hours": 10.0,
-      "core_hours": 10.0,
-      "capacity_hours": 12,
-      "evidence": [
-        "Break, repair, measure, and diagnose evidence frozen at source commit"
-      ],
-      "time_blocks": [
-        {
-          "id": "W004-T01",
-          "label": "Required evidence components",
-          "minutes": 30,
-          "activity": "failure_experiment",
-          "required": true,
-          "artifact_allocations": [
-            {
-              "artifact_id": "A04",
-              "minutes": 30
-            }
-          ]
-        },
-        {
-          "id": "W004-T02",
-          "label": "Break, repair, measure, and diagnose core work",
-          "minutes": 570,
-          "activity": "failure_experiment",
-          "required": true
-        },
-        {
-          "id": "W004-T03",
-          "label": "Optional contingency capacity",
-          "minutes": 120,
-          "activity": "contingency",
-          "required": false
-        }
-      ]
+      "id": "L04",
+      "title": "Quality-Attribute Scenarios",
+      "path": "lessons/04-quality-attribute-scenarios.md"
     },
     {
-      "number": 5,
-      "phase": "Decide, teach, assess, and freeze",
-      "focus": "Decide, teach, assess, and freeze",
-      "hours": 9.5,
-      "core_hours": 9.5,
-      "capacity_hours": 12,
-      "evidence": [
-        "Decide, teach, assess, and freeze evidence frozen at source commit"
-      ],
-      "time_blocks": [
-        {
-          "id": "W005-T01",
-          "label": "Required evidence components",
-          "minutes": 150,
-          "activity": "decision_artifact",
-          "required": true,
-          "artifact_allocations": [
-            {
-              "artifact_id": "A05",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A07",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A08",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A09",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A10",
-              "minutes": 30
-            }
-          ]
-        },
-        {
-          "id": "W005-T02",
-          "label": "Decide, teach, assess, and freeze core work",
-          "minutes": 360,
-          "activity": "assessment",
-          "required": true
-        },
-        {
-          "id": "W005-T03",
-          "label": "Module teach-back",
-          "minutes": 30,
-          "activity": "teach_back",
-          "required": true
-        },
-        {
-          "id": "W005-T04",
-          "label": "Learning log and freeze check",
-          "minutes": 30,
-          "activity": "reflection",
-          "required": true
-        },
-        {
-          "id": "W005-T05",
-          "label": "Optional contingency capacity",
-          "minutes": 150,
-          "activity": "contingency",
-          "required": false
-        }
-      ]
+      "id": "L05",
+      "title": "Context and Boundaries",
+      "path": "lessons/05-context-and-boundaries.md"
+    },
+    {
+      "id": "L06",
+      "title": "Constraints, Options, and Reversibility",
+      "path": "lessons/06-constraints-options-and-reversibility.md"
+    },
+    {
+      "id": "L07",
+      "title": "Failure Models and Adversarial Review",
+      "path": "lessons/07-failure-models-and-adversarial-review.md"
+    },
+    {
+      "id": "L08",
+      "title": "Decisions, RFCs, and Defense",
+      "path": "lessons/08-decisions-rfcs-and-defense.md"
     }
   ],
-  "target_hours": 47,
-  "status": "review",
-  "readiness_note": "Local validation and the two-run Pass, Revise, and Repeat LLM calibration passed on 2026-07-31.",
-  "outcomes": [
+  "learning_outcomes": [
     {
       "id": "M01-O1",
       "statement": "Translate an ambiguous product request into users, outcomes, scope, constraints, and measurable acceptance conditions.",
-      "graduate_profile": [
-        1,
-        15,
-        16
-      ],
-      "mastery_levels": [
-        "Define",
-        "Decide and Teach"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L01",
         "L02"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-01",
         "EX-02"
-      ],
-      "artifacts": [
-        "A01",
-        "A07"
-      ],
-      "rubric": [
-        "R01"
       ]
     },
     {
       "id": "M01-O2",
       "statement": "Build a workload model with normal, peak, burst, projected, skew, and uncertainty dimensions.",
-      "graduate_profile": [
-        1,
-        2
-      ],
-      "mastery_levels": [
-        "Define",
-        "Calculate"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L02"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-03"
-      ],
-      "artifacts": [
-        "A01"
-      ],
-      "rubric": [
-        "R02"
       ]
     },
     {
       "id": "M01-O3",
       "statement": "Express business, data, security, and operational invariants and assign authoritative state ownership.",
-      "graduate_profile": [
-        1,
-        4,
-        7,
-        9
-      ],
-      "mastery_levels": [
-        "Define",
-        "Implement",
-        "Diagnose"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L03"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-04",
         "EX-05"
-      ],
-      "artifacts": [
-        "A01",
-        "A04"
-      ],
-      "rubric": [
-        "R03",
-        "R06"
       ]
     },
     {
       "id": "M01-O4",
       "statement": "Write measurable quality-attribute scenarios tied to user journeys and evidence collection.",
-      "graduate_profile": [
-        1,
-        8,
-        15
-      ],
-      "mastery_levels": [
-        "Define",
-        "Calculate",
-        "Decide and Teach"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L04"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-06"
-      ],
-      "artifacts": [
-        "A01",
-        "A07"
-      ],
-      "rubric": [
-        "R04"
       ]
     },
     {
       "id": "M01-O5",
       "statement": "Communicate system context, boundaries, flows, trust, and ownership without prematurely choosing deployable services.",
-      "graduate_profile": [
-        1,
-        9,
-        10,
-        16
-      ],
-      "mastery_levels": [
-        "Define",
-        "Implement",
-        "Decide and Teach"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L05"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-07"
-      ],
-      "artifacts": [
-        "A01",
-        "A02"
-      ],
-      "rubric": [
-        "R06",
-        "R09"
       ]
     },
     {
       "id": "M01-O6",
       "statement": "Compare simple, moderate, and distributed designs using shared drivers, cost boundaries, evidence, and reversal conditions.",
-      "graduate_profile": [
-        10,
-        14,
-        15
-      ],
-      "mastery_levels": [
-        "Calculate",
-        "Implement",
-        "Decide and Teach"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L06",
         "L08"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-08",
         "EX-09"
-      ],
-      "artifacts": [
-        "A02",
-        "A03",
-        "A07"
-      ],
-      "rubric": [
-        "R07",
-        "R08"
       ]
     },
     {
       "id": "M01-O7",
       "statement": "State a scoped failure and overload model and expose unsupported claims through adversarial review.",
-      "graduate_profile": [
-        5,
-        7,
-        8
-      ],
-      "mastery_levels": [
-        "Define",
-        "Diagnose",
-        "Decide and Teach"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L07"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-10",
         "EX-11"
-      ],
-      "artifacts": [
-        "A04",
-        "A05"
-      ],
-      "rubric": [
-        "R05",
-        "R10"
       ]
     },
     {
       "id": "M01-O8",
       "statement": "Write and defend an evidence-based RFC, resolve disagreement through decision drivers, and teach the causal model.",
-      "graduate_profile": [
-        14,
-        15,
-        16
-      ],
-      "mastery_levels": [
-        "Implement",
-        "Diagnose",
-        "Decide and Teach"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L08"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-12"
-      ],
-      "artifacts": [
-        "A07",
-        "A08",
-        "A09"
-      ],
-      "rubric": [
-        "R08",
-        "R09",
-        "R10"
       ]
     }
   ],
+  "practice": {
+    "exercises_path": "exercises/exercises.md",
+    "answer_key_path": "exercises/answer-key.md"
+  },
+  "lab": {
+    "required": false,
+    "path": null,
+    "note": "No executable lab is required; use the exercises as the reinforcement lab for framing and decision practice."
+  },
+  "quiz": {
+    "question_bank_path": "quiz/question-bank.json",
+    "answer_key_path": "quiz/answer-key.md",
+    "llm_grader_prompt_path": "quiz/llm-grader-prompt.md",
+    "question_count": 100,
+    "default_draw_count": 20,
+    "types": [
+      "multiple_choice",
+      "short_answer",
+      "calculation",
+      "scenario_diagnosis",
+      "design_judgment"
+    ]
+  },
+  "optional_project": {
+    "description": "Create a lightweight system-framing memo for a product or work system you know. Keep it optional and revise it freely as you learn."
+  },
   "resources": [
     {
       "id": "RES-01",
       "title": "Reasoning About Software Quality Attributes",
-      "type": "authoritative written source",
       "url": "https://www.sei.cmu.edu/library/reasoning-about-software-quality-attributes/",
       "required": true,
-      "access": "free",
-      "week": 2,
       "estimated_minutes": 35,
-      "assignment": "Read the overview and General Scenarios sections through the discussion of trade-offs. Record one quality name that remains ambiguous until expressed as a scenario.",
-      "last_verified": "2026-07-31",
-      "text_alternative": "lessons/04-quality-attribute-scenarios.md",
-      "author_or_publisher": "Software Engineering Institute, Carnegie Mellon University",
       "purpose": "Read the overview and General Scenarios sections through the discussion of trade-offs.",
-      "verified_title": "Reasoning About Software Quality Attributes",
-      "verified_publisher": "Software Engineering Institute, Carnegie Mellon University",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://www.sei.cmu.edu/library/reasoning-about-software-quality-attributes/",
-      "verification_status": "verified"
+      "local_alternative": "lessons/04-quality-attribute-scenarios.md"
     },
     {
       "id": "RES-02",
       "title": "Architecting in a Complex World: Eliciting and Specifying Quality Attribute Requirements",
-      "type": "webcast",
       "url": "https://www.sei.cmu.edu/library/architecting-in-a-complex-world-eliciting-and-specifying-quality-attribute-requirements/",
       "required": false,
-      "access": "free",
-      "week": 1,
       "estimated_minutes": 60,
-      "assignment": "Watch the complete webcast or study the supplemental slides. Write down the workshop steps that prevent the loudest stakeholder from defining every priority.",
-      "last_verified": "2026-07-31",
-      "text_alternative": "lessons/04-quality-attribute-scenarios.md",
-      "author_or_publisher": "Software Engineering Institute, Carnegie Mellon University",
       "purpose": "Watch the complete webcast or study the supplemental slides.",
-      "verified_title": "Architecting in a Complex World: Eliciting and Specifying Quality Attribute Requirements",
-      "verified_publisher": "Software Engineering Institute, Carnegie Mellon University",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://www.sei.cmu.edu/library/architecting-in-a-complex-world-eliciting-and-specifying-quality-attribute-requirements/",
-      "verification_status": "verified"
+      "local_alternative": "lessons/04-quality-attribute-scenarios.md"
     },
     {
       "id": "RES-03",
       "title": "Implementing SLOs",
-      "type": "practitioner handbook chapter",
       "url": "https://sre.google/workbook/implementing-slos/",
       "required": false,
-      "access": "free",
-      "week": 1,
       "estimated_minutes": 45,
-      "assignment": "Read Getting Started, SLI Specification versus Implementation, and Modeling User Journeys. Explain why a server metric may misrepresent a user's outcome.",
-      "last_verified": "2026-07-31",
-      "text_alternative": "lessons/02-problem-framing-and-workloads.md",
-      "author_or_publisher": "Google Site Reliability Engineering",
       "purpose": "Read Getting Started, SLI Specification versus Implementation, and Modeling User Journeys.",
-      "verified_title": "Implementing SLOs",
-      "verified_publisher": "Google Site Reliability Engineering",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://sre.google/workbook/implementing-slos/",
-      "verification_status": "verified"
+      "local_alternative": "lessons/02-problem-framing-and-workloads.md"
     },
     {
       "id": "RES-04",
       "title": "The C4 model for visualising software architecture",
-      "type": "official documentation",
       "url": "https://c4model.com/",
       "required": true,
-      "access": "free",
-      "week": 2,
       "estimated_minutes": 30,
-      "assignment": "Read the overview, abstractions, system-context guidance, notation guidance, and diagram-review checklist. Identify which details do not belong on a context diagram.",
-      "last_verified": "2026-07-31",
-      "text_alternative": "lessons/05-context-and-boundaries.md",
-      "author_or_publisher": "Simon Brown and the C4 model project",
       "purpose": "Read the overview, abstractions, system-context guidance, notation guidance, and diagram-review checklist.",
-      "verified_title": "The C4 model for visualising software architecture",
-      "verified_publisher": "Simon Brown and the C4 model project",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://c4model.com/",
-      "verification_status": "verified"
+      "local_alternative": "lessons/05-context-and-boundaries.md"
     },
     {
       "id": "RES-05",
       "title": "The C4 model for visualising software architecture",
-      "type": "conference video",
       "url": "https://www.youtube.com/watch?v=KvoBrUd1-5E",
       "required": false,
-      "access": "free",
-      "week": 1,
       "estimated_minutes": 60,
-      "assignment": "Watch the complete creator-led talk. Capture three diagram smells and how each impairs a design review.",
-      "last_verified": "2026-07-31",
-      "text_alternative": "lessons/05-context-and-boundaries.md",
-      "author_or_publisher": "Simon Brown and the C4 model project",
       "purpose": "Watch the complete creator-led talk.",
-      "verified_title": "The C4 model for visualising software architecture",
-      "verified_publisher": "Simon Brown and the C4 model project",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://www.youtube.com/watch?v=KvoBrUd1-5E",
-      "verification_status": "verified"
+      "local_alternative": "lessons/05-context-and-boundaries.md"
     },
     {
       "id": "RES-06",
       "title": "Documenting Architecture Decisions",
-      "type": "original practitioner article",
       "url": "https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions",
       "required": true,
-      "access": "free",
-      "week": 1,
       "estimated_minutes": 20,
-      "assignment": "Read the complete article. Explain why preserving a superseded decision is useful and identify one decision too small to deserve an ADR.",
-      "last_verified": "2026-07-31",
-      "text_alternative": "lessons/08-decisions-rfcs-and-defense.md",
-      "author_or_publisher": "Michael Nygard; Cognitect",
       "purpose": "Read the complete article.",
-      "verified_title": "Documenting Architecture Decisions",
-      "verified_publisher": "Michael Nygard; Cognitect",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions",
-      "verification_status": "verified"
+      "local_alternative": "lessons/08-decisions-rfcs-and-defense.md"
     },
     {
       "id": "RES-07",
       "title": "Challenges with Distributed Systems",
-      "type": "first-person engineering case",
       "url": "https://builder.aws.com/content/3F08f7GPFiZMCgXD8gny6OjxR0Z/challenges-with-distributed-systems",
       "required": true,
-      "access": "free",
-      "week": 1,
       "estimated_minutes": 45,
-      "assignment": "Read the complete article. Add three independent failure combinations and one unknown-outcome case to the transit case failure matrix.",
-      "last_verified": "2026-07-31",
-      "text_alternative": "lessons/07-failure-models-and-adversarial-review.md",
-      "author_or_publisher": "Amazon Web Services",
       "purpose": "Read the complete article.",
-      "verified_title": "Challenges with Distributed Systems",
-      "verified_publisher": "Amazon Web Services",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://builder.aws.com/content/3F08f7GPFiZMCgXD8gny6OjxR0Z/challenges-with-distributed-systems",
-      "verification_status": "verified"
+      "local_alternative": "lessons/07-failure-models-and-adversarial-review.md"
     },
     {
       "id": "RES-08",
       "title": "ISO/IEC 25010:2023 Product quality model",
-      "type": "standard",
       "url": "https://www.iso.org/standard/78176.html",
       "required": false,
-      "access": "paid",
-      "week": 1,
       "estimated_minutes": 60,
-      "assignment": "Optional: review the current product-quality taxonomy and compare its categories with the scenarios you wrote.",
-      "last_verified": "2026-07-31",
-      "text_alternative": "lessons/04-quality-attribute-scenarios.md",
-      "author_or_publisher": "ISO/IEC",
       "purpose": "Optional: review the current product-quality taxonomy and compare its categories with the scenarios you wrote.",
-      "verified_title": "ISO/IEC 25010:2023 Product quality model",
-      "verified_publisher": "ISO/IEC",
-      "verification_method": "manual primary-source verification",
-      "final_url": "https://www.iso.org/standard/78176.html",
-      "verification_status": "verified-manually-optional"
+      "local_alternative": "lessons/04-quality-attribute-scenarios.md"
     }
-  ],
-  "artifacts": [
-    {
-      "id": "A01",
-      "week": 1,
-      "required": true,
-      "template_path": "capstone/baselines/week-01-baseline.md",
-      "submission_path": "capstone/baselines/week-01-baseline.md",
-      "immutable_after_submission": true,
-      "portfolio_category": "capstone",
-      "portfolio_item_id": "PI-CAPSTONE-01",
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-CAPSTONE-GLOBAL-COMMERCE",
-      "component_role": "baseline",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A02",
-      "week": 2,
-      "required": true,
-      "template_path": "modules/01-architectural-judgment/worksheets/week-02-candidate-designs.md",
-      "submission_path": "reports/module-01-candidate-designs.md",
-      "portfolio_category": "model",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M01-A02",
-      "component_role": "prediction",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A03",
-      "week": 2,
-      "required": true,
-      "template_path": "templates/adr-template.md",
-      "submission_path": "adr/ADR-001-module-01-decision.md",
-      "portfolio_category": "model",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M01-A03",
-      "component_role": "prediction",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A04",
-      "week": 4,
-      "required": true,
-      "template_path": "modules/01-architectural-judgment/worksheets/week-03-failure-review.md",
-      "submission_path": "experiments/module-01-failure-review.md",
-      "portfolio_category": "failure_matrix",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M01-A04",
-      "component_role": "raw_evidence",
-      "estimated_minutes": 30,
-      "evidence_mode": "executed_deterministic"
-    },
-    {
-      "id": "A05",
-      "week": 5,
-      "required": true,
-      "template_path": "reviews/week-01-baseline-review.md",
-      "submission_path": "reviews/week-01-baseline-review.md",
-      "portfolio_category": "teach_back",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M01-A05",
-      "component_role": "final",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A07",
-      "week": 5,
-      "required": true,
-      "template_path": "templates/rfc-template.md",
-      "submission_path": "rfc/RFC-001-architectural-judgment.md",
-      "portfolio_category": "rfc",
-      "portfolio_item_id": "PI-DECISION-M01",
-      "portfolio_credit": true,
-      "evidence_lineage_id": "LIN-DECISION-M01",
-      "component_role": "decision",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A08",
-      "week": 5,
-      "required": true,
-      "template_path": "modules/01-architectural-judgment/worksheets/week-04-rfc-defense.md",
-      "submission_path": "reviews/module-01-defense.md",
-      "portfolio_category": "teach_back",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M01-A08",
-      "component_role": "final",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A09",
-      "week": 5,
-      "required": true,
-      "template_path": "modules/01-architectural-judgment/assessment/report-template.md",
-      "submission_path": "reviews/module-01-evaluation.md",
-      "portfolio_category": "evaluation",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M01-A09",
-      "component_role": "final",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A10",
-      "week": 5,
-      "required": true,
-      "template_path": "templates/learning-log-template.md",
-      "submission_path": "learning-log/week-001.md through learning-log/week-005.md",
-      "portfolio_category": "learning_log",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M01-A10",
-      "component_role": "final",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    }
-  ],
-  "failure_experiments": [
-    {
-      "id": "F01",
-      "scenario": "Tenfold traffic burst",
-      "evidence": "Predicted behavior, saturated responsibility, affected journey, invariant exposure, and follow-up measurement"
-    },
-    {
-      "id": "F02",
-      "scenario": "One slow dependency",
-      "evidence": "Critical-path effect, queue or concurrency propagation, bounded response, and unsupported assumptions"
-    },
-    {
-      "id": "F03",
-      "scenario": "Stale data",
-      "evidence": "Operation-specific consequence, invariant impact, user-visible behavior, and detection"
-    },
-    {
-      "id": "F04",
-      "scenario": "Operator mistake",
-      "evidence": "Blast radius, prevention, detection, recovery, ownership, and residual risk"
-    },
-    {
-      "id": "F05",
-      "scenario": "Loss of one hosting zone",
-      "evidence": "Capacity and state assumptions, degraded behavior, recovery path, and excluded correlated faults"
-    }
-  ],
-  "assessment": {
-    "rubric_path": "modules/01-architectural-judgment/assessment/rubric.md",
-    "evaluator_prompt_path": "modules/01-architectural-judgment/assessment/evaluator-prompt.md",
-    "evaluation_schema_path": "schemas/evaluation.schema.json",
-    "calibration_path": "modules/01-architectural-judgment/assessment/calibration",
-    "pass_average": 3,
-    "safety_critical_criteria": [
-      "R03",
-      "R05",
-      "R06"
-    ],
-    "required_result_bands": [
-      "Pass",
-      "Revise",
-      "Repeat"
-    ]
-  },
-  "solo_review": {
-    "challenge_questions": [
-      {
-        "id": "M01-SR-Q01",
-        "prompt": "Which claim in your artifact most directly supports this outcome, and what evidence could falsify it: Translate an ambiguous product request into users, outcomes, scope, constraints, and measurable acceptance conditions."
-      },
-      {
-        "id": "M01-SR-Q02",
-        "prompt": "What unstated assumption could invalidate your treatment of this outcome, and how would you test it: Build a workload model with normal, peak, burst, projected, skew, and uncertainty dimensions."
-      },
-      {
-        "id": "M01-SR-Q03",
-        "prompt": "Defend the causal chain behind your evidence for this outcome, including the first likely failure: Express business, data, security, and operational invariants and assign authoritative state ownership."
-      },
-      {
-        "id": "M01-SR-Q04",
-        "prompt": "Which reasonable alternative would challenge your treatment of this outcome, and under what evidence would it win: Write measurable quality-attribute scenarios tied to user journeys and evidence collection."
-      },
-      {
-        "id": "M01-SR-Q05",
-        "prompt": "What operational, security, cost, or ownership consequence is least supported in your treatment of this outcome: Communicate system context, boundaries, flows, trust, and ownership without prematurely choosing deployable services."
-      },
-      {
-        "id": "M01-SR-Q06",
-        "prompt": "Where does your evidence stop transferring to production for this outcome, and how is that boundary disclosed: Compare simple, moderate, and distributed designs using shared drivers, cost boundaries, evidence, and reversal conditions."
-      },
-      {
-        "id": "M01-SR-Q07",
-        "prompt": "What dissent should a skeptical reviewer raise about your treatment of this outcome, and what follow-up evidence would resolve it: State a scoped failure and overload model and expose unsupported claims through adversarial review."
-      },
-      {
-        "id": "M01-SR-Q08",
-        "prompt": "What changed belief or reversal condition follows from your work on this outcome, and where is it recorded: Write and defend an evidence-based RFC, resolve disagreement through decision drivers, and teach the causal model."
-      }
-    ],
-    "required_reviewer_roles": [
-      "Architectural Judgment domain reviewer",
-      "operations and reliability owner",
-      "security and privacy reviewer",
-      "delivery and cost stakeholder"
-    ],
-    "questions_per_attempt": 5,
-    "live_ai_allowed": false,
-    "record_template_path": "templates/solo-review-record-template.md"
-  },
-  "factual_claims_path": "modules/01-architectural-judgment/assessment/factual-claims.json",
-  "lesson_catalog": [
-    {
-      "id": "L01",
-      "path": "lessons/01-architectural-judgment.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L02",
-      "path": "lessons/02-problem-framing-and-workloads.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L03",
-      "path": "lessons/03-invariants-and-state-ownership.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L04",
-      "path": "lessons/04-quality-attribute-scenarios.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L05",
-      "path": "lessons/05-context-and-boundaries.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L06",
-      "path": "lessons/06-constraints-options-and-reversibility.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L07",
-      "path": "lessons/07-failure-models-and-adversarial-review.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L08",
-      "path": "lessons/08-decisions-rfcs-and-defense.md",
-      "estimated_minutes": 30
-    }
-  ],
-  "citation_catalog": [
-    {
-      "id": "CIT-01",
-      "title": "Early Analysis of Software Architecture",
-      "author_or_publisher": "Software Engineering Institute",
-      "type": "primary-source citation",
-      "url": "https://www.sei.cmu.edu/library/early-analysis-of-software-architecture/",
-      "required": true,
-      "access": "free",
-      "purpose": "Provide primary-source support for the bounded mechanism discussed in the cited local lesson.",
-      "reading_boundary": "Read the abstract and collection description on quality-attribute mechanisms, sufficiency of architecture evidence, and risk analysis.",
-      "last_verified": "2026-08-04",
-      "text_alternative": "lessons/07-failure-models-and-adversarial-review.md",
-      "verified_title": "Early Analysis of Software Architecture",
-      "verified_publisher": "Software Engineering Institute",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://www.sei.cmu.edu/library/early-analysis-of-software-architecture/",
-      "verification_status": "verified"
-    },
-    {
-      "id": "CIT-02",
-      "title": "Architecture Tradeoff Analysis Method\u00ae Collection",
-      "author_or_publisher": "Software Engineering Institute",
-      "type": "primary-source citation",
-      "url": "https://www.sei.cmu.edu/library/architecture-tradeoff-analysis-method-collection/",
-      "required": true,
-      "access": "free",
-      "purpose": "Provide primary-source support for the bounded mechanism discussed in the cited local lesson.",
-      "reading_boundary": "Read the Description, nine ATAM steps, outputs, and benefits; the multi-day facilitated process is context, not a solo-course requirement.",
-      "last_verified": "2026-08-04",
-      "text_alternative": "lessons/08-decisions-rfcs-and-defense.md",
-      "verified_title": "Architecture Tradeoff Analysis Method\u00ae Collection",
-      "verified_publisher": "Software Engineering Institute",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://www.sei.cmu.edu/library/architecture-tradeoff-analysis-method-collection/",
-      "verification_status": "verified"
-    }
-  ],
-  "course_id": "PESD-104",
-  "course_version": "2.0",
-  "primary_decision": {
-    "artifact_id": "A07",
-    "type": "RFC"
-  },
-  "pesd_v2_additions": "a constraint and assurance ledger covering data classes, tenant boundaries, obligations, AI use, supplier risk, cost allocation, decision rights, evidence owners, uncertainty, and reversal triggers",
-  "semantic_evaluation": "module_specific"
+  ]
 }

@@ -1,0 +1,1926 @@
+{
+  "module_id": "M12",
+  "title": "Reliability, Incidents, and Disaster Recovery",
+  "questions": [
+    {
+      "question_id": "M12-Q001",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "user-journeys-slis-and-slos",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'User Journeys, SLIs, and SLOs' in Reliability, Incidents, and Disaster Recovery?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to define user-journey slis and slos with valid populations, windows, exclusions, latency, availability, freshness, and correctness.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to define user-journey slis and slos with valid populations, windows, exclusions, latency, availability, freshness, and correctness.",
+      "explanation": "Use User Journeys, SLIs, and SLOs to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M12-Q002",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "error-budgets-dependencies-and-composite-reliabi",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Error Budgets, Dependencies, and Composite Reliability' supports this outcome: Calculate error budgets, burn, dependency exposure, shared fate, and composite reliability and use them in decisions.",
+      "correct_answer": "A strong answer defines the mechanism from 'Error Budgets, Dependencies, and Composite Reliability', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Error Budgets, Dependencies, and Composite Reliability to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M12-Q003",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "burn-rates-and-actionable-alerting",
+        "synthesis"
+      ],
+      "prompt": "For 'Burn Rates and Actionable Alerting', what quantities, units, or thresholds would you calculate before trusting a design claim about: Implement multi-window burn alerts and separate actionable journey symptoms from causal diagnostic telemetry.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Calculate burn rate from observed error fraction and SLO error fraction.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M12-Q004",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "graceful-degradation-and-degraded-capacity",
+        "application"
+      ],
+      "prompt": "A learner applies 'Graceful Degradation and Degraded Capacity' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Call errors degradation:** no priority or minimum-useful contract exists.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M12-Q005",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "incident-command-communication-and-runbooks",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Incident Command, Communication, and Runbooks'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for run incidents with explicit command, operations, communications, liaison, handoff, escalation, and stop conditions..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-04 and RES-08, complete EX-10\u2013EX-11, and preserve the incident timeline as raw evidence for the postmortem rather than rewriting it afterward.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M12-Q006",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "postmortems-and-corrective-work",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Postmortems and Corrective Work' in Reliability, Incidents, and Disaster Recovery?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to produce an evidence-based postmortem and rank corrective work by risk reduction, effort, ownership, and verification.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to produce an evidence-based postmortem and rank corrective work by risk reduction, effort, ownership, and verification.",
+      "explanation": "Use Postmortems and Corrective Work to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M12-Q007",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "backups-restore-failover-and-failback",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Backups, Restore, Failover, and Failback' supports this outcome: Verify backup integrity, RPO, RTO, restore, failover, fencing, reconciliation, and failback with controlled evidence.",
+      "correct_answer": "A strong answer defines the mechanism from 'Backups, Restore, Failover, and Failback', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Backups, Restore, Failover, and Failback to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M12-Q008",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "chaos-game-days-and-reliability-decisions",
+        "synthesis"
+      ],
+      "prompt": "For 'Chaos, Game Days, and Reliability Decisions', what quantities, units, or thresholds would you calculate before trusting a design claim about: Diagnose nine reliability failures and defend cumulative review across consensus, messaging, operations, security, cost, ownership, and recovery.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Design a controlled game day with hypothesis, safety, and evidence.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M12-Q009",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "user-journeys-slis-and-slos",
+        "application"
+      ],
+      "prompt": "A learner applies 'User Journeys, SLIs, and SLOs' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Measure component uptime:** users can fail while every process responds.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M12-Q010",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "error-budgets-dependencies-and-composite-reliabi",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Error Budgets, Dependencies, and Composite Reliability'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for calculate error budgets, burn, dependency exposure, shared fate, and composite reliability and use them in decisions..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Complete EX-03\u2013EX-05 and carry the dependency/common-cause model into Lesson 3.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M12-Q011",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "burn-rates-and-actionable-alerting",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Burn Rates and Actionable Alerting' in Reliability, Incidents, and Disaster Recovery?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement multi-window burn alerts and separate actionable journey symptoms from causal diagnostic telemetry.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement multi-window burn alerts and separate actionable journey symptoms from causal diagnostic telemetry.",
+      "explanation": "Use Burn Rates and Actionable Alerting to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M12-Q012",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "graceful-degradation-and-degraded-capacity",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Graceful Degradation and Degraded Capacity' supports this outcome: Build priority-aware degradation, load shedding, bounded dependency work, and degraded regional capacity.",
+      "correct_answer": "A strong answer defines the mechanism from 'Graceful Degradation and Degraded Capacity', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Graceful Degradation and Degraded Capacity to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M12-Q013",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "incident-command-communication-and-runbooks",
+        "synthesis"
+      ],
+      "prompt": "For 'Incident Command, Communication, and Runbooks', what quantities, units, or thresholds would you calculate before trusting a design claim about: Run incidents with explicit command, operations, communications, liaison, handoff, escalation, and stop conditions.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Separate incident command, operations, communications, and liaison roles.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M12-Q014",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "postmortems-and-corrective-work",
+        "application"
+      ],
+      "prompt": "A learner applies 'Postmortems and Corrective Work' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Tell a heroic story:** individual effort replaces system learning.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M12-Q015",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "backups-restore-failover-and-failback",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Backups, Restore, Failover, and Failback'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for verify backup integrity, rpo, rto, restore, failover, fencing, reconciliation, and failback with controlled evidence..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-06, complete EX-14\u2013EX-15, and preserve F05\u2013F09 recovery versions, timestamps, epochs, hashes, approvals, and reconciliation as raw evidence.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M12-Q016",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "chaos-game-days-and-reliability-decisions",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Chaos, Game Days, and Reliability Decisions' in Reliability, Incidents, and Disaster Recovery?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose nine reliability failures and defend gate 4 across consensus, messaging, operations, security, cost, ownership, and recovery.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose nine reliability failures and defend cumulative review across consensus, messaging, operations, security, cost, ownership, and recovery.",
+      "explanation": "Use Chaos, Game Days, and Reliability Decisions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M12-Q017",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "user-journeys-slis-and-slos",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'User Journeys, SLIs, and SLOs' supports this outcome: Define user-journey SLIs and SLOs with valid populations, windows, exclusions, latency, availability, freshness, and correctness.",
+      "correct_answer": "A strong answer defines the mechanism from 'User Journeys, SLIs, and SLOs', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use User Journeys, SLIs, and SLOs to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M12-Q018",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "error-budgets-dependencies-and-composite-reliabi",
+        "synthesis"
+      ],
+      "prompt": "For 'Error Budgets, Dependencies, and Composite Reliability', what quantities, units, or thresholds would you calculate before trusting a design claim about: Calculate error budgets, burn, dependency exposure, shared fate, and composite reliability and use them in decisions.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Calculate allowed bad events and consumed error budget.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M12-Q019",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "burn-rates-and-actionable-alerting",
+        "application"
+      ],
+      "prompt": "A learner applies 'Burn Rates and Actionable Alerting' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Page at the SLO threshold:** noise arrives faster than useful action.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M12-Q020",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "graceful-degradation-and-degraded-capacity",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Graceful Degradation and Degraded Capacity'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for build priority-aware degradation, load shedding, bounded dependency work, and degraded regional capacity..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-03, complete EX-08\u2013EX-09, implement the public lab contract, and record capacity predictions before running F01 or F07.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M12-Q021",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "incident-command-communication-and-runbooks",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Incident Command, Communication, and Runbooks' in Reliability, Incidents, and Disaster Recovery?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to run incidents with explicit command, operations, communications, liaison, handoff, escalation, and stop conditions.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to run incidents with explicit command, operations, communications, liaison, handoff, escalation, and stop conditions.",
+      "explanation": "Use Incident Command, Communication, and Runbooks to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M12-Q022",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "postmortems-and-corrective-work",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Postmortems and Corrective Work' supports this outcome: Produce an evidence-based postmortem and rank corrective work by risk reduction, effort, ownership, and verification.",
+      "correct_answer": "A strong answer defines the mechanism from 'Postmortems and Corrective Work', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Postmortems and Corrective Work to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M12-Q023",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "backups-restore-failover-and-failback",
+        "synthesis"
+      ],
+      "prompt": "For 'Backups, Restore, Failover, and Failback', what quantities, units, or thresholds would you calculate before trusting a design claim about: Verify backup integrity, RPO, RTO, restore, failover, fencing, reconciliation, and failback with controlled evidence.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Derive RPO and RTO from user/data consequence and measured evidence.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M12-Q024",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "chaos-game-days-and-reliability-decisions",
+        "application"
+      ],
+      "prompt": "A learner applies 'Chaos, Game Days, and Reliability Decisions' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Inject chaos without a hypothesis:** spectacle replaces learning.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M12-Q025",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "user-journeys-slis-and-slos",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'User Journeys, SLIs, and SLOs'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for define user-journey slis and slos with valid populations, windows, exclusions, latency, availability, freshness, and correctness..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-01, complete EX-01\u2013EX-02, and save the Week 45 SLI population before opening the Northstar case or answer key.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M12-Q026",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "error-budgets-dependencies-and-composite-reliabi",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Error Budgets, Dependencies, and Composite Reliability' in Reliability, Incidents, and Disaster Recovery?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate error budgets, burn, dependency exposure, shared fate, and composite reliability and use them in decisions.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate error budgets, burn, dependency exposure, shared fate, and composite reliability and use them in decisions.",
+      "explanation": "Use Error Budgets, Dependencies, and Composite Reliability to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M12-Q027",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "burn-rates-and-actionable-alerting",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Burn Rates and Actionable Alerting' supports this outcome: Implement multi-window burn alerts and separate actionable journey symptoms from causal diagnostic telemetry.",
+      "correct_answer": "A strong answer defines the mechanism from 'Burn Rates and Actionable Alerting', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Burn Rates and Actionable Alerting to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M12-Q028",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "graceful-degradation-and-degraded-capacity",
+        "synthesis"
+      ],
+      "prompt": "For 'Graceful Degradation and Degraded Capacity', what quantities, units, or thresholds would you calculate before trusting a design claim about: Build priority-aware degradation, load shedding, bounded dependency work, and degraded regional capacity.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Define a priority order and user-visible degraded contract.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M12-Q029",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "incident-command-communication-and-runbooks",
+        "application"
+      ],
+      "prompt": "A learner applies 'Incident Command, Communication, and Runbooks' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Best debugger commands:** coordination and impact become ownerless.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M12-Q030",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "postmortems-and-corrective-work",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Postmortems and Corrective Work'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for produce an evidence-based postmortem and rank corrective work by risk reduction, effort, ownership, and verification..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-05, complete EX-12\u2013EX-13, and use the incident-postmortem template.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M12-Q031",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "backups-restore-failover-and-failback",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Backups, Restore, Failover, and Failback' in Reliability, Incidents, and Disaster Recovery?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to verify backup integrity, rpo, rto, restore, failover, fencing, reconciliation, and failback with controlled evidence.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to verify backup integrity, rpo, rto, restore, failover, fencing, reconciliation, and failback with controlled evidence.",
+      "explanation": "Use Backups, Restore, Failover, and Failback to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M12-Q032",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "chaos-game-days-and-reliability-decisions",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Chaos, Game Days, and Reliability Decisions' supports this outcome: Diagnose nine reliability failures and defend cumulative review across consensus, messaging, operations, security, cost, ownership, and recovery.",
+      "correct_answer": "A strong answer defines the mechanism from 'Chaos, Game Days, and Reliability Decisions', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Chaos, Game Days, and Reliability Decisions to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M12-Q033",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "user-journeys-slis-and-slos",
+        "synthesis"
+      ],
+      "prompt": "For 'User Journeys, SLIs, and SLOs', what quantities, units, or thresholds would you calculate before trusting a design claim about: Define user-journey SLIs and SLOs with valid populations, windows, exclusions, latency, availability, freshness, and correctness.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Specify valid and good events for a complete user journey.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M12-Q034",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "error-budgets-dependencies-and-composite-reliabi",
+        "application"
+      ],
+      "prompt": "A learner applies 'Error Budgets, Dependencies, and Composite Reliability' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Subtract percentages:** budget is computed against valid events or time.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M12-Q035",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "burn-rates-and-actionable-alerting",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Burn Rates and Actionable Alerting'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement multi-window burn alerts and separate actionable journey symptoms from causal diagnostic telemetry..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-02, complete EX-06\u2013EX-07, and test the alert series before building degraded modes in Lesson 4.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M12-Q036",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "graceful-degradation-and-degraded-capacity",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Graceful Degradation and Degraded Capacity' in Reliability, Incidents, and Disaster Recovery?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to build priority-aware degradation, load shedding, bounded dependency work, and degraded regional capacity.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to build priority-aware degradation, load shedding, bounded dependency work, and degraded regional capacity.",
+      "explanation": "Use Graceful Degradation and Degraded Capacity to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M12-Q037",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "incident-command-communication-and-runbooks",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Incident Command, Communication, and Runbooks' supports this outcome: Run incidents with explicit command, operations, communications, liaison, handoff, escalation, and stop conditions.",
+      "correct_answer": "A strong answer defines the mechanism from 'Incident Command, Communication, and Runbooks', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Incident Command, Communication, and Runbooks to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M12-Q038",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "postmortems-and-corrective-work",
+        "synthesis"
+      ],
+      "prompt": "For 'Postmortems and Corrective Work', what quantities, units, or thresholds would you calculate before trusting a design claim about: Produce an evidence-based postmortem and rank corrective work by risk reduction, effort, ownership, and verification.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Quantify impact and reconstruct a cited timeline.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M12-Q039",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "backups-restore-failover-and-failback",
+        "application"
+      ],
+      "prompt": "A learner applies 'Backups, Restore, Failover, and Failback' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Replica equals backup:** corruption or operator error can propagate.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M12-Q040",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "chaos-game-days-and-reliability-decisions",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Chaos, Game Days, and Reliability Decisions'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose nine reliability failures and defend cumulative review across consensus, messaging, operations, security, cost, ownership, and recovery..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-07, complete EX-16, finalize the disaster-recovery review, conduct the defense, save cumulative review in Week 68, and write the separate Week 69 synthesis project delta.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M12-Q041",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "user-journeys-slis-and-slos",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'User Journeys, SLIs, and SLOs' in Reliability, Incidents, and Disaster Recovery?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to define user-journey slis and slos with valid populations, windows, exclusions, latency, availability, freshness, and correctness.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to define user-journey slis and slos with valid populations, windows, exclusions, latency, availability, freshness, and correctness.",
+      "explanation": "Use User Journeys, SLIs, and SLOs to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M12-Q042",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "error-budgets-dependencies-and-composite-reliabi",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Error Budgets, Dependencies, and Composite Reliability' supports this outcome: Calculate error budgets, burn, dependency exposure, shared fate, and composite reliability and use them in decisions.",
+      "correct_answer": "A strong answer defines the mechanism from 'Error Budgets, Dependencies, and Composite Reliability', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Error Budgets, Dependencies, and Composite Reliability to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M12-Q043",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "burn-rates-and-actionable-alerting",
+        "synthesis"
+      ],
+      "prompt": "For 'Burn Rates and Actionable Alerting', what quantities, units, or thresholds would you calculate before trusting a design claim about: Implement multi-window burn alerts and separate actionable journey symptoms from causal diagnostic telemetry.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Calculate burn rate from observed error fraction and SLO error fraction.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M12-Q044",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "graceful-degradation-and-degraded-capacity",
+        "application"
+      ],
+      "prompt": "A learner applies 'Graceful Degradation and Degraded Capacity' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Call errors degradation:** no priority or minimum-useful contract exists.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M12-Q045",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "incident-command-communication-and-runbooks",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Incident Command, Communication, and Runbooks'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for run incidents with explicit command, operations, communications, liaison, handoff, escalation, and stop conditions..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-04 and RES-08, complete EX-10\u2013EX-11, and preserve the incident timeline as raw evidence for the postmortem rather than rewriting it afterward.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M12-Q046",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "postmortems-and-corrective-work",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Postmortems and Corrective Work' in Reliability, Incidents, and Disaster Recovery?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to produce an evidence-based postmortem and rank corrective work by risk reduction, effort, ownership, and verification.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to produce an evidence-based postmortem and rank corrective work by risk reduction, effort, ownership, and verification.",
+      "explanation": "Use Postmortems and Corrective Work to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M12-Q047",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "backups-restore-failover-and-failback",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Backups, Restore, Failover, and Failback' supports this outcome: Verify backup integrity, RPO, RTO, restore, failover, fencing, reconciliation, and failback with controlled evidence.",
+      "correct_answer": "A strong answer defines the mechanism from 'Backups, Restore, Failover, and Failback', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Backups, Restore, Failover, and Failback to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M12-Q048",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "chaos-game-days-and-reliability-decisions",
+        "synthesis"
+      ],
+      "prompt": "For 'Chaos, Game Days, and Reliability Decisions', what quantities, units, or thresholds would you calculate before trusting a design claim about: Diagnose nine reliability failures and defend cumulative review across consensus, messaging, operations, security, cost, ownership, and recovery.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Design a controlled game day with hypothesis, safety, and evidence.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M12-Q049",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "user-journeys-slis-and-slos",
+        "application"
+      ],
+      "prompt": "A learner applies 'User Journeys, SLIs, and SLOs' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Measure component uptime:** users can fail while every process responds.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M12-Q050",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "error-budgets-dependencies-and-composite-reliabi",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Error Budgets, Dependencies, and Composite Reliability'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for calculate error budgets, burn, dependency exposure, shared fate, and composite reliability and use them in decisions..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Complete EX-03\u2013EX-05 and carry the dependency/common-cause model into Lesson 3.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M12-Q051",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "burn-rates-and-actionable-alerting",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Burn Rates and Actionable Alerting' in Reliability, Incidents, and Disaster Recovery?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement multi-window burn alerts and separate actionable journey symptoms from causal diagnostic telemetry.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement multi-window burn alerts and separate actionable journey symptoms from causal diagnostic telemetry.",
+      "explanation": "Use Burn Rates and Actionable Alerting to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M12-Q052",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "graceful-degradation-and-degraded-capacity",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Graceful Degradation and Degraded Capacity' supports this outcome: Build priority-aware degradation, load shedding, bounded dependency work, and degraded regional capacity.",
+      "correct_answer": "A strong answer defines the mechanism from 'Graceful Degradation and Degraded Capacity', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Graceful Degradation and Degraded Capacity to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M12-Q053",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "incident-command-communication-and-runbooks",
+        "synthesis"
+      ],
+      "prompt": "For 'Incident Command, Communication, and Runbooks', what quantities, units, or thresholds would you calculate before trusting a design claim about: Run incidents with explicit command, operations, communications, liaison, handoff, escalation, and stop conditions.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Separate incident command, operations, communications, and liaison roles.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M12-Q054",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "postmortems-and-corrective-work",
+        "application"
+      ],
+      "prompt": "A learner applies 'Postmortems and Corrective Work' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Tell a heroic story:** individual effort replaces system learning.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M12-Q055",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "backups-restore-failover-and-failback",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Backups, Restore, Failover, and Failback'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for verify backup integrity, rpo, rto, restore, failover, fencing, reconciliation, and failback with controlled evidence..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-06, complete EX-14\u2013EX-15, and preserve F05\u2013F09 recovery versions, timestamps, epochs, hashes, approvals, and reconciliation as raw evidence.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M12-Q056",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "chaos-game-days-and-reliability-decisions",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Chaos, Game Days, and Reliability Decisions' in Reliability, Incidents, and Disaster Recovery?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose nine reliability failures and defend gate 4 across consensus, messaging, operations, security, cost, ownership, and recovery.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose nine reliability failures and defend cumulative review across consensus, messaging, operations, security, cost, ownership, and recovery.",
+      "explanation": "Use Chaos, Game Days, and Reliability Decisions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M12-Q057",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "user-journeys-slis-and-slos",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'User Journeys, SLIs, and SLOs' supports this outcome: Define user-journey SLIs and SLOs with valid populations, windows, exclusions, latency, availability, freshness, and correctness.",
+      "correct_answer": "A strong answer defines the mechanism from 'User Journeys, SLIs, and SLOs', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use User Journeys, SLIs, and SLOs to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M12-Q058",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "error-budgets-dependencies-and-composite-reliabi",
+        "synthesis"
+      ],
+      "prompt": "For 'Error Budgets, Dependencies, and Composite Reliability', what quantities, units, or thresholds would you calculate before trusting a design claim about: Calculate error budgets, burn, dependency exposure, shared fate, and composite reliability and use them in decisions.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Calculate allowed bad events and consumed error budget.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M12-Q059",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "burn-rates-and-actionable-alerting",
+        "application"
+      ],
+      "prompt": "A learner applies 'Burn Rates and Actionable Alerting' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Page at the SLO threshold:** noise arrives faster than useful action.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M12-Q060",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "graceful-degradation-and-degraded-capacity",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Graceful Degradation and Degraded Capacity'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for build priority-aware degradation, load shedding, bounded dependency work, and degraded regional capacity..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-03, complete EX-08\u2013EX-09, implement the public lab contract, and record capacity predictions before running F01 or F07.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M12-Q061",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "incident-command-communication-and-runbooks",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Incident Command, Communication, and Runbooks' in Reliability, Incidents, and Disaster Recovery?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to run incidents with explicit command, operations, communications, liaison, handoff, escalation, and stop conditions.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to run incidents with explicit command, operations, communications, liaison, handoff, escalation, and stop conditions.",
+      "explanation": "Use Incident Command, Communication, and Runbooks to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M12-Q062",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "postmortems-and-corrective-work",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Postmortems and Corrective Work' supports this outcome: Produce an evidence-based postmortem and rank corrective work by risk reduction, effort, ownership, and verification.",
+      "correct_answer": "A strong answer defines the mechanism from 'Postmortems and Corrective Work', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Postmortems and Corrective Work to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M12-Q063",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "backups-restore-failover-and-failback",
+        "synthesis"
+      ],
+      "prompt": "For 'Backups, Restore, Failover, and Failback', what quantities, units, or thresholds would you calculate before trusting a design claim about: Verify backup integrity, RPO, RTO, restore, failover, fencing, reconciliation, and failback with controlled evidence.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Derive RPO and RTO from user/data consequence and measured evidence.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M12-Q064",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "chaos-game-days-and-reliability-decisions",
+        "application"
+      ],
+      "prompt": "A learner applies 'Chaos, Game Days, and Reliability Decisions' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Inject chaos without a hypothesis:** spectacle replaces learning.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M12-Q065",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "user-journeys-slis-and-slos",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'User Journeys, SLIs, and SLOs'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for define user-journey slis and slos with valid populations, windows, exclusions, latency, availability, freshness, and correctness..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-01, complete EX-01\u2013EX-02, and save the Week 45 SLI population before opening the Northstar case or answer key.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M12-Q066",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "error-budgets-dependencies-and-composite-reliabi",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Error Budgets, Dependencies, and Composite Reliability' in Reliability, Incidents, and Disaster Recovery?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate error budgets, burn, dependency exposure, shared fate, and composite reliability and use them in decisions.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate error budgets, burn, dependency exposure, shared fate, and composite reliability and use them in decisions.",
+      "explanation": "Use Error Budgets, Dependencies, and Composite Reliability to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M12-Q067",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "burn-rates-and-actionable-alerting",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Burn Rates and Actionable Alerting' supports this outcome: Implement multi-window burn alerts and separate actionable journey symptoms from causal diagnostic telemetry.",
+      "correct_answer": "A strong answer defines the mechanism from 'Burn Rates and Actionable Alerting', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Burn Rates and Actionable Alerting to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M12-Q068",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "graceful-degradation-and-degraded-capacity",
+        "synthesis"
+      ],
+      "prompt": "For 'Graceful Degradation and Degraded Capacity', what quantities, units, or thresholds would you calculate before trusting a design claim about: Build priority-aware degradation, load shedding, bounded dependency work, and degraded regional capacity.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Define a priority order and user-visible degraded contract.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M12-Q069",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "incident-command-communication-and-runbooks",
+        "application"
+      ],
+      "prompt": "A learner applies 'Incident Command, Communication, and Runbooks' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Best debugger commands:** coordination and impact become ownerless.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M12-Q070",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "postmortems-and-corrective-work",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Postmortems and Corrective Work'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for produce an evidence-based postmortem and rank corrective work by risk reduction, effort, ownership, and verification..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-05, complete EX-12\u2013EX-13, and use the incident-postmortem template.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M12-Q071",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "backups-restore-failover-and-failback",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Backups, Restore, Failover, and Failback' in Reliability, Incidents, and Disaster Recovery?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to verify backup integrity, rpo, rto, restore, failover, fencing, reconciliation, and failback with controlled evidence.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to verify backup integrity, rpo, rto, restore, failover, fencing, reconciliation, and failback with controlled evidence.",
+      "explanation": "Use Backups, Restore, Failover, and Failback to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M12-Q072",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "chaos-game-days-and-reliability-decisions",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Chaos, Game Days, and Reliability Decisions' supports this outcome: Diagnose nine reliability failures and defend cumulative review across consensus, messaging, operations, security, cost, ownership, and recovery.",
+      "correct_answer": "A strong answer defines the mechanism from 'Chaos, Game Days, and Reliability Decisions', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Chaos, Game Days, and Reliability Decisions to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M12-Q073",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "user-journeys-slis-and-slos",
+        "synthesis"
+      ],
+      "prompt": "For 'User Journeys, SLIs, and SLOs', what quantities, units, or thresholds would you calculate before trusting a design claim about: Define user-journey SLIs and SLOs with valid populations, windows, exclusions, latency, availability, freshness, and correctness.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Specify valid and good events for a complete user journey.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M12-Q074",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "error-budgets-dependencies-and-composite-reliabi",
+        "application"
+      ],
+      "prompt": "A learner applies 'Error Budgets, Dependencies, and Composite Reliability' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Subtract percentages:** budget is computed against valid events or time.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M12-Q075",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "burn-rates-and-actionable-alerting",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Burn Rates and Actionable Alerting'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement multi-window burn alerts and separate actionable journey symptoms from causal diagnostic telemetry..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-02, complete EX-06\u2013EX-07, and test the alert series before building degraded modes in Lesson 4.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M12-Q076",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "graceful-degradation-and-degraded-capacity",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Graceful Degradation and Degraded Capacity' in Reliability, Incidents, and Disaster Recovery?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to build priority-aware degradation, load shedding, bounded dependency work, and degraded regional capacity.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to build priority-aware degradation, load shedding, bounded dependency work, and degraded regional capacity.",
+      "explanation": "Use Graceful Degradation and Degraded Capacity to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M12-Q077",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "incident-command-communication-and-runbooks",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Incident Command, Communication, and Runbooks' supports this outcome: Run incidents with explicit command, operations, communications, liaison, handoff, escalation, and stop conditions.",
+      "correct_answer": "A strong answer defines the mechanism from 'Incident Command, Communication, and Runbooks', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Incident Command, Communication, and Runbooks to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M12-Q078",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "postmortems-and-corrective-work",
+        "synthesis"
+      ],
+      "prompt": "For 'Postmortems and Corrective Work', what quantities, units, or thresholds would you calculate before trusting a design claim about: Produce an evidence-based postmortem and rank corrective work by risk reduction, effort, ownership, and verification.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Quantify impact and reconstruct a cited timeline.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M12-Q079",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "backups-restore-failover-and-failback",
+        "application"
+      ],
+      "prompt": "A learner applies 'Backups, Restore, Failover, and Failback' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Replica equals backup:** corruption or operator error can propagate.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M12-Q080",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "chaos-game-days-and-reliability-decisions",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Chaos, Game Days, and Reliability Decisions'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose nine reliability failures and defend cumulative review across consensus, messaging, operations, security, cost, ownership, and recovery..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-07, complete EX-16, finalize the disaster-recovery review, conduct the defense, save cumulative review in Week 68, and write the separate Week 69 synthesis project delta.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M12-Q081",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "user-journeys-slis-and-slos",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'User Journeys, SLIs, and SLOs' in Reliability, Incidents, and Disaster Recovery?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to define user-journey slis and slos with valid populations, windows, exclusions, latency, availability, freshness, and correctness.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to define user-journey slis and slos with valid populations, windows, exclusions, latency, availability, freshness, and correctness.",
+      "explanation": "Use User Journeys, SLIs, and SLOs to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M12-Q082",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "error-budgets-dependencies-and-composite-reliabi",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Error Budgets, Dependencies, and Composite Reliability' supports this outcome: Calculate error budgets, burn, dependency exposure, shared fate, and composite reliability and use them in decisions.",
+      "correct_answer": "A strong answer defines the mechanism from 'Error Budgets, Dependencies, and Composite Reliability', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Error Budgets, Dependencies, and Composite Reliability to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M12-Q083",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "burn-rates-and-actionable-alerting",
+        "synthesis"
+      ],
+      "prompt": "For 'Burn Rates and Actionable Alerting', what quantities, units, or thresholds would you calculate before trusting a design claim about: Implement multi-window burn alerts and separate actionable journey symptoms from causal diagnostic telemetry.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Calculate burn rate from observed error fraction and SLO error fraction.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M12-Q084",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "graceful-degradation-and-degraded-capacity",
+        "application"
+      ],
+      "prompt": "A learner applies 'Graceful Degradation and Degraded Capacity' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Call errors degradation:** no priority or minimum-useful contract exists.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M12-Q085",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "incident-command-communication-and-runbooks",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Incident Command, Communication, and Runbooks'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for run incidents with explicit command, operations, communications, liaison, handoff, escalation, and stop conditions..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-04 and RES-08, complete EX-10\u2013EX-11, and preserve the incident timeline as raw evidence for the postmortem rather than rewriting it afterward.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M12-Q086",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "postmortems-and-corrective-work",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Postmortems and Corrective Work' in Reliability, Incidents, and Disaster Recovery?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to produce an evidence-based postmortem and rank corrective work by risk reduction, effort, ownership, and verification.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to produce an evidence-based postmortem and rank corrective work by risk reduction, effort, ownership, and verification.",
+      "explanation": "Use Postmortems and Corrective Work to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M12-Q087",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "backups-restore-failover-and-failback",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Backups, Restore, Failover, and Failback' supports this outcome: Verify backup integrity, RPO, RTO, restore, failover, fencing, reconciliation, and failback with controlled evidence.",
+      "correct_answer": "A strong answer defines the mechanism from 'Backups, Restore, Failover, and Failback', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Backups, Restore, Failover, and Failback to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M12-Q088",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "chaos-game-days-and-reliability-decisions",
+        "synthesis"
+      ],
+      "prompt": "For 'Chaos, Game Days, and Reliability Decisions', what quantities, units, or thresholds would you calculate before trusting a design claim about: Diagnose nine reliability failures and defend cumulative review across consensus, messaging, operations, security, cost, ownership, and recovery.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Design a controlled game day with hypothesis, safety, and evidence.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M12-Q089",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "user-journeys-slis-and-slos",
+        "application"
+      ],
+      "prompt": "A learner applies 'User Journeys, SLIs, and SLOs' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Measure component uptime:** users can fail while every process responds.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M12-Q090",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "error-budgets-dependencies-and-composite-reliabi",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Error Budgets, Dependencies, and Composite Reliability'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for calculate error budgets, burn, dependency exposure, shared fate, and composite reliability and use them in decisions..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Complete EX-03\u2013EX-05 and carry the dependency/common-cause model into Lesson 3.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M12-Q091",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "burn-rates-and-actionable-alerting",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Burn Rates and Actionable Alerting' in Reliability, Incidents, and Disaster Recovery?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement multi-window burn alerts and separate actionable journey symptoms from causal diagnostic telemetry.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement multi-window burn alerts and separate actionable journey symptoms from causal diagnostic telemetry.",
+      "explanation": "Use Burn Rates and Actionable Alerting to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M12-Q092",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "graceful-degradation-and-degraded-capacity",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Graceful Degradation and Degraded Capacity' supports this outcome: Build priority-aware degradation, load shedding, bounded dependency work, and degraded regional capacity.",
+      "correct_answer": "A strong answer defines the mechanism from 'Graceful Degradation and Degraded Capacity', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Graceful Degradation and Degraded Capacity to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M12-Q093",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "incident-command-communication-and-runbooks",
+        "synthesis"
+      ],
+      "prompt": "For 'Incident Command, Communication, and Runbooks', what quantities, units, or thresholds would you calculate before trusting a design claim about: Run incidents with explicit command, operations, communications, liaison, handoff, escalation, and stop conditions.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Separate incident command, operations, communications, and liaison roles.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M12-Q094",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "postmortems-and-corrective-work",
+        "application"
+      ],
+      "prompt": "A learner applies 'Postmortems and Corrective Work' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Tell a heroic story:** individual effort replaces system learning.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M12-Q095",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "backups-restore-failover-and-failback",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Backups, Restore, Failover, and Failback'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for verify backup integrity, rpo, rto, restore, failover, fencing, reconciliation, and failback with controlled evidence..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-06, complete EX-14\u2013EX-15, and preserve F05\u2013F09 recovery versions, timestamps, epochs, hashes, approvals, and reconciliation as raw evidence.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M12-Q096",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "chaos-game-days-and-reliability-decisions",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Chaos, Game Days, and Reliability Decisions' in Reliability, Incidents, and Disaster Recovery?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose nine reliability failures and defend gate 4 across consensus, messaging, operations, security, cost, ownership, and recovery.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose nine reliability failures and defend cumulative review across consensus, messaging, operations, security, cost, ownership, and recovery.",
+      "explanation": "Use Chaos, Game Days, and Reliability Decisions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M12-Q097",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "user-journeys-slis-and-slos",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'User Journeys, SLIs, and SLOs' supports this outcome: Define user-journey SLIs and SLOs with valid populations, windows, exclusions, latency, availability, freshness, and correctness.",
+      "correct_answer": "A strong answer defines the mechanism from 'User Journeys, SLIs, and SLOs', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use User Journeys, SLIs, and SLOs to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M12-Q098",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "error-budgets-dependencies-and-composite-reliabi",
+        "synthesis"
+      ],
+      "prompt": "For 'Error Budgets, Dependencies, and Composite Reliability', what quantities, units, or thresholds would you calculate before trusting a design claim about: Calculate error budgets, burn, dependency exposure, shared fate, and composite reliability and use them in decisions.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Calculate allowed bad events and consumed error budget.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M12-Q099",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "burn-rates-and-actionable-alerting",
+        "application"
+      ],
+      "prompt": "A learner applies 'Burn Rates and Actionable Alerting' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Page at the SLO threshold:** noise arrives faster than useful action.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M12-Q100",
+      "module_id": "M12",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "reliability-incidents-and-disaster-recovery",
+        "graceful-degradation-and-degraded-capacity",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Graceful Degradation and Degraded Capacity'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for build priority-aware degradation, load shedding, bounded dependency work, and degraded regional capacity..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-03, complete EX-08\u2013EX-09, implement the public lab contract, and record capacity predictions before running F01 or F07.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    }
+  ]
+}

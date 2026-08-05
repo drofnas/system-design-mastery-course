@@ -1,14 +1,14 @@
 lesson_id: L08
 
-# CivicAid decision tutorial and capstone defense
+# CivicAid decision tutorial and synthesis review
 
 ## Outcomes
 
-By the end of this lesson, you can integrate Modules 1–18 into a reversible architecture decision, defend it under adversarial questioning, and revise your capstone without rewriting frozen baselines.
+By the end of this lesson, you can integrate Modules 1-18 into a reversible architecture decision and identify which retrieval, tool, workflow, and operating claims need stronger evidence.
 
 ## Prerequisites
 
-Complete Lessons 1–7, all eight failure pairs, and the prior five course gates. Bring the frozen Week 1, 12, 24, and 48 artifacts.
+Complete Lessons 1-7 and the reinforcement failure pairs. Bring your notes from earlier modules when a tradeoff depends on prior systems material.
 
 ## Decision method
 
@@ -59,8 +59,8 @@ have new evidence. A peer may add adaptive questions after freezing.
 
 ## Self-check
 
-1. What makes a capstone decision reversible?
-2. Why preserve earlier baselines?
+1. What makes a synthesis-project decision reversible?
+2. Why save earlier attempts?
 3. What should you do when a defense question exceeds available evidence?
 4. How does a staff-plus defense differ from a technically correct design?
 
@@ -73,11 +73,11 @@ have new evidence. A peer may add adaptive questions after freezing.
 
 ## Sources and next work
 
-Read the bounded Dropbox Dash assignment in [resources.md](../resources.md). Complete EX-19 and EX-20, the final worksheet, and the Week 103 Gate 6 submission. Use [week-104-delta.md](../../../capstone/revisions/week-104-delta.md) only after the Gate 6 freeze as a new final-delta contract.
+Read the bounded Dropbox Dash assignment in [resources.md](../resources.md). Complete EX-19 and EX-20, then use the module quiz and LLM grading prompt to find the retrieval, tool-safety, and workflow topics that need review.
 
-## PESD 2.0 extension: modern constraints and ownership
+## Solo extension: modern constraints and ownership
 
-PESD 2.0 adds **a complete AI assurance case covering tool/model inventory, provider supply chain, ongoing evaluation, human-approval efficacy, transparency, deletion, incident response, policy drift, rollback, and retirement**.
+The deep path adds **an AI assurance review covering tool/model inventory, provider supply chain, ongoing evaluation, human-approval efficacy, transparency, deletion, incident response, policy drift, rollback, and retirement**.
 
 ### Repeatable decision procedure
 
@@ -85,7 +85,7 @@ PESD 2.0 adds **a complete AI assurance case covering tool/model inventory, prov
    control planes, evidence owners, and cost owners before selecting a mechanism.
 2. State the invariant and the authority that may change it. Separate a claimed
    policy from the enforcement point and from the evidence that proves execution.
-3. Freeze a prediction, implement or model the named mechanism, and record the
+3. Save a prediction, implement or model the named mechanism, and record the
    accepted evidence mode and runtime boundary.
 4. Inject one policy, isolation, recovery, or supplier failure in addition to the
    module's mechanism failure. Preserve raw evidence before interpretation.

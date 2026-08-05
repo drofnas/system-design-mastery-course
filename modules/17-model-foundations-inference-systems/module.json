@@ -1,1149 +1,271 @@
 {
   "$schema": "../../schemas/module.schema.json",
+  "course_id": "CSSDM",
+  "course_version": "3.0-solo",
   "id": "M17",
   "title": "Model Foundations and Inference Systems",
-  "weeks": [
+  "status": "ready",
+  "focus": "Derive vectors, matrices, norms, probability, entropy, gradients, and scaled dot-product attention with explicit shapes, units, and numerical limits.",
+  "pacing": {
+    "review": "Skim lessons, answer self-checks, and take one generated quiz.",
+    "standard": "Study lessons, complete guided practice, use the answer key, and take one or more generated quizzes.",
+    "deep": "Complete standard work plus the reinforcement lab and optional project."
+  },
+  "lessons": [
     {
-      "number": 92,
-      "phase": "Model and derive",
-      "focus": "Model and derive",
-      "hours": 8.5,
-      "core_hours": 8.5,
-      "capacity_hours": 12,
-      "evidence": [
-        "Model and derive evidence frozen at source commit"
-      ],
-      "time_blocks": [
-        {
-          "id": "W092-T01",
-          "label": "Bounded authoritative resources",
-          "minutes": 180,
-          "activity": "required_resource",
-          "required": true,
-          "resource_ids": [
-            "RES-03",
-            "RES-07",
-            "RES-09"
-          ]
-        },
-        {
-          "id": "W092-T02",
-          "label": "Local mechanism instruction",
-          "minutes": 120,
-          "activity": "local_instruction",
-          "required": true,
-          "lesson_ids": [
-            "L01",
-            "L02",
-            "L03",
-            "L04"
-          ]
-        },
-        {
-          "id": "W092-T03",
-          "label": "Guided practice",
-          "minutes": 60,
-          "activity": "guided_practice",
-          "required": true,
-          "exercise_ids": [
-            "EX-01",
-            "EX-02",
-            "EX-03",
-            "EX-04",
-            "EX-05",
-            "EX-06",
-            "EX-07",
-            "EX-08",
-            "EX-09"
-          ]
-        },
-        {
-          "id": "W092-T04",
-          "label": "Required evidence components",
-          "minutes": 30,
-          "activity": "independent_work",
-          "required": true,
-          "artifact_allocations": [
-            {
-              "artifact_id": "A07",
-              "minutes": 30
-            }
-          ]
-        },
-        {
-          "id": "W092-T05",
-          "label": "Model and derive core work",
-          "minutes": 120,
-          "activity": "independent_work",
-          "required": true
-        },
-        {
-          "id": "W092-T06",
-          "label": "Optional contingency capacity",
-          "minutes": 210,
-          "activity": "contingency",
-          "required": false
-        }
-      ]
+      "id": "L01",
+      "title": "Mathematics for Inference Decisions",
+      "path": "lessons/01-mathematics-for-inference.md"
     },
     {
-      "number": 93,
-      "phase": "Guided build and prediction freeze",
-      "focus": "Guided build and prediction freeze",
-      "hours": 9.0,
-      "core_hours": 9.0,
-      "capacity_hours": 12,
-      "evidence": [
-        "Guided build and prediction freeze evidence frozen at source commit"
-      ],
-      "time_blocks": [
-        {
-          "id": "W093-T01",
-          "label": "Bounded authoritative resources",
-          "minutes": 155,
-          "activity": "required_resource",
-          "required": true,
-          "resource_ids": [
-            "RES-02",
-            "RES-05",
-            "RES-10"
-          ]
-        },
-        {
-          "id": "W093-T02",
-          "label": "Local mechanism instruction",
-          "minutes": 120,
-          "activity": "local_instruction",
-          "required": true,
-          "lesson_ids": [
-            "L05",
-            "L06",
-            "L07",
-            "L08"
-          ]
-        },
-        {
-          "id": "W093-T03",
-          "label": "Guided practice",
-          "minutes": 60,
-          "activity": "guided_practice",
-          "required": true,
-          "exercise_ids": [
-            "EX-10",
-            "EX-11",
-            "EX-12",
-            "EX-13",
-            "EX-14",
-            "EX-15",
-            "EX-16",
-            "EX-17",
-            "EX-18"
-          ]
-        },
-        {
-          "id": "W093-T04",
-          "label": "Required evidence components",
-          "minutes": 30,
-          "activity": "independent_work",
-          "required": true,
-          "artifact_allocations": [
-            {
-              "artifact_id": "A01",
-              "minutes": 30
-            }
-          ]
-        },
-        {
-          "id": "W093-T05",
-          "label": "Guided build and prediction freeze core work",
-          "minutes": 175,
-          "activity": "independent_work",
-          "required": true
-        },
-        {
-          "id": "W093-T06",
-          "label": "Optional contingency capacity",
-          "minutes": 180,
-          "activity": "contingency",
-          "required": false
-        }
-      ]
+      "id": "L02",
+      "title": "Tokens, Embeddings, and Attention",
+      "path": "lessons/02-tokens-embeddings-attention.md"
     },
     {
-      "number": 94,
-      "phase": "Independent build and integration",
-      "focus": "Independent build and integration",
-      "hours": 10.0,
-      "core_hours": 10.0,
-      "capacity_hours": 12,
-      "evidence": [
-        "Independent build and integration evidence frozen at source commit"
-      ],
-      "time_blocks": [
-        {
-          "id": "W094-T01",
-          "label": "Required evidence components",
-          "minutes": 60,
-          "activity": "independent_work",
-          "required": true,
-          "artifact_allocations": [
-            {
-              "artifact_id": "A02",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A03",
-              "minutes": 30
-            }
-          ]
-        },
-        {
-          "id": "W094-T02",
-          "label": "Independent build and integration core work",
-          "minutes": 540,
-          "activity": "independent_work",
-          "required": true
-        },
-        {
-          "id": "W094-T03",
-          "label": "Optional contingency capacity",
-          "minutes": 120,
-          "activity": "contingency",
-          "required": false
-        }
-      ]
+      "id": "L03",
+      "title": "Transformer Inference from Prefill to Decode",
+      "path": "lessons/03-transformer-inference-path.md"
     },
     {
-      "number": 95,
-      "phase": "Independent build and integration II",
-      "focus": "Independent build and integration II",
-      "hours": 10.0,
-      "core_hours": 10.0,
-      "capacity_hours": 12,
-      "evidence": [
-        "Independent build and integration II evidence frozen at source commit"
-      ],
-      "time_blocks": [
-        {
-          "id": "W095-T01",
-          "label": "Independent build and integration II core work",
-          "minutes": 540,
-          "activity": "independent_work",
-          "required": true
-        },
-        {
-          "id": "W095-T02",
-          "label": "Independent build and integration II verification checkpoint",
-          "minutes": 60,
-          "activity": "independent_work",
-          "required": true
-        },
-        {
-          "id": "W095-T03",
-          "label": "Optional contingency capacity",
-          "minutes": 120,
-          "activity": "contingency",
-          "required": false
-        }
-      ]
+      "id": "L04",
+      "title": "Compute, Memory, and Capacity Accounting",
+      "path": "lessons/04-compute-memory-capacity.md"
     },
     {
-      "number": 96,
-      "phase": "Break, repair, measure, and diagnose",
-      "focus": "Break, repair, measure, and diagnose",
-      "hours": 10.0,
-      "core_hours": 10.0,
-      "capacity_hours": 12,
-      "evidence": [
-        "Break, repair, measure, and diagnose evidence frozen at source commit"
-      ],
-      "time_blocks": [
-        {
-          "id": "W096-T01",
-          "label": "Required evidence components",
-          "minutes": 120,
-          "activity": "failure_experiment",
-          "required": true,
-          "artifact_allocations": [
-            {
-              "artifact_id": "A04",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A05",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A06",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A13",
-              "minutes": 30
-            }
-          ]
-        },
-        {
-          "id": "W096-T02",
-          "label": "Break, repair, measure, and diagnose core work",
-          "minutes": 480,
-          "activity": "failure_experiment",
-          "required": true
-        },
-        {
-          "id": "W096-T03",
-          "label": "Optional contingency capacity",
-          "minutes": 120,
-          "activity": "contingency",
-          "required": false
-        }
-      ]
+      "id": "L05",
+      "title": "Profiling and Inference Metrics",
+      "path": "lessons/05-profiling-inference-metrics.md"
     },
     {
-      "number": 97,
-      "phase": "Decide, teach, assess, and freeze",
-      "focus": "Decide, teach, assess, and freeze",
-      "hours": 9.5,
-      "core_hours": 9.5,
-      "capacity_hours": 12,
-      "evidence": [
-        "Decide, teach, assess, and freeze evidence frozen at source commit"
-      ],
-      "time_blocks": [
-        {
-          "id": "W097-T01",
-          "label": "Required evidence components",
-          "minutes": 120,
-          "activity": "decision_artifact",
-          "required": true,
-          "artifact_allocations": [
-            {
-              "artifact_id": "A08",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A09",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A11",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A12",
-              "minutes": 30
-            }
-          ]
-        },
-        {
-          "id": "W097-T02",
-          "label": "Decide, teach, assess, and freeze core work",
-          "minutes": 390,
-          "activity": "assessment",
-          "required": true
-        },
-        {
-          "id": "W097-T03",
-          "label": "Module teach-back",
-          "minutes": 30,
-          "activity": "teach_back",
-          "required": true
-        },
-        {
-          "id": "W097-T04",
-          "label": "Learning log and freeze check",
-          "minutes": 30,
-          "activity": "reflection",
-          "required": true
-        },
-        {
-          "id": "W097-T05",
-          "label": "Optional contingency capacity",
-          "minutes": 150,
-          "activity": "contingency",
-          "required": false
-        }
-      ]
+      "id": "L06",
+      "title": "Scheduling, Batching, Admission, and Fairness",
+      "path": "lessons/06-scheduling-admission-fairness.md"
+    },
+    {
+      "id": "L07",
+      "title": "Caches, Quantization, and Provider Failure",
+      "path": "lessons/07-caches-quantization-failover.md"
+    },
+    {
+      "id": "L08",
+      "title": "Atlas Tutorial, Architecture Decision, and Teach-Back",
+      "path": "lessons/08-atlas-inference-decision.md"
     }
   ],
-  "target_hours": 57,
-  "status": "review",
-  "readiness_note": "Ready after portable lab tests, six isolated evaluator records, deterministic calibration checking, semantic and resource review, and focused and full-course validation passed on 2026-08-03.",
-  "outcomes": [
+  "learning_outcomes": [
     {
       "id": "M17-O1",
       "statement": "Derive vectors, matrices, norms, probability, entropy, gradients, and scaled dot-product attention with explicit shapes, units, and numerical limits.",
-      "graduate_profile": [
-        2,
-        3,
-        11,
-        13
-      ],
-      "mastery_levels": [
-        "Define",
-        "Calculate"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L01",
         "L02"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-01",
         "EX-02",
         "EX-03",
         "EX-04",
         "EX-06"
-      ],
-      "artifacts": [
-        "A01",
-        "A02"
-      ],
-      "rubric": [
-        "R01"
       ]
     },
     {
       "id": "M17-O2",
       "statement": "Implement versioned tokenization, embeddings, causal attention, and a deterministic tiny transformer inference path.",
-      "graduate_profile": [
-        3,
-        11,
-        13
-      ],
-      "mastery_levels": [
-        "Define",
-        "Implement"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L02",
         "L03"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-05",
         "EX-06",
         "EX-07"
-      ],
-      "artifacts": [
-        "A02",
-        "A03"
-      ],
-      "rubric": [
-        "R02"
       ]
     },
     {
       "id": "M17-O3",
       "statement": "Calculate weights, activations, KV cache, bandwidth, concurrency, headroom, failover reserve, and cost per useful output.",
-      "graduate_profile": [
-        2,
-        3,
-        13
-      ],
-      "mastery_levels": [
-        "Calculate",
-        "Diagnose"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L04"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-08",
         "EX-09"
-      ],
-      "artifacts": [
-        "A01",
-        "A06",
-        "A07"
-      ],
-      "rubric": [
-        "R03"
       ]
     },
     {
       "id": "M17-O4",
       "statement": "Measure queue-inclusive TTFT, inter-token latency, prefill, decode, outcomes, throughput, memory, and profiler limits.",
-      "graduate_profile": [
-        2,
-        8,
-        13
-      ],
-      "mastery_levels": [
-        "Implement",
-        "Diagnose"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L05"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-10"
-      ],
-      "artifacts": [
-        "A03",
-        "A05",
-        "A06"
-      ],
-      "rubric": [
-        "R04"
       ]
     },
     {
       "id": "M17-O5",
       "statement": "Implement bounded batching, pre-admission resource reservation, quotas, shedding, and traffic-class fairness.",
-      "graduate_profile": [
-        6,
-        9,
-        13
-      ],
-      "mastery_levels": [
-        "Implement",
-        "Diagnose",
-        "Decide and Teach"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L06"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-11",
         "EX-12",
         "EX-13"
-      ],
-      "artifacts": [
-        "A03",
-        "A04",
-        "A05",
-        "A07"
-      ],
-      "rubric": [
-        "R05"
       ]
     },
     {
       "id": "M17-O6",
       "statement": "Apply versioned prefix and semantic caches and precision changes without crossing privacy, compatibility, or quality boundaries.",
-      "graduate_profile": [
-        5,
-        9,
-        13
-      ],
-      "mastery_levels": [
-        "Implement",
-        "Diagnose"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L07"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-14",
         "EX-15"
-      ],
-      "artifacts": [
-        "A04",
-        "A05",
-        "A07"
-      ],
-      "rubric": [
-        "R06",
-        "R07"
       ]
     },
     {
       "id": "M17-O7",
       "statement": "Diagnose memory exhaustion, mixed-length interference, queue overload, cache collision, precision loss, and provider failure from preserved evidence.",
-      "graduate_profile": [
-        7,
-        8,
-        13
-      ],
-      "mastery_levels": [
-        "Diagnose"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L05",
         "L06",
         "L07"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-16",
         "EX-17"
-      ],
-      "artifacts": [
-        "A04",
-        "A05",
-        "A06"
-      ],
-      "rubric": [
-        "R08",
-        "R09"
       ]
     },
     {
       "id": "M17-O8",
       "statement": "Defend an inference architecture across quality, latency, availability, security, cost, ownership, migration, rollback, and reversal.",
-      "graduate_profile": [
-        10,
-        14,
-        15,
-        16
-      ],
-      "mastery_levels": [
-        "Decide and Teach"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L08"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-18"
-      ],
-      "artifacts": [
-        "A07",
-        "A08",
-        "A09",
-        "A12",
-        "A11"
-      ],
-      "rubric": [
-        "R10"
       ]
     }
   ],
+  "practice": {
+    "exercises_path": "exercises/exercises.md",
+    "answer_key_path": "exercises/answer-key.md"
+  },
+  "lab": {
+    "required": true,
+    "path": "lab/README.md",
+    "note": "Use the lab to reinforce the local mechanism; treat expanded matrices and platform-specific evidence as optional deep-dive work."
+  },
+  "quiz": {
+    "question_bank_path": "quiz/question-bank.json",
+    "answer_key_path": "quiz/answer-key.md",
+    "llm_grader_prompt_path": "quiz/llm-grader-prompt.md",
+    "question_count": 100,
+    "default_draw_count": 20,
+    "types": [
+      "multiple_choice",
+      "short_answer",
+      "calculation",
+      "scenario_diagnosis",
+      "design_judgment"
+    ]
+  },
+  "optional_project": {
+    "description": "Apply Model Foundations and Inference Systems to a small system you know. Write a short design note, experiment report, or implementation summary only if you want deeper practice."
+  },
   "resources": [
     {
       "id": "RES-01",
       "title": "Deep Learning",
-      "author_or_publisher": "Ian Goodfellow, Yoshua Bengio, Aaron Courville / MIT Press",
-      "type": "free online textbook",
       "url": "https://www.deeplearningbook.org/",
       "required": false,
-      "access": "free",
-      "week": 97,
       "estimated_minutes": 90,
       "purpose": "Ground linear algebra, probability, entropy, gradients, and numerical stability used in local derivations.",
-      "assignment": "Read Chapter 2 Sections 2.1-2.5, Chapter 3 Sections 3.1-3.4 and 3.13, and Chapter 4 Sections 4.1-4.3; reproduce one matrix, entropy, and gradient calculation.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/01-mathematics-for-inference.md",
-      "verified_title": "Deep Learning",
-      "verified_publisher": "Ian Goodfellow, Yoshua Bengio, Aaron Courville / MIT Press",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://www.deeplearningbook.org/",
-      "verification_status": "verified"
+      "local_alternative": "lessons/01-mathematics-for-inference.md"
     },
     {
       "id": "RES-02",
       "title": "Attention Is All You Need",
-      "author_or_publisher": "Ashish Vaswani et al.",
-      "type": "original research paper",
       "url": "https://arxiv.org/abs/1706.03762",
       "required": true,
-      "access": "free",
-      "week": 93,
       "estimated_minutes": 60,
       "purpose": "Connect the local attention implementation to the original transformer mechanism and notation.",
-      "assignment": "Read Sections 3.1-3.5 only; annotate tensor shapes, scaling, masking, and parallelism claims.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/02-tokens-embeddings-attention.md",
-      "verified_title": "Attention Is All You Need",
-      "verified_publisher": "Ashish Vaswani et al.",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://arxiv.org/abs/1706.03762",
-      "verification_status": "verified"
+      "local_alternative": "lessons/02-tokens-embeddings-attention.md"
     },
     {
       "id": "RES-03",
       "title": "CS336: Language Modeling from Scratch",
-      "author_or_publisher": "Stanford University",
-      "type": "course materials",
       "url": "https://cs336.stanford.edu/",
       "required": true,
-      "access": "free",
-      "week": 92,
       "estimated_minutes": 90,
       "purpose": "Reinforce tokenization, resource accounting, architectures, hardware, and current inference-system reasoning.",
-      "assignment": "Use only Lectures 1-5 and 10 materials; separate token, operator, memory, hardware, and serving claims in a concept ledger.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/03-transformer-inference-path.md",
-      "verified_title": "CS336: Language Modeling from Scratch",
-      "verified_publisher": "Stanford University",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://cs336.stanford.edu/",
-      "verification_status": "verified"
+      "local_alternative": "lessons/03-transformer-inference-path.md"
     },
     {
       "id": "RES-04",
       "title": "CS336 Lecture 10: Inference",
-      "author_or_publisher": "Stanford Online",
-      "type": "captioned technical video",
       "url": "https://www.youtube.com/watch?v=fcgPYo3OtV0",
       "required": false,
-      "access": "free",
-      "week": 97,
       "estimated_minutes": 75,
       "purpose": "Visualize prefill, decode, batching, and serving trade-offs with a written equivalent.",
-      "assignment": "Watch with captions; produce a prefill/decode/batching map and two claims that do not transfer to the Atlas portable CPU lab.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/03-transformer-inference-path.md",
-      "verified_title": "CS336 Lecture 10: Inference",
-      "verified_publisher": "Stanford Online",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://www.youtube.com/watch?v=fcgPYo3OtV0",
-      "verification_status": "verified"
+      "local_alternative": "lessons/03-transformer-inference-path.md"
     },
     {
       "id": "RES-05",
       "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
-      "author_or_publisher": "Woosuk Kwon et al. / SOSP",
-      "type": "original systems paper",
       "url": "https://arxiv.org/abs/2309.06180",
       "required": true,
-      "access": "free",
-      "week": 93,
       "estimated_minutes": 75,
       "purpose": "Study KV-cache allocation, fragmentation, batching, scheduling, and their workload assumptions.",
-      "assignment": "Read Sections 2-4 and 7; reproduce the fragmentation argument and list the assumptions that differ from Atlas.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/04-compute-memory-capacity.md",
-      "verified_title": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
-      "verified_publisher": "Woosuk Kwon et al. / SOSP",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://arxiv.org/abs/2309.06180",
-      "verification_status": "verified"
+      "local_alternative": "lessons/04-compute-memory-capacity.md"
     },
     {
       "id": "RES-06",
       "title": "Optimization and Tuning",
-      "author_or_publisher": "vLLM project",
-      "type": "maintainer documentation",
       "url": "https://docs.vllm.ai/en/latest/configuration/optimization/",
       "required": false,
-      "access": "free",
-      "week": 97,
       "estimated_minutes": 45,
       "purpose": "Compare current preemption, chunked-prefill, and input-processing controls with the local scheduler model.",
-      "assignment": "Read preemption, chunked prefill, and input processing only; map each current control to the Atlas failure it could affect.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/06-scheduling-admission-fairness.md",
-      "verified_title": "Optimization and Tuning",
-      "verified_publisher": "vLLM project",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://docs.vllm.ai/en/latest/configuration/optimization/",
-      "verification_status": "verified"
+      "local_alternative": "lessons/06-scheduling-admission-fairness.md"
     },
     {
       "id": "RES-07",
       "title": "PyTorch Profiler",
-      "author_or_publisher": "PyTorch project",
-      "type": "maintainer tutorial",
       "url": "https://docs.pytorch.org/tutorials/recipes/recipes/profiler_recipe.html",
       "required": true,
-      "access": "free",
-      "week": 92,
       "estimated_minutes": 45,
       "purpose": "Define timing, shape, memory, warm-up, and trace-export evidence for the optional adapter.",
-      "assignment": "Read timing, memory, trace, and long-running sections; write the Atlas measured-profile procedure and its overhead boundary.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/05-profiling-inference-metrics.md",
-      "verified_title": "PyTorch Profiler",
-      "verified_publisher": "PyTorch project",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://docs.pytorch.org/tutorials/recipes/recipes/profiler_recipe.html",
-      "verification_status": "verified"
+      "local_alternative": "lessons/05-profiling-inference-metrics.md"
     },
     {
       "id": "RES-08",
       "title": "SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models",
-      "author_or_publisher": "Guangxuan Xiao et al.",
-      "type": "original research paper",
       "url": "https://arxiv.org/abs/2211.10438",
       "required": false,
-      "access": "free",
-      "week": 97,
       "estimated_minutes": 60,
       "purpose": "Tie numerical representation changes to both hardware efficiency and protected quality evidence.",
-      "assignment": "Read Sections 1-4 and 5.3-5.5; identify the precision, hardware, corpus, and metric boundaries behind each claim.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/07-caches-quantization-failover.md",
-      "verified_title": "SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models",
-      "verified_publisher": "Guangxuan Xiao et al.",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://arxiv.org/abs/2211.10438",
-      "verification_status": "verified"
+      "local_alternative": "lessons/07-caches-quantization-failover.md"
     },
     {
       "id": "RES-09",
       "title": "Taming the tail utilization of ads inference at Meta scale",
-      "author_or_publisher": "Meta Engineering",
-      "type": "first-person engineering case",
       "url": "https://engineering.fb.com/2024/07/10/production-engineering/tail-utilization-ads-inference-meta/",
       "required": true,
-      "access": "free",
-      "week": 92,
       "estimated_minutes": 45,
       "purpose": "Examine operator evidence connecting tail utilization, capacity, reliability, and user latency.",
-      "assignment": "Read the full case; separate measurements, interventions, outcomes, scale assumptions, and claims that do not transfer to generative Atlas workloads.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/08-atlas-inference-decision.md",
-      "verified_title": "Taming the tail utilization of ads inference at Meta scale",
-      "verified_publisher": "Meta Engineering",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://engineering.fb.com/2024/07/10/production-engineering/tail-utilization-ads-inference-meta/",
-      "verification_status": "verified"
+      "local_alternative": "lessons/08-atlas-inference-decision.md"
     },
     {
       "id": "RES-10",
       "title": "NIST AI RMF Core",
-      "author_or_publisher": "NIST AIRC",
-      "type": "official primary guidance",
       "url": "https://airc.nist.gov/airmf-resources/airmf/5-sec-core/",
       "required": true,
-      "access": "free",
-      "week": 93,
       "estimated_minutes": 20,
-      "purpose": "Ground the PESD 2.0 cross-cutting decision in current primary guidance and produce scoped evidence rather than framework vocabulary.",
-      "assignment": "Read Govern 1.5\u20131.7 and Manage 3\u20134; map inventory, monitoring, supplier, incident, recovery, and decommission outcomes into the dossier.",
-      "last_verified": "2026-08-04",
-      "text_alternative": "lessons/08-atlas-inference-decision.md",
-      "verified_title": "NIST AI RMF Core",
-      "verified_publisher": "NIST AIRC",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://airc.nist.gov/airmf-resources/airmf/5-sec-core/",
-      "verification_status": "verified"
+      "purpose": "Ground the solo course cross-cutting decision in current primary guidance and produce scoped evidence rather than framework vocabulary.",
+      "local_alternative": "lessons/08-atlas-inference-decision.md"
     }
-  ],
-  "artifacts": [
-    {
-      "id": "A01",
-      "week": 93,
-      "required": true,
-      "template_path": "modules/17-model-foundations-inference-systems/worksheets/week-65-inference-model.md",
-      "submission_path": "reports/module-17-inference-baseline.md",
-      "immutable_after_submission": true,
-      "portfolio_category": "model",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M17-A01",
-      "component_role": "prediction",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A02",
-      "week": 94,
-      "required": true,
-      "template_path": "modules/17-model-foundations-inference-systems/worksheets/week-66-inference-build.md",
-      "submission_path": "labs/module-17/inference/",
-      "portfolio_category": "implementation",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M17-A02",
-      "component_role": "implementation",
-      "estimated_minutes": 30,
-      "evidence_mode": "executed_deterministic"
-    },
-    {
-      "id": "A03",
-      "week": 94,
-      "required": true,
-      "template_path": "modules/17-model-foundations-inference-systems/worksheets/week-66-inference-build.md",
-      "submission_path": "reports/module-17-inference-conformance-and-internals.md",
-      "portfolio_category": "source_code_internals_review",
-      "portfolio_item_id": "PI-INT-03",
-      "portfolio_credit": true,
-      "evidence_lineage_id": "LIN-INT-INFERENCE",
-      "component_role": "analysis",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A04",
-      "week": 96,
-      "required": true,
-      "template_path": "modules/17-model-foundations-inference-systems/worksheets/week-67-inference-failures.md",
-      "submission_path": "experiments/module-17/",
-      "immutable_after_submission": true,
-      "portfolio_category": "failure_matrix",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M17-A04",
-      "component_role": "raw_evidence",
-      "estimated_minutes": 30,
-      "evidence_mode": "executed_deterministic"
-    },
-    {
-      "id": "A05",
-      "week": 96,
-      "required": true,
-      "template_path": "modules/17-model-foundations-inference-systems/worksheets/week-67-inference-failures.md",
-      "submission_path": "reports/module-17-inference-failure-matrix.md",
-      "portfolio_category": "failure_matrix",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M17-A05",
-      "component_role": "raw_evidence",
-      "estimated_minutes": 30,
-      "evidence_mode": "executed_deterministic"
-    },
-    {
-      "id": "A06",
-      "week": 96,
-      "required": true,
-      "template_path": "templates/performance-review-template.md",
-      "submission_path": "reports/module-17-inference-performance-and-cost.md",
-      "portfolio_category": "performance_investigation",
-      "portfolio_item_id": "PI-PERF-06",
-      "portfolio_credit": true,
-      "evidence_lineage_id": "LIN-PERF-INFERENCE",
-      "component_role": "analysis",
-      "estimated_minutes": 30,
-      "evidence_mode": "measured_loopback"
-    },
-    {
-      "id": "A07",
-      "week": 92,
-      "required": true,
-      "template_path": "templates/rfc-template.md",
-      "submission_path": "rfc/module-17-inference-architecture.md",
-      "portfolio_category": "model",
-      "portfolio_item_id": "PI-AI-01",
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-AI-SYSTEM",
-      "component_role": "baseline",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A08",
-      "week": 97,
-      "required": true,
-      "template_path": "modules/17-model-foundations-inference-systems/worksheets/week-68-inference-defense.md",
-      "submission_path": "reviews/module-17-inference-defense.md",
-      "portfolio_category": "teach_back",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M17-A08",
-      "component_role": "final",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A09",
-      "week": 97,
-      "required": true,
-      "template_path": "modules/17-model-foundations-inference-systems/assessment/report-template.md",
-      "submission_path": "reviews/module-17-evaluation.md",
-      "portfolio_category": "evaluation",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M17-A09",
-      "component_role": "final",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A11",
-      "week": 97,
-      "required": true,
-      "template_path": "templates/learning-log-template.md",
-      "submission_path": "learning-log/week-092.md through learning-log/week-097.md",
-      "portfolio_category": "learning_log",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M17-A11",
-      "component_role": "final",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A12",
-      "week": 97,
-      "required": true,
-      "template_path": "templates/adr-template.md",
-      "submission_path": "adr/module-17-inference-deployment-policy.md",
-      "portfolio_category": "adr",
-      "portfolio_item_id": "PI-DECISION-M17",
-      "portfolio_credit": true,
-      "evidence_lineage_id": "LIN-DECISION-M17",
-      "component_role": "decision",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A13",
-      "week": 96,
-      "required": true,
-      "template_path": "templates/architecture-cost-model-template.md",
-      "submission_path": "reports/module-17-useful-output-cost-model.md",
-      "portfolio_category": "capacity_cost_model",
-      "portfolio_item_id": "PI-COST-03",
-      "portfolio_credit": true,
-      "evidence_lineage_id": "LIN-COST-INFERENCE",
-      "component_role": "analysis",
-      "estimated_minutes": 30,
-      "evidence_mode": "modeled_capacity"
-    }
-  ],
-  "failure_experiments": [
-    {
-      "id": "F01",
-      "scenario": "KV and activation growth exceeds reserved memory",
-      "evidence": "same-input broken/repaired hashes, full memory ledger, pre-admission reservation, rejection, headroom, OOM count, and I01"
-    },
-    {
-      "id": "F02",
-      "scenario": "long prefills starve interactive decode",
-      "evidence": "same arrivals and lengths, per-class queue-inclusive TTFT/ITL, chunking/share control, batch progress, and I02-I04"
-    },
-    {
-      "id": "F03",
-      "scenario": "arrival rate overloads an unbounded queue",
-      "evidence": "open-loop arrival identity, queue maximum, rejection, deadline outcomes, recovery, useful work, and I03"
-    },
-    {
-      "id": "F04",
-      "scenario": "prefix or semantic cache survives tenant or version change",
-      "evidence": "two pseudonymous tenants, complete identity fields, version/authorization invalidation, cross-tenant and stale hits, and I05-I06"
-    },
-    {
-      "id": "F05",
-      "scenario": "reduced precision exceeds the declared quality tolerance",
-      "evidence": "reference corpus hash, maximum logit error, top-k agreement, task score, rollout/rollback gate, and I07"
-    },
-    {
-      "id": "F06",
-      "scenario": "provider loss amplifies deadlines, attempts, and cost",
-      "evidence": "one request identity and deadline, attempts, duplicate work, compatibility/data boundary, fallback capacity, cost, and I08-I10"
-    }
-  ],
-  "assessment": {
-    "rubric_path": "modules/17-model-foundations-inference-systems/assessment/rubric.md",
-    "evaluator_prompt_path": "modules/17-model-foundations-inference-systems/assessment/evaluator-prompt.md",
-    "evaluation_schema_path": "schemas/evaluation.schema.json",
-    "calibration_path": "modules/17-model-foundations-inference-systems/assessment/calibration",
-    "pass_average": 3,
-    "safety_critical_criteria": [
-      "R05",
-      "R06",
-      "R08",
-      "R09"
-    ],
-    "required_result_bands": [
-      "Pass",
-      "Revise",
-      "Repeat"
-    ]
-  },
-  "solo_review": {
-    "challenge_questions": [
-      {
-        "id": "M17-SR-Q01",
-        "prompt": "Which claim in your artifact most directly supports this outcome, and what evidence could falsify it: Derive vectors, matrices, norms, probability, entropy, gradients, and scaled dot-product attention with explicit shapes, units, and numerical limits."
-      },
-      {
-        "id": "M17-SR-Q02",
-        "prompt": "What unstated assumption could invalidate your treatment of this outcome, and how would you test it: Implement versioned tokenization, embeddings, causal attention, and a deterministic tiny transformer inference path."
-      },
-      {
-        "id": "M17-SR-Q03",
-        "prompt": "Defend the causal chain behind your evidence for this outcome, including the first likely failure: Calculate weights, activations, KV cache, bandwidth, concurrency, headroom, failover reserve, and cost per useful output."
-      },
-      {
-        "id": "M17-SR-Q04",
-        "prompt": "Which reasonable alternative would challenge your treatment of this outcome, and under what evidence would it win: Measure queue-inclusive TTFT, inter-token latency, prefill, decode, outcomes, throughput, memory, and profiler limits."
-      },
-      {
-        "id": "M17-SR-Q05",
-        "prompt": "What operational, security, cost, or ownership consequence is least supported in your treatment of this outcome: Implement bounded batching, pre-admission resource reservation, quotas, shedding, and traffic-class fairness."
-      },
-      {
-        "id": "M17-SR-Q06",
-        "prompt": "Where does your evidence stop transferring to production for this outcome, and how is that boundary disclosed: Apply versioned prefix and semantic caches and precision changes without crossing privacy, compatibility, or quality boundaries."
-      },
-      {
-        "id": "M17-SR-Q07",
-        "prompt": "What dissent should a skeptical reviewer raise about your treatment of this outcome, and what follow-up evidence would resolve it: Diagnose memory exhaustion, mixed-length interference, queue overload, cache collision, precision loss, and provider failure from preserved evidence."
-      },
-      {
-        "id": "M17-SR-Q08",
-        "prompt": "What changed belief or reversal condition follows from your work on this outcome, and where is it recorded: Defend an inference architecture across quality, latency, availability, security, cost, ownership, migration, rollback, and reversal."
-      }
-    ],
-    "required_reviewer_roles": [
-      "Model Foundations and Inference Systems domain reviewer",
-      "operations and reliability owner",
-      "security and privacy reviewer",
-      "delivery and cost stakeholder"
-    ],
-    "questions_per_attempt": 5,
-    "live_ai_allowed": false,
-    "record_template_path": "templates/solo-review-record-template.md"
-  },
-  "factual_claims_path": "modules/17-model-foundations-inference-systems/assessment/factual-claims.json",
-  "lesson_catalog": [
-    {
-      "id": "L01",
-      "path": "lessons/01-mathematics-for-inference.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L02",
-      "path": "lessons/02-tokens-embeddings-attention.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L03",
-      "path": "lessons/03-transformer-inference-path.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L04",
-      "path": "lessons/04-compute-memory-capacity.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L05",
-      "path": "lessons/05-profiling-inference-metrics.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L06",
-      "path": "lessons/06-scheduling-admission-fairness.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L07",
-      "path": "lessons/07-caches-quantization-failover.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L08",
-      "path": "lessons/08-atlas-inference-decision.md",
-      "estimated_minutes": 30
-    }
-  ],
-  "citation_catalog": [
-    {
-      "id": "CIT-01",
-      "title": "The tokenization pipeline",
-      "author_or_publisher": "Hugging Face",
-      "type": "official maintainer documentation",
-      "url": "https://huggingface.co/docs/tokenizers/python/latest/pipeline.html",
-      "required": true,
-      "access": "free",
-      "purpose": "Document normalization, pre-tokenization, vocabulary-to-ID mapping, and special-token post-processing as distinct tokenizer inputs to a model.",
-      "reading_boundary": "Read Normalization, Pre-Tokenization, The Model, and Post-Processing; examples describe this maintained library and support the general need to bind tokenizer configuration to model inputs.",
-      "last_verified": "2026-08-04",
-      "text_alternative": "lessons/02-tokens-embeddings-attention.md",
-      "verified_title": "The tokenization pipeline",
-      "verified_publisher": "Hugging Face",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://huggingface.co/docs/tokenizers/python/latest/pipeline.html",
-      "verification_status": "verified"
-    }
-  ],
-  "course_id": "PESD-104",
-  "course_version": "2.0",
-  "primary_decision": {
-    "artifact_id": "A12",
-    "type": "ADR"
-  },
-  "pesd_v2_additions": "an actual streaming tiny-transformer path with incremental KV state, token scheduling, byte-budget admission, tenant/version cache identity, bounded provider failure, profiling, and an AI System Dossier",
-  "semantic_evaluation": "module_specific"
+  ]
 }

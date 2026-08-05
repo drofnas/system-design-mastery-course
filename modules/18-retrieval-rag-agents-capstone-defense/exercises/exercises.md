@@ -83,13 +83,13 @@ as evidence, inference, assumption, or unknown. A peer is optional.
 
 ## EX-20: Decision teach-back
 
-Deliver a ten-minute explanation as a recording or written transcript, then use
-the frozen solo-review packet to restate the decision, strongest rejected
-alternative, highest-risk invariant, migration trigger, and owner. Revise the
-explanation, not the frozen baseline. An engineer outside the project may
-perform the restatement as optional stronger transfer evidence.
+Deliver a ten-minute explanation as a recording or written transcript, then
+restate the decision, strongest rejected alternative, highest-risk invariant,
+migration trigger, and owner. Revise the explanation rather than hiding the
+original uncertainty. An engineer outside the project may perform the
+restatement as optional stronger transfer evidence.
 
-## PESD 2.0 extension to the final exercise
+## Solo extension to the final exercise
 
 Extend the final guided exercise with a complete AI assurance case covering tool/model inventory, provider supply chain, ongoing evaluation, human-approval efficacy, transparency, deletion, incident response, policy drift, rollback, and retirement. Produce an
 obligation/control/evidence row, a named owner, a bounded cost or capacity

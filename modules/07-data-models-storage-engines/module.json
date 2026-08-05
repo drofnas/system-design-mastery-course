@@ -1,1090 +1,273 @@
 {
   "$schema": "../../schemas/module.schema.json",
+  "course_id": "CSSDM",
+  "course_version": "3.0-solo",
   "id": "M07",
   "title": "Data Models and Storage Engines",
-  "weeks": [
+  "status": "ready",
+  "focus": "Derive logical and physical data models from quantified access paths, invariants, retention, growth, and ownership.",
+  "pacing": {
+    "review": "Skim lessons, answer self-checks, and take one generated quiz.",
+    "standard": "Study lessons, complete guided practice, use the answer key, and take one or more generated quizzes.",
+    "deep": "Complete standard work plus the reinforcement lab and optional project."
+  },
+  "lessons": [
     {
-      "number": 35,
-      "phase": "Model and derive",
-      "focus": "Model and derive",
-      "hours": 8.5,
-      "core_hours": 8.5,
-      "capacity_hours": 12,
-      "evidence": [
-        "Model and derive evidence frozen at source commit"
-      ],
-      "time_blocks": [
-        {
-          "id": "W035-T01",
-          "label": "Bounded authoritative resources",
-          "minutes": 145,
-          "activity": "required_resource",
-          "required": true,
-          "resource_ids": [
-            "RES-04",
-            "RES-05",
-            "RES-10"
-          ]
-        },
-        {
-          "id": "W035-T02",
-          "label": "Local mechanism instruction",
-          "minutes": 120,
-          "activity": "local_instruction",
-          "required": true,
-          "lesson_ids": [
-            "L01",
-            "L02",
-            "L03",
-            "L04"
-          ]
-        },
-        {
-          "id": "W035-T03",
-          "label": "Guided practice",
-          "minutes": 60,
-          "activity": "guided_practice",
-          "required": true,
-          "exercise_ids": [
-            "EX-01",
-            "EX-02",
-            "EX-03",
-            "EX-04",
-            "EX-05",
-            "EX-06",
-            "EX-07",
-            "EX-08"
-          ]
-        },
-        {
-          "id": "W035-T04",
-          "label": "Required evidence components",
-          "minutes": 30,
-          "activity": "independent_work",
-          "required": true,
-          "artifact_allocations": [
-            {
-              "artifact_id": "A10",
-              "minutes": 30
-            }
-          ]
-        },
-        {
-          "id": "W035-T05",
-          "label": "Model and derive core work",
-          "minutes": 155,
-          "activity": "independent_work",
-          "required": true
-        },
-        {
-          "id": "W035-T06",
-          "label": "Optional contingency capacity",
-          "minutes": 210,
-          "activity": "contingency",
-          "required": false
-        }
-      ]
+      "id": "L01",
+      "title": "Workloads, Access Paths, and Data Models",
+      "path": "lessons/01-workloads-access-paths-data-models.md"
     },
     {
-      "number": 36,
-      "phase": "Guided build and prediction freeze",
-      "focus": "Guided build and prediction freeze",
-      "hours": 9.0,
-      "core_hours": 9.0,
-      "capacity_hours": 12,
-      "evidence": [
-        "Guided build and prediction freeze evidence frozen at source commit"
-      ],
-      "time_blocks": [
-        {
-          "id": "W036-T01",
-          "label": "Bounded authoritative resources",
-          "minutes": 135,
-          "activity": "required_resource",
-          "required": true,
-          "resource_ids": [
-            "RES-01",
-            "RES-07",
-            "RES-09"
-          ]
-        },
-        {
-          "id": "W036-T02",
-          "label": "Local mechanism instruction",
-          "minutes": 120,
-          "activity": "local_instruction",
-          "required": true,
-          "lesson_ids": [
-            "L05",
-            "L06",
-            "L07",
-            "L08"
-          ]
-        },
-        {
-          "id": "W036-T03",
-          "label": "Guided practice",
-          "minutes": 60,
-          "activity": "guided_practice",
-          "required": true,
-          "exercise_ids": [
-            "EX-09",
-            "EX-10",
-            "EX-11",
-            "EX-12",
-            "EX-13",
-            "EX-14",
-            "EX-15",
-            "EX-16"
-          ]
-        },
-        {
-          "id": "W036-T04",
-          "label": "Required evidence components",
-          "minutes": 90,
-          "activity": "independent_work",
-          "required": true,
-          "artifact_allocations": [
-            {
-              "artifact_id": "A01",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A02",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A03",
-              "minutes": 30
-            }
-          ]
-        },
-        {
-          "id": "W036-T05",
-          "label": "Guided build and prediction freeze core work",
-          "minutes": 135,
-          "activity": "independent_work",
-          "required": true
-        },
-        {
-          "id": "W036-T06",
-          "label": "Optional contingency capacity",
-          "minutes": 180,
-          "activity": "contingency",
-          "required": false
-        }
-      ]
+      "id": "L02",
+      "title": "Pages, Records, Buffer Pools, and Locality",
+      "path": "lessons/02-pages-records-buffer-pools.md"
     },
     {
-      "number": 37,
-      "phase": "Independent build and integration",
-      "focus": "Independent build and integration",
-      "hours": 10.0,
-      "core_hours": 10.0,
-      "capacity_hours": 12,
-      "evidence": [
-        "Independent build and integration evidence frozen at source commit"
-      ],
-      "time_blocks": [
-        {
-          "id": "W037-T01",
-          "label": "Independent build and integration core work",
-          "minutes": 540,
-          "activity": "independent_work",
-          "required": true
-        },
-        {
-          "id": "W037-T02",
-          "label": "Independent build and integration verification checkpoint",
-          "minutes": 60,
-          "activity": "independent_work",
-          "required": true
-        },
-        {
-          "id": "W037-T03",
-          "label": "Optional contingency capacity",
-          "minutes": 120,
-          "activity": "contingency",
-          "required": false
-        }
-      ]
+      "id": "L03",
+      "title": "B+ Trees, Hash Indexes, and Inverted Indexes",
+      "path": "lessons/03-btree-hash-inverted-indexes.md"
     },
     {
-      "number": 38,
-      "phase": "Break, repair, measure, and diagnose",
-      "focus": "Break, repair, measure, and diagnose",
-      "hours": 10.0,
-      "core_hours": 10.0,
-      "capacity_hours": 12,
-      "evidence": [
-        "Break, repair, measure, and diagnose evidence frozen at source commit"
-      ],
-      "time_blocks": [
-        {
-          "id": "W038-T01",
-          "label": "Required evidence components",
-          "minutes": 60,
-          "activity": "failure_experiment",
-          "required": true,
-          "artifact_allocations": [
-            {
-              "artifact_id": "A04",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A05",
-              "minutes": 30
-            }
-          ]
-        },
-        {
-          "id": "W038-T02",
-          "label": "Break, repair, measure, and diagnose core work",
-          "minutes": 540,
-          "activity": "failure_experiment",
-          "required": true
-        },
-        {
-          "id": "W038-T03",
-          "label": "Optional contingency capacity",
-          "minutes": 120,
-          "activity": "contingency",
-          "required": false
-        }
-      ]
+      "id": "L04",
+      "title": "LSM Paths, Bloom Filters, Tombstones, and Compaction",
+      "path": "lessons/04-lsm-bloom-compaction.md"
     },
     {
-      "number": 39,
-      "phase": "Decide, teach, assess, and freeze",
-      "focus": "Decide, teach, assess, and freeze",
-      "hours": 9.5,
-      "core_hours": 9.5,
-      "capacity_hours": 12,
-      "evidence": [
-        "Decide, teach, assess, and freeze evidence frozen at source commit"
-      ],
-      "time_blocks": [
-        {
-          "id": "W039-T01",
-          "label": "Required evidence components",
-          "minutes": 120,
-          "activity": "decision_artifact",
-          "required": true,
-          "artifact_allocations": [
-            {
-              "artifact_id": "A06",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A07",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A08",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A09",
-              "minutes": 30
-            }
-          ]
-        },
-        {
-          "id": "W039-T02",
-          "label": "Decide, teach, assess, and freeze core work",
-          "minutes": 390,
-          "activity": "assessment",
-          "required": true
-        },
-        {
-          "id": "W039-T03",
-          "label": "Module teach-back",
-          "minutes": 30,
-          "activity": "teach_back",
-          "required": true
-        },
-        {
-          "id": "W039-T04",
-          "label": "Learning log and freeze check",
-          "minutes": 30,
-          "activity": "reflection",
-          "required": true
-        },
-        {
-          "id": "W039-T05",
-          "label": "Optional contingency capacity",
-          "minutes": 150,
-          "activity": "contingency",
-          "required": false
-        }
-      ]
+      "id": "L05",
+      "title": "Amplification and SSD Endurance",
+      "path": "lessons/05-amplification-ssd-endurance.md"
+    },
+    {
+      "id": "L06",
+      "title": "Query Plans, Statistics, and Index Design",
+      "path": "lessons/06-query-plans-statistics-indexes.md"
+    },
+    {
+      "id": "L07",
+      "title": "Skew, Background Debt, Stalls, and Diagnosis",
+      "path": "lessons/07-skew-debt-stalls-diagnosis.md"
+    },
+    {
+      "id": "L08",
+      "title": "Storage Decisions, Migration, Cost, and Ownership",
+      "path": "lessons/08-storage-decisions-migration-ownership.md"
     }
   ],
-  "target_hours": 47,
-  "status": "review",
-  "readiness_note": "Ready on 2026-08-02 after semantic review, 11 storage-lab tests across 22 strict scenarios, six isolated evaluator invocations with stable calibration bands, two calibration checks, focused validation, full-course validation, resource verification, and evidence-safety review.",
-  "outcomes": [
+  "learning_outcomes": [
     {
       "id": "M07-O1",
       "statement": "Derive logical and physical data models from quantified access paths, invariants, retention, growth, and ownership.",
-      "graduate_profile": [
-        1,
-        2,
-        4,
-        9,
-        10
-      ],
-      "mastery_levels": [
-        "Define",
-        "Calculate",
-        "Decide and Teach"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L01"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-01",
         "EX-02"
-      ],
-      "artifacts": [
-        "A01",
-        "A06"
-      ],
-      "rubric": [
-        "R01"
       ]
     },
     {
       "id": "M07-O2",
       "statement": "Explain and measure how pages, records, buffer pools, locality, and cache policy shape physical work.",
-      "graduate_profile": [
-        2,
-        3,
-        8
-      ],
-      "mastery_levels": [
-        "Define",
-        "Calculate",
-        "Diagnose"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L02"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-03",
         "EX-04"
-      ],
-      "artifacts": [
-        "A01",
-        "A04"
-      ],
-      "rubric": [
-        "R02"
       ]
     },
     {
       "id": "M07-O3",
       "statement": "Implement and validate a persistent paged B+ tree with point lookup, range scan, splits, cache behavior, deletion, and clean reopen.",
-      "graduate_profile": [
-        3,
-        4,
-        7,
-        8,
-        11
-      ],
-      "mastery_levels": [
-        "Implement",
-        "Diagnose"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L03"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-05",
         "EX-06",
         "EX-07"
-      ],
-      "artifacts": [
-        "A02",
-        "A04"
-      ],
-      "rubric": [
-        "R03",
-        "R07"
       ]
     },
     {
       "id": "M07-O4",
       "statement": "Implement and validate an LSM store with memtable, SSTables, sparse indexes, Bloom filters, tombstones, and compaction.",
-      "graduate_profile": [
-        3,
-        4,
-        7,
-        8,
-        11
-      ],
-      "mastery_levels": [
-        "Implement",
-        "Diagnose"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L04"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-08",
         "EX-09"
-      ],
-      "artifacts": [
-        "A03",
-        "A04"
-      ],
-      "rubric": [
-        "R04",
-        "R07"
       ]
     },
     {
       "id": "M07-O5",
       "statement": "Calculate read, write, and space amplification and connect them to tail latency, capacity, cost, and SSD endurance.",
-      "graduate_profile": [
-        2,
-        3,
-        8,
-        10
-      ],
-      "mastery_levels": [
-        "Calculate",
-        "Diagnose"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L05"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-10"
-      ],
-      "artifacts": [
-        "A05",
-        "A06"
-      ],
-      "rubric": [
-        "R05"
       ]
     },
     {
       "id": "M07-O6",
       "statement": "Choose indexes and diagnose query plans whose estimates, statistics, or access paths do not match the workload.",
-      "graduate_profile": [
-        4,
-        8,
-        10
-      ],
-      "mastery_levels": [
-        "Calculate",
-        "Diagnose",
-        "Decide and Teach"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L06"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-11",
         "EX-12"
-      ],
-      "artifacts": [
-        "A05",
-        "A06"
-      ],
-      "rubric": [
-        "R08"
       ]
     },
     {
       "id": "M07-O7",
       "statement": "Diagnose read, write, range, skew, delete, cache, Bloom, compaction, and tombstone behavior from preserved same-input evidence.",
-      "graduate_profile": [
-        2,
-        7,
-        8
-      ],
-      "mastery_levels": [
-        "Diagnose",
-        "Decide and Teach"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L07"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-13",
         "EX-14"
-      ],
-      "artifacts": [
-        "A05"
-      ],
-      "rubric": [
-        "R06",
-        "R07"
       ]
     },
     {
       "id": "M07-O8",
       "statement": "Defend a storage-engine decision covering security, operations, cost, ownership, migration, rollback, recovery requirements, and reversal evidence.",
-      "graduate_profile": [
-        9,
-        10,
-        14,
-        15,
-        16
-      ],
-      "mastery_levels": [
-        "Decide and Teach"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L08"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-15",
         "EX-16"
-      ],
-      "artifacts": [
-        "A06",
-        "A07",
-        "A08",
-        "A09"
-      ],
-      "rubric": [
-        "R09",
-        "R10"
       ]
     }
   ],
+  "practice": {
+    "exercises_path": "exercises/exercises.md",
+    "answer_key_path": "exercises/answer-key.md"
+  },
+  "lab": {
+    "required": true,
+    "path": "lab/README.md",
+    "note": "Use the lab to reinforce the local mechanism; treat expanded matrices and platform-specific evidence as optional deep-dive work."
+  },
+  "quiz": {
+    "question_bank_path": "quiz/question-bank.json",
+    "answer_key_path": "quiz/answer-key.md",
+    "llm_grader_prompt_path": "quiz/llm-grader-prompt.md",
+    "question_count": 100,
+    "default_draw_count": 20,
+    "types": [
+      "multiple_choice",
+      "short_answer",
+      "calculation",
+      "scenario_diagnosis",
+      "design_judgment"
+    ]
+  },
+  "optional_project": {
+    "description": "Apply Data Models and Storage Engines to a small system you know. Write a short design note, experiment report, or implementation summary only if you want deeper practice."
+  },
   "resources": [
     {
       "id": "RES-01",
       "title": "Database File Format",
-      "author_or_publisher": "SQLite Authors",
-      "type": "maintainer specification",
       "url": "https://www.sqlite.org/fileformat.html",
       "required": true,
-      "access": "free",
-      "week": 36,
       "estimated_minutes": 50,
       "purpose": "Ground pages, B-tree cells, and record boundaries in a stable implementation contract.",
-      "assignment": "Read Sections 1.2, 1.6, and 2.1; sketch a page and name two choices the format does not prescribe for this lab.",
-      "last_verified": "2026-08-02",
-      "text_alternative": "lessons/02-pages-records-buffer-pools.md",
-      "verified_title": "Database File Format",
-      "verified_publisher": "SQLite Authors",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://www.sqlite.org/fileformat.html",
-      "verification_status": "verified"
+      "local_alternative": "lessons/02-pages-records-buffer-pools.md"
     },
     {
       "id": "RES-02",
       "title": "B+Tree Indexes",
-      "author_or_publisher": "CMU Database Group",
-      "type": "captioned course video",
       "url": "https://www.youtube.com/watch?v=scUtG_6M_lU",
       "required": false,
-      "access": "free",
-      "week": 39,
       "estimated_minutes": 80,
       "purpose": "Observe insertion, split, deletion, and composite-index reasoning from a database-internals course.",
-      "assignment": "Watch through deletion and composite indexes; predict changed pages for one insert/delete and compare with the lab trace.",
-      "last_verified": "2026-08-02",
-      "text_alternative": "lessons/03-btree-hash-inverted-indexes.md",
-      "verified_title": "B+Tree Indexes",
-      "verified_publisher": "CMU Database Group",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://www.youtube.com/watch?v=scUtG_6M_lU",
-      "verification_status": "verified"
+      "local_alternative": "lessons/03-btree-hash-inverted-indexes.md"
     },
     {
       "id": "RES-03",
       "title": "Database Systems Spring 2026 Schedule and Materials",
-      "author_or_publisher": "Carnegie Mellon University",
-      "type": "course notes and slides",
       "url": "https://15445.courses.cs.cmu.edu/spring2026/schedule.html",
       "required": false,
-      "access": "free",
-      "week": 39,
       "estimated_minutes": 90,
       "purpose": "Connect storage, memory management, and indexes in one primary teaching sequence.",
-      "assignment": "Use only Database Storage I-II, Memory Management, and Indexes & Filters I-II notes/slides; produce a physical-path diagram and workload-dependent question.",
-      "last_verified": "2026-08-02",
-      "text_alternative": "lessons/02-pages-records-buffer-pools.md",
-      "verified_title": "Database Systems Spring 2026 Schedule and Materials",
-      "verified_publisher": "Carnegie Mellon University",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://15445.courses.cs.cmu.edu/spring2026/schedule.html",
-      "verification_status": "verified"
+      "local_alternative": "lessons/02-pages-records-buffer-pools.md"
     },
     {
       "id": "RES-04",
       "title": "The Log-Structured Merge-Tree",
-      "author_or_publisher": "P. O'Neil, E. Cheng, D. Gawlick, E. O'Neil",
-      "type": "original research paper",
       "url": "https://dsf.berkeley.edu/cs286/papers/lsm-acta1996.pdf",
       "required": true,
-      "access": "free",
-      "week": 35,
       "estimated_minutes": 70,
       "purpose": "Derive the buffered write mechanism and original cost assumptions.",
-      "assignment": "Read the Abstract and Sections 1-3; derive why buffering changes write cost and list assumptions that differ from the lab.",
-      "last_verified": "2026-08-02",
-      "text_alternative": "lessons/04-lsm-bloom-compaction.md",
-      "verified_title": "The Log-Structured Merge-Tree",
-      "verified_publisher": "P. O'Neil, E. Cheng, D. Gawlick, E. O'Neil",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://dsf.berkeley.edu/cs286/papers/lsm-acta1996.pdf",
-      "verification_status": "verified"
+      "local_alternative": "lessons/04-lsm-bloom-compaction.md"
     },
     {
       "id": "RES-05",
       "title": "RocksDB Overview",
-      "author_or_publisher": "RocksDB Maintainers; Meta",
-      "type": "maintainer documentation",
       "url": "https://github.com/facebook/rocksdb/wiki/RocksDB-Overview",
       "required": true,
-      "access": "free",
-      "week": 35,
       "estimated_minutes": 40,
       "purpose": "Compare operated LSM compaction shapes and amplification trade-offs.",
-      "assignment": "Read Architecture and Compaction Styles; compare leveled, tiered/universal, and FIFO under three amplification dimensions.",
-      "last_verified": "2026-08-02",
-      "text_alternative": "lessons/04-lsm-bloom-compaction.md",
-      "verified_title": "RocksDB Overview",
-      "verified_publisher": "RocksDB Maintainers; Meta",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://github.com/facebook/rocksdb/wiki/RocksDB-Overview",
-      "verification_status": "verified"
+      "local_alternative": "lessons/04-lsm-bloom-compaction.md"
     },
     {
       "id": "RES-06",
       "title": "Compaction",
-      "author_or_publisher": "RocksDB Maintainers; Meta",
-      "type": "maintainer documentation",
       "url": "https://github.com/facebook/rocksdb/wiki/Compaction",
       "required": false,
-      "access": "free",
-      "week": 39,
       "estimated_minutes": 45,
       "purpose": "Expose bytes, run shapes, and temporary space involved in compaction.",
-      "assignment": "Read Overview through Tiered+Leveled; draw one merge and identify temporary-space exposure.",
-      "last_verified": "2026-08-02",
-      "text_alternative": "lessons/05-amplification-ssd-endurance.md",
-      "verified_title": "Compaction",
-      "verified_publisher": "RocksDB Maintainers; Meta",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://github.com/facebook/rocksdb/wiki/Compaction",
-      "verification_status": "verified"
+      "local_alternative": "lessons/05-amplification-ssd-endurance.md"
     },
     {
       "id": "RES-07",
       "title": "Write Stalls",
-      "author_or_publisher": "RocksDB Maintainers; Meta",
-      "type": "first-person practitioner documentation",
       "url": "https://github.com/facebook/rocksdb/wiki/Write-Stalls",
       "required": true,
-      "access": "free",
-      "week": 36,
       "estimated_minutes": 35,
       "purpose": "Relate compaction debt to bounded admission and operator-owned recovery.",
-      "assignment": "Read the complete page; map every trigger to a metric, owner, and safe overload action.",
-      "last_verified": "2026-08-02",
-      "text_alternative": "lessons/07-skew-debt-stalls-diagnosis.md",
-      "verified_title": "Write Stalls",
-      "verified_publisher": "RocksDB Maintainers; Meta",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://github.com/facebook/rocksdb/wiki/Write-Stalls",
-      "verification_status": "verified"
+      "local_alternative": "lessons/07-skew-debt-stalls-diagnosis.md"
     },
     {
       "id": "RES-08",
       "title": "Indexes",
-      "author_or_publisher": "PostgreSQL Global Development Group",
-      "type": "maintainer documentation",
       "url": "https://www.postgresql.org/docs/current/indexes.html",
       "required": false,
-      "access": "free",
-      "week": 39,
       "estimated_minutes": 45,
       "purpose": "Connect index operator/order support to update and storage costs.",
-      "assignment": "Read Sections 11.1-11.5; design equality and ordered-range indexes and explain their write/storage cost.",
-      "last_verified": "2026-08-02",
-      "text_alternative": "lessons/06-query-plans-statistics-indexes.md",
-      "verified_title": "Indexes",
-      "verified_publisher": "PostgreSQL Global Development Group",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://www.postgresql.org/docs/current/indexes.html",
-      "verification_status": "verified"
+      "local_alternative": "lessons/06-query-plans-statistics-indexes.md"
     },
     {
       "id": "RES-09",
       "title": "Using EXPLAIN",
-      "author_or_publisher": "PostgreSQL Global Development Group",
-      "type": "maintainer documentation",
       "url": "https://www.postgresql.org/docs/current/using-explain.html",
       "required": true,
-      "access": "free",
-      "week": 36,
       "estimated_minutes": 50,
       "purpose": "Ground query-plan diagnosis in estimated and actual physical work.",
-      "assignment": "Read Sections 14.1.1-14.1.3; compare estimated/actual rows and record one alternative explanation before changing an index.",
-      "last_verified": "2026-08-02",
-      "text_alternative": "lessons/06-query-plans-statistics-indexes.md",
-      "verified_title": "Using EXPLAIN",
-      "verified_publisher": "PostgreSQL Global Development Group",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://www.postgresql.org/docs/current/using-explain.html",
-      "verification_status": "verified"
+      "local_alternative": "lessons/06-query-plans-statistics-indexes.md"
     },
     {
       "id": "RES-10",
       "title": "Statistics Used by the Planner",
-      "author_or_publisher": "PostgreSQL Global Development Group",
-      "type": "maintainer documentation",
       "url": "https://www.postgresql.org/docs/current/planner-stats.html",
       "required": true,
-      "access": "free",
-      "week": 35,
       "estimated_minutes": 35,
       "purpose": "Explain selectivity, correlation, and extended-statistics trade-offs.",
-      "assignment": "Read Sections 14.2.1-14.2.2; explain one correlation error and the cost of more detailed statistics.",
-      "last_verified": "2026-08-02",
-      "text_alternative": "lessons/06-query-plans-statistics-indexes.md",
-      "verified_title": "Statistics Used by the Planner",
-      "verified_publisher": "PostgreSQL Global Development Group",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://www.postgresql.org/docs/current/planner-stats.html",
-      "verification_status": "verified"
+      "local_alternative": "lessons/06-query-plans-statistics-indexes.md"
     },
     {
       "id": "RES-11",
       "title": "Overcoming the Write Amplification Problem with NVM Express Flexible Data Placement",
-      "author_or_publisher": "Amber Huffman and Chris Sabol; NVM Express",
-      "type": "standards-body technical article",
       "url": "https://nvmexpress.org/nvmeflexible-data-placement-fdp-blog/",
       "required": false,
-      "access": "free",
-      "week": 39,
       "estimated_minutes": 35,
       "purpose": "Separate host/engine amplification from device media amplification.",
-      "assignment": "Read through the WAF definition and FDP mechanism; state which level the lab can measure and which remains unknown.",
-      "last_verified": "2026-08-02",
-      "text_alternative": "lessons/05-amplification-ssd-endurance.md",
-      "verified_title": "Overcoming the Write Amplification Problem with NVM Express Flexible Data Placement",
-      "verified_publisher": "Amber Huffman and Chris Sabol; NVM Express",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://nvmexpress.org/nvmeflexible-data-placement-fdp-blog/",
-      "verification_status": "verified"
+      "local_alternative": "lessons/05-amplification-ssd-endurance.md"
     }
-  ],
-  "artifacts": [
-    {
-      "id": "A01",
-      "week": 36,
-      "required": true,
-      "template_path": "modules/07-data-models-storage-engines/worksheets/week-25-storage-model.md",
-      "submission_path": "reports/module-07-storage-baseline.md",
-      "immutable_after_submission": true,
-      "portfolio_category": "model",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M07-A01",
-      "component_role": "prediction",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A02",
-      "week": 36,
-      "required": true,
-      "template_path": "modules/07-data-models-storage-engines/worksheets/week-26-engine-build.md",
-      "submission_path": "labs/module-07/btree/",
-      "portfolio_category": "implementation",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M07-A02",
-      "component_role": "implementation",
-      "estimated_minutes": 30,
-      "evidence_mode": "executed_deterministic"
-    },
-    {
-      "id": "A03",
-      "week": 36,
-      "required": true,
-      "template_path": "modules/07-data-models-storage-engines/worksheets/week-26-engine-build.md",
-      "submission_path": "labs/module-07/lsm/",
-      "portfolio_category": "implementation",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M07-A03",
-      "component_role": "implementation",
-      "estimated_minutes": 30,
-      "evidence_mode": "executed_deterministic"
-    },
-    {
-      "id": "A04",
-      "week": 38,
-      "required": true,
-      "template_path": "modules/07-data-models-storage-engines/worksheets/week-26-engine-build.md",
-      "submission_path": "reports/module-07-engine-internals-review.md",
-      "portfolio_category": "source_code_internals_review",
-      "portfolio_item_id": "PI-INT-01",
-      "portfolio_credit": true,
-      "evidence_lineage_id": "LIN-INT-STORAGE",
-      "component_role": "analysis",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A05",
-      "week": 38,
-      "required": true,
-      "template_path": "modules/07-data-models-storage-engines/worksheets/week-27-amplification-matrix.md",
-      "submission_path": "experiments/module-07/",
-      "immutable_after_submission": true,
-      "portfolio_category": "failure_matrix",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M07-A05",
-      "component_role": "raw_evidence",
-      "estimated_minutes": 30,
-      "evidence_mode": "executed_deterministic"
-    },
-    {
-      "id": "A06",
-      "week": 39,
-      "required": true,
-      "template_path": "templates/adr-template.md",
-      "submission_path": "adr/module-07-storage-engine-decision.md",
-      "portfolio_category": "adr",
-      "portfolio_item_id": "PI-DECISION-M07",
-      "portfolio_credit": true,
-      "evidence_lineage_id": "LIN-DECISION-M07",
-      "component_role": "decision",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A07",
-      "week": 39,
-      "required": true,
-      "template_path": "modules/07-data-models-storage-engines/worksheets/week-28-storage-decision.md",
-      "submission_path": "reviews/module-07-defense.md",
-      "portfolio_category": "teach_back",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M07-A07",
-      "component_role": "final",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A08",
-      "week": 39,
-      "required": true,
-      "template_path": "modules/07-data-models-storage-engines/assessment/report-template.md",
-      "submission_path": "reviews/module-07-evaluation.md",
-      "portfolio_category": "evaluation",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M07-A08",
-      "component_role": "final",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A09",
-      "week": 39,
-      "required": true,
-      "template_path": "templates/learning-log-template.md",
-      "submission_path": "learning-log/week-035.md through learning-log/week-039.md",
-      "portfolio_category": "learning_log",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M07-A09",
-      "component_role": "final",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A10",
-      "week": 35,
-      "required": true,
-      "template_path": "templates/pesd-v2-dossier-template.md",
-      "submission_path": "reports/module-07-data-governance-dossier.md",
-      "portfolio_category": "data_governance_dossier",
-      "portfolio_item_id": "PI-GOV-01",
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-GOV-DATA",
-      "component_role": "baseline",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    }
-  ],
-  "failure_experiments": [
-    {
-      "id": "F01",
-      "scenario": "undersized buffer pool",
-      "evidence": "same-input cache pair, page reads, hit/miss/eviction, warm and post-scan behavior, correctness, and recovery"
-    },
-    {
-      "id": "F02",
-      "scenario": "compaction backlog",
-      "evidence": "same-input compaction pair, runs, pending bytes, stalls, amplification, temporary space, foreground tail, and recovery"
-    },
-    {
-      "id": "F03",
-      "scenario": "negative lookups without Bloom filters",
-      "evidence": "same-input Bloom pair, filter checks/negatives/false positives, table probes, latency, and zero false negatives"
-    },
-    {
-      "id": "F04",
-      "scenario": "range scans across overlapping runs",
-      "evidence": "same-input compaction pair, merge sources, table probes, ordered results, bytes, and range tail"
-    },
-    {
-      "id": "F05",
-      "scenario": "hot-key cache pollution",
-      "evidence": "same-input skew/cache pair, distribution, page hits/misses, splits/writes, post-scan state, and alternatives"
-    },
-    {
-      "id": "F06",
-      "scenario": "tombstone debt",
-      "evidence": "same-input delete/compaction pair, tombstones, live/disk bytes, point/range/reopen absence, zero resurrection, and safe reclamation"
-    }
-  ],
-  "assessment": {
-    "rubric_path": "modules/07-data-models-storage-engines/assessment/rubric.md",
-    "evaluator_prompt_path": "modules/07-data-models-storage-engines/assessment/evaluator-prompt.md",
-    "evaluation_schema_path": "schemas/evaluation.schema.json",
-    "calibration_path": "modules/07-data-models-storage-engines/assessment/calibration",
-    "pass_average": 3,
-    "safety_critical_criteria": [
-      "R06",
-      "R07"
-    ],
-    "required_result_bands": [
-      "Pass",
-      "Revise",
-      "Repeat"
-    ]
-  },
-  "solo_review": {
-    "challenge_questions": [
-      {
-        "id": "M07-SR-Q01",
-        "prompt": "Which claim in your artifact most directly supports this outcome, and what evidence could falsify it: Derive logical and physical data models from quantified access paths, invariants, retention, growth, and ownership."
-      },
-      {
-        "id": "M07-SR-Q02",
-        "prompt": "What unstated assumption could invalidate your treatment of this outcome, and how would you test it: Explain and measure how pages, records, buffer pools, locality, and cache policy shape physical work."
-      },
-      {
-        "id": "M07-SR-Q03",
-        "prompt": "Defend the causal chain behind your evidence for this outcome, including the first likely failure: Implement and validate a persistent paged B+ tree with point lookup, range scan, splits, cache behavior, deletion, and clean reopen."
-      },
-      {
-        "id": "M07-SR-Q04",
-        "prompt": "Which reasonable alternative would challenge your treatment of this outcome, and under what evidence would it win: Implement and validate an LSM store with memtable, SSTables, sparse indexes, Bloom filters, tombstones, and compaction."
-      },
-      {
-        "id": "M07-SR-Q05",
-        "prompt": "What operational, security, cost, or ownership consequence is least supported in your treatment of this outcome: Calculate read, write, and space amplification and connect them to tail latency, capacity, cost, and SSD endurance."
-      },
-      {
-        "id": "M07-SR-Q06",
-        "prompt": "Where does your evidence stop transferring to production for this outcome, and how is that boundary disclosed: Choose indexes and diagnose query plans whose estimates, statistics, or access paths do not match the workload."
-      },
-      {
-        "id": "M07-SR-Q07",
-        "prompt": "What dissent should a skeptical reviewer raise about your treatment of this outcome, and what follow-up evidence would resolve it: Diagnose read, write, range, skew, delete, cache, Bloom, compaction, and tombstone behavior from preserved same-input evidence."
-      },
-      {
-        "id": "M07-SR-Q08",
-        "prompt": "What changed belief or reversal condition follows from your work on this outcome, and where is it recorded: Defend a storage-engine decision covering security, operations, cost, ownership, migration, rollback, recovery requirements, and reversal evidence."
-      }
-    ],
-    "required_reviewer_roles": [
-      "Data Models and Storage Engines domain reviewer",
-      "operations and reliability owner",
-      "security and privacy reviewer",
-      "delivery and cost stakeholder"
-    ],
-    "questions_per_attempt": 5,
-    "live_ai_allowed": false,
-    "record_template_path": "templates/solo-review-record-template.md"
-  },
-  "factual_claims_path": "modules/07-data-models-storage-engines/assessment/factual-claims.json",
-  "lesson_catalog": [
-    {
-      "id": "L01",
-      "path": "lessons/01-workloads-access-paths-data-models.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L02",
-      "path": "lessons/02-pages-records-buffer-pools.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L03",
-      "path": "lessons/03-btree-hash-inverted-indexes.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L04",
-      "path": "lessons/04-lsm-bloom-compaction.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L05",
-      "path": "lessons/05-amplification-ssd-endurance.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L06",
-      "path": "lessons/06-query-plans-statistics-indexes.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L07",
-      "path": "lessons/07-skew-debt-stalls-diagnosis.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L08",
-      "path": "lessons/08-storage-decisions-migration-ownership.md",
-      "estimated_minutes": 30
-    }
-  ],
-  "citation_catalog": [
-    {
-      "id": "CIT-01",
-      "title": "A New Analysis of the False-Positive Rate of a Bloom Filter",
-      "author_or_publisher": "NIST",
-      "type": "primary-source citation",
-      "url": "https://www.nist.gov/publications/new-analysis-false-positive-rate-bloom-filter",
-      "required": true,
-      "access": "free",
-      "purpose": "Bound the standard independent-hash approximation used in the Bloom-filter derivation and disclose that it is not an exact finite-filter probability.",
-      "reading_boundary": "Read the abstract and publication summary, then follow the hosted paper for the standard approximation, its independence assumptions, and the corrected finite-filter analysis.",
-      "last_verified": "2026-08-04",
-      "text_alternative": "lessons/04-lsm-bloom-compaction.md",
-      "verified_title": "A New Analysis of the False-Positive Rate of a Bloom Filter",
-      "verified_publisher": "NIST",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://www.nist.gov/publications/new-analysis-false-positive-rate-bloom-filter",
-      "verification_status": "verified"
-    }
-  ],
-  "course_id": "PESD-104",
-  "course_version": "2.0",
-  "primary_decision": {
-    "artifact_id": "A06",
-    "type": "ADR"
-  },
-  "pesd_v2_additions": "analytical projections, versioned data contracts, quality SLOs, lineage, stewardship, rebuild and backfill, deletion propagation, and ownership while preserving B+ tree and LSM mechanisms",
-  "semantic_evaluation": "module_specific"
+  ]
 }

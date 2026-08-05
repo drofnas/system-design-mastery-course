@@ -1,0 +1,1926 @@
+{
+  "module_id": "M13",
+  "title": "Security, Privacy, and Abuse Resistance",
+  "questions": [
+    {
+      "question_id": "M13-Q001",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "threat-models-trust-boundaries-and-abuse-cases",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Threat models, trust boundaries, and abuse cases' in Security, Privacy, and Abuse Resistance?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to build a repeatable threat model from assets, actors, data flows, trust boundaries, abuse cases, risk owners, and reversal evidence.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to build a repeatable threat model from assets, actors, data flows, trust boundaries, abuse cases, risk owners, and reversal evidence.",
+      "explanation": "Use Threat models, trust boundaries, and abuse cases to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M13-Q002",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "identity-authentication-recovery-and-sessions",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Identity, authentication, recovery, and sessions' supports this outcome: Design identity, authentication, recovery, session binding, assurance, expiry, revocation, and replay controls.",
+      "correct_answer": "A strong answer defines the mechanism from 'Identity, authentication, recovery, and sessions', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Identity, authentication, recovery, and sessions to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M13-Q003",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "authorization-models-and-enforcement",
+        "synthesis"
+      ],
+      "prompt": "For 'Authorization models and enforcement', what quantities, units, or thresholds would you calculate before trusting a design claim about: Select role, attribute, or relationship authorization and enforce deny-by-default checks for every object and action.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Express authorization as a decision over subject, object, action, context, and policy version.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M13-Q004",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "tenant-isolation-and-scoped-access",
+        "application"
+      ],
+      "prompt": "A learner applies 'Tenant isolation and scoped access' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Adding tenant filters only in controllers:** workers, exports, caches, and",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M13-Q005",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "secrets-keys-certificates-and-encryption",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Secrets, keys, certificates, and encryption'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for operate scoped secrets, certificates, and encryption keys through issuance, rotation, revocation, recovery, and retirement without inventing cryptography..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - OWASP Secrets Management Cheat Sheethttps://cheatsheetseries.owasp.org/cheatsheets/SecretsManagementCheatSheet.html - NIST Key Management Guidelineshttps://csrc.nist.gov/projects/key-management/key-management-guidelines Complete EX-09 and EX-10 and preserve",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M13-Q006",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "audit-privacy-and-data-lifecycles",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Audit, privacy, and data lifecycles' in Security, Privacy, and Abuse Resistance?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to design attributable tamper-detectable audit evidence and verified classification, minimization, retention, deletion, residency, and backup handling.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to design attributable tamper-detectable audit evidence and verified classification, minimization, retention, deletion, residency, and backup handling.",
+      "explanation": "Use Audit, privacy, and data lifecycles to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M13-Q007",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "supply-chains-economic-abuse-and-security-respon",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Supply chains, economic abuse, and security response' supports this outcome: Bound dependency, supply-chain, economic-abuse, prompt-injection, and tool-authorization risk with deterministic enforcement and security response.",
+      "correct_answer": "A strong answer defines the mechanism from 'Supply chains, economic abuse, and security response', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Supply chains, economic abuse, and security response to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M13-Q008",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "prompt-injection-tool-authorization-and-security",
+        "synthesis"
+      ],
+      "prompt": "For 'Prompt injection, tool authorization, and security decisions', what quantities, units, or thresholds would you calculate before trusting a design claim about: Diagnose nine adversarial failures and defend a security architecture with residual risk, ownership, cost, migration, and reversal conditions.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Treat user, retrieved, tool, and memory content as data with explicit trust labels.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M13-Q009",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "threat-models-trust-boundaries-and-abuse-cases",
+        "application"
+      ],
+      "prompt": "A learner applies 'Threat models, trust boundaries, and abuse cases' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Starting from controls:** a list of MFA, encryption, and firewalls can miss",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M13-Q010",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "identity-authentication-recovery-and-sessions",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Identity, authentication, recovery, and sessions'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for design identity, authentication, recovery, session binding, assurance, expiry, revocation, and replay controls..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - NIST SP 800-63B-4https://pages.nist.gov/800-63-4/sp800-63b.html Complete EX-03 and EX-04 and add session/recovery abuse cases to the saved model.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M13-Q011",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "authorization-models-and-enforcement",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Authorization models and enforcement' in Security, Privacy, and Abuse Resistance?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to select role, attribute, or relationship authorization and enforce deny-by-default checks for every object and action.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to select role, attribute, or relationship authorization and enforce deny-by-default checks for every object and action.",
+      "explanation": "Use Authorization models and enforcement to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M13-Q012",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "tenant-isolation-and-scoped-access",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Tenant isolation and scoped access' supports this outcome: Preserve tenant isolation and least privilege through data, cache, file, queue, search, administrative, and break-glass paths.",
+      "correct_answer": "A strong answer defines the mechanism from 'Tenant isolation and scoped access', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Tenant isolation and scoped access to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M13-Q013",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "secrets-keys-certificates-and-encryption",
+        "synthesis"
+      ],
+      "prompt": "For 'Secrets, keys, certificates, and encryption', what quantities, units, or thresholds would you calculate before trusting a design claim about: Operate scoped secrets, certificates, and encryption keys through issuance, rotation, revocation, recovery, and retirement without inventing cryptography.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Inventory credentials and key material by purpose, scope, custodian, and consumer.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M13-Q014",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "audit-privacy-and-data-lifecycles",
+        "application"
+      ],
+      "prompt": "A learner applies 'Audit, privacy, and data lifecycles' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Logging everything:** sensitive data, cost, noise, and access risk grow while",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M13-Q015",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "supply-chains-economic-abuse-and-security-respon",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Supply chains, economic abuse, and security response'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for bound dependency, supply-chain, economic-abuse, prompt-injection, and tool-authorization risk with deterministic enforcement and security response..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - SLSA Specification 1.2https://slsa.dev/spec/v1.2/ Complete EX-14 and EX-15, then run F07 and F08 from saved predictions.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M13-Q016",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "prompt-injection-tool-authorization-and-security",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Prompt injection, tool authorization, and security decisions' in Security, Privacy, and Abuse Resistance?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose nine adversarial failures and defend a security architecture with residual risk, ownership, cost, migration, and reversal conditions.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose nine adversarial failures and defend a security architecture with residual risk, ownership, cost, migration, and reversal conditions.",
+      "explanation": "Use Prompt injection, tool authorization, and security decisions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M13-Q017",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "threat-models-trust-boundaries-and-abuse-cases",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Threat models, trust boundaries, and abuse cases' supports this outcome: Build a repeatable threat model from assets, actors, data flows, trust boundaries, abuse cases, risk owners, and reversal evidence.",
+      "correct_answer": "A strong answer defines the mechanism from 'Threat models, trust boundaries, and abuse cases', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Threat models, trust boundaries, and abuse cases to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M13-Q018",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "identity-authentication-recovery-and-sessions",
+        "synthesis"
+      ],
+      "prompt": "For 'Identity, authentication, recovery, and sessions', what quantities, units, or thresholds would you calculate before trusting a design claim about: Design identity, authentication, recovery, session binding, assurance, expiry, revocation, and replay controls.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Separate identity proofing, authentication, authorization, and session continuity.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M13-Q019",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "authorization-models-and-enforcement",
+        "application"
+      ],
+      "prompt": "A learner applies 'Authorization models and enforcement' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **One \u201cadmin\u201d escape hatch:** broad roles hide object and action distinctions",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M13-Q020",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "tenant-isolation-and-scoped-access",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Tenant isolation and scoped access'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for preserve tenant isolation and least privilege through data, cache, file, queue, search, administrative, and break-glass paths..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - OWASP Multi-Tenant Security Cheat Sheethttps://cheatsheetseries.owasp.org/cheatsheets/MultiTenantSecurityCheatSheet.html Complete EX-07 and EX-08, then implement and test every surface you claim to protect.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M13-Q021",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "secrets-keys-certificates-and-encryption",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Secrets, keys, certificates, and encryption' in Security, Privacy, and Abuse Resistance?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to operate scoped secrets, certificates, and encryption keys through issuance, rotation, revocation, recovery, and retirement without inventing cryptography.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to operate scoped secrets, certificates, and encryption keys through issuance, rotation, revocation, recovery, and retirement without inventing cryptography.",
+      "explanation": "Use Secrets, keys, certificates, and encryption to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M13-Q022",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "audit-privacy-and-data-lifecycles",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Audit, privacy, and data lifecycles' supports this outcome: Design attributable tamper-detectable audit evidence and verified classification, minimization, retention, deletion, residency, and backup handling.",
+      "correct_answer": "A strong answer defines the mechanism from 'Audit, privacy, and data lifecycles', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Audit, privacy, and data lifecycles to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M13-Q023",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "supply-chains-economic-abuse-and-security-respon",
+        "synthesis"
+      ],
+      "prompt": "For 'Supply chains, economic abuse, and security response', what quantities, units, or thresholds would you calculate before trusting a design claim about: Bound dependency, supply-chain, economic-abuse, prompt-injection, and tool-authorization risk with deterministic enforcement and security response.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Form dependency expectations and verify identity, digest, provenance, and policy.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M13-Q024",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "prompt-injection-tool-authorization-and-security",
+        "application"
+      ],
+      "prompt": "A learner applies 'Prompt injection, tool authorization, and security decisions' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Calling a system prompt a boundary:** models process instructions and data in",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M13-Q025",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "threat-models-trust-boundaries-and-abuse-cases",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Threat models, trust boundaries, and abuse cases'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for build a repeatable threat model from assets, actors, data flows, trust boundaries, abuse cases, risk owners, and reversal evidence..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - OWASP Threat Modeling Cheat Sheethttps://cheatsheetseries.owasp.org/cheatsheets/ThreatModelingCheatSheet.html - OWASP ASVShttps://owasp.org/www-project-application-security-verification-standard/ Complete EX-01 and EX-02, then save the Week 49 model before",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M13-Q026",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "identity-authentication-recovery-and-sessions",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Identity, authentication, recovery, and sessions' in Security, Privacy, and Abuse Resistance?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to design identity, authentication, recovery, session binding, assurance, expiry, revocation, and replay controls.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to design identity, authentication, recovery, session binding, assurance, expiry, revocation, and replay controls.",
+      "explanation": "Use Identity, authentication, recovery, and sessions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M13-Q027",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "authorization-models-and-enforcement",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Authorization models and enforcement' supports this outcome: Select role, attribute, or relationship authorization and enforce deny-by-default checks for every object and action.",
+      "correct_answer": "A strong answer defines the mechanism from 'Authorization models and enforcement', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Authorization models and enforcement to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M13-Q028",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "tenant-isolation-and-scoped-access",
+        "synthesis"
+      ],
+      "prompt": "For 'Tenant isolation and scoped access', what quantities, units, or thresholds would you calculate before trusting a design claim about: Preserve tenant isolation and least privilege through data, cache, file, queue, search, administrative, and break-glass paths.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Bind tenant identity to authenticated context rather than attacker-controlled input.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M13-Q029",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "secrets-keys-certificates-and-encryption",
+        "application"
+      ],
+      "prompt": "A learner applies 'Secrets, keys, certificates, and encryption' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **One high-value shared secret:** attribution and containment become impossible.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M13-Q030",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "audit-privacy-and-data-lifecycles",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Audit, privacy, and data lifecycles'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for design attributable tamper-detectable audit evidence and verified classification, minimization, retention, deletion, residency, and backup handling..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - OWASP Logging Cheat Sheethttps://cheatsheetseries.owasp.org/cheatsheets/LoggingCheatSheet.html - NIST Privacy Frameworkhttps://www.nist.gov/privacy-framework/privacy-framework Complete EX-11-EX-13 and save the copy ledger before running deletion tests.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M13-Q031",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "supply-chains-economic-abuse-and-security-respon",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Supply chains, economic abuse, and security response' in Security, Privacy, and Abuse Resistance?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to bound dependency, supply-chain, economic-abuse, prompt-injection, and tool-authorization risk with deterministic enforcement and security response.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to bound dependency, supply-chain, economic-abuse, prompt-injection, and tool-authorization risk with deterministic enforcement and security response.",
+      "explanation": "Use Supply chains, economic abuse, and security response to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M13-Q032",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "prompt-injection-tool-authorization-and-security",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Prompt injection, tool authorization, and security decisions' supports this outcome: Diagnose nine adversarial failures and defend a security architecture with residual risk, ownership, cost, migration, and reversal conditions.",
+      "correct_answer": "A strong answer defines the mechanism from 'Prompt injection, tool authorization, and security decisions', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Prompt injection, tool authorization, and security decisions to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M13-Q033",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "threat-models-trust-boundaries-and-abuse-cases",
+        "synthesis"
+      ],
+      "prompt": "For 'Threat models, trust boundaries, and abuse cases', what quantities, units, or thresholds would you calculate before trusting a design claim about: Build a repeatable threat model from assets, actors, data flows, trust boundaries, abuse cases, risk owners, and reversal evidence.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Decompose a system into assets, actors, processes, stores, flows, and trust boundaries.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M13-Q034",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "identity-authentication-recovery-and-sessions",
+        "application"
+      ],
+      "prompt": "A learner applies 'Identity, authentication, recovery, and sessions' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Equating authentication with authorization:** a valid identity can still be",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M13-Q035",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "authorization-models-and-enforcement",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Authorization models and enforcement'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for select role, attribute, or relationship authorization and enforce deny-by-default checks for every object and action..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - OWASP Authorization Cheat Sheethttps://cheatsheetseries.owasp.org/cheatsheets/AuthorizationCheatSheet.html - Zanzibar paper and presentationhttps://www.usenix.org/conference/atc19/presentation/pang Complete EX-05 and EX-06 before implementing the authorizati",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M13-Q036",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "tenant-isolation-and-scoped-access",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Tenant isolation and scoped access' in Security, Privacy, and Abuse Resistance?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to preserve tenant isolation and least privilege through data, cache, file, queue, search, administrative, and break-glass paths.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to preserve tenant isolation and least privilege through data, cache, file, queue, search, administrative, and break-glass paths.",
+      "explanation": "Use Tenant isolation and scoped access to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M13-Q037",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "secrets-keys-certificates-and-encryption",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Secrets, keys, certificates, and encryption' supports this outcome: Operate scoped secrets, certificates, and encryption keys through issuance, rotation, revocation, recovery, and retirement without inventing cryptography.",
+      "correct_answer": "A strong answer defines the mechanism from 'Secrets, keys, certificates, and encryption', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Secrets, keys, certificates, and encryption to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M13-Q038",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "audit-privacy-and-data-lifecycles",
+        "synthesis"
+      ],
+      "prompt": "For 'Audit, privacy, and data lifecycles', what quantities, units, or thresholds would you calculate before trusting a design claim about: Design attributable tamper-detectable audit evidence and verified classification, minimization, retention, deletion, residency, and backup handling.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Design attributable, privacy-aware, tamper-detectable security events.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M13-Q039",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "supply-chains-economic-abuse-and-security-respon",
+        "application"
+      ],
+      "prompt": "A learner applies 'Supply chains, economic abuse, and security response' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Treating an SBOM as prevention:** inventory does not verify or block an artifact.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M13-Q040",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "prompt-injection-tool-authorization-and-security",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Prompt injection, tool authorization, and security decisions'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose nine adversarial failures and defend a security architecture with residual risk, ownership, cost, migration, and reversal conditions..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - OWASP LLM Prompt Injection Preventionhttps://cheatsheetseries.owasp.org/cheatsheets/LLMPromptInjectionPreventionCheatSheet.html - OWASP AI Agent Securityhttps://cheatsheetseries.owasp.org/cheatsheets/AIAgentSecurityCheatSheet.html Complete EX-16-EX-18, freez",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M13-Q041",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "threat-models-trust-boundaries-and-abuse-cases",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Threat models, trust boundaries, and abuse cases' in Security, Privacy, and Abuse Resistance?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to build a repeatable threat model from assets, actors, data flows, trust boundaries, abuse cases, risk owners, and reversal evidence.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to build a repeatable threat model from assets, actors, data flows, trust boundaries, abuse cases, risk owners, and reversal evidence.",
+      "explanation": "Use Threat models, trust boundaries, and abuse cases to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M13-Q042",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "identity-authentication-recovery-and-sessions",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Identity, authentication, recovery, and sessions' supports this outcome: Design identity, authentication, recovery, session binding, assurance, expiry, revocation, and replay controls.",
+      "correct_answer": "A strong answer defines the mechanism from 'Identity, authentication, recovery, and sessions', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Identity, authentication, recovery, and sessions to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M13-Q043",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "authorization-models-and-enforcement",
+        "synthesis"
+      ],
+      "prompt": "For 'Authorization models and enforcement', what quantities, units, or thresholds would you calculate before trusting a design claim about: Select role, attribute, or relationship authorization and enforce deny-by-default checks for every object and action.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Express authorization as a decision over subject, object, action, context, and policy version.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M13-Q044",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "tenant-isolation-and-scoped-access",
+        "application"
+      ],
+      "prompt": "A learner applies 'Tenant isolation and scoped access' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Adding tenant filters only in controllers:** workers, exports, caches, and",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M13-Q045",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "secrets-keys-certificates-and-encryption",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Secrets, keys, certificates, and encryption'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for operate scoped secrets, certificates, and encryption keys through issuance, rotation, revocation, recovery, and retirement without inventing cryptography..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - OWASP Secrets Management Cheat Sheethttps://cheatsheetseries.owasp.org/cheatsheets/SecretsManagementCheatSheet.html - NIST Key Management Guidelineshttps://csrc.nist.gov/projects/key-management/key-management-guidelines Complete EX-09 and EX-10 and preserve",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M13-Q046",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "audit-privacy-and-data-lifecycles",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Audit, privacy, and data lifecycles' in Security, Privacy, and Abuse Resistance?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to design attributable tamper-detectable audit evidence and verified classification, minimization, retention, deletion, residency, and backup handling.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to design attributable tamper-detectable audit evidence and verified classification, minimization, retention, deletion, residency, and backup handling.",
+      "explanation": "Use Audit, privacy, and data lifecycles to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M13-Q047",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "supply-chains-economic-abuse-and-security-respon",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Supply chains, economic abuse, and security response' supports this outcome: Bound dependency, supply-chain, economic-abuse, prompt-injection, and tool-authorization risk with deterministic enforcement and security response.",
+      "correct_answer": "A strong answer defines the mechanism from 'Supply chains, economic abuse, and security response', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Supply chains, economic abuse, and security response to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M13-Q048",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "prompt-injection-tool-authorization-and-security",
+        "synthesis"
+      ],
+      "prompt": "For 'Prompt injection, tool authorization, and security decisions', what quantities, units, or thresholds would you calculate before trusting a design claim about: Diagnose nine adversarial failures and defend a security architecture with residual risk, ownership, cost, migration, and reversal conditions.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Treat user, retrieved, tool, and memory content as data with explicit trust labels.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M13-Q049",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "threat-models-trust-boundaries-and-abuse-cases",
+        "application"
+      ],
+      "prompt": "A learner applies 'Threat models, trust boundaries, and abuse cases' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Starting from controls:** a list of MFA, encryption, and firewalls can miss",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M13-Q050",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "identity-authentication-recovery-and-sessions",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Identity, authentication, recovery, and sessions'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for design identity, authentication, recovery, session binding, assurance, expiry, revocation, and replay controls..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - NIST SP 800-63B-4https://pages.nist.gov/800-63-4/sp800-63b.html Complete EX-03 and EX-04 and add session/recovery abuse cases to the saved model.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M13-Q051",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "authorization-models-and-enforcement",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Authorization models and enforcement' in Security, Privacy, and Abuse Resistance?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to select role, attribute, or relationship authorization and enforce deny-by-default checks for every object and action.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to select role, attribute, or relationship authorization and enforce deny-by-default checks for every object and action.",
+      "explanation": "Use Authorization models and enforcement to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M13-Q052",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "tenant-isolation-and-scoped-access",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Tenant isolation and scoped access' supports this outcome: Preserve tenant isolation and least privilege through data, cache, file, queue, search, administrative, and break-glass paths.",
+      "correct_answer": "A strong answer defines the mechanism from 'Tenant isolation and scoped access', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Tenant isolation and scoped access to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M13-Q053",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "secrets-keys-certificates-and-encryption",
+        "synthesis"
+      ],
+      "prompt": "For 'Secrets, keys, certificates, and encryption', what quantities, units, or thresholds would you calculate before trusting a design claim about: Operate scoped secrets, certificates, and encryption keys through issuance, rotation, revocation, recovery, and retirement without inventing cryptography.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Inventory credentials and key material by purpose, scope, custodian, and consumer.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M13-Q054",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "audit-privacy-and-data-lifecycles",
+        "application"
+      ],
+      "prompt": "A learner applies 'Audit, privacy, and data lifecycles' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Logging everything:** sensitive data, cost, noise, and access risk grow while",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M13-Q055",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "supply-chains-economic-abuse-and-security-respon",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Supply chains, economic abuse, and security response'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for bound dependency, supply-chain, economic-abuse, prompt-injection, and tool-authorization risk with deterministic enforcement and security response..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - SLSA Specification 1.2https://slsa.dev/spec/v1.2/ Complete EX-14 and EX-15, then run F07 and F08 from saved predictions.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M13-Q056",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "prompt-injection-tool-authorization-and-security",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Prompt injection, tool authorization, and security decisions' in Security, Privacy, and Abuse Resistance?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose nine adversarial failures and defend a security architecture with residual risk, ownership, cost, migration, and reversal conditions.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose nine adversarial failures and defend a security architecture with residual risk, ownership, cost, migration, and reversal conditions.",
+      "explanation": "Use Prompt injection, tool authorization, and security decisions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M13-Q057",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "threat-models-trust-boundaries-and-abuse-cases",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Threat models, trust boundaries, and abuse cases' supports this outcome: Build a repeatable threat model from assets, actors, data flows, trust boundaries, abuse cases, risk owners, and reversal evidence.",
+      "correct_answer": "A strong answer defines the mechanism from 'Threat models, trust boundaries, and abuse cases', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Threat models, trust boundaries, and abuse cases to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M13-Q058",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "identity-authentication-recovery-and-sessions",
+        "synthesis"
+      ],
+      "prompt": "For 'Identity, authentication, recovery, and sessions', what quantities, units, or thresholds would you calculate before trusting a design claim about: Design identity, authentication, recovery, session binding, assurance, expiry, revocation, and replay controls.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Separate identity proofing, authentication, authorization, and session continuity.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M13-Q059",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "authorization-models-and-enforcement",
+        "application"
+      ],
+      "prompt": "A learner applies 'Authorization models and enforcement' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **One \u201cadmin\u201d escape hatch:** broad roles hide object and action distinctions",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M13-Q060",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "tenant-isolation-and-scoped-access",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Tenant isolation and scoped access'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for preserve tenant isolation and least privilege through data, cache, file, queue, search, administrative, and break-glass paths..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - OWASP Multi-Tenant Security Cheat Sheethttps://cheatsheetseries.owasp.org/cheatsheets/MultiTenantSecurityCheatSheet.html Complete EX-07 and EX-08, then implement and test every surface you claim to protect.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M13-Q061",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "secrets-keys-certificates-and-encryption",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Secrets, keys, certificates, and encryption' in Security, Privacy, and Abuse Resistance?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to operate scoped secrets, certificates, and encryption keys through issuance, rotation, revocation, recovery, and retirement without inventing cryptography.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to operate scoped secrets, certificates, and encryption keys through issuance, rotation, revocation, recovery, and retirement without inventing cryptography.",
+      "explanation": "Use Secrets, keys, certificates, and encryption to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M13-Q062",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "audit-privacy-and-data-lifecycles",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Audit, privacy, and data lifecycles' supports this outcome: Design attributable tamper-detectable audit evidence and verified classification, minimization, retention, deletion, residency, and backup handling.",
+      "correct_answer": "A strong answer defines the mechanism from 'Audit, privacy, and data lifecycles', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Audit, privacy, and data lifecycles to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M13-Q063",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "supply-chains-economic-abuse-and-security-respon",
+        "synthesis"
+      ],
+      "prompt": "For 'Supply chains, economic abuse, and security response', what quantities, units, or thresholds would you calculate before trusting a design claim about: Bound dependency, supply-chain, economic-abuse, prompt-injection, and tool-authorization risk with deterministic enforcement and security response.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Form dependency expectations and verify identity, digest, provenance, and policy.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M13-Q064",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "prompt-injection-tool-authorization-and-security",
+        "application"
+      ],
+      "prompt": "A learner applies 'Prompt injection, tool authorization, and security decisions' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Calling a system prompt a boundary:** models process instructions and data in",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M13-Q065",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "threat-models-trust-boundaries-and-abuse-cases",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Threat models, trust boundaries, and abuse cases'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for build a repeatable threat model from assets, actors, data flows, trust boundaries, abuse cases, risk owners, and reversal evidence..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - OWASP Threat Modeling Cheat Sheethttps://cheatsheetseries.owasp.org/cheatsheets/ThreatModelingCheatSheet.html - OWASP ASVShttps://owasp.org/www-project-application-security-verification-standard/ Complete EX-01 and EX-02, then save the Week 49 model before",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M13-Q066",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "identity-authentication-recovery-and-sessions",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Identity, authentication, recovery, and sessions' in Security, Privacy, and Abuse Resistance?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to design identity, authentication, recovery, session binding, assurance, expiry, revocation, and replay controls.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to design identity, authentication, recovery, session binding, assurance, expiry, revocation, and replay controls.",
+      "explanation": "Use Identity, authentication, recovery, and sessions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M13-Q067",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "authorization-models-and-enforcement",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Authorization models and enforcement' supports this outcome: Select role, attribute, or relationship authorization and enforce deny-by-default checks for every object and action.",
+      "correct_answer": "A strong answer defines the mechanism from 'Authorization models and enforcement', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Authorization models and enforcement to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M13-Q068",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "tenant-isolation-and-scoped-access",
+        "synthesis"
+      ],
+      "prompt": "For 'Tenant isolation and scoped access', what quantities, units, or thresholds would you calculate before trusting a design claim about: Preserve tenant isolation and least privilege through data, cache, file, queue, search, administrative, and break-glass paths.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Bind tenant identity to authenticated context rather than attacker-controlled input.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M13-Q069",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "secrets-keys-certificates-and-encryption",
+        "application"
+      ],
+      "prompt": "A learner applies 'Secrets, keys, certificates, and encryption' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **One high-value shared secret:** attribution and containment become impossible.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M13-Q070",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "audit-privacy-and-data-lifecycles",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Audit, privacy, and data lifecycles'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for design attributable tamper-detectable audit evidence and verified classification, minimization, retention, deletion, residency, and backup handling..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - OWASP Logging Cheat Sheethttps://cheatsheetseries.owasp.org/cheatsheets/LoggingCheatSheet.html - NIST Privacy Frameworkhttps://www.nist.gov/privacy-framework/privacy-framework Complete EX-11-EX-13 and save the copy ledger before running deletion tests.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M13-Q071",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "supply-chains-economic-abuse-and-security-respon",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Supply chains, economic abuse, and security response' in Security, Privacy, and Abuse Resistance?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to bound dependency, supply-chain, economic-abuse, prompt-injection, and tool-authorization risk with deterministic enforcement and security response.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to bound dependency, supply-chain, economic-abuse, prompt-injection, and tool-authorization risk with deterministic enforcement and security response.",
+      "explanation": "Use Supply chains, economic abuse, and security response to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M13-Q072",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "prompt-injection-tool-authorization-and-security",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Prompt injection, tool authorization, and security decisions' supports this outcome: Diagnose nine adversarial failures and defend a security architecture with residual risk, ownership, cost, migration, and reversal conditions.",
+      "correct_answer": "A strong answer defines the mechanism from 'Prompt injection, tool authorization, and security decisions', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Prompt injection, tool authorization, and security decisions to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M13-Q073",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "threat-models-trust-boundaries-and-abuse-cases",
+        "synthesis"
+      ],
+      "prompt": "For 'Threat models, trust boundaries, and abuse cases', what quantities, units, or thresholds would you calculate before trusting a design claim about: Build a repeatable threat model from assets, actors, data flows, trust boundaries, abuse cases, risk owners, and reversal evidence.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Decompose a system into assets, actors, processes, stores, flows, and trust boundaries.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M13-Q074",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "identity-authentication-recovery-and-sessions",
+        "application"
+      ],
+      "prompt": "A learner applies 'Identity, authentication, recovery, and sessions' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Equating authentication with authorization:** a valid identity can still be",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M13-Q075",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "authorization-models-and-enforcement",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Authorization models and enforcement'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for select role, attribute, or relationship authorization and enforce deny-by-default checks for every object and action..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - OWASP Authorization Cheat Sheethttps://cheatsheetseries.owasp.org/cheatsheets/AuthorizationCheatSheet.html - Zanzibar paper and presentationhttps://www.usenix.org/conference/atc19/presentation/pang Complete EX-05 and EX-06 before implementing the authorizati",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M13-Q076",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "tenant-isolation-and-scoped-access",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Tenant isolation and scoped access' in Security, Privacy, and Abuse Resistance?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to preserve tenant isolation and least privilege through data, cache, file, queue, search, administrative, and break-glass paths.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to preserve tenant isolation and least privilege through data, cache, file, queue, search, administrative, and break-glass paths.",
+      "explanation": "Use Tenant isolation and scoped access to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M13-Q077",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "secrets-keys-certificates-and-encryption",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Secrets, keys, certificates, and encryption' supports this outcome: Operate scoped secrets, certificates, and encryption keys through issuance, rotation, revocation, recovery, and retirement without inventing cryptography.",
+      "correct_answer": "A strong answer defines the mechanism from 'Secrets, keys, certificates, and encryption', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Secrets, keys, certificates, and encryption to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M13-Q078",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "audit-privacy-and-data-lifecycles",
+        "synthesis"
+      ],
+      "prompt": "For 'Audit, privacy, and data lifecycles', what quantities, units, or thresholds would you calculate before trusting a design claim about: Design attributable tamper-detectable audit evidence and verified classification, minimization, retention, deletion, residency, and backup handling.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Design attributable, privacy-aware, tamper-detectable security events.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M13-Q079",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "supply-chains-economic-abuse-and-security-respon",
+        "application"
+      ],
+      "prompt": "A learner applies 'Supply chains, economic abuse, and security response' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Treating an SBOM as prevention:** inventory does not verify or block an artifact.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M13-Q080",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "prompt-injection-tool-authorization-and-security",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Prompt injection, tool authorization, and security decisions'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose nine adversarial failures and defend a security architecture with residual risk, ownership, cost, migration, and reversal conditions..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - OWASP LLM Prompt Injection Preventionhttps://cheatsheetseries.owasp.org/cheatsheets/LLMPromptInjectionPreventionCheatSheet.html - OWASP AI Agent Securityhttps://cheatsheetseries.owasp.org/cheatsheets/AIAgentSecurityCheatSheet.html Complete EX-16-EX-18, freez",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M13-Q081",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "threat-models-trust-boundaries-and-abuse-cases",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Threat models, trust boundaries, and abuse cases' in Security, Privacy, and Abuse Resistance?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to build a repeatable threat model from assets, actors, data flows, trust boundaries, abuse cases, risk owners, and reversal evidence.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to build a repeatable threat model from assets, actors, data flows, trust boundaries, abuse cases, risk owners, and reversal evidence.",
+      "explanation": "Use Threat models, trust boundaries, and abuse cases to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M13-Q082",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "identity-authentication-recovery-and-sessions",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Identity, authentication, recovery, and sessions' supports this outcome: Design identity, authentication, recovery, session binding, assurance, expiry, revocation, and replay controls.",
+      "correct_answer": "A strong answer defines the mechanism from 'Identity, authentication, recovery, and sessions', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Identity, authentication, recovery, and sessions to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M13-Q083",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "authorization-models-and-enforcement",
+        "synthesis"
+      ],
+      "prompt": "For 'Authorization models and enforcement', what quantities, units, or thresholds would you calculate before trusting a design claim about: Select role, attribute, or relationship authorization and enforce deny-by-default checks for every object and action.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Express authorization as a decision over subject, object, action, context, and policy version.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M13-Q084",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "tenant-isolation-and-scoped-access",
+        "application"
+      ],
+      "prompt": "A learner applies 'Tenant isolation and scoped access' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Adding tenant filters only in controllers:** workers, exports, caches, and",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M13-Q085",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "secrets-keys-certificates-and-encryption",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Secrets, keys, certificates, and encryption'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for operate scoped secrets, certificates, and encryption keys through issuance, rotation, revocation, recovery, and retirement without inventing cryptography..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - OWASP Secrets Management Cheat Sheethttps://cheatsheetseries.owasp.org/cheatsheets/SecretsManagementCheatSheet.html - NIST Key Management Guidelineshttps://csrc.nist.gov/projects/key-management/key-management-guidelines Complete EX-09 and EX-10 and preserve",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M13-Q086",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "audit-privacy-and-data-lifecycles",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Audit, privacy, and data lifecycles' in Security, Privacy, and Abuse Resistance?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to design attributable tamper-detectable audit evidence and verified classification, minimization, retention, deletion, residency, and backup handling.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to design attributable tamper-detectable audit evidence and verified classification, minimization, retention, deletion, residency, and backup handling.",
+      "explanation": "Use Audit, privacy, and data lifecycles to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M13-Q087",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "supply-chains-economic-abuse-and-security-respon",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Supply chains, economic abuse, and security response' supports this outcome: Bound dependency, supply-chain, economic-abuse, prompt-injection, and tool-authorization risk with deterministic enforcement and security response.",
+      "correct_answer": "A strong answer defines the mechanism from 'Supply chains, economic abuse, and security response', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Supply chains, economic abuse, and security response to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M13-Q088",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "prompt-injection-tool-authorization-and-security",
+        "synthesis"
+      ],
+      "prompt": "For 'Prompt injection, tool authorization, and security decisions', what quantities, units, or thresholds would you calculate before trusting a design claim about: Diagnose nine adversarial failures and defend a security architecture with residual risk, ownership, cost, migration, and reversal conditions.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Treat user, retrieved, tool, and memory content as data with explicit trust labels.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M13-Q089",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "threat-models-trust-boundaries-and-abuse-cases",
+        "application"
+      ],
+      "prompt": "A learner applies 'Threat models, trust boundaries, and abuse cases' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Starting from controls:** a list of MFA, encryption, and firewalls can miss",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M13-Q090",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "identity-authentication-recovery-and-sessions",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Identity, authentication, recovery, and sessions'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for design identity, authentication, recovery, session binding, assurance, expiry, revocation, and replay controls..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - NIST SP 800-63B-4https://pages.nist.gov/800-63-4/sp800-63b.html Complete EX-03 and EX-04 and add session/recovery abuse cases to the saved model.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M13-Q091",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "authorization-models-and-enforcement",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Authorization models and enforcement' in Security, Privacy, and Abuse Resistance?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to select role, attribute, or relationship authorization and enforce deny-by-default checks for every object and action.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to select role, attribute, or relationship authorization and enforce deny-by-default checks for every object and action.",
+      "explanation": "Use Authorization models and enforcement to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M13-Q092",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "tenant-isolation-and-scoped-access",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Tenant isolation and scoped access' supports this outcome: Preserve tenant isolation and least privilege through data, cache, file, queue, search, administrative, and break-glass paths.",
+      "correct_answer": "A strong answer defines the mechanism from 'Tenant isolation and scoped access', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Tenant isolation and scoped access to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M13-Q093",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "secrets-keys-certificates-and-encryption",
+        "synthesis"
+      ],
+      "prompt": "For 'Secrets, keys, certificates, and encryption', what quantities, units, or thresholds would you calculate before trusting a design claim about: Operate scoped secrets, certificates, and encryption keys through issuance, rotation, revocation, recovery, and retirement without inventing cryptography.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Inventory credentials and key material by purpose, scope, custodian, and consumer.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M13-Q094",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "audit-privacy-and-data-lifecycles",
+        "application"
+      ],
+      "prompt": "A learner applies 'Audit, privacy, and data lifecycles' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Logging everything:** sensitive data, cost, noise, and access risk grow while",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M13-Q095",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "supply-chains-economic-abuse-and-security-respon",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Supply chains, economic abuse, and security response'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for bound dependency, supply-chain, economic-abuse, prompt-injection, and tool-authorization risk with deterministic enforcement and security response..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - SLSA Specification 1.2https://slsa.dev/spec/v1.2/ Complete EX-14 and EX-15, then run F07 and F08 from saved predictions.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M13-Q096",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "prompt-injection-tool-authorization-and-security",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Prompt injection, tool authorization, and security decisions' in Security, Privacy, and Abuse Resistance?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose nine adversarial failures and defend a security architecture with residual risk, ownership, cost, migration, and reversal conditions.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose nine adversarial failures and defend a security architecture with residual risk, ownership, cost, migration, and reversal conditions.",
+      "explanation": "Use Prompt injection, tool authorization, and security decisions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M13-Q097",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "threat-models-trust-boundaries-and-abuse-cases",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Threat models, trust boundaries, and abuse cases' supports this outcome: Build a repeatable threat model from assets, actors, data flows, trust boundaries, abuse cases, risk owners, and reversal evidence.",
+      "correct_answer": "A strong answer defines the mechanism from 'Threat models, trust boundaries, and abuse cases', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Threat models, trust boundaries, and abuse cases to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M13-Q098",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "identity-authentication-recovery-and-sessions",
+        "synthesis"
+      ],
+      "prompt": "For 'Identity, authentication, recovery, and sessions', what quantities, units, or thresholds would you calculate before trusting a design claim about: Design identity, authentication, recovery, session binding, assurance, expiry, revocation, and replay controls.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Separate identity proofing, authentication, authorization, and session continuity.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M13-Q099",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "authorization-models-and-enforcement",
+        "application"
+      ],
+      "prompt": "A learner applies 'Authorization models and enforcement' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **One \u201cadmin\u201d escape hatch:** broad roles hide object and action distinctions",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M13-Q100",
+      "module_id": "M13",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "security-privacy-and-abuse-resistance",
+        "tenant-isolation-and-scoped-access",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Tenant isolation and scoped access'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for preserve tenant isolation and least privilege through data, cache, file, queue, search, administrative, and break-glass paths..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - OWASP Multi-Tenant Security Cheat Sheethttps://cheatsheetseries.owasp.org/cheatsheets/MultiTenantSecurityCheatSheet.html Complete EX-07 and EX-08, then implement and test every surface you claim to protect.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    }
+  ]
+}

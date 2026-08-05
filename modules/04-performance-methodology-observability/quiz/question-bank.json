@@ -1,0 +1,1926 @@
+{
+  "module_id": "M04",
+  "title": "Performance Methodology and Observability",
+  "questions": [
+    {
+      "question_id": "M04-Q001",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "performance-methodology-and-observability",
+        "question-first-performance-investigations",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Question-First Performance Investigations' in Performance Methodology and Observability?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to freeze a user-scoped performance question, equivalent-work baseline, competing hypotheses, falsifiers, and bounded collection plan before inspecting a fault.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to save a user-scoped performance question, equivalent-work baseline, competing hypotheses, falsifiers, and bounded collection plan before inspecting a fault.",
+      "explanation": "Use Question-First Performance Investigations to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M04-Q002",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "performance-methodology-and-observability",
+        "baselines-hypotheses-and-controlled-experiments",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Baselines, Hypotheses, and Controlled Experiments' supports this outcome: Design controlled, interleaved experiments that expose process and environment variation while preserving useful work and raw samples.",
+      "correct_answer": "A strong answer defines the mechanism from 'Baselines, Hypotheses, and Controlled Experiments', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Baselines, Hypotheses, and Controlled Experiments to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M04-Q003",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "performance-methodology-and-observability",
+        "trace-context-and-causal-request-paths",
+        "synthesis"
+      ],
+      "prompt": "For 'Trace Context and Causal Request Paths', what quantities, units, or thresholds would you calculate before trusting a design claim about: Propagate safe trace context across a process boundary and correlate request traces, structured logs, metrics, and exemplars.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Validate and propagate trace identity across a process boundary.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M04-Q004",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "performance-methodology-and-observability",
+        "metrics-logs-cardinality-and-cost",
+        "application"
+      ],
+      "prompt": "A learner applies 'Metrics, Logs, Cardinality, and Cost' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Log everything:** volume, sensitive data, and investigation noise increase.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M04-Q005",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "performance-methodology-and-observability",
+        "cpu-allocation-and-lock-profiles",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'CPU, Allocation, and Lock Profiles'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for use cpu, allocation, lock-wait, dependency-span, local-i/o, and query-plan evidence without overstating profiler or cache boundaries..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Python Software Foundation, The Python Profilershttps://docs.python.org/3/library/profile.html.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M04-Q006",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "performance-methodology-and-observability",
+        "i/o-dependency-timing-and-query-plans",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'I/O, Dependency Timing, and Query Plans' in Performance Methodology and Observability?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose cpu work, allocation pressure, lock contention, slow i/o, connection retention, and metric-cardinality faults before reveal, then design discriminating reruns.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose cpu work, allocation pressure, lock contention, slow i/o, connection retention, and metric-cardinality faults before reveal, then design discriminating reruns.",
+      "explanation": "Use I/O, Dependency Timing, and Query Plans to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M04-Q007",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "performance-methodology-and-observability",
+        "reproducible-benchmarks-and-regression-budgets",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Reproducible Benchmarks and Regression Budgets' supports this outcome: Build a reproducible benchmark and enforce a workload-scoped regression budget with pass, regression, and inconclusive outcomes.",
+      "correct_answer": "A strong answer defines the mechanism from 'Reproducible Benchmarks and Regression Budgets', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Reproducible Benchmarks and Regression Budgets to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M04-Q008",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "performance-methodology-and-observability",
+        "causal-decisions-validation-and-teach-back",
+        "synthesis"
+      ],
+      "prompt": "For 'Causal Decisions, Validation, and Teach-Back', what quantities, units, or thresholds would you calculate before trusting a design claim about: Defend a performance change through user outcome, causal evidence, validation, telemetry safety and cost, ownership, migration, rollout, rollback, and reversal conditions.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Connect a user outcome to code, resource behavior, and controlled evidence.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M04-Q009",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "performance-methodology-and-observability",
+        "question-first-performance-investigations",
+        "application"
+      ],
+      "prompt": "A learner applies 'Question-First Performance Investigations' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Start with the dashboard:** available signals frame the answer before the",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M04-Q010",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "performance-methodology-and-observability",
+        "baselines-hypotheses-and-controlled-experiments",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Baselines, Hypotheses, and Controlled Experiments'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for design controlled, interleaved experiments that expose process and environment variation while preserving useful work and raw samples..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Tomas Kalibera and Richard E.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M04-Q011",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "performance-methodology-and-observability",
+        "trace-context-and-causal-request-paths",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Trace Context and Causal Request Paths' in Performance Methodology and Observability?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to propagate safe trace context across a process boundary and correlate request traces, structured logs, metrics, and exemplars.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to propagate safe trace context across a process boundary and correlate request traces, structured logs, metrics, and exemplars.",
+      "explanation": "Use Trace Context and Causal Request Paths to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M04-Q012",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "performance-methodology-and-observability",
+        "metrics-logs-cardinality-and-cost",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Metrics, Logs, Cardinality, and Cost' supports this outcome: Choose metrics and logs with explicit units, purpose, cardinality, overhead, privacy, retention, access, cost, and ownership bounds.",
+      "correct_answer": "A strong answer defines the mechanism from 'Metrics, Logs, Cardinality, and Cost', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Metrics, Logs, Cardinality, and Cost to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M04-Q013",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "performance-methodology-and-observability",
+        "cpu-allocation-and-lock-profiles",
+        "synthesis"
+      ],
+      "prompt": "For 'CPU, Allocation, and Lock Profiles', what quantities, units, or thresholds would you calculate before trusting a design claim about: Use CPU, allocation, lock-wait, dependency-span, local-I/O, and query-plan evidence without overstating profiler or cache boundaries.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Choose a profiler that matches the resource question.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M04-Q014",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "performance-methodology-and-observability",
+        "i/o-dependency-timing-and-query-plans",
+        "application"
+      ],
+      "prompt": "A learner applies 'I/O, Dependency Timing, and Query Plans' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Call every wait I/O:** locks, queues, timers, and scheduler delay also wait.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M04-Q015",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "performance-methodology-and-observability",
+        "reproducible-benchmarks-and-regression-budgets",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Reproducible Benchmarks and Regression Budgets'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for build a reproducible benchmark and enforce a workload-scoped regression budget with pass, regression, and inconclusive outcomes..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Kalibera and Jones, Rigorous Benchmarking in Reasonable Timehttps://kar.kent.ac.uk/33611/.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M04-Q016",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "performance-methodology-and-observability",
+        "causal-decisions-validation-and-teach-back",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Causal Decisions, Validation, and Teach-Back' in Performance Methodology and Observability?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend a performance change through user outcome, causal evidence, validation, telemetry safety and cost, ownership, migration, rollout, rollback, and reversal conditions.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend a performance change through user outcome, causal evidence, validation, telemetry safety and cost, ownership, migration, rollout, rollback, and reversal conditions.",
+      "explanation": "Use Causal Decisions, Validation, and Teach-Back to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M04-Q017",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "performance-methodology-and-observability",
+        "question-first-performance-investigations",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Question-First Performance Investigations' supports this outcome: save a user-scoped performance question, equivalent-work baseline, competing hypotheses, falsifiers, and bounded collection plan before inspecting a fault.",
+      "correct_answer": "A strong answer defines the mechanism from 'Question-First Performance Investigations', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Question-First Performance Investigations to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M04-Q018",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "performance-methodology-and-observability",
+        "baselines-hypotheses-and-controlled-experiments",
+        "synthesis"
+      ],
+      "prompt": "For 'Baselines, Hypotheses, and Controlled Experiments', what quantities, units, or thresholds would you calculate before trusting a design claim about: Design controlled, interleaved experiments that expose process and environment variation while preserving useful work and raw samples.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Preserve equivalent work and identify multiple variation levels.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M04-Q019",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "performance-methodology-and-observability",
+        "trace-context-and-causal-request-paths",
+        "application"
+      ],
+      "prompt": "A learner applies 'Trace Context and Causal Request Paths' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Use trace ID for authorization:** inbound context is caller-controlled.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M04-Q020",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "performance-methodology-and-observability",
+        "metrics-logs-cardinality-and-cost",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Metrics, Logs, Cardinality, and Cost'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for choose metrics and logs with explicit units, purpose, cardinality, overhead, privacy, retention, access, cost, and ownership bounds..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - OpenTelemetry, Metrics specificationhttps://opentelemetry.io/docs/specs/otel/metrics/.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M04-Q021",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "performance-methodology-and-observability",
+        "cpu-allocation-and-lock-profiles",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'CPU, Allocation, and Lock Profiles' in Performance Methodology and Observability?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to use cpu, allocation, lock-wait, dependency-span, local-i/o, and query-plan evidence without overstating profiler or cache boundaries.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to use cpu, allocation, lock-wait, dependency-span, local-i/o, and query-plan evidence without overstating profiler or cache boundaries.",
+      "explanation": "Use CPU, Allocation, and Lock Profiles to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M04-Q022",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "performance-methodology-and-observability",
+        "i/o-dependency-timing-and-query-plans",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'I/O, Dependency Timing, and Query Plans' supports this outcome: Diagnose CPU work, allocation pressure, lock contention, slow I/O, connection retention, and metric-cardinality faults before reveal, then design discriminating reruns.",
+      "correct_answer": "A strong answer defines the mechanism from 'I/O, Dependency Timing, and Query Plans', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use I/O, Dependency Timing, and Query Plans to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M04-Q023",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "performance-methodology-and-observability",
+        "reproducible-benchmarks-and-regression-budgets",
+        "synthesis"
+      ],
+      "prompt": "For 'Reproducible Benchmarks and Regression Budgets', what quantities, units, or thresholds would you calculate before trusting a design claim about: Build a reproducible benchmark and enforce a workload-scoped regression budget with pass, regression, and inconclusive outcomes.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Build an interleaved benchmark with raw repetitions and environment metadata.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M04-Q024",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "performance-methodology-and-observability",
+        "causal-decisions-validation-and-teach-back",
+        "application"
+      ],
+      "prompt": "A learner applies 'Causal Decisions, Validation, and Teach-Back' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Lead with the patch:** reviewers cannot judge whether it solves the user",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M04-Q025",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "performance-methodology-and-observability",
+        "question-first-performance-investigations",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Question-First Performance Investigations'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for save a user-scoped performance question, equivalent-work baseline, competing hypotheses, falsifiers, and bounded collection plan before inspecting a fault..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Brendan Gregg, The USE Methodhttps://www.brendangregg.com/usemethod.html.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M04-Q026",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "performance-methodology-and-observability",
+        "baselines-hypotheses-and-controlled-experiments",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Baselines, Hypotheses, and Controlled Experiments' in Performance Methodology and Observability?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to design controlled, interleaved experiments that expose process and environment variation while preserving useful work and raw samples.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to design controlled, interleaved experiments that expose process and environment variation while preserving useful work and raw samples.",
+      "explanation": "Use Baselines, Hypotheses, and Controlled Experiments to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M04-Q027",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "performance-methodology-and-observability",
+        "trace-context-and-causal-request-paths",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Trace Context and Causal Request Paths' supports this outcome: Propagate safe trace context across a process boundary and correlate request traces, structured logs, metrics, and exemplars.",
+      "correct_answer": "A strong answer defines the mechanism from 'Trace Context and Causal Request Paths', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Trace Context and Causal Request Paths to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M04-Q028",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "performance-methodology-and-observability",
+        "metrics-logs-cardinality-and-cost",
+        "synthesis"
+      ],
+      "prompt": "For 'Metrics, Logs, Cardinality, and Cost', what quantities, units, or thresholds would you calculate before trusting a design claim about: Choose metrics and logs with explicit units, purpose, cardinality, overhead, privacy, retention, access, cost, and ownership bounds.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Select signals for user health, diagnosis, capacity, and change validation.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M04-Q029",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "performance-methodology-and-observability",
+        "cpu-allocation-and-lock-profiles",
+        "application"
+      ],
+      "prompt": "A learner applies 'CPU, Allocation, and Lock Profiles' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Optimize the top line blindly:** inclusive time can belong to callees.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M04-Q030",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "performance-methodology-and-observability",
+        "i/o-dependency-timing-and-query-plans",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'I/O, Dependency Timing, and Query Plans'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose cpu work, allocation pressure, lock contention, slow i/o, connection retention, and metric-cardinality faults before reveal, then design discriminating reruns..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - SQLite, EXPLAIN QUERY PLANhttps://www.sqlite.org/eqp.html.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M04-Q031",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "performance-methodology-and-observability",
+        "reproducible-benchmarks-and-regression-budgets",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Reproducible Benchmarks and Regression Budgets' in Performance Methodology and Observability?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to build a reproducible benchmark and enforce a workload-scoped regression budget with pass, regression, and inconclusive outcomes.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to build a reproducible benchmark and enforce a workload-scoped regression budget with pass, regression, and inconclusive outcomes.",
+      "explanation": "Use Reproducible Benchmarks and Regression Budgets to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M04-Q032",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "performance-methodology-and-observability",
+        "causal-decisions-validation-and-teach-back",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Causal Decisions, Validation, and Teach-Back' supports this outcome: Defend a performance change through user outcome, causal evidence, validation, telemetry safety and cost, ownership, migration, rollout, rollback, and reversal conditions.",
+      "correct_answer": "A strong answer defines the mechanism from 'Causal Decisions, Validation, and Teach-Back', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Causal Decisions, Validation, and Teach-Back to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M04-Q033",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "performance-methodology-and-observability",
+        "question-first-performance-investigations",
+        "synthesis"
+      ],
+      "prompt": "For 'Question-First Performance Investigations', what quantities, units, or thresholds would you calculate before trusting a design claim about: save a user-scoped performance question, equivalent-work baseline, competing hypotheses, falsifiers, and bounded collection plan before inspecting a fault.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Turn a user symptom into a bounded, falsifiable performance question.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M04-Q034",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "performance-methodology-and-observability",
+        "baselines-hypotheses-and-controlled-experiments",
+        "application"
+      ],
+      "prompt": "A learner applies 'Baselines, Hypotheses, and Controlled Experiments' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Benchmark different work:** removing a branch or validation makes timing",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M04-Q035",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "performance-methodology-and-observability",
+        "trace-context-and-causal-request-paths",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Trace Context and Causal Request Paths'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for propagate safe trace context across a process boundary and correlate request traces, structured logs, metrics, and exemplars..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - W3C, Trace Contexthttps://www.w3.org/TR/trace-context/.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M04-Q036",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "performance-methodology-and-observability",
+        "metrics-logs-cardinality-and-cost",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Metrics, Logs, Cardinality, and Cost' in Performance Methodology and Observability?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to choose metrics and logs with explicit units, purpose, cardinality, overhead, privacy, retention, access, cost, and ownership bounds.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to choose metrics and logs with explicit units, purpose, cardinality, overhead, privacy, retention, access, cost, and ownership bounds.",
+      "explanation": "Use Metrics, Logs, Cardinality, and Cost to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M04-Q037",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "performance-methodology-and-observability",
+        "cpu-allocation-and-lock-profiles",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'CPU, Allocation, and Lock Profiles' supports this outcome: Use CPU, allocation, lock-wait, dependency-span, local-I/O, and query-plan evidence without overstating profiler or cache boundaries.",
+      "correct_answer": "A strong answer defines the mechanism from 'CPU, Allocation, and Lock Profiles', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use CPU, Allocation, and Lock Profiles to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M04-Q038",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "performance-methodology-and-observability",
+        "i/o-dependency-timing-and-query-plans",
+        "synthesis"
+      ],
+      "prompt": "For 'I/O, Dependency Timing, and Query Plans', what quantities, units, or thresholds would you calculate before trusting a design claim about: Diagnose CPU work, allocation pressure, lock contention, slow I/O, connection retention, and metric-cardinality faults before reveal, then design discriminating reruns.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Decompose queue, service, dependency, and local I/O time.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M04-Q039",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "performance-methodology-and-observability",
+        "reproducible-benchmarks-and-regression-budgets",
+        "application"
+      ],
+      "prompt": "A learner applies 'Reproducible Benchmarks and Regression Budgets' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Use one global threshold:** workloads and user journeys have different",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M04-Q040",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "performance-methodology-and-observability",
+        "causal-decisions-validation-and-teach-back",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Causal Decisions, Validation, and Teach-Back'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for defend a performance change through user outcome, causal evidence, validation, telemetry safety and cost, ownership, migration, rollout, rollback, and reversal conditions..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - USENIX, The Art of Performance Monitoringhttps://www.usenix.org/conference/srecon16/program/presentation/smith.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M04-Q041",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "performance-methodology-and-observability",
+        "question-first-performance-investigations",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Question-First Performance Investigations' in Performance Methodology and Observability?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to freeze a user-scoped performance question, equivalent-work baseline, competing hypotheses, falsifiers, and bounded collection plan before inspecting a fault.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to save a user-scoped performance question, equivalent-work baseline, competing hypotheses, falsifiers, and bounded collection plan before inspecting a fault.",
+      "explanation": "Use Question-First Performance Investigations to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M04-Q042",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "performance-methodology-and-observability",
+        "baselines-hypotheses-and-controlled-experiments",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Baselines, Hypotheses, and Controlled Experiments' supports this outcome: Design controlled, interleaved experiments that expose process and environment variation while preserving useful work and raw samples.",
+      "correct_answer": "A strong answer defines the mechanism from 'Baselines, Hypotheses, and Controlled Experiments', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Baselines, Hypotheses, and Controlled Experiments to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M04-Q043",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "performance-methodology-and-observability",
+        "trace-context-and-causal-request-paths",
+        "synthesis"
+      ],
+      "prompt": "For 'Trace Context and Causal Request Paths', what quantities, units, or thresholds would you calculate before trusting a design claim about: Propagate safe trace context across a process boundary and correlate request traces, structured logs, metrics, and exemplars.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Validate and propagate trace identity across a process boundary.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M04-Q044",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "performance-methodology-and-observability",
+        "metrics-logs-cardinality-and-cost",
+        "application"
+      ],
+      "prompt": "A learner applies 'Metrics, Logs, Cardinality, and Cost' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Log everything:** volume, sensitive data, and investigation noise increase.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M04-Q045",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "performance-methodology-and-observability",
+        "cpu-allocation-and-lock-profiles",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'CPU, Allocation, and Lock Profiles'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for use cpu, allocation, lock-wait, dependency-span, local-i/o, and query-plan evidence without overstating profiler or cache boundaries..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Python Software Foundation, The Python Profilershttps://docs.python.org/3/library/profile.html.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M04-Q046",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "performance-methodology-and-observability",
+        "i/o-dependency-timing-and-query-plans",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'I/O, Dependency Timing, and Query Plans' in Performance Methodology and Observability?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose cpu work, allocation pressure, lock contention, slow i/o, connection retention, and metric-cardinality faults before reveal, then design discriminating reruns.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose cpu work, allocation pressure, lock contention, slow i/o, connection retention, and metric-cardinality faults before reveal, then design discriminating reruns.",
+      "explanation": "Use I/O, Dependency Timing, and Query Plans to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M04-Q047",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "performance-methodology-and-observability",
+        "reproducible-benchmarks-and-regression-budgets",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Reproducible Benchmarks and Regression Budgets' supports this outcome: Build a reproducible benchmark and enforce a workload-scoped regression budget with pass, regression, and inconclusive outcomes.",
+      "correct_answer": "A strong answer defines the mechanism from 'Reproducible Benchmarks and Regression Budgets', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Reproducible Benchmarks and Regression Budgets to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M04-Q048",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "performance-methodology-and-observability",
+        "causal-decisions-validation-and-teach-back",
+        "synthesis"
+      ],
+      "prompt": "For 'Causal Decisions, Validation, and Teach-Back', what quantities, units, or thresholds would you calculate before trusting a design claim about: Defend a performance change through user outcome, causal evidence, validation, telemetry safety and cost, ownership, migration, rollout, rollback, and reversal conditions.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Connect a user outcome to code, resource behavior, and controlled evidence.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M04-Q049",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "performance-methodology-and-observability",
+        "question-first-performance-investigations",
+        "application"
+      ],
+      "prompt": "A learner applies 'Question-First Performance Investigations' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Start with the dashboard:** available signals frame the answer before the",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M04-Q050",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "performance-methodology-and-observability",
+        "baselines-hypotheses-and-controlled-experiments",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Baselines, Hypotheses, and Controlled Experiments'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for design controlled, interleaved experiments that expose process and environment variation while preserving useful work and raw samples..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Tomas Kalibera and Richard E.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M04-Q051",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "performance-methodology-and-observability",
+        "trace-context-and-causal-request-paths",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Trace Context and Causal Request Paths' in Performance Methodology and Observability?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to propagate safe trace context across a process boundary and correlate request traces, structured logs, metrics, and exemplars.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to propagate safe trace context across a process boundary and correlate request traces, structured logs, metrics, and exemplars.",
+      "explanation": "Use Trace Context and Causal Request Paths to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M04-Q052",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "performance-methodology-and-observability",
+        "metrics-logs-cardinality-and-cost",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Metrics, Logs, Cardinality, and Cost' supports this outcome: Choose metrics and logs with explicit units, purpose, cardinality, overhead, privacy, retention, access, cost, and ownership bounds.",
+      "correct_answer": "A strong answer defines the mechanism from 'Metrics, Logs, Cardinality, and Cost', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Metrics, Logs, Cardinality, and Cost to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M04-Q053",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "performance-methodology-and-observability",
+        "cpu-allocation-and-lock-profiles",
+        "synthesis"
+      ],
+      "prompt": "For 'CPU, Allocation, and Lock Profiles', what quantities, units, or thresholds would you calculate before trusting a design claim about: Use CPU, allocation, lock-wait, dependency-span, local-I/O, and query-plan evidence without overstating profiler or cache boundaries.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Choose a profiler that matches the resource question.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M04-Q054",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "performance-methodology-and-observability",
+        "i/o-dependency-timing-and-query-plans",
+        "application"
+      ],
+      "prompt": "A learner applies 'I/O, Dependency Timing, and Query Plans' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Call every wait I/O:** locks, queues, timers, and scheduler delay also wait.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M04-Q055",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "performance-methodology-and-observability",
+        "reproducible-benchmarks-and-regression-budgets",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Reproducible Benchmarks and Regression Budgets'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for build a reproducible benchmark and enforce a workload-scoped regression budget with pass, regression, and inconclusive outcomes..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Kalibera and Jones, Rigorous Benchmarking in Reasonable Timehttps://kar.kent.ac.uk/33611/.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M04-Q056",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "performance-methodology-and-observability",
+        "causal-decisions-validation-and-teach-back",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Causal Decisions, Validation, and Teach-Back' in Performance Methodology and Observability?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend a performance change through user outcome, causal evidence, validation, telemetry safety and cost, ownership, migration, rollout, rollback, and reversal conditions.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend a performance change through user outcome, causal evidence, validation, telemetry safety and cost, ownership, migration, rollout, rollback, and reversal conditions.",
+      "explanation": "Use Causal Decisions, Validation, and Teach-Back to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M04-Q057",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "performance-methodology-and-observability",
+        "question-first-performance-investigations",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Question-First Performance Investigations' supports this outcome: save a user-scoped performance question, equivalent-work baseline, competing hypotheses, falsifiers, and bounded collection plan before inspecting a fault.",
+      "correct_answer": "A strong answer defines the mechanism from 'Question-First Performance Investigations', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Question-First Performance Investigations to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M04-Q058",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "performance-methodology-and-observability",
+        "baselines-hypotheses-and-controlled-experiments",
+        "synthesis"
+      ],
+      "prompt": "For 'Baselines, Hypotheses, and Controlled Experiments', what quantities, units, or thresholds would you calculate before trusting a design claim about: Design controlled, interleaved experiments that expose process and environment variation while preserving useful work and raw samples.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Preserve equivalent work and identify multiple variation levels.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M04-Q059",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "performance-methodology-and-observability",
+        "trace-context-and-causal-request-paths",
+        "application"
+      ],
+      "prompt": "A learner applies 'Trace Context and Causal Request Paths' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Use trace ID for authorization:** inbound context is caller-controlled.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M04-Q060",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "performance-methodology-and-observability",
+        "metrics-logs-cardinality-and-cost",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Metrics, Logs, Cardinality, and Cost'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for choose metrics and logs with explicit units, purpose, cardinality, overhead, privacy, retention, access, cost, and ownership bounds..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - OpenTelemetry, Metrics specificationhttps://opentelemetry.io/docs/specs/otel/metrics/.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M04-Q061",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "performance-methodology-and-observability",
+        "cpu-allocation-and-lock-profiles",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'CPU, Allocation, and Lock Profiles' in Performance Methodology and Observability?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to use cpu, allocation, lock-wait, dependency-span, local-i/o, and query-plan evidence without overstating profiler or cache boundaries.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to use cpu, allocation, lock-wait, dependency-span, local-i/o, and query-plan evidence without overstating profiler or cache boundaries.",
+      "explanation": "Use CPU, Allocation, and Lock Profiles to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M04-Q062",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "performance-methodology-and-observability",
+        "i/o-dependency-timing-and-query-plans",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'I/O, Dependency Timing, and Query Plans' supports this outcome: Diagnose CPU work, allocation pressure, lock contention, slow I/O, connection retention, and metric-cardinality faults before reveal, then design discriminating reruns.",
+      "correct_answer": "A strong answer defines the mechanism from 'I/O, Dependency Timing, and Query Plans', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use I/O, Dependency Timing, and Query Plans to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M04-Q063",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "performance-methodology-and-observability",
+        "reproducible-benchmarks-and-regression-budgets",
+        "synthesis"
+      ],
+      "prompt": "For 'Reproducible Benchmarks and Regression Budgets', what quantities, units, or thresholds would you calculate before trusting a design claim about: Build a reproducible benchmark and enforce a workload-scoped regression budget with pass, regression, and inconclusive outcomes.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Build an interleaved benchmark with raw repetitions and environment metadata.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M04-Q064",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "performance-methodology-and-observability",
+        "causal-decisions-validation-and-teach-back",
+        "application"
+      ],
+      "prompt": "A learner applies 'Causal Decisions, Validation, and Teach-Back' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Lead with the patch:** reviewers cannot judge whether it solves the user",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M04-Q065",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "performance-methodology-and-observability",
+        "question-first-performance-investigations",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Question-First Performance Investigations'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for save a user-scoped performance question, equivalent-work baseline, competing hypotheses, falsifiers, and bounded collection plan before inspecting a fault..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Brendan Gregg, The USE Methodhttps://www.brendangregg.com/usemethod.html.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M04-Q066",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "performance-methodology-and-observability",
+        "baselines-hypotheses-and-controlled-experiments",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Baselines, Hypotheses, and Controlled Experiments' in Performance Methodology and Observability?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to design controlled, interleaved experiments that expose process and environment variation while preserving useful work and raw samples.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to design controlled, interleaved experiments that expose process and environment variation while preserving useful work and raw samples.",
+      "explanation": "Use Baselines, Hypotheses, and Controlled Experiments to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M04-Q067",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "performance-methodology-and-observability",
+        "trace-context-and-causal-request-paths",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Trace Context and Causal Request Paths' supports this outcome: Propagate safe trace context across a process boundary and correlate request traces, structured logs, metrics, and exemplars.",
+      "correct_answer": "A strong answer defines the mechanism from 'Trace Context and Causal Request Paths', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Trace Context and Causal Request Paths to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M04-Q068",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "performance-methodology-and-observability",
+        "metrics-logs-cardinality-and-cost",
+        "synthesis"
+      ],
+      "prompt": "For 'Metrics, Logs, Cardinality, and Cost', what quantities, units, or thresholds would you calculate before trusting a design claim about: Choose metrics and logs with explicit units, purpose, cardinality, overhead, privacy, retention, access, cost, and ownership bounds.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Select signals for user health, diagnosis, capacity, and change validation.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M04-Q069",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "performance-methodology-and-observability",
+        "cpu-allocation-and-lock-profiles",
+        "application"
+      ],
+      "prompt": "A learner applies 'CPU, Allocation, and Lock Profiles' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Optimize the top line blindly:** inclusive time can belong to callees.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M04-Q070",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "performance-methodology-and-observability",
+        "i/o-dependency-timing-and-query-plans",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'I/O, Dependency Timing, and Query Plans'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose cpu work, allocation pressure, lock contention, slow i/o, connection retention, and metric-cardinality faults before reveal, then design discriminating reruns..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - SQLite, EXPLAIN QUERY PLANhttps://www.sqlite.org/eqp.html.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M04-Q071",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "performance-methodology-and-observability",
+        "reproducible-benchmarks-and-regression-budgets",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Reproducible Benchmarks and Regression Budgets' in Performance Methodology and Observability?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to build a reproducible benchmark and enforce a workload-scoped regression budget with pass, regression, and inconclusive outcomes.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to build a reproducible benchmark and enforce a workload-scoped regression budget with pass, regression, and inconclusive outcomes.",
+      "explanation": "Use Reproducible Benchmarks and Regression Budgets to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M04-Q072",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "performance-methodology-and-observability",
+        "causal-decisions-validation-and-teach-back",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Causal Decisions, Validation, and Teach-Back' supports this outcome: Defend a performance change through user outcome, causal evidence, validation, telemetry safety and cost, ownership, migration, rollout, rollback, and reversal conditions.",
+      "correct_answer": "A strong answer defines the mechanism from 'Causal Decisions, Validation, and Teach-Back', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Causal Decisions, Validation, and Teach-Back to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M04-Q073",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "performance-methodology-and-observability",
+        "question-first-performance-investigations",
+        "synthesis"
+      ],
+      "prompt": "For 'Question-First Performance Investigations', what quantities, units, or thresholds would you calculate before trusting a design claim about: save a user-scoped performance question, equivalent-work baseline, competing hypotheses, falsifiers, and bounded collection plan before inspecting a fault.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Turn a user symptom into a bounded, falsifiable performance question.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M04-Q074",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "performance-methodology-and-observability",
+        "baselines-hypotheses-and-controlled-experiments",
+        "application"
+      ],
+      "prompt": "A learner applies 'Baselines, Hypotheses, and Controlled Experiments' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Benchmark different work:** removing a branch or validation makes timing",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M04-Q075",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "performance-methodology-and-observability",
+        "trace-context-and-causal-request-paths",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Trace Context and Causal Request Paths'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for propagate safe trace context across a process boundary and correlate request traces, structured logs, metrics, and exemplars..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - W3C, Trace Contexthttps://www.w3.org/TR/trace-context/.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M04-Q076",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "performance-methodology-and-observability",
+        "metrics-logs-cardinality-and-cost",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Metrics, Logs, Cardinality, and Cost' in Performance Methodology and Observability?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to choose metrics and logs with explicit units, purpose, cardinality, overhead, privacy, retention, access, cost, and ownership bounds.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to choose metrics and logs with explicit units, purpose, cardinality, overhead, privacy, retention, access, cost, and ownership bounds.",
+      "explanation": "Use Metrics, Logs, Cardinality, and Cost to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M04-Q077",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "performance-methodology-and-observability",
+        "cpu-allocation-and-lock-profiles",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'CPU, Allocation, and Lock Profiles' supports this outcome: Use CPU, allocation, lock-wait, dependency-span, local-I/O, and query-plan evidence without overstating profiler or cache boundaries.",
+      "correct_answer": "A strong answer defines the mechanism from 'CPU, Allocation, and Lock Profiles', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use CPU, Allocation, and Lock Profiles to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M04-Q078",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "performance-methodology-and-observability",
+        "i/o-dependency-timing-and-query-plans",
+        "synthesis"
+      ],
+      "prompt": "For 'I/O, Dependency Timing, and Query Plans', what quantities, units, or thresholds would you calculate before trusting a design claim about: Diagnose CPU work, allocation pressure, lock contention, slow I/O, connection retention, and metric-cardinality faults before reveal, then design discriminating reruns.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Decompose queue, service, dependency, and local I/O time.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M04-Q079",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "performance-methodology-and-observability",
+        "reproducible-benchmarks-and-regression-budgets",
+        "application"
+      ],
+      "prompt": "A learner applies 'Reproducible Benchmarks and Regression Budgets' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Use one global threshold:** workloads and user journeys have different",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M04-Q080",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "performance-methodology-and-observability",
+        "causal-decisions-validation-and-teach-back",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Causal Decisions, Validation, and Teach-Back'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for defend a performance change through user outcome, causal evidence, validation, telemetry safety and cost, ownership, migration, rollout, rollback, and reversal conditions..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - USENIX, The Art of Performance Monitoringhttps://www.usenix.org/conference/srecon16/program/presentation/smith.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M04-Q081",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "performance-methodology-and-observability",
+        "question-first-performance-investigations",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Question-First Performance Investigations' in Performance Methodology and Observability?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to freeze a user-scoped performance question, equivalent-work baseline, competing hypotheses, falsifiers, and bounded collection plan before inspecting a fault.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to save a user-scoped performance question, equivalent-work baseline, competing hypotheses, falsifiers, and bounded collection plan before inspecting a fault.",
+      "explanation": "Use Question-First Performance Investigations to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M04-Q082",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "performance-methodology-and-observability",
+        "baselines-hypotheses-and-controlled-experiments",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Baselines, Hypotheses, and Controlled Experiments' supports this outcome: Design controlled, interleaved experiments that expose process and environment variation while preserving useful work and raw samples.",
+      "correct_answer": "A strong answer defines the mechanism from 'Baselines, Hypotheses, and Controlled Experiments', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Baselines, Hypotheses, and Controlled Experiments to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M04-Q083",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "performance-methodology-and-observability",
+        "trace-context-and-causal-request-paths",
+        "synthesis"
+      ],
+      "prompt": "For 'Trace Context and Causal Request Paths', what quantities, units, or thresholds would you calculate before trusting a design claim about: Propagate safe trace context across a process boundary and correlate request traces, structured logs, metrics, and exemplars.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Validate and propagate trace identity across a process boundary.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M04-Q084",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "performance-methodology-and-observability",
+        "metrics-logs-cardinality-and-cost",
+        "application"
+      ],
+      "prompt": "A learner applies 'Metrics, Logs, Cardinality, and Cost' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Log everything:** volume, sensitive data, and investigation noise increase.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M04-Q085",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "performance-methodology-and-observability",
+        "cpu-allocation-and-lock-profiles",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'CPU, Allocation, and Lock Profiles'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for use cpu, allocation, lock-wait, dependency-span, local-i/o, and query-plan evidence without overstating profiler or cache boundaries..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Python Software Foundation, The Python Profilershttps://docs.python.org/3/library/profile.html.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M04-Q086",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "performance-methodology-and-observability",
+        "i/o-dependency-timing-and-query-plans",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'I/O, Dependency Timing, and Query Plans' in Performance Methodology and Observability?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose cpu work, allocation pressure, lock contention, slow i/o, connection retention, and metric-cardinality faults before reveal, then design discriminating reruns.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose cpu work, allocation pressure, lock contention, slow i/o, connection retention, and metric-cardinality faults before reveal, then design discriminating reruns.",
+      "explanation": "Use I/O, Dependency Timing, and Query Plans to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M04-Q087",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "performance-methodology-and-observability",
+        "reproducible-benchmarks-and-regression-budgets",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Reproducible Benchmarks and Regression Budgets' supports this outcome: Build a reproducible benchmark and enforce a workload-scoped regression budget with pass, regression, and inconclusive outcomes.",
+      "correct_answer": "A strong answer defines the mechanism from 'Reproducible Benchmarks and Regression Budgets', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Reproducible Benchmarks and Regression Budgets to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M04-Q088",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "performance-methodology-and-observability",
+        "causal-decisions-validation-and-teach-back",
+        "synthesis"
+      ],
+      "prompt": "For 'Causal Decisions, Validation, and Teach-Back', what quantities, units, or thresholds would you calculate before trusting a design claim about: Defend a performance change through user outcome, causal evidence, validation, telemetry safety and cost, ownership, migration, rollout, rollback, and reversal conditions.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Connect a user outcome to code, resource behavior, and controlled evidence.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M04-Q089",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "performance-methodology-and-observability",
+        "question-first-performance-investigations",
+        "application"
+      ],
+      "prompt": "A learner applies 'Question-First Performance Investigations' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Start with the dashboard:** available signals frame the answer before the",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M04-Q090",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "performance-methodology-and-observability",
+        "baselines-hypotheses-and-controlled-experiments",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Baselines, Hypotheses, and Controlled Experiments'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for design controlled, interleaved experiments that expose process and environment variation while preserving useful work and raw samples..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Tomas Kalibera and Richard E.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M04-Q091",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "performance-methodology-and-observability",
+        "trace-context-and-causal-request-paths",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Trace Context and Causal Request Paths' in Performance Methodology and Observability?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to propagate safe trace context across a process boundary and correlate request traces, structured logs, metrics, and exemplars.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to propagate safe trace context across a process boundary and correlate request traces, structured logs, metrics, and exemplars.",
+      "explanation": "Use Trace Context and Causal Request Paths to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M04-Q092",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "performance-methodology-and-observability",
+        "metrics-logs-cardinality-and-cost",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Metrics, Logs, Cardinality, and Cost' supports this outcome: Choose metrics and logs with explicit units, purpose, cardinality, overhead, privacy, retention, access, cost, and ownership bounds.",
+      "correct_answer": "A strong answer defines the mechanism from 'Metrics, Logs, Cardinality, and Cost', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Metrics, Logs, Cardinality, and Cost to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M04-Q093",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "performance-methodology-and-observability",
+        "cpu-allocation-and-lock-profiles",
+        "synthesis"
+      ],
+      "prompt": "For 'CPU, Allocation, and Lock Profiles', what quantities, units, or thresholds would you calculate before trusting a design claim about: Use CPU, allocation, lock-wait, dependency-span, local-I/O, and query-plan evidence without overstating profiler or cache boundaries.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Choose a profiler that matches the resource question.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M04-Q094",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "performance-methodology-and-observability",
+        "i/o-dependency-timing-and-query-plans",
+        "application"
+      ],
+      "prompt": "A learner applies 'I/O, Dependency Timing, and Query Plans' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Call every wait I/O:** locks, queues, timers, and scheduler delay also wait.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M04-Q095",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "performance-methodology-and-observability",
+        "reproducible-benchmarks-and-regression-budgets",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Reproducible Benchmarks and Regression Budgets'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for build a reproducible benchmark and enforce a workload-scoped regression budget with pass, regression, and inconclusive outcomes..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Kalibera and Jones, Rigorous Benchmarking in Reasonable Timehttps://kar.kent.ac.uk/33611/.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M04-Q096",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "performance-methodology-and-observability",
+        "causal-decisions-validation-and-teach-back",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Causal Decisions, Validation, and Teach-Back' in Performance Methodology and Observability?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend a performance change through user outcome, causal evidence, validation, telemetry safety and cost, ownership, migration, rollout, rollback, and reversal conditions.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend a performance change through user outcome, causal evidence, validation, telemetry safety and cost, ownership, migration, rollout, rollback, and reversal conditions.",
+      "explanation": "Use Causal Decisions, Validation, and Teach-Back to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M04-Q097",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "performance-methodology-and-observability",
+        "question-first-performance-investigations",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Question-First Performance Investigations' supports this outcome: save a user-scoped performance question, equivalent-work baseline, competing hypotheses, falsifiers, and bounded collection plan before inspecting a fault.",
+      "correct_answer": "A strong answer defines the mechanism from 'Question-First Performance Investigations', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Question-First Performance Investigations to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M04-Q098",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "performance-methodology-and-observability",
+        "baselines-hypotheses-and-controlled-experiments",
+        "synthesis"
+      ],
+      "prompt": "For 'Baselines, Hypotheses, and Controlled Experiments', what quantities, units, or thresholds would you calculate before trusting a design claim about: Design controlled, interleaved experiments that expose process and environment variation while preserving useful work and raw samples.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Preserve equivalent work and identify multiple variation levels.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M04-Q099",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "performance-methodology-and-observability",
+        "trace-context-and-causal-request-paths",
+        "application"
+      ],
+      "prompt": "A learner applies 'Trace Context and Causal Request Paths' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Use trace ID for authorization:** inbound context is caller-controlled.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M04-Q100",
+      "module_id": "M04",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "performance-methodology-and-observability",
+        "metrics-logs-cardinality-and-cost",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Metrics, Logs, Cardinality, and Cost'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for choose metrics and logs with explicit units, purpose, cardinality, overhead, privacy, retention, access, cost, and ownership bounds..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - OpenTelemetry, Metrics specificationhttps://opentelemetry.io/docs/specs/otel/metrics/.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    }
+  ]
+}

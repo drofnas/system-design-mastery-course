@@ -1,218 +1,40 @@
 # Course Authoring Instructions
 
-These instructions apply to every agent that creates, edits, reviews, or
-evaluates course material in this repository.
+This repository is now a solo self-study course for experienced self-taught software engineers building Computer Science and System Design mastery.
 
-## Required reading
+## Course Contract
 
-Before changing a module, read:
+Before changing course content, read:
 
 1. `00_COURSE_SYLLABUS.md`
 2. `MODULE_STANDARD.md`
 3. The target module's `README.md` and `module.json`
-4. Any existing learner artifacts that the change could invalidate
+4. Any lesson, exercise, lab, quiz, or resource file affected by the change
 
-The syllabus defines the curriculum. `MODULE_STANDARD.md` defines the minimum
-quality of a teachable module. Do not weaken either contract.
+Do not reintroduce mandatory review gates, history locks, artifact ledgers, calibrated evaluator fixtures, external review panels, or title/credential claims.
 
-## Intended learner and outcome
+## Module Shape
 
-Write for a software engineer with at least eight years of professional
-experience and senior-level competence in one production stack. Do not spend
-time teaching basic syntax, source control, HTTP, or SQL unless a module depends
-on a subtle behavior that experienced engineers commonly misunderstand.
+Each module should help one learner:
 
-The course develops and produces evidence of system-design and staff-plus
-engineering judgment. It cannot award a Principal Engineer title. Production
-ownership, cross-team influence, organizational trust, and sustained results
-remain necessary outside the course.
+- Learn the material locally
+- Practice with guided exercises and answer explanations
+- Reinforce the mechanism with a focused lab where useful
+- Take a randomized quiz from a 100-question bank
+- Grade with an answer key or LLM grading prompt
+- Optionally complete a deeper project
 
-## Mandatory module shape
+## Quiz Requirements
 
-Every standard five-week module, and each six-week deep module, MUST:
+Every module quiz package must include:
 
-- Budget exactly 47 core learner hours, or 57 for Modules 10 and 17, and publish a week-by-week schedule.
-- Map outcomes to the syllabus graduate profile and applicable mastery levels:
-  Define, Calculate, Implement, Diagnose, and Decide and Teach.
-- Teach concepts locally before grading their application.
-- Include a non-capstone worked example, guided practice, explained answer keys,
-  independent work, a failure experiment, a decision artifact, a teach-back,
-  assessment, and remediation.
-- Preserve the syllabus's required build, break-and-measure work, decision
-  artifact, and relevant portfolio evidence.
-- Include a module-specific 0–4 rubric. A generic course rubric is not enough.
-- Include a provider-neutral LLM evaluator, structured output schema, and at
-  least Pass, Revise, and Repeat calibration fixtures.
-- Include operational, security, cost, ownership, migration, and organizational
-  reasoning when they materially affect the topic.
-- Remain usable without external links. Required external resources reinforce
-  the local instruction; they never replace it.
+- `quiz/question-bank.json`
+- `quiz/answer-key.md`
+- `quiz/llm-grader-prompt.md`
+- `quiz/README.md`
 
-## Lesson contract
+Question banks must contain exactly 100 questions and use the shared schema.
 
-Each lesson MUST contain:
+## Git Workflow
 
-- Learning outcomes and prerequisites
-- A clear explanation of the mechanism or reasoning method
-- A derivation, decision procedure, or repeatable technique
-- A worked example from the module's non-capstone case
-- Common expert mistakes and why they fail
-- Guided practice
-- Self-check questions with explained answers
-- Citations to authoritative sources
-
-Keep tutorial, how-to, reference, and explanation content distinct enough that a
-learner can tell whether they are learning a concept, completing a task, or
-looking up a contract.
-
-## Resource contract
-
-For every external resource record:
-
-- Title, author or publisher, URL, type, required/optional status
-- Purpose and exact reading or viewing boundary
-- Estimated time and week
-- Free/paid status
-- `last_verified` date
-- Written fallback or local text alternative
-- Reflection questions or evidence the learner must produce
-
-Required resources MUST be free to access. Paid books, standards, and courses
-may only be optional enrichment. Prefer primary sources, standards bodies,
-maintainer documentation, original papers, and first-person engineering case
-studies. A required video must have captions or an equivalent written lesson.
-
-Verify links when creating or revising a module. Do not copy articles,
-transcripts, book chapters, or video scripts into the repository. Write original
-explanations, use short attributed quotations only when necessary, and preserve
-source and license notes.
-
-## Capstone integrity
-
-Do not expose a canonical capstone answer before the learner freezes an
-independent baseline. Teach and demonstrate concepts with the module's separate
-case study. Answer keys explain reasoning and acceptable variation; they do not
-prescribe one architecture.
-
-Never edit a frozen learner baseline. Reviews and revisions belong in new
-artifacts. Evaluation may identify gaps and point back to lessons, but it must
-not silently replace the learner's work.
-
-## Assessment contract
-
-An evaluator MUST:
-
-- Run structural gates before semantic scoring.
-- Cite the submitted file and heading for every score or finding.
-- Distinguish missing evidence, incorrect reasoning, unsupported claims, and
-  reasonable uncertainty.
-- Use only the published rubric and submission evidence.
-- Return Pass, Revise, or Repeat using the module's fixed thresholds.
-- Avoid rewarding vocabulary without a causal model.
-- Avoid penalizing a defensible alternative merely because it differs from an
-  exemplar.
-- Recommend lessons and exercises for remediation without writing replacement
-  graded answers.
-
-Calibration fixtures MUST use the non-capstone case. Before marking an evaluator
-ready, run each fixture at least twice with deterministic settings where
-supported. Result bands must agree and category scores must remain within one
-point. Run the module's deterministic calibration checker as well; structured
-output is not accepted when its reported average, citations, finding classes,
-or remediation references contradict the detailed scores.
-
-## Branch and pull-request workflow
-
-Create every new module on its own branch before authoring module files. Unless
-the user names another base, first protect any unrelated working-tree changes,
-switch to `main`, and run `git pull --ff-only origin main`. Verify that local
-`main` and `origin/main` resolve to the same commit before branching. If the
-fast-forward pull or verification fails, stop and report the divergence; do not
-merge, rebase, reset, or fold unrelated work into the module automatically.
-Create `feature/module-NN-short-name` from that verified `main` by default. Do
-not combine multiple new modules on one branch, and do not author a new module
-directly on `main`.
-
-Keep the module implementation, resource verification, tests, evaluator runs,
-calibration results, and readiness transition on that module branch. If module
-work began on `main` but has not been committed, move the complete working tree
-onto the module branch before evaluation and publication.
-
-At the end of every session that updates repository files, review the complete
-in-scope diff, run the relevant checks, and create a local commit before the
-final response. This commit is required whether or not the user requested a
-push or pull request; do not leave completed session work uncommitted or batch
-it into a later session. Never commit known failing, secret-bearing, unrelated,
-or unreviewed changes. If a blocker prevents a safe commit, report it explicitly
-instead of creating a misleading checkpoint.
-
-After evaluation and every readiness check succeeds, stop and report the
-result. The completed update session must already have its local commit. Ask the
-user whether to proceed with the publication phase: push the branch and create
-a pull request back into `main`. Do not perform those remote publication actions
-implicitly; the agent's permission level may need to change first. Unless the
-user says otherwise, create the pull request as a draft and use the repository's
-required PR-title convention.
-
-### "Plan out the next module" trigger
-
-When the user says **"Plan out the next module."**, first inspect the active
-collaboration mode. This is a mandatory precondition and applies before any
-pull, branch creation, file edit, evaluation, commit, push, or other mutation.
-
-- If the active mode is not Plan mode, stop and tell the user that this trigger
-  requires Plan mode. Do not begin the authoring or publication workflow.
-- If the active mode is Plan mode, perform read-only discovery and return one
-  decision-complete `<proposed_plan>`. Do not mutate repository state while
-  planning.
-- The proposed plan must identify the first missing syllabus module from the
-  complete module inventory; derive its outcomes, scope, evidence, dependencies,
-  non-capstone case, interfaces, failure work, assessment, calibration,
-  validation, commit, and publication strategy; and record every material
-  assumption or user decision.
-- The phrase **"Plan out the next module."** requests planning only. It does not
-  authorize authoring, evaluation mutations, committing, pushing, pull-request
-  creation, or merging.
-- Authoring may begin only after Plan mode ends and the user explicitly asks to
-  implement the approved plan. At that point, re-read current repository state,
-  recheck every plan assumption, protect unrelated work, update `main` with
-  `git pull --ff-only origin main`, and verify `main` equals `origin/main` before
-  creating the dedicated module branch. Stop and re-plan when the selected
-  module, base commit, requirements, or other material assumptions changed.
-
-During the later implementation turn, execute the approved Authoring workflow
-below, keep logical reviewed commits, run every structural, semantic,
-evaluator-calibration, and readiness gate, and follow the default publication
-pause. Publication requires separate user authorization; the planning phrase
-does not provide it.
-
-## Authoring workflow
-
-1. Inspect the syllabus requirements and current module manifest.
-2. Research current authoritative resources before writing.
-3. Write or update local instruction and the worked example.
-4. Add guided practice and answer explanations.
-5. Add independent artifacts and failure work.
-6. Add the rubric, evaluator, calibration fixtures, and remediation map.
-7. Update `module.json`, navigation, resource verification dates, and portfolio
-   accounting.
-8. Run `python3 scripts/validate_course.py`.
-9. Review the staged diff for secrets, private information, broken links,
-   answer leakage, unsupported claims, and accidental syllabus changes.
-
-Do not mark a module `ready` because files merely exist. It is ready only when
-the validator passes and every outcome maps to instruction, practice, evidence,
-and assessment.
-
-## Prohibited shortcuts
-
-- Link dumps without teaching purpose or bounded assignments
-- Unexplained jargon
-- Technology-first problem statements
-- Vague criteria such as "scalable," "reliable," or "works correctly"
-- Generic rubrics without score anchors
-- Happy-path-only exercises
-- Unsupported factual claims or fabricated citations
-- Capstone solutions disguised as examples
-- LLM feedback loops that overwrite the learner's preserved first attempt
-- Claims that course completion guarantees a job title or promotion
+Keep changes scoped and review the diff before committing. Do not add automated attribution metadata to commits.

@@ -183,7 +183,7 @@ The answer narrows the claim instead of defending a label.
 
 After review:
 
-- Preserve the frozen baseline.
+- Preserve the original attempt as learning evidence.
 - Record each material comment and disposition.
 - Update the RFC or supersede the decision artifact.
 - State what evidence changed the recommendation.
@@ -221,8 +221,8 @@ claim during defense.
 ## Guided practice
 
 Complete [EX-12](../exercises/exercises.md#ex-12-defense-and-disagreement).
-Then write the Module 1 RFC and use the [defense
-guide](../worksheets/week-04-rfc-defense.md).
+Then write a short optional decision memo and compare it with the practice
+answer key.
 
 ## Self-check
 
@@ -252,12 +252,12 @@ guide](../worksheets/week-04-rfc-defense.md).
   Decisions”](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions)
 - [CMU SEI, Architecture Tradeoff Analysis Method
   collection](https://www.sei.cmu.edu/library/architecture-tradeoff-analysis-method-collection/)
-- Next: complete the [Week 4 defense](../worksheets/week-04-rfc-defense.md) and
-  [assessment](../assessment/README.md).
+- Next: complete the guided decision exercises, compare your answers with the
+  practice key, and generate a module quiz.
 
-## PESD 2.0 extension: modern constraints and ownership
+## Solo extension: modern constraints and ownership
 
-PESD 2.0 adds **a constraint and assurance ledger covering data classes, tenant boundaries, obligations, AI use, supplier risk, cost allocation, decision rights, evidence owners, uncertainty, and reversal triggers**.
+The deep path adds **a constraint and assurance ledger covering data classes, tenant boundaries, obligations, AI use, supplier risk, cost allocation, decision rights, evidence owners, uncertainty, and reversal triggers**.
 
 ### Repeatable decision procedure
 

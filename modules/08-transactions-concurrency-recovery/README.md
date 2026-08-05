@@ -1,173 +1,62 @@
 # Module 8: Transactions, Concurrency, and Recovery
 
-> **Authoring status:** Review. PESD 2.0 content and machine-readable contracts are migrated. Refreshed evaluator calibration, full platform matrices, offline reruns, cleanup checks, and timed learner pilots remain required before Ready.
+## Purpose
 
-## What this module changes
+Map business invariants to transaction boundaries, authoritative state, and enforceable constraints.
 
-ACID labels do not preserve a business invariant. Correctness depends on the
-unit of work, the transactions that can overlap, the history the database may
-admit, the point at which success is acknowledged, and the recovery evidence
-available after failure. This module turns those claims into schedules, log
-records, crashes, restores, and decision rules.
-
-The continuing non-capstone case is **Northstar Observatory Operations
-Registry**. It coordinates certified controllers, exclusive telescope windows,
-exposure results, audit records, and rebuildable nightly summaries. It has no
-products, inventory, checkout, payment, orders, or merchant data. Freeze the
-independent commerce transaction baseline before opening the completed
-Northstar case or answer key.
+This module is part of the solo Computer Science and System Design Mastery path. Study the local lessons first, reinforce the mechanisms with practice and labs, then use the quiz package to test recall, application, diagnosis, and design judgment.
 
 ## Prerequisites
 
-- Modules 1–7, especially invariants, bounded retries, physical storage, and
-  the explicit Module 7 durability boundary
-- Python 3.11 or newer; the required lab has no external dependency, database,
-  container, account, or network requirement
-- A preserved commerce state-ownership and storage baseline
-- Comfort reading transaction histories and structured JSON evidence
+- Familiarity with Modules 1-7, or willingness to review earlier lessons as needed.
+- Python 3.11 or newer for the quiz tooling and most reinforcement labs.
+- Comfort reading technical documentation, code snippets, diagrams, and answer explanations.
 
-## Learning outcomes
+## Learning Outcomes
 
-By the end of the module, you can:
+1. Map business invariants to transaction boundaries, authoritative state, and enforceable constraints.
+2. Derive isolation anomalies from histories, visibility rules, and serialization dependencies.
+3. Implement and compare locking, optimistic validation, MVCC, deadlock handling, and bounded transaction retries.
+4. Enforce atomic authoritative workflows with schema constraints and rebuildable derived state.
+5. Explain and test WAL ordering, checkpoints, redo/undo, group commit, and durable acknowledgement.
+6. Automate and validate backup, point-in-time recovery, integrity checks, and measured RTO/RPO while distinguishing replicas from backups.
+7. Diagnose seven concurrency and recovery failures from immutable same-input evidence.
+8. Defend a transaction and recovery strategy covering security, cost, operations, ownership, migration, rollback, and reversal evidence.
 
-1. Map business invariants to transaction boundaries, authorities, and schema
-   constraints.
-2. Derive lost updates, write skew, and other serialization anomalies from
-   histories and dependency graphs.
-3. Implement and compare strict locking, optimistic validation, MVCC,
-   deadlock handling, and bounded whole-transaction retries.
-4. Keep authoritative state and required audit evidence atomic while treating
-   derived state as rebuildable.
-5. Explain and test WAL ordering, checkpoints, redo/undo, group commit, and the
-   durable-acknowledgement boundary.
-6. Automate backup, point-in-time recovery, integrity probes, and measured
-   RTO/RPO while distinguishing replicas from backups.
-7. Diagnose seven concurrency and recovery failures from preserved same-input
-   evidence.
-8. Defend a transaction and recovery design covering security, cost,
-   operations, ownership, migration, rollback, and reversal evidence.
-
-## Schedule
-
-The 10–12 hour weekly figure is a capacity envelope. Core work is deliberately
-budgeted below that ceiling; unused time is recovery buffer, not hidden work.
-
-### Week 40: Model and derive — 8.5 hours
-
-| Work | Time |
-|---|---:|
-| Bounded authoritative resources | 115 min |
-| Local mechanism instruction | 120 min |
-| Guided practice | 60 min |
-| Model and derive core work | 215 min |
-
-Optional contingency capacity: 210 minutes. It is not core work, carries no required evidence, and may remain unused.
-
-### Week 41: Guided build and prediction freeze — 9 hours
-
-| Work | Time |
-|---|---:|
-| Bounded authoritative resources | 135 min |
-| Local mechanism instruction | 120 min |
-| Guided practice | 60 min |
-| Required evidence components | 30 min |
-| Guided build and prediction freeze core work | 195 min |
-
-Optional contingency capacity: 180 minutes. It is not core work, carries no required evidence, and may remain unused.
-
-### Week 42: Independent build and integration — 10 hours
-
-| Work | Time |
-|---|---:|
-| Independent build and integration core work | 540 min |
-| Independent build and integration verification checkpoint | 60 min |
-
-Optional contingency capacity: 120 minutes. It is not core work, carries no required evidence, and may remain unused.
-
-### Week 43: Break, repair, measure, and diagnose — 10 hours
-
-| Work | Time |
-|---|---:|
-| Required evidence components | 120 min |
-| Break, repair, measure, and diagnose core work | 480 min |
-
-Optional contingency capacity: 120 minutes. It is not core work, carries no required evidence, and may remain unused.
-
-### Week 44: Decide, teach, assess, and freeze — 9.5 hours
-
-| Work | Time |
-|---|---:|
-| Required evidence components | 120 min |
-| Decide, teach, assess, and freeze core work | 390 min |
-| Module teach-back | 30 min |
-| Learning log and freeze check | 30 min |
-
-Optional contingency capacity: 150 minutes. It is not core work, carries no required evidence, and may remain unused.
 ## Learn
 
-1. [Invariants and transaction boundaries](lessons/01-invariants-transaction-boundaries.md)
-2. [Histories, serializability, and isolation anomalies](lessons/02-histories-isolation-anomalies.md)
-3. [Locks, two-phase locking, deadlocks, and retries](lessons/03-locks-deadlocks-retries.md)
-4. [Optimistic control, MVCC, snapshots, and write skew](lessons/04-occ-mvcc-write-skew.md)
-5. [Constraints, authority, and atomic workflows](lessons/05-constraints-atomic-workflows.md)
-6. [WAL, checkpoints, redo/undo, and group commit](lessons/06-wal-checkpoints-recovery.md)
-7. [Backups, PITR, restore validation, and objectives](lessons/07-backups-pitr-restore.md)
-8. [Transaction and recovery decisions](lessons/08-decisions-migration-ownership.md)
+1. [Invariants and Transaction Boundaries](lessons/01-invariants-transaction-boundaries.md)
+2. [Histories, Serializability, and Isolation Anomalies](lessons/02-histories-isolation-anomalies.md)
+3. [Locks, Two-Phase Locking, Deadlocks, and Retries](lessons/03-locks-deadlocks-retries.md)
+4. [Optimistic Control, MVCC, Snapshots, and Write Skew](lessons/04-occ-mvcc-write-skew.md)
+5. [Constraints, Authority, and Atomic Workflows](lessons/05-constraints-atomic-workflows.md)
+6. [WAL, Checkpoints, Redo/Undo, and Group Commit](lessons/06-wal-checkpoints-recovery.md)
+7. [Backups, PITR, Restore Validation, and Objectives](lessons/07-backups-pitr-restore.md)
+8. [Transaction and Recovery Decisions](lessons/08-decisions-migration-ownership.md)
 
-Use the [glossary](glossary.md) after studying the mechanisms.
+- Glossary: [glossary.md](glossary.md).
 
-## Practice and independent evidence
+## Practice And Lab
 
-- Study the [Northstar worked case](case-study/northstar-observatory.md) only
-  after freezing the independent Week 29 baseline.
-- Run the [transaction and recovery lab](lab/README.md), then reproduce its
-  observable contract in the learner's chosen stack.
-- Complete the [guided exercises](exercises/exercises.md) before opening the
-  [explained answers](exercises/answer-key.md).
-- Preserve predictions, schedule files, seeds, raw JSON, hashes, environment,
-  acknowledgement points, and restore probes before interpretation.
-- Apply the method independently to commerce invariants; do not copy
-  Northstar boundaries, constraints, isolation choices, or recovery targets.
+- Guided exercises: [exercises/exercises.md](exercises/exercises.md).
+- Explained practice answers: [exercises/answer-key.md](exercises/answer-key.md).
+- Reinforcement lab: [lab/README.md](lab/README.md). Use the lab to reinforce the local mechanism; treat expanded matrices and platform-specific evidence as optional deep-dive work.
+- Resource guide: [resources.md](resources.md).
 
-This module contributes one ADR, one failure matrix, one transaction/recovery
-internals report, one disaster-recovery exercise report, and one recorded
-teach-back.
+## Quiz And Review
 
-## Assessment and completion
+- Question bank: [quiz/question-bank.json](quiz/question-bank.json).
+- Answer key: [quiz/answer-key.md](quiz/answer-key.md).
+- LLM grading prompt: [quiz/llm-grader-prompt.md](quiz/llm-grader-prompt.md).
 
-- Read the [assessment contract](assessment/README.md) and
-  [anchored rubric](assessment/rubric.md) before independent work.
-- Use the provider-neutral [evaluator prompt](assessment/evaluator-prompt.md),
-  shared JSON schema, [report template](assessment/report-template.md), and
-  [remediation map](assessment/remediation-map.md).
-- Complete all required artifacts, pass all six structural gates, average at
-  least 3.0, and avoid a zero in R07 or R08.
-- Corrections belong in dated addenda. Never overwrite the frozen baseline,
-  schedules, raw trials, first restore report, ADR, or evaluation.
+Generate a 20-question quiz from the repository root:
 
-## Evidence boundary and AI use
+```bash
+python3 scripts/generate_quiz.py --module M08 --count 20 --output quiz-m08.json
+```
 
-The lab performs local file writes and `fsync`, but its schedules and storage
-model are deliberately small. It does not prove production DBMS semantics,
-kernel/device cache behavior, distributed durability, cloud recovery, or
-business RTO/RPO. Those claims require evidence from the chosen environment.
+A module is complete when you can explain the lesson mechanisms, complete the practice, run or reason through the reinforcement lab, and score your quiz attempt with the answer key or LLM grader.
 
-AI may challenge schedules, test cases, or competing explanations. It may not
-choose the graded commerce design, invent trials, modify raw evidence, write a
-replacement graded answer, or answer during the defense. Disclose assistance.
+## Optional Project
 
-## Course-wide completion contracts
-
-- The machine-readable `module.json` time blocks are the canonical required-work budget.
-- The [factual-claims ledger](assessment/factual-claims.json) maps each local lesson to its authoritative source boundary.
-- Use the [provider-neutral evaluation workflow](../../EVALUATION_GUIDE.md) only after learner evidence is committed.
-- Use the [sealed local gate workflow](../../SOLO_GATE_GUIDE.md) when a course gate applies. Human review is optional.
-
-A frozen self-evaluation may establish **Solo Complete**; independent human or LLM review may establish **Independently Validated**. Synthetic lab values are not production measurements.
-
-## PESD 2.0 scope addition
-
-This 5-week module schedules 47 core hours. Its primary
-decision is ADR A06. The added graded scope is
-retention, deletion, legal holds, key rotation, logs, replicas, exports, backups, restore-time policy replay, and resurrection prevention. See Lesson 8, the final guided exercise, final worksheet,
-rubric anchors, and remediation map for the integrated evidence contract.
+Apply Transactions, Concurrency, and Recovery to a small system you know. Write a short design note, experiment report, or implementation summary only if you want deeper practice.

@@ -1,0 +1,1926 @@
+{
+  "module_id": "M01",
+  "title": "Architectural Judgment",
+  "questions": [
+    {
+      "question_id": "M01-Q001",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "architectural-judgment",
+        "architectural-judgment",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Architectural Judgment' in Architectural Judgment?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to translate an ambiguous product request into users, outcomes, scope, constraints, and measurable acceptance conditions.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to translate an ambiguous product request into users, outcomes, scope, constraints, and measurable acceptance conditions.",
+      "explanation": "Use Architectural Judgment to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M01-Q002",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "architectural-judgment",
+        "problem-framing-and-workloads",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Problem Framing and Workloads' supports this outcome: Build a workload model with normal, peak, burst, projected, skew, and uncertainty dimensions.",
+      "correct_answer": "A strong answer defines the mechanism from 'Problem Framing and Workloads', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Problem Framing and Workloads to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M01-Q003",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "architectural-judgment",
+        "invariants-and-state-ownership",
+        "synthesis"
+      ],
+      "prompt": "For 'Invariants and State Ownership', what quantities, units, or thresholds would you calculate before trusting a design claim about: Express business, data, security, and operational invariants and assign authoritative state ownership.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. After this lesson, you can: - Distinguish an invariant from a goal, process, or quality target.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M01-Q004",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "architectural-judgment",
+        "quality-attribute-scenarios",
+        "application"
+      ],
+      "prompt": "A learner applies 'Quality-Attribute Scenarios' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating Quality-Attribute Scenarios as a label instead of explaining the causal mechanism.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M01-Q005",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "architectural-judgment",
+        "context-and-boundaries",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Context and Boundaries'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for communicate system context, boundaries, flows, trust, and ownership without prematurely choosing deployable services..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Official C4 modelhttps://c4model.com/ - Creator-led C4 videohttps://www.youtube.com/watch?v=KvoBrUd1-5E - Next: Complete the Week 1 baseline, then study Lesson 606-constraints-options-and-reversibility.md.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M01-Q006",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "architectural-judgment",
+        "constraints-options-and-reversibility",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Constraints, Options, and Reversibility' in Architectural Judgment?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to compare simple, moderate, and distributed designs using shared drivers, cost boundaries, evidence, and reversal conditions.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to compare simple, moderate, and distributed designs using shared drivers, cost boundaries, evidence, and reversal conditions.",
+      "explanation": "Use Constraints, Options, and Reversibility to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M01-Q007",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "architectural-judgment",
+        "failure-models-and-adversarial-review",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Failure Models and Adversarial Review' supports this outcome: State a scoped failure and overload model and expose unsupported claims through adversarial review.",
+      "correct_answer": "A strong answer defines the mechanism from 'Failure Models and Adversarial Review', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Failure Models and Adversarial Review to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M01-Q008",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "architectural-judgment",
+        "decisions-rfcs-and-defense",
+        "synthesis"
+      ],
+      "prompt": "For 'Decisions, RFCs, and Defense', what quantities, units, or thresholds would you calculate before trusting a design claim about: Write and defend an evidence-based RFC, resolve disagreement through decision drivers, and teach the causal model.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. After this lesson, you can: - Decide when to use an ADR, RFC, experiment report, or risk entry.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M01-Q009",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "architectural-judgment",
+        "architectural-judgment",
+        "application"
+      ],
+      "prompt": "A learner applies 'Architectural Judgment' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating Architectural Judgment as a label instead of explaining the causal mechanism.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M01-Q010",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "architectural-judgment",
+        "problem-framing-and-workloads",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Problem Framing and Workloads'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for build a workload model with normal, peak, burst, projected, skew, and uncertainty dimensions..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Google SRE Workbook, \u201cImplementing SLOs\u201dhttps://sre.google/workbook/implementing-slos/ - Module resource assignment../resources.mdgoogle-sre-workbook-implementing-slos - Next: Lesson 303-invariants-and-state-ownership.md",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M01-Q011",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "architectural-judgment",
+        "invariants-and-state-ownership",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Invariants and State Ownership' in Architectural Judgment?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to express business, data, security, and operational invariants and assign authoritative state ownership.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to express business, data, security, and operational invariants and assign authoritative state ownership.",
+      "explanation": "Use Invariants and State Ownership to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M01-Q012",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "architectural-judgment",
+        "quality-attribute-scenarios",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Quality-Attribute Scenarios' supports this outcome: Write measurable quality-attribute scenarios tied to user journeys and evidence collection.",
+      "correct_answer": "A strong answer defines the mechanism from 'Quality-Attribute Scenarios', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Quality-Attribute Scenarios to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M01-Q013",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "architectural-judgment",
+        "context-and-boundaries",
+        "synthesis"
+      ],
+      "prompt": "For 'Context and Boundaries', what quantities, units, or thresholds would you calculate before trusting a design claim about: Communicate system context, boundaries, flows, trust, and ownership without prematurely choosing deployable services.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. After this lesson, you can: - Draw a system-context diagram that communicates users, external systems, responsibilities, and meaningful relationships.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M01-Q014",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "architectural-judgment",
+        "constraints-options-and-reversibility",
+        "application"
+      ],
+      "prompt": "A learner applies 'Constraints, Options, and Reversibility' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating Constraints, Options, and Reversibility as a label instead of explaining the causal mechanism.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M01-Q015",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "architectural-judgment",
+        "failure-models-and-adversarial-review",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Failure Models and Adversarial Review'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for state a scoped failure and overload model and expose unsupported claims through adversarial review..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - AWS Builder Center, \u201cChallenges with Distributed Systems\u201dhttps://builder.aws.com/content/3F08f7GPFiZMCgXD8gny6OjxR0Z/challenges-with-distributed-systems - CMU SEI, Early Architecture Analysishttps://www.sei.cmu.edu/library/early-analysis-of-software-architec",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M01-Q016",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "architectural-judgment",
+        "decisions-rfcs-and-defense",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Decisions, RFCs, and Defense' in Architectural Judgment?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to write and defend an evidence-based rfc, resolve disagreement through decision drivers, and teach the causal model.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to write and defend an evidence-based rfc, resolve disagreement through decision drivers, and teach the causal model.",
+      "explanation": "Use Decisions, RFCs, and Defense to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M01-Q017",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "architectural-judgment",
+        "architectural-judgment",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Architectural Judgment' supports this outcome: Translate an ambiguous product request into users, outcomes, scope, constraints, and measurable acceptance conditions.",
+      "correct_answer": "A strong answer defines the mechanism from 'Architectural Judgment', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Architectural Judgment to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M01-Q018",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "architectural-judgment",
+        "problem-framing-and-workloads",
+        "synthesis"
+      ],
+      "prompt": "For 'Problem Framing and Workloads', what quantities, units, or thresholds would you calculate before trusting a design claim about: Build a workload model with normal, peak, burst, projected, skew, and uncertainty dimensions.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. After this lesson, you can: - Express a critical user journey and its measurable business outcome.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M01-Q019",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "architectural-judgment",
+        "invariants-and-state-ownership",
+        "application"
+      ],
+      "prompt": "A learner applies 'Invariants and State Ownership' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating Invariants and State Ownership as a label instead of explaining the causal mechanism.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M01-Q020",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "architectural-judgment",
+        "quality-attribute-scenarios",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Quality-Attribute Scenarios'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for write measurable quality-attribute scenarios tied to user journeys and evidence collection..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - CMU SEI, \u201cReasoning About Software Quality Attributes\u201dhttps://www.sei.cmu.edu/library/reasoning-about-software-quality-attributes/ - CMU SEI Quality Attribute Workshop webcasthttps://www.sei.cmu.edu/library/architecting-in-a-complex-world-eliciting-and-speci",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M01-Q021",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "architectural-judgment",
+        "context-and-boundaries",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Context and Boundaries' in Architectural Judgment?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to communicate system context, boundaries, flows, trust, and ownership without prematurely choosing deployable services.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to communicate system context, boundaries, flows, trust, and ownership without prematurely choosing deployable services.",
+      "explanation": "Use Context and Boundaries to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M01-Q022",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "architectural-judgment",
+        "constraints-options-and-reversibility",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Constraints, Options, and Reversibility' supports this outcome: Compare simple, moderate, and distributed designs using shared drivers, cost boundaries, evidence, and reversal conditions.",
+      "correct_answer": "A strong answer defines the mechanism from 'Constraints, Options, and Reversibility', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Constraints, Options, and Reversibility to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M01-Q023",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "architectural-judgment",
+        "failure-models-and-adversarial-review",
+        "synthesis"
+      ],
+      "prompt": "For 'Failure Models and Adversarial Review', what quantities, units, or thresholds would you calculate before trusting a design claim about: State a scoped failure and overload model and expose unsupported claims through adversarial review.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. After this lesson, you can: - State a failure model with faults, combinations, timing, and exclusions.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M01-Q024",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "architectural-judgment",
+        "decisions-rfcs-and-defense",
+        "application"
+      ],
+      "prompt": "A learner applies 'Decisions, RFCs, and Defense' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating Decisions, RFCs, and Defense as a label instead of explaining the causal mechanism.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M01-Q025",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "architectural-judgment",
+        "architectural-judgment",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Architectural Judgment'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for translate an ambiguous product request into users, outcomes, scope, constraints, and measurable acceptance conditions..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Course foundation: 00COURSESYLLABUS.md../../../00COURSESYLLABUS.md - Decision records: Michael Nygard, \u201cDocumenting Architecture Decisions\u201dhttps://cognitect.com/blog/2011/11/15/documenting-architecture-decisions - Next: Lesson 202-problem-framing-and-workloa",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M01-Q026",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "architectural-judgment",
+        "problem-framing-and-workloads",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Problem Framing and Workloads' in Architectural Judgment?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to build a workload model with normal, peak, burst, projected, skew, and uncertainty dimensions.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to build a workload model with normal, peak, burst, projected, skew, and uncertainty dimensions.",
+      "explanation": "Use Problem Framing and Workloads to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M01-Q027",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "architectural-judgment",
+        "invariants-and-state-ownership",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Invariants and State Ownership' supports this outcome: Express business, data, security, and operational invariants and assign authoritative state ownership.",
+      "correct_answer": "A strong answer defines the mechanism from 'Invariants and State Ownership', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Invariants and State Ownership to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M01-Q028",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "architectural-judgment",
+        "quality-attribute-scenarios",
+        "synthesis"
+      ],
+      "prompt": "For 'Quality-Attribute Scenarios', what quantities, units, or thresholds would you calculate before trusting a design claim about: Write measurable quality-attribute scenarios tied to user journeys and evidence collection.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. After this lesson, you can: - Explain why \u201cfast,\u201d \u201creliable,\u201d and \u201csecure\u201d are not requirements.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M01-Q029",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "architectural-judgment",
+        "context-and-boundaries",
+        "application"
+      ],
+      "prompt": "A learner applies 'Context and Boundaries' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating Context and Boundaries as a label instead of explaining the causal mechanism.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M01-Q030",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "architectural-judgment",
+        "constraints-options-and-reversibility",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Constraints, Options, and Reversibility'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for compare simple, moderate, and distributed designs using shared drivers, cost boundaries, evidence, and reversal conditions..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Michael Nygard, \u201cDocumenting Architecture Decisions\u201dhttps://cognitect.com/blog/2011/11/15/documenting-architecture-decisions - Next: Lesson 707-failure-models-and-adversarial-review.md",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M01-Q031",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "architectural-judgment",
+        "failure-models-and-adversarial-review",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Failure Models and Adversarial Review' in Architectural Judgment?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to state a scoped failure and overload model and expose unsupported claims through adversarial review.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to state a scoped failure and overload model and expose unsupported claims through adversarial review.",
+      "explanation": "Use Failure Models and Adversarial Review to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M01-Q032",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "architectural-judgment",
+        "decisions-rfcs-and-defense",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Decisions, RFCs, and Defense' supports this outcome: Write and defend an evidence-based RFC, resolve disagreement through decision drivers, and teach the causal model.",
+      "correct_answer": "A strong answer defines the mechanism from 'Decisions, RFCs, and Defense', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Decisions, RFCs, and Defense to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M01-Q033",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "architectural-judgment",
+        "architectural-judgment",
+        "synthesis"
+      ],
+      "prompt": "For 'Architectural Judgment', what quantities, units, or thresholds would you calculate before trusting a design claim about: Translate an ambiguous product request into users, outcomes, scope, constraints, and measurable acceptance conditions.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. After this lesson, you can: - Separate a system-design problem from a technology-selection exercise.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M01-Q034",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "architectural-judgment",
+        "problem-framing-and-workloads",
+        "application"
+      ],
+      "prompt": "A learner applies 'Problem Framing and Workloads' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating Problem Framing and Workloads as a label instead of explaining the causal mechanism.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M01-Q035",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "architectural-judgment",
+        "invariants-and-state-ownership",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Invariants and State Ownership'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for express business, data, security, and operational invariants and assign authoritative state ownership..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - synthesis project invariant requirements: 00COURSESYLLABUS.md../../../00COURSESYLLABUS.md - Security depth appears in Module 13; transaction enforcement appears in Module 8.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M01-Q036",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "architectural-judgment",
+        "quality-attribute-scenarios",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Quality-Attribute Scenarios' in Architectural Judgment?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to write measurable quality-attribute scenarios tied to user journeys and evidence collection.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to write measurable quality-attribute scenarios tied to user journeys and evidence collection.",
+      "explanation": "Use Quality-Attribute Scenarios to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M01-Q037",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "architectural-judgment",
+        "context-and-boundaries",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Context and Boundaries' supports this outcome: Communicate system context, boundaries, flows, trust, and ownership without prematurely choosing deployable services.",
+      "correct_answer": "A strong answer defines the mechanism from 'Context and Boundaries', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Context and Boundaries to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M01-Q038",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "architectural-judgment",
+        "constraints-options-and-reversibility",
+        "synthesis"
+      ],
+      "prompt": "For 'Constraints, Options, and Reversibility', what quantities, units, or thresholds would you calculate before trusting a design claim about: Compare simple, moderate, and distributed designs using shared drivers, cost boundaries, evidence, and reversal conditions.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. After this lesson, you can: - Separate constraints, assumptions, preferences, and decision drivers.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M01-Q039",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "architectural-judgment",
+        "failure-models-and-adversarial-review",
+        "application"
+      ],
+      "prompt": "A learner applies 'Failure Models and Adversarial Review' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating Failure Models and Adversarial Review as a label instead of explaining the causal mechanism.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M01-Q040",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "architectural-judgment",
+        "decisions-rfcs-and-defense",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Decisions, RFCs, and Defense'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for write and defend an evidence-based rfc, resolve disagreement through decision drivers, and teach the causal model..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Michael Nygard, \u201cDocumenting Architecture Decisions\u201dhttps://cognitect.com/blog/2011/11/15/documenting-architecture-decisions - CMU SEI, Architecture Tradeoff Analysis Method collectionhttps://www.sei.cmu.edu/library/architecture-tradeoff-analysis-method-coll",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M01-Q041",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "architectural-judgment",
+        "architectural-judgment",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Architectural Judgment' in Architectural Judgment?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to translate an ambiguous product request into users, outcomes, scope, constraints, and measurable acceptance conditions.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to translate an ambiguous product request into users, outcomes, scope, constraints, and measurable acceptance conditions.",
+      "explanation": "Use Architectural Judgment to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M01-Q042",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "architectural-judgment",
+        "problem-framing-and-workloads",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Problem Framing and Workloads' supports this outcome: Build a workload model with normal, peak, burst, projected, skew, and uncertainty dimensions.",
+      "correct_answer": "A strong answer defines the mechanism from 'Problem Framing and Workloads', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Problem Framing and Workloads to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M01-Q043",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "architectural-judgment",
+        "invariants-and-state-ownership",
+        "synthesis"
+      ],
+      "prompt": "For 'Invariants and State Ownership', what quantities, units, or thresholds would you calculate before trusting a design claim about: Express business, data, security, and operational invariants and assign authoritative state ownership.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. After this lesson, you can: - Distinguish an invariant from a goal, process, or quality target.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M01-Q044",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "architectural-judgment",
+        "quality-attribute-scenarios",
+        "application"
+      ],
+      "prompt": "A learner applies 'Quality-Attribute Scenarios' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating Quality-Attribute Scenarios as a label instead of explaining the causal mechanism.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M01-Q045",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "architectural-judgment",
+        "context-and-boundaries",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Context and Boundaries'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for communicate system context, boundaries, flows, trust, and ownership without prematurely choosing deployable services..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Official C4 modelhttps://c4model.com/ - Creator-led C4 videohttps://www.youtube.com/watch?v=KvoBrUd1-5E - Next: Complete the Week 1 baseline, then study Lesson 606-constraints-options-and-reversibility.md.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M01-Q046",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "architectural-judgment",
+        "constraints-options-and-reversibility",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Constraints, Options, and Reversibility' in Architectural Judgment?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to compare simple, moderate, and distributed designs using shared drivers, cost boundaries, evidence, and reversal conditions.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to compare simple, moderate, and distributed designs using shared drivers, cost boundaries, evidence, and reversal conditions.",
+      "explanation": "Use Constraints, Options, and Reversibility to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M01-Q047",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "architectural-judgment",
+        "failure-models-and-adversarial-review",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Failure Models and Adversarial Review' supports this outcome: State a scoped failure and overload model and expose unsupported claims through adversarial review.",
+      "correct_answer": "A strong answer defines the mechanism from 'Failure Models and Adversarial Review', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Failure Models and Adversarial Review to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M01-Q048",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "architectural-judgment",
+        "decisions-rfcs-and-defense",
+        "synthesis"
+      ],
+      "prompt": "For 'Decisions, RFCs, and Defense', what quantities, units, or thresholds would you calculate before trusting a design claim about: Write and defend an evidence-based RFC, resolve disagreement through decision drivers, and teach the causal model.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. After this lesson, you can: - Decide when to use an ADR, RFC, experiment report, or risk entry.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M01-Q049",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "architectural-judgment",
+        "architectural-judgment",
+        "application"
+      ],
+      "prompt": "A learner applies 'Architectural Judgment' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating Architectural Judgment as a label instead of explaining the causal mechanism.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M01-Q050",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "architectural-judgment",
+        "problem-framing-and-workloads",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Problem Framing and Workloads'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for build a workload model with normal, peak, burst, projected, skew, and uncertainty dimensions..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Google SRE Workbook, \u201cImplementing SLOs\u201dhttps://sre.google/workbook/implementing-slos/ - Module resource assignment../resources.mdgoogle-sre-workbook-implementing-slos - Next: Lesson 303-invariants-and-state-ownership.md",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M01-Q051",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "architectural-judgment",
+        "invariants-and-state-ownership",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Invariants and State Ownership' in Architectural Judgment?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to express business, data, security, and operational invariants and assign authoritative state ownership.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to express business, data, security, and operational invariants and assign authoritative state ownership.",
+      "explanation": "Use Invariants and State Ownership to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M01-Q052",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "architectural-judgment",
+        "quality-attribute-scenarios",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Quality-Attribute Scenarios' supports this outcome: Write measurable quality-attribute scenarios tied to user journeys and evidence collection.",
+      "correct_answer": "A strong answer defines the mechanism from 'Quality-Attribute Scenarios', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Quality-Attribute Scenarios to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M01-Q053",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "architectural-judgment",
+        "context-and-boundaries",
+        "synthesis"
+      ],
+      "prompt": "For 'Context and Boundaries', what quantities, units, or thresholds would you calculate before trusting a design claim about: Communicate system context, boundaries, flows, trust, and ownership without prematurely choosing deployable services.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. After this lesson, you can: - Draw a system-context diagram that communicates users, external systems, responsibilities, and meaningful relationships.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M01-Q054",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "architectural-judgment",
+        "constraints-options-and-reversibility",
+        "application"
+      ],
+      "prompt": "A learner applies 'Constraints, Options, and Reversibility' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating Constraints, Options, and Reversibility as a label instead of explaining the causal mechanism.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M01-Q055",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "architectural-judgment",
+        "failure-models-and-adversarial-review",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Failure Models and Adversarial Review'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for state a scoped failure and overload model and expose unsupported claims through adversarial review..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - AWS Builder Center, \u201cChallenges with Distributed Systems\u201dhttps://builder.aws.com/content/3F08f7GPFiZMCgXD8gny6OjxR0Z/challenges-with-distributed-systems - CMU SEI, Early Architecture Analysishttps://www.sei.cmu.edu/library/early-analysis-of-software-architec",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M01-Q056",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "architectural-judgment",
+        "decisions-rfcs-and-defense",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Decisions, RFCs, and Defense' in Architectural Judgment?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to write and defend an evidence-based rfc, resolve disagreement through decision drivers, and teach the causal model.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to write and defend an evidence-based rfc, resolve disagreement through decision drivers, and teach the causal model.",
+      "explanation": "Use Decisions, RFCs, and Defense to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M01-Q057",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "architectural-judgment",
+        "architectural-judgment",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Architectural Judgment' supports this outcome: Translate an ambiguous product request into users, outcomes, scope, constraints, and measurable acceptance conditions.",
+      "correct_answer": "A strong answer defines the mechanism from 'Architectural Judgment', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Architectural Judgment to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M01-Q058",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "architectural-judgment",
+        "problem-framing-and-workloads",
+        "synthesis"
+      ],
+      "prompt": "For 'Problem Framing and Workloads', what quantities, units, or thresholds would you calculate before trusting a design claim about: Build a workload model with normal, peak, burst, projected, skew, and uncertainty dimensions.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. After this lesson, you can: - Express a critical user journey and its measurable business outcome.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M01-Q059",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "architectural-judgment",
+        "invariants-and-state-ownership",
+        "application"
+      ],
+      "prompt": "A learner applies 'Invariants and State Ownership' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating Invariants and State Ownership as a label instead of explaining the causal mechanism.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M01-Q060",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "architectural-judgment",
+        "quality-attribute-scenarios",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Quality-Attribute Scenarios'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for write measurable quality-attribute scenarios tied to user journeys and evidence collection..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - CMU SEI, \u201cReasoning About Software Quality Attributes\u201dhttps://www.sei.cmu.edu/library/reasoning-about-software-quality-attributes/ - CMU SEI Quality Attribute Workshop webcasthttps://www.sei.cmu.edu/library/architecting-in-a-complex-world-eliciting-and-speci",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M01-Q061",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "architectural-judgment",
+        "context-and-boundaries",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Context and Boundaries' in Architectural Judgment?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to communicate system context, boundaries, flows, trust, and ownership without prematurely choosing deployable services.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to communicate system context, boundaries, flows, trust, and ownership without prematurely choosing deployable services.",
+      "explanation": "Use Context and Boundaries to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M01-Q062",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "architectural-judgment",
+        "constraints-options-and-reversibility",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Constraints, Options, and Reversibility' supports this outcome: Compare simple, moderate, and distributed designs using shared drivers, cost boundaries, evidence, and reversal conditions.",
+      "correct_answer": "A strong answer defines the mechanism from 'Constraints, Options, and Reversibility', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Constraints, Options, and Reversibility to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M01-Q063",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "architectural-judgment",
+        "failure-models-and-adversarial-review",
+        "synthesis"
+      ],
+      "prompt": "For 'Failure Models and Adversarial Review', what quantities, units, or thresholds would you calculate before trusting a design claim about: State a scoped failure and overload model and expose unsupported claims through adversarial review.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. After this lesson, you can: - State a failure model with faults, combinations, timing, and exclusions.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M01-Q064",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "architectural-judgment",
+        "decisions-rfcs-and-defense",
+        "application"
+      ],
+      "prompt": "A learner applies 'Decisions, RFCs, and Defense' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating Decisions, RFCs, and Defense as a label instead of explaining the causal mechanism.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M01-Q065",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "architectural-judgment",
+        "architectural-judgment",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Architectural Judgment'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for translate an ambiguous product request into users, outcomes, scope, constraints, and measurable acceptance conditions..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Course foundation: 00COURSESYLLABUS.md../../../00COURSESYLLABUS.md - Decision records: Michael Nygard, \u201cDocumenting Architecture Decisions\u201dhttps://cognitect.com/blog/2011/11/15/documenting-architecture-decisions - Next: Lesson 202-problem-framing-and-workloa",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M01-Q066",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "architectural-judgment",
+        "problem-framing-and-workloads",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Problem Framing and Workloads' in Architectural Judgment?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to build a workload model with normal, peak, burst, projected, skew, and uncertainty dimensions.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to build a workload model with normal, peak, burst, projected, skew, and uncertainty dimensions.",
+      "explanation": "Use Problem Framing and Workloads to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M01-Q067",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "architectural-judgment",
+        "invariants-and-state-ownership",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Invariants and State Ownership' supports this outcome: Express business, data, security, and operational invariants and assign authoritative state ownership.",
+      "correct_answer": "A strong answer defines the mechanism from 'Invariants and State Ownership', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Invariants and State Ownership to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M01-Q068",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "architectural-judgment",
+        "quality-attribute-scenarios",
+        "synthesis"
+      ],
+      "prompt": "For 'Quality-Attribute Scenarios', what quantities, units, or thresholds would you calculate before trusting a design claim about: Write measurable quality-attribute scenarios tied to user journeys and evidence collection.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. After this lesson, you can: - Explain why \u201cfast,\u201d \u201creliable,\u201d and \u201csecure\u201d are not requirements.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M01-Q069",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "architectural-judgment",
+        "context-and-boundaries",
+        "application"
+      ],
+      "prompt": "A learner applies 'Context and Boundaries' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating Context and Boundaries as a label instead of explaining the causal mechanism.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M01-Q070",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "architectural-judgment",
+        "constraints-options-and-reversibility",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Constraints, Options, and Reversibility'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for compare simple, moderate, and distributed designs using shared drivers, cost boundaries, evidence, and reversal conditions..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Michael Nygard, \u201cDocumenting Architecture Decisions\u201dhttps://cognitect.com/blog/2011/11/15/documenting-architecture-decisions - Next: Lesson 707-failure-models-and-adversarial-review.md",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M01-Q071",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "architectural-judgment",
+        "failure-models-and-adversarial-review",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Failure Models and Adversarial Review' in Architectural Judgment?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to state a scoped failure and overload model and expose unsupported claims through adversarial review.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to state a scoped failure and overload model and expose unsupported claims through adversarial review.",
+      "explanation": "Use Failure Models and Adversarial Review to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M01-Q072",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "architectural-judgment",
+        "decisions-rfcs-and-defense",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Decisions, RFCs, and Defense' supports this outcome: Write and defend an evidence-based RFC, resolve disagreement through decision drivers, and teach the causal model.",
+      "correct_answer": "A strong answer defines the mechanism from 'Decisions, RFCs, and Defense', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Decisions, RFCs, and Defense to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M01-Q073",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "architectural-judgment",
+        "architectural-judgment",
+        "synthesis"
+      ],
+      "prompt": "For 'Architectural Judgment', what quantities, units, or thresholds would you calculate before trusting a design claim about: Translate an ambiguous product request into users, outcomes, scope, constraints, and measurable acceptance conditions.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. After this lesson, you can: - Separate a system-design problem from a technology-selection exercise.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M01-Q074",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "architectural-judgment",
+        "problem-framing-and-workloads",
+        "application"
+      ],
+      "prompt": "A learner applies 'Problem Framing and Workloads' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating Problem Framing and Workloads as a label instead of explaining the causal mechanism.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M01-Q075",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "architectural-judgment",
+        "invariants-and-state-ownership",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Invariants and State Ownership'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for express business, data, security, and operational invariants and assign authoritative state ownership..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - synthesis project invariant requirements: 00COURSESYLLABUS.md../../../00COURSESYLLABUS.md - Security depth appears in Module 13; transaction enforcement appears in Module 8.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M01-Q076",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "architectural-judgment",
+        "quality-attribute-scenarios",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Quality-Attribute Scenarios' in Architectural Judgment?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to write measurable quality-attribute scenarios tied to user journeys and evidence collection.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to write measurable quality-attribute scenarios tied to user journeys and evidence collection.",
+      "explanation": "Use Quality-Attribute Scenarios to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M01-Q077",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "architectural-judgment",
+        "context-and-boundaries",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Context and Boundaries' supports this outcome: Communicate system context, boundaries, flows, trust, and ownership without prematurely choosing deployable services.",
+      "correct_answer": "A strong answer defines the mechanism from 'Context and Boundaries', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Context and Boundaries to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M01-Q078",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "architectural-judgment",
+        "constraints-options-and-reversibility",
+        "synthesis"
+      ],
+      "prompt": "For 'Constraints, Options, and Reversibility', what quantities, units, or thresholds would you calculate before trusting a design claim about: Compare simple, moderate, and distributed designs using shared drivers, cost boundaries, evidence, and reversal conditions.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. After this lesson, you can: - Separate constraints, assumptions, preferences, and decision drivers.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M01-Q079",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "architectural-judgment",
+        "failure-models-and-adversarial-review",
+        "application"
+      ],
+      "prompt": "A learner applies 'Failure Models and Adversarial Review' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating Failure Models and Adversarial Review as a label instead of explaining the causal mechanism.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M01-Q080",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "architectural-judgment",
+        "decisions-rfcs-and-defense",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Decisions, RFCs, and Defense'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for write and defend an evidence-based rfc, resolve disagreement through decision drivers, and teach the causal model..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Michael Nygard, \u201cDocumenting Architecture Decisions\u201dhttps://cognitect.com/blog/2011/11/15/documenting-architecture-decisions - CMU SEI, Architecture Tradeoff Analysis Method collectionhttps://www.sei.cmu.edu/library/architecture-tradeoff-analysis-method-coll",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M01-Q081",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "architectural-judgment",
+        "architectural-judgment",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Architectural Judgment' in Architectural Judgment?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to translate an ambiguous product request into users, outcomes, scope, constraints, and measurable acceptance conditions.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to translate an ambiguous product request into users, outcomes, scope, constraints, and measurable acceptance conditions.",
+      "explanation": "Use Architectural Judgment to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M01-Q082",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "architectural-judgment",
+        "problem-framing-and-workloads",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Problem Framing and Workloads' supports this outcome: Build a workload model with normal, peak, burst, projected, skew, and uncertainty dimensions.",
+      "correct_answer": "A strong answer defines the mechanism from 'Problem Framing and Workloads', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Problem Framing and Workloads to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M01-Q083",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "architectural-judgment",
+        "invariants-and-state-ownership",
+        "synthesis"
+      ],
+      "prompt": "For 'Invariants and State Ownership', what quantities, units, or thresholds would you calculate before trusting a design claim about: Express business, data, security, and operational invariants and assign authoritative state ownership.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. After this lesson, you can: - Distinguish an invariant from a goal, process, or quality target.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M01-Q084",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "architectural-judgment",
+        "quality-attribute-scenarios",
+        "application"
+      ],
+      "prompt": "A learner applies 'Quality-Attribute Scenarios' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating Quality-Attribute Scenarios as a label instead of explaining the causal mechanism.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M01-Q085",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "architectural-judgment",
+        "context-and-boundaries",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Context and Boundaries'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for communicate system context, boundaries, flows, trust, and ownership without prematurely choosing deployable services..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Official C4 modelhttps://c4model.com/ - Creator-led C4 videohttps://www.youtube.com/watch?v=KvoBrUd1-5E - Next: Complete the Week 1 baseline, then study Lesson 606-constraints-options-and-reversibility.md.",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M01-Q086",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "architectural-judgment",
+        "constraints-options-and-reversibility",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Constraints, Options, and Reversibility' in Architectural Judgment?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to compare simple, moderate, and distributed designs using shared drivers, cost boundaries, evidence, and reversal conditions.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to compare simple, moderate, and distributed designs using shared drivers, cost boundaries, evidence, and reversal conditions.",
+      "explanation": "Use Constraints, Options, and Reversibility to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M01-Q087",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "architectural-judgment",
+        "failure-models-and-adversarial-review",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Failure Models and Adversarial Review' supports this outcome: State a scoped failure and overload model and expose unsupported claims through adversarial review.",
+      "correct_answer": "A strong answer defines the mechanism from 'Failure Models and Adversarial Review', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Failure Models and Adversarial Review to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M01-Q088",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "architectural-judgment",
+        "decisions-rfcs-and-defense",
+        "synthesis"
+      ],
+      "prompt": "For 'Decisions, RFCs, and Defense', what quantities, units, or thresholds would you calculate before trusting a design claim about: Write and defend an evidence-based RFC, resolve disagreement through decision drivers, and teach the causal model.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. After this lesson, you can: - Decide when to use an ADR, RFC, experiment report, or risk entry.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M01-Q089",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "architectural-judgment",
+        "architectural-judgment",
+        "application"
+      ],
+      "prompt": "A learner applies 'Architectural Judgment' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating Architectural Judgment as a label instead of explaining the causal mechanism.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M01-Q090",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "architectural-judgment",
+        "problem-framing-and-workloads",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Problem Framing and Workloads'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for build a workload model with normal, peak, burst, projected, skew, and uncertainty dimensions..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Google SRE Workbook, \u201cImplementing SLOs\u201dhttps://sre.google/workbook/implementing-slos/ - Module resource assignment../resources.mdgoogle-sre-workbook-implementing-slos - Next: Lesson 303-invariants-and-state-ownership.md",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M01-Q091",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "architectural-judgment",
+        "invariants-and-state-ownership",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Invariants and State Ownership' in Architectural Judgment?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to express business, data, security, and operational invariants and assign authoritative state ownership.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to express business, data, security, and operational invariants and assign authoritative state ownership.",
+      "explanation": "Use Invariants and State Ownership to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M01-Q092",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "architectural-judgment",
+        "quality-attribute-scenarios",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Quality-Attribute Scenarios' supports this outcome: Write measurable quality-attribute scenarios tied to user journeys and evidence collection.",
+      "correct_answer": "A strong answer defines the mechanism from 'Quality-Attribute Scenarios', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Quality-Attribute Scenarios to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M01-Q093",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "architectural-judgment",
+        "context-and-boundaries",
+        "synthesis"
+      ],
+      "prompt": "For 'Context and Boundaries', what quantities, units, or thresholds would you calculate before trusting a design claim about: Communicate system context, boundaries, flows, trust, and ownership without prematurely choosing deployable services.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. After this lesson, you can: - Draw a system-context diagram that communicates users, external systems, responsibilities, and meaningful relationships.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M01-Q094",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "architectural-judgment",
+        "constraints-options-and-reversibility",
+        "application"
+      ],
+      "prompt": "A learner applies 'Constraints, Options, and Reversibility' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating Constraints, Options, and Reversibility as a label instead of explaining the causal mechanism.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M01-Q095",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L07"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "architectural-judgment",
+        "failure-models-and-adversarial-review",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Failure Models and Adversarial Review'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for state a scoped failure and overload model and expose unsupported claims through adversarial review..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - AWS Builder Center, \u201cChallenges with Distributed Systems\u201dhttps://builder.aws.com/content/3F08f7GPFiZMCgXD8gny6OjxR0Z/challenges-with-distributed-systems - CMU SEI, Early Architecture Analysishttps://www.sei.cmu.edu/library/early-analysis-of-software-architec",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    },
+    {
+      "question_id": "M01-Q096",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L08"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "architectural-judgment",
+        "decisions-rfcs-and-defense",
+        "recall"
+      ],
+      "prompt": "Which approach best applies 'Decisions, RFCs, and Defense' in Architectural Judgment?",
+      "choices": [
+        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to write and defend an evidence-based rfc, resolve disagreement through decision drivers, and teach the causal model.",
+        "Choose the most familiar technology first, then justify it with broad labels.",
+        "Skip assumptions and use average-case behavior as the complete answer.",
+        "Treat a successful local run as proof that all production conditions are covered."
+      ],
+      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to write and defend an evidence-based rfc, resolve disagreement through decision drivers, and teach the causal model.",
+      "explanation": "Use Decisions, RFCs, and Defense to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+    },
+    {
+      "question_id": "M01-Q097",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "short_answer",
+      "difficulty": "application",
+      "tags": [
+        "architectural-judgment",
+        "architectural-judgment",
+        "application"
+      ],
+      "prompt": "In 3-5 sentences, explain how 'Architectural Judgment' supports this outcome: Translate an ambiguous product request into users, outcomes, scope, constraints, and measurable acceptance conditions.",
+      "correct_answer": "A strong answer defines the mechanism from 'Architectural Judgment', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
+      "explanation": "Use Architectural Judgment to reason from explicit assumptions to observable behavior.",
+      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+    },
+    {
+      "question_id": "M01-Q098",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "architectural-judgment",
+        "problem-framing-and-workloads",
+        "synthesis"
+      ],
+      "prompt": "For 'Problem Framing and Workloads', what quantities, units, or thresholds would you calculate before trusting a design claim about: Build a workload model with normal, peak, burst, projected, skew, and uncertainty dimensions.",
+      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
+      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. After this lesson, you can: - Express a critical user journey and its measurable business outcome.",
+      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+    },
+    {
+      "question_id": "M01-Q099",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "architectural-judgment",
+        "invariants-and-state-ownership",
+        "application"
+      ],
+      "prompt": "A learner applies 'Invariants and State Ownership' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating Invariants and State Ownership as a label instead of explaining the causal mechanism.",
+      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
+      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+    },
+    {
+      "question_id": "M01-Q100",
+      "module_id": "M01",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "architectural-judgment",
+        "quality-attribute-scenarios",
+        "synthesis"
+      ],
+      "prompt": "You must make a design choice involving 'Quality-Attribute Scenarios'. What tradeoff would you document, and what evidence would make you reverse the choice?",
+      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for write measurable quality-attribute scenarios tied to user journeys and evidence collection..",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - CMU SEI, \u201cReasoning About Software Quality Attributes\u201dhttps://www.sei.cmu.edu/library/reasoning-about-software-quality-attributes/ - CMU SEI Quality Attribute Workshop webcasthttps://www.sei.cmu.edu/library/architecting-in-a-complex-world-eliciting-and-speci",
+      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+    }
+  ]
+}

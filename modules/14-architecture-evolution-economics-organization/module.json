@@ -1,1088 +1,276 @@
 {
   "$schema": "../../schemas/module.schema.json",
+  "course_id": "CSSDM",
+  "course_version": "3.0-solo",
   "id": "M14",
   "title": "Architecture Evolution, Economics, and Organization",
-  "weeks": [
+  "status": "ready",
+  "focus": "Select modular-monolith, service, or event boundaries from change, workload, failure, data-authority, security, and ownership evidence.",
+  "pacing": {
+    "review": "Skim lessons, answer self-checks, and take one generated quiz.",
+    "standard": "Study lessons, complete guided practice, use the answer key, and take one or more generated quizzes.",
+    "deep": "Complete standard work plus the reinforcement lab and optional project."
+  },
+  "lessons": [
     {
-      "number": 75,
-      "phase": "Model and derive",
-      "focus": "Model and derive",
-      "hours": 8.5,
-      "core_hours": 8.5,
-      "capacity_hours": 12,
-      "evidence": [
-        "Model and derive evidence frozen at source commit"
-      ],
-      "time_blocks": [
-        {
-          "id": "W075-T01",
-          "label": "Bounded authoritative resources",
-          "minutes": 160,
-          "activity": "required_resource",
-          "required": true,
-          "resource_ids": [
-            "RES-05",
-            "RES-07",
-            "RES-10",
-            "RES-11"
-          ]
-        },
-        {
-          "id": "W075-T02",
-          "label": "Local mechanism instruction",
-          "minutes": 120,
-          "activity": "local_instruction",
-          "required": true,
-          "lesson_ids": [
-            "L01",
-            "L02",
-            "L03",
-            "L04"
-          ]
-        },
-        {
-          "id": "W075-T03",
-          "label": "Guided practice",
-          "minutes": 60,
-          "activity": "guided_practice",
-          "required": true,
-          "exercise_ids": [
-            "EX-01",
-            "EX-02",
-            "EX-03",
-            "EX-04",
-            "EX-05",
-            "EX-06",
-            "EX-07",
-            "EX-08",
-            "EX-09"
-          ]
-        },
-        {
-          "id": "W075-T04",
-          "label": "Model and derive core work",
-          "minutes": 170,
-          "activity": "independent_work",
-          "required": true
-        },
-        {
-          "id": "W075-T05",
-          "label": "Optional contingency capacity",
-          "minutes": 210,
-          "activity": "contingency",
-          "required": false
-        }
-      ]
+      "id": "L01",
+      "title": "Boundaries from Outcomes and Coupling",
+      "path": "lessons/01-boundaries-outcomes-coupling.md"
     },
     {
-      "number": 76,
-      "phase": "Guided build and prediction freeze",
-      "focus": "Guided build and prediction freeze",
-      "hours": 9.0,
-      "core_hours": 9.0,
-      "capacity_hours": 12,
-      "evidence": [
-        "Guided build and prediction freeze evidence frozen at source commit"
-      ],
-      "time_blocks": [
-        {
-          "id": "W076-T01",
-          "label": "Bounded authoritative resources",
-          "minutes": 150,
-          "activity": "required_resource",
-          "required": true,
-          "resource_ids": [
-            "RES-02",
-            "RES-08",
-            "RES-09"
-          ]
-        },
-        {
-          "id": "W076-T02",
-          "label": "Local mechanism instruction",
-          "minutes": 120,
-          "activity": "local_instruction",
-          "required": true,
-          "lesson_ids": [
-            "L05",
-            "L06",
-            "L07",
-            "L08"
-          ]
-        },
-        {
-          "id": "W076-T03",
-          "label": "Guided practice",
-          "minutes": 60,
-          "activity": "guided_practice",
-          "required": true,
-          "exercise_ids": [
-            "EX-10",
-            "EX-11",
-            "EX-12",
-            "EX-13",
-            "EX-14",
-            "EX-15",
-            "EX-16",
-            "EX-17",
-            "EX-18"
-          ]
-        },
-        {
-          "id": "W076-T04",
-          "label": "Required evidence components",
-          "minutes": 60,
-          "activity": "independent_work",
-          "required": true,
-          "artifact_allocations": [
-            {
-              "artifact_id": "A01",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A03",
-              "minutes": 30
-            }
-          ]
-        },
-        {
-          "id": "W076-T05",
-          "label": "Guided build and prediction freeze core work",
-          "minutes": 150,
-          "activity": "independent_work",
-          "required": true
-        },
-        {
-          "id": "W076-T06",
-          "label": "Optional contingency capacity",
-          "minutes": 180,
-          "activity": "contingency",
-          "required": false
-        }
-      ]
+      "id": "L02",
+      "title": "Social Architecture, Ownership, and Cognitive Load",
+      "path": "lessons/02-social-architecture-ownership.md"
     },
     {
-      "number": 77,
-      "phase": "Independent build and integration",
-      "focus": "Independent build and integration",
-      "hours": 10.0,
-      "core_hours": 10.0,
-      "capacity_hours": 12,
-      "evidence": [
-        "Independent build and integration evidence frozen at source commit"
-      ],
-      "time_blocks": [
-        {
-          "id": "W077-T01",
-          "label": "Independent build and integration core work",
-          "minutes": 540,
-          "activity": "independent_work",
-          "required": true
-        },
-        {
-          "id": "W077-T02",
-          "label": "Independent build and integration verification checkpoint",
-          "minutes": 60,
-          "activity": "independent_work",
-          "required": true
-        },
-        {
-          "id": "W077-T03",
-          "label": "Optional contingency capacity",
-          "minutes": 120,
-          "activity": "contingency",
-          "required": false
-        }
-      ]
+      "id": "L03",
+      "title": "Sourcing, Platforms, and Governance",
+      "path": "lessons/03-sourcing-platforms-governance.md"
     },
     {
-      "number": 78,
-      "phase": "Break, repair, measure, and diagnose",
-      "focus": "Break, repair, measure, and diagnose",
-      "hours": 10.0,
-      "core_hours": 10.0,
-      "capacity_hours": 12,
-      "evidence": [
-        "Break, repair, measure, and diagnose evidence frozen at source commit"
-      ],
-      "time_blocks": [
-        {
-          "id": "W078-T01",
-          "label": "Required evidence components",
-          "minutes": 90,
-          "activity": "failure_experiment",
-          "required": true,
-          "artifact_allocations": [
-            {
-              "artifact_id": "A02",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A05",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A06",
-              "minutes": 30
-            }
-          ]
-        },
-        {
-          "id": "W078-T02",
-          "label": "Break, repair, measure, and diagnose core work",
-          "minutes": 510,
-          "activity": "failure_experiment",
-          "required": true
-        },
-        {
-          "id": "W078-T03",
-          "label": "Optional contingency capacity",
-          "minutes": 120,
-          "activity": "contingency",
-          "required": false
-        }
-      ]
+      "id": "L04",
+      "title": "Total Cost and Unit Economics",
+      "path": "lessons/04-total-cost-unit-economics.md"
     },
     {
-      "number": 79,
-      "phase": "Decide, teach, assess, and freeze",
-      "focus": "Decide, teach, assess, and freeze",
-      "hours": 9.5,
-      "core_hours": 9.5,
-      "capacity_hours": 12,
-      "evidence": [
-        "Decide, teach, assess, and freeze evidence frozen at source commit"
-      ],
-      "time_blocks": [
-        {
-          "id": "W079-T01",
-          "label": "Required evidence components",
-          "minutes": 150,
-          "activity": "decision_artifact",
-          "required": true,
-          "artifact_allocations": [
-            {
-              "artifact_id": "A04",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A07",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A08",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A09",
-              "minutes": 30
-            },
-            {
-              "artifact_id": "A11",
-              "minutes": 30
-            }
-          ]
-        },
-        {
-          "id": "W079-T02",
-          "label": "Decide, teach, assess, and freeze core work",
-          "minutes": 360,
-          "activity": "assessment",
-          "required": true
-        },
-        {
-          "id": "W079-T03",
-          "label": "Module teach-back",
-          "minutes": 30,
-          "activity": "teach_back",
-          "required": true
-        },
-        {
-          "id": "W079-T04",
-          "label": "Learning log and freeze check",
-          "minutes": 30,
-          "activity": "reflection",
-          "required": true
-        },
-        {
-          "id": "W079-T05",
-          "label": "Optional contingency capacity",
-          "minutes": 150,
-          "activity": "contingency",
-          "required": false
-        }
-      ]
+      "id": "L05",
+      "title": "Compatibility, Versioning, and Schema Evolution",
+      "path": "lessons/05-compatibility-schema-evolution.md"
+    },
+    {
+      "id": "L06",
+      "title": "Incremental Migration and Backfills",
+      "path": "lessons/06-incremental-migration-backfills.md"
+    },
+    {
+      "id": "L07",
+      "title": "Shadowing, Cutover, Rollback, and Decommissioning",
+      "path": "lessons/07-shadow-cutover-rollback.md"
+    },
+    {
+      "id": "L08",
+      "title": "Technical Strategy and Teach-Back",
+      "path": "lessons/08-technical-strategy-teach-back.md"
     }
   ],
-  "target_hours": 47,
-  "status": "review",
-  "readiness_note": "Ready on 2026-08-03 after deterministic lab tests, six isolated evaluator runs, calibration checking, semantic and resource review, and focused and full-course validation passed.",
-  "outcomes": [
+  "learning_outcomes": [
     {
       "id": "M14-O1",
       "statement": "Select modular-monolith, service, or event boundaries from change, workload, failure, data-authority, security, and ownership evidence.",
-      "graduate_profile": [
-        1,
-        10,
-        14,
-        15
-      ],
-      "mastery_levels": [
-        "Define",
-        "Diagnose",
-        "Decide and Teach"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L01"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-01",
         "EX-02"
-      ],
-      "artifacts": [
-        "A01",
-        "A04",
-        "A07"
-      ],
-      "rubric": [
-        "R01"
       ]
     },
     {
       "id": "M14-O2",
       "statement": "Model Conway effects, interaction cost, cognitive load, ownership, and succession for an evolving architecture.",
-      "graduate_profile": [
-        10,
-        14,
-        16
-      ],
-      "mastery_levels": [
-        "Define",
-        "Diagnose",
-        "Decide and Teach"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L02"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-03",
         "EX-04"
-      ],
-      "artifacts": [
-        "A01",
-        "A07",
-        "A08"
-      ],
-      "rubric": [
-        "R02"
       ]
     },
     {
       "id": "M14-O3",
       "statement": "Compare managed, open-source, custom, and platform choices with explicit operating, security, governance, portability, and exit obligations.",
-      "graduate_profile": [
-        9,
-        10,
-        14,
-        15
-      ],
-      "mastery_levels": [
-        "Calculate",
-        "Decide and Teach"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L03"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-05",
         "EX-06"
-      ],
-      "artifacts": [
-        "A02",
-        "A07"
-      ],
-      "rubric": [
-        "R03"
       ]
     },
     {
       "id": "M14-O4",
       "statement": "Calculate fully loaded cost and cost per useful outcome with allocation, sensitivity, and stopping thresholds.",
-      "graduate_profile": [
-        2,
-        10,
-        15
-      ],
-      "mastery_levels": [
-        "Calculate",
-        "Diagnose",
-        "Decide and Teach"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L04"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-07",
         "EX-08"
-      ],
-      "artifacts": [
-        "A02",
-        "A07"
-      ],
-      "rubric": [
-        "R04"
       ]
     },
     {
       "id": "M14-O5",
       "statement": "Design compatibility policies and expand-and-contract changes for mixed-version operation.",
-      "graduate_profile": [
-        4,
-        5,
-        7,
-        14
-      ],
-      "mastery_levels": [
-        "Define",
-        "Implement",
-        "Diagnose"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L05"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-09",
         "EX-10"
-      ],
-      "artifacts": [
-        "A03",
-        "A04",
-        "A05"
-      ],
-      "rubric": [
-        "R05"
       ]
     },
     {
       "id": "M14-O6",
       "statement": "Implement resumable backfills, shadow comparison, controlled cutover, rollback, and evidence-based decommissioning.",
-      "graduate_profile": [
-        7,
-        8,
-        14
-      ],
-      "mastery_levels": [
-        "Implement",
-        "Diagnose"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L06",
         "L07"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-11",
         "EX-12",
         "EX-13",
         "EX-14",
         "EX-15"
-      ],
-      "artifacts": [
-        "A03",
-        "A04",
-        "A05",
-        "A06"
-      ],
-      "rubric": [
-        "R06",
-        "R07"
       ]
     },
     {
       "id": "M14-O7",
       "statement": "Diagnose nine evolution failures without losing authority, data, service, cost control, dependency control, or ownership continuity.",
-      "graduate_profile": [
-        7,
-        8,
-        10,
-        14
-      ],
-      "mastery_levels": [
-        "Diagnose"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L07"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-16"
-      ],
-      "artifacts": [
-        "A05",
-        "A06",
-        "A08",
-        "A09"
-      ],
-      "rubric": [
-        "R08",
-        "R09"
       ]
     },
     {
       "id": "M14-O8",
       "statement": "Defend a multi-quarter strategy with outcomes, sequencing, staffing, dependencies, dissent, stopping conditions, and reversal evidence.",
-      "graduate_profile": [
-        10,
-        14,
-        15,
-        16
-      ],
-      "mastery_levels": [
-        "Decide and Teach"
-      ],
-      "lessons": [
+      "lesson_ids": [
         "L08"
       ],
-      "exercises": [
+      "exercise_ids": [
         "EX-17",
         "EX-18"
-      ],
-      "artifacts": [
-        "A07",
-        "A08",
-        "A09",
-        "A11"
-      ],
-      "rubric": [
-        "R10"
       ]
     }
   ],
+  "practice": {
+    "exercises_path": "exercises/exercises.md",
+    "answer_key_path": "exercises/answer-key.md"
+  },
+  "lab": {
+    "required": true,
+    "path": "lab/README.md",
+    "note": "Use the lab to reinforce the local mechanism; treat expanded matrices and platform-specific evidence as optional deep-dive work."
+  },
+  "quiz": {
+    "question_bank_path": "quiz/question-bank.json",
+    "answer_key_path": "quiz/answer-key.md",
+    "llm_grader_prompt_path": "quiz/llm-grader-prompt.md",
+    "question_count": 100,
+    "default_draw_count": 20,
+    "types": [
+      "multiple_choice",
+      "short_answer",
+      "calculation",
+      "scenario_diagnosis",
+      "design_judgment"
+    ]
+  },
+  "optional_project": {
+    "description": "Apply Architecture Evolution, Economics, and Organization to a small system you know. Write a short design note, experiment report, or implementation summary only if you want deeper practice."
+  },
   "resources": [
     {
       "id": "RES-01",
       "title": "Under Deconstruction: The State of Shopify's Monolith",
-      "author_or_publisher": "Shopify Engineering",
-      "type": "first-person engineering case",
       "url": "https://shopify.engineering/shopify-monolith",
       "required": false,
-      "access": "free",
-      "week": 79,
       "estimated_minutes": 60,
       "purpose": "Compare modularization with service extraction using observed change and complexity costs.",
-      "assignment": "Read the complete article; record three boundary drivers, two reasons to remain modular, and one extraction threshold.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/01-boundaries-outcomes-coupling.md",
-      "verified_title": "Under Deconstruction: The State of Shopify's Monolith",
-      "verified_publisher": "Shopify Engineering",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://shopify.engineering/shopify-monolith",
-      "verification_status": "verified"
+      "local_alternative": "lessons/01-boundaries-outcomes-coupling.md"
     },
     {
       "id": "RES-02",
       "title": "Conway's Law",
-      "author_or_publisher": "Melvin E. Conway",
-      "type": "original paper and author commentary",
       "url": "https://melconway.com/Home/Conways_Law.html",
       "required": true,
-      "access": "free",
-      "week": 76,
       "estimated_minutes": 45,
       "purpose": "Connect communication paths to interface structure without treating organization as destiny.",
-      "assignment": "Read the author page and linked original paper; map three required technical interfaces to their human communication paths.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/02-social-architecture-ownership.md",
-      "verified_title": "Conway's Law",
-      "verified_publisher": "Melvin E. Conway",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://melconway.com/Home/Conways_Law.html",
-      "verification_status": "verified"
+      "local_alternative": "lessons/02-social-architecture-ownership.md"
     },
     {
       "id": "RES-03",
       "title": "Team Interaction Modeling with Team Topologies",
-      "author_or_publisher": "Team Topologies",
-      "type": "maintainer guidance",
       "url": "https://teamtopologies.com/key-concepts-content/team-interaction-modeling-with-team-topologies",
       "required": false,
-      "access": "free",
-      "week": 79,
       "estimated_minutes": 60,
       "purpose": "Make cognitive load, ownership, and temporary versus durable interactions visible.",
-      "assignment": "Read the interaction-modeling and cognitive-load sections; draw current and target interaction maps with one expiry condition.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/02-social-architecture-ownership.md",
-      "verified_title": "Team Interaction Modeling with Team Topologies",
-      "verified_publisher": "Team Topologies",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://teamtopologies.com/key-concepts-content/team-interaction-modeling-with-team-topologies",
-      "verification_status": "verified"
+      "local_alternative": "lessons/02-social-architecture-ownership.md"
     },
     {
       "id": "RES-04",
       "title": "Capability: Unit Economics",
-      "author_or_publisher": "FinOps Foundation",
-      "type": "foundation framework",
       "url": "https://www.finops.org/framework/capabilities/unit-economics/",
       "required": false,
-      "access": "free",
-      "week": 79,
       "estimated_minutes": 60,
       "purpose": "Connect technical spend to a useful product outcome and decision threshold.",
-      "assignment": "Read Definition, Functional Activities, and Inputs and Outputs; define one business unit metric, one resource metric, sources, owner, and threshold.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/04-total-cost-unit-economics.md",
-      "verified_title": "Capability: Unit Economics",
-      "verified_publisher": "FinOps Foundation",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://www.finops.org/framework/capabilities/unit-economics/",
-      "verification_status": "verified"
+      "local_alternative": "lessons/04-total-cost-unit-economics.md"
     },
     {
       "id": "RES-05",
       "title": "Patterns of Legacy Displacement",
-      "author_or_publisher": "Ian Cartwright, Rob Horn, and James Lewis; MartinFowler.com",
-      "type": "practitioner pattern collection",
       "url": "https://martinfowler.com/articles/patterns-legacy-displacement/",
       "required": true,
-      "access": "free",
-      "week": 75,
       "estimated_minutes": 75,
       "purpose": "Design incremental seams and transitional architecture tied to outcomes and removal conditions.",
-      "assignment": "Read Breaking the Cycle, Successfully Deliver the Parts, and the middleware example; produce a seam, transition asset, removal condition, and cost-of-risk argument.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/06-incremental-migration-backfills.md",
-      "verified_title": "Patterns of Legacy Displacement",
-      "verified_publisher": "Ian Cartwright, Rob Horn, and James Lewis; MartinFowler.com",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://martinfowler.com/articles/patterns-legacy-displacement/",
-      "verification_status": "verified"
+      "local_alternative": "lessons/06-incremental-migration-backfills.md"
     },
     {
       "id": "RES-06",
       "title": "Online Migrations at Scale",
-      "author_or_publisher": "Jacqueline Xu Atlas; Stripe Engineering",
-      "type": "first-person engineering case",
       "url": "https://stripe.com/blog/online-migrations",
       "required": false,
-      "access": "free",
-      "week": 79,
       "estimated_minutes": 75,
       "purpose": "Examine phased writes, backfill, comparison, cutover, and cleanup in a live migration.",
-      "assignment": "Read the complete article; identify authority in each phase, backfill verification, divergence risk, cutover gate, and cleanup proof.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/06-incremental-migration-backfills.md",
-      "verified_title": "Online Migrations at Scale",
-      "verified_publisher": "Jacqueline Xu Atlas; Stripe Engineering",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://stripe.com/blog/online-migrations",
-      "verification_status": "verified"
+      "local_alternative": "lessons/06-incremental-migration-backfills.md"
     },
     {
       "id": "RES-07",
       "title": "Semantic Versioning 2.0.0",
-      "author_or_publisher": "Semantic Versioning maintainers",
-      "type": "open specification",
       "url": "https://semver.org/",
       "required": true,
-      "access": "free",
-      "week": 75,
       "estimated_minutes": 45,
       "purpose": "Use a declared public contract and explicit compatibility signal while recognizing limits for data and protocols.",
-      "assignment": "Read the Summary and specification items 1-11; classify six changes and state two cases where SemVer cannot prove runtime compatibility.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/05-compatibility-schema-evolution.md",
-      "verified_title": "Semantic Versioning 2.0.0",
-      "verified_publisher": "Semantic Versioning maintainers",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://semver.org/",
-      "verification_status": "verified"
+      "local_alternative": "lessons/05-compatibility-schema-evolution.md"
     },
     {
       "id": "RES-08",
       "title": "Canarying Releases",
-      "author_or_publisher": "Google Site Reliability Engineering",
-      "type": "practitioner book chapter",
       "url": "https://sre.google/workbook/canarying-releases/",
       "required": true,
-      "access": "free",
-      "week": 76,
       "estimated_minutes": 60,
       "purpose": "Bound blast radius and connect promotion or rollback to measured candidate-versus-control evidence.",
-      "assignment": "Read Canary Release through Canary Implementation; define population, duration, comparison metrics, budget exposure, promotion, and rollback thresholds.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/07-shadow-cutover-rollback.md",
-      "verified_title": "Canarying Releases",
-      "verified_publisher": "Google Site Reliability Engineering",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://sre.google/workbook/canarying-releases/",
-      "verification_status": "verified"
+      "local_alternative": "lessons/07-shadow-cutover-rollback.md"
     },
     {
       "id": "RES-09",
       "title": "Maintaining Client Transparency While Migrating Systems",
-      "author_or_publisher": "Google SRE Prodcast",
-      "type": "recorded practitioner interview with HTML transcript",
       "url": "https://sre.google/prodcast/transcripts/sre-prodcast-01-05/",
       "required": true,
-      "access": "free",
-      "week": 76,
       "estimated_minutes": 45,
       "purpose": "Treat traffic replay, discrepancy measurement, gradual cutover, and fast rollback as client-transparency controls.",
-      "assignment": "Listen to the episode or read the transcript; enumerate user-visible states, mismatch measures, rollout stages, rollback trigger, and one unknown not captured server-side.",
-      "last_verified": "2026-08-03",
-      "text_alternative": "lessons/07-shadow-cutover-rollback.md",
-      "verified_title": "Maintaining Client Transparency While Migrating Systems",
-      "verified_publisher": "Google SRE Prodcast",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://sre.google/prodcast/transcripts/sre-prodcast-01-05/",
-      "verification_status": "verified"
+      "local_alternative": "lessons/07-shadow-cutover-rollback.md"
     },
     {
       "id": "RES-10",
       "title": "CNCF Platforms White Paper",
-      "author_or_publisher": "CNCF TAG App Delivery",
-      "type": "official primary guidance",
       "url": "https://tag-app-delivery.cncf.io/whitepapers/platforms/",
       "required": true,
-      "access": "free",
-      "week": 75,
       "estimated_minutes": 20,
-      "purpose": "Ground the PESD 2.0 cross-cutting decision in current primary guidance and produce scoped evidence rather than framework vocabulary.",
-      "assignment": "Read why platforms, successful platform/team attributes, challenges, measurement, and capabilities; extract user-value and support hypotheses.",
-      "last_verified": "2026-08-04",
-      "text_alternative": "lessons/08-technical-strategy-teach-back.md",
-      "verified_title": "CNCF Platforms White Paper",
-      "verified_publisher": "CNCF TAG App Delivery",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://tag-app-delivery.cncf.io/whitepapers/platforms/",
-      "verification_status": "verified"
+      "purpose": "Ground the solo course cross-cutting decision in current primary guidance and produce scoped evidence rather than framework vocabulary.",
+      "local_alternative": "lessons/08-technical-strategy-teach-back.md"
     },
     {
       "id": "RES-11",
       "title": "Allocation FinOps Framework Capability",
-      "author_or_publisher": "FinOps Foundation",
-      "type": "official primary guidance",
       "url": "https://www.finops.org/framework/capabilities/allocation/",
       "required": true,
-      "access": "free",
-      "week": 75,
       "estimated_minutes": 20,
-      "purpose": "Ground the PESD 2.0 cross-cutting decision in current primary guidance and produce scoped evidence rather than framework vocabulary.",
-      "assignment": "Read definition, allocation/tagging/shared-cost strategies, and measures; define one transparent allocation and exception policy.",
-      "last_verified": "2026-08-04",
-      "text_alternative": "lessons/08-technical-strategy-teach-back.md",
-      "verified_title": "Allocation FinOps Framework Capability",
-      "verified_publisher": "FinOps Foundation",
-      "verification_method": "HTTP GET plus primary-source metadata comparison",
-      "final_url": "https://www.finops.org/framework/capabilities/allocation/",
-      "verification_status": "verified"
+      "purpose": "Ground the solo course cross-cutting decision in current primary guidance and produce scoped evidence rather than framework vocabulary.",
+      "local_alternative": "lessons/08-technical-strategy-teach-back.md"
     }
-  ],
-  "artifacts": [
-    {
-      "id": "A01",
-      "week": 76,
-      "required": true,
-      "template_path": "modules/14-architecture-evolution-economics-organization/worksheets/week-53-evolution-model.md",
-      "submission_path": "reports/module-14-evolution-baseline.md",
-      "immutable_after_submission": true,
-      "portfolio_category": "model",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M14-A01",
-      "component_role": "prediction",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A02",
-      "week": 78,
-      "required": true,
-      "template_path": "templates/architecture-cost-model-template.md",
-      "submission_path": "reports/module-14-cost-model.md",
-      "portfolio_category": "capacity_cost_model",
-      "portfolio_item_id": "PI-COST-02",
-      "portfolio_credit": true,
-      "evidence_lineage_id": "LIN-COST-PLATFORM",
-      "component_role": "analysis",
-      "estimated_minutes": 30,
-      "evidence_mode": "modeled_capacity"
-    },
-    {
-      "id": "A03",
-      "week": 76,
-      "required": true,
-      "template_path": "modules/14-architecture-evolution-economics-organization/worksheets/week-54-migration-build.md",
-      "submission_path": "labs/module-14/evolution-migration/",
-      "portfolio_category": "platform_product_experiment",
-      "portfolio_item_id": "PI-PLATFORM-01",
-      "portfolio_credit": true,
-      "evidence_lineage_id": "LIN-PLATFORM-PRODUCT",
-      "component_role": "implementation",
-      "estimated_minutes": 30,
-      "evidence_mode": "executed_deterministic"
-    },
-    {
-      "id": "A04",
-      "week": 79,
-      "required": true,
-      "template_path": "templates/migration-plan-template.md",
-      "submission_path": "reports/module-14-migration-plan.md",
-      "portfolio_category": "migration_plan",
-      "portfolio_item_id": "PI-MIG-01",
-      "portfolio_credit": true,
-      "evidence_lineage_id": "LIN-MIG-PLATFORM",
-      "component_role": "final",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A05",
-      "week": 78,
-      "required": true,
-      "template_path": "modules/14-architecture-evolution-economics-organization/worksheets/week-55-evolution-failure-matrix.md",
-      "submission_path": "experiments/module-14/",
-      "immutable_after_submission": true,
-      "portfolio_category": "failure_matrix",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M14-A05",
-      "component_role": "raw_evidence",
-      "estimated_minutes": 30,
-      "evidence_mode": "executed_deterministic"
-    },
-    {
-      "id": "A06",
-      "week": 78,
-      "required": true,
-      "template_path": "modules/14-architecture-evolution-economics-organization/worksheets/week-55-evolution-failure-matrix.md",
-      "submission_path": "reports/module-14-evolution-failure-matrix.md",
-      "portfolio_category": "failure_matrix",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M14-A06",
-      "component_role": "raw_evidence",
-      "estimated_minutes": 30,
-      "evidence_mode": "executed_deterministic"
-    },
-    {
-      "id": "A07",
-      "week": 79,
-      "required": true,
-      "template_path": "templates/technical-strategy-memo-template.md",
-      "submission_path": "rfc/module-14-technical-strategy.md",
-      "portfolio_category": "adr",
-      "portfolio_item_id": "PI-DECISION-M14",
-      "portfolio_credit": true,
-      "evidence_lineage_id": "LIN-DECISION-M14",
-      "component_role": "decision",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A08",
-      "week": 79,
-      "required": true,
-      "template_path": "modules/14-architecture-evolution-economics-organization/worksheets/week-56-strategy-defense.md",
-      "submission_path": "reviews/module-14-defense.md",
-      "portfolio_category": "teach_back",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M14-A08",
-      "component_role": "final",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A09",
-      "week": 79,
-      "required": true,
-      "template_path": "modules/14-architecture-evolution-economics-organization/assessment/report-template.md",
-      "submission_path": "reviews/module-14-evaluation.md",
-      "portfolio_category": "evaluation",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M14-A09",
-      "component_role": "final",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    },
-    {
-      "id": "A11",
-      "week": 79,
-      "required": true,
-      "template_path": "templates/learning-log-template.md",
-      "submission_path": "learning-log/week-075.md through learning-log/week-079.md",
-      "portfolio_category": "learning_log",
-      "portfolio_item_id": null,
-      "portfolio_credit": false,
-      "evidence_lineage_id": "LIN-M14-A11",
-      "component_role": "final",
-      "estimated_minutes": 30,
-      "evidence_mode": "derived"
-    }
-  ],
-  "failure_experiments": [
-    {
-      "id": "F01",
-      "scenario": "incompatible producer and consumer deployment",
-      "evidence": "producer/consumer versions, accepted fields, compatibility decision, rejected event, rollout state, and I03"
-    },
-    {
-      "id": "F02",
-      "scenario": "destructive schema contraction while an old reader remains",
-      "evidence": "schema phase, reader inventory, deprecation window, contraction decision, rollback, and I04"
-    },
-    {
-      "id": "F03",
-      "scenario": "partial backfill restart skips or duplicates records",
-      "evidence": "cursor, batch identity, idempotency, counts, reconciliation, restart result, and I05"
-    },
-    {
-      "id": "F04",
-      "scenario": "dual-write divergence creates competing authority",
-      "evidence": "source of truth, write attempts, versions, divergence, repair path, and I06"
-    },
-    {
-      "id": "F05",
-      "scenario": "shadow mismatch is ignored during promotion",
-      "evidence": "sample size, normalized mismatch, threshold, promotion decision, owner, and I07"
-    },
-    {
-      "id": "F06",
-      "scenario": "target-only state prevents safe rollback",
-      "evidence": "cutover phase, new writes, reverse path, data loss, stop condition, and I08"
-    },
-    {
-      "id": "F07",
-      "scenario": "fourfold cost spike is hidden by incomplete allocation",
-      "evidence": "direct/shared/labor/transition cost, good outcomes, unit cost, budget, stop decision, and I09"
-    },
-    {
-      "id": "F08",
-      "scenario": "managed dependency quota or price change has no executable exit",
-      "evidence": "dependency limit, price, portable contract/data, replacement lead time, owner, and I10"
-    },
-    {
-      "id": "F09",
-      "scenario": "loss of the primary owning team leaves a critical capability unowned",
-      "evidence": "primary/secondary owners, runbook verification, access, escalation, handoff trial, and I11"
-    }
-  ],
-  "assessment": {
-    "rubric_path": "modules/14-architecture-evolution-economics-organization/assessment/rubric.md",
-    "evaluator_prompt_path": "modules/14-architecture-evolution-economics-organization/assessment/evaluator-prompt.md",
-    "evaluation_schema_path": "schemas/evaluation.schema.json",
-    "calibration_path": "modules/14-architecture-evolution-economics-organization/assessment/calibration",
-    "pass_average": 3,
-    "safety_critical_criteria": [
-      "R05",
-      "R06",
-      "R07",
-      "R08",
-      "R09"
-    ],
-    "required_result_bands": [
-      "Pass",
-      "Revise",
-      "Repeat"
-    ]
-  },
-  "solo_review": {
-    "challenge_questions": [
-      {
-        "id": "M14-SR-Q01",
-        "prompt": "Which claim in your artifact most directly supports this outcome, and what evidence could falsify it: Select modular-monolith, service, or event boundaries from change, workload, failure, data-authority, security, and ownership evidence."
-      },
-      {
-        "id": "M14-SR-Q02",
-        "prompt": "What unstated assumption could invalidate your treatment of this outcome, and how would you test it: Model Conway effects, interaction cost, cognitive load, ownership, and succession for an evolving architecture."
-      },
-      {
-        "id": "M14-SR-Q03",
-        "prompt": "Defend the causal chain behind your evidence for this outcome, including the first likely failure: Compare managed, open-source, custom, and platform choices with explicit operating, security, governance, portability, and exit obligations."
-      },
-      {
-        "id": "M14-SR-Q04",
-        "prompt": "Which reasonable alternative would challenge your treatment of this outcome, and under what evidence would it win: Calculate fully loaded cost and cost per useful outcome with allocation, sensitivity, and stopping thresholds."
-      },
-      {
-        "id": "M14-SR-Q05",
-        "prompt": "What operational, security, cost, or ownership consequence is least supported in your treatment of this outcome: Design compatibility policies and expand-and-contract changes for mixed-version operation."
-      },
-      {
-        "id": "M14-SR-Q06",
-        "prompt": "Where does your evidence stop transferring to production for this outcome, and how is that boundary disclosed: Implement resumable backfills, shadow comparison, controlled cutover, rollback, and evidence-based decommissioning."
-      },
-      {
-        "id": "M14-SR-Q07",
-        "prompt": "What dissent should a skeptical reviewer raise about your treatment of this outcome, and what follow-up evidence would resolve it: Diagnose nine evolution failures without losing authority, data, service, cost control, dependency control, or ownership continuity."
-      },
-      {
-        "id": "M14-SR-Q08",
-        "prompt": "What changed belief or reversal condition follows from your work on this outcome, and where is it recorded: Defend a multi-quarter strategy with outcomes, sequencing, staffing, dependencies, dissent, stopping conditions, and reversal evidence."
-      }
-    ],
-    "required_reviewer_roles": [
-      "Architecture Evolution, Economics, and Organization domain reviewer",
-      "operations and reliability owner",
-      "security and privacy reviewer",
-      "delivery and cost stakeholder"
-    ],
-    "questions_per_attempt": 5,
-    "live_ai_allowed": false,
-    "record_template_path": "templates/solo-review-record-template.md"
-  },
-  "factual_claims_path": "modules/14-architecture-evolution-economics-organization/assessment/factual-claims.json",
-  "lesson_catalog": [
-    {
-      "id": "L01",
-      "path": "lessons/01-boundaries-outcomes-coupling.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L02",
-      "path": "lessons/02-social-architecture-ownership.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L03",
-      "path": "lessons/03-sourcing-platforms-governance.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L04",
-      "path": "lessons/04-total-cost-unit-economics.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L05",
-      "path": "lessons/05-compatibility-schema-evolution.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L06",
-      "path": "lessons/06-incremental-migration-backfills.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L07",
-      "path": "lessons/07-shadow-cutover-rollback.md",
-      "estimated_minutes": 30
-    },
-    {
-      "id": "L08",
-      "path": "lessons/08-technical-strategy-teach-back.md",
-      "estimated_minutes": 30
-    }
-  ],
-  "citation_catalog": [],
-  "course_id": "PESD-104",
-  "course_version": "2.0",
-  "primary_decision": {
-    "artifact_id": "A07",
-    "type": "ADR"
-  },
-  "pesd_v2_additions": "a thin local platform product with a service catalog, self-service interface, golden path, policy guardrails, exception path, ownership metadata, platform SLO, adoption and support metrics, FinOps allocation, and an exit plan",
-  "semantic_evaluation": "module_specific"
+  ]
 }

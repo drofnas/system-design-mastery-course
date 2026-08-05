@@ -72,12 +72,12 @@ panel is optional.
 
 ## Sources and next work
 
-Use RES-06 only with its historical boundary. Complete the ADR, defense, module
-assessment, and [Gate 5](../../../gates/G05/assessment-brief.md).
+Use RES-06 only with its historical boundary. Complete the guided exercises,
+run at least one runtime implementation path, and finish with a generated quiz.
 
-## PESD 2.0 extension: modern constraints and ownership
+## Solo extension: modern constraints and ownership
 
-PESD 2.0 adds **four transport/schema shells while the learner implements admission, task ownership, cancellation, cleanup, memory and lifetime behavior, synchronization, and validation in TypeScript, Go, Rust, and Java**.
+The deep path adds **four transport/schema shells while the learner implements admission, task ownership, cancellation, cleanup, memory and lifetime behavior, synchronization, and validation in TypeScript, Go, Rust, and Java**.
 
 ### Repeatable decision procedure
 
@@ -85,7 +85,7 @@ PESD 2.0 adds **four transport/schema shells while the learner implements admiss
    control planes, evidence owners, and cost owners before selecting a mechanism.
 2. State the invariant and the authority that may change it. Separate a claimed
    policy from the enforcement point and from the evidence that proves execution.
-3. Freeze a prediction, implement or model the named mechanism, and record the
+3. Save a prediction, implement or model the named mechanism, and record the
    accepted evidence mode and runtime boundary.
 4. Inject one policy, isolation, recovery, or supplier failure in addition to the
    module's mechanism failure. Preserve raw evidence before interpretation.
