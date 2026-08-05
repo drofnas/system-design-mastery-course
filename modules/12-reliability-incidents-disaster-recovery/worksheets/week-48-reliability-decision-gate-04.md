@@ -1,4 +1,7 @@
-# Week 48 Reliability Decision, Defense, and Gate 4
+# PESD 2.0 Week 67 Reliability Decision and Defense
+
+The filename remains stable for V1 crosswalks. Gate 4 is a standalone Week 68
+assessment; accepted findings belong in the separate Week 69 capstone delta.
 
 Complete after freezing all incident and recovery evidence.
 
@@ -39,8 +42,8 @@ or the recovery record.
 
 ## Gate 4
 
-Complete all four parts in [Gate 4](../assessment/gate-04.md). Freeze the Gate 4
-submission before creating the separate Week 48 capstone revision. The revision
+Complete all scored parts in [Gate 4](../../../gates/G04/assessment-brief.md). Freeze the Gate 4
+submission before creating the separate Week 69 capstone delta. The delta
 describes changed beliefs and citations; it never edits earlier artifacts.
 
 ## Completion check
@@ -49,3 +52,14 @@ describes changed beliefs and citations; it never edits earlier artifacts.
 - G01–G06 pass; average is at least 3.0; R04/R07/R08/R09 are nonzero.
 - Required resources and local alternatives are complete.
 - Defense, Gate 4, revision, evaluation, remediation, and learning logs are separate.
+
+## PESD 2.0 decision and assurance check
+
+- Added scope: cyber recovery, corrupted-backup recovery, provider concentration, control-plane outages, clean-room assumptions, evidence preservation, and notification ownership
+- Requirement or obligation and applicability:
+- Enforcement point and failure mode:
+- Evidence owner, source commit, hashes, and evidence mode:
+- Tenant/data/provider boundary:
+- Cost allocation and operating owner:
+- Migration, rollback, and decommissioning step:
+- Uncertainty and reversal trigger:

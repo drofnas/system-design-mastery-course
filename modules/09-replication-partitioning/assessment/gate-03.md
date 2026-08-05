@@ -1,5 +1,7 @@
 # Gate 3: Storage, Transactions, Replication, and Partitioning
 
+> **PESD V1 historical contract:** Preserve this file for V1 learners and immutable evidence. PESD 2.0 uses [gates/G03/README.md](../../../gates/G03/README.md).
+
 Gate 3 closes Week 36. Complete it after freezing Module 9 evidence. Freeze each
 part before feedback. The practical uses a new Northstar seed/configuration and
 does not expose a commerce answer. Total learner time: 3.5 hours.

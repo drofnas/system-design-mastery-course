@@ -151,3 +151,18 @@ Remediation: Lesson 8; EX-12.
 - Repeat: prediction/artifact integrity fails, evidence is fabricated, required
   work is unbounded, concurrency/durability safety fails, or the machine model
   is materially false.
+
+## PESD 2.0 cross-cutting anchors
+
+Apply these anchors inside the published module-specific criteria; they do not
+create a generic substitute rubric.
+
+- **0–1:** ignores or merely names cgroup enforcement, virtualization and steal time, noisy-neighbor isolation, architecture-specific limits, and measured-versus-host-controlled evidence boundaries without an enforceable
+  causal model, evidence boundary, or owner.
+- **2:** covers the happy path but leaves a material tenant, governance,
+  recovery, supplier, cost, migration, or evidence gap.
+- **3:** connects the requirement to a mechanism, failure evidence, ownership,
+  cost, migration, and a scoped residual risk.
+- **4:** additionally tests policy drift or isolation failure, quantifies useful
+  outcome and uncertainty, preserves lineage, and gives teachable reversal and
+  decommissioning triggers.

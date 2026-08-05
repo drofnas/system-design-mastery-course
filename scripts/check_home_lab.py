@@ -21,7 +21,7 @@ DOCKER_MODULES = {"M03", "M15"}
 COMPILER_MODULES = {"M03"}
 OPENSSL_MODULES = {"M05"}
 NODE_MODULES = {"M16"}
-LOOPBACK_MODULES = {"M02", "M04", "M05", "M06", "M11", "M12", "M16", "M17", "M18"}
+LOOPBACK_MODULES = {"M02", "M04", "M05", "M06", "M09", "M10", "M11", "M12", "M16", "M17", "M18"}
 
 
 def _run_version(command: list[str]) -> str | None:
@@ -127,6 +127,19 @@ def _docker_daemon_ok() -> bool:
         return False
 
 
+def _docker_memory_gib() -> float | None:
+    if not shutil.which("docker"):
+        return None
+    try:
+        raw = subprocess.run(
+            ["docker", "info", "--format", "{{.MemTotal}}"],
+            capture_output=True, text=True, timeout=8, check=True,
+        ).stdout.strip()
+        return round(int(raw) / 2**30, 1)
+    except (OSError, ValueError, subprocess.SubprocessError):
+        return None
+
+
 def collect_snapshot() -> dict[str, Any]:
     versions = {
         "python": platform.python_version(),
@@ -142,17 +155,23 @@ def collect_snapshot() -> dict[str, Any]:
         free_disk = round(shutil.disk_usage(ROOT).free / 2**30, 1)
     except OSError:
         free_disk = None
+    platform_kind = _platform_kind()
     return {
-        "platform": _platform_kind(),
+        "platform": platform_kind,
         "architecture": _architecture(),
         "ram_gib": _ram_gib(),
         "logical_cpus": os.cpu_count(),
         "free_disk_gib": free_disk,
         "versions": versions,
         "docker_daemon": _docker_daemon_ok(),
+        "docker_memory_gib": _docker_memory_gib(),
         "openssl_addext": _command_supports(["openssl", "req", "-help"], "-addext"),
         "loopback": _loopback_ok(),
         "temporary_files": _temporary_ok(),
+        "repo_on_wsl_filesystem": not str(ROOT).lower().startswith("/mnt/") if platform_kind == "wsl2-ubuntu" else None,
+        "cgroup_controls": all(Path(path).exists() for path in ("/sys/fs/cgroup/cpu.stat", "/sys/fs/cgroup/memory.max", "/sys/fs/cgroup/pids.max")) if platform_kind == "wsl2-ubuntu" else None,
+        "chromium_available": any(shutil.which(name) for name in ("chromium", "chromium-browser", "google-chrome", "playwright")),
+        "windows_browser_callback": None,
     }
 
 
@@ -176,7 +195,7 @@ def evaluate(snapshot: dict[str, Any], selected_modules: list[str]) -> dict[str,
     checks.append(_check("architecture", arch_status, arch, "64-bit x86_64 or ARM64 (Windows ARM is unsupported)", selected,
                          "Use a supported 64-bit x86_64 or ARM64 host; Windows must use supported x86_64 WSL2."))
 
-    for key, minimum, recommended, label in (("ram_gib", 8, 16, "RAM GiB"), ("logical_cpus", 2, 4, "logical CPUs"), ("free_disk_gib", 20, 30, "free disk GiB")):
+    for key, minimum, recommended, label in (("ram_gib", 8, 16, "RAM GiB"), ("logical_cpus", 2, 4, "logical CPUs"), ("free_disk_gib", 20, 40, "free disk GiB")):
         value = snapshot.get(key)
         if value is None:
             status, observed = "warn", "unknown"
@@ -233,6 +252,24 @@ def evaluate(snapshot: dict[str, Any], selected_modules: list[str]) -> dict[str,
                          "read/write succeeded" if snapshot.get("temporary_files") else "read/write failed",
                          "temporary directory supports file create/read", selected,
                          "Free disk space and grant the current user access to the operating-system temporary directory."))
+
+    if platform_kind == "wsl2-ubuntu":
+        wsl_checks = (
+            ("wsl-filesystem", snapshot.get("repo_on_wsl_filesystem"), "repository stored outside /mnt/c", "Move the repository into the WSL ext4 filesystem."),
+            ("wsl-cgroups", snapshot.get("cgroup_controls"), "CPU, memory, and PID cgroup controls visible", "Enable current WSL2 and Docker resource enforcement before collecting evidence."),
+            ("wsl-docker-memory", (snapshot.get("docker_memory_gib") or 0) >= 4, "Docker has at least 4 GiB", "Assign at least 4 GiB to Docker Desktop."),
+        )
+        for check_id, passed, requirement, remediation in wsl_checks:
+            checks.append(_check(check_id, "pass" if passed else "fail", "verified" if passed else "not verified", requirement, selected, remediation))
+        chromium_relevant = bool(selected & NODE_MODULES)
+        chromium = snapshot.get("chromium_available")
+        checks.append(_check("wsl-chromium", "pass" if chromium else ("fail" if chromium_relevant else "skipped"),
+                             "available" if chromium else "missing", "pinned Chromium can launch", selected & NODE_MODULES,
+                             "Install the pinned Playwright Chromium cache or use the official remote runner."))
+        callback = snapshot.get("windows_browser_callback")
+        checks.append(_check("wsl-windows-browser-callback", "pass" if callback else "warn",
+                             "verified" if callback else "manual check required", "Windows browser reaches the WSL loopback callback",
+                             selected & NODE_MODULES, "Run the Module 16 host-browser connectivity check before measured evidence."))
 
     counts = {name: sum(item["status"] == name for item in checks) for name in ("pass", "warn", "fail", "skipped")}
     result = "fail" if counts["fail"] else ("warn" if counts["warn"] else "pass")

@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
   "module": "M10",
-  "reviewed_commit": "670fcb8a202d8aea43d03f15f435054fdb2685f5",
+  "reviewed_commit": "WORKTREE",
   "reviewed_at": "2026-08-04",
   "evidence_boundary": "This ledger records a source-level semantic review of lessons, worked answers, case studies, exercises, worksheets, rubrics, and lab guides. It verifies named mechanisms against bounded primary or official sources, distinguishes normative course contracts, and does not turn synthetic examples into production measurements.",
   "claims": [
@@ -434,7 +434,7 @@
   "document_coverage": [
     {
       "path": "README.md",
-      "sha256": "aa68fa796dc50c7e9e00d78915673c000db5ff1c387ae1f90bde13a090eef470",
+      "sha256": "3bed89319f73fa51cbdabc1ad2cb2b432a40e514df1e2c7511c3d2af43ced7b4",
       "review_scope": "normative_or_assignment_only",
       "claim_ids": [],
       "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
@@ -512,7 +512,7 @@
     },
     {
       "path": "assessment/evaluator-prompt.md",
-      "sha256": "c9cd3b28bc252b8f4adc6367010de52917966c654ce24a47ef6a4eb121d26920",
+      "sha256": "48690131e85d755d35631853aa5dc704b49d410942aa48a3b769aafebc70427a",
       "review_scope": "normative_or_assignment_only",
       "claim_ids": [],
       "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
@@ -526,7 +526,7 @@
     },
     {
       "path": "assessment/remediation-map.md",
-      "sha256": "d8f83ab870bc17fd5c053d0fe2e7bded604cd4872807e4db1e0aba13d4721b46",
+      "sha256": "70ea7059a8df8ee4263e583a7aa6bb06fbccf614d51ba53b5b702c255b369d95",
       "review_scope": "normative_or_assignment_only",
       "claim_ids": [],
       "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
@@ -540,14 +540,14 @@
     },
     {
       "path": "assessment/rubric.md",
-      "sha256": "5ec95ef68e767888e56c97b20811b44fd9d65c557c5ecbec88e2adf52bb3a47d",
+      "sha256": "22c8d0782ee908f71cbf50c1969d7fd8848bd9d982c2f8ee00219d451749a1e0",
       "review_scope": "normative_or_assignment_only",
       "claim_ids": [],
       "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
     },
     {
       "path": "assessment/semantic-readiness-review.md",
-      "sha256": "2acc8deb7db16ac2c812921c2764b31a68a009f45774c0c2b59ca14d1b79733a",
+      "sha256": "19723ce2f862f1c99779640180ac6dfe8d6876d5c32fd255aaf767ff6fb787c1",
       "review_scope": "normative_or_assignment_only",
       "claim_ids": [],
       "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
@@ -565,7 +565,7 @@
     },
     {
       "path": "exercises/answer-key.md",
-      "sha256": "51ef25cf780138a3c4c716fb773b615b7a3bd46fb90bb82c837afb65be70eeb4",
+      "sha256": "a99c2c7747ac2f0b61c4a1367a32bc1fa901203fa84a94746167c9451b2406db",
       "review_scope": "substantive_claims",
       "claim_ids": [
         "M10-FC-009",
@@ -575,7 +575,7 @@
     },
     {
       "path": "exercises/exercises.md",
-      "sha256": "4ddf8a2a54de753f868ba82cbe1bdb9fb878c5dd4ec3ede1f0467cbaf6ec0b36",
+      "sha256": "aa03e510176a010afd8f1208b48d6f96701630fa25845fbe053df3f7dc9ff3db",
       "review_scope": "substantive_claims",
       "claim_ids": [
         "M10-FC-013"
@@ -591,7 +591,7 @@
     },
     {
       "path": "lab/README.md",
-      "sha256": "eaceb29cdeaa704707e66eb28a436c353340a3f68b725e51325404daf4737c9b",
+      "sha256": "a3fc461bc6269cc0e634a7dbdbd02b6d7a66603ee028c51aa4dff6445013104f",
       "review_scope": "normative_or_assignment_only",
       "claim_ids": [],
       "review_note": "The lab guide's commands, interfaces, bounds, and synthetic evidence limitations were checked directly against the executable implementation and its passing tests."
@@ -612,7 +612,14 @@
     },
     {
       "path": "lab/consensus_lab/config.py",
-      "sha256": "a5e19da00645da7c9abe5e49308c8c5debb7962099b6d164866b67624158e332",
+      "sha256": "4a038ebae194ece340e9be5a23533338d4f52948e2a9c7a9a0b92bcd1e97737c",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/consensus_lab/harness.py",
+      "sha256": "2085992b7ba27338b95cedc2e6ec3906e60adda5124635fd0683b6c180758b8b",
       "review_scope": "implementation_evidence",
       "claim_ids": [],
       "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
@@ -626,7 +633,7 @@
     },
     {
       "path": "lab/consensus_lab/runner.py",
-      "sha256": "486358f3338dacb3d63bda9e58e37162caefd36c42d4bd7db559cdba30713856",
+      "sha256": "b3ca3ce83544ffbd68b8f764d1dc2679e2c25f8b94bc7ce5c1a7d4365a0bcfbe",
       "review_scope": "implementation_evidence",
       "claim_ids": [],
       "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
@@ -768,7 +775,7 @@
     },
     {
       "path": "lab/tests/test_consensus_lab.py",
-      "sha256": "e976bca1f573a19fa24f8d0dad6c18702da48391a635cd372e41f9309c7a29a8",
+      "sha256": "b0f1fcf99c9b02cf1f41cda1745d67df4fd6212569fe6ea09294a03a366ef6b4",
       "review_scope": "implementation_evidence",
       "claim_ids": [],
       "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
@@ -842,7 +849,7 @@
     },
     {
       "path": "lessons/08-membership-leases-fencing-decisions.md",
-      "sha256": "2b2b8592eab808e940dc94fc2840081a46e58c65eecfc2ad9ae9831df24f6245",
+      "sha256": "753e9c25800fd54e45abf15b3a1bc54f35ebc9dc4d97fec37f755d0e0f27c050",
       "review_scope": "substantive_claims",
       "claim_ids": [
         "M10-FC-008"
@@ -851,7 +858,7 @@
     },
     {
       "path": "module.json",
-      "sha256": "9a3144b396a360008689dbc4f691b9ae012aceeebcc3617d7d30a90de1cbc8a1",
+      "sha256": "7690f06c4ccc46197e092f0c429dddba48d2be6fe72335018b4e068671918a41",
       "review_scope": "implementation_evidence",
       "claim_ids": [],
       "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
@@ -886,7 +893,7 @@
     },
     {
       "path": "worksheets/week-40-coordination-rfc-defense.md",
-      "sha256": "77f6d82a5b20577269bade015b1c7c55db312cdf0e089404c6b746e9339f6d65",
+      "sha256": "bd507d239c3b7592ed1577b073534b922a1ebb8a1ac6218e04eab86282d1cf1d",
       "review_scope": "normative_or_assignment_only",
       "claim_ids": [],
       "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
@@ -978,12 +985,12 @@
       "claim_id": "M10-FC-002"
     }
   ],
-  "content_digest": "d56d7210a8102c7f4d1019a0b28ad0a19c9c742a709cbea1f3b3eb9204e2009c",
+  "content_digest": "b3dd97ee96127091889b5991cbba2c2f13eb6466d42d80a786c497e4f0417966",
   "review_attestation": {
     "reviewer": "course readiness remediation review",
     "method": "primary-source semantic review",
     "status": "complete",
-    "content_digest": "d56d7210a8102c7f4d1019a0b28ad0a19c9c742a709cbea1f3b3eb9204e2009c",
+    "content_digest": "b3dd97ee96127091889b5991cbba2c2f13eb6466d42d80a786c497e4f0417966",
     "scope_note": "All tracked learner-facing prose, exercises, answers, assessment contracts, synthetic fixtures, laboratory documentation, implementation, and configuration in this module were inventoried; substantive claims were checked against the named source boundaries."
   }
 }

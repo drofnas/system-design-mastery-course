@@ -144,3 +144,11 @@ task; record the substitution.
 Do not copy articles, chapters, slides, or transcripts into learner artifacts.
 Use short attributed quotations only when necessary and otherwise paraphrase with
 the source ID, exact section boundary, and stated evidence limit.
+
+## PESD 2.0 primary anchors
+
+- [NIST AI RMF Core](https://airc.nist.gov/airmf-resources/airmf/5-sec-core/) — NIST AIRC; required, free, 20 minutes; Read Govern 1.5–1.7 and Manage 3–4; map inventory, monitoring, supplier, incident, recovery, and decommission outcomes into the dossier. Local alternative: Lesson 8 PESD 2.0 extension. Last verified 2026-08-04.
+
+For each source, submit the named control/evidence mapping and applicability or
+scope uncertainty. A framework name is not evidence of implementation or legal
+compliance.

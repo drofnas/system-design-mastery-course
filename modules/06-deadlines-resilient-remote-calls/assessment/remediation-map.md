@@ -18,3 +18,11 @@ smallest evidence needed.
 
 Repeat requires a new independent baseline and new raw trials only when the
 original ordering/evidence is invalid. Never reconstruct missing raw data.
+
+## PESD 2.0 remediation
+
+When a cross-cutting floor is missed, return to Lesson 8's PESD 2.0 extension
+and the final exercise. Create a separate dated revision containing the missing
+requirement/control/evidence mapping, owner, evidence boundary, failure check,
+cost consequence, migration, and reversal trigger. Never edit the frozen
+baseline or raw trial. A Pass creates no required remediation artifact.

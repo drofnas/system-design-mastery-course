@@ -1,8 +1,6 @@
 # Module 3: Computer Systems and Operating Systems
 
-> **Authoring status:** Ready. The teaching, lab, assessment, calibration, and
-> Gate 1 package passed independent review and all recorded readiness checks.
-> See the [readiness review](assessment/readiness-review.md).
+> **Authoring status:** Review. PESD 2.0 content and machine-readable contracts are migrated. Refreshed evaluator calibration, full platform matrices, offline reruns, cleanup checks, and timed learner pilots remain required before Ready.
 
 ## What this module changes
 
@@ -43,51 +41,50 @@ By the end of the module, you can:
 
 ## Schedule
 
-### Week 9: Model — 10.5 hours
+The 10–12 hour weekly figure is a capacity envelope. Core work is deliberately
+budgeted below that ceiling; unused time is recovery buffer, not hidden work.
+
+### Week 11: Model and derive — 8.5 hours
 
 | Work | Time |
 |---|---:|
-| Lessons 1–2 and bounded resources | 3 h |
-| Guided exercises EX-01–EX-04 | 2 h |
-| Machine inventory and frozen benchmark prediction | 4 h |
-| Self-check and learning log | 1.5 h |
+| Bounded authoritative resources | 105 min |
+| Local mechanism instruction | 120 min |
+| Guided practice | 60 min |
+| Model and derive core work | 225 min |
 
-Use the [benchmark-prediction worksheet](worksheets/week-09-benchmark-prediction.md).
-
-### Week 10: Build — 10.5 hours
+### Week 12: Guided build and prediction freeze — 9 hours
 
 | Work | Time |
 |---|---:|
-| Lessons 3–5 | 3 h |
-| Transit worker walkthrough and EX-05–EX-08 | 2 h |
-| Portable probes, instrumentation, and tests | 4.5 h |
-| Build review and learning log | 1 h |
+| Bounded authoritative resources | 105 min |
+| Local mechanism instruction | 120 min |
+| Guided practice | 60 min |
+| Required evidence components | 30 min |
+| Guided build and prediction freeze core work | 225 min |
 
-Use the [portable-build worksheet](worksheets/week-10-portable-build.md).
-
-### Week 11: Break and measure — 10.5 hours
-
-| Work | Time |
-|---|---:|
-| Lessons 6–7 and bounded resources | 2.5 h |
-| Guided failure walkthrough and EX-09–EX-11 | 1.5 h |
-| Required experiment matrix | 5 h |
-| Evidence review and learning log | 1.5 h |
-
-Use the [experiment-matrix worksheet](worksheets/week-11-systems-matrix.md).
-
-### Week 12: Decide, teach, and Gate 1 — 10.5 hours
+### Week 13: Independent build and integration — 10 hours
 
 | Work | Time |
 |---|---:|
-| Lesson 8 and report method | 1 h |
-| Systems-performance report | 2.5 h |
-| Recorded teach-back and challenge | 1.5 h |
-| Module evaluation and separate remediation | 2 h |
-| Gate 1 and learning log | 3.5 h |
+| Independent build and integration core work | 540 min |
+| Independent build and integration verification checkpoint | 60 min |
 
-Use the [report-and-defense worksheet](worksheets/week-12-report-defense.md).
+### Week 14: Break, repair, measure, and diagnose — 10 hours
 
+| Work | Time |
+|---|---:|
+| Required evidence components | 120 min |
+| Break, repair, measure, and diagnose core work | 480 min |
+
+### Week 15: Decide, teach, assess, and freeze — 9.5 hours
+
+| Work | Time |
+|---|---:|
+| Required evidence components | 90 min |
+| Decide, teach, assess, and freeze core work | 420 min |
+| Module teach-back | 30 min |
+| Learning log and freeze check | 30 min |
 ## Learn
 
 1. [Benchmark contracts, pipelines, caches, and locality](lessons/01-benchmark-contracts-and-locality.md)
@@ -111,8 +108,9 @@ Use the [report-and-defense worksheet](worksheets/week-12-report-defense.md).
 - Preserve raw evidence separately from interpretation and preserve every
   superseded conclusion in a new revision artifact.
 
-The required portfolio evidence is one systems-performance investigation, one
-failure matrix, one source-code internals review, and one recorded teach-back.
+The featured portfolio evidence is one systems-performance investigation and
+one failure matrix. The internals trace and lightweight teach-back remain
+required module evidence without receiving duplicate featured credit.
 
 ## Build and measure
 
@@ -130,8 +128,8 @@ failure matrix, one source-code internals review, and one recorded teach-back.
 - Use the [Module 3 assessment](assessment/README.md),
   [anchored rubric](assessment/rubric.md), and
   [provider-neutral evaluator](assessment/evaluator-prompt.md).
-- Complete [Gate 1](assessment/gate-01.md) and record changed beliefs only in
-  the [Week 12 revision](../../capstone/revisions/week-12-gate-01.md).
+- Complete [Gate 1](../../gates/G01/assessment-brief.md) and record changed beliefs only in
+  the [Week 17 delta](../../capstone/revisions/week-017-delta.md).
 - Keep the frozen prediction and raw trials unchanged. Remediation is a new,
   cited artifact linked to a lesson and exercise.
 
@@ -157,3 +155,10 @@ code, primary sources, and repeated experiments.
 - Use the [sealed local gate workflow](../../SOLO_GATE_GUIDE.md) when a course gate applies. Human review is optional.
 
 A frozen self-evaluation may establish **Solo Complete**; independent human or LLM review may establish **Independently Validated**. Synthetic lab values are not production measurements.
+
+## PESD 2.0 scope addition
+
+This 5-week module schedules 47 core hours. Its primary
+decision is ADR A06. The added graded scope is
+cgroup enforcement, virtualization and steal time, noisy-neighbor isolation, architecture-specific limits, and measured-versus-host-controlled evidence boundaries. See Lesson 8, the final guided exercise, final worksheet,
+rubric anchors, and remediation map for the integrated evidence contract.

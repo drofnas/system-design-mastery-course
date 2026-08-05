@@ -87,18 +87,18 @@ def run_scenario(scenario: dict[str, Any]) -> dict[str, Any]:
     secrets_exposed = 1 if injection_acted_on else 0
 
     invariant_pass = {
-        "I01": True,
-        "I02": not stale_index,
-        "I03": revoked_hits == 0,
-        "I04": release_passed and not low_quality,
-        "I05": not stale_index and corpus["index_version"] == corpus["source_version"],
-        "I06": True,
-        "I07": authorization_source == "deterministic-executor" and secrets_exposed == 0,
-        "I08": not unauthorized and approval_consumed,
-        "I09": duplicate_side_effects == 0,
-        "I10": not replay_unsafe,
-        "I11": elapsed_ms <= workload["deadline_ms"] and used_steps <= workload["max_steps"] and used_cost <= workload["max_cost_microunits"] and outstanding_work == 0,
-        "I12": secrets_exposed == 0,
+        "AI01": True,
+        "AI02": not stale_index,
+        "AI03": revoked_hits == 0,
+        "AI04": release_passed and not low_quality,
+        "AI05": not stale_index and corpus["index_version"] == corpus["source_version"],
+        "AI06": True,
+        "AI07": authorization_source == "deterministic-executor" and secrets_exposed == 0,
+        "AI08": not unauthorized and approval_consumed,
+        "AI09": duplicate_side_effects == 0,
+        "AI10": not replay_unsafe,
+        "AI11": elapsed_ms <= workload["deadline_ms"] and used_steps <= workload["max_steps"] and used_cost <= workload["max_cost_microunits"] and outstanding_work == 0,
+        "AI12": secrets_exposed == 0,
     }
 
     citations = [

@@ -1,5 +1,7 @@
 # Gate 5: Security, Evolution, Economics, and Runtimes
 
+> **PESD V1 historical contract:** Preserve this file for V1 learners and immutable evidence. PESD 2.0 uses [gates/G05/README.md](../../../gates/G05/README.md).
+
 Gate 5 closes Week 60 after Module 15 evidence is frozen. Freeze every part
 before feedback. Total learner time: 3.5 hours.
 

@@ -21,3 +21,14 @@ reversal thresholds.
 Explain ordering and stream isolation from first principles. Record questions,
 disagreement, changed claims, unresolved uncertainty, follow-up owner, and a
 separate revision path.
+
+## PESD 2.0 decision and assurance check
+
+- Added scope: workload identity, egress policy, residency-aware routing, encrypted naming implications, and a network certificate and algorithm inventory
+- Requirement or obligation and applicability:
+- Enforcement point and failure mode:
+- Evidence owner, source commit, hashes, and evidence mode:
+- Tenant/data/provider boundary:
+- Cost allocation and operating owner:
+- Migration, rollback, and decommissioning step:
+- Uncertainty and reversal trigger:

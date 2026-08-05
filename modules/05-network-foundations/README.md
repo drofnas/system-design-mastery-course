@@ -1,8 +1,6 @@
 # Module 5: Network Foundations
 
-> **Authoring status:** Ready. Structural, semantic, lab, evaluator-calibration,
-> and full-course validation gates passed on 2026-08-01. See the
-> [readiness review](assessment/readiness-review.md).
+> **Authoring status:** Review. PESD 2.0 content and machine-readable contracts are migrated. Refreshed evaluator calibration, full platform matrices, offline reruns, cleanup checks, and timed learner pilots remain required before Ready.
 
 ## What this module changes
 
@@ -52,50 +50,50 @@ By the end of the module, you can:
 
 ## Schedule
 
-### Week 17: Model the path — 10.5 hours
+The 10–12 hour weekly figure is a capacity envelope. Core work is deliberately
+budgeted below that ceiling; unused time is recovery buffer, not hidden work.
+
+### Week 23: Model and derive — 8.5 hours
 
 | Work | Time |
 |---|---:|
-| Lessons 1–2 and bounded resources | 3 h |
-| Guided exercises EX-01–EX-04 | 2 h |
-| Frozen client/path/round-trip prediction | 4 h |
-| Self-check and learning log | 1.5 h |
+| Bounded authoritative resources | 170 min |
+| Local mechanism instruction | 120 min |
+| Guided practice | 60 min |
+| Model and derive core work | 160 min |
 
-Use the [Week 17 path worksheet](worksheets/week-17-path-budget.md).
-
-### Week 18: Build and trace — 10.5 hours
+### Week 24: Guided build and prediction freeze — 9 hours
 
 | Work | Time |
 |---|---:|
-| Lessons 3–5 | 3 h |
-| Transit loopback tutorial and EX-05–EX-08 | 2 h |
-| Trace the independent commerce journey | 4.5 h |
-| Build review and learning log | 1 h |
+| Bounded authoritative resources | 135 min |
+| Local mechanism instruction | 120 min |
+| Guided practice | 60 min |
+| Required evidence components | 60 min |
+| Guided build and prediction freeze core work | 165 min |
 
-Use the [Week 18 trace worksheet](worksheets/week-18-trace-build.md).
-
-### Week 19: Break and diagnose — 10.5 hours
-
-| Work | Time |
-|---|---:|
-| Lessons 6–7 and bounded resources | 2.5 h |
-| Guided model rehearsal and EX-09–EX-12 | 2 h |
-| Blind nine-scenario fault matrix | 4.5 h |
-| Reveal review and learning log | 1.5 h |
-
-Use the [Week 19 failure worksheet](worksheets/week-19-network-failures.md).
-
-### Week 20: Decide and teach — 10.5 hours
+### Week 25: Independent build and integration — 10 hours
 
 | Work | Time |
 |---|---:|
-| Lesson 8 and practitioner resources | 2 h |
-| Protocol/topology comparison and validation | 2.5 h |
-| ADR and recorded teach-back | 3 h |
-| Evaluation, separate remediation, and learning log | 3 h |
+| Independent build and integration core work | 540 min |
+| Independent build and integration verification checkpoint | 60 min |
 
-Use the [Week 20 decision worksheet](worksheets/week-20-protocol-decision.md).
+### Week 26: Break, repair, measure, and diagnose — 10 hours
 
+| Work | Time |
+|---|---:|
+| Required evidence components | 60 min |
+| Break, repair, measure, and diagnose core work | 540 min |
+
+### Week 27: Decide, teach, assess, and freeze — 9.5 hours
+
+| Work | Time |
+|---|---:|
+| Required evidence components | 120 min |
+| Decide, teach, assess, and freeze core work | 390 min |
+| Module teach-back | 30 min |
+| Learning log and freeze check | 30 min |
 ## Learn
 
 1. [Request paths, round trips, and byte budgets](lessons/01-request-paths-and-budgets.md)
@@ -154,3 +152,10 @@ experiment.
 - Use the [sealed local gate workflow](../../SOLO_GATE_GUIDE.md) when a course gate applies. Human review is optional.
 
 A frozen self-evaluation may establish **Solo Complete**; independent human or LLM review may establish **Independently Validated**. Synthetic lab values are not production measurements.
+
+## PESD 2.0 scope addition
+
+This 5-week module schedules 47 core hours. Its primary
+decision is ADR A05. The added graded scope is
+workload identity, egress policy, residency-aware routing, encrypted naming implications, and a network certificate and algorithm inventory. See Lesson 8, the final guided exercise, final worksheet,
+rubric anchors, and remediation map for the integrated evidence contract.

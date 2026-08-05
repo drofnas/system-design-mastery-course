@@ -34,3 +34,14 @@ unresolved follow-up, owner, and date. Do not use AI during the defense.
 
 Record evaluator identity/settings, exact cited evidence, result, uncertainty,
 and remediation lesson/exercise. Preserve the original; create a dated revision.
+
+## PESD 2.0 decision and assurance check
+
+- Added scope: an actual streaming tiny-transformer path with incremental KV state, token scheduling, byte-budget admission, tenant/version cache identity, bounded provider failure, profiling, and an AI System Dossier
+- Requirement or obligation and applicability:
+- Enforcement point and failure mode:
+- Evidence owner, source commit, hashes, and evidence mode:
+- Tenant/data/provider boundary:
+- Cost allocation and operating owner:
+- Migration, rollback, and decommissioning step:
+- Uncertainty and reversal trigger:

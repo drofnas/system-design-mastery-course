@@ -65,7 +65,7 @@ mixed-version compatibility, staged migration, rollback, dissent, and reversal
 evidence.
 
 Existing frozen learner artifacts are unchanged. Module 10 creates no capstone
-revision or Gate 4 submission; Gate 4 remains at Week 48. Frozen predictions,
+revision or Gate 4 submission; Gate 4 runs in Week 68. Frozen predictions,
 raw evidence, decisions, and evaluation reports are remediated only through
 dated addenda. Secret and answer-leakage review found no credentials, commerce
 solution, fabricated production proof, or Module 11 scope theft.

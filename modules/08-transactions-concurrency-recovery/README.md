@@ -1,8 +1,6 @@
 # Module 8: Transactions, Concurrency, and Recovery
 
-> **Authoring status:** Ready. Teaching, practice, executable lab, structural,
-> semantic, evaluator-calibration, focused, and full-course gates passed on
-> 2026-08-02. See the [readiness review](assessment/readiness-review.md).
+> **Authoring status:** Review. PESD 2.0 content and machine-readable contracts are migrated. Refreshed evaluator calibration, full platform matrices, offline reruns, cleanup checks, and timed learner pilots remain required before Ready.
 
 ## What this module changes
 
@@ -51,50 +49,50 @@ By the end of the module, you can:
 
 ## Schedule
 
-### Week 29: Model and freeze — 10.5 hours
+The 10–12 hour weekly figure is a capacity envelope. Core work is deliberately
+budgeted below that ceiling; unused time is recovery buffer, not hidden work.
+
+### Week 40: Model and derive — 8.5 hours
 
 | Work | Time |
 |---|---:|
-| Lessons 1–2 and bounded resources | 3 h |
-| EX-01–EX-04 and Northstar schedule tutorial | 2 h |
-| Independent invariant, boundary, and anomaly baseline | 4 h |
-| Self-check and learning log | 1.5 h |
+| Bounded authoritative resources | 115 min |
+| Local mechanism instruction | 120 min |
+| Guided practice | 60 min |
+| Model and derive core work | 215 min |
 
-Use the [Week 29 worksheet](worksheets/week-29-transaction-model.md).
-
-### Week 30: Build concurrency controls — 11 hours
+### Week 41: Guided build and prediction freeze — 9 hours
 
 | Work | Time |
 |---|---:|
-| Lessons 3–5 | 3 h |
-| EX-05–EX-10 and lab walkthrough | 2.5 h |
-| Independent concurrent transaction build and tests | 4.5 h |
-| Internals review and learning log | 1 h |
+| Bounded authoritative resources | 135 min |
+| Local mechanism instruction | 120 min |
+| Guided practice | 60 min |
+| Required evidence components | 30 min |
+| Guided build and prediction freeze core work | 195 min |
 
-Use the [Week 30 worksheet](worksheets/week-30-concurrency-build.md).
-
-### Week 31: Break, recover, and measure — 11.5 hours
-
-| Work | Time |
-|---|---:|
-| Lessons 6–7 and bounded resources | 3 h |
-| EX-11–EX-14 failure rehearsal | 2 h |
-| Seven paired trials and restore validation | 5 h |
-| Evidence review and learning log | 1.5 h |
-
-Use the [Week 31 worksheet](worksheets/week-31-failure-restore-matrix.md).
-
-### Week 32: Decide, teach, and assess — 10.5 hours
+### Week 42: Independent build and integration — 10 hours
 
 | Work | Time |
 |---|---:|
-| Lesson 8 and practitioner cases | 2 h |
-| Alternatives, cost, security, migration, and ownership | 2 h |
-| Transaction/recovery ADR and recorded defense | 3 h |
-| Evaluation, remediation, and learning log | 3.5 h |
+| Independent build and integration core work | 540 min |
+| Independent build and integration verification checkpoint | 60 min |
 
-Use the [Week 32 worksheet](worksheets/week-32-transaction-recovery-decision.md).
+### Week 43: Break, repair, measure, and diagnose — 10 hours
 
+| Work | Time |
+|---|---:|
+| Required evidence components | 120 min |
+| Break, repair, measure, and diagnose core work | 480 min |
+
+### Week 44: Decide, teach, assess, and freeze — 9.5 hours
+
+| Work | Time |
+|---|---:|
+| Required evidence components | 120 min |
+| Decide, teach, assess, and freeze core work | 390 min |
+| Module teach-back | 30 min |
+| Learning log and freeze check | 30 min |
 ## Learn
 
 1. [Invariants and transaction boundaries](lessons/01-invariants-transaction-boundaries.md)
@@ -156,3 +154,10 @@ replacement graded answer, or answer during the defense. Disclose assistance.
 - Use the [sealed local gate workflow](../../SOLO_GATE_GUIDE.md) when a course gate applies. Human review is optional.
 
 A frozen self-evaluation may establish **Solo Complete**; independent human or LLM review may establish **Independently Validated**. Synthetic lab values are not production measurements.
+
+## PESD 2.0 scope addition
+
+This 5-week module schedules 47 core hours. Its primary
+decision is ADR A06. The added graded scope is
+retention, deletion, legal holds, key rotation, logs, replicas, exports, backups, restore-time policy replay, and resurrection prevention. See Lesson 8, the final guided exercise, final worksheet,
+rubric anchors, and remediation map for the integrated evidence contract.

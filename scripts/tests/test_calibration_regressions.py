@@ -39,12 +39,12 @@ class CalibrationRegressionTests(unittest.TestCase):
             validate_course.validate_calibration_provenance(module_root, manifest, provenance_errors)
         return calibration_errors, provenance_errors
 
-    def test_current_calibration_passes_and_missing_raw_or_provenance_fails(self) -> None:
+    def test_migrated_calibration_is_structurally_valid_but_requires_fresh_provenance(self) -> None:
         temporary, root, module_root, manifest = self.repository()
         self.addCleanup(temporary.cleanup)
         calibration_errors, provenance_errors = self.validate(root, module_root, manifest)
         self.assertEqual(calibration_errors, [])
-        self.assertEqual(provenance_errors, [])
+        self.assertTrue(any("calibration input hash is stale" in error for error in provenance_errors))
 
         raw = module_root / "assessment" / "calibration" / "runs" / "pass-run-1.json"
         raw.unlink()

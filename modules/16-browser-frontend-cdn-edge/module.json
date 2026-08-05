@@ -4,30 +4,31 @@
   "title": "Browser, Frontend, CDN, and Edge Architecture",
   "weeks": [
     {
-      "number": 61,
-      "focus": "Model browser work, route rendering, cache authority, accessibility, telemetry, and performance budgets; freeze predictions",
-      "hours": 11,
+      "number": 87,
+      "phase": "Model and derive",
+      "focus": "Model and derive",
+      "hours": 8.5,
+      "core_hours": 8.5,
+      "capacity_hours": 12,
       "evidence": [
-        "Frozen browser-edge baseline",
-        "Route and cache policy",
-        "F01-F08 predictions",
-        "Week 61 learning log"
+        "Model and derive evidence frozen at source commit"
       ],
       "time_blocks": [
         {
-          "id": "W61-T01",
+          "id": "W087-T01",
           "label": "Bounded authoritative resources",
-          "minutes": 155,
+          "minutes": 165,
           "activity": "required_resource",
           "resource_ids": [
             "RES-01",
-            "RES-02",
-            "RES-04"
+            "RES-04",
+            "RES-09",
+            "RES-14"
           ]
         },
         {
-          "id": "W61-T02",
-          "label": "Local lesson instruction",
+          "id": "W087-T02",
+          "label": "Local mechanism instruction",
           "minutes": 120,
           "activity": "local_instruction",
           "lesson_ids": [
@@ -38,9 +39,9 @@
           ]
         },
         {
-          "id": "W61-T03",
+          "id": "W087-T03",
           "label": "Guided practice",
-          "minutes": 90,
+          "minutes": 60,
           "activity": "guided_practice",
           "exercise_ids": [
             "EX-01",
@@ -49,259 +50,220 @@
             "EX-04",
             "EX-05",
             "EX-06",
-            "EX-07"
-          ]
-        },
-        {
-          "id": "W61-T04",
-          "label": "Reflection and learning log",
-          "minutes": 30,
-          "activity": "reflection"
-        },
-        {
-          "id": "W61-T05",
-          "label": "Independent Work",
-          "minutes": 265,
-          "activity": "independent_work",
-          "artifact_ids": [
-            "A01"
-          ]
-        }
-      ]
-    },
-    {
-      "number": 62,
-      "focus": "Build and verify static, streaming, client-rendered, and private personalized storefront routes",
-      "hours": 12,
-      "evidence": [
-        "Independent storefront implementation",
-        "Rendering and cache conformance review",
-        "Accessibility and trace evidence",
-        "Week 62 learning log"
-      ],
-      "time_blocks": [
-        {
-          "id": "W62-T01",
-          "label": "Bounded authoritative resources",
-          "minutes": 60,
-          "activity": "required_resource",
-          "resource_ids": [
-            "RES-07"
-          ]
-        },
-        {
-          "id": "W62-T02",
-          "label": "Local lesson instruction",
-          "minutes": 90,
-          "activity": "local_instruction",
-          "lesson_ids": [
-            "L03",
-            "L05",
-            "L07"
-          ]
-        },
-        {
-          "id": "W62-T03",
-          "label": "Guided practice",
-          "minutes": 90,
-          "activity": "guided_practice",
-          "exercise_ids": [
+            "EX-07",
             "EX-08",
-            "EX-09",
-            "EX-10",
-            "EX-11",
-            "EX-12",
-            "EX-13"
+            "EX-09"
           ]
         },
         {
-          "id": "W62-T04",
-          "label": "Reflection and learning log",
-          "minutes": 30,
-          "activity": "reflection"
-        },
-        {
-          "id": "W62-T05",
-          "label": "Decision Artifact",
-          "minutes": 30,
-          "activity": "decision_artifact",
-          "artifact_ids": [
-            "A03"
-          ]
-        },
-        {
-          "id": "W62-T06",
-          "label": "Independent Work",
-          "minutes": 420,
-          "activity": "independent_work",
-          "artifact_ids": [
-            "A02"
-          ]
+          "id": "W087-T04",
+          "label": "Model and derive core work",
+          "minutes": 165,
+          "activity": "independent_work"
         }
       ]
     },
     {
-      "number": 63,
-      "focus": "Break and measure main-thread, hydration, memory, third-party, cache, edge, and constrained-network failures",
-      "hours": 12,
+      "number": 88,
+      "phase": "Guided build and prediction freeze",
+      "focus": "Guided build and prediction freeze",
+      "hours": 9.0,
+      "core_hours": 9.0,
+      "capacity_hours": 12,
       "evidence": [
-        "Sixteen immutable raw trials",
-        "Eight broken/repaired comparisons",
-        "Browser-edge failure matrix",
-        "Performance investigation review"
+        "Guided build and prediction freeze evidence frozen at source commit"
       ],
       "time_blocks": [
         {
-          "id": "W63-T01",
+          "id": "W088-T01",
           "label": "Bounded authoritative resources",
-          "minutes": 35,
+          "minutes": 150,
           "activity": "required_resource",
           "resource_ids": [
-            "RES-09"
-          ]
-        },
-        {
-          "id": "W63-T02",
-          "label": "Local lesson instruction",
-          "minutes": 90,
-          "activity": "local_instruction",
-          "lesson_ids": [
-            "L01",
-            "L04",
-            "L06"
-          ]
-        },
-        {
-          "id": "W63-T03",
-          "label": "Guided practice",
-          "minutes": 90,
-          "activity": "guided_practice",
-          "exercise_ids": [
-            "EX-14",
-            "EX-15",
-            "EX-16",
-            "EX-17"
-          ]
-        },
-        {
-          "id": "W63-T04",
-          "label": "Reflection and learning log",
-          "minutes": 30,
-          "activity": "reflection"
-        },
-        {
-          "id": "W63-T05",
-          "label": "Decision Artifact",
-          "minutes": 30,
-          "activity": "decision_artifact",
-          "artifact_ids": [
-            "A06"
-          ]
-        },
-        {
-          "id": "W63-T06",
-          "label": "Failure Experiment",
-          "minutes": 445,
-          "activity": "failure_experiment",
-          "artifact_ids": [
-            "A04",
-            "A05"
-          ]
-        }
-      ]
-    },
-    {
-      "number": 64,
-      "focus": "Decide per-route architecture, defend ownership and edge limits, assess, teach, and remediate",
-      "hours": 11,
-      "evidence": [
-        "Frontend and edge RFC",
-        "Architecture defense and teach-back",
-        "Module evaluation and remediation",
-        "Week 64 learning log"
-      ],
-      "time_blocks": [
-        {
-          "id": "W64-T01",
-          "label": "Bounded authoritative resources",
-          "minutes": 45,
-          "activity": "required_resource",
-          "resource_ids": [
+            "RES-02",
+            "RES-07",
             "RES-11"
           ]
         },
         {
-          "id": "W64-T02",
-          "label": "Local lesson instruction",
-          "minutes": 45,
+          "id": "W088-T02",
+          "label": "Local mechanism instruction",
+          "minutes": 120,
           "activity": "local_instruction",
           "lesson_ids": [
+            "L05",
+            "L06",
+            "L07",
             "L08"
           ]
         },
         {
-          "id": "W64-T03",
+          "id": "W088-T03",
           "label": "Guided practice",
-          "minutes": 45,
+          "minutes": 60,
           "activity": "guided_practice",
           "exercise_ids": [
+            "EX-10",
+            "EX-11",
+            "EX-12",
+            "EX-13",
+            "EX-14",
+            "EX-15",
+            "EX-16",
+            "EX-17",
             "EX-18"
           ]
         },
         {
-          "id": "W64-T04",
-          "label": "Required portfolio artifact A11",
-          "minutes": 45,
-          "activity": "reflection",
-          "artifact_ids": [
-            "A11"
+          "id": "W088-T04",
+          "label": "Required evidence components",
+          "minutes": 60,
+          "activity": "independent_work",
+          "artifact_allocations": [
+            {
+              "artifact_id": "A01",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A02",
+              "minutes": 30
+            }
           ]
         },
         {
-          "id": "W64-T05",
-          "label": "Reflection and learning log",
+          "id": "W088-T05",
+          "label": "Guided build and prediction freeze core work",
+          "minutes": 150,
+          "activity": "independent_work"
+        }
+      ]
+    },
+    {
+      "number": 89,
+      "phase": "Independent build and integration",
+      "focus": "Independent build and integration",
+      "hours": 10.0,
+      "core_hours": 10.0,
+      "capacity_hours": 12,
+      "evidence": [
+        "Independent build and integration evidence frozen at source commit"
+      ],
+      "time_blocks": [
+        {
+          "id": "W089-T01",
+          "label": "Independent build and integration core work",
+          "minutes": 540,
+          "activity": "independent_work"
+        },
+        {
+          "id": "W089-T02",
+          "label": "Independent build and integration verification checkpoint",
+          "minutes": 60,
+          "activity": "independent_work"
+        }
+      ]
+    },
+    {
+      "number": 90,
+      "phase": "Break, repair, measure, and diagnose",
+      "focus": "Break, repair, measure, and diagnose",
+      "hours": 10.0,
+      "core_hours": 10.0,
+      "capacity_hours": 12,
+      "evidence": [
+        "Break, repair, measure, and diagnose evidence frozen at source commit"
+      ],
+      "time_blocks": [
+        {
+          "id": "W090-T01",
+          "label": "Required evidence components",
+          "minutes": 120,
+          "activity": "failure_experiment",
+          "artifact_allocations": [
+            {
+              "artifact_id": "A03",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A04",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A05",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A06",
+              "minutes": 30
+            }
+          ]
+        },
+        {
+          "id": "W090-T02",
+          "label": "Break, repair, measure, and diagnose core work",
+          "minutes": 480,
+          "activity": "failure_experiment"
+        }
+      ]
+    },
+    {
+      "number": 91,
+      "phase": "Decide, teach, assess, and freeze",
+      "focus": "Decide, teach, assess, and freeze",
+      "hours": 9.5,
+      "core_hours": 9.5,
+      "capacity_hours": 12,
+      "evidence": [
+        "Decide, teach, assess, and freeze evidence frozen at source commit"
+      ],
+      "time_blocks": [
+        {
+          "id": "W091-T01",
+          "label": "Required evidence components",
+          "minutes": 120,
+          "activity": "decision_artifact",
+          "artifact_allocations": [
+            {
+              "artifact_id": "A07",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A08",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A09",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A11",
+              "minutes": 30
+            }
+          ]
+        },
+        {
+          "id": "W091-T02",
+          "label": "Decide, teach, assess, and freeze core work",
+          "minutes": 390,
+          "activity": "assessment"
+        },
+        {
+          "id": "W091-T03",
+          "label": "Module teach-back",
+          "minutes": 30,
+          "activity": "teach_back"
+        },
+        {
+          "id": "W091-T04",
+          "label": "Learning log and freeze check",
           "minutes": 30,
           "activity": "reflection"
-        },
-        {
-          "id": "W64-T06",
-          "label": "Assessment",
-          "minutes": 60,
-          "activity": "assessment",
-          "artifact_ids": [
-            "A09",
-            "A10"
-          ]
-        },
-        {
-          "id": "W64-T07",
-          "label": "Decision Artifact",
-          "minutes": 270,
-          "activity": "decision_artifact",
-          "artifact_ids": [
-            "A07"
-          ]
-        },
-        {
-          "id": "W64-T08",
-          "label": "Review Remediation",
-          "minutes": 60,
-          "activity": "review_remediation"
-        },
-        {
-          "id": "W64-T09",
-          "label": "Teach Back",
-          "minutes": 60,
-          "activity": "teach_back",
-          "artifact_ids": [
-            "A08"
-          ]
         }
       ]
     }
   ],
-  "target_hours": 46,
-  "status": "ready",
+  "target_hours": 47,
+  "status": "review",
   "readiness_note": "Ready on 2026-08-03 after the pinned browser lab, eight paired failures, accessibility and manual checks, six isolated evaluator runs, deterministic calibration checking, semantic and resource reviews, and focused and full-course validation passed.",
   "outcomes": [
     {
@@ -538,7 +500,6 @@
         "A07",
         "A08",
         "A09",
-        "A10",
         "A11"
       ],
       "rubric": [
@@ -555,7 +516,7 @@
       "url": "https://html.spec.whatwg.org/multipage/webappapis.html#event-loops",
       "required": true,
       "access": "free",
-      "week": 61,
+      "week": 87,
       "estimated_minutes": 50,
       "purpose": "Ground tasks, microtasks, rendering opportunities, and agent event loops in the platform contract.",
       "assignment": "Read definitions, queuing tasks, and the processing model; trace one input through task, microtask checkpoint, and rendering opportunity.",
@@ -575,7 +536,7 @@
       "url": "https://developer.chrome.com/docs/chromium/renderingng-architecture",
       "required": true,
       "access": "free",
-      "week": 61,
+      "week": 88,
       "estimated_minutes": 45,
       "purpose": "Connect style, layout, paint, raster, compositing, and thread placement to observed work.",
       "assignment": "Read the pipeline and threading sections; label which Northstar work must use the main thread and which may bypass it.",
@@ -595,7 +556,7 @@
       "url": "https://web.dev/articles/inp",
       "required": false,
       "access": "free",
-      "week": 61,
+      "week": 91,
       "estimated_minutes": 45,
       "purpose": "Interpret interaction latency and separate field thresholds from controlled lab observations.",
       "assignment": "Read through the interaction anatomy and thresholds; map input delay, processing, and presentation delay to the Northstar filter interaction.",
@@ -615,10 +576,10 @@
       "url": "https://www.rfc-editor.org/rfc/rfc9111.html",
       "required": true,
       "access": "free",
-      "week": 61,
+      "week": 87,
       "estimated_minutes": 60,
       "purpose": "Reason precisely about cache storage, freshness, validation, invalidation, and shared-cache restrictions.",
-      "assignment": "Read Sections 3–5 and 7; produce the cache decision table for all four Northstar routes.",
+      "assignment": "Read Sections 3\u20135 and 7; produce the cache decision table for all four Northstar routes.",
       "last_verified": "2026-08-03",
       "text_alternative": "lessons/04-http-cdn-cache-safety.md",
       "verified_title": "RFC 9111: HTTP Caching",
@@ -635,7 +596,7 @@
       "url": "https://react.dev/reference/react-dom/server/renderToPipeableStream",
       "required": false,
       "access": "free",
-      "week": 62,
+      "week": 91,
       "estimated_minutes": 35,
       "purpose": "Expose streaming HTML shell, readiness, error, and abort semantics without a framework abstraction.",
       "assignment": "Read reference, caveats, and error recovery; identify when response status and headers become irreversible.",
@@ -655,7 +616,7 @@
       "url": "https://react.dev/reference/react-dom/client/hydrateRoot",
       "required": false,
       "access": "free",
-      "week": 62,
+      "week": 91,
       "estimated_minutes": 35,
       "purpose": "Define hydration identity, mismatch handling, and root ownership.",
       "assignment": "Read caveats and error hooks; define the server/client inputs whose equality the lab must preserve.",
@@ -675,7 +636,7 @@
       "url": "https://www.w3.org/TR/WCAG22/",
       "required": true,
       "access": "free",
-      "week": 62,
+      "week": 88,
       "estimated_minutes": 60,
       "purpose": "Tie resilient interaction to testable accessibility outcomes rather than tool scores.",
       "assignment": "Read Principles, Conformance, 1.3.1, 2.1.1, 2.4.3, 2.4.7, 2.5.8, 3.3.1, and 4.1.2; create manual and automated checks.",
@@ -695,7 +656,7 @@
       "url": "https://developer.chrome.com/docs/devtools/memory-problems",
       "required": false,
       "access": "free",
-      "week": 63,
+      "week": 91,
       "estimated_minutes": 45,
       "purpose": "Use heap growth, detached DOM, and allocation evidence to diagnose retained browser resources.",
       "assignment": "Read the overview and leak workflow; define a repeated-navigation test and the evidence that distinguishes growth from a leak.",
@@ -715,7 +676,7 @@
       "url": "https://www.w3.org/TR/trace-context/",
       "required": true,
       "access": "free",
-      "week": 63,
+      "week": 87,
       "estimated_minutes": 35,
       "purpose": "Propagate interoperable trace identity without trusting client sampling or leaking session data.",
       "assignment": "Read the design overview and security considerations; trace browser, edge, and origin parentage and list rejected sensitive attributes.",
@@ -735,7 +696,7 @@
       "url": "https://www.youtube.com/watch?v=K2QHdgAKP-s",
       "required": false,
       "access": "free",
-      "week": 61,
+      "week": 91,
       "estimated_minutes": 60,
       "purpose": "Visualize the journey from web content to displayed pixels while identifying version-bound Chromium details.",
       "assignment": "Watch with captions; draw the pipeline, then annotate at least two details superseded or clarified by current RenderingNG documentation.",
@@ -755,7 +716,7 @@
       "url": "https://web.dev/case-studies/better-youtube-web-part1",
       "required": true,
       "access": "free",
-      "week": 64,
+      "week": 88,
       "estimated_minutes": 45,
       "purpose": "Examine how a large operator connected constrained devices, field data, code delivery, and product outcomes.",
       "assignment": "Read the full case; separate measurements, interventions, product outcomes, and claims that do not transfer to Northstar.",
@@ -775,7 +736,7 @@
       "url": "https://opentelemetry.io/docs/languages/js/getting-started/browser/",
       "required": false,
       "access": "free",
-      "week": 63,
+      "week": 91,
       "estimated_minutes": 30,
       "purpose": "Inspect a browser tracing implementation while preserving its documented experimental boundary.",
       "assignment": "Read the warning, setup, and instrumentation sections; record which contracts are standard and which library behavior remains experimental.",
@@ -795,7 +756,7 @@
       "url": "https://web.dev/articles/optimizing-content-efficiency-loading-third-party-javascript",
       "required": false,
       "access": "free",
-      "week": 63,
+      "week": 91,
       "estimated_minutes": 45,
       "purpose": "Treat third-party code as a performance, privacy, security, and ownership dependency.",
       "assignment": "Read risks, measurement, loading, and safety sections; write a Northstar admission, failure, and removal policy.",
@@ -806,98 +767,170 @@
       "verification_method": "HTTP GET plus primary-source metadata comparison",
       "final_url": "https://web.dev/articles/optimizing-content-efficiency-loading-third-party-javascript",
       "verification_status": "verified"
+    },
+    {
+      "id": "RES-14",
+      "title": "Guidelines on transparency obligations for providers and deployers of AI systems",
+      "author_or_publisher": "European Commission",
+      "type": "official primary guidance",
+      "url": "https://digital-strategy.ec.europa.eu/en/library/guidelines-transparency-obligations-providers-and-deployers-ai-systems",
+      "required": true,
+      "access": "free",
+      "week": 87,
+      "estimated_minutes": 20,
+      "purpose": "Ground the PESD 2.0 cross-cutting decision in current primary guidance and produce scoped evidence rather than framework vocabulary.",
+      "assignment": "Read scope and Article 50 transparency categories; record applicability and uncertainty before translating any obligation into a web control.",
+      "last_verified": "2026-08-04",
+      "text_alternative": "lessons/08-frontend-edge-decision-teachback.md",
+      "verified_title": "Guidelines on transparency obligations for providers and deployers of AI systems",
+      "verified_publisher": "European Commission",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://digital-strategy.ec.europa.eu/en/library/guidelines-transparency-obligations-providers-and-deployers-ai-systems",
+      "verification_status": "verified"
     }
   ],
   "artifacts": [
     {
       "id": "A01",
-      "week": 61,
+      "week": 88,
       "required": true,
       "template_path": "modules/16-browser-frontend-cdn-edge/worksheets/week-61-browser-edge-model.md",
       "submission_path": "reports/module-16-browser-edge-baseline.md",
       "immutable_after_submission": true,
-      "portfolio_category": "model"
+      "portfolio_category": "model",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M16-A01",
+      "component_role": "prediction",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A02",
-      "week": 62,
+      "week": 88,
       "required": true,
       "template_path": "modules/16-browser-frontend-cdn-edge/worksheets/week-62-storefront-build.md",
       "submission_path": "labs/module-16/storefront/",
-      "portfolio_category": "implementation"
+      "portfolio_category": "implementation",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M16-A02",
+      "component_role": "implementation",
+      "estimated_minutes": 30,
+      "evidence_mode": "executed_deterministic"
     },
     {
       "id": "A03",
-      "week": 62,
+      "week": 90,
       "required": true,
       "template_path": "modules/16-browser-frontend-cdn-edge/worksheets/week-62-storefront-build.md",
       "submission_path": "reports/module-16-render-cache-accessibility-conformance.md",
-      "portfolio_category": "runtime_comparison"
+      "portfolio_category": "runtime_comparison",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M16-A03",
+      "component_role": "analysis",
+      "estimated_minutes": 30,
+      "evidence_mode": "measured_loopback"
     },
     {
       "id": "A04",
-      "week": 63,
+      "week": 90,
       "required": true,
       "template_path": "modules/16-browser-frontend-cdn-edge/worksheets/week-63-browser-edge-failures.md",
       "submission_path": "experiments/module-16/",
       "immutable_after_submission": true,
-      "portfolio_category": "failure_matrix"
+      "portfolio_category": "failure_matrix",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M16-A04",
+      "component_role": "raw_evidence",
+      "estimated_minutes": 30,
+      "evidence_mode": "executed_deterministic"
     },
     {
       "id": "A05",
-      "week": 63,
+      "week": 90,
       "required": true,
       "template_path": "modules/16-browser-frontend-cdn-edge/worksheets/week-63-browser-edge-failures.md",
       "submission_path": "reports/module-16-browser-edge-failure-matrix.md",
-      "portfolio_category": "failure_matrix"
+      "portfolio_category": "failure_matrix",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M16-A05",
+      "component_role": "raw_evidence",
+      "estimated_minutes": 30,
+      "evidence_mode": "executed_deterministic"
     },
     {
       "id": "A06",
-      "week": 63,
+      "week": 90,
       "required": true,
       "template_path": "templates/performance-review-template.md",
       "submission_path": "reports/module-16-performance-investigation.md",
-      "portfolio_category": "performance_investigation"
+      "portfolio_category": "performance_investigation",
+      "portfolio_item_id": "PI-PERF-05",
+      "portfolio_credit": true,
+      "evidence_lineage_id": "LIN-PERF-WEB-EDGE",
+      "component_role": "analysis",
+      "estimated_minutes": 30,
+      "evidence_mode": "measured_loopback"
     },
     {
       "id": "A07",
-      "week": 64,
+      "week": 91,
       "required": true,
       "template_path": "templates/rfc-template.md",
       "submission_path": "rfc/module-16-frontend-edge-architecture.md",
-      "portfolio_category": "rfc"
+      "portfolio_category": "rfc",
+      "portfolio_item_id": "PI-DECISION-M16",
+      "portfolio_credit": true,
+      "evidence_lineage_id": "LIN-DECISION-M16",
+      "component_role": "decision",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A08",
-      "week": 64,
+      "week": 91,
       "required": true,
       "template_path": "modules/16-browser-frontend-cdn-edge/worksheets/week-64-architecture-defense.md",
       "submission_path": "reviews/module-16-defense.md",
-      "portfolio_category": "teach_back"
+      "portfolio_category": "teach_back",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M16-A08",
+      "component_role": "final",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A09",
-      "week": 64,
+      "week": 91,
       "required": true,
       "template_path": "modules/16-browser-frontend-cdn-edge/assessment/report-template.md",
       "submission_path": "reviews/module-16-evaluation.md",
-      "portfolio_category": "evaluation"
-    },
-    {
-      "id": "A10",
-      "week": 64,
-      "required": true,
-      "template_path": "modules/16-browser-frontend-cdn-edge/assessment/report-template.md",
-      "submission_path": "reviews/module-16-remediation-revision.md",
-      "portfolio_category": "evaluation"
+      "portfolio_category": "evaluation",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M16-A09",
+      "component_role": "final",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A11",
-      "week": 64,
+      "week": 91,
       "required": true,
       "template_path": "templates/learning-log-template.md",
-      "submission_path": "learning-log/week-61.md through learning-log/week-64.md",
-      "portfolio_category": "learning_log"
+      "submission_path": "learning-log/week-087.md through learning-log/week-091.md",
+      "portfolio_category": "learning_log",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M16-A11",
+      "component_role": "final",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     }
   ],
   "failure_experiments": [
@@ -1103,5 +1136,13 @@
       "final_url": "https://developers.cloudflare.com/workers/platform/limits/",
       "verification_status": "verified"
     }
-  ]
+  ],
+  "course_id": "PESD-104",
+  "course_version": "2.0",
+  "primary_decision": {
+    "artifact_id": "A07",
+    "type": "RFC"
+  },
+  "pesd_v2_additions": "offline and degraded client state, browser-storage lifecycle, third-party governance, AI-content transparency and provenance, edge residency, and energy/performance budgets",
+  "semantic_evaluation": "module_specific"
 }

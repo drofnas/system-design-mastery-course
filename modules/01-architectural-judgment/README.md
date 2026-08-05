@@ -1,7 +1,6 @@
 # Module 1: Architectural Judgment
 
-> **Authoring status:** Ready. Local validation and two independent
-> Pass/Revise/Repeat evaluator calibration runs passed on 2026-07-31.
+> **Authoring status:** Review. PESD 2.0 content and machine-readable contracts are migrated. Refreshed evaluator calibration, full platform matrices, offline reruns, cleanup checks, and timed learner pilots remain required before Ready.
 
 ## What this module changes
 
@@ -10,7 +9,7 @@ design reviews by naming technologies. Principal-level judgment starts earlier:
 Which outcome matters? What must remain true? What load and failure environment
 must the system survive? What evidence would reverse the decision?
 
-This four-week module teaches a repeatable method for turning an ambiguous
+This five-week module teaches a repeatable method for turning an ambiguous
 product goal into a defensible architecture decision. It is self-contained.
 External resources add other perspectives but are not required to understand
 the local lessons.
@@ -52,57 +51,51 @@ artifacts, and rubric appears in [`module.json`](module.json).
 
 ## Schedule
 
-### Week 1: Model — 10.5 hours
+The 10–12 hour weekly figure is a capacity envelope. Core work is deliberately
+budgeted below that ceiling; unused time is recovery buffer, not hidden work.
+
+### Week 1: Model and derive — 8.5 hours
 
 | Work | Time |
 |---|---:|
-| Lessons 1–5 and required readings | 3.5 h |
-| Guided exercises EX-01–EX-07 | 2 h |
-| Independent commerce baseline | 4 h |
-| Self-check, freeze, and learning log | 1 h |
+| Bounded authoritative resources | 65 min |
+| Local mechanism instruction | 120 min |
+| Guided practice | 60 min |
+| Required evidence components | 30 min |
+| Model and derive core work | 235 min |
 
-Finish by committing and tagging the independently authored
-[`week-01-baseline.md`](../../capstone/baselines/week-01-baseline.md). Do not
-request LLM critique until it is frozen.
-
-### Week 2: Build — 10.5 hours
+### Week 2: Guided build and prediction freeze — 9 hours
 
 | Work | Time |
 |---|---:|
-| Lessons 6 and 8 plus ADR reading | 2.5 h |
-| Transit candidate-design tutorial and EX-08–EX-09 | 2 h |
-| Commerce candidate comparison | 4 h |
-| Practice ADR and learning log | 2 h |
+| Bounded authoritative resources | 65 min |
+| Local mechanism instruction | 120 min |
+| Guided practice | 60 min |
+| Required evidence components | 60 min |
+| Guided build and prediction freeze core work | 235 min |
 
-Use the [Week 2 worksheet](worksheets/week-02-candidate-designs.md).
-
-### Week 3: Break and measure — 10.5 hours
-
-| Work | Time |
-|---|---:|
-| Lesson 7 and distributed-failure reading | 2.5 h |
-| Transit tabletop and EX-10–EX-11 | 2 h |
-| Five required commerce failure scenarios | 4 h |
-| Evidence ledger, baseline review, and learning log | 2 h |
-
-Use the [Week 3 worksheet](worksheets/week-03-failure-review.md). “Measure” in
-this module means measuring the support for a claim: identify its evidence,
-threshold, or missing experiment. Later modules execute load and fault
-injection against code.
-
-### Week 4: Decide and teach — 10.5 hours
+### Week 3: Independent build and integration — 10 hours
 
 | Work | Time |
 |---|---:|
-| Lesson 8 review and EX-12 | 1.5 h |
-| Substantial commerce RFC | 4 h |
-| Defense preparation and recorded teach-back | 2 h |
-| LLM panel, evaluation report, and revision log | 2 h |
-| Learning log and portfolio check | 1 h |
+| Independent build and integration core work | 540 min |
+| Independent build and integration verification checkpoint | 60 min |
 
-Use the [Week 4 defense guide](worksheets/week-04-rfc-defense.md) and the
-[assessment package](assessment/README.md).
+### Week 4: Break, repair, measure, and diagnose — 10 hours
 
+| Work | Time |
+|---|---:|
+| Required evidence components | 30 min |
+| Break, repair, measure, and diagnose core work | 570 min |
+
+### Week 5: Decide, teach, assess, and freeze — 9.5 hours
+
+| Work | Time |
+|---|---:|
+| Required evidence components | 150 min |
+| Decide, teach, assess, and freeze core work | 360 min |
+| Module teach-back | 30 min |
+| Learning log and freeze check | 30 min |
 ## Learn
 
 1. [Architectural judgment](lessons/01-architectural-judgment.md)
@@ -151,7 +144,7 @@ Module 1 passes when:
 - Review findings and revisions remain separate from the frozen baseline.
 
 If the result is Revise or Repeat, use the rubric’s remediation map, repeat the
-named practice, and record the change in the Week 4 revision log.
+named practice, and record the change in the dated post-assessment revision log.
 
 ## AI use
 
@@ -171,3 +164,10 @@ code, or experiments.
 - Use the [sealed local gate workflow](../../SOLO_GATE_GUIDE.md) when a course gate applies. Human review is optional.
 
 A frozen self-evaluation may establish **Solo Complete**; independent human or LLM review may establish **Independently Validated**. Synthetic lab values are not production measurements.
+
+## PESD 2.0 scope addition
+
+This 5-week module schedules 47 core hours. Its primary
+decision is RFC A07. The added graded scope is
+a constraint and assurance ledger covering data classes, tenant boundaries, obligations, AI use, supplier risk, cost allocation, decision rights, evidence owners, uncertainty, and reversal triggers. See Lesson 8, the final guided exercise, final worksheet,
+rubric anchors, and remediation map for the integrated evidence contract.

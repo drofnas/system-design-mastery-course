@@ -90,3 +90,11 @@ Return one JSON object conforming to `schemas/evaluation.schema.json` with:
 - confidence level/reasons, concise summary, and bounded next actions.
 
 Do not wrap JSON in Markdown. Do not include fields outside the schema.
+
+## PESD 2.0 evaluator instruction
+
+Score the published criteria against evidence for telemetry as a governed data product: schema ownership, PII restrictions, retention, sampling bias, lineage, cardinality, and cost budgets.
+Classify missing evidence, incorrect reasoning, unsupported claims, and
+reasonable uncertainty separately. Reject fixture replay presented as
+independent build or break evidence. Do not invent legal applicability or treat
+a named framework as proof of compliance.

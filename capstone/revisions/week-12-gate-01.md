@@ -1,5 +1,7 @@
 # Week 12 Gate 1 Revision
 
+> **PESD V1 historical contract:** Preserve this file for V1 learners and immutable evidence. PESD 2.0 uses [V1_TO_V2_MIGRATION.md](../../V1_TO_V2_MIGRATION.md).
+
 > Create this artifact after freezing the Gate 1 submission. Do not edit
 > `capstone/baselines/week-01-baseline.md`. Replace prompts with your evidence;
 > do not copy Transit decisions into the commerce capstone.

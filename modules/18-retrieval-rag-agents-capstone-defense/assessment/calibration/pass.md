@@ -14,4 +14,4 @@ Principal filters precede ranking. Exact versions, validity, revocation epoch, i
 
 ## Failures, operations, and leadership
 
-F01–F08 broken targets fail and repaired trials restore I01–I12 with the same inputs and one changed control. The final RFC compares no-change and two credible alternatives using common drivers. Costs include failure amplification and useful-answer denominators. Named owners, SLOs, incidents, staged migration, compatibility, reversal, dissent, defense, remediation, and next-year influence practice align.
+F01–F08 broken targets fail and repaired trials restore AI01–AI12 with the same inputs and one changed control. The final RFC compares no-change and two credible alternatives using common drivers. Costs include failure amplification and useful-answer denominators. Named owners, SLOs, incidents, staged migration, compatibility, reversal, dissent, defense, remediation, and next-year influence practice align.

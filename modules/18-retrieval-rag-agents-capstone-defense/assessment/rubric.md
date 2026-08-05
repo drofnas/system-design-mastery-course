@@ -61,7 +61,7 @@ Safety-critical because changed inputs or rewritten trials can manufacture a con
 - **0:** chronology/evidence is altered or a repaired invariant remains failed.
 - **1:** conclusions lack predictions, hashes, pairs, targets, or limitations.
 - **2:** most pairs work but one-control isolation, raw identity, causal explanation, or alternatives are weak.
-- **3:** F01–F08 predictions, hashes, controls, targets, repairs, I01–I12, raw trials, and limitations agree.
+- **3:** F01–F08 predictions, hashes, controls, targets, repairs, AI01–AI12, raw trials, and limitations agree.
 - **4:** independent repetitions and falsification narrow claims while preserving every frozen artifact.
 
 ## R08: Operations and cost
@@ -93,3 +93,18 @@ Safety-critical because changed inputs or rewritten trials can manufacture a con
 ## Thresholds
 
 Module Pass requires G01–G06, A01–A17, average ≥3.0, non-low confidence, and no zero in R04–R07. Gate 6/final capstone Pass additionally requires all six course gates, average ≥3.5, every invariant passing, and successful product, technical, security, cost, ownership, and operating review through the frozen solo-review packet or an optional live panel.
+
+## PESD 2.0 cross-cutting anchors
+
+Apply these anchors inside the published module-specific criteria; they do not
+create a generic substitute rubric.
+
+- **0–1:** ignores or merely names a complete AI assurance case covering tool/model inventory, provider supply chain, ongoing evaluation, human-approval efficacy, transparency, deletion, incident response, policy drift, rollback, and retirement without an enforceable
+  causal model, evidence boundary, or owner.
+- **2:** covers the happy path but leaves a material tenant, governance,
+  recovery, supplier, cost, migration, or evidence gap.
+- **3:** connects the requirement to a mechanism, failure evidence, ownership,
+  cost, migration, and a scoped residual risk.
+- **4:** additionally tests policy drift or isolation failure, quantifies useful
+  outcome and uncertainty, preserves lineage, and gives teachable reversal and
+  decommissioning triggers.

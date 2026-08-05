@@ -8,6 +8,15 @@ used only for fast scenario-inventory checks. `run_conformance.py` launches and
 measures the real services in `implementations/`. Model output is never accepted
 as runtime behavior or performance evidence.
 
+The four services are transport/schema shells plus an executable reference
+oracle. For independent Build evidence, preserve request parsing, response
+encoding, loopback binding, and schema fixtures, then implement admission, task
+ownership, cancellation propagation, cleanup, memory/lifetime behavior,
+synchronization, and validation in **all four** languages. Do not submit the
+unchanged reference mechanisms as learner implementation. Run TypeScript, Go,
+Rust, and Java serially; build once, reuse pinned caches, and keep native and
+container timing in separate evidence sets.
+
 ## Public interface
 
 Every service binds loopback by default and exposes:
@@ -58,6 +67,11 @@ alone: every container reference includes the immutable digest in
 `toolchains.lock.json`. Builds occur in an ephemeral container filesystem. Raw
 results are written only below the required `--output` directory. Never
 overwrite or edit frozen raw trials.
+
+The two featured runtime lineages are distinct: semantic conformance cites the
+language-neutral request/response/fault contract, while measured performance and
+operability cites warm-ups, repetitions, resource limits, cleanup, and runtime-
+specific telemetry. One report cannot receive both credits.
 
 ## Platform paths
 

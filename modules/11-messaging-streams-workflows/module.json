@@ -4,28 +4,30 @@
   "title": "Messaging, Streams, and Workflows",
   "weeks": [
     {
-      "number": 41,
-      "focus": "Model and freeze authority, delivery, identity, ordering, partition, backlog, and workflow predictions",
-      "hours": 10.5,
+      "number": 58,
+      "phase": "Model and derive",
+      "focus": "Model and derive",
+      "hours": 8.5,
+      "core_hours": 8.5,
+      "capacity_hours": 12,
       "evidence": [
-        "Frozen authority and derived-state map",
-        "Delivery and ordering contract",
-        "Backlog model and F01-F09 predictions",
-        "Week 41 learning log"
+        "Model and derive evidence frozen at source commit"
       ],
       "time_blocks": [
         {
-          "id": "W41-T01",
+          "id": "W058-T01",
           "label": "Bounded authoritative resources",
-          "minutes": 80,
+          "minutes": 160,
           "activity": "required_resource",
           "resource_ids": [
-            "RES-01"
+            "RES-01",
+            "RES-03",
+            "RES-06"
           ]
         },
         {
-          "id": "W41-T02",
-          "label": "Local lesson instruction",
+          "id": "W058-T02",
+          "label": "Local mechanism instruction",
           "minutes": 120,
           "activity": "local_instruction",
           "lesson_ids": [
@@ -36,9 +38,9 @@
           ]
         },
         {
-          "id": "W41-T03",
+          "id": "W058-T03",
           "label": "Guided practice",
-          "minutes": 90,
+          "minutes": 60,
           "activity": "guided_practice",
           "exercise_ids": [
             "EX-01",
@@ -46,251 +48,214 @@
             "EX-03",
             "EX-04",
             "EX-05",
-            "EX-06"
+            "EX-06",
+            "EX-07",
+            "EX-08"
           ]
         },
         {
-          "id": "W41-T04",
-          "label": "Reflection and learning log",
-          "minutes": 30,
-          "activity": "reflection"
-        },
-        {
-          "id": "W41-T05",
-          "label": "Independent Work",
-          "minutes": 310,
-          "activity": "independent_work",
-          "artifact_ids": [
-            "A01"
-          ]
+          "id": "W058-T04",
+          "label": "Model and derive core work",
+          "minutes": 170,
+          "activity": "independent_work"
         }
       ]
     },
     {
-      "number": 42,
-      "focus": "Build atomic publication, idempotent consumption, derived state, and reconciliation",
-      "hours": 11.5,
+      "number": 59,
+      "phase": "Guided build and prediction freeze",
+      "focus": "Guided build and prediction freeze",
+      "hours": 9.0,
+      "core_hours": 9.0,
+      "capacity_hours": 12,
       "evidence": [
-        "Outbox-to-log implementation",
-        "Inbox and derived-view tests",
-        "Schema-valid internals review",
-        "Week 42 learning log"
+        "Guided build and prediction freeze evidence frozen at source commit"
       ],
       "time_blocks": [
         {
-          "id": "W42-T01",
+          "id": "W059-T01",
           "label": "Bounded authoritative resources",
-          "minutes": 85,
+          "minutes": 120,
           "activity": "required_resource",
           "resource_ids": [
             "RES-02",
-            "RES-03"
-          ]
-        },
-        {
-          "id": "W42-T02",
-          "label": "Local lesson instruction",
-          "minutes": 90,
-          "activity": "local_instruction",
-          "lesson_ids": [
-            "L03",
-            "L05",
-            "L07"
-          ]
-        },
-        {
-          "id": "W42-T03",
-          "label": "Guided practice",
-          "minutes": 90,
-          "activity": "guided_practice",
-          "exercise_ids": [
-            "EX-07",
-            "EX-08",
-            "EX-09",
-            "EX-10",
-            "EX-11"
-          ]
-        },
-        {
-          "id": "W42-T04",
-          "label": "Reflection and learning log",
-          "minutes": 30,
-          "activity": "reflection"
-        },
-        {
-          "id": "W42-T05",
-          "label": "Decision Artifact",
-          "minutes": 30,
-          "activity": "decision_artifact",
-          "artifact_ids": [
-            "A03"
-          ]
-        },
-        {
-          "id": "W42-T06",
-          "label": "Independent Work",
-          "minutes": 365,
-          "activity": "independent_work",
-          "artifact_ids": [
-            "A02"
-          ]
-        }
-      ]
-    },
-    {
-      "number": 43,
-      "focus": "Break delivery, consumers, workflows, time, and repair, then diagnose invariant failures",
-      "hours": 11.5,
-      "evidence": [
-        "Eighteen immutable raw trials",
-        "Nine broken/repaired comparisons",
-        "Failure matrix and causal investigation",
-        "Week 43 learning log"
-      ],
-      "time_blocks": [
-        {
-          "id": "W43-T01",
-          "label": "Bounded authoritative resources",
-          "minutes": 75,
-          "activity": "required_resource",
-          "resource_ids": [
             "RES-04"
           ]
         },
         {
-          "id": "W43-T02",
-          "label": "Local lesson instruction",
-          "minutes": 90,
+          "id": "W059-T02",
+          "label": "Local mechanism instruction",
+          "minutes": 120,
           "activity": "local_instruction",
           "lesson_ids": [
-            "L01",
-            "L04",
-            "L06"
-          ]
-        },
-        {
-          "id": "W43-T03",
-          "label": "Guided practice",
-          "minutes": 90,
-          "activity": "guided_practice",
-          "exercise_ids": [
-            "EX-12",
-            "EX-13",
-            "EX-14",
-            "EX-15"
-          ]
-        },
-        {
-          "id": "W43-T04",
-          "label": "Reflection and learning log",
-          "minutes": 30,
-          "activity": "reflection"
-        },
-        {
-          "id": "W43-T05",
-          "label": "Failure Experiment",
-          "minutes": 375,
-          "activity": "failure_experiment",
-          "artifact_ids": [
-            "A04"
-          ]
-        },
-        {
-          "id": "W43-T06",
-          "label": "Independent Work",
-          "minutes": 30,
-          "activity": "independent_work",
-          "artifact_ids": [
-            "A05"
-          ]
-        }
-      ]
-    },
-    {
-      "number": 44,
-      "focus": "Decide, migrate, operate, teach, evaluate, and remediate asynchronous architecture",
-      "hours": 10,
-      "evidence": [
-        "Asynchronous-workflow RFC",
-        "Security, cost, migration, ownership, and reversal plan",
-        "Recorded defense and module evaluation",
-        "Week 44 learning log"
-      ],
-      "time_blocks": [
-        {
-          "id": "W44-T01",
-          "label": "Bounded authoritative resources",
-          "minutes": 40,
-          "activity": "required_resource",
-          "resource_ids": [
-            "RES-06"
-          ]
-        },
-        {
-          "id": "W44-T02",
-          "label": "Local lesson instruction",
-          "minutes": 45,
-          "activity": "local_instruction",
-          "lesson_ids": [
+            "L05",
+            "L06",
+            "L07",
             "L08"
           ]
         },
         {
-          "id": "W44-T03",
+          "id": "W059-T03",
           "label": "Guided practice",
-          "minutes": 45,
+          "minutes": 60,
           "activity": "guided_practice",
           "exercise_ids": [
+            "EX-09",
+            "EX-10",
+            "EX-11",
+            "EX-12",
+            "EX-13",
+            "EX-14",
+            "EX-15",
             "EX-16"
           ]
         },
         {
-          "id": "W44-T04",
-          "label": "Reflection and learning log",
-          "minutes": 30,
-          "activity": "reflection",
-          "artifact_ids": [
-            "A09"
+          "id": "W059-T04",
+          "label": "Required evidence components",
+          "minutes": 90,
+          "activity": "independent_work",
+          "artifact_allocations": [
+            {
+              "artifact_id": "A01",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A02",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A05",
+              "minutes": 30
+            }
           ]
         },
         {
-          "id": "W44-T05",
-          "label": "Assessment",
+          "id": "W059-T05",
+          "label": "Guided build and prediction freeze core work",
+          "minutes": 150,
+          "activity": "independent_work"
+        }
+      ]
+    },
+    {
+      "number": 60,
+      "phase": "Independent build and integration",
+      "focus": "Independent build and integration",
+      "hours": 10.0,
+      "core_hours": 10.0,
+      "capacity_hours": 12,
+      "evidence": [
+        "Independent build and integration evidence frozen at source commit"
+      ],
+      "time_blocks": [
+        {
+          "id": "W060-T01",
+          "label": "Independent build and integration core work",
+          "minutes": 540,
+          "activity": "independent_work"
+        },
+        {
+          "id": "W060-T02",
+          "label": "Independent build and integration verification checkpoint",
           "minutes": 60,
-          "activity": "assessment",
-          "artifact_ids": [
-            "A08"
+          "activity": "independent_work"
+        }
+      ]
+    },
+    {
+      "number": 61,
+      "phase": "Break, repair, measure, and diagnose",
+      "focus": "Break, repair, measure, and diagnose",
+      "hours": 10.0,
+      "core_hours": 10.0,
+      "capacity_hours": 12,
+      "evidence": [
+        "Break, repair, measure, and diagnose evidence frozen at source commit"
+      ],
+      "time_blocks": [
+        {
+          "id": "W061-T01",
+          "label": "Required evidence components",
+          "minutes": 60,
+          "activity": "failure_experiment",
+          "artifact_allocations": [
+            {
+              "artifact_id": "A03",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A04",
+              "minutes": 30
+            }
           ]
         },
         {
-          "id": "W44-T06",
-          "label": "Decision Artifact",
-          "minutes": 260,
+          "id": "W061-T02",
+          "label": "Break, repair, measure, and diagnose core work",
+          "minutes": 540,
+          "activity": "failure_experiment"
+        }
+      ]
+    },
+    {
+      "number": 62,
+      "phase": "Decide, teach, assess, and freeze",
+      "focus": "Decide, teach, assess, and freeze",
+      "hours": 9.5,
+      "core_hours": 9.5,
+      "capacity_hours": 12,
+      "evidence": [
+        "Decide, teach, assess, and freeze evidence frozen at source commit"
+      ],
+      "time_blocks": [
+        {
+          "id": "W062-T01",
+          "label": "Required evidence components",
+          "minutes": 120,
           "activity": "decision_artifact",
-          "artifact_ids": [
-            "A06"
+          "artifact_allocations": [
+            {
+              "artifact_id": "A06",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A07",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A08",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A09",
+              "minutes": 30
+            }
           ]
         },
         {
-          "id": "W44-T07",
-          "label": "Review Remediation",
-          "minutes": 60,
-          "activity": "review_remediation"
+          "id": "W062-T02",
+          "label": "Decide, teach, assess, and freeze core work",
+          "minutes": 390,
+          "activity": "assessment"
         },
         {
-          "id": "W44-T08",
-          "label": "Teach Back",
-          "minutes": 60,
-          "activity": "teach_back",
-          "artifact_ids": [
-            "A07"
-          ]
+          "id": "W062-T03",
+          "label": "Module teach-back",
+          "minutes": 30,
+          "activity": "teach_back"
+        },
+        {
+          "id": "W062-T04",
+          "label": "Learning log and freeze check",
+          "minutes": 30,
+          "activity": "reflection"
         }
       ]
     }
   ],
-  "target_hours": 43.5,
-  "status": "ready",
+  "target_hours": 47,
+  "status": "review",
   "readiness_note": "Ready on 2026-08-02 after teaching, lab, eighteen paired trials, six isolated calibration records, semantic review, resource verification, focused validation, and full-course validation passed.",
   "outcomes": [
     {
@@ -552,7 +517,7 @@
       "url": "https://kafka.apache.org/42/design/design/",
       "required": true,
       "access": "free",
-      "week": 41,
+      "week": 58,
       "estimated_minutes": 80,
       "purpose": "Derive log, partition, consumer-position, delivery, replay, and exactly-once boundaries from an operated design.",
       "assignment": "Read The Producer through Message Delivery Semantics; draw one partition/consumer-group trace and identify the participating state in each guarantee.",
@@ -572,7 +537,7 @@
       "url": "https://debezium.io/documentation/reference/stable/transformations/outbox-event-router.html",
       "required": true,
       "access": "free",
-      "week": 42,
+      "week": 59,
       "estimated_minutes": 45,
       "purpose": "Connect an application transaction, outbox envelope, routing key, CDC position, and downstream consumer identity.",
       "assignment": "Read Basic outbox table through Configuration options; produce a field-by-field envelope and partition-key review.",
@@ -592,7 +557,7 @@
       "url": "https://www.postgresql.org/docs/current/logicaldecoding-explanation.html",
       "required": true,
       "access": "free",
-      "week": 42,
+      "week": 58,
       "estimated_minutes": 40,
       "purpose": "Reason about transaction order, snapshots, replication slots, acknowledgement, and retained WAL at a CDC boundary.",
       "assignment": "Read the complete page; map snapshot, LSN, slot, consumer acknowledgement, retention risk, and recovery owner to the lab.",
@@ -612,10 +577,10 @@
       "url": "https://research.google/pubs/the-dataflow-model-a-practical-approach-to-balancing-correctness-latency-and-cost-in-massive-scale-unbounded-out-of-order-data-processing/",
       "required": true,
       "access": "free",
-      "week": 43,
+      "week": 59,
       "estimated_minutes": 75,
       "purpose": "Distinguish event time, processing time, windows, triggers, watermarks, late data, and their correctness/latency/cost trade-offs.",
-      "assignment": "Read Sections 1–2.3; specify when, in event time, a result is computed and how later data changes it.",
+      "assignment": "Read Sections 1\u20132.3; specify when, in event time, a result is computed and how later data changes it.",
       "last_verified": "2026-08-02",
       "text_alternative": "lessons/07-event-time-watermarks-backpressure.md",
       "verified_title": "The Dataflow Model: A Practical Approach to Balancing Correctness, Latency, and Cost in Massive-Scale, Unbounded, Out-of-Order Data Processing",
@@ -632,10 +597,10 @@
       "url": "https://www.cs.princeton.edu/research/techreps/598",
       "required": false,
       "access": "free",
-      "week": 43,
+      "week": 62,
       "estimated_minutes": 65,
       "purpose": "Separate local atomic transactions, long-lived workflow progress, compensation, and interleaving.",
-      "assignment": "Read Sections 1–4; write a forward/compensation ledger and identify one action that cannot restore prior state.",
+      "assignment": "Read Sections 1\u20134; write a forward/compensation ledger and identify one action that cannot restore prior state.",
       "last_verified": "2026-08-02",
       "text_alternative": "lessons/06-workflows-sagas-compensation.md",
       "verified_title": "Sagas",
@@ -652,7 +617,7 @@
       "url": "https://www.uber.com/us/en/blog/announcing-cadence/",
       "required": true,
       "access": "free",
-      "week": 44,
+      "week": 58,
       "estimated_minutes": 40,
       "purpose": "Study workflow history, replay, versioning, capacity isolation, visibility, and platform ownership in an operated system.",
       "assignment": "Read What is Cadence, Feature Set, Scale, and Robustness; record three platform guarantees, their prerequisites, and their owners.",
@@ -672,10 +637,10 @@
       "url": "https://martin.kleppmann.com/2016/01/29/event-sourcing-stream-processing-at-ddd-europe.html",
       "required": false,
       "access": "free",
-      "week": 41,
+      "week": 62,
       "estimated_minutes": 55,
       "purpose": "Compare database state, event logs, derived views, replay, event sourcing, and stream processing without relying on labels.",
-      "assignment": "Watch 00:00–45:00 or review the linked slides; draw authority and derivation boundaries and name one unsafe equivalence.",
+      "assignment": "Watch 00:00\u201345:00 or review the linked slides; draw authority and derivation boundaries and name one unsafe equivalence.",
       "last_verified": "2026-08-02",
       "text_alternative": "lessons/01-authority-events-queues-logs-streams.md",
       "verified_title": "Event Sourcing and Stream Processing at Scale",
@@ -688,78 +653,132 @@
   "artifacts": [
     {
       "id": "A01",
-      "week": 41,
+      "week": 59,
       "required": true,
       "template_path": "modules/11-messaging-streams-workflows/worksheets/week-41-messaging-model.md",
       "submission_path": "reports/module-11-messaging-baseline.md",
       "immutable_after_submission": true,
-      "portfolio_category": "model"
+      "portfolio_category": "model",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M11-A01",
+      "component_role": "prediction",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A02",
-      "week": 42,
+      "week": 59,
       "required": true,
       "template_path": "modules/11-messaging-streams-workflows/worksheets/week-42-publication-build.md",
       "submission_path": "labs/module-11/publication-workflow/",
-      "portfolio_category": "implementation"
+      "portfolio_category": "implementation",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M11-A02",
+      "component_role": "implementation",
+      "estimated_minutes": 30,
+      "evidence_mode": "executed_deterministic"
     },
     {
       "id": "A03",
-      "week": 42,
+      "week": 61,
       "required": true,
       "template_path": "modules/11-messaging-streams-workflows/worksheets/week-42-publication-build.md",
       "submission_path": "reports/module-11-messaging-internals.md",
-      "portfolio_category": "runtime_comparison"
+      "portfolio_category": "data_governance_dossier",
+      "portfolio_item_id": "PI-GOV-01",
+      "portfolio_credit": true,
+      "evidence_lineage_id": "LIN-GOV-DATA",
+      "component_role": "analysis",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A04",
-      "week": 43,
+      "week": 61,
       "required": true,
       "template_path": "modules/11-messaging-streams-workflows/worksheets/week-43-messaging-failure-matrix.md",
       "submission_path": "experiments/module-11/",
       "immutable_after_submission": true,
-      "portfolio_category": "failure_matrix"
+      "portfolio_category": "failure_matrix",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M11-A04",
+      "component_role": "raw_evidence",
+      "estimated_minutes": 30,
+      "evidence_mode": "executed_deterministic"
     },
     {
       "id": "A05",
-      "week": 43,
+      "week": 59,
       "required": true,
       "template_path": "modules/11-messaging-streams-workflows/worksheets/week-43-messaging-failure-matrix.md",
       "submission_path": "reports/module-11-messaging-failure-investigation.md",
       "immutable_after_submission": true,
-      "portfolio_category": "model"
+      "portfolio_category": "model",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M11-A05",
+      "component_role": "prediction",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A06",
-      "week": 44,
+      "week": 62,
       "required": true,
       "template_path": "templates/rfc-template.md",
       "submission_path": "rfc/module-11-asynchronous-workflow.md",
-      "portfolio_category": "rfc"
+      "portfolio_category": "rfc",
+      "portfolio_item_id": "PI-DECISION-M11",
+      "portfolio_credit": true,
+      "evidence_lineage_id": "LIN-DECISION-M11",
+      "component_role": "decision",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A07",
-      "week": 44,
+      "week": 62,
       "required": true,
       "template_path": "modules/11-messaging-streams-workflows/worksheets/week-44-async-workflow-rfc-defense.md",
       "submission_path": "reviews/module-11-defense.md",
-      "portfolio_category": "teach_back"
+      "portfolio_category": "teach_back",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M11-A07",
+      "component_role": "final",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A08",
-      "week": 44,
+      "week": 62,
       "required": true,
       "template_path": "modules/11-messaging-streams-workflows/assessment/report-template.md",
       "submission_path": "reviews/module-11-evaluation.md",
-      "portfolio_category": "evaluation"
+      "portfolio_category": "evaluation",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M11-A08",
+      "component_role": "final",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A09",
-      "week": 44,
+      "week": 62,
       "required": true,
       "template_path": "templates/learning-log-template.md",
-      "submission_path": "learning-log/week-41.md through learning-log/week-44.md",
-      "portfolio_category": "learning_log"
+      "submission_path": "learning-log/week-058.md through learning-log/week-062.md",
+      "portfolio_category": "learning_log",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M11-A09",
+      "component_role": "final",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     }
   ],
   "failure_experiments": [
@@ -914,5 +933,13 @@
       "estimated_minutes": 30
     }
   ],
-  "citation_catalog": []
+  "citation_catalog": [],
+  "course_id": "PESD-104",
+  "course_version": "2.0",
+  "primary_decision": {
+    "artifact_id": "A06",
+    "type": "RFC"
+  },
+  "pesd_v2_additions": "semantic event contracts, producer and consumer ownership, data quality, lineage, policy-version-aware replay, lifecycle disposition, and batch/stream reconciliation",
+  "semantic_evaluation": "module_specific"
 }

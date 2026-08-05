@@ -4,28 +4,29 @@
   "title": "Replication and Partitioning",
   "weeks": [
     {
-      "number": 33,
-      "focus": "Model and freeze per-operation consistency, topology, quorum, placement, and failure predictions",
-      "hours": 10.5,
+      "number": 45,
+      "phase": "Model and derive",
+      "focus": "Model and derive",
+      "hours": 8.5,
+      "core_hours": 8.5,
+      "capacity_hours": 12,
       "evidence": [
-        "Frozen operation consistency table",
-        "Topology and quorum analysis",
-        "Placement and residency constraints",
-        "Week 33 learning log"
+        "Model and derive evidence frozen at source commit"
       ],
       "time_blocks": [
         {
-          "id": "W33-T01",
+          "id": "W045-T01",
           "label": "Bounded authoritative resources",
-          "minutes": 110,
+          "minutes": 150,
           "activity": "required_resource",
           "resource_ids": [
-            "RES-01"
+            "RES-01",
+            "RES-06"
           ]
         },
         {
-          "id": "W33-T02",
-          "label": "Local lesson instruction",
+          "id": "W045-T02",
+          "label": "Local mechanism instruction",
           "minutes": 120,
           "activity": "local_instruction",
           "lesson_ids": [
@@ -36,9 +37,9 @@
           ]
         },
         {
-          "id": "W33-T03",
+          "id": "W045-T03",
           "label": "Guided practice",
-          "minutes": 90,
+          "minutes": 60,
           "activity": "guided_practice",
           "exercise_ids": [
             "EX-01",
@@ -46,260 +47,214 @@
             "EX-03",
             "EX-04",
             "EX-05",
-            "EX-06"
-          ]
-        },
-        {
-          "id": "W33-T04",
-          "label": "Reflection and learning log",
-          "minutes": 30,
-          "activity": "reflection"
-        },
-        {
-          "id": "W33-T05",
-          "label": "Independent Work",
-          "minutes": 280,
-          "activity": "independent_work",
-          "artifact_ids": [
-            "A01"
-          ]
-        }
-      ]
-    },
-    {
-      "number": 34,
-      "focus": "Build selectable replication, version, repair, and partitioning mechanisms",
-      "hours": 11,
-      "evidence": [
-        "Replicated key/value implementation",
-        "Schema-valid deterministic trials",
-        "Partitioning and repair tests",
-        "Internals review and Week 34 learning log"
-      ],
-      "time_blocks": [
-        {
-          "id": "W34-T01",
-          "label": "Bounded authoritative resources",
-          "minutes": 70,
-          "activity": "required_resource",
-          "resource_ids": [
-            "RES-05"
-          ]
-        },
-        {
-          "id": "W34-T02",
-          "label": "Local lesson instruction",
-          "minutes": 90,
-          "activity": "local_instruction",
-          "lesson_ids": [
-            "L03",
-            "L05",
-            "L07"
-          ]
-        },
-        {
-          "id": "W34-T03",
-          "label": "Guided practice",
-          "minutes": 90,
-          "activity": "guided_practice",
-          "exercise_ids": [
+            "EX-06",
             "EX-07",
-            "EX-08",
-            "EX-09",
-            "EX-10",
-            "EX-11"
+            "EX-08"
           ]
         },
         {
-          "id": "W34-T04",
-          "label": "Reflection and learning log",
-          "minutes": 30,
-          "activity": "reflection"
-        },
-        {
-          "id": "W34-T05",
-          "label": "Decision Artifact",
-          "minutes": 30,
-          "activity": "decision_artifact",
-          "artifact_ids": [
-            "A03"
-          ]
-        },
-        {
-          "id": "W34-T06",
-          "label": "Independent Work",
-          "minutes": 350,
-          "activity": "independent_work",
-          "artifact_ids": [
-            "A02"
-          ]
+          "id": "W045-T04",
+          "label": "Model and derive core work",
+          "minutes": 180,
+          "activity": "independent_work"
         }
       ]
     },
     {
-      "number": 35,
-      "focus": "Break replicas and placement, then measure repair, movement, and fairness",
-      "hours": 11.5,
+      "number": 46,
+      "phase": "Guided build and prediction freeze",
+      "focus": "Guided build and prediction freeze",
+      "hours": 9.0,
+      "core_hours": 9.0,
+      "capacity_hours": 12,
       "evidence": [
-        "Six broken/repaired pairs",
-        "Immutable raw trials and failure matrix",
-        "Convergence, hotspot, and reshard analysis",
-        "Week 35 learning log"
+        "Guided build and prediction freeze evidence frozen at source commit"
       ],
       "time_blocks": [
         {
-          "id": "W35-T01",
+          "id": "W046-T01",
           "label": "Bounded authoritative resources",
-          "minutes": 40,
+          "minutes": 135,
           "activity": "required_resource",
           "resource_ids": [
-            "RES-06"
-          ]
-        },
-        {
-          "id": "W35-T02",
-          "label": "Local lesson instruction",
-          "minutes": 90,
-          "activity": "local_instruction",
-          "lesson_ids": [
-            "L01",
-            "L04",
-            "L06"
-          ]
-        },
-        {
-          "id": "W35-T03",
-          "label": "Guided practice",
-          "minutes": 90,
-          "activity": "guided_practice",
-          "exercise_ids": [
-            "EX-12",
-            "EX-13",
-            "EX-14",
-            "EX-15"
-          ]
-        },
-        {
-          "id": "W35-T04",
-          "label": "Required portfolio artifact A11",
-          "minutes": 45,
-          "activity": "review_remediation",
-          "artifact_ids": [
-            "A11"
-          ]
-        },
-        {
-          "id": "W35-T05",
-          "label": "Reflection and learning log",
-          "minutes": 30,
-          "activity": "reflection"
-        },
-        {
-          "id": "W35-T06",
-          "label": "Failure Experiment",
-          "minutes": 365,
-          "activity": "failure_experiment",
-          "artifact_ids": [
-            "A04"
-          ]
-        },
-        {
-          "id": "W35-T07",
-          "label": "Independent Work",
-          "minutes": 30,
-          "activity": "independent_work",
-          "artifact_ids": [
-            "A05"
-          ]
-        }
-      ]
-    },
-    {
-      "number": 36,
-      "focus": "Decide, migrate, teach, evaluate, and complete Gate 3",
-      "hours": 10.5,
-      "evidence": [
-        "Data-placement and consistency ADR",
-        "Migration, rollback, security, cost, and ownership plan",
-        "Recorded defense and Module 9 evaluation",
-        "Gate 3 submission and Week 36 learning log"
-      ],
-      "time_blocks": [
-        {
-          "id": "W36-T01",
-          "label": "Bounded authoritative resources",
-          "minutes": 65,
-          "activity": "required_resource",
-          "resource_ids": [
+            "RES-05",
             "RES-07"
           ]
         },
         {
-          "id": "W36-T02",
-          "label": "Local lesson instruction",
-          "minutes": 45,
+          "id": "W046-T02",
+          "label": "Local mechanism instruction",
+          "minutes": 120,
           "activity": "local_instruction",
           "lesson_ids": [
+            "L05",
+            "L06",
+            "L07",
             "L08"
           ]
         },
         {
-          "id": "W36-T03",
+          "id": "W046-T03",
           "label": "Guided practice",
-          "minutes": 45,
+          "minutes": 60,
           "activity": "guided_practice",
           "exercise_ids": [
+            "EX-09",
+            "EX-10",
+            "EX-11",
+            "EX-12",
+            "EX-13",
+            "EX-14",
+            "EX-15",
             "EX-16"
           ]
         },
         {
-          "id": "W36-T04",
-          "label": "Reflection and learning log",
-          "minutes": 30,
-          "activity": "reflection",
-          "artifact_ids": [
-            "A09"
+          "id": "W046-T04",
+          "label": "Required evidence components",
+          "minutes": 90,
+          "activity": "independent_work",
+          "artifact_allocations": [
+            {
+              "artifact_id": "A01",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A02",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A05",
+              "minutes": 30
+            }
           ]
         },
         {
-          "id": "W36-T05",
-          "label": "Assessment",
+          "id": "W046-T05",
+          "label": "Guided build and prediction freeze core work",
+          "minutes": 135,
+          "activity": "independent_work"
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "phase": "Independent build and integration",
+      "focus": "Independent build and integration",
+      "hours": 10.0,
+      "core_hours": 10.0,
+      "capacity_hours": 12,
+      "evidence": [
+        "Independent build and integration evidence frozen at source commit"
+      ],
+      "time_blocks": [
+        {
+          "id": "W047-T01",
+          "label": "Independent build and integration core work",
+          "minutes": 540,
+          "activity": "independent_work"
+        },
+        {
+          "id": "W047-T02",
+          "label": "Independent build and integration verification checkpoint",
           "minutes": 60,
-          "activity": "assessment",
-          "artifact_ids": [
-            "A08",
-            "A10"
+          "activity": "independent_work"
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "phase": "Break, repair, measure, and diagnose",
+      "focus": "Break, repair, measure, and diagnose",
+      "hours": 10.0,
+      "core_hours": 10.0,
+      "capacity_hours": 12,
+      "evidence": [
+        "Break, repair, measure, and diagnose evidence frozen at source commit"
+      ],
+      "time_blocks": [
+        {
+          "id": "W048-T01",
+          "label": "Required evidence components",
+          "minutes": 90,
+          "activity": "failure_experiment",
+          "artifact_allocations": [
+            {
+              "artifact_id": "A03",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A04",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A11",
+              "minutes": 30
+            }
           ]
         },
         {
-          "id": "W36-T06",
-          "label": "Decision Artifact",
-          "minutes": 265,
+          "id": "W048-T02",
+          "label": "Break, repair, measure, and diagnose core work",
+          "minutes": 510,
+          "activity": "failure_experiment"
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "phase": "Decide, teach, assess, and freeze",
+      "focus": "Decide, teach, assess, and freeze",
+      "hours": 9.5,
+      "core_hours": 9.5,
+      "capacity_hours": 12,
+      "evidence": [
+        "Decide, teach, assess, and freeze evidence frozen at source commit"
+      ],
+      "time_blocks": [
+        {
+          "id": "W049-T01",
+          "label": "Required evidence components",
+          "minutes": 90,
           "activity": "decision_artifact",
-          "artifact_ids": [
-            "A06"
+          "artifact_allocations": [
+            {
+              "artifact_id": "A06",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A07",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A09",
+              "minutes": 30
+            }
           ]
         },
         {
-          "id": "W36-T07",
-          "label": "Review Remediation",
-          "minutes": 60,
-          "activity": "review_remediation"
+          "id": "W049-T02",
+          "label": "Decide, teach, assess, and freeze core work",
+          "minutes": 420,
+          "activity": "assessment"
         },
         {
-          "id": "W36-T08",
-          "label": "Teach Back",
-          "minutes": 60,
-          "activity": "teach_back",
-          "artifact_ids": [
-            "A07"
-          ]
+          "id": "W049-T03",
+          "label": "Module teach-back",
+          "minutes": 30,
+          "activity": "teach_back"
+        },
+        {
+          "id": "W049-T04",
+          "label": "Learning log and freeze check",
+          "minutes": 30,
+          "activity": "reflection"
         }
       ]
     }
   ],
-  "target_hours": 43.5,
-  "status": "ready",
+  "target_hours": 47,
+  "status": "review",
   "readiness_note": "Ready on 2026-08-02 after semantic and evidence-safety review, ten replication-lab tests across twelve strict paired scenarios, six evaluator records with stable calibration bands, deterministic calibration checking, focused validation, full-course validation, and authoritative-resource verification.",
   "outcomes": [
     {
@@ -541,9 +496,7 @@
       "artifacts": [
         "A06",
         "A07",
-        "A08",
         "A09",
-        "A10",
         "A11"
       ],
       "rubric": [
@@ -561,10 +514,10 @@
       "url": "https://www.amazon.science/publications/dynamo-amazons-highly-available-key-value-store",
       "required": true,
       "access": "free",
-      "week": 33,
+      "week": 45,
       "estimated_minutes": 110,
       "purpose": "Connect workload, N/R/W, versioning, conflict handling, consistent hashing, hinted handoff, repair, and production trade-offs.",
-      "assignment": "Read Sections 2.2, 4.2–4.7, 6.3, and 6.5; produce an assumption ledger and map each mechanism to an application obligation.",
+      "assignment": "Read Sections 2.2, 4.2\u20134.7, 6.3, and 6.5; produce an assumption ledger and map each mechanism to an application obligation.",
       "last_verified": "2026-08-02",
       "text_alternative": "lessons/02-replication-topologies-acknowledgements.md",
       "verified_title": "Dynamo: Amazon's Highly Available Key-value Store",
@@ -581,10 +534,10 @@
       "url": "https://classes.cs.uchicago.edu/archive/2026/spring/23380-1/papers/terry_sessionguarantees.pdf",
       "required": false,
       "access": "free",
-      "week": 33,
+      "week": 49,
       "estimated_minutes": 55,
       "purpose": "Define read-your-writes, monotonic reads/writes, and writes-follow-reads as session contracts.",
-      "assignment": "Read Sections 1–4; draw one admitted history and one rejection/routing rule for each guarantee.",
+      "assignment": "Read Sections 1\u20134; draw one admitted history and one rejection/routing rule for each guarantee.",
       "last_verified": "2026-08-02",
       "text_alternative": "lessons/01-operation-semantics-session-guarantees.md",
       "verified_title": "Session Guarantees for Weakly Consistent Replicated Data",
@@ -601,10 +554,10 @@
       "url": "https://groups.csail.mit.edu/tds/papers/Gilbert/Brewer6.pdf",
       "required": false,
       "access": "free",
-      "week": 33,
+      "week": 49,
       "estimated_minutes": 45,
       "purpose": "Scope consistency, availability, and partition behavior to an explicit asynchronous model.",
-      "assignment": "Read Sections 1–4; write the theorem's definitions and explain which production claims they do not imply.",
+      "assignment": "Read Sections 1\u20134; write the theorem's definitions and explain which production claims they do not imply.",
       "last_verified": "2026-08-02",
       "text_alternative": "lessons/07-cap-pacelc-regional-placement.md",
       "verified_title": "Brewer's Conjecture and the Feasibility of Consistent, Available, Partition-Tolerant Web Services",
@@ -621,7 +574,7 @@
       "url": "https://www.cs.umd.edu/~abadi/papers/abadi-pacelc.pdf",
       "required": false,
       "access": "free",
-      "week": 36,
+      "week": 49,
       "estimated_minutes": 45,
       "purpose": "Add the normal-operation latency/consistency decision omitted by CAP-only labels.",
       "assignment": "Read the complete article; write separate partition and normal-operation choices for two Northstar operations.",
@@ -641,7 +594,7 @@
       "url": "https://cassandra.apache.org/doc/latest/cassandra/architecture/dynamo.html",
       "required": true,
       "access": "free",
-      "week": 34,
+      "week": 46,
       "estimated_minutes": 70,
       "purpose": "Connect multi-primary versioned replication to concrete hints, read repair, Merkle-tree anti-entropy, and repair ownership.",
       "assignment": "Read the Dynamo architecture page and linked Repair overview; build a foreground/background repair table with failure and cost boundaries.",
@@ -661,7 +614,7 @@
       "url": "https://engineering.fb.com/2020/08/24/production-engineering/scaling-services-with-shard-manager/",
       "required": true,
       "access": "free",
-      "week": 35,
+      "week": 45,
       "estimated_minutes": 40,
       "purpose": "Relate shard ownership, replicas, hotspots, rebalancing, and operating responsibility in production.",
       "assignment": "Read the complete article; identify the state owner, placement controller, load signals, failure assumptions, and one migration risk.",
@@ -681,7 +634,7 @@
       "url": "https://www.usenix.org/conference/atc22/presentation/elhemali",
       "required": true,
       "access": "free",
-      "week": 36,
+      "week": 46,
       "estimated_minutes": 65,
       "purpose": "Study operated responses to traffic imbalance, fairness, monitoring, and automated placement at large scale.",
       "assignment": "Read the open paper; optionally watch the presentation. Extract one fairness mechanism, one customer-visible metric, one automation risk, and one owner.",
@@ -697,96 +650,133 @@
   "artifacts": [
     {
       "id": "A01",
-      "week": 33,
+      "week": 46,
       "required": true,
       "template_path": "modules/09-replication-partitioning/worksheets/week-33-consistency-placement-model.md",
       "submission_path": "reports/module-09-replication-baseline.md",
       "immutable_after_submission": true,
-      "portfolio_category": "model"
+      "portfolio_category": "model",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M09-A01",
+      "component_role": "prediction",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A02",
-      "week": 34,
+      "week": 46,
       "required": true,
       "template_path": "modules/09-replication-partitioning/worksheets/week-34-replicated-kv-build.md",
       "submission_path": "labs/module-09/replicated-kv/",
-      "portfolio_category": "implementation"
+      "portfolio_category": "implementation",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M09-A02",
+      "component_role": "implementation",
+      "estimated_minutes": 30,
+      "evidence_mode": "executed_deterministic"
     },
     {
       "id": "A03",
-      "week": 34,
+      "week": 48,
       "required": true,
       "template_path": "modules/09-replication-partitioning/worksheets/week-34-replicated-kv-build.md",
       "submission_path": "reports/module-09-replication-internals.md",
-      "portfolio_category": "runtime_comparison"
+      "portfolio_category": "runtime_comparison",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M09-A03",
+      "component_role": "analysis",
+      "estimated_minutes": 30,
+      "evidence_mode": "measured_loopback"
     },
     {
       "id": "A04",
-      "week": 35,
+      "week": 48,
       "required": true,
       "template_path": "modules/09-replication-partitioning/worksheets/week-35-replication-failure-matrix.md",
       "submission_path": "experiments/module-09/",
       "immutable_after_submission": true,
-      "portfolio_category": "failure_matrix"
+      "portfolio_category": "failure_matrix",
+      "portfolio_item_id": "PI-FAIL-03",
+      "portfolio_credit": true,
+      "evidence_lineage_id": "LIN-FAIL-REPLICATION",
+      "component_role": "raw_evidence",
+      "estimated_minutes": 30,
+      "evidence_mode": "executed_deterministic"
     },
     {
       "id": "A05",
-      "week": 35,
+      "week": 46,
       "required": true,
       "template_path": "modules/09-replication-partitioning/worksheets/week-35-replication-failure-matrix.md",
       "submission_path": "reports/module-09-convergence-hotspot-reshard.md",
       "immutable_after_submission": true,
-      "portfolio_category": "model"
+      "portfolio_category": "model",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M09-A05",
+      "component_role": "prediction",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A06",
-      "week": 36,
+      "week": 49,
       "required": true,
       "template_path": "templates/adr-template.md",
       "submission_path": "adr/module-09-data-placement-consistency.md",
-      "portfolio_category": "adr"
+      "portfolio_category": "adr",
+      "portfolio_item_id": "PI-DECISION-M09",
+      "portfolio_credit": true,
+      "evidence_lineage_id": "LIN-DECISION-M09",
+      "component_role": "decision",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A07",
-      "week": 36,
+      "week": 49,
       "required": true,
       "template_path": "modules/09-replication-partitioning/worksheets/week-36-placement-decision-defense.md",
       "submission_path": "reviews/module-09-defense.md",
-      "portfolio_category": "teach_back"
-    },
-    {
-      "id": "A08",
-      "week": 36,
-      "required": true,
-      "template_path": "modules/09-replication-partitioning/assessment/report-template.md",
-      "submission_path": "reviews/module-09-evaluation.md",
-      "portfolio_category": "evaluation"
+      "portfolio_category": "teach_back",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M09-A07",
+      "component_role": "final",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A09",
-      "week": 36,
+      "week": 49,
       "required": true,
       "template_path": "templates/learning-log-template.md",
-      "submission_path": "learning-log/week-33.md through learning-log/week-36.md",
-      "portfolio_category": "learning_log"
-    },
-    {
-      "id": "A10",
-      "week": 36,
-      "required": true,
-      "template_path": "modules/09-replication-partitioning/assessment/gate-03.md",
-      "submission_path": "reviews/gate-03-submission.md",
-      "immutable_after_submission": true,
-      "portfolio_category": "evaluation"
+      "submission_path": "learning-log/week-045.md through learning-log/week-049.md",
+      "portfolio_category": "learning_log",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M09-A09",
+      "component_role": "final",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A11",
-      "week": 35,
+      "week": 48,
       "required": true,
       "template_path": "templates/incident-postmortem-template.md",
       "submission_path": "reports/module-09-replica-partition-postmortem.md",
       "portfolio_category": "controlled_incident_postmortem",
-      "immutable_after_submission": true
+      "immutable_after_submission": true,
+      "portfolio_item_id": "PI-POST-02",
+      "portfolio_credit": true,
+      "evidence_lineage_id": "LIN-POST-REPLICATION",
+      "component_role": "analysis",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     }
   ],
   "failure_experiments": [
@@ -925,5 +915,13 @@
       "estimated_minutes": 30
     }
   ],
-  "citation_catalog": []
+  "citation_catalog": [],
+  "course_id": "PESD-104",
+  "course_version": "2.0",
+  "primary_decision": {
+    "artifact_id": "A06",
+    "type": "ADR"
+  },
+  "pesd_v2_additions": "tenant onboarding, suspension, export, offboarding, region movement, cells, control-plane/data-plane separation, tenant keys, quotas, SLOs, and cost attribution",
+  "semantic_evaluation": "subsumed_by_gate"
 }

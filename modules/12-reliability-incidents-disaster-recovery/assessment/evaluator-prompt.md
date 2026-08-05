@@ -28,3 +28,11 @@ Never infer production availability, physical media durability, regional
 isolation, human performance, security enforcement, or compliance from the toy
 lab. Accept different SLOs, alert windows, degradation, incident structures,
 and recovery tiers when the submission's evidence supports them.
+
+## PESD 2.0 evaluator instruction
+
+Score the published criteria against evidence for cyber recovery, corrupted-backup recovery, provider concentration, control-plane outages, clean-room assumptions, evidence preservation, and notification ownership.
+Classify missing evidence, incorrect reasoning, unsupported claims, and
+reasonable uncertainty separately. Reject fixture replay presented as
+independent build or break evidence. Do not invent legal applicability or treat
+a named framework as proof of compliance.

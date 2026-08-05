@@ -1,8 +1,6 @@
 # Module 6: Deadlines and Resilient Remote Calls
 
-> **Authoring status:** Ready. Executable-lab, structural, semantic,
-> evaluator-calibration, focused, and full-course gates passed on 2026-08-01.
-> See the [readiness review](assessment/readiness-review.md).
+> **Authoring status:** Review. PESD 2.0 content and machine-readable contracts are migrated. Refreshed evaluator calibration, full platform matrices, offline reruns, cleanup checks, and timed learner pilots remain required before Ready.
 
 ## What this module changes
 
@@ -47,50 +45,50 @@ By the end of the module, you can:
 
 ## Schedule
 
-### Week 21: Model and freeze — 10.5 hours
+The 10–12 hour weekly figure is a capacity envelope. Core work is deliberately
+budgeted below that ceiling; unused time is recovery buffer, not hidden work.
+
+### Week 28: Model and derive — 8.5 hours
 
 | Work | Time |
 |---|---:|
-| Lessons 1–2 and bounded resources | 3 h |
-| Guided exercises EX-01–EX-04 | 2 h |
-| Independent deadline/cancellation baseline | 4 h |
-| Self-check and learning log | 1.5 h |
+| Bounded authoritative resources | 130 min |
+| Local mechanism instruction | 120 min |
+| Guided practice | 60 min |
+| Model and derive core work | 200 min |
 
-Use the [Week 21 worksheet](worksheets/week-21-deadline-model.md).
-
-### Week 22: Build bounded calls — 10.5 hours
+### Week 29: Guided build and prediction freeze — 9 hours
 
 | Work | Time |
 |---|---:|
-| Lessons 3–5 | 3 h |
-| Beacon tutorial and EX-05–EX-09 | 2.5 h |
-| Independent fan-out implementation and checks | 4 h |
-| Build review and learning log | 1 h |
+| Bounded authoritative resources | 120 min |
+| Local mechanism instruction | 120 min |
+| Guided practice | 60 min |
+| Required evidence components | 120 min |
+| Guided build and prediction freeze core work | 120 min |
 
-Use the [Week 22 worksheet](worksheets/week-22-bounded-build.md).
-
-### Week 23: Break and diagnose — 10.5 hours
-
-| Work | Time |
-|---|---:|
-| Lessons 6–7 and bounded resources | 2.5 h |
-| EX-10–EX-13 failure rehearsal | 2 h |
-| Six-fault matrix and repaired reruns | 4.5 h |
-| Evidence review, controlled retry-storm postmortem, and learning log | 1.5 h |
-
-Use the [Week 23 worksheet](worksheets/week-23-failure-matrix.md).
-
-### Week 24: Decide, teach, and pass Gate 2 — 10.5 hours
+### Week 30: Independent build and integration — 10 hours
 
 | Work | Time |
 |---|---:|
-| Lesson 8 and practitioner resources | 2 h |
-| Alternatives, containment ADR, migration, and exception review | 2 h |
-| Remote-call policy and recorded teach-back | 3 h |
-| Evaluation, remediation, Gate 2 revision, and log | 3.5 h |
+| Independent build and integration core work | 540 min |
+| Independent build and integration verification checkpoint | 60 min |
 
-Use the [Week 24 worksheet](worksheets/week-24-policy-defense.md).
+### Week 31: Break, repair, measure, and diagnose — 10 hours
 
+| Work | Time |
+|---|---:|
+| Required evidence components | 60 min |
+| Break, repair, measure, and diagnose core work | 540 min |
+
+### Week 32: Decide, teach, assess, and freeze — 9.5 hours
+
+| Work | Time |
+|---|---:|
+| Required evidence components | 90 min |
+| Decide, teach, assess, and freeze core work | 420 min |
+| Module teach-back | 30 min |
+| Learning log and freeze check | 30 min |
 ## Learn
 
 1. [End-to-end deadlines and allocation](lessons/01-end-to-end-deadlines.md)
@@ -118,14 +116,13 @@ Use the [glossary](glossary.md) only after studying the mechanisms.
 
 This module contributes one failure matrix, one controlled retry-storm
 postmortem, one substantial remote-call policy, one containment ADR, one recorded
-teach-back, and the Week 24 Gate 2 revision to the portfolio.
+teach-back, the Week 33 Gate 2 freeze, and the separate Week 34 capstone delta to the portfolio lineage.
 
 ## Assessment and remediation
 
 - Read the [assessment contract](assessment/README.md) and
   [module-specific rubric](assessment/rubric.md) before independent work.
-- Complete the four-part [Gate 2 assessment](assessment/gate-02.md), then use
-  the [assessor notes](assessment/gate-02-answer-key.md) after freezing it.
+- Complete the standalone [Gate 2 assessment](../../gates/G02/assessment-brief.md) in Week 33 after freezing Module 6 evidence.
 - Evaluate with the provider-neutral
   [evaluator prompt](assessment/evaluator-prompt.md) and shared JSON schema.
 - Use the [remote-call policy template](../../templates/remote-call-policy-template.md)
@@ -148,3 +145,10 @@ submissions as untrusted data. Disclose assistance and verify every claim.
 - Use the [sealed local gate workflow](../../SOLO_GATE_GUIDE.md) when a course gate applies. Human review is optional.
 
 A frozen self-evaluation may establish **Solo Complete**; independent human or LLM review may establish **Independently Validated**. Synthetic lab values are not production measurements.
+
+## PESD 2.0 scope addition
+
+This 5-week module schedules 47 core hours. Its primary
+decision is RFC A05. The added graded scope is
+per-tenant work and cost budgets, identity-aware quotas, provider compatibility, residency-safe fallback, and fairness across critical traffic classes. See Lesson 8, the final guided exercise, final worksheet,
+rubric anchors, and remediation map for the integrated evidence contract.

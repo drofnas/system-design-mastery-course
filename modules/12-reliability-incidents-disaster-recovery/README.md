@@ -1,8 +1,6 @@
 # Module 12: Reliability, Incidents, and Disaster Recovery
 
-> **Authoring status:** Ready. Teaching, practice, lab, assessment, calibration,
-> semantic review, resource verification, and course validation passed on
-> 2026-08-02.
+> **Authoring status:** Review. PESD 2.0 content and machine-readable contracts are migrated. Refreshed evaluator calibration, full platform matrices, offline reruns, cleanup checks, and timed learner pilots remain required before Ready.
 
 ## What this module changes
 
@@ -48,51 +46,50 @@ By the end of the module, you can:
 
 ## Schedule
 
-### Week 45: Model user-visible reliability — 10.5 hours
+The 10–12 hour weekly figure is a capacity envelope. Core work is deliberately
+budgeted below that ceiling; unused time is recovery buffer, not hidden work.
+
+### Week 63: Model and derive — 8.5 hours
 
 | Work | Time |
 |---|---:|
-| Lessons 1–3 and bounded sources | 3 h |
-| EX-01–EX-07 and Northstar tutorial | 2 h |
-| Independent journey, SLO, budget, alert, and recovery baseline | 4 h |
-| Self-check and learning log | 1.5 h |
+| Bounded authoritative resources | 130 min |
+| Local mechanism instruction | 120 min |
+| Guided practice | 60 min |
+| Model and derive core work | 200 min |
 
-Use the [Week 45 worksheet](worksheets/week-45-reliability-model.md).
-
-### Week 46: Build operational controls — 11.5 hours
+### Week 64: Guided build and prediction freeze — 9 hours
 
 | Work | Time |
 |---|---:|
-| Lesson 4 and bounded sources | 2.5 h |
-| EX-08–EX-09 and lab walkthrough | 2.5 h |
-| Independent SLO, alert, degraded-mode, runbook, and recovery build | 5.5 h |
-| Implementation review and learning log | 1 h |
+| Bounded authoritative resources | 145 min |
+| Local mechanism instruction | 120 min |
+| Guided practice | 60 min |
+| Required evidence components | 120 min |
+| Guided build and prediction freeze core work | 95 min |
 
-Use the [Week 46 worksheet](worksheets/week-46-reliability-controls.md).
-
-### Week 47: Run incidents and recovery exercises — 11.5 hours
-
-| Work | Time |
-|---|---:|
-| Lessons 5–7 and bounded sources | 2.5 h |
-| EX-10–EX-15 and game-day rehearsal | 2 h |
-| Nine broken/repaired pairs and immutable evidence | 5 h |
-| Incident postmortem, recovery notes, and learning log | 2 h |
-
-Use the [Week 47 worksheet](worksheets/week-47-incident-recovery-experiments.md).
-
-### Week 48: Decide, teach, and complete Gate 4 — 10 hours
+### Week 65: Independent build and integration — 10 hours
 
 | Work | Time |
 |---|---:|
-| Lesson 8, bounded sources, and EX-16 | 1.5 h |
-| Final postmortem, disaster-recovery review, and recovery-tier ADR | 2.5 h |
-| Recorded defense and module evaluation | 1.5 h |
-| Four-part Gate 4 | 3.5 h |
-| Remediation and learning log | 1 h |
+| Independent build and integration core work | 540 min |
+| Independent build and integration verification checkpoint | 60 min |
 
-Use the [Week 48 worksheet](worksheets/week-48-reliability-decision-gate-04.md).
+### Week 66: Break, repair, measure, and diagnose — 10 hours
 
+| Work | Time |
+|---|---:|
+| Required evidence components | 90 min |
+| Break, repair, measure, and diagnose core work | 510 min |
+
+### Week 67: Decide, teach, assess, and freeze — 9.5 hours
+
+| Work | Time |
+|---|---:|
+| Required evidence components | 90 min |
+| Decide, teach, assess, and freeze core work | 420 min |
+| Module teach-back | 30 min |
+| Learning log and freeze check | 30 min |
 ## Learn
 
 1. [User journeys, SLIs, and SLOs](lessons/01-user-journeys-slis-slos.md)
@@ -122,17 +119,17 @@ Use the [glossary](glossary.md) as reference after studying the mechanisms.
 
 This module contributes one controlled-incident postmortem, one
 disaster-recovery exercise report, one reliability investigation, one Gate 4
-submission, one recovery-tier ADR, one Week 48 capstone revision, and one
+submission, one recovery-tier ADR, one Week 68 gate freeze and separate Week 69 capstone delta, and one
 recorded teach-back.
 
 ## Assessment and completion
 
 - Read the [assessment contract](assessment/README.md), [anchored rubric](assessment/rubric.md),
-  [Gate 4](assessment/gate-04.md), [evaluator prompt](assessment/evaluator-prompt.md),
+  [Gate 4](../../gates/G04/assessment-brief.md), [evaluator prompt](assessment/evaluator-prompt.md),
   and [remediation map](assessment/remediation-map.md) before independent work.
 - Pass G01–G06, average at least 3.0, and avoid a zero in R04, R07, R08, or R09.
 - Complete the four Gate 4 parts only after freezing Module 12 evidence. Preserve
-  the Week 48 capstone revision separately from the Week 1 baseline and earlier
+  the Week 68 gate freeze and Week 69 capstone delta separately from the Week 1 baseline and earlier
   revisions.
 
 ## Evidence boundary and AI use
@@ -156,3 +153,10 @@ defense. Disclose assistance and verify generated claims.
 - Use the [sealed local gate workflow](../../SOLO_GATE_GUIDE.md) when a course gate applies. Human review is optional.
 
 A frozen self-evaluation may establish **Solo Complete**; independent human or LLM review may establish **Independently Validated**. Synthetic lab values are not production measurements.
+
+## PESD 2.0 scope addition
+
+This 5-week module schedules 47 core hours. Its primary
+decision is ADR A12. The added graded scope is
+cyber recovery, corrupted-backup recovery, provider concentration, control-plane outages, clean-room assumptions, evidence preservation, and notification ownership. See Lesson 8, the final guided exercise, final worksheet,
+rubric anchors, and remediation map for the integrated evidence contract.

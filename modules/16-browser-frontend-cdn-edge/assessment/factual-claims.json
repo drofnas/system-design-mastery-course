@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
   "module": "M16",
-  "reviewed_commit": "670fcb8a202d8aea43d03f15f435054fdb2685f5",
+  "reviewed_commit": "WORKTREE",
   "reviewed_at": "2026-08-04",
   "evidence_boundary": "This ledger records a source-level semantic review of lessons, worked answers, case studies, exercises, worksheets, rubrics, and lab guides. It verifies named mechanisms against bounded primary or official sources, distinguishes normative course contracts, and does not turn synthetic examples into production measurements.",
   "claims": [
@@ -338,7 +338,7 @@
   "document_coverage": [
     {
       "path": "README.md",
-      "sha256": "526690e53e83b7bc6c31a2ee7a6d8634600ab2c1fd638136bd42cffab81feabe",
+      "sha256": "f60ae1910672cf0f0674a8d8ccd30f04cc5085918a1691f988ad01f98e7d10c3",
       "review_scope": "normative_or_assignment_only",
       "claim_ids": [],
       "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
@@ -416,7 +416,7 @@
     },
     {
       "path": "assessment/evaluator-prompt.md",
-      "sha256": "c2b6e4550d04e61dd876fda62ead88c94ffeb8f07bafe832b0ad7830806075d7",
+      "sha256": "65a93546e8e6be2dd2013067e73377cc5c4d2df38886f39bbab9b1301826ed3c",
       "review_scope": "normative_or_assignment_only",
       "claim_ids": [],
       "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
@@ -430,7 +430,7 @@
     },
     {
       "path": "assessment/remediation-map.md",
-      "sha256": "dd93dd358092dfd1fa7deabca0e6dce3648e2adc5b62fa08274fc6c350fc9a71",
+      "sha256": "fa0de11c1cd124021ec34cb9021b091d84709f7356a3faad02db56fec1254af8",
       "review_scope": "normative_or_assignment_only",
       "claim_ids": [],
       "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
@@ -444,7 +444,7 @@
     },
     {
       "path": "assessment/rubric.md",
-      "sha256": "acfe5ea09a39ddae93bdb0eb2885997a7580a814be92eea7cb3fa8ba907d5045",
+      "sha256": "63147e011db8ed6e3b85aebc76f377870f60a41c6d059a9c0e672e297ed56080",
       "review_scope": "normative_or_assignment_only",
       "claim_ids": [],
       "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
@@ -468,7 +468,7 @@
     },
     {
       "path": "exercises/answer-key.md",
-      "sha256": "88f076023a8fb8bf9ff1e7dcf9877795f1fa8d007498f3f36c6fa3e425f74150",
+      "sha256": "71b73d7153df3b46440ea4feb9a9d01edb2cff450cc0b22c5f373c3c82ba96fb",
       "review_scope": "substantive_claims",
       "claim_ids": [
         "M16-FC-009",
@@ -478,7 +478,7 @@
     },
     {
       "path": "exercises/exercises.md",
-      "sha256": "13378afab3783e315248519f983c3a4a85b800d0ddcca1ea8dac6b4cdcf1d953",
+      "sha256": "a9e1e705bac0a61778a957d97860cb72f94a2e9a236761e64d122a4989083a01",
       "review_scope": "normative_or_assignment_only",
       "claim_ids": [],
       "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
@@ -492,7 +492,7 @@
     },
     {
       "path": "lab/README.md",
-      "sha256": "e1368c36167462ab7094413a7ea5c800bb0da35fc06d98dab97fca26848f2a09",
+      "sha256": "2fd6203fa162f593d3615c37d47498456183389d1ba8ff556063b0a54e5b6f02",
       "review_scope": "normative_or_assignment_only",
       "claim_ids": [],
       "review_note": "The lab guide's commands, interfaces, bounds, and synthetic evidence limitations were checked directly against the executable implementation and its passing tests."
@@ -521,6 +521,13 @@
     {
       "path": "lab/browser_edge_lab/runner.py",
       "sha256": "c8109be50cb5ad22e77a8809b3ab5fc1a2a3f51d6a11ddf581708f897cd6c3f0",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/host_browser_callback.py",
+      "sha256": "c3b21c45d71de65d1fb9e4839158f41c823f9144f97fc33f920d6bf8fc688126",
       "review_scope": "implementation_evidence",
       "claim_ids": [],
       "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
@@ -689,6 +696,20 @@
       "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
     },
     {
+      "path": "lab/test-results/.last-run.json",
+      "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
+      "path": "lab/test-results/results.json",
+      "sha256": "605400c08ec84f9e183381dfc69268d7b78239eee9ad2ec29243d14b3f06684c",
+      "review_scope": "implementation_evidence",
+      "claim_ids": [],
+      "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
+    },
+    {
       "path": "lab/tests/__init__.py",
       "sha256": "3db777073cc12e5c8d6e7df633c719a8e68aaeb8a93ecc4988de9cc42d96bb2e",
       "review_scope": "implementation_evidence",
@@ -797,7 +818,7 @@
     },
     {
       "path": "lessons/08-frontend-edge-decision-teachback.md",
-      "sha256": "dcd07fa81c7d72929d3533287be9eea92bc0a440ffeafe48928528db3b5589b7",
+      "sha256": "ee79e7b6798b6503ec6f985b882e0f376ad5323f3ebc83208626de6975c531d6",
       "review_scope": "substantive_claims",
       "claim_ids": [
         "M16-FC-008"
@@ -806,14 +827,14 @@
     },
     {
       "path": "module.json",
-      "sha256": "f94f3b54668bfa8cc15fce91ebcb4da75cdae24a52ebbb3251bd495793abae6e",
+      "sha256": "1208f4eeb599cf50d00170692b83ea91d2af8ce8aad05ef8920f174f782af5b7",
       "review_scope": "implementation_evidence",
       "claim_ids": [],
       "review_note": "Reviewed as implementation or configuration evidence and verified by the declared laboratory tests."
     },
     {
       "path": "resources.md",
-      "sha256": "eb7ed5c605d622e9dfcc7e5f779a083501310b99d97054eedda6c972a32b6b97",
+      "sha256": "7624ae7a2f59bb5b66a2d8ae1af5a74223ed4f5da6a3bff00c04f35afa19190f",
       "review_scope": "normative_or_assignment_only",
       "claim_ids": [],
       "review_note": "Reviewed as course navigation, assignment, rubric, or policy text rather than an external empirical claim."
@@ -841,7 +862,7 @@
     },
     {
       "path": "worksheets/week-64-architecture-defense.md",
-      "sha256": "85d6387785a21d809d639f6a182a61530f4deb5969b66f393ef73c5b97da008f",
+      "sha256": "b52d517b60634a40f745a4eddb11825d3af36fc1b44a81f044be610bf2549cf4",
       "review_scope": "normative_or_assignment_only",
       "claim_ids": [],
       "review_note": "This document contains course requirements, prompts, or score anchors; it was checked for hidden required work and for consistency with the sourced lessons and synthetic evidence boundary."
@@ -884,12 +905,12 @@
       "claim_id": "M16-FC-012"
     }
   ],
-  "content_digest": "255e62929cafe2403b19393aeb3c7151b0c82937ba3f54a18c39e21632f0e4b5",
+  "content_digest": "a74c9b48a1e937b51128e37e963487e17a25bc07e13bf763f6cabf9b6ee82c27",
   "review_attestation": {
     "reviewer": "course readiness remediation review",
     "method": "primary-source semantic review",
     "status": "complete",
-    "content_digest": "255e62929cafe2403b19393aeb3c7151b0c82937ba3f54a18c39e21632f0e4b5",
+    "content_digest": "a74c9b48a1e937b51128e37e963487e17a25bc07e13bf763f6cabf9b6ee82c27",
     "scope_note": "All tracked learner-facing prose, exercises, answers, assessment contracts, synthetic fixtures, laboratory documentation, implementation, and configuration in this module were inventoried; substantive claims were checked against the named source boundaries."
   }
 }

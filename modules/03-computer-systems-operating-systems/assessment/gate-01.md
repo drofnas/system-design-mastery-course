@@ -1,5 +1,7 @@
 # Gate 1: Systems Judgment Review
 
+> **PESD V1 historical contract:** Preserve this file for V1 learners and immutable evidence. PESD 2.0 uses [gates/G01/README.md](../../../gates/G01/README.md).
+
 ## Purpose and timing
 
 Gate 1 closes Week 12. It tests whether the learner can transfer Module 1–3

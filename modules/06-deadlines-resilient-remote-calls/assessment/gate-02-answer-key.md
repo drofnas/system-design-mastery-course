@@ -1,5 +1,7 @@
 # Gate 2 Assessor Notes and Explained Boundaries
 
+> **PESD V1 historical contract:** Preserve this file for V1 learners and immutable evidence. PESD 2.0 uses [gates/G02/README.md](../../../gates/G02/README.md).
+
 Use after the learner freezes all four parts. These notes identify reasoning
 boundaries, not one required architecture.
 

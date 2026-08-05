@@ -95,3 +95,11 @@ Draft a telemetry-first rollout, mixed-client compatibility rule, canary gate,
 rollback trigger, exception expiry, and decommission condition. Use the frozen
 solo-review packet to answer challenges from dependency-owner, security,
 finance, and on-call perspectives. A live panel is optional.
+
+## PESD 2.0 extension to the final exercise
+
+Extend the final guided exercise with per-tenant work and cost budgets, identity-aware quotas, provider compatibility, residency-safe fallback, and fairness across critical traffic classes. Produce an
+obligation/control/evidence row, a named owner, a bounded cost or capacity
+effect, a failure or policy-drift test, a migration step, and a reversal trigger.
+Label every observation with an accepted evidence mode and do not use fixture
+replay as independent Build, Break, Implement, or Measure evidence.

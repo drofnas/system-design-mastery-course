@@ -7,9 +7,10 @@ The lab has three evidence planes:
 
 1. `inference_lab/tensor.py` and `model.py` are a dependency-free, inspectable
    tokenizer, tensor, attention, and tiny transformer implementation.
-2. The F01–F06 runner is a deterministic serving model. It proves schema shape,
-   one-control pairs, hashes, target failures, and repaired invariants.
-3. The loopback server produces measured CPU timing for a tiny model. The optional
+2. The F01–F06 runner is a deterministic capacity and fault model. It proves
+   schema shape, one-control pairs, hashes, target failures, and repaired invariants.
+3. The loopback server executes the actual tiny transformer and produces measured
+   CPU timing. The optional
    PyTorch adapter records a bounded operator profile when PyTorch is installed.
 
 Do not present modeled milliseconds as hardware measurements or extrapolate the
@@ -31,7 +32,7 @@ PyTorch is absent. Installing PyTorch is optional and outside the readiness gate
 
 ## Streaming request contract
 
-`POST /v1/generate` accepts exactly:
+`POST /v1/generate` requires:
 
 ```json
 {
@@ -45,11 +46,24 @@ PyTorch is absent. Installing PyTorch is optional and outside the readiness gate
 }
 ```
 
+Fault tests may additionally set `provider_mode` to `fail_once` and
+`fallback_model_version` to the compatible local version. No other fields are
+accepted.
+
 The response is `application/x-ndjson`: one `accepted` event, zero or more
 ordered `token` events, and one `completed`, `rejected`, or `failed` terminal
 event. Events report request and version identity, precision, and cache kind.
 They omit tenant and prompt values. `/healthz` reports local model health;
 `/metrics` reports bounded aggregate counters. The server refuses non-loopback IPs.
+
+PESD 2.0 flushes each NDJSON event as it is produced; it does not buffer all
+tokens before completion. Prefill creates real K/V rows and decode extends only
+the new row. Admission reserves bounded byte and token budgets before work
+starts, and batch work cannot consume the interactive reserve. Prompt K/V cache
+identity includes tenant, model, tokenizer, prompt-policy, precision, cache kind,
+and normalized input. The bounded fake provider can fail once and use only a
+compatible fallback inside the remaining deadline; it never creates unbounded
+attempts.
 
 ## Invariants
 
@@ -72,3 +86,9 @@ Copy scenario JSON and printed trial JSON into the immutable A04 submission path
 Record SHA-256, source commit, Python version, host, and whether evidence is
 modeled or measured. Measured profiles additionally record warm-up, repetitions,
 device/runtime, profiler overhead, and environmental limitations.
+
+Never exhaust host memory intentionally. `byte_budget_exhausted` is the required
+safe failure. Modeled F01–F06 output does not replace independent requests to the
+actual server for Build, Break, Implement, or Measure evidence. Tests cover
+stream-before-completion, incremental/full equivalence, K/V reuse, tenant
+isolation, memory refusal and cleanup, queue recovery, and bounded failover.

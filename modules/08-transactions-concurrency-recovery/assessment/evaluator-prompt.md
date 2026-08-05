@@ -33,3 +33,11 @@ when the submitted manifest identifies one calibration fixture.
   remediation references agree.
 - Accept a defensible alternative when its invariant, failure model, and
   evidence meet the published rubric.
+
+## PESD 2.0 evaluator instruction
+
+Score the published criteria against evidence for retention, deletion, legal holds, key rotation, logs, replicas, exports, backups, restore-time policy replay, and resurrection prevention.
+Classify missing evidence, incorrect reasoning, unsupported claims, and
+reasonable uncertainty separately. Reject fixture replay presented as
+independent build or break evidence. Do not invent legal applicability or treat
+a named framework as proof of compliance.

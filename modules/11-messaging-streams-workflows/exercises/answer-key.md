@@ -103,3 +103,11 @@ The simplest candidate should win unless independent consumers, buffering,
 replay, or workflow recovery justify complexity. A sound migration shadows
 events and reads, compares with authority, canaries consumers, rehearses
 rollback, and decommissions only after compatibility/reconciliation gates.
+
+## PESD 2.0 extension answer
+
+A defensible answer covers semantic event contracts, producer and consumer ownership, data quality, lineage, policy-version-aware replay, lifecycle disposition, and batch/stream reconciliation. It distinguishes the
+requirement, enforcement mechanism, evidence, and owner; keeps modeled and
+measured results separate; and names the failed condition that would reverse
+the decision. Different architectures are acceptable when their invariants,
+evidence boundaries, migration, and residual risk are explicit.

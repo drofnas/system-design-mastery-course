@@ -1,8 +1,6 @@
 # Module 11: Messaging, Streams, and Workflows
 
-> **Authoring status:** Ready. Teaching, practice, lab, assessment, calibration,
-> semantic review, and validation passed on 2026-08-02. See the
-> [readiness review](assessment/readiness-review.md).
+> **Authoring status:** Review. PESD 2.0 content and machine-readable contracts are migrated. Refreshed evaluator calibration, full platform matrices, offline reruns, cleanup checks, and timed learner pilots remain required before Ready.
 
 ## What this module changes
 
@@ -50,50 +48,50 @@ By the end of the module, you can:
 
 ## Schedule
 
-### Week 41: Model authority and delivery — 10.5 hours
+The 10–12 hour weekly figure is a capacity envelope. Core work is deliberately
+budgeted below that ceiling; unused time is recovery buffer, not hidden work.
+
+### Week 58: Model and derive — 8.5 hours
 
 | Work | Time |
 |---|---:|
-| Lessons 1–3 and bounded sources | 3 h |
-| EX-01–EX-06 and Northstar tutorial | 2 h |
-| Independent authority, semantics, ordering, and prediction baseline | 4 h |
-| Self-check and learning log | 1.5 h |
+| Bounded authoritative resources | 160 min |
+| Local mechanism instruction | 120 min |
+| Guided practice | 60 min |
+| Model and derive core work | 170 min |
 
-Use the [Week 41 worksheet](worksheets/week-41-messaging-model.md).
-
-### Week 42: Build the transactional publication path — 11.5 hours
+### Week 59: Guided build and prediction freeze — 9 hours
 
 | Work | Time |
 |---|---:|
-| Lessons 4–5 and bounded sources | 2.5 h |
-| EX-07–EX-10 and lab walkthrough | 2.5 h |
-| Independent outbox, log, consumer, projection, and reconciliation build | 5.5 h |
-| Internals review and learning log | 1 h |
+| Bounded authoritative resources | 120 min |
+| Local mechanism instruction | 120 min |
+| Guided practice | 60 min |
+| Required evidence components | 90 min |
+| Guided build and prediction freeze core work | 150 min |
 
-Use the [Week 42 worksheet](worksheets/week-42-publication-build.md).
-
-### Week 43: Break workflows and recovery — 11.5 hours
-
-| Work | Time |
-|---|---:|
-| Lessons 6–7 and bounded sources | 2.5 h |
-| EX-11–EX-15 and failure rehearsal | 2 h |
-| Nine broken/repaired pairs and immutable raw evidence | 5.5 h |
-| Failure matrix and learning log | 1.5 h |
-
-Use the [Week 43 worksheet](worksheets/week-43-messaging-failure-matrix.md).
-
-### Week 44: Decide and teach — 10 hours
+### Week 60: Independent build and integration — 10 hours
 
 | Work | Time |
 |---|---:|
-| Lesson 8 and bounded sources | 1.5 h |
-| EX-16 and RFC preparation | 1.5 h |
-| Asynchronous-workflow RFC | 3.5 h |
-| Defense, evaluation, remediation, and learning log | 3.5 h |
+| Independent build and integration core work | 540 min |
+| Independent build and integration verification checkpoint | 60 min |
 
-Use the [Week 44 worksheet](worksheets/week-44-async-workflow-rfc-defense.md).
+### Week 61: Break, repair, measure, and diagnose — 10 hours
 
+| Work | Time |
+|---|---:|
+| Required evidence components | 60 min |
+| Break, repair, measure, and diagnose core work | 540 min |
+
+### Week 62: Decide, teach, assess, and freeze — 9.5 hours
+
+| Work | Time |
+|---|---:|
+| Required evidence components | 120 min |
+| Decide, teach, assess, and freeze core work | 390 min |
+| Module teach-back | 30 min |
+| Learning log and freeze check | 30 min |
 ## Learn
 
 1. [Authority, events, queues, logs, and streams](lessons/01-authority-events-queues-logs-streams.md)
@@ -121,8 +119,9 @@ Use the [glossary](glossary.md) only after studying the mechanisms.
   compensation, or migration into the commerce capstone.
 
 This module contributes one substantial asynchronous-workflow RFC, one failure
-matrix, one distributed-systems investigation, one internals review, and one
-recorded teach-back.
+matrix, one distributed-systems investigation, the final Data Governance
+Dossier lineage component, and one lightweight teach-back. The internals trace
+remains required but is not a separately featured portfolio item.
 
 ## Assessment and completion
 
@@ -131,7 +130,7 @@ recorded teach-back.
   [remediation map](assessment/remediation-map.md) before independent work.
 - Pass G01–G06, average at least 3.0, and avoid a zero in R04, R06, or R09.
 - Module 11 creates no capstone revision or Gate 4 submission. Gate 4 remains at
-  Week 48 after Module 12.
+  Week 68 after Module 12.
 
 ## Evidence boundary and AI use
 
@@ -153,3 +152,10 @@ and verify generated claims against sources, code, and experiments.
 - Use the [sealed local gate workflow](../../SOLO_GATE_GUIDE.md) when a course gate applies. Human review is optional.
 
 A frozen self-evaluation may establish **Solo Complete**; independent human or LLM review may establish **Independently Validated**. Synthetic lab values are not production measurements.
+
+## PESD 2.0 scope addition
+
+This 5-week module schedules 47 core hours. Its primary
+decision is RFC A06. The added graded scope is
+semantic event contracts, producer and consumer ownership, data quality, lineage, policy-version-aware replay, lifecycle disposition, and batch/stream reconciliation. See Lesson 8, the final guided exercise, final worksheet,
+rubric anchors, and remediation map for the integrated evidence contract.

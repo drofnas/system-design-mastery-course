@@ -5,26 +5,28 @@
   "weeks": [
     {
       "number": 1,
-      "focus": "Model",
-      "hours": 10.5,
+      "phase": "Model and derive",
+      "focus": "Model and derive",
+      "hours": 8.5,
+      "core_hours": 8.5,
+      "capacity_hours": 12,
       "evidence": [
-        "Frozen Week 1 commerce baseline",
-        "Week 1 learning log"
+        "Model and derive evidence frozen at source commit"
       ],
       "time_blocks": [
         {
-          "id": "W01-T01",
+          "id": "W001-T01",
           "label": "Bounded authoritative resources",
           "minutes": 65,
           "activity": "required_resource",
           "resource_ids": [
-            "RES-01",
-            "RES-04"
+            "RES-06",
+            "RES-07"
           ]
         },
         {
-          "id": "W01-T02",
-          "label": "Local lesson instruction",
+          "id": "W001-T02",
+          "label": "Local mechanism instruction",
           "minutes": 120,
           "activity": "local_instruction",
           "lesson_ids": [
@@ -35,253 +37,228 @@
           ]
         },
         {
-          "id": "W01-T03",
+          "id": "W001-T03",
           "label": "Guided practice",
-          "minutes": 90,
+          "minutes": 60,
           "activity": "guided_practice",
           "exercise_ids": [
             "EX-01",
             "EX-02",
             "EX-03",
             "EX-04",
-            "EX-05"
+            "EX-05",
+            "EX-06"
           ]
         },
         {
-          "id": "W01-T04",
-          "label": "Reflection and learning log",
+          "id": "W001-T04",
+          "label": "Required evidence components",
           "minutes": 30,
-          "activity": "reflection"
-        },
-        {
-          "id": "W01-T05",
-          "label": "Decision Artifact",
-          "minutes": 30,
-          "activity": "decision_artifact",
-          "artifact_ids": [
-            "A01"
+          "activity": "independent_work",
+          "artifact_allocations": [
+            {
+              "artifact_id": "A01",
+              "minutes": 30
+            }
           ]
         },
         {
-          "id": "W01-T06",
-          "label": "Independent Work",
-          "minutes": 295,
+          "id": "W001-T05",
+          "label": "Model and derive core work",
+          "minutes": 235,
           "activity": "independent_work"
         }
       ]
     },
     {
       "number": 2,
-      "focus": "Build",
-      "hours": 10.5,
+      "phase": "Guided build and prediction freeze",
+      "focus": "Guided build and prediction freeze",
+      "hours": 9.0,
+      "core_hours": 9.0,
+      "capacity_hours": 12,
       "evidence": [
-        "Candidate-design comparison",
-        "Practice ADR",
-        "Week 2 learning log"
+        "Guided build and prediction freeze evidence frozen at source commit"
       ],
       "time_blocks": [
         {
-          "id": "W02-T01",
+          "id": "W002-T01",
           "label": "Bounded authoritative resources",
-          "minutes": 20,
+          "minutes": 65,
           "activity": "required_resource",
           "resource_ids": [
-            "RES-06"
+            "RES-01",
+            "RES-04"
           ]
         },
         {
-          "id": "W02-T02",
-          "label": "Local lesson instruction",
-          "minutes": 90,
+          "id": "W002-T02",
+          "label": "Local mechanism instruction",
+          "minutes": 120,
           "activity": "local_instruction",
           "lesson_ids": [
-            "L03",
             "L05",
-            "L07"
+            "L06",
+            "L07",
+            "L08"
           ]
         },
         {
-          "id": "W02-T03",
+          "id": "W002-T03",
           "label": "Guided practice",
-          "minutes": 90,
+          "minutes": 60,
           "activity": "guided_practice",
           "exercise_ids": [
-            "EX-06",
             "EX-07",
-            "EX-08"
+            "EX-08",
+            "EX-09",
+            "EX-10",
+            "EX-11",
+            "EX-12"
           ]
         },
         {
-          "id": "W02-T04",
-          "label": "Reflection and learning log",
-          "minutes": 30,
-          "activity": "reflection"
-        },
-        {
-          "id": "W02-T05",
-          "label": "Decision Artifact",
-          "minutes": 30,
-          "activity": "decision_artifact",
-          "artifact_ids": [
-            "A03"
-          ]
-        },
-        {
-          "id": "W02-T06",
-          "label": "Independent Work",
-          "minutes": 370,
+          "id": "W002-T04",
+          "label": "Required evidence components",
+          "minutes": 60,
           "activity": "independent_work",
-          "artifact_ids": [
-            "A02"
+          "artifact_allocations": [
+            {
+              "artifact_id": "A02",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A03",
+              "minutes": 30
+            }
           ]
+        },
+        {
+          "id": "W002-T05",
+          "label": "Guided build and prediction freeze core work",
+          "minutes": 235,
+          "activity": "independent_work"
         }
       ]
     },
     {
       "number": 3,
-      "focus": "Break and measure",
-      "hours": 10.5,
+      "phase": "Independent build and integration",
+      "focus": "Independent build and integration",
+      "hours": 10.0,
+      "core_hours": 10.0,
+      "capacity_hours": 12,
       "evidence": [
-        "Failure matrix",
-        "Evidence ledger",
-        "Adversarial baseline review",
-        "Week 3 learning log"
+        "Independent build and integration evidence frozen at source commit"
       ],
       "time_blocks": [
         {
-          "id": "W03-T01",
-          "label": "Bounded authoritative resources",
-          "minutes": 45,
-          "activity": "required_resource",
-          "resource_ids": [
-            "RES-07"
-          ]
+          "id": "W003-T01",
+          "label": "Independent build and integration core work",
+          "minutes": 540,
+          "activity": "independent_work"
         },
         {
-          "id": "W03-T02",
-          "label": "Local lesson instruction",
-          "minutes": 90,
-          "activity": "local_instruction",
-          "lesson_ids": [
-            "L01",
-            "L04",
-            "L06"
-          ]
-        },
-        {
-          "id": "W03-T03",
-          "label": "Guided practice",
-          "minutes": 90,
-          "activity": "guided_practice",
-          "exercise_ids": [
-            "EX-09",
-            "EX-10",
-            "EX-11"
-          ]
-        },
-        {
-          "id": "W03-T04",
-          "label": "Reflection and learning log",
-          "minutes": 30,
-          "activity": "reflection"
-        },
-        {
-          "id": "W03-T05",
-          "label": "Failure Experiment",
-          "minutes": 345,
-          "activity": "failure_experiment",
-          "artifact_ids": [
-            "A04"
-          ]
-        },
-        {
-          "id": "W03-T06",
-          "label": "Teach Back",
-          "minutes": 30,
-          "activity": "teach_back",
-          "artifact_ids": [
-            "A05"
-          ]
+          "id": "W003-T02",
+          "label": "Independent build and integration verification checkpoint",
+          "minutes": 60,
+          "activity": "independent_work"
         }
       ]
     },
     {
       "number": 4,
-      "focus": "Decide and teach",
-      "hours": 10.5,
+      "phase": "Break, repair, measure, and diagnose",
+      "focus": "Break, repair, measure, and diagnose",
+      "hours": 10.0,
+      "core_hours": 10.0,
+      "capacity_hours": 12,
       "evidence": [
-        "Module RFC",
-        "Architecture defense",
-        "Evaluation report",
-        "Revision log",
-        "Week 4 learning log"
+        "Break, repair, measure, and diagnose evidence frozen at source commit"
       ],
       "time_blocks": [
         {
-          "id": "W04-T01",
-          "label": "Local lesson instruction",
-          "minutes": 45,
-          "activity": "local_instruction",
-          "lesson_ids": [
-            "L08"
-          ]
-        },
-        {
-          "id": "W04-T02",
-          "label": "Guided practice",
-          "minutes": 45,
-          "activity": "guided_practice",
-          "exercise_ids": [
-            "EX-12"
-          ]
-        },
-        {
-          "id": "W04-T03",
-          "label": "Reflection and learning log",
+          "id": "W004-T01",
+          "label": "Required evidence components",
           "minutes": 30,
-          "activity": "reflection",
-          "artifact_ids": [
-            "A10"
+          "activity": "failure_experiment",
+          "artifact_allocations": [
+            {
+              "artifact_id": "A04",
+              "minutes": 30
+            }
           ]
         },
         {
-          "id": "W04-T04",
-          "label": "Assessment",
-          "minutes": 60,
-          "activity": "assessment",
-          "artifact_ids": [
-            "A09"
-          ]
-        },
+          "id": "W004-T02",
+          "label": "Break, repair, measure, and diagnose core work",
+          "minutes": 570,
+          "activity": "failure_experiment"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "phase": "Decide, teach, assess, and freeze",
+      "focus": "Decide, teach, assess, and freeze",
+      "hours": 9.5,
+      "core_hours": 9.5,
+      "capacity_hours": 12,
+      "evidence": [
+        "Decide, teach, assess, and freeze evidence frozen at source commit"
+      ],
+      "time_blocks": [
         {
-          "id": "W04-T05",
-          "label": "Decision Artifact",
-          "minutes": 330,
+          "id": "W005-T01",
+          "label": "Required evidence components",
+          "minutes": 150,
           "activity": "decision_artifact",
-          "artifact_ids": [
-            "A07"
+          "artifact_allocations": [
+            {
+              "artifact_id": "A05",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A07",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A08",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A09",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A10",
+              "minutes": 30
+            }
           ]
         },
         {
-          "id": "W04-T06",
-          "label": "Review Remediation",
-          "minutes": 60,
-          "activity": "review_remediation"
+          "id": "W005-T02",
+          "label": "Decide, teach, assess, and freeze core work",
+          "minutes": 360,
+          "activity": "assessment"
         },
         {
-          "id": "W04-T07",
-          "label": "Teach Back",
-          "minutes": 60,
-          "activity": "teach_back",
-          "artifact_ids": [
-            "A08"
-          ]
+          "id": "W005-T03",
+          "label": "Module teach-back",
+          "minutes": 30,
+          "activity": "teach_back"
+        },
+        {
+          "id": "W005-T04",
+          "label": "Learning log and freeze check",
+          "minutes": 30,
+          "activity": "reflection"
         }
       ]
     }
   ],
-  "target_hours": 42,
-  "status": "ready",
+  "target_hours": 47,
+  "status": "review",
   "readiness_note": "Local validation and the two-run Pass, Revise, and Repeat LLM calibration passed on 2026-07-31.",
   "outcomes": [
     {
@@ -521,7 +498,7 @@
       "url": "https://www.sei.cmu.edu/library/reasoning-about-software-quality-attributes/",
       "required": true,
       "access": "free",
-      "week": 1,
+      "week": 2,
       "estimated_minutes": 35,
       "assignment": "Read the overview and General Scenarios sections through the discussion of trade-offs. Record one quality name that remains ambiguous until expressed as a scenario.",
       "last_verified": "2026-07-31",
@@ -581,7 +558,7 @@
       "url": "https://c4model.com/",
       "required": true,
       "access": "free",
-      "week": 1,
+      "week": 2,
       "estimated_minutes": 30,
       "assignment": "Read the overview, abstractions, system-context guidance, notation guidance, and diagram-review checklist. Identify which details do not belong on a context diagram.",
       "last_verified": "2026-07-31",
@@ -621,7 +598,7 @@
       "url": "https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions",
       "required": true,
       "access": "free",
-      "week": 2,
+      "week": 1,
       "estimated_minutes": 20,
       "assignment": "Read the complete article. Explain why preserving a superseded decision is useful and identify one decision too small to deserve an ADR.",
       "last_verified": "2026-07-31",
@@ -641,7 +618,7 @@
       "url": "https://builder.aws.com/content/3F08f7GPFiZMCgXD8gny6OjxR0Z/challenges-with-distributed-systems",
       "required": true,
       "access": "free",
-      "week": 3,
+      "week": 1,
       "estimated_minutes": 45,
       "assignment": "Read the complete article. Add three independent failure combinations and one unknown-outcome case to the transit case failure matrix.",
       "last_verified": "2026-07-31",
@@ -683,7 +660,13 @@
       "template_path": "capstone/baselines/week-01-baseline.md",
       "submission_path": "capstone/baselines/week-01-baseline.md",
       "immutable_after_submission": true,
-      "portfolio_category": "capstone"
+      "portfolio_category": "capstone",
+      "portfolio_item_id": "PI-CAPSTONE-01",
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-CAPSTONE-GLOBAL-COMMERCE",
+      "component_role": "baseline",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A02",
@@ -691,7 +674,13 @@
       "required": true,
       "template_path": "modules/01-architectural-judgment/worksheets/week-02-candidate-designs.md",
       "submission_path": "reports/module-01-candidate-designs.md",
-      "portfolio_category": "model"
+      "portfolio_category": "model",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M01-A02",
+      "component_role": "prediction",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A03",
@@ -699,55 +688,97 @@
       "required": true,
       "template_path": "templates/adr-template.md",
       "submission_path": "adr/ADR-001-module-01-decision.md",
-      "portfolio_category": "adr"
+      "portfolio_category": "model",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M01-A03",
+      "component_role": "prediction",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A04",
-      "week": 3,
+      "week": 4,
       "required": true,
       "template_path": "modules/01-architectural-judgment/worksheets/week-03-failure-review.md",
       "submission_path": "experiments/module-01-failure-review.md",
-      "portfolio_category": "failure_matrix"
+      "portfolio_category": "failure_matrix",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M01-A04",
+      "component_role": "raw_evidence",
+      "estimated_minutes": 30,
+      "evidence_mode": "executed_deterministic"
     },
     {
       "id": "A05",
-      "week": 3,
+      "week": 5,
       "required": true,
       "template_path": "reviews/week-01-baseline-review.md",
       "submission_path": "reviews/week-01-baseline-review.md",
-      "portfolio_category": "teach_back"
+      "portfolio_category": "teach_back",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M01-A05",
+      "component_role": "final",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A07",
-      "week": 4,
+      "week": 5,
       "required": true,
       "template_path": "templates/rfc-template.md",
       "submission_path": "rfc/RFC-001-architectural-judgment.md",
-      "portfolio_category": "rfc"
+      "portfolio_category": "rfc",
+      "portfolio_item_id": "PI-DECISION-M01",
+      "portfolio_credit": true,
+      "evidence_lineage_id": "LIN-DECISION-M01",
+      "component_role": "decision",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A08",
-      "week": 4,
+      "week": 5,
       "required": true,
       "template_path": "modules/01-architectural-judgment/worksheets/week-04-rfc-defense.md",
       "submission_path": "reviews/module-01-defense.md",
-      "portfolio_category": "teach_back"
+      "portfolio_category": "teach_back",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M01-A08",
+      "component_role": "final",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A09",
-      "week": 4,
+      "week": 5,
       "required": true,
       "template_path": "modules/01-architectural-judgment/assessment/report-template.md",
       "submission_path": "reviews/module-01-evaluation.md",
-      "portfolio_category": "evaluation"
+      "portfolio_category": "evaluation",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M01-A09",
+      "component_role": "final",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A10",
-      "week": 4,
+      "week": 5,
       "required": true,
       "template_path": "templates/learning-log-template.md",
-      "submission_path": "learning-log/week-01.md through learning-log/week-04.md",
-      "portfolio_category": "learning_log"
+      "submission_path": "learning-log/week-001.md through learning-log/week-005.md",
+      "portfolio_category": "learning_log",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M01-A10",
+      "component_role": "final",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     }
   ],
   "failure_experiments": [
@@ -903,7 +934,7 @@
     },
     {
       "id": "CIT-02",
-      "title": "Architecture Tradeoff Analysis Method® Collection",
+      "title": "Architecture Tradeoff Analysis Method\u00ae Collection",
       "author_or_publisher": "Software Engineering Institute",
       "type": "primary-source citation",
       "url": "https://www.sei.cmu.edu/library/architecture-tradeoff-analysis-method-collection/",
@@ -913,11 +944,19 @@
       "reading_boundary": "Read the Description, nine ATAM steps, outputs, and benefits; the multi-day facilitated process is context, not a solo-course requirement.",
       "last_verified": "2026-08-04",
       "text_alternative": "lessons/08-decisions-rfcs-and-defense.md",
-      "verified_title": "Architecture Tradeoff Analysis Method® Collection",
+      "verified_title": "Architecture Tradeoff Analysis Method\u00ae Collection",
       "verified_publisher": "Software Engineering Institute",
       "verification_method": "HTTP GET plus primary-source metadata comparison",
       "final_url": "https://www.sei.cmu.edu/library/architecture-tradeoff-analysis-method-collection/",
       "verification_status": "verified"
     }
-  ]
+  ],
+  "course_id": "PESD-104",
+  "course_version": "2.0",
+  "primary_decision": {
+    "artifact_id": "A07",
+    "type": "RFC"
+  },
+  "pesd_v2_additions": "a constraint and assurance ledger covering data classes, tenant boundaries, obligations, AI use, supplier risk, cost allocation, decision rights, evidence owners, uncertainty, and reversal triggers",
+  "semantic_evaluation": "module_specific"
 }

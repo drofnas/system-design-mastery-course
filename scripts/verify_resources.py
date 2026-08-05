@@ -80,6 +80,8 @@ AUTHORITY_ALIASES = {
     "martin.kleppmann.com": "martin kleppmann domain driven design europe",
     "owasp.org": "owasp foundation",
     "finops.org": "finops foundation",
+    "tag-app-delivery.cncf.io": "cloud native computing foundation cncf tag app delivery",
+    "digital-strategy.ec.europa.eu": "european commission shaping europe digital future",
     "stripe.com": "stripe engineering jacqueline xu atlas",
     "go.dev": "go project",
     "rust-lang.org": "rust project rust foundation",

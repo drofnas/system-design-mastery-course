@@ -1,5 +1,7 @@
 # Gate 6 — Final capstone defense
 
+> **PESD V1 historical contract:** Preserve this file for V1 learners and immutable evidence. PESD 2.0 uses [gates/G06/README.md](../../../gates/G06/README.md).
+
 Submit at `reviews/gate-06-submission.md`. Use the
 [sealed-local gate workflow](../../../SOLO_GATE_GUIDE.md); it does not publish a
 canonical commerce answer. Human review is optional and remains stronger
@@ -38,4 +40,4 @@ follow-up questions without drafting the learner's answer.
 
 ## Result
 
-Gate 6/final capstone Pass requires all six course gates, average ≥3.5, I01–I12 passing, and all six review dimensions successful. Otherwise record Revise or Repeat under the assessment contract.
+Gate 6/final capstone Pass requires all six course gates, average ≥3.5, AI01–AI12 passing, and all six review dimensions successful. Otherwise record Revise or Repeat under the assessment contract.

@@ -24,8 +24,16 @@ Tool schema, authorization, approval, and idempotency are separate gates. A vali
 
 ## EX-17–EX-18
 
-The expected target mapping is F01→I05, F02→I03, F03→I04, F04→I07, F05→I11, F06→I09, F07→I11, and F08→I08. Each broken trial must fail its target. Each repaired trial must pass I01–I12. Workload, seed, corpus hash, and evaluation-set hash remain identical; exactly one named control changes. If another input changes, the pair does not identify the repair causally.
+The expected target mapping is F01→AI05, F02→AI03, F03→AI04, F04→AI07, F05→AI11, F06→AI09, F07→AI11, and F08→AI08. Each broken trial must fail its target. Each repaired trial must pass AI01–AI12. Workload, seed, corpus hash, and evaluation-set hash remain identical; exactly one named control changes. If another input changes, the pair does not identify the repair causally.
 
 ## EX-19–EX-20
 
 There is no prescribed commerce answer. Strong work separates facts from estimates, shows quantitative and failure evidence, limits authority outside the model, defines ownership and escalation, and presents a staged migration with kill criteria. The teach-back succeeds when another engineer can explain the decision and its strongest counterargument without repeating unexplained vocabulary.
+
+## PESD 2.0 extension answer
+
+A defensible answer covers a complete AI assurance case covering tool/model inventory, provider supply chain, ongoing evaluation, human-approval efficacy, transparency, deletion, incident response, policy drift, rollback, and retirement. It distinguishes the
+requirement, enforcement mechanism, evidence, and owner; keeps modeled and
+measured results separate; and names the failed condition that would reverse
+the decision. Different architectures are acceptable when their invariants,
+evidence boundaries, migration, and residual risk are explicit.

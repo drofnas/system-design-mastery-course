@@ -15,3 +15,11 @@ submission that was scored.
 
 An evaluator may point to these tasks but must not author the learner's graded
 architecture or overwrite the preserved baseline.
+
+## PESD 2.0 remediation
+
+When a cross-cutting floor is missed, return to Lesson 8's PESD 2.0 extension
+and the final exercise. Create a separate dated revision containing the missing
+requirement/control/evidence mapping, owner, evidence boundary, failure check,
+cost consequence, migration, and reversal trigger. Never edit the frozen
+baseline or raw trial. A Pass creates no required remediation artifact.

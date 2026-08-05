@@ -1,4 +1,7 @@
-# Week 60 Runtime Decision, Defense, and Gate 5
+# PESD 2.0 Week 84 Runtime Decision and Defense
+
+The filename remains stable for V1 crosswalks. Gate 5 runs separately in Week
+85; accepted findings belong in the Week 86 capstone delta.
 
 ## Comparison reports
 
@@ -22,5 +25,16 @@ is optional.
 ## Assessment and remediation
 
 Freeze the module submission, run the evaluator, preserve its output, and create
-a separate remediation revision. Then complete [Gate 5](../assessment/gate-05.md).
-Do not create or edit a Week 60 capstone revision.
+a separate remediation revision. Then complete [Gate 5](../../../gates/G05/assessment-brief.md).
+Do not edit the Week 85 gate freeze; create the Week 86 delta separately.
+
+## PESD 2.0 decision and assurance check
+
+- Added scope: four transport/schema shells while the learner implements admission, task ownership, cancellation, cleanup, memory and lifetime behavior, synchronization, and validation in TypeScript, Go, Rust, and Java
+- Requirement or obligation and applicability:
+- Enforcement point and failure mode:
+- Evidence owner, source commit, hashes, and evidence mode:
+- Tenant/data/provider boundary:
+- Cost allocation and operating owner:
+- Migration, rollback, and decommissioning step:
+- Uncertainty and reversal trigger:

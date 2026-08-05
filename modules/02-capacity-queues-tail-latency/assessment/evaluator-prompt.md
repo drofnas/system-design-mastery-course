@@ -147,3 +147,11 @@ Before learner work, score all Transit fixtures twice with fixed inputs. Bands
 must match `expected-results.json`; category drift may not exceed one point.
 Run `scripts/check_calibration.py --module
 modules/02-capacity-queues-tail-latency` over the six JSON outputs.
+
+## PESD 2.0 evaluator instruction
+
+Score the published criteria against evidence for per-tenant allocation, forecast variance, useful-outcome economics, shared-cost policy, and modeled energy/carbon sensitivity.
+Classify missing evidence, incorrect reasoning, unsupported claims, and
+reasonable uncertainty separately. Reject fixture replay presented as
+independent build or break evidence. Do not invent legal applicability or treat
+a named framework as proof of compliance.

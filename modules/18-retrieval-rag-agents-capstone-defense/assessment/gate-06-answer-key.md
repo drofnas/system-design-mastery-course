@@ -1,5 +1,7 @@
 # Gate 6 assessor reasoning guide
 
+> **PESD V1 historical contract:** Preserve this file for V1 learners and immutable evidence. PESD 2.0 uses [gates/G06/README.md](../../../gates/G06/README.md).
+
 This guide defines boundaries, not a canonical commerce architecture.
 
 - Written calculations must state their denominator, judgment convention, units, and decision consequence. Correct arithmetic without a causal interpretation is incomplete.

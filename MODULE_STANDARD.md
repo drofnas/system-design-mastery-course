@@ -18,7 +18,8 @@ WSL2 instructions wherever commands or evidence boundaries differ.
 
 ## Required learning loop
 
-Every four-week module follows this sequence:
+Every five-week module follows this sequence. Modules 10 and 17 use six weeks
+because they include a second independent build and integration phase:
 
 1. **Learn:** establish vocabulary, mechanisms, assumptions, and models.
 2. **Practice:** apply the method to a non-capstone example with guidance.
@@ -49,20 +50,48 @@ instruction and guided practice.
 
 ## Time and depth
 
-- Four weeks
-- 10–12 hours per week
-- 40–48 hours total
-- At least one explicit instruction, practice, application, and reflection block
-  each week
+- Five weeks and exactly 47 core hours for standard modules
+- Six weeks and exactly 57 core hours for Modules 10 and 17
+- 10–12 hours per week is learner capacity; instructional weeks publish 8.5–10
+  core hours and leave the remainder as genuine buffer
+- Standard phase budgets: 8.5 hours Model; 9 Guided Build; 10 Independent
+  Build; 10 Break/Repair/Measure; 9.5 Decide/Teach/Assess
+- Deep modules insert a second 10-hour independent build/integration phase
 
 Time estimates include reading, watching, writing, experiments, review, and
 teach-back. Do not hide required work under "optional."
+
+Activities are phase-appropriate rather than padded into every week. The module
+as a whole must schedule local instruction, required sources, guided practice,
+independent build, failure work, a decision artifact, assessment, teach-back,
+reflection, and remediation. No gate or flex week may introduce new required
+teaching or build work.
 
 Every manifest publishes a lesson catalog and minute-level weekly time blocks.
 The blocks schedule each local lesson, required source, guided exercise,
 required artifact, failure experiment, assessment, teach-back, and reflection.
 The validator requires the block sum to equal the README and manifest hours;
 required-resource blocks equal the source estimates exactly.
+
+Artifact work uses `artifact_allocations` with explicit minutes. Each required
+artifact records an evidence lineage, component role, featured portfolio item
+or null, credit flag, estimate, and evidence mode. `contingency` is permitted as
+a non-required activity; it cannot disguise core work or increase a module's
+published core-hour total.
+
+## Evidence modes and hardware boundaries
+
+Every experiment declares one of `derived`, `executed_deterministic`,
+`measured_loopback`, `measured_container`, `modeled_capacity`, `fixture_replay`,
+or `measured_accelerator`. Fixture replay supports practice or remediation only;
+it cannot satisfy independent Build, Break, Implement, or Measure evidence.
+Modeled accelerator, region, fleet, or device results cannot be presented as
+local measurements.
+
+Every trial records source commit, scenario/input/configuration hashes, runtime
+boundary, resource limits, clock, warm-up/repetition policy, raw outcomes, and
+limitations. Optional accelerators, cloud accounts, Kubernetes, and second
+machines never become completion prerequisites.
 
 ## Outcomes and mastery evidence
 
@@ -186,7 +215,7 @@ and `scripts/validate_evaluation.py` validates it and renders Markdown.
 A module is `ready` only when:
 
 1. Its manifest conforms to `schemas/module.schema.json`.
-2. Total scheduled work is 40–48 hours.
+2. Total scheduled work is exactly 47 hours, or 57 for M10 and M17.
 3. Every outcome maps to instruction, practice, evidence, and a rubric item.
 4. Every required template, lesson, exercise, answer key, and assessment file
    exists and is reachable from the course README within two links.
@@ -196,3 +225,11 @@ A module is `ready` only when:
 8. A reviewer confirms that the local content teaches rather than merely tests.
 9. Factual claims, time blocks, portfolio accounting, solo-gate contracts, and
    current calibration provenance pass their deterministic validators.
+10. Required labs pass on macOS ARM64, Ubuntu x86_64, and real Windows 11/WSL2,
+    including cached offline reruns and cleanup checks.
+11. Timed pilots with experienced senior engineers show p80 core completion at
+    or below 10 hours per week and p95 at or below 12.
+
+A module remains `review` while a required lab, platform, evaluator, resource,
+or time-on-task check is unverified. Existing calibration evidence does not
+grandfather a changed rubric or evaluator prompt.

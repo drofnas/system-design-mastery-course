@@ -196,3 +196,11 @@ task; record the substitution.
 Do not copy articles, chapters, slides, or transcripts into learner artifacts.
 Use short attributed quotations only when necessary and otherwise paraphrase with
 the source ID, exact section boundary, and stated evidence limit.
+
+## PESD 2.0 primary anchors
+
+- [Guidelines on transparency obligations for providers and deployers of AI systems](https://digital-strategy.ec.europa.eu/en/library/guidelines-transparency-obligations-providers-and-deployers-ai-systems) — European Commission; required, free, 20 minutes; Read scope and Article 50 transparency categories; record applicability and uncertainty before translating any obligation into a web control. Local alternative: Lesson 8 PESD 2.0 extension. Last verified 2026-08-04.
+
+For each source, submit the named control/evidence mapping and applicability or
+scope uncertainty. A framework name is not evidence of implementation or legal
+compliance.

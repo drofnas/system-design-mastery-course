@@ -4,29 +4,30 @@
   "title": "Model Foundations and Inference Systems",
   "weeks": [
     {
-      "number": 65,
-      "focus": "Derive tensor, probability, token, attention, compute, memory, quality, and cost models; freeze predictions",
-      "hours": 11,
+      "number": 92,
+      "phase": "Model and derive",
+      "focus": "Model and derive",
+      "hours": 8.5,
+      "core_hours": 8.5,
+      "capacity_hours": 12,
       "evidence": [
-        "Frozen inference baseline",
-        "Capacity and quality model",
-        "F01-F06 predictions",
-        "Week 65 learning log"
+        "Model and derive evidence frozen at source commit"
       ],
       "time_blocks": [
         {
-          "id": "W65-T01",
+          "id": "W092-T01",
           "label": "Bounded authoritative resources",
-          "minutes": 150,
+          "minutes": 180,
           "activity": "required_resource",
           "resource_ids": [
-            "RES-02",
-            "RES-03"
+            "RES-03",
+            "RES-07",
+            "RES-09"
           ]
         },
         {
-          "id": "W65-T02",
-          "label": "Local lesson instruction",
+          "id": "W092-T02",
+          "label": "Local mechanism instruction",
           "minutes": 120,
           "activity": "local_instruction",
           "lesson_ids": [
@@ -37,9 +38,9 @@
           ]
         },
         {
-          "id": "W65-T03",
+          "id": "W092-T03",
           "label": "Guided practice",
-          "minutes": 90,
+          "minutes": 60,
           "activity": "guided_practice",
           "exercise_ids": [
             "EX-01",
@@ -48,268 +49,263 @@
             "EX-04",
             "EX-05",
             "EX-06",
-            "EX-07"
-          ]
-        },
-        {
-          "id": "W65-T04",
-          "label": "Reflection and learning log",
-          "minutes": 30,
-          "activity": "reflection"
-        },
-        {
-          "id": "W65-T05",
-          "label": "Independent Work",
-          "minutes": 270,
-          "activity": "independent_work",
-          "artifact_ids": [
-            "A01"
-          ]
-        }
-      ]
-    },
-    {
-      "number": 66,
-      "focus": "Build and verify tokenization, tensor operations, causal attention, a tiny transformer, and a loopback streaming server",
-      "hours": 12,
-      "evidence": [
-        "Portable inference implementation",
-        "Server conformance report",
-        "Source-code internals review",
-        "Week 66 learning log"
-      ],
-      "time_blocks": [
-        {
-          "id": "W66-T01",
-          "label": "Bounded authoritative resources",
-          "minutes": 75,
-          "activity": "required_resource",
-          "resource_ids": [
-            "RES-05"
-          ]
-        },
-        {
-          "id": "W66-T02",
-          "label": "Local lesson instruction",
-          "minutes": 90,
-          "activity": "local_instruction",
-          "lesson_ids": [
-            "L03",
-            "L05",
-            "L07"
-          ]
-        },
-        {
-          "id": "W66-T03",
-          "label": "Guided practice",
-          "minutes": 90,
-          "activity": "guided_practice",
-          "exercise_ids": [
+            "EX-07",
             "EX-08",
-            "EX-09",
-            "EX-10",
-            "EX-11",
-            "EX-12",
-            "EX-13"
+            "EX-09"
           ]
         },
         {
-          "id": "W66-T04",
-          "label": "Reflection and learning log",
+          "id": "W092-T04",
+          "label": "Required evidence components",
           "minutes": 30,
-          "activity": "reflection"
-        },
-        {
-          "id": "W66-T05",
-          "label": "Decision Artifact",
-          "minutes": 30,
-          "activity": "decision_artifact",
-          "artifact_ids": [
-            "A03"
-          ]
-        },
-        {
-          "id": "W66-T06",
-          "label": "Independent Work",
-          "minutes": 405,
           "activity": "independent_work",
-          "artifact_ids": [
-            "A02"
+          "artifact_allocations": [
+            {
+              "artifact_id": "A07",
+              "minutes": 30
+            }
           ]
+        },
+        {
+          "id": "W092-T05",
+          "label": "Model and derive core work",
+          "minutes": 120,
+          "activity": "independent_work"
         }
       ]
     },
     {
-      "number": 67,
-      "focus": "Break and measure memory, scheduling, overload, cache, precision, and provider assumptions",
-      "hours": 12,
+      "number": 93,
+      "phase": "Guided build and prediction freeze",
+      "focus": "Guided build and prediction freeze",
+      "hours": 9.0,
+      "core_hours": 9.0,
+      "capacity_hours": 12,
       "evidence": [
-        "Twelve immutable raw trials",
-        "Six broken/repaired comparisons",
-        "Performance investigation and failure matrix",
-        "Capacity-and-cost model"
+        "Guided build and prediction freeze evidence frozen at source commit"
       ],
       "time_blocks": [
         {
-          "id": "W67-T01",
+          "id": "W093-T01",
           "label": "Bounded authoritative resources",
-          "minutes": 45,
+          "minutes": 155,
           "activity": "required_resource",
           "resource_ids": [
-            "RES-07"
+            "RES-02",
+            "RES-05",
+            "RES-10"
           ]
         },
         {
-          "id": "W67-T02",
-          "label": "Local lesson instruction",
-          "minutes": 90,
+          "id": "W093-T02",
+          "label": "Local mechanism instruction",
+          "minutes": 120,
           "activity": "local_instruction",
           "lesson_ids": [
-            "L01",
-            "L04",
-            "L06"
-          ]
-        },
-        {
-          "id": "W67-T03",
-          "label": "Guided practice",
-          "minutes": 90,
-          "activity": "guided_practice",
-          "exercise_ids": [
-            "EX-14",
-            "EX-15",
-            "EX-16",
-            "EX-17"
-          ]
-        },
-        {
-          "id": "W67-T04",
-          "label": "Reflection and learning log",
-          "minutes": 30,
-          "activity": "reflection"
-        },
-        {
-          "id": "W67-T05",
-          "label": "Decision Artifact",
-          "minutes": 30,
-          "activity": "decision_artifact",
-          "artifact_ids": [
-            "A06"
-          ]
-        },
-        {
-          "id": "W67-T06",
-          "label": "Failure Experiment",
-          "minutes": 435,
-          "activity": "failure_experiment",
-          "artifact_ids": [
-            "A04",
-            "A05"
-          ]
-        }
-      ]
-    },
-    {
-      "number": 68,
-      "focus": "Decide inference architecture, defend ownership and operating limits, assess, teach, and remediate",
-      "hours": 11,
-      "evidence": [
-        "Inference architecture RFC",
-        "Architecture defense and teach-back",
-        "Module evaluation and separate remediation",
-        "Week 68 learning log"
-      ],
-      "time_blocks": [
-        {
-          "id": "W68-T01",
-          "label": "Bounded authoritative resources",
-          "minutes": 45,
-          "activity": "required_resource",
-          "resource_ids": [
-            "RES-09"
-          ]
-        },
-        {
-          "id": "W68-T02",
-          "label": "Local lesson instruction",
-          "minutes": 45,
-          "activity": "local_instruction",
-          "lesson_ids": [
+            "L05",
+            "L06",
+            "L07",
             "L08"
           ]
         },
         {
-          "id": "W68-T03",
+          "id": "W093-T03",
           "label": "Guided practice",
-          "minutes": 45,
+          "minutes": 60,
           "activity": "guided_practice",
           "exercise_ids": [
+            "EX-10",
+            "EX-11",
+            "EX-12",
+            "EX-13",
+            "EX-14",
+            "EX-15",
+            "EX-16",
+            "EX-17",
             "EX-18"
           ]
         },
         {
-          "id": "W68-T04",
-          "label": "Required portfolio artifact A11",
-          "minutes": 45,
-          "activity": "reflection",
-          "artifact_ids": [
-            "A11"
+          "id": "W093-T04",
+          "label": "Required evidence components",
+          "minutes": 30,
+          "activity": "independent_work",
+          "artifact_allocations": [
+            {
+              "artifact_id": "A01",
+              "minutes": 30
+            }
           ]
         },
         {
-          "id": "W68-T05",
-          "label": "Required portfolio artifact A12",
-          "minutes": 210,
+          "id": "W093-T05",
+          "label": "Guided build and prediction freeze core work",
+          "minutes": 175,
+          "activity": "independent_work"
+        }
+      ]
+    },
+    {
+      "number": 94,
+      "phase": "Independent build and integration",
+      "focus": "Independent build and integration",
+      "hours": 10.0,
+      "core_hours": 10.0,
+      "capacity_hours": 12,
+      "evidence": [
+        "Independent build and integration evidence frozen at source commit"
+      ],
+      "time_blocks": [
+        {
+          "id": "W094-T01",
+          "label": "Required evidence components",
+          "minutes": 60,
+          "activity": "independent_work",
+          "artifact_allocations": [
+            {
+              "artifact_id": "A02",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A03",
+              "minutes": 30
+            }
+          ]
+        },
+        {
+          "id": "W094-T02",
+          "label": "Independent build and integration core work",
+          "minutes": 540,
+          "activity": "independent_work"
+        }
+      ]
+    },
+    {
+      "number": 95,
+      "phase": "Independent build and integration II",
+      "focus": "Independent build and integration II",
+      "hours": 10.0,
+      "core_hours": 10.0,
+      "capacity_hours": 12,
+      "evidence": [
+        "Independent build and integration II evidence frozen at source commit"
+      ],
+      "time_blocks": [
+        {
+          "id": "W095-T01",
+          "label": "Independent build and integration II core work",
+          "minutes": 540,
+          "activity": "independent_work"
+        },
+        {
+          "id": "W095-T02",
+          "label": "Independent build and integration II verification checkpoint",
+          "minutes": 60,
+          "activity": "independent_work"
+        }
+      ]
+    },
+    {
+      "number": 96,
+      "phase": "Break, repair, measure, and diagnose",
+      "focus": "Break, repair, measure, and diagnose",
+      "hours": 10.0,
+      "core_hours": 10.0,
+      "capacity_hours": 12,
+      "evidence": [
+        "Break, repair, measure, and diagnose evidence frozen at source commit"
+      ],
+      "time_blocks": [
+        {
+          "id": "W096-T01",
+          "label": "Required evidence components",
+          "minutes": 120,
+          "activity": "failure_experiment",
+          "artifact_allocations": [
+            {
+              "artifact_id": "A04",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A05",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A06",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A13",
+              "minutes": 30
+            }
+          ]
+        },
+        {
+          "id": "W096-T02",
+          "label": "Break, repair, measure, and diagnose core work",
+          "minutes": 480,
+          "activity": "failure_experiment"
+        }
+      ]
+    },
+    {
+      "number": 97,
+      "phase": "Decide, teach, assess, and freeze",
+      "focus": "Decide, teach, assess, and freeze",
+      "hours": 9.5,
+      "core_hours": 9.5,
+      "capacity_hours": 12,
+      "evidence": [
+        "Decide, teach, assess, and freeze evidence frozen at source commit"
+      ],
+      "time_blocks": [
+        {
+          "id": "W097-T01",
+          "label": "Required evidence components",
+          "minutes": 120,
           "activity": "decision_artifact",
-          "artifact_ids": [
-            "A12"
+          "artifact_allocations": [
+            {
+              "artifact_id": "A08",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A09",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A11",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A12",
+              "minutes": 30
+            }
           ]
         },
         {
-          "id": "W68-T06",
-          "label": "Reflection and learning log",
+          "id": "W097-T02",
+          "label": "Decide, teach, assess, and freeze core work",
+          "minutes": 390,
+          "activity": "assessment"
+        },
+        {
+          "id": "W097-T03",
+          "label": "Module teach-back",
+          "minutes": 30,
+          "activity": "teach_back"
+        },
+        {
+          "id": "W097-T04",
+          "label": "Learning log and freeze check",
           "minutes": 30,
           "activity": "reflection"
-        },
-        {
-          "id": "W68-T07",
-          "label": "Assessment",
-          "minutes": 60,
-          "activity": "assessment",
-          "artifact_ids": [
-            "A09",
-            "A10"
-          ]
-        },
-        {
-          "id": "W68-T08",
-          "label": "Decision Artifact",
-          "minutes": 60,
-          "activity": "decision_artifact",
-          "artifact_ids": [
-            "A07"
-          ]
-        },
-        {
-          "id": "W68-T09",
-          "label": "Review Remediation",
-          "minutes": 60,
-          "activity": "review_remediation"
-        },
-        {
-          "id": "W68-T10",
-          "label": "Teach Back",
-          "minutes": 60,
-          "activity": "teach_back",
-          "artifact_ids": [
-            "A08"
-          ]
         }
       ]
     }
   ],
-  "target_hours": 46,
-  "status": "ready",
+  "target_hours": 57,
+  "status": "review",
   "readiness_note": "Ready after portable lab tests, six isolated evaluator records, deterministic calibration checking, semantic and resource review, and focused and full-course validation passed on 2026-08-03.",
   "outcomes": [
     {
@@ -540,9 +536,8 @@
         "A07",
         "A08",
         "A09",
-        "A10",
-        "A11",
-        "A12"
+        "A12",
+        "A11"
       ],
       "rubric": [
         "R10"
@@ -558,7 +553,7 @@
       "url": "https://www.deeplearningbook.org/",
       "required": false,
       "access": "free",
-      "week": 65,
+      "week": 97,
       "estimated_minutes": 90,
       "purpose": "Ground linear algebra, probability, entropy, gradients, and numerical stability used in local derivations.",
       "assignment": "Read Chapter 2 Sections 2.1-2.5, Chapter 3 Sections 3.1-3.4 and 3.13, and Chapter 4 Sections 4.1-4.3; reproduce one matrix, entropy, and gradient calculation.",
@@ -578,7 +573,7 @@
       "url": "https://arxiv.org/abs/1706.03762",
       "required": true,
       "access": "free",
-      "week": 65,
+      "week": 93,
       "estimated_minutes": 60,
       "purpose": "Connect the local attention implementation to the original transformer mechanism and notation.",
       "assignment": "Read Sections 3.1-3.5 only; annotate tensor shapes, scaling, masking, and parallelism claims.",
@@ -598,7 +593,7 @@
       "url": "https://cs336.stanford.edu/",
       "required": true,
       "access": "free",
-      "week": 65,
+      "week": 92,
       "estimated_minutes": 90,
       "purpose": "Reinforce tokenization, resource accounting, architectures, hardware, and current inference-system reasoning.",
       "assignment": "Use only Lectures 1-5 and 10 materials; separate token, operator, memory, hardware, and serving claims in a concept ledger.",
@@ -618,7 +613,7 @@
       "url": "https://www.youtube.com/watch?v=fcgPYo3OtV0",
       "required": false,
       "access": "free",
-      "week": 66,
+      "week": 97,
       "estimated_minutes": 75,
       "purpose": "Visualize prefill, decode, batching, and serving trade-offs with a written equivalent.",
       "assignment": "Watch with captions; produce a prefill/decode/batching map and two claims that do not transfer to the Atlas portable CPU lab.",
@@ -638,7 +633,7 @@
       "url": "https://arxiv.org/abs/2309.06180",
       "required": true,
       "access": "free",
-      "week": 66,
+      "week": 93,
       "estimated_minutes": 75,
       "purpose": "Study KV-cache allocation, fragmentation, batching, scheduling, and their workload assumptions.",
       "assignment": "Read Sections 2-4 and 7; reproduce the fragmentation argument and list the assumptions that differ from Atlas.",
@@ -658,7 +653,7 @@
       "url": "https://docs.vllm.ai/en/latest/configuration/optimization/",
       "required": false,
       "access": "free",
-      "week": 67,
+      "week": 97,
       "estimated_minutes": 45,
       "purpose": "Compare current preemption, chunked-prefill, and input-processing controls with the local scheduler model.",
       "assignment": "Read preemption, chunked prefill, and input processing only; map each current control to the Atlas failure it could affect.",
@@ -678,7 +673,7 @@
       "url": "https://docs.pytorch.org/tutorials/recipes/recipes/profiler_recipe.html",
       "required": true,
       "access": "free",
-      "week": 67,
+      "week": 92,
       "estimated_minutes": 45,
       "purpose": "Define timing, shape, memory, warm-up, and trace-export evidence for the optional adapter.",
       "assignment": "Read timing, memory, trace, and long-running sections; write the Atlas measured-profile procedure and its overhead boundary.",
@@ -698,7 +693,7 @@
       "url": "https://arxiv.org/abs/2211.10438",
       "required": false,
       "access": "free",
-      "week": 67,
+      "week": 97,
       "estimated_minutes": 60,
       "purpose": "Tie numerical representation changes to both hardware efficiency and protected quality evidence.",
       "assignment": "Read Sections 1-4 and 5.3-5.5; identify the precision, hardware, corpus, and metric boundaries behind each claim.",
@@ -718,7 +713,7 @@
       "url": "https://engineering.fb.com/2024/07/10/production-engineering/tail-utilization-ads-inference-meta/",
       "required": true,
       "access": "free",
-      "week": 68,
+      "week": 92,
       "estimated_minutes": 45,
       "purpose": "Examine operator evidence connecting tail utilization, capacity, reliability, and user latency.",
       "assignment": "Read the full case; separate measurements, interventions, outcomes, scale assumptions, and claims that do not transfer to generative Atlas workloads.",
@@ -729,106 +724,198 @@
       "verification_method": "HTTP GET plus primary-source metadata comparison",
       "final_url": "https://engineering.fb.com/2024/07/10/production-engineering/tail-utilization-ads-inference-meta/",
       "verification_status": "verified"
+    },
+    {
+      "id": "RES-10",
+      "title": "NIST AI RMF Core",
+      "author_or_publisher": "NIST AIRC",
+      "type": "official primary guidance",
+      "url": "https://airc.nist.gov/airmf-resources/airmf/5-sec-core/",
+      "required": true,
+      "access": "free",
+      "week": 93,
+      "estimated_minutes": 20,
+      "purpose": "Ground the PESD 2.0 cross-cutting decision in current primary guidance and produce scoped evidence rather than framework vocabulary.",
+      "assignment": "Read Govern 1.5\u20131.7 and Manage 3\u20134; map inventory, monitoring, supplier, incident, recovery, and decommission outcomes into the dossier.",
+      "last_verified": "2026-08-04",
+      "text_alternative": "lessons/08-atlas-inference-decision.md",
+      "verified_title": "NIST AI RMF Core",
+      "verified_publisher": "NIST AIRC",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://airc.nist.gov/airmf-resources/airmf/5-sec-core/",
+      "verification_status": "verified"
     }
   ],
   "artifacts": [
     {
       "id": "A01",
-      "week": 65,
+      "week": 93,
       "required": true,
       "template_path": "modules/17-model-foundations-inference-systems/worksheets/week-65-inference-model.md",
       "submission_path": "reports/module-17-inference-baseline.md",
       "immutable_after_submission": true,
-      "portfolio_category": "model"
+      "portfolio_category": "model",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M17-A01",
+      "component_role": "prediction",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A02",
-      "week": 66,
+      "week": 94,
       "required": true,
       "template_path": "modules/17-model-foundations-inference-systems/worksheets/week-66-inference-build.md",
       "submission_path": "labs/module-17/inference/",
-      "portfolio_category": "implementation"
+      "portfolio_category": "implementation",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M17-A02",
+      "component_role": "implementation",
+      "estimated_minutes": 30,
+      "evidence_mode": "executed_deterministic"
     },
     {
       "id": "A03",
-      "week": 66,
+      "week": 94,
       "required": true,
       "template_path": "modules/17-model-foundations-inference-systems/worksheets/week-66-inference-build.md",
       "submission_path": "reports/module-17-inference-conformance-and-internals.md",
-      "portfolio_category": "source_code_internals_review"
+      "portfolio_category": "source_code_internals_review",
+      "portfolio_item_id": "PI-INT-03",
+      "portfolio_credit": true,
+      "evidence_lineage_id": "LIN-INT-INFERENCE",
+      "component_role": "analysis",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A04",
-      "week": 67,
+      "week": 96,
       "required": true,
       "template_path": "modules/17-model-foundations-inference-systems/worksheets/week-67-inference-failures.md",
       "submission_path": "experiments/module-17/",
       "immutable_after_submission": true,
-      "portfolio_category": "failure_matrix"
+      "portfolio_category": "failure_matrix",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M17-A04",
+      "component_role": "raw_evidence",
+      "estimated_minutes": 30,
+      "evidence_mode": "executed_deterministic"
     },
     {
       "id": "A05",
-      "week": 67,
+      "week": 96,
       "required": true,
       "template_path": "modules/17-model-foundations-inference-systems/worksheets/week-67-inference-failures.md",
       "submission_path": "reports/module-17-inference-failure-matrix.md",
-      "portfolio_category": "failure_matrix"
+      "portfolio_category": "failure_matrix",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M17-A05",
+      "component_role": "raw_evidence",
+      "estimated_minutes": 30,
+      "evidence_mode": "executed_deterministic"
     },
     {
       "id": "A06",
-      "week": 67,
+      "week": 96,
       "required": true,
       "template_path": "templates/performance-review-template.md",
       "submission_path": "reports/module-17-inference-performance-and-cost.md",
-      "portfolio_category": "performance_investigation"
+      "portfolio_category": "performance_investigation",
+      "portfolio_item_id": "PI-PERF-06",
+      "portfolio_credit": true,
+      "evidence_lineage_id": "LIN-PERF-INFERENCE",
+      "component_role": "analysis",
+      "estimated_minutes": 30,
+      "evidence_mode": "measured_loopback"
     },
     {
       "id": "A07",
-      "week": 68,
+      "week": 92,
       "required": true,
       "template_path": "templates/rfc-template.md",
       "submission_path": "rfc/module-17-inference-architecture.md",
-      "portfolio_category": "rfc"
+      "portfolio_category": "model",
+      "portfolio_item_id": "PI-AI-01",
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-AI-SYSTEM",
+      "component_role": "baseline",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A08",
-      "week": 68,
+      "week": 97,
       "required": true,
       "template_path": "modules/17-model-foundations-inference-systems/worksheets/week-68-inference-defense.md",
       "submission_path": "reviews/module-17-inference-defense.md",
-      "portfolio_category": "teach_back"
+      "portfolio_category": "teach_back",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M17-A08",
+      "component_role": "final",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A09",
-      "week": 68,
+      "week": 97,
       "required": true,
       "template_path": "modules/17-model-foundations-inference-systems/assessment/report-template.md",
       "submission_path": "reviews/module-17-evaluation.md",
-      "portfolio_category": "evaluation"
-    },
-    {
-      "id": "A10",
-      "week": 68,
-      "required": true,
-      "template_path": "modules/17-model-foundations-inference-systems/assessment/report-template.md",
-      "submission_path": "reviews/module-17-remediation-revision.md",
-      "portfolio_category": "evaluation"
+      "portfolio_category": "evaluation",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M17-A09",
+      "component_role": "final",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A11",
-      "week": 68,
+      "week": 97,
       "required": true,
       "template_path": "templates/learning-log-template.md",
-      "submission_path": "learning-log/week-65.md through learning-log/week-68.md",
-      "portfolio_category": "learning_log"
+      "submission_path": "learning-log/week-092.md through learning-log/week-097.md",
+      "portfolio_category": "learning_log",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M17-A11",
+      "component_role": "final",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A12",
-      "week": 68,
+      "week": 97,
       "required": true,
       "template_path": "templates/adr-template.md",
       "submission_path": "adr/module-17-inference-deployment-policy.md",
-      "portfolio_category": "adr"
+      "portfolio_category": "adr",
+      "portfolio_item_id": "PI-DECISION-M17",
+      "portfolio_credit": true,
+      "evidence_lineage_id": "LIN-DECISION-M17",
+      "component_role": "decision",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
+    },
+    {
+      "id": "A13",
+      "week": 96,
+      "required": true,
+      "template_path": "templates/architecture-cost-model-template.md",
+      "submission_path": "reports/module-17-useful-output-cost-model.md",
+      "portfolio_category": "capacity_cost_model",
+      "portfolio_item_id": "PI-COST-03",
+      "portfolio_credit": true,
+      "evidence_lineage_id": "LIN-COST-INFERENCE",
+      "component_role": "analysis",
+      "estimated_minutes": 30,
+      "evidence_mode": "modeled_capacity"
     }
   ],
   "failure_experiments": [
@@ -988,5 +1075,13 @@
       "final_url": "https://huggingface.co/docs/tokenizers/python/latest/pipeline.html",
       "verification_status": "verified"
     }
-  ]
+  ],
+  "course_id": "PESD-104",
+  "course_version": "2.0",
+  "primary_decision": {
+    "artifact_id": "A12",
+    "type": "ADR"
+  },
+  "pesd_v2_additions": "an actual streaming tiny-transformer path with incremental KV state, token scheduling, byte-budget admission, tenant/version cache identity, bounded provider failure, profiling, and an AI System Dossier",
+  "semantic_evaluation": "module_specific"
 }

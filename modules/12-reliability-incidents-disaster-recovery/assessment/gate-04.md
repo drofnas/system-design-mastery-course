@@ -1,5 +1,7 @@
 # Gate 4: Consensus, Messaging, Reliability, and Recovery
 
+> **PESD V1 historical contract:** Preserve this file for V1 learners and immutable evidence. PESD 2.0 uses [gates/G04/README.md](../../../gates/G04/README.md).
+
 Gate 4 closes Week 48. Complete it after freezing Module 12 evidence. Freeze
 each part before feedback. The practical uses an unpublished Northstar variant
 and does not expose a commerce answer. Total learner time: 3.5 hours.

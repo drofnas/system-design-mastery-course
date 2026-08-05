@@ -56,6 +56,13 @@ Run `npm ci`, `npx playwright install --with-deps --only-shell chromium`, and
 For manual checks, serve the site from WSL loopback and open it through
 `localhost` in a normal Windows browser. Native PowerShell is not supported.
 
+Before measured evidence, run `python3 host_browser_callback.py` inside WSL and
+open its one-time URL in the normal Windows browser. Preserve only the sanitized
+pass/fail record, not the token. If Chromium cannot launch or the callback is
+blocked, use the official remote container fallback with learner commit, image
+digest, runner version, hashes, raw output, and limitations; remote evidence is
+not a hidden cloud prerequisite.
+
 The automated harness uses one worker, keeps traces only on failure, and leaves
 video and screenshots disabled by default. Manual keyboard, 200% zoom/reflow,
 JavaScript-disabled, and accessibility evidence must come from a normal host

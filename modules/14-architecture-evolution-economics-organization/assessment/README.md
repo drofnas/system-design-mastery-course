@@ -13,7 +13,7 @@ present. Missing required artifacts prevents Pass.
 
 ### G02: Frozen chronology and evidence integrity (hard gate)
 
-Week 53 baseline and F01–F09 predictions predate trials. Raw broken results
+Week 76 baseline and F01–F09 predictions predate trials. Raw broken results
 remain unchanged; repairs and interpretation are separate dated evidence. A
 changed or fabricated first attempt yields Repeat.
 

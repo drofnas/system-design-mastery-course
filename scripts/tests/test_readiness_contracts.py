@@ -34,6 +34,25 @@ class ReadinessContractTests(unittest.TestCase):
         validate_course.validate_time_contract(root, broken, errors)
         self.assertTrue(any("do not equal published hours" in error or "minutes must equal" in error for error in errors))
 
+        allocation = copy.deepcopy(manifest)
+        allocation_block = next(
+            block for week in allocation["weeks"] for block in week["time_blocks"]
+            if block.get("artifact_allocations")
+        )
+        allocation_block["artifact_allocations"][0]["minutes"] += 15
+        errors = []
+        validate_course.validate_time_contract(root, allocation, errors)
+        self.assertTrue(any("scheduled minutes do not match estimated_minutes" in error for error in errors))
+
+    def test_fixture_replay_cannot_satisfy_implementation_evidence(self) -> None:
+        _, manifest = self.manifest("M17")
+        broken = copy.deepcopy(manifest)
+        artifact = next(row for row in broken["artifacts"] if row["component_role"] == "implementation")
+        artifact["evidence_mode"] = "fixture_replay"
+        errors: list[str] = []
+        validate_course.validate_artifacts(broken, errors)
+        self.assertTrue(any("fixture replay cannot satisfy" in error for error in errors))
+
     def test_time_contract_rejects_missing_work_and_readme_hidden_minutes(self) -> None:
         source_root, manifest = self.manifest("M07")
         temporary = tempfile.TemporaryDirectory()
@@ -42,9 +61,10 @@ class ReadinessContractTests(unittest.TestCase):
         shutil.copytree(source_root, module_root)
 
         missing_lesson = copy.deepcopy(manifest)
-        for block in missing_lesson["weeks"][-1]["time_blocks"]:
-            if "L08" in block.get("lesson_ids", []):
-                block["lesson_ids"].remove("L08")
+        for week in missing_lesson["weeks"]:
+            for block in week["time_blocks"]:
+                if "L08" in block.get("lesson_ids", []):
+                    block["lesson_ids"].remove("L08")
         errors: list[str] = []
         validate_course.validate_time_contract(module_root, missing_lesson, errors)
         self.assertTrue(any("every local lesson" in error for error in errors))
@@ -64,12 +84,12 @@ class ReadinessContractTests(unittest.TestCase):
 
         readme = module_root / "README.md"
         text = readme.read_text()
-        text, replacements = re.subn(r"(\| Lessons 1–2 and bounded resources \| )3 h( \|)", r"\g<1>4 h\2", text, count=1)
+        text, replacements = re.subn(r"(\| Bounded authoritative resources \| )([0-9]+) min( \|)", r"\g<1>999 min\3", text, count=1)
         self.assertEqual(replacements, 1)
         readme.write_text(text)
         errors = []
         validate_course.validate_time_contract(module_root, manifest, errors)
-        self.assertTrue(any("README Week 25 work rows total" in error for error in errors))
+        self.assertTrue(any("README Week 35 work rows total" in error for error in errors))
 
     def test_portfolio_minimums_and_unique_paths(self) -> None:
         manifests = [json.loads(path.read_text()) for path in sorted((ROOT / "modules").glob("*/module.json"))]
@@ -87,7 +107,14 @@ class ReadinessContractTests(unittest.TestCase):
             break
         errors = []
         validate_course.validate_portfolio_contract(broken, errors)
-        self.assertTrue(any("postmortems" in error for error in errors))
+        self.assertTrue(any("controlled_incident_postmortem" in error or "category disagrees" in error for error in errors))
+
+        lineage = copy.deepcopy(manifests)
+        target = next(row for row in lineage[0]["artifacts"] if row.get("portfolio_item_id"))
+        target["evidence_lineage_id"] = "LIN-MUTATED"
+        errors = []
+        validate_course.validate_portfolio_contract(lineage, errors)
+        self.assertTrue(any("lineage disagrees" in error for error in errors))
         duplicate = copy.deepcopy(manifests)
         duplicate[1]["artifacts"][0]["submission_path"] = duplicate[0]["artifacts"][0]["submission_path"]
         errors = []
@@ -96,18 +123,21 @@ class ReadinessContractTests(unittest.TestCase):
 
         extra = copy.deepcopy(manifests)
         for manifest in extra:
-            candidate = next((row for row in manifest["artifacts"] if row["portfolio_category"] != "adr"), None)
+            candidate = next((
+                row for row in manifest["artifacts"]
+                if row.get("portfolio_credit") and row["portfolio_category"] != "adr"
+            ), None)
             if candidate:
                 candidate["portfolio_category"] = "adr"
                 break
         errors = []
         validate_course.validate_portfolio_contract(extra, errors)
-        self.assertTrue(any("exactly 12 ADRs" in error for error in errors))
+        self.assertTrue(any("adr" in error for error in errors))
 
         minimum_categories = {
             "rfc", "capacity_cost_model", "performance_investigation", "failure_matrix",
             "source_code_internals_review", "runtime_comparison", "threat_model",
-            "dr_exercise", "migration_plan", "teach_back", "capstone",
+            "dr_exercise", "migration_plan",
         }
         for category in minimum_categories:
             substituted = copy.deepcopy(manifests)
@@ -119,11 +149,26 @@ class ReadinessContractTests(unittest.TestCase):
             validate_course.validate_portfolio_contract(substituted, errors)
             self.assertTrue(any(category in error for error in errors), category)
 
+        temporary = tempfile.TemporaryDirectory()
+        self.addCleanup(temporary.cleanup)
+        root = Path(temporary.name)
+        (root / "schemas").mkdir()
+        shutil.copy2(ROOT / "schemas" / "portfolio-items.schema.json", root / "schemas" / "portfolio-items.schema.json")
+        source_registry = json.loads((ROOT / "portfolio-items.json").read_text())
+        for category in ("teach_back", "capstone"):
+            registry = copy.deepcopy(source_registry)
+            next(row for row in registry["items"] if row["category"] == category)["category"] = "model"
+            (root / "portfolio-items.json").write_text(json.dumps(registry))
+            with patch.object(validate_course, "ROOT", root):
+                errors = []
+                validate_course.validate_portfolio_contract(manifests, errors)
+                self.assertTrue(any(category in error for error in errors), category)
+
         m15 = next(manifest for manifest in manifests if manifest["id"] == "M15")
         categories = {artifact["id"]: artifact["portfolio_category"] for artifact in m15["artifacts"]}
         self.assertEqual(categories["A03"], "runtime_comparison")
         self.assertEqual(categories["A06"], "performance_investigation")
-        self.assertEqual(categories["A07"], "source_code_internals_review")
+        self.assertEqual(categories["A07"], "runtime_comparison")
         for artifact_id in ("A03", "A06", "A07"):
             regressed = copy.deepcopy(manifests)
             target = next(manifest for manifest in regressed if manifest["id"] == "M15")
@@ -152,25 +197,100 @@ class ReadinessContractTests(unittest.TestCase):
             errors: list[str] = []
             validate_course.validate_revision_chronology(errors)
             self.assertEqual(errors, [])
-            (root / "capstone" / "revisions" / "week-12-gate-01.md").unlink()
+            (root / "capstone" / "revisions" / "week-017-delta.md").unlink()
             errors = []
             validate_course.validate_revision_chronology(errors)
-            self.assertTrue(any("Week 12 revision is missing" in error for error in errors))
+            self.assertTrue(any("Week 17 revision is missing" in error for error in errors))
 
         readme = root / "README.md"
-        readme.write_text(readme.read_text().replace("Week 12, ", ""))
+        readme.write_text(readme.read_text().replace("Weeks 17, 34, 51, 69, 86, and 104", "Weeks 34, 51, 69, 86, and 104"))
         with patch.object(validate_course, "ROOT", root):
             errors = []
             validate_course.validate_revision_chronology(errors)
-            self.assertTrue(any("README.md" in error and "Week 12" in error for error in errors))
+            self.assertTrue(any("README.md" in error and "chronology" in error for error in errors))
 
-        shutil.copy2(ROOT / "capstone" / "revisions" / "week-12-gate-01.md", root / "capstone" / "revisions" / "week-12-gate-01.md")
+        shutil.copy2(ROOT / "capstone" / "revisions" / "week-017-delta.md", root / "capstone" / "revisions" / "week-017-delta.md")
         baseline = root / "capstone" / "baselines" / "week-01-baseline.md"
         baseline.write_text(baseline.read_text().replace("never edit this", "replace this"))
         with patch.object(validate_course, "ROOT", root):
             errors = []
             validate_course.validate_revision_chronology(errors)
             self.assertTrue(any("immutable" in error for error in errors))
+
+    def test_v2_calendar_hours_gate_parts_and_invariants_fail_closed(self) -> None:
+        manifests = [json.loads(path.read_text()) for path in sorted((ROOT / "modules").glob("*/module.json"))]
+        temporary = tempfile.TemporaryDirectory()
+        self.addCleanup(temporary.cleanup)
+        root = Path(temporary.name)
+        (root / "schemas").mkdir()
+        shutil.copy2(ROOT / "schemas" / "course-calendar.schema.json", root / "schemas" / "course-calendar.schema.json")
+        shutil.copy2(ROOT / "schemas" / "gate.schema.json", root / "schemas" / "gate.schema.json")
+        shutil.copy2(ROOT / "course-calendar.json", root / "course-calendar.json")
+        shutil.copytree(ROOT / "gates", root / "gates")
+
+        with patch.object(validate_course, "ROOT", root):
+            errors: list[str] = []
+            validate_course.validate_v2_course_contract(manifests, errors)
+            self.assertEqual(errors, [])
+
+            calendar_path = root / "course-calendar.json"
+            calendar = json.loads(calendar_path.read_text())
+            calendar["weeks"][0]["week"] = 2
+            calendar_path.write_text(json.dumps(calendar))
+            errors = []
+            validate_course.validate_v2_course_contract(manifests, errors)
+            self.assertTrue(any("gap-free" in error or "unique" in error for error in errors))
+
+            shutil.copy2(ROOT / "course-calendar.json", calendar_path)
+            calendar = json.loads(calendar_path.read_text())
+            calendar["weeks"][0]["core_hours"] += 0.5
+            calendar_path.write_text(json.dumps(calendar))
+            errors = []
+            validate_course.validate_v2_course_contract(manifests, errors)
+            self.assertTrue(any("920 core hours" in error or "does not match" in error for error in errors))
+
+            shutil.copy2(ROOT / "course-calendar.json", calendar_path)
+            gate_path = root / "gates" / "G01" / "gate.json"
+            gate = json.loads(gate_path.read_text())
+            gate["parts"][1]["minutes"] += 1
+            gate_path.write_text(json.dumps(gate))
+            errors = []
+            validate_course.validate_v2_course_contract(manifests, errors)
+            self.assertTrue(any("gate-part" in error for error in errors))
+
+            shutil.copy2(ROOT / "gates" / "G01" / "gate.json", gate_path)
+            gate6_path = root / "gates" / "G06" / "gate.json"
+            gate6 = json.loads(gate6_path.read_text())
+            gate6["invariant_sets"][1]["invariants"].pop()
+            gate6_path.write_text(json.dumps(gate6))
+            errors = []
+            validate_course.validate_v2_course_contract(manifests, errors)
+            self.assertTrue(any("AI01-AI12" in error for error in errors))
+
+    def test_remote_fallback_is_pinned_optional_and_evidence_bound(self) -> None:
+        errors: list[str] = []
+        validate_course.validate_remote_fallback_contract(errors)
+        self.assertEqual(errors, [])
+
+        temporary = tempfile.TemporaryDirectory()
+        self.addCleanup(temporary.cleanup)
+        root = Path(temporary.name)
+        for source in (
+            ROOT / ".github" / "workflows" / "pesd-remote-fallback.yml",
+            ROOT / "remote-runner" / "README.md",
+            ROOT / "scripts" / "write_remote_evidence.py",
+            ROOT / "schemas" / "remote-evidence.schema.json",
+            ROOT / "modules" / "15-execution-models-across-languages" / "lab" / "toolchains.lock.json",
+        ):
+            target = root / source.relative_to(ROOT)
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(source, target)
+        guide = root / "remote-runner" / "README.md"
+        guide.write_text(guide.read_text().replace("optional and never a prerequisite", "available to every learner"))
+        with patch.object(validate_course, "ROOT", root):
+            errors = []
+            validate_course.validate_remote_fallback_contract(errors)
+            self.assertTrue(any("optional and never a prerequisite" in error for error in errors))
 
     def test_solo_completion_contract_rejects_a_reviewer_requirement(self) -> None:
         source_root, _ = self.manifest("M01")

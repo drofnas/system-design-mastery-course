@@ -382,7 +382,7 @@ def apply_semantic_contract(claim: dict[str, Any]) -> None:
 
 
 def main() -> int:
-    commit = subprocess.run(["git", "rev-parse", "HEAD"], cwd=ROOT, check=True, capture_output=True, text=True).stdout.strip()
+    commit = "WORKTREE"
     for ledger_path in sorted((ROOT / "modules").glob("*/assessment/factual-claims.json")):
         root = ledger_path.parent.parent
         ledger = json.loads(ledger_path.read_text(encoding="utf-8"))

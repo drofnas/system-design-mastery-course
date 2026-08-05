@@ -16,3 +16,11 @@
 If secrets or private data appear, contain and rotate them before creating new
 evidence. A safety failure requires Repeat with new inputs; prose cannot repair
 an invalid or mutable experiment.
+
+## PESD 2.0 remediation
+
+When a cross-cutting floor is missed, return to Lesson 8's PESD 2.0 extension
+and the final exercise. Create a separate dated revision containing the missing
+requirement/control/evidence mapping, owner, evidence boundary, failure check,
+cost consequence, migration, and reversal trigger. Never edit the frozen
+baseline or raw trial. A Pass creates no required remediation artifact.

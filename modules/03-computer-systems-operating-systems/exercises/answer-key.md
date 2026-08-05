@@ -95,3 +95,11 @@ one driver to test alternatives, and either transfers or rejects the mechanism
 using an explicit comparison. The decision names service/platform owners,
 security and invariant effects, cost denominator, staged rollback, and measurable
 reversal evidence. Different decisions remain acceptable when evidence differs.
+
+## PESD 2.0 extension answer
+
+A defensible answer covers cgroup enforcement, virtualization and steal time, noisy-neighbor isolation, architecture-specific limits, and measured-versus-host-controlled evidence boundaries. It distinguishes the
+requirement, enforcement mechanism, evidence, and owner; keeps modeled and
+measured results separate; and names the failed condition that would reverse
+the decision. Different architectures are acceptable when their invariants,
+evidence boundaries, migration, and residual risk are explicit.

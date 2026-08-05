@@ -14,11 +14,13 @@ from scripts import check_home_lab
 def snapshot(platform_name="ubuntu", architecture="x86_64", **changes):
     value = {
         "platform": platform_name, "architecture": architecture, "ram_gib": 16.0,
-        "logical_cpus": 4, "free_disk_gib": 30.0,
+        "logical_cpus": 4, "free_disk_gib": 40.0,
         "versions": {"python": "3.11.9", "git": "git version 2.45", "compiler": "cc 15.0",
                      "make": "GNU Make 4.4", "openssl": "OpenSSL 3.0", "docker": "Docker 28.0",
                      "node": "v24.19.0", "npm": "11.0"},
-        "docker_daemon": True, "openssl_addext": True, "loopback": True, "temporary_files": True,
+        "docker_daemon": True, "docker_memory_gib": 4.0, "openssl_addext": True,
+        "loopback": True, "temporary_files": True, "repo_on_wsl_filesystem": True,
+        "cgroup_controls": True, "chromium_available": True, "windows_browser_callback": True,
     }
     value.update(changes)
     return value

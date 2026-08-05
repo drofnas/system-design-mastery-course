@@ -1,5 +1,7 @@
 # Gate 2 Assessment: Performance, Networks, and Remote Calls
 
+> **PESD V1 historical contract:** Preserve this file for V1 learners and immutable evidence. PESD 2.0 uses [gates/G02/README.md](../../../gates/G02/README.md).
+
 Freeze each part before feedback. The practical uses Beacon Dispatch and a new
 seed/configuration; it is not a commerce solution. Submit exact headings and
 commits through the Module 6 evaluator.

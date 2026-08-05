@@ -99,3 +99,18 @@ Safety-critical because model-controlled authority can turn untrusted text into 
 - **Pass:** every gate passes, average at least 3.0, and R02/R03/R04/R05/R07/R09 are nonzero.
 - **Revise:** no hard/safety failure, but average is below 3.0 or material evidence gaps remain.
 - **Repeat:** G02-G05 fails or a safety-critical criterion is zero.
+
+## PESD 2.0 cross-cutting anchors
+
+Apply these anchors inside the published module-specific criteria; they do not
+create a generic substitute rubric.
+
+- **0–1:** ignores or merely names obligation-to-control-to-evidence mapping, privacy impact reasoning, secure SDLC, source-to-deployment identity, cryptographic inventory, crypto agility, and post-quantum migration planning without an enforceable
+  causal model, evidence boundary, or owner.
+- **2:** covers the happy path but leaves a material tenant, governance,
+  recovery, supplier, cost, migration, or evidence gap.
+- **3:** connects the requirement to a mechanism, failure evidence, ownership,
+  cost, migration, and a scoped residual risk.
+- **4:** additionally tests policy drift or isolation failure, quantifies useful
+  outcome and uncertainty, preserves lineage, and gives teachable reversal and
+  decommissioning triggers.

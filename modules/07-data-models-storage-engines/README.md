@@ -1,8 +1,6 @@
 # Module 7: Data Models and Storage Engines
 
-> **Authoring status:** Ready. Teaching, executable-lab, structural, semantic,
-> evaluator-calibration, focused, and full-course gates passed on 2026-08-02.
-> See the [readiness review](assessment/readiness-review.md).
+> **Authoring status:** Review. PESD 2.0 content and machine-readable contracts are migrated. Refreshed evaluator calibration, full platform matrices, offline reruns, cleanup checks, and timed learner pilots remain required before Ready.
 
 ## What this module changes
 
@@ -51,50 +49,51 @@ By the end of the module, you can:
 
 ## Schedule
 
-### Week 25: Model and freeze — 10.5 hours
+The 10–12 hour weekly figure is a capacity envelope. Core work is deliberately
+budgeted below that ceiling; unused time is recovery buffer, not hidden work.
+
+### Week 35: Model and derive — 8.5 hours
 
 | Work | Time |
 |---|---:|
-| Lessons 1–2 and bounded resources | 3 h |
-| Guided exercises EX-01–EX-04 | 2 h |
-| Independent workload/access-path baseline | 4 h |
-| Self-check and learning log | 1.5 h |
+| Bounded authoritative resources | 145 min |
+| Local mechanism instruction | 120 min |
+| Guided practice | 60 min |
+| Required evidence components | 30 min |
+| Model and derive core work | 155 min |
 
-Use the [Week 25 worksheet](worksheets/week-25-storage-model.md).
-
-### Week 26: Build both write paths — 11 hours
-
-| Work | Time |
-|---|---:|
-| Lessons 3–4 | 3 h |
-| Harbor tutorial and EX-05–EX-09 | 2.5 h |
-| Independent B+ tree and LSM implementation | 4.5 h |
-| Internals review and learning log | 1 h |
-
-Use the [Week 26 worksheet](worksheets/week-26-engine-build.md).
-
-### Week 27: Break and measure — 11 hours
+### Week 36: Guided build and prediction freeze — 9 hours
 
 | Work | Time |
 |---|---:|
-| Lessons 5–7 and bounded resources | 3 h |
-| EX-10–EX-14 failure rehearsal | 2 h |
-| Workload matrix and six paired experiments | 4.5 h |
-| Evidence review and learning log | 1.5 h |
+| Bounded authoritative resources | 135 min |
+| Local mechanism instruction | 120 min |
+| Guided practice | 60 min |
+| Required evidence components | 90 min |
+| Guided build and prediction freeze core work | 135 min |
 
-Use the [Week 27 worksheet](worksheets/week-27-amplification-matrix.md).
-
-### Week 28: Decide, teach, and assess — 10.5 hours
+### Week 37: Independent build and integration — 10 hours
 
 | Work | Time |
 |---|---:|
-| Lesson 8 and practitioner resources | 2 h |
-| Alternatives, cost, migration, and rollback | 2 h |
-| Storage ADR and recorded teach-back | 3 h |
-| Evaluation, remediation, and learning log | 3.5 h |
+| Independent build and integration core work | 540 min |
+| Independent build and integration verification checkpoint | 60 min |
 
-Use the [Week 28 worksheet](worksheets/week-28-storage-decision.md).
+### Week 38: Break, repair, measure, and diagnose — 10 hours
 
+| Work | Time |
+|---|---:|
+| Required evidence components | 60 min |
+| Break, repair, measure, and diagnose core work | 540 min |
+
+### Week 39: Decide, teach, assess, and freeze — 9.5 hours
+
+| Work | Time |
+|---|---:|
+| Required evidence components | 120 min |
+| Decide, teach, assess, and freeze core work | 390 min |
+| Module teach-back | 30 min |
+| Learning log and freeze check | 30 min |
 ## Learn
 
 1. [Workloads, access paths, and data models](lessons/01-workloads-access-paths-data-models.md)
@@ -153,3 +152,10 @@ answer during the defense. Disclose assistance and verify every claim.
 - Use the [sealed local gate workflow](../../SOLO_GATE_GUIDE.md) when a course gate applies. Human review is optional.
 
 A frozen self-evaluation may establish **Solo Complete**; independent human or LLM review may establish **Independently Validated**. Synthetic lab values are not production measurements.
+
+## PESD 2.0 scope addition
+
+This 5-week module schedules 47 core hours. Its primary
+decision is ADR A06. The added graded scope is
+analytical projections, versioned data contracts, quality SLOs, lineage, stewardship, rebuild and backfill, deletion propagation, and ownership while preserving B+ tree and LSM mechanisms. See Lesson 8, the final guided exercise, final worksheet,
+rubric anchors, and remediation map for the integrated evidence contract.

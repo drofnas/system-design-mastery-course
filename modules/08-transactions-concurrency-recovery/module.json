@@ -4,28 +4,29 @@
   "title": "Transactions, Concurrency, and Recovery",
   "weeks": [
     {
-      "number": 29,
-      "focus": "Model and freeze invariants, boundaries, histories, and anomaly predictions",
-      "hours": 10.5,
+      "number": 40,
+      "phase": "Model and derive",
+      "focus": "Model and derive",
+      "hours": 8.5,
+      "core_hours": 8.5,
+      "capacity_hours": 12,
       "evidence": [
-        "Frozen invariant and transaction-boundary map",
-        "History and serialization analysis",
-        "Isolation predictions",
-        "Week 29 learning log"
+        "Model and derive evidence frozen at source commit"
       ],
       "time_blocks": [
         {
-          "id": "W29-T01",
+          "id": "W040-T01",
           "label": "Bounded authoritative resources",
-          "minutes": 55,
+          "minutes": 115,
           "activity": "required_resource",
           "resource_ids": [
-            "RES-01"
+            "RES-06",
+            "RES-07"
           ]
         },
         {
-          "id": "W29-T02",
-          "label": "Local lesson instruction",
+          "id": "W040-T02",
+          "label": "Local mechanism instruction",
           "minutes": 120,
           "activity": "local_instruction",
           "lesson_ids": [
@@ -36,9 +37,9 @@
           ]
         },
         {
-          "id": "W29-T03",
+          "id": "W040-T03",
           "label": "Guided practice",
-          "minutes": 90,
+          "minutes": 60,
           "activity": "guided_practice",
           "exercise_ids": [
             "EX-01",
@@ -46,249 +47,215 @@
             "EX-03",
             "EX-04",
             "EX-05",
-            "EX-06"
-          ]
-        },
-        {
-          "id": "W29-T04",
-          "label": "Reflection and learning log",
-          "minutes": 30,
-          "activity": "reflection"
-        },
-        {
-          "id": "W29-T05",
-          "label": "Independent Work",
-          "minutes": 335,
-          "activity": "independent_work",
-          "artifact_ids": [
-            "A01"
-          ]
-        }
-      ]
-    },
-    {
-      "number": 30,
-      "focus": "Build concurrent transactions and explicit correctness controls",
-      "hours": 11,
-      "evidence": [
-        "Concurrent transaction implementation",
-        "Constraint and isolation tests",
-        "Deadlock and retry evidence",
-        "Internals review and Week 30 learning log"
-      ],
-      "time_blocks": [
-        {
-          "id": "W30-T01",
-          "label": "Bounded authoritative resources",
-          "minutes": 45,
-          "activity": "required_resource",
-          "resource_ids": [
-            "RES-02"
-          ]
-        },
-        {
-          "id": "W30-T02",
-          "label": "Local lesson instruction",
-          "minutes": 90,
-          "activity": "local_instruction",
-          "lesson_ids": [
-            "L03",
-            "L05",
-            "L07"
-          ]
-        },
-        {
-          "id": "W30-T03",
-          "label": "Guided practice",
-          "minutes": 90,
-          "activity": "guided_practice",
-          "exercise_ids": [
+            "EX-06",
             "EX-07",
-            "EX-08",
-            "EX-09",
-            "EX-10",
-            "EX-11"
+            "EX-08"
           ]
         },
         {
-          "id": "W30-T04",
-          "label": "Reflection and learning log",
-          "minutes": 30,
-          "activity": "reflection"
-        },
-        {
-          "id": "W30-T05",
-          "label": "Decision Artifact",
-          "minutes": 30,
-          "activity": "decision_artifact",
-          "artifact_ids": [
-            "A02",
-            "A03"
-          ]
-        },
-        {
-          "id": "W30-T06",
-          "label": "Independent Work",
-          "minutes": 375,
+          "id": "W040-T04",
+          "label": "Model and derive core work",
+          "minutes": 215,
           "activity": "independent_work"
         }
       ]
     },
     {
-      "number": 31,
-      "focus": "Break transactions, crash the store, and validate recovery",
-      "hours": 11.5,
+      "number": 41,
+      "phase": "Guided build and prediction freeze",
+      "focus": "Guided build and prediction freeze",
+      "hours": 9.0,
+      "core_hours": 9.0,
+      "capacity_hours": 12,
       "evidence": [
-        "Seven broken/repaired pairs",
-        "WAL and acknowledgement evidence",
-        "Restore validation with RTO/RPO",
-        "Failure matrix and Week 31 learning log"
+        "Guided build and prediction freeze evidence frozen at source commit"
       ],
       "time_blocks": [
         {
-          "id": "W31-T01",
+          "id": "W041-T01",
           "label": "Bounded authoritative resources",
-          "minutes": 105,
+          "minutes": 135,
           "activity": "required_resource",
           "resource_ids": [
-            "RES-04",
-            "RES-06"
+            "RES-01",
+            "RES-02",
+            "RES-04"
           ]
         },
         {
-          "id": "W31-T02",
-          "label": "Local lesson instruction",
-          "minutes": 90,
+          "id": "W041-T02",
+          "label": "Local mechanism instruction",
+          "minutes": 120,
           "activity": "local_instruction",
           "lesson_ids": [
-            "L01",
-            "L04",
-            "L06"
-          ]
-        },
-        {
-          "id": "W31-T03",
-          "label": "Guided practice",
-          "minutes": 90,
-          "activity": "guided_practice",
-          "exercise_ids": [
-            "EX-12",
-            "EX-13",
-            "EX-14",
-            "EX-15"
-          ]
-        },
-        {
-          "id": "W31-T04",
-          "label": "Reflection and learning log",
-          "minutes": 30,
-          "activity": "reflection"
-        },
-        {
-          "id": "W31-T05",
-          "label": "Decision Artifact",
-          "minutes": 30,
-          "activity": "decision_artifact",
-          "artifact_ids": [
-            "A05"
-          ]
-        },
-        {
-          "id": "W31-T06",
-          "label": "Failure Experiment",
-          "minutes": 345,
-          "activity": "failure_experiment",
-          "artifact_ids": [
-            "A04"
-          ]
-        }
-      ]
-    },
-    {
-      "number": 32,
-      "focus": "Decide, migrate, teach, and assess",
-      "hours": 10.5,
-      "evidence": [
-        "Transaction and recovery ADR",
-        "Migration and rollback plan",
-        "Recorded defense",
-        "Evaluation, remediation, and Week 32 learning log"
-      ],
-      "time_blocks": [
-        {
-          "id": "W32-T01",
-          "label": "Bounded authoritative resources",
-          "minutes": 45,
-          "activity": "required_resource",
-          "resource_ids": [
-            "RES-07"
-          ]
-        },
-        {
-          "id": "W32-T02",
-          "label": "Local lesson instruction",
-          "minutes": 45,
-          "activity": "local_instruction",
-          "lesson_ids": [
+            "L05",
+            "L06",
+            "L07",
             "L08"
           ]
         },
         {
-          "id": "W32-T03",
+          "id": "W041-T03",
           "label": "Guided practice",
-          "minutes": 45,
+          "minutes": 60,
           "activity": "guided_practice",
           "exercise_ids": [
+            "EX-09",
+            "EX-10",
+            "EX-11",
+            "EX-12",
+            "EX-13",
+            "EX-14",
+            "EX-15",
             "EX-16"
           ]
         },
         {
-          "id": "W32-T04",
-          "label": "Reflection and learning log",
+          "id": "W041-T04",
+          "label": "Required evidence components",
           "minutes": 30,
-          "activity": "reflection",
-          "artifact_ids": [
-            "A09"
+          "activity": "independent_work",
+          "artifact_allocations": [
+            {
+              "artifact_id": "A01",
+              "minutes": 30
+            }
           ]
         },
         {
-          "id": "W32-T05",
-          "label": "Assessment",
+          "id": "W041-T05",
+          "label": "Guided build and prediction freeze core work",
+          "minutes": 195,
+          "activity": "independent_work"
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "phase": "Independent build and integration",
+      "focus": "Independent build and integration",
+      "hours": 10.0,
+      "core_hours": 10.0,
+      "capacity_hours": 12,
+      "evidence": [
+        "Independent build and integration evidence frozen at source commit"
+      ],
+      "time_blocks": [
+        {
+          "id": "W042-T01",
+          "label": "Independent build and integration core work",
+          "minutes": 540,
+          "activity": "independent_work"
+        },
+        {
+          "id": "W042-T02",
+          "label": "Independent build and integration verification checkpoint",
           "minutes": 60,
-          "activity": "assessment",
-          "artifact_ids": [
-            "A08"
+          "activity": "independent_work"
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "phase": "Break, repair, measure, and diagnose",
+      "focus": "Break, repair, measure, and diagnose",
+      "hours": 10.0,
+      "core_hours": 10.0,
+      "capacity_hours": 12,
+      "evidence": [
+        "Break, repair, measure, and diagnose evidence frozen at source commit"
+      ],
+      "time_blocks": [
+        {
+          "id": "W043-T01",
+          "label": "Required evidence components",
+          "minutes": 120,
+          "activity": "failure_experiment",
+          "artifact_allocations": [
+            {
+              "artifact_id": "A02",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A03",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A04",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A05",
+              "minutes": 30
+            }
           ]
         },
         {
-          "id": "W32-T06",
-          "label": "Decision Artifact",
-          "minutes": 285,
+          "id": "W043-T02",
+          "label": "Break, repair, measure, and diagnose core work",
+          "minutes": 480,
+          "activity": "failure_experiment"
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "phase": "Decide, teach, assess, and freeze",
+      "focus": "Decide, teach, assess, and freeze",
+      "hours": 9.5,
+      "core_hours": 9.5,
+      "capacity_hours": 12,
+      "evidence": [
+        "Decide, teach, assess, and freeze evidence frozen at source commit"
+      ],
+      "time_blocks": [
+        {
+          "id": "W044-T01",
+          "label": "Required evidence components",
+          "minutes": 120,
           "activity": "decision_artifact",
-          "artifact_ids": [
-            "A06"
+          "artifact_allocations": [
+            {
+              "artifact_id": "A06",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A07",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A08",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A09",
+              "minutes": 30
+            }
           ]
         },
         {
-          "id": "W32-T07",
-          "label": "Review Remediation",
-          "minutes": 60,
-          "activity": "review_remediation"
+          "id": "W044-T02",
+          "label": "Decide, teach, assess, and freeze core work",
+          "minutes": 390,
+          "activity": "assessment"
         },
         {
-          "id": "W32-T08",
-          "label": "Teach Back",
-          "minutes": 60,
-          "activity": "teach_back",
-          "artifact_ids": [
-            "A07"
-          ]
+          "id": "W044-T03",
+          "label": "Module teach-back",
+          "minutes": 30,
+          "activity": "teach_back"
+        },
+        {
+          "id": "W044-T04",
+          "label": "Learning log and freeze check",
+          "minutes": 30,
+          "activity": "reflection"
         }
       ]
     }
   ],
-  "target_hours": 43.5,
-  "status": "ready",
+  "target_hours": 47,
+  "status": "review",
   "readiness_note": "Ready on 2026-08-02 after semantic and evidence-safety review, nine transaction-lab tests across fourteen strict paired scenarios, six evaluator records with stable calibration bands, deterministic calibration checking, focused validation, full-course validation, and authoritative-resource verification.",
   "outcomes": [
     {
@@ -544,7 +511,7 @@
       "url": "https://www.postgresql.org/docs/current/transaction-iso.html",
       "required": true,
       "access": "free",
-      "week": 29,
+      "week": 41,
       "estimated_minutes": 55,
       "purpose": "Ground visibility, anomalies, and whole-transaction serialization retry in an operated DBMS.",
       "assignment": "Read Sections 13.2.1-13.2.3; draw one admitted history per level and state which Northstar invariant it can violate.",
@@ -564,7 +531,7 @@
       "url": "https://www.postgresql.org/docs/current/explicit-locking.html",
       "required": true,
       "access": "free",
-      "week": 30,
+      "week": 41,
       "estimated_minutes": 45,
       "purpose": "Connect lock modes, wait behavior, and deadlock victim handling to application retry policy.",
       "assignment": "Read Sections 13.3.2 and 13.3.4; build a wait-for graph and write a complete-transaction retry boundary.",
@@ -584,7 +551,7 @@
       "url": "https://15445.courses.cs.cmu.edu/spring2026/schedule.html",
       "required": false,
       "access": "free",
-      "week": 30,
+      "week": 44,
       "estimated_minutes": 150,
       "purpose": "Connect concurrency-control theory, 2PL, MVCC, logging, and recovery in one primary teaching sequence.",
       "assignment": "Use only Lectures 17, 18, 20, 22, and 23; watch selected mechanism segments or use the linked notes, then annotate one schedule and one recovery trace.",
@@ -604,7 +571,7 @@
       "url": "https://www.postgresql.org/docs/current/wal-intro.html",
       "required": true,
       "access": "free",
-      "week": 31,
+      "week": 41,
       "estimated_minutes": 35,
       "purpose": "Derive WAL-before-data, redo, group commit, and PITR consequences from a concise implementation contract.",
       "assignment": "Read the complete section; order log, data, flush, commit, and acknowledgement events and identify the unsafe permutation.",
@@ -624,7 +591,7 @@
       "url": "https://www.postgresql.org/docs/current/wal-reliability.html",
       "required": false,
       "access": "free",
-      "week": 31,
+      "week": 44,
       "estimated_minutes": 35,
       "purpose": "Bound durability claims across process, OS, controller, and device caches.",
       "assignment": "Read Sections 28.1-28.2; list the flush assumptions the local lab cannot verify and the owner of each production check.",
@@ -644,7 +611,7 @@
       "url": "https://www.postgresql.org/docs/current/continuous-archiving.html",
       "required": true,
       "access": "free",
-      "week": 31,
+      "week": 40,
       "estimated_minutes": 70,
       "purpose": "Connect a base backup, complete WAL archive, recovery target, and restore time/storage cost.",
       "assignment": "Read Sections 25.3.1, 25.3.2, and 25.3.5; draw the minimum recoverable set and calculate a bounded RPO and replay workload.",
@@ -664,7 +631,7 @@
       "url": "https://about.gitlab.com/blog/postmortem-of-database-outage-of-january-31/",
       "required": true,
       "access": "free",
-      "week": 32,
+      "week": 40,
       "estimated_minutes": 45,
       "purpose": "Show why successful backup jobs, replicas, runbooks, ownership, and tested restores are different claims.",
       "assignment": "Read Broken recovery procedures through Root cause analysis; classify each failed control as prevention, detection, recovery, or ownership evidence.",
@@ -684,7 +651,7 @@
       "url": "https://github.blog/news-insights/company-news/oct21-post-incident-analysis/",
       "required": false,
       "access": "free",
-      "week": 32,
+      "week": 44,
       "estimated_minutes": 40,
       "purpose": "Relate integrity-first degradation, large restore time, reconciliation, and backlog recovery to operating decisions.",
       "assignment": "Read the recovery plan through Next steps; separate RTO, consistency, replay, backlog, and user-communication decisions.",
@@ -704,7 +671,7 @@
       "url": "https://www.postgresql.org/docs/current/ddl-constraints.html",
       "required": false,
       "access": "free",
-      "week": 29,
+      "week": 44,
       "estimated_minutes": 35,
       "purpose": "Ground commit-time invariant enforcement in check, uniqueness, primary-key, and foreign-key contracts.",
       "assignment": "Read the check, not-null, unique, primary-key, and foreign-key sections; map each mechanism to the facts it can and cannot enforce.",
@@ -720,78 +687,132 @@
   "artifacts": [
     {
       "id": "A01",
-      "week": 29,
+      "week": 41,
       "required": true,
       "template_path": "modules/08-transactions-concurrency-recovery/worksheets/week-29-transaction-model.md",
       "submission_path": "reports/module-08-transaction-baseline.md",
       "immutable_after_submission": true,
-      "portfolio_category": "model"
+      "portfolio_category": "model",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M08-A01",
+      "component_role": "prediction",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A02",
-      "week": 30,
+      "week": 43,
       "required": true,
       "template_path": "modules/08-transactions-concurrency-recovery/worksheets/week-30-concurrency-build.md",
       "submission_path": "labs/module-08/transaction-recovery/",
-      "portfolio_category": "dr_exercise"
+      "portfolio_category": "dr_exercise",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M08-A02",
+      "component_role": "raw_evidence",
+      "estimated_minutes": 30,
+      "evidence_mode": "executed_deterministic"
     },
     {
       "id": "A03",
-      "week": 30,
+      "week": 43,
       "required": true,
       "template_path": "modules/08-transactions-concurrency-recovery/worksheets/week-30-concurrency-build.md",
       "submission_path": "reports/module-08-transaction-recovery-internals.md",
-      "portfolio_category": "dr_exercise"
+      "portfolio_category": "dr_exercise",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M08-A03",
+      "component_role": "raw_evidence",
+      "estimated_minutes": 30,
+      "evidence_mode": "executed_deterministic"
     },
     {
       "id": "A04",
-      "week": 31,
+      "week": 43,
       "required": true,
       "template_path": "modules/08-transactions-concurrency-recovery/worksheets/week-31-failure-restore-matrix.md",
       "submission_path": "experiments/module-08/",
       "immutable_after_submission": true,
-      "portfolio_category": "failure_matrix"
+      "portfolio_category": "failure_matrix",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M08-A04",
+      "component_role": "raw_evidence",
+      "estimated_minutes": 30,
+      "evidence_mode": "executed_deterministic"
     },
     {
       "id": "A05",
-      "week": 31,
+      "week": 43,
       "required": true,
       "template_path": "modules/08-transactions-concurrency-recovery/worksheets/week-31-failure-restore-matrix.md",
       "submission_path": "reports/module-08-restore-validation.md",
       "immutable_after_submission": true,
-      "portfolio_category": "dr_exercise"
+      "portfolio_category": "dr_exercise",
+      "portfolio_item_id": "PI-DR-01",
+      "portfolio_credit": true,
+      "evidence_lineage_id": "LIN-DR-RESTORE",
+      "component_role": "raw_evidence",
+      "estimated_minutes": 30,
+      "evidence_mode": "executed_deterministic"
     },
     {
       "id": "A06",
-      "week": 32,
+      "week": 44,
       "required": true,
       "template_path": "templates/adr-template.md",
       "submission_path": "adr/module-08-transaction-recovery-design.md",
-      "portfolio_category": "adr"
+      "portfolio_category": "adr",
+      "portfolio_item_id": "PI-DECISION-M08",
+      "portfolio_credit": true,
+      "evidence_lineage_id": "LIN-DECISION-M08",
+      "component_role": "decision",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A07",
-      "week": 32,
+      "week": 44,
       "required": true,
       "template_path": "modules/08-transactions-concurrency-recovery/worksheets/week-32-transaction-recovery-decision.md",
       "submission_path": "reviews/module-08-defense.md",
-      "portfolio_category": "teach_back"
+      "portfolio_category": "teach_back",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M08-A07",
+      "component_role": "final",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A08",
-      "week": 32,
+      "week": 44,
       "required": true,
       "template_path": "modules/08-transactions-concurrency-recovery/assessment/report-template.md",
       "submission_path": "reviews/module-08-evaluation.md",
-      "portfolio_category": "evaluation"
+      "portfolio_category": "evaluation",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M08-A08",
+      "component_role": "final",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A09",
-      "week": 32,
+      "week": 44,
       "required": true,
       "template_path": "templates/learning-log-template.md",
-      "submission_path": "learning-log/week-29.md through learning-log/week-32.md",
-      "portfolio_category": "learning_log"
+      "submission_path": "learning-log/week-040.md through learning-log/week-044.md",
+      "portfolio_category": "learning_log",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M08-A09",
+      "component_role": "final",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     }
   ],
   "failure_experiments": [
@@ -972,5 +993,13 @@
       "final_url": "https://docs.cloud.google.com/architecture/framework/reliability/perform-testing-for-recovery-from-data-loss",
       "verification_status": "verified"
     }
-  ]
+  ],
+  "course_id": "PESD-104",
+  "course_version": "2.0",
+  "primary_decision": {
+    "artifact_id": "A06",
+    "type": "ADR"
+  },
+  "pesd_v2_additions": "retention, deletion, legal holds, key rotation, logs, replicas, exports, backups, restore-time policy replay, and resurrection prevention",
+  "semantic_evaluation": "module_specific"
 }

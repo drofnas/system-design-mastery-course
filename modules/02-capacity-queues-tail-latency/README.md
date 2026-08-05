@@ -1,8 +1,6 @@
 # Module 2: Capacity, Queues, and Tail Latency
 
-> **Authoring status:** Ready. Local course validation, all 22 lab tests, two
-> independent evaluator runs per fixture, and deterministic calibration
-> checking passed on 2026-07-31.
+> **Authoring status:** Review. PESD 2.0 content and machine-readable contracts are migrated. Refreshed evaluator calibration, full platform matrices, offline reruns, cleanup checks, and timed learner pilots remain required before Ready.
 
 ## What this module changes
 
@@ -44,56 +42,50 @@ practice, evidence, and rubric is in [`module.json`](module.json).
 
 ## Schedule
 
-### Week 5: Model — 10.5 hours
+The 10–12 hour weekly figure is a capacity envelope. Core work is deliberately
+budgeted below that ceiling; unused time is recovery buffer, not hidden work.
+
+### Week 6: Model and derive — 8.5 hours
 
 | Work | Time |
 |---|---:|
-| Lessons 1–3 and required resources | 3.5 h |
-| Guided exercises EX-01–EX-05 | 2 h |
-| Capacity tool and commerce prediction | 4 h |
-| Freeze, self-check, and learning log | 1 h |
+| Bounded authoritative resources | 115 min |
+| Local mechanism instruction | 120 min |
+| Guided practice | 60 min |
+| Model and derive core work | 215 min |
 
-Freeze the prediction before running a load experiment. Use the
-[Week 5 worksheet](worksheets/week-05-capacity-prediction.md).
-
-### Week 6: Build — 10.5 hours
+### Week 7: Guided build and prediction freeze — 9 hours
 
 | Work | Time |
 |---|---:|
-| Lessons 4–6 | 3 h |
-| Transit lab tutorial and EX-06–EX-09 | 2 h |
-| Commerce service, load driver, and tests | 4.5 h |
-| Build review and learning log | 1 h |
+| Bounded authoritative resources | 105 min |
+| Local mechanism instruction | 120 min |
+| Guided practice | 60 min |
+| Required evidence components | 30 min |
+| Guided build and prediction freeze core work | 225 min |
 
-Start with the [reference lab](lab/README.md), then implement or adapt the same
-observable mechanisms for one commerce journey.
-
-### Week 7: Break and measure — 10.5 hours
+### Week 8: Independent build and integration — 10 hours
 
 | Work | Time |
 |---|---:|
-| Lessons 7–8 and resource reflection | 2 h |
-| Transit failure walkthrough and EX-10–EX-12 | 2 h |
-| Required load sweep and failures | 5 h |
-| Evidence review and learning log | 1.5 h |
+| Independent build and integration core work | 540 min |
+| Independent build and integration verification checkpoint | 60 min |
 
-Use the [experiment worksheet](worksheets/week-07-load-sweep.md). Preserve raw
-JSONL separately from interpretation.
-
-### Week 8: Decide and teach — 10.5 hours
+### Week 9: Break, repair, measure, and diagnose — 10 hours
 
 | Work | Time |
 |---|---:|
-| Report method review | 1.5 h |
-| Capacity report and overload-policy ADR | 4 h |
-| Recorded defense and reviewer challenge | 2 h |
-| Evaluation and separate revision | 2 h |
-| Learning log and portfolio accounting | 1 h |
+| Required evidence components | 150 min |
+| Break, repair, measure, and diagnose core work | 450 min |
 
-Use the [report worksheet](worksheets/week-08-capacity-report.md), the
-[defense guide](worksheets/week-08-defense.md), and the
-[assessment package](assessment/README.md).
+### Week 10: Decide, teach, assess, and freeze — 9.5 hours
 
+| Work | Time |
+|---|---:|
+| Required evidence components | 120 min |
+| Decide, teach, assess, and freeze core work | 390 min |
+| Module teach-back | 30 min |
+| Learning log and freeze check | 30 min |
 ## Learn
 
 1. [Workload and useful work](lessons/01-workload-and-useful-work.md)
@@ -166,3 +158,10 @@ against code, sources, or experiments.
 - Use the [sealed local gate workflow](../../SOLO_GATE_GUIDE.md) when a course gate applies. Human review is optional.
 
 A frozen self-evaluation may establish **Solo Complete**; independent human or LLM review may establish **Independently Validated**. Synthetic lab values are not production measurements.
+
+## PESD 2.0 scope addition
+
+This 5-week module schedules 47 core hours. Its primary
+decision is ADR A07. The added graded scope is
+per-tenant allocation, forecast variance, useful-outcome economics, shared-cost policy, and modeled energy/carbon sensitivity. See Lesson 8, the final guided exercise, final worksheet,
+rubric anchors, and remediation map for the integrated evidence contract.

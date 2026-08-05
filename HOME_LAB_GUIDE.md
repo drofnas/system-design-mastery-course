@@ -1,12 +1,14 @@
 # Home Lab Guide
 
-The canonical capstone revision points are Weeks 12, 24, 48, and 72. Preserve
-the Week 1 baseline and every earlier revision; later evidence belongs in a new
-file rather than an edit to a frozen artifact.
+The canonical capstone freeze points are Weeks 16, 33, 50, 68, 85, and 103.
+The separate capstone delta points are Weeks 17, 34, 51, 69, 86, and 104.
+Preserve the Week 1 baseline and every earlier artifact; later evidence belongs
+in a new file rather than an edit to frozen history.
 
-All 17 executable course labs are designed to run on one ordinary home
-computer. A discrete GPU, cloud account, Kubernetes cluster, Kafka cluster, or
-second person is not required. Run the local preflight before beginning a lab:
+All 17 executable course labs target one home computer. A discrete GPU, cloud
+account, Kubernetes cluster, Kafka cluster, or second person is not required.
+WSL2 support remains provisional until the complete matrix passes on a real
+Windows 11 host. Run the local preflight before beginning a lab:
 
 ```bash
 python3 scripts/check_home_lab.py
@@ -20,16 +22,14 @@ report. Exit status `0` means no blocker was found (warnings are allowed), `1`
 means at least one blocker needs remediation, and `2` means the invocation or
 preflight itself was invalid.
 
-## Supported baseline
+## Hardware lanes
 
-| Resource | Minimum | Recommended |
-|---|---:|---:|
-| Architecture | 64-bit x86_64 or ARM64 | same |
-| Memory | 8 GiB | 16 GiB |
-| Logical CPUs | 2 | 4 |
-| Free disk before setup | 20 GiB | 30 GiB |
-| Graphics | integrated | integrated |
-| Python | 3.11 | current compatible 3.x |
+| Lane | Minimum |
+|---|---|
+| Portable learning | 2 logical CPUs, 8 GiB RAM, 20 GiB free, Python 3.11 |
+| Full local evidence | 4 logical CPUs, 16 GiB RAM, 40 GiB free, loopback, Docker/Podman or pinned native toolchains |
+| Windows/WSL2 | 16 GiB physical RAM, 8 GiB assigned to WSL, 4 GiB Docker allocation, 40 GiB inside WSL; 24/12 GiB recommended |
+| Optional accelerator | Any explicitly recorded GPU or MPS device; never required |
 
 One-time internet access is needed to clone the course and obtain container
 images, language toolchains, packages, and Chromium. Once those inputs are
@@ -70,7 +70,7 @@ limits, host architecture, and whether a native toolchain was substituted.
 ## Windows through WSL2
 
 Native Windows and native PowerShell are not supported lab environments. Use
-Windows 10 build 19041 or newer, or Windows 11, with Ubuntu on WSL2.
+Windows 11 with Ubuntu on WSL2 for the provisional support matrix.
 
 1. From an elevated Windows terminal, install WSL with `wsl --install`, restart
    if requested, and complete Ubuntu's first-run setup.
@@ -83,23 +83,47 @@ Windows 10 build 19041 or newer, or Windows 11, with Ubuntu on WSL2.
 5. Run Python, Docker, Node, and all lab commands in the Ubuntu shell.
 6. For Module 16 manual checks, serve from WSL on loopback and open
    `http://localhost:<port>` in a normal Windows browser.
+7. Verify cgroup CPU, memory, and PID enforcement; Docker's assigned memory;
+   guest loopback; the Windows-browser callback; Chromium launch; free disk;
+   and the pinned offline cache before collecting evidence.
 
 The preflight reports native Windows as unsupported and points to WSL2. Windows
 on ARM, Hyper-V-only Docker, and locked-down managed devices are outside the
-supported baseline.
+supported baseline until separately verified.
+
+## Remote fallback runner
+
+An official remote container runner may be used when a machine cannot run
+Docker, loopback, or Chromium. It is a fallback, not a cloud prerequisite.
+Accepted remote evidence records the learner commit, image digest, runner
+version, scenario/input/configuration hashes, resource limits, clock, raw output,
+and limitations. The remote runner cannot turn fixture replay into independent
+Build, Break, Implement, or Measure evidence.
+
+## Evidence modes and trial record
+
+Declare exactly one of `derived`, `executed_deterministic`,
+`measured_loopback`, `measured_container`, `modeled_capacity`, `fixture_replay`,
+or `measured_accelerator`. Fixture replay is practice/remediation evidence only.
+Modeled accelerator, region, fleet, or device results may support Calculate and
+Decide but are not local measurements.
+
+Every executed or measured trial records source commit, scenario/input/config
+hashes, runtime boundary, CPU/memory/PID limits, clock, warm-up/repetition policy,
+raw outcomes, and limitations.
 
 ## Module dependency matrix
 
 | Modules | Required local capabilities | Typical first-use download | Low-resource notes |
 |---|---|---|---|
-| 2, 4, 6–14, 17, 18 | Python 3.11+, Git, loopback where used | none beyond repository | Run scenarios serially. |
+| 2, 4, 6–14, 17, 18 | Python 3.11+, Git, loopback where used | none beyond repository | Run scenarios serially; M09–M12 reuse the shared three-process cluster/proxy contract. |
 | 3 | Python, C11 compiler, `make`, Docker | pinned GCC image | Matrix is serial; assign Docker two CPUs and at least 256 MiB per trial. |
 | 5 | Python, OpenSSL, TCP/UDP loopback | none beyond repository | Certificates and servers are temporary and unprivileged. |
 | 15 | Python, Docker; or exact native toolchains | four pinned toolchain images/packages | Run one runtime at a time; each container is capped at 2 CPUs, 3 GiB memory/swap, and 256 PIDs. |
 | 16 | Node/npm, Chromium headless shell, loopback; host browser for manual work | npm packages and Chromium | Automated tests use one worker and retain traces only on failure. |
 
-No module needs a GPU. Module 17 models inference mechanics locally and does
-not download or execute a production model.
+No module needs a GPU. Module 17 executes and profiles the course's actual tiny
+transformer path; it does not download or execute a production model.
 Integrated graphics are sufficient for every lab.
 
 ## Low-resource operation

@@ -19,3 +19,11 @@ Every evidence string uses `path#heading`. `artifact_commit` identifies the
 submission; `baseline_tag` may be null. Preserve reasonable uncertainty.
 Return exactly one JSON object conforming to the schema. Do not append Markdown
 or any text outside that object.
+
+## PESD 2.0 evaluator instruction
+
+Score the published criteria against evidence for four transport/schema shells while the learner implements admission, task ownership, cancellation, cleanup, memory and lifetime behavior, synchronization, and validation in TypeScript, Go, Rust, and Java.
+Classify missing evidence, incorrect reasoning, unsupported claims, and
+reasonable uncertainty separately. Reject fixture replay presented as
+independent build or break evidence. Do not invent legal applicability or treat
+a named framework as proof of compliance.

@@ -1,5 +1,9 @@
 # Messaging, Streams, and Workflows Lab
 
+PESD 2.0 reuses the [shared three-node process/storage/fault boundary](../../../shared-labs/three-node-cluster/README.md)
+for Modules 9–12. Connect publication, consumption, workflow, and reconciliation
+mechanisms to the shared proxy without treating the fixture as graded evidence.
+
 Before setup, run the repository [Home Lab Guide](../../../HOME_LAB_GUIDE.md)
 preflight for `M11`.
 

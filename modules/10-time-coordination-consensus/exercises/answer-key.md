@@ -133,3 +133,11 @@ rejection, resource fencing, staged shadow/read verification, joint membership,
 rollback before decommissioning, cost/on-call owners, and thresholds that would
 return to simpler authority. Another choice is acceptable under different
 drivers and evidence.
+
+## PESD 2.0 extension answer
+
+A defensible answer covers learner-written elections through membership under deterministic scheduling, crashable persistence, fencing, an independent invariant oracle, executable small-state safety checks, and mutation tests. It distinguishes the
+requirement, enforcement mechanism, evidence, and owner; keeps modeled and
+measured results separate; and names the failed condition that would reverse
+the decision. Different architectures are acceptable when their invariants,
+evidence boundaries, migration, and residual risk are explicit.

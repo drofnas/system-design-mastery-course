@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/system-design-course/course-calendar.schema.json",
+  "title": "PESD-104 canonical calendar",
+  "type": "object",
+  "required": ["course_id", "version", "capacity_hours_per_week", "weeks"],
+  "properties": {
+    "$schema": {"type": "string"},
+    "course_id": {"const": "PESD-104"},
+    "version": {"const": "2.0"},
+    "capacity_hours_per_week": {
+      "type": "object",
+      "required": ["minimum", "maximum"],
+      "properties": {
+        "minimum": {"const": 10},
+        "maximum": {"const": 12}
+      },
+      "additionalProperties": false
+    },
+    "weeks": {
+      "type": "array",
+      "minItems": 104,
+      "maxItems": 104,
+      "items": {
+        "type": "object",
+        "required": ["week", "term", "type", "capacity_hours", "core_hours", "phase", "owner"],
+        "properties": {
+          "week": {"type": "integer", "minimum": 1, "maximum": 104},
+          "term": {"type": "integer", "minimum": 1, "maximum": 6},
+          "type": {"enum": ["module", "gate", "flex"]},
+          "capacity_hours": {"const": 12},
+          "core_hours": {"type": "number", "minimum": 0, "maximum": 10},
+          "phase": {"type": "string", "minLength": 3},
+          "owner": {"type": "string", "pattern": "^(M|G|F)(0[1-9]|1[0-8])$"},
+          "module": {"type": "string", "pattern": "^M(0[1-9]|1[0-8])$"},
+          "gate": {"type": "string", "pattern": "^G0[1-6]$"},
+          "flex": {"type": "string", "pattern": "^F0[1-6]$"}
+        },
+        "allOf": [
+          {
+            "if": {"properties": {"type": {"const": "module"}}},
+            "then": {"required": ["module"]}
+          },
+          {
+            "if": {"properties": {"type": {"const": "gate"}}},
+            "then": {"required": ["gate"]}
+          },
+          {
+            "if": {"properties": {"type": {"const": "flex"}}},
+            "then": {"required": ["flex"]}
+          }
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

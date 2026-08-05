@@ -149,3 +149,11 @@ Before learner work, score all Transit fixtures twice with fixed inputs. Bands
 must match `expected-results.json`; category drift may not exceed one point.
 Run `scripts/check_calibration.py --module
 modules/03-computer-systems-operating-systems` over the six JSON outputs.
+
+## PESD 2.0 evaluator instruction
+
+Score the published criteria against evidence for cgroup enforcement, virtualization and steal time, noisy-neighbor isolation, architecture-specific limits, and measured-versus-host-controlled evidence boundaries.
+Classify missing evidence, incorrect reasoning, unsupported claims, and
+reasonable uncertainty separately. Reject fixture replay presented as
+independent build or break evidence. Do not invent legal applicability or treat
+a named framework as proof of compliance.

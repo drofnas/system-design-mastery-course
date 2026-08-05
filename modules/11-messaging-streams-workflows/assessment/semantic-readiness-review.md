@@ -21,7 +21,7 @@ than replace local teaching.
 Northstar continues the observatory case and contains no commerce entities or
 canonical capstone topology. The README, case, exercises, answer key, fixtures,
 and evaluator require the learner to freeze independent work first and accept
-defensible alternatives. No Gate 4 or Week 48 capstone answer is exposed.
+defensible alternatives. No Gate 4 or Week 69 capstone-delta answer is exposed.
 
 ## Interface and evidence integrity
 

@@ -1,12 +1,13 @@
 {
   "schema_version": "2.0",
-  "verified_at": "2026-08-04T22:41:37.465703Z",
+  "verified_at": "2026-08-05T03:42:32.972488Z",
   "method": "bounded HTTP GET with redirects; structured title/publisher metadata; exact authored-URL inventory; local fallback check; full binary SHA-256 attestation",
   "status": "pass",
   "failures": [],
   "warnings": [
     "M03/RES-07: source could not be retrieved; reviewed local fallback remains available",
-    "M09/RES-04: optional binary source lacks a current manual attestation"
+    "M09/RES-04: optional binary source lacks a current manual attestation",
+    "M18/CIT-01: source could not be retrieved; reviewed local fallback remains available"
   ],
   "unregistered_urls": {},
   "records": [
@@ -191,7 +192,7 @@
       "content_type": "text/html",
       "bytes_inspected": 128722,
       "content_complete": false,
-      "content_sha256": "8188285b1a3a05a2febc5e05f300bd2522ac8aebde5ed0b6dba649238fa221d1",
+      "content_sha256": "fcc1d5023d49f371238459b0d6a64c81e4475d8bbaae84fbdb91c9f67ef3b384",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -227,7 +228,7 @@
       "content_type": "text/html",
       "bytes_inspected": 213153,
       "content_complete": false,
-      "content_sha256": "f1657d5f2611bfab3287ec9e2f8d371ca40182c9c71516ccdd406902606d1eb4",
+      "content_sha256": "e280bc1fe647006671a4139aa1dd2e2f037dd6f37fa8521eebabe031580e7e48",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -264,7 +265,7 @@
       "content_type": "text/html",
       "bytes_inspected": 136712,
       "content_complete": false,
-      "content_sha256": "a7b76748a6830c012353862db525501b6e3fe40548574ba34cd5d28521538091",
+      "content_sha256": "916ab365ab5704e784585869450910d4361c714002eedbfe0bae0431574a1921",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -301,7 +302,7 @@
       "content_type": "text/html",
       "bytes_inspected": 112589,
       "content_complete": false,
-      "content_sha256": "715a45ede3aea9dbc0484675c8a999f4ca898a5f5661464562bd94e60b3acc49",
+      "content_sha256": "21d8f547192c1afa4cce6147523c9c6ebdaa0c8ea1320490ca903ddece535a25",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -407,7 +408,7 @@
       "content_type": "text/html",
       "bytes_inspected": 786432,
       "content_complete": false,
-      "content_sha256": "aef25a0a5195282d15519f2ad86c46caf6a7dceb9521c3e834616a0c26ae61cd",
+      "content_sha256": "677899352adcacf7d807509ed18294e0b0a3d81d9c1b0846eabd1798008b25d9",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -509,29 +510,10 @@
       "declared_final_url": "https://www.iso.org/standard/78176.html",
       "reading_boundary": "Optional: review the current product-quality taxonomy and compare its categories with the scenarios you wrote.",
       "local_fallback": "modules/01-architectural-judgment/lessons/04-quality-attribute-scenarios.md",
-      "status": 200,
+      "status": 403,
       "final_url": "https://www.iso.org/standard/78176.html",
-      "redirected": false,
-      "content_type": "text/html",
-      "bytes_inspected": 90510,
-      "content_complete": false,
-      "content_sha256": "db3e894f7200ebc5cd5a3c604c1592e2f6632b6117574ebe8197240077edf1b3",
-      "access": "retrieved",
-      "transport": "python-stdlib",
-      "remote_titles": [
-        "ISO/IEC 25010:2023 - Systems and software engineering \u2014 Systems and software Quality Requirements and Evaluation (SQuaRE) \u2014 Product quality model",
-        "ISO/IEC 25010:2023 Systems and software engineering \u2014 Systems and software Quality Requirements and Evaluation (SQuaRE) \u2014 Product quality model",
-        "Abstract",
-        "ISO/IEC 25010:2023",
-        "ISO/IEC 25010:2023"
-      ],
-      "remote_title_overlap": 1.0,
-      "title_match": true,
-      "publisher_metadata": [
-        "ISO"
-      ],
-      "publisher_overlap": 1.0,
-      "publisher_match": true
+      "access": "failed",
+      "error": "HTTP Error 403: Forbidden"
     },
     {
       "module": "M02",
@@ -691,9 +673,9 @@
       "final_url": "https://github.com/HdrHistogram/HdrHistogram",
       "redirected": false,
       "content_type": "text/html",
-      "bytes_inspected": 305709,
+      "bytes_inspected": 305490,
       "content_complete": false,
-      "content_sha256": "ede5c062af43160790b4da5a410f26c936ccc0ba209bcab3ddad8d5aeacf8be6",
+      "content_sha256": "b9f6f581e9ff7db8ae70501cc1e41e810c5dd11fa0820520f7106cb85a515f8c",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -729,7 +711,7 @@
       "content_type": "text/html",
       "bytes_inspected": 29147,
       "content_complete": false,
-      "content_sha256": "e80449a3ae4a88b4199e0ad1c27e467a25038a7755a97569f0cdeb161fdb504f",
+      "content_sha256": "208b3f97338419b8df9a68151df3174106977023458090699e5bab82d8fc77e3",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -996,9 +978,9 @@
       "final_url": "https://engineering.fb.com/2015/03/10/production-engineering/serving-facebook-multifeed-efficiency-performance-gains-through-redesign/",
       "redirected": false,
       "content_type": "text/html",
-      "bytes_inspected": 93199,
+      "bytes_inspected": 93243,
       "content_complete": false,
-      "content_sha256": "154e96b810f8dc25c46b8c60d6d7f1a48520dedf5c6a00f85071288cb05a8ef8",
+      "content_sha256": "a9a22af0700ce015eb1a0ec6b0ba5ae80857f99958bb85831963db3d230cd047",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -1034,7 +1016,7 @@
       "content_type": "text/html",
       "bytes_inspected": 33230,
       "content_complete": false,
-      "content_sha256": "9c75ec57584e1afb5890a83385d7468b46fc2c3e829a6bb6e03c99e077df0f70",
+      "content_sha256": "1e1bf8f565f90ed6209202b3676760429043029e3a78f62dcb2c9136dfef8abc",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -1547,7 +1529,7 @@
       "content_type": "text/html",
       "bytes_inspected": 67638,
       "content_complete": false,
-      "content_sha256": "2330643fc1249e8b28ce1c6860cbb73c553a3fef2726ab2555a2e3936b0d114f",
+      "content_sha256": "c139dbae1443d9e46ea019f2c3308f79025e7d4c5e847726f6c8b07f09db0d39",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -1781,7 +1763,7 @@
       "content_type": "text/html",
       "bytes_inspected": 70388,
       "content_complete": false,
-      "content_sha256": "5358f4cf09a7a7e64233379e9b9f0f77dc2095246430f403f9ad04f8aa7cb1e9",
+      "content_sha256": "18e696510f070a20bbc81b11cda3c4a39ecd53f4612d23dddce9d12683cb78ae",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -1963,7 +1945,7 @@
       "content_type": "text/html",
       "bytes_inspected": 174880,
       "content_complete": false,
-      "content_sha256": "c40f889d52cb63190f8514ab6e5fd6d1457a39272c64fdff46a6ee7176b21c85",
+      "content_sha256": "68fcb0ddcd0f28e2bfa9d06540592d513953cd78e4394d5a94310fc3c49a4025",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -2140,9 +2122,9 @@
       "final_url": "https://blog.cloudflare.com/the-road-to-quic/",
       "redirected": false,
       "content_type": "text/html",
-      "bytes_inspected": 521096,
+      "bytes_inspected": 521528,
       "content_complete": false,
-      "content_sha256": "994710ea1c31aa8a3a7c0b486e74bc2ad7abf580672083c9d8f761e929171537",
+      "content_sha256": "de3e92d8b53f024e78fd818f2c6f516f039ab598460d1311e85f3df6ef9ee2d5",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -2179,7 +2161,7 @@
       "content_type": "text/html",
       "bytes_inspected": 34122,
       "content_complete": false,
-      "content_sha256": "fb1d9e9e1bf11d1008a299e8c554ada44a7821ea81ec0503f4f52a7dbbf470e9",
+      "content_sha256": "600d9adefee6ebd2a59590468dbdfda5acca98f16fb3f820f427d985aa9b600c",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -2494,7 +2476,7 @@
       "content_type": "text/html",
       "bytes_inspected": 68983,
       "content_complete": false,
-      "content_sha256": "6bcbde923d136cf29f6ef1613e32cead749853856f7337ca9e4e58aca0cb4764",
+      "content_sha256": "4cff94365f900d3b5c685bf3fc4b07db1c7cbf188bb7d263df0f8eb1282340f5",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -2531,7 +2513,7 @@
       "content_type": "text/html",
       "bytes_inspected": 80759,
       "content_complete": false,
-      "content_sha256": "f6a4eda920f4fdd144c26cf594073f6f4aa57e5414b61ce0e211438ce00a8594",
+      "content_sha256": "9e91c8b8b6945dd8d54de84f4b38e65af7bc329248b9ce9121aff9bcdd0888c9",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -2608,7 +2590,7 @@
       "content_type": "text/html",
       "bytes_inspected": 786432,
       "content_complete": false,
-      "content_sha256": "67bfb87ecf5948ac811281345d3df5ff5f0212b7cbf6373dd0d93a77bf9a2570",
+      "content_sha256": "aa82aee55a232cbb124859d3bfe334a4c3daeb67ebb0815aee1ec3b66bcd539a",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -2706,9 +2688,9 @@
       "final_url": "https://github.com/facebook/rocksdb/wiki/RocksDB-Overview",
       "redirected": false,
       "content_type": "text/html",
-      "bytes_inspected": 711247,
+      "bytes_inspected": 711245,
       "content_complete": false,
-      "content_sha256": "77c5a7581468fecc101385b7094ce989d87a30038cd1ad6f78f3fced2b1c4116",
+      "content_sha256": "64aeb33ade7b618ffd42bd21d91353ea73971322e1757df71f521880444b82d7",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -2743,9 +2725,9 @@
       "final_url": "https://github.com/facebook/rocksdb/wiki/Compaction",
       "redirected": false,
       "content_type": "text/html",
-      "bytes_inspected": 671612,
+      "bytes_inspected": 671604,
       "content_complete": false,
-      "content_sha256": "8e08535474e71489d0caf9fc668e111e5ecf2138479c9bba0f8795fca856140b",
+      "content_sha256": "287fac935021f31bf39b80db3039630b60436c4ce7a2e1858e8bcfa39e749a86",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -2780,9 +2762,9 @@
       "final_url": "https://github.com/facebook/rocksdb/wiki/Write-Stalls",
       "redirected": false,
       "content_type": "text/html",
-      "bytes_inspected": 652232,
+      "bytes_inspected": 652230,
       "content_complete": false,
-      "content_sha256": "da7b1ddb1fe18b48fd537f9955d95043c7c5b3f188f2c14027ce49b280be1890",
+      "content_sha256": "70012ebaa0e4a47b4fafdb8027dd6dc02ff790e182a3a2af1111f12774e0c584",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -2924,7 +2906,7 @@
       "content_type": "text/html",
       "bytes_inspected": 79213,
       "content_complete": false,
-      "content_sha256": "d374051b60ba933a8fea954962be6f5192aed19cc583a9486979f40db7e8dc58",
+      "content_sha256": "f49dcfe21719d562c3cdc74dc352a12cf1811f58739d3dc4523002051ad49aae",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -2995,9 +2977,9 @@
       "final_url": "https://docs.cloud.google.com/architecture/framework/reliability/perform-testing-for-recovery-from-data-loss",
       "redirected": false,
       "content_type": "text/html",
-      "bytes_inspected": 222939,
+      "bytes_inspected": 222935,
       "content_complete": false,
-      "content_sha256": "ab528a13baf2dd2d42642a1b5fecf570e876d05bdcaf728f49178683434f42e0",
+      "content_sha256": "4fae1ed9dc386a49ba710938ed657e14cd3cc29be117af78f4940669ddef28de",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -3244,7 +3226,7 @@
       "content_type": "text/html",
       "bytes_inspected": 229891,
       "content_complete": false,
-      "content_sha256": "a16168808b0b4912640a60f991f2a59a491f73c6343542f625674c2e1f06c0de",
+      "content_sha256": "ba179991d245e262ef8e436003250074b186e01d1f7fe6c48597f79e5a2bbca7",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -3280,9 +3262,9 @@
       "final_url": "https://github.blog/news-insights/company-news/oct21-post-incident-analysis/",
       "redirected": false,
       "content_type": "text/html",
-      "bytes_inspected": 211197,
+      "bytes_inspected": 183899,
       "content_complete": false,
-      "content_sha256": "31de609f6fc8fa571c7f06af636a2ef0e9381411bc04e5f545358a4c3a93ec83",
+      "content_sha256": "b51560a2fa79e3080433e4c0e82939becd30d101665164fb621f68e2a4a8d0ab",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -3352,9 +3334,9 @@
       "final_url": "https://www.amazon.science/publications/dynamo-amazons-highly-available-key-value-store",
       "redirected": false,
       "content_type": "text/html",
-      "bytes_inspected": 289810,
+      "bytes_inspected": 291202,
       "content_complete": false,
-      "content_sha256": "a474e78759166cd151fd7cfc33ca1a757537f487a81697cbe1554faef6115b15",
+      "content_sha256": "79a8a845649550377d990f61cd886aabd9cefcbb5d78333d809474b3a794941d",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -3518,9 +3500,9 @@
       "final_url": "https://engineering.fb.com/2020/08/24/production-engineering/scaling-services-with-shard-manager/",
       "redirected": false,
       "content_type": "text/html",
-      "bytes_inspected": 131306,
+      "bytes_inspected": 131166,
       "content_complete": false,
-      "content_sha256": "beab85f7679ea30b4a8599672248c7a0b4dc9e68af25e3481d81aacae9c5072d",
+      "content_sha256": "8ea641b1f3d5df2fab271b11cb9402b78933e320d23eac3002c4bc3de9562de3",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -3556,7 +3538,7 @@
       "content_type": "text/html",
       "bytes_inspected": 40799,
       "content_complete": false,
-      "content_sha256": "b4e44c6462e491adab2a4289c4d11d9de4eab3f4369781e97442e72619b1f23c",
+      "content_sha256": "4ccbf3ae70cc799a78a8a8bab34eb1da6fa563b78f0668dcfd9f91e547f9e407",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -3632,9 +3614,9 @@
       "final_url": "https://research.google/pubs/spanner-googles-globally-distributed-database-2/",
       "redirected": false,
       "content_type": "text/html",
-      "bytes_inspected": 146868,
+      "bytes_inspected": 146856,
       "content_complete": false,
-      "content_sha256": "fff1a3584ba0a98ed3b0f3c15efd73d48eb9974834e0188bc0ad90103beeeda1",
+      "content_sha256": "ef49131af4a76e199e89ec1ad0bed967d001defb58918f90c88d428bbc07ce68",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -3696,7 +3678,7 @@
       "content_type": "text/html",
       "bytes_inspected": 171236,
       "content_complete": false,
-      "content_sha256": "e693d1ab168018277fb28d40a40929102f8074aaf8b075911575a6e53e175acf",
+      "content_sha256": "d2ca44975514705603e2a40c1c29f108bef5169e62931c8f3726ef29307ce6d6",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -3762,7 +3744,7 @@
       "content_type": "text/html",
       "bytes_inspected": 786432,
       "content_complete": false,
-      "content_sha256": "2d58dee16c3e80f8a22666624185e60905398143d3f36c9a02b3200bc7494e39",
+      "content_sha256": "770a4b45f5d2e04eba1d26bfc64d5dffd6ba82a88fe7559bcbb4019d1449121b",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -3796,9 +3778,9 @@
       "final_url": "https://github.com/ongardie/raft.tla",
       "redirected": false,
       "content_type": "text/html",
-      "bytes_inspected": 201453,
+      "bytes_inspected": 201255,
       "content_complete": false,
-      "content_sha256": "ad546d9db4fabca55826a5a8a13dcab2f13daff597a1adf123c9ee02c6b9137d",
+      "content_sha256": "9caa77fa0141badd740cc5801d6b3f1a33b15b1b7f81fc2f0a361524c1da9508",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -3905,7 +3887,7 @@
       "content_type": "text/html",
       "bytes_inspected": 65916,
       "content_complete": false,
-      "content_sha256": "ba4cd41bf57bb6750a2f8f5510b268974171e6daef30302cf43d7d6df9e98aea",
+      "content_sha256": "90fc939f4f722bd3bd51346de7cb4907771401676064217ec22d620611f0b3c2",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -4050,9 +4032,9 @@
       "final_url": "https://www.uber.com/us/en/blog/announcing-cadence/",
       "redirected": false,
       "content_type": "text/html",
-      "bytes_inspected": 406828,
+      "bytes_inspected": 469592,
       "content_complete": false,
-      "content_sha256": "426135d72e14942587438eb214f0eb0fbf445ace48be529058ae18606e5d073d",
+      "content_sha256": "8f0146ceea2fa9537b75be37d939b985a41c4037f66110e1bab0e2afac9505c8",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -4412,7 +4394,7 @@
       "content_type": "text/html",
       "bytes_inspected": 67761,
       "content_complete": false,
-      "content_sha256": "2a2812c00917bb6d22d70a1de24ae6a9c2fbeabb9954c920125eeccb15dd4b84",
+      "content_sha256": "5794c65bafaf57b1a89c1d6e57003131446c8178b1e2af63799268bf731efd65",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -4446,7 +4428,7 @@
       "content_type": "text/html",
       "bytes_inspected": 354110,
       "content_complete": false,
-      "content_sha256": "53549d8a16d8ae317237990319cce17e51cbf9da30c8c59e38829b4d3ae0314d",
+      "content_sha256": "205dc0f47f79f08d00c235ccded0d7a0405dd39cd7735646a5201c5bff6abb15",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -4546,7 +4528,7 @@
       "content_type": "text/html",
       "bytes_inspected": 39855,
       "content_complete": false,
-      "content_sha256": "2c0e0dd4821c6d7b4e6833bb8720c412027f515e8a1a1b3cfef327f8bca6dd3c",
+      "content_sha256": "6d267c60972bb3176e04f749ff5f3c472cdc9da85366e12913c3d13a40450cd4",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -4628,7 +4610,7 @@
       "content_type": "text/html",
       "bytes_inspected": 47826,
       "content_complete": false,
-      "content_sha256": "96a974f60fcb01b4ab220bbbb57d4a8a11d062823d98cd9bc0e44f151bdb30d8",
+      "content_sha256": "04e63918ff00eaa66096721eeb5f8f2b37ca33de5e9ebdcf9734a63fd8f6648a",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -4696,7 +4678,7 @@
       "content_type": "text/html",
       "bytes_inspected": 90169,
       "content_complete": false,
-      "content_sha256": "35dc30930fb1a89761b182766f8b1a1306ffdc3a552a4e46e34df923f2668d00",
+      "content_sha256": "acaf2a041bf62eb0013a57712191581efe9e8b71fe6c8276b5c3a73e65348731",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -4819,6 +4801,76 @@
       "publisher_match": true
     },
     {
+      "module": "M13",
+      "resource_id": "RES-14",
+      "resource_key": "M13/RES-14",
+      "kind": "assigned_resource",
+      "required": true,
+      "blocking": true,
+      "declared_title": "Secure Software Development Framework",
+      "declared_publisher": "NIST",
+      "requested_url": "https://csrc.nist.gov/projects/ssdf",
+      "declared_final_url": "https://csrc.nist.gov/projects/ssdf",
+      "reading_boundary": "Read the SSDF practices and use sections; map applicable outcomes to source, build, release, and vulnerability-response evidence.",
+      "local_fallback": "modules/13-security-privacy-abuse-resistance/lessons/08-prompt-injection-tool-authorization-decisions.md",
+      "status": 200,
+      "final_url": "https://csrc.nist.gov/projects/ssdf",
+      "redirected": false,
+      "content_type": "text/html",
+      "bytes_inspected": 58559,
+      "content_complete": false,
+      "content_sha256": "38ab73e08747687032217b6e8ed6833f0e418367ea486cc159eeb8574f33fcd6",
+      "access": "retrieved",
+      "transport": "python-stdlib",
+      "remote_titles": [
+        "Secure Software Development Framework | CSRC",
+        "Secure Software Development Framework SSDF",
+        "Secure Software Development Framework | CSRC | CSRC"
+      ],
+      "remote_title_overlap": 1.0,
+      "title_match": true,
+      "publisher_metadata": [
+        "CSRC | NIST"
+      ],
+      "publisher_overlap": 1.0,
+      "publisher_match": true
+    },
+    {
+      "module": "M13",
+      "resource_id": "RES-15",
+      "resource_key": "M13/RES-15",
+      "kind": "assigned_resource",
+      "required": true,
+      "blocking": true,
+      "declared_title": "Crypto Agility",
+      "declared_publisher": "NIST",
+      "requested_url": "https://csrc.nist.gov/Projects/crypto-agility",
+      "declared_final_url": "https://csrc.nist.gov/Projects/crypto-agility",
+      "reading_boundary": "Read the overview and current publications boundary; inventory algorithms and plan replacement without claiming a universal migration schedule.",
+      "local_fallback": "modules/13-security-privacy-abuse-resistance/lessons/08-prompt-injection-tool-authorization-decisions.md",
+      "status": 200,
+      "final_url": "https://csrc.nist.gov/Projects/crypto-agility",
+      "redirected": false,
+      "content_type": "text/html",
+      "bytes_inspected": 41717,
+      "content_complete": false,
+      "content_sha256": "87a08d97b1d4150509d4369bc9bb256b23a61be366c8787666795b01869173ff",
+      "access": "retrieved",
+      "transport": "python-stdlib",
+      "remote_titles": [
+        "Crypto Agility | CSRC",
+        "Crypto Agility",
+        "Crypto Agility | CSRC | CSRC"
+      ],
+      "remote_title_overlap": 1.0,
+      "title_match": true,
+      "publisher_metadata": [
+        "CSRC | NIST"
+      ],
+      "publisher_overlap": 1.0,
+      "publisher_match": true
+    },
+    {
       "module": "M14",
       "resource_id": "RES-01",
       "resource_key": "M14/RES-01",
@@ -4837,7 +4889,7 @@
       "content_type": "text/html",
       "bytes_inspected": 325885,
       "content_complete": false,
-      "content_sha256": "859903e941588c27dec7027a126e83cd621e672a02418d8cba52b649a500263e",
+      "content_sha256": "4e018bbadb950aa5658a653d6330be809f6ba46be33d06e8530cd25c2e1d7d34",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -4940,7 +4992,7 @@
       "content_type": "text/html",
       "bytes_inspected": 198842,
       "content_complete": false,
-      "content_sha256": "6ac3442b005eebe41f09a0755e63fbdc9dd7574ea0b89fadece85ba93abcf774",
+      "content_sha256": "d3c0b281b9b3acb37ced68cab26d51539676c07b2d72d01af287796be8796c41",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -5010,7 +5062,7 @@
       "content_type": "text/html",
       "bytes_inspected": 386256,
       "content_complete": false,
-      "content_sha256": "69db91e3f348c97a04043b02913d2bbe1ed02eb281a1fc3e979d35b7e84d47d9",
+      "content_sha256": "8671c59ae7dc645554a08fdbf50ea911da0aa1f6f269eb9885a60d28fdb99305",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -5127,6 +5179,74 @@
       "title_match": true,
       "publisher_metadata": [],
       "publisher_overlap": 0.667,
+      "publisher_match": true
+    },
+    {
+      "module": "M14",
+      "resource_id": "RES-10",
+      "resource_key": "M14/RES-10",
+      "kind": "assigned_resource",
+      "required": true,
+      "blocking": true,
+      "declared_title": "CNCF Platforms White Paper",
+      "declared_publisher": "CNCF TAG App Delivery",
+      "requested_url": "https://tag-app-delivery.cncf.io/whitepapers/platforms/",
+      "declared_final_url": "https://tag-app-delivery.cncf.io/whitepapers/platforms/",
+      "reading_boundary": "Read why platforms, successful platform/team attributes, challenges, measurement, and capabilities; extract user-value and support hypotheses.",
+      "local_fallback": "modules/14-architecture-evolution-economics-organization/lessons/08-technical-strategy-teach-back.md",
+      "status": 200,
+      "final_url": "https://tag-app-delivery.cncf.io/whitepapers/platforms/",
+      "redirected": false,
+      "content_type": "text/html",
+      "bytes_inspected": 62470,
+      "content_complete": false,
+      "content_sha256": "09dfc99bed386572c2abd769c518b7241e1ca179216251f54285040b63b31e29",
+      "access": "retrieved",
+      "transport": "python-stdlib",
+      "remote_titles": [
+        "CNCF Platforms White Paper | CNCF TAG App Delivery",
+        "CNCF Platforms White Paper",
+        "Introduction",
+        "CNCF Platforms White Paper"
+      ],
+      "remote_title_overlap": 1.0,
+      "title_match": true,
+      "publisher_metadata": [],
+      "publisher_overlap": 1.0,
+      "publisher_match": true
+    },
+    {
+      "module": "M14",
+      "resource_id": "RES-11",
+      "resource_key": "M14/RES-11",
+      "kind": "assigned_resource",
+      "required": true,
+      "blocking": true,
+      "declared_title": "Allocation FinOps Framework Capability",
+      "declared_publisher": "FinOps Foundation",
+      "requested_url": "https://www.finops.org/framework/capabilities/allocation/",
+      "declared_final_url": "https://www.finops.org/framework/capabilities/allocation/",
+      "reading_boundary": "Read definition, allocation/tagging/shared-cost strategies, and measures; define one transparent allocation and exception policy.",
+      "local_fallback": "modules/14-architecture-evolution-economics-organization/lessons/08-technical-strategy-teach-back.md",
+      "status": 200,
+      "final_url": "https://www.finops.org/framework/capabilities/allocation/",
+      "redirected": false,
+      "content_type": "text/html",
+      "bytes_inspected": 182322,
+      "content_complete": false,
+      "content_sha256": "d5934a48c3052a09ad1814c9f8bd14530758b491b941bfa6dcdd4f9f9bbf149f",
+      "access": "retrieved",
+      "transport": "python-stdlib",
+      "remote_titles": [
+        "Allocation FinOps Framework Capability",
+        "Allocation",
+        "On this page",
+        "Allocation FinOps Framework Capability"
+      ],
+      "remote_title_overlap": 1.0,
+      "title_match": true,
+      "publisher_metadata": [],
+      "publisher_overlap": 1.0,
       "publisher_match": true
     },
     {
@@ -5353,9 +5473,9 @@
       "final_url": "https://discord.com/blog/why-discord-is-switching-from-go-to-rust",
       "redirected": false,
       "content_type": "text/html",
-      "bytes_inspected": 237040,
+      "bytes_inspected": 237052,
       "content_complete": false,
-      "content_sha256": "5aba475a0b5727ecbe1a545afd4d4c65e01a74cb2f1b4a2449e98765811411df",
+      "content_sha256": "2353d2ac0342f5e117da33ac434a3c46ee08e82c2dd8c78a891de765ccd393ba",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -5559,9 +5679,9 @@
       "final_url": "https://nodejs.org/en/about/previous-releases",
       "redirected": false,
       "content_type": "text/html",
-      "bytes_inspected": 306301,
+      "bytes_inspected": 306202,
       "content_complete": false,
-      "content_sha256": "5b0af6443795f7400c0a60dbbd99d3a0eff9543f91fcaef9dc2a6bf1e1289b7a",
+      "content_sha256": "237b1ddb755b9f45135c40166feb52926684167d7ea4552fc883874cc9efcbb1",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -5661,9 +5781,9 @@
       "final_url": "https://www.oracle.com/java/technologies/java-se-support-roadmap.html",
       "redirected": false,
       "content_type": "text/html",
-      "bytes_inspected": 48948,
+      "bytes_inspected": 48963,
       "content_complete": false,
-      "content_sha256": "7ac2d4aa407533760b207b0d73c72352e47738c24e038e638183f97cbe6a8ec3",
+      "content_sha256": "063690246123c04ad2e7570ea0dacf37236822dda964fb09740c30a7a7f9b3bb",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -5695,7 +5815,7 @@
       "content_type": "text/html",
       "bytes_inspected": 342923,
       "content_complete": false,
-      "content_sha256": "d07219168894a2f3a774c422130235b233920c4a08a0bf2873bfd6cfde4d3189",
+      "content_sha256": "ccda0a4cc9bc3f9805202a4c462256455ff46a22ea9bd5139164b858f8b1140d",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -5795,9 +5915,9 @@
       "final_url": "https://developers.cloudflare.com/workers/reference/how-workers-works/",
       "redirected": false,
       "content_type": "text/html",
-      "bytes_inspected": 197367,
+      "bytes_inspected": 195108,
       "content_complete": false,
-      "content_sha256": "23d387c1c899f4b3d8907b41c18b522935f54c325469ec1d01b6a9c462d732a3",
+      "content_sha256": "90ac394c8871ee4e26d7148165e8c01caca4e7e72f11100e9db4346a0b36de8a",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -5834,7 +5954,7 @@
       "content_type": "text/html",
       "bytes_inspected": 235660,
       "content_complete": false,
-      "content_sha256": "34d99d69afcb86feb688dfb449dc8f45c0d3fca5d7ea037e4c6335894a9568dc",
+      "content_sha256": "751a05521d5d75a89a94f9f75dbbc961103e6ae19b0616d567d37c20989f2f7b",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -5907,7 +6027,7 @@
       "content_type": "text/html",
       "bytes_inspected": 143840,
       "content_complete": false,
-      "content_sha256": "bf35489a39d34ab1c31f696e2f7e0c474df310fee023cf2595d747a95c69ed78",
+      "content_sha256": "26aecf291e0406d7432cfdd7423816f3b13eb9b0d7165b2e2c99e2e1b20bde0a",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -5943,7 +6063,7 @@
       "content_type": "text/html",
       "bytes_inspected": 149517,
       "content_complete": false,
-      "content_sha256": "9598ccb039d2aa4695506b58947913c74ee234dd5870396b1713bc20c1020fe9",
+      "content_sha256": "87a7147248a64b859f6d9ca6fbaad56d802f3815ebe6019593b3715e107a5138",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -6119,7 +6239,7 @@
       "content_type": "text/html",
       "bytes_inspected": 224260,
       "content_complete": false,
-      "content_sha256": "7250fa0f9dded14cb743871e3a4b1c15dbdac00b1b8ffde8a9d1786103ed7c95",
+      "content_sha256": "55b9dcc334efecdd205480144cb9335f082f150c9a2dfb2b342fc415eb537916",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -6188,7 +6308,7 @@
       "content_type": "text/html",
       "bytes_inspected": 786432,
       "content_complete": false,
-      "content_sha256": "3f4b71b38b182b4c352f3f0090add2884e1f313c73d24fa4395d9fc4a64da65c",
+      "content_sha256": "e61c2ca5c0d4e9534c78f08e763e42adf4bc2a52c8d8f9afac642197ff7addbd",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -6222,9 +6342,9 @@
       "final_url": "https://web.dev/case-studies/better-youtube-web-part1",
       "redirected": false,
       "content_type": "text/html",
-      "bytes_inspected": 104617,
+      "bytes_inspected": 104613,
       "content_complete": false,
-      "content_sha256": "8b9484d54a4c9b55158c5e39ce153d865a1d18806c36b83bff7d5d701011f22c",
+      "content_sha256": "222896c471a8f14b1f62acaff5b2d83177aae7d98eec54674dcd58d5dee7a046",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -6294,9 +6414,9 @@
       "final_url": "https://web.dev/articles/optimizing-content-efficiency-loading-third-party-javascript",
       "redirected": false,
       "content_type": "text/html",
-      "bytes_inspected": 125186,
+      "bytes_inspected": 125182,
       "content_complete": false,
-      "content_sha256": "638ad4905ce4e121ff7e879d7a9e4b533e3db6e08968380ddcc5547067193099",
+      "content_sha256": "456734a6d8c870eaf07e3ab974e669da5371970b85d4b7071527d25cee90805d",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -6309,6 +6429,42 @@
       "title_match": true,
       "publisher_metadata": [
         "web.dev"
+      ],
+      "publisher_overlap": 1.0,
+      "publisher_match": true
+    },
+    {
+      "module": "M16",
+      "resource_id": "RES-14",
+      "resource_key": "M16/RES-14",
+      "kind": "assigned_resource",
+      "required": true,
+      "blocking": true,
+      "declared_title": "Guidelines on transparency obligations for providers and deployers of AI systems",
+      "declared_publisher": "European Commission",
+      "requested_url": "https://digital-strategy.ec.europa.eu/en/library/guidelines-transparency-obligations-providers-and-deployers-ai-systems",
+      "declared_final_url": "https://digital-strategy.ec.europa.eu/en/library/guidelines-transparency-obligations-providers-and-deployers-ai-systems",
+      "reading_boundary": "Read scope and Article 50 transparency categories; record applicability and uncertainty before translating any obligation into a web control.",
+      "local_fallback": "modules/16-browser-frontend-cdn-edge/lessons/08-frontend-edge-decision-teachback.md",
+      "status": 200,
+      "final_url": "https://digital-strategy.ec.europa.eu/en/library/guidelines-transparency-obligations-providers-and-deployers-ai-systems",
+      "redirected": false,
+      "content_type": "text/html",
+      "bytes_inspected": 52102,
+      "content_complete": false,
+      "content_sha256": "c14d0838a4ed8dd0b651207feea9621803e928701548b58a33fda86e69b70ee4",
+      "access": "retrieved",
+      "transport": "python-stdlib",
+      "remote_titles": [
+        "Guidelines on transparency obligations for providers and deployers of AI systems | Shaping Europe\u2019s digital future",
+        "Guidelines on transparency obligations for providers and deployers of AI systems",
+        "Downloads",
+        "Guidelines on transparency obligations for providers and deployers of AI systems"
+      ],
+      "remote_title_overlap": 1.0,
+      "title_match": true,
+      "publisher_metadata": [
+        "Shaping Europe\u2019s digital future"
       ],
       "publisher_overlap": 1.0,
       "publisher_match": true
@@ -6482,7 +6638,7 @@
       "content_type": "text/html",
       "bytes_inspected": 786432,
       "content_complete": false,
-      "content_sha256": "4e6383e13624ed7cb6aac85dcbda1cb8b8b24fe433233333101436f87be7de98",
+      "content_sha256": "9f3215f8b6880937720ca44f7f466aa1b273e8bbcf26ab1735b61460dea5e7ec",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -6563,9 +6719,9 @@
       "final_url": "https://docs.vllm.ai/en/latest/configuration/optimization/",
       "redirected": false,
       "content_type": "text/html",
-      "bytes_inspected": 638499,
+      "bytes_inspected": 639379,
       "content_complete": false,
-      "content_sha256": "782d49a35ab1107c8b3ce595b3458718bd7ee104d9ac91fa95ce11b0724961f6",
+      "content_sha256": "8822e2e8acb8373d91b03fbb6a077128aa293697b112511940092ad18d0eee8f",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -6598,7 +6754,7 @@
       "content_type": "text/html",
       "bytes_inspected": 213233,
       "content_complete": false,
-      "content_sha256": "29a95532f28f5edd0dd1dd38a031d4757b53cb8441002933cfbbb06467b9e959",
+      "content_sha256": "93231680e0ce9a73ff0b9dab7adb58be69008cc317853f88b0e2f99de3476692",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -6673,9 +6829,9 @@
       "final_url": "https://engineering.fb.com/2024/07/10/production-engineering/tail-utilization-ads-inference-meta/",
       "redirected": false,
       "content_type": "text/html",
-      "bytes_inspected": 118150,
+      "bytes_inspected": 118010,
       "content_complete": false,
-      "content_sha256": "b4a92545bf13c345b5f6bf5b651a3f16146d1465cb47e91c2fa6987c8f67b3e5",
+      "content_sha256": "a8c5ec23c9a19d630dc5b6b0013ffbac305aa0c8ce35223fb58dd3aa56b5f201",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -6693,6 +6849,43 @@
       "publisher_match": true
     },
     {
+      "module": "M17",
+      "resource_id": "RES-10",
+      "resource_key": "M17/RES-10",
+      "kind": "assigned_resource",
+      "required": true,
+      "blocking": true,
+      "declared_title": "NIST AI RMF Core",
+      "declared_publisher": "NIST AIRC",
+      "requested_url": "https://airc.nist.gov/airmf-resources/airmf/5-sec-core/",
+      "declared_final_url": "https://airc.nist.gov/airmf-resources/airmf/5-sec-core/",
+      "reading_boundary": "Read Govern 1.5\u20131.7 and Manage 3\u20134; map inventory, monitoring, supplier, incident, recovery, and decommission outcomes into the dossier.",
+      "local_fallback": "modules/17-model-foundations-inference-systems/lessons/08-atlas-inference-decision.md",
+      "status": 200,
+      "final_url": "https://airc.nist.gov/airmf-resources/airmf/5-sec-core/",
+      "redirected": false,
+      "content_type": "text/html",
+      "bytes_inspected": 84823,
+      "content_complete": false,
+      "content_sha256": "b8d69a834666b53af60856e5f32e736458077ed82b63a56c671b99cb7c17e73d",
+      "access": "retrieved",
+      "transport": "python-stdlib",
+      "remote_titles": [
+        "AI RMF Core - AIRC",
+        "5 AI RMF Core",
+        "5.1 Govern",
+        "AI RMF Core - AIRC",
+        "AI RMF Core - AIRC"
+      ],
+      "remote_title_overlap": 0.75,
+      "title_match": true,
+      "publisher_metadata": [
+        "NIST AI Resource Center"
+      ],
+      "publisher_overlap": 0.5,
+      "publisher_match": true
+    },
+    {
       "module": "M18",
       "resource_id": "CIT-01",
       "resource_key": "M18/CIT-01",
@@ -6705,20 +6898,10 @@
       "declared_final_url": "https://cormack.uwaterloo.ca/cormacksigir09-rrf.pdf",
       "reading_boundary": "Read the abstract and Section 2, especially Equation 1 and the explanation of the rank constant k; do not generalize the reported evaluation results beyond the paper's collections and systems.",
       "local_fallback": "modules/18-retrieval-rag-agents-capstone-defense/lessons/04-hybrid-reranking-release-gates.md",
-      "status": 200,
-      "final_url": "https://cormack.uwaterloo.ca/cormacksigir09-rrf.pdf",
-      "redirected": false,
-      "content_type": "application/pdf",
-      "bytes_inspected": 66196,
-      "content_complete": true,
-      "content_sha256": "5c1f9f1fe0d80f67d82041bbe151ea17437bc7a7d9a920564cf122d1b09eafb5",
-      "access": "retrieved",
-      "transport": "python-stdlib",
-      "remote_titles": [],
-      "title_match": null,
-      "publisher_match": null,
-      "metadata_note": "Binary source metadata is accepted only through a content-hash-bound manual attestation.",
-      "manual_attestation_match": true
+      "status": null,
+      "final_url": null,
+      "access": "failed",
+      "error": "<urlopen error _ssl.c:1011: The handshake operation timed out>"
     },
     {
       "module": "M18",
@@ -7007,7 +7190,7 @@
       "content_type": "text/html",
       "bytes_inspected": 786432,
       "content_complete": false,
-      "content_sha256": "ca035036fe36503dd7aecea5e88d8de0bea71493d2eaca1e93e9e9e427e66fc4",
+      "content_sha256": "79144f0625fea7312733fa81bca18037f9a3e56044a61f6d50314a6d2c3ef0f1",
       "access": "retrieved",
       "transport": "python-stdlib",
       "remote_titles": [
@@ -7020,6 +7203,79 @@
       "publisher_metadata": [
         "YouTube",
         "James Briggs"
+      ],
+      "publisher_overlap": 1.0,
+      "publisher_match": true
+    },
+    {
+      "module": "M18",
+      "resource_id": "RES-09",
+      "resource_key": "M18/RES-09",
+      "kind": "assigned_resource",
+      "required": true,
+      "blocking": true,
+      "declared_title": "NIST AI RMF Core",
+      "declared_publisher": "NIST AIRC",
+      "requested_url": "https://airc.nist.gov/airmf-resources/airmf/5-sec-core/",
+      "declared_final_url": "https://airc.nist.gov/airmf-resources/airmf/5-sec-core/",
+      "reading_boundary": "Read Govern 1.5\u20131.7 and Manage 3\u20134; complete lifecycle inventory, monitoring, incident, recovery, supplier, and retirement evidence.",
+      "local_fallback": "modules/18-retrieval-rag-agents-capstone-defense/lessons/08-civicaid-capstone-defense.md",
+      "status": 200,
+      "final_url": "https://airc.nist.gov/airmf-resources/airmf/5-sec-core/",
+      "redirected": false,
+      "content_type": "text/html",
+      "bytes_inspected": 84823,
+      "content_complete": false,
+      "content_sha256": "610869f0b2650210e43293e7ab2817bc3d88fbfd263e1361afdb1046990a19f4",
+      "access": "retrieved",
+      "transport": "python-stdlib",
+      "remote_titles": [
+        "AI RMF Core - AIRC",
+        "5 AI RMF Core",
+        "5.1 Govern",
+        "AI RMF Core - AIRC",
+        "AI RMF Core - AIRC"
+      ],
+      "remote_title_overlap": 0.75,
+      "title_match": true,
+      "publisher_metadata": [
+        "NIST AI Resource Center"
+      ],
+      "publisher_overlap": 0.5,
+      "publisher_match": true
+    },
+    {
+      "module": "M18",
+      "resource_id": "RES-10",
+      "resource_key": "M18/RES-10",
+      "kind": "assigned_resource",
+      "required": true,
+      "blocking": true,
+      "declared_title": "Guidelines on transparency obligations for providers and deployers of AI systems",
+      "declared_publisher": "European Commission",
+      "requested_url": "https://digital-strategy.ec.europa.eu/en/library/guidelines-transparency-obligations-providers-and-deployers-ai-systems",
+      "declared_final_url": "https://digital-strategy.ec.europa.eu/en/library/guidelines-transparency-obligations-providers-and-deployers-ai-systems",
+      "reading_boundary": "Read scope and Article 50 categories. Translate only applicable obligations and preserve legal uncertainty; do not claim universal compliance.",
+      "local_fallback": "modules/18-retrieval-rag-agents-capstone-defense/lessons/08-civicaid-capstone-defense.md",
+      "status": 200,
+      "final_url": "https://digital-strategy.ec.europa.eu/en/library/guidelines-transparency-obligations-providers-and-deployers-ai-systems",
+      "redirected": false,
+      "content_type": "text/html",
+      "bytes_inspected": 52102,
+      "content_complete": false,
+      "content_sha256": "c14d0838a4ed8dd0b651207feea9621803e928701548b58a33fda86e69b70ee4",
+      "access": "retrieved",
+      "transport": "python-stdlib",
+      "remote_titles": [
+        "Guidelines on transparency obligations for providers and deployers of AI systems | Shaping Europe\u2019s digital future",
+        "Guidelines on transparency obligations for providers and deployers of AI systems",
+        "Downloads",
+        "Guidelines on transparency obligations for providers and deployers of AI systems"
+      ],
+      "remote_title_overlap": 1.0,
+      "title_match": true,
+      "publisher_metadata": [
+        "Shaping Europe\u2019s digital future"
       ],
       "publisher_overlap": 1.0,
       "publisher_match": true

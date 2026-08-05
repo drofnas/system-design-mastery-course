@@ -16,3 +16,11 @@
 Repeat only the weak component unless a hard-gate or shared invariant failure
 invalidates dependent evidence. Never edit frozen predictions, raw trials, the
 submitted major threat model, or earlier capstone artifacts.
+
+## PESD 2.0 remediation
+
+When a cross-cutting floor is missed, return to Lesson 8's PESD 2.0 extension
+and the final exercise. Create a separate dated revision containing the missing
+requirement/control/evidence mapping, owner, evidence boundary, failure check,
+cost consequence, migration, and reversal trigger. Never edit the frozen
+baseline or raw trial. A Pass creates no required remediation artifact.

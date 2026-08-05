@@ -78,3 +78,11 @@ BFF; only public versioned work may move to edge. It rejects microfrontends beca
 independent delivery benefit is unproven. A different option is acceptable with
 measured drivers, explicit authority, full costs, stable owners, coexistence,
 rollback, decommissioning, dissent resolution, and reversal evidence.
+
+## PESD 2.0 extension answer
+
+A defensible answer covers offline and degraded client state, browser-storage lifecycle, third-party governance, AI-content transparency and provenance, edge residency, and energy/performance budgets. It distinguishes the
+requirement, enforcement mechanism, evidence, and owner; keeps modeled and
+measured results separate; and names the failed condition that would reverse
+the decision. Different architectures are acceptable when their invariants,
+evidence boundaries, migration, and residual risk are explicit.

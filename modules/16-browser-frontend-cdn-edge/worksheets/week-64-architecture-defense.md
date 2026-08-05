@@ -45,3 +45,14 @@ demonstrate transfer to another person's route.
 Freeze the defense and A09 evaluation. Map each finding to the remediation map
 and create A10 as a separate dated revision. Never rewrite A01, A04, or the
 submitted defense.
+
+## PESD 2.0 decision and assurance check
+
+- Added scope: offline and degraded client state, browser-storage lifecycle, third-party governance, AI-content transparency and provenance, edge residency, and energy/performance budgets
+- Requirement or obligation and applicability:
+- Enforcement point and failure mode:
+- Evidence owner, source commit, hashes, and evidence mode:
+- Tenant/data/provider boundary:
+- Cost allocation and operating owner:
+- Migration, rollback, and decommissioning step:
+- Uncertainty and reversal trigger:

@@ -81,6 +81,7 @@ def validate_trial(trial: dict[str, Any]) -> list[str]:
         "scenario_sha256", "shared_input_sha256", "config_sha256", "topology",
         "events", "nodes", "client_results", "resource", "membership", "metrics",
         "deduplication_records", "key_values", "invariants", "evidence_boundary",
+        "generated_schedule_count",
     }
     if set(trial) != required:
         errors.append(f"trial fields differ: {sorted(set(trial) ^ required)}")
@@ -112,4 +113,6 @@ def validate_trial(trial: dict[str, Any]) -> list[str]:
     for field in ("messages", "elections", "commits", "applies", "unavailable_operations"):
         if not isinstance(metrics.get(field), int) or metrics[field] < 0:
             errors.append(f"metric {field} is invalid")
+    if trial.get("generated_schedule_count", 0) < 2:
+        errors.append("generated schedules are missing")
     return errors

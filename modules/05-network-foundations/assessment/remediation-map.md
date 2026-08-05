@@ -16,3 +16,11 @@
 Never edit the frozen Week 17 prediction, raw trials, original blind diagnosis,
 reveal record, ADR, or evaluation. Link a new dated artifact to the finding and
 retain both versions.
+
+## PESD 2.0 remediation
+
+When a cross-cutting floor is missed, return to Lesson 8's PESD 2.0 extension
+and the final exercise. Create a separate dated revision containing the missing
+requirement/control/evidence mapping, owner, evidence boundary, failure check,
+cost consequence, migration, and reversal trigger. Never edit the frozen
+baseline or raw trial. A Pass creates no required remediation artifact.

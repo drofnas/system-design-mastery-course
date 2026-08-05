@@ -11,3 +11,11 @@
 | R09–R10 capstone/leadership | Lesson 8; EX-19–EX-20 | separate revision, challenge log, migration/reversal and teach-back evidence |
 
 Remediation points back to instruction and practice. It must not supply a replacement graded commerce architecture.
+
+## PESD 2.0 remediation
+
+When a cross-cutting floor is missed, return to Lesson 8's PESD 2.0 extension
+and the final exercise. Create a separate dated revision containing the missing
+requirement/control/evidence mapping, owner, evidence boundary, failure check,
+cost consequence, migration, and reversal trigger. Never edit the frozen
+baseline or raw trial. A Pass creates no required remediation artifact.

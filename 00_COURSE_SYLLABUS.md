@@ -1,12 +1,13 @@
 ---
 title: "Principal Engineer and Systems Design Mastery"
 subtitle: "Course Outline and Syllabus"
-course_id: "PESD-72"
-version: "1.0"
-duration_weeks: 72
-standard_hours_per_week: "10–12"
+course_id: "PESD-104"
+version: "2.0"
+duration_weeks: 104
+learner_capacity_hours_per_week: "10–12"
+instructional_core_hours_per_week: "8.5–10"
 format: "Self-study, project-based"
-status: "Ready to begin"
+status: "Review: content migrated; platform pilots and refreshed evaluator calibration pending"
 tags:
   - principal-engineering
   - system-design
@@ -144,66 +145,91 @@ are not required.
 
 ## 7. Time commitment and pacing
 
-### Standard track
+PESD 2.0 has one supported path: **104 weeks**. Ten to twelve hours is the
+learner's weekly capacity, not a mandatory workload target. Instructional weeks
+schedule 8.5–10 core hours, standalone Gates 1–5 schedule 6.5 hours, Gate 6
+schedules 9.5 hours, and flex weeks schedule at most two required hours.
 
-- Duration: 72 weeks
-- Effort: 10–12 hours per week
-- Total effort: about 800 hours
-- Best fit: full-time engineers studying alongside work
+The calendar contains exactly **920 core hours**. At ten hours of capacity each
+week it leaves 120 hours of unscheduled capacity; at twelve it leaves 328. That
+buffer absorbs difficult mechanisms, work and family interruptions, toolchain
+variance, and ordinary recovery without deleting assessed scope.
 
-### Accelerated track
+The former 48–52-week accelerated promise is retired. A compressed path is
+experimental until timed pilots show that its p80 workload remains at or below
+10 hours per week and p95 remains at or below 12.
 
-- Duration: 48–52 weeks
-- Effort: 15–18 hours per week
-- Combine reading and implementation weeks, but keep the failure experiments and decision reviews.
-
-### Extended track
-
-- Duration: 90–104 weeks
-- Effort: 6–8 hours per week
-- Split builds across two weeks and preserve the assessment gates.
-
-If work or life interrupts the schedule, pause at the end of a module. Do not skip its failure experiment or decision artifact to recover calendar time.
-
-### Suggested weekly budget
-
-| Activity | Hours |
-|---|---:|
-| Primary reading and concept notes | 2–3 |
-| Implementation | 3–4 |
-| Experiments and measurement | 2 |
-| ADR, RFC, or technical report | 1–2 |
-| Review, teach-back, and learning log | 1 |
+If a Revise needs more than the six-hour reserve in the following flex week,
+pause the calendar. Remediation cannot silently spill into the next module.
 
 ## 8. Learning cycle
 
-Each four-week module follows one cycle.
+Standard modules schedule 47 core hours over five weeks. Modules 10 and 17
+schedule 57 hours over six weeks because consensus and inference serving need a
+second independent implementation/integration week.
 
-| Week | Focus | Required evidence |
-|---:|---|---|
-| 1 | Model | Vocabulary, assumptions, diagrams, estimates, and source review |
-| 2 | Build | Minimal implementation or focused modification of an existing system |
-| 3 | Break and measure | Load, skew, crashes, delay, loss, duplication, saturation, or misuse |
-| 4 | Decide and teach | ADR or RFC, design defense, peer feedback, and revision |
+| Module week | Focus | Core hours |
+|---:|---|---:|
+| 1 | Model and derive | 8.5 |
+| 2 | Guided build and prediction freeze | 9 |
+| 3 | Independent build and integration | 10 |
+| 4 | Break, repair, measure, and diagnose | 10 |
+| 5 | Decide, teach, assess, and freeze | 9.5 |
+
+Modules 10 and 17 insert **Independent build and integration II — 10 hours**
+before their break week. Activities are scheduled where they serve learning;
+every week does not need artificial reading, practice, and application padding.
+Every completed module still includes local instruction, guided practice,
+independent work, failure evidence, a primary decision, assessment, teach-back,
+reflection, and remediation rules.
 
 You may use a production system for a module if you can experiment without putting users or company data at risk. Otherwise, build a lab system that isolates the mechanism.
 
 ## 9. Curriculum map
 
-| Phase | Weeks | Theme | Modules |
-|---|---:|---|---:|
-| I | 1–16 | Engineering judgment and physical limits | 1–4 |
-| II | 17–32 | Networks and persistence | 5–8 |
-| III | 33–44 | Distributed systems and asynchronous correctness | 9–11 |
-| IV | 45–56 | Production architecture and technical strategy | 12–14 |
-| V | 57–64 | Polyglot, browser, and edge systems | 15–16 |
-| VI | 65–72 | AI systems and final defense | 17–18 |
+| Term | Weeks | Theme | Modules / close |
+|---:|---:|---|---|
+| 1 | 1–17 | Frame, quantify, and measure | M01–M03; G1 Week 16; flex Week 17 |
+| 2 | 18–34 | Observe, connect, and contain | M04–M06; G2 Week 33; flex Week 34 |
+| 3 | 35–51 | Persist, recover, and distribute | M07–M09; G3 Week 50; flex Week 51 |
+| 4 | 52–69 | Coordinate, communicate, and survive | M10–M12; G4 Week 68; flex Week 69 |
+| 5 | 70–86 | Govern, evolve, and enable | M13–M15; G5 Week 85; flex Week 86 |
+| 6 | 87–104 | Deliver web and intelligent systems | M16–M18; G6 Week 103; flex Week 104 |
+
+[`course-calendar.json`](course-calendar.json) is the exact, gap-free calendar.
+
+### PESD 2.0 modern-constraint map
+
+Every module retains its foundational mechanism and adds the corresponding
+2026 decision surface. The module README, Lesson 8, final exercise, final
+worksheet, rubric anchors, and remediation map publish the detailed contract.
+
+| Module | Primary decision | Added decision surface |
+|---|---|---|
+| M01 | RFC | Constraint and assurance ledger: data, tenants, obligations, AI, suppliers, allocation, rights, owners, uncertainty, reversal |
+| M02 | ADR | Per-tenant allocation, forecast variance, useful-outcome economics, shared cost, energy/carbon sensitivity |
+| M03 | ADR | Cgroups, steal time, noisy neighbors, architecture limits, host-controlled evidence |
+| M04 | ADR | Governed telemetry: ownership, PII, retention, bias, lineage, cardinality, cost |
+| M05 | ADR | Workload identity, egress, residency routing, encrypted naming, crypto inventory |
+| M06 | RFC | Per-tenant budgets, identity quotas, provider compatibility, residency-safe fallback, fairness |
+| M07 | ADR | Data contracts, analytical projections, quality SLOs, lineage, stewardship, backfill, deletion |
+| M08 | ADR | Retention, holds, keys, exports, backups, policy replay, resurrection prevention |
+| M09 | ADR | Tenant lifecycle, cells, control/data planes, tenant keys, quotas, SLO and cost attribution |
+| M10 | ADR | Learner consensus node, deterministic faults, crashable store, fencing, independent oracle, model checking |
+| M11 | RFC | Semantic event contracts, ownership, quality, lineage, policy-aware replay, lifecycle, reconciliation |
+| M12 | ADR | Cyber and corrupted-backup recovery, concentration, control-plane loss, clean room, notification |
+| M13 | RFC | Obligation/control/evidence, privacy impact, SSDF, provenance, crypto agility and PQC plan |
+| M14 | ADR | Thin platform product, golden path, guardrails, exceptions, SLO, adoption/support, FinOps, exit |
+| M15 | ADR | Four supplied shells; learner owns admission, cancellation, cleanup, lifetime, synchronization, validation |
+| M16 | RFC | Web Edge, offline state, storage lifecycle, third parties, AI transparency, residency, energy/performance |
+| M17 | ADR | Streaming transformer, incremental KV, token/byte scheduling, cache identity, failure, profiling, AI dossier |
+| M18 | RFC | Full AI assurance case, supply chain, ongoing evaluation, approval efficacy, deletion, incidents, retirement |
 
 ## 10. Detailed course outline
 
 ### Phase I: Engineering judgment and physical limits
 
-#### Module 1, Weeks 1–4: Architectural judgment
+#### Module 1, Weeks 1–5: Architectural judgment
 
 **Core questions**
 
@@ -235,7 +261,7 @@ Review the design under a tenfold traffic burst, one slow dependency, stale data
 
 Write an RFC that compares a simple design, a moderate design, and a distributed design. Preserve the first draft for comparison at later assessment gates.
 
-#### Module 2, Weeks 5–8: Capacity, queues, and tail latency
+#### Module 2, Weeks 6–10: Capacity, queues, and tail latency
 
 **Core questions**
 
@@ -269,7 +295,7 @@ Sweep load from 10 percent to 150 percent of measured capacity. Add slow request
 
 Publish a capacity report that sets a safe operating region, scaling signal, overload policy, failover reserve, and cost per useful request.
 
-#### Module 3, Weeks 9–12: Computer systems and operating systems
+#### Module 3, Weeks 11–15: Computer systems and operating systems
 
 **Core questions**
 
@@ -301,7 +327,7 @@ Apply CPU quotas, memory pressure, I/O contention, lock contention, and oversize
 
 Write a systems-performance report that explains one counterintuitive result through hardware or operating-system behavior.
 
-#### Module 4, Weeks 13–16: Performance methodology and observability
+#### Module 4, Weeks 18–22: Performance methodology and observability
 
 **Core questions**
 
@@ -336,7 +362,7 @@ Create a performance review with the baseline, evidence, causal model, proposed 
 
 ### Phase II: Networks and persistence
 
-#### Module 5, Weeks 17–20: Network foundations
+#### Module 5, Weeks 23–27: Network foundations
 
 **Core questions**
 
@@ -369,7 +395,7 @@ Inject delay, jitter, loss, reordering, bandwidth limits, resets, DNS failure, a
 
 Write a protocol and topology decision for a concrete client population and failure environment.
 
-#### Module 6, Weeks 21–24: Deadlines and resilient remote calls
+#### Module 6, Weeks 28–32: Deadlines and resilient remote calls
 
 **Core questions**
 
@@ -403,7 +429,7 @@ Cause a retry storm, connection-pool exhaustion, dependency slowdown, partial re
 
 Produce a remote-call policy with deadline allocation, retry eligibility, idempotency rules, concurrency bounds, telemetry, and exception handling.
 
-#### Module 7, Weeks 25–28: Data models and storage engines
+#### Module 7, Weeks 35–39: Data models and storage engines
 
 **Core questions**
 
@@ -437,7 +463,7 @@ Compare read-heavy, write-heavy, range-heavy, skewed, and delete-heavy workloads
 
 Write a storage-engine decision that ties workload and recovery requirements to measured amplification and operating cost.
 
-#### Module 8, Weeks 29–32: Transactions, concurrency, and recovery
+#### Module 8, Weeks 40–44: Transactions, concurrency, and recovery
 
 **Core questions**
 
@@ -473,7 +499,7 @@ Publish a transaction and recovery design that maps each invariant to a constrai
 
 ### Phase III: Distributed systems and asynchronous correctness
 
-#### Module 9, Weeks 33–36: Replication and partitioning
+#### Module 9, Weeks 45–49: Replication and partitioning
 
 **Core questions**
 
@@ -507,7 +533,7 @@ Partition replicas, stop leaders, skew traffic to one key, delay replication, lo
 
 Write a data-placement and consistency decision for each important operation. Include partition behavior, staleness limits, hotspot controls, and repair.
 
-#### Module 10, Weeks 37–40: Time, coordination, and consensus
+#### Module 10, Weeks 52–57: Time, coordination, and consensus
 
 **Core questions**
 
@@ -541,7 +567,7 @@ Terminate leaders, partition the network, restart nodes, duplicate clients, dela
 
 Create a coordination design that names the safety property, liveness assumptions, stale-owner protection, operating limits, and alternatives to consensus.
 
-#### Module 11, Weeks 41–44: Messaging, streams, and workflows
+#### Module 11, Weeks 58–62: Messaging, streams, and workflows
 
 **Core questions**
 
@@ -579,7 +605,7 @@ Write an asynchronous-workflow RFC that includes the state machine, ownership, d
 
 ### Phase IV: Production architecture and technical strategy
 
-#### Module 12, Weeks 45–48: Reliability, incidents, and disaster recovery
+#### Module 12, Weeks 63–67: Reliability, incidents, and disaster recovery
 
 **Core questions**
 
@@ -615,7 +641,7 @@ Run a controlled incident that combines a slow dependency with load growth. Cond
 
 Write an incident postmortem and a disaster-recovery review. Rank corrective work by risk reduction, effort, and ownership.
 
-#### Module 13, Weeks 49–52: Security, privacy, and abuse resistance
+#### Module 13, Weeks 70–74: Security, privacy, and abuse resistance
 
 **Core questions**
 
@@ -651,7 +677,7 @@ Test cross-tenant access, privilege escalation, replay, expired credentials, sec
 
 Publish a security architecture that maps threats to preventive, detective, and recovery controls. Record residual risks and control owners.
 
-#### Module 14, Weeks 53–56: Architecture evolution, economics, and organization
+#### Module 14, Weeks 75–79: Architecture evolution, economics, and organization
 
 **Core questions**
 
@@ -690,7 +716,7 @@ Write a technical strategy memo with target outcomes, sequencing, dependencies, 
 
 ### Phase V: Polyglot, browser, and edge systems
 
-#### Module 15, Weeks 57–60: Execution models across languages
+#### Module 15, Weeks 80–84: Execution models across languages
 
 **Core questions**
 
@@ -726,7 +752,7 @@ Cause event-loop blocking, worker exhaustion, goroutine or task leaks, allocatio
 
 Create a runtime comparison based on workload behavior, latency, memory, safety, operability, ecosystem, and team constraints.
 
-#### Module 16, Weeks 61–64: Browser, frontend, CDN, and edge architecture
+#### Module 16, Weeks 87–91: Browser, frontend, CDN, and edge architecture
 
 **Core questions**
 
@@ -766,7 +792,7 @@ Write a frontend and edge architecture RFC with per-route rendering, cache polic
 
 ### Phase VI: AI systems and final defense
 
-#### Module 17, Weeks 65–68: Model foundations and inference systems
+#### Module 17, Weeks 92–97: Model foundations and inference systems
 
 **Core questions**
 
@@ -802,7 +828,7 @@ Exhaust memory, mix long and short requests, overload the queue, invalidate cach
 
 Write an inference architecture and capacity model that ties quality, latency, throughput, memory, availability, and cost to a concrete use case.
 
-#### Module 18, Weeks 69–72: Retrieval, RAG, agents, and capstone defense
+#### Module 18, Weeks 98–102: Retrieval, RAG, agents, and capstone defense
 
 **Core questions**
 
@@ -891,24 +917,33 @@ Build a Global Commerce Platform with an AI Shopping Assistant. A modular monoli
 
 ## 12. Assessment gates
 
-Each gate reviews the previous 12 weeks. A gate contains a written examination, a practical exercise, an architecture defense, and a portfolio review.
+Each gate owns a standalone week and reviews the preceding three modules. Gate
+weeks contain no new required instruction or build work. Weeks 16, 33, 50, 68, 85, and 103
+freeze separate capstone submissions. Weeks 17, 34, 51, 69, 86, and 104 hold
+separate delta revisions and the next-term plan. Earlier evidence
+is immutable.
 
 | Gate | Week | Focus | Required defense |
 |---:|---:|---|---|
-| 1 | 12 | Judgment, capacity, and computer systems | Explain a saturation curve and revise the baseline design |
-| 2 | 24 | Performance, networks, and remote calls | Diagnose a hidden fault and defend deadline and retry policy |
-| 3 | 36 | Storage, transactions, replication, and partitioning | Preserve an invariant through concurrency and partition tests |
-| 4 | 48 | Consensus, messaging, reliability, and recovery | Recover a failed workflow and defend system safety |
-| 5 | 60 | Security, evolution, economics, and runtimes | Present a threat model, migration, cost model, and runtime choice |
-| 6 | 72 | Browser, edge, AI systems, and capstone | Defend the system under technical, product, security, and operating review |
+| 1 | 16 | Judgment, capacity, and computer systems | Explain a saturation curve and defend the baseline design |
+| 2 | 33 | Performance, networks, and remote calls | Diagnose a hidden fault and defend deadline and retry policy |
+| 3 | 50 | Storage, transactions, replication, and partitioning | Preserve an invariant through concurrency and partition tests |
+| 4 | 68 | Consensus, messaging, reliability, and recovery | Recover a failed workflow and defend system safety |
+| 5 | 85 | Security, evolution, economics, and runtimes | Present an assurance case, platform migration, cost model, and runtime choice |
+| 6 | 103 | Web edge, AI systems, and capstone | Defend the system under product, technical, governance, recovery, economics, and ownership review |
+
+Gates 1–5 schedule 390 minutes: freeze 30, written 75, hidden practical 150,
+defense 60, portfolio 45, and feedback review 30. Gate 6 schedules 570 minutes:
+freeze 30, written 90, practical 180, defense 120, longitudinal portfolio 90,
+and closure 60. The top-level [`gates`](gates/) manifests are authoritative.
 
 ### Gate result
 
 Use three result bands:
 
-- **Pass:** Evidence supports the decision, and you can answer follow-up questions without changing the failure model.
-- **Revise:** The design may work, but missing evidence, unclear semantics, or weak experiments prevent a defensible decision.
-- **Repeat:** A safety property fails, the recovery claim lacks a test, or the explanation depends on incorrect system behavior.
+- **Pass:** all structural, scored-part, module-domain, safety, invariant, and average floors pass.
+- **Revise:** evidence is complete and chronology is valid, but one or more non-safety score floors are missed.
+- **Repeat:** an invariant fails, chronology is invalid, evidence is fabricated or mismatched, or the causal model is materially incorrect.
 
 Revise or repeat the weak component before starting the next phase. You do not need to repeat work that already meets the standard.
 
@@ -931,9 +966,10 @@ Score each major artifact from 0 to 4 in each category.
 
 ### Passing standard
 
-- No category may score 0 on a safety-critical artifact.
-- Each assessment gate requires an average of 3.
-- The final capstone requires an average of 3.5.
+- Every scored part, module domain, and safety-critical criterion in Gates 1–5 requires 3.0; the overall average requires 3.0.
+- Gate 6 requires 3.0 in M16, M17, M18 and in each product, technical, security/governance, operations/recovery, economics, and ownership/migration dimension.
+- Gate 6 longitudinal capstone judgment and overall average require 3.5.
+- Commerce invariants C01–C10 and retrieval/agent invariants AI01–AI12 must pass.
 - You must repair any failed invariant before completion.
 
 The scores guide revision. The evidence and your ability to defend it matter more than arithmetic.
@@ -949,7 +985,9 @@ complete the course.
 
 ## 14. Required portfolio
 
-By Week 72, your portfolio should contain:
+By Week 104, the featured portfolio contains exactly the credited lineages in
+[`portfolio-items.json`](portfolio-items.json). Every module still produces one
+primary decision and performs failure work and a lightweight teach-back.
 
 | Artifact | Minimum |
 |---|---:|
@@ -966,21 +1004,29 @@ By Week 72, your portfolio should contain:
 | Migration plans | 2 |
 | Recorded teach-backs or review sessions | 6 |
 | Complete capstone | 1 |
+| Data Governance Dossier lineage | 1 |
+| Assurance Case | 1 |
+| Platform Product Experiment | 1 |
+| AI System Dossier lineage | 1 |
 
 Sanitize company information before placing work-derived material in a personal portfolio. Replace customer data, credentials, internal URLs, proprietary code, and confidential scale figures with safe equivalents.
 
 ## 15. Core resource spine
 
-Use a small set of substantial sources as the course spine:
+Use free primary sources and complete local lessons as the required spine.
+Paid books and courses are optional enrichment. Current cross-cutting anchors
+include:
 
-- Martin Kleppmann, *Designing Data-Intensive Applications*
-- Brendan Gregg, *Systems Performance*
-- A database-internals course such as CMU 15-445/645
-- A distributed-systems course such as MIT 6.5840
-- Google’s Site Reliability Engineering books and workbook
-- OWASP ASVS and threat-modeling guidance
-- MDN and web performance curricula for browser systems
-- A build-from-first-principles language-model course such as Stanford CS336
+- [NIST Secure Software Development Framework](https://csrc.nist.gov/projects/ssdf)
+- [NIST crypto agility](https://csrc.nist.gov/Projects/crypto-agility)
+- [CNCF Platforms white paper](https://tag-app-delivery.cncf.io/whitepapers/platforms/)
+- [FinOps allocation guidance](https://www.finops.org/framework/capabilities/allocation/)
+- [NIST AI Risk Management Framework](https://airc.nist.gov/airmf-resources/airmf/5-sec-core/)
+- [European Commission AI transparency guidance](https://digital-strategy.ec.europa.eu/en/library/guidelines-transparency-obligations-providers-and-deployers-ai-systems)
+
+Architecture exercises translate applicable transparency requirements into
+controls and evidence; they do not claim universal legal compliance. The course
+records applicability, uncertainty, and qualified-review needs explicitly.
 
 Supplement these with standards, source code, and foundational papers. A separate reading and paper guide will map each source to the relevant week, set reading boundaries, and define a review template.
 
@@ -1053,7 +1099,7 @@ You complete the course when:
 - Capstone experiments preserve the stated invariants.
 - Recovery exercises meet the declared targets.
 - The final defense answers technical, product, security, cost, and ownership challenges.
-- The Week 72 revision identifies specific changes from the untouched Week 1 baseline.
+- The Week 104 final delta identifies specific changes from the untouched Week 1 baseline and every intervening freeze/delta pair.
 - You publish a next-year practice plan tied to production scope and cross-team influence.
 
 ## 20. First action

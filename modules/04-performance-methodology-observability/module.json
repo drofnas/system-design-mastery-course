@@ -4,29 +4,30 @@
   "title": "Performance Methodology and Observability",
   "weeks": [
     {
-      "number": 13,
-      "focus": "Model and freeze the investigation",
-      "hours": 10.5,
+      "number": 18,
+      "phase": "Model and derive",
+      "focus": "Model and derive",
+      "hours": 8.5,
+      "core_hours": 8.5,
+      "capacity_hours": 12,
       "evidence": [
-        "Frozen baseline and question",
-        "Hypothesis ledger and falsifiers",
-        "Collection and overhead plan",
-        "Week 13 learning log"
+        "Model and derive evidence frozen at source commit"
       ],
       "time_blocks": [
         {
-          "id": "W13-T01",
+          "id": "W018-T01",
           "label": "Bounded authoritative resources",
-          "minutes": 80,
+          "minutes": 130,
           "activity": "required_resource",
           "resource_ids": [
-            "RES-01",
-            "RES-02"
+            "RES-03",
+            "RES-05",
+            "RES-06"
           ]
         },
         {
-          "id": "W13-T02",
-          "label": "Local lesson instruction",
+          "id": "W018-T02",
+          "label": "Local mechanism instruction",
           "minutes": 120,
           "activity": "local_instruction",
           "lesson_ids": [
@@ -37,9 +38,9 @@
           ]
         },
         {
-          "id": "W13-T03",
+          "id": "W018-T03",
           "label": "Guided practice",
-          "minutes": 90,
+          "minutes": 60,
           "activity": "guided_practice",
           "exercise_ids": [
             "EX-01",
@@ -47,236 +48,222 @@
             "EX-03",
             "EX-04",
             "EX-05",
-            "EX-06"
-          ]
-        },
-        {
-          "id": "W13-T04",
-          "label": "Reflection and learning log",
-          "minutes": 30,
-          "activity": "reflection"
-        },
-        {
-          "id": "W13-T05",
-          "label": "Independent Work",
-          "minutes": 310,
-          "activity": "independent_work",
-          "artifact_ids": [
-            "A01"
-          ]
-        }
-      ]
-    },
-    {
-      "number": 14,
-      "focus": "Instrument and correlate",
-      "hours": 10.5,
-      "evidence": [
-        "Instrumented Module 2 service",
-        "Trace-context and signal-correlation proof",
-        "Profiles and query-plan evidence",
-        "Build review and Week 14 learning log"
-      ],
-      "time_blocks": [
-        {
-          "id": "W14-T01",
-          "label": "Bounded authoritative resources",
-          "minutes": 120,
-          "activity": "required_resource",
-          "resource_ids": [
-            "RES-03",
-            "RES-04",
-            "RES-06"
-          ]
-        },
-        {
-          "id": "W14-T02",
-          "label": "Local lesson instruction",
-          "minutes": 90,
-          "activity": "local_instruction",
-          "lesson_ids": [
-            "L03",
-            "L05",
-            "L07"
-          ]
-        },
-        {
-          "id": "W14-T03",
-          "label": "Guided practice",
-          "minutes": 90,
-          "activity": "guided_practice",
-          "exercise_ids": [
+            "EX-06",
             "EX-07",
-            "EX-08",
-            "EX-09",
-            "EX-10"
+            "EX-08"
           ]
         },
         {
-          "id": "W14-T04",
-          "label": "Reflection and learning log",
-          "minutes": 30,
-          "activity": "reflection"
-        },
-        {
-          "id": "W14-T05",
-          "label": "Independent Work",
-          "minutes": 300,
-          "activity": "independent_work",
-          "artifact_ids": [
-            "A02",
-            "A03"
-          ]
+          "id": "W018-T04",
+          "label": "Model and derive core work",
+          "minutes": 200,
+          "activity": "independent_work"
         }
       ]
     },
     {
-      "number": 15,
-      "focus": "Break and diagnose",
-      "hours": 10.5,
+      "number": 19,
+      "phase": "Guided build and prediction freeze",
+      "focus": "Guided build and prediction freeze",
+      "hours": 9.0,
+      "core_hours": 9.0,
+      "capacity_hours": 12,
       "evidence": [
-        "Six raw fault bundles",
-        "Frozen blind diagnosis matrix",
-        "Discriminating reruns and reveal record",
-        "Week 15 learning log"
+        "Guided build and prediction freeze evidence frozen at source commit"
       ],
       "time_blocks": [
         {
-          "id": "W15-T01",
-          "label": "Local lesson instruction",
-          "minutes": 90,
-          "activity": "local_instruction",
-          "lesson_ids": [
-            "L01",
-            "L04",
-            "L06"
-          ]
-        },
-        {
-          "id": "W15-T02",
-          "label": "Guided practice",
-          "minutes": 90,
-          "activity": "guided_practice",
-          "exercise_ids": [
-            "EX-11",
-            "EX-12",
-            "EX-13",
-            "EX-14"
-          ]
-        },
-        {
-          "id": "W15-T03",
-          "label": "Reflection and learning log",
-          "minutes": 30,
-          "activity": "reflection"
-        },
-        {
-          "id": "W15-T04",
-          "label": "Failure Experiment",
-          "minutes": 420,
-          "activity": "failure_experiment",
-          "artifact_ids": [
-            "A04",
-            "A05"
-          ]
-        }
-      ]
-    },
-    {
-      "number": 16,
-      "focus": "Validate, decide, and teach",
-      "hours": 10.5,
-      "evidence": [
-        "Interleaved benchmark and regression budget",
-        "Performance review",
-        "Recorded teach-back",
-        "Evaluation, separate remediation, and Week 16 learning log"
-      ],
-      "time_blocks": [
-        {
-          "id": "W16-T01",
+          "id": "W019-T01",
           "label": "Bounded authoritative resources",
-          "minutes": 55,
+          "minutes": 125,
           "activity": "required_resource",
           "resource_ids": [
-            "RES-05"
+            "RES-01",
+            "RES-02",
+            "RES-04"
           ]
         },
         {
-          "id": "W16-T02",
-          "label": "Local lesson instruction",
-          "minutes": 45,
+          "id": "W019-T02",
+          "label": "Local mechanism instruction",
+          "minutes": 120,
           "activity": "local_instruction",
           "lesson_ids": [
+            "L05",
+            "L06",
+            "L07",
             "L08"
           ]
         },
         {
-          "id": "W16-T03",
+          "id": "W019-T03",
           "label": "Guided practice",
-          "minutes": 45,
+          "minutes": 60,
           "activity": "guided_practice",
           "exercise_ids": [
+            "EX-09",
+            "EX-10",
+            "EX-11",
+            "EX-12",
+            "EX-13",
+            "EX-14",
             "EX-15"
           ]
         },
         {
-          "id": "W16-T04",
-          "label": "Required portfolio artifact A11",
-          "minutes": 215,
-          "activity": "decision_artifact",
-          "artifact_ids": [
-            "A11"
+          "id": "W019-T04",
+          "label": "Required evidence components",
+          "minutes": 90,
+          "activity": "independent_work",
+          "artifact_allocations": [
+            {
+              "artifact_id": "A01",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A02",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A03",
+              "minutes": 30
+            }
           ]
         },
         {
-          "id": "W16-T05",
-          "label": "Reflection and learning log",
+          "id": "W019-T05",
+          "label": "Guided build and prediction freeze core work",
+          "minutes": 145,
+          "activity": "independent_work"
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "phase": "Independent build and integration",
+      "focus": "Independent build and integration",
+      "hours": 10.0,
+      "core_hours": 10.0,
+      "capacity_hours": 12,
+      "evidence": [
+        "Independent build and integration evidence frozen at source commit"
+      ],
+      "time_blocks": [
+        {
+          "id": "W020-T01",
+          "label": "Independent build and integration core work",
+          "minutes": 540,
+          "activity": "independent_work"
+        },
+        {
+          "id": "W020-T02",
+          "label": "Independent build and integration verification checkpoint",
+          "minutes": 60,
+          "activity": "independent_work"
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "phase": "Break, repair, measure, and diagnose",
+      "focus": "Break, repair, measure, and diagnose",
+      "hours": 10.0,
+      "core_hours": 10.0,
+      "capacity_hours": 12,
+      "evidence": [
+        "Break, repair, measure, and diagnose evidence frozen at source commit"
+      ],
+      "time_blocks": [
+        {
+          "id": "W021-T01",
+          "label": "Required evidence components",
+          "minutes": 120,
+          "activity": "failure_experiment",
+          "artifact_allocations": [
+            {
+              "artifact_id": "A04",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A05",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A06",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A07",
+              "minutes": 30
+            }
+          ]
+        },
+        {
+          "id": "W021-T02",
+          "label": "Break, repair, measure, and diagnose core work",
+          "minutes": 480,
+          "activity": "failure_experiment"
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "phase": "Decide, teach, assess, and freeze",
+      "focus": "Decide, teach, assess, and freeze",
+      "hours": 9.5,
+      "core_hours": 9.5,
+      "capacity_hours": 12,
+      "evidence": [
+        "Decide, teach, assess, and freeze evidence frozen at source commit"
+      ],
+      "time_blocks": [
+        {
+          "id": "W022-T01",
+          "label": "Required evidence components",
+          "minutes": 120,
+          "activity": "decision_artifact",
+          "artifact_allocations": [
+            {
+              "artifact_id": "A08",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A09",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A10",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A11",
+              "minutes": 30
+            }
+          ]
+        },
+        {
+          "id": "W022-T02",
+          "label": "Decide, teach, assess, and freeze core work",
+          "minutes": 390,
+          "activity": "assessment"
+        },
+        {
+          "id": "W022-T03",
+          "label": "Module teach-back",
           "minutes": 30,
-          "activity": "reflection",
-          "artifact_ids": [
-            "A10"
-          ]
+          "activity": "teach_back"
         },
         {
-          "id": "W16-T06",
-          "label": "Assessment",
-          "minutes": 60,
-          "activity": "assessment",
-          "artifact_ids": [
-            "A09"
-          ]
-        },
-        {
-          "id": "W16-T07",
-          "label": "Decision Artifact",
-          "minutes": 60,
-          "activity": "decision_artifact",
-          "artifact_ids": [
-            "A06",
-            "A07"
-          ]
-        },
-        {
-          "id": "W16-T08",
-          "label": "Review Remediation",
-          "minutes": 60,
-          "activity": "review_remediation"
-        },
-        {
-          "id": "W16-T09",
-          "label": "Teach Back",
-          "minutes": 60,
-          "activity": "teach_back",
-          "artifact_ids": [
-            "A08"
-          ]
+          "id": "W022-T04",
+          "label": "Learning log and freeze check",
+          "minutes": 30,
+          "activity": "reflection"
         }
       ]
     }
   ],
-  "target_hours": 42,
-  "status": "ready",
+  "target_hours": 47,
+  "status": "review",
   "readiness_note": "Ready on 2026-07-31 after structural and semantic review, six isolated calibration runs, deterministic checking, lab and regression suites, and focused and full course validation.",
   "outcomes": [
     {
@@ -533,7 +520,7 @@
       "url": "https://www.brendangregg.com/usemethod.html",
       "required": true,
       "access": "free",
-      "week": 13,
+      "week": 19,
       "estimated_minutes": 35,
       "purpose": "Start investigation from resource questions rather than available dashboards.",
       "assignment": "Read Summary, Metrics, In Practice, and Other Methodologies; build a USE table and name two gaps.",
@@ -553,7 +540,7 @@
       "url": "https://sre.google/workbook/monitoring/",
       "required": true,
       "access": "free",
-      "week": 13,
+      "week": 19,
       "estimated_minutes": 45,
       "purpose": "Connect user symptoms, diagnostic signals, and operating cost.",
       "assignment": "Read Desirable Features, Sources of Monitoring Data, and Metrics with Purpose through Saturation; classify five signals.",
@@ -573,7 +560,7 @@
       "url": "https://www.w3.org/TR/trace-context/",
       "required": true,
       "access": "free",
-      "week": 14,
+      "week": 18,
       "estimated_minutes": 40,
       "purpose": "Define interoperable trace identity, parsing, and privacy behavior.",
       "assignment": "Read Abstract, header format, processing model, and privacy considerations; validate three contexts and identify one trust boundary.",
@@ -593,7 +580,7 @@
       "url": "https://opentelemetry.io/docs/specs/otel/overview/",
       "required": true,
       "access": "free",
-      "week": 14,
+      "week": 19,
       "estimated_minutes": 45,
       "purpose": "Map provider-neutral lab records to trace, metric, log, resource, and context semantics.",
       "assignment": "Read the named signal, resource, context, and propagator sections; map every lab record field.",
@@ -613,7 +600,7 @@
       "url": "https://kar.kent.ac.uk/33611/",
       "required": true,
       "access": "free",
-      "week": 16,
+      "week": 18,
       "estimated_minutes": 55,
       "purpose": "Model multiple sources of benchmark variation and efficient repetition.",
       "assignment": "Read the abstract, experimental dimensions, repetition guidance, and reporting recommendations; identify three variation levels.",
@@ -633,7 +620,7 @@
       "url": "https://www.usenix.org/conference/srecon16/program/presentation/smith",
       "required": true,
       "access": "free",
-      "week": 14,
+      "week": 18,
       "estimated_minutes": 35,
       "purpose": "Examine production performance monitoring as a designed and owned system.",
       "assignment": "Watch the complete talk or use all slides with the local alternative; record one design rule, its cost, and a counterexample.",
@@ -653,7 +640,7 @@
       "url": "https://docs.python.org/3/library/profile.html",
       "required": false,
       "access": "free",
-      "week": 14,
+      "week": 22,
       "estimated_minutes": 30,
       "purpose": "Distinguish deterministic call profiling, cumulative time, and instrumentation overhead in the portable lab.",
       "assignment": "Read the introduction, instant user manual, and limitations; record what deterministic profiling measures and how its overhead changes the evidence boundary.",
@@ -667,19 +654,19 @@
     },
     {
       "id": "RES-08",
-      "title": "tracemalloc — Trace memory allocations",
+      "title": "tracemalloc \u2014 Trace memory allocations",
       "author_or_publisher": "Python Software Foundation",
       "type": "official documentation",
       "url": "https://docs.python.org/3/library/tracemalloc.html",
       "required": false,
       "access": "free",
-      "week": 14,
+      "week": 22,
       "estimated_minutes": 25,
       "purpose": "Interpret allocation snapshots and retained differences without equating total allocation with a leak.",
       "assignment": "Read tracing allocations, snapshots, and comparing snapshots; state what the tool can attribute and what it cannot establish about object liveness.",
       "last_verified": "2026-08-04",
       "text_alternative": "lessons/05-profiling.md",
-      "verified_title": "tracemalloc — Trace memory allocations",
+      "verified_title": "tracemalloc \u2014 Trace memory allocations",
       "verified_publisher": "Python Software Foundation",
       "verification_method": "HTTP GET plus primary-source metadata comparison",
       "final_url": "https://docs.python.org/3/library/tracemalloc.html",
@@ -693,10 +680,10 @@
       "url": "https://www.sqlite.org/eqp.html",
       "required": false,
       "access": "free",
-      "week": 14,
+      "week": 22,
       "estimated_minutes": 25,
       "purpose": "Interpret scan, search, index, join-order, and temporary-structure evidence in the dependency lab.",
-      "assignment": "Read the warning and Sections 1.1–1.3; identify the chosen access path and explain why output formatting is not a stable application API.",
+      "assignment": "Read the warning and Sections 1.1\u20131.3; identify the chosen access path and explain why output formatting is not a stable application API.",
       "last_verified": "2026-08-04",
       "text_alternative": "lessons/06-dependencies-query-plans.md",
       "verified_title": "EXPLAIN QUERY PLAN",
@@ -709,93 +696,159 @@
   "artifacts": [
     {
       "id": "A01",
-      "week": 13,
+      "week": 19,
       "required": true,
       "template_path": "modules/04-performance-methodology-observability/worksheets/week-13-investigation-plan.md",
       "submission_path": "reports/module-04-investigation-plan.md",
       "immutable_after_submission": true,
-      "portfolio_category": "model"
+      "portfolio_category": "model",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M04-A01",
+      "component_role": "prediction",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A02",
-      "week": 14,
+      "week": 19,
       "required": true,
       "template_path": "modules/04-performance-methodology-observability/lab/README.md",
       "submission_path": "labs/module-04/",
-      "portfolio_category": "implementation"
+      "portfolio_category": "implementation",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M04-A02",
+      "component_role": "implementation",
+      "estimated_minutes": 30,
+      "evidence_mode": "executed_deterministic"
     },
     {
       "id": "A03",
-      "week": 14,
+      "week": 19,
       "required": true,
       "template_path": "modules/04-performance-methodology-observability/worksheets/week-14-instrumentation-build.md",
       "submission_path": "labs/module-04/build-review.md",
-      "portfolio_category": "implementation"
+      "portfolio_category": "implementation",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M04-A03",
+      "component_role": "implementation",
+      "estimated_minutes": 30,
+      "evidence_mode": "executed_deterministic"
     },
     {
       "id": "A04",
-      "week": 15,
+      "week": 21,
       "required": true,
       "template_path": "modules/04-performance-methodology-observability/worksheets/week-15-blind-diagnosis.md",
       "submission_path": "experiments/module-04/",
-      "portfolio_category": "failure_matrix"
+      "portfolio_category": "failure_matrix",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M04-A04",
+      "component_role": "raw_evidence",
+      "estimated_minutes": 30,
+      "evidence_mode": "executed_deterministic"
     },
     {
       "id": "A05",
-      "week": 15,
+      "week": 21,
       "required": true,
       "template_path": "modules/04-performance-methodology-observability/worksheets/week-15-blind-diagnosis.md",
       "submission_path": "reports/module-04-failure-matrix.md",
       "immutable_after_submission": true,
-      "portfolio_category": "failure_matrix"
+      "portfolio_category": "failure_matrix",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M04-A05",
+      "component_role": "raw_evidence",
+      "estimated_minutes": 30,
+      "evidence_mode": "executed_deterministic"
     },
     {
       "id": "A06",
-      "week": 16,
+      "week": 21,
       "required": true,
       "template_path": "modules/04-performance-methodology-observability/worksheets/week-16-performance-review.md",
       "submission_path": "experiments/module-04/benchmark-result.json",
-      "portfolio_category": "performance_investigation"
+      "portfolio_category": "performance_investigation",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M04-A06",
+      "component_role": "analysis",
+      "estimated_minutes": 30,
+      "evidence_mode": "measured_loopback"
     },
     {
       "id": "A07",
-      "week": 16,
+      "week": 21,
       "required": true,
       "template_path": "templates/performance-review-template.md",
       "submission_path": "reports/module-04-performance-review.md",
-      "portfolio_category": "performance_investigation"
+      "portfolio_category": "performance_investigation",
+      "portfolio_item_id": "PI-PERF-02",
+      "portfolio_credit": true,
+      "evidence_lineage_id": "LIN-PERF-OBSERVABILITY",
+      "component_role": "analysis",
+      "estimated_minutes": 30,
+      "evidence_mode": "measured_loopback"
     },
     {
       "id": "A08",
-      "week": 16,
+      "week": 22,
       "required": true,
       "template_path": "modules/04-performance-methodology-observability/worksheets/week-16-performance-review.md",
       "submission_path": "reviews/module-04-defense.md",
-      "portfolio_category": "teach_back"
+      "portfolio_category": "teach_back",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M04-A08",
+      "component_role": "final",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A09",
-      "week": 16,
+      "week": 22,
       "required": true,
       "template_path": "modules/04-performance-methodology-observability/assessment/report-template.md",
       "submission_path": "reviews/module-04-evaluation.md",
-      "portfolio_category": "evaluation"
+      "portfolio_category": "evaluation",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M04-A09",
+      "component_role": "final",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A10",
-      "week": 16,
+      "week": 22,
       "required": true,
       "template_path": "templates/learning-log-template.md",
-      "submission_path": "learning-log/week-13.md through learning-log/week-16.md",
-      "portfolio_category": "learning_log"
+      "submission_path": "learning-log/week-018.md through learning-log/week-022.md",
+      "portfolio_category": "learning_log",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M04-A10",
+      "component_role": "final",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A11",
-      "week": 16,
+      "week": 22,
       "required": true,
       "template_path": "templates/adr-template.md",
       "submission_path": "adr/module-04-performance-regression-policy.md",
-      "portfolio_category": "adr"
+      "portfolio_category": "adr",
+      "portfolio_item_id": "PI-DECISION-M04",
+      "portfolio_credit": true,
+      "evidence_lineage_id": "LIN-DECISION-M04",
+      "component_role": "decision",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     }
   ],
   "failure_experiments": [
@@ -937,7 +990,7 @@
   "citation_catalog": [
     {
       "id": "CIT-01",
-      "title": "timeit — Measure execution time of small code snippets",
+      "title": "timeit \u2014 Measure execution time of small code snippets",
       "author_or_publisher": "Python Software Foundation",
       "type": "primary-source citation",
       "url": "https://docs.python.org/3/library/timeit.html",
@@ -947,7 +1000,7 @@
       "reading_boundary": "Read the command-line interface, default repetition behavior, and timing caveats; do not generalize microbenchmarks to production.",
       "last_verified": "2026-08-04",
       "text_alternative": "lessons/02-controlled-experiments.md",
-      "verified_title": "timeit — Measure execution time of small code snippets",
+      "verified_title": "timeit \u2014 Measure execution time of small code snippets",
       "verified_publisher": "Python Software Foundation",
       "verification_method": "HTTP GET plus primary-source metadata comparison",
       "final_url": "https://docs.python.org/3/library/timeit.html",
@@ -1027,7 +1080,7 @@
     },
     {
       "id": "CIT-06",
-      "title": "sqlite3 — DB-API 2.0 interface for SQLite databases",
+      "title": "sqlite3 \u2014 DB-API 2.0 interface for SQLite databases",
       "author_or_publisher": "Python Software Foundation",
       "type": "primary-source citation",
       "url": "https://docs.python.org/3/library/sqlite3.html",
@@ -1037,7 +1090,7 @@
       "reading_boundary": "Read transaction control and EXPLAIN-related API boundaries used by the local SQLite experiment.",
       "last_verified": "2026-08-04",
       "text_alternative": "lessons/06-dependencies-query-plans.md",
-      "verified_title": "sqlite3 — DB-API 2.0 interface for SQLite databases",
+      "verified_title": "sqlite3 \u2014 DB-API 2.0 interface for SQLite databases",
       "verified_publisher": "Python Software Foundation",
       "verification_method": "HTTP GET plus primary-source metadata comparison",
       "final_url": "https://docs.python.org/3/library/sqlite3.html",
@@ -1045,7 +1098,7 @@
     },
     {
       "id": "CIT-07",
-      "title": "statistics — Mathematical statistics functions",
+      "title": "statistics \u2014 Mathematical statistics functions",
       "author_or_publisher": "Python Software Foundation",
       "type": "primary-source citation",
       "url": "https://docs.python.org/3/library/statistics.html",
@@ -1055,11 +1108,19 @@
       "reading_boundary": "Read median and quantiles contracts, including method and small-sample caveats used by the deterministic checker.",
       "last_verified": "2026-08-04",
       "text_alternative": "lessons/07-benchmarks-regression-budgets.md",
-      "verified_title": "statistics — Mathematical statistics functions",
+      "verified_title": "statistics \u2014 Mathematical statistics functions",
       "verified_publisher": "Python Software Foundation",
       "verification_method": "HTTP GET plus primary-source metadata comparison",
       "final_url": "https://docs.python.org/3/library/statistics.html",
       "verification_status": "verified"
     }
-  ]
+  ],
+  "course_id": "PESD-104",
+  "course_version": "2.0",
+  "primary_decision": {
+    "artifact_id": "A11",
+    "type": "ADR"
+  },
+  "pesd_v2_additions": "telemetry as a governed data product: schema ownership, PII restrictions, retention, sampling bias, lineage, cardinality, and cost budgets",
+  "semantic_evaluation": "module_specific"
 }

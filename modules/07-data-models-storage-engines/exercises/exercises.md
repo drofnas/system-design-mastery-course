@@ -95,3 +95,11 @@ Conduct a recorded defense using the frozen solo-review packet. Answer from
 database, application, security/privacy, finance, and on-call/recovery
 perspectives. Record changed belief, unresolved dissent, owner, follow-up
 evidence, and any dated addendum. A live panel is optional.
+
+## PESD 2.0 extension to the final exercise
+
+Extend the final guided exercise with analytical projections, versioned data contracts, quality SLOs, lineage, stewardship, rebuild and backfill, deletion propagation, and ownership while preserving B+ tree and LSM mechanisms. Produce an
+obligation/control/evidence row, a named owner, a bounded cost or capacity
+effect, a failure or policy-drift test, a migration step, and a reversal trigger.
+Label every observation with an accepted evidence mode and do not use fixture
+replay as independent Build, Break, Implement, or Measure evidence.

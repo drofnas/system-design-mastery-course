@@ -162,3 +162,18 @@ Calculate the mean of R01–R10.
   decision.
 - Repeat: missing freeze/artifact gate, safety failure, or materially false
   system model.
+
+## PESD 2.0 cross-cutting anchors
+
+Apply these anchors inside the published module-specific criteria; they do not
+create a generic substitute rubric.
+
+- **0–1:** ignores or merely names a constraint and assurance ledger covering data classes, tenant boundaries, obligations, AI use, supplier risk, cost allocation, decision rights, evidence owners, uncertainty, and reversal triggers without an enforceable
+  causal model, evidence boundary, or owner.
+- **2:** covers the happy path but leaves a material tenant, governance,
+  recovery, supplier, cost, migration, or evidence gap.
+- **3:** connects the requirement to a mechanism, failure evidence, ownership,
+  cost, migration, and a scoped residual risk.
+- **4:** additionally tests policy drift or isolation failure, quantifies useful
+  outcome and uncertainty, preserves lineage, and gives teachable reversal and
+  decommissioning triggers.

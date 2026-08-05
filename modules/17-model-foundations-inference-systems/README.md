@@ -1,8 +1,6 @@
 # Module 17: Model Foundations and Inference Systems
 
-> **Authoring status:** Ready. The portable CPU lab, F01–F06 pairs, six isolated
-> evaluator records, deterministic calibration, semantic/resource review, and
-> focused/full validation all pass.
+> **Authoring status:** Review. PESD 2.0 content and machine-readable contracts are migrated. Refreshed evaluator calibration, full platform matrices, offline reruns, cleanup checks, and timed learner pilots remain required before Ready.
 
 ## What this module changes
 
@@ -44,50 +42,58 @@ By the end of the module, you can:
 
 ## Schedule
 
-### Week 65: Model and freeze inference predictions — 11 hours
+The 10–12 hour weekly figure is a capacity envelope. Core work is deliberately
+budgeted below that ceiling; unused time is recovery buffer, not hidden work.
+
+### Week 92: Model and derive — 8.5 hours
 
 | Work | Time |
 |---|---:|
-| Lessons 1–4 and bounded sources | 4 h |
-| EX-01–EX-09 with Atlas calculations | 2.5 h |
-| Independent capacity, quality, and F01–F06 baseline | 3 h |
-| Freeze, self-check, and learning log | 1.5 h |
+| Bounded authoritative resources | 180 min |
+| Local mechanism instruction | 120 min |
+| Guided practice | 60 min |
+| Required evidence components | 30 min |
+| Model and derive core work | 120 min |
 
-Use the [Week 65 worksheet](worksheets/week-65-inference-model.md).
-
-### Week 66: Build the transformer and serving contract — 12 hours
-
-| Work | Time |
-|---|---:|
-| Lessons 2–5 and Atlas tutorial | 2.5 h |
-| EX-05–EX-12 with conformance rehearsal | 2 h |
-| Independent tensor, model, and server implementation | 6.5 h |
-| Internals review and learning log | 1 h |
-
-Use the [Week 66 worksheet](worksheets/week-66-inference-build.md).
-
-### Week 67: Break and measure inference assumptions — 12 hours
+### Week 93: Guided build and prediction freeze — 9 hours
 
 | Work | Time |
 |---|---:|
-| Lessons 4–7 and bounded sources | 2 h |
-| EX-10–EX-17 and experiment rehearsal | 2 h |
-| F01–F06 broken/repaired trials and CPU profile | 6 h |
-| Failure matrix, performance report, and cost model | 2 h |
+| Bounded authoritative resources | 155 min |
+| Local mechanism instruction | 120 min |
+| Guided practice | 60 min |
+| Required evidence components | 30 min |
+| Guided build and prediction freeze core work | 175 min |
 
-Use the [Week 67 worksheet](worksheets/week-67-inference-failures.md).
-
-### Week 68: Decide, teach, assess, and remediate — 11 hours
+### Week 94: Independent build and integration — 10 hours
 
 | Work | Time |
 |---|---:|
-| Lesson 8, practitioner case, and EX-18 | 1.5 h |
-| Inference RFC, deployment-policy ADR, and architecture defense | 4 h |
-| Module evaluation and teach-back | 2 h |
-| Separate remediation and learning log | 3.5 h |
+| Required evidence components | 60 min |
+| Independent build and integration core work | 540 min |
 
-Use the [Week 68 worksheet](worksheets/week-68-inference-defense.md).
+### Week 95: Independent build and integration II — 10 hours
 
+| Work | Time |
+|---|---:|
+| Independent build and integration II core work | 540 min |
+| Independent build and integration II verification checkpoint | 60 min |
+
+### Week 96: Break, repair, measure, and diagnose — 10 hours
+
+| Work | Time |
+|---|---:|
+| Required evidence components | 120 min |
+| Break, repair, measure, and diagnose core work | 480 min |
+
+### Week 97: Decide, teach, assess, and freeze — 9.5 hours
+
+| Work | Time |
+|---|---:|
+| Required evidence components | 120 min |
+| Decide, teach, assess, and freeze core work | 390 min |
+| Module teach-back | 30 min |
+| Learning log and freeze check | 30 min |
 ## Learn
 
 1. [Mathematics for inference decisions](lessons/01-mathematics-for-inference.md)
@@ -123,8 +129,7 @@ one inference-deployment policy ADR, and one recorded architecture teach-back.
   [evaluator prompt](assessment/evaluator-prompt.md), [remediation map](assessment/remediation-map.md),
   and [readiness review](assessment/semantic-readiness-review.md).
 - Pass G01–G06, average at least 3.0, and avoid a zero in R05, R06, R08, or R09.
-- Gate 6 occurs in Week 72 after Module 18; Module 17 creates inputs but no final
-  capstone defense submission.
+- Gate 6 runs in Week 103 after Module 18; Module 17 creates inputs but no duplicate final capstone defense submission.
 
 ## Evidence boundary and AI use
 
@@ -146,3 +151,10 @@ work, produce replacement graded answers, or answer during the defense.
 - Use the [sealed local gate workflow](../../SOLO_GATE_GUIDE.md) when a course gate applies. Human review is optional.
 
 A frozen self-evaluation may establish **Solo Complete**; independent human or LLM review may establish **Independently Validated**. Synthetic lab values are not production measurements.
+
+## PESD 2.0 scope addition
+
+This 6-week module schedules 57 core hours. Its primary
+decision is ADR A12. The added graded scope is
+an actual streaming tiny-transformer path with incremental KV state, token scheduling, byte-budget admission, tenant/version cache identity, bounded provider failure, profiling, and an AI System Dossier. See Lesson 8, the final guided exercise, final worksheet,
+rubric anchors, and remediation map for the integrated evidence contract.

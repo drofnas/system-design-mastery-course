@@ -29,3 +29,11 @@ when the submission manifest identifies one fixture.
 - Verify average, result band, citations, finding classes, and remediation agree.
 - Accept a defensible alternative meeting the published properties; never
   require Northstar's architecture, topology, timing, or thresholds.
+
+## PESD 2.0 evaluator instruction
+
+Score the published criteria against evidence for learner-written elections through membership under deterministic scheduling, crashable persistence, fencing, an independent invariant oracle, executable small-state safety checks, and mutation tests.
+Classify missing evidence, incorrect reasoning, unsupported claims, and
+reasonable uncertainty separately. Reject fixture replay presented as
+independent build or break evidence. Do not invent legal applicability or treat
+a named framework as proof of compliance.

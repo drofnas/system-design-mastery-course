@@ -32,3 +32,14 @@ complete named lessons/exercises and create a dated revision or rerun that links
 to—not overwrites—the original.
 
 Module 11 creates no Gate 4 or capstone revision.
+
+## PESD 2.0 decision and assurance check
+
+- Added scope: semantic event contracts, producer and consumer ownership, data quality, lineage, policy-version-aware replay, lifecycle disposition, and batch/stream reconciliation
+- Requirement or obligation and applicability:
+- Enforcement point and failure mode:
+- Evidence owner, source commit, hashes, and evidence mode:
+- Tenant/data/provider boundary:
+- Cost allocation and operating owner:
+- Migration, rollback, and decommissioning step:
+- Uncertainty and reversal trigger:

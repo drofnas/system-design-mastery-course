@@ -1,5 +1,7 @@
 # Gate 5 Assessor Notes
 
+> **PESD V1 historical contract:** Preserve this file for V1 learners and immutable evidence. PESD 2.0 uses [gates/G05/README.md](../../../gates/G05/README.md).
+
 Use only after all parts are frozen. These are reasoning boundaries, not a
 commerce answer or preferred runtime.
 

@@ -48,7 +48,7 @@ preserves workflow and irreversible-effect invariants. Failure is hard.
 The postmortem, DR review, and distinct A12 recovery-tier ADR cover alternatives,
 impact, capacity, security, cost, migration, rollback, owners, dissent,
 uncertainty, and reversal. All four
-Gate 4 parts and the separate Week 48 revision resolve. Remediation never
+Gate 4 Week 68 parts and the separate Week 69 delta resolve. Remediation never
 overwrites frozen evidence.
 
 ## Scoring and result

@@ -4,29 +4,31 @@
   "title": "Security, Privacy, and Abuse Resistance",
   "weeks": [
     {
-      "number": 49,
-      "focus": "Model and freeze assets, actors, trust boundaries, abuse cases, privacy flows, and residual risks",
-      "hours": 10.5,
+      "number": 70,
+      "phase": "Model and derive",
+      "focus": "Model and derive",
+      "hours": 8.5,
+      "core_hours": 8.5,
+      "capacity_hours": 12,
       "evidence": [
-        "Frozen security baseline",
-        "Threat and trust-boundary inventory",
-        "F01-F09 predictions",
-        "Week 49 learning log"
+        "Model and derive evidence frozen at source commit"
       ],
       "time_blocks": [
         {
-          "id": "W49-T01",
+          "id": "W070-T01",
           "label": "Bounded authoritative resources",
-          "minutes": 130,
+          "minutes": 200,
           "activity": "required_resource",
           "resource_ids": [
-            "RES-01",
-            "RES-02"
+            "RES-03",
+            "RES-12",
+            "RES-14",
+            "RES-15"
           ]
         },
         {
-          "id": "W49-T02",
-          "label": "Local lesson instruction",
+          "id": "W070-T02",
+          "label": "Local mechanism instruction",
           "minutes": 120,
           "activity": "local_instruction",
           "lesson_ids": [
@@ -37,9 +39,9 @@
           ]
         },
         {
-          "id": "W49-T03",
+          "id": "W070-T03",
           "label": "Guided practice",
-          "minutes": 90,
+          "minutes": 60,
           "activity": "guided_practice",
           "exercise_ids": [
             "EX-01",
@@ -48,252 +50,228 @@
             "EX-04",
             "EX-05",
             "EX-06",
-            "EX-07"
-          ]
-        },
-        {
-          "id": "W49-T04",
-          "label": "Reflection and learning log",
-          "minutes": 30,
-          "activity": "reflection"
-        },
-        {
-          "id": "W49-T05",
-          "label": "Independent Work",
-          "minutes": 260,
-          "activity": "independent_work",
-          "artifact_ids": [
-            "A01"
-          ]
-        }
-      ]
-    },
-    {
-      "number": 50,
-      "focus": "Build identity, session, authorization, tenant, credential, audit, deletion, and abuse controls",
-      "hours": 11.5,
-      "evidence": [
-        "Security controls implementation",
-        "Authorization regression tests",
-        "Implementation review",
-        "Week 50 learning log"
-      ],
-      "time_blocks": [
-        {
-          "id": "W50-T01",
-          "label": "Bounded authoritative resources",
-          "minutes": 90,
-          "activity": "required_resource",
-          "resource_ids": [
-            "RES-03"
-          ]
-        },
-        {
-          "id": "W50-T02",
-          "label": "Local lesson instruction",
-          "minutes": 90,
-          "activity": "local_instruction",
-          "lesson_ids": [
-            "L03",
-            "L05",
-            "L07"
-          ]
-        },
-        {
-          "id": "W50-T03",
-          "label": "Guided practice",
-          "minutes": 90,
-          "activity": "guided_practice",
-          "exercise_ids": [
+            "EX-07",
             "EX-08",
-            "EX-09",
-            "EX-10",
-            "EX-11",
-            "EX-12",
-            "EX-13"
+            "EX-09"
           ]
         },
         {
-          "id": "W50-T04",
-          "label": "Reflection and learning log",
+          "id": "W070-T04",
+          "label": "Required evidence components",
           "minutes": 30,
-          "activity": "reflection"
+          "activity": "independent_work",
+          "artifact_allocations": [
+            {
+              "artifact_id": "A05",
+              "minutes": 30
+            }
+          ]
         },
         {
-          "id": "W50-T05",
-          "label": "Independent Work",
-          "minutes": 390,
-          "activity": "independent_work",
-          "artifact_ids": [
-            "A02",
-            "A03"
-          ]
+          "id": "W070-T05",
+          "label": "Model and derive core work",
+          "minutes": 100,
+          "activity": "independent_work"
         }
       ]
     },
     {
-      "number": 51,
-      "focus": "Break and measure nine security, privacy, supply-chain, abuse, and tool boundaries",
-      "hours": 11.5,
+      "number": 71,
+      "phase": "Guided build and prediction freeze",
+      "focus": "Guided build and prediction freeze",
+      "hours": 9.0,
+      "core_hours": 9.0,
+      "capacity_hours": 12,
       "evidence": [
-        "Eighteen immutable raw trials",
-        "Nine broken/repaired comparisons",
-        "Major threat model and verification report",
-        "Week 51 learning log"
+        "Guided build and prediction freeze evidence frozen at source commit"
       ],
       "time_blocks": [
         {
-          "id": "W51-T01",
+          "id": "W071-T01",
           "label": "Bounded authoritative resources",
-          "minutes": 75,
+          "minutes": 205,
           "activity": "required_resource",
           "resource_ids": [
+            "RES-01",
+            "RES-02",
             "RES-10"
           ]
         },
         {
-          "id": "W51-T02",
-          "label": "Local lesson instruction",
-          "minutes": 90,
+          "id": "W071-T02",
+          "label": "Local mechanism instruction",
+          "minutes": 120,
           "activity": "local_instruction",
           "lesson_ids": [
-            "L01",
-            "L04",
-            "L06"
-          ]
-        },
-        {
-          "id": "W51-T03",
-          "label": "Guided practice",
-          "minutes": 90,
-          "activity": "guided_practice",
-          "exercise_ids": [
-            "EX-14",
-            "EX-15",
-            "EX-16",
-            "EX-17"
-          ]
-        },
-        {
-          "id": "W51-T04",
-          "label": "Reflection and learning log",
-          "minutes": 30,
-          "activity": "reflection"
-        },
-        {
-          "id": "W51-T05",
-          "label": "Decision Artifact",
-          "minutes": 30,
-          "activity": "decision_artifact",
-          "artifact_ids": [
-            "A05"
-          ]
-        },
-        {
-          "id": "W51-T06",
-          "label": "Failure Experiment",
-          "minutes": 345,
-          "activity": "failure_experiment",
-          "artifact_ids": [
-            "A04"
-          ]
-        },
-        {
-          "id": "W51-T07",
-          "label": "Independent Work",
-          "minutes": 30,
-          "activity": "independent_work",
-          "artifact_ids": [
-            "A06"
-          ]
-        }
-      ]
-    },
-    {
-      "number": 52,
-      "focus": "Decide, teach, assess, and remediate the security architecture",
-      "hours": 10,
-      "evidence": [
-        "Security architecture RFC",
-        "Recorded defense",
-        "Module 13 evaluation and separate revision",
-        "Week 52 learning log"
-      ],
-      "time_blocks": [
-        {
-          "id": "W52-T01",
-          "label": "Bounded authoritative resources",
-          "minutes": 70,
-          "activity": "required_resource",
-          "resource_ids": [
-            "RES-12"
-          ]
-        },
-        {
-          "id": "W52-T02",
-          "label": "Local lesson instruction",
-          "minutes": 45,
-          "activity": "local_instruction",
-          "lesson_ids": [
+            "L05",
+            "L06",
+            "L07",
             "L08"
           ]
         },
         {
-          "id": "W52-T03",
+          "id": "W071-T03",
           "label": "Guided practice",
-          "minutes": 45,
+          "minutes": 60,
           "activity": "guided_practice",
           "exercise_ids": [
+            "EX-10",
+            "EX-11",
+            "EX-12",
+            "EX-13",
+            "EX-14",
+            "EX-15",
+            "EX-16",
+            "EX-17",
             "EX-18"
           ]
         },
         {
-          "id": "W52-T04",
-          "label": "Reflection and learning log",
-          "minutes": 30,
-          "activity": "reflection",
-          "artifact_ids": [
-            "A10"
+          "id": "W071-T04",
+          "label": "Required evidence components",
+          "minutes": 90,
+          "activity": "independent_work",
+          "artifact_allocations": [
+            {
+              "artifact_id": "A01",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A02",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A03",
+              "minutes": 30
+            }
           ]
         },
         {
-          "id": "W52-T05",
-          "label": "Assessment",
+          "id": "W071-T05",
+          "label": "Guided build and prediction freeze core work",
+          "minutes": 65,
+          "activity": "independent_work"
+        }
+      ]
+    },
+    {
+      "number": 72,
+      "phase": "Independent build and integration",
+      "focus": "Independent build and integration",
+      "hours": 10.0,
+      "core_hours": 10.0,
+      "capacity_hours": 12,
+      "evidence": [
+        "Independent build and integration evidence frozen at source commit"
+      ],
+      "time_blocks": [
+        {
+          "id": "W072-T01",
+          "label": "Independent build and integration core work",
+          "minutes": 540,
+          "activity": "independent_work"
+        },
+        {
+          "id": "W072-T02",
+          "label": "Independent build and integration verification checkpoint",
           "minutes": 60,
-          "activity": "assessment",
-          "artifact_ids": [
-            "A09"
+          "activity": "independent_work"
+        }
+      ]
+    },
+    {
+      "number": 73,
+      "phase": "Break, repair, measure, and diagnose",
+      "focus": "Break, repair, measure, and diagnose",
+      "hours": 10.0,
+      "core_hours": 10.0,
+      "capacity_hours": 12,
+      "evidence": [
+        "Break, repair, measure, and diagnose evidence frozen at source commit"
+      ],
+      "time_blocks": [
+        {
+          "id": "W073-T01",
+          "label": "Required evidence components",
+          "minutes": 60,
+          "activity": "failure_experiment",
+          "artifact_allocations": [
+            {
+              "artifact_id": "A04",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A06",
+              "minutes": 30
+            }
           ]
         },
         {
-          "id": "W52-T06",
-          "label": "Decision Artifact",
-          "minutes": 230,
+          "id": "W073-T02",
+          "label": "Break, repair, measure, and diagnose core work",
+          "minutes": 540,
+          "activity": "failure_experiment"
+        }
+      ]
+    },
+    {
+      "number": 74,
+      "phase": "Decide, teach, assess, and freeze",
+      "focus": "Decide, teach, assess, and freeze",
+      "hours": 9.5,
+      "core_hours": 9.5,
+      "capacity_hours": 12,
+      "evidence": [
+        "Decide, teach, assess, and freeze evidence frozen at source commit"
+      ],
+      "time_blocks": [
+        {
+          "id": "W074-T01",
+          "label": "Required evidence components",
+          "minutes": 120,
           "activity": "decision_artifact",
-          "artifact_ids": [
-            "A07"
+          "artifact_allocations": [
+            {
+              "artifact_id": "A07",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A08",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A09",
+              "minutes": 30
+            },
+            {
+              "artifact_id": "A10",
+              "minutes": 30
+            }
           ]
         },
         {
-          "id": "W52-T07",
-          "label": "Review Remediation",
-          "minutes": 60,
-          "activity": "review_remediation"
+          "id": "W074-T02",
+          "label": "Decide, teach, assess, and freeze core work",
+          "minutes": 390,
+          "activity": "assessment"
         },
         {
-          "id": "W52-T08",
-          "label": "Teach Back",
-          "minutes": 60,
-          "activity": "teach_back",
-          "artifact_ids": [
-            "A08"
-          ]
+          "id": "W074-T03",
+          "label": "Module teach-back",
+          "minutes": 30,
+          "activity": "teach_back"
+        },
+        {
+          "id": "W074-T04",
+          "label": "Learning log and freeze check",
+          "minutes": 30,
+          "activity": "reflection"
         }
       ]
     }
   ],
-  "target_hours": 43.5,
-  "status": "ready",
+  "target_hours": 47,
+  "status": "review",
   "readiness_note": "Ready on 2026-08-03 after isolated six-run calibration, deterministic lab checks, semantic review, and focused and full course validation.",
   "outcomes": [
     {
@@ -558,7 +536,7 @@
       "url": "https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html",
       "required": true,
       "access": "free",
-      "week": 49,
+      "week": 71,
       "estimated_minutes": 70,
       "purpose": "Apply the four-question process to concrete assets, flows, boundaries, threats, and testable responses.",
       "assignment": "Read Overview through Review and Validation; submit one data-flow boundary, three contextual threats, responses, owners, and validation tests.",
@@ -578,7 +556,7 @@
       "url": "https://owasp.org/www-project-application-security-verification-standard/",
       "required": true,
       "access": "free",
-      "week": 49,
+      "week": 71,
       "estimated_minutes": 60,
       "purpose": "Turn threats into versioned verification requirements rather than generic control labels.",
       "assignment": "Read What is ASVS and How to Reference Requirements; select and version five requirements that test the Northstar model, explaining exclusions.",
@@ -598,7 +576,7 @@
       "url": "https://pages.nist.gov/800-63-4/sp800-63b.html",
       "required": true,
       "access": "free",
-      "week": 50,
+      "week": 70,
       "estimated_minutes": 90,
       "purpose": "Separate authentication assurance, authenticator lifecycle, recovery, and session continuity.",
       "assignment": "Read Sections 2, 4, and 5; produce one assurance choice, recovery abuse case, session-binding contract, timeout, and revocation test.",
@@ -618,7 +596,7 @@
       "url": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html",
       "required": false,
       "access": "free",
-      "week": 50,
+      "week": 74,
       "estimated_minutes": 65,
       "purpose": "Design per-request, per-object, per-action authorization with explicit deny behavior and tests.",
       "assignment": "Read all Recommendations; submit an allow/deny matrix and four negative regression tests, including policy failure behavior.",
@@ -638,7 +616,7 @@
       "url": "https://cheatsheetseries.owasp.org/cheatsheets/Multi_Tenant_Security_Cheat_Sheet.html",
       "required": false,
       "access": "free",
-      "week": 50,
+      "week": 74,
       "estimated_minutes": 70,
       "purpose": "Trace tenant identity through every shared data and execution surface.",
       "assignment": "Read Key Risks, Best Practices, and Do's and Don'ts; audit API, database, cache, file, queue, search, and administrative paths.",
@@ -658,7 +636,7 @@
       "url": "https://www.usenix.org/conference/atc19/presentation/pang",
       "required": false,
       "access": "free",
-      "week": 50,
+      "week": 74,
       "estimated_minutes": 90,
       "purpose": "Evaluate relationship authorization, consistency, caching, and centralized policy as operated-system trade-offs.",
       "assignment": "Watch the presentation or read Sections 1-3 and 5-7 of the paper; record the data model, stale-decision risk, operating cost, and one simpler alternative.",
@@ -678,7 +656,7 @@
       "url": "https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html",
       "required": false,
       "access": "free",
-      "week": 51,
+      "week": 74,
       "estimated_minutes": 70,
       "purpose": "Design secret scope, custody, rotation, revocation, auditing, and exposure response.",
       "assignment": "Read General Secrets Management, CI/CD, Detection, and Incident Response; create one lifecycle and rotation-without-outage experiment.",
@@ -698,7 +676,7 @@
       "url": "https://csrc.nist.gov/projects/key-management/key-management-guidelines",
       "required": false,
       "access": "free",
-      "week": 51,
+      "week": 74,
       "estimated_minutes": 55,
       "purpose": "Distinguish key material, cryptoperiods, protection, compromise, recovery, and destruction.",
       "assignment": "Read the SP 800-57 Part 1 Rev. 5 overview and lifecycle guidance; map one key from generation through destruction and name its owner.",
@@ -718,7 +696,7 @@
       "url": "https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html",
       "required": false,
       "access": "free",
-      "week": 51,
+      "week": 74,
       "estimated_minutes": 65,
       "purpose": "Make security events attributable and useful without logging secrets or unbounded sensitive data.",
       "assignment": "Read Event Data Sources through Verification; define an audit event, prohibited fields, tamper signal, logging-failure test, retention, and access rule.",
@@ -738,7 +716,7 @@
       "url": "https://www.nist.gov/privacy-framework/privacy-framework",
       "required": true,
       "access": "free",
-      "week": 51,
+      "week": 71,
       "estimated_minutes": 75,
       "purpose": "Connect data processing, privacy outcomes, owners, and lifecycle verification without assuming one jurisdiction.",
       "assignment": "Read the Framework Core Identify-P, Govern-P, Control-P, Communicate-P, and Protect-P outcomes; produce a data-action inventory and deletion exception register.",
@@ -758,7 +736,7 @@
       "url": "https://slsa.dev/spec/v1.2/",
       "required": false,
       "access": "free",
-      "week": 52,
+      "week": 74,
       "estimated_minutes": 65,
       "purpose": "Separate provenance evidence from trust decisions and verify source/build expectations.",
       "assignment": "Read About SLSA, Build Track Basics, Provenance, and Verifying Source; define one dependency acceptance policy and negative test.",
@@ -778,7 +756,7 @@
       "url": "https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html",
       "required": true,
       "access": "free",
-      "week": 52,
+      "week": 70,
       "estimated_minutes": 70,
       "purpose": "Treat instructions in retrieved content as adversarial data and preserve deterministic authorization.",
       "assignment": "Read Common Attack Types, Primary Defenses, Agent-Specific Defenses, and Testing; submit one indirect-injection test and deterministic denial trace.",
@@ -798,7 +776,7 @@
       "url": "https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html",
       "required": false,
       "access": "free",
-      "week": 52,
+      "week": 74,
       "estimated_minutes": 65,
       "purpose": "Bound tool identity, privilege, approvals, memory, budgets, audit, and recovery independently of model behavior.",
       "assignment": "Read Threat Model, Least Privilege, Tool Authorization, Memory, Observability, and Adversarial Validation; produce a high-risk tool contract and failure matrix.",
@@ -809,92 +787,192 @@
       "verification_method": "HTTP GET plus primary-source metadata comparison",
       "final_url": "https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html",
       "verification_status": "verified"
+    },
+    {
+      "id": "RES-14",
+      "title": "Secure Software Development Framework",
+      "author_or_publisher": "NIST",
+      "type": "official primary guidance",
+      "url": "https://csrc.nist.gov/projects/ssdf",
+      "required": true,
+      "access": "free",
+      "week": 70,
+      "estimated_minutes": 20,
+      "purpose": "Ground the PESD 2.0 cross-cutting decision in current primary guidance and produce scoped evidence rather than framework vocabulary.",
+      "assignment": "Read the SSDF practices and use sections; map applicable outcomes to source, build, release, and vulnerability-response evidence.",
+      "last_verified": "2026-08-04",
+      "text_alternative": "lessons/08-prompt-injection-tool-authorization-decisions.md",
+      "verified_title": "Secure Software Development Framework",
+      "verified_publisher": "NIST",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://csrc.nist.gov/projects/ssdf",
+      "verification_status": "verified"
+    },
+    {
+      "id": "RES-15",
+      "title": "Crypto Agility",
+      "author_or_publisher": "NIST",
+      "type": "official primary guidance",
+      "url": "https://csrc.nist.gov/Projects/crypto-agility",
+      "required": true,
+      "access": "free",
+      "week": 70,
+      "estimated_minutes": 20,
+      "purpose": "Ground the PESD 2.0 cross-cutting decision in current primary guidance and produce scoped evidence rather than framework vocabulary.",
+      "assignment": "Read the overview and current publications boundary; inventory algorithms and plan replacement without claiming a universal migration schedule.",
+      "last_verified": "2026-08-04",
+      "text_alternative": "lessons/08-prompt-injection-tool-authorization-decisions.md",
+      "verified_title": "Crypto Agility",
+      "verified_publisher": "NIST",
+      "verification_method": "HTTP GET plus primary-source metadata comparison",
+      "final_url": "https://csrc.nist.gov/Projects/crypto-agility",
+      "verification_status": "verified"
     }
   ],
   "artifacts": [
     {
       "id": "A01",
-      "week": 49,
+      "week": 71,
       "required": true,
       "template_path": "modules/13-security-privacy-abuse-resistance/worksheets/week-49-security-model.md",
       "submission_path": "reports/module-13-security-baseline.md",
       "immutable_after_submission": true,
-      "portfolio_category": "model"
+      "portfolio_category": "model",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M13-A01",
+      "component_role": "prediction",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A02",
-      "week": 50,
+      "week": 71,
       "required": true,
       "template_path": "modules/13-security-privacy-abuse-resistance/worksheets/week-50-security-controls.md",
       "submission_path": "labs/module-13/security-controls/",
-      "portfolio_category": "implementation"
+      "portfolio_category": "implementation",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M13-A02",
+      "component_role": "implementation",
+      "estimated_minutes": 30,
+      "evidence_mode": "executed_deterministic"
     },
     {
       "id": "A03",
-      "week": 50,
+      "week": 71,
       "required": true,
       "template_path": "modules/13-security-privacy-abuse-resistance/worksheets/week-50-security-controls.md",
       "submission_path": "reports/module-13-security-implementation-review.md",
-      "portfolio_category": "model"
+      "portfolio_category": "model",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M13-A03",
+      "component_role": "prediction",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A04",
-      "week": 51,
+      "week": 73,
       "required": true,
       "template_path": "modules/13-security-privacy-abuse-resistance/worksheets/week-51-security-failure-matrix.md",
       "submission_path": "experiments/module-13/",
       "immutable_after_submission": true,
-      "portfolio_category": "failure_matrix"
+      "portfolio_category": "failure_matrix",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M13-A04",
+      "component_role": "raw_evidence",
+      "estimated_minutes": 30,
+      "evidence_mode": "executed_deterministic"
     },
     {
       "id": "A05",
-      "week": 51,
+      "week": 70,
       "required": true,
       "template_path": "templates/security-threat-model-template.md",
       "submission_path": "reports/module-13-threat-model.md",
       "immutable_after_submission": true,
-      "portfolio_category": "threat_model"
+      "portfolio_category": "threat_model",
+      "portfolio_item_id": "PI-THREAT-01",
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-THREAT-ASSISTANT",
+      "component_role": "baseline",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A06",
-      "week": 51,
+      "week": 73,
       "required": true,
       "template_path": "modules/13-security-privacy-abuse-resistance/worksheets/week-51-security-failure-matrix.md",
       "submission_path": "reports/module-13-security-verification.md",
       "immutable_after_submission": true,
-      "portfolio_category": "model"
+      "portfolio_category": "assurance_case",
+      "portfolio_item_id": "PI-ASSURE-01",
+      "portfolio_credit": true,
+      "evidence_lineage_id": "LIN-ASSURE-SYSTEM",
+      "component_role": "analysis",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A07",
-      "week": 52,
+      "week": 74,
       "required": true,
       "template_path": "templates/rfc-template.md",
       "submission_path": "rfc/module-13-security-architecture.md",
-      "portfolio_category": "rfc"
+      "portfolio_category": "rfc",
+      "portfolio_item_id": "PI-DECISION-M13",
+      "portfolio_credit": true,
+      "evidence_lineage_id": "LIN-DECISION-M13",
+      "component_role": "decision",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A08",
-      "week": 52,
+      "week": 74,
       "required": true,
       "template_path": "modules/13-security-privacy-abuse-resistance/worksheets/week-52-security-decision-defense.md",
       "submission_path": "reviews/module-13-defense.md",
-      "portfolio_category": "teach_back"
+      "portfolio_category": "teach_back",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M13-A08",
+      "component_role": "final",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A09",
-      "week": 52,
+      "week": 74,
       "required": true,
       "template_path": "modules/13-security-privacy-abuse-resistance/assessment/report-template.md",
       "submission_path": "reviews/module-13-evaluation.md",
-      "portfolio_category": "evaluation"
+      "portfolio_category": "evaluation",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M13-A09",
+      "component_role": "final",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     },
     {
       "id": "A10",
-      "week": 52,
+      "week": 74,
       "required": true,
       "template_path": "templates/learning-log-template.md",
-      "submission_path": "learning-log/week-49.md through learning-log/week-52.md",
-      "portfolio_category": "learning_log"
+      "submission_path": "learning-log/week-070.md through learning-log/week-074.md",
+      "portfolio_category": "learning_log",
+      "portfolio_item_id": null,
+      "portfolio_credit": false,
+      "evidence_lineage_id": "LIN-M13-A10",
+      "component_role": "final",
+      "estimated_minutes": 30,
+      "evidence_mode": "derived"
     }
   ],
   "failure_experiments": [
@@ -1052,5 +1130,13 @@
       "estimated_minutes": 30
     }
   ],
-  "citation_catalog": []
+  "citation_catalog": [],
+  "course_id": "PESD-104",
+  "course_version": "2.0",
+  "primary_decision": {
+    "artifact_id": "A07",
+    "type": "RFC"
+  },
+  "pesd_v2_additions": "obligation-to-control-to-evidence mapping, privacy impact reasoning, secure SDLC, source-to-deployment identity, cryptographic inventory, crypto agility, and post-quantum migration planning",
+  "semantic_evaluation": "module_specific"
 }

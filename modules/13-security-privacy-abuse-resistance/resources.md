@@ -196,3 +196,12 @@ task; record the substitution.
 Do not copy articles, chapters, slides, or transcripts into learner artifacts.
 Use short attributed quotations only when necessary and otherwise paraphrase with
 the source ID, exact section boundary, and stated evidence limit.
+
+## PESD 2.0 primary anchors
+
+- [Secure Software Development Framework](https://csrc.nist.gov/projects/ssdf) — NIST; required, free, 20 minutes; Read the SSDF practices and use sections; map applicable outcomes to source, build, release, and vulnerability-response evidence. Local alternative: Lesson 8 PESD 2.0 extension. Last verified 2026-08-04.
+- [Crypto Agility](https://csrc.nist.gov/Projects/crypto-agility) — NIST; required, free, 20 minutes; Read the overview and current publications boundary; inventory algorithms and plan replacement without claiming a universal migration schedule. Local alternative: Lesson 8 PESD 2.0 extension. Last verified 2026-08-04.
+
+For each source, submit the named control/evidence mapping and applicability or
+scope uncertainty. A framework name is not evidence of implementation or legal
+compliance.

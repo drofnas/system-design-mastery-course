@@ -1,8 +1,6 @@
 # Module 15: Execution Models Across Languages
 
-> **Authoring status:** Ready. Four-runtime conformance, paired failure evidence,
-> six isolated evaluator runs, factual and resource review, calibration
-> checking, and focused and full-course validation passed on 2026-08-04.
+> **Authoring status:** Review. PESD 2.0 content and machine-readable contracts are migrated. Refreshed evaluator calibration, full platform matrices, offline reruns, cleanup checks, and timed learner pilots remain required before Ready.
 
 ## What this module changes
 
@@ -43,51 +41,50 @@ By the end of the module, you can:
 
 ## Schedule
 
-### Week 57: Model execution and freeze predictions — 11 hours
+The 10–12 hour weekly figure is a capacity envelope. Core work is deliberately
+budgeted below that ceiling; unused time is recovery buffer, not hidden work.
+
+### Week 80: Model and derive — 8.5 hours
 
 | Work | Time |
 |---|---:|
-| Lessons 1–5 and bounded sources | 4 h |
-| EX-01–EX-04 and Northstar modeling | 2 h |
-| Independent workload, equivalence, and F01–F09 baseline | 3.5 h |
-| Freeze, self-check, and learning log | 1.5 h |
+| Bounded authoritative resources | 115 min |
+| Local mechanism instruction | 120 min |
+| Guided practice | 60 min |
+| Model and derive core work | 215 min |
 
-Use the [Week 57 worksheet](worksheets/week-57-execution-model.md).
-
-### Week 58: Build four equivalent services — 12 hours
+### Week 81: Guided build and prediction freeze — 9 hours
 
 | Work | Time |
 |---|---:|
-| Lessons 3, 5, and 7; lab tutorial | 2.5 h |
-| EX-05–EX-09 and contract rehearsal | 2 h |
-| TypeScript, Go, Rust, and Java implementations | 6.5 h |
-| Conformance review and learning log | 1 h |
+| Bounded authoritative resources | 115 min |
+| Local mechanism instruction | 120 min |
+| Guided practice | 60 min |
+| Required evidence components | 120 min |
+| Guided build and prediction freeze core work | 125 min |
 
-Use the [Week 58 worksheet](worksheets/week-58-polyglot-build.md).
-
-### Week 59: Break and measure runtime assumptions — 12 hours
-
-| Work | Time |
-|---|---:|
-| Lessons 4 and 6; bounded sources | 2 h |
-| EX-10–EX-17 and experiment rehearsal | 2 h |
-| F01–F09 broken/repaired trials | 6 h |
-| Failure matrix, investigation, and learning log | 2 h |
-
-Use the [Week 59 worksheet](worksheets/week-59-runtime-failure-matrix.md).
-
-### Week 60: Decide, teach, assess, and complete Gate 5 — 11 hours
+### Week 82: Independent build and integration — 10 hours
 
 | Work | Time |
 |---|---:|
-| Lesson 8, Discord case, and EX-18 | 1.5 h |
-| Runtime comparison, performance, internals, and selection ADR | 3 h |
-| Defense and module evaluation | 1.5 h |
-| Four-part Gate 5 | 3.5 h |
-| Remediation and learning log | 1.5 h |
+| Independent build and integration core work | 540 min |
+| Independent build and integration verification checkpoint | 60 min |
 
-Use the [Week 60 worksheet](worksheets/week-60-runtime-decision-gate-05.md).
+### Week 83: Break, repair, measure, and diagnose — 10 hours
 
+| Work | Time |
+|---|---:|
+| Required evidence components | 90 min |
+| Break, repair, measure, and diagnose core work | 510 min |
+
+### Week 84: Decide, teach, assess, and freeze — 9.5 hours
+
+| Work | Time |
+|---|---:|
+| Required evidence components | 60 min |
+| Decide, teach, assess, and freeze core work | 450 min |
+| Module teach-back | 30 min |
+| Learning log and freeze check | 30 min |
 ## Learn
 
 1. [Memory lifetime and management](lessons/01-memory-lifetime-management.md)
@@ -115,18 +112,19 @@ studying the mechanisms.
   a language property.
 - Preserve predictions and raw results. Corrections belong in dated addenda.
 
-This module contributes one runtime-comparison report, the course's third
-source-code internals review, one ADR, one failure matrix, one performance
-investigation, one Gate 5 submission, and one recorded teach-back.
+This module contributes two distinct runtime comparisons—semantic conformance
+and measured performance/operability—plus one ADR, one failure matrix, one
+performance investigation, and one lightweight teach-back. Gate 5 owns its
+standalone submission; the module does not duplicate it.
 
 ## Assessment and completion
 
 - Read the [assessment contract](assessment/README.md), [anchored rubric](assessment/rubric.md),
-  [Gate 5](assessment/gate-05.md), [evaluator prompt](assessment/evaluator-prompt.md),
+  [Gate 5](../../gates/G05/assessment-brief.md), [evaluator prompt](assessment/evaluator-prompt.md),
   [remediation map](assessment/remediation-map.md), and current
   [readiness review](assessment/semantic-readiness-review.md) before independent work.
 - Pass G01–G06, average at least 3.0, and avoid a zero in R05–R08.
-- Gate 5 reviews Modules 13–15. It does not create a Week 60 capstone revision.
+- Gate 5 reviews Modules 13–15. The Week 85 gate freeze remains immutable; accepted findings belong in the separate Week 86 delta.
 
 ## Evidence boundary and AI use
 
@@ -147,3 +145,10 @@ produce replacement graded answers, or answer during the defense.
 - Use the [sealed local gate workflow](../../SOLO_GATE_GUIDE.md) when a course gate applies. Human review is optional.
 
 A frozen self-evaluation may establish **Solo Complete**; independent human or LLM review may establish **Independently Validated**. Synthetic lab values are not production measurements.
+
+## PESD 2.0 scope addition
+
+This 5-week module schedules 47 core hours. Its primary
+decision is ADR A08. The added graded scope is
+four transport/schema shells while the learner implements admission, task ownership, cancellation, cleanup, memory and lifetime behavior, synchronization, and validation in TypeScript, Go, Rust, and Java. See Lesson 8, the final guided exercise, final worksheet,
+rubric anchors, and remediation map for the integrated evidence contract.

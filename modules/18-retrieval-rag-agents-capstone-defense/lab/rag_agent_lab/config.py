@@ -15,7 +15,7 @@ CONTROL_KEYS = (
     "budget_and_cancellation_bounds",
     "approval_authorization_gate",
 )
-INVARIANT_IDS = tuple(f"I{number:02d}" for number in range(1, 13))
+INVARIANT_IDS = tuple(f"AI{number:02d}" for number in range(1, 13))
 
 
 def load_scenario(path: Path) -> dict[str, Any]:
@@ -33,7 +33,7 @@ def load_scenario(path: Path) -> dict[str, Any]:
         if len(identity) != 64 or any(character not in "0123456789abcdef" for character in identity):
             raise ValueError("corpus and evaluation identities must be SHA-256 values")
     if scenario["expected"]["repaired_invariants"] != list(INVARIANT_IDS):
-        raise ValueError("repaired invariant inventory must be I01-I12")
+        raise ValueError("repaired invariant inventory must be AI01-AI12")
     return scenario
 
 
@@ -49,7 +49,7 @@ def validate_trial(trial: dict[str, Any]) -> list[str]:
         if len(value) != 64 or any(character not in "0123456789abcdef" for character in value):
             errors.append(f"{name} is not a SHA-256")
     if [row.get("id") for row in trial.get("invariants", [])] != list(INVARIANT_IDS):
-        errors.append("invariant inventory must be ordered I01-I12")
+        errors.append("invariant inventory must be ordered AI01-AI12")
     if not trial.get("limitations"):
         errors.append("limitations are required")
     return errors

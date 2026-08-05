@@ -13,7 +13,7 @@ reachable evidence exist. All four runtime implementations are required.
 
 ### G02: Frozen chronology and equivalent work (hard gate)
 
-The Week 57 baseline and F01–F09 predictions predate execution. Raw trials are
+The Week 81 baseline and F01–F09 predictions predate execution. Raw trials are
 unchanged. Paired variants share logical input, seed, and resource limits and
 change exactly one named control. Fabricated/altered evidence yields Repeat.
 

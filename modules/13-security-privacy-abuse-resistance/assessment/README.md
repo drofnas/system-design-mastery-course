@@ -14,7 +14,7 @@ present. Missing required artifacts prevents Pass.
 
 ### G02: Frozen chronology and evidence integrity (hard gate)
 
-Week 49 predictions and scenario hashes predate trials. Raw broken results remain
+Week 71 predictions and scenario hashes predate trials. Raw broken results remain
 unchanged; repairs and interpretations are separate dated evidence. A changed or
 fabricated first attempt yields Repeat.
 

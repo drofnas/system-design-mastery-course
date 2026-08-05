@@ -214,3 +214,11 @@ Example response to regional services:
 
 Each response should identify the assumption, mechanism, evidence, and decision
 effect rather than repeat the RFC recommendation.
+
+## PESD 2.0 extension answer
+
+A defensible answer covers a constraint and assurance ledger covering data classes, tenant boundaries, obligations, AI use, supplier risk, cost allocation, decision rights, evidence owners, uncertainty, and reversal triggers. It distinguishes the
+requirement, enforcement mechanism, evidence, and owner; keeps modeled and
+measured results separate; and names the failed condition that would reverse
+the decision. Different architectures are acceptable when their invariants,
+evidence boundaries, migration, and residual risk are explicit.

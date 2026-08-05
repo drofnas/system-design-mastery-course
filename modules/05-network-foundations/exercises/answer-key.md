@@ -103,3 +103,11 @@ Begin only after fallback capacity and observability pass. Expose a bounded
 supported mobile cohort; succeed on user p95, error, fallback, CPU/memory, and
 cost thresholds; stop or remove advertisement when thresholds fail. Decommission
 old support only after client use and rollback windows meet published evidence.
+
+## PESD 2.0 extension answer
+
+A defensible answer covers workload identity, egress policy, residency-aware routing, encrypted naming implications, and a network certificate and algorithm inventory. It distinguishes the
+requirement, enforcement mechanism, evidence, and owner; keeps modeled and
+measured results separate; and names the failed condition that would reverse
+the decision. Different architectures are acceptable when their invariants,
+evidence boundaries, migration, and residual risk are explicit.

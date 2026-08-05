@@ -1,5 +1,7 @@
 # Week 48 Gate 4 Revision
 
+> **PESD V1 historical contract:** Preserve this file for V1 learners and immutable evidence. PESD 2.0 uses [V1_TO_V2_MIGRATION.md](../../V1_TO_V2_MIGRATION.md).
+
 > Create this artifact only after freezing the Gate 4 submission. Do not edit
 > the Week 1 baseline or Week 12/24 revisions. Describe changes and cite
 > evidence; do not copy Northstar reliability thresholds, roles, or topology

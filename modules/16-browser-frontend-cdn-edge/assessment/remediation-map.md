@@ -15,3 +15,11 @@
 
 Safety-critical remediation for R04–R06 or R09 creates a separate A10 revision
 and new trials. It never rewrites A01 or A04.
+
+## PESD 2.0 remediation
+
+When a cross-cutting floor is missed, return to Lesson 8's PESD 2.0 extension
+and the final exercise. Create a separate dated revision containing the missing
+requirement/control/evidence mapping, owner, evidence boundary, failure check,
+cost consequence, migration, and reversal trigger. Never edit the frozen
+baseline or raw trial. A Pass creates no required remediation artifact.

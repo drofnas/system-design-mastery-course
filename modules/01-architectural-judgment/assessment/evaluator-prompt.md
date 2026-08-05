@@ -211,3 +211,11 @@ interpretation before assessing the learner.
 After both runs, use `scripts/check_calibration.py` to reject arithmetic errors,
 fabricated fixture headings, unclassified findings, incomplete remediation, or
 score drift.
+
+## PESD 2.0 evaluator instruction
+
+Score the published criteria against evidence for a constraint and assurance ledger covering data classes, tenant boundaries, obligations, AI use, supplier risk, cost allocation, decision rights, evidence owners, uncertainty, and reversal triggers.
+Classify missing evidence, incorrect reasoning, unsupported claims, and
+reasonable uncertainty separately. Reject fixture replay presented as
+independent build or break evidence. Do not invent legal applicability or treat
+a named framework as proof of compliance.

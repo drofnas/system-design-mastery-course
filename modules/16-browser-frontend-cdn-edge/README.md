@@ -1,9 +1,6 @@
 # Module 16: Browser, Frontend, CDN, and Edge Architecture
 
-> **Authoring status:** Ready. The pinned browser lab, F01–F08 pairs,
-> accessibility and manual checks, six isolated evaluator runs, calibration
-> checking, semantic and resource review, and focused and full-course validation
-> passed on 2026-08-03.
+> **Authoring status:** Review. PESD 2.0 content and machine-readable contracts are migrated. Refreshed evaluator calibration, full platform matrices, offline reruns, cleanup checks, and timed learner pilots remain required before Ready.
 
 ## What this module changes
 
@@ -44,50 +41,50 @@ By the end of the module, you can:
 
 ## Schedule
 
-### Week 61: Model and freeze browser-edge predictions — 11 hours
+The 10–12 hour weekly figure is a capacity envelope. Core work is deliberately
+budgeted below that ceiling; unused time is recovery buffer, not hidden work.
+
+### Week 87: Model and derive — 8.5 hours
 
 | Work | Time |
 |---|---:|
-| Lessons 1–4 and bounded sources | 4 h |
-| EX-01–EX-10 with Northstar route modeling | 2 h |
-| Independent route, budget, cache, accessibility, and F01–F08 baseline | 3.5 h |
-| Freeze, self-check, and learning log | 1.5 h |
+| Bounded authoritative resources | 165 min |
+| Local mechanism instruction | 120 min |
+| Guided practice | 60 min |
+| Model and derive core work | 165 min |
 
-Use the [Week 61 worksheet](worksheets/week-61-browser-edge-model.md).
-
-### Week 62: Build the route-specific storefront — 12 hours
+### Week 88: Guided build and prediction freeze — 9 hours
 
 | Work | Time |
 |---|---:|
-| Lessons 3, 5, and 7; Northstar lab tutorial | 2.5 h |
-| EX-05–EX-12 and conformance rehearsal | 2 h |
-| Independent storefront implementation | 6.5 h |
-| Conformance review and learning log | 1 h |
+| Bounded authoritative resources | 150 min |
+| Local mechanism instruction | 120 min |
+| Guided practice | 60 min |
+| Required evidence components | 60 min |
+| Guided build and prediction freeze core work | 150 min |
 
-Use the [Week 62 worksheet](worksheets/week-62-storefront-build.md).
-
-### Week 63: Break and measure browser-edge assumptions — 12 hours
-
-| Work | Time |
-|---|---:|
-| Lessons 1, 4, and 6; bounded sources | 2 h |
-| EX-13–EX-17 and experiment rehearsal | 2 h |
-| F01–F08 broken/repaired trials | 6 h |
-| Failure matrix, performance review, and learning log | 2 h |
-
-Use the [Week 63 worksheet](worksheets/week-63-browser-edge-failures.md).
-
-### Week 64: Decide, teach, assess, and remediate — 11 hours
+### Week 89: Independent build and integration — 10 hours
 
 | Work | Time |
 |---|---:|
-| Lesson 8, practitioner case, and EX-18 | 1.5 h |
-| Frontend-edge RFC and defense | 4 h |
-| Module evaluation and teach-back | 2 h |
-| Remediation and learning log | 3.5 h |
+| Independent build and integration core work | 540 min |
+| Independent build and integration verification checkpoint | 60 min |
 
-Use the [Week 64 worksheet](worksheets/week-64-architecture-defense.md).
+### Week 90: Break, repair, measure, and diagnose — 10 hours
 
+| Work | Time |
+|---|---:|
+| Required evidence components | 120 min |
+| Break, repair, measure, and diagnose core work | 480 min |
+
+### Week 91: Decide, teach, assess, and freeze — 9.5 hours
+
+| Work | Time |
+|---|---:|
+| Required evidence components | 120 min |
+| Decide, teach, assess, and freeze core work | 390 min |
+| Module teach-back | 30 min |
+| Learning log and freeze check | 30 min |
 ## Learn
 
 1. [Browser work and the rendering pipeline](lessons/01-browser-work-rendering-pipeline.md)
@@ -124,7 +121,7 @@ one failure matrix, and one recorded architecture teach-back.
   [evaluator prompt](assessment/evaluator-prompt.md), [remediation map](assessment/remediation-map.md),
   and [readiness review](assessment/semantic-readiness-review.md).
 - Pass G01–G06, average at least 3.0, and avoid a zero in R04–R06 or R09.
-- Gate 6 occurs in Week 72 after Modules 17–18; Module 16 creates no gate submission.
+- Gate 6 runs in Week 103 after Modules 17–18; Module 16 evidence is frozen there but creates no duplicate module gate submission.
 
 ## Evidence boundary and AI use
 
@@ -146,3 +143,10 @@ during the defense.
 - Use the [sealed local gate workflow](../../SOLO_GATE_GUIDE.md) when a course gate applies. Human review is optional.
 
 A frozen self-evaluation may establish **Solo Complete**; independent human or LLM review may establish **Independently Validated**. Synthetic lab values are not production measurements.
+
+## PESD 2.0 scope addition
+
+This 5-week module schedules 47 core hours. Its primary
+decision is RFC A07. The added graded scope is
+offline and degraded client state, browser-storage lifecycle, third-party governance, AI-content transparency and provenance, edge residency, and energy/performance budgets. See Lesson 8, the final guided exercise, final worksheet,
+rubric anchors, and remediation map for the integrated evidence contract.

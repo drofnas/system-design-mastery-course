@@ -1,5 +1,7 @@
 # Gate 4 Assessor Notes and Explained Boundaries
 
+> **PESD V1 historical contract:** Preserve this file for V1 learners and immutable evidence. PESD 2.0 uses [gates/G04/README.md](../../../gates/G04/README.md).
+
 Use only after all four parts are frozen. These notes describe acceptable
 reasoning, not one architecture or capstone answer.
 
