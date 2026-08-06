@@ -2,12 +2,12 @@
 
 ## How to use this case
 
-Transit Signal is the continuing non-capstone example for Module 1. Follow each
+Transit Signal is the continuing local example for Module 1. Follow each
 step after reading the related lesson. The case demonstrates a reasoning method,
 not a canonical architecture. Other designs can be defensible under different
 workloads, constraints, or ownership.
 
-Do not substitute the commerce capstone into the worked steps. Complete the
+Do not substitute the external commerce example into the worked steps. Complete the
 guided exercises first, then produce the commerce artifacts independently.
 
 ## Step 1: Replace the solution request with an outcome

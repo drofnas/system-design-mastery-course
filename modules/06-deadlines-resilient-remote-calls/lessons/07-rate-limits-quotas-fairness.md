@@ -1,6 +1,6 @@
 ---
 lesson_id: L07
-title: Rate Limits, Quotas, and Fairness
+title: "Rate Limits, Quotas, and Fairness"
 ---
 
 # Rate Limits, Quotas, and Fairness

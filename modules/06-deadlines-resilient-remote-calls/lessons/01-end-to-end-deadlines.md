@@ -1,6 +1,6 @@
 ---
 lesson_id: L01
-title: End-to-End Deadlines and Allocation
+title: "End-to-End Deadlines and Allocation"
 ---
 
 # End-to-End Deadlines and Allocation
@@ -94,4 +94,4 @@ when only 45 ms remains but the child's measured minimum useful duration is 70 m
 - gRPC Authors, [Deadlines](https://grpc.io/docs/guides/deadlines/), especially
   propagation and application cleanup responsibility.
 - Google SRE, [Addressing Cascading Failures](https://sre.google/sre-book/addressing-cascading-failures/), “Latency and Deadlines.”
-- Next: complete EX-01 and EX-02, then freeze the Week 21 call graph.
+- Next: complete EX-01 and EX-02, then freeze the call graph.

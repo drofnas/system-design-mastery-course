@@ -28,7 +28,7 @@ task; record the substitution.
 - **URL:** https://www.sei.cmu.edu/library/reasoning-about-software-quality-attributes/
 - **Type/status:** authoritative written source; Required
 - **Access:** free
-- **Week/time:** Week 2; 35 minutes assigned
+- **Lesson/time:** the relevant lesson; 35 minutes assigned
 - **Purpose:** Read the overview and General Scenarios sections through the discussion of trade-offs.
 - **Boundary and evidence:** Read the overview and General Scenarios sections through the discussion of trade-offs. Record one quality name that remains ambiguous until expressed as a scenario.
 - **Local alternative:** [lessons/04-quality-attribute-scenarios.md](lessons/04-quality-attribute-scenarios.md)
@@ -41,7 +41,7 @@ task; record the substitution.
 - **URL:** https://c4model.com/
 - **Type/status:** official documentation; Required
 - **Access:** free
-- **Week/time:** Week 2; 30 minutes assigned
+- **Lesson/time:** the relevant lesson; 30 minutes assigned
 - **Purpose:** Read the overview, abstractions, system-context guidance, notation guidance, and diagram-review checklist.
 - **Boundary and evidence:** Read the overview, abstractions, system-context guidance, notation guidance, and diagram-review checklist. Identify which details do not belong on a context diagram.
 - **Local alternative:** [lessons/05-context-and-boundaries.md](lessons/05-context-and-boundaries.md)
@@ -54,7 +54,7 @@ task; record the substitution.
 - **URL:** https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions
 - **Type/status:** original practitioner article; Required
 - **Access:** free
-- **Week/time:** Week 1; 20 minutes assigned
+- **Lesson/time:** the relevant lesson; 20 minutes assigned
 - **Purpose:** Read the complete article.
 - **Boundary and evidence:** Read the complete article. Explain why preserving a superseded decision is useful and identify one decision too small to deserve an ADR.
 - **Local alternative:** [lessons/08-decisions-rfcs-and-defense.md](lessons/08-decisions-rfcs-and-defense.md)
@@ -67,7 +67,7 @@ task; record the substitution.
 - **URL:** https://builder.aws.com/content/3F08f7GPFiZMCgXD8gny6OjxR0Z/challenges-with-distributed-systems
 - **Type/status:** first-person engineering case; Required
 - **Access:** free
-- **Week/time:** Week 1; 45 minutes assigned
+- **Lesson/time:** the relevant lesson; 45 minutes assigned
 - **Purpose:** Read the complete article.
 - **Boundary and evidence:** Read the complete article. Add three independent failure combinations and one unknown-outcome case to the transit case failure matrix.
 - **Local alternative:** [lessons/07-failure-models-and-adversarial-review.md](lessons/07-failure-models-and-adversarial-review.md)
@@ -80,7 +80,7 @@ task; record the substitution.
 - **URL:** https://www.sei.cmu.edu/library/architecting-in-a-complex-world-eliciting-and-specifying-quality-attribute-requirements/
 - **Type/status:** webcast; Optional enrichment
 - **Access:** free
-- **Week/time:** Week 1; 60 minutes optional
+- **Lesson/time:** the relevant lesson; 60 minutes optional
 - **Purpose:** Watch the complete webcast or study the supplemental slides.
 - **Boundary and evidence:** Watch the complete webcast or study the supplemental slides. Write down the workshop steps that prevent the loudest stakeholder from defining every priority.
 - **Local alternative:** [lessons/04-quality-attribute-scenarios.md](lessons/04-quality-attribute-scenarios.md)
@@ -93,7 +93,7 @@ task; record the substitution.
 - **URL:** https://sre.google/workbook/implementing-slos/
 - **Type/status:** practitioner handbook chapter; Optional enrichment
 - **Access:** free
-- **Week/time:** Week 1; 45 minutes optional
+- **Lesson/time:** the relevant lesson; 45 minutes optional
 - **Purpose:** Read Getting Started, SLI Specification versus Implementation, and Modeling User Journeys.
 - **Boundary and evidence:** Read Getting Started, SLI Specification versus Implementation, and Modeling User Journeys. Explain why a server metric may misrepresent a user's outcome.
 - **Local alternative:** [lessons/02-problem-framing-and-workloads.md](lessons/02-problem-framing-and-workloads.md)
@@ -106,7 +106,7 @@ task; record the substitution.
 - **URL:** https://www.youtube.com/watch?v=KvoBrUd1-5E
 - **Type/status:** conference video; Optional enrichment
 - **Access:** free
-- **Week/time:** Week 1; 60 minutes optional
+- **Lesson/time:** the relevant lesson; 60 minutes optional
 - **Purpose:** Watch the complete creator-led talk.
 - **Boundary and evidence:** Watch the complete creator-led talk. Capture three diagram smells and how each impairs a design review.
 - **Local alternative:** [lessons/05-context-and-boundaries.md](lessons/05-context-and-boundaries.md)
@@ -119,7 +119,7 @@ task; record the substitution.
 - **URL:** https://www.iso.org/standard/78176.html
 - **Type/status:** standard; Optional enrichment
 - **Access:** paid
-- **Week/time:** Week 1; 60 minutes optional
+- **Lesson/time:** the relevant lesson; 60 minutes optional
 - **Purpose:** Optional: review the current product-quality taxonomy and compare its categories with the scenarios you wrote.
 - **Boundary and evidence:** Optional: review the current product-quality taxonomy and compare its categories with the scenarios you wrote.
 - **Local alternative:** [lessons/04-quality-attribute-scenarios.md](lessons/04-quality-attribute-scenarios.md)

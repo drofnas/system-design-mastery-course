@@ -2,7 +2,7 @@
 
 ## Case boundary
 
-Transit Signal remains the non-capstone example. A rider journey contains three
+Transit Signal remains the local example. A rider journey contains three
 route legs. The route-impact endpoint fans out to one alert lookup per leg and
 waits for all three before returning the current approved impacts.
 

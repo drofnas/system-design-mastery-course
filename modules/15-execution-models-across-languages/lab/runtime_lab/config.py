@@ -56,7 +56,7 @@ def validate_trial(trial: dict[str, Any]) -> list[str]:
     if "model is not measured runtime evidence" in boundaries:
         errors.append("measured trial must not claim to be deterministic model evidence")
     if not any("five measured repetitions" in str(boundary) for boundary in boundaries):
-        errors.append("measured trial must disclose its five-repetition evidence boundary")
+        errors.append("measured trial must disclose its five-repetition evidence limit")
     hashes = trial.get("hashes", {})
     for key in ("code_sha256", "schema_sha256", "image_sha256"):
         if len(str(hashes.get(key, ""))) != 64:

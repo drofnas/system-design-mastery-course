@@ -28,7 +28,7 @@ task; record the substitution.
 - **URL:** https://www.sqlite.org/fileformat.html
 - **Type/status:** maintainer specification; Required
 - **Access:** free
-- **Week/time:** Week 36; 50 minutes assigned
+- **Lesson/time:** the relevant lesson; 50 minutes assigned
 - **Purpose:** Ground pages, B-tree cells, and record boundaries in a stable implementation contract.
 - **Boundary and evidence:** Read Sections 1.2, 1.6, and 2.1; sketch a page and name two choices the format does not prescribe for this lab.
 - **Local alternative:** [lessons/02-pages-records-buffer-pools.md](lessons/02-pages-records-buffer-pools.md)
@@ -41,7 +41,7 @@ task; record the substitution.
 - **URL:** https://dsf.berkeley.edu/cs286/papers/lsm-acta1996.pdf
 - **Type/status:** original research paper; Required
 - **Access:** free
-- **Week/time:** Week 35; 70 minutes assigned
+- **Lesson/time:** the relevant lesson; 70 minutes assigned
 - **Purpose:** Derive the buffered write mechanism and original cost assumptions.
 - **Boundary and evidence:** Read the Abstract and Sections 1-3; derive why buffering changes write cost and list assumptions that differ from the lab.
 - **Local alternative:** [lessons/04-lsm-bloom-compaction.md](lessons/04-lsm-bloom-compaction.md)
@@ -54,7 +54,7 @@ task; record the substitution.
 - **URL:** https://github.com/facebook/rocksdb/wiki/RocksDB-Overview
 - **Type/status:** maintainer documentation; Required
 - **Access:** free
-- **Week/time:** Week 35; 40 minutes assigned
+- **Lesson/time:** the relevant lesson; 40 minutes assigned
 - **Purpose:** Compare operated LSM compaction shapes and amplification trade-offs.
 - **Boundary and evidence:** Read Architecture and Compaction Styles; compare leveled, tiered/universal, and FIFO under three amplification dimensions.
 - **Local alternative:** [lessons/04-lsm-bloom-compaction.md](lessons/04-lsm-bloom-compaction.md)
@@ -67,7 +67,7 @@ task; record the substitution.
 - **URL:** https://github.com/facebook/rocksdb/wiki/Write-Stalls
 - **Type/status:** first-person practitioner documentation; Required
 - **Access:** free
-- **Week/time:** Week 36; 35 minutes assigned
+- **Lesson/time:** the relevant lesson; 35 minutes assigned
 - **Purpose:** Relate compaction debt to bounded admission and operator-owned recovery.
 - **Boundary and evidence:** Read the complete page; map every trigger to a metric, owner, and safe overload action.
 - **Local alternative:** [lessons/07-skew-debt-stalls-diagnosis.md](lessons/07-skew-debt-stalls-diagnosis.md)
@@ -80,7 +80,7 @@ task; record the substitution.
 - **URL:** https://www.postgresql.org/docs/current/using-explain.html
 - **Type/status:** maintainer documentation; Required
 - **Access:** free
-- **Week/time:** Week 36; 50 minutes assigned
+- **Lesson/time:** the relevant lesson; 50 minutes assigned
 - **Purpose:** Ground query-plan diagnosis in estimated and actual physical work.
 - **Boundary and evidence:** Read Sections 14.1.1-14.1.3; compare estimated/actual rows and record one alternative explanation before changing an index.
 - **Local alternative:** [lessons/06-query-plans-statistics-indexes.md](lessons/06-query-plans-statistics-indexes.md)
@@ -93,7 +93,7 @@ task; record the substitution.
 - **URL:** https://www.postgresql.org/docs/current/planner-stats.html
 - **Type/status:** maintainer documentation; Required
 - **Access:** free
-- **Week/time:** Week 35; 35 minutes assigned
+- **Lesson/time:** the relevant lesson; 35 minutes assigned
 - **Purpose:** Explain selectivity, correlation, and extended-statistics trade-offs.
 - **Boundary and evidence:** Read Sections 14.2.1-14.2.2; explain one correlation error and the cost of more detailed statistics.
 - **Local alternative:** [lessons/06-query-plans-statistics-indexes.md](lessons/06-query-plans-statistics-indexes.md)
@@ -106,7 +106,7 @@ task; record the substitution.
 - **URL:** https://www.youtube.com/watch?v=scUtG_6M_lU
 - **Type/status:** captioned course video; Optional enrichment
 - **Access:** free
-- **Week/time:** Week 39; 80 minutes optional
+- **Lesson/time:** the relevant lesson; 80 minutes optional
 - **Purpose:** Observe insertion, split, deletion, and composite-index reasoning from a database-internals course.
 - **Boundary and evidence:** Watch through deletion and composite indexes; predict changed pages for one insert/delete and compare with the lab trace.
 - **Local alternative:** [lessons/03-btree-hash-inverted-indexes.md](lessons/03-btree-hash-inverted-indexes.md)
@@ -119,7 +119,7 @@ task; record the substitution.
 - **URL:** https://15445.courses.cs.cmu.edu/spring2026/schedule.html
 - **Type/status:** course notes and slides; Optional enrichment
 - **Access:** free
-- **Week/time:** Week 39; 90 minutes optional
+- **Lesson/time:** the relevant lesson; 90 minutes optional
 - **Purpose:** Connect storage, memory management, and indexes in one primary teaching sequence.
 - **Boundary and evidence:** Use only Database Storage I-II, Memory Management, and Indexes & Filters I-II notes/slides; produce a physical-path diagram and workload-dependent question.
 - **Local alternative:** [lessons/02-pages-records-buffer-pools.md](lessons/02-pages-records-buffer-pools.md)
@@ -132,7 +132,7 @@ task; record the substitution.
 - **URL:** https://github.com/facebook/rocksdb/wiki/Compaction
 - **Type/status:** maintainer documentation; Optional enrichment
 - **Access:** free
-- **Week/time:** Week 39; 45 minutes optional
+- **Lesson/time:** the relevant lesson; 45 minutes optional
 - **Purpose:** Expose bytes, run shapes, and temporary space involved in compaction.
 - **Boundary and evidence:** Read Overview through Tiered+Leveled; draw one merge and identify temporary-space exposure.
 - **Local alternative:** [lessons/05-amplification-ssd-endurance.md](lessons/05-amplification-ssd-endurance.md)
@@ -145,7 +145,7 @@ task; record the substitution.
 - **URL:** https://www.postgresql.org/docs/current/indexes.html
 - **Type/status:** maintainer documentation; Optional enrichment
 - **Access:** free
-- **Week/time:** Week 39; 45 minutes optional
+- **Lesson/time:** the relevant lesson; 45 minutes optional
 - **Purpose:** Connect index operator/order support to update and storage costs.
 - **Boundary and evidence:** Read Sections 11.1-11.5; design equality and ordered-range indexes and explain their write/storage cost.
 - **Local alternative:** [lessons/06-query-plans-statistics-indexes.md](lessons/06-query-plans-statistics-indexes.md)
@@ -158,7 +158,7 @@ task; record the substitution.
 - **URL:** https://nvmexpress.org/nvmeflexible-data-placement-fdp-blog/
 - **Type/status:** standards-body technical article; Optional enrichment
 - **Access:** free
-- **Week/time:** Week 39; 35 minutes optional
+- **Lesson/time:** the relevant lesson; 35 minutes optional
 - **Purpose:** Separate host/engine amplification from device media amplification.
 - **Boundary and evidence:** Read through the WAF definition and FDP mechanism; state which level the lab can measure and which remains unknown.
 - **Local alternative:** [lessons/05-amplification-ssd-endurance.md](lessons/05-amplification-ssd-endurance.md)

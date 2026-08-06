@@ -1,4 +1,7 @@
+---
 lesson_id: L03
+title: "Route Rendering and Hydration"
+---
 
 # Route Rendering and Hydration
 

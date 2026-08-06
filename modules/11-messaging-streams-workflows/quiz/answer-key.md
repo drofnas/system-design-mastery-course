@@ -53,7 +53,7 @@ This key covers all 100 questions for **Messaging, Streams, and Workflows**. Use
 
 **Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for design safe replay, poison handling, schema evolution, derived-state rebuild, and reconciliation..
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Complete EX-09–EX-10 and the replay/reconciliation sections of the Week 42 worksheet before opening failure fixtures.
+**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Complete EX-09–EX-10 and the replay/reconciliation sections of the workflow practice worksheet before opening failure fixtures.
 
 **Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
 
@@ -218,7 +218,7 @@ This key covers all 100 questions for **Messaging, Streams, and Workflows**. Use
 
 **Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement an atomic outbox, stable envelope, publisher, idempotent inbox, derived view, and cdc checkpoint boundary..
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-02 and RES-03, complete EX-07–EX-08, then build and inspect the Week 42 publication path.
+**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-02 and RES-03, complete EX-07–EX-08, then build and inspect the workflow practice publication path.
 
 **Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
 
@@ -273,7 +273,7 @@ This key covers all 100 questions for **Messaging, Streams, and Workflows**. Use
 
 **Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for separate authoritative facts, commands, events, queues, logs, streams, and derived state, with explicit owners and rebuild contracts..
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-07 within its published boundary, then complete EX-01–EX-02 and the authority section of the Week 41 worksheet.
+**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-07 within its published boundary, then complete EX-01–EX-02 and the authority section of the workflow practice worksheet.
 
 **Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
 
@@ -383,7 +383,7 @@ This key covers all 100 questions for **Messaging, Streams, and Workflows**. Use
 
 **Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for select partition keys and consumer-group topology from workload, fairness, and per-aggregate invariants..
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Use RES-01's producer, consumer, and partition sections; complete EX-05–EX-06 and the Week 41 partition/fairness review.
+**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Use RES-01's producer, consumer, and partition sections; complete EX-05–EX-06 and the workflow practice partition/fairness review.
 
 **Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
 
@@ -493,7 +493,7 @@ This key covers all 100 questions for **Messaging, Streams, and Workflows**. Use
 
 **Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for design safe replay, poison handling, schema evolution, derived-state rebuild, and reconciliation..
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Complete EX-09–EX-10 and the replay/reconciliation sections of the Week 42 worksheet before opening failure fixtures.
+**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Complete EX-09–EX-10 and the replay/reconciliation sections of the workflow practice worksheet before opening failure fixtures.
 
 **Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
 
@@ -658,7 +658,7 @@ This key covers all 100 questions for **Messaging, Streams, and Workflows**. Use
 
 **Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement an atomic outbox, stable envelope, publisher, idempotent inbox, derived view, and cdc checkpoint boundary..
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-02 and RES-03, complete EX-07–EX-08, then build and inspect the Week 42 publication path.
+**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-02 and RES-03, complete EX-07–EX-08, then build and inspect the workflow practice publication path.
 
 **Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
 
@@ -713,7 +713,7 @@ This key covers all 100 questions for **Messaging, Streams, and Workflows**. Use
 
 **Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for separate authoritative facts, commands, events, queues, logs, streams, and derived state, with explicit owners and rebuild contracts..
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-07 within its published boundary, then complete EX-01–EX-02 and the authority section of the Week 41 worksheet.
+**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-07 within its published boundary, then complete EX-01–EX-02 and the authority section of the workflow practice worksheet.
 
 **Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
 
@@ -823,7 +823,7 @@ This key covers all 100 questions for **Messaging, Streams, and Workflows**. Use
 
 **Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for select partition keys and consumer-group topology from workload, fairness, and per-aggregate invariants..
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Use RES-01's producer, consumer, and partition sections; complete EX-05–EX-06 and the Week 41 partition/fairness review.
+**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Use RES-01's producer, consumer, and partition sections; complete EX-05–EX-06 and the workflow practice partition/fairness review.
 
 **Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
 
@@ -933,7 +933,7 @@ This key covers all 100 questions for **Messaging, Streams, and Workflows**. Use
 
 **Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for design safe replay, poison handling, schema evolution, derived-state rebuild, and reconciliation..
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Complete EX-09–EX-10 and the replay/reconciliation sections of the Week 42 worksheet before opening failure fixtures.
+**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Complete EX-09–EX-10 and the replay/reconciliation sections of the workflow practice worksheet before opening failure fixtures.
 
 **Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
 
@@ -1098,6 +1098,6 @@ This key covers all 100 questions for **Messaging, Streams, and Workflows**. Use
 
 **Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement an atomic outbox, stable envelope, publisher, idempotent inbox, derived view, and cdc checkpoint boundary..
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-02 and RES-03, complete EX-07–EX-08, then build and inspect the Week 42 publication path.
+**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-02 and RES-03, complete EX-07–EX-08, then build and inspect the workflow practice publication path.
 
 **Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.

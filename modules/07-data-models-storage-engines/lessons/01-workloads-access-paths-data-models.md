@@ -1,4 +1,7 @@
+---
 lesson_id: L01
+title: "Workloads, Access Paths, and Data Models"
+---
 
 # Workloads, Access Paths, and Data Models
 

@@ -62,7 +62,7 @@ This key covers all 100 questions for **Capacity, Queues, and Tail Latency**. Us
 **Type:** `multiple_choice`  
 **Difficulty:** `recall`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to locate saturation from useful throughput, latency, queue, rejection, concurrency, and generator evidence across the required load sweep.
+**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to locate saturation from useful throughput, latency, queue, rejection, concurrency, and generator evidence across the load sweep.
 
 **Explanation:** A retry is additional load created during a failure. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
 
@@ -326,7 +326,7 @@ This key covers all 100 questions for **Capacity, Queues, and Tail Latency**. Us
 **Type:** `design_judgment`  
 **Difficulty:** `synthesis`
 
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for locate saturation from useful throughput, latency, queue, rejection, concurrency, and generator evidence across the required load sweep..
+**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for locate saturation from useful throughput, latency, queue, rejection, concurrency, and generator evidence across the load sweep..
 
 **Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Google SRE, Addressing Cascading Failureshttps://sre.google/sre-book/addressing-cascading-failures/ - Marc Brooker, Timeouts, retries, and backoff with jitterhttps://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/ Complete EX-09, th
 
@@ -502,7 +502,7 @@ This key covers all 100 questions for **Capacity, Queues, and Tail Latency**. Us
 **Type:** `multiple_choice`  
 **Difficulty:** `recall`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to locate saturation from useful throughput, latency, queue, rejection, concurrency, and generator evidence across the required load sweep.
+**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to locate saturation from useful throughput, latency, queue, rejection, concurrency, and generator evidence across the load sweep.
 
 **Explanation:** A retry is additional load created during a failure. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
 
@@ -766,7 +766,7 @@ This key covers all 100 questions for **Capacity, Queues, and Tail Latency**. Us
 **Type:** `design_judgment`  
 **Difficulty:** `synthesis`
 
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for locate saturation from useful throughput, latency, queue, rejection, concurrency, and generator evidence across the required load sweep..
+**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for locate saturation from useful throughput, latency, queue, rejection, concurrency, and generator evidence across the load sweep..
 
 **Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Google SRE, Addressing Cascading Failureshttps://sre.google/sre-book/addressing-cascading-failures/ - Marc Brooker, Timeouts, retries, and backoff with jitterhttps://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/ Complete EX-09, th
 
@@ -942,7 +942,7 @@ This key covers all 100 questions for **Capacity, Queues, and Tail Latency**. Us
 **Type:** `multiple_choice`  
 **Difficulty:** `recall`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to locate saturation from useful throughput, latency, queue, rejection, concurrency, and generator evidence across the required load sweep.
+**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to locate saturation from useful throughput, latency, queue, rejection, concurrency, and generator evidence across the load sweep.
 
 **Explanation:** A retry is additional load created during a failure. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
 

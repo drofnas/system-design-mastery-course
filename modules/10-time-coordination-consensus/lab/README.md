@@ -1,6 +1,6 @@
 # Time, Coordination, and Consensus Lab
 
-PESD 2.0 reuses the [shared three-node process/storage/fault boundary](../../../shared-labs/three-node-cluster/README.md)
+This lab reuses the [shared three-node process/storage/fault boundary](../../../shared-labs/three-node-cluster/README.md)
 for Modules 9–12. The consensus-specific virtual clock, crashable store,
 fencing fake, and oracle extend that common boundary.
 
@@ -13,7 +13,7 @@ deduplication, read barriers, fencing, snapshots, and membership. It does not
 prove disk durability, real-time availability, network bounds, Byzantine
 tolerance, production performance, security enforcement, or regional survival.
 
-PESD 2.0 drives the learner node through `VirtualClock`,
+The lab drives the learner node through `VirtualClock`,
 `DeterministicNetwork`, and `CrashableStore`. The protected-resource fake owns
 fencing independently of the node. `InvariantOracle` derives C01–C10 from the
 history and final state; scenario IDs and expected-result fields cannot select
@@ -47,7 +47,7 @@ fault/workload input and the changed control. Learners freeze predictions and
 scenario hashes, preserve raw output, then reproduce the observable contract in
 their chosen stack or operated service.
 
-The reference node is an inspectable contract, not a capstone answer. Learners
+The reference node is an inspectable contract, not a optional project answer. Learners
 implement the mechanisms inside their own node boundary and run the unchanged
 driver, schedules, oracle, protected-resource fake, and mutation suite against
 that code. A scenario fixture may supply stimuli but cannot satisfy independent

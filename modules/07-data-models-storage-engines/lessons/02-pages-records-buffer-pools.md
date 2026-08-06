@@ -1,4 +1,7 @@
+---
 lesson_id: L02
+title: "Pages, Records, Buffer Pools, and Locality"
+---
 
 # Pages, Records, Buffer Pools, and Locality
 

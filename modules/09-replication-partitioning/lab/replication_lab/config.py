@@ -29,7 +29,7 @@ def load_scenario(path: str | Path) -> dict[str, Any]:
     if len(nodes) < 3 or len(set(nodes)) != len(nodes) or data["topology"].get("leader") not in nodes:
         raise ValueError("topology must name three unique nodes and a member leader")
     if not data["operations"] or len(data["prediction"]) < 10 or len(data["evidence_boundary"]) < 10:
-        raise ValueError("operations, prediction, and evidence boundary are required")
+        raise ValueError("operations, prediction, and evidence limit are required")
     return data
 
 

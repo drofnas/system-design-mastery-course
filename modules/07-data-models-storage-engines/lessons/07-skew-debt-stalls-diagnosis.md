@@ -1,4 +1,7 @@
+---
 lesson_id: L07
+title: "Skew, Background Debt, Stalls, and Diagnosis"
+---
 
 # Skew, Background Debt, Stalls, and Diagnosis
 

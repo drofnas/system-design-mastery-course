@@ -1,6 +1,6 @@
 ---
 lesson_id: L04
-title: Idempotency and Deduplication
+title: "Idempotency and Deduplication"
 ---
 
 # Idempotency and Deduplication

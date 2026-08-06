@@ -1,4 +1,7 @@
+---
 lesson_id: L06
+title: "Equivalent-work Runtime Measurement"
+---
 
 # Equivalent-work Runtime Measurement
 

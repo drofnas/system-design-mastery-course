@@ -1,6 +1,6 @@
 ---
 lesson_id: L06
-title: Circuit Breakers, Hedges, and Partial Results
+title: "Circuit Breakers, Hedges, and Partial Results"
 ---
 
 # Circuit Breakers, Hedges, and Partial Results

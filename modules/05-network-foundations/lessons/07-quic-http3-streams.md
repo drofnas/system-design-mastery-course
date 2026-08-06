@@ -1,4 +1,7 @@
+---
 lesson_id: L07
+title: "QUIC and HTTP/3 Stream Behavior"
+---
 
 # QUIC and HTTP/3 Stream Behavior
 

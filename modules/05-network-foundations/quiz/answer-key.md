@@ -438,7 +438,7 @@ This key covers all 100 questions for **Network Foundations**. Use it after an a
 
 **Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for defend a protocol and topology decision through client outcomes, security, cost, ownership, migration, rollback, and reversal conditions..
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Cloudflare, The Road to QUIC: https://blog.cloudflare.com/the-road-to-quic/ - USENIX, Deploying and Debugging HTTP/3: https://www.usenix.org/conference/srecon23emea/presentation/marx - Complete the Week 20 ADR and defense before evaluation.
+**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Cloudflare, The Road to QUIC: https://blog.cloudflare.com/the-road-to-quic/ - USENIX, Deploying and Debugging HTTP/3: https://www.usenix.org/conference/srecon23emea/presentation/marx - Complete the protocol ADR and defense before evaluation.
 
 **Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
 
@@ -878,7 +878,7 @@ This key covers all 100 questions for **Network Foundations**. Use it after an a
 
 **Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for defend a protocol and topology decision through client outcomes, security, cost, ownership, migration, rollback, and reversal conditions..
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Cloudflare, The Road to QUIC: https://blog.cloudflare.com/the-road-to-quic/ - USENIX, Deploying and Debugging HTTP/3: https://www.usenix.org/conference/srecon23emea/presentation/marx - Complete the Week 20 ADR and defense before evaluation.
+**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Cloudflare, The Road to QUIC: https://blog.cloudflare.com/the-road-to-quic/ - USENIX, Deploying and Debugging HTTP/3: https://www.usenix.org/conference/srecon23emea/presentation/marx - Complete the protocol ADR and defense before evaluation.
 
 **Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
 

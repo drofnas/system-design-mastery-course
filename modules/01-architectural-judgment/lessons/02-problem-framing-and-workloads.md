@@ -1,10 +1,9 @@
 ---
 lesson_id: L02
-week: 1
-estimated_hours: 0.75
+title: "Problem Framing and Workloads"
 ---
 
-# Lesson 2: Problem Framing and Workloads
+# Problem Framing and Workloads
 
 ## Outcomes
 
@@ -223,7 +222,7 @@ Complete:
 - [EX-02](../exercises/exercises.md#ex-02-scope-assumption-or-constraint)
 - [EX-03](../exercises/exercises.md#ex-03-workload-and-sensitivity)
 
-Use the transit case. Do not use the commerce capstone until the exercises are
+Use the transit case. Do not use the external commerce example until the exercises are
 finished.
 
 ## Self-check

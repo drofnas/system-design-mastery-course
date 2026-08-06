@@ -22,4 +22,4 @@
 | Equivalent work | Same logical inputs, required effects, and success denominator across variants. |
 | Useful throughput | Completed valid outcomes per unit time; attempts and rejected work are separate. |
 | Cleanup grace | Bounded time after cancellation for owned work to stop and resources to close. |
-| Evidence boundary | What a measurement or tool cannot establish. |
+| Evidence limit | What a measurement or tool cannot establish. |

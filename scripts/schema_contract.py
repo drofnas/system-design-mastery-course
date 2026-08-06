@@ -9,8 +9,13 @@ from __future__ import annotations
 
 import json
 import re
+import sys
 from datetime import date, datetime
+from pathlib import Path
 from typing import Any
+
+
+ROOT = Path(__file__).resolve().parents[1]
 
 
 ANNOTATIONS = {"$schema", "$id", "title", "description", "default", "examples"}
@@ -206,3 +211,52 @@ def validate_schema_contract(schema: dict[str, Any], *, label: str = "schema") -
         _check_schema(schema)
     except SchemaContractError as error:
         raise SchemaContractError(f"{label}: {error}") from error
+
+
+def _load_json(path: Path) -> Any:
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def _resolve_declared_schema(instance_path: Path) -> dict[str, Any]:
+    instance = _load_json(instance_path)
+    if not isinstance(instance, dict) or not isinstance(instance.get("$schema"), str):
+        raise SchemaContractError(f"{instance_path.relative_to(ROOT)} does not declare $schema")
+    schema_path = (instance_path.parent / instance["$schema"]).resolve()
+    try:
+        schema_path.relative_to(ROOT)
+    except ValueError as error:
+        raise SchemaContractError(f"{instance_path.relative_to(ROOT)} declares schema outside repository") from error
+    return _load_json(schema_path)
+
+
+def main() -> int:
+    errors: list[str] = []
+    for schema_path in sorted((ROOT / "schemas").glob("*.schema.json")):
+        try:
+            validate_schema_contract(_load_json(schema_path), label=str(schema_path.relative_to(ROOT)))
+        except Exception as error:
+            errors.append(str(error))
+    for instance_path in sorted((ROOT / "modules").glob("*/module.json")):
+        try:
+            instance = _load_json(instance_path)
+            schema = _resolve_declared_schema(instance_path)
+            validate_instance(instance, schema, label=str(instance_path.relative_to(ROOT)))
+        except Exception as error:
+            errors.append(str(error))
+    for instance_path in sorted((ROOT / "modules").glob("*/quiz/question-bank.json")):
+        try:
+            instance = _load_json(instance_path)
+            schema = _resolve_declared_schema(instance_path)
+            validate_instance(instance, schema, label=str(instance_path.relative_to(ROOT)))
+        except Exception as error:
+            errors.append(str(error))
+    if errors:
+        for error in errors:
+            print(error, file=sys.stderr)
+        return 1
+    print("Validated schema contracts and declared module/quiz schemas.")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

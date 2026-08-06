@@ -58,7 +58,7 @@ visible status, and which must fail closed.
 Specify semantics, keyboard, focus, status, and recovery for loading, success,
 empty, validation error, dependency failure, and retry states.
 
-## EX-12: Evidence boundary
+## EX-12: Evidence limit
 
 Divide accessibility verification into deterministic DOM, automated rules,
 manual keyboard/zoom, and assistive-technology evidence. State each limit.
@@ -93,11 +93,3 @@ prohibited private values, sampling authority, and cardinality/retention owners.
 Compare one modular portal, a portal plus BFF, and independently deployed
 microfrontends/edge work. Defend one choice with route evidence, cost, ownership,
 migration, rollback, dissent, stops, and reversal conditions.
-
-## PESD 2.0 extension to the final exercise
-
-Extend the final guided exercise with offline and degraded client state, browser-storage lifecycle, third-party governance, AI-content transparency and provenance, edge residency, and energy/performance budgets. Produce an
-obligation/control/evidence row, a named owner, a bounded cost or capacity
-effect, a failure or policy-drift test, a migration step, and a reversal trigger.
-Label every observation with an accepted evidence mode and do not use fixture
-replay as independent Build, Break, Implement, or Measure evidence.

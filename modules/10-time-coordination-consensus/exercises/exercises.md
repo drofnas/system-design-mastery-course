@@ -93,7 +93,7 @@ verification, rollback boundary, and owner.
 
 For F01–F08, create a table with frozen prediction, shared-input hash, changed
 control, first divergent event, violated invariant, isolated repair, alternative
-cause, discriminating rerun, and evidence boundary.
+cause, discriminating rerun, and evidence limit.
 
 ## EX-16: Coordination RFC and defense
 
@@ -102,11 +102,3 @@ liveness, latency, quorum loss, durability boundary, snapshots, membership,
 security, cost, migration, rollback, owners, dissent, and reversal thresholds.
 Prepare four challenges from application, platform/on-call, security, and
 finance perspectives.
-
-## PESD 2.0 extension to the final exercise
-
-Extend the final guided exercise with learner-written elections through membership under deterministic scheduling, crashable persistence, fencing, an independent invariant oracle, executable small-state safety checks, and mutation tests. Produce an
-obligation/control/evidence row, a named owner, a bounded cost or capacity
-effect, a failure or policy-drift test, a migration step, and a reversal trigger.
-Label every observation with an accepted evidence mode and do not use fixture
-replay as independent Build, Break, Implement, or Measure evidence.

@@ -1,0 +1,30 @@
+name: ci
+
+on: [push, pull_request]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+          check-latest: true
+      - name: course structure
+        run: python3 scripts/validate_solo_course.py
+      - name: schema conformance
+        run: python3 scripts/schema_contract.py
+      - name: lab suites
+        run: |
+          fail=0
+          for lab in modules/*/lab; do
+            [ -d "$lab/tests" ] || continue
+            echo "::group::$lab"
+            (cd "$lab" && python3 -m unittest discover -s tests) || fail=1
+            echo "::endgroup::"
+          done
+          exit $fail

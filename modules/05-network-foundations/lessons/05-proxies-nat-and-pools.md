@@ -1,4 +1,7 @@
+---
 lesson_id: L05
+title: "Proxies, NAT, Pooling, and Exhaustion"
+---
 
 # Proxies, NAT, Pooling, and Exhaustion
 

@@ -1,6 +1,6 @@
 ---
 lesson_id: L01
-title: Benchmark Contracts, Pipelines, Caches, and Locality
+title: "Benchmark Contracts, Pipelines, Caches, and Locality"
 ---
 
 # Benchmark Contracts, Pipelines, Caches, and Locality
@@ -115,4 +115,4 @@ could still reject the change.
 
 - Intel, *Optimization Reference Manual*, current Volume 1 sections on front end
   and data access: https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html
-- Continue with EX-01 and EX-02, then freeze the Week 9 prediction.
+- Continue with EX-01 and EX-02, then freeze the systems prediction.

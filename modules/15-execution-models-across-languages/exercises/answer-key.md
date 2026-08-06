@@ -55,11 +55,3 @@ input, limits, and all controls except one; raw evidence remains immutable. A
 runtime defense passes when choice follows drivers and contains operations,
 security, economics, migration, ownership, dissent, stops, and reversal. Any of
 keep-current, bounded adoption, or broad adoption may be defensible.
-
-## PESD 2.0 extension answer
-
-A defensible answer covers four transport/schema shells while the learner implements admission, task ownership, cancellation, cleanup, memory and lifetime behavior, synchronization, and validation in TypeScript, Go, Rust, and Java. It distinguishes the
-requirement, enforcement mechanism, evidence, and owner; keeps modeled and
-measured results separate; and names the failed condition that would reverse
-the decision. Different architectures are acceptable when their invariants,
-evidence boundaries, migration, and residual risk are explicit.

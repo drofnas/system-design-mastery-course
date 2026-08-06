@@ -1,4 +1,5 @@
 {
+  "$schema": "../../../schemas/quiz-bank.schema.json",
   "module_id": "M07",
   "title": "Data Models and Storage Engines",
   "questions": [
@@ -95,7 +96,7 @@
       ],
       "prompt": "You must make a design choice involving 'Amplification and SSD Endurance'. What tradeoff would you document, and what evidence would make you reverse the choice?",
       "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for calculate read, write, and space amplification and connect them to tail latency, capacity, cost, and ssd endurance..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RocksDB compaction trade-offs, RES-05\u2013RES-06.",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RocksDB compaction trade-offs, RES-05–RES-06.",
       "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
     },
     {
@@ -172,7 +173,7 @@
         "application"
       ],
       "prompt": "A learner applies 'Workloads, Access Paths, and Data Models' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Choosing from nouns:** \u201ctelemetry means time-series database\u201d omits actual",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Choosing from nouns:** “telemetry means time-series database” omits actual",
       "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
       "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
     },
@@ -460,7 +461,7 @@
         "application"
       ],
       "prompt": "A learner applies 'Storage Decisions, Migration, Cost, and Ownership' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Writing \u201cuse LSM for writes\u201d:** no workload, amplification, or recovery",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Writing “use LSM for writes”:** no workload, amplification, or recovery",
       "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
       "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
     },
@@ -575,7 +576,7 @@
       ],
       "prompt": "You must make a design choice involving 'Query Plans, Statistics, and Index Design'. What tradeoff would you document, and what evidence would make you reverse the choice?",
       "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for choose indexes and diagnose query plans whose estimates, statistics, or access paths do not match the workload..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - PostgreSQL Indexes, EXPLAIN, and Planner Statistics, RES-08\u2013RES-10.",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - PostgreSQL Indexes, EXPLAIN, and Planner Statistics, RES-08–RES-10.",
       "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
     },
     {
@@ -767,7 +768,7 @@
       ],
       "prompt": "You must make a design choice involving 'Storage Decisions, Migration, Cost, and Ownership'. What tradeoff would you document, and what evidence would make you reverse the choice?",
       "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for defend a storage-engine decision covering security, operations, cost, ownership, migration, rollback, recovery requirements, and reversal evidence..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RocksDB practitioner materials RES-05\u2013RES-07, PostgreSQL resources RES-08\u2013RES-10, and NVM Express RES-11.",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RocksDB practitioner materials RES-05–RES-07, PostgreSQL resources RES-08–RES-10, and NVM Express RES-11.",
       "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
     },
     {
@@ -863,7 +864,7 @@
       ],
       "prompt": "You must make a design choice involving 'Amplification and SSD Endurance'. What tradeoff would you document, and what evidence would make you reverse the choice?",
       "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for calculate read, write, and space amplification and connect them to tail latency, capacity, cost, and ssd endurance..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RocksDB compaction trade-offs, RES-05\u2013RES-06.",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RocksDB compaction trade-offs, RES-05–RES-06.",
       "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
     },
     {
@@ -940,7 +941,7 @@
         "application"
       ],
       "prompt": "A learner applies 'Workloads, Access Paths, and Data Models' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Choosing from nouns:** \u201ctelemetry means time-series database\u201d omits actual",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Choosing from nouns:** “telemetry means time-series database” omits actual",
       "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
       "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
     },
@@ -1228,7 +1229,7 @@
         "application"
       ],
       "prompt": "A learner applies 'Storage Decisions, Migration, Cost, and Ownership' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Writing \u201cuse LSM for writes\u201d:** no workload, amplification, or recovery",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Writing “use LSM for writes”:** no workload, amplification, or recovery",
       "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
       "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
     },
@@ -1343,7 +1344,7 @@
       ],
       "prompt": "You must make a design choice involving 'Query Plans, Statistics, and Index Design'. What tradeoff would you document, and what evidence would make you reverse the choice?",
       "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for choose indexes and diagnose query plans whose estimates, statistics, or access paths do not match the workload..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - PostgreSQL Indexes, EXPLAIN, and Planner Statistics, RES-08\u2013RES-10.",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - PostgreSQL Indexes, EXPLAIN, and Planner Statistics, RES-08–RES-10.",
       "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
     },
     {
@@ -1535,7 +1536,7 @@
       ],
       "prompt": "You must make a design choice involving 'Storage Decisions, Migration, Cost, and Ownership'. What tradeoff would you document, and what evidence would make you reverse the choice?",
       "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for defend a storage-engine decision covering security, operations, cost, ownership, migration, rollback, recovery requirements, and reversal evidence..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RocksDB practitioner materials RES-05\u2013RES-07, PostgreSQL resources RES-08\u2013RES-10, and NVM Express RES-11.",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RocksDB practitioner materials RES-05–RES-07, PostgreSQL resources RES-08–RES-10, and NVM Express RES-11.",
       "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
     },
     {
@@ -1631,7 +1632,7 @@
       ],
       "prompt": "You must make a design choice involving 'Amplification and SSD Endurance'. What tradeoff would you document, and what evidence would make you reverse the choice?",
       "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for calculate read, write, and space amplification and connect them to tail latency, capacity, cost, and ssd endurance..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RocksDB compaction trade-offs, RES-05\u2013RES-06.",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RocksDB compaction trade-offs, RES-05–RES-06.",
       "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
     },
     {
@@ -1708,7 +1709,7 @@
         "application"
       ],
       "prompt": "A learner applies 'Workloads, Access Paths, and Data Models' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Choosing from nouns:** \u201ctelemetry means time-series database\u201d omits actual",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Choosing from nouns:** “telemetry means time-series database” omits actual",
       "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
       "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
     },

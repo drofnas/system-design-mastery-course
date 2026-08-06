@@ -1,10 +1,9 @@
 ---
 lesson_id: L04
-week: 1
-estimated_hours: 0.75
+title: "Quality-Attribute Scenarios"
 ---
 
-# Lesson 4: Quality-Attribute Scenarios
+# Quality-Attribute Scenarios
 
 ## Outcomes
 

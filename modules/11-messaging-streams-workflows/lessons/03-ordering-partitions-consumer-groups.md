@@ -1,7 +1,6 @@
 ---
 lesson_id: L03
-title: Ordering, Partition Keys, and Consumer Groups
-week: 41
+title: "Ordering, Partition Keys, and Consumer Groups"
 ---
 
 # Ordering, Partition Keys, and Consumer Groups
@@ -80,4 +79,4 @@ for version gaps and rebalances.
 ## Sources and next work
 
 Use RES-01's producer, consumer, and partition sections; complete EX-05–EX-06
-and the Week 41 partition/fairness review.
+and the workflow practice partition/fairness review.

@@ -93,11 +93,3 @@ records to freeze, target invariant, limitations, and same-work repair evidence.
 Compare a managed provider, one bounded self-hosted deployment, and split
 interactive/batch deployments. Defend one with quality, capacity, cost, security,
 ownership, migration, rollback, dissent, stop, and reversal conditions.
-
-## PESD 2.0 extension to the final exercise
-
-Extend the final guided exercise with an actual streaming tiny-transformer path with incremental KV state, token scheduling, byte-budget admission, tenant/version cache identity, bounded provider failure, profiling, and an AI System Dossier. Produce an
-obligation/control/evidence row, a named owner, a bounded cost or capacity
-effect, a failure or policy-drift test, a migration step, and a reversal trigger.
-Label every observation with an accepted evidence mode and do not use fixture
-replay as independent Build, Break, Implement, or Measure evidence.

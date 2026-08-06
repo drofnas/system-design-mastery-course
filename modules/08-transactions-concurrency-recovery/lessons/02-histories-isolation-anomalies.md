@@ -1,4 +1,7 @@
+---
 lesson_id: L02
+title: "Histories, Serializability, and Isolation Anomalies"
+---
 
 # Histories, Serializability, and Isolation Anomalies
 
@@ -63,6 +66,38 @@ restructuring. State how each repair can be falsified.
 same logical value; write skew uses disjoint writes whose combined effect
 violates a predicate. 3. Roll back and retry the entire transaction from fresh
 state, subject to bounded eligibility and deadline rules.
+
+## Failure-mode bridge to the lab
+
+Isolation anomalies are not vocabulary trivia; they are explanations for how a
+history that looks plausible at the statement level violates an invariant at the
+transaction level. Dirty reads expose uncommitted state. Non-repeatable reads
+change an answer inside one transaction. Phantoms add or remove rows that match a
+predicate. Write skew lets two transactions each observe a safe condition and
+commit updates that make the combined result unsafe.
+
+When the lab presents interleavings, draw the history before naming the anomaly.
+Mark each read, each write, and the predicate or row it touches. Then ask what
+serial order, if any, would produce the same result. If none exists, the history
+is not serializable. If a serial order exists but violates a business invariant,
+the boundary or constraint is wrong. This separation prevents the common mistake
+of demanding the strongest isolation when the real fix is an explicit invariant.
+
+## Second worked example
+
+Two doctors each check that at least one doctor remains on call, then each marks
+themselves off call in separate rows. Under snapshot isolation both reads can
+see two doctors on call and both writes can commit because they touch different
+rows. The final state violates the predicate invariant. The anomaly is not a
+dirty read or lost update; it is write skew. A repair makes the predicate
+conflict concrete through serializable isolation, a guard row, or a constraint
+that the storage system can enforce.
+
+## Decision checklist
+
+For each history, list reads, writes, predicates, commit order, and candidate
+serial orders. Then separate the isolation anomaly from any missing business
+constraint.
 
 ## Sources and next work
 

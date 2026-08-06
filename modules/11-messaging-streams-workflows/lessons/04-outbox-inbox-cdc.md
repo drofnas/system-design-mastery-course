@@ -1,7 +1,6 @@
 ---
 lesson_id: L04
-title: Transactional Outbox, Inbox, and Change Data Capture
-week: 42
+title: "Transactional Outbox, Inbox, and Change Data Capture"
 ---
 
 # Transactional Outbox, Inbox, and Change Data Capture
@@ -78,5 +77,4 @@ must be atomic and what remains merely eventual.
 
 ## Sources and next work
 
-Study RES-02 and RES-03, complete EX-07–EX-08, then build and inspect the Week
-42 publication path.
+Study RES-02 and RES-03, complete EX-07–EX-08, then build and inspect the the relevant lesson publication path.

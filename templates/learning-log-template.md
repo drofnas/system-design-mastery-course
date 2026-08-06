@@ -1,5 +1,5 @@
 ---
-week:
+module:
 module:
 date:
 hours_spent:

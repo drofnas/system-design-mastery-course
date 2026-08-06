@@ -1,4 +1,7 @@
+---
 lesson_id: L06
+title: "Hot Keys, Skew, Fairness, and Tenant Isolation"
+---
 
 # Hot Keys, Skew, Fairness, and Tenant Isolation
 

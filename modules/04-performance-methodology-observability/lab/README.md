@@ -67,60 +67,37 @@ returns an error.
 ### `blind-prepare` and `blind-reveal`
 
 The named scenario files are for guided source work and fault-specific tests.
-They are not the Week 15 blind input. A partner or instructor prepares six
-randomly assigned opaque bundles and keeps the mapping outside the learner's
-directory:
+They are not the blind diagnosis input. Prepare six randomly assigned opaque
+bundles and write the reveal mapping to a path you do not open until after
+diagnosis:
 
 ```bash
 python3 -m observability_lab blind-prepare \
   --output-dir /tmp/transit-blind-learner \
-  --reveal-file /tmp/transit-blind-partner/mapping.json
+  --reveal-file /tmp/transit-blind-held/mapping.json
 ```
 
-Give only `/tmp/transit-blind-learner` to the learner. Its manifest, bundle
-metadata, scenario IDs, and telemetry contain no injected-cause label or source
-filename. Evidence such as a hot normalization stack, lock wait, retained
-bytes, or a wide dependency span remains visible because diagnosing that
-mechanism is the assignment.
+Work only from `/tmp/transit-blind-learner`. Its manifest, bundle metadata,
+scenario IDs, and telemetry contain no injected-cause label or source filename.
+Evidence such as a hot normalization stack, lock wait, retained bytes, or a
+wide dependency span remains visible because diagnosing that mechanism is the
+assignment.
 
-After the learner commits a non-empty diagnosis matrix, the partner reveals the
-held mapping into a new artifact:
+After writing a non-empty diagnosis matrix, reveal the held mapping into a new
+artifact and use it to score your reasoning:
 
 ```bash
 python3 -m observability_lab blind-reveal \
   --bundle-dir /tmp/transit-blind-learner \
-  --reveal-file /tmp/transit-blind-partner/mapping.json \
-  --frozen-diagnosis reports/module-04-failure-matrix.md \
-  --frozen-commit DIAGNOSIS_COMMIT \
+  --reveal-file /tmp/transit-blind-held/mapping.json \
+  --diagnosis reports/module-04-failure-matrix.md \
   --output reports/module-04-reveal.json
 ```
 
-The command verifies that the diagnosis bytes match the named Git commit, then
-records both the commit and content hash. It never changes the original matrix
-or raw bundles. This is a workflow boundary, not a defense against a
-learner deliberately inspecting the lab source or a partner's private file.
-
-### Solo blind workflow
-
-When no partner is available, use the same freeze boundary with a local binary
-envelope:
-
-```bash
-python3 -m observability_lab blind-solo-prepare \
-  --output-dir /tmp/transit-blind-learner
-python3 -m observability_lab blind-solo-reveal \
-  --bundle-dir /tmp/transit-blind-learner \
-  --frozen-diagnosis reports/module-04-failure-matrix.md \
-  --frozen-commit DIAGNOSIS_COMMIT \
-  --output reports/module-04-solo-reveal.json
-```
-
-Preparation stores a `.sblind` envelope under
-`.course-private/blind/M04/`; that directory is ignored by Git. The envelope is
-preserved after reveal for audit and recovery. It is accidental-exposure
-protection, not encryption or anti-cheating: inspecting the open-source
-scenarios or decoding the envelope bypasses it. Reveal refuses empty,
-uncommitted, modified, mismatched, tampered, or overwrite-prone evidence.
+The command records the diagnosis content hash. It never changes the original
+matrix or raw bundles. This is accidental-exposure protection, not encryption or
+anti-cheating: inspecting the open-source scenarios or the held mapping bypasses
+the exercise.
 
 ## Scenario contract
 

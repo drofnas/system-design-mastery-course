@@ -58,4 +58,4 @@ operations, security, cost, migration, ownership, and reversal evidence align.
 Different libraries, scheduler primitives, validation code, child ordering, or
 runtime choices are valid when the public semantics, bounds, evidence identity,
 and safety invariants remain equivalent. Do not copy Northstar thresholds or
-runtime decision into the commerce capstone.
+runtime decision into the external commerce example.

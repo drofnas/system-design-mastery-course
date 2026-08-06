@@ -1,4 +1,7 @@
+---
 lesson_id: L07
+title: "Reproducible Benchmarks and Regression Budgets"
+---
 
 # Reproducible Benchmarks and Regression Budgets
 
@@ -63,6 +66,37 @@ inconclusive sample set.
    deterministic.
 3. A named owner and automatic action when the threshold is exceeded, plus a
    rerun or escalation rule.
+
+## Failure-mode bridge to the lab
+
+A benchmark is useful only when it preserves the decision contract. The lab
+records raw order because repeated runs are not interchangeable decorations. If
+the first candidate run warms a cache and later runs look better, the sequence
+matters. If the machine metadata changes, the result may still be interesting,
+but it is no longer the same comparison.
+
+Regression budgets also need an action. A budget that nobody checks becomes a
+comment. A budget with no tolerance for variance creates false alarms. A strong
+answer states the metric, percentile, allowed change, sample size, repetition
+policy, and what happens when the budget is crossed. When the lab reports a
+boundary value, keep it visible rather than smoothing it away; boundary hits are
+the cases that future fixture edits most often break.
+
+## Second worked example
+
+A library upgrade increases p95 by 4 percent against a 5 percent budget, but
+p99 rises by 40 percent. A single budget on p95 would pass the change while the
+tail gets worse for the users who already suffer most. A stronger regression
+budget names the protected journey, the percentile, the minimum sample, and the
+secondary guardrail. It also states the action: block, investigate, accept with
+follow-up, or rerun because the comparison was invalid. Budgets only work when
+they are tied to decisions.
+
+## Decision checklist
+
+State metric, percentile, minimum repetitions, warm-up policy, allowed movement,
+secondary guardrail, and decision owner. If the comparison hits the exact bound,
+record it explicitly.
 
 ## Sources and next work
 

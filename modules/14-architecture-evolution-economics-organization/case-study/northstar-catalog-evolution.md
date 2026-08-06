@@ -3,7 +3,7 @@
 This completed case demonstrates one defensible Module 14 decision on a
 non-commerce system. It is not a canonical architecture. Do not transfer its
 boundaries, contracts, costs, teams, thresholds, or sequence into the commerce
-capstone.
+optional project.
 
 ## Outcome, workload, and current state
 

@@ -53,7 +53,7 @@ This key covers all 100 questions for **Architectural Judgment**. Use it after a
 
 **Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for communicate system context, boundaries, flows, trust, and ownership without prematurely choosing deployable services..
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Official C4 modelhttps://c4model.com/ - Creator-led C4 videohttps://www.youtube.com/watch?v=KvoBrUd1-5E - Next: Complete the Week 1 baseline, then study Lesson 606-constraints-options-and-reversibility.md.
+**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Official C4 modelhttps://c4model.com/ - Creator-led C4 videohttps://www.youtube.com/watch?v=KvoBrUd1-5E - Next: Complete the initial baseline, then study Lesson 606-constraints-options-and-reversibility.md.
 
 **Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
 
@@ -493,7 +493,7 @@ This key covers all 100 questions for **Architectural Judgment**. Use it after a
 
 **Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for communicate system context, boundaries, flows, trust, and ownership without prematurely choosing deployable services..
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Official C4 modelhttps://c4model.com/ - Creator-led C4 videohttps://www.youtube.com/watch?v=KvoBrUd1-5E - Next: Complete the Week 1 baseline, then study Lesson 606-constraints-options-and-reversibility.md.
+**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Official C4 modelhttps://c4model.com/ - Creator-led C4 videohttps://www.youtube.com/watch?v=KvoBrUd1-5E - Next: Complete the initial baseline, then study Lesson 606-constraints-options-and-reversibility.md.
 
 **Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
 
@@ -933,7 +933,7 @@ This key covers all 100 questions for **Architectural Judgment**. Use it after a
 
 **Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for communicate system context, boundaries, flows, trust, and ownership without prematurely choosing deployable services..
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Official C4 modelhttps://c4model.com/ - Creator-led C4 videohttps://www.youtube.com/watch?v=KvoBrUd1-5E - Next: Complete the Week 1 baseline, then study Lesson 606-constraints-options-and-reversibility.md.
+**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Official C4 modelhttps://c4model.com/ - Creator-led C4 videohttps://www.youtube.com/watch?v=KvoBrUd1-5E - Next: Complete the initial baseline, then study Lesson 606-constraints-options-and-reversibility.md.
 
 **Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
 

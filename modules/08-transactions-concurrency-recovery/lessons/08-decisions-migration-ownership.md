@@ -1,4 +1,7 @@
+---
 lesson_id: L08
+title: "Transaction and Recovery Decisions"
+---
 
 # Transaction and Recovery Decisions
 
@@ -68,47 +71,56 @@ evidence, telemetry, owner, and reversal. 2. Old/new code can admit different
 histories and retry behavior. 3. A stated workload/failure model plus measured
 restore, integrity and business probes, RTO/RPO, and owned gaps.
 
+## Failure-mode bridge to the lab
+
+Transaction decisions become fragile when ownership is vague. Someone must own
+the invariant, the transaction boundary, the retry policy, the recovery test,
+and the migration path. If those owners differ, the handoff needs a written
+contract. Otherwise a team can optimize read latency while another depends on a
+constraint that was quietly moved out of the database.
+
+In the lab, treat each repair as a migration problem. How would you deploy the
+new constraint without rejecting valid old writes? How would you backfill
+derived state? What happens to in-flight transactions? What metric proves the
+new boundary is preserving useful work instead of only reducing errors by
+rejecting too much? The decision defense should name the reversible step, the
+irreversible step, and the rollback condition before production data is trusted
+to the new path.
+
+## Second worked example
+
+A team moves order state from one database to a new service. The tempting plan is
+dual-write from the application until confidence rises. The safer plan names one
+authoritative writer, publishes a durable change stream, backfills the new
+projection, shadows reads, compares mismatches by segment, then cuts traffic only
+after rollback and reconciliation are tested. Ownership is part of the design:
+someone must own old reads, new reads, mismatch triage, and the final removal of
+the old path.
+
+## Decision checklist
+
+State authority, compatibility window, backfill plan, shadow metric, mismatch
+threshold, rollback, owner, and deletion step. Do not call the migration done
+until old authority is intentionally retired.
+
+## Module synthesis
+
+The transaction module is a chain, not a bag of database features. Invariants
+define what must remain true. Transaction boundaries decide which reads, writes,
+and constraints preserve that truth together. Isolation explains which
+interleavings are allowed. Locks, OCC, and MVCC are mechanisms for conflict,
+waiting, and snapshots. WAL, checkpoints, backups, and PITR explain what remains
+true after a crash or restore.
+
+Most production mistakes happen when one link in that chain is treated as
+somebody else's detail. An application retry can duplicate an external effect. A
+missing constraint can turn snapshot isolation into write skew. A backup can
+exist but fail restore. A migration can preserve data but lose authority. The
+decision habit is to name the invariant first, then choose the mechanism that
+keeps it enforceable during normal operation, failure, and change.
+
 ## Sources and next work
 
 - GitHub, [October 21 post-incident analysis](https://github.blog/news-insights/company-news/oct21-post-incident-analysis/).
 - Google, [Testing recovery from data loss](https://docs.cloud.google.com/architecture/framework/reliability/perform-testing-for-recovery-from-data-loss).
 - Continue with EX-15–EX-16, the ADR, and defense.
-
-## PESD 2.0 extension: modern constraints and ownership
-
-PESD 2.0 adds **retention, deletion, legal holds, key rotation, logs, replicas, exports, backups, restore-time policy replay, and resurrection prevention**.
-
-### Repeatable decision procedure
-
-1. Inventory the affected data, tenants, identities, providers, jurisdictions,
-   control planes, evidence owners, and cost owners before selecting a mechanism.
-2. State the invariant and the authority that may change it. Separate a claimed
-   policy from the enforcement point and from the evidence that proves execution.
-3. Freeze a prediction, implement or model the named mechanism, and record the
-   accepted evidence mode and runtime boundary.
-4. Inject one policy, isolation, recovery, or supplier failure in addition to the
-   module's mechanism failure. Preserve raw evidence before interpretation.
-5. Compare at least two options across product outcome, technical mechanism,
-   security and governance, operations and recovery, economics, ownership,
-   migration, and reversal triggers.
-
-### Non-capstone extension
-
-Apply the procedure to the module's continuing case. Add one tenant or governed
-data class, one supplier or control-plane dependency, and one deletion, recovery,
-or exit obligation. The completed case may demonstrate the method, but its
-topology, thresholds, policy choices, and answer are not defaults for Global
-Commerce.
-
-### Evidence boundary
-
-Use `derived`, `executed_deterministic`, `measured_loopback`,
-`measured_container`, `modeled_capacity`, `fixture_replay`, or
-`measured_accelerator` exactly as defined by the course. Fixture replay supports
-practice and remediation only. Modeled remote scale is not local measurement.
-Every trial records commit and input/configuration hashes, runtime and resource
-limits, clock, warm-up/repetition policy, raw outcomes, and limitations.
-
-### Source boundary
-
-Use the module's bounded primary sources and preserve the local evidence boundary.

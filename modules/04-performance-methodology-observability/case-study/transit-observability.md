@@ -70,14 +70,12 @@ Every run preserves scenario, seed, planned arrivals, useful-work definition,
 and machine metadata. The raw order remains visible. The review reports the
 ratio and dispersion rather than selecting the most convenient run.
 
-For independent diagnosis, a partner runs the lab's `blind-prepare` command and
-keeps its reveal mapping outside the learner-visible directory. Opaque bundle
-IDs are randomized on every preparation. The learner commits the Week 15 matrix
-before the partner runs `blind-reveal`; that reveal record hashes the frozen
-matrix. Named lab scenarios remain guided source-work inputs, not blind fixtures.
-When no partner is available, the lab's solo commands preserve the same commit
-boundary with a local `.sblind` envelope. That envelope only reduces accidental
-exposure and is explicitly bypassable; the learner discloses the solo mode.
+For independent diagnosis, the learner runs the lab's `blind-prepare` command
+and writes the reveal mapping to a path they do not open. Opaque bundle IDs are
+randomized on every preparation. The learner completes the blind diagnosis
+matrix first, then runs `blind-reveal`; the reveal record hashes the completed
+matrix and exposes the mapping for self-scoring. Named lab scenarios remain
+guided source-work inputs, not blind fixtures.
 
 Suppose the candidate has a higher p95 and the server span widens. The SQLite
 child span is unchanged, process CPU rises, and the CPU profile attributes most

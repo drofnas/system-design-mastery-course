@@ -120,11 +120,3 @@ owner; compares alternatives with shared drivers; and preserves dissent.
 Migration includes mixed-version compatibility and verified rollback. A
 reversal threshold is measurable, such as session violations above zero for an
 authoritative operation or p99 coordination exceeding its allocated budget.
-
-## PESD 2.0 extension answer
-
-A defensible answer covers tenant onboarding, suspension, export, offboarding, region movement, cells, control-plane/data-plane separation, tenant keys, quotas, SLOs, and cost attribution. It distinguishes the
-requirement, enforcement mechanism, evidence, and owner; keeps modeled and
-measured results separate; and names the failed condition that would reverse
-the decision. Different architectures are acceptable when their invariants,
-evidence boundaries, migration, and residual risk are explicit.

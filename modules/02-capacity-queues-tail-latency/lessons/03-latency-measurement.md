@@ -1,10 +1,9 @@
 ---
 lesson_id: L03
 title: "Latency Measurement"
-week: 5
 ---
 
-# Lesson 3: Latency Measurement
+# Latency Measurement
 
 ## Outcomes
 
@@ -114,4 +113,4 @@ completions. State which denominator belongs in user-visible success rate.
 - HdrHistogram maintainers, [Corrected vs. raw recording](https://github.com/HdrHistogram/HdrHistogram)
 - Google Research, [The Tail at Scale](https://research.google/pubs/the-tail-at-scale/)
 
-Complete EX-04 and EX-05, then freeze the Week 5 prediction.
+Complete EX-04 and EX-05, then freeze the capacity prediction.

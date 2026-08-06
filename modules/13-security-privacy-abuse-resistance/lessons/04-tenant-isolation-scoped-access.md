@@ -1,6 +1,6 @@
 ---
 lesson_id: L04
-title: Tenant isolation and scoped access
+title: "Tenant isolation and scoped access"
 ---
 
 # Tenant isolation and scoped access

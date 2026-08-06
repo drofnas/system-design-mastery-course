@@ -3,7 +3,7 @@
 This completed case demonstrates Module 13 reasoning on a non-commerce system.
 It is not a canonical architecture. Different controls are defensible when they
 preserve the same properties with evidence. Do not transfer Northstar's actors,
-thresholds, policies, or topology into the commerce capstone.
+thresholds, policies, or topology into the external commerce example.
 
 ## Problem and protected outcomes
 

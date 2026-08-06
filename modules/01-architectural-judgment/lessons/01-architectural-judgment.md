@@ -1,10 +1,9 @@
 ---
 lesson_id: L01
-week: 1
-estimated_hours: 0.75
+title: "Architectural Judgment"
 ---
 
-# Lesson 1: Architectural Judgment
+# Architectural Judgment
 
 ## Outcomes
 

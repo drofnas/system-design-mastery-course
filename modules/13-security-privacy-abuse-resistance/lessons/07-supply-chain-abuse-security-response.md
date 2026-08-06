@@ -1,6 +1,6 @@
 ---
 lesson_id: L07
-title: Supply chains, economic abuse, and security response
+title: "Supply chains, economic abuse, and security response"
 ---
 
 # Supply chains, economic abuse, and security response

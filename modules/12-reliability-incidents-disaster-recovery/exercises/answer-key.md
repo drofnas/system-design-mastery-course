@@ -122,11 +122,3 @@ restore minimizes steady cost but has longer outage; warm standby trades reserve
 cost for recovery; active regional service increases coordination and shared
 control risks. Credit any option whose user/data need, evidence, staffing,
 security, cost, migration, dissent, and reversal conditions align.
-
-## PESD 2.0 extension answer
-
-A defensible answer covers cyber recovery, corrupted-backup recovery, provider concentration, control-plane outages, clean-room assumptions, evidence preservation, and notification ownership. It distinguishes the
-requirement, enforcement mechanism, evidence, and owner; keeps modeled and
-measured results separate; and names the failed condition that would reverse
-the decision. Different architectures are acceptable when their invariants,
-evidence boundaries, migration, and residual risk are explicit.

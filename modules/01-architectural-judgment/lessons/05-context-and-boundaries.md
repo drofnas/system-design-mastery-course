@@ -1,10 +1,9 @@
 ---
 lesson_id: L05
-week: 1
-estimated_hours: 0.5
+title: "Context and Boundaries"
 ---
 
-# Lesson 5: Context and Boundaries
+# Context and Boundaries
 
 ## Outcomes
 
@@ -247,5 +246,5 @@ the context view.
 
 - [Official C4 model](https://c4model.com/)
 - [Creator-led C4 video](https://www.youtube.com/watch?v=KvoBrUd1-5E)
-- Next: Complete the Week 1 baseline, then study
+- Next: Complete the initial baseline, then study
   [Lesson 6](06-constraints-options-and-reversibility.md).

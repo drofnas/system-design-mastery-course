@@ -1,6 +1,9 @@
-# Lesson 7: Clients, Linearizable Reads, Snapshots, and Compaction
-
+---
 lesson_id: L07
+title: "Clients, Linearizable Reads, Snapshots, and Compaction"
+---
+
+# Clients, Linearizable Reads, Snapshots, and Compaction
 
 ## Outcomes
 

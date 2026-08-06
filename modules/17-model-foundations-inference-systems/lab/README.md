@@ -56,7 +56,7 @@ event. Events report request and version identity, precision, and cache kind.
 They omit tenant and prompt values. `/healthz` reports local model health;
 `/metrics` reports bounded aggregate counters. The server refuses non-loopback IPs.
 
-PESD 2.0 flushes each NDJSON event as it is produced; it does not buffer all
+The lab flushes each NDJSON event as it is produced; it does not buffer all
 tokens before completion. Prefill creates real K/V rows and decode extends only
 the new row. Admission reserves bounded byte and token budgets before work
 starts, and batch work cannot consume the interactive reserve. Prompt K/V cache

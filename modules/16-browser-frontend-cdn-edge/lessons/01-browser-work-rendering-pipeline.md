@@ -1,4 +1,7 @@
+---
 lesson_id: L01
+title: "Browser Work and the Rendering Pipeline"
+---
 
 # Browser Work and the Rendering Pipeline
 

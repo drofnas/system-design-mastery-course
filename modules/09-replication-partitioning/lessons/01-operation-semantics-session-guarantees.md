@@ -1,4 +1,7 @@
+---
 lesson_id: L01
+title: "Operation Semantics and Session Guarantees"
+---
 
 # Operation Semantics and Session Guarantees
 

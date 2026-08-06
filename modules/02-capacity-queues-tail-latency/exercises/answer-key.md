@@ -142,11 +142,3 @@ rejection/degradation, client guidance, recovery, and owners. Cost sensitivity
 varies load, service demand, or price. A reversal condition is measurable. A
 fair objection challenges false rejection, workload mismatch, cost, or
 untested correlated failure rather than repeating a preference.
-
-## PESD 2.0 extension answer
-
-A defensible answer covers per-tenant allocation, forecast variance, useful-outcome economics, shared-cost policy, and modeled energy/carbon sensitivity. It distinguishes the
-requirement, enforcement mechanism, evidence, and owner; keeps modeled and
-measured results separate; and names the failed condition that would reverse
-the decision. Different architectures are acceptable when their invariants,
-evidence boundaries, migration, and residual risk are explicit.

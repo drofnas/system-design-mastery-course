@@ -1,7 +1,6 @@
 ---
 lesson_id: L01
-title: User Journeys, SLIs, and SLOs
-week: 45
+title: "User Journeys, SLIs, and SLOs"
 ---
 
 # User Journeys, SLIs, and SLOs
@@ -81,5 +80,5 @@ each exclusion with a failure that occurs after request acceptance.
 
 ## Sources and next work
 
-Study RES-01, complete EX-01–EX-02, and freeze the Week 45 SLI population before
+Study RES-01, complete EX-01–EX-02, and freeze the SLI population before
 opening the Northstar case or answer key.

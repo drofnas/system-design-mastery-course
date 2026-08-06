@@ -1,7 +1,6 @@
 ---
 lesson_id: L05
-title: Incident Command, Communication, and Runbooks
-week: 47
+title: "Incident Command, Communication, and Runbooks"
 ---
 
 # Incident Command, Communication, and Runbooks

@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://example.invalid/system-design-course/blind-reveal.schema.json",
-  "title": "Module 4 partner-held and revealed mapping",
+  "title": "Module 4 blind reveal mapping",
   "type": "object",
   "additionalProperties": false,
   "required": ["schema_version", "collection_id", "items"],
@@ -9,8 +9,8 @@
     "schema_version": {"const": "1.0"},
     "collection_id": {"type": "string", "pattern": "^[0-9a-f]{32}$"},
     "revealed_at": {"type": "string", "minLength": 20},
-    "frozen_diagnosis_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
-    "frozen_commit": {"type": "string", "pattern": "^[0-9a-f]{40,64}$"},
+    "diagnosis_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "diagnosis_path": {"type": "string", "minLength": 1},
     "items": {
       "type": "array", "minItems": 2,
       "items": {

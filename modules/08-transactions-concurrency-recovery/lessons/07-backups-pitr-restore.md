@@ -1,4 +1,7 @@
+---
 lesson_id: L07
+title: "Backups, PITR, Restore Validation, and Objectives"
+---
 
 # Backups, PITR, Restore Validation, and Objectives
 
@@ -64,6 +67,45 @@ security, derived-state, dependency, and user-journey probes plus owners.
 invariant, security, compatibility, derived rebuild, and service validation.
 3. Whenever target identity, archive continuity, checksums, invariants,
 authorization, dependencies, or user-journey probes have not passed.
+
+## Failure-mode bridge to the lab
+
+Backups are not recovery until a restore has been tested. Point-in-time recovery
+adds a target: restore a base backup and replay logs to the chosen moment. The
+target must be precise enough to avoid replaying the corrupting operation while
+still preserving required committed work.
+
+Three failure modes matter in the lab. First, a backup can be present but
+corrupt, incomplete, or missing the keys needed to read it. Second, a restore can
+choose the wrong target and silently lose valid writes. Third, a restored system
+can rejoin with stale authority and overwrite newer state. A strong recovery
+answer includes integrity verification before selection, the required version or
+timestamp, the observed RPO, the observed RTO, and the fencing rule for failback.
+That turns "we have backups" into a testable recovery claim.
+
+## Second worked example
+
+A bad migration runs at 10:07 and deletes valid rows. The last full backup is
+from 02:00, and logs are available through 10:30. Restoring to 10:30 faithfully
+replays the deletion. Restoring to 10:06 may avoid the deletion but lose valid
+writes between 10:06 and detection. A recovery plan should identify the exact
+target, quantify accepted data loss, preserve the corrupt state for analysis if
+needed, and fence the restored system until authority is clear.
+
+## Decision checklist
+
+Verify backup integrity, restore target, required version, excluded bad change,
+RPO, RTO, credentials, encryption keys, and failback fencing. A backup that was
+not restored is only an artifact.
+
+## Restore drill
+
+Run the restore story as a drill before the incident. Choose a backup, restore
+it into isolation, replay to the target, verify application invariants, compare
+row counts and checksums, and record the exact command path. Then practice
+failback separately. The first drill usually reveals missing credentials, wrong
+retention assumptions, undocumented dependencies, or operators who can read the
+runbook but cannot complete the procedure under time pressure.
 
 ## Sources and next work
 

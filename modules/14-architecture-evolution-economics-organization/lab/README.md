@@ -26,7 +26,7 @@ inputs and differs by exactly one control. The broken output fails its declared
 target invariant; the repaired output passes I01–I12. Preserve scenario and
 output SHA-256 values in the independent evidence directory.
 
-## Evidence boundary
+## Evidence limit
 
 The lab demonstrates arithmetic and decision contracts. It cannot establish
 production compatibility, database atomicity, provider portability, real bills,

@@ -1,4 +1,7 @@
+---
 lesson_id: L06
+title: "HTTP/1.1 and HTTP/2 Multiplexing"
+---
 
 # HTTP/1.1 and HTTP/2 Multiplexing
 

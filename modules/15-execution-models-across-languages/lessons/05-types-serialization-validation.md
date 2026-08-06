@@ -1,4 +1,7 @@
+---
 lesson_id: L05
+title: "Types, Serialization, and Validation"
+---
 
 # Types, Serialization, and Validation
 

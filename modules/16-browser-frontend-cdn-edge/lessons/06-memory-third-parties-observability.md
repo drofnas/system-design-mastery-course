@@ -1,4 +1,7 @@
+---
 lesson_id: L06
+title: "Memory, Third Parties, and Observability"
+---
 
 # Memory, Third Parties, and Observability
 

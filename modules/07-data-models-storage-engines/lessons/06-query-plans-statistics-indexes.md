@@ -1,4 +1,7 @@
+---
 lesson_id: L06
+title: "Query Plans, Statistics, and Index Design"
+---
 
 # Query Plans, Statistics, and Index Design
 

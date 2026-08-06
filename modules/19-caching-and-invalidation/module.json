@@ -1,0 +1,170 @@
+{
+  "$schema": "../../schemas/module.schema.json",
+  "course_id": "CSSDM",
+  "course_version": "3.1-solo",
+  "id": "M19",
+  "title": "Caching and Invalidation",
+  "status": "draft",
+  "focus": "Cache placement, eviction, invalidation, coherence, stampede protection, and cache failure modes.",
+  "pacing": {
+    "review": "Skim the six lessons and map one cache you already operate.",
+    "standard": "Study lessons, complete exercises, and write one cache policy decision.",
+    "deep": "Prototype one cache failure and a repaired policy locally."
+  },
+  "lessons": [
+    {
+      "id": "L01",
+      "title": "Cache Placement and Read/Write Paths",
+      "path": "lessons/01-cache-placement-read-write-paths.md"
+    },
+    {
+      "id": "L02",
+      "title": "Eviction Policies and Hit-Rate Economics",
+      "path": "lessons/02-eviction-policies-hit-rate-economics.md"
+    },
+    {
+      "id": "L03",
+      "title": "Invalidation and Coherence",
+      "path": "lessons/03-invalidation-coherence.md"
+    },
+    {
+      "id": "L04",
+      "title": "Stampede Protection",
+      "path": "lessons/04-stampede-protection.md"
+    },
+    {
+      "id": "L05",
+      "title": "Cache Failure Modes",
+      "path": "lessons/05-cache-failure-modes.md"
+    },
+    {
+      "id": "L06",
+      "title": "Caching Decisions and Defense",
+      "path": "lessons/06-caching-decisions-defense.md"
+    }
+  ],
+  "learning_outcomes": [
+    {
+      "id": "M19-O1",
+      "statement": "Choose cache placement from read/write path, freshness, authority, and failure cost.",
+      "lesson_ids": [
+        "L01",
+        "L06"
+      ],
+      "exercise_ids": [
+        "EX-01",
+        "EX-02"
+      ]
+    },
+    {
+      "id": "M19-O2",
+      "statement": "Explain eviction policy behavior and estimate hit-rate economics.",
+      "lesson_ids": [
+        "L02"
+      ],
+      "exercise_ids": [
+        "EX-03",
+        "EX-04"
+      ]
+    },
+    {
+      "id": "M19-O3",
+      "statement": "Design invalidation and coherence rules without hiding stale or private data risks.",
+      "lesson_ids": [
+        "L03",
+        "L05"
+      ],
+      "exercise_ids": [
+        "EX-05",
+        "EX-06"
+      ]
+    },
+    {
+      "id": "M19-O4",
+      "statement": "Prevent cache stampedes with request coalescing, jitter, leases, and bounded regeneration.",
+      "lesson_ids": [
+        "L04"
+      ],
+      "exercise_ids": [
+        "EX-07",
+        "EX-08"
+      ]
+    },
+    {
+      "id": "M19-O5",
+      "statement": "Defend a cache policy with ownership, observability, rollback, and abuse controls.",
+      "lesson_ids": [
+        "L05",
+        "L06"
+      ],
+      "exercise_ids": [
+        "EX-09",
+        "EX-10"
+      ]
+    }
+  ],
+  "practice": {
+    "exercises_path": "exercises/exercises.md",
+    "answer_key_path": "exercises/answer-key.md"
+  },
+  "lab": {
+    "required": false,
+    "path": null,
+    "note": "Draft module; executable cache lab is deferred. Use the exercises to model a cache policy locally."
+  },
+  "quiz": {
+    "question_bank_path": "quiz/question-bank.json",
+    "answer_key_path": "quiz/answer-key.md",
+    "llm_grader_prompt_path": "quiz/llm-grader-prompt.md",
+    "question_count": 100,
+    "default_draw_count": 20,
+    "types": [
+      "multiple_choice",
+      "short_answer",
+      "calculation",
+      "scenario_diagnosis",
+      "design_judgment"
+    ]
+  },
+  "optional_project": {
+    "description": "Choose one real cache and write a policy memo covering keys, TTLs, invalidation, stampede controls, privacy, observability, and rollback."
+  },
+  "resources": [
+    {
+      "id": "RES-01",
+      "title": "Caching at Scale With Redis",
+      "url": "https://redis.io/learn/howtos/solutions/microservices/caching-at-scale",
+      "required": false,
+      "estimated_minutes": 45,
+      "purpose": "Use for practical cache placement and invalidation vocabulary.",
+      "local_alternative": "lessons/01-cache-placement-read-write-paths.md"
+    },
+    {
+      "id": "RES-02",
+      "title": "Cloudflare Cache Concepts",
+      "url": "https://developers.cloudflare.com/cache/concepts/default-cache-behavior/",
+      "required": false,
+      "estimated_minutes": 30,
+      "purpose": "Use for HTTP cache-key and freshness concepts.",
+      "local_alternative": "lessons/03-invalidation-coherence.md"
+    },
+    {
+      "id": "RES-03",
+      "title": "Caching Strategies and How to Choose the Right One",
+      "url": "https://aws.amazon.com/caching/best-practices/",
+      "required": false,
+      "estimated_minutes": 45,
+      "purpose": "Compare cache-aside, write-through, write-around, and write-behind patterns.",
+      "local_alternative": "lessons/01-cache-placement-read-write-paths.md"
+    },
+    {
+      "id": "RES-04",
+      "title": "Cache Stampede",
+      "url": "https://en.wikipedia.org/wiki/Cache_stampede",
+      "required": false,
+      "estimated_minutes": 20,
+      "purpose": "Use as a quick definition before deeper local modeling.",
+      "local_alternative": "lessons/04-stampede-protection.md"
+    }
+  ]
+}

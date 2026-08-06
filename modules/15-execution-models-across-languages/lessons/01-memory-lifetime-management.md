@@ -1,4 +1,7 @@
+---
 lesson_id: L01
+title: "Memory Lifetime and Management"
+---
 
 # Memory Lifetime and Management
 

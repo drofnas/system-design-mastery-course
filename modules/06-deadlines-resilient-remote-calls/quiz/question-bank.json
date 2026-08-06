@@ -1,4 +1,5 @@
 {
+  "$schema": "../../../schemas/quiz-bank.schema.json",
   "module_id": "M06",
   "title": "Deadlines and Resilient Remote Calls",
   "questions": [
@@ -23,7 +24,7 @@
         "Treat a successful local run as proof that all production conditions are covered."
       ],
       "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to allocate and propagate an end-to-end deadline through serial and parallel work with response and cleanup reserves.",
-      "explanation": "A deadline answers \u201cafter what instant is this result no longer useful?\u201d A timeout answers \u201chow long will this component wait?\u201d Resetting a full timeout at each hop lets a request live longer than the user promise. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "explanation": "A deadline answers “after what instant is this result no longer useful?” A timeout answers “how long will this component wait?” Resetting a full timeout at each hop lets a request live longer than the user promise. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
       "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
     },
     {
@@ -76,7 +77,7 @@
         "application"
       ],
       "prompt": "A learner applies 'Idempotency and Deduplication' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **\u201cPOST is not idempotent, PUT is\u201d:** method semantics do not encode the business invariant.",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **“POST is not idempotent, PUT is”:** method semantics do not encode the business invariant.",
       "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
       "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
     },
@@ -329,7 +330,7 @@
       ],
       "prompt": "In 3-5 sentences, explain how 'End-to-End Deadlines and Allocation' supports this outcome: Allocate and propagate an end-to-end deadline through serial and parallel work with response and cleanup reserves.",
       "correct_answer": "A strong answer defines the mechanism from 'End-to-End Deadlines and Allocation', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "A deadline answers \u201cafter what instant is this result no longer useful?\u201d A timeout answers \u201chow long will this component wait?\u201d Resetting a full timeout at each hop lets a request live longer than the user promise.",
+      "explanation": "A deadline answers “after what instant is this result no longer useful?” A timeout answers “how long will this component wait?” Resetting a full timeout at each hop lets a request live longer than the user promise.",
       "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
     },
     {
@@ -383,7 +384,7 @@
       ],
       "prompt": "You must make a design choice involving 'Idempotency and Deduplication'. What tradeoff would you document, and what evidence would make you reverse the choice?",
       "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for make ambiguous remote outcomes safe using scoped idempotency records, atomic effects, and deduplication retention..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - IETF, RFC 9110 HTTP Semanticshttps://www.rfc-editor.org/rfc/rfc9110.html, \u00a7\u00a79.2.1\u20139.2.3.",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - IETF, RFC 9110 HTTP Semanticshttps://www.rfc-editor.org/rfc/rfc9110.html, §§9.2.1–9.2.3.",
       "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
     },
     {
@@ -791,7 +792,7 @@
         "Treat a successful local run as proof that all production conditions are covered."
       ],
       "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to allocate and propagate an end-to-end deadline through serial and parallel work with response and cleanup reserves.",
-      "explanation": "A deadline answers \u201cafter what instant is this result no longer useful?\u201d A timeout answers \u201chow long will this component wait?\u201d Resetting a full timeout at each hop lets a request live longer than the user promise. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "explanation": "A deadline answers “after what instant is this result no longer useful?” A timeout answers “how long will this component wait?” Resetting a full timeout at each hop lets a request live longer than the user promise. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
       "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
     },
     {
@@ -844,7 +845,7 @@
         "application"
       ],
       "prompt": "A learner applies 'Idempotency and Deduplication' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **\u201cPOST is not idempotent, PUT is\u201d:** method semantics do not encode the business invariant.",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **“POST is not idempotent, PUT is”:** method semantics do not encode the business invariant.",
       "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
       "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
     },
@@ -1097,7 +1098,7 @@
       ],
       "prompt": "In 3-5 sentences, explain how 'End-to-End Deadlines and Allocation' supports this outcome: Allocate and propagate an end-to-end deadline through serial and parallel work with response and cleanup reserves.",
       "correct_answer": "A strong answer defines the mechanism from 'End-to-End Deadlines and Allocation', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "A deadline answers \u201cafter what instant is this result no longer useful?\u201d A timeout answers \u201chow long will this component wait?\u201d Resetting a full timeout at each hop lets a request live longer than the user promise.",
+      "explanation": "A deadline answers “after what instant is this result no longer useful?” A timeout answers “how long will this component wait?” Resetting a full timeout at each hop lets a request live longer than the user promise.",
       "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
     },
     {
@@ -1151,7 +1152,7 @@
       ],
       "prompt": "You must make a design choice involving 'Idempotency and Deduplication'. What tradeoff would you document, and what evidence would make you reverse the choice?",
       "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for make ambiguous remote outcomes safe using scoped idempotency records, atomic effects, and deduplication retention..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - IETF, RFC 9110 HTTP Semanticshttps://www.rfc-editor.org/rfc/rfc9110.html, \u00a7\u00a79.2.1\u20139.2.3.",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - IETF, RFC 9110 HTTP Semanticshttps://www.rfc-editor.org/rfc/rfc9110.html, §§9.2.1–9.2.3.",
       "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
     },
     {
@@ -1559,7 +1560,7 @@
         "Treat a successful local run as proof that all production conditions are covered."
       ],
       "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to allocate and propagate an end-to-end deadline through serial and parallel work with response and cleanup reserves.",
-      "explanation": "A deadline answers \u201cafter what instant is this result no longer useful?\u201d A timeout answers \u201chow long will this component wait?\u201d Resetting a full timeout at each hop lets a request live longer than the user promise. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
+      "explanation": "A deadline answers “after what instant is this result no longer useful?” A timeout answers “how long will this component wait?” Resetting a full timeout at each hop lets a request live longer than the user promise. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
       "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
     },
     {
@@ -1612,7 +1613,7 @@
         "application"
       ],
       "prompt": "A learner applies 'Idempotency and Deduplication' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **\u201cPOST is not idempotent, PUT is\u201d:** method semantics do not encode the business invariant.",
+      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **“POST is not idempotent, PUT is”:** method semantics do not encode the business invariant.",
       "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
       "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
     },
@@ -1865,7 +1866,7 @@
       ],
       "prompt": "In 3-5 sentences, explain how 'End-to-End Deadlines and Allocation' supports this outcome: Allocate and propagate an end-to-end deadline through serial and parallel work with response and cleanup reserves.",
       "correct_answer": "A strong answer defines the mechanism from 'End-to-End Deadlines and Allocation', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "A deadline answers \u201cafter what instant is this result no longer useful?\u201d A timeout answers \u201chow long will this component wait?\u201d Resetting a full timeout at each hop lets a request live longer than the user promise.",
+      "explanation": "A deadline answers “after what instant is this result no longer useful?” A timeout answers “how long will this component wait?” Resetting a full timeout at each hop lets a request live longer than the user promise.",
       "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
     },
     {
@@ -1919,7 +1920,7 @@
       ],
       "prompt": "You must make a design choice involving 'Idempotency and Deduplication'. What tradeoff would you document, and what evidence would make you reverse the choice?",
       "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for make ambiguous remote outcomes safe using scoped idempotency records, atomic effects, and deduplication retention..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - IETF, RFC 9110 HTTP Semanticshttps://www.rfc-editor.org/rfc/rfc9110.html, \u00a7\u00a79.2.1\u20139.2.3.",
+      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - IETF, RFC 9110 HTTP Semanticshttps://www.rfc-editor.org/rfc/rfc9110.html, §§9.2.1–9.2.3.",
       "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
     }
   ]

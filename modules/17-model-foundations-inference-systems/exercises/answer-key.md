@@ -1,6 +1,6 @@
 # Module 17 Explained Exercise Answers
 
-These are reasoning checks for Atlas, not capstone answers. Other results are
+These are reasoning checks for Atlas, not optional project answers. Other results are
 acceptable when assumptions, arithmetic, evidence, and consequences are explicit.
 
 ## EX-01–EX-04
@@ -55,11 +55,3 @@ except one. The broken target must fail and repaired invariants must pass withou
 rewriting the raw evidence. An architecture defense compares the same drivers,
 names owners and costs, separates measured from modeled claims, and gives an
 executable migration, rollback, and evidence-based reversal condition.
-
-## PESD 2.0 extension answer
-
-A defensible answer covers an actual streaming tiny-transformer path with incremental KV state, token scheduling, byte-budget admission, tenant/version cache identity, bounded provider failure, profiling, and an AI System Dossier. It distinguishes the
-requirement, enforcement mechanism, evidence, and owner; keeps modeled and
-measured results separate; and names the failed condition that would reverse
-the decision. Different architectures are acceptable when their invariants,
-evidence boundaries, migration, and residual risk are explicit.

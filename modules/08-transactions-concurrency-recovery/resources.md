@@ -28,7 +28,7 @@ task; record the substitution.
 - **URL:** https://www.postgresql.org/docs/current/transaction-iso.html
 - **Type/status:** maintainer documentation; Required
 - **Access:** free
-- **Week/time:** Week 41; 55 minutes assigned
+- **Lesson/time:** workflow practice; 55 minutes assigned
 - **Purpose:** Ground visibility, anomalies, and whole-transaction serialization retry in an operated DBMS.
 - **Boundary and evidence:** Read Sections 13.2.1-13.2.3; draw one admitted history per level and state which Northstar invariant it can violate.
 - **Local alternative:** [lessons/02-histories-isolation-anomalies.md](lessons/02-histories-isolation-anomalies.md)
@@ -41,7 +41,7 @@ task; record the substitution.
 - **URL:** https://www.postgresql.org/docs/current/explicit-locking.html
 - **Type/status:** maintainer documentation; Required
 - **Access:** free
-- **Week/time:** Week 41; 45 minutes assigned
+- **Lesson/time:** workflow practice; 45 minutes assigned
 - **Purpose:** Connect lock modes, wait behavior, and deadlock victim handling to application retry policy.
 - **Boundary and evidence:** Read Sections 13.3.2 and 13.3.4; build a wait-for graph and write a complete-transaction retry boundary.
 - **Local alternative:** [lessons/03-locks-deadlocks-retries.md](lessons/03-locks-deadlocks-retries.md)
@@ -54,7 +54,7 @@ task; record the substitution.
 - **URL:** https://www.postgresql.org/docs/current/wal-intro.html
 - **Type/status:** maintainer documentation; Required
 - **Access:** free
-- **Week/time:** Week 41; 35 minutes assigned
+- **Lesson/time:** workflow practice; 35 minutes assigned
 - **Purpose:** Derive WAL-before-data, redo, group commit, and PITR consequences from a concise implementation contract.
 - **Boundary and evidence:** Read the complete section; order log, data, flush, commit, and acknowledgement events and identify the unsafe permutation.
 - **Local alternative:** [lessons/06-wal-checkpoints-recovery.md](lessons/06-wal-checkpoints-recovery.md)
@@ -67,7 +67,7 @@ task; record the substitution.
 - **URL:** https://www.postgresql.org/docs/current/continuous-archiving.html
 - **Type/status:** maintainer documentation; Required
 - **Access:** free
-- **Week/time:** Week 40; 70 minutes assigned
+- **Lesson/time:** the relevant lesson; 70 minutes assigned
 - **Purpose:** Connect a base backup, complete WAL archive, recovery target, and restore time/storage cost.
 - **Boundary and evidence:** Read Sections 25.3.1, 25.3.2, and 25.3.5; draw the minimum recoverable set and calculate a bounded RPO and replay workload.
 - **Local alternative:** [lessons/07-backups-pitr-restore.md](lessons/07-backups-pitr-restore.md)
@@ -80,7 +80,7 @@ task; record the substitution.
 - **URL:** https://about.gitlab.com/blog/postmortem-of-database-outage-of-january-31/
 - **Type/status:** first-person engineering postmortem; Required
 - **Access:** free
-- **Week/time:** Week 40; 45 minutes assigned
+- **Lesson/time:** the relevant lesson; 45 minutes assigned
 - **Purpose:** Show why successful backup jobs, replicas, runbooks, ownership, and tested restores are different claims.
 - **Boundary and evidence:** Read Broken recovery procedures through Root cause analysis; classify each failed control as prevention, detection, recovery, or ownership evidence.
 - **Local alternative:** [lessons/07-backups-pitr-restore.md](lessons/07-backups-pitr-restore.md)
@@ -93,7 +93,7 @@ task; record the substitution.
 - **URL:** https://15445.courses.cs.cmu.edu/spring2026/schedule.html
 - **Type/status:** course videos with notes and slides; Optional enrichment
 - **Access:** free
-- **Week/time:** Week 44; 150 minutes optional
+- **Lesson/time:** the relevant lesson; 150 minutes optional
 - **Purpose:** Connect concurrency-control theory, 2PL, MVCC, logging, and recovery in one primary teaching sequence.
 - **Boundary and evidence:** Use only Lectures 17, 18, 20, 22, and 23; watch selected mechanism segments or use the linked notes, then annotate one schedule and one recovery trace.
 - **Local alternative:** [lessons/04-occ-mvcc-write-skew.md](lessons/04-occ-mvcc-write-skew.md)
@@ -106,7 +106,7 @@ task; record the substitution.
 - **URL:** https://www.postgresql.org/docs/current/wal-reliability.html
 - **Type/status:** maintainer documentation; Optional enrichment
 - **Access:** free
-- **Week/time:** Week 44; 35 minutes optional
+- **Lesson/time:** the relevant lesson; 35 minutes optional
 - **Purpose:** Bound durability claims across process, OS, controller, and device caches.
 - **Boundary and evidence:** Read Sections 28.1-28.2; list the flush assumptions the local lab cannot verify and the owner of each production check.
 - **Local alternative:** [lessons/06-wal-checkpoints-recovery.md](lessons/06-wal-checkpoints-recovery.md)
@@ -119,7 +119,7 @@ task; record the substitution.
 - **URL:** https://github.blog/news-insights/company-news/oct21-post-incident-analysis/
 - **Type/status:** first-person engineering postmortem; Optional enrichment
 - **Access:** free
-- **Week/time:** Week 44; 40 minutes optional
+- **Lesson/time:** the relevant lesson; 40 minutes optional
 - **Purpose:** Relate integrity-first degradation, large restore time, reconciliation, and backlog recovery to operating decisions.
 - **Boundary and evidence:** Read the recovery plan through Next steps; separate RTO, consistency, replay, backlog, and user-communication decisions.
 - **Local alternative:** [lessons/08-decisions-migration-ownership.md](lessons/08-decisions-migration-ownership.md)
@@ -132,7 +132,7 @@ task; record the substitution.
 - **URL:** https://www.postgresql.org/docs/current/ddl-constraints.html
 - **Type/status:** maintainer documentation; Optional enrichment
 - **Access:** free
-- **Week/time:** Week 44; 35 minutes optional
+- **Lesson/time:** the relevant lesson; 35 minutes optional
 - **Purpose:** Ground commit-time invariant enforcement in check, uniqueness, primary-key, and foreign-key contracts.
 - **Boundary and evidence:** Read the check, not-null, unique, primary-key, and foreign-key sections; map each mechanism to the facts it can and cannot enforce.
 - **Local alternative:** [lessons/05-constraints-atomic-workflows.md](lessons/05-constraints-atomic-workflows.md)

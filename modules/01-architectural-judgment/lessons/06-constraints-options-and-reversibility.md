@@ -1,10 +1,9 @@
 ---
 lesson_id: L06
-week: 2
-estimated_hours: 1.25
+title: "Constraints, Options, and Reversibility"
 ---
 
-# Lesson 6: Constraints, Options, and Reversibility
+# Constraints, Options, and Reversibility
 
 ## Outcomes
 
@@ -17,8 +16,8 @@ After this lesson, you can:
 
 ## Prerequisites
 
-Freeze the independent Week 1 baseline before applying this lesson to the
-commerce capstone. Complete Lessons 1–5.
+Freeze the independent initial baseline before applying this lesson to the
+external commerce example. Complete Lessons 1–5.
 
 ## Constraints remove choices
 

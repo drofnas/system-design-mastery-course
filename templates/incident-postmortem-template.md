@@ -1,6 +1,6 @@
 # Controlled-Incident Postmortem
 
-## Submission identity and evidence boundary
+## Submission identity and evidence limit
 
 - Incident ID, time window, environment, and evidence commit:
 - Exercise authorization and abort conditions:

@@ -1,10 +1,9 @@
 ---
 lesson_id: L05
 title: "Bounded Overload Control"
-week: 6
 ---
 
-# Lesson 5: Bounded Overload Control
+# Bounded Overload Control
 
 ## Outcomes
 

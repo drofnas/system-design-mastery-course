@@ -1,4 +1,7 @@
+---
 lesson_id: L03
+title: "B+ Trees, Hash Indexes, and Inverted Indexes"
+---
 
 # B+ Trees, Hash Indexes, and Inverted Indexes
 

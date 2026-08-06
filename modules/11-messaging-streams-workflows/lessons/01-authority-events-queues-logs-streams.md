@@ -1,7 +1,6 @@
 ---
 lesson_id: L01
-title: Authority, Events, Queues, Logs, and Streams
-week: 41
+title: "Authority, Events, Queues, Logs, and Streams"
 ---
 
 # Authority, Events, Queues, Logs, and Streams
@@ -88,4 +87,4 @@ envelope and state why a queue or retained log fits each consumer.
 ## Sources and next work
 
 Study RES-07 within its published boundary, then complete EX-01–EX-02 and the
-authority section of the Week 41 worksheet.
+authority section of the workflow practice worksheet.

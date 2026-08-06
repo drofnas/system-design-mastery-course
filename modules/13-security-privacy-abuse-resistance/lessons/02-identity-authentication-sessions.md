@@ -1,6 +1,6 @@
 ---
 lesson_id: L02
-title: Identity, authentication, recovery, and sessions
+title: "Identity, authentication, recovery, and sessions"
 ---
 
 # Identity, authentication, recovery, and sessions

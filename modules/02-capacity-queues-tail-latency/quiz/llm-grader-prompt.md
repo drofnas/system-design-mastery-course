@@ -11,7 +11,7 @@ Module goals:
 - Implement and test fixed workers, explicit bounded waiting, fan-out, downstream admission, logical identities, and timing instrumentation.
 - Design an open-loop latency experiment that exposes coordinated omission, generator limits, rejection, and uncertainty.
 - Predict and measure fan-out tail amplification, downstream branch demand, and correlation limits.
-- Locate saturation from useful throughput, latency, queue, rejection, concurrency, and generator evidence across the required load sweep.
+- Locate saturation from useful throughput, latency, queue, rejection, concurrency, and generator evidence across the load sweep.
 - Keep overload, priority, retries, downstream work, and recovery bounded under burst and dependency failure.
 - Defend a workload-scoped safe operating region, actionable scaling signal, overload policy, failover reserve, ownership model, and cost per useful request.
 

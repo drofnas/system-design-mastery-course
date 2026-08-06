@@ -1,6 +1,6 @@
 # Module 3 Guided Exercises
 
-Complete these against Transit Signal before independent capstone work.
+Complete these against Transit Signal before independent optional project work.
 
 ## EX-01: Freeze equivalent work
 
@@ -71,11 +71,3 @@ limits. Connect every claim to controller counters, exit status, and recovery.
 Select one failed prediction. Produce a causal chain, two alternatives, a
 falsification experiment, lab-to-production comparison, decision, owners,
 rollout, rollback, cost boundary, and reversal evidence.
-
-## PESD 2.0 extension to the final exercise
-
-Extend the final guided exercise with cgroup enforcement, virtualization and steal time, noisy-neighbor isolation, architecture-specific limits, and measured-versus-host-controlled evidence boundaries. Produce an
-obligation/control/evidence row, a named owner, a bounded cost or capacity
-effect, a failure or policy-drift test, a migration step, and a reversal trigger.
-Label every observation with an accepted evidence mode and do not use fixture
-replay as independent Build, Break, Implement, or Measure evidence.

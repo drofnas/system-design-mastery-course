@@ -1,6 +1,6 @@
 # Module 14 Explained Exercise Answers
 
-These are reasoned Northstar answers, not capstone answers. Other choices are
+These are reasoned Northstar answers, not optional project answers. Other choices are
 valid when they preserve authority, compatibility, service, cost, security, and
 ownership with evidence.
 
@@ -152,11 +152,3 @@ comparison and ownership evidence; permanent modularity ignores measured delay
 and failure distraction. Choose modular seam first, then condition extraction on
 flow, shadow, cost, and ownership results. Preserve finance's concern that the
 transition premium may not expire as a dated risk with an owner and threshold.
-
-## PESD 2.0 extension answer
-
-A defensible answer covers a thin local platform product with a service catalog, self-service interface, golden path, policy guardrails, exception path, ownership metadata, platform SLO, adoption and support metrics, FinOps allocation, and an exit plan. It distinguishes the
-requirement, enforcement mechanism, evidence, and owner; keeps modeled and
-measured results separate; and names the failed condition that would reverse
-the decision. Different architectures are acceptable when their invariants,
-evidence boundaries, migration, and residual risk are explicit.

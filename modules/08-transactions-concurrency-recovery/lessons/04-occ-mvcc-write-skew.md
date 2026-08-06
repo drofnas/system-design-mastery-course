@@ -1,4 +1,7 @@
+---
 lesson_id: L04
+title: "Optimistic Control, MVCC, Snapshots, and Write Skew"
+---
 
 # Optimistic Control, MVCC, Snapshots, and Write Skew
 
@@ -58,6 +61,38 @@ design under low, base, and high administrative contention.
 discarded after reads/computation, then repeated under continued contention.
 3. Oldest active snapshot/version-retention age and retained bytes, paired with
 cleanup lag and transaction age.
+
+## Failure-mode bridge to the lab
+
+Optimistic concurrency control and MVCC both reduce unnecessary waiting, but
+they do not remove the need to name conflicts. OCC checks whether the data read
+or written by a transaction changed before commit. MVCC lets readers see a
+snapshot while writers continue. Those mechanisms improve concurrency, yet a
+predicate invariant can still be missed if no concrete row or constraint records
+the conflict.
+
+Write skew is the lab's most important warning. Two transactions can each read a
+snapshot where the invariant appears safe, update different rows, and commit a
+combined state that violates the rule. The repair is not always "turn on
+serializable" globally. It may be a materialized guard row, exclusion constraint,
+predicate lock, or narrower transaction boundary. The diagnostic question is:
+where does the system make the shared condition concrete enough to conflict?
+
+## Second worked example
+
+An inventory system lets two warehouses promise the same scarce replacement
+part. Each transaction reads total available stock from a snapshot, reserves from
+its own warehouse row, and commits. No row conflict occurs, but the combined
+reservation exceeds the global limit. OCC sees no write-write conflict. MVCC
+keeps readers fast. The invariant still fails because total availability was not
+represented as a conflicting record or serializable predicate. Repair the shape
+of the conflict, not merely the retry loop.
+
+## Decision checklist
+
+Identify read set, write set, predicate, snapshot time, conflict detector, and
+constraint. If two commits can both pass locally and fail together, make the
+shared condition concrete.
 
 ## Sources and next work
 

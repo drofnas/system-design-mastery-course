@@ -1,10 +1,9 @@
 ---
 lesson_id: L08
-week: 4
-estimated_hours: 1.25
+title: "Decisions, RFCs, and Defense"
 ---
 
-# Lesson 8: Decisions, RFCs, and Defense
+# Decisions, RFCs, and Defense
 
 ## Outcomes
 
@@ -17,7 +16,7 @@ After this lesson, you can:
 
 ## Prerequisites
 
-Complete Lessons 1–7, the Week 2 candidate comparison, and the Week 3 failure
+Complete Lessons 1–7, the candidate comparison, and the failure
 review.
 
 ## Documents serve decisions
@@ -273,7 +272,7 @@ The deep path adds **a constraint and assurance ledger covering data classes, te
    security and governance, operations and recovery, economics, ownership,
    migration, and reversal triggers.
 
-### Non-capstone extension
+### Optional extension
 
 Apply the procedure to the module's continuing case. Add one tenant or governed
 data class, one supplier or control-plane dependency, and one deletion, recovery,
@@ -281,15 +280,10 @@ or exit obligation. The completed case may demonstrate the method, but its
 topology, thresholds, policy choices, and answer are not defaults for Global
 Commerce.
 
-### Evidence boundary
+### Evidence limit
 
-Use `derived`, `executed_deterministic`, `measured_loopback`,
-`measured_container`, `modeled_capacity`, `fixture_replay`, or
-`measured_accelerator` exactly as defined by the course. Fixture replay supports
-practice and remediation only. Modeled remote scale is not local measurement.
-Every trial records commit and input/configuration hashes, runtime and resource
-limits, clock, warm-up/repetition policy, raw outcomes, and limitations.
+State whether the evidence is derived, modeled, or measured locally. Preserve input/configuration hashes, runtime and resource limits, clock assumptions, warm-up/repetition policy, raw outcomes, and limitations.
 
 ### Source boundary
 
-Use the module's bounded primary sources and preserve the local evidence boundary.
+Use the module's bounded primary sources and preserve the local evidence limits.

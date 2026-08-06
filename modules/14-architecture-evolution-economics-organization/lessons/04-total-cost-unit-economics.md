@@ -1,4 +1,7 @@
+---
 lesson_id: L04
+title: "Total Cost and Unit Economics"
+---
 
 # Total Cost and Unit Economics
 

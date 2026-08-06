@@ -1,4 +1,7 @@
+---
 lesson_id: L04
+title: "Compute, Memory, and Capacity Accounting"
+---
 
 # Compute, Memory, and Capacity Accounting
 

@@ -1,4 +1,7 @@
+---
 lesson_id: L07
+title: "CAP, PACELC, Regional Placement, Security, and Cost"
+---
 
 # CAP, PACELC, Regional Placement, Security, and Cost
 

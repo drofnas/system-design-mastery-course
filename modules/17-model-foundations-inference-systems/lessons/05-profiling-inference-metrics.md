@@ -1,4 +1,7 @@
+---
 lesson_id: L05
+title: "Profiling and Inference Metrics"
+---
 
 # Profiling and Inference Metrics
 
@@ -55,7 +58,7 @@ same seed and workload.
 - Reporting a mean for a mixed interactive/batch population.
 - Omitting rejected requests from useful-throughput and cost analysis.
 - Profiling every request and treating profiler overhead as production behavior.
-- Comparing a CPU model with a GPU server without restating the evidence boundary.
+- Comparing a CPU model with a GPU server without restating the evidence limit.
 
 ## Guided practice
 

@@ -28,7 +28,7 @@ task; record the substitution.
 - **URL:** https://html.spec.whatwg.org/multipage/webappapis.html#event-loops
 - **Type/status:** living web standard; Required
 - **Access:** free
-- **Week/time:** Week 87; 50 minutes assigned
+- **Lesson/time:** the relevant lesson; 50 minutes assigned
 - **Purpose:** Ground tasks, microtasks, rendering opportunities, and agent event loops in the platform contract.
 - **Boundary and evidence:** Read definitions, queuing tasks, and the processing model; trace one input through task, microtask checkpoint, and rendering opportunity.
 - **Local alternative:** [lessons/01-browser-work-rendering-pipeline.md](lessons/01-browser-work-rendering-pipeline.md)
@@ -41,7 +41,7 @@ task; record the substitution.
 - **URL:** https://developer.chrome.com/docs/chromium/renderingng-architecture
 - **Type/status:** maintainer architecture guide; Required
 - **Access:** free
-- **Week/time:** Week 88; 45 minutes assigned
+- **Lesson/time:** the relevant lesson; 45 minutes assigned
 - **Purpose:** Connect style, layout, paint, raster, compositing, and thread placement to observed work.
 - **Boundary and evidence:** Read the pipeline and threading sections; label which Northstar work must use the main thread and which may bypass it.
 - **Local alternative:** [lessons/01-browser-work-rendering-pipeline.md](lessons/01-browser-work-rendering-pipeline.md)
@@ -54,7 +54,7 @@ task; record the substitution.
 - **URL:** https://www.rfc-editor.org/rfc/rfc9111.html
 - **Type/status:** Internet Standard; Required
 - **Access:** free
-- **Week/time:** Week 87; 60 minutes assigned
+- **Lesson/time:** the relevant lesson; 60 minutes assigned
 - **Purpose:** Reason precisely about cache storage, freshness, validation, invalidation, and shared-cache restrictions.
 - **Boundary and evidence:** Read Sections 3–5 and 7; produce the cache decision table for all four Northstar routes.
 - **Local alternative:** [lessons/04-http-cdn-cache-safety.md](lessons/04-http-cdn-cache-safety.md)
@@ -67,7 +67,7 @@ task; record the substitution.
 - **URL:** https://www.w3.org/TR/WCAG22/
 - **Type/status:** W3C Recommendation; Required
 - **Access:** free
-- **Week/time:** Week 88; 60 minutes assigned
+- **Lesson/time:** the relevant lesson; 60 minutes assigned
 - **Purpose:** Tie resilient interaction to testable accessibility outcomes rather than tool scores.
 - **Boundary and evidence:** Read Principles, Conformance, 1.3.1, 2.1.1, 2.4.3, 2.4.7, 2.5.8, 3.3.1, and 4.1.2; create manual and automated checks.
 - **Local alternative:** [lessons/05-accessibility-resilient-interaction.md](lessons/05-accessibility-resilient-interaction.md)
@@ -80,7 +80,7 @@ task; record the substitution.
 - **URL:** https://www.w3.org/TR/trace-context/
 - **Type/status:** W3C Recommendation; Required
 - **Access:** free
-- **Week/time:** Week 87; 35 minutes assigned
+- **Lesson/time:** the relevant lesson; 35 minutes assigned
 - **Purpose:** Propagate interoperable trace identity without trusting client sampling or leaking session data.
 - **Boundary and evidence:** Read the design overview and security considerations; trace browser, edge, and origin parentage and list rejected sensitive attributes.
 - **Local alternative:** [lessons/06-memory-third-parties-observability.md](lessons/06-memory-third-parties-observability.md)
@@ -93,7 +93,7 @@ task; record the substitution.
 - **URL:** https://web.dev/case-studies/better-youtube-web-part1
 - **Type/status:** first-person engineering case; Required
 - **Access:** free
-- **Week/time:** Week 88; 45 minutes assigned
+- **Lesson/time:** the relevant lesson; 45 minutes assigned
 - **Purpose:** Examine how a large operator connected constrained devices, field data, code delivery, and product outcomes.
 - **Boundary and evidence:** Read the full case; separate measurements, interventions, product outcomes, and claims that do not transfer to Northstar.
 - **Local alternative:** [lessons/08-frontend-edge-decision-teachback.md](lessons/08-frontend-edge-decision-teachback.md)
@@ -106,7 +106,7 @@ task; record the substitution.
 - **URL:** https://web.dev/articles/inp
 - **Type/status:** maintainer metric guide; Optional enrichment
 - **Access:** free
-- **Week/time:** Week 91; 45 minutes optional
+- **Lesson/time:** the relevant lesson; 45 minutes optional
 - **Purpose:** Interpret interaction latency and separate field thresholds from controlled lab observations.
 - **Boundary and evidence:** Read through the interaction anatomy and thresholds; map input delay, processing, and presentation delay to the Northstar filter interaction.
 - **Local alternative:** [lessons/02-performance-budgets-evidence.md](lessons/02-performance-budgets-evidence.md)
@@ -119,7 +119,7 @@ task; record the substitution.
 - **URL:** https://react.dev/reference/react-dom/server/renderToPipeableStream
 - **Type/status:** maintainer API reference; Optional enrichment
 - **Access:** free
-- **Week/time:** Week 91; 35 minutes optional
+- **Lesson/time:** the relevant lesson; 35 minutes optional
 - **Purpose:** Expose streaming HTML shell, readiness, error, and abort semantics without a framework abstraction.
 - **Boundary and evidence:** Read reference, caveats, and error recovery; identify when response status and headers become irreversible.
 - **Local alternative:** [lessons/03-route-rendering-hydration.md](lessons/03-route-rendering-hydration.md)
@@ -132,7 +132,7 @@ task; record the substitution.
 - **URL:** https://react.dev/reference/react-dom/client/hydrateRoot
 - **Type/status:** maintainer API reference; Optional enrichment
 - **Access:** free
-- **Week/time:** Week 91; 35 minutes optional
+- **Lesson/time:** the relevant lesson; 35 minutes optional
 - **Purpose:** Define hydration identity, mismatch handling, and root ownership.
 - **Boundary and evidence:** Read caveats and error hooks; define the server/client inputs whose equality the lab must preserve.
 - **Local alternative:** [lessons/03-route-rendering-hydration.md](lessons/03-route-rendering-hydration.md)
@@ -145,7 +145,7 @@ task; record the substitution.
 - **URL:** https://developer.chrome.com/docs/devtools/memory-problems
 - **Type/status:** maintainer diagnostic guide; Optional enrichment
 - **Access:** free
-- **Week/time:** Week 91; 45 minutes optional
+- **Lesson/time:** the relevant lesson; 45 minutes optional
 - **Purpose:** Use heap growth, detached DOM, and allocation evidence to diagnose retained browser resources.
 - **Boundary and evidence:** Read the overview and leak workflow; define a repeated-navigation test and the evidence that distinguishes growth from a leak.
 - **Local alternative:** [lessons/06-memory-third-parties-observability.md](lessons/06-memory-third-parties-observability.md)
@@ -158,7 +158,7 @@ task; record the substitution.
 - **URL:** https://www.youtube.com/watch?v=K2QHdgAKP-s
 - **Type/status:** captioned technical video; Optional enrichment
 - **Access:** free
-- **Week/time:** Week 91; 60 minutes optional
+- **Lesson/time:** the relevant lesson; 60 minutes optional
 - **Purpose:** Visualize the journey from web content to displayed pixels while identifying version-bound Chromium details.
 - **Boundary and evidence:** Watch with captions; draw the pipeline, then annotate at least two details superseded or clarified by current RenderingNG documentation.
 - **Local alternative:** [lessons/01-browser-work-rendering-pipeline.md](lessons/01-browser-work-rendering-pipeline.md)
@@ -171,7 +171,7 @@ task; record the substitution.
 - **URL:** https://opentelemetry.io/docs/languages/js/getting-started/browser/
 - **Type/status:** maintainer documentation; Optional enrichment
 - **Access:** free
-- **Week/time:** Week 91; 30 minutes optional
+- **Lesson/time:** the relevant lesson; 30 minutes optional
 - **Purpose:** Inspect a browser tracing implementation while preserving its documented experimental boundary.
 - **Boundary and evidence:** Read the warning, setup, and instrumentation sections; record which contracts are standard and which library behavior remains experimental.
 - **Local alternative:** [lessons/06-memory-third-parties-observability.md](lessons/06-memory-third-parties-observability.md)
@@ -184,7 +184,7 @@ task; record the substitution.
 - **URL:** https://web.dev/articles/optimizing-content-efficiency-loading-third-party-javascript
 - **Type/status:** maintainer guidance; Optional enrichment
 - **Access:** free
-- **Week/time:** Week 91; 45 minutes optional
+- **Lesson/time:** the relevant lesson; 45 minutes optional
 - **Purpose:** Treat third-party code as a performance, privacy, security, and ownership dependency.
 - **Boundary and evidence:** Read risks, measurement, loading, and safety sections; write a Northstar admission, failure, and removal policy.
 - **Local alternative:** [lessons/06-memory-third-parties-observability.md](lessons/06-memory-third-parties-observability.md)
@@ -194,18 +194,3 @@ task; record the substitution.
 Do not copy articles, chapters, slides, or transcripts into learner artifacts.
 Use short attributed quotations only when necessary and otherwise paraphrase with
 the source ID, exact section boundary, and stated evidence limit.
-
-## PESD 2.0 primary anchors
-
-### RES-14: Guidelines on transparency obligations for providers and deployers of AI systems
-
-- **Author/publisher:** European Commission
-- **URL:** https://digital-strategy.ec.europa.eu/en/library/guidelines-transparency-obligations-providers-and-deployers-ai-systems
-- **Type/status:** official primary guidance; Required
-- **Access:** free
-- **Week/time:** Week 87; 20 minutes assigned
-- **Purpose:** Ground the PESD 2.0 cross-cutting decision in current primary guidance and produce scoped evidence rather than framework vocabulary.
-- **Boundary and evidence:** Read scope and Article 50 transparency categories; record applicability and uncertainty before translating any obligation into a web control.
-- **Local alternative:** [lessons/08-frontend-edge-decision-teachback.md](lessons/08-frontend-edge-decision-teachback.md)
-- **Verification:** verified; HTTP GET plus primary-source metadata comparison; last checked 2026-08-04
-- **Reflection:** Which obligation applies, which evidence proves its control, and what uncertainty or failure would reverse the decision?

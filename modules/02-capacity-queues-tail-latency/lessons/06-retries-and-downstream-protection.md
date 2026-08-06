@@ -1,10 +1,9 @@
 ---
 lesson_id: L06
 title: "Retries and Downstream Protection"
-week: 6
 ---
 
-# Lesson 6: Retries and Downstream Protection
+# Retries and Downstream Protection
 
 ## Outcomes
 
@@ -123,4 +122,4 @@ A 5% budget permits 100 retry attempts.
 - Google SRE, [Addressing Cascading Failures](https://sre.google/sre-book/addressing-cascading-failures/)
 - Marc Brooker, [Timeouts, retries, and backoff with jitter](https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/)
 
-Complete EX-09, then freeze the Week 6 implementation before failure work.
+Complete EX-09, then freeze the retry implementation before failure work.

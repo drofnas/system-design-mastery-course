@@ -72,7 +72,14 @@ class FanoutLabTests(unittest.TestCase):
             repaired["attempts"]["useful_work_ratio"],
             broken["attempts"]["useful_work_ratio"],
         )
+        self.assertGreater(
+            repaired["outcomes"]["complete"] + repaired["outcomes"]["degraded"],
+            0,
+            "repaired variant must produce observable useful work, else the pair teaches nothing",
+        )
         self.assertGreater(broken["attempts"]["total"], repaired["attempts"]["total"])
+        # The 100 ms deadline is intentional: 150 ms lets the broken policy complete,
+        # weakening the retry-storm contrast this pair is meant to teach.
         self.assertLessEqual(repaired["attempts"]["retries"], 16)
         self.assertLessEqual(repaired["attempts"]["total"], 40)
         self.assertTrue(repaired["policy_checks"]["retry_budget_respected"])

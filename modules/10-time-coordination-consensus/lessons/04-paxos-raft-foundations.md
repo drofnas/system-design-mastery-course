@@ -1,6 +1,9 @@
-# Lesson 4: Paxos, Raft, and Replicated-State-Machine Foundations
-
+---
 lesson_id: L04
+title: "Paxos, Raft, and Replicated-State-Machine Foundations"
+---
+
+# Paxos, Raft, and Replicated-State-Machine Foundations
 
 ## Outcomes
 

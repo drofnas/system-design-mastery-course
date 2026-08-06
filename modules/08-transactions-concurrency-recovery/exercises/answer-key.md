@@ -1,7 +1,7 @@
 # Module 8 Explained Answers
 
 These answers explain Northstar reasoning and acceptable variation. They do not
-specify commerce transactions or a canonical capstone architecture.
+specify commerce transactions or a canonical optional project architecture.
 
 ## EX-01
 
@@ -110,11 +110,3 @@ A defensible matrix maps each invariant to authority, constraint/isolation,
 retry, durable acknowledgement, backup, tested target, telemetry, owner, cost,
 migration, rollback, and reversal. Different designs pass when their evidence
 supports the same published drivers and failure model.
-
-## PESD 2.0 extension answer
-
-A defensible answer covers retention, deletion, legal holds, key rotation, logs, replicas, exports, backups, restore-time policy replay, and resurrection prevention. It distinguishes the
-requirement, enforcement mechanism, evidence, and owner; keeps modeled and
-measured results separate; and names the failed condition that would reverse
-the decision. Different architectures are acceptable when their invariants,
-evidence boundaries, migration, and residual risk are explicit.

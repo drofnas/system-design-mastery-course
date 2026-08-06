@@ -1,0 +1,274 @@
+{
+  "$schema": "../../schemas/module.schema.json",
+  "course_id": "CSSDM",
+  "course_version": "3.1-solo",
+  "id": "M18",
+  "title": "Retrieval, RAG, and Agent Systems",
+  "status": "ready",
+  "focus": "Retrieval, RAG, tool authorization, workflow durability, grounding, and agent failure modes.",
+  "pacing": {
+    "review": "Skim lessons, answer self-checks, and take one generated quiz.",
+    "standard": "Study lessons, complete guided practice, use the answer key, and take one or more generated quizzes.",
+    "deep": "Complete standard work plus the reinforcement lab and optional project."
+  },
+  "lessons": [
+    {
+      "id": "L01",
+      "title": "Retrieval Contracts, Outcomes, and Evaluation",
+      "path": "lessons/01-retrieval-contracts-evaluation.md"
+    },
+    {
+      "id": "L02",
+      "title": "Chunking, Lexical and Vector Retrieval, and Access Filters",
+      "path": "lessons/02-chunking-lexical-vector-filters.md"
+    },
+    {
+      "id": "L03",
+      "title": "Exact Search, HNSW, and Index Economics",
+      "path": "lessons/03-exact-ann-hnsw.md"
+    },
+    {
+      "id": "L04",
+      "title": "Hybrid Retrieval, Reranking, and Release Criteria",
+      "path": "lessons/04-hybrid-reranking-release-gates.md"
+    },
+    {
+      "id": "L05",
+      "title": "Evidence provenance, grounding, freshness, and abstention",
+      "path": "lessons/05-provenance-grounding-freshness.md"
+    },
+    {
+      "id": "L06",
+      "title": "Structured tools, authorization, approval, and hostile context",
+      "path": "lessons/06-tools-authorization-prompt-injection.md"
+    },
+    {
+      "id": "L07",
+      "title": "Durable agent workflows, replay, cancellation, and budgets",
+      "path": "lessons/07-durable-agent-workflows.md"
+    },
+    {
+      "id": "L08",
+      "title": "CivicAid Decision Tutorial and Synthesis Review",
+      "path": "lessons/08-civicaid-decision-defense.md"
+    }
+  ],
+  "learning_outcomes": [
+    {
+      "id": "M18-O1",
+      "statement": "Model exact and approximate nearest-neighbor retrieval and tune HNSW from measured recall, visited work, latency, memory, and index cost.",
+      "lesson_ids": [
+        "L01",
+        "L03"
+      ],
+      "exercise_ids": [
+        "EX-01",
+        "EX-05",
+        "EX-06"
+      ]
+    },
+    {
+      "id": "M18-O2",
+      "statement": "Build and compare chunked lexical, vector, filtered, hybrid, and reranked retrieval paths using one evaluation set.",
+      "lesson_ids": [
+        "L02",
+        "L04"
+      ],
+      "exercise_ids": [
+        "EX-03",
+        "EX-04",
+        "EX-07",
+        "EX-08"
+      ]
+    },
+    {
+      "id": "M18-O3",
+      "statement": "Select retrieval, grounding, refusal, latency, and cost measures that connect to a declared user outcome and release criterion.",
+      "lesson_ids": [
+        "L01",
+        "L04",
+        "L05"
+      ],
+      "exercise_ids": [
+        "EX-02",
+        "EX-09",
+        "EX-10"
+      ]
+    },
+    {
+      "id": "M18-O4",
+      "statement": "Preserve evidence authorization, exact version, freshness, revocation, claim support, citations, and justified abstention.",
+      "lesson_ids": [
+        "L05"
+      ],
+      "exercise_ids": [
+        "EX-11",
+        "EX-12"
+      ]
+    },
+    {
+      "id": "M18-O5",
+      "statement": "Enforce versioned tool schemas, scoped credentials, deterministic authorization, bound human approval, and secret-free audit outside model output.",
+      "lesson_ids": [
+        "L06"
+      ],
+      "exercise_ids": [
+        "EX-13",
+        "EX-14"
+      ]
+    },
+    {
+      "id": "M18-O6",
+      "statement": "Resume, replay, deduplicate, cancel, compensate, and budget an agent workflow without repeating irreversible side effects.",
+      "lesson_ids": [
+        "L07"
+      ],
+      "exercise_ids": [
+        "EX-15",
+        "EX-16"
+      ]
+    },
+    {
+      "id": "M18-O7",
+      "statement": "Diagnose F01-F08 from immutable equivalent trials and connect each repair to user, security, operating, and cost consequences.",
+      "lesson_ids": [
+        "L05",
+        "L06",
+        "L07"
+      ],
+      "exercise_ids": [
+        "EX-17",
+        "EX-18"
+      ]
+    },
+    {
+      "id": "M18-O8",
+      "statement": "Synthesize retrieval, agent, product, security, operating, cost, ownership, migration, and reversal tradeoffs.",
+      "lesson_ids": [
+        "L08"
+      ],
+      "exercise_ids": [
+        "EX-19",
+        "EX-20"
+      ]
+    }
+  ],
+  "practice": {
+    "exercises_path": "exercises/exercises.md",
+    "answer_key_path": "exercises/answer-key.md"
+  },
+  "lab": {
+    "required": true,
+    "path": "lab/README.md",
+    "note": "Run the portable retrieval/agent lab for reinforcement; build a larger assistant only as an optional synthesis project."
+  },
+  "quiz": {
+    "question_bank_path": "quiz/question-bank.json",
+    "answer_key_path": "quiz/answer-key.md",
+    "llm_grader_prompt_path": "quiz/llm-grader-prompt.md",
+    "question_count": 100,
+    "default_draw_count": 20,
+    "types": [
+      "multiple_choice",
+      "short_answer",
+      "calculation",
+      "scenario_diagnosis",
+      "design_judgment"
+    ]
+  },
+  "optional_project": {
+    "description": "Build an optional final synthesis project that uses retrieval and tool workflows safely. No synthesis review or locked first attempt is required."
+  },
+  "resources": [
+    {
+      "id": "RES-01",
+      "title": "Introduction to Information Retrieval, Chapters 6 and 8",
+      "url": "https://nlp.stanford.edu/IR-book/",
+      "required": true,
+      "estimated_minutes": 90,
+      "purpose": "Ground probabilistic ranking and empirical retrieval evaluation.",
+      "local_alternative": "lessons/01-retrieval-contracts-evaluation.md"
+    },
+    {
+      "id": "RES-02",
+      "title": "Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs",
+      "url": "https://arxiv.org/abs/1603.09320",
+      "required": true,
+      "estimated_minutes": 75,
+      "purpose": "Connect the portable index to HNSW layers, graph navigation, construction, and recall/work controls.",
+      "local_alternative": "lessons/03-exact-ann-hnsw.md"
+    },
+    {
+      "id": "RES-03",
+      "title": "BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models",
+      "url": "https://arxiv.org/abs/2104.08663",
+      "required": false,
+      "estimated_minutes": 60,
+      "purpose": "Show why one in-domain result does not establish retrieval generalization.",
+      "local_alternative": "lessons/04-hybrid-reranking-release-gates.md"
+    },
+    {
+      "id": "RES-04",
+      "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "url": "https://arxiv.org/abs/2005.11401",
+      "required": true,
+      "estimated_minutes": 60,
+      "purpose": "Separate parametric generation from inspectable non-parametric evidence and its provenance limits.",
+      "local_alternative": "lessons/05-provenance-grounding-freshness.md"
+    },
+    {
+      "id": "RES-05",
+      "title": "LLM Prompt Injection Prevention Cheat Sheet",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html",
+      "required": true,
+      "estimated_minutes": 50,
+      "purpose": "Model indirect injection, exfiltration, tool abuse, least privilege, and approval as system boundaries.",
+      "local_alternative": "lessons/06-tools-authorization-prompt-injection.md"
+    },
+    {
+      "id": "RES-06",
+      "title": "AI Agent Reference Architecture",
+      "url": "https://go.temporal.io/platform-hub/ai-engineering/ai-reference-architecture",
+      "required": false,
+      "estimated_minutes": 50,
+      "purpose": "Study recorded side effects, workflow replay, checkpoints, approvals, and nondeterministic provider boundaries.",
+      "local_alternative": "lessons/07-durable-agent-workflows.md"
+    },
+    {
+      "id": "RES-07",
+      "title": "Using LLMs to amplify human labeling and improve Dash search relevance",
+      "url": "https://dropbox.tech/machine-learning/llm-human-labeling-improving-search-relevance-dropbox-dash",
+      "required": false,
+      "estimated_minutes": 45,
+      "purpose": "Examine how a production team connects retrieval judgments, human labels, search relevance, and grounded answers.",
+      "local_alternative": "lessons/08-civicaid-decision-defense.md"
+    },
+    {
+      "id": "RES-08",
+      "title": "HNSW for Vector Search Explained and Implemented with Faiss",
+      "url": "https://www.youtube.com/watch?v=QvKMwLjdK-s",
+      "required": false,
+      "estimated_minutes": 40,
+      "purpose": "Visualize HNSW layers, navigation, construction, and tuning before inspecting the portable implementation.",
+      "local_alternative": "lessons/03-exact-ann-hnsw.md"
+    },
+    {
+      "id": "RES-09",
+      "title": "NIST AI RMF Core",
+      "url": "https://airc.nist.gov/airmf-resources/airmf/5-sec-core/",
+      "required": true,
+      "estimated_minutes": 20,
+      "purpose": "Ground the solo course cross-cutting decision in current primary guidance and produce scoped evidence rather than framework vocabulary.",
+      "local_alternative": "lessons/08-civicaid-decision-defense.md"
+    },
+    {
+      "id": "RES-10",
+      "title": "Guidelines on transparency obligations for providers and deployers of AI systems",
+      "url": "https://digital-strategy.ec.europa.eu/en/library/guidelines-transparency-obligations-providers-and-deployers-ai-systems",
+      "required": true,
+      "estimated_minutes": 20,
+      "purpose": "Ground the solo course cross-cutting decision in current primary guidance and produce scoped evidence rather than framework vocabulary.",
+      "local_alternative": "lessons/08-civicaid-decision-defense.md"
+    }
+  ]
+}

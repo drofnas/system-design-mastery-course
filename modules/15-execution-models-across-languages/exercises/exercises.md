@@ -92,11 +92,3 @@ propagation, rerun identical work, and rank one alternative explanation.
 
 Compare keep-current, bounded adoption, and broad adoption. Defend workload,
 safety, operations, security, cost, migration, ownership, dissent, and reversal.
-
-## PESD 2.0 extension to the final exercise
-
-Extend the final guided exercise with four transport/schema shells while the learner implements admission, task ownership, cancellation, cleanup, memory and lifetime behavior, synchronization, and validation in TypeScript, Go, Rust, and Java. Produce an
-obligation/control/evidence row, a named owner, a bounded cost or capacity
-effect, a failure or policy-drift test, a migration step, and a reversal trigger.
-Label every observation with an accepted evidence mode and do not use fixture
-replay as independent Build, Break, Implement, or Measure evidence.

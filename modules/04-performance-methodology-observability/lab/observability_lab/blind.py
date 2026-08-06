@@ -1,4 +1,4 @@
-"""Partner-mediated opaque collection and reveal workflow for Week 15."""
+"""Opaque collection and reveal workflow for solo blind diagnosis practice."""
 
 from __future__ import annotations
 
@@ -6,10 +6,7 @@ import copy
 import hashlib
 import json
 import secrets
-import subprocess
-import tempfile
 import time
-import zlib
 from pathlib import Path
 from random import Random
 from typing import Any, Iterable
@@ -29,11 +26,6 @@ DEFAULT_SCENARIOS = (
     LAB_ROOT / "scenarios" / "transit-connection-leak.json",
     LAB_ROOT / "scenarios" / "transit-high-cardinality.json",
 )
-ENVELOPE_MAGIC = b"SDBLIND\x00\x01"
-ASSURANCE_LIMITATION = (
-    "Accidental-exposure protection only; this is not encryption or anti-cheating, "
-    "and a learner can bypass it by inspecting source scenarios or decoding the envelope."
-)
 
 
 def _sha256_json(value: Any) -> str:
@@ -45,10 +37,6 @@ def _write_json(path: Path, value: Any) -> None:
     path.write_text(json.dumps(value, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
 
-def _canonical(value: Any) -> bytes:
-    return json.dumps(value, sort_keys=True, separators=(",", ":")).encode("utf-8")
-
-
 def _directory_sha256(path: Path) -> str:
     digest = hashlib.sha256()
     for item in sorted(candidate for candidate in path.rglob("*") if candidate.is_file()):
@@ -57,73 +45,14 @@ def _directory_sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
-def _manifest_core(public: dict[str, Any]) -> dict[str, Any]:
-    return {key: value for key, value in public.items() if key != "envelope_sha256"}
-
-
-def _write_envelope(path: Path, payload: dict[str, Any]) -> str:
-    encoded = zlib.compress(_canonical(payload), level=9)
-    body_hash = hashlib.sha256(encoded).digest()
-    data = ENVELOPE_MAGIC + body_hash + encoded
-    path.parent.mkdir(parents=True, exist_ok=True)
-    if path.exists():
-        raise ValueError("solo reveal envelope already exists")
-    path.write_bytes(data)
-    path.chmod(0o600)
-    return hashlib.sha256(data).hexdigest()
-
-
-def _read_envelope(path: Path) -> tuple[dict[str, Any], str]:
-    data = path.read_bytes()
-    if not data.startswith(ENVELOPE_MAGIC) or len(data) <= len(ENVELOPE_MAGIC) + 32:
-        raise ValueError("invalid solo reveal envelope header")
-    expected = data[len(ENVELOPE_MAGIC):len(ENVELOPE_MAGIC) + 32]
-    compressed = data[len(ENVELOPE_MAGIC) + 32:]
-    if hashlib.sha256(compressed).digest() != expected:
-        raise ValueError("solo reveal envelope integrity check failed")
-    try:
-        payload = json.loads(zlib.decompress(compressed))
-    except (zlib.error, json.JSONDecodeError) as error:
-        raise ValueError("solo reveal envelope cannot be decoded") from error
-    validate_with_schema(payload, _schema("solo-blind-envelope.schema.json"))
-    return payload, hashlib.sha256(data).hexdigest()
-
-
-def _verify_frozen_diagnosis(path: Path, frozen_commit: str) -> tuple[bytes, str, str]:
+def _read_completed_diagnosis(path: Path) -> tuple[bytes, str]:
     if not path.is_file() or not path.read_text(encoding="utf-8").strip():
-        raise ValueError("a non-empty frozen diagnosis artifact is required before reveal")
-    repository = str(_run_git(["-C", str(path.parent), "rev-parse", "--show-toplevel"]))
-    commit = str(_run_git(["-C", repository, "rev-parse", f"{frozen_commit}^{{commit}}"]))
-    try:
-        relative = path.resolve().relative_to(Path(repository).resolve()).as_posix()
-    except ValueError as error:
-        raise ValueError("frozen diagnosis must be inside its Git repository") from error
-    committed = _run_git(["-C", repository, "show", f"{commit}:{relative}"], text=False)
-    working = path.read_bytes()
-    if committed != working:
-        raise ValueError("diagnosis file differs from the supplied frozen commit")
-    return working, relative, commit
+        raise ValueError("a non-empty completed diagnosis artifact is required before reveal")
+    return path.read_bytes(), path.name
 
 
 def _schema(name: str) -> dict[str, Any]:
     return json.loads((REPOSITORY_ROOT / "schemas" / name).read_text(encoding="utf-8"))
-
-
-def _run_git(arguments: list[str], *, text: bool = True) -> str | bytes:
-    try:
-        completed = subprocess.run(
-            ["git", *arguments],
-            check=True,
-            capture_output=True,
-            text=text,
-        )
-    except (OSError, subprocess.CalledProcessError) as error:
-        detail = getattr(error, "stderr", None)
-        if isinstance(detail, bytes):
-            detail = detail.decode("utf-8", errors="replace")
-        suffix = f": {detail.strip()}" if isinstance(detail, str) and detail.strip() else ""
-        raise ValueError(f"cannot verify frozen diagnosis with Git{suffix}") from error
-    return completed.stdout.strip() if text else completed.stdout
 
 
 async def prepare_blind_collection(
@@ -133,7 +62,7 @@ async def prepare_blind_collection(
     scenario_paths: Iterable[str | Path] = DEFAULT_SCENARIOS,
     randomizer: Random | None = None,
 ) -> dict[str, Any]:
-    """Collect opaque bundles while writing the mapping to a partner-held file."""
+    """Collect opaque bundles while writing the mapping outside the visible bundle."""
 
     public_root = Path(output_dir).resolve()
     private_reveal = Path(reveal_file).resolve()
@@ -204,11 +133,10 @@ async def prepare_blind_collection(
 def reveal_blind_collection(
     bundle_dir: str | Path,
     reveal_file: str | Path,
-    frozen_diagnosis: str | Path,
-    frozen_commit: str,
+    completed_diagnosis: str | Path,
     output: str | Path,
 ) -> dict[str, Any]:
-    """Publish the held mapping only after a non-empty frozen diagnosis exists."""
+    """Publish the held mapping only after a non-empty diagnosis exists."""
 
     target = Path(output)
     if target.exists():
@@ -218,8 +146,8 @@ def reveal_blind_collection(
     resolved_public = public_root.resolve()
     if private_path == resolved_public or private_path.is_relative_to(resolved_public):
         raise ValueError("reveal file must stay outside the learner-visible bundle directory")
-    diagnosis = Path(frozen_diagnosis)
-    diagnosis_bytes, _relative, commit = _verify_frozen_diagnosis(diagnosis, frozen_commit)
+    diagnosis = Path(completed_diagnosis)
+    diagnosis_bytes, diagnosis_name = _read_completed_diagnosis(diagnosis)
     public = json.loads((public_root / "manifest.json").read_text(encoding="utf-8"))
     private = json.loads(private_path.read_text(encoding="utf-8"))
     if public.get("collection_id") != private.get("collection_id"):
@@ -236,74 +164,9 @@ def reveal_blind_collection(
     revealed = {
         **private,
         "revealed_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-        "frozen_diagnosis_sha256": hashlib.sha256(diagnosis_bytes).hexdigest(),
-        "frozen_commit": commit,
+        "diagnosis_sha256": hashlib.sha256(diagnosis_bytes).hexdigest(),
+        "diagnosis_path": diagnosis_name,
     }
     validate_with_schema(revealed, _schema("blind-reveal.schema.json"))
     _write_json(target, revealed)
     return revealed
-
-
-async def prepare_solo_blind_collection(
-    output_dir: str | Path,
-    *,
-    scenario_paths: Iterable[str | Path] = DEFAULT_SCENARIOS,
-    randomizer: Random | None = None,
-) -> dict[str, Any]:
-    """Create opaque bundles and store only a binary local reveal envelope."""
-    public_root = Path(output_dir).resolve()
-    with tempfile.TemporaryDirectory(prefix="m04-solo-blind-") as temporary:
-        temporary_reveal = Path(temporary) / "mapping.json"
-        public = await prepare_blind_collection(
-            public_root, temporary_reveal, scenario_paths=scenario_paths, randomizer=randomizer,
-        )
-        private = json.loads(temporary_reveal.read_text(encoding="utf-8"))
-    public["reveal_mode"] = "solo"
-    core_hash = hashlib.sha256(_canonical(_manifest_core(public))).hexdigest()
-    mapping = {item["opaque_id"]: {key: value for key, value in item.items() if key != "opaque_id"} for item in private["items"]}
-    payload = {
-        "schema_version": "1.0", "module": "M04", "collection_id": public["collection_id"],
-        "manifest_core_sha256": core_hash,
-        "bundles": {item["opaque_id"]: _directory_sha256(public_root / item["bundle"]) for item in public["items"]},
-        "mapping": mapping, "assurance_limitation": ASSURANCE_LIMITATION,
-    }
-    envelope = REPOSITORY_ROOT / ".course-private" / "blind" / "M04" / f"{public['collection_id']}.sblind"
-    public["envelope_sha256"] = _write_envelope(envelope, payload)
-    validate_with_schema(public, _schema("blind-collection.schema.json"))
-    _write_json(public_root / "manifest.json", public)
-    return public
-
-
-def reveal_solo_blind_collection(
-    bundle_dir: str | Path, frozen_diagnosis: str | Path, frozen_commit: str, output: str | Path,
-) -> dict[str, Any]:
-    target = Path(output)
-    if target.exists():
-        raise ValueError("reveal output already exists; evidence is never overwritten")
-    public_root = Path(bundle_dir)
-    manifest_path = public_root / "manifest.json"
-    public = json.loads(manifest_path.read_text(encoding="utf-8"))
-    if public.get("reveal_mode") != "solo":
-        raise ValueError("bundle is not a solo blind collection")
-    envelope = REPOSITORY_ROOT / ".course-private" / "blind" / "M04" / f"{public.get('collection_id')}.sblind"
-    payload, envelope_hash = _read_envelope(envelope)
-    if envelope_hash != public.get("envelope_sha256"):
-        raise ValueError("manifest and solo reveal envelope do not match")
-    core_hash = hashlib.sha256(_canonical(_manifest_core(public))).hexdigest()
-    if payload.get("module") != "M04" or payload.get("collection_id") != public.get("collection_id") or payload.get("manifest_core_sha256") != core_hash:
-        raise ValueError("solo reveal envelope does not belong to this collection")
-    for item in public["items"]:
-        if _directory_sha256(public_root / item["bundle"]) != payload["bundles"].get(item["opaque_id"]):
-            raise ValueError("opaque bundle integrity check failed")
-    diagnosis_bytes, relative, commit = _verify_frozen_diagnosis(Path(frozen_diagnosis), frozen_commit)
-    record = {
-        "schema_version": "1.0", "module": "M04", "collection_id": public["collection_id"],
-        "reveal_mode": "solo", "revealed_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-        "diagnosis_path": relative, "diagnosis_sha256": hashlib.sha256(diagnosis_bytes).hexdigest(),
-        "frozen_commit": commit, "manifest_sha256": hashlib.sha256(manifest_path.read_bytes()).hexdigest(),
-        "manifest_core_sha256": core_hash, "envelope_sha256": envelope_hash,
-        "mapping": payload["mapping"], "assurance_limitation": ASSURANCE_LIMITATION,
-    }
-    validate_with_schema(record, _schema("solo-blind-reveal.schema.json"))
-    _write_json(target, record)
-    return record

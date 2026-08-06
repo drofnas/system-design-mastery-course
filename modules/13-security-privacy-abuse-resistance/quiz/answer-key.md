@@ -273,7 +273,7 @@ This key covers all 100 questions for **Security, Privacy, and Abuse Resistance*
 
 **Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for build a repeatable threat model from assets, actors, data flows, trust boundaries, abuse cases, risk owners, and reversal evidence..
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - OWASP Threat Modeling Cheat Sheethttps://cheatsheetseries.owasp.org/cheatsheets/ThreatModelingCheatSheet.html - OWASP ASVShttps://owasp.org/www-project-application-security-verification-standard/ Complete EX-01 and EX-02, then save the Week 49 model before
+**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - OWASP Threat Modeling Cheat Sheethttps://cheatsheetseries.owasp.org/cheatsheets/ThreatModelingCheatSheet.html - OWASP ASVShttps://owasp.org/www-project-application-security-verification-standard/ Complete EX-01 and EX-02, then save the threat model before
 
 **Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
 
@@ -713,7 +713,7 @@ This key covers all 100 questions for **Security, Privacy, and Abuse Resistance*
 
 **Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for build a repeatable threat model from assets, actors, data flows, trust boundaries, abuse cases, risk owners, and reversal evidence..
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - OWASP Threat Modeling Cheat Sheethttps://cheatsheetseries.owasp.org/cheatsheets/ThreatModelingCheatSheet.html - OWASP ASVShttps://owasp.org/www-project-application-security-verification-standard/ Complete EX-01 and EX-02, then save the Week 49 model before
+**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - OWASP Threat Modeling Cheat Sheethttps://cheatsheetseries.owasp.org/cheatsheets/ThreatModelingCheatSheet.html - OWASP ASVShttps://owasp.org/www-project-application-security-verification-standard/ Complete EX-01 and EX-02, then save the threat model before
 
 **Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
 
