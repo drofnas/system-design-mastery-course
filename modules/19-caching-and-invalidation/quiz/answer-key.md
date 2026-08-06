@@ -1,6 +1,6 @@
 # M19 Quiz Answer Key
 
-This key covers all 34 questions for **Caching and Invalidation**. Use it after an attempt, or provide it with the LLM grading prompt for feedback.
+This key covers all 19 questions for **Caching and Invalidation**. Use it after an attempt, or provide it with the LLM grading prompt for feedback.
 
 ## M19-Q001
 
@@ -145,156 +145,12 @@ This key covers all 34 questions for **Caching and Invalidation**. Use it after 
 
 **Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
-## M19-Q014
-
-**Type:** `multiple_choice`
-**Difficulty:** `recall`
-
-**Choices:**
-
-- Measure caching naming data for review case one; limit the change.
-- Measure write behind data for review case one; limit the change.
-- Measure private representation data for review case one; limit the change.
-- Measure reporting hit data for review case one; limit the change.
-
-**Answer:** Measure caching naming data for review case one; limit the change.
-
-**Explanation:** M19-Q014 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
-
-**Grading notes:** Full credit selects caching naming as the deciding target and explains why the other listed targets are adjacent rather than decisive.
-
-## M19-Q015
-
-**Type:** `multiple_choice`
-**Difficulty:** `application`
-
-**Choices:**
-
-- Measure letting batch data for review case two; limit the change.
-- Measure write behind data for review case two; limit the change.
-- Measure item size data for review case two; limit the change.
-- Measure ttl only data for review case two; limit the change.
-
-**Answer:** Measure write behind data for review case two; limit the change.
-
-**Explanation:** M19-Q015 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
-
-**Grading notes:** Full credit selects write behind as the deciding target and explains why the other listed targets are adjacent rather than decisive.
-
-## M19-Q016
-
-**Type:** `multiple_choice`
-**Difficulty:** `synthesis`
-
-**Choices:**
-
-- Measure derived indexes data for review case three; limit the change.
-- Measure allowing two data for review case three; limit the change. with margin
-- Measure private representation data for review case three; limit the change.
-- Measure giving every data for review case three; limit the change.
-
-**Answer:** Measure private representation data for review case three; limit the change.
-
-**Explanation:** M19-Q016 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
-
-**Grading notes:** Full credit selects private representation as the deciding target and explains why the other listed targets are adjacent rather than decisive.
-
-## M19-Q017
-
-**Type:** `multiple_choice`
-**Difficulty:** `recall`
-
-**Choices:**
-
-- Measure letting regeneration data for review case four; limit the change.
-- Measure serving unmarked data for review case four; limit the change.
-- Measure poisoned hit data for review case four; limit the change.
-- Measure reporting hit data for review case four; limit the change.
-
-**Answer:** Measure reporting hit data for review case four; limit the change.
-
-**Explanation:** M19-Q017 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
-
-**Grading notes:** Full credit selects reporting hit as the deciding target and explains why the other listed targets are adjacent rather than decisive.
-
-## M19-Q018
-
-**Type:** `multiple_choice`
-**Difficulty:** `application`
-
-**Choices:**
-
-- Measure letting batch data for review case five; limit the change.
-- Measure aggregating hit data for review case five; limit the change.
-- Measure negative cache data for review case five; limit the change.
-- Measure cache owner data for review case five; limit the change.
-
-**Answer:** Measure letting batch data for review case five; limit the change.
-
-**Explanation:** M19-Q018 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
-
-**Grading notes:** Full credit selects letting batch as the deciding target and explains why the other listed targets are adjacent rather than decisive.
-
-## M19-Q019
-
-**Type:** `multiple_choice`
-**Difficulty:** `synthesis`
-
-**Choices:**
-
-- Measure removal condition data for review case six; limit the change.
-- Measure item size data for review case six; limit the change.
-- Measure measuring only data for review case six; limit the change.
-- Measure workload growth data for review case six; limit the change.
-
-**Answer:** Measure item size data for review case six; limit the change.
-
-**Explanation:** M19-Q019 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
-
-**Grading notes:** Full credit selects item size as the deciding target and explains why the other listed targets are adjacent rather than decisive.
-
-## M19-Q020
-
-**Type:** `multiple_choice`
-**Difficulty:** `recall`
-
-**Choices:**
-
-- Measure failure behavior data for review case seven; limit the change.
-- Measure capacity margin data for review case seven; limit the change.
-- Measure ttl only data for review case seven; limit the change.
-- Measure state ownership data for review case seven; limit the change.
-
-**Answer:** Measure ttl only data for review case seven; limit the change.
-
-**Explanation:** M19-Q020 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
-
-**Grading notes:** Full credit selects ttl only as the deciding target and explains why the other listed targets are adjacent rather than decisive.
-
-## M19-Q021
-
-**Type:** `multiple_choice`
-**Difficulty:** `application`
-
-**Choices:**
-
-- Measure latency evidence data for review case eight; limit the change.
-- Measure recovery demand data for review case eight; limit the change.
-- Measure boundary signal data for review case eight; limit the change.
-- Measure derived indexes data for review case eight; limit the change.
-
-**Answer:** Measure derived indexes data for review case eight; limit the change.
-
-**Explanation:** M19-Q021 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
-
-**Grading notes:** Full credit selects derived indexes as the deciding target and explains why the other listed targets are adjacent rather than decisive.
-
 ## M19-Q022
 
 **Type:** `calculation`
 **Difficulty:** `recall`
 
-**Answer:** Calculation for cache placement and read/write paths, effective latency is 0.9 x 2 + (1 - 0.9) x 50 = 6.8 ms.
+**Answer:** Effective latency is 0.9 x 2 + (1 - 0.9) x 50 = 6.8 ms.
 
 **Explanation:** M19-Q022 uses cache effective latency from Cache Placement and Read/Write Paths and keeps units visible through the final numeric result.
 
@@ -305,7 +161,7 @@ This key covers all 34 questions for **Caching and Invalidation**. Use it after 
 **Type:** `calculation`
 **Difficulty:** `application`
 
-**Answer:** Calculation for eviction policies and hit-rate economics, origin reads are 10,000 x (1 - 0.95) = 500/min.
+**Answer:** Origin reads are 10,000 x (1 - 0.95) = 500/min.
 
 **Explanation:** M19-Q023 uses origin rate from Eviction Policies and Hit-Rate Economics and keeps units visible through the final numeric result.
 
@@ -316,18 +172,18 @@ This key covers all 34 questions for **Caching and Invalidation**. Use it after 
 **Type:** `calculation`
 **Difficulty:** `synthesis`
 
-**Answer:** Calculation for invalidation and coherence, coalescing allows 1 regeneration instead of 80, avoiding 79 duplicate origin computations.
+**Answer:** One regeneration should run for that key; the other 9,999 callers wait, receive bounded stale data, or fail fast.
 
-**Explanation:** M19-Q024 uses stampede coalescing from Invalidation and Coherence and keeps units visible through the final numeric result.
+**Explanation:** M19-Q024 uses the L04 stampede-protection worked example: single-flight bounds duplicate regeneration for one hot key.
 
-**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
+**Grading notes:** Full credit names one in-flight regeneration per key and gives a bounded behavior for waiters instead of allowing them to start a new stampede.
 
 ## M19-Q025
 
 **Type:** `calculation`
 **Difficulty:** `recall`
 
-**Answer:** Calculation for stampede protection, m19 Cold-Start Load case 4: Warmup lower bound is 5,000 / 250 = 20.0 seconds.
+**Answer:** Warmup lower bound is 5,000 / 250 = 20.0 seconds.
 
 **Explanation:** M19-Q025 uses cold-start load from Stampede Protection and keeps units visible through the final numeric result.
 
@@ -338,96 +194,19 @@ This key covers all 34 questions for **Caching and Invalidation**. Use it after 
 **Type:** `calculation`
 **Difficulty:** `application`
 
-**Answer:** Calculation for cache failure modes, the stale window can last up to 300 - 45 = 255 more seconds without invalidation.
+**Answer:** Before the flush, origin reads are 20,000 x (1 - 0.95) = 1,000/minute; immediately after, misses can drive 20,000/minute.
 
-**Explanation:** M19-Q026 uses stale window from Cache Failure Modes and keeps units visible through the final numeric result.
+**Explanation:** M19-Q026 uses the L05 cold-start failure practice and shows why a flush can remove the cache's protective effect.
 
-**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
+**Grading notes:** Full credit computes the pre-flush origin rate and the immediate post-flush miss load, then connects the jump to cold-start or metastable overload risk.
 
 ## M19-Q027
 
 **Type:** `calculation`
 **Difficulty:** `synthesis`
 
-**Answer:** Calculation for caching decisions and defense, m19 Hit-Rate Economics case 6: Saved origin reads are 10,000 x (0.10 - 0.05) = 500/min.
+**Answer:** Saved origin reads are 10,000 x (0.10 - 0.05) = 500/min.
 
 **Explanation:** M19-Q027 uses hit-rate economics from Caching Decisions and Defense and keeps units visible through the final numeric result.
 
 **Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
-
-## M19-Q028
-
-**Type:** `design_judgment`
-**Difficulty:** `application`
-
-**Answer:** Approve Placement at 158.6/s. The deciding number is 237 x 0.72 = 170.6/s, leaving 12/s before the reserve is consumed. Withdraw approval if a drill, trace, or workload sample shows placement demand above 170.6/s or proves the shed point cannot protect lower-priority work.
-
-**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to placement demand and the protection policy in this case.
-
-**Grading notes:** Full credit gives the stated decision, computes 170.6/s, compares it with planned demand, and names a scenario-specific reversal condition.
-
-## M19-Q029
-
-**Type:** `design_judgment`
-**Difficulty:** `synthesis`
-
-**Answer:** Decline Write Policy at 194.3/s. The deciding number is 254 x 0.72 = 182.9/s, so planned demand exceeds the usable region by 11.4/s. Approve later if repeated measurements lift usable capacity above 194.3/s or a named policy removes at least 11.4/s of deferrable work before saturation.
-
-**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to write policy demand and the protection policy in this case.
-
-**Grading notes:** Full credit gives the stated decision, computes 182.9/s, compares it with planned demand, and names a scenario-specific reversal condition.
-
-## M19-Q030
-
-**Type:** `design_judgment`
-**Difficulty:** `recall`
-
-**Answer:** Approve conditionally for Hit-Rate Economics. The deciding number is 271 x 0.72 = 195.1/s, and 190.1/s fits only while the fallback remains enforceable. Keep the condition until recovery traffic, priority demand, or fallback tests show less than 5/s of usable margin.
-
-**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to hit-rate economics demand and the protection policy in this case.
-
-**Grading notes:** Full credit gives the stated decision, computes 195.1/s, compares it with planned demand, and names a scenario-specific reversal condition.
-
-## M19-Q031
-
-**Type:** `design_judgment`
-**Difficulty:** `application`
-
-**Answer:** Approve Eviction at 190.3/s. The deciding number is 288 x 0.72 = 207.4/s, leaving 17.1/s before the reserve is consumed. Require redesign if a drill, trace, or workload sample shows eviction demand above 207.4/s or proves the shed point cannot protect lower-priority work.
-
-**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to eviction demand and the protection policy in this case.
-
-**Grading notes:** Full credit gives the stated decision, computes 207.4/s, compares it with planned demand, and names a scenario-specific reversal condition.
-
-## M19-Q032
-
-**Type:** `design_judgment`
-**Difficulty:** `synthesis`
-
-**Answer:** Decline Invalidation at 235.2/s. The deciding number is 305 x 0.72 = 219.6/s, so planned demand exceeds the usable region by 15.6/s. Lift the decline if repeated measurements lift usable capacity above 235.2/s or a named policy removes at least 15.6/s of deferrable work before saturation.
-
-**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to invalidation demand and the protection policy in this case.
-
-**Grading notes:** Full credit gives the stated decision, computes 219.6/s, compares it with planned demand, and names a scenario-specific reversal condition.
-
-## M19-Q033
-
-**Type:** `design_judgment`
-**Difficulty:** `recall`
-
-**Answer:** Approve Coherence at 211.3/s. The deciding number is 322 x 0.72 = 231.8/s, leaving 20.5/s before the reserve is consumed. Reverse the call if a drill, trace, or workload sample shows coherence demand above 231.8/s or proves the shed point cannot protect lower-priority work.
-
-**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to coherence demand and the protection policy in this case.
-
-**Grading notes:** Full credit gives the stated decision, computes 231.8/s, compares it with planned demand, and names a scenario-specific reversal condition.
-
-## M19-Q034
-
-**Type:** `design_judgment`
-**Difficulty:** `application`
-
-**Answer:** Decline Stampede at 262.5/s. The deciding number is 339 x 0.72 = 244.1/s, so planned demand exceeds the usable region by 18.4/s. Accept the proposal when repeated measurements lift usable capacity above 262.5/s or a named policy removes at least 18.4/s of deferrable work before saturation.
-
-**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to stampede demand and the protection policy in this case.
-
-**Grading notes:** Full credit gives the stated decision, computes 244.1/s, compares it with planned demand, and names a scenario-specific reversal condition.

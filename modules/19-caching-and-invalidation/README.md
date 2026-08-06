@@ -49,11 +49,17 @@ Complete [exercises](exercises/exercises.md), then compare with the
 [answer key](exercises/answer-key.md). No executable lab is required for this
 draft module; use the exercises as the local reinforcement path.
 
-## Quiz Status
+## Quiz And Review
 
-This module is draft. Its quiz package is intentionally deferred to the next
-quiz-bank cycle. The current exit condition is lesson and practice parity, not a
-question bank.
+- Question bank: [quiz/question-bank.json](quiz/question-bank.json).
+- Answer key: [quiz/answer-key.md](quiz/answer-key.md).
+- LLM grading prompt: [quiz/llm-grader-prompt.md](quiz/llm-grader-prompt.md).
+
+Generate a 12-question quiz from the repository root:
+
+```bash
+python3 scripts/generate_quiz.py --module M19 --output quiz-m19.json
+```
 
 ## Optional Project
 

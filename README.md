@@ -47,6 +47,8 @@ Use `--seed` to reproduce a quiz attempt. Each module has:
 - `quiz/answer-key.md`: answers and explanations
 - `quiz/llm-grader-prompt.md`: prompt for grading and remediation feedback
 
+Current quiz banks contain short-answer and calculation questions only; generated attempts withhold answers by default.
+
 ## Module Catalog
 
 | Module | Topic | Entry Point |
