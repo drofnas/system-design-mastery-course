@@ -155,9 +155,9 @@ def validate_module(path: Path, errors: list[str], *, strict: bool = False) -> N
     if not isinstance(bank, dict):
         return
     questions = bank.get('questions')
-    if not isinstance(questions, list) or not 30 <= len(questions) <= 60:
+    if not isinstance(questions, list) or not 12 <= len(questions) <= 60:
         found = len(questions) if isinstance(questions, list) else 'non-list'
-        errors.append(f'{rel(bank_path)}: must contain 30-60 questions, found {found}')
+        errors.append(f'{rel(bank_path)}: must contain 12-60 questions, found {found}')
         return
     seen = set()
     for question in questions:

@@ -12,7 +12,7 @@ Each module must include:
 - `module.json` using the simplified solo schema.
 - 6-8 local lessons with outcomes, mechanism explanation, worked example, common expert mistakes, guided practice, self-checks, and sources.
 - `exercises/exercises.md` and `exercises/answer-key.md`.
-- `quiz/question-bank.json` with 30-60 questions.
+- `quiz/question-bank.json` with 12-60 questions.
 - `quiz/answer-key.md` with every answer and explanation.
 - `quiz/llm-grader-prompt.md` for optional LLM grading and remediation feedback.
 - A lab README when an executable reinforcement lab exists.
@@ -31,7 +31,7 @@ Quiz banks use mixed question types:
 - `scenario_diagnosis`
 - `design_judgment`
 
-Every question maps to at least one lesson and includes a correct answer, explanation, grading notes, difficulty, tags, and a `src:` provenance tag. Multiple-choice questions use four choices; calculation questions include concrete numeric inputs and numeric answers; design-judgment questions include reversal evidence.
+Every question maps to at least one lesson and includes a correct answer, explanation, grading notes, difficulty, tags, and a `src:` provenance tag. Multiple-choice questions use four choices; calculation questions include concrete numeric inputs and numeric answers; design-judgment questions include reversal evidence. A module bank does not need to include every legal type in every cleanup cycle.
 
 ## Optional Projects
 

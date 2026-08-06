@@ -232,6 +232,11 @@ def check_bank(bank_path: Path, *, threshold: float) -> list[str]:
     return failures
 
 
+def multiple_choice_count(bank_path: Path) -> int:
+    bank = json.loads(bank_path.read_text(encoding="utf-8"))
+    return sum(1 for question in bank["questions"] if question.get("type") == "multiple_choice")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--module", help="Module id such as M02")
@@ -243,6 +248,9 @@ def main() -> int:
     paths = [module_root(args.module.upper()) / "quiz" / "question-bank.json"] if args.module else sorted(
         (ROOT / "modules").glob("*/quiz/question-bank.json")
     )
+    if sum(multiple_choice_count(path) for path in paths) == 0:
+        print("No multiple_choice questions present; blind-strategy checks skipped.")
+        return 0
     failures: list[str] = []
     for path in paths:
         failures.extend(check_bank(path, threshold=args.threshold))

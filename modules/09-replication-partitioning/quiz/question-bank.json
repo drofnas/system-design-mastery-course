@@ -160,7 +160,7 @@
         "quorums-intersections-and-hidden-assumptions",
         "src:L03-selfcheck-1"
       ],
-      "prompt": "For N=5, R=3, W=3, which intersections hold?",
+      "prompt": "With N=5, R=3, and W=3, which quorum intersections hold?",
       "correct_answer": "Both: 3+3>5 and 2×3>5.",
       "explanation": "M09-Q009 uses self-check 1 from Quorums, Intersections, and Hidden Assumptions; the answer ties the mechanism to the cited evidence scope rather than a label.",
       "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
@@ -178,7 +178,7 @@
         "quorums-intersections-and-hidden-assumptions",
         "src:L03-selfcheck-2"
       ],
-      "prompt": "For N=5, R=4, W=2, which intersection fails?",
+      "prompt": "With N=5, R=4, and W=2, which quorum intersection fails?",
       "correct_answer": "Write/write intersection fails because 4 is not greater than 5.",
       "explanation": "M09-Q010 uses self-check 2 from Quorums, Intersections, and Hidden Assumptions; the answer ties the mechanism to the cited evidence scope rather than a label.",
       "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
@@ -256,246 +256,6 @@
       "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
-      "question_id": "M09-Q015",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "application",
-      "tags": [
-        "replication-and-partitioning",
-        "operation-semantics-and-session-guarantees",
-        "src:L01-mistake-1"
-      ],
-      "prompt": "A review compares checks for one label, equating acknowledgement, wall clock, and cache ttl. The proposal says choosing one label for the product: it over-constrains cheap reads or. Which measurement target decides case one?",
-      "choices": [
-        "Measure one label data for review case one; limit the change.",
-        "Measure equating acknowledgement data for review case one; limit the change.",
-        "Measure wall clock data for review case one; limit the change.",
-        "Measure cache ttl data for review case one; limit the change."
-      ],
-      "correct_answer": "Measure one label data for review case one; limit the change.",
-      "explanation": "M09-Q015 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
-      "grading_notes": "Full credit selects one label as the deciding target and explains why the other listed targets are adjacent rather than decisive."
-    },
-    {
-      "question_id": "M09-Q016",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "synthesis",
-      "tags": [
-        "replication-and-partitioning",
-        "operation-semantics-and-session-guarantees",
-        "src:L01-mistake-2"
-      ],
-      "prompt": "A review compares checks for equating acknowledgement, failing open, replication backup, and promising durability. The proposal says equating acknowledgement with universal visibility: an asynchronous. Which measurement target decides case two?",
-      "choices": [
-        "Measure failing open data for review case two; limit the change. with margin with margin",
-        "Measure equating acknowledgement data for review case two; limit the change.",
-        "Measure replication backup data for review case two; limit the change.",
-        "Measure promising durability data for review case two; limit the change."
-      ],
-      "correct_answer": "Measure equating acknowledgement data for review case two; limit the change.",
-      "explanation": "M09-Q016 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
-      "grading_notes": "Full credit selects equating acknowledgement as the deciding target and explains why the other listed targets are adjacent rather than decisive."
-    },
-    {
-      "question_id": "M09-Q017",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "replication-and-partitioning",
-        "operation-semantics-and-session-guarantees",
-        "src:L01-mistake-3"
-      ],
-      "prompt": "A review compares checks for wall clock, serving followers, multi leader, and failover routing. The proposal says using wall-clock timestamps as version proof: clock skew can order events. Which measurement target decides case three?",
-      "choices": [
-        "Measure serving followers data for review case three; limit the change.",
-        "Measure multi leader data for review case three; limit the change.",
-        "Measure wall clock data for review case three; limit the change.",
-        "Measure failover routing data for review case three; limit the change."
-      ],
-      "correct_answer": "Measure wall clock data for review case three; limit the change.",
-      "explanation": "M09-Q017 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
-      "grading_notes": "Full credit selects wall clock as the deciding target and explains why the other listed targets are adjacent rather than decisive."
-    },
-    {
-      "question_id": "M09-Q018",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "application",
-      "tags": [
-        "replication-and-partitioning",
-        "operation-semantics-and-session-guarantees",
-        "src:L01-mistake-4"
-      ],
-      "prompt": "A review compares checks for cache ttl, quoting linearizability, write intersection, and hinted replicas. The proposal says calling cache TTL bounded staleness: TTL bounds cache age only under. Which measurement target decides case four?",
-      "choices": [
-        "Measure quoting linearizability data for review case four; limit the change.",
-        "Measure write intersection data for review case four; limit the change.",
-        "Measure hinted replicas data for review case four; limit the change.",
-        "Measure cache ttl data for review case four; limit the change."
-      ],
-      "correct_answer": "Measure cache ttl data for review case four; limit the change.",
-      "explanation": "M09-Q018 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
-      "grading_notes": "Full credit selects cache ttl as the deciding target and explains why the other listed targets are adjacent rather than decisive."
-    },
-    {
-      "question_id": "M09-Q019",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "synthesis",
-      "tags": [
-        "replication-and-partitioning",
-        "operation-semantics-and-session-guarantees",
-        "src:L01-mistake-5"
-      ],
-      "prompt": "A review compares checks for failing open, equating timeout, changing during, and last write. The proposal says failing open on a session-token miss: returning an older version converts. Which measurement target decides case five?",
-      "choices": [
-        "Measure failing open data for review case five; limit the change.",
-        "Measure equating timeout data for review case five; limit the change.",
-        "Measure changing during data for review case five; limit the change.",
-        "Measure last write data for review case five; limit the change."
-      ],
-      "correct_answer": "Measure failing open data for review case five; limit the change.",
-      "explanation": "M09-Q019 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
-      "grading_notes": "Full credit selects failing open as the deciding target and explains why the other listed targets are adjacent rather than decisive."
-    },
-    {
-      "question_id": "M09-Q020",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L02"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "replication-and-partitioning",
-        "replication-topologies-and-acknowledgement-bound",
-        "src:L02-mistake-1"
-      ],
-      "prompt": "A review compares checks for replication backup, retries conflict, depending only, and merkle tree. The proposal says calling replication a backup: deletion, corruption, and operator error. Which measurement target decides case six?",
-      "choices": [
-        "Measure retries conflict data for review case six; limit the change.",
-        "Measure replication backup data for review case six; limit the change.",
-        "Measure depending only data for review case six; limit the change.",
-        "Measure merkle tree data for review case six; limit the change. with margin"
-      ],
-      "correct_answer": "Measure replication backup data for review case six; limit the change.",
-      "explanation": "M09-Q020 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
-      "grading_notes": "Full credit selects replication backup as the deciding target and explains why the other listed targets are adjacent rather than decisive."
-    },
-    {
-      "question_id": "M09-Q021",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L02"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "application",
-      "tags": [
-        "replication-and-partitioning",
-        "replication-topologies-and-acknowledgement-bound",
-        "src:L02-mistake-2"
-      ],
-      "prompt": "A review compares checks for promising durability, repairing derived, averages declare, and expecting consistent. The proposal says promising durability from replica count: copies may share a failure domain. Which measurement target decides case seven?",
-      "choices": [
-        "Measure repairing derived data for review case seven; limit the change.",
-        "Measure averages declare data for review case seven; limit the change. with margin",
-        "Measure promising durability data for review case seven; limit the change.",
-        "Measure expecting consistent data for review case seven; limit the change."
-      ],
-      "correct_answer": "Measure promising durability data for review case seven; limit the change.",
-      "explanation": "M09-Q021 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
-      "grading_notes": "Full credit selects promising durability as the deciding target and explains why the other listed targets are adjacent rather than decisive."
-    },
-    {
-      "question_id": "M09-Q022",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L02"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "synthesis",
-      "tags": [
-        "replication-and-partitioning",
-        "replication-topologies-and-acknowledgement-bound",
-        "src:L02-mistake-3"
-      ],
-      "prompt": "A review compares checks for serving followers, cutting routing, dual writing, and deleting old. The proposal says serving followers without session policy: latency improves while users. Which measurement target decides case eight?",
-      "choices": [
-        "Measure cutting routing data for review case eight; limit the change.",
-        "Measure dual writing data for review case eight; limit the change. with margin",
-        "Measure deleting old data for review case eight; limit the change.",
-        "Measure serving followers data for review case eight; limit the change."
-      ],
-      "correct_answer": "Measure serving followers data for review case eight; limit the change.",
-      "explanation": "M09-Q022 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
-      "grading_notes": "Full credit selects serving followers as the deciding target and explains why the other listed targets are adjacent rather than decisive."
-    },
-    {
-      "question_id": "M09-Q023",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L02"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "replication-and-partitioning",
-        "replication-topologies-and-acknowledgement-bound",
-        "src:L02-mistake-4"
-      ],
-      "prompt": "A review compares checks for multi leader, keys instead, replicas write, and rate limiting. The proposal says adding multi-leader for availability without conflict ownership: the. Which measurement target decides case nine?",
-      "choices": [
-        "Measure multi leader data for review case nine; limit the change.",
-        "Measure keys instead data for review case nine; limit the change.",
-        "Measure replicas write data for review case nine; limit the change.",
-        "Measure rate limiting data for review case nine; limit the change."
-      ],
-      "correct_answer": "Measure multi leader data for review case nine; limit the change.",
-      "explanation": "M09-Q023 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
-      "grading_notes": "Full credit selects multi leader as the deciding target and explains why the other listed targets are adjacent rather than decisive."
-    },
-    {
-      "question_id": "M09-Q024",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L02"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "application",
-      "tags": [
-        "replication-and-partitioning",
-        "replication-topologies-and-acknowledgement-bound",
-        "src:L02-mistake-5"
-      ],
-      "prompt": "A review compares checks for failover routing, letting background, isolation authentication, and labeling database. The proposal says treating failover as routing: safe authority change requires coordination. Which measurement target decides case ten?",
-      "choices": [
-        "Measure letting background data for review case ten; limit the change.",
-        "Measure failover routing data for review case ten; limit the change.",
-        "Measure isolation authentication data for review case ten; limit the change.",
-        "Measure labeling database data for review case ten; limit the change."
-      ],
-      "correct_answer": "Measure failover routing data for review case ten; limit the change.",
-      "explanation": "M09-Q024 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
-      "grading_notes": "Full credit selects failover routing as the deciding target and explains why the other listed targets are adjacent rather than decisive."
-    },
-    {
       "question_id": "M09-Q025",
       "module_id": "M09",
       "lesson_ids": [
@@ -508,8 +268,8 @@
         "repair-bytes",
         "src:L01-worked"
       ],
-      "prompt": "For operation semantics and session guarantees, anti-entropy repairs 10,000 keys of 1024 bytes. How many MiB of foreground-equivalent data is scanned?",
-      "correct_answer": "Calculation for operation semantics and session guarantees, bytes are 10,000 x 1024 = 10,240,000; that is 9.77 MiB.",
+      "prompt": "Anti-entropy repairs 10,000 keys of 1024 bytes. How many MiB of foreground-equivalent data is scanned?",
+      "correct_answer": "Bytes are 10,000 x 1024 = 10,240,000; that is 9.77 MiB.",
       "explanation": "M09-Q025 uses repair bytes from Operation Semantics and Session Guarantees and keeps units visible through the final numeric result.",
       "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
@@ -526,8 +286,8 @@
         "key-movement",
         "src:L02-worked"
       ],
-      "prompt": "For replication topologies and acknowledgement boundaries, consistent hashing moves 2 of 8 keys during a node add. What movement ratio is that?",
-      "correct_answer": "Calculation for replication topologies and acknowledgement boundaries, movement ratio is 2 / 8 = 0.25, or 25%.",
+      "prompt": "Consistent hashing moves 2 of 8 keys during a node add. What movement ratio is that?",
+      "correct_answer": "Movement ratio is 2 / 8 = 0.25, or 25%.",
       "explanation": "M09-Q026 uses key movement from Replication Topologies and Acknowledgement Boundaries and keeps units visible through the final numeric result.",
       "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
@@ -544,8 +304,8 @@
         "copy-time",
         "src:quiz-calculation-practice"
       ],
-      "prompt": "For quorums, intersections, and hidden assumptions, copying 200 GiB at 40 MiB/s takes how long?",
-      "correct_answer": "Calculation for quorums, intersections, and hidden assumptions, 200 GiB is 204800 MiB; 204800 / 40 = 5120 seconds, or 1.42 hours.",
+      "prompt": "Copying 200 GiB at 40 MiB/s takes how long?",
+      "correct_answer": "200 GiB is 204800 MiB; 204800 / 40 = 5120 seconds, or 1.42 hours.",
       "explanation": "M09-Q027 uses copy time from Quorums, Intersections, and Hidden Assumptions and keeps units visible through the final numeric result.",
       "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
@@ -562,8 +322,8 @@
         "skew-ratio",
         "src:quiz-calculation-practice"
       ],
-      "prompt": "For versions, conflicts, repair, and convergence, a hot shard handles 120/s while the mean shard handles 40/s. What max/mean skew ratio is visible?",
-      "correct_answer": "Calculation for versions, conflicts, repair, and convergence, skew ratio is 120 / 40 = 3.0x.",
+      "prompt": "A hot shard handles 120/s while the mean shard handles 40/s. What max/mean skew ratio is visible?",
+      "correct_answer": "Skew ratio is 120 / 40 = 3.0x.",
       "explanation": "M09-Q028 uses skew ratio from Versions, Conflicts, Repair, and Convergence and keeps units visible through the final numeric result.",
       "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
@@ -580,8 +340,8 @@
         "serialization",
         "src:quiz-calculation-practice"
       ],
-      "prompt": "For partitioning, consistent hashing, and resharding, a response is 280 KiB over a 900 Kbps link. Estimate serialization time.",
-      "correct_answer": "Calculation for partitioning, consistent hashing, and resharding, serialization is 280 KiB x 8 / 900 Kbps = 2.49 seconds, ignoring protocol overhead.",
+      "prompt": "A partition movement response is 280 KiB on 900 Kbps effective goodput. How long does payload serialization take?",
+      "correct_answer": "Payload serialization is 280 KiB x 8 / 900 Kbps = 2.49 seconds, ignoring protocol overhead.",
       "explanation": "M09-Q029 uses serialization from Partitioning, Consistent Hashing, and Resharding and keeps units visible through the final numeric result.",
       "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
@@ -598,244 +358,10 @@
         "quorum",
         "src:L06-worked"
       ],
-      "prompt": "For hot keys, skew, fairness, and tenant isolation, a write quorum needs 3 acknowledgements from 5 replicas. How many replica failures can it tolerate while still writing?",
-      "correct_answer": "Calculation for hot keys, skew, fairness, and tenant isolation, it can lose 2 replicas and still collect 3 acknowledgements.",
+      "prompt": "A write quorum needs 3 acknowledgements from 5 replicas. How many replica failures can it tolerate while still writing?",
+      "correct_answer": "It can lose 2 replicas and still collect 3 acknowledgements.",
       "explanation": "M09-Q030 uses quorum from Hot Keys, Skew, Fairness, and Tenant Isolation and keeps units visible through the final numeric result.",
       "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
-    },
-    {
-      "question_id": "M09-Q031",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "replication-and-partitioning",
-        "operation-semantics-and-session-guarantees",
-        "src:fixture-f01-replica-partition-broken"
-      ],
-      "prompt": "A operation semantics and session guarantees lab run emits this first field set:\n\n  acknowledgements.ambiguous         = 0\n  acknowledgements.attempted         = 4\n  acknowledgements.successful        = 4\n  availability.accepted              = 4\n  availability.ratio                 = 1\n  availability.total                 = 4\n\nName the mechanism, cite the discriminating pair, and state how the paired run would differ.",
-      "correct_answer": "Diagnosis for operation semantics and session guarantees, acknowledgements.ambiguous and acknowledgements.successful separate the mechanism. acknowledgements.ambiguous = 0 while acknowledgements.successful = 4, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.",
-      "explanation": "The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare acknowledgements.ambiguous with acknowledgements.successful and connect that contrast to operation semantics and session guarantees.",
-      "grading_notes": "Full credit names Operation Semantics and Session Guarantees, cites acknowledgements.ambiguous and acknowledgements.successful, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison."
-    },
-    {
-      "question_id": "M09-Q032",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L02"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "synthesis",
-      "tags": [
-        "replication-and-partitioning",
-        "replication-topologies-and-acknowledgement-bound",
-        "src:fixture-f01-replica-partition-repaired"
-      ],
-      "prompt": "A replication topologies and acknowledgement boundaries lab run emits this second field set:\n\n  acknowledgements.ambiguous         = 0\n  acknowledgements.attempted         = 4\n  acknowledgements.successful        = 4\n  availability.accepted              = 2\n  availability.ratio                 = 0.5\n  availability.total                 = 4\n\nName the mechanism, cite the discriminating pair, and state how the paired run would differ.",
-      "correct_answer": "Diagnosis for replication topologies and acknowledgement boundaries, acknowledgements.ambiguous and availability.accepted separate the mechanism. acknowledgements.ambiguous = 0 while availability.accepted = 2, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.",
-      "explanation": "The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare acknowledgements.ambiguous with availability.accepted and connect that contrast to replication topologies and acknowledgement boundaries.",
-      "grading_notes": "Full credit names Replication Topologies and Acknowledgement Boundaries, cites acknowledgements.ambiguous and availability.accepted, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison."
-    },
-    {
-      "question_id": "M09-Q033",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L03"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "recall",
-      "tags": [
-        "replication-and-partitioning",
-        "quorums-intersections-and-hidden-assumptions",
-        "src:fixture-f02-leader-stopped-broken"
-      ],
-      "prompt": "A quorums, intersections, and hidden assumptions lab run emits this third field set:\n\n  acknowledgements.ambiguous         = 0\n  acknowledgements.attempted         = 3\n  acknowledgements.successful        = 3\n  availability.accepted              = 3\n  availability.ratio                 = 1\n  availability.total                 = 3\n\nName the mechanism, cite the discriminating pair, and state how the paired run would differ.",
-      "correct_answer": "Diagnosis for quorums, intersections, and hidden assumptions, acknowledgements.ambiguous and availability.ratio separate the mechanism. acknowledgements.ambiguous = 0 while availability.ratio = 1, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.",
-      "explanation": "The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare acknowledgements.ambiguous with availability.ratio and connect that contrast to quorums, intersections, and hidden assumptions.",
-      "grading_notes": "Full credit names Quorums, Intersections, and Hidden Assumptions, cites acknowledgements.ambiguous and availability.ratio, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison."
-    },
-    {
-      "question_id": "M09-Q034",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L04"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "replication-and-partitioning",
-        "versions-conflicts-repair-and-convergence",
-        "src:fixture-f02-leader-stopped-repaired"
-      ],
-      "prompt": "A versions, conflicts, repair, and convergence lab run emits this fourth field set:\n\n  acknowledgements.ambiguous         = 0\n  acknowledgements.attempted         = 3\n  acknowledgements.successful        = 2\n  availability.accepted              = 2\n  availability.ratio                 = 0.666667\n  availability.total                 = 3\n\nName the mechanism, cite the discriminating pair, and state how the paired run would differ.",
-      "correct_answer": "Diagnosis for versions, conflicts, repair, and convergence, acknowledgements.ambiguous and availability.total separate the mechanism. acknowledgements.ambiguous = 0 while availability.total = 3, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.",
-      "explanation": "The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare acknowledgements.ambiguous with availability.total and connect that contrast to versions, conflicts, repair, and convergence.",
-      "grading_notes": "Full credit names Versions, Conflicts, Repair, and Convergence, cites acknowledgements.ambiguous and availability.total, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison."
-    },
-    {
-      "question_id": "M09-Q035",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L05"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "synthesis",
-      "tags": [
-        "replication-and-partitioning",
-        "partitioning-consistent-hashing-and-resharding",
-        "src:fixture-f03-replication-lag-broken"
-      ],
-      "prompt": "A partitioning, consistent hashing, and resharding lab run emits this fifth field set:\n\n  acknowledgements.ambiguous         = 0\n  acknowledgements.attempted         = 3\n  acknowledgements.successful        = 3\n  availability.accepted              = 3\n  availability.ratio                 = 1\n  availability.total                 = 3\n\nName the mechanism, cite the discriminating pair, and state how the paired run would differ.",
-      "correct_answer": "Diagnosis for partitioning, consistent hashing, and resharding, acknowledgements.attempted and availability.ratio separate the mechanism. acknowledgements.attempted = 3 while availability.ratio = 1, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.",
-      "explanation": "The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare acknowledgements.attempted with availability.ratio and connect that contrast to partitioning, consistent hashing, and resharding.",
-      "grading_notes": "Full credit names Partitioning, Consistent Hashing, and Resharding, cites acknowledgements.attempted and availability.ratio, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison."
-    },
-    {
-      "question_id": "M09-Q036",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L06"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "recall",
-      "tags": [
-        "replication-and-partitioning",
-        "hot-keys-skew-fairness-and-tenant-isolation",
-        "src:fixture-f03-replication-lag-repaired"
-      ],
-      "prompt": "A hot keys, skew, fairness, and tenant isolation lab run emits this sixth field set:\n\n  acknowledgements.ambiguous         = 0\n  acknowledgements.attempted         = 3\n  acknowledgements.successful        = 3\n  availability.accepted              = 3\n  availability.ratio                 = 1\n  availability.total                 = 3\n\nName the mechanism, cite the discriminating pair, and state how the paired run would differ.",
-      "correct_answer": "Diagnosis for hot keys, skew, fairness, and tenant isolation, acknowledgements.successful and availability.ratio separate the mechanism. acknowledgements.successful = 3 while availability.ratio = 1, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.",
-      "explanation": "The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare acknowledgements.successful with availability.ratio and connect that contrast to hot keys, skew, fairness, and tenant isolation.",
-      "grading_notes": "Full credit names Hot Keys, Skew, Fairness, and Tenant Isolation, cites acknowledgements.successful and availability.ratio, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison."
-    },
-    {
-      "question_id": "M09-Q037",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L07"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "replication-and-partitioning",
-        "cap-pacelc-regional-placement-security-and-cost",
-        "src:fixture-f04-lost-acknowledgement-broken"
-      ],
-      "prompt": "A cap, pacelc, regional placement, security, and cost lab run emits this seventh field set:\n\n  acknowledgements.ambiguous         = 1\n  acknowledgements.attempted         = 3\n  acknowledgements.successful        = 2\n  availability.accepted              = 3\n  availability.ratio                 = 1\n  availability.total                 = 3\n\nName the mechanism, cite the discriminating pair, and state how the paired run would differ.",
-      "correct_answer": "Diagnosis for cap, pacelc, regional placement, security, and cost, acknowledgements.successful and availability.ratio separate the mechanism. acknowledgements.successful = 2 while availability.ratio = 1, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.",
-      "explanation": "The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare acknowledgements.successful with availability.ratio and connect that contrast to cap, pacelc, regional placement, security, and cost.",
-      "grading_notes": "Full credit names CAP, PACELC, Regional Placement, Security, and Cost, cites acknowledgements.successful and availability.ratio, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison."
-    },
-    {
-      "question_id": "M09-Q038",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L08"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "synthesis",
-      "tags": [
-        "replication-and-partitioning",
-        "data-placement-decisions-migration-and-ownership",
-        "src:fixture-f04-lost-acknowledgement-repaired"
-      ],
-      "prompt": "A data-placement decisions, migration, and ownership lab run emits this eighth field set:\n\n  acknowledgements.ambiguous         = 1\n  acknowledgements.attempted         = 3\n  acknowledgements.successful        = 2\n  availability.accepted              = 3\n  availability.ratio                 = 1\n  availability.total                 = 3\n\nName the mechanism, cite the discriminating pair, and state how the paired run would differ.",
-      "correct_answer": "Diagnosis for data-placement decisions, migration, and ownership, acknowledgements.successful and availability.total separate the mechanism. acknowledgements.successful = 2 while availability.total = 3, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.",
-      "explanation": "The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare acknowledgements.successful with availability.total and connect that contrast to data-placement decisions, migration, and ownership.",
-      "grading_notes": "Full credit names Data-Placement Decisions, Migration, and Ownership, cites acknowledgements.successful and availability.total, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison."
-    },
-    {
-      "question_id": "M09-Q039",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "design_judgment",
-      "difficulty": "recall",
-      "tags": [
-        "replication-and-partitioning",
-        "operation-semantics-and-session-guarantees",
-        "src:EX-01"
-      ],
-      "prompt": "A proposal for Operation histories measures 207/s and reserves 28% for failure, recovery, or skew. It plans steady demand at 137/s with a lower-priority shed point below the reserve. Should it ship? Name the deciding number and reversal evidence.",
-      "correct_answer": "Approve Operation histories at 137/s. The deciding number is 207 x 0.72 = 149/s, leaving 12/s before the reserve is consumed. Withdraw approval if a drill, trace, or workload sample shows operation histories demand above 149/s or proves the shed point cannot protect lower-priority work.",
-      "explanation": "The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to operation histories demand and the protection policy in this case.",
-      "grading_notes": "Full credit gives the stated decision, computes 149/s, compares it with planned demand, and names a scenario-specific reversal condition."
-    },
-    {
-      "question_id": "M09-Q040",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L02"
-      ],
-      "type": "design_judgment",
-      "difficulty": "application",
-      "tags": [
-        "replication-and-partitioning",
-        "replication-topologies-and-acknowledgement-bound",
-        "src:EX-02"
-      ],
-      "prompt": "A proposal for Weakest sufficient contract measures 224/s and reserves 28% for failure, recovery, or skew. It plans steady demand at 172.7/s and has no specific shed rule. Should it ship? Name the deciding number and reversal evidence.",
-      "correct_answer": "Decline Weakest sufficient contract at 172.7/s. The deciding number is 224 x 0.72 = 161.3/s, so planned demand exceeds the usable region by 11.4/s. Approve later if repeated measurements lift usable capacity above 172.7/s or a named policy removes at least 11.4/s of deferrable work before saturation.",
-      "explanation": "The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to weakest sufficient contract demand and the protection policy in this case.",
-      "grading_notes": "Full credit gives the stated decision, computes 161.3/s, compares it with planned demand, and names a scenario-specific reversal condition."
-    },
-    {
-      "question_id": "M09-Q041",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L03"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "replication-and-partitioning",
-        "quorums-intersections-and-hidden-assumptions",
-        "src:EX-03"
-      ],
-      "prompt": "A proposal for Acknowledgement trace measures 241/s and reserves 28% for failure, recovery, or skew. It plans 168.5/s steady demand, but only if a named fallback is active during recovery. Should it ship? Name the deciding number and reversal evidence.",
-      "correct_answer": "Approve conditionally for Acknowledgement trace. The deciding number is 241 x 0.72 = 173.5/s, and 168.5/s fits only while the fallback remains enforceable. Keep the condition until recovery traffic, priority demand, or fallback tests show less than 5/s of usable margin.",
-      "explanation": "The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to acknowledgement trace demand and the protection policy in this case.",
-      "grading_notes": "Full credit gives the stated decision, computes 173.5/s, compares it with planned demand, and names a scenario-specific reversal condition."
-    },
-    {
-      "question_id": "M09-Q042",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L04"
-      ],
-      "type": "design_judgment",
-      "difficulty": "recall",
-      "tags": [
-        "replication-and-partitioning",
-        "versions-conflicts-repair-and-convergence",
-        "src:EX-04"
-      ],
-      "prompt": "A proposal for Topology comparison measures 258/s and reserves 28% for failure, recovery, or skew. It plans steady demand at 168.7/s with a lower-priority shed point below the reserve. Should it ship? Name the deciding number and reversal evidence.",
-      "correct_answer": "Approve Topology comparison at 168.7/s. The deciding number is 258 x 0.72 = 185.8/s, leaving 17.1/s before the reserve is consumed. Require redesign if a drill, trace, or workload sample shows topology comparison demand above 185.8/s or proves the shed point cannot protect lower-priority work.",
-      "explanation": "The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to topology comparison demand and the protection policy in this case.",
-      "grading_notes": "Full credit gives the stated decision, computes 185.8/s, compares it with planned demand, and names a scenario-specific reversal condition."
-    },
-    {
-      "question_id": "M09-Q043",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L05"
-      ],
-      "type": "design_judgment",
-      "difficulty": "application",
-      "tags": [
-        "replication-and-partitioning",
-        "partitioning-consistent-hashing-and-resharding",
-        "src:EX-05"
-      ],
-      "prompt": "A proposal for Quorum arithmetic measures 275/s and reserves 28% for failure, recovery, or skew. It plans steady demand at 213.6/s and has no specific shed rule. Should it ship? Name the deciding number and reversal evidence.",
-      "correct_answer": "Decline Quorum arithmetic at 213.6/s. The deciding number is 275 x 0.72 = 198/s, so planned demand exceeds the usable region by 15.6/s. Lift the decline if repeated measurements lift usable capacity above 213.6/s or a named policy removes at least 15.6/s of deferrable work before saturation.",
-      "explanation": "The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to quorum arithmetic demand and the protection policy in this case.",
-      "grading_notes": "Full credit gives the stated decision, computes 198/s, compares it with planned demand, and names a scenario-specific reversal condition."
     }
   ]
 }

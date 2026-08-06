@@ -256,198 +256,6 @@
       "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
-      "question_id": "M00-Q015",
-      "module_id": "M00",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "application",
-      "tags": [
-        "algorithmic-foundations",
-        "asymptotic-analysis-and-its-limits",
-        "src:L01-mistake-1"
-      ],
-      "prompt": "A review compares checks for constants hot, worst case, amortized cost, and algorithms checking. The proposal says ignoring constants for hot paths. Which measurement target decides case one?",
-      "choices": [
-        "Measure constants hot data for review case one; limit the change.",
-        "Measure worst case data for review case one; limit the change.",
-        "Measure amortized cost data for review case one; limit the change.",
-        "Measure algorithms checking data for review case one; limit the change."
-      ],
-      "correct_answer": "Measure constants hot data for review case one; limit the change.",
-      "explanation": "M00-Q015 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
-      "grading_notes": "Full credit selects constants hot as the deciding target and explains why the other listed targets are adjacent rather than decisive."
-    },
-    {
-      "question_id": "M00-Q016",
-      "module_id": "M00",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "synthesis",
-      "tags": [
-        "algorithmic-foundations",
-        "asymptotic-analysis-and-its-limits",
-        "src:L01-mistake-2"
-      ],
-      "prompt": "A review compares checks for worst case, amortized means, linked list, and contiguous growth. The proposal says using worst-case notation without naming the adversary or input condition. Which measurement target decides case two?",
-      "choices": [
-        "Measure amortized means data for review case two; limit the change.",
-        "Measure worst case data for review case two; limit the change.",
-        "Measure linked list data for review case two; limit the change.",
-        "Measure contiguous growth data for review case two; limit the change."
-      ],
-      "correct_answer": "Measure worst case data for review case two; limit the change.",
-      "explanation": "M00-Q016 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
-      "grading_notes": "Full credit selects worst case as the deciding target and explains why the other listed targets are adjacent rather than decisive."
-    },
-    {
-      "question_id": "M00-Q017",
-      "module_id": "M00",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "algorithmic-foundations",
-        "asymptotic-analysis-and-its-limits",
-        "src:L01-mistake-3"
-      ],
-      "prompt": "A review compares checks for amortized cost, random input, resize spikes, and only hash. The proposal says calling amortized cost a latency guarantee. Which measurement target decides case three?",
-      "choices": [
-        "Measure random input data for review case three; limit the change.",
-        "Measure resize spikes data for review case three; limit the change.",
-        "Measure amortized cost data for review case three; limit the change.",
-        "Measure only hash data for review case three; limit the change. with margin"
-      ],
-      "correct_answer": "Measure amortized cost data for review case three; limit the change.",
-      "explanation": "M00-Q017 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
-      "grading_notes": "Full credit selects amortized cost as the deciding target and explains why the other listed targets are adjacent rather than decisive."
-    },
-    {
-      "question_id": "M00-Q018",
-      "module_id": "M00",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "application",
-      "tags": [
-        "algorithmic-foundations",
-        "asymptotic-analysis-and-its-limits",
-        "src:L01-mistake-4"
-      ],
-      "prompt": "A review compares checks for algorithms checking, hashing range, balance maintenance, and storage index. The proposal says comparing algorithms without checking memory layout. Which measurement target decides case four?",
-      "choices": [
-        "Measure hashing range data for review case four; limit the change.",
-        "Measure balance maintenance data for review case four; limit the change.",
-        "Measure storage index data for review case four; limit the change.",
-        "Measure algorithms checking data for review case four; limit the change."
-      ],
-      "correct_answer": "Measure algorithms checking data for review case four; limit the change.",
-      "explanation": "M00-Q018 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
-      "grading_notes": "Full credit selects algorithms checking as the deciding target and explains why the other listed targets are adjacent rather than decisive."
-    },
-    {
-      "question_id": "M00-Q019",
-      "module_id": "M00",
-      "lesson_ids": [
-        "L02"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "synthesis",
-      "tags": [
-        "algorithmic-foundations",
-        "arrays-dynamic-arrays-and-locality",
-        "src:L02-mistake-1"
-      ],
-      "prompt": "A review compares checks for amortized means, priority boolean, starvation heaps, and priority queues. The proposal says saying amortized O(1) means every append is cheap. Which measurement target decides case five?",
-      "choices": [
-        "Measure amortized means data for review case five; limit the change.",
-        "Measure priority boolean data for review case five; limit the change.",
-        "Measure starvation heaps data for review case five; limit the change.",
-        "Measure priority queues data for review case five; limit the change."
-      ],
-      "correct_answer": "Measure amortized means data for review case five; limit the change.",
-      "explanation": "M00-Q019 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
-      "grading_notes": "Full credit selects amortized means as the deciding target and explains why the other listed targets are adjacent rather than decisive."
-    },
-    {
-      "question_id": "M00-Q020",
-      "module_id": "M00",
-      "lesson_ids": [
-        "L02"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "algorithmic-foundations",
-        "arrays-dynamic-arrays-and-locality",
-        "src:L02-mistake-2"
-      ],
-      "prompt": "A review compares checks for linked list, matrix sparse, cycles dependency, and first found. The proposal says choosing a linked list for insertion while ignoring how the insertion point is found. Which measurement target decides case six?",
-      "choices": [
-        "Measure matrix sparse data for review case six; limit the change.",
-        "Measure linked list data for review case six; limit the change.",
-        "Measure cycles dependency data for review case six; limit the change.",
-        "Measure first found data for review case six; limit the change."
-      ],
-      "correct_answer": "Measure linked list data for review case six; limit the change.",
-      "explanation": "M00-Q020 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
-      "grading_notes": "Full credit selects linked list as the deciding target and explains why the other listed targets are adjacent rather than decisive."
-    },
-    {
-      "question_id": "M00-Q021",
-      "module_id": "M00",
-      "lesson_ids": [
-        "L02"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "application",
-      "tags": [
-        "algorithmic-foundations",
-        "arrays-dynamic-arrays-and-locality",
-        "src:L02-mistake-3"
-      ],
-      "prompt": "A review compares checks for contiguous growth, sorting top, memory temporary, and exponential search. The proposal says forgetting that contiguous growth can require copying and memory headroom. Which measurement target decides case seven?",
-      "choices": [
-        "Measure sorting top data for review case seven; limit the change.",
-        "Measure memory temporary data for review case seven; limit the change.",
-        "Measure contiguous growth data for review case seven; limit the change.",
-        "Measure exponential search data for review case seven; limit the change."
-      ],
-      "correct_answer": "Measure contiguous growth data for review case seven; limit the change.",
-      "explanation": "M00-Q021 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
-      "grading_notes": "Full credit selects contiguous growth as the deciding target and explains why the other listed targets are adjacent rather than decisive."
-    },
-    {
-      "question_id": "M00-Q022",
-      "module_id": "M00",
-      "lesson_ids": [
-        "L03"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "synthesis",
-      "tags": [
-        "algorithmic-foundations",
-        "hash-tables",
-        "src:L03-mistake-1"
-      ],
-      "prompt": "A review compares checks for random input, constraints code, score preserving, and workload growth. The proposal says assuming random input when keys are user-controlled. Which measurement target decides case eight?",
-      "choices": [
-        "Measure constraints code data for review case eight; limit the change.",
-        "Measure score preserving data for review case eight; limit the change.",
-        "Measure workload growth data for review case eight; limit the change.",
-        "Measure random input data for review case eight; limit the change."
-      ],
-      "correct_answer": "Measure random input data for review case eight; limit the change.",
-      "explanation": "M00-Q022 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
-      "grading_notes": "Full credit selects random input as the deciding target and explains why the other listed targets are adjacent rather than decisive."
-    },
-    {
       "question_id": "M00-Q023",
       "module_id": "M00",
       "lesson_ids": [
@@ -460,8 +268,8 @@
         "amortized-resize-copies",
         "src:L01-worked"
       ],
-      "prompt": "For asymptotic analysis and its limits, a dynamic array starts at capacity 1 and doubles when full. After 18 appends, how many existing items were copied during resizes, and what is the final capacity?",
-      "correct_answer": "Calculation for asymptotic analysis and its limits, resizes copy 1 + 2 + 4 + ... below 18, totaling 31 copied items; final capacity is 32 slots.",
+      "prompt": "A dynamic array starts at capacity 1 and doubles when full. After 18 appends, how many existing items were copied during resizes, and what is the final capacity?",
+      "correct_answer": "Resizes copy 1 + 2 + 4 + ... below 18, totaling 31 copied items; final capacity is 32 slots.",
       "explanation": "M00-Q023 uses amortized resize copies from Asymptotic Analysis and Its Limits and keeps units visible through the final numeric result.",
       "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
@@ -478,8 +286,8 @@
         "open-addressing-probe-factor",
         "src:L02-worked"
       ],
-      "prompt": "For arrays, dynamic arrays, and locality, an open-addressed hash table is compared at load factors alpha = 0.50 and alpha = 0.90. Using 1/(1-alpha), what probe factors should you expect?",
-      "correct_answer": "Calculation for arrays, dynamic arrays, and locality, at alpha 0.50, 1/(1-0.50) = 2. At alpha 0.90, 1/(1-0.90) = 10, so the high-load table is about 5x worse by this approximation.",
+      "prompt": "An open-addressed hash table is compared at load factors alpha = 0.50 and alpha = 0.90. Using 1/(1-alpha), what probe factors should you expect?",
+      "correct_answer": "At alpha 0.50, 1/(1-0.50) = 2. At alpha 0.90, 1/(1-0.90) = 10, so the high-load table is about 5x worse by this approximation.",
       "explanation": "M00-Q024 uses open addressing probe factor from Arrays, Dynamic Arrays, and Locality and keeps units visible through the final numeric result.",
       "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
@@ -496,8 +304,8 @@
         "b-tree-fanout-height",
         "src:L03-worked"
       ],
-      "prompt": "For hash tables, a B-tree with fanout near 100 stores about 10,300,000 keys. Compare a 4-level B-tree lookup with a binary tree path of about 24 levels.",
-      "correct_answer": "Calculation for hash tables, m00 B-Tree Fanout Height case 3: The B-tree needs about 4 page-level steps versus about 24 binary comparisons, a 20-level reduction in path depth for page-oriented access.",
+      "prompt": "A B-tree with fanout near 100 stores about 10,300,000 keys. Compare a 4-level B-tree lookup with a binary tree path of about 24 levels.",
+      "correct_answer": "The B-tree needs about 4 page-level steps versus about 24 binary comparisons, a 20-level reduction in path depth for page-oriented access.",
       "explanation": "M00-Q025 uses B-tree fanout height from Hash Tables and keeps units visible through the final numeric result.",
       "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
@@ -514,8 +322,8 @@
         "heap-height",
         "src:quiz-calculation-practice"
       ],
-      "prompt": "For trees and balanced search, a binary heap holds 1536 items. What is the maximum parent-child levels traversed by a sift operation?",
-      "correct_answer": "Calculation for trees and balanced search, heap height is floor(log2(1536)) = 10, so a sift traverses at most 10 levels.",
+      "prompt": "A binary heap holds 1536 items. What is the maximum parent-child levels traversed by a sift operation?",
+      "correct_answer": "Heap height is floor(log2(1536)) = 10, so a sift traverses at most 10 levels.",
       "explanation": "M00-Q026 uses heap height from Trees and Balanced Search and keeps units visible through the final numeric result.",
       "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
@@ -532,27 +340,9 @@
         "graph-representation-size",
         "src:quiz-calculation-practice"
       ],
-      "prompt": "For heaps and priority queues, an undirected graph has 850 nodes and 2550 edges. Compare adjacency-list entries with adjacency-matrix cells.",
-      "correct_answer": "Calculation for heaps and priority queues, the adjacency list stores about 2 x 2550 = 5100 endpoint entries, while the matrix stores 850 x 850 = 722500 cells.",
+      "prompt": "An undirected graph has 850 nodes and 2550 edges. Compare adjacency-list entries with adjacency-matrix cells.",
+      "correct_answer": "The adjacency list stores about 2 x 2550 = 5100 endpoint entries, while the matrix stores 850 x 850 = 722500 cells.",
       "explanation": "M00-Q027 uses graph representation size from Heaps and Priority Queues and keeps units visible through the final numeric result.",
-      "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
-    },
-    {
-      "question_id": "M00-Q028",
-      "module_id": "M00",
-      "lesson_ids": [
-        "L06"
-      ],
-      "type": "calculation",
-      "difficulty": "recall",
-      "tags": [
-        "algorithmic-foundations",
-        "graph-representation-size",
-        "src:quiz-calculation-practice"
-      ],
-      "prompt": "For graphs and traversal, an undirected graph has 860 nodes and 2580 edges. Compare adjacency-list entries with adjacency-matrix cells.",
-      "correct_answer": "Calculation for graphs and traversal, the adjacency list stores about 2 x 2580 = 5160 endpoint entries, while the matrix stores 860 x 860 = 739600 cells.",
-      "explanation": "M00-Q028 uses graph representation size from Graphs and Traversal and keeps units visible through the final numeric result.",
       "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
     {
@@ -568,154 +358,10 @@
         "candidate-count",
         "src:quiz-calculation-practice"
       ],
-      "prompt": "For sorting and selection, a naive design checks 12 candidate groups against 1070 records each. How many comparisons happen before pruning?",
-      "correct_answer": "Calculation for sorting and selection, the naive count is 12 x 1070 = 12840 comparisons before any pruning changes the shape of the search.",
+      "prompt": "A naive design checks 12 candidate groups against 1070 records each. How many comparisons happen before pruning?",
+      "correct_answer": "The naive count is 12 x 1070 = 12840 comparisons before any pruning changes the shape of the search.",
       "explanation": "M00-Q029 uses candidate count from Sorting and Selection and keeps units visible through the final numeric result.",
       "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
-    },
-    {
-      "question_id": "M00-Q030",
-      "module_id": "M00",
-      "lesson_ids": [
-        "L08"
-      ],
-      "type": "calculation",
-      "difficulty": "synthesis",
-      "tags": [
-        "algorithmic-foundations",
-        "amortized-resize-copies",
-        "src:L08-worked"
-      ],
-      "prompt": "For tractability and design decisions, a dynamic array starts at capacity 1 and doubles when full. After 25 appends, how many existing items were copied during resizes, and what is the final capacity?",
-      "correct_answer": "Calculation for tractability and design decisions, resizes copy 1 + 2 + 4 + ... below 25, totaling 31 copied items; final capacity is 32 slots.",
-      "explanation": "M00-Q030 uses amortized resize copies from Tractability and Design Decisions and keeps units visible through the final numeric result.",
-      "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
-    },
-    {
-      "question_id": "M00-Q031",
-      "module_id": "M00",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "design_judgment",
-      "difficulty": "application",
-      "tags": [
-        "algorithmic-foundations",
-        "asymptotic-analysis-and-its-limits",
-        "src:EX-01"
-      ],
-      "prompt": "A proposal for Growth Classes measures 180/s and reserves 28% for failure, recovery, or skew. It plans steady demand at 117.6/s with a lower-priority shed point below the reserve. Should it ship? Name the deciding number and reversal evidence.",
-      "correct_answer": "Approve Growth Classes at 117.6/s. The deciding number is 180 x 0.72 = 129.6/s, leaving 12/s before the reserve is consumed. Withdraw approval if a drill, trace, or workload sample shows growth classes demand above 129.6/s or proves the shed point cannot protect lower-priority work.",
-      "explanation": "The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to growth classes demand and the protection policy in this case.",
-      "grading_notes": "Full credit gives the stated decision, computes 129.6/s, compares it with planned demand, and names a scenario-specific reversal condition."
-    },
-    {
-      "question_id": "M00-Q032",
-      "module_id": "M00",
-      "lesson_ids": [
-        "L02"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "algorithmic-foundations",
-        "arrays-dynamic-arrays-and-locality",
-        "src:EX-02"
-      ],
-      "prompt": "A proposal for Amortized Resize measures 197/s and reserves 28% for failure, recovery, or skew. It plans steady demand at 153.2/s and has no specific shed rule. Should it ship? Name the deciding number and reversal evidence.",
-      "correct_answer": "Decline Amortized Resize at 153.2/s. The deciding number is 197 x 0.72 = 141.8/s, so planned demand exceeds the usable region by 11.4/s. Approve later if repeated measurements lift usable capacity above 153.2/s or a named policy removes at least 11.4/s of deferrable work before saturation.",
-      "explanation": "The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to amortized resize demand and the protection policy in this case.",
-      "grading_notes": "Full credit gives the stated decision, computes 141.8/s, compares it with planned demand, and names a scenario-specific reversal condition."
-    },
-    {
-      "question_id": "M00-Q033",
-      "module_id": "M00",
-      "lesson_ids": [
-        "L03"
-      ],
-      "type": "design_judgment",
-      "difficulty": "recall",
-      "tags": [
-        "algorithmic-foundations",
-        "hash-tables",
-        "src:EX-03"
-      ],
-      "prompt": "A proposal for Operation Mix measures 214/s and reserves 28% for failure, recovery, or skew. It plans 149.1/s steady demand, but only if a named fallback is active during recovery. Should it ship? Name the deciding number and reversal evidence.",
-      "correct_answer": "Approve conditionally for Operation Mix. The deciding number is 214 x 0.72 = 154.1/s, and 149.1/s fits only while the fallback remains enforceable. Keep the condition until recovery traffic, priority demand, or fallback tests show less than 5/s of usable margin.",
-      "explanation": "The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to operation mix demand and the protection policy in this case.",
-      "grading_notes": "Full credit gives the stated decision, computes 154.1/s, compares it with planned demand, and names a scenario-specific reversal condition."
-    },
-    {
-      "question_id": "M00-Q034",
-      "module_id": "M00",
-      "lesson_ids": [
-        "L04"
-      ],
-      "type": "design_judgment",
-      "difficulty": "application",
-      "tags": [
-        "algorithmic-foundations",
-        "trees-and-balanced-search",
-        "src:EX-04"
-      ],
-      "prompt": "A proposal for Locality measures 231/s and reserves 28% for failure, recovery, or skew. It plans steady demand at 149.2/s with a lower-priority shed point below the reserve. Should it ship? Name the deciding number and reversal evidence.",
-      "correct_answer": "Approve Locality at 149.2/s. The deciding number is 231 x 0.72 = 166.3/s, leaving 17.1/s before the reserve is consumed. Require redesign if a drill, trace, or workload sample shows locality demand above 166.3/s or proves the shed point cannot protect lower-priority work.",
-      "explanation": "The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to locality demand and the protection policy in this case.",
-      "grading_notes": "Full credit gives the stated decision, computes 166.3/s, compares it with planned demand, and names a scenario-specific reversal condition."
-    },
-    {
-      "question_id": "M00-Q035",
-      "module_id": "M00",
-      "lesson_ids": [
-        "L05"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "algorithmic-foundations",
-        "heaps-and-priority-queues",
-        "src:EX-05"
-      ],
-      "prompt": "A proposal for Graph Representation measures 248/s and reserves 28% for failure, recovery, or skew. It plans steady demand at 194.2/s and has no specific shed rule. Should it ship? Name the deciding number and reversal evidence.",
-      "correct_answer": "Decline Graph Representation at 194.2/s. The deciding number is 248 x 0.72 = 178.6/s, so planned demand exceeds the usable region by 15.6/s. Lift the decline if repeated measurements lift usable capacity above 194.2/s or a named policy removes at least 15.6/s of deferrable work before saturation.",
-      "explanation": "The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to graph representation demand and the protection policy in this case.",
-      "grading_notes": "Full credit gives the stated decision, computes 178.6/s, compares it with planned demand, and names a scenario-specific reversal condition."
-    },
-    {
-      "question_id": "M00-Q036",
-      "module_id": "M00",
-      "lesson_ids": [
-        "L06"
-      ],
-      "type": "design_judgment",
-      "difficulty": "recall",
-      "tags": [
-        "algorithmic-foundations",
-        "graphs-and-traversal",
-        "src:EX-06"
-      ],
-      "prompt": "A proposal for Priority Semantics measures 265/s and reserves 28% for failure, recovery, or skew. It plans steady demand at 170.3/s with a lower-priority shed point below the reserve. Should it ship? Name the deciding number and reversal evidence.",
-      "correct_answer": "Approve Priority Semantics at 170.3/s. The deciding number is 265 x 0.72 = 190.8/s, leaving 20.5/s before the reserve is consumed. Reverse the call if a drill, trace, or workload sample shows priority semantics demand above 190.8/s or proves the shed point cannot protect lower-priority work.",
-      "explanation": "The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to priority semantics demand and the protection policy in this case.",
-      "grading_notes": "Full credit gives the stated decision, computes 190.8/s, compares it with planned demand, and names a scenario-specific reversal condition."
-    },
-    {
-      "question_id": "M00-Q037",
-      "module_id": "M00",
-      "lesson_ids": [
-        "L07"
-      ],
-      "type": "design_judgment",
-      "difficulty": "application",
-      "tags": [
-        "algorithmic-foundations",
-        "sorting-and-selection",
-        "src:EX-07"
-      ],
-      "prompt": "A proposal for Sorting Boundary measures 282/s and reserves 28% for failure, recovery, or skew. It plans steady demand at 221.4/s and has no specific shed rule. Should it ship? Name the deciding number and reversal evidence.",
-      "correct_answer": "Decline Sorting Boundary at 221.4/s. The deciding number is 282 x 0.72 = 203/s, so planned demand exceeds the usable region by 18.4/s. Accept the proposal when repeated measurements lift usable capacity above 221.4/s or a named policy removes at least 18.4/s of deferrable work before saturation.",
-      "explanation": "The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to sorting boundary demand and the protection policy in this case.",
-      "grading_notes": "Full credit gives the stated decision, computes 203/s, compares it with planned demand, and names a scenario-specific reversal condition."
     }
   ]
 }

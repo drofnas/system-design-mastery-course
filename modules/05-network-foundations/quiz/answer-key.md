@@ -1,6 +1,6 @@
 # M05 Quiz Answer Key
 
-This key covers all 39 questions for **Network Foundations**. Use it after an attempt, or provide it with the LLM grading prompt for feedback.
+This key covers all 18 questions for **Network Foundations**. Use it after an attempt, or provide it with the LLM grading prompt for feedback.
 
 ## M05-Q001
 
@@ -134,156 +134,12 @@ This key covers all 39 questions for **Network Foundations**. Use it after an at
 
 **Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
-## M05-Q013
-
-**Type:** `multiple_choice`
-**Difficulty:** `synthesis`
-
-**Choices:**
-
-- Measure marginal percentiles data for review case one; limit the change.
-- Measure payload bytes data for review case one; limit the change.
-- Measure every phase data for review case one; limit the change. with margin
-- Measure lower bound data for review case one; limit the change.
-
-**Answer:** Measure marginal percentiles data for review case one; limit the change.
-
-**Explanation:** M05-Q013 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
-
-**Grading notes:** Full credit selects marginal percentiles as the deciding target and explains why the other listed targets are adjacent rather than decisive.
-
-## M05-Q014
-
-**Type:** `multiple_choice`
-**Difficulty:** `recall`
-
-**Choices:**
-
-- Measure dns down data for review case two; limit the change.
-- Measure payload bytes data for review case two; limit the change.
-- Measure infinite retry data for review case two; limit the change.
-- Measure stale address data for review case two; limit the change.
-
-**Answer:** Measure payload bytes data for review case two; limit the change.
-
-**Explanation:** M05-Q014 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
-
-**Grading notes:** Full credit selects payload bytes as the deciding target and explains why the other listed targets are adjacent rather than decisive.
-
-## M05-Q015
-
-**Type:** `multiple_choice`
-**Difficulty:** `application`
-
-**Choices:**
-
-- Measure logging full data for review case three; limit the change. with margin
-- Measure equating socket data for review case three; limit the change.
-- Measure every phase data for review case three; limit the change. with margin
-- Measure every throughput data for review case three; limit the change.
-
-**Answer:** Measure every phase data for review case three; limit the change. with margin
-
-**Explanation:** M05-Q015 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
-
-**Grading notes:** Full credit selects every phase as the deciding target and explains why the other listed targets are adjacent rather than decisive.
-
-## M05-Q016
-
-**Type:** `multiple_choice`
-**Difficulty:** `synthesis`
-
-**Choices:**
-
-- Measure dividing payload data for review case four; limit the change. with margin
-- Measure changed payloads data for review case four; limit the change.
-- Measure disabling verification data for review case four; limit the change.
-- Measure lower bound data for review case four; limit the change. with margin
-
-**Answer:** Measure lower bound data for review case four; limit the change. with margin
-
-**Explanation:** M05-Q016 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
-
-**Grading notes:** Full credit selects lower bound as the deciding target and explains why the other listed targets are adjacent rather than decisive.
-
-## M05-Q017
-
-**Type:** `multiple_choice`
-**Difficulty:** `recall`
-
-**Choices:**
-
-- Measure dns down data for review case five; limit the change. with margin
-- Measure possession certificate data for review case five; limit the change. with margin
-- Measure committing private data for review case five; limit the change.
-- Measure resumption always data for review case five; limit the change.
-
-**Answer:** Measure dns down data for review case five; limit the change. with margin
-
-**Explanation:** M05-Q017 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
-
-**Grading notes:** Full credit selects dns down as the deciding target and explains why the other listed targets are adjacent rather than decisive.
-
-## M05-Q018
-
-**Type:** `multiple_choice`
-**Difficulty:** `application`
-
-**Choices:**
-
-- Measure requests not data for review case six; limit the change.
-- Measure infinite retry data for review case six; limit the change.
-- Measure one connection data for review case six; limit the change.
-- Measure unlimited pools data for review case six; limit the change.
-
-**Answer:** Measure infinite retry data for review case six; limit the change.
-
-**Explanation:** M05-Q018 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
-
-**Grading notes:** Full credit selects infinite retry as the deciding target and explains why the other listed targets are adjacent rather than decisive.
-
-## M05-Q019
-
-**Type:** `multiple_choice`
-**Difficulty:** `synthesis`
-
-**Choices:**
-
-- Measure rotating certificate data for review case seven; limit the change.
-- Measure multiplexed does data for review case seven; limit the change.
-- Measure stale address data for review case seven; limit the change.
-- Measure one cold data for review case seven; limit the change.
-
-**Answer:** Measure stale address data for review case seven; limit the change.
-
-**Explanation:** M05-Q019 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
-
-**Grading notes:** Full credit selects stale address as the deciding target and explains why the other listed targets are adjacent rather than decisive.
-
-## M05-Q020
-
-**Type:** `multiple_choice`
-**Difficulty:** `recall`
-
-**Choices:**
-
-- Measure maximum concurrent data for review case eight; limit the change.
-- Measure client proxy data for review case eight; limit the change.
-- Measure quic fixes data for review case eight; limit the change.
-- Measure logging full data for review case eight; limit the change.
-
-**Answer:** Measure logging full data for review case eight; limit the change.
-
-**Explanation:** M05-Q020 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
-
-**Grading notes:** Full credit selects logging full as the deciding target and explains why the other listed targets are adjacent rather than decisive.
-
 ## M05-Q021
 
 **Type:** `calculation`
 **Difficulty:** `synthesis`
 
-**Answer:** Calculation for request paths, round trips, and byte budgets, m05 Bandwidth-Delay Product case 1: BDP = 80 Mbps / 8 x 0.120 s = 1,200,000 bytes.
+**Answer:** BDP = 80 Mbps / 8 x 0.120 s = 1,200,000 bytes.
 
 **Explanation:** M05-Q021 uses bandwidth-delay product from Request Paths, Round Trips, and Byte Budgets and keeps units visible through the final numeric result.
 
@@ -294,7 +150,7 @@ This key covers all 39 questions for **Network Foundations**. Use it after an at
 **Type:** `calculation`
 **Difficulty:** `recall`
 
-**Answer:** Calculation for dns, addressing, routing, and discovery, setup lower bound is 3 x 90 ms = 270 ms before payload work.
+**Answer:** Setup lower bound is 3 x 90 ms = 270 ms before payload work.
 
 **Explanation:** M05-Q022 uses RTT setup from DNS, Addressing, Routing, and Discovery and keeps units visible through the final numeric result.
 
@@ -305,7 +161,7 @@ This key covers all 39 questions for **Network Foundations**. Use it after an at
 **Type:** `calculation`
 **Difficulty:** `application`
 
-**Answer:** Calculation for tcp ordering, flow, congestion, and goodput, serialization is 280 KiB x 8 / 900 Kbps = 2.49 seconds, ignoring protocol overhead.
+**Answer:** Serialization is 280 KiB x 8 / 900 Kbps = 2.49 seconds, ignoring protocol overhead.
 
 **Explanation:** M05-Q023 uses serialization from TCP Ordering, Flow, Congestion, and Goodput and keeps units visible through the final numeric result.
 
@@ -316,7 +172,7 @@ This key covers all 39 questions for **Network Foundations**. Use it after an at
 **Type:** `calculation`
 **Difficulty:** `synthesis`
 
-**Answer:** Calculation for tls trust and connection establishment, goodput is 100 x (1 - 0.12) = 88.0 MB/s.
+**Answer:** Goodput is 100 x (1 - 0.12) = 88.0 MB/s.
 
 **Explanation:** M05-Q024 uses goodput from TLS Trust and Connection Establishment and keeps units visible through the final numeric result.
 
@@ -327,7 +183,7 @@ This key covers all 39 questions for **Network Foundations**. Use it after an at
 **Type:** `calculation`
 **Difficulty:** `recall`
 
-**Answer:** Calculation for proxies, nat, pooling, and exhaustion, mean concurrency is 350 x 0.08 = 28.0 active streams.
+**Answer:** Mean concurrency is 350 x 0.08 = 28.0 active streams.
 
 **Explanation:** M05-Q025 uses rate times hold time from Proxies, NAT, Pooling, and Exhaustion and keeps units visible through the final numeric result.
 
@@ -338,151 +194,8 @@ This key covers all 39 questions for **Network Foundations**. Use it after an at
 **Type:** `calculation`
 **Difficulty:** `application`
 
-**Answer:** Calculation for http/11 and http/2 multiplexing, shared ordering exposes the later completion, 220 ms, while independent streams can expose the 140 ms result separately.
+**Answer:** Shared ordering exposes the later completion, 220 ms, while independent streams can expose the 140 ms result separately.
 
 **Explanation:** M05-Q026 uses shared ordering from HTTP/1.1 and HTTP/2 Multiplexing and keeps units visible through the final numeric result.
 
 **Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
-
-## M05-Q027
-
-**Type:** `scenario_diagnosis`
-**Difficulty:** `recall`
-
-**Answer:** Diagnosis for request paths, round trips, and byte budgets, path.rtt_ms and streams.0.bytes separate the mechanism. path.rtt_ms = 60 while streams.0.bytes = 12288, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
-
-**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare path.rtt_ms with streams.0.bytes and connect that contrast to request paths, round trips, and byte budgets.
-
-**Grading notes:** Full credit names Request Paths, Round Trips, and Byte Budgets, cites path.rtt_ms and streams.0.bytes, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
-
-## M05-Q028
-
-**Type:** `scenario_diagnosis`
-**Difficulty:** `application`
-
-**Answer:** Diagnosis for dns, addressing, routing, and discovery, path.rtt_ms and limits.timeout_ms separate the mechanism. path.rtt_ms = 60 while limits.timeout_ms = 5000, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
-
-**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare path.rtt_ms with limits.timeout_ms and connect that contrast to dns, addressing, routing, and discovery.
-
-**Grading notes:** Full credit names DNS, Addressing, Routing, and Discovery, cites path.rtt_ms and limits.timeout_ms, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
-
-## M05-Q029
-
-**Type:** `scenario_diagnosis`
-**Difficulty:** `synthesis`
-
-**Answer:** Diagnosis for tcp ordering, flow, congestion, and goodput, path.rtt_ms and streams.2.bytes separate the mechanism. path.rtt_ms = 60 while streams.2.bytes = 4096, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
-
-**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare path.rtt_ms with streams.2.bytes and connect that contrast to tcp ordering, flow, congestion, and goodput.
-
-**Grading notes:** Full credit names TCP Ordering, Flow, Congestion, and Goodput, cites path.rtt_ms and streams.2.bytes, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
-
-## M05-Q030
-
-**Type:** `scenario_diagnosis`
-**Difficulty:** `recall`
-
-**Answer:** Diagnosis for tls trust and connection establishment, path.rtt_ms and limits.max_bytes separate the mechanism. path.rtt_ms = 60 while limits.max_bytes = 131072, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
-
-**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare path.rtt_ms with limits.max_bytes and connect that contrast to tls trust and connection establishment.
-
-**Grading notes:** Full credit names TLS Trust and Connection Establishment, cites path.rtt_ms and limits.max_bytes, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
-
-## M05-Q031
-
-**Type:** `scenario_diagnosis`
-**Difficulty:** `application`
-
-**Answer:** Diagnosis for proxies, nat, pooling, and exhaustion, path.bandwidth_kbps and streams.0.bytes separate the mechanism. path.bandwidth_kbps = 4000 while streams.0.bytes = 12288, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
-
-**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare path.bandwidth_kbps with streams.0.bytes and connect that contrast to proxies, nat, pooling, and exhaustion.
-
-**Grading notes:** Full credit names Proxies, NAT, Pooling, and Exhaustion, cites path.bandwidth_kbps and streams.0.bytes, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
-
-## M05-Q032
-
-**Type:** `scenario_diagnosis`
-**Difficulty:** `synthesis`
-
-**Answer:** Diagnosis for http/11 and http/2 multiplexing, path.bandwidth_kbps and streams.1.bytes separate the mechanism. path.bandwidth_kbps = 4000 while streams.1.bytes = 6144, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
-
-**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare path.bandwidth_kbps with streams.1.bytes and connect that contrast to http/11 and http/2 multiplexing.
-
-**Grading notes:** Full credit names HTTP/11 and HTTP/2 Multiplexing, cites path.bandwidth_kbps and streams.1.bytes, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
-
-## M05-Q033
-
-**Type:** `scenario_diagnosis`
-**Difficulty:** `recall`
-
-**Answer:** Diagnosis for quic and http/3 stream behavior, path.bandwidth_kbps and streams.2.bytes separate the mechanism. path.bandwidth_kbps = 4000 while streams.2.bytes = 4096, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
-
-**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare path.bandwidth_kbps with streams.2.bytes and connect that contrast to quic and http/3 stream behavior.
-
-**Grading notes:** Full credit names QUIC and HTTP/3 Stream Behavior, cites path.bandwidth_kbps and streams.2.bytes, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
-
-## M05-Q034
-
-**Type:** `scenario_diagnosis`
-**Difficulty:** `application`
-
-**Answer:** Diagnosis for protocol and topology decisions, path.bandwidth_kbps and fault.connections separate the mechanism. path.bandwidth_kbps = 4000 while fault.connections = 7, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
-
-**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare path.bandwidth_kbps with fault.connections and connect that contrast to protocol and topology decisions.
-
-**Grading notes:** Full credit names Protocol and Topology Decisions, cites path.bandwidth_kbps and fault.connections, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
-
-## M05-Q035
-
-**Type:** `design_judgment`
-**Difficulty:** `synthesis`
-
-**Answer:** Approve Cold path budget at 128.4/s. The deciding number is 195 x 0.72 = 140.4/s, leaving 12/s before the reserve is consumed. Withdraw approval if a drill, trace, or workload sample shows cold path budget demand above 140.4/s or proves the shed point cannot protect lower-priority work.
-
-**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to cold path budget demand and the protection policy in this case.
-
-**Grading notes:** Full credit gives the stated decision, computes 140.4/s, compares it with planned demand, and names a scenario-specific reversal condition.
-
-## M05-Q036
-
-**Type:** `design_judgment`
-**Difficulty:** `recall`
-
-**Answer:** Decline Journey percentile at 164/s. The deciding number is 212 x 0.72 = 152.6/s, so planned demand exceeds the usable region by 11.4/s. Approve later if repeated measurements lift usable capacity above 164/s or a named policy removes at least 11.4/s of deferrable work before saturation.
-
-**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to journey percentile demand and the protection policy in this case.
-
-**Grading notes:** Full credit gives the stated decision, computes 152.6/s, compares it with planned demand, and names a scenario-specific reversal condition.
-
-## M05-Q037
-
-**Type:** `design_judgment`
-**Difficulty:** `application`
-
-**Answer:** Approve conditionally for DNS response classes. The deciding number is 229 x 0.72 = 164.9/s, and 159.9/s fits only while the fallback remains enforceable. Keep the condition until recovery traffic, priority demand, or fallback tests show less than 5/s of usable margin.
-
-**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to dns response classes demand and the protection policy in this case.
-
-**Grading notes:** Full credit gives the stated decision, computes 164.9/s, compares it with planned demand, and names a scenario-specific reversal condition.
-
-## M05-Q038
-
-**Type:** `design_judgment`
-**Difficulty:** `synthesis`
-
-**Answer:** Approve Discovery ownership at 160/s. The deciding number is 246 x 0.72 = 177.1/s, leaving 17.1/s before the reserve is consumed. Require redesign if a drill, trace, or workload sample shows discovery ownership demand above 177.1/s or proves the shed point cannot protect lower-priority work.
-
-**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to discovery ownership demand and the protection policy in this case.
-
-**Grading notes:** Full credit gives the stated decision, computes 177.1/s, compares it with planned demand, and names a scenario-specific reversal condition.
-
-## M05-Q039
-
-**Type:** `design_judgment`
-**Difficulty:** `recall`
-
-**Answer:** Decline Flow versus congestion at 205/s. The deciding number is 263 x 0.72 = 189.4/s, so planned demand exceeds the usable region by 15.6/s. Lift the decline if repeated measurements lift usable capacity above 205/s or a named policy removes at least 15.6/s of deferrable work before saturation.
-
-**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to flow versus congestion demand and the protection policy in this case.
-
-**Grading notes:** Full credit gives the stated decision, computes 189.4/s, compares it with planned demand, and names a scenario-specific reversal condition.

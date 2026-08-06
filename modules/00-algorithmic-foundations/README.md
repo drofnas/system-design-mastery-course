@@ -49,11 +49,17 @@ the [answer key](exercises/answer-key.md). The optional
 counts, bounded local timing, lookup-growth ratios, and the limits of CPython
 measurement.
 
-## Quiz Status
+## Quiz And Review
 
-This module is draft. Its quiz package is intentionally deferred to the next
-quiz-bank cycle. The lessons, exercises, lab, glossary, and resources are still
-complete local study material.
+- Question bank: [quiz/question-bank.json](quiz/question-bank.json).
+- Answer key: [quiz/answer-key.md](quiz/answer-key.md).
+- LLM grading prompt: [quiz/llm-grader-prompt.md](quiz/llm-grader-prompt.md).
+
+Generate a 12-question quiz from the repository root:
+
+```bash
+python3 scripts/generate_quiz.py --module M00 --output quiz-m00.json
+```
 
 ## Optional Project
 

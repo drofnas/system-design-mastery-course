@@ -9,6 +9,7 @@ import random
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+ANSWER_FIELDS = {'correct_answer', 'explanation', 'grading_notes'}
 
 
 def module_root(module: str) -> Path:
@@ -39,6 +40,14 @@ def _load_seen_ids(path: str) -> set[str]:
     return {str(q.get('question_id')) for q in questions if q.get('question_id')}
 
 
+def _without_answers(question: dict) -> dict:
+    return {
+        key: value
+        for key, value in question.items()
+        if key not in ANSWER_FIELDS
+    }
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument('--module', required=True, help='Module id such as M01')
@@ -48,6 +57,9 @@ def main() -> int:
     parser.add_argument('--difficulty', action='append', help='Difficulty filter; repeat or comma-separate')
     parser.add_argument('--lesson', action='append', help='Lesson id filter such as L03 or comma-separated ids')
     parser.add_argument('--exclude-seen', help='Prior generated quiz JSON whose question_ids should be excluded')
+    answer_group = parser.add_mutually_exclusive_group()
+    answer_group.add_argument('--no-answers', dest='with_answers', action='store_false', default=False, help='Withhold answers from the generated attempt; this is the default')
+    answer_group.add_argument('--with-answers', dest='with_answers', action='store_true', help='Include answers and explanations for grading after an attempt')
     parser.add_argument('--output', required=True)
     args = parser.parse_args()
 
@@ -70,6 +82,7 @@ def main() -> int:
         raise SystemExit(f'--count must be between 1 and {len(questions)} after filters')
     rng = random.Random(args.seed)
     selected = rng.sample(questions, args.count)
+    emitted = selected if args.with_answers else [_without_answers(q) for q in selected]
     attempt = {
         'module_id': bank['module_id'],
         'title': bank['title'],
@@ -81,7 +94,7 @@ def main() -> int:
             'lesson': sorted(lesson_filters),
             'exclude_seen': args.exclude_seen,
         },
-        'questions': selected,
+        'questions': emitted,
     }
     output = Path(args.output)
     output.write_text(json.dumps(attempt, indent=2) + '\n', encoding='utf-8')

@@ -220,198 +220,6 @@
       "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
-      "question_id": "M05-Q013",
-      "module_id": "M05",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "synthesis",
-      "tags": [
-        "network-foundations",
-        "request-paths-round-trips-and-byte-budgets",
-        "src:L01-mistake-1"
-      ],
-      "prompt": "A review compares checks for marginal percentiles, payload bytes, every phase, and lower bound. The proposal says adding marginal percentiles from different requests creates a journey that. Which measurement target decides case one?",
-      "choices": [
-        "Measure marginal percentiles data for review case one; limit the change.",
-        "Measure payload bytes data for review case one; limit the change.",
-        "Measure every phase data for review case one; limit the change. with margin",
-        "Measure lower bound data for review case one; limit the change."
-      ],
-      "correct_answer": "Measure marginal percentiles data for review case one; limit the change.",
-      "explanation": "M05-Q013 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
-      "grading_notes": "Full credit selects marginal percentiles as the deciding target and explains why the other listed targets are adjacent rather than decisive."
-    },
-    {
-      "question_id": "M05-Q014",
-      "module_id": "M05",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "network-foundations",
-        "request-paths-round-trips-and-byte-budgets",
-        "src:L01-mistake-2"
-      ],
-      "prompt": "A review compares checks for payload bytes, dns down, infinite retry, and stale address. The proposal says treating payload bytes as wire bytes hides headers and retransmissions. Which measurement target decides case two?",
-      "choices": [
-        "Measure dns down data for review case two; limit the change.",
-        "Measure payload bytes data for review case two; limit the change.",
-        "Measure infinite retry data for review case two; limit the change.",
-        "Measure stale address data for review case two; limit the change."
-      ],
-      "correct_answer": "Measure payload bytes data for review case two; limit the change.",
-      "explanation": "M05-Q014 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
-      "grading_notes": "Full credit selects payload bytes as the deciding target and explains why the other listed targets are adjacent rather than decisive."
-    },
-    {
-      "question_id": "M05-Q015",
-      "module_id": "M05",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "application",
-      "tags": [
-        "network-foundations",
-        "request-paths-round-trips-and-byte-budgets",
-        "src:L01-mistake-3"
-      ],
-      "prompt": "A review compares checks for every phase, logging full, equating socket, and every throughput. The proposal says counting every phase as serial overstates cost when DNS/address attempts or. Which measurement target decides case three?",
-      "choices": [
-        "Measure logging full data for review case three; limit the change. with margin",
-        "Measure equating socket data for review case three; limit the change.",
-        "Measure every phase data for review case three; limit the change. with margin",
-        "Measure every throughput data for review case three; limit the change."
-      ],
-      "correct_answer": "Measure every phase data for review case three; limit the change. with margin",
-      "explanation": "M05-Q015 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
-      "grading_notes": "Full credit selects every phase as the deciding target and explains why the other listed targets are adjacent rather than decisive."
-    },
-    {
-      "question_id": "M05-Q016",
-      "module_id": "M05",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "synthesis",
-      "tags": [
-        "network-foundations",
-        "request-paths-round-trips-and-byte-budgets",
-        "src:L01-mistake-4"
-      ],
-      "prompt": "A review compares checks for lower bound, dividing payload, changed payloads, and disabling verification. The proposal says calling a lower bound an SLO prediction hides queues, loss, and application work. Which measurement target decides case four?",
-      "choices": [
-        "Measure dividing payload data for review case four; limit the change. with margin",
-        "Measure changed payloads data for review case four; limit the change.",
-        "Measure disabling verification data for review case four; limit the change.",
-        "Measure lower bound data for review case four; limit the change. with margin"
-      ],
-      "correct_answer": "Measure lower bound data for review case four; limit the change. with margin",
-      "explanation": "M05-Q016 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
-      "grading_notes": "Full credit selects lower bound as the deciding target and explains why the other listed targets are adjacent rather than decisive."
-    },
-    {
-      "question_id": "M05-Q017",
-      "module_id": "M05",
-      "lesson_ids": [
-        "L02"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "network-foundations",
-        "dns-addressing-routing-and-discovery",
-        "src:L02-mistake-1"
-      ],
-      "prompt": "A review compares checks for dns down, possession certificate, committing private, and resumption always. The proposal says dNS is down collapses authoritative, recursive, network, validation, and cache failures. Which measurement target decides case five?",
-      "choices": [
-        "Measure dns down data for review case five; limit the change. with margin",
-        "Measure possession certificate data for review case five; limit the change. with margin",
-        "Measure committing private data for review case five; limit the change.",
-        "Measure resumption always data for review case five; limit the change."
-      ],
-      "correct_answer": "Measure dns down data for review case five; limit the change. with margin",
-      "explanation": "M05-Q017 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
-      "grading_notes": "Full credit selects dns down as the deciding target and explains why the other listed targets are adjacent rather than decisive."
-    },
-    {
-      "question_id": "M05-Q018",
-      "module_id": "M05",
-      "lesson_ids": [
-        "L02"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "application",
-      "tags": [
-        "network-foundations",
-        "dns-addressing-routing-and-discovery",
-        "src:L02-mistake-2"
-      ],
-      "prompt": "A review compares checks for infinite retry, requests not, one connection, and unlimited pools. The proposal says infinite retry on timeout multiplies resolver load during failure. Which measurement target decides case six?",
-      "choices": [
-        "Measure requests not data for review case six; limit the change.",
-        "Measure infinite retry data for review case six; limit the change.",
-        "Measure one connection data for review case six; limit the change.",
-        "Measure unlimited pools data for review case six; limit the change."
-      ],
-      "correct_answer": "Measure infinite retry data for review case six; limit the change.",
-      "explanation": "M05-Q018 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
-      "grading_notes": "Full credit selects infinite retry as the deciding target and explains why the other listed targets are adjacent rather than decisive."
-    },
-    {
-      "question_id": "M05-Q019",
-      "module_id": "M05",
-      "lesson_ids": [
-        "L02"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "synthesis",
-      "tags": [
-        "network-foundations",
-        "dns-addressing-routing-and-discovery",
-        "src:L02-mistake-3"
-      ],
-      "prompt": "A review compares checks for stale address, rotating certificate, multiplexed does, and one cold. The proposal says using a stale address without a stated policy can route to decommissioned or unsafe infrastructure. Which measurement target decides case seven?",
-      "choices": [
-        "Measure rotating certificate data for review case seven; limit the change.",
-        "Measure multiplexed does data for review case seven; limit the change.",
-        "Measure stale address data for review case seven; limit the change.",
-        "Measure one cold data for review case seven; limit the change."
-      ],
-      "correct_answer": "Measure stale address data for review case seven; limit the change.",
-      "explanation": "M05-Q019 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
-      "grading_notes": "Full credit selects stale address as the deciding target and explains why the other listed targets are adjacent rather than decisive."
-    },
-    {
-      "question_id": "M05-Q020",
-      "module_id": "M05",
-      "lesson_ids": [
-        "L02"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "network-foundations",
-        "dns-addressing-routing-and-discovery",
-        "src:L02-mistake-4"
-      ],
-      "prompt": "A review compares checks for logging full, maximum concurrent, client proxy, and quic fixes. The proposal says logging full queried names can expose tenant or user data. Which measurement target decides case eight?",
-      "choices": [
-        "Measure maximum concurrent data for review case eight; limit the change.",
-        "Measure client proxy data for review case eight; limit the change.",
-        "Measure quic fixes data for review case eight; limit the change.",
-        "Measure logging full data for review case eight; limit the change."
-      ],
-      "correct_answer": "Measure logging full data for review case eight; limit the change.",
-      "explanation": "M05-Q020 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
-      "grading_notes": "Full credit selects logging full as the deciding target and explains why the other listed targets are adjacent rather than decisive."
-    },
-    {
       "question_id": "M05-Q021",
       "module_id": "M05",
       "lesson_ids": [
@@ -424,8 +232,8 @@
         "bandwidth-delay-product",
         "src:quiz-calculation-practice"
       ],
-      "prompt": "For request paths, round trips, and byte budgets, a path has 80 Mbps bandwidth and 120 ms RTT. What is the bandwidth-delay product in bytes?",
-      "correct_answer": "Calculation for request paths, round trips, and byte budgets, m05 Bandwidth-Delay Product case 1: BDP = 80 Mbps / 8 x 0.120 s = 1,200,000 bytes.",
+      "prompt": "A path has 80 Mbps bandwidth and 120 ms RTT. What is the bandwidth-delay product in bytes?",
+      "correct_answer": "BDP = 80 Mbps / 8 x 0.120 s = 1,200,000 bytes.",
       "explanation": "M05-Q021 uses bandwidth-delay product from Request Paths, Round Trips, and Byte Budgets and keeps units visible through the final numeric result.",
       "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
@@ -442,8 +250,8 @@
         "rtt-setup",
         "src:L02-worked"
       ],
-      "prompt": "For dns, addressing, routing, and discovery, a connection setup needs 3 round trips on a 90 ms path. What setup lower bound does RTT impose?",
-      "correct_answer": "Calculation for dns, addressing, routing, and discovery, setup lower bound is 3 x 90 ms = 270 ms before payload work.",
+      "prompt": "A connection setup needs 3 round trips on a 90 ms path. What setup lower bound does RTT impose?",
+      "correct_answer": "Setup lower bound is 3 x 90 ms = 270 ms before payload work.",
       "explanation": "M05-Q022 uses RTT setup from DNS, Addressing, Routing, and Discovery and keeps units visible through the final numeric result.",
       "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
@@ -460,8 +268,8 @@
         "serialization",
         "src:quiz-calculation-practice"
       ],
-      "prompt": "For tcp ordering, flow, congestion, and goodput, a response is 280 KiB over a 900 Kbps link. Estimate serialization time.",
-      "correct_answer": "Calculation for tcp ordering, flow, congestion, and goodput, serialization is 280 KiB x 8 / 900 Kbps = 2.49 seconds, ignoring protocol overhead.",
+      "prompt": "A response is 280 KiB over a 900 Kbps link. Estimate serialization time.",
+      "correct_answer": "Serialization is 280 KiB x 8 / 900 Kbps = 2.49 seconds, ignoring protocol overhead.",
       "explanation": "M05-Q023 uses serialization from TCP Ordering, Flow, Congestion, and Goodput and keeps units visible through the final numeric result.",
       "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
@@ -478,8 +286,8 @@
         "goodput",
         "src:L04-worked"
       ],
-      "prompt": "For tls trust and connection establishment, wire throughput is 100 MB/s and retransmission wastes 12%. What goodput remains?",
-      "correct_answer": "Calculation for tls trust and connection establishment, goodput is 100 x (1 - 0.12) = 88.0 MB/s.",
+      "prompt": "Wire throughput is 100 MB/s and retransmission wastes 12%. What goodput remains?",
+      "correct_answer": "Goodput is 100 x (1 - 0.12) = 88.0 MB/s.",
       "explanation": "M05-Q024 uses goodput from TLS Trust and Connection Establishment and keeps units visible through the final numeric result.",
       "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
@@ -496,8 +304,8 @@
         "rate-times-hold-time",
         "src:L05-worked"
       ],
-      "prompt": "For proxies, nat, pooling, and exhaustion, a client opens 350/s streams and holds each for 80 ms. What mean concurrency follows?",
-      "correct_answer": "Calculation for proxies, nat, pooling, and exhaustion, mean concurrency is 350 x 0.08 = 28.0 active streams.",
+      "prompt": "A client opens 350/s streams and holds each for 80 ms. What mean concurrency follows?",
+      "correct_answer": "Mean concurrency is 350 x 0.08 = 28.0 active streams.",
       "explanation": "M05-Q025 uses rate times hold time from Proxies, NAT, Pooling, and Exhaustion and keeps units visible through the final numeric result.",
       "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
@@ -512,246 +320,12 @@
       "tags": [
         "network-foundations",
         "shared-ordering",
-        "src:L06-worked"
+        "src:quiz-calculation-practice"
       ],
-      "prompt": "For http/11 and http/2 multiplexing, two ordered streams finish at 140 ms and 220 ms. What completion time does shared ordering expose?",
-      "correct_answer": "Calculation for http/11 and http/2 multiplexing, shared ordering exposes the later completion, 220 ms, while independent streams can expose the 140 ms result separately.",
+      "prompt": "Two ordered streams finish at 140 ms and 220 ms. What completion time does shared ordering expose?",
+      "correct_answer": "Shared ordering exposes the later completion, 220 ms, while independent streams can expose the 140 ms result separately.",
       "explanation": "M05-Q026 uses shared ordering from HTTP/1.1 and HTTP/2 Multiplexing and keeps units visible through the final numeric result.",
       "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
-    },
-    {
-      "question_id": "M05-Q027",
-      "module_id": "M05",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "recall",
-      "tags": [
-        "network-foundations",
-        "request-paths-round-trips-and-byte-budgets",
-        "src:fixture-transit-bandwidth"
-      ],
-      "prompt": "A request paths, round trips, and byte budgets lab run emits this first field set:\n\n  path.rtt_ms                        = 60\n  path.bandwidth_kbps                = 4000\n  streams.0.bytes                    = 12288\n  streams.1.bytes                    = 6144\n  streams.2.bytes                    = 4096\n  fault.bandwidth_kbps               = 256\n\nName the mechanism, cite the discriminating pair, and state how the paired run would differ.",
-      "correct_answer": "Diagnosis for request paths, round trips, and byte budgets, path.rtt_ms and streams.0.bytes separate the mechanism. path.rtt_ms = 60 while streams.0.bytes = 12288, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.",
-      "explanation": "The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare path.rtt_ms with streams.0.bytes and connect that contrast to request paths, round trips, and byte budgets.",
-      "grading_notes": "Full credit names Request Paths, Round Trips, and Byte Budgets, cites path.rtt_ms and streams.0.bytes, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison."
-    },
-    {
-      "question_id": "M05-Q028",
-      "module_id": "M05",
-      "lesson_ids": [
-        "L02"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "network-foundations",
-        "dns-addressing-routing-and-discovery",
-        "src:fixture-transit-baseline"
-      ],
-      "prompt": "A dns, addressing, routing, and discovery lab run emits this second field set:\n\n  path.rtt_ms                        = 60\n  path.bandwidth_kbps                = 4000\n  streams.0.bytes                    = 12288\n  limits.timeout_ms                  = 5000\n  limits.max_connections             = 8\n  limits.max_bytes                   = 131072\n\nName the mechanism, cite the discriminating pair, and state how the paired run would differ.",
-      "correct_answer": "Diagnosis for dns, addressing, routing, and discovery, path.rtt_ms and limits.timeout_ms separate the mechanism. path.rtt_ms = 60 while limits.timeout_ms = 5000, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.",
-      "explanation": "The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare path.rtt_ms with limits.timeout_ms and connect that contrast to dns, addressing, routing, and discovery.",
-      "grading_notes": "Full credit names DNS, Addressing, Routing, and Discovery, cites path.rtt_ms and limits.timeout_ms, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison."
-    },
-    {
-      "question_id": "M05-Q029",
-      "module_id": "M05",
-      "lesson_ids": [
-        "L03"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "synthesis",
-      "tags": [
-        "network-foundations",
-        "tcp-ordering-flow-congestion-and-goodput",
-        "src:fixture-transit-delay"
-      ],
-      "prompt": "A tcp ordering, flow, congestion, and goodput lab run emits this third field set:\n\n  path.rtt_ms                        = 60\n  path.bandwidth_kbps                = 4000\n  streams.0.bytes                    = 12288\n  streams.1.bytes                    = 6144\n  streams.2.bytes                    = 4096\n  fault.delay_ms                     = 80\n\nName the mechanism, cite the discriminating pair, and state how the paired run would differ.",
-      "correct_answer": "Diagnosis for tcp ordering, flow, congestion, and goodput, path.rtt_ms and streams.2.bytes separate the mechanism. path.rtt_ms = 60 while streams.2.bytes = 4096, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.",
-      "explanation": "The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare path.rtt_ms with streams.2.bytes and connect that contrast to tcp ordering, flow, congestion, and goodput.",
-      "grading_notes": "Full credit names TCP Ordering, Flow, Congestion, and Goodput, cites path.rtt_ms and streams.2.bytes, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison."
-    },
-    {
-      "question_id": "M05-Q030",
-      "module_id": "M05",
-      "lesson_ids": [
-        "L04"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "recall",
-      "tags": [
-        "network-foundations",
-        "tls-trust-and-connection-establishment",
-        "src:fixture-transit-dns-failure"
-      ],
-      "prompt": "A tls trust and connection establishment lab run emits this fourth field set:\n\n  path.rtt_ms                        = 60\n  path.bandwidth_kbps                = 4000\n  streams.0.bytes                    = 12288\n  limits.timeout_ms                  = 5000\n  limits.max_connections             = 8\n  limits.max_bytes                   = 131072\n\nName the mechanism, cite the discriminating pair, and state how the paired run would differ.",
-      "correct_answer": "Diagnosis for tls trust and connection establishment, path.rtt_ms and limits.max_bytes separate the mechanism. path.rtt_ms = 60 while limits.max_bytes = 131072, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.",
-      "explanation": "The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare path.rtt_ms with limits.max_bytes and connect that contrast to tls trust and connection establishment.",
-      "grading_notes": "Full credit names TLS Trust and Connection Establishment, cites path.rtt_ms and limits.max_bytes, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison."
-    },
-    {
-      "question_id": "M05-Q031",
-      "module_id": "M05",
-      "lesson_ids": [
-        "L05"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "network-foundations",
-        "proxies-nat-pooling-and-exhaustion",
-        "src:fixture-transit-jitter"
-      ],
-      "prompt": "A proxies, nat, pooling, and exhaustion lab run emits this fifth field set:\n\n  path.rtt_ms                        = 60\n  path.bandwidth_kbps                = 4000\n  streams.0.bytes                    = 12288\n  streams.1.bytes                    = 6144\n  streams.2.bytes                    = 4096\n  fault.jitter_ms                    = 25\n\nName the mechanism, cite the discriminating pair, and state how the paired run would differ.",
-      "correct_answer": "Diagnosis for proxies, nat, pooling, and exhaustion, path.bandwidth_kbps and streams.0.bytes separate the mechanism. path.bandwidth_kbps = 4000 while streams.0.bytes = 12288, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.",
-      "explanation": "The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare path.bandwidth_kbps with streams.0.bytes and connect that contrast to proxies, nat, pooling, and exhaustion.",
-      "grading_notes": "Full credit names Proxies, NAT, Pooling, and Exhaustion, cites path.bandwidth_kbps and streams.0.bytes, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison."
-    },
-    {
-      "question_id": "M05-Q032",
-      "module_id": "M05",
-      "lesson_ids": [
-        "L06"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "synthesis",
-      "tags": [
-        "network-foundations",
-        "http-1-1-and-http-2-multiplexing",
-        "src:fixture-transit-loss-quic"
-      ],
-      "prompt": "A http/11 and http/2 multiplexing lab run emits this sixth field set:\n\n  path.rtt_ms                        = 60\n  path.bandwidth_kbps                = 4000\n  streams.0.bytes                    = 12288\n  streams.1.bytes                    = 6144\n  streams.2.bytes                    = 4096\n  fault.packet_index                 = 0\n\nName the mechanism, cite the discriminating pair, and state how the paired run would differ.",
-      "correct_answer": "Diagnosis for http/11 and http/2 multiplexing, path.bandwidth_kbps and streams.1.bytes separate the mechanism. path.bandwidth_kbps = 4000 while streams.1.bytes = 6144, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.",
-      "explanation": "The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare path.bandwidth_kbps with streams.1.bytes and connect that contrast to http/11 and http/2 multiplexing.",
-      "grading_notes": "Full credit names HTTP/11 and HTTP/2 Multiplexing, cites path.bandwidth_kbps and streams.1.bytes, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison."
-    },
-    {
-      "question_id": "M05-Q033",
-      "module_id": "M05",
-      "lesson_ids": [
-        "L07"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "recall",
-      "tags": [
-        "network-foundations",
-        "quic-and-http-3-stream-behavior",
-        "src:fixture-transit-loss"
-      ],
-      "prompt": "A quic and http/3 stream behavior lab run emits this seventh field set:\n\n  path.rtt_ms                        = 60\n  path.bandwidth_kbps                = 4000\n  streams.0.bytes                    = 12288\n  streams.1.bytes                    = 6144\n  streams.2.bytes                    = 4096\n  fault.packet_index                 = 0\n\nName the mechanism, cite the discriminating pair, and state how the paired run would differ.",
-      "correct_answer": "Diagnosis for quic and http/3 stream behavior, path.bandwidth_kbps and streams.2.bytes separate the mechanism. path.bandwidth_kbps = 4000 while streams.2.bytes = 4096, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.",
-      "explanation": "The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare path.bandwidth_kbps with streams.2.bytes and connect that contrast to quic and http/3 stream behavior.",
-      "grading_notes": "Full credit names QUIC and HTTP/3 Stream Behavior, cites path.bandwidth_kbps and streams.2.bytes, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison."
-    },
-    {
-      "question_id": "M05-Q034",
-      "module_id": "M05",
-      "lesson_ids": [
-        "L08"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "network-foundations",
-        "protocol-and-topology-decisions",
-        "src:fixture-transit-pool-exhaustion"
-      ],
-      "prompt": "A protocol and topology decisions lab run emits this eighth field set:\n\n  path.rtt_ms                        = 60\n  path.bandwidth_kbps                = 4000\n  streams.0.bytes                    = 12288\n  streams.1.bytes                    = 6144\n  streams.2.bytes                    = 4096\n  fault.connections                  = 7\n\nName the mechanism, cite the discriminating pair, and state how the paired run would differ.",
-      "correct_answer": "Diagnosis for protocol and topology decisions, path.bandwidth_kbps and fault.connections separate the mechanism. path.bandwidth_kbps = 4000 while fault.connections = 7, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.",
-      "explanation": "The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare path.bandwidth_kbps with fault.connections and connect that contrast to protocol and topology decisions.",
-      "grading_notes": "Full credit names Protocol and Topology Decisions, cites path.bandwidth_kbps and fault.connections, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison."
-    },
-    {
-      "question_id": "M05-Q035",
-      "module_id": "M05",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "network-foundations",
-        "request-paths-round-trips-and-byte-budgets",
-        "src:EX-01"
-      ],
-      "prompt": "A proposal for Cold path budget measures 195/s and reserves 28% for failure, recovery, or skew. It plans steady demand at 128.4/s with a lower-priority shed point below the reserve. Should it ship? Name the deciding number and reversal evidence.",
-      "correct_answer": "Approve Cold path budget at 128.4/s. The deciding number is 195 x 0.72 = 140.4/s, leaving 12/s before the reserve is consumed. Withdraw approval if a drill, trace, or workload sample shows cold path budget demand above 140.4/s or proves the shed point cannot protect lower-priority work.",
-      "explanation": "The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to cold path budget demand and the protection policy in this case.",
-      "grading_notes": "Full credit gives the stated decision, computes 140.4/s, compares it with planned demand, and names a scenario-specific reversal condition."
-    },
-    {
-      "question_id": "M05-Q036",
-      "module_id": "M05",
-      "lesson_ids": [
-        "L02"
-      ],
-      "type": "design_judgment",
-      "difficulty": "recall",
-      "tags": [
-        "network-foundations",
-        "dns-addressing-routing-and-discovery",
-        "src:EX-02"
-      ],
-      "prompt": "A proposal for Journey percentile measures 212/s and reserves 28% for failure, recovery, or skew. It plans steady demand at 164/s and has no specific shed rule. Should it ship? Name the deciding number and reversal evidence.",
-      "correct_answer": "Decline Journey percentile at 164/s. The deciding number is 212 x 0.72 = 152.6/s, so planned demand exceeds the usable region by 11.4/s. Approve later if repeated measurements lift usable capacity above 164/s or a named policy removes at least 11.4/s of deferrable work before saturation.",
-      "explanation": "The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to journey percentile demand and the protection policy in this case.",
-      "grading_notes": "Full credit gives the stated decision, computes 152.6/s, compares it with planned demand, and names a scenario-specific reversal condition."
-    },
-    {
-      "question_id": "M05-Q037",
-      "module_id": "M05",
-      "lesson_ids": [
-        "L03"
-      ],
-      "type": "design_judgment",
-      "difficulty": "application",
-      "tags": [
-        "network-foundations",
-        "tcp-ordering-flow-congestion-and-goodput",
-        "src:EX-03"
-      ],
-      "prompt": "A proposal for DNS response classes measures 229/s and reserves 28% for failure, recovery, or skew. It plans 159.9/s steady demand, but only if a named fallback is active during recovery. Should it ship? Name the deciding number and reversal evidence.",
-      "correct_answer": "Approve conditionally for DNS response classes. The deciding number is 229 x 0.72 = 164.9/s, and 159.9/s fits only while the fallback remains enforceable. Keep the condition until recovery traffic, priority demand, or fallback tests show less than 5/s of usable margin.",
-      "explanation": "The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to dns response classes demand and the protection policy in this case.",
-      "grading_notes": "Full credit gives the stated decision, computes 164.9/s, compares it with planned demand, and names a scenario-specific reversal condition."
-    },
-    {
-      "question_id": "M05-Q038",
-      "module_id": "M05",
-      "lesson_ids": [
-        "L04"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "network-foundations",
-        "tls-trust-and-connection-establishment",
-        "src:EX-04"
-      ],
-      "prompt": "A proposal for Discovery ownership measures 246/s and reserves 28% for failure, recovery, or skew. It plans steady demand at 160/s with a lower-priority shed point below the reserve. Should it ship? Name the deciding number and reversal evidence.",
-      "correct_answer": "Approve Discovery ownership at 160/s. The deciding number is 246 x 0.72 = 177.1/s, leaving 17.1/s before the reserve is consumed. Require redesign if a drill, trace, or workload sample shows discovery ownership demand above 177.1/s or proves the shed point cannot protect lower-priority work.",
-      "explanation": "The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to discovery ownership demand and the protection policy in this case.",
-      "grading_notes": "Full credit gives the stated decision, computes 177.1/s, compares it with planned demand, and names a scenario-specific reversal condition."
-    },
-    {
-      "question_id": "M05-Q039",
-      "module_id": "M05",
-      "lesson_ids": [
-        "L05"
-      ],
-      "type": "design_judgment",
-      "difficulty": "recall",
-      "tags": [
-        "network-foundations",
-        "proxies-nat-pooling-and-exhaustion",
-        "src:EX-05"
-      ],
-      "prompt": "A proposal for Flow versus congestion measures 263/s and reserves 28% for failure, recovery, or skew. It plans steady demand at 205/s and has no specific shed rule. Should it ship? Name the deciding number and reversal evidence.",
-      "correct_answer": "Decline Flow versus congestion at 205/s. The deciding number is 263 x 0.72 = 189.4/s, so planned demand exceeds the usable region by 15.6/s. Lift the decline if repeated measurements lift usable capacity above 205/s or a named policy removes at least 15.6/s of deferrable work before saturation.",
-      "explanation": "The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to flow versus congestion demand and the protection policy in this case.",
-      "grading_notes": "Full credit gives the stated decision, computes 189.4/s, compares it with planned demand, and names a scenario-specific reversal condition."
     }
   ]
 }
