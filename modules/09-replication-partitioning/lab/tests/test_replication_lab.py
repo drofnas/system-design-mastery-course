@@ -15,6 +15,11 @@ LAB = Path(__file__).resolve().parents[1]
 
 
 class ReplicationLabTests(unittest.TestCase):
+    def pair(self, stem: str) -> tuple[dict, dict]:
+        broken = run_scenario(load_scenario(LAB / "scenarios" / f"{stem}-broken.json"))
+        repaired = run_scenario(load_scenario(LAB / "scenarios" / f"{stem}-repaired.json"))
+        return broken, repaired
+
     def test_quorum_intersections_are_separate_claims(self) -> None:
         self.assertEqual(quorum_properties(3, 2, 2), {"read_write_intersection": True, "write_write_intersection": True})
         self.assertEqual(quorum_properties(5, 4, 2), {"read_write_intersection": True, "write_write_intersection": False})
@@ -75,6 +80,28 @@ class ReplicationLabTests(unittest.TestCase):
             text=True,
         )
         self.assertEqual(validate_trial(json.loads(result.stdout)), [])
+
+    def test_replica_partition_pair_converges_with_conflict_preservation(self) -> None:
+        broken, repaired = self.pair("f01-replica-partition")
+        self.assertFalse(broken["repair"]["converged"])
+        self.assertTrue(repaired["repair"]["converged"])
+        self.assertFalse(broken["consistency"]["concurrent_conflicts_preserved"])
+        self.assertTrue(repaired["consistency"]["concurrent_conflicts_preserved"])
+
+    def test_leader_stop_pair_rejects_stale_reads_instead_of_serving_them(self) -> None:
+        broken, repaired = self.pair("f02-leader-stopped")
+        self.assertGreater(broken["consistency"]["staleness_versions"], 0)
+        self.assertEqual(0, repaired["consistency"]["staleness_versions"])
+        self.assertGreater(repaired["load"]["rejected"], broken["load"]["rejected"])
+
+    def test_hot_key_and_reshard_pairs_reduce_imbalance_and_authority_gaps(self) -> None:
+        hot_broken, hot_repaired = self.pair("f05-hot-key")
+        shard_broken, shard_repaired = self.pair("f06-reshard-under-load")
+        self.assertGreater(hot_broken["load"]["imbalance_ratio"], hot_repaired["load"]["imbalance_ratio"])
+        self.assertGreater(shard_broken["placement"]["missing_keys"], 0)
+        self.assertGreater(shard_broken["placement"]["duplicate_authorities"], 0)
+        self.assertEqual(0, shard_repaired["placement"]["missing_keys"])
+        self.assertEqual(0, shard_repaired["placement"]["duplicate_authorities"])
 
 
 if __name__ == "__main__":

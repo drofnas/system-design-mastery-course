@@ -17,6 +17,11 @@ LAB = Path(__file__).resolve().parents[1]
 
 
 class TransactionLabTests(unittest.TestCase):
+    def pair(self, stem: str) -> tuple[dict, dict]:
+        broken = run_scenario(load_scenario(LAB / "scenarios" / f"{stem}-broken.json"))
+        repaired = run_scenario(load_scenario(LAB / "scenarios" / f"{stem}-repaired.json"))
+        return broken, repaired
+
     def test_wal_checksum_and_flush_before_ack(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             store = ToyStore(directory, {"value": 0})
@@ -107,6 +112,37 @@ class TransactionLabTests(unittest.TestCase):
             self.assertEqual(len(trials), 2)
             self.assertEqual(len({t["shared_input_sha256"] for t in trials}), 1)
             self.assertEqual(len({t["config_sha256"] for t in trials}), 2)
+
+    def test_lost_update_and_write_skew_pairs_preserve_business_counts(self) -> None:
+        lost_broken, lost_repaired = self.pair("f01-lost-update")
+        skew_broken, skew_repaired = self.pair("f02-write-skew")
+        self.assertEqual(1, lost_broken["final_state"]["completed_exposures"])
+        self.assertEqual(2, lost_repaired["final_state"]["completed_exposures"])
+        self.assertEqual(0, skew_broken["final_state"]["certified_controllers"])
+        self.assertEqual(1, skew_repaired["final_state"]["certified_controllers"])
+
+    def test_deadlock_pair_retries_victim_to_complete_both_transfers(self) -> None:
+        broken, repaired = self.pair("f03-deadlock")
+        self.assertTrue(broken["locks"]["deadlock_detected"])
+        self.assertEqual("T2", broken["locks"]["victim"])
+        self.assertEqual(1, broken["final_state"]["completed_transfers"])
+        self.assertEqual(2, repaired["final_state"]["completed_transfers"])
+
+    def test_durability_and_restore_pairs_validate_recovery_bounds(self) -> None:
+        durable_broken, durable_repaired = self.pair("f04-process-termination")
+        restore_broken, restore_repaired = self.pair("f07-restore-failure")
+        self.assertEqual(1, durable_broken["recovery"]["rpo_operations"])
+        self.assertEqual(0, durable_repaired["recovery"]["rpo_operations"])
+        self.assertFalse(restore_broken["recovery"]["validated"])
+        self.assertTrue(restore_repaired["recovery"]["validated"])
+
+    def test_torn_workflow_and_derived_corruption_pairs_repair_authority_mismatch(self) -> None:
+        workflow_broken, workflow_repaired = self.pair("f05-torn-workflow")
+        derived_broken, derived_repaired = self.pair("f06-derived-corruption")
+        self.assertNotEqual(workflow_broken["final_state"]["audit_rows"], workflow_broken["final_state"]["result_rows"])
+        self.assertEqual(workflow_repaired["final_state"]["audit_rows"], workflow_repaired["final_state"]["result_rows"])
+        self.assertNotEqual(derived_broken["final_state"]["authoritative_exposures"], derived_broken["final_state"]["nightly_summary"])
+        self.assertEqual(derived_repaired["final_state"]["authoritative_exposures"], derived_repaired["final_state"]["nightly_summary"])
 
 
 if __name__ == "__main__":

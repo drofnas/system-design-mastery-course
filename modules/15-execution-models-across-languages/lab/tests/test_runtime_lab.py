@@ -14,6 +14,11 @@ from runtime_lab.runner import run_scenario
 
 
 class RuntimeLabTest(unittest.TestCase):
+    def pair(self, stem: str) -> tuple[dict, dict]:
+        broken = run_scenario(load_scenario(LAB / "scenarios" / f"{stem}-broken.json"))
+        repaired = run_scenario(load_scenario(LAB / "scenarios" / f"{stem}-repaired.json"))
+        return broken, repaired
+
     def test_pairs_are_single_control_and_model_is_explicitly_non_measured(self) -> None:
         paths = sorted((LAB / "scenarios").glob("*.json"))
         validate_pair_contract(paths)
@@ -62,6 +67,37 @@ class RuntimeLabTest(unittest.TestCase):
             changed = copy.deepcopy(trial)
             changed[mutation[0]] = mutation[1]
             self.assertTrue(any(expected in error for error in validate_trial(changed)), validate_trial(changed))
+
+    def test_worker_exhaustion_pair_caps_in_flight_work(self) -> None:
+        broken, repaired = self.pair("f02-worker-exhaustion")
+        self.assertGreater(broken["scheduler"]["max_in_flight"], repaired["scheduler"]["max_in_flight"])
+        self.assertEqual(64, repaired["scheduler"]["max_in_flight"])
+
+    def test_task_leak_pair_joins_cancelled_children(self) -> None:
+        broken, repaired = self.pair("f03-task-leak")
+        self.assertFalse(broken["cancellation"]["joined"])
+        self.assertTrue(repaired["cancellation"]["joined"])
+
+    def test_allocation_and_gc_pairs_expose_memory_bounds(self) -> None:
+        allocation_broken, allocation_repaired = self.pair("f04-allocation-pressure")
+        gc_broken, gc_repaired = self.pair("f05-gc-pause")
+        self.assertFalse(allocation_broken["memory"]["bounded"])
+        self.assertTrue(allocation_repaired["memory"]["bounded"])
+        self.assertFalse(gc_broken["memory"]["gc_observed"])
+        self.assertTrue(gc_repaired["memory"]["gc_observed"])
+
+    def test_race_pair_requires_synchronized_shared_state(self) -> None:
+        broken, repaired = self.pair("f06-data-race")
+        self.assertFalse(broken["race"]["synchronized"])
+        self.assertTrue(repaired["race"]["synchronized"])
+
+    def test_resource_and_validation_pairs_close_handles_and_validate_runtime(self) -> None:
+        resource_broken, resource_repaired = self.pair("f08-resource-leak")
+        validation_broken, validation_repaired = self.pair("f09-invalid-json")
+        self.assertFalse(resource_broken["resources"]["closed"])
+        self.assertTrue(resource_repaired["resources"]["closed"])
+        self.assertFalse(validation_broken["validation"]["runtime_validation"])
+        self.assertTrue(validation_repaired["validation"]["runtime_validation"])
 
 
 if __name__ == "__main__":

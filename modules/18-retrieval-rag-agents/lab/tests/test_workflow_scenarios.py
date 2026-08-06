@@ -11,6 +11,12 @@ from rag_agent_lab.workflow import DurableWorkflow, ToolExecutor, approval_diges
 
 
 class WorkflowTests(unittest.TestCase):
+    def pair(self, stem: str) -> tuple[dict, dict]:
+        scenario_root = Path(__file__).parents[1] / "scenarios"
+        broken = run_scenario(load_scenario(scenario_root / f"{stem}-broken.json"))
+        repaired = run_scenario(load_scenario(scenario_root / f"{stem}-repaired.json"))
+        return broken, repaired
+
     def test_tool_authorization_approval_and_idempotency(self) -> None:
         schema = {"type": "object", "required": ["application_id"], "properties": {"application_id": {"type": "string"}}, "additionalProperties": False}
         executor = ToolExecutor({"submit": {"input_schema": schema, "required_scope": "permit.submit", "risk": "irreversible"}})
@@ -75,6 +81,36 @@ class WorkflowTests(unittest.TestCase):
             self.assertFalse({row["id"]: row["passed"] for row in broken[1]["invariants"]}[target])
             self.assertEqual([row["id"] for row in repaired[1]["invariants"]], list(INVARIANT_IDS))
             self.assertTrue(all(row["passed"] for row in repaired[1]["invariants"]))
+
+    def test_index_freshness_and_revocation_pairs_filter_evidence(self) -> None:
+        freshness_broken, freshness_repaired = self.pair("f01-index-freshness")
+        revoked_broken, revoked_repaired = self.pair("f02-revoked-evidence")
+        self.assertFalse(freshness_broken["answer"]["citation_versions_valid"])
+        self.assertTrue(freshness_repaired["answer"]["citation_versions_valid"])
+        self.assertGreater(revoked_broken["answer"]["revoked_hits"], revoked_repaired["answer"]["revoked_hits"])
+
+    def test_low_quality_retrieval_pair_improves_grounded_answer_economics(self) -> None:
+        broken, repaired = self.pair("f03-low-quality-retrieval")
+        self.assertLess(broken["retrieval"]["ndcg_at_3"], repaired["retrieval"]["ndcg_at_3"])
+        self.assertGreater(broken["answer"]["unsupported_claims"], repaired["answer"]["unsupported_claims"])
+        self.assertGreater(broken["cost"]["cost_per_supported_answer"], repaired["cost"]["cost_per_supported_answer"])
+
+    def test_adversarial_and_unauthorized_pairs_keep_executor_authoritative(self) -> None:
+        adversarial_broken, adversarial_repaired = self.pair("f04-adversarial-document")
+        unauthorized_broken, unauthorized_repaired = self.pair("f08-unauthorized-action")
+        self.assertEqual("model-proposed", adversarial_broken["workflow"]["authorization_source"])
+        self.assertEqual("deterministic-executor", adversarial_repaired["workflow"]["authorization_source"])
+        self.assertFalse(unauthorized_broken["workflow"]["approval_consumed"])
+        self.assertTrue(unauthorized_repaired["workflow"]["approval_consumed"])
+
+    def test_provider_timeout_restart_and_budget_pairs_bound_work(self) -> None:
+        timeout_broken, timeout_repaired = self.pair("f05-provider-timeout")
+        restart_broken, restart_repaired = self.pair("f06-restart-duplicate")
+        budget_broken, budget_repaired = self.pair("f07-budget-cancellation")
+        self.assertGreater(timeout_broken["budget"]["elapsed_ms"], timeout_repaired["budget"]["elapsed_ms"])
+        self.assertGreater(restart_broken["workflow"]["duplicate_side_effects"], restart_repaired["workflow"]["duplicate_side_effects"])
+        self.assertGreater(budget_broken["budget"]["used_steps"], budget_repaired["budget"]["used_steps"])
+        self.assertGreater(budget_broken["budget"]["used_cost_microunits"], budget_repaired["budget"]["used_cost_microunits"])
 
 
 if __name__ == "__main__":
