@@ -73,6 +73,6 @@ could falsify the prediction.
 
 ## Sources and next work
 
-- Malkov and Yashunin, HNSW: <https://arxiv.org/abs/1603.09320>
-- Briggs, HNSW video: <https://www.youtube.com/watch?v=QvKMwLjdK-s>
+- Malkov and Yashunin, HNSW: RES-02
+- Briggs, HNSW video: RES-08
 - Inspect `lab/rag_agent_lab/retrieval.py`, then complete EX-05–EX-06.

@@ -86,6 +86,6 @@ product owner without changing the causal model.
 
 ## Sources and next work
 
-- Julia Lawall, *Opening the Box*: https://www.usenix.org/conference/srecon24emea/presentation/lawall
-- Meta, *Serving Facebook Multifeed*: https://engineering.fb.com/2015/03/10/production-engineering/serving-facebook-multifeed-efficiency-performance-gains-through-redesign/
+- Julia Lawall, *Opening the Box*: RES-06
+- Meta, *Serving Facebook Multifeed*: RES-05
 - Complete EX-12, the report, defense, and Gate 1.

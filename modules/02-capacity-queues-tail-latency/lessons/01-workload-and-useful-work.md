@@ -125,7 +125,7 @@ must drive admission.
 
 ## Sources and next work
 
-- MIT OpenCourseWare, [Queueing Systems lecture notes](https://ocw.mit.edu/courses/1-203j-logistical-and-transportation-planning-methods-fall-2006/resources/lec5/)
-- Google SRE, [Addressing Cascading Failures](https://sre.google/sre-book/addressing-cascading-failures/)
+- MIT OpenCourseWare, Queueing Systems lecture notes (RES-01)
+- Google SRE, Addressing Cascading Failures (RES-03)
 
 Complete EX-01 and EX-02, then continue to Lesson 2.

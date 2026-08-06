@@ -106,6 +106,6 @@ boundary owns the commit decision.
 
 ## Sources and next work
 
-- PostgreSQL, [Constraints](https://www.postgresql.org/docs/current/ddl-constraints.html).
+- PostgreSQL, Constraints (RES-09).
 - Continue with EX-01–EX-02 and Lesson 2; freeze the transaction map before the
   completed case or answers.

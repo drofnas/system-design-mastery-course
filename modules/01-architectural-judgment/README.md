@@ -39,7 +39,7 @@ This module is part of the solo Computer Science and System Design Mastery path.
 
 - Guided exercises: [exercises/exercises.md](exercises/exercises.md).
 - Explained practice answers: [exercises/answer-key.md](exercises/answer-key.md).
-- Reinforcement lab: this module uses guided exercises as the main lab. No executable lab is required; use the exercises as the reinforcement lab for framing and decision practice.
+- Reinforcement lab: this module intentionally uses guided exercises as the main lab. No executable lab is required; framing, invariants, and tradeoff defense are reinforced through the practice set rather than a runnable harness.
 - Resource guide: [resources.md](resources.md).
 
 ## Quiz And Review

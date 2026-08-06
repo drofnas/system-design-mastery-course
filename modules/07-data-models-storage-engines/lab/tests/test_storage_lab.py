@@ -112,6 +112,11 @@ class LSMTreeTests(unittest.TestCase):
 
 
 class ScenarioTests(unittest.TestCase):
+    def pair(self, stem: str) -> tuple[dict, dict]:
+        broken = run_scenario(load_scenario(LAB / "scenarios" / f"{stem}-broken.json"))
+        repaired = run_scenario(load_scenario(LAB / "scenarios" / f"{stem}-repaired.json"))
+        return broken, repaired
+
     def test_strict_scenario_rejects_unknown_field(self) -> None:
         scenario = json.loads((LAB / "scenarios/base-btree-read.json").read_text())
         scenario["unknown"] = True
@@ -154,6 +159,41 @@ class ScenarioTests(unittest.TestCase):
         disk = trial["io"]["disk_bytes"]
         expected_space = round(disk / live, 4) if live else 0.0
         self.assertEqual(expected_space, trial["amplification"]["space"])
+
+    def test_f01_cache_pair_turns_repeated_reads_into_cache_hits(self) -> None:
+        broken, repaired = self.pair("f01-cache")
+        self.assertEqual(0, broken["io"]["cache_hits"])
+        self.assertGreater(repaired["io"]["cache_hits"], repaired["io"]["cache_misses"])
+        self.assertLess(repaired["amplification"]["read"], broken["amplification"]["read"])
+
+    def test_f02_compaction_pair_clears_stalls_and_pending_bytes(self) -> None:
+        broken, repaired = self.pair("f02-compaction")
+        self.assertGreater(broken["maintenance"]["stalls"], 0)
+        self.assertGreater(broken["maintenance"]["pending_compaction_bytes"], 0)
+        self.assertEqual(0, repaired["maintenance"]["stalls"])
+        self.assertEqual(0, repaired["maintenance"]["pending_compaction_bytes"])
+
+    def test_f03_bloom_pair_bounds_negative_read_probes(self) -> None:
+        broken, repaired = self.pair("f03-bloom")
+        self.assertGreater(broken["maintenance"]["bloom_false_positives"], 0)
+        self.assertEqual(0, repaired["maintenance"]["bloom_false_positives"])
+        self.assertLess(repaired["io"]["page_or_table_probes"], broken["io"]["page_or_table_probes"])
+
+    def test_f04_runs_pair_collapses_run_count_and_space_amplification(self) -> None:
+        broken, repaired = self.pair("f04-runs")
+        self.assertGreater(broken["maintenance"]["runs"], repaired["maintenance"]["runs"])
+        self.assertLess(repaired["amplification"]["space"], broken["amplification"]["space"])
+
+    def test_f05_skew_cache_pair_keeps_hot_reads_in_cache(self) -> None:
+        broken, repaired = self.pair("f05-skew-cache")
+        self.assertGreater(repaired["io"]["cache_hits"], broken["io"]["cache_hits"])
+        self.assertLess(repaired["io"]["page_or_table_probes"], broken["io"]["page_or_table_probes"])
+
+    def test_f06_tombstone_pair_compacts_without_resurrection(self) -> None:
+        broken, repaired = self.pair("f06-tombstone")
+        self.assertGreater(broken["maintenance"]["tombstones"], 0)
+        self.assertEqual(0, repaired["maintenance"]["tombstones"])
+        self.assertEqual(0, repaired["correctness"]["resurrections"])
 
 
 if __name__ == "__main__":

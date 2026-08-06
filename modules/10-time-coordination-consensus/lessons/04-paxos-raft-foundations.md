@@ -94,3 +94,5 @@ a conflicting command after the earlier command is committed.
 - Ongaro and Ousterhout, *In Search of an Understandable Consensus Algorithm*,
   Sections 2–3.
 - Next: Lesson 5 implements terms, votes, and elections.
+- RES-04 -- In Search of an Understandable Consensus Algorithm, for the local mechanism boundary.
+- RES-03 -- Paxos Made Simple, for the local mechanism boundary.

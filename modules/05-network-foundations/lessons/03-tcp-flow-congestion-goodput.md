@@ -95,5 +95,5 @@ rerun; mark every conclusion as observed or inferred.
 
 ## Sources and next work
 
-- RFC 9293, Sections 2.2, 3.5, 3.7, and 3.8: https://www.rfc-editor.org/rfc/rfc9293.html
+- RFC 9293, Sections 2.2, 3.5, 3.7, and 3.8: RES-02
 - Continue with Lesson 4 for trust establishment over the connection.

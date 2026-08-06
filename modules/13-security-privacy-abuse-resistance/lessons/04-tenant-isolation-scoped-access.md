@@ -91,6 +91,6 @@ radius, migration, noisy-neighbor behavior, recovery, cost, and operator error.
 
 ## Sources and next work
 
-- [OWASP Multi-Tenant Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Multi_Tenant_Security_Cheat_Sheet.html)
+- OWASP Multi-Tenant Security Cheat Sheet (RES-05)
 
 Complete EX-07 and EX-08, then implement and test every surface you claim to protect.

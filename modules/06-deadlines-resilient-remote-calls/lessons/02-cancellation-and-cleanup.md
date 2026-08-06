@@ -85,6 +85,6 @@ atomic section, and which metrics prove all permits return.
 
 ## Sources and next work
 
-- gRPC Authors, [Cancellation](https://grpc.io/docs/guides/cancellation/).
-- gRPC Authors, [Deadlines](https://grpc.io/docs/guides/deadlines/), server responsibility.
+- gRPC Authors, Cancellation (RES-02).
+- gRPC Authors, Deadlines (RES-01), server responsibility.
 - Next: complete EX-03 and EX-04 and define the the relevant lesson cancellation contract.

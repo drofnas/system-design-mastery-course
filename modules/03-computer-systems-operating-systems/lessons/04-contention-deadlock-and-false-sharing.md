@@ -82,5 +82,5 @@ must preserve during merge.
 
 ## Sources and next work
 
-- Meta, *Serving Facebook Multifeed*: https://engineering.fb.com/2015/03/10/production-engineering/serving-facebook-multifeed-efficiency-performance-gains-through-redesign/
+- Meta, *Serving Facebook Multifeed*: RES-05
 - Continue with EX-06 through EX-08.

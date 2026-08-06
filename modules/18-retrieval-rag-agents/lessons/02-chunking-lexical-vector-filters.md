@@ -76,6 +76,6 @@ for a private draft and why post-filtering is insufficient evidence.
 
 ## Sources and next work
 
-- Manning et al., probabilistic retrieval: <https://nlp.stanford.edu/IR-book/>
-- Lewis et al., retrieval and non-parametric evidence: <https://arxiv.org/abs/2005.11401>
+- Manning et al., probabilistic retrieval: RES-01
+- Lewis et al., retrieval and non-parametric evidence: RES-04
 - Continue with Lesson 3 and EX-03–EX-04.

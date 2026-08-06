@@ -84,6 +84,6 @@ trigger, configuration owner, and evidence that would justify hedging later.
 
 ## Sources and next work
 
-- Craig Fender and Ravindra Punati, [Avoiding Cascading Failures at eBay?](https://www.usenix.org/conference/srecon16/program/presentation/fender), SREcon 2016.
-- Google SRE, [Addressing Cascading Failures](https://sre.google/sre-book/addressing-cascading-failures/).
+- Craig Fender and Ravindra Punati, Avoiding Cascading Failures at eBay? (RES-07), SREcon 2016.
+- Google SRE, Addressing Cascading Failures (RES-05).
 - Next: complete EX-15 and EX-16, write the policy, and conduct the defense.

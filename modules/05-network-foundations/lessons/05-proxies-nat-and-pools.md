@@ -72,5 +72,5 @@ pool decision.
 
 ## Sources and next work
 
-- RFC 9293 keep-alive and connection behavior: https://www.rfc-editor.org/rfc/rfc9293.html
+- RFC 9293 keep-alive and connection behavior: RES-02
 - Continue with Lesson 6 to compare request concurrency over connections.

@@ -117,6 +117,6 @@ For the practice, the probabilities are 2%, about 9.61%, and about 33.24%.
 
 ## Sources and next work
 
-- Jeffrey Dean and Luiz André Barroso, [The Tail at Scale](https://research.google/pubs/the-tail-at-scale/)
+- Jeffrey Dean and Luiz André Barroso, The Tail at Scale (RES-02)
 
 Complete EX-06 and run the Transit baseline before Lesson 5.

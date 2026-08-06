@@ -85,6 +85,6 @@ degraded response fields.
 
 ## Sources and next work
 
-- L. Huang et al., [Metastable Failures in the Wild](https://www.usenix.org/system/files/osdi22-huang-lexiang.pdf), OSDI 2022.
-- Google SRE, [Addressing Cascading Failures](https://sre.google/sre-book/addressing-cascading-failures/).
+- L. Huang et al., Metastable Failures in the Wild (RES-06), OSDI 2022.
+- Google SRE, Addressing Cascading Failures (RES-05).
 - Next: complete EX-10 and EX-11 and record a breaker/hedge reversal gate.

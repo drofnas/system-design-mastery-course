@@ -81,6 +81,6 @@ the quota period throttling occurs. Add restart and backlog bounds.
 
 ## Sources and next work
 
-- Linux kernel, Control Group v2: https://www.kernel.org/doc/html/latest/admin-guide/cgroup-v2.html
-- Docker, resource constraints: https://docs.docker.com/engine/containers/resource_constraints/
+- Linux kernel, Control Group v2: RES-04
+- Docker, resource constraints: RES-10
 - Continue with EX-11 and the Linux constraint matrix.

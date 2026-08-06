@@ -123,7 +123,7 @@ For the practice: in-system `L = 120 × 0.08 = 9.6`; in-service demand is
 
 ## Sources and next work
 
-- MIT OpenCourseWare, [Queueing Systems lecture notes](https://ocw.mit.edu/courses/1-203j-logistical-and-transportation-planning-methods-fall-2006/resources/lec5/)
-- Julius Plenz, [How to Trade off Server Utilization and Tail Latency](https://www.usenix.org/conference/srecon19asia/presentation/plenz)
+- MIT OpenCourseWare, Queueing Systems lecture notes (RES-01)
+- Julius Plenz, How to Trade off Server Utilization and Tail Latency (RES-06)
 
 Complete EX-03 and freeze the first model before measuring.

@@ -82,6 +82,6 @@ outcomes, not just equal request counts.
 
 ## Sources and next work
 
-- Google SRE, [Addressing Cascading Failures](https://sre.google/sre-book/addressing-cascading-failures/), load shedding and client isolation.
-- Marc Brooker, [Timeouts, retries, and backoff with jitter](https://builder.aws.com/content/3EumjoZascWd1oZiEgL8ORlv3qE/timeouts-retries-and-backoff-with-jitter).
+- Google SRE, Addressing Cascading Failures (RES-05), load shedding and client isolation.
+- Marc Brooker, Timeouts, retries, and backoff with jitter (RES-04).
 - Next: complete EX-12 and integrate fairness evidence into the failure matrix.

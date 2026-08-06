@@ -79,5 +79,5 @@ cleanup, per-process bounds, stop conditions, repetitions, and recovery checks.
 
 ## Sources and next work
 
-- Linux kernel block writeback cache control: https://www.kernel.org/doc/html/latest/block/writeback_cache_control.html
+- Linux kernel block writeback cache control: RES-08
 - Continue with EX-10 and the bounded I/O competitor.

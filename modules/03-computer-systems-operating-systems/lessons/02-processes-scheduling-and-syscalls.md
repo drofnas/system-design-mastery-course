@@ -85,6 +85,6 @@ it hurts. Name the measurements that distinguish them.
 
 ## Sources and next work
 
-- Linux man-pages, `getrusage(2)`: https://man7.org/linux/man-pages/man2/getrusage.2.html
-- Julia Lawall, *Opening the Box*: https://www.usenix.org/conference/srecon24emea/presentation/lawall
+- Linux man-pages, `getrusage(2)`: RES-01
+- Julia Lawall, *Opening the Box*: RES-06
 - Continue with EX-03 and EX-04.

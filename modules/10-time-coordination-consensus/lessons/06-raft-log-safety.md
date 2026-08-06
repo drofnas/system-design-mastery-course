@@ -89,3 +89,5 @@ the preceding index 7 becomes committed with it.
 - Ongaro and Ousterhout, Sections 5.3–5.4 and Figure 2.
 - Ongaro's `raft.tla` for abstract state/invariant mapping.
 - Next: Lesson 7 completes the client and recovery boundary.
+- RES-06 -- Formal TLA+ Specification for the Raft Consensus Algorithm, for the local mechanism boundary.
+- RES-05 -- Designing for Understandability: The Raft Consensus Algorithm, for the local mechanism boundary.

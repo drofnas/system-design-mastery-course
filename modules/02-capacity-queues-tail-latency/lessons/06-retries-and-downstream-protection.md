@@ -119,7 +119,7 @@ A 5% budget permits 100 retry attempts.
 
 ## Sources and next work
 
-- Google SRE, [Addressing Cascading Failures](https://sre.google/sre-book/addressing-cascading-failures/)
-- Marc Brooker, [Timeouts, retries, and backoff with jitter](https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/)
+- Google SRE, Addressing Cascading Failures (RES-03)
+- Marc Brooker, Timeouts, retries, and backoff with jitter (RES-07)
 
 Complete EX-09, then freeze the retry implementation before failure work.

@@ -121,6 +121,6 @@ keeps it enforceable during normal operation, failure, and change.
 
 ## Sources and next work
 
-- GitHub, [October 21 post-incident analysis](https://github.blog/news-insights/company-news/oct21-post-incident-analysis/).
-- Google, [Testing recovery from data loss](https://docs.cloud.google.com/architecture/framework/reliability/perform-testing-for-recovery-from-data-loss).
+- GitHub, October 21 post-incident analysis (RES-08).
+- Google, Testing recovery from data loss (RES-11).
 - Continue with EX-15–EX-16, the ADR, and defense.

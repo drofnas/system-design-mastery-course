@@ -111,3 +111,7 @@ State whether the evidence is derived, modeled, or measured locally. Preserve in
 ### Source boundary
 
 Use the module's bounded primary sources and preserve the local evidence limits.
+- RES-12 -- Node.js Releases, for the local mechanism boundary.
+- RES-13 -- Go Release History, for the local mechanism boundary.
+- RES-14 -- Rust Releases, for the local mechanism boundary.
+- RES-15 -- Oracle Java SE Support Roadmap, for the local mechanism boundary.

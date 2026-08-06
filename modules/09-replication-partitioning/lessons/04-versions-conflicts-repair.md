@@ -98,3 +98,4 @@ verification table. Calculate the foreground capacity consumed by 10,000
 
 Read the Cassandra Dynamo and Repair documentation plus Dynamo Sections 4.4–4.7.
 Next connect replica sets to key placement and safe ownership change.
+- RES-05 -- Dynamo Architecture and Repair, for the local mechanism boundary.

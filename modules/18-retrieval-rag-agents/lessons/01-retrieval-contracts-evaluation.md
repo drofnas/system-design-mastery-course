@@ -76,6 +76,6 @@ abstention, risk class, and reviewer disagreement.
 
 ## Sources and next work
 
-- Manning, Raghavan, and Schütze, *Introduction to Information Retrieval*, Chapters 6 and 8: <https://nlp.stanford.edu/IR-book/>
-- Thakur et al., “BEIR”: <https://arxiv.org/abs/2104.08663>
+- Manning, Raghavan, and Schütze, *Introduction to Information Retrieval*, Chapters 6 and 8: RES-01
+- Thakur et al., “BEIR”: RES-03
 - Continue with Lesson 2 and EX-01–EX-02.

@@ -129,7 +129,7 @@ objection from a product owner who fears false rejection.
 
 ## Sources and next work
 
-- Google SRE, [Addressing Cascading Failures](https://sre.google/sre-book/addressing-cascading-failures/)
-- Google Research, [The Tail at Scale](https://research.google/pubs/the-tail-at-scale/)
+- Google SRE, Addressing Cascading Failures (RES-03)
+- Google Research, The Tail at Scale (RES-02)
 
 Complete EX-12, the capacity report, ADR, and defense.

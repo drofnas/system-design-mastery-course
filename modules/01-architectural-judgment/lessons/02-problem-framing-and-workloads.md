@@ -249,7 +249,6 @@ finished.
 
 ## Sources and next work
 
-- [Google SRE Workbook, “Implementing
-  SLOs”](https://sre.google/workbook/implementing-slos/)
+- Google SRE Workbook, “Implementing SLOs” (RES-03)
 - [Module resource assignment](../resources.md#google-sre-workbook-implementing-slos)
 - Next: [Lesson 3](03-invariants-and-state-ownership.md)

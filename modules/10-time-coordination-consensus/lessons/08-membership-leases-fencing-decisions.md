@@ -93,3 +93,4 @@ whose old credential remains valid for ten minutes.
 - Ongaro and Ousterhout, Section 6 and dissertation membership extension.
 - Burrows, *The Chubby Lock Service*, Sections 2–5.
 - Next: EX-16 and the decision worksheet turn the mechanisms into an RFC and defense.
+- RES-07 -- The Chubby Lock Service for Loosely-Coupled Distributed Systems, for the local mechanism boundary.

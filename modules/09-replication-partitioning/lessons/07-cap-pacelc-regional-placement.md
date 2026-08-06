@@ -99,3 +99,5 @@ logs, indexes, and keys. Complete EX-14 and EX-15.
 
 Read Gilbert/Lynch and Abadi's PACELC paper using the bounded assignments. Next
 turn the operation table and evidence into a reversible organizational decision.
+- RES-03 -- Brewer's Conjecture and the Feasibility of Consistent, Available, Partition-Tolerant Web Services, for the local mechanism boundary.
+- RES-04 -- Consistency Tradeoffs in Modern Distributed Database System Design, for the local mechanism boundary.

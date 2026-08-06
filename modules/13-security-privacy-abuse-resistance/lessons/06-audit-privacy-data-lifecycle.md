@@ -90,7 +90,7 @@ evidence and exceptions.
 
 ## Sources and next work
 
-- [OWASP Logging Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html)
-- [NIST Privacy Framework](https://www.nist.gov/privacy-framework/privacy-framework)
+- OWASP Logging Cheat Sheet (RES-09)
+- NIST Privacy Framework (RES-10)
 
 Complete EX-11-EX-13 and freeze the copy ledger before running deletion tests.

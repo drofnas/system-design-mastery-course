@@ -142,3 +142,45 @@ task; record the substitution.
 Do not copy articles, chapters, slides, or transcripts into learner artifacts.
 Use short attributed quotations only when necessary and otherwise paraphrase with
 the source ID, exact section boundary, and stated evidence limit.
+
+### RES-10: timeit
+
+- URL: https://docs.python.org/3/library/timeit.html
+- Use for: Source cited by `lessons/02-controlled-experiments.md` during RES citation normalization.
+- Local alternative: lessons/02-controlled-experiments.md
+
+### RES-11: Tracing API
+
+- URL: https://opentelemetry.io/docs/specs/otel/trace/api/
+- Use for: Source cited by `lessons/03-trace-context.md` during RES citation normalization.
+- Local alternative: lessons/03-trace-context.md
+
+### RES-12: Metrics specification
+
+- URL: https://opentelemetry.io/docs/specs/otel/metrics/
+- Use for: Source cited by `lessons/04-signals-cardinality-cost.md` during RES citation normalization.
+- Local alternative: lessons/04-signals-cardinality-cost.md
+
+### RES-13: Logging specification
+
+- URL: https://opentelemetry.io/docs/specs/otel/logs/
+- Use for: Source cited by `lessons/04-signals-cardinality-cost.md` during RES citation normalization.
+- Local alternative: lessons/04-signals-cardinality-cost.md
+
+### RES-14: Profiles
+
+- URL: https://opentelemetry.io/docs/specs/otel/profiles/
+- Use for: Source cited by `lessons/05-profiling.md` during RES citation normalization.
+- Local alternative: lessons/05-profiling.md
+
+### RES-15: sqlite3
+
+- URL: https://docs.python.org/3/library/sqlite3.html
+- Use for: Source cited by `lessons/06-dependencies-query-plans.md` during RES citation normalization.
+- Local alternative: lessons/06-dependencies-query-plans.md
+
+### RES-16: statistics
+
+- URL: https://docs.python.org/3/library/statistics.html
+- Use for: Source cited by `lessons/07-benchmarks-regression-budgets.md` during RES citation normalization.
+- Local alternative: lessons/07-benchmarks-regression-budgets.md

@@ -154,6 +154,28 @@ class ConsensusLabTests(unittest.TestCase):
             with self.subTest(control=control):
                 self.assertFalse(results[invariant])
 
+    def test_leader_termination_pair_commits_before_visible_reply(self) -> None:
+        pair = {row["variant"]: row for row in self.trials if row["pair_id"] == "F01"}
+        self.assertEqual(0, pair["broken"]["metrics"]["commits"])
+        self.assertEqual(1, pair["repaired"]["metrics"]["commits"])
+        self.assertEqual("alpha", pair["repaired"]["key_values"]["window"])
+
+    def test_fencing_pairs_reject_stale_owners(self) -> None:
+        for pair_id in ("F02", "F05"):
+            pair = {row["variant"]: row for row in self.trials if row["pair_id"] == pair_id}
+            with self.subTest(pair=pair_id):
+                self.assertGreater(len(pair["broken"]["resource"]["accepted"]), 0)
+                self.assertEqual([], pair["repaired"]["resource"]["accepted"])
+                self.assertGreater(len(pair["repaired"]["resource"]["rejected"]), 0)
+
+    def test_restart_persistence_pair_retains_vote_after_crash(self) -> None:
+        pair = {row["variant"]: row for row in self.trials if row["pair_id"] == "F03"}
+        broken_n2 = next(node for node in pair["broken"]["nodes"] if node["id"] == "n2")
+        repaired_n2 = next(node for node in pair["repaired"]["nodes"] if node["id"] == "n2")
+        self.assertEqual("n3", broken_n2["voted_for"])
+        self.assertEqual("n1", repaired_n2["voted_for"])
+        self.assertTrue(any(event.get("persisted") is True for event in pair["repaired"]["events"] if event["type"] == "vote"))
+
 
 if __name__ == "__main__":
     unittest.main()

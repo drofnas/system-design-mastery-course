@@ -69,6 +69,6 @@ safety checks, a p95 latency budget, and a rollback trigger.
 
 ## Sources and next work
 
-- Thakur et al., BEIR: <https://arxiv.org/abs/2104.08663>
-- Dropbox Engineering relevance case: <https://dropbox.tech/machine-learning/llm-human-labeling-improving-search-relevance-dropbox-dash>
+- Thakur et al., BEIR: RES-03
+- Dropbox Engineering relevance case: RES-07
 - Continue with Lesson 5 and EX-07–EX-10.

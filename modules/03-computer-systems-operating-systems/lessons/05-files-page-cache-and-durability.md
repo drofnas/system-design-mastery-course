@@ -88,6 +88,6 @@ stated recovery invariant is true, then state its latency trade-off.
 
 ## Sources and next work
 
-- Linux man-pages, `write(2)`: https://www.man7.org/linux/man-pages/man2/write.2.html
-- Linux man-pages, `fsync(2)`: https://www.man7.org/linux/man-pages/man2/fsync.2.html
+- Linux man-pages, `write(2)`: RES-09
+- Linux man-pages, `fsync(2)`: RES-03
 - Continue with EX-09 and the durability experiment.

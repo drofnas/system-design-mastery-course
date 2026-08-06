@@ -105,7 +105,7 @@ is documentation, not observability.
 
 ## Sources and next work
 
-- OpenTelemetry, [Metrics specification](https://opentelemetry.io/docs/specs/otel/metrics/).
-- OpenTelemetry, [Logging specification](https://opentelemetry.io/docs/specs/otel/logs/).
-- Google SRE Workbook, [Monitoring](https://sre.google/workbook/monitoring/).
+- OpenTelemetry, Metrics specification (RES-12).
+- OpenTelemetry, Logging specification (RES-13).
+- Google SRE Workbook, Monitoring (RES-02).
 - Next: attribute resources to code in Lesson 5.

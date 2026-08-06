@@ -99,7 +99,7 @@ PEP, negative test, detective evidence, recovery action, owner, and review date.
 
 ## Sources and next work
 
-- [OWASP Threat Modeling Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html)
-- [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/)
+- OWASP Threat Modeling Cheat Sheet (RES-01)
+- OWASP ASVS (RES-02)
 
 Complete EX-01 and EX-02, then freeze the threat model before opening the case.

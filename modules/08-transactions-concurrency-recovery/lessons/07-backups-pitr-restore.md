@@ -109,6 +109,6 @@ runbook but cannot complete the procedure under time pressure.
 
 ## Sources and next work
 
-- PostgreSQL, [Continuous Archiving and PITR](https://www.postgresql.org/docs/current/continuous-archiving.html).
-- GitLab, [Database outage postmortem](https://about.gitlab.com/blog/postmortem-of-database-outage-of-january-31/).
+- PostgreSQL, Continuous Archiving and PITR (RES-06).
+- GitLab, Database outage postmortem (RES-07).
 - Continue with EX-13–EX-14 and F07.

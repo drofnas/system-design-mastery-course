@@ -101,3 +101,4 @@ Use Terry et al., *Session Guarantees for Weakly Consistent Replicated Data*,
 Sections 1–4, and the consistency definitions linked in the resource guide.
 Next study how replication topology and acknowledgement determine which
 versions can be observed.
+- RES-02 -- Session Guarantees for Weakly Consistent Replicated Data, for the local mechanism boundary.

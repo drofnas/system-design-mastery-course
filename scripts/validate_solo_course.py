@@ -45,6 +45,7 @@ OLD_TERMS = [
 WEEK_RE = re.compile(r'\bWeek\s+\d+\b')
 FRONTMATTER_WEEK_RE = re.compile(r'^week:\s*\d+\s*$', re.MULTILINE)
 RES_RE = re.compile(r'\bRES-\d{2}\b')
+INLINE_WEB_LINK_RE = re.compile(r'\]\(https?://|<https?://|(?<![\(<])https?://')
 QUESTION_TYPES = {'multiple_choice', 'short_answer', 'calculation', 'scenario_diagnosis', 'design_judgment'}
 DIFFICULTIES = {'recall', 'application', 'synthesis'}
 
@@ -233,7 +234,7 @@ def validate_lesson_frontmatter(errors: list[str]) -> None:
                 errors.append(f'{rel(lesson_path)}: frontmatter week key remains')
 
 
-def validate_resource_references(errors: list[str]) -> None:
+def validate_resource_references(errors: list[str], warnings: list[str]) -> None:
     for module_dir in sorted((ROOT / 'modules').glob('*')):
         if not module_dir.is_dir():
             continue
@@ -241,17 +242,29 @@ def validate_resource_references(errors: list[str]) -> None:
         defined: set[str] = set()
         if resources_path.exists():
             defined = set(re.findall(r'^###\s+(RES-\d{2})\b', resources_path.read_text(encoding='utf-8'), re.MULTILINE))
-        for lesson_path in sorted((module_dir / 'lessons').glob('*.md')):
+        cited: set[str] = set()
+        content_paths = [
+            *sorted((module_dir / 'lessons').glob('*.md')),
+            *sorted((module_dir / 'exercises').glob('*.md')),
+        ]
+        for lesson_path in content_paths:
             text = lesson_path.read_text(encoding='utf-8')
+            if INLINE_WEB_LINK_RE.search(text):
+                errors.append(f'{rel(lesson_path)}: cite web sources via resources.md RES-nn records, not inline links')
             for resource_id in sorted(set(RES_RE.findall(text))):
+                cited.add(resource_id)
                 if resource_id not in defined:
                     errors.append(f'{rel(lesson_path)}: references undefined {resource_id}')
+        uncited = sorted(defined - cited)
+        if uncited:
+            warnings.append(f'{rel(resources_path)}: defined but uncited resources: {", ".join(uncited)}')
 
 
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.parse_args()
     errors: list[str] = []
+    warnings: list[str] = []
     module_paths = sorted((ROOT / 'modules').glob('*/module.json'))
     if len(module_paths) not in {18, 20}:
         errors.append(f'Expected 18 or 20 modules, found {len(module_paths)}')
@@ -260,11 +273,13 @@ def main() -> int:
     validate_links(errors)
     validate_old_terms(errors)
     validate_lesson_frontmatter(errors)
-    validate_resource_references(errors)
+    validate_resource_references(errors, warnings)
     if errors:
         for error in errors:
             print(error, file=sys.stderr)
         return 1
+    for warning in warnings:
+        print(f'warning: {warning}', file=sys.stderr)
     print(f'Validated {len(module_paths)} solo-learning modules.')
     return 0
 

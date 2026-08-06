@@ -69,3 +69,4 @@ Draw the CivicAid state machine from draft through approval, submission, and rec
 ## Sources and next work
 
 Read the bounded Temporal reference assignment in [resources.md](../resources.md), distinguishing general durable-execution principles from product features. Complete EX-15 through EX-18. Lesson 8 integrates these mechanisms into a defensible final decision.
+- RES-06 -- AI Agent Reference Architecture, for the local mechanism boundary.

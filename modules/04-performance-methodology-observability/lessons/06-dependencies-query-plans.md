@@ -109,6 +109,6 @@ target the first causal break in that chain.
 
 ## Sources and next work
 
-- SQLite, [`EXPLAIN QUERY PLAN`](https://www.sqlite.org/eqp.html).
-- Python Software Foundation, [`sqlite3`](https://docs.python.org/3/library/sqlite3.html).
+- SQLite, EXPLAIN QUERY PLAN (RES-09).
+- Python Software Foundation, sqlite3 (RES-15).
 - Next: turn comparisons into a release gate in Lesson 7.

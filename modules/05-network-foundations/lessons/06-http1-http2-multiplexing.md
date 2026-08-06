@@ -67,5 +67,5 @@ can be delivered and which evidence would falsify your model.
 
 ## Sources and next work
 
-- RFC 9113, HTTP/2: https://www.rfc-editor.org/rfc/rfc9113.html
+- RFC 9113, HTTP/2: RES-04
 - Continue with Lesson 7 for QUIC's different ordering boundary.

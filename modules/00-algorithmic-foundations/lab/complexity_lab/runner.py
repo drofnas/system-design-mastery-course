@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import random
 import time
 from pathlib import Path
 from typing import Any
@@ -42,6 +43,13 @@ def _linked_sum(head: Node | None) -> int:
     return total
 
 
+def _array_index_sum(values: list[int]) -> int:
+    total = 0
+    for index in range(len(values)):
+        total += values[index]
+    return total
+
+
 def _time_ns(fn) -> int:
     start = time.perf_counter_ns()
     fn()
@@ -50,29 +58,36 @@ def _time_ns(fn) -> int:
 
 def run_scenario(scenario: dict[str, Any]) -> dict[str, Any]:
     rows = []
+    rng = random.Random(scenario["seed"])
     for size in scenario["sizes"]:
         values = list(range(size))
         linked = _linked(values)
         table = {value: value for value in values}
-        keys = [(index * 17) % size for index in range(scenario["lookup_count"])]
+        keys = [rng.randrange(size) for _ in range(scenario["lookup_count"])]
+        key_checksum = sum((index + 1) * key for index, key in enumerate(keys))
 
-        array_times = [_time_ns(lambda: sum(values)) for _ in range(scenario["repetitions"])]
+        array_times = [_time_ns(lambda: _array_index_sum(values)) for _ in range(scenario["repetitions"])]
         linked_times = [_time_ns(lambda: _linked_sum(linked)) for _ in range(scenario["repetitions"])]
         scan_times = [_time_ns(lambda: [key in values for key in keys]) for _ in range(scenario["repetitions"])]
         hash_times = [_time_ns(lambda: [key in table for key in keys]) for _ in range(scenario["repetitions"])]
+        median_scan_ns = sorted(scan_times)[len(scan_times) // 2]
+        median_hash_ns = sorted(hash_times)[len(hash_times) // 2]
 
         rows.append({
             "n": size,
-            "array_sum": sum(values),
+            "array_sum": _array_index_sum(values),
             "linked_sum": _linked_sum(linked),
             "array_traversal_ops": size,
             "linked_traversal_ops": size,
             "linear_lookup_ops": size * len(keys),
             "hash_lookup_ops": len(keys),
+            "sample_count": len(array_times),
+            "lookup_key_checksum": key_checksum,
             "median_array_ns": sorted(array_times)[len(array_times) // 2],
             "median_linked_ns": sorted(linked_times)[len(linked_times) // 2],
-            "median_scan_ns": sorted(scan_times)[len(scan_times) // 2],
-            "median_hash_ns": sorted(hash_times)[len(hash_times) // 2],
+            "median_scan_ns": median_scan_ns,
+            "median_hash_ns": median_hash_ns,
+            "lookup_time_ratio": median_scan_ns / max(1, median_hash_ns),
         })
 
     return {
@@ -82,6 +97,9 @@ def run_scenario(scenario: dict[str, Any]) -> dict[str, Any]:
         "rows": rows,
         "model_limits": [
             "local CPython timing, not production performance evidence",
+            "array and linked traversals are both Python-level loops; this avoids a C builtin versus interpreted-loop comparison but does not isolate CPU cache behavior",
+            "CPython lists hold contiguous references to boxed integer objects, not contiguous primitive integers",
+            "median-of-repetitions on a shared machine is not a controlled benchmark",
             "non-adversarial integer keys, not hash-flood resistance evidence",
             "operation counts describe logical work, not CPU pipeline behavior",
         ],

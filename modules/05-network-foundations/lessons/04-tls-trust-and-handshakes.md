@@ -69,6 +69,6 @@ for each failure.
 
 ## Sources and next work
 
-- RFC 9846, TLS 1.3: https://www.rfc-editor.org/rfc/rfc9846.html
-- RFC 9525, Service Identity in TLS: https://www.rfc-editor.org/rfc/rfc9525.html
+- RFC 9846, TLS 1.3: RES-03
+- RFC 9525, Service Identity in TLS: RES-12
 - Continue with Lesson 5 for connection ownership beyond the TLS endpoint.

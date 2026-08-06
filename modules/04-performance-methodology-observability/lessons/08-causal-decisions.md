@@ -116,6 +116,6 @@ uncertainty before a decision, not to decorate a decision that was already made.
 
 ## Sources and next work
 
-- USENIX, [The Art of Performance Monitoring](https://www.usenix.org/conference/srecon16/program/presentation/smith).
-- OpenTelemetry, [Specification overview](https://opentelemetry.io/docs/specs/otel/overview/).
+- USENIX, The Art of Performance Monitoring (RES-06).
+- OpenTelemetry, Specification overview (RES-04).
 - Next: complete the performance review and defense.

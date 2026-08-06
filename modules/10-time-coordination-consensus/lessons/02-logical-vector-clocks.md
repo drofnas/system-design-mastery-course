@@ -87,3 +87,4 @@ L1/[0,1]`, receive `L3/[2,2]`, `b2 L4/[2,3]`. `a2` and `b1` are concurrent;
 - Lamport, *Time, Clocks, and the Ordering of Events*, pages 558–563.
 - Module 9 Lesson 4 for version/concurrency application.
 - Next: Lesson 3 states the properties that coordination must protect.
+- RES-01 -- Time, Clocks, and the Ordering of Events in a Distributed System, for the local mechanism boundary.

@@ -225,6 +225,5 @@ before reading the answer key.
 ## Sources and next work
 
 - Course foundation: [`00_COURSE_SYLLABUS.md`](../../../00_COURSE_SYLLABUS.md)
-- Decision records: [Michael Nygard, “Documenting Architecture
-  Decisions”](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions)
+- Decision records: Michael Nygard, “Documenting Architecture Decisions” (RES-06)
 - Next: [Lesson 2](02-problem-framing-and-workloads.md)

@@ -91,7 +91,7 @@ when only 45 ms remains but the child's measured minimum useful duration is 70 m
 
 ## Sources and next work
 
-- gRPC Authors, [Deadlines](https://grpc.io/docs/guides/deadlines/), especially
+- gRPC Authors, Deadlines (RES-01), especially
   propagation and application cleanup responsibility.
-- Google SRE, [Addressing Cascading Failures](https://sre.google/sre-book/addressing-cascading-failures/), “Latency and Deadlines.”
+- Google SRE, Addressing Cascading Failures (RES-05), “Latency and Deadlines.”
 - Next: complete EX-01 and EX-02, then freeze the call graph.
