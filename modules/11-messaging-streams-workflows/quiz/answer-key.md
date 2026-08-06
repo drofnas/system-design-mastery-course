@@ -141,16 +141,16 @@ This key covers all 38 questions for **Messaging, Streams, and Workflows**. Use 
 
 **Choices:**
 
-- Test the M11 scoped measurement and record the limiting assumption before approving the change.
-- Approve it may omit a CDC change or retain an obsolete for Authority, Events, Queues, Logs, and Streams; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for it may omit a CDC change or retain an obsolete; the team can monitor Authority, Events, Queues, Logs, and Streams after launch.
-- Approve the M11 shortcut for alpha now.
+- Measure treat log data for review case one; limit the change. with margin
+- Measure publish intent data for review case one; limit the change. with margin
+- Measure copy entire data for review case one; limit the change.
+- Measure choose event data for review case one; limit the change.
 
-**Answer:** Test the M11 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure treat log data for review case one; limit the change. with margin
 
-**Explanation:** M11-Q013 enacts mistake 1 from Authority, Events, Queues, Logs, and Streams; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M11-Q013 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects treat log as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M11-Q014
 
@@ -159,16 +159,16 @@ This key covers all 38 questions for **Messaging, Streams, and Workflows**. Use 
 
 **Choices:**
 
-- Approve `SendBulletinRequested` is not evidence that a for Authority, Events, Queues, Logs, and Streams; the local context makes that proposal familiar enough for review.
-- Scope the M11 scoped measurement before approving the change.
-- Defer measurement until production for `SendBulletinRequested` is not evidence that a; the team can monitor Authority, Events, Queues, Logs, and Streams after launch.
-- Approve the M11 shortcut for bravo now.
+- Measure generate new data for review case two; limit the change.
+- Measure publish intent data for review case two; limit the change.
+- Measure payload equality data for review case two; limit the change.
+- Measure commit offset data for review case two; limit the change.
 
-**Answer:** Scope the M11 scoped measurement before approving the change.
+**Answer:** Measure publish intent data for review case two; limit the change.
 
-**Explanation:** M11-Q014 enacts mistake 2 from Authority, Events, Queues, Logs, and Streams; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M11-Q014 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects publish intent as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M11-Q015
 
@@ -177,16 +177,16 @@ This key covers all 38 questions for **Messaging, Streams, and Workflows**. Use 
 
 **Choices:**
 
-- Approve this leaks data and couples consumers to private storage for Authority, Events, Queues, Logs, and Streams; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for this leaks data and couples consumers to private storage; the team can monitor Authority, Events, Queues, Logs, and Streams after launch.
-- Measure the M11 scoped measurement before approval.
-- Approve the M11 shortcut for charlie now.
+- Measure call broker data for review case three; limit the change.
+- Measure require global data for review case three; limit the change.
+- Measure copy entire data for review case three; limit the change.
+- Measure key randomly data for review case three; limit the change.
 
-**Answer:** Measure the M11 scoped measurement before approval.
+**Answer:** Measure copy entire data for review case three; limit the change.
 
-**Explanation:** M11-Q015 enacts mistake 3 from Authority, Events, Queues, Logs, and Streams; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M11-Q015 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects copy entire as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M11-Q016
 
@@ -195,16 +195,16 @@ This key covers all 38 questions for **Messaging, Streams, and Workflows**. Use 
 
 **Choices:**
 
-- Approve extra deployables create ownership for Authority, Events, Queues, Logs, and Streams; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for extra deployables create ownership; the team can monitor Authority, Events, Queues, Logs, and Streams after launch.
-- Approve the M11 shortcut for delta now.
-- Bound the M11 scoped measurement and record the limiting assumption before approving the change.
+- Measure assume partitions data for review case four; limit the change. with margin
+- Measure ignore rebalance data for review case four; limit the change.
+- Measure mark published data for review case four; limit the change.
+- Measure choose event data for review case four; limit the change. with margin
 
-**Answer:** Bound the M11 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure choose event data for review case four; limit the change. with margin
 
-**Explanation:** M11-Q016 enacts mistake 4 from Authority, Events, Queues, Logs, and Streams; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M11-Q016 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects choose event as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M11-Q017
 
@@ -213,16 +213,16 @@ This key covers all 38 questions for **Messaging, Streams, and Workflows**. Use 
 
 **Choices:**
 
-- Freeze the M11 scoped measurement before approving the change.
-- Approve deduplication cannot recognize sameness for Delivery Semantics, Identities, and Exactly-Once Bounda; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for deduplication cannot recognize sameness; the team can monitor Delivery Semantics, Identities, and Exactly-Once Bounda after launch.
-- Approve the M11 shortcut for ember now.
+- Measure generate new data for review case five; limit the change.
+- Measure delete immediately data for review case five; limit the change.
+- Measure treat cdc data for review case five; limit the change.
+- Measure store inbox data for review case five; limit the change.
 
-**Answer:** Freeze the M11 scoped measurement before approving the change.
+**Answer:** Measure generate new data for review case five; limit the change.
 
-**Explanation:** M11-Q017 enacts mistake 1 from Delivery Semantics, Identities, and Exactly-Once Boundaries; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M11-Q017 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects generate new as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M11-Q018
 
@@ -231,16 +231,16 @@ This key covers all 38 questions for **Messaging, Streams, and Workflows**. Use 
 
 **Choices:**
 
-- Approve legitimate equal events and serialization changes for Delivery Semantics, Identities, and Exactly-Once Bounda; the local context makes that proposal familiar enough for review.
-- Preserve the M11 scoped measurement before approval.
-- Defer measurement until production for legitimate equal events and serialization changes; the team can monitor Delivery Semantics, Identities, and Exactly-Once Bounda after launch.
-- Approve the M11 shortcut for fable now.
+- Measure replay live data for review case six; limit the change. with margin
+- Measure payload equality data for review case six; limit the change.
+- Measure skip poison data for review case six; limit the change.
+- Measure trust counts data for review case six; limit the change.
 
-**Answer:** Preserve the M11 scoped measurement before approval.
+**Answer:** Measure payload equality data for review case six; limit the change.
 
-**Explanation:** M11-Q018 enacts mistake 2 from Delivery Semantics, Identities, and Exactly-Once Boundaries; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M11-Q018 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects payload equality as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M11-Q019
 
@@ -249,16 +249,16 @@ This key covers all 38 questions for **Messaging, Streams, and Workflows**. Use 
 
 **Choices:**
 
-- Approve a crash loses accepted work for Delivery Semantics, Identities, and Exactly-Once Bounda; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for a crash loses accepted work; the team can monitor Delivery Semantics, Identities, and Exactly-Once Bounda after launch.
-- Model the M11 scoped measurement and record the limiting assumption before approving the change.
-- Approve the M11 shortcut for harbor now.
+- Measure repair authority data for review case seven; limit the change. with margin
+- Measure event presence data for review case seven; limit the change.
+- Measure commit offset data for review case seven; limit the change. with margin
+- Measure compensate deleting data for review case seven; limit the change.
 
-**Answer:** Model the M11 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure commit offset data for review case seven; limit the change. with margin
 
-**Explanation:** M11-Q019 enacts mistake 3 from Delivery Semantics, Identities, and Exactly-Once Boundaries; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M11-Q019 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects commit offset as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M11-Q020
 
@@ -267,23 +267,23 @@ This key covers all 38 questions for **Messaging, Streams, and Workflows**. Use 
 
 **Choices:**
 
-- Approve call broker transactions end-to-end exactly once:: external databases and for Delivery Semantics, Identities, and Exactly-Once Bounda; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for call broker transactions end-to-end exactly once:: external databases and; the team can monitor Delivery Semantics, Identities, and Exactly-Once Bounda after launch.
-- Approve the M11 shortcut for indigo now.
-- Account the M11 scoped measurement before approving the change.
+- Measure retry all data for review case eight; limit the change.
+- Measure hide state data for review case eight; limit the change.
+- Measure call watermark data for review case eight; limit the change.
+- Measure call broker data for review case eight; limit the change.
 
-**Answer:** Account the M11 scoped measurement before approving the change.
+**Answer:** Measure call broker data for review case eight; limit the change.
 
-**Explanation:** M11-Q020 enacts mistake 4 from Delivery Semantics, Identities, and Exactly-Once Boundaries; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M11-Q020 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects call broker as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M11-Q021
 
 **Type:** `calculation`
 **Difficulty:** `synthesis`
 
-**Answer:** M11 Partition Parallelism case 1: Non-hot share is 1 - 0.35 = 0.65; 12 x 0.65 = 7.8 partition-equivalents remain.
+**Answer:** Calculation for authority, events, queues, logs, and streams, non-hot share is 1 - 0.35 = 0.65; 12 x 0.65 = 7.8 partition-equivalents remain.
 
 **Explanation:** M11-Q021 uses partition parallelism from Authority, Events, Queues, Logs, and Streams and keeps units visible through the final numeric result.
 
@@ -294,7 +294,7 @@ This key covers all 38 questions for **Messaging, Streams, and Workflows**. Use 
 **Type:** `calculation`
 **Difficulty:** `recall`
 
-**Answer:** M11 Backlog Drain case 2: Net drain is (240 - 150) / 1.25 = 72.0/s, so drain time is 54,000 / 72.0 = 750.0 seconds.
+**Answer:** Calculation for delivery semantics, identities, and exactly-once boundaries, net drain is (240 - 150) / 1.25 = 72.0/s, so drain time is 54,000 / 72.0 = 750.0 seconds.
 
 **Explanation:** M11-Q022 uses backlog drain from Delivery Semantics, Identities, and Exactly-Once Boundaries and keeps units visible through the final numeric result.
 
@@ -305,7 +305,7 @@ This key covers all 38 questions for **Messaging, Streams, and Workflows**. Use 
 **Type:** `calculation`
 **Difficulty:** `application`
 
-**Answer:** M11 Stream Drain case 3: Net drain is 240 - 150 = 90/s; 54,000 / 90 = 600.0 seconds.
+**Answer:** Calculation for ordering, partition keys, and consumer groups, net drain is 240 - 150 = 90/s; 54,000 / 90 = 600.0 seconds.
 
 **Explanation:** M11-Q023 uses stream drain from Ordering, Partition Keys, and Consumer Groups and keeps units visible through the final numeric result.
 
@@ -316,7 +316,7 @@ This key covers all 38 questions for **Messaging, Streams, and Workflows**. Use 
 **Type:** `calculation`
 **Difficulty:** `synthesis`
 
-**Answer:** M11 Stream Drain case 4: Net drain is 240 - 150 = 90/s; 54,000 / 90 = 600.0 seconds.
+**Answer:** Calculation for transactional outbox, inbox, and change data capture, net drain is 240 - 150 = 90/s; 54,000 / 90 = 600.0 seconds.
 
 **Explanation:** M11-Q024 uses stream drain from Transactional Outbox, Inbox, and Change Data Capture and keeps units visible through the final numeric result.
 
@@ -327,151 +327,151 @@ This key covers all 38 questions for **Messaging, Streams, and Workflows**. Use 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `application`
 
-**Answer:** M11 diagnosis 1 identifies authority and outbox commit atomically. The proving fields are authority.facts.0.version and authority.version; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for authority, events, queues, logs, and streams, authority.facts.0.version and broker.duplicates separate the mechanism. authority.facts.0.version = 3 while broker.duplicates = 0, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M11-Q025 comes from emitted trial fields rather than fixture identifiers; Authority, Events, Queues, Logs, and Streams is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare authority.facts.0.version with broker.duplicates and connect that contrast to authority, events, queues, logs, and streams.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Authority, Events, Queues, Logs, and Streams, cites authority.facts.0.version and broker.duplicates, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M11-Q026
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** M11 diagnosis 2 identifies Delivery Semantics, Identities, and Exactly-Once Boundaries evidence scope. The proving fields are authority.facts.0.version and authority.version; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for delivery semantics, identities, and exactly-once boundaries, authority.facts.0.version and broker.records.0.position separate the mechanism. authority.facts.0.version = 3 while broker.records.0.position = 0, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M11-Q026 comes from emitted trial fields rather than fixture identifiers; Delivery Semantics, Identities, and Exactly-Once Boundaries is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare authority.facts.0.version with broker.records.0.position and connect that contrast to delivery semantics, identities, and exactly-once boundaries.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Delivery Semantics, Identities, and Exactly-Once Boundaries, cites authority.facts.0.version and broker.records.0.position, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M11-Q027
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `recall`
 
-**Answer:** M11 diagnosis 3 identifies one event identity applies once per consumer. The proving fields are authority.facts.0.version and authority.version; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for ordering, partition keys, and consumer groups, authority.facts.0.version and broker.records.1.position separate the mechanism. authority.facts.0.version = 3 while broker.records.1.position = 1, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M11-Q027 comes from emitted trial fields rather than fixture identifiers; Ordering, Partition Keys, and Consumer Groups is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare authority.facts.0.version with broker.records.1.position and connect that contrast to ordering, partition keys, and consumer groups.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Ordering, Partition Keys, and Consumer Groups, cites authority.facts.0.version and broker.records.1.position, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M11-Q028
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `application`
 
-**Answer:** M11 diagnosis 4 identifies Transactional Outbox, Inbox, and Change Data Capture evidence scope. The proving fields are authority.facts.0.version and authority.version; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for transactional outbox, inbox, and change data capture, authority.version and broker.duplicates separate the mechanism. authority.version = 3 while broker.duplicates = 1, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M11-Q028 comes from emitted trial fields rather than fixture identifiers; Transactional Outbox, Inbox, and Change Data Capture is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare authority.version with broker.duplicates and connect that contrast to transactional outbox, inbox, and change data capture.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Transactional Outbox, Inbox, and Change Data Capture, cites authority.version and broker.duplicates, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M11-Q029
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** M11 diagnosis 5 identifies one effect identity causes at most one irreversible effect. The proving fields are authority.facts.0.version and authority.version; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for replay, poison records, and reconciliation, authority.version and broker.records.0.position separate the mechanism. authority.version = 3 while broker.records.0.position = 0, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M11-Q029 comes from emitted trial fields rather than fixture identifiers; Replay, Poison Records, and Reconciliation is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare authority.version with broker.records.0.position and connect that contrast to replay, poison records, and reconciliation.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Replay, Poison Records, and Reconciliation, cites authority.version and broker.records.0.position, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M11-Q030
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `recall`
 
-**Answer:** M11 diagnosis 6 identifies Workflow State, Sagas, and Compensation evidence scope. The proving fields are authority.facts.0.version and authority.version; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for workflow state, sagas, and compensation, authority.version and consumer.applications separate the mechanism. authority.version = 3 while consumer.applications = 1, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M11-Q030 comes from emitted trial fields rather than fixture identifiers; Workflow State, Sagas, and Compensation is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare authority.version with consumer.applications and connect that contrast to workflow state, sagas, and compensation.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Workflow State, Sagas, and Compensation, cites authority.version and consumer.applications, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M11-Q031
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `application`
 
-**Answer:** M11 diagnosis 7 identifies derived aggregate version never regresses. The proving fields are authority.facts.0.version and authority.version; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for event time, watermarks, lag, and bounded recovery, broker.duplicates and broker.records.0.version separate the mechanism. broker.duplicates = 0 while broker.records.0.version = 3, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M11-Q031 comes from emitted trial fields rather than fixture identifiers; Event Time, Watermarks, Lag, and Bounded Recovery is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare broker.duplicates with broker.records.0.version and connect that contrast to event time, watermarks, lag, and bounded recovery.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Event Time, Watermarks, Lag, and Bounded Recovery, cites broker.duplicates and broker.records.0.version, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M11-Q032
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** M11 diagnosis 8 identifies Asynchronous Architecture Decisions evidence scope. The proving fields are authority.facts.0.version and authority.version; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for asynchronous architecture decisions, broker.duplicates and consumer.applications separate the mechanism. broker.duplicates = 0 while consumer.applications = 1, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M11-Q032 comes from emitted trial fields rather than fixture identifiers; Asynchronous Architecture Decisions is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare broker.duplicates with consumer.applications and connect that contrast to asynchronous architecture decisions.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Asynchronous Architecture Decisions, cites broker.duplicates and consumer.applications, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M11-Q033
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `recall`
 
-**Answer:** M11 diagnosis 9 identifies poison handling bounds attempts and preserves ownership. The proving fields are authority.facts.0.version and authority.version; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for authority, events, queues, logs, and streams, broker.records.0.position and broker.records.0.version separate the mechanism. broker.records.0.position = 0 while broker.records.0.version = 3, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M11-Q033 comes from emitted trial fields rather than fixture identifiers; Authority, Events, Queues, Logs, and Streams is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare broker.records.0.position with broker.records.0.version and connect that contrast to authority, events, queues, logs, and streams.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Authority, Events, Queues, Logs, and Streams, cites broker.records.0.position and broker.records.0.version, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M11-Q034
 
 **Type:** `design_judgment`
 **Difficulty:** `application`
 
-**Answer:** For M11 decision 1, recommend against. The protected bound is 213 x 0.72 = 153.4/s, and the planned 187.4/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 187.4/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 34.0/s of lower-priority work.
+**Answer:** Approve Authority and derived state at 141.4/s. The deciding number is 213 x 0.72 = 153.4/s, leaving 12/s before the reserve is consumed. Withdraw approval if a drill, trace, or workload sample shows authority and derived state demand above 153.4/s or proves the shed point cannot protect lower-priority work.
 
-**Explanation:** M11-Q034 turns on the forcing number from EX-01, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to authority and derived state demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 153.4/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M11-Q035
 
 **Type:** `design_judgment`
 **Difficulty:** `synthesis`
 
-**Answer:** For M11 decision 2, recommend against. The protected bound is 230 x 0.72 = 165.6/s, and the planned 202.4/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 202.4/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 36.8/s of lower-priority work.
+**Answer:** Decline Event envelope review at 177/s. The deciding number is 230 x 0.72 = 165.6/s, so planned demand exceeds the usable region by 11.4/s. Approve later if repeated measurements lift usable capacity above 177/s or a named policy removes at least 11.4/s of deferrable work before saturation.
 
-**Explanation:** M11-Q035 turns on the forcing number from EX-02, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to event envelope review demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 165.6/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M11-Q036
 
 **Type:** `design_judgment`
 **Difficulty:** `recall`
 
-**Answer:** For M11 decision 3, recommend against. The protected bound is 247 x 0.72 = 177.8/s, and the planned 217.4/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 217.4/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 39.6/s of lower-priority work.
+**Answer:** Approve conditionally for Crash-window derivation. The deciding number is 247 x 0.72 = 177.8/s, and 172.8/s fits only while the fallback remains enforceable. Keep the condition until recovery traffic, priority demand, or fallback tests show less than 5/s of usable margin.
 
-**Explanation:** M11-Q036 turns on the forcing number from EX-03, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to crash-window derivation demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 177.8/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M11-Q037
 
 **Type:** `design_judgment`
 **Difficulty:** `application`
 
-**Answer:** For M11 decision 4, recommend against. The protected bound is 264 x 0.72 = 190.1/s, and the planned 232.3/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 232.3/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 42.2/s of lower-priority work.
+**Answer:** Approve Exactly-once claim audit at 173/s. The deciding number is 264 x 0.72 = 190.1/s, leaving 17.1/s before the reserve is consumed. Require redesign if a drill, trace, or workload sample shows exactly-once claim audit demand above 190.1/s or proves the shed point cannot protect lower-priority work.
 
-**Explanation:** M11-Q037 turns on the forcing number from EX-04, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to exactly-once claim audit demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 190.1/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M11-Q038
 
 **Type:** `design_judgment`
 **Difficulty:** `synthesis`
 
-**Answer:** For M11 decision 5, recommend against. The protected bound is 281 x 0.72 = 202.3/s, and the planned 247.3/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 247.3/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 45.0/s of lower-priority work.
+**Answer:** Decline Partition-key comparison at 217.9/s. The deciding number is 281 x 0.72 = 202.3/s, so planned demand exceeds the usable region by 15.6/s. Lift the decline if repeated measurements lift usable capacity above 217.9/s or a named policy removes at least 15.6/s of deferrable work before saturation.
 
-**Explanation:** M11-Q038 turns on the forcing number from EX-05, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to partition-key comparison demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 202.3/s, compares it with planned demand, and names a scenario-specific reversal condition.

@@ -163,16 +163,16 @@ This key covers all 46 questions for **Computer Systems and Operating Systems**.
 
 **Choices:**
 
-- Scope the M03 scoped measurement and record the limiting assumption before approving the change.
-- Approve a faster wrong checksum is not an optimization for Benchmark Contracts, Pipelines, Caches, and Locality; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for a faster wrong checksum is not an optimization; the team can monitor Benchmark Contracts, Pipelines, Caches, and Locality after launch.
-- Approve the M03 shortcut for alpha now.
+- Measure timing unequal data for review case one; limit the change.
+- Measure one iteration data for review case one; limit the change.
+- Measure naming cache data for review case one; limit the change. with margin
+- Measure reporting only data for review case one; limit the change.
 
-**Answer:** Scope the M03 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure timing unequal data for review case one; limit the change.
 
-**Explanation:** M03-Q015 enacts mistake 1 from Benchmark Contracts, Pipelines, Caches, and Locality; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M03-Q015 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects timing unequal as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M03-Q016
 
@@ -181,16 +181,16 @@ This key covers all 46 questions for **Computer Systems and Operating Systems**.
 
 **Choices:**
 
-- Approve startup, interrupts, and frequency state dominate for Benchmark Contracts, Pipelines, Caches, and Locality; the local context makes that proposal familiar enough for review.
-- Measure the M03 scoped measurement before approving the change.
-- Defer measurement until production for startup, interrupts, and frequency state dominate; the team can monitor Benchmark Contracts, Pipelines, Caches, and Locality after launch.
-- Approve the M03 shortcut for bravo now.
+- Measure generalizing across data for review case two; limit the change.
+- Measure one iteration data for review case two; limit the change.
+- Measure equating threads data for review case two; limit the change.
+- Measure every context data for review case two; limit the change.
 
-**Answer:** Measure the M03 scoped measurement before approving the change.
+**Answer:** Measure one iteration data for review case two; limit the change.
 
-**Explanation:** M03-Q016 enacts mistake 2 from Benchmark Contracts, Pipelines, Caches, and Locality; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M03-Q016 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects one iteration as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M03-Q017
 
@@ -199,16 +199,16 @@ This key covers all 46 questions for **Computer Systems and Operating Systems**.
 
 **Choices:**
 
-- Approve layout, vectorization, or copying for Benchmark Contracts, Pipelines, Caches, and Locality; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for layout, vectorization, or copying; the team can monitor Benchmark Contracts, Pipelines, Caches, and Locality after launch.
-- Bound the M03 scoped measurement before approval.
-- Approve the M03 shortcut for charlie now.
+- Measure logical cpus data for review case three; limit the change.
+- Measure syscall count data for review case three; limit the change.
+- Measure naming cache data for review case three; limit the change.
+- Measure throttled blocked data for review case three; limit the change.
 
-**Answer:** Bound the M03 scoped measurement before approval.
+**Answer:** Measure naming cache data for review case three; limit the change.
 
-**Explanation:** M03-Q017 enacts mistake 3 from Benchmark Contracts, Pipelines, Caches, and Locality; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M03-Q017 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects naming cache as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M03-Q018
 
@@ -217,16 +217,16 @@ This key covers all 46 questions for **Computer Systems and Operating Systems**.
 
 **Choices:**
 
-- Approve it selects favorable noise and hides variance for Benchmark Contracts, Pipelines, Caches, and Locality; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for it selects favorable noise and hides variance; the team can monitor Benchmark Contracts, Pipelines, Caches, and Locality after launch.
-- Approve the M03 shortcut for delta now.
-- Freeze the M03 scoped measurement and record the limiting assumption before approving the change.
+- Measure every fault data for review case four; limit the change. with margin
+- Measure rss allocated data for review case four; limit the change.
+- Measure forcing host data for review case four; limit the change.
+- Measure reporting only data for review case four; limit the change.
 
-**Answer:** Freeze the M03 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure reporting only data for review case four; limit the change.
 
-**Explanation:** M03-Q018 enacts mistake 4 from Benchmark Contracts, Pipelines, Caches, and Locality; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M03-Q018 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects reporting only as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M03-Q019
 
@@ -235,16 +235,16 @@ This key covers all 46 questions for **Computer Systems and Operating Systems**.
 
 **Choices:**
 
-- Preserve the M03 scoped measurement before approving the change.
-- Approve cache and branch behavior are not API contracts for Benchmark Contracts, Pipelines, Caches, and Locality; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for cache and branch behavior are not API contracts; the team can monitor Benchmark Contracts, Pipelines, Caches, and Locality after launch.
-- Approve the M03 shortcut for ember now.
+- Measure generalizing across data for review case five; limit the change.
+- Measure different initialization data for review case five; limit the change.
+- Measure oom exception data for review case five; limit the change.
+- Measure away correctness data for review case five; limit the change.
 
-**Answer:** Preserve the M03 scoped measurement before approving the change.
+**Answer:** Measure generalizing across data for review case five; limit the change.
 
-**Explanation:** M03-Q019 enacts mistake 5 from Benchmark Contracts, Pipelines, Caches, and Locality; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M03-Q019 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects generalizing across as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M03-Q020
 
@@ -253,16 +253,16 @@ This key covers all 46 questions for **Computer Systems and Operating Systems**.
 
 **Choices:**
 
-- Approve runnable threads still need CPU capacity for Processes, Scheduling, Context Switches, and System Cal; the local context makes that proposal familiar enough for review.
-- Model the M03 scoped measurement before approval.
-- Defer measurement until production for runnable threads still need CPU capacity; the team can monitor Processes, Scheduling, Context Switches, and System Cal after launch.
-- Approve the M03 shortcut for fable now.
+- Measure any slow data for review case six; limit the change. with margin
+- Measure equating threads data for review case six; limit the change.
+- Measure running deadlock data for review case six; limit the change.
+- Measure cache line data for review case six; limit the change.
 
-**Answer:** Model the M03 scoped measurement before approval.
+**Answer:** Measure equating threads data for review case six; limit the change.
 
-**Explanation:** M03-Q020 enacts mistake 1 from Processes, Scheduling, Context Switches, and System Calls; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M03-Q020 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects equating threads as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M03-Q021
 
@@ -271,16 +271,16 @@ This key covers all 46 questions for **Computer Systems and Operating Systems**.
 
 **Choices:**
 
-- Approve blocking is required for many correct waits for Processes, Scheduling, Context Switches, and System Cal; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for blocking is required for many correct waits; the team can monitor Processes, Scheduling, Context Switches, and System Cal after launch.
-- Account the M03 scoped measurement and record the limiting assumption before approving the change.
-- Approve the M03 shortcut for harbor now.
+- Measure asserting padded data for review case seven; limit the change.
+- Measure close durability data for review case seven; limit the change.
+- Measure every context data for review case seven; limit the change.
+- Measure directory durability data for review case seven; limit the change.
 
-**Answer:** Account the M03 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure every context data for review case seven; limit the change.
 
-**Explanation:** M03-Q021 enacts mistake 2 from Processes, Scheduling, Context Switches, and System Calls; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M03-Q021 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects every context as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M03-Q022
 
@@ -289,16 +289,16 @@ This key covers all 46 questions for **Computer Systems and Operating Systems**.
 
 **Choices:**
 
-- Approve treating logical CPUs as identical physical cores:: SMT and heterogeneous for Processes, Scheduling, Context Switches, and System Cal; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for treating logical CPUs as identical physical cores:: SMT and heterogeneous; the team can monitor Processes, Scheduling, Context Switches, and System Cal after launch.
-- Approve the M03 shortcut for indigo now.
-- Test the M03 scoped measurement before approving the change.
+- Measure dev null data for review case eight; limit the change.
+- Measure dropping caches data for review case eight; limit the change.
+- Measure reporting average data for review case eight; limit the change.
+- Measure logical cpus data for review case eight; limit the change.
 
-**Answer:** Test the M03 scoped measurement before approving the change.
+**Answer:** Measure logical cpus data for review case eight; limit the change.
 
-**Explanation:** M03-Q022 enacts mistake 3 from Processes, Scheduling, Context Switches, and System Calls; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M03-Q022 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects logical cpus as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M03-Q023
 
@@ -307,16 +307,16 @@ This key covers all 46 questions for **Computer Systems and Operating Systems**.
 
 **Choices:**
 
-- Scope the M03 scoped measurement before approval.
-- Approve request size and kernel work also change cost for Processes, Scheduling, Context Switches, and System Cal; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for request size and kernel work also change cost; the team can monitor Processes, Scheduling, Context Switches, and System Cal after launch.
-- Approve the M03 shortcut for juniper now.
+- Measure syscall count data for review case nine; limit the change.
+- Measure all time data for review case nine; limit the change.
+- Measure changing chunk data for review case nine; limit the change.
+- Measure host wide data for review case nine; limit the change.
 
-**Answer:** Scope the M03 scoped measurement before approval.
+**Answer:** Measure syscall count data for review case nine; limit the change.
 
-**Explanation:** M03-Q023 enacts mistake 4 from Processes, Scheduling, Context Switches, and System Calls; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M03-Q023 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects syscall count as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M03-Q024
 
@@ -325,23 +325,23 @@ This key covers all 46 questions for **Computer Systems and Operating Systems**.
 
 **Choices:**
 
-- Approve the remediation and owner differ for Processes, Scheduling, Context Switches, and System Cal; the local context makes that proposal familiar enough for review.
-- Measure the M03 scoped measurement and record the limiting assumption before approving the change.
-- Defer measurement until production for the remediation and owner differ; the team can monitor Processes, Scheduling, Context Switches, and System Cal after launch.
-- Approve the M03 shortcut for keystone now.
+- Measure cleanup abandoned data for review case ten; limit the change.
+- Measure throttled blocked data for review case ten; limit the change.
+- Measure latency losing data for review case ten; limit the change.
+- Measure reading free data for review case ten; limit the change.
 
-**Answer:** Measure the M03 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure throttled blocked data for review case ten; limit the change.
 
-**Explanation:** M03-Q024 enacts mistake 5 from Processes, Scheduling, Context Switches, and System Calls; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M03-Q024 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects throttled blocked as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M03-Q025
 
 **Type:** `calculation`
 **Difficulty:** `recall`
 
-**Answer:** M03 Cache-Line Scan case 1: Packed records touch 10,040 x 64 / 64 = 10,040 cache lines.
+**Answer:** Calculation for benchmark contracts, pipelines, caches, and locality, m03 Cache-Line Scan case 1: Packed records touch 10,040 x 64 / 64 = 10,040 cache lines.
 
 **Explanation:** M03-Q025 uses cache-line scan from Benchmark Contracts, Pipelines, Caches, and Locality and keeps units visible through the final numeric result.
 
@@ -352,7 +352,7 @@ This key covers all 46 questions for **Computer Systems and Operating Systems**.
 **Type:** `calculation`
 **Difficulty:** `application`
 
-**Answer:** M03 Page First Touches case 2: 256 MiB is 262144 KiB; 262144 / 4 = 65,536 pages.
+**Answer:** Calculation for processes, scheduling, context switches, and system calls, 256 MiB is 262144 KiB; 262144 / 4 = 65,536 pages.
 
 **Explanation:** M03-Q026 uses page first touches from Processes, Scheduling, Context Switches, and System Calls and keeps units visible through the final numeric result.
 
@@ -363,7 +363,7 @@ This key covers all 46 questions for **Computer Systems and Operating Systems**.
 **Type:** `calculation`
 **Difficulty:** `synthesis`
 
-**Answer:** M03 Cpu Quota case 3: Excess demand is 3.5 - 2.0 = 1.5 CPU-seconds during that second.
+**Answer:** Calculation for virtual memory, allocation, page faults, and rss, excess demand is 3.5 - 2.0 = 1.5 CPU-seconds during that second.
 
 **Explanation:** M03-Q027 uses CPU quota from Virtual Memory, Allocation, Page Faults, and RSS and keeps units visible through the final numeric result.
 
@@ -374,7 +374,7 @@ This key covers all 46 questions for **Computer Systems and Operating Systems**.
 **Type:** `calculation`
 **Difficulty:** `recall`
 
-**Answer:** M03 Cpu Quota case 4: Excess demand is 3.5 - 2.0 = 1.5 CPU-seconds during that second.
+**Answer:** Calculation for locks, contention, deadlock, and false sharing, excess demand is 3.5 - 2.0 = 1.5 CPU-seconds during that second.
 
 **Explanation:** M03-Q028 uses CPU quota from Locks, Contention, Deadlock, and False Sharing and keeps units visible through the final numeric result.
 
@@ -385,7 +385,7 @@ This key covers all 46 questions for **Computer Systems and Operating Systems**.
 **Type:** `calculation`
 **Difficulty:** `application`
 
-**Answer:** M03 Cache-Line Scan case 5: Packed records touch 10,080 x 64 / 64 = 10,080 cache lines.
+**Answer:** Calculation for files, page cache, writeback, and durable writes, m03 Cache-Line Scan case 5: Packed records touch 10,080 x 64 / 64 = 10,080 cache lines.
 
 **Explanation:** M03-Q029 uses cache-line scan from Files, Page Cache, Writeback, and Durable Writes and keeps units visible through the final numeric result.
 
@@ -396,184 +396,184 @@ This key covers all 46 questions for **Computer Systems and Operating Systems**.
 **Type:** `scenario_diagnosis`
 **Difficulty:** `recall`
 
-**Answer:** M03 diagnosis 1 identifies Benchmark Contracts, Pipelines, Caches, and Locality evidence scope. The proving fields are parameters.iterations and parameters.bytes_per_iteration; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for benchmark contracts, pipelines, caches, and locality, parameters.iterations and warmup separate the mechanism. parameters.iterations = 4096 while warmup = 1, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M03-Q030 comes from emitted trial fields rather than fixture identifiers; Benchmark Contracts, Pipelines, Caches, and Locality is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare parameters.iterations with warmup and connect that contrast to benchmark contracts, pipelines, caches, and locality.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Benchmark Contracts, Pipelines, Caches, and Locality, cites parameters.iterations and warmup, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M03-Q031
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `application`
 
-**Answer:** M03 diagnosis 2 identifies Processes, Scheduling, Context Switches, and System Calls evidence scope. The proving fields are parameters.iterations and parameters.bytes_per_iteration; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for processes, scheduling, context switches, and system calls, parameters.iterations and repetitions separate the mechanism. parameters.iterations = 4096 while repetitions = 3, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M03-Q031 comes from emitted trial fields rather than fixture identifiers; Processes, Scheduling, Context Switches, and System Calls is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare parameters.iterations with repetitions and connect that contrast to processes, scheduling, context switches, and system calls.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Processes, Scheduling, Context Switches, and System Calls, cites parameters.iterations and repetitions, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M03-Q032
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** M03 diagnosis 3 identifies Virtual Memory, Allocation, Page Faults, and RSS evidence scope. The proving fields are parameters.iterations and parameters.bytes_per_iteration; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for virtual memory, allocation, page faults, and rss, parameters.iterations and timeout_seconds separate the mechanism. parameters.iterations = 128 while timeout_seconds = 20, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M03-Q032 comes from emitted trial fields rather than fixture identifiers; Virtual Memory, Allocation, Page Faults, and RSS is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare parameters.iterations with timeout_seconds and connect that contrast to virtual memory, allocation, page faults, and rss.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Virtual Memory, Allocation, Page Faults, and RSS, cites parameters.iterations and timeout_seconds, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M03-Q033
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `recall`
 
-**Answer:** M03 diagnosis 4 identifies Locks, Contention, Deadlock, and False Sharing evidence scope. The proving fields are parameters.iterations and parameters.bytes_per_iteration; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for locks, contention, deadlock, and false sharing, parameters.bytes_per_iteration and warmup separate the mechanism. parameters.bytes_per_iteration = 1.04858e+06 while warmup = 0, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M03-Q033 comes from emitted trial fields rather than fixture identifiers; Locks, Contention, Deadlock, and False Sharing is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare parameters.bytes_per_iteration with warmup and connect that contrast to locks, contention, deadlock, and false sharing.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Locks, Contention, Deadlock, and False Sharing, cites parameters.bytes_per_iteration and warmup, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M03-Q034
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `application`
 
-**Answer:** M03 diagnosis 5 identifies Files, Page Cache, Writeback, and Durable Writes evidence scope. The proving fields are parameters.iterations and parameters.bytes_per_iteration; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for files, page cache, writeback, and durable writes, parameters.bytes_per_iteration and repetitions separate the mechanism. parameters.bytes_per_iteration = 1.04858e+06 while repetitions = 3, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M03-Q034 comes from emitted trial fields rather than fixture identifiers; Files, Page Cache, Writeback, and Durable Writes is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare parameters.bytes_per_iteration with repetitions and connect that contrast to files, page cache, writeback, and durable writes.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Files, Page Cache, Writeback, and Durable Writes, cites parameters.bytes_per_iteration and repetitions, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M03-Q035
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** M03 diagnosis 6 identifies Device Queues and I/O Latency evidence scope. The proving fields are parameters.iterations and parameters.bytes_per_iteration; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for device queues and i/o latency, parameters.bytes_per_iteration and timeout_seconds separate the mechanism. parameters.bytes_per_iteration = 1.04858e+06 while timeout_seconds = 20, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M03-Q035 comes from emitted trial fields rather than fixture identifiers; Device Queues and I/O Latency is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare parameters.bytes_per_iteration with timeout_seconds and connect that contrast to device queues and i/o latency.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Device Queues and I/O Latency, cites parameters.bytes_per_iteration and timeout_seconds, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M03-Q036
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `recall`
 
-**Answer:** M03 diagnosis 7 identifies Containers, Quotas, Throttling, and Memory Limits evidence scope. The proving fields are parameters.elements and parameters.stride; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for containers, quotas, throttling, and memory limits, warmup and timeout_seconds separate the mechanism. warmup = 1 while timeout_seconds = 10, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M03-Q036 comes from emitted trial fields rather than fixture identifiers; Containers, Quotas, Throttling, and Memory Limits is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare warmup with timeout_seconds and connect that contrast to containers, quotas, throttling, and memory limits.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Containers, Quotas, Throttling, and Memory Limits, cites warmup and timeout_seconds, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M03-Q037
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `application`
 
-**Answer:** M03 diagnosis 8 identifies Causal Diagnosis and Production Decisions evidence scope. The proving fields are parameters.elements and parameters.stride; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for causal diagnosis and production decisions, repetitions and timeout_seconds separate the mechanism. repetitions = 3 while timeout_seconds = 10, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M03-Q037 comes from emitted trial fields rather than fixture identifiers; Causal Diagnosis and Production Decisions is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare repetitions with timeout_seconds and connect that contrast to causal diagnosis and production decisions.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Causal Diagnosis and Production Decisions, cites repetitions and timeout_seconds, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M03-Q038
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** M03 diagnosis 9 identifies Benchmark Contracts, Pipelines, Caches, and Locality evidence scope. The proving fields are parameters.workers and parameters.iterations; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for benchmark contracts, pipelines, caches, and locality, parameters.workers and repetitions separate the mechanism. parameters.workers = 1 while repetitions = 3, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M03-Q038 comes from emitted trial fields rather than fixture identifiers; Benchmark Contracts, Pipelines, Caches, and Locality is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare parameters.workers with repetitions and connect that contrast to benchmark contracts, pipelines, caches, and locality.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Benchmark Contracts, Pipelines, Caches, and Locality, cites parameters.workers and repetitions, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M03-Q039
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `recall`
 
-**Answer:** M03 diagnosis 10 identifies Processes, Scheduling, Context Switches, and System Calls evidence scope. The proving fields are parameters.workers and parameters.iterations; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for processes, scheduling, context switches, and system calls, parameters.workers and warmup separate the mechanism. parameters.workers = 16 while warmup = 1, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M03-Q039 comes from emitted trial fields rather than fixture identifiers; Processes, Scheduling, Context Switches, and System Calls is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare parameters.workers with warmup and connect that contrast to processes, scheduling, context switches, and system calls.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Processes, Scheduling, Context Switches, and System Calls, cites parameters.workers and warmup, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M03-Q040
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `application`
 
-**Answer:** M03 diagnosis 11 identifies Virtual Memory, Allocation, Page Faults, and RSS evidence scope. The proving fields are parameters.workers and parameters.iterations; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for virtual memory, allocation, page faults, and rss, parameters.workers and repetitions separate the mechanism. parameters.workers = 8 while repetitions = 3, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M03-Q040 comes from emitted trial fields rather than fixture identifiers; Virtual Memory, Allocation, Page Faults, and RSS is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare parameters.workers with repetitions and connect that contrast to virtual memory, allocation, page faults, and rss.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Virtual Memory, Allocation, Page Faults, and RSS, cites parameters.workers and repetitions, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M03-Q041
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** M03 diagnosis 12 identifies Locks, Contention, Deadlock, and False Sharing evidence scope. The proving fields are parameters.workers and parameters.iterations; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for locks, contention, deadlock, and false sharing, parameters.iterations and repetitions separate the mechanism. parameters.iterations = 500000 while repetitions = 3, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M03-Q041 comes from emitted trial fields rather than fixture identifiers; Locks, Contention, Deadlock, and False Sharing is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare parameters.iterations with repetitions and connect that contrast to locks, contention, deadlock, and false sharing.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Locks, Contention, Deadlock, and False Sharing, cites parameters.iterations and repetitions, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M03-Q042
 
 **Type:** `design_judgment`
 **Difficulty:** `recall`
 
-**Answer:** For M03 decision 1, recommend against. The protected bound is 189 x 0.72 = 136.1/s, and the planned 166.3/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 166.3/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 30.2/s of lower-priority work.
+**Answer:** Approve Freeze equivalent work at 124.1/s. The deciding number is 189 x 0.72 = 136.1/s, leaving 12/s before the reserve is consumed. Withdraw approval if a drill, trace, or workload sample shows freeze equivalent work demand above 136.1/s or proves the shed point cannot protect lower-priority work.
 
-**Explanation:** M03-Q042 turns on the forcing number from EX-01, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to freeze equivalent work demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 136.1/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M03-Q043
 
 **Type:** `design_judgment`
 **Difficulty:** `application`
 
-**Answer:** For M03 decision 2, recommend against. The protected bound is 206 x 0.72 = 148.3/s, and the planned 181.3/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 181.3/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 33.0/s of lower-priority work.
+**Answer:** Decline Locality and branch model at 159.7/s. The deciding number is 206 x 0.72 = 148.3/s, so planned demand exceeds the usable region by 11.4/s. Approve later if repeated measurements lift usable capacity above 159.7/s or a named policy removes at least 11.4/s of deferrable work before saturation.
 
-**Explanation:** M03-Q043 turns on the forcing number from EX-02, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to locality and branch model demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 148.3/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M03-Q044
 
 **Type:** `design_judgment`
 **Difficulty:** `synthesis`
 
-**Answer:** For M03 decision 3, recommend against. The protected bound is 223 x 0.72 = 160.6/s, and the planned 196.2/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 196.2/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 35.6/s of lower-priority work.
+**Answer:** Approve conditionally for Scheduler state table. The deciding number is 223 x 0.72 = 160.6/s, and 155.6/s fits only while the fallback remains enforceable. Keep the condition until recovery traffic, priority demand, or fallback tests show less than 5/s of usable margin.
 
-**Explanation:** M03-Q044 turns on the forcing number from EX-03, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to scheduler state table demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 160.6/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M03-Q045
 
 **Type:** `design_judgment`
 **Difficulty:** `recall`
 
-**Answer:** For M03 decision 4, recommend against. The protected bound is 240 x 0.72 = 172.8/s, and the planned 211.2/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 211.2/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 38.4/s of lower-priority work.
+**Answer:** Approve Syscall batching at 155.7/s. The deciding number is 240 x 0.72 = 172.8/s, leaving 17.1/s before the reserve is consumed. Require redesign if a drill, trace, or workload sample shows syscall batching demand above 172.8/s or proves the shed point cannot protect lower-priority work.
 
-**Explanation:** M03-Q045 turns on the forcing number from EX-04, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to syscall batching demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 172.8/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M03-Q046
 
 **Type:** `design_judgment`
 **Difficulty:** `application`
 
-**Answer:** For M03 decision 5, recommend against. The protected bound is 257 x 0.72 = 185.0/s, and the planned 226.2/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 226.2/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 41.2/s of lower-priority work.
+**Answer:** Decline First-touch estimate at 200.6/s. The deciding number is 257 x 0.72 = 185/s, so planned demand exceeds the usable region by 15.6/s. Lift the decline if repeated measurements lift usable capacity above 200.6/s or a named policy removes at least 15.6/s of deferrable work before saturation.
 
-**Explanation:** M03-Q046 turns on the forcing number from EX-05, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to first-touch estimate demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 185/s, compares it with planned demand, and names a scenario-specific reversal condition.

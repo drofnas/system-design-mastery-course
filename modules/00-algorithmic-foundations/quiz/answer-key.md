@@ -163,16 +163,16 @@ This key covers all 37 questions for **Algorithmic Foundations**. Use it after a
 
 **Choices:**
 
-- Scope the M00 scoped measurement and record the limiting assumption before approving the change.
-- Approve ignoring constants for hot paths for Asymptotic Analysis and Its Limits; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for ignoring constants for hot paths; the team can monitor Asymptotic Analysis and Its Limits after launch.
-- Approve the M00 shortcut for alpha now.
+- Measure constants hot data for review case one; limit the change.
+- Measure worst case data for review case one; limit the change.
+- Measure amortized cost data for review case one; limit the change.
+- Measure algorithms checking data for review case one; limit the change.
 
-**Answer:** Scope the M00 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure constants hot data for review case one; limit the change.
 
-**Explanation:** M00-Q015 enacts mistake 1 from Asymptotic Analysis and Its Limits; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M00-Q015 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects constants hot as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M00-Q016
 
@@ -181,16 +181,16 @@ This key covers all 37 questions for **Algorithmic Foundations**. Use it after a
 
 **Choices:**
 
-- Approve using worst-case notation without naming the adversary or input condition for Asymptotic Analysis and Its Limits; the local context makes that proposal familiar enough for review.
-- Measure the M00 scoped measurement before approving the change.
-- Defer measurement until production for using worst-case notation without naming the adversary or input condition; the team can monitor Asymptotic Analysis and Its Limits after launch.
-- Approve the M00 shortcut for bravo now.
+- Measure amortized means data for review case two; limit the change.
+- Measure worst case data for review case two; limit the change.
+- Measure linked list data for review case two; limit the change.
+- Measure contiguous growth data for review case two; limit the change.
 
-**Answer:** Measure the M00 scoped measurement before approving the change.
+**Answer:** Measure worst case data for review case two; limit the change.
 
-**Explanation:** M00-Q016 enacts mistake 2 from Asymptotic Analysis and Its Limits; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M00-Q016 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects worst case as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M00-Q017
 
@@ -199,16 +199,16 @@ This key covers all 37 questions for **Algorithmic Foundations**. Use it after a
 
 **Choices:**
 
-- Approve calling amortized cost a latency guarantee for Asymptotic Analysis and Its Limits; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for calling amortized cost a latency guarantee; the team can monitor Asymptotic Analysis and Its Limits after launch.
-- Bound the M00 scoped measurement before approval.
-- Approve the M00 shortcut for charlie now.
+- Measure random input data for review case three; limit the change.
+- Measure resize spikes data for review case three; limit the change.
+- Measure amortized cost data for review case three; limit the change.
+- Measure only hash data for review case three; limit the change. with margin
 
-**Answer:** Bound the M00 scoped measurement before approval.
+**Answer:** Measure amortized cost data for review case three; limit the change.
 
-**Explanation:** M00-Q017 enacts mistake 3 from Asymptotic Analysis and Its Limits; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M00-Q017 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects amortized cost as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M00-Q018
 
@@ -217,16 +217,16 @@ This key covers all 37 questions for **Algorithmic Foundations**. Use it after a
 
 **Choices:**
 
-- Approve comparing algorithms without checking memory layout for Asymptotic Analysis and Its Limits; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for comparing algorithms without checking memory layout; the team can monitor Asymptotic Analysis and Its Limits after launch.
-- Approve the M00 shortcut for delta now.
-- Freeze the M00 scoped measurement and record the limiting assumption before approving the change.
+- Measure hashing range data for review case four; limit the change.
+- Measure balance maintenance data for review case four; limit the change.
+- Measure storage index data for review case four; limit the change.
+- Measure algorithms checking data for review case four; limit the change.
 
-**Answer:** Freeze the M00 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure algorithms checking data for review case four; limit the change.
 
-**Explanation:** M00-Q018 enacts mistake 4 from Asymptotic Analysis and Its Limits; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M00-Q018 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects algorithms checking as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M00-Q019
 
@@ -235,16 +235,16 @@ This key covers all 37 questions for **Algorithmic Foundations**. Use it after a
 
 **Choices:**
 
-- Preserve the M00 scoped measurement before approving the change.
-- Approve saying amortized O(1) means every append is cheap for Arrays, Dynamic Arrays, and Locality; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for saying amortized O(1) means every append is cheap; the team can monitor Arrays, Dynamic Arrays, and Locality after launch.
-- Approve the M00 shortcut for ember now.
+- Measure amortized means data for review case five; limit the change.
+- Measure priority boolean data for review case five; limit the change.
+- Measure starvation heaps data for review case five; limit the change.
+- Measure priority queues data for review case five; limit the change.
 
-**Answer:** Preserve the M00 scoped measurement before approving the change.
+**Answer:** Measure amortized means data for review case five; limit the change.
 
-**Explanation:** M00-Q019 enacts mistake 1 from Arrays, Dynamic Arrays, and Locality; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M00-Q019 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects amortized means as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M00-Q020
 
@@ -253,16 +253,16 @@ This key covers all 37 questions for **Algorithmic Foundations**. Use it after a
 
 **Choices:**
 
-- Approve choosing a linked list for insertion while ignoring how the insertion point is f for Arrays, Dynamic Arrays, and Locality; the local context makes that proposal familiar enough for review.
-- Model the M00 scoped measurement before approval.
-- Defer measurement until production for choosing a linked list for insertion while ignoring how the insertion point is f; the team can monitor Arrays, Dynamic Arrays, and Locality after launch.
-- Approve the M00 shortcut for fable now.
+- Measure matrix sparse data for review case six; limit the change.
+- Measure linked list data for review case six; limit the change.
+- Measure cycles dependency data for review case six; limit the change.
+- Measure first found data for review case six; limit the change.
 
-**Answer:** Model the M00 scoped measurement before approval.
+**Answer:** Measure linked list data for review case six; limit the change.
 
-**Explanation:** M00-Q020 enacts mistake 2 from Arrays, Dynamic Arrays, and Locality; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M00-Q020 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects linked list as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M00-Q021
 
@@ -271,16 +271,16 @@ This key covers all 37 questions for **Algorithmic Foundations**. Use it after a
 
 **Choices:**
 
-- Approve forgetting that contiguous growth can require copying and memory headroom for Arrays, Dynamic Arrays, and Locality; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for forgetting that contiguous growth can require copying and memory headroom; the team can monitor Arrays, Dynamic Arrays, and Locality after launch.
-- Account the M00 scoped measurement and record the limiting assumption before approving the change.
-- Approve the M00 shortcut for harbor now.
+- Measure sorting top data for review case seven; limit the change.
+- Measure memory temporary data for review case seven; limit the change.
+- Measure contiguous growth data for review case seven; limit the change.
+- Measure exponential search data for review case seven; limit the change.
 
-**Answer:** Account the M00 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure contiguous growth data for review case seven; limit the change.
 
-**Explanation:** M00-Q021 enacts mistake 3 from Arrays, Dynamic Arrays, and Locality; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M00-Q021 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects contiguous growth as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M00-Q022
 
@@ -289,23 +289,23 @@ This key covers all 37 questions for **Algorithmic Foundations**. Use it after a
 
 **Choices:**
 
-- Approve assuming random input when keys are user-controlled for Hash Tables; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for assuming random input when keys are user-controlled; the team can monitor Hash Tables after launch.
-- Approve the M00 shortcut for indigo now.
-- Test the M00 scoped measurement before approving the change.
+- Measure constraints code data for review case eight; limit the change.
+- Measure score preserving data for review case eight; limit the change.
+- Measure workload growth data for review case eight; limit the change.
+- Measure random input data for review case eight; limit the change.
 
-**Answer:** Test the M00 scoped measurement before approving the change.
+**Answer:** Measure random input data for review case eight; limit the change.
 
-**Explanation:** M00-Q022 enacts mistake 1 from Hash Tables; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M00-Q022 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects random input as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M00-Q023
 
 **Type:** `calculation`
 **Difficulty:** `application`
 
-**Answer:** M00 Amortized Resize Copies case 1: Resizes copy 1 + 2 + 4 + ... below 18, totaling 31 copied items; final capacity is 32 slots.
+**Answer:** Calculation for asymptotic analysis and its limits, resizes copy 1 + 2 + 4 + ... below 18, totaling 31 copied items; final capacity is 32 slots.
 
 **Explanation:** M00-Q023 uses amortized resize copies from Asymptotic Analysis and Its Limits and keeps units visible through the final numeric result.
 
@@ -316,7 +316,7 @@ This key covers all 37 questions for **Algorithmic Foundations**. Use it after a
 **Type:** `calculation`
 **Difficulty:** `synthesis`
 
-**Answer:** M00 Open Addressing Probe Factor case 2: At alpha 0.50, 1/(1-0.50) = 2. At alpha 0.90, 1/(1-0.90) = 10, so the high-load table is about 5x worse by this approximation.
+**Answer:** Calculation for arrays, dynamic arrays, and locality, at alpha 0.50, 1/(1-0.50) = 2. At alpha 0.90, 1/(1-0.90) = 10, so the high-load table is about 5x worse by this approximation.
 
 **Explanation:** M00-Q024 uses open addressing probe factor from Arrays, Dynamic Arrays, and Locality and keeps units visible through the final numeric result.
 
@@ -327,7 +327,7 @@ This key covers all 37 questions for **Algorithmic Foundations**. Use it after a
 **Type:** `calculation`
 **Difficulty:** `recall`
 
-**Answer:** M00 B-Tree Fanout Height case 3: The B-tree needs about 4 page-level steps versus about 24 binary comparisons, a 20-level reduction in path depth for page-oriented access.
+**Answer:** Calculation for hash tables, m00 B-Tree Fanout Height case 3: The B-tree needs about 4 page-level steps versus about 24 binary comparisons, a 20-level reduction in path depth for page-oriented access.
 
 **Explanation:** M00-Q025 uses B-tree fanout height from Hash Tables and keeps units visible through the final numeric result.
 
@@ -338,7 +338,7 @@ This key covers all 37 questions for **Algorithmic Foundations**. Use it after a
 **Type:** `calculation`
 **Difficulty:** `application`
 
-**Answer:** M00 Heap Height case 4: Heap height is floor(log2(1536)) = 10, so a sift traverses at most 10 levels.
+**Answer:** Calculation for trees and balanced search, heap height is floor(log2(1536)) = 10, so a sift traverses at most 10 levels.
 
 **Explanation:** M00-Q026 uses heap height from Trees and Balanced Search and keeps units visible through the final numeric result.
 
@@ -349,7 +349,7 @@ This key covers all 37 questions for **Algorithmic Foundations**. Use it after a
 **Type:** `calculation`
 **Difficulty:** `synthesis`
 
-**Answer:** M00 Graph Representation Size case 5: The adjacency list stores about 2 x 2550 = 5100 endpoint entries, while the matrix stores 850 x 850 = 722500 cells.
+**Answer:** Calculation for heaps and priority queues, the adjacency list stores about 2 x 2550 = 5100 endpoint entries, while the matrix stores 850 x 850 = 722500 cells.
 
 **Explanation:** M00-Q027 uses graph representation size from Heaps and Priority Queues and keeps units visible through the final numeric result.
 
@@ -360,7 +360,7 @@ This key covers all 37 questions for **Algorithmic Foundations**. Use it after a
 **Type:** `calculation`
 **Difficulty:** `recall`
 
-**Answer:** M00 Graph Representation Size case 6: The adjacency list stores about 2 x 2580 = 5160 endpoint entries, while the matrix stores 860 x 860 = 739600 cells.
+**Answer:** Calculation for graphs and traversal, the adjacency list stores about 2 x 2580 = 5160 endpoint entries, while the matrix stores 860 x 860 = 739600 cells.
 
 **Explanation:** M00-Q028 uses graph representation size from Graphs and Traversal and keeps units visible through the final numeric result.
 
@@ -371,7 +371,7 @@ This key covers all 37 questions for **Algorithmic Foundations**. Use it after a
 **Type:** `calculation`
 **Difficulty:** `application`
 
-**Answer:** M00 Candidate Count case 7: The naive count is 12 x 1070 = 12840 comparisons before any pruning changes the shape of the search.
+**Answer:** Calculation for sorting and selection, the naive count is 12 x 1070 = 12840 comparisons before any pruning changes the shape of the search.
 
 **Explanation:** M00-Q029 uses candidate count from Sorting and Selection and keeps units visible through the final numeric result.
 
@@ -382,7 +382,7 @@ This key covers all 37 questions for **Algorithmic Foundations**. Use it after a
 **Type:** `calculation`
 **Difficulty:** `synthesis`
 
-**Answer:** M00 Amortized Resize Copies case 8: Resizes copy 1 + 2 + 4 + ... below 25, totaling 31 copied items; final capacity is 32 slots.
+**Answer:** Calculation for tractability and design decisions, resizes copy 1 + 2 + 4 + ... below 25, totaling 31 copied items; final capacity is 32 slots.
 
 **Explanation:** M00-Q030 uses amortized resize copies from Tractability and Design Decisions and keeps units visible through the final numeric result.
 
@@ -393,74 +393,74 @@ This key covers all 37 questions for **Algorithmic Foundations**. Use it after a
 **Type:** `design_judgment`
 **Difficulty:** `application`
 
-**Answer:** For M00 decision 1, recommend against. The protected bound is 180 x 0.72 = 129.6/s, and the planned 158.4/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 158.4/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 28.8/s of lower-priority work.
+**Answer:** Approve Growth Classes at 117.6/s. The deciding number is 180 x 0.72 = 129.6/s, leaving 12/s before the reserve is consumed. Withdraw approval if a drill, trace, or workload sample shows growth classes demand above 129.6/s or proves the shed point cannot protect lower-priority work.
 
-**Explanation:** M00-Q031 turns on the forcing number from EX-01, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to growth classes demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 129.6/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M00-Q032
 
 **Type:** `design_judgment`
 **Difficulty:** `synthesis`
 
-**Answer:** For M00 decision 2, recommend against. The protected bound is 197 x 0.72 = 141.8/s, and the planned 173.4/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 173.4/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 31.6/s of lower-priority work.
+**Answer:** Decline Amortized Resize at 153.2/s. The deciding number is 197 x 0.72 = 141.8/s, so planned demand exceeds the usable region by 11.4/s. Approve later if repeated measurements lift usable capacity above 153.2/s or a named policy removes at least 11.4/s of deferrable work before saturation.
 
-**Explanation:** M00-Q032 turns on the forcing number from EX-02, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to amortized resize demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 141.8/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M00-Q033
 
 **Type:** `design_judgment`
 **Difficulty:** `recall`
 
-**Answer:** For M00 decision 3, recommend against. The protected bound is 214 x 0.72 = 154.1/s, and the planned 188.3/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 188.3/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 34.2/s of lower-priority work.
+**Answer:** Approve conditionally for Operation Mix. The deciding number is 214 x 0.72 = 154.1/s, and 149.1/s fits only while the fallback remains enforceable. Keep the condition until recovery traffic, priority demand, or fallback tests show less than 5/s of usable margin.
 
-**Explanation:** M00-Q033 turns on the forcing number from EX-03, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to operation mix demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 154.1/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M00-Q034
 
 **Type:** `design_judgment`
 **Difficulty:** `application`
 
-**Answer:** For M00 decision 4, recommend against. The protected bound is 231 x 0.72 = 166.3/s, and the planned 203.3/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 203.3/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 37.0/s of lower-priority work.
+**Answer:** Approve Locality at 149.2/s. The deciding number is 231 x 0.72 = 166.3/s, leaving 17.1/s before the reserve is consumed. Require redesign if a drill, trace, or workload sample shows locality demand above 166.3/s or proves the shed point cannot protect lower-priority work.
 
-**Explanation:** M00-Q034 turns on the forcing number from EX-04, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to locality demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 166.3/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M00-Q035
 
 **Type:** `design_judgment`
 **Difficulty:** `synthesis`
 
-**Answer:** For M00 decision 5, recommend against. The protected bound is 248 x 0.72 = 178.6/s, and the planned 218.2/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 218.2/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 39.6/s of lower-priority work.
+**Answer:** Decline Graph Representation at 194.2/s. The deciding number is 248 x 0.72 = 178.6/s, so planned demand exceeds the usable region by 15.6/s. Lift the decline if repeated measurements lift usable capacity above 194.2/s or a named policy removes at least 15.6/s of deferrable work before saturation.
 
-**Explanation:** M00-Q035 turns on the forcing number from EX-05, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to graph representation demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 178.6/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M00-Q036
 
 **Type:** `design_judgment`
 **Difficulty:** `recall`
 
-**Answer:** For M00 decision 6, recommend against. The protected bound is 265 x 0.72 = 190.8/s, and the planned 233.2/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 233.2/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 42.4/s of lower-priority work.
+**Answer:** Approve Priority Semantics at 170.3/s. The deciding number is 265 x 0.72 = 190.8/s, leaving 20.5/s before the reserve is consumed. Reverse the call if a drill, trace, or workload sample shows priority semantics demand above 190.8/s or proves the shed point cannot protect lower-priority work.
 
-**Explanation:** M00-Q036 turns on the forcing number from EX-06, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to priority semantics demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 190.8/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M00-Q037
 
 **Type:** `design_judgment`
 **Difficulty:** `application`
 
-**Answer:** For M00 decision 7, recommend against. The protected bound is 282 x 0.72 = 203.0/s, and the planned 248.2/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 248.2/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 45.2/s of lower-priority work.
+**Answer:** Decline Sorting Boundary at 221.4/s. The deciding number is 282 x 0.72 = 203/s, so planned demand exceeds the usable region by 18.4/s. Accept the proposal when repeated measurements lift usable capacity above 221.4/s or a named policy removes at least 18.4/s of deferrable work before saturation.
 
-**Explanation:** M00-Q037 turns on the forcing number from EX-07, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to sorting boundary demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 203/s, compares it with planned demand, and names a scenario-specific reversal condition.

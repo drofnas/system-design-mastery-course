@@ -163,16 +163,16 @@ This key covers all 43 questions for **Browser, Frontend, CDN, and Edge Architec
 
 **Choices:**
 
-- Scope the M16 scoped measurement and record the limiting assumption before approving the change.
-- Approve the platform contract uses tasks and for Browser Work and the Rendering Pipeline; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for the platform contract uses tasks and; the team can monitor Browser Work and the Rendering Pipeline after launch.
-- Approve the M16 shortcut for alpha now.
+- Measure every callback data for review case one; limit the change.
+- Measure promises free data for review case one; limit the change. with margin
+- Measure reading flame data for review case one; limit the change.
+- Measure forcing layout data for review case one; limit the change.
 
-**Answer:** Scope the M16 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure every callback data for review case one; limit the change.
 
-**Explanation:** M16-Q015 enacts mistake 1 from Browser Work and the Rendering Pipeline; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M16-Q015 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects every callback as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M16-Q016
 
@@ -181,16 +181,16 @@ This key covers all 43 questions for **Browser, Frontend, CDN, and Edge Architec
 
 **Choices:**
 
-- Approve promise continuations are for Browser Work and the Rendering Pipeline; the local context makes that proposal familiar enough for review.
-- Measure the M16 scoped measurement before approving the change.
-- Defer measurement until production for promise continuations are; the team can monitor Browser Work and the Rendering Pipeline after launch.
-- Approve the M16 shortcut for bravo now.
+- Measure average frame data for review case two; limit the change.
+- Measure promises free data for review case two; limit the change.
+- Measure lighthouse score data for review case two; limit the change.
+- Measure mixing cold data for review case two; limit the change.
 
-**Answer:** Measure the M16 scoped measurement before approving the change.
+**Answer:** Measure promises free data for review case two; limit the change.
 
-**Explanation:** M16-Q016 enacts mistake 2 from Browser Work and the Rendering Pipeline; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M16-Q016 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects promises free as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M16-Q017
 
@@ -199,16 +199,16 @@ This key covers all 43 questions for **Browser, Frontend, CDN, and Edge Architec
 
 **Choices:**
 
-- Approve a long stack is evidence of time spent for Browser Work and the Rendering Pipeline; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for a long stack is evidence of time spent; the team can monitor Browser Work and the Rendering Pipeline after launch.
-- Bound the M16 scoped measurement before approval.
-- Approve the M16 shortcut for charlie now.
+- Measure reporting five data for review case three; limit the change.
+- Measure milestone users data for review case three; limit the change.
+- Measure reading flame data for review case three; limit the change.
+- Measure telemetry overhead data for review case three; limit the change.
 
-**Answer:** Bound the M16 scoped measurement before approval.
+**Answer:** Measure reading flame data for review case three; limit the change.
 
-**Explanation:** M16-Q017 enacts mistake 3 from Browser Work and the Rendering Pipeline; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M16-Q017 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects reading flame as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M16-Q018
 
@@ -217,16 +217,16 @@ This key covers all 43 questions for **Browser, Frontend, CDN, and Edge Architec
 
 **Choices:**
 
-- Approve alternating geometry reads and DOM for Browser Work and the Rendering Pipeline; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for alternating geometry reads and DOM; the team can monitor Browser Work and the Rendering Pipeline after launch.
-- Approve the M16 shortcut for delta now.
-- Freeze the M16 scoped measurement and record the limiting assumption before approving the change.
+- Measure declaring whole data for review case four; limit the change.
+- Measure streaming knowing data for review case four; limit the change.
+- Measure suppressing hydration data for review case four; limit the change.
+- Measure forcing layout data for review case four; limit the change.
 
-**Answer:** Freeze the M16 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure forcing layout data for review case four; limit the change.
 
-**Explanation:** M16-Q018 enacts mistake 4 from Browser Work and the Rendering Pipeline; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M16-Q018 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects forcing layout as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M16-Q019
 
@@ -235,16 +235,16 @@ This key covers all 43 questions for **Browser, Frontend, CDN, and Edge Architec
 
 **Choices:**
 
-- Preserve the M16 scoped measurement before approving the change.
-- Approve one blocked critical interaction can be for Browser Work and the Rendering Pipeline; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for one blocked critical interaction can be; the team can monitor Browser Work and the Rendering Pipeline after launch.
-- Approve the M16 shortcut for ember now.
+- Measure average frame data for review case five; limit the change.
+- Measure hydrating whole data for review case five; limit the change.
+- Measure equating server data for review case five; limit the change.
+- Measure keying only data for review case five; limit the change.
 
-**Answer:** Preserve the M16 scoped measurement before approving the change.
+**Answer:** Measure average frame data for review case five; limit the change.
 
-**Explanation:** M16-Q019 enacts mistake 5 from Browser Work and the Rendering Pipeline; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M16-Q019 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects average frame as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M16-Q020
 
@@ -253,16 +253,16 @@ This key covers all 43 questions for **Browser, Frontend, CDN, and Edge Architec
 
 **Choices:**
 
-- Approve a composite score hides the route for Performance Budgets and Evidence; the local context makes that proposal familiar enough for review.
-- Model the M16 scoped measurement before approval.
-- Defer measurement until production for a composite score hides the route; the team can monitor Performance Budgets and Evidence after launch.
-- Approve the M16 shortcut for fable now.
+- Measure ttl deletion data for review case six; limit the change.
+- Measure lighthouse score data for review case six; limit the change.
+- Measure caching authorization data for review case six; limit the change.
+- Measure purge instantaneous data for review case six; limit the change.
 
-**Answer:** Model the M16 scoped measurement before approval.
+**Answer:** Measure lighthouse score data for review case six; limit the change.
 
-**Explanation:** M16-Q020 enacts mistake 1 from Performance Budgets and Evidence; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M16-Q020 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects lighthouse score as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M16-Q021
 
@@ -271,16 +271,16 @@ This key covers all 43 questions for **Browser, Frontend, CDN, and Edge Architec
 
 **Choices:**
 
-- Approve they answer different questions for Performance Budgets and Evidence; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for they answer different questions; the team can monitor Performance Budgets and Evidence after launch.
-- Account the M16 scoped measurement and record the limiting assumption before approving the change.
-- Approve the M16 shortcut for harbor now.
+- Measure serving stale data for review case seven; limit the change.
+- Measure aria recreate data for review case seven; limit the change.
+- Measure mixing cold data for review case seven; limit the change.
+- Measure moving focus data for review case seven; limit the change.
 
-**Answer:** Account the M16 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure mixing cold data for review case seven; limit the change.
 
-**Explanation:** M16-Q021 enacts mistake 2 from Performance Budgets and Evidence; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M16-Q021 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects mixing cold as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M16-Q022
 
@@ -289,16 +289,16 @@ This key covers all 43 questions for **Browser, Frontend, CDN, and Edge Architec
 
 **Choices:**
 
-- Approve a tiny controlled sample is not a for Performance Budgets and Evidence; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for a tiny controlled sample is not a; the team can monitor Performance Budgets and Evidence after launch.
-- Approve the M16 shortcut for indigo now.
-- Test the M16 scoped measurement before approving the change.
+- Measure loading skeletons data for review case eight; limit the change.
+- Measure only happy data for review case eight; limit the change.
+- Measure accepting automated data for review case eight; limit the change.
+- Measure reporting five data for review case eight; limit the change.
 
-**Answer:** Test the M16 scoped measurement before approving the change.
+**Answer:** Measure reporting five data for review case eight; limit the change.
 
-**Explanation:** M16-Q022 enacts mistake 3 from Performance Budgets and Evidence; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M16-Q022 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects reporting five as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M16-Q023
 
@@ -307,16 +307,16 @@ This key covers all 43 questions for **Browser, Frontend, CDN, and Edge Architec
 
 **Choices:**
 
-- Scope the M16 scoped measurement before approval.
-- Approve optimizing a milestone that users cannot use.: Early pixels can still be for Performance Budgets and Evidence; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for optimizing a milestone that users cannot use.: Early pixels can still be; the team can monitor Performance Budgets and Evidence after launch.
-- Approve the M16 shortcut for juniper now.
+- Measure milestone users data for review case nine; limit the change.
+- Measure high heap data for review case nine; limit the change. with margin
+- Measure measuring only data for review case nine; limit the change.
+- Measure loading third data for review case nine; limit the change.
 
-**Answer:** Scope the M16 scoped measurement before approval.
+**Answer:** Measure milestone users data for review case nine; limit the change.
 
-**Explanation:** M16-Q023 enacts mistake 4 from Performance Budgets and Evidence; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M16-Q023 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects milestone users as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M16-Q024
 
@@ -325,23 +325,23 @@ This key covers all 43 questions for **Browser, Frontend, CDN, and Edge Architec
 
 **Choices:**
 
-- Approve ignoring telemetry overhead and missingness.: Collection can change work for Performance Budgets and Evidence; the local context makes that proposal familiar enough for review.
-- Measure the M16 scoped measurement and record the limiting assumption before approving the change.
-- Defer measurement until production for ignoring telemetry overhead and missingness.: Collection can change work; the team can monitor Performance Budgets and Evidence after launch.
-- Approve the M16 shortcut for keystone now.
+- Measure putting sensitive data for review case ten; limit the change.
+- Measure telemetry overhead data for review case ten; limit the change.
+- Measure trusting browser data for review case ten; limit the change.
+- Measure model timing data for review case ten; limit the change. with margin
 
-**Answer:** Measure the M16 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure telemetry overhead data for review case ten; limit the change.
 
-**Explanation:** M16-Q024 enacts mistake 5 from Performance Budgets and Evidence; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M16-Q024 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects telemetry overhead as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M16-Q025
 
 **Type:** `calculation`
 **Difficulty:** `recall`
 
-**Answer:** M16 Frontend Shell Delivery case 1: Serialization is 110 x 8 / 900 = 0.98 s; RTT adds 360 ms, for about 1338 ms.
+**Answer:** Calculation for browser work and the rendering pipeline, serialization is 110 x 8 / 900 = 0.98 s; RTT adds 360 ms, for about 1338 ms.
 
 **Explanation:** M16-Q025 uses frontend shell delivery from Browser Work and the Rendering Pipeline and keeps units visible through the final numeric result.
 
@@ -352,7 +352,7 @@ This key covers all 43 questions for **Browser, Frontend, CDN, and Edge Architec
 **Type:** `calculation`
 **Difficulty:** `application`
 
-**Answer:** M16 Interaction Block case 2: It exceeds the budget by 220 - 100 = 120 ms.
+**Answer:** Calculation for performance budgets and evidence, it exceeds the budget by 220 - 100 = 120 ms.
 
 **Explanation:** M16-Q026 uses interaction block from Performance Budgets and Evidence and keeps units visible through the final numeric result.
 
@@ -363,7 +363,7 @@ This key covers all 43 questions for **Browser, Frontend, CDN, and Edge Architec
 **Type:** `calculation`
 **Difficulty:** `synthesis`
 
-**Answer:** M16 Serialization case 3: Serialization is 280 KiB x 8 / 900 Kbps = 2.49 seconds, ignoring protocol overhead.
+**Answer:** Calculation for route rendering and hydration, serialization is 280 KiB x 8 / 900 Kbps = 2.49 seconds, ignoring protocol overhead.
 
 **Explanation:** M16-Q027 uses serialization from Route Rendering and Hydration and keeps units visible through the final numeric result.
 
@@ -374,7 +374,7 @@ This key covers all 43 questions for **Browser, Frontend, CDN, and Edge Architec
 **Type:** `calculation`
 **Difficulty:** `recall`
 
-**Answer:** M16 Rtt Setup case 4: Setup lower bound is 3 x 90 ms = 270 ms before payload work.
+**Answer:** Calculation for http and cdn cache safety, setup lower bound is 3 x 90 ms = 270 ms before payload work.
 
 **Explanation:** M16-Q028 uses RTT setup from HTTP and CDN Cache Safety and keeps units visible through the final numeric result.
 
@@ -385,162 +385,162 @@ This key covers all 43 questions for **Browser, Frontend, CDN, and Edge Architec
 **Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** M16 diagnosis 1 identifies controlled interaction is below guardrail and long work is attributed. The proving fields are accessibility.focus_preserved and accessibility.keyboard_path; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for browser work and the rendering pipeline, accessibility.focus_preserved and cache.private_cache_entries separate the mechanism. accessibility.focus_preserved = 1 while cache.private_cache_entries = 0, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M16-Q029 comes from emitted trial fields rather than fixture identifiers; Browser Work and the Rendering Pipeline is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare accessibility.focus_preserved with cache.private_cache_entries and connect that contrast to browser work and the rendering pipeline.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Browser Work and the Rendering Pipeline, cites accessibility.focus_preserved and cache.private_cache_entries, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M16-Q030
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `recall`
 
-**Answer:** M16 diagnosis 2 identifies Performance Budgets and Evidence evidence scope. The proving fields are accessibility.focus_preserved and accessibility.keyboard_path; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for performance budgets and evidence, accessibility.keyboard_path and cache.private_cache_entries separate the mechanism. accessibility.keyboard_path = 1 while cache.private_cache_entries = 0, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M16-Q030 comes from emitted trial fields rather than fixture identifiers; Performance Budgets and Evidence is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare accessibility.keyboard_path with cache.private_cache_entries and connect that contrast to performance budgets and evidence.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Performance Budgets and Evidence, cites accessibility.keyboard_path and cache.private_cache_entries, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M16-Q031
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `application`
 
-**Answer:** M16 diagnosis 3 identifies server/client state hashes agree and recoverable mismatches are zero. The proving fields are accessibility.focus_preserved and accessibility.keyboard_path; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for route rendering and hydration, accessibility.focus_preserved and cache.degraded_marked separate the mechanism. accessibility.focus_preserved = 0 while cache.degraded_marked = 1, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M16-Q031 comes from emitted trial fields rather than fixture identifiers; Route Rendering and Hydration is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare accessibility.focus_preserved with cache.degraded_marked and connect that contrast to route rendering and hydration.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Route Rendering and Hydration, cites accessibility.focus_preserved and cache.degraded_marked, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M16-Q032
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** M16 diagnosis 4 identifies HTTP and CDN Cache Safety evidence scope. The proving fields are accessibility.focus_preserved and accessibility.keyboard_path; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for http and cdn cache safety, accessibility.semantic_structure and cache.private_cache_entries separate the mechanism. accessibility.semantic_structure = 1 while cache.private_cache_entries = 0, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M16-Q032 comes from emitted trial fields rather than fixture identifiers; HTTP and CDN Cache Safety is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare accessibility.semantic_structure with cache.private_cache_entries and connect that contrast to http and cdn cache safety.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names HTTP and CDN Cache Safety, cites accessibility.semantic_structure and cache.private_cache_entries, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M16-Q033
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `recall`
 
-**Answer:** M16 diagnosis 5 identifies route-owned active resources and detached nodes return to baseline. The proving fields are accessibility.focus_preserved and accessibility.keyboard_path; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for accessibility and resilient interaction, cache.degraded_marked and cache.private_cache_entries separate the mechanism. cache.degraded_marked = 1 while cache.private_cache_entries = 0, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M16-Q033 comes from emitted trial fields rather than fixture identifiers; Accessibility and Resilient Interaction is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare cache.degraded_marked with cache.private_cache_entries and connect that contrast to accessibility and resilient interaction.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Accessibility and Resilient Interaction, cites cache.degraded_marked and cache.private_cache_entries, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M16-Q034
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `application`
 
-**Answer:** M16 diagnosis 6 identifies Memory, Third Parties, and Observability evidence scope. The proving fields are accessibility.focus_preserved and accessibility.keyboard_path; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for memory, third parties, and observability, accessibility.focus_preserved and cache.private_cache_entries separate the mechanism. accessibility.focus_preserved = 1 while cache.private_cache_entries = 0, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M16-Q034 comes from emitted trial fields rather than fixture identifiers; Memory, Third Parties, and Observability is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare accessibility.focus_preserved with cache.private_cache_entries and connect that contrast to memory, third parties, and observability.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Memory, Third Parties, and Observability, cites accessibility.focus_preserved and cache.private_cache_entries, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M16-Q035
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** M16 diagnosis 7 identifies core semantic route survives slow or blocked optional dependency. The proving fields are accessibility.focus_preserved and accessibility.keyboard_path; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for northstar browser-edge tutorial, accessibility.keyboard_path and cache.private_cache_entries separate the mechanism. accessibility.keyboard_path = 1 while cache.private_cache_entries = 0, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M16-Q035 comes from emitted trial fields rather than fixture identifiers; Northstar Browser-Edge Tutorial is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare accessibility.keyboard_path with cache.private_cache_entries and connect that contrast to northstar browser-edge tutorial.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Northstar Browser-Edge Tutorial, cites accessibility.keyboard_path and cache.private_cache_entries, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M16-Q036
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `recall`
 
-**Answer:** M16 diagnosis 8 identifies Frontend-Edge Decision and Teach-Back evidence scope. The proving fields are accessibility.focus_preserved and accessibility.keyboard_path; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for frontend-edge decision and teach-back, accessibility.manual_boundary_recorded and cache.private_cache_entries separate the mechanism. accessibility.manual_boundary_recorded = 1 while cache.private_cache_entries = 0, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M16-Q036 comes from emitted trial fields rather than fixture identifiers; Frontend-Edge Decision and Teach-Back is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare accessibility.manual_boundary_recorded with cache.private_cache_entries and connect that contrast to frontend-edge decision and teach-back.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Frontend-Edge Decision and Teach-Back, cites accessibility.manual_boundary_recorded and cache.private_cache_entries, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M16-Q037
 
 **Type:** `design_judgment`
 **Difficulty:** `application`
 
-**Answer:** For M16 decision 1, recommend against. The protected bound is 228 x 0.72 = 164.2/s, and the planned 200.6/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 200.6/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 36.4/s of lower-priority work.
+**Answer:** Approve Interaction trace at 152.2/s. The deciding number is 228 x 0.72 = 164.2/s, leaving 12/s before the reserve is consumed. Withdraw approval if a drill, trace, or workload sample shows interaction trace demand above 164.2/s or proves the shed point cannot protect lower-priority work.
 
-**Explanation:** M16-Q037 turns on the forcing number from EX-01, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to interaction trace demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 164.2/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M16-Q038
 
 **Type:** `design_judgment`
 **Difficulty:** `synthesis`
 
-**Answer:** For M16 decision 2, recommend against. The protected bound is 245 x 0.72 = 176.4/s, and the planned 215.6/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 215.6/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 39.2/s of lower-priority work.
+**Answer:** Decline One-control long-task pair at 187.8/s. The deciding number is 245 x 0.72 = 176.4/s, so planned demand exceeds the usable region by 11.4/s. Approve later if repeated measurements lift usable capacity above 187.8/s or a named policy removes at least 11.4/s of deferrable work before saturation.
 
-**Explanation:** M16-Q038 turns on the forcing number from EX-02, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to one-control long-task pair demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 176.4/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M16-Q039
 
 **Type:** `design_judgment`
 **Difficulty:** `recall`
 
-**Answer:** For M16 decision 3, recommend against. The protected bound is 262 x 0.72 = 188.6/s, and the planned 230.6/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 230.6/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 42.0/s of lower-priority work.
+**Answer:** Approve conditionally for Critical-path calculation. The deciding number is 262 x 0.72 = 188.6/s, and 183.6/s fits only while the fallback remains enforceable. Keep the condition until recovery traffic, priority demand, or fallback tests show less than 5/s of usable margin.
 
-**Explanation:** M16-Q039 turns on the forcing number from EX-03, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to critical-path calculation demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 188.6/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M16-Q040
 
 **Type:** `design_judgment`
 **Difficulty:** `application`
 
-**Answer:** For M16 decision 4, recommend against. The protected bound is 279 x 0.72 = 200.9/s, and the planned 245.5/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 245.5/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 44.6/s of lower-priority work.
+**Answer:** Approve Evidence classification at 183.8/s. The deciding number is 279 x 0.72 = 200.9/s, leaving 17.1/s before the reserve is consumed. Require redesign if a drill, trace, or workload sample shows evidence classification demand above 200.9/s or proves the shed point cannot protect lower-priority work.
 
-**Explanation:** M16-Q040 turns on the forcing number from EX-04, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to evidence classification demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 200.9/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M16-Q041
 
 **Type:** `design_judgment`
 **Difficulty:** `synthesis`
 
-**Answer:** For M16 decision 5, recommend against. The protected bound is 296 x 0.72 = 213.1/s, and the planned 260.5/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 260.5/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 47.4/s of lower-priority work.
+**Answer:** Decline Route rendering matrix at 228.7/s. The deciding number is 296 x 0.72 = 213.1/s, so planned demand exceeds the usable region by 15.6/s. Lift the decline if repeated measurements lift usable capacity above 228.7/s or a named policy removes at least 15.6/s of deferrable work before saturation.
 
-**Explanation:** M16-Q041 turns on the forcing number from EX-05, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to route rendering matrix demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 213.1/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M16-Q042
 
 **Type:** `design_judgment`
 **Difficulty:** `recall`
 
-**Answer:** For M16 decision 6, recommend against. The protected bound is 313 x 0.72 = 225.4/s, and the planned 275.4/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 275.4/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 50.0/s of lower-priority work.
+**Answer:** Approve Streaming commitment at 204.9/s. The deciding number is 313 x 0.72 = 225.4/s, leaving 20.5/s before the reserve is consumed. Reverse the call if a drill, trace, or workload sample shows streaming commitment demand above 225.4/s or proves the shed point cannot protect lower-priority work.
 
-**Explanation:** M16-Q042 turns on the forcing number from EX-06, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to streaming commitment demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 225.4/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M16-Q043
 
 **Type:** `design_judgment`
 **Difficulty:** `application`
 
-**Answer:** For M16 decision 7, recommend against. The protected bound is 330 x 0.72 = 237.6/s, and the planned 290.4/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 290.4/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 52.8/s of lower-priority work.
+**Answer:** Decline Hydration identity at 256/s. The deciding number is 330 x 0.72 = 237.6/s, so planned demand exceeds the usable region by 18.4/s. Accept the proposal when repeated measurements lift usable capacity above 256/s or a named policy removes at least 18.4/s of deferrable work before saturation.
 
-**Explanation:** M16-Q043 turns on the forcing number from EX-07, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to hydration identity demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 237.6/s, compares it with planned demand, and names a scenario-specific reversal condition.

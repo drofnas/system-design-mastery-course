@@ -185,16 +185,16 @@ This key covers all 43 questions for **Security, Privacy, and Abuse Resistance**
 
 **Choices:**
 
-- Measure the M13 scoped measurement and record the limiting assumption before approving the change.
-- Approve a list of MFA, encryption, and firewalls can miss for Threat models, trust boundaries, and abuse cases; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for a list of MFA, encryption, and firewalls can miss; the team can monitor Threat models, trust boundaries, and abuse cases after launch.
-- Approve the M13 shortcut for alpha now.
+- Measure starting controls data for review case one; limit the change.
+- Measure modeling only data for review case one; limit the change. with margin
+- Measure stride coverage data for review case one; limit the change.
+- Measure collapsing risk data for review case one; limit the change.
 
-**Answer:** Measure the M13 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure starting controls data for review case one; limit the change.
 
-**Explanation:** M13-Q017 enacts mistake 1 from Threat models, trust boundaries, and abuse cases; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M13-Q017 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects starting controls as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M13-Q018
 
@@ -203,16 +203,16 @@ This key covers all 43 questions for **Security, Privacy, and Abuse Resistance**
 
 **Choices:**
 
-- Approve a diagram without threats, responses, tests, and for Threat models, trust boundaries, and abuse cases; the local context makes that proposal familiar enough for review.
-- Bound the M13 scoped measurement before approving the change.
-- Defer measurement until production for a diagram without threats, responses, tests, and; the team can monitor Threat models, trust boundaries, and abuse cases after launch.
-- Approve the M13 shortcut for bravo now.
+- Measure accepting risk data for review case two; limit the change.
+- Measure modeling only data for review case two; limit the change.
+- Measure equating authentication data for review case two; limit the change.
+- Measure designing login data for review case two; limit the change.
 
-**Answer:** Bound the M13 scoped measurement before approving the change.
+**Answer:** Measure modeling only data for review case two; limit the change.
 
-**Explanation:** M13-Q018 enacts mistake 2 from Threat models, trust boundaries, and abuse cases; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M13-Q018 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects modeling only as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M13-Q019
 
@@ -221,16 +221,16 @@ This key covers all 43 questions for **Security, Privacy, and Abuse Resistance**
 
 **Choices:**
 
-- Approve prompts help discovery; they do not for Threat models, trust boundaries, and abuse cases; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for prompts help discovery; they do not; the team can monitor Threat models, trust boundaries, and abuse cases after launch.
-- Freeze the M13 scoped measurement before approval.
-- Approve the M13 shortcut for charlie now.
+- Measure embedding claims data for review case three; limit the change.
+- Measure client only data for review case three; limit the change.
+- Measure stride coverage data for review case three; limit the change.
+- Measure global logout data for review case three; limit the change.
 
-**Answer:** Freeze the M13 scoped measurement before approval.
+**Answer:** Measure stride coverage data for review case three; limit the change.
 
-**Explanation:** M13-Q019 enacts mistake 3 from Threat models, trust boundaries, and abuse cases; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M13-Q019 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects stride coverage as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M13-Q020
 
@@ -239,16 +239,16 @@ This key covers all 43 questions for **Security, Privacy, and Abuse Resistance**
 
 **Choices:**
 
-- Approve multiplying invented likelihood and impact for Threat models, trust boundaries, and abuse cases; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for multiplying invented likelihood and impact; the team can monitor Threat models, trust boundaries, and abuse cases after launch.
-- Approve the M13 shortcut for delta now.
-- Preserve the M13 scoped measurement and record the limiting assumption before approving the change.
+- Measure one admin data for review case four; limit the change.
+- Measure authorization button data for review case four; limit the change.
+- Measure checking object data for review case four; limit the change.
+- Measure collapsing risk data for review case four; limit the change.
 
-**Answer:** Preserve the M13 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure collapsing risk data for review case four; limit the change.
 
-**Explanation:** M13-Q020 enacts mistake 4 from Threat models, trust boundaries, and abuse cases; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M13-Q020 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects collapsing risk as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M13-Q021
 
@@ -257,16 +257,16 @@ This key covers all 43 questions for **Security, Privacy, and Abuse Resistance**
 
 **Choices:**
 
-- Model the M13 scoped measurement before approving the change.
-- Approve an ownerless acceptance with no expiry is an for Threat models, trust boundaries, and abuse cases; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for an ownerless acceptance with no expiry is an; the team can monitor Threat models, trust boundaries, and abuse cases after launch.
-- Approve the M13 shortcut for ember now.
+- Measure accepting risk data for review case five; limit the change.
+- Measure failing open data for review case five; limit the change. with margin
+- Measure caching policy data for review case five; limit the change.
+- Measure tenant filters data for review case five; limit the change.
 
-**Answer:** Model the M13 scoped measurement before approving the change.
+**Answer:** Measure accepting risk data for review case five; limit the change.
 
-**Explanation:** M13-Q021 enacts mistake 5 from Threat models, trust boundaries, and abuse cases; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M13-Q021 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects accepting risk as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M13-Q022
 
@@ -275,16 +275,16 @@ This key covers all 43 questions for **Security, Privacy, and Abuse Resistance**
 
 **Choices:**
 
-- Approve equating authentication with authorization:: a valid identity can still be for Identity, authentication, recovery, and sessions; the local context makes that proposal familiar enough for review.
-- Account the M13 scoped measurement before approval.
-- Defer measurement until production for equating authentication with authorization:: a valid identity can still be; the team can monitor Identity, authentication, recovery, and sessions after launch.
-- Approve the M13 shortcut for fable now.
+- Measure random identifiers data for review case six; limit the change.
+- Measure equating authentication data for review case six; limit the change.
+- Measure shared cache data for review case six; limit the change. with margin
+- Measure internal bypasses data for review case six; limit the change.
 
-**Answer:** Account the M13 scoped measurement before approval.
+**Answer:** Measure equating authentication data for review case six; limit the change.
 
-**Explanation:** M13-Q022 enacts mistake 1 from Identity, authentication, recovery, and sessions; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M13-Q022 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects equating authentication as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M13-Q023
 
@@ -293,16 +293,16 @@ This key covers all 43 questions for **Security, Privacy, and Abuse Resistance**
 
 **Choices:**
 
-- Approve the weakest identity transition becomes for Identity, authentication, recovery, and sessions; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for the weakest identity transition becomes; the team can monitor Identity, authentication, recovery, and sessions after launch.
-- Test the M13 scoped measurement and record the limiting assumption before approving the change.
-- Approve the M13 shortcut for harbor now.
+- Measure one isolation data for review case seven; limit the change.
+- Measure one high data for review case seven; limit the change.
+- Measure designing login data for review case seven; limit the change.
+- Measure scheduled rotation data for review case seven; limit the change.
 
-**Answer:** Test the M13 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure designing login data for review case seven; limit the change.
 
-**Explanation:** M13-Q023 enacts mistake 2 from Identity, authentication, recovery, and sessions; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M13-Q023 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects designing login as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M13-Q024
 
@@ -311,16 +311,16 @@ This key covers all 43 questions for **Security, Privacy, and Abuse Resistance**
 
 **Choices:**
 
-- Approve stale roles or tenant membership in long-lived for Identity, authentication, recovery, and sessions; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for stale roles or tenant membership in long-lived; the team can monitor Identity, authentication, recovery, and sessions after launch.
-- Approve the M13 shortcut for indigo now.
-- Scope the M13 scoped measurement before approving the change.
+- Measure logging values data for review case eight; limit the change.
+- Measure encryption access data for review case eight; limit the change.
+- Measure deleting keys data for review case eight; limit the change.
+- Measure embedding claims data for review case eight; limit the change.
 
-**Answer:** Scope the M13 scoped measurement before approving the change.
+**Answer:** Measure embedding claims data for review case eight; limit the change.
 
-**Explanation:** M13-Q024 enacts mistake 3 from Identity, authentication, recovery, and sessions; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M13-Q024 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects embedding claims as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M13-Q025
 
@@ -329,16 +329,16 @@ This key covers all 43 questions for **Security, Privacy, and Abuse Resistance**
 
 **Choices:**
 
-- Measure the M13 scoped measurement before approval.
-- Approve a server that accepts an expired credential still has a vulnerability for Identity, authentication, recovery, and sessions; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for a server that accepts an expired credential still has a vulnerability; the team can monitor Identity, authentication, recovery, and sessions after launch.
-- Approve the M13 shortcut for juniper now.
+- Measure client only data for review case nine; limit the change.
+- Measure logging everything data for review case nine; limit the change.
+- Measure append only data for review case nine; limit the change.
+- Measure deleting only data for review case nine; limit the change.
 
-**Answer:** Measure the M13 scoped measurement before approval.
+**Answer:** Measure client only data for review case nine; limit the change.
 
-**Explanation:** M13-Q025 enacts mistake 4 from Identity, authentication, recovery, and sessions; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M13-Q025 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects client only as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M13-Q026
 
@@ -347,23 +347,23 @@ This key covers all 43 questions for **Security, Privacy, and Abuse Resistance**
 
 **Choices:**
 
-- Approve revocation must be measured across for Identity, authentication, recovery, and sessions; the local context makes that proposal familiar enough for review.
-- Bound the M13 scoped measurement and record the limiting assumption before approving the change.
-- Defer measurement until production for revocation must be measured across; the team can monitor Identity, authentication, recovery, and sessions after launch.
-- Approve the M13 shortcut for keystone now.
+- Measure one retention data for review case ten; limit the change.
+- Measure global logout data for review case ten; limit the change.
+- Measure compliance framework data for review case ten; limit the change.
+- Measure sbom prevention data for review case ten; limit the change.
 
-**Answer:** Bound the M13 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure global logout data for review case ten; limit the change.
 
-**Explanation:** M13-Q026 enacts mistake 5 from Identity, authentication, recovery, and sessions; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M13-Q026 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects global logout as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M13-Q027
 
 **Type:** `calculation`
 **Difficulty:** `synthesis`
 
-**Answer:** M13 Credential Lifetime case 1: Maximum issue-to-detection window is 15 + 5 = 20 minutes.
+**Answer:** Calculation for threat models, trust boundaries, and abuse cases, maximum issue-to-detection window is 15 + 5 = 20 minutes.
 
 **Explanation:** M13-Q027 uses credential lifetime from Threat models, trust boundaries, and abuse cases and keeps units visible through the final numeric result.
 
@@ -374,7 +374,7 @@ This key covers all 43 questions for **Security, Privacy, and Abuse Resistance**
 **Type:** `calculation`
 **Difficulty:** `recall`
 
-**Answer:** M13 Key Rotation case 2: Dual-read exposure is 5 minutes; after that only version 4 should validate new requests.
+**Answer:** Calculation for identity, authentication, recovery, and sessions, dual-read exposure is 5 minutes; after that only version 4 should validate new requests.
 
 **Explanation:** M13-Q028 uses key rotation from Identity, authentication, recovery, and sessions and keeps units visible through the final numeric result.
 
@@ -385,162 +385,162 @@ This key covers all 43 questions for **Security, Privacy, and Abuse Resistance**
 **Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** M13 diagnosis 1 identifies tenant context is derived from trusted identity and propagated. The proving fields are abuse_controls.denial_is_attributable and abuse_controls.subject_budget_enforced; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for threat models, trust boundaries, and abuse cases, abuse_controls.denial_is_attributable and audit_evidence.tampering_detected separate the mechanism. abuse_controls.denial_is_attributable = 1 while audit_evidence.tampering_detected = 0, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M13-Q029 comes from emitted trial fields rather than fixture identifiers; Threat models, trust boundaries, and abuse cases is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare abuse_controls.denial_is_attributable with audit_evidence.tampering_detected and connect that contrast to threat models, trust boundaries, and abuse cases.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Threat models, trust boundaries, and abuse cases, cites abuse_controls.denial_is_attributable and audit_evidence.tampering_detected, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M13-Q030
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `recall`
 
-**Answer:** M13 diagnosis 2 identifies Identity, authentication, recovery, and sessions evidence scope. The proving fields are abuse_controls.denial_is_attributable and abuse_controls.subject_budget_enforced; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for identity, authentication, recovery, and sessions, abuse_controls.subject_budget_enforced and audit_evidence.tampering_detected separate the mechanism. abuse_controls.subject_budget_enforced = 1 while audit_evidence.tampering_detected = 0, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M13-Q030 comes from emitted trial fields rather than fixture identifiers; Identity, authentication, recovery, and sessions is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare abuse_controls.subject_budget_enforced with audit_evidence.tampering_detected and connect that contrast to identity, authentication, recovery, and sessions.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Identity, authentication, recovery, and sessions, cites abuse_controls.subject_budget_enforced and audit_evidence.tampering_detected, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M13-Q031
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `application`
 
-**Answer:** M13 diagnosis 3 identifies every object and action receives a deny-by-default authorization decision. The proving fields are abuse_controls.denial_is_attributable and abuse_controls.subject_budget_enforced; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for authorization models and enforcement, abuse_controls.tenant_budget_enforced and audit_evidence.tampering_detected separate the mechanism. abuse_controls.tenant_budget_enforced = 1 while audit_evidence.tampering_detected = 0, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M13-Q031 comes from emitted trial fields rather than fixture identifiers; Authorization models and enforcement is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare abuse_controls.tenant_budget_enforced with audit_evidence.tampering_detected and connect that contrast to authorization models and enforcement.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Authorization models and enforcement, cites abuse_controls.tenant_budget_enforced and audit_evidence.tampering_detected, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M13-Q032
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** M13 diagnosis 4 identifies Tenant isolation and scoped access evidence scope. The proving fields are abuse_controls.denial_is_attributable and abuse_controls.subject_budget_enforced; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for tenant isolation and scoped access, audit_evidence.event_attributable and audit_evidence.tampering_detected separate the mechanism. audit_evidence.event_attributable = 1 while audit_evidence.tampering_detected = 0, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M13-Q032 comes from emitted trial fields rather than fixture identifiers; Tenant isolation and scoped access is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare audit_evidence.event_attributable with audit_evidence.tampering_detected and connect that contrast to tenant isolation and scoped access.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Tenant isolation and scoped access, cites audit_evidence.event_attributable and audit_evidence.tampering_detected, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M13-Q033
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `recall`
 
-**Answer:** M13 diagnosis 5 identifies authentication and session evidence is current and replay resistant. The proving fields are abuse_controls.denial_is_attributable and abuse_controls.subject_budget_enforced; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for secrets, keys, certificates, and encryption, audit_evidence.sensitive_value_excluded and audit_evidence.tampering_detected separate the mechanism. audit_evidence.sensitive_value_excluded = 1 while audit_evidence.tampering_detected = 0, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M13-Q033 comes from emitted trial fields rather than fixture identifiers; Secrets, keys, certificates, and encryption is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare audit_evidence.sensitive_value_excluded with audit_evidence.tampering_detected and connect that contrast to secrets, keys, certificates, and encryption.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Secrets, keys, certificates, and encryption, cites audit_evidence.sensitive_value_excluded and audit_evidence.tampering_detected, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M13-Q034
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `application`
 
-**Answer:** M13 diagnosis 6 identifies Audit, privacy, and data lifecycles evidence scope. The proving fields are abuse_controls.denial_is_attributable and abuse_controls.subject_budget_enforced; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for audit, privacy, and data lifecycles, abuse_controls.denial_is_attributable and audit_evidence.tampering_detected separate the mechanism. abuse_controls.denial_is_attributable = 1 while audit_evidence.tampering_detected = 0, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M13-Q034 comes from emitted trial fields rather than fixture identifiers; Audit, privacy, and data lifecycles is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare abuse_controls.denial_is_attributable with audit_evidence.tampering_detected and connect that contrast to audit, privacy, and data lifecycles.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Audit, privacy, and data lifecycles, cites abuse_controls.denial_is_attributable and audit_evidence.tampering_detected, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M13-Q035
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** M13 diagnosis 7 identifies credentials are scoped, revocable, and rotated without accepting exposed versions. The proving fields are abuse_controls.denial_is_attributable and abuse_controls.subject_budget_enforced; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for supply chains, economic abuse, and security response, abuse_controls.subject_budget_enforced and audit_evidence.tampering_detected separate the mechanism. abuse_controls.subject_budget_enforced = 1 while audit_evidence.tampering_detected = 0, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M13-Q035 comes from emitted trial fields rather than fixture identifiers; Supply chains, economic abuse, and security response is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare abuse_controls.subject_budget_enforced with audit_evidence.tampering_detected and connect that contrast to supply chains, economic abuse, and security response.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Supply chains, economic abuse, and security response, cites abuse_controls.subject_budget_enforced and audit_evidence.tampering_detected, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M13-Q036
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `recall`
 
-**Answer:** M13 diagnosis 8 identifies Prompt injection, tool authorization, and security decisions evidence scope. The proving fields are abuse_controls.denial_is_attributable and abuse_controls.subject_budget_enforced; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for prompt injection, tool authorization, and security decisions, abuse_controls.tenant_budget_enforced and audit_evidence.tampering_detected separate the mechanism. abuse_controls.tenant_budget_enforced = 1 while audit_evidence.tampering_detected = 0, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M13-Q036 comes from emitted trial fields rather than fixture identifiers; Prompt injection, tool authorization, and security decisions is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare abuse_controls.tenant_budget_enforced with audit_evidence.tampering_detected and connect that contrast to prompt injection, tool authorization, and security decisions.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Prompt injection, tool authorization, and security decisions, cites abuse_controls.tenant_budget_enforced and audit_evidence.tampering_detected, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M13-Q037
 
 **Type:** `design_judgment`
 **Difficulty:** `application`
 
-**Answer:** For M13 decision 1, recommend against. The protected bound is 219 x 0.72 = 157.7/s, and the planned 192.7/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 192.7/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 35.0/s of lower-priority work.
+**Answer:** Approve Decompose a security target at 145.7/s. The deciding number is 219 x 0.72 = 157.7/s, leaving 12/s before the reserve is consumed. Withdraw approval if a drill, trace, or workload sample shows decompose a security target demand above 157.7/s or proves the shed point cannot protect lower-priority work.
 
-**Explanation:** M13-Q037 turns on the forcing number from EX-01, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to decompose a security target demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 157.7/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M13-Q038
 
 **Type:** `design_judgment`
 **Difficulty:** `synthesis`
 
-**Answer:** For M13 decision 2, recommend against. The protected bound is 236 x 0.72 = 169.9/s, and the planned 207.7/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 207.7/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 37.8/s of lower-priority work.
+**Answer:** Decline Convert abuse into requirements at 181.3/s. The deciding number is 236 x 0.72 = 169.9/s, so planned demand exceeds the usable region by 11.4/s. Approve later if repeated measurements lift usable capacity above 181.3/s or a named policy removes at least 11.4/s of deferrable work before saturation.
 
-**Explanation:** M13-Q038 turns on the forcing number from EX-02, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to convert abuse into requirements demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 169.9/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M13-Q039
 
 **Type:** `design_judgment`
 **Difficulty:** `recall`
 
-**Answer:** For M13 decision 3, recommend against. The protected bound is 253 x 0.72 = 182.2/s, and the planned 222.6/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 222.6/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 40.4/s of lower-priority work.
+**Answer:** Approve conditionally for Build an authentication state machine. The deciding number is 253 x 0.72 = 182.2/s, and 177.2/s fits only while the fallback remains enforceable. Keep the condition until recovery traffic, priority demand, or fallback tests show less than 5/s of usable margin.
 
-**Explanation:** M13-Q039 turns on the forcing number from EX-03, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to build an authentication state machine demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 182.2/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M13-Q040
 
 **Type:** `design_judgment`
 **Difficulty:** `application`
 
-**Answer:** For M13 decision 4, recommend against. The protected bound is 270 x 0.72 = 194.4/s, and the planned 237.6/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 237.6/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 43.2/s of lower-priority work.
+**Answer:** Approve Test replay and recovery at 177.3/s. The deciding number is 270 x 0.72 = 194.4/s, leaving 17.1/s before the reserve is consumed. Require redesign if a drill, trace, or workload sample shows test replay and recovery demand above 194.4/s or proves the shed point cannot protect lower-priority work.
 
-**Explanation:** M13-Q040 turns on the forcing number from EX-04, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to test replay and recovery demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 194.4/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M13-Q041
 
 **Type:** `design_judgment`
 **Difficulty:** `synthesis`
 
-**Answer:** For M13 decision 5, recommend against. The protected bound is 287 x 0.72 = 206.6/s, and the planned 252.6/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 252.6/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 46.0/s of lower-priority work.
+**Answer:** Decline Build an authorization matrix at 222.2/s. The deciding number is 287 x 0.72 = 206.6/s, so planned demand exceeds the usable region by 15.6/s. Lift the decline if repeated measurements lift usable capacity above 222.2/s or a named policy removes at least 15.6/s of deferrable work before saturation.
 
-**Explanation:** M13-Q041 turns on the forcing number from EX-05, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to build an authorization matrix demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 206.6/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M13-Q042
 
 **Type:** `design_judgment`
 **Difficulty:** `recall`
 
-**Answer:** For M13 decision 6, recommend against. The protected bound is 304 x 0.72 = 218.9/s, and the planned 267.5/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 267.5/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 48.6/s of lower-priority work.
+**Answer:** Approve Compare policy models at 198.4/s. The deciding number is 304 x 0.72 = 218.9/s, leaving 20.5/s before the reserve is consumed. Reverse the call if a drill, trace, or workload sample shows compare policy models demand above 218.9/s or proves the shed point cannot protect lower-priority work.
 
-**Explanation:** M13-Q042 turns on the forcing number from EX-06, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to compare policy models demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 218.9/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M13-Q043
 
 **Type:** `design_judgment`
 **Difficulty:** `application`
 
-**Answer:** For M13 decision 7, recommend against. The protected bound is 321 x 0.72 = 231.1/s, and the planned 282.5/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 282.5/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 51.4/s of lower-priority work.
+**Answer:** Decline Audit seven tenant surfaces at 249.5/s. The deciding number is 321 x 0.72 = 231.1/s, so planned demand exceeds the usable region by 18.4/s. Accept the proposal when repeated measurements lift usable capacity above 249.5/s or a named policy removes at least 18.4/s of deferrable work before saturation.
 
-**Explanation:** M13-Q043 turns on the forcing number from EX-07, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to audit seven tenant surfaces demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 231.1/s, compares it with planned demand, and names a scenario-specific reversal condition.

@@ -152,16 +152,16 @@ This key covers all 38 questions for **Execution Models Across Languages**. Use 
 
 **Choices:**
 
-- Calculate the M15 scoped measurement and record the limiting assumption before approving the change.
-- Approve treating heap allocation as inherently slow while ignoring allocation rate for Memory Lifetime and Management; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for treating heap allocation as inherently slow while ignoring allocation rate; the team can monitor Memory Lifetime and Management after launch.
-- Approve the M15 shortcut for alpha now.
+- Measure heap allocation data for review case one; limit the change.
+- Measure low rss data for review case one; limit the change. with margin
+- Measure raii closes data for review case one; limit the change.
+- Measure pauses heap data for review case one; limit the change.
 
-**Answer:** Calculate the M15 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure heap allocation data for review case one; limit the change.
 
-**Explanation:** M15-Q014 enacts mistake 1 from Memory Lifetime and Management; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M15-Q014 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects heap allocation as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M15-Q015
 
@@ -170,16 +170,16 @@ This key covers all 38 questions for **Execution Models Across Languages**. Use 
 
 **Choices:**
 
-- Approve treating low RSS as proof of release; allocators may retain pages and RSS may for Memory Lifetime and Management; the local context makes that proposal familiar enough for review.
-- Draw the M15 scoped measurement before approving the change.
-- Defer measurement until production for treating low RSS as proof of release; allocators may retain pages and RSS may; the team can monitor Memory Lifetime and Management after launch.
-- Approve the M15 shortcut for bravo now.
+- Measure all node data for review case two; limit the change. with margin
+- Measure low rss data for review case two; limit the change. with margin
+- Measure measuring cpu data for review case two; limit the change.
+- Measure replacing small data for review case two; limit the change.
 
-**Answer:** Draw the M15 scoped measurement before approving the change.
+**Answer:** Measure low rss data for review case two; limit the change. with margin
 
-**Explanation:** M15-Q015 enacts mistake 2 from Memory Lifetime and Management; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M15-Q015 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects low rss as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M15-Q016
 
@@ -188,16 +188,16 @@ This key covers all 38 questions for **Execution Models Across Languages**. Use 
 
 **Choices:**
 
-- Approve claiming RAII closes asynchronous child work automatically. The scope must own for Memory Lifetime and Management; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for claiming RAII closes asynchronous child work automatically. The scope must own; the team can monitor Memory Lifetime and Management after launch.
-- Separate the M15 scoped measurement before approval.
-- Approve the M15 shortcut for charlie now.
+- Measure async syntax data for review case three; limit the change. with margin
+- Measure semaphore after data for review case three; limit the change.
+- Measure raii closes data for review case three; limit the change. with margin
+- Measure returning after data for review case three; limit the change.
 
-**Answer:** Separate the M15 scoped measurement before approval.
+**Answer:** Measure raii closes data for review case three; limit the change. with margin
 
-**Explanation:** M15-Q016 enacts mistake 3 from Memory Lifetime and Management; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M15-Q016 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects raii closes as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M15-Q017
 
@@ -206,16 +206,16 @@ This key covers all 38 questions for **Execution Models Across Languages**. Use 
 
 **Choices:**
 
-- Approve comparing GC pauses without heap size, allocation rate, flags, warm-up, and for Memory Lifetime and Management; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for comparing GC pauses without heap size, allocation rate, flags, warm-up, and; the team can monitor Memory Lifetime and Management after launch.
-- Approve the M15 shortcut for delta now.
-- Verify the M15 scoped measurement and record the limiting assumption before approving the change.
+- Measure timeout exception data for review case four; limit the change. with margin
+- Measure giving optional data for review case four; limit the change.
+- Measure race detector data for review case four; limit the change.
+- Measure pauses heap data for review case four; limit the change. with margin
 
-**Answer:** Verify the M15 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure pauses heap data for review case four; limit the change. with margin
 
-**Explanation:** M15-Q017 enacts mistake 4 from Memory Lifetime and Management; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M15-Q017 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects pauses heap as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M15-Q018
 
@@ -224,16 +224,16 @@ This key covers all 38 questions for **Execution Models Across Languages**. Use 
 
 **Choices:**
 
-- Compare the M15 scoped measurement before approving the change.
-- Approve calling all Node work single-threaded or all Go/Rust/Java work parallel for Schedulers, Event Loops, and Tasks; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for calling all Node work single-threaded or all Go/Rust/Java work parallel; the team can monitor Schedulers, Event Loops, and Tasks after launch.
-- Approve the M15 shortcut for ember now.
+- Measure all node data for review case five; limit the change. with margin
+- Measure volatile general data for review case five; limit the change. with margin
+- Measure fixing race data for review case five; limit the change.
+- Measure race freedom data for review case five; limit the change.
 
-**Answer:** Compare the M15 scoped measurement before approving the change.
+**Answer:** Measure all node data for review case five; limit the change. with margin
 
-**Explanation:** M15-Q018 enacts mistake 1 from Schedulers, Event Loops, and Tasks; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M15-Q018 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects all node as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M15-Q019
 
@@ -242,16 +242,16 @@ This key covers all 38 questions for **Execution Models Across Languages**. Use 
 
 **Choices:**
 
-- Approve measuring CPU utilization without runnable queue, throttling, and per-core use for Schedulers, Event Loops, and Tasks; the local context makes that proposal familiar enough for review.
-- Reject the M15 scoped measurement before approval.
-- Defer measurement until production for measuring CPU utilization without runnable queue, throttling, and per-core use; the team can monitor Schedulers, Event Loops, and Tasks after launch.
-- Approve the M15 shortcut for fable now.
+- Measure generated type data for review case six; limit the change. with margin
+- Measure measuring cpu data for review case six; limit the change. with margin
+- Measure returning library data for review case six; limit the change.
+- Measure validating shape data for review case six; limit the change.
 
-**Answer:** Reject the M15 scoped measurement before approval.
+**Answer:** Measure measuring cpu data for review case six; limit the change. with margin
 
-**Explanation:** M15-Q019 enacts mistake 2 from Schedulers, Event Loops, and Tasks; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M15-Q019 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects measuring cpu as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M15-Q020
 
@@ -260,16 +260,16 @@ This key covers all 38 questions for **Execution Models Across Languages**. Use 
 
 **Choices:**
 
-- Approve replacing a small thread pool with unbounded tasks and moving failure to for Schedulers, Event Loops, and Tasks; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for replacing a small thread pool with unbounded tasks and moving failure to; the team can monitor Schedulers, Event Loops, and Tasks after launch.
-- Trace the M15 scoped measurement and record the limiting assumption before approving the change.
-- Approve the M15 shortcut for harbor now.
+- Measure allowing unknown data for review case seven; limit the change.
+- Measure mixing cold data for review case seven; limit the change.
+- Measure replacing small data for review case seven; limit the change.
+- Measure fixing concurrency data for review case seven; limit the change.
 
-**Answer:** Trace the M15 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure replacing small data for review case seven; limit the change.
 
-**Explanation:** M15-Q020 enacts mistake 3 from Schedulers, Event Loops, and Tasks; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M15-Q020 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects replacing small as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M15-Q021
 
@@ -278,23 +278,23 @@ This key covers all 38 questions for **Execution Models Across Languages**. Use 
 
 **Choices:**
 
-- Approve assuming async syntax proves non-blocking behavior for Schedulers, Event Loops, and Tasks; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for assuming async syntax proves non-blocking behavior; the team can monitor Schedulers, Event Loops, and Tasks after launch.
-- Approve the M15 shortcut for indigo now.
-- Require the M15 scoped measurement before approving the change.
+- Measure rss heap data for review case eight; limit the change.
+- Measure removing outliers data for review case eight; limit the change.
+- Measure editing northstar data for review case eight; limit the change.
+- Measure async syntax data for review case eight; limit the change.
 
-**Answer:** Require the M15 scoped measurement before approving the change.
+**Answer:** Measure async syntax data for review case eight; limit the change.
 
-**Explanation:** M15-Q021 enacts mistake 4 from Schedulers, Event Loops, and Tasks; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M15-Q021 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects async syntax as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M15-Q022
 
 **Type:** `calculation`
 **Difficulty:** `recall`
 
-**Answer:** M15 Retained Memory case 1: Retained memory is 1800 x 12 KiB = 21600 KiB = 21.1 MiB.
+**Answer:** Calculation for memory lifetime and management, retained memory is 1800 x 12 KiB = 21600 KiB = 21.1 MiB.
 
 **Explanation:** M15-Q022 uses retained memory from Memory Lifetime and Management and keeps units visible through the final numeric result.
 
@@ -305,7 +305,7 @@ This key covers all 38 questions for **Execution Models Across Languages**. Use 
 **Type:** `calculation`
 **Difficulty:** `application`
 
-**Answer:** M15 Success Denominator case 2: Report 930/1000 = 93.0% against the same equivalent-work denominator.
+**Answer:** Calculation for schedulers, event loops, and tasks, report 930/1000 = 93.0% against the same equivalent-work denominator.
 
 **Explanation:** M15-Q023 uses success denominator from Schedulers, Event Loops, and Tasks and keeps units visible through the final numeric result.
 
@@ -316,7 +316,7 @@ This key covers all 38 questions for **Execution Models Across Languages**. Use 
 **Type:** `calculation`
 **Difficulty:** `synthesis`
 
-**Answer:** M15 Runtime Slots case 3: 12 - 8 = 4 tasks wait before any scheduling overhead.
+**Answer:** Calculation for bounded fan-out and structured cleanup, 12 - 8 = 4 tasks wait before any scheduling overhead.
 
 **Explanation:** M15-Q024 uses runtime slots from Bounded Fan-out and Structured Cleanup and keeps units visible through the final numeric result.
 
@@ -327,151 +327,151 @@ This key covers all 38 questions for **Execution Models Across Languages**. Use 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `application`
 
-**Answer:** M15 diagnosis 1 identifies non-expanding deadline. The proving fields are cancellation.joined and cancellation.propagated; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for memory lifetime and management, cancellation.joined and invariants.2.passed separate the mechanism. cancellation.joined = 1 while invariants.2.passed = 0, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M15-Q025 comes from emitted trial fields rather than fixture identifiers; Memory Lifetime and Management is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare cancellation.joined with invariants.2.passed and connect that contrast to memory lifetime and management.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Memory Lifetime and Management, cites cancellation.joined and invariants.2.passed, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M15-Q026
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** M15 diagnosis 2 identifies non-expanding deadline. The proving fields are cancellation.joined and cancellation.propagated; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for schedulers, event loops, and tasks, cancellation.propagated and invariants.2.passed separate the mechanism. cancellation.propagated = 1 while invariants.2.passed = 0, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M15-Q026 comes from emitted trial fields rather than fixture identifiers; Schedulers, Event Loops, and Tasks is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare cancellation.propagated with invariants.2.passed and connect that contrast to schedulers, event loops, and tasks.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Schedulers, Event Loops, and Tasks, cites cancellation.propagated and invariants.2.passed, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M15-Q027
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `recall`
 
-**Answer:** M15 diagnosis 3 identifies non-expanding deadline. The proving fields are cancellation.joined and cancellation.propagated; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for bounded fan-out and structured cleanup, invariants.0.passed and invariants.2.passed separate the mechanism. invariants.0.passed = 1 while invariants.2.passed = 0, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M15-Q027 comes from emitted trial fields rather than fixture identifiers; Bounded Fan-out and Structured Cleanup is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare invariants.0.passed with invariants.2.passed and connect that contrast to bounded fan-out and structured cleanup.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Bounded Fan-out and Structured Cleanup, cites invariants.0.passed and invariants.2.passed, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M15-Q028
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `application`
 
-**Answer:** M15 diagnosis 4 identifies non-expanding deadline. The proving fields are cancellation.joined and cancellation.propagated; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for memory visibility and races, invariants.1.passed and invariants.2.passed separate the mechanism. invariants.1.passed = 1 while invariants.2.passed = 0, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M15-Q028 comes from emitted trial fields rather than fixture identifiers; Memory Visibility and Races is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare invariants.1.passed with invariants.2.passed and connect that contrast to memory visibility and races.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Memory Visibility and Races, cites invariants.1.passed and invariants.2.passed, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M15-Q029
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** M15 diagnosis 5 identifies non-expanding deadline. The proving fields are cancellation.joined and cancellation.propagated; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for types, serialization, and validation, invariants.2.passed and memory.bounded separate the mechanism. invariants.2.passed = 0 while memory.bounded = 1, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M15-Q029 comes from emitted trial fields rather than fixture identifiers; Types, Serialization, and Validation is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare invariants.2.passed with memory.bounded and connect that contrast to types, serialization, and validation.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Types, Serialization, and Validation, cites invariants.2.passed and memory.bounded, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M15-Q030
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `recall`
 
-**Answer:** M15 diagnosis 6 identifies non-expanding deadline. The proving fields are cancellation.joined and cancellation.propagated; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for equivalent-work runtime measurement, cancellation.joined and invariants.2.passed separate the mechanism. cancellation.joined = 1 while invariants.2.passed = 0, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M15-Q030 comes from emitted trial fields rather than fixture identifiers; Equivalent-work Runtime Measurement is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare cancellation.joined with invariants.2.passed and connect that contrast to equivalent-work runtime measurement.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Equivalent-work Runtime Measurement, cites cancellation.joined and invariants.2.passed, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M15-Q031
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `application`
 
-**Answer:** M15 diagnosis 7 identifies non-expanding deadline. The proving fields are cancellation.joined and cancellation.propagated; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for northstar polyglot fan-out tutorial, cancellation.propagated and invariants.2.passed separate the mechanism. cancellation.propagated = 1 while invariants.2.passed = 0, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M15-Q031 comes from emitted trial fields rather than fixture identifiers; Northstar Polyglot Fan-out Tutorial is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare cancellation.propagated with invariants.2.passed and connect that contrast to northstar polyglot fan-out tutorial.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Northstar Polyglot Fan-out Tutorial, cites cancellation.propagated and invariants.2.passed, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M15-Q032
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** M15 diagnosis 8 identifies non-expanding deadline. The proving fields are cancellation.joined and cancellation.propagated; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for runtime decision and teach-back, invariants.0.passed and invariants.2.passed separate the mechanism. invariants.0.passed = 1 while invariants.2.passed = 0, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M15-Q032 comes from emitted trial fields rather than fixture identifiers; Runtime Decision and Teach-back is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare invariants.0.passed with invariants.2.passed and connect that contrast to runtime decision and teach-back.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Runtime Decision and Teach-back, cites invariants.0.passed and invariants.2.passed, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M15-Q033
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `recall`
 
-**Answer:** M15 diagnosis 9 identifies non-expanding deadline. The proving fields are cancellation.joined and cancellation.propagated; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for memory lifetime and management, invariants.1.passed and invariants.2.passed separate the mechanism. invariants.1.passed = 1 while invariants.2.passed = 0, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M15-Q033 comes from emitted trial fields rather than fixture identifiers; Memory Lifetime and Management is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare invariants.1.passed with invariants.2.passed and connect that contrast to memory lifetime and management.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Memory Lifetime and Management, cites invariants.1.passed and invariants.2.passed, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M15-Q034
 
 **Type:** `design_judgment`
 **Difficulty:** `application`
 
-**Answer:** For M15 decision 1, recommend against. The protected bound is 225 x 0.72 = 162.0/s, and the planned 198.0/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 198.0/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 36.0/s of lower-priority work.
+**Answer:** Approve Lifetime inventory at 150/s. The deciding number is 225 x 0.72 = 162/s, leaving 12/s before the reserve is consumed. Withdraw approval if a drill, trace, or workload sample shows lifetime inventory demand above 162/s or proves the shed point cannot protect lower-priority work.
 
-**Explanation:** M15-Q034 turns on the forcing number from EX-01, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to lifetime inventory demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 162/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M15-Q035
 
 **Type:** `design_judgment`
 **Difficulty:** `synthesis`
 
-**Answer:** For M15 decision 2, recommend against. The protected bound is 242 x 0.72 = 174.2/s, and the planned 213.0/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 213.0/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 38.8/s of lower-priority work.
+**Answer:** Decline Allocation calculation at 185.6/s. The deciding number is 242 x 0.72 = 174.2/s, so planned demand exceeds the usable region by 11.4/s. Approve later if repeated measurements lift usable capacity above 185.6/s or a named policy removes at least 11.4/s of deferrable work before saturation.
 
-**Explanation:** M15-Q035 turns on the forcing number from EX-02, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to allocation calculation demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 174.2/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M15-Q036
 
 **Type:** `design_judgment`
 **Difficulty:** `recall`
 
-**Answer:** For M15 decision 3, recommend against. The protected bound is 259 x 0.72 = 186.5/s, and the planned 227.9/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 227.9/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 41.4/s of lower-priority work.
+**Answer:** Approve conditionally for Scheduler placement. The deciding number is 259 x 0.72 = 186.5/s, and 181.5/s fits only while the fallback remains enforceable. Keep the condition until recovery traffic, priority demand, or fallback tests show less than 5/s of usable margin.
 
-**Explanation:** M15-Q036 turns on the forcing number from EX-03, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to scheduler placement demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 186.5/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M15-Q037
 
 **Type:** `design_judgment`
 **Difficulty:** `application`
 
-**Answer:** For M15 decision 4, recommend against. The protected bound is 276 x 0.72 = 198.7/s, and the planned 242.9/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 242.9/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 44.2/s of lower-priority work.
+**Answer:** Approve Bound derivation at 181.6/s. The deciding number is 276 x 0.72 = 198.7/s, leaving 17.1/s before the reserve is consumed. Require redesign if a drill, trace, or workload sample shows bound derivation demand above 198.7/s or proves the shed point cannot protect lower-priority work.
 
-**Explanation:** M15-Q037 turns on the forcing number from EX-04, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to bound derivation demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 198.7/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M15-Q038
 
 **Type:** `design_judgment`
 **Difficulty:** `synthesis`
 
-**Answer:** For M15 decision 5, recommend against. The protected bound is 293 x 0.72 = 211.0/s, and the planned 257.8/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 257.8/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 46.8/s of lower-priority work.
+**Answer:** Decline Request contract at 226.6/s. The deciding number is 293 x 0.72 = 211/s, so planned demand exceeds the usable region by 15.6/s. Lift the decline if repeated measurements lift usable capacity above 226.6/s or a named policy removes at least 15.6/s of deferrable work before saturation.
 
-**Explanation:** M15-Q038 turns on the forcing number from EX-05, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to request contract demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 211/s, compares it with planned demand, and names a scenario-specific reversal condition.

@@ -152,16 +152,16 @@ This key covers all 37 questions for **Performance Methodology and Observability
 
 **Choices:**
 
-- Calculate the M04 scoped measurement and record the limiting assumption before approving the change.
-- Approve available signals frame the answer before the for Question-First Performance Investigations; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for available signals frame the answer before the; the team can monitor Question-First Performance Investigations after launch.
-- Approve the M04 shortcut for alpha now.
+- Measure dashboard available data for review case one; limit the change.
+- Measure name component data for review case one; limit the change.
+- Measure optimize loudest data for review case one; limit the change.
+- Measure ignore useful data for review case one; limit the change. with margin
 
-**Answer:** Calculate the M04 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure dashboard available data for review case one; limit the change.
 
-**Explanation:** M04-Q014 enacts mistake 1 from Question-First Performance Investigations; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M04-Q014 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects dashboard available as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M04-Q015
 
@@ -170,16 +170,16 @@ This key covers all 37 questions for **Performance Methodology and Observability
 
 **Choices:**
 
-- Approve "database" lacks the mechanism, operation for Question-First Performance Investigations; the local context makes that proposal familiar enough for review.
-- Draw the M04 scoped measurement before approving the change.
-- Defer measurement until production for "database" lacks the mechanism, operation; the team can monitor Question-First Performance Investigations after launch.
-- Approve the M04 shortcut for bravo now.
+- Measure benchmark different data for review case two; limit the change.
+- Measure name component data for review case two; limit the change.
+- Measure warm only data for review case two; limit the change.
+- Measure report one data for review case two; limit the change.
 
-**Answer:** Draw the M04 scoped measurement before approving the change.
+**Answer:** Measure name component data for review case two; limit the change.
 
-**Explanation:** M04-Q015 enacts mistake 2 from Question-First Performance Investigations; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M04-Q015 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects name component as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M04-Q016
 
@@ -188,16 +188,16 @@ This key covers all 37 questions for **Performance Methodology and Observability
 
 **Choices:**
 
-- Approve a counter may be a consequence of waiting or for Question-First Performance Investigations; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for a counter may be a consequence of waiting or; the team can monitor Question-First Performance Investigations after launch.
-- Separate the M04 scoped measurement before approval.
-- Approve the M04 shortcut for charlie now.
+- Measure treat significance data for review case three; limit the change.
+- Measure trace authorization data for review case three; limit the change.
+- Measure optimize loudest data for review case three; limit the change.
+- Measure reuse one data for review case three; limit the change.
 
-**Answer:** Separate the M04 scoped measurement before approval.
+**Answer:** Measure optimize loudest data for review case three; limit the change.
 
-**Explanation:** M04-Q016 enacts mistake 3 from Question-First Performance Investigations; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M04-Q016 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects optimize loudest as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M04-Q017
 
@@ -206,16 +206,16 @@ This key covers all 37 questions for **Performance Methodology and Observability
 
 **Choices:**
 
-- Approve faster attempts can hide fewer successful journeys for Question-First Performance Investigations; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for faster attempts can hide fewer successful journeys; the team can monitor Question-First Performance Investigations after launch.
-- Approve the M04 shortcut for delta now.
-- Verify the M04 scoped measurement and record the limiting assumption before approving the change.
+- Measure put identity data for review case four; limit the change.
+- Measure assume every data for review case four; limit the change.
+- Measure log everything data for review case four; limit the change.
+- Measure ignore useful data for review case four; limit the change.
 
-**Answer:** Verify the M04 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure ignore useful data for review case four; limit the change.
 
-**Explanation:** M04-Q017 enacts mistake 4 from Question-First Performance Investigations; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M04-Q017 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects ignore useful as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M04-Q018
 
@@ -224,16 +224,16 @@ This key covers all 37 questions for **Performance Methodology and Observability
 
 **Choices:**
 
-- Compare the M04 scoped measurement before approving the change.
-- Approve removing a branch or validation makes timing for Baselines, Hypotheses, and Controlled Experiments; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for removing a branch or validation makes timing; the team can monitor Baselines, Hypotheses, and Controlled Experiments after launch.
-- Approve the M04 shortcut for ember now.
+- Measure benchmark different data for review case five; limit the change.
+- Measure put errors data for review case five; limit the change.
+- Measure unbounded route data for review case five; limit the change.
+- Measure ignore instrumentation data for review case five; limit the change.
 
-**Answer:** Compare the M04 scoped measurement before approving the change.
+**Answer:** Measure benchmark different data for review case five; limit the change.
 
-**Explanation:** M04-Q018 enacts mistake 1 from Baselines, Hypotheses, and Controlled Experiments; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M04-Q018 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects benchmark different as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M04-Q019
 
@@ -242,16 +242,16 @@ This key covers all 37 questions for **Performance Methodology and Observability
 
 **Choices:**
 
-- Approve cache and compilation state become confounders for Baselines, Hypotheses, and Controlled Experiments; the local context makes that proposal familiar enough for review.
-- Reject the M04 scoped measurement before approval.
-- Defer measurement until production for cache and compilation state become confounders; the team can monitor Baselines, Hypotheses, and Controlled Experiments after launch.
-- Approve the M04 shortcut for fable now.
+- Measure optimize top data for review case six; limit the change.
+- Measure warm only data for review case six; limit the change.
+- Measure call allocation data for review case six; limit the change.
+- Measure profile only data for review case six; limit the change.
 
-**Answer:** Reject the M04 scoped measurement before approval.
+**Answer:** Measure warm only data for review case six; limit the change.
 
-**Explanation:** M04-Q019 enacts mistake 2 from Baselines, Hypotheses, and Controlled Experiments; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M04-Q019 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects warm only as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M04-Q020
 
@@ -260,16 +260,16 @@ This key covers all 37 questions for **Performance Methodology and Observability
 
 **Choices:**
 
-- Approve sampling error and host noise remain for Baselines, Hypotheses, and Controlled Experiments; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for sampling error and host noise remain; the team can monitor Baselines, Hypotheses, and Controlled Experiments after launch.
-- Trace the M04 scoped measurement and record the limiting assumption before approving the change.
-- Approve the M04 shortcut for harbor now.
+- Measure infer lock data for review case seven; limit the change.
+- Measure call every data for review case seven; limit the change.
+- Measure report one data for review case seven; limit the change.
+- Measure treat index data for review case seven; limit the change.
 
-**Answer:** Trace the M04 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure report one data for review case seven; limit the change.
 
-**Explanation:** M04-Q020 enacts mistake 3 from Baselines, Hypotheses, and Controlled Experiments; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M04-Q020 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects report one as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M04-Q021
 
@@ -278,23 +278,23 @@ This key covers all 37 questions for **Performance Methodology and Observability
 
 **Choices:**
 
-- Approve a tiny repeatable effect may not change a for Baselines, Hypotheses, and Controlled Experiments; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for a tiny repeatable effect may not change a; the team can monitor Baselines, Hypotheses, and Controlled Experiments after launch.
-- Approve the M04 shortcut for indigo now.
-- Require the M04 scoped measurement before approving the change.
+- Measure compare cold data for review case eight; limit the change.
+- Measure infer durability data for review case eight; limit the change.
+- Measure one global data for review case eight; limit the change. with margin
+- Measure treat significance data for review case eight; limit the change.
 
-**Answer:** Require the M04 scoped measurement before approving the change.
+**Answer:** Measure treat significance data for review case eight; limit the change.
 
-**Explanation:** M04-Q021 enacts mistake 4 from Baselines, Hypotheses, and Controlled Experiments; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M04-Q021 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects treat significance as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M04-Q022
 
 **Type:** `calculation`
 **Difficulty:** `recall`
 
-**Answer:** M04 Signal Count case 1: 6 hypotheses x 3 signals = 18 signal checks before narrowing the claim.
+**Answer:** Calculation for question-first performance investigations, 6 hypotheses x 3 signals = 18 signal checks before narrowing the claim.
 
 **Explanation:** M04-Q022 uses signal count from Question-First Performance Investigations and keeps units visible through the final numeric result.
 
@@ -305,7 +305,7 @@ This key covers all 37 questions for **Performance Methodology and Observability
 **Type:** `calculation`
 **Difficulty:** `application`
 
-**Answer:** M04 Error Budget case 2: Budget is 750,000 x (1 - 0.9995) = 375 bad events.
+**Answer:** Calculation for baselines, hypotheses, and controlled experiments, budget is 750,000 x (1 - 0.9995) = 375 bad events.
 
 **Explanation:** M04-Q023 uses error budget from Baselines, Hypotheses, and Controlled Experiments and keeps units visible through the final numeric result.
 
@@ -316,7 +316,7 @@ This key covers all 37 questions for **Performance Methodology and Observability
 **Type:** `calculation`
 **Difficulty:** `synthesis`
 
-**Answer:** M04 Signal Count case 3: 5 hypotheses x 3 signals = 15 signal checks before narrowing the claim.
+**Answer:** Calculation for trace context and causal request paths, 5 hypotheses x 3 signals = 15 signal checks before narrowing the claim.
 
 **Explanation:** M04-Q024 uses signal count from Trace Context and Causal Request Paths and keeps units visible through the final numeric result.
 
@@ -327,140 +327,140 @@ This key covers all 37 questions for **Performance Methodology and Observability
 **Type:** `scenario_diagnosis`
 **Difficulty:** `application`
 
-**Answer:** M04 diagnosis 1 identifies Question-First Performance Investigations evidence scope. The proving fields are arrival.rate_per_second and arrival.duration_seconds; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for question-first performance investigations, arrival.rate_per_second and arrival.max_in_flight separate the mechanism. arrival.rate_per_second = 20 while arrival.max_in_flight = 8, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M04-Q025 comes from emitted trial fields rather than fixture identifiers; Question-First Performance Investigations is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare arrival.rate_per_second with arrival.max_in_flight and connect that contrast to question-first performance investigations.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Question-First Performance Investigations, cites arrival.rate_per_second and arrival.max_in_flight, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M04-Q026
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** M04 diagnosis 2 identifies Baselines, Hypotheses, and Controlled Experiments evidence scope. The proving fields are arrival.rate_per_second and arrival.duration_seconds; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for baselines, hypotheses, and controlled experiments, arrival.rate_per_second and arrival.burst_multiplier separate the mechanism. arrival.rate_per_second = 30 while arrival.burst_multiplier = 1, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M04-Q026 comes from emitted trial fields rather than fixture identifiers; Baselines, Hypotheses, and Controlled Experiments is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare arrival.rate_per_second with arrival.burst_multiplier and connect that contrast to baselines, hypotheses, and controlled experiments.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Baselines, Hypotheses, and Controlled Experiments, cites arrival.rate_per_second and arrival.burst_multiplier, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M04-Q027
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `recall`
 
-**Answer:** M04 diagnosis 3 identifies Trace Context and Causal Request Paths evidence scope. The proving fields are arrival.rate_per_second and arrival.duration_seconds; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for trace context and causal request paths, arrival.rate_per_second and arrival.burst_start_seconds separate the mechanism. arrival.rate_per_second = 20 while arrival.burst_start_seconds = 0, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M04-Q027 comes from emitted trial fields rather than fixture identifiers; Trace Context and Causal Request Paths is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare arrival.rate_per_second with arrival.burst_start_seconds and connect that contrast to trace context and causal request paths.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Trace Context and Causal Request Paths, cites arrival.rate_per_second and arrival.burst_start_seconds, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M04-Q028
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `application`
 
-**Answer:** M04 diagnosis 4 identifies Metrics, Logs, Cardinality, and Cost evidence scope. The proving fields are arrival.rate_per_second and arrival.duration_seconds; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for metrics, logs, cardinality, and cost, arrival.rate_per_second and arrival.burst_duration_seconds separate the mechanism. arrival.rate_per_second = 20 while arrival.burst_duration_seconds = 0, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M04-Q028 comes from emitted trial fields rather than fixture identifiers; Metrics, Logs, Cardinality, and Cost is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare arrival.rate_per_second with arrival.burst_duration_seconds and connect that contrast to metrics, logs, cardinality, and cost.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Metrics, Logs, Cardinality, and Cost, cites arrival.rate_per_second and arrival.burst_duration_seconds, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M04-Q029
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** M04 diagnosis 5 identifies CPU, Allocation, and Lock Profiles evidence scope. The proving fields are arrival.rate_per_second and arrival.duration_seconds; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for cpu, allocation, and lock profiles, arrival.duration_seconds and arrival.max_in_flight separate the mechanism. arrival.duration_seconds = 0.5 while arrival.max_in_flight = 8, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M04-Q029 comes from emitted trial fields rather than fixture identifiers; CPU, Allocation, and Lock Profiles is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare arrival.duration_seconds with arrival.max_in_flight and connect that contrast to cpu, allocation, and lock profiles.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names CPU, Allocation, and Lock Profiles, cites arrival.duration_seconds and arrival.max_in_flight, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M04-Q030
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `recall`
 
-**Answer:** M04 diagnosis 6 identifies I/O, Dependency Timing, and Query Plans evidence scope. The proving fields are arrival.rate_per_second and arrival.duration_seconds; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for i/o, dependency timing, and query plans, arrival.duration_seconds and arrival.burst_multiplier separate the mechanism. arrival.duration_seconds = 0.5 while arrival.burst_multiplier = 1, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M04-Q030 comes from emitted trial fields rather than fixture identifiers; I/O, Dependency Timing, and Query Plans is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare arrival.duration_seconds with arrival.burst_multiplier and connect that contrast to i/o, dependency timing, and query plans.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names I/O, Dependency Timing, and Query Plans, cites arrival.duration_seconds and arrival.burst_multiplier, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M04-Q031
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `application`
 
-**Answer:** M04 diagnosis 7 identifies Reproducible Benchmarks and Regression Budgets evidence scope. The proving fields are arrival.rate_per_second and arrival.duration_seconds; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for reproducible benchmarks and regression budgets, arrival.duration_seconds and arrival.burst_start_seconds separate the mechanism. arrival.duration_seconds = 0.5 while arrival.burst_start_seconds = 0, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M04-Q031 comes from emitted trial fields rather than fixture identifiers; Reproducible Benchmarks and Regression Budgets is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare arrival.duration_seconds with arrival.burst_start_seconds and connect that contrast to reproducible benchmarks and regression budgets.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Reproducible Benchmarks and Regression Budgets, cites arrival.duration_seconds and arrival.burst_start_seconds, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M04-Q032
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** M04 diagnosis 8 identifies Causal Decisions, Validation, and Teach-Back evidence scope. The proving fields are arrival.rate_per_second and arrival.duration_seconds; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for causal decisions, validation, and teach-back, arrival.duration_seconds and arrival.burst_duration_seconds separate the mechanism. arrival.duration_seconds = 0.5 while arrival.burst_duration_seconds = 0, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M04-Q032 comes from emitted trial fields rather than fixture identifiers; Causal Decisions, Validation, and Teach-Back is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare arrival.duration_seconds with arrival.burst_duration_seconds and connect that contrast to causal decisions, validation, and teach-back.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Causal Decisions, Validation, and Teach-Back, cites arrival.duration_seconds and arrival.burst_duration_seconds, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M04-Q033
 
 **Type:** `design_judgment`
 **Difficulty:** `recall`
 
-**Answer:** For M04 decision 1, recommend against. The protected bound is 192 x 0.72 = 138.2/s, and the planned 169.0/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 169.0/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 30.8/s of lower-priority work.
+**Answer:** Approve Rewrite the question at 126.2/s. The deciding number is 192 x 0.72 = 138.2/s, leaving 12/s before the reserve is consumed. Withdraw approval if a drill, trace, or workload sample shows rewrite the question demand above 138.2/s or proves the shed point cannot protect lower-priority work.
 
-**Explanation:** M04-Q033 turns on the forcing number from EX-01, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to rewrite the question demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 138.2/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M04-Q034
 
 **Type:** `design_judgment`
 **Difficulty:** `application`
 
-**Answer:** For M04 decision 2, recommend against. The protected bound is 209 x 0.72 = 150.5/s, and the planned 183.9/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 183.9/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 33.4/s of lower-priority work.
+**Answer:** Decline Build a hypothesis ledger at 161.9/s. The deciding number is 209 x 0.72 = 150.5/s, so planned demand exceeds the usable region by 11.4/s. Approve later if repeated measurements lift usable capacity above 161.9/s or a named policy removes at least 11.4/s of deferrable work before saturation.
 
-**Explanation:** M04-Q034 turns on the forcing number from EX-02, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to build a hypothesis ledger demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 150.5/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M04-Q035
 
 **Type:** `design_judgment`
 **Difficulty:** `synthesis`
 
-**Answer:** For M04 decision 3, recommend against. The protected bound is 226 x 0.72 = 162.7/s, and the planned 198.9/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 198.9/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 36.2/s of lower-priority work.
+**Answer:** Approve conditionally for Preserve equivalent work. The deciding number is 226 x 0.72 = 162.7/s, and 157.7/s fits only while the fallback remains enforceable. Keep the condition until recovery traffic, priority demand, or fallback tests show less than 5/s of usable margin.
 
-**Explanation:** M04-Q035 turns on the forcing number from EX-03, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to preserve equivalent work demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 162.7/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M04-Q036
 
 **Type:** `design_judgment`
 **Difficulty:** `recall`
 
-**Answer:** For M04 decision 4, recommend against. The protected bound is 243 x 0.72 = 175.0/s, and the planned 213.8/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 213.8/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 38.8/s of lower-priority work.
+**Answer:** Approve Bound experiment dimensions at 157.9/s. The deciding number is 243 x 0.72 = 175/s, leaving 17.1/s before the reserve is consumed. Require redesign if a drill, trace, or workload sample shows bound experiment dimensions demand above 175/s or proves the shed point cannot protect lower-priority work.
 
-**Explanation:** M04-Q036 turns on the forcing number from EX-04, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to bound experiment dimensions demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 175/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M04-Q037
 
 **Type:** `design_judgment`
 **Difficulty:** `application`
 
-**Answer:** For M04 decision 5, recommend against. The protected bound is 260 x 0.72 = 187.2/s, and the planned 228.8/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 228.8/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 41.6/s of lower-priority work.
+**Answer:** Decline Validate trace context at 202.8/s. The deciding number is 260 x 0.72 = 187.2/s, so planned demand exceeds the usable region by 15.6/s. Lift the decline if repeated measurements lift usable capacity above 202.8/s or a named policy removes at least 15.6/s of deferrable work before saturation.
 
-**Explanation:** M04-Q037 turns on the forcing number from EX-05, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to validate trace context demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 187.2/s, compares it with planned demand, and names a scenario-specific reversal condition.

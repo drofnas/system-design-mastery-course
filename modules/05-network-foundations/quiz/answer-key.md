@@ -141,16 +141,16 @@ This key covers all 39 questions for **Network Foundations**. Use it after an at
 
 **Choices:**
 
-- Test the M05 scoped measurement and record the limiting assumption before approving the change.
-- Approve adding marginal percentiles from different requests creates a journey that for Request Paths, Round Trips, and Byte Budgets; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for adding marginal percentiles from different requests creates a journey that; the team can monitor Request Paths, Round Trips, and Byte Budgets after launch.
-- Approve the M05 shortcut for alpha now.
+- Measure marginal percentiles data for review case one; limit the change.
+- Measure payload bytes data for review case one; limit the change.
+- Measure every phase data for review case one; limit the change. with margin
+- Measure lower bound data for review case one; limit the change.
 
-**Answer:** Test the M05 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure marginal percentiles data for review case one; limit the change.
 
-**Explanation:** M05-Q013 enacts mistake 1 from Request Paths, Round Trips, and Byte Budgets; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M05-Q013 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects marginal percentiles as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M05-Q014
 
@@ -159,16 +159,16 @@ This key covers all 39 questions for **Network Foundations**. Use it after an at
 
 **Choices:**
 
-- Approve treating payload bytes as wire bytes hides headers and retransmissions for Request Paths, Round Trips, and Byte Budgets; the local context makes that proposal familiar enough for review.
-- Scope the M05 scoped measurement before approving the change.
-- Defer measurement until production for treating payload bytes as wire bytes hides headers and retransmissions; the team can monitor Request Paths, Round Trips, and Byte Budgets after launch.
-- Approve the M05 shortcut for bravo now.
+- Measure dns down data for review case two; limit the change.
+- Measure payload bytes data for review case two; limit the change.
+- Measure infinite retry data for review case two; limit the change.
+- Measure stale address data for review case two; limit the change.
 
-**Answer:** Scope the M05 scoped measurement before approving the change.
+**Answer:** Measure payload bytes data for review case two; limit the change.
 
-**Explanation:** M05-Q014 enacts mistake 2 from Request Paths, Round Trips, and Byte Budgets; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M05-Q014 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects payload bytes as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M05-Q015
 
@@ -177,16 +177,16 @@ This key covers all 39 questions for **Network Foundations**. Use it after an at
 
 **Choices:**
 
-- Approve counting every phase as serial overstates cost when DNS/address attempts or for Request Paths, Round Trips, and Byte Budgets; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for counting every phase as serial overstates cost when DNS/address attempts or; the team can monitor Request Paths, Round Trips, and Byte Budgets after launch.
-- Measure the M05 scoped measurement before approval.
-- Approve the M05 shortcut for charlie now.
+- Measure logging full data for review case three; limit the change. with margin
+- Measure equating socket data for review case three; limit the change.
+- Measure every phase data for review case three; limit the change. with margin
+- Measure every throughput data for review case three; limit the change.
 
-**Answer:** Measure the M05 scoped measurement before approval.
+**Answer:** Measure every phase data for review case three; limit the change. with margin
 
-**Explanation:** M05-Q015 enacts mistake 3 from Request Paths, Round Trips, and Byte Budgets; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M05-Q015 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects every phase as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M05-Q016
 
@@ -195,16 +195,16 @@ This key covers all 39 questions for **Network Foundations**. Use it after an at
 
 **Choices:**
 
-- Approve calling a lower bound an SLO prediction hides queues, loss, and application work for Request Paths, Round Trips, and Byte Budgets; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for calling a lower bound an SLO prediction hides queues, loss, and application work; the team can monitor Request Paths, Round Trips, and Byte Budgets after launch.
-- Approve the M05 shortcut for delta now.
-- Bound the M05 scoped measurement and record the limiting assumption before approving the change.
+- Measure dividing payload data for review case four; limit the change. with margin
+- Measure changed payloads data for review case four; limit the change.
+- Measure disabling verification data for review case four; limit the change.
+- Measure lower bound data for review case four; limit the change. with margin
 
-**Answer:** Bound the M05 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure lower bound data for review case four; limit the change. with margin
 
-**Explanation:** M05-Q016 enacts mistake 4 from Request Paths, Round Trips, and Byte Budgets; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M05-Q016 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects lower bound as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M05-Q017
 
@@ -213,16 +213,16 @@ This key covers all 39 questions for **Network Foundations**. Use it after an at
 
 **Choices:**
 
-- Freeze the M05 scoped measurement before approving the change.
-- Approve “DNS is down” collapses authoritative, recursive, network, validation, and cache for DNS, Addressing, Routing, and Discovery; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for “DNS is down” collapses authoritative, recursive, network, validation, and cache; the team can monitor DNS, Addressing, Routing, and Discovery after launch.
-- Approve the M05 shortcut for ember now.
+- Measure dns down data for review case five; limit the change. with margin
+- Measure possession certificate data for review case five; limit the change. with margin
+- Measure committing private data for review case five; limit the change.
+- Measure resumption always data for review case five; limit the change.
 
-**Answer:** Freeze the M05 scoped measurement before approving the change.
+**Answer:** Measure dns down data for review case five; limit the change. with margin
 
-**Explanation:** M05-Q017 enacts mistake 1 from DNS, Addressing, Routing, and Discovery; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M05-Q017 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects dns down as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M05-Q018
 
@@ -231,16 +231,16 @@ This key covers all 39 questions for **Network Foundations**. Use it after an at
 
 **Choices:**
 
-- Approve infinite retry on timeout multiplies resolver load during failure for DNS, Addressing, Routing, and Discovery; the local context makes that proposal familiar enough for review.
-- Preserve the M05 scoped measurement before approval.
-- Defer measurement until production for infinite retry on timeout multiplies resolver load during failure; the team can monitor DNS, Addressing, Routing, and Discovery after launch.
-- Approve the M05 shortcut for fable now.
+- Measure requests not data for review case six; limit the change.
+- Measure infinite retry data for review case six; limit the change.
+- Measure one connection data for review case six; limit the change.
+- Measure unlimited pools data for review case six; limit the change.
 
-**Answer:** Preserve the M05 scoped measurement before approval.
+**Answer:** Measure infinite retry data for review case six; limit the change.
 
-**Explanation:** M05-Q018 enacts mistake 2 from DNS, Addressing, Routing, and Discovery; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M05-Q018 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects infinite retry as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M05-Q019
 
@@ -249,16 +249,16 @@ This key covers all 39 questions for **Network Foundations**. Use it after an at
 
 **Choices:**
 
-- Approve using a stale address without a stated policy can route to decommissioned or uns for DNS, Addressing, Routing, and Discovery; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for using a stale address without a stated policy can route to decommissioned or uns; the team can monitor DNS, Addressing, Routing, and Discovery after launch.
-- Model the M05 scoped measurement and record the limiting assumption before approving the change.
-- Approve the M05 shortcut for harbor now.
+- Measure rotating certificate data for review case seven; limit the change.
+- Measure multiplexed does data for review case seven; limit the change.
+- Measure stale address data for review case seven; limit the change.
+- Measure one cold data for review case seven; limit the change.
 
-**Answer:** Model the M05 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure stale address data for review case seven; limit the change.
 
-**Explanation:** M05-Q019 enacts mistake 3 from DNS, Addressing, Routing, and Discovery; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M05-Q019 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects stale address as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M05-Q020
 
@@ -267,23 +267,23 @@ This key covers all 39 questions for **Network Foundations**. Use it after an at
 
 **Choices:**
 
-- Approve logging full queried names can expose tenant or user data for DNS, Addressing, Routing, and Discovery; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for logging full queried names can expose tenant or user data; the team can monitor DNS, Addressing, Routing, and Discovery after launch.
-- Approve the M05 shortcut for indigo now.
-- Account the M05 scoped measurement before approving the change.
+- Measure maximum concurrent data for review case eight; limit the change.
+- Measure client proxy data for review case eight; limit the change.
+- Measure quic fixes data for review case eight; limit the change.
+- Measure logging full data for review case eight; limit the change.
 
-**Answer:** Account the M05 scoped measurement before approving the change.
+**Answer:** Measure logging full data for review case eight; limit the change.
 
-**Explanation:** M05-Q020 enacts mistake 4 from DNS, Addressing, Routing, and Discovery; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M05-Q020 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects logging full as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M05-Q021
 
 **Type:** `calculation`
 **Difficulty:** `synthesis`
 
-**Answer:** M05 Bandwidth-Delay Product case 1: BDP = 80 Mbps / 8 x 0.120 s = 1,200,000 bytes.
+**Answer:** Calculation for request paths, round trips, and byte budgets, m05 Bandwidth-Delay Product case 1: BDP = 80 Mbps / 8 x 0.120 s = 1,200,000 bytes.
 
 **Explanation:** M05-Q021 uses bandwidth-delay product from Request Paths, Round Trips, and Byte Budgets and keeps units visible through the final numeric result.
 
@@ -294,7 +294,7 @@ This key covers all 39 questions for **Network Foundations**. Use it after an at
 **Type:** `calculation`
 **Difficulty:** `recall`
 
-**Answer:** M05 Rtt Setup case 2: Setup lower bound is 3 x 90 ms = 270 ms before payload work.
+**Answer:** Calculation for dns, addressing, routing, and discovery, setup lower bound is 3 x 90 ms = 270 ms before payload work.
 
 **Explanation:** M05-Q022 uses RTT setup from DNS, Addressing, Routing, and Discovery and keeps units visible through the final numeric result.
 
@@ -305,7 +305,7 @@ This key covers all 39 questions for **Network Foundations**. Use it after an at
 **Type:** `calculation`
 **Difficulty:** `application`
 
-**Answer:** M05 Serialization case 3: Serialization is 280 KiB x 8 / 900 Kbps = 2.49 seconds, ignoring protocol overhead.
+**Answer:** Calculation for tcp ordering, flow, congestion, and goodput, serialization is 280 KiB x 8 / 900 Kbps = 2.49 seconds, ignoring protocol overhead.
 
 **Explanation:** M05-Q023 uses serialization from TCP Ordering, Flow, Congestion, and Goodput and keeps units visible through the final numeric result.
 
@@ -316,7 +316,7 @@ This key covers all 39 questions for **Network Foundations**. Use it after an at
 **Type:** `calculation`
 **Difficulty:** `synthesis`
 
-**Answer:** M05 Goodput case 4: Goodput is 100 x (1 - 0.12) = 88.0 MB/s.
+**Answer:** Calculation for tls trust and connection establishment, goodput is 100 x (1 - 0.12) = 88.0 MB/s.
 
 **Explanation:** M05-Q024 uses goodput from TLS Trust and Connection Establishment and keeps units visible through the final numeric result.
 
@@ -327,7 +327,7 @@ This key covers all 39 questions for **Network Foundations**. Use it after an at
 **Type:** `calculation`
 **Difficulty:** `recall`
 
-**Answer:** M05 Rate Times Hold Time case 5: Mean concurrency is 350 x 0.08 = 28.0 active streams.
+**Answer:** Calculation for proxies, nat, pooling, and exhaustion, mean concurrency is 350 x 0.08 = 28.0 active streams.
 
 **Explanation:** M05-Q025 uses rate times hold time from Proxies, NAT, Pooling, and Exhaustion and keeps units visible through the final numeric result.
 
@@ -338,7 +338,7 @@ This key covers all 39 questions for **Network Foundations**. Use it after an at
 **Type:** `calculation`
 **Difficulty:** `application`
 
-**Answer:** M05 Shared Ordering case 6: Shared ordering exposes the later completion, 220 ms, while independent streams can expose the 140 ms result separately.
+**Answer:** Calculation for http/11 and http/2 multiplexing, shared ordering exposes the later completion, 220 ms, while independent streams can expose the 140 ms result separately.
 
 **Explanation:** M05-Q026 uses shared ordering from HTTP/1.1 and HTTP/2 Multiplexing and keeps units visible through the final numeric result.
 
@@ -349,140 +349,140 @@ This key covers all 39 questions for **Network Foundations**. Use it after an at
 **Type:** `scenario_diagnosis`
 **Difficulty:** `recall`
 
-**Answer:** M05 diagnosis 1 identifies Request Paths, Round Trips, and Byte Budgets evidence scope. The proving fields are path.rtt_ms and path.bandwidth_kbps; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for request paths, round trips, and byte budgets, path.rtt_ms and streams.0.bytes separate the mechanism. path.rtt_ms = 60 while streams.0.bytes = 12288, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M05-Q027 comes from emitted trial fields rather than fixture identifiers; Request Paths, Round Trips, and Byte Budgets is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare path.rtt_ms with streams.0.bytes and connect that contrast to request paths, round trips, and byte budgets.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Request Paths, Round Trips, and Byte Budgets, cites path.rtt_ms and streams.0.bytes, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M05-Q028
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `application`
 
-**Answer:** M05 diagnosis 2 identifies DNS, Addressing, Routing, and Discovery evidence scope. The proving fields are path.rtt_ms and path.bandwidth_kbps; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for dns, addressing, routing, and discovery, path.rtt_ms and limits.timeout_ms separate the mechanism. path.rtt_ms = 60 while limits.timeout_ms = 5000, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M05-Q028 comes from emitted trial fields rather than fixture identifiers; DNS, Addressing, Routing, and Discovery is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare path.rtt_ms with limits.timeout_ms and connect that contrast to dns, addressing, routing, and discovery.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names DNS, Addressing, Routing, and Discovery, cites path.rtt_ms and limits.timeout_ms, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M05-Q029
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** M05 diagnosis 3 identifies TCP Ordering, Flow, Congestion, and Goodput evidence scope. The proving fields are path.rtt_ms and path.bandwidth_kbps; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for tcp ordering, flow, congestion, and goodput, path.rtt_ms and streams.2.bytes separate the mechanism. path.rtt_ms = 60 while streams.2.bytes = 4096, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M05-Q029 comes from emitted trial fields rather than fixture identifiers; TCP Ordering, Flow, Congestion, and Goodput is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare path.rtt_ms with streams.2.bytes and connect that contrast to tcp ordering, flow, congestion, and goodput.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names TCP Ordering, Flow, Congestion, and Goodput, cites path.rtt_ms and streams.2.bytes, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M05-Q030
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `recall`
 
-**Answer:** M05 diagnosis 4 identifies TLS Trust and Connection Establishment evidence scope. The proving fields are path.rtt_ms and path.bandwidth_kbps; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for tls trust and connection establishment, path.rtt_ms and limits.max_bytes separate the mechanism. path.rtt_ms = 60 while limits.max_bytes = 131072, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M05-Q030 comes from emitted trial fields rather than fixture identifiers; TLS Trust and Connection Establishment is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare path.rtt_ms with limits.max_bytes and connect that contrast to tls trust and connection establishment.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names TLS Trust and Connection Establishment, cites path.rtt_ms and limits.max_bytes, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M05-Q031
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `application`
 
-**Answer:** M05 diagnosis 5 identifies Proxies, NAT, Pooling, and Exhaustion evidence scope. The proving fields are path.rtt_ms and path.bandwidth_kbps; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for proxies, nat, pooling, and exhaustion, path.bandwidth_kbps and streams.0.bytes separate the mechanism. path.bandwidth_kbps = 4000 while streams.0.bytes = 12288, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M05-Q031 comes from emitted trial fields rather than fixture identifiers; Proxies, NAT, Pooling, and Exhaustion is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare path.bandwidth_kbps with streams.0.bytes and connect that contrast to proxies, nat, pooling, and exhaustion.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Proxies, NAT, Pooling, and Exhaustion, cites path.bandwidth_kbps and streams.0.bytes, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M05-Q032
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** M05 diagnosis 6 identifies HTTP/1.1 and HTTP/2 Multiplexing evidence scope. The proving fields are path.rtt_ms and path.bandwidth_kbps; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for http/11 and http/2 multiplexing, path.bandwidth_kbps and streams.1.bytes separate the mechanism. path.bandwidth_kbps = 4000 while streams.1.bytes = 6144, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M05-Q032 comes from emitted trial fields rather than fixture identifiers; HTTP/1.1 and HTTP/2 Multiplexing is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare path.bandwidth_kbps with streams.1.bytes and connect that contrast to http/11 and http/2 multiplexing.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names HTTP/11 and HTTP/2 Multiplexing, cites path.bandwidth_kbps and streams.1.bytes, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M05-Q033
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `recall`
 
-**Answer:** M05 diagnosis 7 identifies QUIC and HTTP/3 Stream Behavior evidence scope. The proving fields are path.rtt_ms and path.bandwidth_kbps; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for quic and http/3 stream behavior, path.bandwidth_kbps and streams.2.bytes separate the mechanism. path.bandwidth_kbps = 4000 while streams.2.bytes = 4096, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M05-Q033 comes from emitted trial fields rather than fixture identifiers; QUIC and HTTP/3 Stream Behavior is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare path.bandwidth_kbps with streams.2.bytes and connect that contrast to quic and http/3 stream behavior.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names QUIC and HTTP/3 Stream Behavior, cites path.bandwidth_kbps and streams.2.bytes, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M05-Q034
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `application`
 
-**Answer:** M05 diagnosis 8 identifies Protocol and Topology Decisions evidence scope. The proving fields are path.rtt_ms and path.bandwidth_kbps; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for protocol and topology decisions, path.bandwidth_kbps and fault.connections separate the mechanism. path.bandwidth_kbps = 4000 while fault.connections = 7, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M05-Q034 comes from emitted trial fields rather than fixture identifiers; Protocol and Topology Decisions is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare path.bandwidth_kbps with fault.connections and connect that contrast to protocol and topology decisions.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Protocol and Topology Decisions, cites path.bandwidth_kbps and fault.connections, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M05-Q035
 
 **Type:** `design_judgment`
 **Difficulty:** `synthesis`
 
-**Answer:** For M05 decision 1, recommend against. The protected bound is 195 x 0.72 = 140.4/s, and the planned 171.6/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 171.6/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 31.2/s of lower-priority work.
+**Answer:** Approve Cold path budget at 128.4/s. The deciding number is 195 x 0.72 = 140.4/s, leaving 12/s before the reserve is consumed. Withdraw approval if a drill, trace, or workload sample shows cold path budget demand above 140.4/s or proves the shed point cannot protect lower-priority work.
 
-**Explanation:** M05-Q035 turns on the forcing number from EX-01, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to cold path budget demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 140.4/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M05-Q036
 
 **Type:** `design_judgment`
 **Difficulty:** `recall`
 
-**Answer:** For M05 decision 2, recommend against. The protected bound is 212 x 0.72 = 152.6/s, and the planned 186.6/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 186.6/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 34.0/s of lower-priority work.
+**Answer:** Decline Journey percentile at 164/s. The deciding number is 212 x 0.72 = 152.6/s, so planned demand exceeds the usable region by 11.4/s. Approve later if repeated measurements lift usable capacity above 164/s or a named policy removes at least 11.4/s of deferrable work before saturation.
 
-**Explanation:** M05-Q036 turns on the forcing number from EX-02, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to journey percentile demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 152.6/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M05-Q037
 
 **Type:** `design_judgment`
 **Difficulty:** `application`
 
-**Answer:** For M05 decision 3, recommend against. The protected bound is 229 x 0.72 = 164.9/s, and the planned 201.5/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 201.5/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 36.6/s of lower-priority work.
+**Answer:** Approve conditionally for DNS response classes. The deciding number is 229 x 0.72 = 164.9/s, and 159.9/s fits only while the fallback remains enforceable. Keep the condition until recovery traffic, priority demand, or fallback tests show less than 5/s of usable margin.
 
-**Explanation:** M05-Q037 turns on the forcing number from EX-03, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to dns response classes demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 164.9/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M05-Q038
 
 **Type:** `design_judgment`
 **Difficulty:** `synthesis`
 
-**Answer:** For M05 decision 4, recommend against. The protected bound is 246 x 0.72 = 177.1/s, and the planned 216.5/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 216.5/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 39.4/s of lower-priority work.
+**Answer:** Approve Discovery ownership at 160/s. The deciding number is 246 x 0.72 = 177.1/s, leaving 17.1/s before the reserve is consumed. Require redesign if a drill, trace, or workload sample shows discovery ownership demand above 177.1/s or proves the shed point cannot protect lower-priority work.
 
-**Explanation:** M05-Q038 turns on the forcing number from EX-04, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to discovery ownership demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 177.1/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M05-Q039
 
 **Type:** `design_judgment`
 **Difficulty:** `recall`
 
-**Answer:** For M05 decision 5, recommend against. The protected bound is 263 x 0.72 = 189.4/s, and the planned 231.4/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 231.4/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 42.0/s of lower-priority work.
+**Answer:** Decline Flow versus congestion at 205/s. The deciding number is 263 x 0.72 = 189.4/s, so planned demand exceeds the usable region by 15.6/s. Lift the decline if repeated measurements lift usable capacity above 205/s or a named policy removes at least 15.6/s of deferrable work before saturation.
 
-**Explanation:** M05-Q039 turns on the forcing number from EX-05, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to flow versus congestion demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 189.4/s, compares it with planned demand, and names a scenario-specific reversal condition.

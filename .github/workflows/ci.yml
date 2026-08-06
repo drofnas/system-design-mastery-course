@@ -20,6 +20,8 @@ jobs:
         run: python3 scripts/schema_contract.py
       - name: answer key drift
         run: python3 scripts/generate_answer_key.py --all --check
+      - name: quiz acceptance
+        run: python3 scripts/check_quiz_acceptance.py --all
       - name: lab suites
         run: |
           fail=0
