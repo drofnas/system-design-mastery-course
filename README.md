@@ -24,6 +24,15 @@ The course is not a classroom package or credentialing program. It is designed t
 
 Move at the pace that fits your life. There are no review gates, formal evidence logs, Git-based submission freezes, or mandatory final-project submissions.
 
+## Suggested Reading Order
+
+Catalog order is the default path. Start with M00 if algorithms, data structures,
+and tractability are rusty; skip directly to M01 if you already have that CS
+foundation and return to M00 as a reference. M19 is numbered last as synthesis,
+but it reads naturally after M07 when you want cache placement, eviction,
+invalidation, and stampede mechanics before the browser/CDN-specific material in
+M16.
+
 ## Quiz Workflow
 
 Generate a quiz from the repository root:

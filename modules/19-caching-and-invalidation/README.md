@@ -16,6 +16,7 @@ Use this module when a design conversation says "just cache it." The local work
 turns that sentence into a concrete policy: what is authoritative, which key is
 safe, how stale is allowed, who regenerates, and when the cache should be
 removed.
+
 That policy is the unit of learning; cache product names are secondary.
 
 ## Prerequisites
