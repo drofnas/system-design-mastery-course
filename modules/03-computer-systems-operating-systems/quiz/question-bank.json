@@ -268,16 +268,16 @@
         "benchmark-contracts-pipelines-caches-and-localit",
         "src:L01-mistake-1"
       ],
-      "prompt": "A design review for Benchmark Contracts, Pipelines, Caches, and Locality includes this proposal: a faster wrong checksum is not an optimization. Which response best protects the mechanism?",
+      "prompt": "A review compares checks for timing unequal, one iteration, naming cache, and reporting only. The proposal says timing unequal work: a faster wrong checksum is not an optimization. Which measurement target decides case one?",
       "choices": [
-        "Scope the M03 scoped measurement and record the limiting assumption before approving the change.",
-        "Approve a faster wrong checksum is not an optimization for Benchmark Contracts, Pipelines, Caches, and Locality; the local context makes that proposal familiar enough for review.",
-        "Defer measurement until production for a faster wrong checksum is not an optimization; the team can monitor Benchmark Contracts, Pipelines, Caches, and Locality after launch.",
-        "Approve the M03 shortcut for alpha now."
+        "Measure timing unequal data for review case one; limit the change.",
+        "Measure one iteration data for review case one; limit the change.",
+        "Measure naming cache data for review case one; limit the change. with margin",
+        "Measure reporting only data for review case one; limit the change."
       ],
-      "correct_answer": "Scope the M03 scoped measurement and record the limiting assumption before approving the change.",
-      "explanation": "M03-Q015 enacts mistake 1 from Benchmark Contracts, Pipelines, Caches, and Locality; the defensible response asks for the missing scope evidence before accepting the shortcut.",
-      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
+      "correct_answer": "Measure timing unequal data for review case one; limit the change.",
+      "explanation": "M03-Q015 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
+      "grading_notes": "Full credit selects timing unequal as the deciding target and explains why the other listed targets are adjacent rather than decisive."
     },
     {
       "question_id": "M03-Q016",
@@ -292,16 +292,16 @@
         "benchmark-contracts-pipelines-caches-and-localit",
         "src:L01-mistake-2"
       ],
-      "prompt": "During an incident review about Benchmark Contracts, Pipelines, Caches, and Locality, the team wants to proceed this way: startup, interrupts, and frequency state dominate. What should the reviewer say?",
+      "prompt": "A review compares checks for one iteration, generalizing across, equating threads, and every context. The proposal says using one iteration: startup, interrupts, and frequency state dominate. Which measurement target decides case two?",
       "choices": [
-        "Approve startup, interrupts, and frequency state dominate for Benchmark Contracts, Pipelines, Caches, and Locality; the local context makes that proposal familiar enough for review.",
-        "Measure the M03 scoped measurement before approving the change.",
-        "Defer measurement until production for startup, interrupts, and frequency state dominate; the team can monitor Benchmark Contracts, Pipelines, Caches, and Locality after launch.",
-        "Approve the M03 shortcut for bravo now."
+        "Measure generalizing across data for review case two; limit the change.",
+        "Measure one iteration data for review case two; limit the change.",
+        "Measure equating threads data for review case two; limit the change.",
+        "Measure every context data for review case two; limit the change."
       ],
-      "correct_answer": "Measure the M03 scoped measurement before approving the change.",
-      "explanation": "M03-Q016 enacts mistake 2 from Benchmark Contracts, Pipelines, Caches, and Locality; the defensible response asks for the missing scope evidence before accepting the shortcut.",
-      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
+      "correct_answer": "Measure one iteration data for review case two; limit the change.",
+      "explanation": "M03-Q016 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
+      "grading_notes": "Full credit selects one iteration as the deciding target and explains why the other listed targets are adjacent rather than decisive."
     },
     {
       "question_id": "M03-Q017",
@@ -316,16 +316,16 @@
         "benchmark-contracts-pipelines-caches-and-localit",
         "src:L01-mistake-3"
       ],
-      "prompt": "A learner applies Benchmark Contracts, Pipelines, Caches, and Locality and chooses this shortcut: layout, vectorization, or copying. Which correction is most defensible?",
+      "prompt": "A review compares checks for naming cache, logical cpus, syscall count, and throttled blocked. The proposal says naming a cache as cause without evidence: layout, vectorization, or copying. Which measurement target decides case three?",
       "choices": [
-        "Approve layout, vectorization, or copying for Benchmark Contracts, Pipelines, Caches, and Locality; the local context makes that proposal familiar enough for review.",
-        "Defer measurement until production for layout, vectorization, or copying; the team can monitor Benchmark Contracts, Pipelines, Caches, and Locality after launch.",
-        "Bound the M03 scoped measurement before approval.",
-        "Approve the M03 shortcut for charlie now."
+        "Measure logical cpus data for review case three; limit the change.",
+        "Measure syscall count data for review case three; limit the change.",
+        "Measure naming cache data for review case three; limit the change.",
+        "Measure throttled blocked data for review case three; limit the change."
       ],
-      "correct_answer": "Bound the M03 scoped measurement before approval.",
-      "explanation": "M03-Q017 enacts mistake 3 from Benchmark Contracts, Pipelines, Caches, and Locality; the defensible response asks for the missing scope evidence before accepting the shortcut.",
-      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
+      "correct_answer": "Measure naming cache data for review case three; limit the change.",
+      "explanation": "M03-Q017 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
+      "grading_notes": "Full credit selects naming cache as the deciding target and explains why the other listed targets are adjacent rather than decisive."
     },
     {
       "question_id": "M03-Q018",
@@ -340,16 +340,16 @@
         "benchmark-contracts-pipelines-caches-and-localit",
         "src:L01-mistake-4"
       ],
-      "prompt": "A migration note for Benchmark Contracts, Pipelines, Caches, and Locality relies on this claim: it selects favorable noise and hides variance. Which option keeps the evidence scope intact?",
+      "prompt": "A review compares checks for reporting only, every fault, rss allocated, and forcing host. The proposal says reporting only the best run: it selects favorable noise and hides variance. Which measurement target decides case four?",
       "choices": [
-        "Approve it selects favorable noise and hides variance for Benchmark Contracts, Pipelines, Caches, and Locality; the local context makes that proposal familiar enough for review.",
-        "Defer measurement until production for it selects favorable noise and hides variance; the team can monitor Benchmark Contracts, Pipelines, Caches, and Locality after launch.",
-        "Approve the M03 shortcut for delta now.",
-        "Freeze the M03 scoped measurement and record the limiting assumption before approving the change."
+        "Measure every fault data for review case four; limit the change. with margin",
+        "Measure rss allocated data for review case four; limit the change.",
+        "Measure forcing host data for review case four; limit the change.",
+        "Measure reporting only data for review case four; limit the change."
       ],
-      "correct_answer": "Freeze the M03 scoped measurement and record the limiting assumption before approving the change.",
-      "explanation": "M03-Q018 enacts mistake 4 from Benchmark Contracts, Pipelines, Caches, and Locality; the defensible response asks for the missing scope evidence before accepting the shortcut.",
-      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
+      "correct_answer": "Measure reporting only data for review case four; limit the change.",
+      "explanation": "M03-Q018 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
+      "grading_notes": "Full credit selects reporting only as the deciding target and explains why the other listed targets are adjacent rather than decisive."
     },
     {
       "question_id": "M03-Q019",
@@ -364,16 +364,16 @@
         "benchmark-contracts-pipelines-caches-and-localit",
         "src:L01-mistake-5"
       ],
-      "prompt": "A capacity memo touches Benchmark Contracts, Pipelines, Caches, and Locality and argues: cache and branch behavior are not API contracts. Which response is the strongest engineering objection?",
+      "prompt": "A review compares checks for generalizing across, different initialization, oom exception, and away correctness. The proposal says generalizing across machines: cache and branch behavior are not API contracts. Which measurement target decides case five?",
       "choices": [
-        "Preserve the M03 scoped measurement before approving the change.",
-        "Approve cache and branch behavior are not API contracts for Benchmark Contracts, Pipelines, Caches, and Locality; the local context makes that proposal familiar enough for review.",
-        "Defer measurement until production for cache and branch behavior are not API contracts; the team can monitor Benchmark Contracts, Pipelines, Caches, and Locality after launch.",
-        "Approve the M03 shortcut for ember now."
+        "Measure generalizing across data for review case five; limit the change.",
+        "Measure different initialization data for review case five; limit the change.",
+        "Measure oom exception data for review case five; limit the change.",
+        "Measure away correctness data for review case five; limit the change."
       ],
-      "correct_answer": "Preserve the M03 scoped measurement before approving the change.",
-      "explanation": "M03-Q019 enacts mistake 5 from Benchmark Contracts, Pipelines, Caches, and Locality; the defensible response asks for the missing scope evidence before accepting the shortcut.",
-      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
+      "correct_answer": "Measure generalizing across data for review case five; limit the change.",
+      "explanation": "M03-Q019 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
+      "grading_notes": "Full credit selects generalizing across as the deciding target and explains why the other listed targets are adjacent rather than decisive."
     },
     {
       "question_id": "M03-Q020",
@@ -388,16 +388,16 @@
         "processes-scheduling-context-switches-and-system",
         "src:L02-mistake-1"
       ],
-      "prompt": "A design review for Processes, Scheduling, Context Switches, and System Calls includes this proposal: runnable threads still need CPU capacity. Which response best protects the mechanism?",
+      "prompt": "A review compares checks for equating threads, any slow, running deadlock, and cache line. The proposal says equating threads with parallelism: runnable threads still need CPU capacity. Which measurement target decides case six?",
       "choices": [
-        "Approve runnable threads still need CPU capacity for Processes, Scheduling, Context Switches, and System Cal; the local context makes that proposal familiar enough for review.",
-        "Model the M03 scoped measurement before approval.",
-        "Defer measurement until production for runnable threads still need CPU capacity; the team can monitor Processes, Scheduling, Context Switches, and System Cal after launch.",
-        "Approve the M03 shortcut for fable now."
+        "Measure any slow data for review case six; limit the change. with margin",
+        "Measure equating threads data for review case six; limit the change.",
+        "Measure running deadlock data for review case six; limit the change.",
+        "Measure cache line data for review case six; limit the change."
       ],
-      "correct_answer": "Model the M03 scoped measurement before approval.",
-      "explanation": "M03-Q020 enacts mistake 1 from Processes, Scheduling, Context Switches, and System Calls; the defensible response asks for the missing scope evidence before accepting the shortcut.",
-      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
+      "correct_answer": "Measure equating threads data for review case six; limit the change.",
+      "explanation": "M03-Q020 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
+      "grading_notes": "Full credit selects equating threads as the deciding target and explains why the other listed targets are adjacent rather than decisive."
     },
     {
       "question_id": "M03-Q021",
@@ -412,16 +412,16 @@
         "processes-scheduling-context-switches-and-system",
         "src:L02-mistake-2"
       ],
-      "prompt": "During an incident review about Processes, Scheduling, Context Switches, and System Calls, the team wants to proceed this way: blocking is required for many correct waits. What should the reviewer say?",
+      "prompt": "A review compares checks for every context, asserting padded, close durability, and directory durability. The proposal says calling every context switch bad: blocking is required for many correct waits. Which measurement target decides case seven?",
       "choices": [
-        "Approve blocking is required for many correct waits for Processes, Scheduling, Context Switches, and System Cal; the local context makes that proposal familiar enough for review.",
-        "Defer measurement until production for blocking is required for many correct waits; the team can monitor Processes, Scheduling, Context Switches, and System Cal after launch.",
-        "Account the M03 scoped measurement and record the limiting assumption before approving the change.",
-        "Approve the M03 shortcut for harbor now."
+        "Measure asserting padded data for review case seven; limit the change.",
+        "Measure close durability data for review case seven; limit the change.",
+        "Measure every context data for review case seven; limit the change.",
+        "Measure directory durability data for review case seven; limit the change."
       ],
-      "correct_answer": "Account the M03 scoped measurement and record the limiting assumption before approving the change.",
-      "explanation": "M03-Q021 enacts mistake 2 from Processes, Scheduling, Context Switches, and System Calls; the defensible response asks for the missing scope evidence before accepting the shortcut.",
-      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
+      "correct_answer": "Measure every context data for review case seven; limit the change.",
+      "explanation": "M03-Q021 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
+      "grading_notes": "Full credit selects every context as the deciding target and explains why the other listed targets are adjacent rather than decisive."
     },
     {
       "question_id": "M03-Q022",
@@ -436,16 +436,16 @@
         "processes-scheduling-context-switches-and-system",
         "src:L02-mistake-3"
       ],
-      "prompt": "A learner applies Processes, Scheduling, Context Switches, and System Calls and chooses this shortcut: treating logical CPUs as identical physical cores:: SMT and heterogeneous. Which correction is most defensible?",
+      "prompt": "A review compares checks for logical cpus, dev null, dropping caches, and reporting average. The proposal says treating logical CPUs as identical physical cores: SMT and heterogeneous. Which measurement target decides case eight?",
       "choices": [
-        "Approve treating logical CPUs as identical physical cores:: SMT and heterogeneous for Processes, Scheduling, Context Switches, and System Cal; the local context makes that proposal familiar enough for review.",
-        "Defer measurement until production for treating logical CPUs as identical physical cores:: SMT and heterogeneous; the team can monitor Processes, Scheduling, Context Switches, and System Cal after launch.",
-        "Approve the M03 shortcut for indigo now.",
-        "Test the M03 scoped measurement before approving the change."
+        "Measure dev null data for review case eight; limit the change.",
+        "Measure dropping caches data for review case eight; limit the change.",
+        "Measure reporting average data for review case eight; limit the change.",
+        "Measure logical cpus data for review case eight; limit the change."
       ],
-      "correct_answer": "Test the M03 scoped measurement before approving the change.",
-      "explanation": "M03-Q022 enacts mistake 3 from Processes, Scheduling, Context Switches, and System Calls; the defensible response asks for the missing scope evidence before accepting the shortcut.",
-      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
+      "correct_answer": "Measure logical cpus data for review case eight; limit the change.",
+      "explanation": "M03-Q022 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
+      "grading_notes": "Full credit selects logical cpus as the deciding target and explains why the other listed targets are adjacent rather than decisive."
     },
     {
       "question_id": "M03-Q023",
@@ -460,16 +460,16 @@
         "processes-scheduling-context-switches-and-system",
         "src:L02-mistake-4"
       ],
-      "prompt": "A migration note for Processes, Scheduling, Context Switches, and System Calls relies on this claim: request size and kernel work also change cost. Which option keeps the evidence scope intact?",
+      "prompt": "A review compares checks for syscall count, all time, changing chunk, and host wide. The proposal says using syscall count alone: request size and kernel work also change cost. Which measurement target decides case nine?",
       "choices": [
-        "Scope the M03 scoped measurement before approval.",
-        "Approve request size and kernel work also change cost for Processes, Scheduling, Context Switches, and System Cal; the local context makes that proposal familiar enough for review.",
-        "Defer measurement until production for request size and kernel work also change cost; the team can monitor Processes, Scheduling, Context Switches, and System Cal after launch.",
-        "Approve the M03 shortcut for juniper now."
+        "Measure syscall count data for review case nine; limit the change.",
+        "Measure all time data for review case nine; limit the change.",
+        "Measure changing chunk data for review case nine; limit the change.",
+        "Measure host wide data for review case nine; limit the change."
       ],
-      "correct_answer": "Scope the M03 scoped measurement before approval.",
-      "explanation": "M03-Q023 enacts mistake 4 from Processes, Scheduling, Context Switches, and System Calls; the defensible response asks for the missing scope evidence before accepting the shortcut.",
-      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
+      "correct_answer": "Measure syscall count data for review case nine; limit the change.",
+      "explanation": "M03-Q023 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
+      "grading_notes": "Full credit selects syscall count as the deciding target and explains why the other listed targets are adjacent rather than decisive."
     },
     {
       "question_id": "M03-Q024",
@@ -484,16 +484,16 @@
         "processes-scheduling-context-switches-and-system",
         "src:L02-mistake-5"
       ],
-      "prompt": "A capacity memo touches Processes, Scheduling, Context Switches, and System Calls and argues: the remediation and owner differ. Which response is the strongest engineering objection?",
+      "prompt": "A review compares checks for throttled blocked, cleanup abandoned, latency losing, and reading free. The proposal says confusing throttled with blocked: the remediation and owner differ. Which measurement target decides case ten?",
       "choices": [
-        "Approve the remediation and owner differ for Processes, Scheduling, Context Switches, and System Cal; the local context makes that proposal familiar enough for review.",
-        "Measure the M03 scoped measurement and record the limiting assumption before approving the change.",
-        "Defer measurement until production for the remediation and owner differ; the team can monitor Processes, Scheduling, Context Switches, and System Cal after launch.",
-        "Approve the M03 shortcut for keystone now."
+        "Measure cleanup abandoned data for review case ten; limit the change.",
+        "Measure throttled blocked data for review case ten; limit the change.",
+        "Measure latency losing data for review case ten; limit the change.",
+        "Measure reading free data for review case ten; limit the change."
       ],
-      "correct_answer": "Measure the M03 scoped measurement and record the limiting assumption before approving the change.",
-      "explanation": "M03-Q024 enacts mistake 5 from Processes, Scheduling, Context Switches, and System Calls; the defensible response asks for the missing scope evidence before accepting the shortcut.",
-      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
+      "correct_answer": "Measure throttled blocked data for review case ten; limit the change.",
+      "explanation": "M03-Q024 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
+      "grading_notes": "Full credit selects throttled blocked as the deciding target and explains why the other listed targets are adjacent rather than decisive."
     },
     {
       "question_id": "M03-Q025",
@@ -508,8 +508,8 @@
         "cache-line-scan",
         "src:L01-worked"
       ],
-      "prompt": "Alpha case in Computer Systems and Operating Systems: A scan reads 10,040 records of 64 bytes on 64-byte cache lines. How many cache lines are touched if records are packed?",
-      "correct_answer": "M03 Cache-Line Scan case 1: Packed records touch 10,040 x 64 / 64 = 10,040 cache lines.",
+      "prompt": "For benchmark contracts, pipelines, caches, and locality, a scan reads 10,040 records of 64 bytes on 64-byte cache lines. How many cache lines are touched if records are packed?",
+      "correct_answer": "Calculation for benchmark contracts, pipelines, caches, and locality, m03 Cache-Line Scan case 1: Packed records touch 10,040 x 64 / 64 = 10,040 cache lines.",
       "explanation": "M03-Q025 uses cache-line scan from Benchmark Contracts, Pipelines, Caches, and Locality and keeps units visible through the final numeric result.",
       "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
@@ -526,8 +526,8 @@
         "page-first-touches",
         "src:L02-worked"
       ],
-      "prompt": "Bravo case in Computer Systems and Operating Systems: A process first-touches a 256 MiB region using 4 KiB pages. How many pages are faulted?",
-      "correct_answer": "M03 Page First Touches case 2: 256 MiB is 262144 KiB; 262144 / 4 = 65,536 pages.",
+      "prompt": "For processes, scheduling, context switches, and system calls, a process first-touches a 256 MiB region using 4 KiB pages. How many pages are faulted?",
+      "correct_answer": "Calculation for processes, scheduling, context switches, and system calls, 256 MiB is 262144 KiB; 262144 / 4 = 65,536 pages.",
       "explanation": "M03-Q026 uses page first touches from Processes, Scheduling, Context Switches, and System Calls and keeps units visible through the final numeric result.",
       "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
@@ -542,10 +542,10 @@
       "tags": [
         "computer-systems-and-operating-systems",
         "cpu-quota",
-        "src:L03-worked"
+        "src:quiz-calculation-practice"
       ],
-      "prompt": "Charlie case in Computer Systems and Operating Systems: A container has 2.0 CPU quota and bursts to 3.5 CPU for one second. How much demand exceeds quota?",
-      "correct_answer": "M03 Cpu Quota case 3: Excess demand is 3.5 - 2.0 = 1.5 CPU-seconds during that second.",
+      "prompt": "For virtual memory, allocation, page faults, and rss, a container has 2.0 CPU quota and bursts to 3.5 CPU for one second. How much demand exceeds quota?",
+      "correct_answer": "Calculation for virtual memory, allocation, page faults, and rss, excess demand is 3.5 - 2.0 = 1.5 CPU-seconds during that second.",
       "explanation": "M03-Q027 uses CPU quota from Virtual Memory, Allocation, Page Faults, and RSS and keeps units visible through the final numeric result.",
       "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
@@ -560,10 +560,10 @@
       "tags": [
         "computer-systems-and-operating-systems",
         "cpu-quota",
-        "src:L04-worked"
+        "src:quiz-calculation-practice"
       ],
-      "prompt": "Delta case in Computer Systems and Operating Systems: A container has 2.0 CPU quota and bursts to 3.5 CPU for one second. How much demand exceeds quota?",
-      "correct_answer": "M03 Cpu Quota case 4: Excess demand is 3.5 - 2.0 = 1.5 CPU-seconds during that second.",
+      "prompt": "For locks, contention, deadlock, and false sharing, a container has 2.0 CPU quota and bursts to 3.5 CPU for one second. How much demand exceeds quota?",
+      "correct_answer": "Calculation for locks, contention, deadlock, and false sharing, excess demand is 3.5 - 2.0 = 1.5 CPU-seconds during that second.",
       "explanation": "M03-Q028 uses CPU quota from Locks, Contention, Deadlock, and False Sharing and keeps units visible through the final numeric result.",
       "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
@@ -580,8 +580,8 @@
         "cache-line-scan",
         "src:L05-worked"
       ],
-      "prompt": "Ember case in Computer Systems and Operating Systems: A scan reads 10,080 records of 64 bytes on 64-byte cache lines. How many cache lines are touched if records are packed?",
-      "correct_answer": "M03 Cache-Line Scan case 5: Packed records touch 10,080 x 64 / 64 = 10,080 cache lines.",
+      "prompt": "For files, page cache, writeback, and durable writes, a scan reads 10,080 records of 64 bytes on 64-byte cache lines. How many cache lines are touched if records are packed?",
+      "correct_answer": "Calculation for files, page cache, writeback, and durable writes, m03 Cache-Line Scan case 5: Packed records touch 10,080 x 64 / 64 = 10,080 cache lines.",
       "explanation": "M03-Q029 uses cache-line scan from Files, Page Cache, Writeback, and Durable Writes and keeps units visible through the final numeric result.",
       "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
@@ -598,10 +598,10 @@
         "benchmark-contracts-pipelines-caches-and-localit",
         "src:fixture-allocation-per-iteration"
       ],
-      "prompt": "A lab trial for Benchmark Contracts, Pipelines, Caches, and Locality reports:\n\n  parameters.iterations = 4096\n  parameters.bytes_per_iteration = 4096\n  warmup = 1\n  repetitions = 3\n  timeout_seconds = 10\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
-      "correct_answer": "M03 diagnosis 1 identifies Benchmark Contracts, Pipelines, Caches, and Locality evidence scope. The proving fields are parameters.iterations and parameters.bytes_per_iteration; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
-      "explanation": "M03-Q030 comes from emitted trial fields rather than fixture identifiers; Benchmark Contracts, Pipelines, Caches, and Locality is tested by comparing committed state, applied state, and invariant evidence.",
-      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
+      "prompt": "A benchmark contracts, pipelines, caches, and locality lab run emits this first field set:\n\n  parameters.iterations              = 4096\n  parameters.bytes_per_iteration     = 4096\n  warmup                             = 1\n  repetitions                        = 3\n  timeout_seconds                    = 10\n\nName the mechanism, cite the discriminating pair, and state how the paired run would differ.",
+      "correct_answer": "Diagnosis for benchmark contracts, pipelines, caches, and locality, parameters.iterations and warmup separate the mechanism. parameters.iterations = 4096 while warmup = 1, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.",
+      "explanation": "The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare parameters.iterations with warmup and connect that contrast to benchmark contracts, pipelines, caches, and locality.",
+      "grading_notes": "Full credit names Benchmark Contracts, Pipelines, Caches, and Locality, cites parameters.iterations and warmup, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison."
     },
     {
       "question_id": "M03-Q031",
@@ -616,10 +616,10 @@
         "processes-scheduling-context-switches-and-system",
         "src:fixture-allocation-reuse"
       ],
-      "prompt": "A lab trial for Processes, Scheduling, Context Switches, and System Calls reports:\n\n  parameters.iterations = 4096\n  parameters.bytes_per_iteration = 4096\n  warmup = 1\n  repetitions = 3\n  timeout_seconds = 10\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
-      "correct_answer": "M03 diagnosis 2 identifies Processes, Scheduling, Context Switches, and System Calls evidence scope. The proving fields are parameters.iterations and parameters.bytes_per_iteration; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
-      "explanation": "M03-Q031 comes from emitted trial fields rather than fixture identifiers; Processes, Scheduling, Context Switches, and System Calls is tested by comparing committed state, applied state, and invariant evidence.",
-      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
+      "prompt": "A processes, scheduling, context switches, and system calls lab run emits this second field set:\n\n  parameters.iterations              = 4096\n  parameters.bytes_per_iteration     = 4096\n  warmup                             = 1\n  repetitions                        = 3\n  timeout_seconds                    = 10\n\nName the mechanism, cite the discriminating pair, and state how the paired run would differ.",
+      "correct_answer": "Diagnosis for processes, scheduling, context switches, and system calls, parameters.iterations and repetitions separate the mechanism. parameters.iterations = 4096 while repetitions = 3, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.",
+      "explanation": "The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare parameters.iterations with repetitions and connect that contrast to processes, scheduling, context switches, and system calls.",
+      "grading_notes": "Full credit names Processes, Scheduling, Context Switches, and System Calls, cites parameters.iterations and repetitions, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison."
     },
     {
       "question_id": "M03-Q032",
@@ -634,10 +634,10 @@
         "virtual-memory-allocation-page-faults-and-rss",
         "src:fixture-allocation-working-set-128"
       ],
-      "prompt": "A lab trial for Virtual Memory, Allocation, Page Faults, and RSS reports:\n\n  parameters.iterations = 128\n  parameters.bytes_per_iteration = 1.04858e+06\n  warmup = 0\n  repetitions = 3\n  timeout_seconds = 20\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
-      "correct_answer": "M03 diagnosis 3 identifies Virtual Memory, Allocation, Page Faults, and RSS evidence scope. The proving fields are parameters.iterations and parameters.bytes_per_iteration; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
-      "explanation": "M03-Q032 comes from emitted trial fields rather than fixture identifiers; Virtual Memory, Allocation, Page Faults, and RSS is tested by comparing committed state, applied state, and invariant evidence.",
-      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
+      "prompt": "A virtual memory, allocation, page faults, and rss lab run emits this third field set:\n\n  parameters.iterations              = 128\n  parameters.bytes_per_iteration     = 1.04858e+06\n  warmup                             = 0\n  repetitions                        = 3\n  timeout_seconds                    = 20\n\nName the mechanism, cite the discriminating pair, and state how the paired run would differ.",
+      "correct_answer": "Diagnosis for virtual memory, allocation, page faults, and rss, parameters.iterations and timeout_seconds separate the mechanism. parameters.iterations = 128 while timeout_seconds = 20, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.",
+      "explanation": "The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare parameters.iterations with timeout_seconds and connect that contrast to virtual memory, allocation, page faults, and rss.",
+      "grading_notes": "Full credit names Virtual Memory, Allocation, Page Faults, and RSS, cites parameters.iterations and timeout_seconds, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison."
     },
     {
       "question_id": "M03-Q033",
@@ -652,10 +652,10 @@
         "locks-contention-deadlock-and-false-sharing",
         "src:fixture-allocation-working-set-16"
       ],
-      "prompt": "A lab trial for Locks, Contention, Deadlock, and False Sharing reports:\n\n  parameters.iterations = 16\n  parameters.bytes_per_iteration = 1.04858e+06\n  warmup = 0\n  repetitions = 3\n  timeout_seconds = 20\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
-      "correct_answer": "M03 diagnosis 4 identifies Locks, Contention, Deadlock, and False Sharing evidence scope. The proving fields are parameters.iterations and parameters.bytes_per_iteration; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
-      "explanation": "M03-Q033 comes from emitted trial fields rather than fixture identifiers; Locks, Contention, Deadlock, and False Sharing is tested by comparing committed state, applied state, and invariant evidence.",
-      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
+      "prompt": "A locks, contention, deadlock, and false sharing lab run emits this fourth field set:\n\n  parameters.iterations              = 16\n  parameters.bytes_per_iteration     = 1.04858e+06\n  warmup                             = 0\n  repetitions                        = 3\n  timeout_seconds                    = 20\n\nName the mechanism, cite the discriminating pair, and state how the paired run would differ.",
+      "correct_answer": "Diagnosis for locks, contention, deadlock, and false sharing, parameters.bytes_per_iteration and warmup separate the mechanism. parameters.bytes_per_iteration = 1.04858e+06 while warmup = 0, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.",
+      "explanation": "The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare parameters.bytes_per_iteration with warmup and connect that contrast to locks, contention, deadlock, and false sharing.",
+      "grading_notes": "Full credit names Locks, Contention, Deadlock, and False Sharing, cites parameters.bytes_per_iteration and warmup, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison."
     },
     {
       "question_id": "M03-Q034",
@@ -670,10 +670,10 @@
         "files-page-cache-writeback-and-durable-writes",
         "src:fixture-allocation-working-set-256"
       ],
-      "prompt": "A lab trial for Files, Page Cache, Writeback, and Durable Writes reports:\n\n  parameters.iterations = 256\n  parameters.bytes_per_iteration = 1.04858e+06\n  warmup = 0\n  repetitions = 3\n  timeout_seconds = 20\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
-      "correct_answer": "M03 diagnosis 5 identifies Files, Page Cache, Writeback, and Durable Writes evidence scope. The proving fields are parameters.iterations and parameters.bytes_per_iteration; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
-      "explanation": "M03-Q034 comes from emitted trial fields rather than fixture identifiers; Files, Page Cache, Writeback, and Durable Writes is tested by comparing committed state, applied state, and invariant evidence.",
-      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
+      "prompt": "A files, page cache, writeback, and durable writes lab run emits this fifth field set:\n\n  parameters.iterations              = 256\n  parameters.bytes_per_iteration     = 1.04858e+06\n  warmup                             = 0\n  repetitions                        = 3\n  timeout_seconds                    = 20\n\nName the mechanism, cite the discriminating pair, and state how the paired run would differ.",
+      "correct_answer": "Diagnosis for files, page cache, writeback, and durable writes, parameters.bytes_per_iteration and repetitions separate the mechanism. parameters.bytes_per_iteration = 1.04858e+06 while repetitions = 3, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.",
+      "explanation": "The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare parameters.bytes_per_iteration with repetitions and connect that contrast to files, page cache, writeback, and durable writes.",
+      "grading_notes": "Full credit names Files, Page Cache, Writeback, and Durable Writes, cites parameters.bytes_per_iteration and repetitions, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison."
     },
     {
       "question_id": "M03-Q035",
@@ -688,10 +688,10 @@
         "device-queues-and-i-o-latency",
         "src:fixture-allocation-working-set-64"
       ],
-      "prompt": "A lab trial for Device Queues and I/O Latency reports:\n\n  parameters.iterations = 64\n  parameters.bytes_per_iteration = 1.04858e+06\n  warmup = 0\n  repetitions = 3\n  timeout_seconds = 20\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
-      "correct_answer": "M03 diagnosis 6 identifies Device Queues and I/O Latency evidence scope. The proving fields are parameters.iterations and parameters.bytes_per_iteration; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
-      "explanation": "M03-Q035 comes from emitted trial fields rather than fixture identifiers; Device Queues and I/O Latency is tested by comparing committed state, applied state, and invariant evidence.",
-      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
+      "prompt": "A device queues and i/o latency lab run emits this sixth field set:\n\n  parameters.iterations              = 64\n  parameters.bytes_per_iteration     = 1.04858e+06\n  warmup                             = 0\n  repetitions                        = 3\n  timeout_seconds                    = 20\n\nName the mechanism, cite the discriminating pair, and state how the paired run would differ.",
+      "correct_answer": "Diagnosis for device queues and i/o latency, parameters.bytes_per_iteration and timeout_seconds separate the mechanism. parameters.bytes_per_iteration = 1.04858e+06 while timeout_seconds = 20, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.",
+      "explanation": "The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare parameters.bytes_per_iteration with timeout_seconds and connect that contrast to device queues and i/o latency.",
+      "grading_notes": "Full credit names Device Queues and I/O Latency, cites parameters.bytes_per_iteration and timeout_seconds, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison."
     },
     {
       "question_id": "M03-Q036",
@@ -706,10 +706,10 @@
         "containers-quotas-throttling-and-memory-limits",
         "src:fixture-branch-mixed"
       ],
-      "prompt": "A lab trial for Containers, Quotas, Throttling, and Memory Limits reports:\n\n  parameters.elements = 1e+06\n  parameters.stride = 1\n  warmup = 1\n  repetitions = 3\n  timeout_seconds = 10\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
-      "correct_answer": "M03 diagnosis 7 identifies Containers, Quotas, Throttling, and Memory Limits evidence scope. The proving fields are parameters.elements and parameters.stride; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
-      "explanation": "M03-Q036 comes from emitted trial fields rather than fixture identifiers; Containers, Quotas, Throttling, and Memory Limits is tested by comparing committed state, applied state, and invariant evidence.",
-      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
+      "prompt": "A containers, quotas, throttling, and memory limits lab run emits this seventh field set:\n\n  parameters.elements                = 1e+06\n  parameters.stride                  = 1\n  warmup                             = 1\n  repetitions                        = 3\n  timeout_seconds                    = 10\n\nName the mechanism, cite the discriminating pair, and state how the paired run would differ.",
+      "correct_answer": "Diagnosis for containers, quotas, throttling, and memory limits, warmup and timeout_seconds separate the mechanism. warmup = 1 while timeout_seconds = 10, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.",
+      "explanation": "The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare warmup with timeout_seconds and connect that contrast to containers, quotas, throttling, and memory limits.",
+      "grading_notes": "Full credit names Containers, Quotas, Throttling, and Memory Limits, cites warmup and timeout_seconds, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison."
     },
     {
       "question_id": "M03-Q037",
@@ -724,10 +724,10 @@
         "causal-diagnosis-and-production-decisions",
         "src:fixture-branch-predictable"
       ],
-      "prompt": "A lab trial for Causal Diagnosis and Production Decisions reports:\n\n  parameters.elements = 1e+06\n  parameters.stride = 1\n  warmup = 1\n  repetitions = 3\n  timeout_seconds = 10\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
-      "correct_answer": "M03 diagnosis 8 identifies Causal Diagnosis and Production Decisions evidence scope. The proving fields are parameters.elements and parameters.stride; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
-      "explanation": "M03-Q037 comes from emitted trial fields rather than fixture identifiers; Causal Diagnosis and Production Decisions is tested by comparing committed state, applied state, and invariant evidence.",
-      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
+      "prompt": "A causal diagnosis and production decisions lab run emits this eighth field set:\n\n  parameters.elements                = 1e+06\n  parameters.stride                  = 1\n  warmup                             = 1\n  repetitions                        = 3\n  timeout_seconds                    = 10\n\nName the mechanism, cite the discriminating pair, and state how the paired run would differ.",
+      "correct_answer": "Diagnosis for causal diagnosis and production decisions, repetitions and timeout_seconds separate the mechanism. repetitions = 3 while timeout_seconds = 10, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.",
+      "explanation": "The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare repetitions with timeout_seconds and connect that contrast to causal diagnosis and production decisions.",
+      "grading_notes": "Full credit names Causal Diagnosis and Production Decisions, cites repetitions and timeout_seconds, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison."
     },
     {
       "question_id": "M03-Q038",
@@ -742,10 +742,10 @@
         "benchmark-contracts-pipelines-caches-and-localit",
         "src:fixture-contention-sharded-1"
       ],
-      "prompt": "A lab trial for Benchmark Contracts, Pipelines, Caches, and Locality reports:\n\n  parameters.workers = 1\n  parameters.iterations = 500000\n  warmup = 1\n  repetitions = 3\n  timeout_seconds = 20\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
-      "correct_answer": "M03 diagnosis 9 identifies Benchmark Contracts, Pipelines, Caches, and Locality evidence scope. The proving fields are parameters.workers and parameters.iterations; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
-      "explanation": "M03-Q038 comes from emitted trial fields rather than fixture identifiers; Benchmark Contracts, Pipelines, Caches, and Locality is tested by comparing committed state, applied state, and invariant evidence.",
-      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
+      "prompt": "A benchmark contracts, pipelines, caches, and locality lab run emits this ninth field set:\n\n  parameters.workers                 = 1\n  parameters.iterations              = 500000\n  warmup                             = 1\n  repetitions                        = 3\n  timeout_seconds                    = 20\n\nName the mechanism, cite the discriminating pair, and state how the paired run would differ.",
+      "correct_answer": "Diagnosis for benchmark contracts, pipelines, caches, and locality, parameters.workers and repetitions separate the mechanism. parameters.workers = 1 while repetitions = 3, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.",
+      "explanation": "The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare parameters.workers with repetitions and connect that contrast to benchmark contracts, pipelines, caches, and locality.",
+      "grading_notes": "Full credit names Benchmark Contracts, Pipelines, Caches, and Locality, cites parameters.workers and repetitions, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison."
     },
     {
       "question_id": "M03-Q039",
@@ -760,10 +760,10 @@
         "processes-scheduling-context-switches-and-system",
         "src:fixture-contention-sharded-16"
       ],
-      "prompt": "A lab trial for Processes, Scheduling, Context Switches, and System Calls reports:\n\n  parameters.workers = 16\n  parameters.iterations = 500000\n  warmup = 1\n  repetitions = 3\n  timeout_seconds = 20\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
-      "correct_answer": "M03 diagnosis 10 identifies Processes, Scheduling, Context Switches, and System Calls evidence scope. The proving fields are parameters.workers and parameters.iterations; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
-      "explanation": "M03-Q039 comes from emitted trial fields rather than fixture identifiers; Processes, Scheduling, Context Switches, and System Calls is tested by comparing committed state, applied state, and invariant evidence.",
-      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
+      "prompt": "A processes, scheduling, context switches, and system calls lab run emits this tenth field set:\n\n  parameters.workers                 = 16\n  parameters.iterations              = 500000\n  warmup                             = 1\n  repetitions                        = 3\n  timeout_seconds                    = 20\n\nName the mechanism, cite the discriminating pair, and state how the paired run would differ.",
+      "correct_answer": "Diagnosis for processes, scheduling, context switches, and system calls, parameters.workers and warmup separate the mechanism. parameters.workers = 16 while warmup = 1, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.",
+      "explanation": "The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare parameters.workers with warmup and connect that contrast to processes, scheduling, context switches, and system calls.",
+      "grading_notes": "Full credit names Processes, Scheduling, Context Switches, and System Calls, cites parameters.workers and warmup, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison."
     },
     {
       "question_id": "M03-Q040",
@@ -778,10 +778,10 @@
         "virtual-memory-allocation-page-faults-and-rss",
         "src:fixture-contention-sharded"
       ],
-      "prompt": "A lab trial for Virtual Memory, Allocation, Page Faults, and RSS reports:\n\n  parameters.workers = 8\n  parameters.iterations = 100000\n  warmup = 1\n  repetitions = 3\n  timeout_seconds = 20\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
-      "correct_answer": "M03 diagnosis 11 identifies Virtual Memory, Allocation, Page Faults, and RSS evidence scope. The proving fields are parameters.workers and parameters.iterations; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
-      "explanation": "M03-Q040 comes from emitted trial fields rather than fixture identifiers; Virtual Memory, Allocation, Page Faults, and RSS is tested by comparing committed state, applied state, and invariant evidence.",
-      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
+      "prompt": "A virtual memory, allocation, page faults, and rss lab run emits this eleventh field set:\n\n  parameters.workers                 = 8\n  parameters.iterations              = 100000\n  warmup                             = 1\n  repetitions                        = 3\n  timeout_seconds                    = 20\n\nName the mechanism, cite the discriminating pair, and state how the paired run would differ.",
+      "correct_answer": "Diagnosis for virtual memory, allocation, page faults, and rss, parameters.workers and repetitions separate the mechanism. parameters.workers = 8 while repetitions = 3, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.",
+      "explanation": "The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare parameters.workers with repetitions and connect that contrast to virtual memory, allocation, page faults, and rss.",
+      "grading_notes": "Full credit names Virtual Memory, Allocation, Page Faults, and RSS, cites parameters.workers and repetitions, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison."
     },
     {
       "question_id": "M03-Q041",
@@ -796,10 +796,10 @@
         "locks-contention-deadlock-and-false-sharing",
         "src:fixture-contention-shared-1"
       ],
-      "prompt": "A lab trial for Locks, Contention, Deadlock, and False Sharing reports:\n\n  parameters.workers = 1\n  parameters.iterations = 500000\n  warmup = 1\n  repetitions = 3\n  timeout_seconds = 20\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
-      "correct_answer": "M03 diagnosis 12 identifies Locks, Contention, Deadlock, and False Sharing evidence scope. The proving fields are parameters.workers and parameters.iterations; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
-      "explanation": "M03-Q041 comes from emitted trial fields rather than fixture identifiers; Locks, Contention, Deadlock, and False Sharing is tested by comparing committed state, applied state, and invariant evidence.",
-      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
+      "prompt": "A locks, contention, deadlock, and false sharing lab run emits this twelfth field set:\n\n  parameters.workers                 = 1\n  parameters.iterations              = 500000\n  warmup                             = 1\n  repetitions                        = 3\n  timeout_seconds                    = 20\n\nName the mechanism, cite the discriminating pair, and state how the paired run would differ.",
+      "correct_answer": "Diagnosis for locks, contention, deadlock, and false sharing, parameters.iterations and repetitions separate the mechanism. parameters.iterations = 500000 while repetitions = 3, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.",
+      "explanation": "The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare parameters.iterations with repetitions and connect that contrast to locks, contention, deadlock, and false sharing.",
+      "grading_notes": "Full credit names Locks, Contention, Deadlock, and False Sharing, cites parameters.iterations and repetitions, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison."
     },
     {
       "question_id": "M03-Q042",
@@ -814,10 +814,10 @@
         "benchmark-contracts-pipelines-caches-and-localit",
         "src:EX-01"
       ],
-      "prompt": "In EX-01 (Freeze equivalent work), a proposal for Benchmark Contracts, Pipelines, Caches, and Locality has measured capacity 189/s, a protected operating bound of 72%, and planned steady demand of 166.3/s. State the recommendation, the number that forces it, and what would change your mind.",
-      "correct_answer": "For M03 decision 1, recommend against. The protected bound is 189 x 0.72 = 136.1/s, and the planned 166.3/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 166.3/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 30.2/s of lower-priority work.",
-      "explanation": "M03-Q042 turns on the forcing number from EX-01, not preference; the reversal conditions are specific to the measured gap in this prompt.",
-      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
+      "prompt": "A proposal for Freeze equivalent work measures 189/s and reserves 28% for failure, recovery, or skew. It plans steady demand at 124.1/s with a lower-priority shed point below the reserve. Should it ship? Name the deciding number and reversal evidence.",
+      "correct_answer": "Approve Freeze equivalent work at 124.1/s. The deciding number is 189 x 0.72 = 136.1/s, leaving 12/s before the reserve is consumed. Withdraw approval if a drill, trace, or workload sample shows freeze equivalent work demand above 136.1/s or proves the shed point cannot protect lower-priority work.",
+      "explanation": "The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to freeze equivalent work demand and the protection policy in this case.",
+      "grading_notes": "Full credit gives the stated decision, computes 136.1/s, compares it with planned demand, and names a scenario-specific reversal condition."
     },
     {
       "question_id": "M03-Q043",
@@ -832,10 +832,10 @@
         "processes-scheduling-context-switches-and-system",
         "src:EX-02"
       ],
-      "prompt": "In EX-02 (Locality and branch model), a proposal for Processes, Scheduling, Context Switches, and System Calls has measured capacity 206/s, a protected operating bound of 72%, and planned steady demand of 181.3/s. State the recommendation, the number that forces it, and what would change your mind.",
-      "correct_answer": "For M03 decision 2, recommend against. The protected bound is 206 x 0.72 = 148.3/s, and the planned 181.3/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 181.3/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 33.0/s of lower-priority work.",
-      "explanation": "M03-Q043 turns on the forcing number from EX-02, not preference; the reversal conditions are specific to the measured gap in this prompt.",
-      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
+      "prompt": "A proposal for Locality and branch model measures 206/s and reserves 28% for failure, recovery, or skew. It plans steady demand at 159.7/s and has no specific shed rule. Should it ship? Name the deciding number and reversal evidence.",
+      "correct_answer": "Decline Locality and branch model at 159.7/s. The deciding number is 206 x 0.72 = 148.3/s, so planned demand exceeds the usable region by 11.4/s. Approve later if repeated measurements lift usable capacity above 159.7/s or a named policy removes at least 11.4/s of deferrable work before saturation.",
+      "explanation": "The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to locality and branch model demand and the protection policy in this case.",
+      "grading_notes": "Full credit gives the stated decision, computes 148.3/s, compares it with planned demand, and names a scenario-specific reversal condition."
     },
     {
       "question_id": "M03-Q044",
@@ -850,10 +850,10 @@
         "virtual-memory-allocation-page-faults-and-rss",
         "src:EX-03"
       ],
-      "prompt": "In EX-03 (Scheduler state table), a proposal for Virtual Memory, Allocation, Page Faults, and RSS has measured capacity 223/s, a protected operating bound of 72%, and planned steady demand of 196.2/s. State the recommendation, the number that forces it, and what would change your mind.",
-      "correct_answer": "For M03 decision 3, recommend against. The protected bound is 223 x 0.72 = 160.6/s, and the planned 196.2/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 196.2/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 35.6/s of lower-priority work.",
-      "explanation": "M03-Q044 turns on the forcing number from EX-03, not preference; the reversal conditions are specific to the measured gap in this prompt.",
-      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
+      "prompt": "A proposal for Scheduler state table measures 223/s and reserves 28% for failure, recovery, or skew. It plans 155.6/s steady demand, but only if a named fallback is active during recovery. Should it ship? Name the deciding number and reversal evidence.",
+      "correct_answer": "Approve conditionally for Scheduler state table. The deciding number is 223 x 0.72 = 160.6/s, and 155.6/s fits only while the fallback remains enforceable. Keep the condition until recovery traffic, priority demand, or fallback tests show less than 5/s of usable margin.",
+      "explanation": "The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to scheduler state table demand and the protection policy in this case.",
+      "grading_notes": "Full credit gives the stated decision, computes 160.6/s, compares it with planned demand, and names a scenario-specific reversal condition."
     },
     {
       "question_id": "M03-Q045",
@@ -868,10 +868,10 @@
         "locks-contention-deadlock-and-false-sharing",
         "src:EX-04"
       ],
-      "prompt": "In EX-04 (Syscall batching), a proposal for Locks, Contention, Deadlock, and False Sharing has measured capacity 240/s, a protected operating bound of 72%, and planned steady demand of 211.2/s. State the recommendation, the number that forces it, and what would change your mind.",
-      "correct_answer": "For M03 decision 4, recommend against. The protected bound is 240 x 0.72 = 172.8/s, and the planned 211.2/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 211.2/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 38.4/s of lower-priority work.",
-      "explanation": "M03-Q045 turns on the forcing number from EX-04, not preference; the reversal conditions are specific to the measured gap in this prompt.",
-      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
+      "prompt": "A proposal for Syscall batching measures 240/s and reserves 28% for failure, recovery, or skew. It plans steady demand at 155.7/s with a lower-priority shed point below the reserve. Should it ship? Name the deciding number and reversal evidence.",
+      "correct_answer": "Approve Syscall batching at 155.7/s. The deciding number is 240 x 0.72 = 172.8/s, leaving 17.1/s before the reserve is consumed. Require redesign if a drill, trace, or workload sample shows syscall batching demand above 172.8/s or proves the shed point cannot protect lower-priority work.",
+      "explanation": "The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to syscall batching demand and the protection policy in this case.",
+      "grading_notes": "Full credit gives the stated decision, computes 172.8/s, compares it with planned demand, and names a scenario-specific reversal condition."
     },
     {
       "question_id": "M03-Q046",
@@ -886,10 +886,10 @@
         "files-page-cache-writeback-and-durable-writes",
         "src:EX-05"
       ],
-      "prompt": "In EX-05 (First-touch estimate), a proposal for Files, Page Cache, Writeback, and Durable Writes has measured capacity 257/s, a protected operating bound of 72%, and planned steady demand of 226.2/s. State the recommendation, the number that forces it, and what would change your mind.",
-      "correct_answer": "For M03 decision 5, recommend against. The protected bound is 257 x 0.72 = 185.0/s, and the planned 226.2/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 226.2/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 41.2/s of lower-priority work.",
-      "explanation": "M03-Q046 turns on the forcing number from EX-05, not preference; the reversal conditions are specific to the measured gap in this prompt.",
-      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
+      "prompt": "A proposal for First-touch estimate measures 257/s and reserves 28% for failure, recovery, or skew. It plans steady demand at 200.6/s and has no specific shed rule. Should it ship? Name the deciding number and reversal evidence.",
+      "correct_answer": "Decline First-touch estimate at 200.6/s. The deciding number is 257 x 0.72 = 185/s, so planned demand exceeds the usable region by 15.6/s. Lift the decline if repeated measurements lift usable capacity above 200.6/s or a named policy removes at least 15.6/s of deferrable work before saturation.",
+      "explanation": "The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to first-touch estimate demand and the protection policy in this case.",
+      "grading_notes": "Full credit gives the stated decision, computes 185/s, compares it with planned demand, and names a scenario-specific reversal condition."
     }
   ]
 }

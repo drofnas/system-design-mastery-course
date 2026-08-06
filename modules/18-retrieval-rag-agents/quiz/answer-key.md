@@ -152,16 +152,16 @@ This key covers all 45 questions for **Retrieval, RAG, and Agent Systems**. Use 
 
 **Choices:**
 
-- Calculate the M18 scoped measurement and record the limiting assumption before approving the change.
-- Approve treating clicks or model-generated labels as unquestioned ground truth for Retrieval Contracts, Outcomes, and Evaluation; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for treating clicks or model-generated labels as unquestioned ground truth; the team can monitor Retrieval Contracts, Outcomes, and Evaluation after launch.
-- Approve the M18 shortcut for alpha now.
+- Measure clicks model data for review case one; limit the change.
+- Measure aggregate unanswerable data for review case one; limit the change.
+- Measure candidates different data for review case one; limit the change.
+- Measure offline metric data for review case one; limit the change.
 
-**Answer:** Calculate the M18 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure clicks model data for review case one; limit the change.
 
-**Explanation:** M18-Q014 enacts mistake 1 from Retrieval Contracts, Outcomes, and Evaluation; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M18-Q014 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects clicks model as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M18-Q015
 
@@ -170,16 +170,16 @@ This key covers all 45 questions for **Retrieval, RAG, and Agent Systems**. Use 
 
 **Choices:**
 
-- Approve optimizing an aggregate while hiding unanswerable, revoked, or private slices for Retrieval Contracts, Outcomes, and Evaluation; the local context makes that proposal familiar enough for review.
-- Draw the M18 scoped measurement before approving the change.
-- Defer measurement until production for optimizing an aggregate while hiding unanswerable, revoked, or private slices; the team can monitor Retrieval Contracts, Outcomes, and Evaluation after launch.
-- Approve the M18 shortcut for bravo now.
+- Measure any fluent data for review case two; limit the change. with margin with margin
+- Measure aggregate unanswerable data for review case two; limit the change.
+- Measure chunking characters data for review case two; limit the change.
+- Measure filtering after data for review case two; limit the change.
 
-**Answer:** Draw the M18 scoped measurement before approving the change.
+**Answer:** Measure aggregate unanswerable data for review case two; limit the change.
 
-**Explanation:** M18-Q015 enacts mistake 2 from Retrieval Contracts, Outcomes, and Evaluation; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M18-Q015 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects aggregate unanswerable as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M18-Q016
 
@@ -188,16 +188,16 @@ This key covers all 45 questions for **Retrieval, RAG, and Agent Systems**. Use 
 
 **Choices:**
 
-- Approve comparing candidates on different queries or relevance judgments for Retrieval Contracts, Outcomes, and Evaluation; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for comparing candidates on different queries or relevance judgments; the team can monitor Retrieval Contracts, Outcomes, and Evaluation after launch.
-- Separate the M18 scoped measurement before approval.
-- Approve the M18 shortcut for charlie now.
+- Measure raw cosine data for review case three; limit the change. with margin
+- Measure omitting source data for review case three; limit the change.
+- Measure candidates different data for review case three; limit the change.
+- Measure embedding proximity data for review case three; limit the change.
 
-**Answer:** Separate the M18 scoped measurement before approval.
+**Answer:** Measure candidates different data for review case three; limit the change.
 
-**Explanation:** M18-Q016 enacts mistake 3 from Retrieval Contracts, Outcomes, and Evaluation; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M18-Q016 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects candidates different as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M18-Q017
 
@@ -206,16 +206,16 @@ This key covers all 45 questions for **Retrieval, RAG, and Agent Systems**. Use 
 
 **Choices:**
 
-- Approve calling an offline metric a product outcome without a validation plan for Retrieval Contracts, Outcomes, and Evaluation; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for calling an offline metric a product outcome without a validation plan; the team can monitor Retrieval Contracts, Outcomes, and Evaluation after launch.
-- Approve the M18 shortcut for delta now.
-- Verify the M18 scoped measurement and record the limiting assumption before approving the change.
+- Measure logarithmic average data for review case four; limit the change.
+- Measure tuning same data for review case four; limit the change.
+- Measure reporting latency data for review case four; limit the change.
+- Measure offline metric data for review case four; limit the change.
 
-**Answer:** Verify the M18 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure offline metric data for review case four; limit the change.
 
-**Explanation:** M18-Q017 enacts mistake 4 from Retrieval Contracts, Outcomes, and Evaluation; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M18-Q017 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects offline metric as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M18-Q018
 
@@ -224,16 +224,16 @@ This key covers all 45 questions for **Retrieval, RAG, and Agent Systems**. Use 
 
 **Choices:**
 
-- Compare the M18 scoped measurement before approving the change.
-- Approve counting any fluent answer as useful output for Retrieval Contracts, Outcomes, and Evaluation; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for counting any fluent answer as useful output; the team can monitor Retrieval Contracts, Outcomes, and Evaluation after launch.
-- Approve the M18 shortcut for ember now.
+- Measure any fluent data for review case five; limit the change.
+- Measure restrictive filters data for review case five; limit the change.
+- Measure tombstoned vectors data for review case five; limit the change.
+- Measure declaring hybrid data for review case five; limit the change.
 
-**Answer:** Compare the M18 scoped measurement before approving the change.
+**Answer:** Measure any fluent data for review case five; limit the change.
 
-**Explanation:** M18-Q018 enacts mistake 5 from Retrieval Contracts, Outcomes, and Evaluation; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M18-Q018 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects any fluent as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M18-Q019
 
@@ -242,16 +242,16 @@ This key covers all 45 questions for **Retrieval, RAG, and Agent Systems**. Use 
 
 **Choices:**
 
-- Approve chunking by characters and severing tables, exceptions, or authority context for Chunking, Lexical and Vector Retrieval, and Access Filt; the local context makes that proposal familiar enough for review.
-- Reject the M18 scoped measurement before approval.
-- Defer measurement until production for chunking by characters and severing tables, exceptions, or authority context; the team can monitor Chunking, Lexical and Vector Retrieval, and Access Filt after launch.
-- Approve the M18 shortcut for fable now.
+- Measure letting reranker data for review case six; limit the change.
+- Measure chunking characters data for review case six; limit the change.
+- Measure tuning reporting data for review case six; limit the change.
+- Measure averaging away data for review case six; limit the change. with margin
 
-**Answer:** Reject the M18 scoped measurement before approval.
+**Answer:** Measure chunking characters data for review case six; limit the change.
 
-**Explanation:** M18-Q019 enacts mistake 1 from Chunking, Lexical and Vector Retrieval, and Access Filters; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M18-Q019 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects chunking characters as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M18-Q020
 
@@ -260,16 +260,16 @@ This key covers all 45 questions for **Retrieval, RAG, and Agent Systems**. Use 
 
 **Choices:**
 
-- Approve filtering after retrieval, allowing private material into prompts or logs for Chunking, Lexical and Vector Retrieval, and Access Filt; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for filtering after retrieval, allowing private material into prompts or logs; the team can monitor Chunking, Lexical and Vector Retrieval, and Access Filt after launch.
-- Trace the M18 scoped measurement and record the limiting assumption before approving the change.
-- Approve the M18 shortcut for harbor now.
+- Measure measuring cost data for review case seven; limit the change.
+- Measure resolvable url data for review case seven; limit the change.
+- Measure filtering after data for review case seven; limit the change.
+- Measure equating semantic data for review case seven; limit the change.
 
-**Answer:** Trace the M18 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure filtering after data for review case seven; limit the change.
 
-**Explanation:** M18-Q020 enacts mistake 2 from Chunking, Lexical and Vector Retrieval, and Access Filters; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M18-Q020 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects filtering after as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M18-Q021
 
@@ -278,16 +278,16 @@ This key covers all 45 questions for **Retrieval, RAG, and Agent Systems**. Use 
 
 **Choices:**
 
-- Approve comparing raw BM25 and cosine scores as if their scales were calibrated for Chunking, Lexical and Vector Retrieval, and Access Filt; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for comparing raw BM25 and cosine scores as if their scales were calibrated; the team can monitor Chunking, Lexical and Vector Retrieval, and Access Filt after launch.
-- Approve the M18 shortcut for indigo now.
-- Require the M18 scoped measurement before approving the change.
+- Measure reporting one data for review case eight; limit the change.
+- Measure deleting revoked data for review case eight; limit the change.
+- Measure logging raw data for review case eight; limit the change.
+- Measure raw cosine data for review case eight; limit the change.
 
-**Answer:** Require the M18 scoped measurement before approving the change.
+**Answer:** Measure raw cosine data for review case eight; limit the change.
 
-**Explanation:** M18-Q021 enacts mistake 3 from Chunking, Lexical and Vector Retrieval, and Access Filters; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M18-Q021 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects raw cosine as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M18-Q022
 
@@ -296,16 +296,16 @@ This key covers all 45 questions for **Retrieval, RAG, and Agent Systems**. Use 
 
 **Choices:**
 
-- Calculate the M18 scoped measurement before approval.
-- Approve omitting source version from a chunk identity for Chunking, Lexical and Vector Retrieval, and Access Filt; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for omitting source version from a chunk identity; the team can monitor Chunking, Lexical and Vector Retrieval, and Access Filt after launch.
-- Approve the M18 shortcut for juniper now.
+- Measure omitting source data for review case nine; limit the change.
+- Measure relying prompt data for review case nine; limit the change.
+- Measure giving agent data for review case nine; limit the change. with margin
+- Measure validating json data for review case nine; limit the change.
 
-**Answer:** Calculate the M18 scoped measurement before approval.
+**Answer:** Measure omitting source data for review case nine; limit the change.
 
-**Explanation:** M18-Q022 enacts mistake 4 from Chunking, Lexical and Vector Retrieval, and Access Filters; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M18-Q022 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects omitting source as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M18-Q023
 
@@ -314,16 +314,16 @@ This key covers all 45 questions for **Retrieval, RAG, and Agent Systems**. Use 
 
 **Choices:**
 
-- Approve assuming embedding proximity preserves negation or policy validity for Chunking, Lexical and Vector Retrieval, and Access Filt; the local context makes that proposal familiar enough for review.
-- Draw the M18 scoped measurement and record the limiting assumption before approving the change.
-- Defer measurement until production for assuming embedding proximity preserves negation or policy validity; the team can monitor Chunking, Lexical and Vector Retrieval, and Access Filt after launch.
-- Approve the M18 shortcut for keystone now.
+- Measure asking human data for review case ten; limit the change.
+- Measure embedding proximity data for review case ten; limit the change.
+- Measure logging bearer data for review case ten; limit the change.
+- Measure read tools data for review case ten; limit the change. with margin
 
-**Answer:** Draw the M18 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure embedding proximity data for review case ten; limit the change.
 
-**Explanation:** M18-Q023 enacts mistake 5 from Chunking, Lexical and Vector Retrieval, and Access Filters; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M18-Q023 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects embedding proximity as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M18-Q024
 
@@ -332,23 +332,23 @@ This key covers all 45 questions for **Retrieval, RAG, and Agent Systems**. Use 
 
 **Choices:**
 
-- Approve calling logarithmic average behavior a worst-case guarantee for Exact Search, HNSW, and Index Economics; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for calling logarithmic average behavior a worst-case guarantee; the team can monitor Exact Search, HNSW, and Index Economics after launch.
-- Separate the M18 scoped measurement before approving the change.
-- Approve the M18 shortcut for lantern now.
+- Measure checkpoint snapshot data for review case eleven; limit the change.
+- Measure retrying irreversible data for review case eleven; limit the change.
+- Measure logarithmic average data for review case eleven; limit the change.
+- Measure giving each data for review case eleven; limit the change.
 
-**Answer:** Separate the M18 scoped measurement before approving the change.
+**Answer:** Measure logarithmic average data for review case eleven; limit the change.
 
-**Explanation:** M18-Q024 enacts mistake 1 from Exact Search, HNSW, and Index Economics; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M18-Q024 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects logarithmic average as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M18-Q025
 
 **Type:** `calculation`
 **Difficulty:** `recall`
 
-**Answer:** M18 Reciprocal Rank case 1: Reciprocal rank is 1/3 = 0.333.
+**Answer:** Calculation for retrieval contracts, outcomes, and evaluation, reciprocal rank is 1/3 = 0.333.
 
 **Explanation:** M18-Q025 uses reciprocal rank from Retrieval Contracts, Outcomes, and Evaluation and keeps units visible through the final numeric result.
 
@@ -359,7 +359,7 @@ This key covers all 45 questions for **Retrieval, RAG, and Agent Systems**. Use 
 **Type:** `calculation`
 **Difficulty:** `application`
 
-**Answer:** M18 Ndcg case 2: DCG = 0 + 3/log2(3) + 2/log2(4) = 2.893; ideal DCG = 3 + 2/log2(3) = 4.262; nDCG = 0.679.
+**Answer:** Calculation for chunking, lexical and vector retrieval, and access filters, dCG = 0 + 3/log2(3) + 2/log2(4) = 2.893; ideal DCG = 3 + 2/log2(3) = 4.262; nDCG = 0.679.
 
 **Explanation:** M18-Q026 uses nDCG from Chunking, Lexical and Vector Retrieval, and Access Filters and keeps units visible through the final numeric result.
 
@@ -370,7 +370,7 @@ This key covers all 45 questions for **Retrieval, RAG, and Agent Systems**. Use 
 **Type:** `calculation`
 **Difficulty:** `synthesis`
 
-**Answer:** M18 Cosine Similarity case 3: Cosine similarity is 0.72 / (0.9 x 1.2) = 0.667.
+**Answer:** Calculation for exact search, hnsw, and index economics, cosine similarity is 0.72 / (0.9 x 1.2) = 0.667.
 
 **Explanation:** M18-Q027 uses cosine similarity from Exact Search, HNSW, and Index Economics and keeps units visible through the final numeric result.
 
@@ -381,7 +381,7 @@ This key covers all 45 questions for **Retrieval, RAG, and Agent Systems**. Use 
 **Type:** `calculation`
 **Difficulty:** `recall`
 
-**Answer:** M18 Recall case 4: Recall@3 is 2/3 = 0.667.
+**Answer:** Calculation for hybrid retrieval, reranking, and release criteria, recall@3 is 2/3 = 0.667.
 
 **Explanation:** M18-Q028 uses recall from Hybrid Retrieval, Reranking, and Release Criteria and keeps units visible through the final numeric result.
 
@@ -392,7 +392,7 @@ This key covers all 45 questions for **Retrieval, RAG, and Agent Systems**. Use 
 **Type:** `calculation`
 **Difficulty:** `application`
 
-**Answer:** M18 Rrf case 5: RRF = 1/(60+2) + 1/(60+5) = 0.03151.
+**Answer:** Calculation for evidence provenance, grounding, freshness, and abstention, rRF = 1/(60+2) + 1/(60+5) = 0.03151.
 
 **Explanation:** M18-Q029 uses RRF from Evidence provenance, grounding, freshness, and abstention and keeps units visible through the final numeric result.
 
@@ -403,7 +403,7 @@ This key covers all 45 questions for **Retrieval, RAG, and Agent Systems**. Use 
 **Type:** `calculation`
 **Difficulty:** `synthesis`
 
-**Answer:** M18 Retrieval Tokens case 6: Retrieval tokens are 6 x 850 = 5100 tokens before instructions or answer budget.
+**Answer:** Calculation for structured tools, authorization, approval, and hostile context, retrieval tokens are 6 x 850 = 5100 tokens before instructions or answer budget.
 
 **Explanation:** M18-Q030 uses retrieval tokens from Structured tools, authorization, approval, and hostile context and keeps units visible through the final numeric result.
 
@@ -414,162 +414,162 @@ This key covers all 45 questions for **Retrieval, RAG, and Agent Systems**. Use 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `application`
 
-**Answer:** M18 diagnosis 1 identifies AI02=false in F01 modeled trial. The proving fields are answer.abstained and answer.citation_versions_valid; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for retrieval contracts, outcomes, and evaluation, answer.abstained and answer.citations.0.version separate the mechanism. answer.abstained = 0 while answer.citations.0.version = 2, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M18-Q031 comes from emitted trial fields rather than fixture identifiers; Retrieval Contracts, Outcomes, and Evaluation is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare answer.abstained with answer.citations.0.version and connect that contrast to retrieval contracts, outcomes, and evaluation.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Retrieval Contracts, Outcomes, and Evaluation, cites answer.abstained and answer.citations.0.version, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M18-Q032
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** M18 diagnosis 2 identifies Chunking, Lexical and Vector Retrieval, and Access Filters evidence scope. The proving fields are answer.abstained and answer.citation_versions_valid; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for chunking, lexical and vector retrieval, and access filters, answer.abstained and answer.citations.1.version separate the mechanism. answer.abstained = 0 while answer.citations.1.version = 2, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M18-Q032 comes from emitted trial fields rather than fixture identifiers; Chunking, Lexical and Vector Retrieval, and Access Filters is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare answer.abstained with answer.citations.1.version and connect that contrast to chunking, lexical and vector retrieval, and access filters.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Chunking, Lexical and Vector Retrieval, and Access Filters, cites answer.abstained and answer.citations.1.version, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M18-Q033
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `recall`
 
-**Answer:** M18 diagnosis 3 identifies AI03=false in F02 modeled trial. The proving fields are answer.abstained and answer.citation_versions_valid; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for exact search, hnsw, and index economics, answer.abstained and answer.grounded_claims separate the mechanism. answer.abstained = 0 while answer.grounded_claims = 2, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M18-Q033 comes from emitted trial fields rather than fixture identifiers; Exact Search, HNSW, and Index Economics is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare answer.abstained with answer.grounded_claims and connect that contrast to exact search, hnsw, and index economics.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Exact Search, HNSW, and Index Economics, cites answer.abstained and answer.grounded_claims, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M18-Q034
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `application`
 
-**Answer:** M18 diagnosis 4 identifies Hybrid Retrieval, Reranking, and Release Criteria evidence scope. The proving fields are answer.abstained and answer.citation_versions_valid; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for hybrid retrieval, reranking, and release criteria, answer.citation_versions_valid and answer.citations.0.version separate the mechanism. answer.citation_versions_valid = 1 while answer.citations.0.version = 3, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M18-Q034 comes from emitted trial fields rather than fixture identifiers; Hybrid Retrieval, Reranking, and Release Criteria is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare answer.citation_versions_valid with answer.citations.0.version and connect that contrast to hybrid retrieval, reranking, and release criteria.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Hybrid Retrieval, Reranking, and Release Criteria, cites answer.citation_versions_valid and answer.citations.0.version, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M18-Q035
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** M18 diagnosis 5 identifies AI04=false in F03 modeled trial. The proving fields are answer.abstained and answer.citation_versions_valid; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for evidence provenance, grounding, freshness, and abstention, answer.citation_versions_valid and answer.citations.1.version separate the mechanism. answer.citation_versions_valid = 1 while answer.citations.1.version = 2, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M18-Q035 comes from emitted trial fields rather than fixture identifiers; Evidence provenance, grounding, freshness, and abstention is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare answer.citation_versions_valid with answer.citations.1.version and connect that contrast to evidence provenance, grounding, freshness, and abstention.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Evidence provenance, grounding, freshness, and abstention, cites answer.citation_versions_valid and answer.citations.1.version, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M18-Q036
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `recall`
 
-**Answer:** M18 diagnosis 6 identifies Structured tools, authorization, approval, and hostile context evidence scope. The proving fields are answer.abstained and answer.citation_versions_valid; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for structured tools, authorization, approval, and hostile context, answer.citation_versions_valid and answer.grounded_claims separate the mechanism. answer.citation_versions_valid = 1 while answer.grounded_claims = 2, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M18-Q036 comes from emitted trial fields rather than fixture identifiers; Structured tools, authorization, approval, and hostile context is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare answer.citation_versions_valid with answer.grounded_claims and connect that contrast to structured tools, authorization, approval, and hostile context.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Structured tools, authorization, approval, and hostile context, cites answer.citation_versions_valid and answer.grounded_claims, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M18-Q037
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `application`
 
-**Answer:** M18 diagnosis 7 identifies AI07=false in F04 modeled trial. The proving fields are answer.abstained and answer.citation_versions_valid; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for durable agent workflows, replay, cancellation, and budgets, answer.citation_versions_valid and answer.revoked_hits separate the mechanism. answer.citation_versions_valid = 1 while answer.revoked_hits = 0, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M18-Q037 comes from emitted trial fields rather than fixture identifiers; Durable agent workflows, replay, cancellation, and budgets is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare answer.citation_versions_valid with answer.revoked_hits and connect that contrast to durable agent workflows, replay, cancellation, and budgets.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Durable agent workflows, replay, cancellation, and budgets, cites answer.citation_versions_valid and answer.revoked_hits, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M18-Q038
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** M18 diagnosis 8 identifies CivicAid Decision Tutorial and Synthesis Review evidence scope. The proving fields are answer.abstained and answer.citation_versions_valid; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for civicaid decision tutorial and synthesis review, answer.citations.0.version and answer.citations.1.version separate the mechanism. answer.citations.0.version = 3 while answer.citations.1.version = 2, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M18-Q038 comes from emitted trial fields rather than fixture identifiers; CivicAid Decision Tutorial and Synthesis Review is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare answer.citations.0.version with answer.citations.1.version and connect that contrast to civicaid decision tutorial and synthesis review.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names CivicAid Decision Tutorial and Synthesis Review, cites answer.citations.0.version and answer.citations.1.version, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M18-Q039
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `recall`
 
-**Answer:** M18 diagnosis 9 identifies AI11=false in F05 modeled trial. The proving fields are answer.abstained and answer.citation_versions_valid; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for retrieval contracts, outcomes, and evaluation, answer.citations.0.version and answer.grounded_claims separate the mechanism. answer.citations.0.version = 3 while answer.grounded_claims = 2, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M18-Q039 comes from emitted trial fields rather than fixture identifiers; Retrieval Contracts, Outcomes, and Evaluation is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare answer.citations.0.version with answer.grounded_claims and connect that contrast to retrieval contracts, outcomes, and evaluation.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Retrieval Contracts, Outcomes, and Evaluation, cites answer.citations.0.version and answer.grounded_claims, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M18-Q040
 
 **Type:** `design_judgment`
 **Difficulty:** `application`
 
-**Answer:** For M18 decision 1, recommend against. The protected bound is 234 x 0.72 = 168.5/s, and the planned 205.9/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 205.9/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 37.4/s of lower-priority work.
+**Answer:** Approve Retrieval outcome contract at 156.5/s. The deciding number is 234 x 0.72 = 168.5/s, leaving 12/s before the reserve is consumed. Withdraw approval if a drill, trace, or workload sample shows retrieval outcome contract demand above 168.5/s or proves the shed point cannot protect lower-priority work.
 
-**Explanation:** M18-Q040 turns on the forcing number from EX-01, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to retrieval outcome contract demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 168.5/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M18-Q041
 
 **Type:** `design_judgment`
 **Difficulty:** `synthesis`
 
-**Answer:** For M18 decision 2, recommend against. The protected bound is 251 x 0.72 = 180.7/s, and the planned 220.9/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 220.9/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 40.2/s of lower-priority work.
+**Answer:** Decline Metric calculation at 192.1/s. The deciding number is 251 x 0.72 = 180.7/s, so planned demand exceeds the usable region by 11.4/s. Approve later if repeated measurements lift usable capacity above 192.1/s or a named policy removes at least 11.4/s of deferrable work before saturation.
 
-**Explanation:** M18-Q041 turns on the forcing number from EX-02, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to metric calculation demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 180.7/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M18-Q042
 
 **Type:** `design_judgment`
 **Difficulty:** `recall`
 
-**Answer:** For M18 decision 3, recommend against. The protected bound is 268 x 0.72 = 193.0/s, and the planned 235.8/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 235.8/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 42.8/s of lower-priority work.
+**Answer:** Approve conditionally for Chunking and metadata. The deciding number is 268 x 0.72 = 193/s, and 188/s fits only while the fallback remains enforceable. Keep the condition until recovery traffic, priority demand, or fallback tests show less than 5/s of usable margin.
 
-**Explanation:** M18-Q042 turns on the forcing number from EX-03, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to chunking and metadata demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 193/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M18-Q043
 
 **Type:** `design_judgment`
 **Difficulty:** `application`
 
-**Answer:** For M18 decision 4, recommend against. The protected bound is 285 x 0.72 = 205.2/s, and the planned 250.8/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 250.8/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 45.6/s of lower-priority work.
+**Answer:** Approve BM25 and access filters at 188.1/s. The deciding number is 285 x 0.72 = 205.2/s, leaving 17.1/s before the reserve is consumed. Require redesign if a drill, trace, or workload sample shows bm25 and access filters demand above 205.2/s or proves the shed point cannot protect lower-priority work.
 
-**Explanation:** M18-Q043 turns on the forcing number from EX-04, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to bm25 and access filters demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 205.2/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M18-Q044
 
 **Type:** `design_judgment`
 **Difficulty:** `synthesis`
 
-**Answer:** For M18 decision 5, recommend against. The protected bound is 302 x 0.72 = 217.4/s, and the planned 265.8/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 265.8/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 48.4/s of lower-priority work.
+**Answer:** Decline Exact-search oracle at 233/s. The deciding number is 302 x 0.72 = 217.4/s, so planned demand exceeds the usable region by 15.6/s. Lift the decline if repeated measurements lift usable capacity above 233/s or a named policy removes at least 15.6/s of deferrable work before saturation.
 
-**Explanation:** M18-Q044 turns on the forcing number from EX-05, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to exact-search oracle demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 217.4/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M18-Q045
 
 **Type:** `design_judgment`
 **Difficulty:** `recall`
 
-**Answer:** For M18 decision 6, recommend against. The protected bound is 319 x 0.72 = 229.7/s, and the planned 280.7/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 280.7/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 51.0/s of lower-priority work.
+**Answer:** Approve HNSW tuning at 209.2/s. The deciding number is 319 x 0.72 = 229.7/s, leaving 20.5/s before the reserve is consumed. Reverse the call if a drill, trace, or workload sample shows hnsw tuning demand above 229.7/s or proves the shed point cannot protect lower-priority work.
 
-**Explanation:** M18-Q045 turns on the forcing number from EX-06, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to hnsw tuning demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 229.7/s, compares it with planned demand, and names a scenario-specific reversal condition.

@@ -152,16 +152,16 @@ This key covers all 34 questions for **Caching and Invalidation**. Use it after 
 
 **Choices:**
 
-- Calculate the M19 scoped measurement and record the limiting assumption before approving the change.
-- Approve caching before naming the authoritative source for Cache Placement and Read/Write Paths; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for caching before naming the authoritative source; the team can monitor Cache Placement and Read/Write Paths after launch.
-- Approve the M19 shortcut for alpha now.
+- Measure caching naming data for review case one; limit the change.
+- Measure write behind data for review case one; limit the change.
+- Measure private representation data for review case one; limit the change.
+- Measure reporting hit data for review case one; limit the change.
 
-**Answer:** Calculate the M19 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure caching naming data for review case one; limit the change.
 
-**Explanation:** M19-Q014 enacts mistake 1 from Cache Placement and Read/Write Paths; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M19-Q014 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects caching naming as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M19-Q015
 
@@ -170,16 +170,16 @@ This key covers all 34 questions for **Caching and Invalidation**. Use it after 
 
 **Choices:**
 
-- Approve treating write-behind as a performance switch instead of a consistency change for Cache Placement and Read/Write Paths; the local context makes that proposal familiar enough for review.
-- Draw the M19 scoped measurement before approving the change.
-- Defer measurement until production for treating write-behind as a performance switch instead of a consistency change; the team can monitor Cache Placement and Read/Write Paths after launch.
-- Approve the M19 shortcut for bravo now.
+- Measure letting batch data for review case two; limit the change.
+- Measure write behind data for review case two; limit the change.
+- Measure item size data for review case two; limit the change.
+- Measure ttl only data for review case two; limit the change.
 
-**Answer:** Draw the M19 scoped measurement before approving the change.
+**Answer:** Measure write behind data for review case two; limit the change.
 
-**Explanation:** M19-Q015 enacts mistake 2 from Cache Placement and Read/Write Paths; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M19-Q015 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects write behind as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M19-Q016
 
@@ -188,16 +188,16 @@ This key covers all 34 questions for **Caching and Invalidation**. Use it after 
 
 **Choices:**
 
-- Approve ignoring private representation keys for Cache Placement and Read/Write Paths; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for ignoring private representation keys; the team can monitor Cache Placement and Read/Write Paths after launch.
-- Separate the M19 scoped measurement before approval.
-- Approve the M19 shortcut for charlie now.
+- Measure derived indexes data for review case three; limit the change.
+- Measure allowing two data for review case three; limit the change. with margin
+- Measure private representation data for review case three; limit the change.
+- Measure giving every data for review case three; limit the change.
 
-**Answer:** Separate the M19 scoped measurement before approval.
+**Answer:** Measure private representation data for review case three; limit the change.
 
-**Explanation:** M19-Q016 enacts mistake 3 from Cache Placement and Read/Write Paths; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M19-Q016 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects private representation as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M19-Q017
 
@@ -206,16 +206,16 @@ This key covers all 34 questions for **Caching and Invalidation**. Use it after 
 
 **Choices:**
 
-- Approve reporting hit rate without miss cost for Eviction Policies and Hit-Rate Economics; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for reporting hit rate without miss cost; the team can monitor Eviction Policies and Hit-Rate Economics after launch.
-- Approve the M19 shortcut for delta now.
-- Verify the M19 scoped measurement and record the limiting assumption before approving the change.
+- Measure letting regeneration data for review case four; limit the change.
+- Measure serving unmarked data for review case four; limit the change.
+- Measure poisoned hit data for review case four; limit the change.
+- Measure reporting hit data for review case four; limit the change.
 
-**Answer:** Verify the M19 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure reporting hit data for review case four; limit the change.
 
-**Explanation:** M19-Q017 enacts mistake 1 from Eviction Policies and Hit-Rate Economics; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M19-Q017 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects reporting hit as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M19-Q018
 
@@ -224,16 +224,16 @@ This key covers all 34 questions for **Caching and Invalidation**. Use it after 
 
 **Choices:**
 
-- Compare the M19 scoped measurement before approving the change.
-- Approve letting batch scans evict interactive hot data for Eviction Policies and Hit-Rate Economics; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for letting batch scans evict interactive hot data; the team can monitor Eviction Policies and Hit-Rate Economics after launch.
-- Approve the M19 shortcut for ember now.
+- Measure letting batch data for review case five; limit the change.
+- Measure aggregating hit data for review case five; limit the change.
+- Measure negative cache data for review case five; limit the change.
+- Measure cache owner data for review case five; limit the change.
 
-**Answer:** Compare the M19 scoped measurement before approving the change.
+**Answer:** Measure letting batch data for review case five; limit the change.
 
-**Explanation:** M19-Q018 enacts mistake 2 from Eviction Policies and Hit-Rate Economics; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M19-Q018 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects letting batch as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M19-Q019
 
@@ -242,16 +242,16 @@ This key covers all 34 questions for **Caching and Invalidation**. Use it after 
 
 **Choices:**
 
-- Approve ignoring item size and recomputation cost for Eviction Policies and Hit-Rate Economics; the local context makes that proposal familiar enough for review.
-- Reject the M19 scoped measurement before approval.
-- Defer measurement until production for ignoring item size and recomputation cost; the team can monitor Eviction Policies and Hit-Rate Economics after launch.
-- Approve the M19 shortcut for fable now.
+- Measure removal condition data for review case six; limit the change.
+- Measure item size data for review case six; limit the change.
+- Measure measuring only data for review case six; limit the change.
+- Measure workload growth data for review case six; limit the change.
 
-**Answer:** Reject the M19 scoped measurement before approval.
+**Answer:** Measure item size data for review case six; limit the change.
 
-**Explanation:** M19-Q019 enacts mistake 3 from Eviction Policies and Hit-Rate Economics; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M19-Q019 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects item size as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M19-Q020
 
@@ -260,16 +260,16 @@ This key covers all 34 questions for **Caching and Invalidation**. Use it after 
 
 **Choices:**
 
-- Approve using TTL as the only invalidation strategy for high-risk data for Invalidation and Coherence; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for using TTL as the only invalidation strategy for high-risk data; the team can monitor Invalidation and Coherence after launch.
-- Trace the M19 scoped measurement and record the limiting assumption before approving the change.
-- Approve the M19 shortcut for harbor now.
+- Measure failure behavior data for review case seven; limit the change.
+- Measure capacity margin data for review case seven; limit the change.
+- Measure ttl only data for review case seven; limit the change.
+- Measure state ownership data for review case seven; limit the change.
 
-**Answer:** Trace the M19 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure ttl only data for review case seven; limit the change.
 
-**Explanation:** M19-Q020 enacts mistake 1 from Invalidation and Coherence; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M19-Q020 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects ttl only as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M19-Q021
 
@@ -278,23 +278,23 @@ This key covers all 34 questions for **Caching and Invalidation**. Use it after 
 
 **Choices:**
 
-- Approve forgetting derived indexes and regional copies for Invalidation and Coherence; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for forgetting derived indexes and regional copies; the team can monitor Invalidation and Coherence after launch.
-- Approve the M19 shortcut for indigo now.
-- Require the M19 scoped measurement before approving the change.
+- Measure latency evidence data for review case eight; limit the change.
+- Measure recovery demand data for review case eight; limit the change.
+- Measure boundary signal data for review case eight; limit the change.
+- Measure derived indexes data for review case eight; limit the change.
 
-**Answer:** Require the M19 scoped measurement before approving the change.
+**Answer:** Measure derived indexes data for review case eight; limit the change.
 
-**Explanation:** M19-Q021 enacts mistake 2 from Invalidation and Coherence; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M19-Q021 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects derived indexes as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M19-Q022
 
 **Type:** `calculation`
 **Difficulty:** `recall`
 
-**Answer:** M19 Cache Effective Latency case 1: Effective latency is 0.9 x 2 + (1 - 0.9) x 50 = 6.8 ms.
+**Answer:** Calculation for cache placement and read/write paths, effective latency is 0.9 x 2 + (1 - 0.9) x 50 = 6.8 ms.
 
 **Explanation:** M19-Q022 uses cache effective latency from Cache Placement and Read/Write Paths and keeps units visible through the final numeric result.
 
@@ -305,7 +305,7 @@ This key covers all 34 questions for **Caching and Invalidation**. Use it after 
 **Type:** `calculation`
 **Difficulty:** `application`
 
-**Answer:** M19 Origin Rate case 2: Origin reads are 10,000 x (1 - 0.95) = 500/min.
+**Answer:** Calculation for eviction policies and hit-rate economics, origin reads are 10,000 x (1 - 0.95) = 500/min.
 
 **Explanation:** M19-Q023 uses origin rate from Eviction Policies and Hit-Rate Economics and keeps units visible through the final numeric result.
 
@@ -316,7 +316,7 @@ This key covers all 34 questions for **Caching and Invalidation**. Use it after 
 **Type:** `calculation`
 **Difficulty:** `synthesis`
 
-**Answer:** M19 Stampede Coalescing case 3: Coalescing allows 1 regeneration instead of 80, avoiding 79 duplicate origin computations.
+**Answer:** Calculation for invalidation and coherence, coalescing allows 1 regeneration instead of 80, avoiding 79 duplicate origin computations.
 
 **Explanation:** M19-Q024 uses stampede coalescing from Invalidation and Coherence and keeps units visible through the final numeric result.
 
@@ -327,7 +327,7 @@ This key covers all 34 questions for **Caching and Invalidation**. Use it after 
 **Type:** `calculation`
 **Difficulty:** `recall`
 
-**Answer:** M19 Cold-Start Load case 4: Warmup lower bound is 5,000 / 250 = 20.0 seconds.
+**Answer:** Calculation for stampede protection, m19 Cold-Start Load case 4: Warmup lower bound is 5,000 / 250 = 20.0 seconds.
 
 **Explanation:** M19-Q025 uses cold-start load from Stampede Protection and keeps units visible through the final numeric result.
 
@@ -338,7 +338,7 @@ This key covers all 34 questions for **Caching and Invalidation**. Use it after 
 **Type:** `calculation`
 **Difficulty:** `application`
 
-**Answer:** M19 Stale Window case 5: The stale window can last up to 300 - 45 = 255 more seconds without invalidation.
+**Answer:** Calculation for cache failure modes, the stale window can last up to 300 - 45 = 255 more seconds without invalidation.
 
 **Explanation:** M19-Q026 uses stale window from Cache Failure Modes and keeps units visible through the final numeric result.
 
@@ -349,7 +349,7 @@ This key covers all 34 questions for **Caching and Invalidation**. Use it after 
 **Type:** `calculation`
 **Difficulty:** `synthesis`
 
-**Answer:** M19 Hit-Rate Economics case 6: Saved origin reads are 10,000 x (0.10 - 0.05) = 500/min.
+**Answer:** Calculation for caching decisions and defense, m19 Hit-Rate Economics case 6: Saved origin reads are 10,000 x (0.10 - 0.05) = 500/min.
 
 **Explanation:** M19-Q027 uses hit-rate economics from Caching Decisions and Defense and keeps units visible through the final numeric result.
 
@@ -360,74 +360,74 @@ This key covers all 34 questions for **Caching and Invalidation**. Use it after 
 **Type:** `design_judgment`
 **Difficulty:** `application`
 
-**Answer:** For M19 decision 1, recommend against. The protected bound is 237 x 0.72 = 170.6/s, and the planned 208.6/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 208.6/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 38.0/s of lower-priority work.
+**Answer:** Approve Placement at 158.6/s. The deciding number is 237 x 0.72 = 170.6/s, leaving 12/s before the reserve is consumed. Withdraw approval if a drill, trace, or workload sample shows placement demand above 170.6/s or proves the shed point cannot protect lower-priority work.
 
-**Explanation:** M19-Q028 turns on the forcing number from EX-01, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to placement demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 170.6/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M19-Q029
 
 **Type:** `design_judgment`
 **Difficulty:** `synthesis`
 
-**Answer:** For M19 decision 2, recommend against. The protected bound is 254 x 0.72 = 182.9/s, and the planned 223.5/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 223.5/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 40.6/s of lower-priority work.
+**Answer:** Decline Write Policy at 194.3/s. The deciding number is 254 x 0.72 = 182.9/s, so planned demand exceeds the usable region by 11.4/s. Approve later if repeated measurements lift usable capacity above 194.3/s or a named policy removes at least 11.4/s of deferrable work before saturation.
 
-**Explanation:** M19-Q029 turns on the forcing number from EX-02, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to write policy demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 182.9/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M19-Q030
 
 **Type:** `design_judgment`
 **Difficulty:** `recall`
 
-**Answer:** For M19 decision 3, recommend against. The protected bound is 271 x 0.72 = 195.1/s, and the planned 238.5/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 238.5/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 43.4/s of lower-priority work.
+**Answer:** Approve conditionally for Hit-Rate Economics. The deciding number is 271 x 0.72 = 195.1/s, and 190.1/s fits only while the fallback remains enforceable. Keep the condition until recovery traffic, priority demand, or fallback tests show less than 5/s of usable margin.
 
-**Explanation:** M19-Q030 turns on the forcing number from EX-03, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to hit-rate economics demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 195.1/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M19-Q031
 
 **Type:** `design_judgment`
 **Difficulty:** `application`
 
-**Answer:** For M19 decision 4, recommend against. The protected bound is 288 x 0.72 = 207.4/s, and the planned 253.4/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 253.4/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 46.0/s of lower-priority work.
+**Answer:** Approve Eviction at 190.3/s. The deciding number is 288 x 0.72 = 207.4/s, leaving 17.1/s before the reserve is consumed. Require redesign if a drill, trace, or workload sample shows eviction demand above 207.4/s or proves the shed point cannot protect lower-priority work.
 
-**Explanation:** M19-Q031 turns on the forcing number from EX-04, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to eviction demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 207.4/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M19-Q032
 
 **Type:** `design_judgment`
 **Difficulty:** `synthesis`
 
-**Answer:** For M19 decision 5, recommend against. The protected bound is 305 x 0.72 = 219.6/s, and the planned 268.4/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 268.4/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 48.8/s of lower-priority work.
+**Answer:** Decline Invalidation at 235.2/s. The deciding number is 305 x 0.72 = 219.6/s, so planned demand exceeds the usable region by 15.6/s. Lift the decline if repeated measurements lift usable capacity above 235.2/s or a named policy removes at least 15.6/s of deferrable work before saturation.
 
-**Explanation:** M19-Q032 turns on the forcing number from EX-05, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to invalidation demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 219.6/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M19-Q033
 
 **Type:** `design_judgment`
 **Difficulty:** `recall`
 
-**Answer:** For M19 decision 6, recommend against. The protected bound is 322 x 0.72 = 231.8/s, and the planned 283.4/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 283.4/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 51.6/s of lower-priority work.
+**Answer:** Approve Coherence at 211.3/s. The deciding number is 322 x 0.72 = 231.8/s, leaving 20.5/s before the reserve is consumed. Reverse the call if a drill, trace, or workload sample shows coherence demand above 231.8/s or proves the shed point cannot protect lower-priority work.
 
-**Explanation:** M19-Q033 turns on the forcing number from EX-06, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to coherence demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 231.8/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M19-Q034
 
 **Type:** `design_judgment`
 **Difficulty:** `application`
 
-**Answer:** For M19 decision 7, recommend against. The protected bound is 339 x 0.72 = 244.1/s, and the planned 298.3/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 298.3/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 54.2/s of lower-priority work.
+**Answer:** Decline Stampede at 262.5/s. The deciding number is 339 x 0.72 = 244.1/s, so planned demand exceeds the usable region by 18.4/s. Accept the proposal when repeated measurements lift usable capacity above 262.5/s or a named policy removes at least 18.4/s of deferrable work before saturation.
 
-**Explanation:** M19-Q034 turns on the forcing number from EX-07, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to stampede demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 244.1/s, compares it with planned demand, and names a scenario-specific reversal condition.

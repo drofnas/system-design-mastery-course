@@ -163,16 +163,16 @@ This key covers all 43 questions for **Replication and Partitioning**. Use it af
 
 **Choices:**
 
-- Scope the M09 scoped measurement and record the limiting assumption before approving the change.
-- Approve it over-constrains cheap reads or for Operation Semantics and Session Guarantees; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for it over-constrains cheap reads or; the team can monitor Operation Semantics and Session Guarantees after launch.
-- Approve the M09 shortcut for alpha now.
+- Measure one label data for review case one; limit the change.
+- Measure equating acknowledgement data for review case one; limit the change.
+- Measure wall clock data for review case one; limit the change.
+- Measure cache ttl data for review case one; limit the change.
 
-**Answer:** Scope the M09 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure one label data for review case one; limit the change.
 
-**Explanation:** M09-Q015 enacts mistake 1 from Operation Semantics and Session Guarantees; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M09-Q015 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects one label as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M09-Q016
 
@@ -181,16 +181,16 @@ This key covers all 43 questions for **Replication and Partitioning**. Use it af
 
 **Choices:**
 
-- Approve equating acknowledgement with universal visibility:: an asynchronous for Operation Semantics and Session Guarantees; the local context makes that proposal familiar enough for review.
-- Measure the M09 scoped measurement before approving the change.
-- Defer measurement until production for equating acknowledgement with universal visibility:: an asynchronous; the team can monitor Operation Semantics and Session Guarantees after launch.
-- Approve the M09 shortcut for bravo now.
+- Measure failing open data for review case two; limit the change. with margin with margin
+- Measure equating acknowledgement data for review case two; limit the change.
+- Measure replication backup data for review case two; limit the change.
+- Measure promising durability data for review case two; limit the change.
 
-**Answer:** Measure the M09 scoped measurement before approving the change.
+**Answer:** Measure equating acknowledgement data for review case two; limit the change.
 
-**Explanation:** M09-Q016 enacts mistake 2 from Operation Semantics and Session Guarantees; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M09-Q016 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects equating acknowledgement as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M09-Q017
 
@@ -199,16 +199,16 @@ This key covers all 43 questions for **Replication and Partitioning**. Use it af
 
 **Choices:**
 
-- Approve using wall-clock timestamps as version proof:: clock skew can order events for Operation Semantics and Session Guarantees; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for using wall-clock timestamps as version proof:: clock skew can order events; the team can monitor Operation Semantics and Session Guarantees after launch.
-- Bound the M09 scoped measurement before approval.
-- Approve the M09 shortcut for charlie now.
+- Measure serving followers data for review case three; limit the change.
+- Measure multi leader data for review case three; limit the change.
+- Measure wall clock data for review case three; limit the change.
+- Measure failover routing data for review case three; limit the change.
 
-**Answer:** Bound the M09 scoped measurement before approval.
+**Answer:** Measure wall clock data for review case three; limit the change.
 
-**Explanation:** M09-Q017 enacts mistake 3 from Operation Semantics and Session Guarantees; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M09-Q017 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects wall clock as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M09-Q018
 
@@ -217,16 +217,16 @@ This key covers all 43 questions for **Replication and Partitioning**. Use it af
 
 **Choices:**
 
-- Approve tTL bounds cache age only under for Operation Semantics and Session Guarantees; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for tTL bounds cache age only under; the team can monitor Operation Semantics and Session Guarantees after launch.
-- Approve the M09 shortcut for delta now.
-- Freeze the M09 scoped measurement and record the limiting assumption before approving the change.
+- Measure quoting linearizability data for review case four; limit the change.
+- Measure write intersection data for review case four; limit the change.
+- Measure hinted replicas data for review case four; limit the change.
+- Measure cache ttl data for review case four; limit the change.
 
-**Answer:** Freeze the M09 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure cache ttl data for review case four; limit the change.
 
-**Explanation:** M09-Q018 enacts mistake 4 from Operation Semantics and Session Guarantees; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M09-Q018 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects cache ttl as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M09-Q019
 
@@ -235,16 +235,16 @@ This key covers all 43 questions for **Replication and Partitioning**. Use it af
 
 **Choices:**
 
-- Preserve the M09 scoped measurement before approving the change.
-- Approve returning an older version converts for Operation Semantics and Session Guarantees; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for returning an older version converts; the team can monitor Operation Semantics and Session Guarantees after launch.
-- Approve the M09 shortcut for ember now.
+- Measure failing open data for review case five; limit the change.
+- Measure equating timeout data for review case five; limit the change.
+- Measure changing during data for review case five; limit the change.
+- Measure last write data for review case five; limit the change.
 
-**Answer:** Preserve the M09 scoped measurement before approving the change.
+**Answer:** Measure failing open data for review case five; limit the change.
 
-**Explanation:** M09-Q019 enacts mistake 5 from Operation Semantics and Session Guarantees; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M09-Q019 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects failing open as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M09-Q020
 
@@ -253,16 +253,16 @@ This key covers all 43 questions for **Replication and Partitioning**. Use it af
 
 **Choices:**
 
-- Approve deletion, corruption, and operator error for Replication Topologies and Acknowledgement Boundaries; the local context makes that proposal familiar enough for review.
-- Model the M09 scoped measurement before approval.
-- Defer measurement until production for deletion, corruption, and operator error; the team can monitor Replication Topologies and Acknowledgement Boundaries after launch.
-- Approve the M09 shortcut for fable now.
+- Measure retries conflict data for review case six; limit the change.
+- Measure replication backup data for review case six; limit the change.
+- Measure depending only data for review case six; limit the change.
+- Measure merkle tree data for review case six; limit the change. with margin
 
-**Answer:** Model the M09 scoped measurement before approval.
+**Answer:** Measure replication backup data for review case six; limit the change.
 
-**Explanation:** M09-Q020 enacts mistake 1 from Replication Topologies and Acknowledgement Boundaries; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M09-Q020 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects replication backup as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M09-Q021
 
@@ -271,16 +271,16 @@ This key covers all 43 questions for **Replication and Partitioning**. Use it af
 
 **Choices:**
 
-- Approve copies may share a failure domain for Replication Topologies and Acknowledgement Boundaries; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for copies may share a failure domain; the team can monitor Replication Topologies and Acknowledgement Boundaries after launch.
-- Account the M09 scoped measurement and record the limiting assumption before approving the change.
-- Approve the M09 shortcut for harbor now.
+- Measure repairing derived data for review case seven; limit the change.
+- Measure averages declare data for review case seven; limit the change. with margin
+- Measure promising durability data for review case seven; limit the change.
+- Measure expecting consistent data for review case seven; limit the change.
 
-**Answer:** Account the M09 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure promising durability data for review case seven; limit the change.
 
-**Explanation:** M09-Q021 enacts mistake 2 from Replication Topologies and Acknowledgement Boundaries; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M09-Q021 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects promising durability as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M09-Q022
 
@@ -289,16 +289,16 @@ This key covers all 43 questions for **Replication and Partitioning**. Use it af
 
 **Choices:**
 
-- Approve latency improves while users for Replication Topologies and Acknowledgement Boundaries; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for latency improves while users; the team can monitor Replication Topologies and Acknowledgement Boundaries after launch.
-- Approve the M09 shortcut for indigo now.
-- Test the M09 scoped measurement before approving the change.
+- Measure cutting routing data for review case eight; limit the change.
+- Measure dual writing data for review case eight; limit the change. with margin
+- Measure deleting old data for review case eight; limit the change.
+- Measure serving followers data for review case eight; limit the change.
 
-**Answer:** Test the M09 scoped measurement before approving the change.
+**Answer:** Measure serving followers data for review case eight; limit the change.
 
-**Explanation:** M09-Q022 enacts mistake 3 from Replication Topologies and Acknowledgement Boundaries; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M09-Q022 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects serving followers as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M09-Q023
 
@@ -307,16 +307,16 @@ This key covers all 43 questions for **Replication and Partitioning**. Use it af
 
 **Choices:**
 
-- Scope the M09 scoped measurement before approval.
-- Approve adding multi-leader for availability without conflict ownership:: the for Replication Topologies and Acknowledgement Boundaries; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for adding multi-leader for availability without conflict ownership:: the; the team can monitor Replication Topologies and Acknowledgement Boundaries after launch.
-- Approve the M09 shortcut for juniper now.
+- Measure multi leader data for review case nine; limit the change.
+- Measure keys instead data for review case nine; limit the change.
+- Measure replicas write data for review case nine; limit the change.
+- Measure rate limiting data for review case nine; limit the change.
 
-**Answer:** Scope the M09 scoped measurement before approval.
+**Answer:** Measure multi leader data for review case nine; limit the change.
 
-**Explanation:** M09-Q023 enacts mistake 4 from Replication Topologies and Acknowledgement Boundaries; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M09-Q023 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects multi leader as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M09-Q024
 
@@ -325,23 +325,23 @@ This key covers all 43 questions for **Replication and Partitioning**. Use it af
 
 **Choices:**
 
-- Approve safe authority change requires coordination for Replication Topologies and Acknowledgement Boundaries; the local context makes that proposal familiar enough for review.
-- Measure the M09 scoped measurement and record the limiting assumption before approving the change.
-- Defer measurement until production for safe authority change requires coordination; the team can monitor Replication Topologies and Acknowledgement Boundaries after launch.
-- Approve the M09 shortcut for keystone now.
+- Measure letting background data for review case ten; limit the change.
+- Measure failover routing data for review case ten; limit the change.
+- Measure isolation authentication data for review case ten; limit the change.
+- Measure labeling database data for review case ten; limit the change.
 
-**Answer:** Measure the M09 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure failover routing data for review case ten; limit the change.
 
-**Explanation:** M09-Q024 enacts mistake 5 from Replication Topologies and Acknowledgement Boundaries; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M09-Q024 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects failover routing as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M09-Q025
 
 **Type:** `calculation`
 **Difficulty:** `recall`
 
-**Answer:** M09 Repair Bytes case 1: Bytes are 10,000 x 1024 = 10,240,000; that is 9.77 MiB.
+**Answer:** Calculation for operation semantics and session guarantees, bytes are 10,000 x 1024 = 10,240,000; that is 9.77 MiB.
 
 **Explanation:** M09-Q025 uses repair bytes from Operation Semantics and Session Guarantees and keeps units visible through the final numeric result.
 
@@ -352,7 +352,7 @@ This key covers all 43 questions for **Replication and Partitioning**. Use it af
 **Type:** `calculation`
 **Difficulty:** `application`
 
-**Answer:** M09 Key Movement case 2: Movement ratio is 2 / 8 = 0.25, or 25%.
+**Answer:** Calculation for replication topologies and acknowledgement boundaries, movement ratio is 2 / 8 = 0.25, or 25%.
 
 **Explanation:** M09-Q026 uses key movement from Replication Topologies and Acknowledgement Boundaries and keeps units visible through the final numeric result.
 
@@ -363,7 +363,7 @@ This key covers all 43 questions for **Replication and Partitioning**. Use it af
 **Type:** `calculation`
 **Difficulty:** `synthesis`
 
-**Answer:** M09 Copy Time case 3: 200 GiB is 204800 MiB; 204800 / 40 = 5120 seconds, or 1.42 hours.
+**Answer:** Calculation for quorums, intersections, and hidden assumptions, 200 GiB is 204800 MiB; 204800 / 40 = 5120 seconds, or 1.42 hours.
 
 **Explanation:** M09-Q027 uses copy time from Quorums, Intersections, and Hidden Assumptions and keeps units visible through the final numeric result.
 
@@ -374,7 +374,7 @@ This key covers all 43 questions for **Replication and Partitioning**. Use it af
 **Type:** `calculation`
 **Difficulty:** `recall`
 
-**Answer:** M09 Skew Ratio case 4: Skew ratio is 120 / 40 = 3.0x.
+**Answer:** Calculation for versions, conflicts, repair, and convergence, skew ratio is 120 / 40 = 3.0x.
 
 **Explanation:** M09-Q028 uses skew ratio from Versions, Conflicts, Repair, and Convergence and keeps units visible through the final numeric result.
 
@@ -385,7 +385,7 @@ This key covers all 43 questions for **Replication and Partitioning**. Use it af
 **Type:** `calculation`
 **Difficulty:** `application`
 
-**Answer:** M09 Serialization case 5: Serialization is 280 KiB x 8 / 900 Kbps = 2.49 seconds, ignoring protocol overhead.
+**Answer:** Calculation for partitioning, consistent hashing, and resharding, serialization is 280 KiB x 8 / 900 Kbps = 2.49 seconds, ignoring protocol overhead.
 
 **Explanation:** M09-Q029 uses serialization from Partitioning, Consistent Hashing, and Resharding and keeps units visible through the final numeric result.
 
@@ -396,7 +396,7 @@ This key covers all 43 questions for **Replication and Partitioning**. Use it af
 **Type:** `calculation`
 **Difficulty:** `synthesis`
 
-**Answer:** M09 Quorum case 6: It can lose 2 replicas and still collect 3 acknowledgements.
+**Answer:** Calculation for hot keys, skew, fairness, and tenant isolation, it can lose 2 replicas and still collect 3 acknowledgements.
 
 **Explanation:** M09-Q030 uses quorum from Hot Keys, Skew, Fairness, and Tenant Isolation and keeps units visible through the final numeric result.
 
@@ -407,140 +407,140 @@ This key covers all 43 questions for **Replication and Partitioning**. Use it af
 **Type:** `scenario_diagnosis`
 **Difficulty:** `application`
 
-**Answer:** M09 diagnosis 1 identifies fault exposes the predicted invariant failure. The proving fields are acknowledgements.ambiguous and acknowledgements.attempted; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for operation semantics and session guarantees, acknowledgements.ambiguous and acknowledgements.successful separate the mechanism. acknowledgements.ambiguous = 0 while acknowledgements.successful = 4, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M09-Q031 comes from emitted trial fields rather than fixture identifiers; Operation Semantics and Session Guarantees is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare acknowledgements.ambiguous with acknowledgements.successful and connect that contrast to operation semantics and session guarantees.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Operation Semantics and Session Guarantees, cites acknowledgements.ambiguous and acknowledgements.successful, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M09-Q032
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** M09 diagnosis 2 identifies Replication Topologies and Acknowledgement Boundaries evidence scope. The proving fields are acknowledgements.ambiguous and acknowledgements.attempted; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for replication topologies and acknowledgement boundaries, acknowledgements.ambiguous and availability.accepted separate the mechanism. acknowledgements.ambiguous = 0 while availability.accepted = 2, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M09-Q032 comes from emitted trial fields rather than fixture identifiers; Replication Topologies and Acknowledgement Boundaries is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare acknowledgements.ambiguous with availability.accepted and connect that contrast to replication topologies and acknowledgement boundaries.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Replication Topologies and Acknowledgement Boundaries, cites acknowledgements.ambiguous and availability.accepted, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M09-Q033
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `recall`
 
-**Answer:** M09 diagnosis 3 identifies fault exposes the predicted invariant failure. The proving fields are acknowledgements.ambiguous and acknowledgements.attempted; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for quorums, intersections, and hidden assumptions, acknowledgements.ambiguous and availability.ratio separate the mechanism. acknowledgements.ambiguous = 0 while availability.ratio = 1, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M09-Q033 comes from emitted trial fields rather than fixture identifiers; Quorums, Intersections, and Hidden Assumptions is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare acknowledgements.ambiguous with availability.ratio and connect that contrast to quorums, intersections, and hidden assumptions.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Quorums, Intersections, and Hidden Assumptions, cites acknowledgements.ambiguous and availability.ratio, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M09-Q034
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `application`
 
-**Answer:** M09 diagnosis 4 identifies Versions, Conflicts, Repair, and Convergence evidence scope. The proving fields are acknowledgements.ambiguous and acknowledgements.attempted; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for versions, conflicts, repair, and convergence, acknowledgements.ambiguous and availability.total separate the mechanism. acknowledgements.ambiguous = 0 while availability.total = 3, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M09-Q034 comes from emitted trial fields rather than fixture identifiers; Versions, Conflicts, Repair, and Convergence is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare acknowledgements.ambiguous with availability.total and connect that contrast to versions, conflicts, repair, and convergence.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Versions, Conflicts, Repair, and Convergence, cites acknowledgements.ambiguous and availability.total, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M09-Q035
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** M09 diagnosis 5 identifies fault exposes the predicted invariant failure. The proving fields are acknowledgements.ambiguous and acknowledgements.attempted; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for partitioning, consistent hashing, and resharding, acknowledgements.attempted and availability.ratio separate the mechanism. acknowledgements.attempted = 3 while availability.ratio = 1, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M09-Q035 comes from emitted trial fields rather than fixture identifiers; Partitioning, Consistent Hashing, and Resharding is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare acknowledgements.attempted with availability.ratio and connect that contrast to partitioning, consistent hashing, and resharding.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Partitioning, Consistent Hashing, and Resharding, cites acknowledgements.attempted and availability.ratio, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M09-Q036
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `recall`
 
-**Answer:** M09 diagnosis 6 identifies Hot Keys, Skew, Fairness, and Tenant Isolation evidence scope. The proving fields are acknowledgements.ambiguous and acknowledgements.attempted; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for hot keys, skew, fairness, and tenant isolation, acknowledgements.successful and availability.ratio separate the mechanism. acknowledgements.successful = 3 while availability.ratio = 1, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M09-Q036 comes from emitted trial fields rather than fixture identifiers; Hot Keys, Skew, Fairness, and Tenant Isolation is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare acknowledgements.successful with availability.ratio and connect that contrast to hot keys, skew, fairness, and tenant isolation.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Hot Keys, Skew, Fairness, and Tenant Isolation, cites acknowledgements.successful and availability.ratio, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M09-Q037
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `application`
 
-**Answer:** M09 diagnosis 7 identifies blind retry duplicates the logical write after an ambiguous acknowledgement. The proving fields are acknowledgements.ambiguous and acknowledgements.attempted; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for cap, pacelc, regional placement, security, and cost, acknowledgements.successful and availability.ratio separate the mechanism. acknowledgements.successful = 2 while availability.ratio = 1, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M09-Q037 comes from emitted trial fields rather than fixture identifiers; CAP, PACELC, Regional Placement, Security, and Cost is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare acknowledgements.successful with availability.ratio and connect that contrast to cap, pacelc, regional placement, security, and cost.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names CAP, PACELC, Regional Placement, Security, and Cost, cites acknowledgements.successful and availability.ratio, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M09-Q038
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** M09 diagnosis 8 identifies Data-Placement Decisions, Migration, and Ownership evidence scope. The proving fields are acknowledgements.ambiguous and acknowledgements.attempted; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for data-placement decisions, migration, and ownership, acknowledgements.successful and availability.total separate the mechanism. acknowledgements.successful = 2 while availability.total = 3, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M09-Q038 comes from emitted trial fields rather than fixture identifiers; Data-Placement Decisions, Migration, and Ownership is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare acknowledgements.successful with availability.total and connect that contrast to data-placement decisions, migration, and ownership.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Data-Placement Decisions, Migration, and Ownership, cites acknowledgements.successful and availability.total, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M09-Q039
 
 **Type:** `design_judgment`
 **Difficulty:** `recall`
 
-**Answer:** For M09 decision 1, recommend against. The protected bound is 207 x 0.72 = 149.0/s, and the planned 182.2/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 182.2/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 33.2/s of lower-priority work.
+**Answer:** Approve Operation histories at 137/s. The deciding number is 207 x 0.72 = 149/s, leaving 12/s before the reserve is consumed. Withdraw approval if a drill, trace, or workload sample shows operation histories demand above 149/s or proves the shed point cannot protect lower-priority work.
 
-**Explanation:** M09-Q039 turns on the forcing number from EX-01, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to operation histories demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 149/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M09-Q040
 
 **Type:** `design_judgment`
 **Difficulty:** `application`
 
-**Answer:** For M09 decision 2, recommend against. The protected bound is 224 x 0.72 = 161.3/s, and the planned 197.1/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 197.1/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 35.8/s of lower-priority work.
+**Answer:** Decline Weakest sufficient contract at 172.7/s. The deciding number is 224 x 0.72 = 161.3/s, so planned demand exceeds the usable region by 11.4/s. Approve later if repeated measurements lift usable capacity above 172.7/s or a named policy removes at least 11.4/s of deferrable work before saturation.
 
-**Explanation:** M09-Q040 turns on the forcing number from EX-02, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to weakest sufficient contract demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 161.3/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M09-Q041
 
 **Type:** `design_judgment`
 **Difficulty:** `synthesis`
 
-**Answer:** For M09 decision 3, recommend against. The protected bound is 241 x 0.72 = 173.5/s, and the planned 212.1/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 212.1/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 38.6/s of lower-priority work.
+**Answer:** Approve conditionally for Acknowledgement trace. The deciding number is 241 x 0.72 = 173.5/s, and 168.5/s fits only while the fallback remains enforceable. Keep the condition until recovery traffic, priority demand, or fallback tests show less than 5/s of usable margin.
 
-**Explanation:** M09-Q041 turns on the forcing number from EX-03, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to acknowledgement trace demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 173.5/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M09-Q042
 
 **Type:** `design_judgment`
 **Difficulty:** `recall`
 
-**Answer:** For M09 decision 4, recommend against. The protected bound is 258 x 0.72 = 185.8/s, and the planned 227.0/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 227.0/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 41.2/s of lower-priority work.
+**Answer:** Approve Topology comparison at 168.7/s. The deciding number is 258 x 0.72 = 185.8/s, leaving 17.1/s before the reserve is consumed. Require redesign if a drill, trace, or workload sample shows topology comparison demand above 185.8/s or proves the shed point cannot protect lower-priority work.
 
-**Explanation:** M09-Q042 turns on the forcing number from EX-04, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to topology comparison demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 185.8/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M09-Q043
 
 **Type:** `design_judgment`
 **Difficulty:** `application`
 
-**Answer:** For M09 decision 5, recommend against. The protected bound is 275 x 0.72 = 198.0/s, and the planned 242.0/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 242.0/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 44.0/s of lower-priority work.
+**Answer:** Decline Quorum arithmetic at 213.6/s. The deciding number is 275 x 0.72 = 198/s, so planned demand exceeds the usable region by 15.6/s. Lift the decline if repeated measurements lift usable capacity above 213.6/s or a named policy removes at least 15.6/s of deferrable work before saturation.
 
-**Explanation:** M09-Q043 turns on the forcing number from EX-05, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to quorum arithmetic demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 198/s, compares it with planned demand, and names a scenario-specific reversal condition.

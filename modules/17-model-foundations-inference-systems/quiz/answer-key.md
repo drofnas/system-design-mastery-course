@@ -163,16 +163,16 @@ This key covers all 44 questions for **Model Foundations and Inference Systems**
 
 **Choices:**
 
-- Scope the M17 scoped measurement and record the limiting assumption before approving the change.
-- Approve dropping batch or sequence dimensions from a memory calculation for Mathematics for Inference Decisions; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for dropping batch or sequence dimensions from a memory calculation; the team can monitor Mathematics for Inference Decisions after launch.
-- Approve the M17 shortcut for alpha now.
+- Measure dropping batch data for review case one; limit the change.
+- Measure mixing decimal data for review case one; limit the change.
+- Measure cosine similarity data for review case one; limit the change.
+- Measure average numerical data for review case one; limit the change.
 
-**Answer:** Scope the M17 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure dropping batch data for review case one; limit the change.
 
-**Explanation:** M17-Q015 enacts mistake 1 from Mathematics for Inference Decisions; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M17-Q015 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects dropping batch as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M17-Q016
 
@@ -181,16 +181,16 @@ This key covers all 44 questions for **Model Foundations and Inference Systems**
 
 **Choices:**
 
-- Approve mixing decimal vendor bytes with binary allocation bytes without disclosure for Mathematics for Inference Decisions; the local context makes that proposal familiar enough for review.
-- Measure the M17 scoped measurement before approving the change.
-- Defer measurement until production for mixing decimal vendor bytes with binary allocation bytes without disclosure; the team can monitor Mathematics for Inference Decisions after launch.
-- Approve the M17 shortcut for bravo now.
+- Measure gradient check data for review case two; limit the change.
+- Measure mixing decimal data for review case two; limit the change.
+- Measure token count data for review case two; limit the change.
+- Measure omitting positional data for review case two; limit the change.
 
-**Answer:** Measure the M17 scoped measurement before approving the change.
+**Answer:** Measure mixing decimal data for review case two; limit the change.
 
-**Explanation:** M17-Q016 enacts mistake 2 from Mathematics for Inference Decisions; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M17-Q016 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects mixing decimal as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M17-Q017
 
@@ -199,16 +199,16 @@ This key covers all 44 questions for **Model Foundations and Inference Systems**
 
 **Choices:**
 
-- Approve calling cosine similarity semantic equivalence for Mathematics for Inference Decisions; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for calling cosine similarity semantic equivalence; the team can monitor Mathematics for Inference Decisions after launch.
-- Bound the M17 scoped measurement before approval.
-- Approve the M17 shortcut for charlie now.
+- Measure masking values data for review case three; limit the change.
+- Measure scale hidden data for review case three; limit the change. with margin
+- Measure cosine similarity data for review case three; limit the change.
+- Measure reading attention data for review case three; limit the change.
 
-**Answer:** Bound the M17 scoped measurement before approval.
+**Answer:** Measure cosine similarity data for review case three; limit the change.
 
-**Explanation:** M17-Q017 enacts mistake 3 from Mathematics for Inference Decisions; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M17-Q017 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects cosine similarity as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M17-Q018
 
@@ -217,16 +217,16 @@ This key covers all 44 questions for **Model Foundations and Inference Systems**
 
 **Choices:**
 
-- Approve treating average numerical error as a protected-example quality guarantee for Mathematics for Inference Decisions; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for treating average numerical error as a protected-example quality guarantee; the team can monitor Mathematics for Inference Decisions after launch.
-- Approve the M17 shortcut for delta now.
-- Freeze the M17 scoped measurement and record the limiting assumption before approving the change.
+- Measure reporting model data for review case four; limit the change.
+- Measure prompt processing data for review case four; limit the change.
+- Measure reuse free data for review case four; limit the change.
+- Measure average numerical data for review case four; limit the change.
 
-**Answer:** Freeze the M17 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure average numerical data for review case four; limit the change.
 
-**Explanation:** M17-Q018 enacts mistake 4 from Mathematics for Inference Decisions; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M17-Q018 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects average numerical as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M17-Q019
 
@@ -235,16 +235,16 @@ This key covers all 44 questions for **Model Foundations and Inference Systems**
 
 **Choices:**
 
-- Preserve the M17 scoped measurement before approving the change.
-- Approve using a gradient check with an unreported step size and precision for Mathematics for Inference Decisions; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for using a gradient check with an unreported step size and precision; the team can monitor Mathematics for Inference Decisions after launch.
-- Approve the M17 shortcut for ember now.
+- Measure gradient check data for review case five; limit the change.
+- Measure retrying generation data for review case five; limit the change.
+- Measure deterministic output data for review case five; limit the change.
+- Measure parameter bytes data for review case five; limit the change.
 
-**Answer:** Preserve the M17 scoped measurement before approving the change.
+**Answer:** Measure gradient check data for review case five; limit the change.
 
-**Explanation:** M17-Q019 enacts mistake 5 from Mathematics for Inference Decisions; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M17-Q019 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects gradient check as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M17-Q020
 
@@ -253,16 +253,16 @@ This key covers all 44 questions for **Model Foundations and Inference Systems**
 
 **Choices:**
 
-- Approve treating token count as a property of text independent of tokenizer version for Tokens, Embeddings, and Attention; the local context makes that proposal familiar enough for review.
-- Model the M17 scoped measurement before approval.
-- Defer measurement until production for treating token count as a property of text independent of tokenizer version; the team can monitor Tokens, Embeddings, and Attention after launch.
-- Approve the M17 shortcut for fable now.
+- Measure calculating prompt data for review case six; limit the change.
+- Measure token count data for review case six; limit the change.
+- Measure dividing cost data for review case six; limit the change.
+- Measure advertised peak data for review case six; limit the change.
 
-**Answer:** Model the M17 scoped measurement before approval.
+**Answer:** Measure token count data for review case six; limit the change.
 
-**Explanation:** M17-Q020 enacts mistake 1 from Tokens, Embeddings, and Attention; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M17-Q020 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects token count as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M17-Q021
 
@@ -271,16 +271,16 @@ This key covers all 44 questions for **Model Foundations and Inference Systems**
 
 **Choices:**
 
-- Approve omitting positional information while claiming order-sensitive behavior for Tokens, Embeddings, and Attention; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for omitting positional information while claiming order-sensitive behavior; the team can monitor Tokens, Embeddings, and Attention after launch.
-- Account the M17 scoped measurement and record the limiting assumption before approving the change.
-- Approve the M17 shortcut for harbor now.
+- Measure sizing normal data for review case seven; limit the change.
+- Measure benchmarking closed data for review case seven; limit the change.
+- Measure omitting positional data for review case seven; limit the change.
+- Measure reporting mean data for review case seven; limit the change.
 
-**Answer:** Account the M17 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure omitting positional data for review case seven; limit the change.
 
-**Explanation:** M17-Q021 enacts mistake 2 from Tokens, Embeddings, and Attention; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M17-Q021 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects omitting positional as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M17-Q022
 
@@ -289,16 +289,16 @@ This key covers all 44 questions for **Model Foundations and Inference Systems**
 
 **Choices:**
 
-- Approve masking values instead of attention logits for Tokens, Embeddings, and Attention; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for masking values instead of attention logits; the team can monitor Tokens, Embeddings, and Attention after launch.
-- Approve the M17 shortcut for indigo now.
-- Test the M17 scoped measurement before approving the change.
+- Measure omitting rejected data for review case eight; limit the change.
+- Measure profiling every data for review case eight; limit the change.
+- Measure cpu model data for review case eight; limit the change.
+- Measure masking values data for review case eight; limit the change.
 
-**Answer:** Test the M17 scoped measurement before approving the change.
+**Answer:** Measure masking values data for review case eight; limit the change.
 
-**Explanation:** M17-Q022 enacts mistake 3 from Tokens, Embeddings, and Attention; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M17-Q022 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects masking values as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M17-Q023
 
@@ -307,16 +307,16 @@ This key covers all 44 questions for **Model Foundations and Inference Systems**
 
 **Choices:**
 
-- Scope the M17 scoped measurement before approval.
-- Approve forgetting the scale or using hidden width rather than key width for Tokens, Embeddings, and Attention; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for forgetting the scale or using hidden width rather than key width; the team can monitor Tokens, Embeddings, and Attention after launch.
-- Approve the M17 shortcut for juniper now.
+- Measure scale hidden data for review case nine; limit the change.
+- Measure queue bounded data for review case nine; limit the change.
+- Measure accepting first data for review case nine; limit the change.
+- Measure trusting client data for review case nine; limit the change.
 
-**Answer:** Scope the M17 scoped measurement before approval.
+**Answer:** Measure scale hidden data for review case nine; limit the change.
 
-**Explanation:** M17-Q023 enacts mistake 4 from Tokens, Embeddings, and Attention; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M17-Q023 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects scale hidden as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M17-Q024
 
@@ -325,23 +325,23 @@ This key covers all 44 questions for **Model Foundations and Inference Systems**
 
 **Choices:**
 
-- Approve reading attention weights as a faithful explanation of model reasoning for Tokens, Embeddings, and Attention; the local context makes that proposal familiar enough for review.
-- Measure the M17 scoped measurement and record the limiting assumption before approving the change.
-- Defer measurement until production for reading attention weights as a faithful explanation of model reasoning; the team can monitor Tokens, Embeddings, and Attention after launch.
-- Approve the M17 shortcut for keystone now.
+- Measure prioritizing decode data for review case ten; limit the change.
+- Measure reading attention data for review case ten; limit the change.
+- Measure retrying rejected data for review case ten; limit the change.
+- Measure cache performance data for review case ten; limit the change.
 
-**Answer:** Measure the M17 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure reading attention data for review case ten; limit the change.
 
-**Explanation:** M17-Q024 enacts mistake 5 from Tokens, Embeddings, and Attention; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M17-Q024 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects reading attention as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M17-Q025
 
 **Type:** `calculation`
 **Difficulty:** `recall`
 
-**Answer:** M17 Kv Cache case 1: Bytes = 4096 x 32 x 32 x 128 x 2 x 2 = 2,147,483,648, or 2.00 GiB.
+**Answer:** Calculation for mathematics for inference decisions, bytes = 4096 x 32 x 32 x 128 x 2 x 2 = 2,147,483,648, or 2.00 GiB.
 
 **Explanation:** M17-Q025 uses KV cache from Mathematics for Inference Decisions and keeps units visible through the final numeric result.
 
@@ -352,7 +352,7 @@ This key covers all 44 questions for **Model Foundations and Inference Systems**
 **Type:** `calculation`
 **Difficulty:** `application`
 
-**Answer:** M17 Capacity Deficit case 2: Capacity deficit is 1000 - 760 = 240/s.
+**Answer:** Calculation for tokens, embeddings, and attention, capacity deficit is 1000 - 760 = 240/s.
 
 **Explanation:** M17-Q026 uses capacity deficit from Tokens, Embeddings, and Attention and keeps units visible through the final numeric result.
 
@@ -363,7 +363,7 @@ This key covers all 44 questions for **Model Foundations and Inference Systems**
 **Type:** `calculation`
 **Difficulty:** `synthesis`
 
-**Answer:** M17 Ttft case 3: Queueing contribution is 7 x 120 = 840 ms before the new request starts prefill.
+**Answer:** Calculation for transformer inference from prefill to decode, queueing contribution is 7 x 120 = 840 ms before the new request starts prefill.
 
 **Explanation:** M17-Q027 uses TTFT from Transformer Inference from Prefill to Decode and keeps units visible through the final numeric result.
 
@@ -374,7 +374,7 @@ This key covers all 44 questions for **Model Foundations and Inference Systems**
 **Type:** `calculation`
 **Difficulty:** `recall`
 
-**Answer:** M17 Inference Capacity case 4: floor(80 / 6) = 13 requests fit before model weights and fragmentation.
+**Answer:** Calculation for compute, memory, and capacity accounting, floor(80 / 6) = 13 requests fit before model weights and fragmentation.
 
 **Explanation:** M17-Q028 uses inference capacity from Compute, Memory, and Capacity Accounting and keeps units visible through the final numeric result.
 
@@ -385,7 +385,7 @@ This key covers all 44 questions for **Model Foundations and Inference Systems**
 **Type:** `calculation`
 **Difficulty:** `application`
 
-**Answer:** M17 Inference Capacity case 5: floor(80 / 6) = 13 requests fit before model weights and fragmentation.
+**Answer:** Calculation for profiling and inference metrics, floor(80 / 6) = 13 requests fit before model weights and fragmentation.
 
 **Explanation:** M17-Q029 uses inference capacity from Profiling and Inference Metrics and keeps units visible through the final numeric result.
 
@@ -396,162 +396,162 @@ This key covers all 44 questions for **Model Foundations and Inference Systems**
 **Type:** `scenario_diagnosis`
 **Difficulty:** `recall`
 
-**Answer:** M17 diagnosis 1 identifies I01=false in F01 modeled trial. The proving fields are cache.cross_tenant_hits and cache.stale_version_hits; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for mathematics for inference decisions, cache.cross_tenant_hits and cost.compute_units separate the mechanism. cache.cross_tenant_hits = 0 while cost.compute_units = 23.136, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M17-Q030 comes from emitted trial fields rather than fixture identifiers; Mathematics for Inference Decisions is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare cache.cross_tenant_hits with cost.compute_units and connect that contrast to mathematics for inference decisions.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Mathematics for Inference Decisions, cites cache.cross_tenant_hits and cost.compute_units, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M17-Q031
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `application`
 
-**Answer:** M17 diagnosis 2 identifies Tokens, Embeddings, and Attention evidence scope. The proving fields are cache.cross_tenant_hits and cache.stale_version_hits; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for tokens, embeddings, and attention, cache.cross_tenant_hits and cost.cost_per_1000_useful_output_tokens separate the mechanism. cache.cross_tenant_hits = 0 while cost.cost_per_1000_useful_output_tokens = 9.1, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M17-Q031 comes from emitted trial fields rather than fixture identifiers; Tokens, Embeddings, and Attention is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare cache.cross_tenant_hits with cost.cost_per_1000_useful_output_tokens and connect that contrast to tokens, embeddings, and attention.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Tokens, Embeddings, and Attention, cites cache.cross_tenant_hits and cost.cost_per_1000_useful_output_tokens, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M17-Q032
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** M17 diagnosis 3 identifies I02=false in F02 modeled trial. The proving fields are cache.cross_tenant_hits and cache.stale_version_hits; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for transformer inference from prefill to decode, cache.cross_tenant_hits and invariants.0.passed separate the mechanism. cache.cross_tenant_hits = 0 while invariants.0.passed = 1, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M17-Q032 comes from emitted trial fields rather than fixture identifiers; Transformer Inference from Prefill to Decode is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare cache.cross_tenant_hits with invariants.0.passed and connect that contrast to transformer inference from prefill to decode.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Transformer Inference from Prefill to Decode, cites cache.cross_tenant_hits and invariants.0.passed, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M17-Q033
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `recall`
 
-**Answer:** M17 diagnosis 4 identifies Compute, Memory, and Capacity Accounting evidence scope. The proving fields are cache.cross_tenant_hits and cache.stale_version_hits; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for compute, memory, and capacity accounting, cache.cross_tenant_hits and invariants.1.passed separate the mechanism. cache.cross_tenant_hits = 0 while invariants.1.passed = 1, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M17-Q033 comes from emitted trial fields rather than fixture identifiers; Compute, Memory, and Capacity Accounting is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare cache.cross_tenant_hits with invariants.1.passed and connect that contrast to compute, memory, and capacity accounting.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Compute, Memory, and Capacity Accounting, cites cache.cross_tenant_hits and invariants.1.passed, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M17-Q034
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `application`
 
-**Answer:** M17 diagnosis 5 identifies I03=false in F03 modeled trial. The proving fields are cache.cross_tenant_hits and cache.stale_version_hits; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for profiling and inference metrics, cache.stale_version_hits and cost.compute_units separate the mechanism. cache.stale_version_hits = 0 while cost.compute_units = 22.976, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M17-Q034 comes from emitted trial fields rather than fixture identifiers; Profiling and Inference Metrics is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare cache.stale_version_hits with cost.compute_units and connect that contrast to profiling and inference metrics.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Profiling and Inference Metrics, cites cache.stale_version_hits and cost.compute_units, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M17-Q035
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** M17 diagnosis 6 identifies Scheduling, Batching, Admission, and Fairness evidence scope. The proving fields are cache.cross_tenant_hits and cache.stale_version_hits; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for scheduling, batching, admission, and fairness, cache.stale_version_hits and cost.cost_per_1000_useful_output_tokens separate the mechanism. cache.stale_version_hits = 0 while cost.cost_per_1000_useful_output_tokens = 9.1, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M17-Q035 comes from emitted trial fields rather than fixture identifiers; Scheduling, Batching, Admission, and Fairness is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare cache.stale_version_hits with cost.cost_per_1000_useful_output_tokens and connect that contrast to scheduling, batching, admission, and fairness.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Scheduling, Batching, Admission, and Fairness, cites cache.stale_version_hits and cost.cost_per_1000_useful_output_tokens, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M17-Q036
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `recall`
 
-**Answer:** M17 diagnosis 7 identifies I05=false in F04 modeled trial. The proving fields are cache.cross_tenant_hits and cache.stale_version_hits; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for caches, quantization, and provider failure, cost.compute_units and invariants.1.passed separate the mechanism. cost.compute_units = 23.296 while invariants.1.passed = 1, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M17-Q036 comes from emitted trial fields rather than fixture identifiers; Caches, Quantization, and Provider Failure is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare cost.compute_units with invariants.1.passed and connect that contrast to caches, quantization, and provider failure.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Caches, Quantization, and Provider Failure, cites cost.compute_units and invariants.1.passed, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M17-Q037
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `application`
 
-**Answer:** M17 diagnosis 8 identifies Atlas Tutorial, Architecture Decision, and Teach-Back evidence scope. The proving fields are cache.cross_tenant_hits and cache.stale_version_hits; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for atlas tutorial, architecture decision, and teach-back, cache.stale_version_hits and invariants.1.passed separate the mechanism. cache.stale_version_hits = 0 while invariants.1.passed = 1, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M17-Q037 comes from emitted trial fields rather than fixture identifiers; Atlas Tutorial, Architecture Decision, and Teach-Back is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare cache.stale_version_hits with invariants.1.passed and connect that contrast to atlas tutorial, architecture decision, and teach-back.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Atlas Tutorial, Architecture Decision, and Teach-Back, cites cache.stale_version_hits and invariants.1.passed, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M17-Q038
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** M17 diagnosis 9 identifies I07=false in F05 modeled trial. The proving fields are cache.cross_tenant_hits and cache.stale_version_hits; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for mathematics for inference decisions, cost.compute_units and cost.cost_per_1000_useful_output_tokens separate the mechanism. cost.compute_units = 23.296 while cost.cost_per_1000_useful_output_tokens = 10.3446, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M17-Q038 comes from emitted trial fields rather than fixture identifiers; Mathematics for Inference Decisions is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare cost.compute_units with cost.cost_per_1000_useful_output_tokens and connect that contrast to mathematics for inference decisions.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Mathematics for Inference Decisions, cites cost.compute_units and cost.cost_per_1000_useful_output_tokens, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M17-Q039
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `recall`
 
-**Answer:** M17 diagnosis 10 identifies Tokens, Embeddings, and Attention evidence scope. The proving fields are cache.cross_tenant_hits and cache.stale_version_hits; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for tokens, embeddings, and attention, cost.compute_units and invariants.0.passed separate the mechanism. cost.compute_units = 23.296 while invariants.0.passed = 1, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M17-Q039 comes from emitted trial fields rather than fixture identifiers; Tokens, Embeddings, and Attention is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare cost.compute_units with invariants.0.passed and connect that contrast to tokens, embeddings, and attention.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Tokens, Embeddings, and Attention, cites cost.compute_units and invariants.0.passed, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M17-Q040
 
 **Type:** `design_judgment`
 **Difficulty:** `application`
 
-**Answer:** For M17 decision 1, recommend against. The protected bound is 231 x 0.72 = 166.3/s, and the planned 203.3/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 203.3/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 37.0/s of lower-priority work.
+**Answer:** Approve Vector and matrix ledger at 154.3/s. The deciding number is 231 x 0.72 = 166.3/s, leaving 12/s before the reserve is consumed. Withdraw approval if a drill, trace, or workload sample shows vector and matrix ledger demand above 166.3/s or proves the shed point cannot protect lower-priority work.
 
-**Explanation:** M17-Q040 turns on the forcing number from EX-01, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to vector and matrix ledger demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 166.3/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M17-Q041
 
 **Type:** `design_judgment`
 **Difficulty:** `synthesis`
 
-**Answer:** For M17 decision 2, recommend against. The protected bound is 248 x 0.72 = 178.6/s, and the planned 218.2/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 218.2/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 39.6/s of lower-priority work.
+**Answer:** Decline Norms and projections at 190/s. The deciding number is 248 x 0.72 = 178.6/s, so planned demand exceeds the usable region by 11.4/s. Approve later if repeated measurements lift usable capacity above 190/s or a named policy removes at least 11.4/s of deferrable work before saturation.
 
-**Explanation:** M17-Q041 turns on the forcing number from EX-02, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to norms and projections demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 178.6/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M17-Q042
 
 **Type:** `design_judgment`
 **Difficulty:** `recall`
 
-**Answer:** For M17 decision 3, recommend against. The protected bound is 265 x 0.72 = 190.8/s, and the planned 233.2/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 233.2/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 42.4/s of lower-priority work.
+**Answer:** Approve conditionally for Probability, entropy, and gradient. The deciding number is 265 x 0.72 = 190.8/s, and 185.8/s fits only while the fallback remains enforceable. Keep the condition until recovery traffic, priority demand, or fallback tests show less than 5/s of usable margin.
 
-**Explanation:** M17-Q042 turns on the forcing number from EX-03, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to probability, entropy, and gradient demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 190.8/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M17-Q043
 
 **Type:** `design_judgment`
 **Difficulty:** `application`
 
-**Answer:** For M17 decision 4, recommend against. The protected bound is 282 x 0.72 = 203.0/s, and the planned 248.2/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 248.2/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 45.2/s of lower-priority work.
+**Answer:** Approve Stable softmax and masking at 185.9/s. The deciding number is 282 x 0.72 = 203/s, leaving 17.1/s before the reserve is consumed. Require redesign if a drill, trace, or workload sample shows stable softmax and masking demand above 203/s or proves the shed point cannot protect lower-priority work.
 
-**Explanation:** M17-Q043 turns on the forcing number from EX-04, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to stable softmax and masking demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 203/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M17-Q044
 
 **Type:** `design_judgment`
 **Difficulty:** `synthesis`
 
-**Answer:** For M17 decision 5, recommend against. The protected bound is 299 x 0.72 = 215.3/s, and the planned 263.1/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 263.1/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 47.8/s of lower-priority work.
+**Answer:** Decline Token and embedding contract at 230.9/s. The deciding number is 299 x 0.72 = 215.3/s, so planned demand exceeds the usable region by 15.6/s. Lift the decline if repeated measurements lift usable capacity above 230.9/s or a named policy removes at least 15.6/s of deferrable work before saturation.
 
-**Explanation:** M17-Q044 turns on the forcing number from EX-05, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to token and embedding contract demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 215.3/s, compares it with planned demand, and names a scenario-specific reversal condition.

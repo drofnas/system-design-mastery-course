@@ -152,16 +152,16 @@ This key covers all 41 questions for **Capacity, Queues, and Tail Latency**. Use
 
 **Choices:**
 
-- Calculate the M02 scoped measurement and record the limiting assumption before approving the change.
-- Approve host count is supply, not demand for Workload and Useful Work; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for host count is supply, not demand; the team can monitor Workload and Useful Work after launch.
-- Approve the M02 shortcut for alpha now.
+- Measure host count data for review case one; limit the change.
+- Measure average whole data for review case one; limit the change.
+- Measure mix requests data for review case one; limit the change.
+- Measure model only data for review case one; limit the change.
 
-**Answer:** Calculate the M02 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure host count data for review case one; limit the change.
 
-**Explanation:** M02-Q014 enacts mistake 1 from Workload and Useful Work; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M02-Q014 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects host count as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M02-Q015
 
@@ -170,16 +170,16 @@ This key covers all 41 questions for **Capacity, Queues, and Tail Latency**. Use
 
 **Choices:**
 
-- Approve it erases burst duration and recovery debt for Workload and Useful Work; the local context makes that proposal familiar enough for review.
-- Draw the M02 scoped measurement before approving the change.
-- Defer measurement until production for it erases burst duration and recovery debt; the team can monitor Workload and Useful Work after launch.
-- Approve the M02 shortcut for bravo now.
+- Measure treat projections data for review case two; limit the change.
+- Measure average whole data for review case two; limit the change.
+- Measure combine different data for review case two; limit the change.
+- Measure attempted rate data for review case two; limit the change.
 
-**Answer:** Draw the M02 scoped measurement before approving the change.
+**Answer:** Measure average whole data for review case two; limit the change.
 
-**Explanation:** M02-Q015 enacts mistake 2 from Workload and Useful Work; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M02-Q015 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects average whole as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M02-Q016
 
@@ -188,16 +188,16 @@ This key covers all 41 questions for **Capacity, Queues, and Tail Latency**. Use
 
 **Choices:**
 
-- Approve retries appear as successful scaling for Workload and Useful Work; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for retries appear as successful scaling; the team can monitor Workload and Useful Work after launch.
-- Separate the M02 scoped measurement before approval.
-- Approve the M02 shortcut for charlie now.
+- Measure call nominal data for review case three; limit the change.
+- Measure infer percentiles data for review case three; limit the change.
+- Measure mix requests data for review case three; limit the change.
+- Measure assume every data for review case three; limit the change.
 
-**Answer:** Separate the M02 scoped measurement before approval.
+**Answer:** Measure mix requests data for review case three; limit the change.
 
-**Explanation:** M02-Q016 enacts mistake 3 from Workload and Useful Work; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M02-Q016 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects mix requests as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M02-Q017
 
@@ -206,16 +206,16 @@ This key covers all 41 questions for **Capacity, Queues, and Tail Latency**. Use
 
 **Choices:**
 
-- Approve reconciliation and backlog drain consume the for Workload and Useful Work; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for reconciliation and backlog drain consume the; the team can monitor Workload and Useful Work after launch.
-- Approve the M02 shortcut for delta now.
-- Verify the M02 scoped measurement and record the limiting assumption before approving the change.
+- Measure report only data for review case four; limit the change.
+- Measure drop rejected data for review case four; limit the change.
+- Measure wall clock data for review case four; limit the change.
+- Measure model only data for review case four; limit the change.
 
-**Answer:** Verify the M02 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure model only data for review case four; limit the change.
 
-**Explanation:** M02-Q017 enacts mistake 4 from Workload and Useful Work; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M02-Q017 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects model only as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M02-Q018
 
@@ -224,16 +224,16 @@ This key covers all 41 questions for **Capacity, Queues, and Tail Latency**. Use
 
 **Choices:**
 
-- Compare the M02 scoped measurement before approving the change.
-- Approve false precision hides the sensitivity for Workload and Useful Work; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for false precision hides the sensitivity; the team can monitor Workload and Useful Work after launch.
-- Approve the M02 shortcut for ember now.
+- Measure treat projections data for review case five; limit the change.
+- Measure ignore generator data for review case five; limit the change.
+- Measure compare unmatched data for review case five; limit the change.
+- Measure multiply branch data for review case five; limit the change. with margin
 
-**Answer:** Compare the M02 scoped measurement before approving the change.
+**Answer:** Measure treat projections data for review case five; limit the change.
 
-**Explanation:** M02-Q018 enacts mistake 5 from Workload and Useful Work; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M02-Q018 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects treat projections as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M02-Q019
 
@@ -242,16 +242,16 @@ This key covers all 41 questions for **Capacity, Queues, and Tail Latency**. Use
 
 **Choices:**
 
-- Approve server concurrency with client end-to-end for Little’s Law and Saturation; the local context makes that proposal familiar enough for review.
-- Reject the M02 scoped measurement before approval.
-- Defer measurement until production for server concurrency with client end-to-end; the team can monitor Little’s Law and Saturation after launch.
-- Approve the M02 shortcut for fable now.
+- Measure assume independence data for review case six; limit the change.
+- Measure combine different data for review case six; limit the change.
+- Measure ignore variable data for review case six; limit the change.
+- Measure optimize only data for review case six; limit the change.
 
-**Answer:** Reject the M02 scoped measurement before approval.
+**Answer:** Measure combine different data for review case six; limit the change.
 
-**Explanation:** M02-Q019 enacts mistake 1 from Little’s Law and Saturation; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M02-Q019 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects combine different as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M02-Q020
 
@@ -260,16 +260,16 @@ This key covers all 41 questions for **Capacity, Queues, and Tail Latency**. Use
 
 **Choices:**
 
-- Approve rejected work did not occupy the for Little’s Law and Saturation; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for rejected work did not occupy the; the team can monitor Little’s Law and Saturation after launch.
-- Trace the M02 scoped measurement and record the limiting assumption before approving the change.
-- Approve the M02 shortcut for harbor now.
+- Measure add hedges data for review case seven; limit the change. with margin
+- Measure treat queue data for review case seven; limit the change.
+- Measure attempted rate data for review case seven; limit the change.
+- Measure hide queues data for review case seven; limit the change.
 
-**Answer:** Trace the M02 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure attempted rate data for review case seven; limit the change.
 
-**Explanation:** M02-Q020 enacts mistake 2 from Little’s Law and Saturation; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M02-Q020 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects attempted rate as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M02-Q021
 
@@ -278,16 +278,16 @@ This key covers all 41 questions for **Capacity, Queues, and Tail Latency**. Use
 
 **Choices:**
 
-- Approve the calculation has no variance for Little’s Law and Saturation; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for the calculation has no variance; the team can monitor Little’s Law and Saturation after launch.
-- Approve the M02 shortcut for indigo now.
-- Require the M02 scoped measurement before approving the change.
+- Measure reject too data for review case eight; limit the change.
+- Measure prioritize caller data for review case eight; limit the change.
+- Measure never exercise data for review case eight; limit the change.
+- Measure call nominal data for review case eight; limit the change.
 
-**Answer:** Require the M02 scoped measurement before approving the change.
+**Answer:** Measure call nominal data for review case eight; limit the change.
 
-**Explanation:** M02-Q021 enacts mistake 3 from Little’s Law and Saturation; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M02-Q021 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects call nominal as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M02-Q022
 
@@ -296,16 +296,16 @@ This key covers all 41 questions for **Capacity, Queues, and Tail Latency**. Use
 
 **Choices:**
 
-- Calculate the M02 scoped measurement before approval.
-- Approve little’s Law relates long-run averages for Little’s Law and Saturation; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for little’s Law relates long-run averages; the team can monitor Little’s Law and Saturation after launch.
-- Approve the M02 shortcut for juniper now.
+- Measure infer percentiles data for review case nine; limit the change.
+- Measure retry every data for review case nine; limit the change.
+- Measure exponential backoff data for review case nine; limit the change.
+- Measure omit logical data for review case nine; limit the change.
 
-**Answer:** Calculate the M02 scoped measurement before approval.
+**Answer:** Measure infer percentiles data for review case nine; limit the change.
 
-**Explanation:** M02-Q022 enacts mistake 4 from Little’s Law and Saturation; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M02-Q022 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects infer percentiles as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M02-Q023
 
@@ -314,23 +314,23 @@ This key covers all 41 questions for **Capacity, Queues, and Tail Latency**. Use
 
 **Choices:**
 
-- Approve shared downstreams can bind first for Little’s Law and Saturation; the local context makes that proposal familiar enough for review.
-- Draw the M02 scoped measurement and record the limiting assumption before approving the change.
-- Defer measurement until production for shared downstreams can bind first; the team can monitor Little’s Law and Saturation after launch.
-- Approve the M02 shortcut for keystone now.
+- Measure protect caller data for review case ten; limit the change.
+- Measure assume every data for review case ten; limit the change.
+- Measure reserve capacity data for review case ten; limit the change.
+- Measure ignore recovery data for review case ten; limit the change.
 
-**Answer:** Draw the M02 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure assume every data for review case ten; limit the change.
 
-**Explanation:** M02-Q023 enacts mistake 5 from Little’s Law and Saturation; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M02-Q023 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects assume every as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M02-Q024
 
 **Type:** `calculation`
 **Difficulty:** `synthesis`
 
-**Answer:** M02 Retry Amplification case 1: Attempts are 120 x (1 + 0.25) = 150.0/s; useful throughput is still bounded by the 120/s logical identities.
+**Answer:** Calculation for workload and useful work, attempts are 120 x (1 + 0.25) = 150.0/s; useful throughput is still bounded by the 120/s logical identities.
 
 **Explanation:** M02-Q024 uses retry amplification from Workload and Useful Work and keeps units visible through the final numeric result.
 
@@ -341,7 +341,7 @@ This key covers all 41 questions for **Capacity, Queues, and Tail Latency**. Use
 **Type:** `calculation`
 **Difficulty:** `recall`
 
-**Answer:** M02 Little'S Law case 2: L = 124/s x 0.080 s = 9.92 requests inside the boundary.
+**Answer:** Calculation for littles law and saturation, m02 Little'S Law case 2: L = 124/s x 0.080 s = 9.92 requests inside the boundary.
 
 **Explanation:** M02-Q025 uses Little's Law from Little’s Law and Saturation and keeps units visible through the final numeric result.
 
@@ -352,7 +352,7 @@ This key covers all 41 questions for **Capacity, Queues, and Tail Latency**. Use
 **Type:** `calculation`
 **Difficulty:** `application`
 
-**Answer:** M02 Fan-Out Tail Probability case 3: At least one slow branch = 1 - (1 - 0.020)^4 = 0.0776, or 7.76%.
+**Answer:** Calculation for latency measurement, m02 Fan-Out Tail Probability case 3: At least one slow branch = 1 - (1 - 0.020)^4 = 0.0776, or 7.76%.
 
 **Explanation:** M02-Q026 uses fan-out tail probability from Latency Measurement and keeps units visible through the final numeric result.
 
@@ -363,7 +363,7 @@ This key covers all 41 questions for **Capacity, Queues, and Tail Latency**. Use
 **Type:** `calculation`
 **Difficulty:** `synthesis`
 
-**Answer:** M02 Queue Drain Bound case 4: Drain time is 54,000 / 240/s = 225.0 seconds before overhead or new arrivals.
+**Answer:** Calculation for fan-out and tail amplification, drain time is 54,000 / 240/s = 225.0 seconds before overhead or new arrivals.
 
 **Explanation:** M02-Q027 uses queue drain bound from Fan-out and Tail Amplification and keeps units visible through the final numeric result.
 
@@ -374,7 +374,7 @@ This key covers all 41 questions for **Capacity, Queues, and Tail Latency**. Use
 **Type:** `calculation`
 **Difficulty:** `recall`
 
-**Answer:** M02 Layered Retry Attempts case 5: The multiplier is 3^4 = 81 attempts at the deepest dependency for one original request.
+**Answer:** Calculation for bounded overload control, the multiplier is 3^4 = 81 attempts at the deepest dependency for one original request.
 
 **Explanation:** M02-Q028 uses layered retry attempts from Bounded Overload Control and keeps units visible through the final numeric result.
 
@@ -385,7 +385,7 @@ This key covers all 41 questions for **Capacity, Queues, and Tail Latency**. Use
 **Type:** `calculation`
 **Difficulty:** `application`
 
-**Answer:** M02 Failover Headroom case 6: Failover-adjusted capacity is 315.6 x 0.75 = 236.7/s, so steady state must stay at or below about 236.7/s.
+**Answer:** Calculation for retries and downstream protection, failover-adjusted capacity is 315.6 x 0.75 = 236.7/s, so steady state must stay at or below about 236.7/s.
 
 **Explanation:** M02-Q029 uses failover headroom from Retries and Downstream Protection and keeps units visible through the final numeric result.
 
@@ -396,7 +396,7 @@ This key covers all 41 questions for **Capacity, Queues, and Tail Latency**. Use
 **Type:** `calculation`
 **Difficulty:** `synthesis`
 
-**Answer:** M02 Backlog Drain case 7: Net drain is (240 - 150) / 1.25 = 72.0/s, so drain time is 54,000 / 72.0 = 750.0 seconds.
+**Answer:** Calculation for failover headroom and unit cost, net drain is (240 - 150) / 1.25 = 72.0/s, so drain time is 54,000 / 72.0 = 750.0 seconds.
 
 **Explanation:** M02-Q030 uses backlog drain from Failover Headroom and Unit Cost and keeps units visible through the final numeric result.
 
@@ -407,118 +407,118 @@ This key covers all 41 questions for **Capacity, Queues, and Tail Latency**. Use
 **Type:** `scenario_diagnosis`
 **Difficulty:** `application`
 
-**Answer:** M02 diagnosis 1 identifies Workload and Useful Work evidence scope. The proving fields are arrival.rate_per_second and arrival.duration_seconds; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for workload and useful work, arrival.rate_per_second and arrival.max_in_flight separate the mechanism. arrival.rate_per_second = 100 while arrival.max_in_flight = 1, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M02-Q031 comes from emitted trial fields rather than fixture identifiers; Workload and Useful Work is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare arrival.rate_per_second with arrival.max_in_flight and connect that contrast to workload and useful work.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Workload and Useful Work, cites arrival.rate_per_second and arrival.max_in_flight, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M02-Q032
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** M02 diagnosis 2 identifies Little’s Law and Saturation evidence scope. The proving fields are arrival.rate_per_second and arrival.duration_seconds; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for littles law and saturation, arrival.rate_per_second and service.workers separate the mechanism. arrival.rate_per_second = 100 while service.workers = 1, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M02-Q032 comes from emitted trial fields rather than fixture identifiers; Little’s Law and Saturation is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare arrival.rate_per_second with service.workers and connect that contrast to littles law and saturation.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Littles Law and Saturation, cites arrival.rate_per_second and service.workers, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M02-Q033
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `recall`
 
-**Answer:** M02 diagnosis 3 identifies Latency Measurement evidence scope. The proving fields are arrival.rate_per_second and arrival.duration_seconds; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for latency measurement, arrival.rate_per_second and service.queue_capacity separate the mechanism. arrival.rate_per_second = 100 while service.queue_capacity = 4, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M02-Q033 comes from emitted trial fields rather than fixture identifiers; Latency Measurement is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare arrival.rate_per_second with service.queue_capacity and connect that contrast to latency measurement.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Latency Measurement, cites arrival.rate_per_second and service.queue_capacity, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M02-Q034
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `application`
 
-**Answer:** M02 diagnosis 4 identifies Fan-out and Tail Amplification evidence scope. The proving fields are arrival.rate_per_second and arrival.duration_seconds; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for fan-out and tail amplification, arrival.rate_per_second and service.base_service_ms separate the mechanism. arrival.rate_per_second = 100 while service.base_service_ms = 20, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M02-Q034 comes from emitted trial fields rather than fixture identifiers; Fan-out and Tail Amplification is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare arrival.rate_per_second with service.base_service_ms and connect that contrast to fan-out and tail amplification.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Fan-out and Tail Amplification, cites arrival.rate_per_second and service.base_service_ms, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M02-Q035
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** M02 diagnosis 5 identifies Bounded Overload Control evidence scope. The proving fields are arrival.rate_per_second and arrival.duration_seconds; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for bounded overload control, arrival.duration_seconds and arrival.max_in_flight separate the mechanism. arrival.duration_seconds = 0.4 while arrival.max_in_flight = 4, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M02-Q035 comes from emitted trial fields rather than fixture identifiers; Bounded Overload Control is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare arrival.duration_seconds with arrival.max_in_flight and connect that contrast to bounded overload control.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Bounded Overload Control, cites arrival.duration_seconds and arrival.max_in_flight, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M02-Q036
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `recall`
 
-**Answer:** M02 diagnosis 6 identifies Retries and Downstream Protection evidence scope. The proving fields are arrival.rate_per_second and arrival.duration_seconds; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for retries and downstream protection, arrival.duration_seconds and service.workers separate the mechanism. arrival.duration_seconds = 0.3 while service.workers = 1, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M02-Q036 comes from emitted trial fields rather than fixture identifiers; Retries and Downstream Protection is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare arrival.duration_seconds with service.workers and connect that contrast to retries and downstream protection.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Retries and Downstream Protection, cites arrival.duration_seconds and service.workers, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M02-Q037
 
 **Type:** `design_judgment`
 **Difficulty:** `application`
 
-**Answer:** For M02 decision 1, recommend against. The protected bound is 186 x 0.72 = 133.9/s, and the planned 163.7/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 163.7/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 29.8/s of lower-priority work.
+**Answer:** Approve Define useful work at 121.9/s. The deciding number is 186 x 0.72 = 133.9/s, leaving 12/s before the reserve is consumed. Withdraw approval if a drill, trace, or workload sample shows define useful work demand above 133.9/s or proves the shed point cannot protect lower-priority work.
 
-**Explanation:** M02-Q037 turns on the forcing number from EX-01, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to define useful work demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 133.9/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M02-Q038
 
 **Type:** `design_judgment`
 **Difficulty:** `synthesis`
 
-**Answer:** For M02 decision 2, recommend against. The protected bound is 203 x 0.72 = 146.2/s, and the planned 178.6/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 178.6/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 32.4/s of lower-priority work.
+**Answer:** Decline Shape and sensitivity at 157.6/s. The deciding number is 203 x 0.72 = 146.2/s, so planned demand exceeds the usable region by 11.4/s. Approve later if repeated measurements lift usable capacity above 157.6/s or a named policy removes at least 11.4/s of deferrable work before saturation.
 
-**Explanation:** M02-Q038 turns on the forcing number from EX-02, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to shape and sensitivity demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 146.2/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M02-Q039
 
 **Type:** `design_judgment`
 **Difficulty:** `recall`
 
-**Answer:** For M02 decision 3, recommend against. The protected bound is 220 x 0.72 = 158.4/s, and the planned 193.6/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 193.6/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 35.2/s of lower-priority work.
+**Answer:** Approve conditionally for Apply Little’s Law. The deciding number is 220 x 0.72 = 158.4/s, and 153.4/s fits only while the fallback remains enforceable. Keep the condition until recovery traffic, priority demand, or fallback tests show less than 5/s of usable margin.
 
-**Explanation:** M02-Q039 turns on the forcing number from EX-03, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to apply little’s law demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 158.4/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M02-Q040
 
 **Type:** `design_judgment`
 **Difficulty:** `application`
 
-**Answer:** For M02 decision 4, recommend against. The protected bound is 237 x 0.72 = 170.6/s, and the planned 208.6/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 208.6/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 38.0/s of lower-priority work.
+**Answer:** Approve Expose coordinated omission at 153.5/s. The deciding number is 237 x 0.72 = 170.6/s, leaving 17.1/s before the reserve is consumed. Require redesign if a drill, trace, or workload sample shows expose coordinated omission demand above 170.6/s or proves the shed point cannot protect lower-priority work.
 
-**Explanation:** M02-Q040 turns on the forcing number from EX-04, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to expose coordinated omission demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 170.6/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M02-Q041
 
 **Type:** `design_judgment`
 **Difficulty:** `synthesis`
 
-**Answer:** For M02 decision 5, recommend against. The protected bound is 254 x 0.72 = 182.9/s, and the planned 223.5/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 223.5/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 40.6/s of lower-priority work.
+**Answer:** Decline Design a valid trial at 198.5/s. The deciding number is 254 x 0.72 = 182.9/s, so planned demand exceeds the usable region by 15.6/s. Lift the decline if repeated measurements lift usable capacity above 198.5/s or a named policy removes at least 15.6/s of deferrable work before saturation.
 
-**Explanation:** M02-Q041 turns on the forcing number from EX-05, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to design a valid trial demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 182.9/s, compares it with planned demand, and names a scenario-specific reversal condition.

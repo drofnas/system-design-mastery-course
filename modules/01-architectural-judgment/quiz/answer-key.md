@@ -185,16 +185,16 @@ This key covers all 37 questions for **Architectural Judgment**. Use it after an
 
 **Choices:**
 
-- Measure the M01 scoped measurement and record the limiting assumption before approving the change.
-- Approve treating experience as evidence for Architectural Judgment; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for treating experience as evidence; the team can monitor Architectural Judgment after launch.
-- Approve the M01 shortcut for alpha now.
+- Measure experience evidence data for review case one; limit the change.
+- Measure architecture labels data for review case one; limit the change.
+- Measure hypothetical distant data for review case one; limit the change.
+- Measure disagreement obstruction data for review case one; limit the change.
 
-**Answer:** Measure the M01 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure experience evidence data for review case one; limit the change.
 
-**Explanation:** M01-Q017 enacts mistake 1 from Architectural Judgment; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M01-Q017 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects experience evidence as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M01-Q018
 
@@ -203,16 +203,16 @@ This key covers all 37 questions for **Architectural Judgment**. Use it after an
 
 **Choices:**
 
-- Approve using architecture labels as conclusions for Architectural Judgment; the local context makes that proposal familiar enough for review.
-- Bound the M01 scoped measurement before approving the change.
-- Defer measurement until production for using architecture labels as conclusions; the team can monitor Architectural Judgment after launch.
-- Approve the M01 shortcut for bravo now.
+- Measure only winning data for review case two; limit the change. with margin
+- Measure architecture labels data for review case two; limit the change.
+- Measure daily volume data for review case two; limit the change.
+- Measure estimates promises data for review case two; limit the change.
 
-**Answer:** Bound the M01 scoped measurement before approving the change.
+**Answer:** Measure architecture labels data for review case two; limit the change.
 
-**Explanation:** M01-Q018 enacts mistake 2 from Architectural Judgment; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M01-Q018 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects architecture labels as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M01-Q019
 
@@ -221,16 +221,16 @@ This key covers all 37 questions for **Architectural Judgment**. Use it after an
 
 **Choices:**
 
-- Approve optimizing for a hypothetical distant future for Architectural Judgment; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for optimizing for a hypothetical distant future; the team can monitor Architectural Judgment after launch.
-- Freeze the M01 scoped measurement before approval.
-- Approve the M01 shortcut for charlie now.
+- Measure modeling only data for review case three; limit the change. with margin
+- Measure product response data for review case three; limit the change.
+- Measure hypothetical distant data for review case three; limit the change.
+- Measure declaring non data for review case three; limit the change.
 
-**Answer:** Freeze the M01 scoped measurement before approval.
+**Answer:** Measure hypothetical distant data for review case three; limit the change.
 
-**Explanation:** M01-Q019 enacts mistake 3 from Architectural Judgment; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M01-Q019 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects hypothetical distant as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M01-Q020
 
@@ -239,16 +239,16 @@ This key covers all 37 questions for **Architectural Judgment**. Use it after an
 
 **Choices:**
 
-- Approve confusing disagreement with obstruction for Architectural Judgment; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for confusing disagreement with obstruction; the team can monitor Architectural Judgment after launch.
-- Approve the M01 shortcut for delta now.
-- Preserve the M01 scoped measurement and record the limiting assumption before approving the change.
+- Measure writing aspirations data for review case four; limit the change.
+- Measure naming only data for review case four; limit the change. with margin with margin
+- Measure cache harmless data for review case four; limit the change.
+- Measure disagreement obstruction data for review case four; limit the change.
 
-**Answer:** Preserve the M01 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure disagreement obstruction data for review case four; limit the change.
 
-**Explanation:** M01-Q020 enacts mistake 4 from Architectural Judgment; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M01-Q020 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects disagreement obstruction as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M01-Q021
 
@@ -257,16 +257,16 @@ This key covers all 37 questions for **Architectural Judgment**. Use it after an
 
 **Choices:**
 
-- Model the M01 scoped measurement before approving the change.
-- Approve recording only the winning option for Architectural Judgment; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for recording only the winning option; the team can monitor Architectural Judgment after launch.
-- Approve the M01 shortcut for ember now.
+- Measure only winning data for review case five; limit the change.
+- Measure unknown outcomes data for review case five; limit the change.
+- Measure assigning team data for review case five; limit the change.
+- Measure quality name data for review case five; limit the change.
 
-**Answer:** Model the M01 scoped measurement before approving the change.
+**Answer:** Measure only winning data for review case five; limit the change.
 
-**Explanation:** M01-Q021 enacts mistake 5 from Architectural Judgment; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M01-Q021 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects only winning as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M01-Q022
 
@@ -275,16 +275,16 @@ This key covers all 37 questions for **Architectural Judgment**. Use it after an
 
 **Choices:**
 
-- Approve using daily volume as a throughput target for Problem Framing and Workloads; the local context makes that proposal familiar enough for review.
-- Account the M01 scoped measurement before approval.
-- Defer measurement until production for using daily volume as a throughput target; the team can monitor Problem Framing and Workloads after launch.
-- Approve the M01 shortcut for fable now.
+- Measure target sounds data for review case six; limit the change.
+- Measure daily volume data for review case six; limit the change.
+- Measure excluding failures data for review case six; limit the change.
+- Measure writing scenario data for review case six; limit the change.
 
-**Answer:** Account the M01 scoped measurement before approval.
+**Answer:** Measure daily volume data for review case six; limit the change.
 
-**Explanation:** M01-Q022 enacts mistake 1 from Problem Framing and Workloads; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M01-Q022 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects daily volume as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M01-Q023
 
@@ -293,16 +293,16 @@ This key covers all 37 questions for **Architectural Judgment**. Use it after an
 
 **Choices:**
 
-- Approve treating estimates as promises for Problem Framing and Workloads; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for treating estimates as promises; the team can monitor Problem Framing and Workloads after launch.
-- Test the M01 scoped measurement and record the limiting assumption before approving the change.
-- Approve the M01 shortcut for harbor now.
+- Measure conflicts quality data for review case seven; limit the change.
+- Measure drawing desired data for review case seven; limit the change.
+- Measure estimates promises data for review case seven; limit the change.
+- Measure product icons data for review case seven; limit the change. with margin
 
-**Answer:** Test the M01 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure estimates promises data for review case seven; limit the change.
 
-**Explanation:** M01-Q023 enacts mistake 2 from Problem Framing and Workloads; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M01-Q023 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects estimates promises as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M01-Q024
 
@@ -311,23 +311,23 @@ This key covers all 37 questions for **Architectural Judgment**. Use it after an
 
 **Choices:**
 
-- Approve modeling only user requests for Problem Framing and Workloads; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for modeling only user requests; the team can monitor Problem Framing and Workloads after launch.
-- Approve the M01 shortcut for indigo now.
-- Scope the M01 scoped measurement before approving the change.
+- Measure arrow direction data for review case eight; limit the change.
+- Measure mixing logical data for review case eight; limit the change.
+- Measure leaving system data for review case eight; limit the change.
+- Measure modeling only data for review case eight; limit the change.
 
-**Answer:** Scope the M01 scoped measurement before approving the change.
+**Answer:** Measure modeling only data for review case eight; limit the change.
 
-**Explanation:** M01-Q024 enacts mistake 3 from Problem Framing and Workloads; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M01-Q024 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects modeling only as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M01-Q025
 
 **Type:** `calculation`
 **Difficulty:** `recall`
 
-**Answer:** M01 Workload Rate Conversion case 1: Average rate is 8,660,000 / 86,400 = 100.23/s. A 6x peak band is 601.39/s.
+**Answer:** Calculation for architectural judgment, average rate is 8,660,000 / 86,400 = 100.23/s. A 6x peak band is 601.39/s.
 
 **Explanation:** M01-Q025 uses workload rate conversion from Architectural Judgment and keeps units visible through the final numeric result.
 
@@ -338,7 +338,7 @@ This key covers all 37 questions for **Architectural Judgment**. Use it after an
 **Type:** `calculation`
 **Difficulty:** `application`
 
-**Answer:** M01 Estimate Sensitivity case 2: The low case is 209 x 0.80 = 167.2/s; the high case is 209 x 1.25 = 261.2/s.
+**Answer:** Calculation for problem framing and workloads, the low case is 209 x 0.80 = 167.2/s; the high case is 209 x 1.25 = 261.2/s.
 
 **Explanation:** M01-Q026 uses estimate sensitivity from Problem Framing and Workloads and keeps units visible through the final numeric result.
 
@@ -349,7 +349,7 @@ This key covers all 37 questions for **Architectural Judgment**. Use it after an
 **Type:** `calculation`
 **Difficulty:** `synthesis`
 
-**Answer:** M01 Weighted Operation Mix case 3: Weighted demand is 904 + 104 x 5 = 1424 read-equivalent units/s.
+**Answer:** Calculation for invariants and state ownership, weighted demand is 904 + 104 x 5 = 1424 read-equivalent units/s.
 
 **Explanation:** M01-Q027 uses weighted operation mix from Invariants and State Ownership and keeps units visible through the final numeric result.
 
@@ -360,107 +360,107 @@ This key covers all 37 questions for **Architectural Judgment**. Use it after an
 **Type:** `design_judgment`
 **Difficulty:** `application`
 
-**Answer:** For M01 decision 1, recommend against. The protected bound is 183 x 0.72 = 131.8/s, and the planned 161.0/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 161.0/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 29.2/s of lower-priority work.
+**Answer:** Approve From solution to decision frame at 119.8/s. The deciding number is 183 x 0.72 = 131.8/s, leaving 12/s before the reserve is consumed. Withdraw approval if a drill, trace, or workload sample shows from solution to decision frame demand above 131.8/s or proves the shed point cannot protect lower-priority work.
 
-**Explanation:** M01-Q028 turns on the forcing number from EX-01, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to from solution to decision frame demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 131.8/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M01-Q029
 
 **Type:** `design_judgment`
 **Difficulty:** `synthesis`
 
-**Answer:** For M01 decision 2, recommend against. The protected bound is 200 x 0.72 = 144.0/s, and the planned 176.0/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 176.0/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 32.0/s of lower-priority work.
+**Answer:** Decline Scope, assumption, or constraint at 155.4/s. The deciding number is 200 x 0.72 = 144/s, so planned demand exceeds the usable region by 11.4/s. Approve later if repeated measurements lift usable capacity above 155.4/s or a named policy removes at least 11.4/s of deferrable work before saturation.
 
-**Explanation:** M01-Q029 turns on the forcing number from EX-02, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to scope, assumption, or constraint demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 144/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M01-Q030
 
 **Type:** `design_judgment`
 **Difficulty:** `recall`
 
-**Answer:** For M01 decision 3, recommend against. The protected bound is 217 x 0.72 = 156.2/s, and the planned 191.0/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 191.0/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 34.8/s of lower-priority work.
+**Answer:** Approve conditionally for Workload and sensitivity. The deciding number is 217 x 0.72 = 156.2/s, and 151.2/s fits only while the fallback remains enforceable. Keep the condition until recovery traffic, priority demand, or fallback tests show less than 5/s of usable margin.
 
-**Explanation:** M01-Q030 turns on the forcing number from EX-03, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to workload and sensitivity demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 156.2/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M01-Q031
 
 **Type:** `design_judgment`
 **Difficulty:** `application`
 
-**Answer:** For M01 decision 4, recommend against. The protected bound is 234 x 0.72 = 168.5/s, and the planned 205.9/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 205.9/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 37.4/s of lower-priority work.
+**Answer:** Approve Invariant or not at 151.4/s. The deciding number is 234 x 0.72 = 168.5/s, leaving 17.1/s before the reserve is consumed. Require redesign if a drill, trace, or workload sample shows invariant or not demand above 168.5/s or proves the shed point cannot protect lower-priority work.
 
-**Explanation:** M01-Q031 turns on the forcing number from EX-04, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to invariant or not demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 168.5/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M01-Q032
 
 **Type:** `design_judgment`
 **Difficulty:** `synthesis`
 
-**Answer:** For M01 decision 5, recommend against. The protected bound is 251 x 0.72 = 180.7/s, and the planned 220.9/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 220.9/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 40.2/s of lower-priority work.
+**Answer:** Decline State authority and proof sketch at 196.3/s. The deciding number is 251 x 0.72 = 180.7/s, so planned demand exceeds the usable region by 15.6/s. Lift the decline if repeated measurements lift usable capacity above 196.3/s or a named policy removes at least 15.6/s of deferrable work before saturation.
 
-**Explanation:** M01-Q032 turns on the forcing number from EX-05, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to state authority and proof sketch demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 180.7/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M01-Q033
 
 **Type:** `design_judgment`
 **Difficulty:** `recall`
 
-**Answer:** For M01 decision 6, recommend against. The protected bound is 268 x 0.72 = 193.0/s, and the planned 235.8/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 235.8/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 42.8/s of lower-priority work.
+**Answer:** Approve Six-part quality scenarios at 172.5/s. The deciding number is 268 x 0.72 = 193/s, leaving 20.5/s before the reserve is consumed. Reverse the call if a drill, trace, or workload sample shows six-part quality scenarios demand above 193/s or proves the shed point cannot protect lower-priority work.
 
-**Explanation:** M01-Q033 turns on the forcing number from EX-06, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to six-part quality scenarios demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 193/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M01-Q034
 
 **Type:** `design_judgment`
 **Difficulty:** `application`
 
-**Answer:** For M01 decision 7, recommend against. The protected bound is 285 x 0.72 = 205.2/s, and the planned 250.8/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 250.8/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 45.6/s of lower-priority work.
+**Answer:** Decline Context diagram critique at 223.6/s. The deciding number is 285 x 0.72 = 205.2/s, so planned demand exceeds the usable region by 18.4/s. Accept the proposal when repeated measurements lift usable capacity above 223.6/s or a named policy removes at least 18.4/s of deferrable work before saturation.
 
-**Explanation:** M01-Q034 turns on the forcing number from EX-07, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to context diagram critique demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 205.2/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M01-Q035
 
 **Type:** `design_judgment`
 **Difficulty:** `synthesis`
 
-**Answer:** For M01 decision 8, recommend against. The protected bound is 302 x 0.72 = 217.4/s, and the planned 265.8/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 265.8/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 48.4/s of lower-priority work.
+**Answer:** Approve conditionally for Decision drivers and candidates. The deciding number is 302 x 0.72 = 217.4/s, and 212.4/s fits only while the fallback remains enforceable. Expand only when recovery traffic, priority demand, or fallback tests show less than 5/s of usable margin.
 
-**Explanation:** M01-Q035 turns on the forcing number from EX-08, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to decision drivers and candidates demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 217.4/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M01-Q036
 
 **Type:** `design_judgment`
 **Difficulty:** `recall`
 
-**Answer:** For M01 decision 9, recommend against. The protected bound is 319 x 0.72 = 229.7/s, and the planned 280.7/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 280.7/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 51.0/s of lower-priority work.
+**Answer:** Approve Reversal conditions at 204.1/s. The deciding number is 319 x 0.72 = 229.7/s, leaving 25.6/s before the reserve is consumed. Stop expansion if a drill, trace, or workload sample shows reversal conditions demand above 229.7/s or proves the shed point cannot protect lower-priority work.
 
-**Explanation:** M01-Q036 turns on the forcing number from EX-09, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to reversal conditions demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 229.7/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M01-Q037
 
 **Type:** `design_judgment`
 **Difficulty:** `application`
 
-**Answer:** For M01 decision 10, recommend against. The protected bound is 336 x 0.72 = 241.9/s, and the planned 295.7/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 295.7/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 53.8/s of lower-priority work.
+**Answer:** Decline Failure matrix at 264.5/s. The deciding number is 336 x 0.72 = 241.9/s, so planned demand exceeds the usable region by 22.6/s. Proceed only after repeated measurements lift usable capacity above 264.5/s or a named policy removes at least 22.6/s of deferrable work before saturation.
 
-**Explanation:** M01-Q037 turns on the forcing number from EX-10, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to failure matrix demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 241.9/s, compares it with planned demand, and names a scenario-specific reversal condition.

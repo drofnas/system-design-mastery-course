@@ -152,16 +152,16 @@ This key covers all 37 questions for **Transactions, Concurrency, and Recovery**
 
 **Choices:**
 
-- Calculate the M08 scoped measurement and record the limiting assumption before approving the change.
-- Approve calling a transaction “ACID” without naming the admitted histories for Invariants and Transaction Boundaries; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for calling a transaction “ACID” without naming the admitted histories; the team can monitor Invariants and Transaction Boundaries after launch.
-- Approve the M08 shortcut for alpha now.
+- Measure transaction acid data for review case one; limit the change.
+- Measure putting network data for review case one; limit the change.
+- Measure cache summary data for review case one; limit the change. with margin
+- Measure widening every data for review case one; limit the change.
 
-**Answer:** Calculate the M08 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure transaction acid data for review case one; limit the change.
 
-**Explanation:** M08-Q014 enacts mistake 1 from Invariants and Transaction Boundaries; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M08-Q014 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects transaction acid as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M08-Q015
 
@@ -170,16 +170,16 @@ This key covers all 37 questions for **Transactions, Concurrency, and Recovery**
 
 **Choices:**
 
-- Approve putting network calls inside a transaction and assuming atomicity crosses the for Invariants and Transaction Boundaries; the local context makes that proposal familiar enough for review.
-- Draw the M08 scoped measurement before approving the change.
-- Defer measurement until production for putting network calls inside a transaction and assuming atomicity crosses the; the team can monitor Invariants and Transaction Boundaries after launch.
-- Approve the M08 shortcut for bravo now.
+- Measure listing ansi data for review case two; limit the change. with margin
+- Measure putting network data for review case two; limit the change.
+- Measure repeatable read data for review case two; limit the change.
+- Measure retrying only data for review case two; limit the change.
 
-**Answer:** Draw the M08 scoped measurement before approving the change.
+**Answer:** Measure putting network data for review case two; limit the change.
 
-**Explanation:** M08-Q015 enacts mistake 2 from Invariants and Transaction Boundaries; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M08-Q015 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects putting network as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M08-Q016
 
@@ -188,16 +188,16 @@ This key covers all 37 questions for **Transactions, Concurrency, and Recovery**
 
 **Choices:**
 
-- Approve treating a cache or summary as authority because it is convenient to query for Invariants and Transaction Boundaries; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for treating a cache or summary as authority because it is convenient to query; the team can monitor Invariants and Transaction Boundaries after launch.
-- Separate the M08 scoped measurement before approval.
-- Approve the M08 shortcut for charlie now.
+- Measure raising isolation data for review case three; limit the change.
+- Measure lock timeout data for review case three; limit the change.
+- Measure cache summary data for review case three; limit the change.
+- Measure retrying last data for review case three; limit the change.
 
-**Answer:** Separate the M08 scoped measurement before approval.
+**Answer:** Measure cache summary data for review case three; limit the change.
 
-**Explanation:** M08-Q016 enacts mistake 3 from Invariants and Transaction Boundaries; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M08-Q016 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects cache summary as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M08-Q017
 
@@ -206,16 +206,16 @@ This key covers all 37 questions for **Transactions, Concurrency, and Recovery**
 
 **Choices:**
 
-- Approve widening every boundary “for safety,” increasing lock duration and recovery for Invariants and Transaction Boundaries; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for widening every boundary “for safety,” increasing lock duration and recovery; the team can monitor Invariants and Transaction Boundaries after launch.
-- Approve the M08 shortcut for delta now.
-- Verify the M08 scoped measurement and record the limiting assumption before approving the change.
+- Measure row locks data for review case four; limit the change. with margin
+- Measure holding locks data for review case four; limit the change.
+- Measure mvcc means data for review case four; limit the change.
+- Measure widening every data for review case four; limit the change.
 
-**Answer:** Verify the M08 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure widening every data for review case four; limit the change.
 
-**Explanation:** M08-Q017 enacts mistake 4 from Invariants and Transaction Boundaries; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M08-Q017 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects widening every as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M08-Q018
 
@@ -224,16 +224,16 @@ This key covers all 37 questions for **Transactions, Concurrency, and Recovery**
 
 **Choices:**
 
-- Compare the M08 scoped measurement before approving the change.
-- Approve listing ANSI anomaly names without drawing the violating schedule for Histories, Serializability, and Isolation Anomalies; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for listing ANSI anomaly names without drawing the violating schedule; the team can monitor Histories, Serializability, and Isolation Anomalies after launch.
-- Approve the M08 shortcut for ember now.
+- Measure listing ansi data for review case five; limit the change.
+- Measure validating only data for review case five; limit the change.
+- Measure retrying high data for review case five; limit the change.
+- Measure timestamps imply data for review case five; limit the change.
 
-**Answer:** Compare the M08 scoped measurement before approving the change.
+**Answer:** Measure listing ansi data for review case five; limit the change.
 
-**Explanation:** M08-Q018 enacts mistake 1 from Histories, Serializability, and Isolation Anomalies; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M08-Q018 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects listing ansi as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M08-Q019
 
@@ -242,16 +242,16 @@ This key covers all 37 questions for **Transactions, Concurrency, and Recovery**
 
 **Choices:**
 
-- Approve assuming repeatable read or snapshot means serializable in every database for Histories, Serializability, and Isolation Anomalies; the local context makes that proposal familiar enough for review.
-- Reject the M08 scoped measurement before approval.
-- Defer measurement until production for assuming repeatable read or snapshot means serializable in every database; the team can monitor Histories, Serializability, and Isolation Anomalies after launch.
-- Approve the M08 shortcut for fable now.
+- Measure relying pre data for review case six; limit the change.
+- Measure repeatable read data for review case six; limit the change.
+- Measure audit log data for review case six; limit the change. with margin
+- Measure dual writing data for review case six; limit the change.
 
-**Answer:** Reject the M08 scoped measurement before approval.
+**Answer:** Measure repeatable read data for review case six; limit the change.
 
-**Explanation:** M08-Q019 enacts mistake 2 from Histories, Serializability, and Isolation Anomalies; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M08-Q019 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects repeatable read as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M08-Q020
 
@@ -260,16 +260,16 @@ This key covers all 37 questions for **Transactions, Concurrency, and Recovery**
 
 **Choices:**
 
-- Approve retrying only the failed statement after the transaction snapshot is invalid for Histories, Serializability, and Isolation Anomalies; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for retrying only the failed statement after the transaction snapshot is invalid; the team can monitor Histories, Serializability, and Isolation Anomalies after launch.
-- Trace the M08 scoped measurement and record the limiting assumption before approving the change.
-- Approve the M08 shortcut for harbor now.
+- Measure keeping transaction data for review case seven; limit the change.
+- Measure buffered write data for review case seven; limit the change.
+- Measure retrying only data for review case seven; limit the change.
+- Measure flushing data data for review case seven; limit the change.
 
-**Answer:** Trace the M08 scoped measurement and record the limiting assumption before approving the change.
+**Answer:** Measure retrying only data for review case seven; limit the change.
 
-**Explanation:** M08-Q020 enacts mistake 3 from Histories, Serializability, and Isolation Anomalies; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M08-Q020 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects retrying only as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M08-Q021
 
@@ -278,23 +278,23 @@ This key covers all 37 questions for **Transactions, Concurrency, and Recovery**
 
 **Choices:**
 
-- Approve raising isolation globally without measuring abort and latency costs for Histories, Serializability, and Isolation Anomalies; the local context makes that proposal familiar enough for review.
-- Defer measurement until production for raising isolation globally without measuring abort and latency costs; the team can monitor Histories, Serializability, and Isolation Anomalies after launch.
-- Approve the M08 shortcut for indigo now.
-- Require the M08 scoped measurement before approving the change.
+- Measure clean process data for review case eight; limit the change.
+- Measure checkpoint completion data for review case eight; limit the change.
+- Measure equating green data for review case eight; limit the change.
+- Measure raising isolation data for review case eight; limit the change.
 
-**Answer:** Require the M08 scoped measurement before approving the change.
+**Answer:** Measure raising isolation data for review case eight; limit the change.
 
-**Explanation:** M08-Q021 enacts mistake 4 from Histories, Serializability, and Isolation Anomalies; the defensible response asks for the missing scope evidence before accepting the shortcut.
+**Explanation:** M08-Q021 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.
 
-**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
+**Grading notes:** Full credit selects raising isolation as the deciding target and explains why the other listed targets are adjacent rather than decisive.
 
 ## M08-Q022
 
 **Type:** `calculation`
 **Difficulty:** `recall`
 
-**Answer:** M08 Rpo case 1: Observable RPO is 20 - 7 = 13 minutes if the missing middle cannot be replayed.
+**Answer:** Calculation for invariants and transaction boundaries, observable RPO is 20 - 7 = 13 minutes if the missing middle cannot be replayed.
 
 **Explanation:** M08-Q022 uses RPO from Invariants and Transaction Boundaries and keeps units visible through the final numeric result.
 
@@ -305,7 +305,7 @@ This key covers all 37 questions for **Transactions, Concurrency, and Recovery**
 **Type:** `calculation`
 **Difficulty:** `application`
 
-**Answer:** M08 Rpo case 2: Observable RPO is 20 - 7 = 13 minutes if the missing middle cannot be replayed.
+**Answer:** Calculation for histories, serializability, and isolation anomalies, observable RPO is 20 - 7 = 13 minutes if the missing middle cannot be replayed.
 
 **Explanation:** M08-Q023 uses RPO from Histories, Serializability, and Isolation Anomalies and keeps units visible through the final numeric result.
 
@@ -316,7 +316,7 @@ This key covers all 37 questions for **Transactions, Concurrency, and Recovery**
 **Type:** `calculation`
 **Difficulty:** `synthesis`
 
-**Answer:** M08 Recovery State Enumeration case 3: The enumeration has 4 x 3 = 12 state cases.
+**Answer:** Calculation for locks, two-phase locking, deadlocks, and retries, the enumeration has 4 x 3 = 12 state cases.
 
 **Explanation:** M08-Q024 uses recovery state enumeration from Locks, Two-Phase Locking, Deadlocks, and Retries and keeps units visible through the final numeric result.
 
@@ -327,140 +327,140 @@ This key covers all 37 questions for **Transactions, Concurrency, and Recovery**
 **Type:** `scenario_diagnosis`
 **Difficulty:** `application`
 
-**Answer:** M08 diagnosis 1 identifies Invariants and Transaction Boundaries evidence scope. The proving fields are initial_state.completed_exposures and invariants.0.value; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for invariants and transaction boundaries, initial_state.completed_exposures and control.atomic_workflow separate the mechanism. initial_state.completed_exposures = 0 while control.atomic_workflow = 1, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M08-Q025 comes from emitted trial fields rather than fixture identifiers; Invariants and Transaction Boundaries is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare initial_state.completed_exposures with control.atomic_workflow and connect that contrast to invariants and transaction boundaries.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Invariants and Transaction Boundaries, cites initial_state.completed_exposures and control.atomic_workflow, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M08-Q026
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** M08 diagnosis 2 identifies Histories, Serializability, and Isolation Anomalies evidence scope. The proving fields are initial_state.completed_exposures and invariants.0.value; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for histories, serializability, and isolation anomalies, initial_state.completed_exposures and control.flush_before_ack separate the mechanism. initial_state.completed_exposures = 0 while control.flush_before_ack = 1, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M08-Q026 comes from emitted trial fields rather than fixture identifiers; Histories, Serializability, and Isolation Anomalies is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare initial_state.completed_exposures with control.flush_before_ack and connect that contrast to histories, serializability, and isolation anomalies.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Histories, Serializability, and Isolation Anomalies, cites initial_state.completed_exposures and control.flush_before_ack, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M08-Q027
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `recall`
 
-**Answer:** M08 diagnosis 3 identifies Locks, Two-Phase Locking, Deadlocks, and Retries evidence scope. The proving fields are initial_state.certified_controllers and invariants.0.value; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for locks, two-phase locking, deadlocks, and retries, initial_state.certified_controllers and control.validate_restore separate the mechanism. initial_state.certified_controllers = 2 while control.validate_restore = 1, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M08-Q027 comes from emitted trial fields rather than fixture identifiers; Locks, Two-Phase Locking, Deadlocks, and Retries is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare initial_state.certified_controllers with control.validate_restore and connect that contrast to locks, two-phase locking, deadlocks, and retries.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Locks, Two-Phase Locking, Deadlocks, and Retries, cites initial_state.certified_controllers and control.validate_restore, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M08-Q028
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `application`
 
-**Answer:** M08 diagnosis 4 identifies Optimistic Control, MVCC, Snapshots, and Write Skew evidence scope. The proving fields are initial_state.certified_controllers and invariants.0.value; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for optimistic control, mvcc, snapshots, and write skew, initial_state.certified_controllers and control.rebuild_derived separate the mechanism. initial_state.certified_controllers = 2 while control.rebuild_derived = 1, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M08-Q028 comes from emitted trial fields rather than fixture identifiers; Optimistic Control, MVCC, Snapshots, and Write Skew is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare initial_state.certified_controllers with control.rebuild_derived and connect that contrast to optimistic control, mvcc, snapshots, and write skew.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Optimistic Control, MVCC, Snapshots, and Write Skew, cites initial_state.certified_controllers and control.rebuild_derived, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M08-Q029
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** M08 diagnosis 5 identifies Constraints, Authority, and Atomic Workflows evidence scope. The proving fields are initial_state.completed_transfers and invariants.0.value; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for constraints, authority, and atomic workflows, invariants.0.value and control.atomic_workflow separate the mechanism. invariants.0.value = 2 while control.atomic_workflow = 1, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M08-Q029 comes from emitted trial fields rather than fixture identifiers; Constraints, Authority, and Atomic Workflows is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare invariants.0.value with control.atomic_workflow and connect that contrast to constraints, authority, and atomic workflows.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Constraints, Authority, and Atomic Workflows, cites invariants.0.value and control.atomic_workflow, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M08-Q030
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `recall`
 
-**Answer:** M08 diagnosis 6 identifies WAL, Checkpoints, Redo/Undo, and Group Commit evidence scope. The proving fields are initial_state.completed_transfers and invariants.0.value; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for wal, checkpoints, redo/undo, and group commit, invariants.0.value and control.flush_before_ack separate the mechanism. invariants.0.value = 2 while control.flush_before_ack = 1, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M08-Q030 comes from emitted trial fields rather than fixture identifiers; WAL, Checkpoints, Redo/Undo, and Group Commit is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare invariants.0.value with control.flush_before_ack and connect that contrast to wal, checkpoints, redo/undo, and group commit.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names WAL, Checkpoints, Redo/Undo, and Group Commit, cites invariants.0.value and control.flush_before_ack, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M08-Q031
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `application`
 
-**Answer:** M08 diagnosis 7 identifies Backups, PITR, Restore Validation, and Objectives evidence scope. The proving fields are initial_state.durable_exposure and invariants.0.value; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for backups, pitr, restore validation, and objectives, control.flush_before_ack and control.validate_restore separate the mechanism. control.flush_before_ack = 0 while control.validate_restore = 1, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M08-Q031 comes from emitted trial fields rather than fixture identifiers; Backups, PITR, Restore Validation, and Objectives is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare control.flush_before_ack with control.validate_restore and connect that contrast to backups, pitr, restore validation, and objectives.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Backups, PITR, Restore Validation, and Objectives, cites control.flush_before_ack and control.validate_restore, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M08-Q032
 
 **Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** M08 diagnosis 8 identifies Transaction and Recovery Decisions evidence scope. The proving fields are initial_state.durable_exposure and invariants.0.value; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
+**Answer:** Diagnosis for transaction and recovery decisions, initial_state.durable_exposure and control.validate_restore separate the mechanism. initial_state.durable_exposure = 0 while control.validate_restore = 1, so the run has to be explained by that contrast rather than by the surrounding counters. In the paired healthy run, the failing side of the pair would move toward the intended contract while unrelated context fields could stay close to these values.
 
-**Explanation:** M08-Q032 comes from emitted trial fields rather than fixture identifiers; Transaction and Recovery Decisions is tested by comparing committed state, applied state, and invariant evidence.
+**Explanation:** The extra fields make the output look realistic, but they are not sufficient alone. The answer has to compare initial_state.durable_exposure with control.validate_restore and connect that contrast to transaction and recovery decisions.
 
-**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
+**Grading notes:** Full credit names Transaction and Recovery Decisions, cites initial_state.durable_exposure and control.validate_restore, and explains the contrast. Partial credit is available for naming the mechanism without the field comparison.
 
 ## M08-Q033
 
 **Type:** `design_judgment`
 **Difficulty:** `recall`
 
-**Answer:** For M08 decision 1, recommend against. The protected bound is 204 x 0.72 = 146.9/s, and the planned 179.5/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 179.5/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 32.6/s of lower-priority work.
+**Answer:** Approve Invariant enforcement map at 134.9/s. The deciding number is 204 x 0.72 = 146.9/s, leaving 12/s before the reserve is consumed. Withdraw approval if a drill, trace, or workload sample shows invariant enforcement map demand above 146.9/s or proves the shed point cannot protect lower-priority work.
 
-**Explanation:** M08-Q033 turns on the forcing number from EX-01, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to invariant enforcement map demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 146.9/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M08-Q034
 
 **Type:** `design_judgment`
 **Difficulty:** `application`
 
-**Answer:** For M08 decision 2, recommend against. The protected bound is 221 x 0.72 = 159.1/s, and the planned 194.5/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 194.5/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 35.4/s of lower-priority work.
+**Answer:** Decline Minimal transaction boundary at 170.5/s. The deciding number is 221 x 0.72 = 159.1/s, so planned demand exceeds the usable region by 11.4/s. Approve later if repeated measurements lift usable capacity above 170.5/s or a named policy removes at least 11.4/s of deferrable work before saturation.
 
-**Explanation:** M08-Q034 turns on the forcing number from EX-02, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to minimal transaction boundary demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 159.1/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M08-Q035
 
 **Type:** `design_judgment`
 **Difficulty:** `synthesis`
 
-**Answer:** For M08 decision 3, recommend against. The protected bound is 238 x 0.72 = 171.4/s, and the planned 209.4/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 209.4/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 38.0/s of lower-priority work.
+**Answer:** Approve conditionally for Lost-update history. The deciding number is 238 x 0.72 = 171.4/s, and 166.4/s fits only while the fallback remains enforceable. Keep the condition until recovery traffic, priority demand, or fallback tests show less than 5/s of usable margin.
 
-**Explanation:** M08-Q035 turns on the forcing number from EX-03, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to lost-update history demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 171.4/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M08-Q036
 
 **Type:** `design_judgment`
 **Difficulty:** `recall`
 
-**Answer:** For M08 decision 4, recommend against. The protected bound is 255 x 0.72 = 183.6/s, and the planned 224.4/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 224.4/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 40.8/s of lower-priority work.
+**Answer:** Approve Write-skew graph at 166.5/s. The deciding number is 255 x 0.72 = 183.6/s, leaving 17.1/s before the reserve is consumed. Require redesign if a drill, trace, or workload sample shows write-skew graph demand above 183.6/s or proves the shed point cannot protect lower-priority work.
 
-**Explanation:** M08-Q036 turns on the forcing number from EX-04, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to write-skew graph demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 183.6/s, compares it with planned demand, and names a scenario-specific reversal condition.
 
 ## M08-Q037
 
 **Type:** `design_judgment`
 **Difficulty:** `application`
 
-**Answer:** For M08 decision 5, recommend against. The protected bound is 272 x 0.72 = 195.8/s, and the planned 239.4/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 239.4/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 43.6/s of lower-priority work.
+**Answer:** Decline Lock compatibility at 211.4/s. The deciding number is 272 x 0.72 = 195.8/s, so planned demand exceeds the usable region by 15.6/s. Lift the decline if repeated measurements lift usable capacity above 211.4/s or a named policy removes at least 15.6/s of deferrable work before saturation.
 
-**Explanation:** M08-Q037 turns on the forcing number from EX-05, not preference; the reversal conditions are specific to the measured gap in this prompt.
+**Explanation:** The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to lock compatibility demand and the protection policy in this case.
 
-**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+**Grading notes:** Full credit gives the stated decision, computes 195.8/s, compares it with planned demand, and names a scenario-specific reversal condition.

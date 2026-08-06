@@ -268,16 +268,16 @@
         "asymptotic-analysis-and-its-limits",
         "src:L01-mistake-1"
       ],
-      "prompt": "A design review for Asymptotic Analysis and Its Limits includes this proposal: ignoring constants for hot paths. Which response best protects the mechanism?",
+      "prompt": "A review compares checks for constants hot, worst case, amortized cost, and algorithms checking. The proposal says ignoring constants for hot paths. Which measurement target decides case one?",
       "choices": [
-        "Scope the M00 scoped measurement and record the limiting assumption before approving the change.",
-        "Approve ignoring constants for hot paths for Asymptotic Analysis and Its Limits; the local context makes that proposal familiar enough for review.",
-        "Defer measurement until production for ignoring constants for hot paths; the team can monitor Asymptotic Analysis and Its Limits after launch.",
-        "Approve the M00 shortcut for alpha now."
+        "Measure constants hot data for review case one; limit the change.",
+        "Measure worst case data for review case one; limit the change.",
+        "Measure amortized cost data for review case one; limit the change.",
+        "Measure algorithms checking data for review case one; limit the change."
       ],
-      "correct_answer": "Scope the M00 scoped measurement and record the limiting assumption before approving the change.",
-      "explanation": "M00-Q015 enacts mistake 1 from Asymptotic Analysis and Its Limits; the defensible response asks for the missing scope evidence before accepting the shortcut.",
-      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
+      "correct_answer": "Measure constants hot data for review case one; limit the change.",
+      "explanation": "M00-Q015 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
+      "grading_notes": "Full credit selects constants hot as the deciding target and explains why the other listed targets are adjacent rather than decisive."
     },
     {
       "question_id": "M00-Q016",
@@ -292,16 +292,16 @@
         "asymptotic-analysis-and-its-limits",
         "src:L01-mistake-2"
       ],
-      "prompt": "During an incident review about Asymptotic Analysis and Its Limits, the team wants to proceed this way: using worst-case notation without naming the adversary or input condition. What should the reviewer say?",
+      "prompt": "A review compares checks for worst case, amortized means, linked list, and contiguous growth. The proposal says using worst-case notation without naming the adversary or input condition. Which measurement target decides case two?",
       "choices": [
-        "Approve using worst-case notation without naming the adversary or input condition for Asymptotic Analysis and Its Limits; the local context makes that proposal familiar enough for review.",
-        "Measure the M00 scoped measurement before approving the change.",
-        "Defer measurement until production for using worst-case notation without naming the adversary or input condition; the team can monitor Asymptotic Analysis and Its Limits after launch.",
-        "Approve the M00 shortcut for bravo now."
+        "Measure amortized means data for review case two; limit the change.",
+        "Measure worst case data for review case two; limit the change.",
+        "Measure linked list data for review case two; limit the change.",
+        "Measure contiguous growth data for review case two; limit the change."
       ],
-      "correct_answer": "Measure the M00 scoped measurement before approving the change.",
-      "explanation": "M00-Q016 enacts mistake 2 from Asymptotic Analysis and Its Limits; the defensible response asks for the missing scope evidence before accepting the shortcut.",
-      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
+      "correct_answer": "Measure worst case data for review case two; limit the change.",
+      "explanation": "M00-Q016 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
+      "grading_notes": "Full credit selects worst case as the deciding target and explains why the other listed targets are adjacent rather than decisive."
     },
     {
       "question_id": "M00-Q017",
@@ -316,16 +316,16 @@
         "asymptotic-analysis-and-its-limits",
         "src:L01-mistake-3"
       ],
-      "prompt": "A learner applies Asymptotic Analysis and Its Limits and chooses this shortcut: calling amortized cost a latency guarantee. Which correction is most defensible?",
+      "prompt": "A review compares checks for amortized cost, random input, resize spikes, and only hash. The proposal says calling amortized cost a latency guarantee. Which measurement target decides case three?",
       "choices": [
-        "Approve calling amortized cost a latency guarantee for Asymptotic Analysis and Its Limits; the local context makes that proposal familiar enough for review.",
-        "Defer measurement until production for calling amortized cost a latency guarantee; the team can monitor Asymptotic Analysis and Its Limits after launch.",
-        "Bound the M00 scoped measurement before approval.",
-        "Approve the M00 shortcut for charlie now."
+        "Measure random input data for review case three; limit the change.",
+        "Measure resize spikes data for review case three; limit the change.",
+        "Measure amortized cost data for review case three; limit the change.",
+        "Measure only hash data for review case three; limit the change. with margin"
       ],
-      "correct_answer": "Bound the M00 scoped measurement before approval.",
-      "explanation": "M00-Q017 enacts mistake 3 from Asymptotic Analysis and Its Limits; the defensible response asks for the missing scope evidence before accepting the shortcut.",
-      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
+      "correct_answer": "Measure amortized cost data for review case three; limit the change.",
+      "explanation": "M00-Q017 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
+      "grading_notes": "Full credit selects amortized cost as the deciding target and explains why the other listed targets are adjacent rather than decisive."
     },
     {
       "question_id": "M00-Q018",
@@ -340,16 +340,16 @@
         "asymptotic-analysis-and-its-limits",
         "src:L01-mistake-4"
       ],
-      "prompt": "A migration note for Asymptotic Analysis and Its Limits relies on this claim: comparing algorithms without checking memory layout. Which option keeps the evidence scope intact?",
+      "prompt": "A review compares checks for algorithms checking, hashing range, balance maintenance, and storage index. The proposal says comparing algorithms without checking memory layout. Which measurement target decides case four?",
       "choices": [
-        "Approve comparing algorithms without checking memory layout for Asymptotic Analysis and Its Limits; the local context makes that proposal familiar enough for review.",
-        "Defer measurement until production for comparing algorithms without checking memory layout; the team can monitor Asymptotic Analysis and Its Limits after launch.",
-        "Approve the M00 shortcut for delta now.",
-        "Freeze the M00 scoped measurement and record the limiting assumption before approving the change."
+        "Measure hashing range data for review case four; limit the change.",
+        "Measure balance maintenance data for review case four; limit the change.",
+        "Measure storage index data for review case four; limit the change.",
+        "Measure algorithms checking data for review case four; limit the change."
       ],
-      "correct_answer": "Freeze the M00 scoped measurement and record the limiting assumption before approving the change.",
-      "explanation": "M00-Q018 enacts mistake 4 from Asymptotic Analysis and Its Limits; the defensible response asks for the missing scope evidence before accepting the shortcut.",
-      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
+      "correct_answer": "Measure algorithms checking data for review case four; limit the change.",
+      "explanation": "M00-Q018 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
+      "grading_notes": "Full credit selects algorithms checking as the deciding target and explains why the other listed targets are adjacent rather than decisive."
     },
     {
       "question_id": "M00-Q019",
@@ -364,16 +364,16 @@
         "arrays-dynamic-arrays-and-locality",
         "src:L02-mistake-1"
       ],
-      "prompt": "A capacity memo touches Arrays, Dynamic Arrays, and Locality and argues: saying amortized O(1) means every append is cheap. Which response is the strongest engineering objection?",
+      "prompt": "A review compares checks for amortized means, priority boolean, starvation heaps, and priority queues. The proposal says saying amortized O(1) means every append is cheap. Which measurement target decides case five?",
       "choices": [
-        "Preserve the M00 scoped measurement before approving the change.",
-        "Approve saying amortized O(1) means every append is cheap for Arrays, Dynamic Arrays, and Locality; the local context makes that proposal familiar enough for review.",
-        "Defer measurement until production for saying amortized O(1) means every append is cheap; the team can monitor Arrays, Dynamic Arrays, and Locality after launch.",
-        "Approve the M00 shortcut for ember now."
+        "Measure amortized means data for review case five; limit the change.",
+        "Measure priority boolean data for review case five; limit the change.",
+        "Measure starvation heaps data for review case five; limit the change.",
+        "Measure priority queues data for review case five; limit the change."
       ],
-      "correct_answer": "Preserve the M00 scoped measurement before approving the change.",
-      "explanation": "M00-Q019 enacts mistake 1 from Arrays, Dynamic Arrays, and Locality; the defensible response asks for the missing scope evidence before accepting the shortcut.",
-      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
+      "correct_answer": "Measure amortized means data for review case five; limit the change.",
+      "explanation": "M00-Q019 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
+      "grading_notes": "Full credit selects amortized means as the deciding target and explains why the other listed targets are adjacent rather than decisive."
     },
     {
       "question_id": "M00-Q020",
@@ -388,16 +388,16 @@
         "arrays-dynamic-arrays-and-locality",
         "src:L02-mistake-2"
       ],
-      "prompt": "A design review for Arrays, Dynamic Arrays, and Locality includes this proposal: choosing a linked list for insertion while ignoring how the insertion point is found. Which response best protects the mechanism?",
+      "prompt": "A review compares checks for linked list, matrix sparse, cycles dependency, and first found. The proposal says choosing a linked list for insertion while ignoring how the insertion point is found. Which measurement target decides case six?",
       "choices": [
-        "Approve choosing a linked list for insertion while ignoring how the insertion point is f for Arrays, Dynamic Arrays, and Locality; the local context makes that proposal familiar enough for review.",
-        "Model the M00 scoped measurement before approval.",
-        "Defer measurement until production for choosing a linked list for insertion while ignoring how the insertion point is f; the team can monitor Arrays, Dynamic Arrays, and Locality after launch.",
-        "Approve the M00 shortcut for fable now."
+        "Measure matrix sparse data for review case six; limit the change.",
+        "Measure linked list data for review case six; limit the change.",
+        "Measure cycles dependency data for review case six; limit the change.",
+        "Measure first found data for review case six; limit the change."
       ],
-      "correct_answer": "Model the M00 scoped measurement before approval.",
-      "explanation": "M00-Q020 enacts mistake 2 from Arrays, Dynamic Arrays, and Locality; the defensible response asks for the missing scope evidence before accepting the shortcut.",
-      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
+      "correct_answer": "Measure linked list data for review case six; limit the change.",
+      "explanation": "M00-Q020 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
+      "grading_notes": "Full credit selects linked list as the deciding target and explains why the other listed targets are adjacent rather than decisive."
     },
     {
       "question_id": "M00-Q021",
@@ -412,16 +412,16 @@
         "arrays-dynamic-arrays-and-locality",
         "src:L02-mistake-3"
       ],
-      "prompt": "During an incident review about Arrays, Dynamic Arrays, and Locality, the team wants to proceed this way: forgetting that contiguous growth can require copying and memory headroom. What should the reviewer say?",
+      "prompt": "A review compares checks for contiguous growth, sorting top, memory temporary, and exponential search. The proposal says forgetting that contiguous growth can require copying and memory headroom. Which measurement target decides case seven?",
       "choices": [
-        "Approve forgetting that contiguous growth can require copying and memory headroom for Arrays, Dynamic Arrays, and Locality; the local context makes that proposal familiar enough for review.",
-        "Defer measurement until production for forgetting that contiguous growth can require copying and memory headroom; the team can monitor Arrays, Dynamic Arrays, and Locality after launch.",
-        "Account the M00 scoped measurement and record the limiting assumption before approving the change.",
-        "Approve the M00 shortcut for harbor now."
+        "Measure sorting top data for review case seven; limit the change.",
+        "Measure memory temporary data for review case seven; limit the change.",
+        "Measure contiguous growth data for review case seven; limit the change.",
+        "Measure exponential search data for review case seven; limit the change."
       ],
-      "correct_answer": "Account the M00 scoped measurement and record the limiting assumption before approving the change.",
-      "explanation": "M00-Q021 enacts mistake 3 from Arrays, Dynamic Arrays, and Locality; the defensible response asks for the missing scope evidence before accepting the shortcut.",
-      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
+      "correct_answer": "Measure contiguous growth data for review case seven; limit the change.",
+      "explanation": "M00-Q021 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
+      "grading_notes": "Full credit selects contiguous growth as the deciding target and explains why the other listed targets are adjacent rather than decisive."
     },
     {
       "question_id": "M00-Q022",
@@ -436,16 +436,16 @@
         "hash-tables",
         "src:L03-mistake-1"
       ],
-      "prompt": "A learner applies Hash Tables and chooses this shortcut: assuming random input when keys are user-controlled. Which correction is most defensible?",
+      "prompt": "A review compares checks for random input, constraints code, score preserving, and workload growth. The proposal says assuming random input when keys are user-controlled. Which measurement target decides case eight?",
       "choices": [
-        "Approve assuming random input when keys are user-controlled for Hash Tables; the local context makes that proposal familiar enough for review.",
-        "Defer measurement until production for assuming random input when keys are user-controlled; the team can monitor Hash Tables after launch.",
-        "Approve the M00 shortcut for indigo now.",
-        "Test the M00 scoped measurement before approving the change."
+        "Measure constraints code data for review case eight; limit the change.",
+        "Measure score preserving data for review case eight; limit the change.",
+        "Measure workload growth data for review case eight; limit the change.",
+        "Measure random input data for review case eight; limit the change."
       ],
-      "correct_answer": "Test the M00 scoped measurement before approving the change.",
-      "explanation": "M00-Q022 enacts mistake 1 from Hash Tables; the defensible response asks for the missing scope evidence before accepting the shortcut.",
-      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
+      "correct_answer": "Measure random input data for review case eight; limit the change.",
+      "explanation": "M00-Q022 asks the learner to map the disputed proposal to the matching measurement target rather than a nearby concern.",
+      "grading_notes": "Full credit selects random input as the deciding target and explains why the other listed targets are adjacent rather than decisive."
     },
     {
       "question_id": "M00-Q023",
@@ -460,8 +460,8 @@
         "amortized-resize-copies",
         "src:L01-worked"
       ],
-      "prompt": "Alpha case in Algorithmic Foundations: A dynamic array starts at capacity 1 and doubles when full. After 18 appends, how many existing items were copied during resizes, and what is the final capacity?",
-      "correct_answer": "M00 Amortized Resize Copies case 1: Resizes copy 1 + 2 + 4 + ... below 18, totaling 31 copied items; final capacity is 32 slots.",
+      "prompt": "For asymptotic analysis and its limits, a dynamic array starts at capacity 1 and doubles when full. After 18 appends, how many existing items were copied during resizes, and what is the final capacity?",
+      "correct_answer": "Calculation for asymptotic analysis and its limits, resizes copy 1 + 2 + 4 + ... below 18, totaling 31 copied items; final capacity is 32 slots.",
       "explanation": "M00-Q023 uses amortized resize copies from Asymptotic Analysis and Its Limits and keeps units visible through the final numeric result.",
       "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
@@ -478,8 +478,8 @@
         "open-addressing-probe-factor",
         "src:L02-worked"
       ],
-      "prompt": "Bravo case in Algorithmic Foundations: An open-addressed hash table is compared at load factors alpha = 0.50 and alpha = 0.90. Using 1/(1-alpha), what probe factors should you expect?",
-      "correct_answer": "M00 Open Addressing Probe Factor case 2: At alpha 0.50, 1/(1-0.50) = 2. At alpha 0.90, 1/(1-0.90) = 10, so the high-load table is about 5x worse by this approximation.",
+      "prompt": "For arrays, dynamic arrays, and locality, an open-addressed hash table is compared at load factors alpha = 0.50 and alpha = 0.90. Using 1/(1-alpha), what probe factors should you expect?",
+      "correct_answer": "Calculation for arrays, dynamic arrays, and locality, at alpha 0.50, 1/(1-0.50) = 2. At alpha 0.90, 1/(1-0.90) = 10, so the high-load table is about 5x worse by this approximation.",
       "explanation": "M00-Q024 uses open addressing probe factor from Arrays, Dynamic Arrays, and Locality and keeps units visible through the final numeric result.",
       "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
@@ -496,8 +496,8 @@
         "b-tree-fanout-height",
         "src:L03-worked"
       ],
-      "prompt": "Charlie case in Algorithmic Foundations: A B-tree with fanout near 100 stores about 10,300,000 keys. Compare a 4-level B-tree lookup with a binary tree path of about 24 levels.",
-      "correct_answer": "M00 B-Tree Fanout Height case 3: The B-tree needs about 4 page-level steps versus about 24 binary comparisons, a 20-level reduction in path depth for page-oriented access.",
+      "prompt": "For hash tables, a B-tree with fanout near 100 stores about 10,300,000 keys. Compare a 4-level B-tree lookup with a binary tree path of about 24 levels.",
+      "correct_answer": "Calculation for hash tables, m00 B-Tree Fanout Height case 3: The B-tree needs about 4 page-level steps versus about 24 binary comparisons, a 20-level reduction in path depth for page-oriented access.",
       "explanation": "M00-Q025 uses B-tree fanout height from Hash Tables and keeps units visible through the final numeric result.",
       "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
@@ -512,10 +512,10 @@
       "tags": [
         "algorithmic-foundations",
         "heap-height",
-        "src:L04-worked"
+        "src:quiz-calculation-practice"
       ],
-      "prompt": "Delta case in Algorithmic Foundations: A binary heap holds 1536 items. What is the maximum parent-child levels traversed by a sift operation?",
-      "correct_answer": "M00 Heap Height case 4: Heap height is floor(log2(1536)) = 10, so a sift traverses at most 10 levels.",
+      "prompt": "For trees and balanced search, a binary heap holds 1536 items. What is the maximum parent-child levels traversed by a sift operation?",
+      "correct_answer": "Calculation for trees and balanced search, heap height is floor(log2(1536)) = 10, so a sift traverses at most 10 levels.",
       "explanation": "M00-Q026 uses heap height from Trees and Balanced Search and keeps units visible through the final numeric result.",
       "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
@@ -530,10 +530,10 @@
       "tags": [
         "algorithmic-foundations",
         "graph-representation-size",
-        "src:L05-worked"
+        "src:quiz-calculation-practice"
       ],
-      "prompt": "Ember case in Algorithmic Foundations: An undirected graph has 850 nodes and 2550 edges. Compare adjacency-list entries with adjacency-matrix cells.",
-      "correct_answer": "M00 Graph Representation Size case 5: The adjacency list stores about 2 x 2550 = 5100 endpoint entries, while the matrix stores 850 x 850 = 722500 cells.",
+      "prompt": "For heaps and priority queues, an undirected graph has 850 nodes and 2550 edges. Compare adjacency-list entries with adjacency-matrix cells.",
+      "correct_answer": "Calculation for heaps and priority queues, the adjacency list stores about 2 x 2550 = 5100 endpoint entries, while the matrix stores 850 x 850 = 722500 cells.",
       "explanation": "M00-Q027 uses graph representation size from Heaps and Priority Queues and keeps units visible through the final numeric result.",
       "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
@@ -548,10 +548,10 @@
       "tags": [
         "algorithmic-foundations",
         "graph-representation-size",
-        "src:L06-worked"
+        "src:quiz-calculation-practice"
       ],
-      "prompt": "Fable case in Algorithmic Foundations: An undirected graph has 860 nodes and 2580 edges. Compare adjacency-list entries with adjacency-matrix cells.",
-      "correct_answer": "M00 Graph Representation Size case 6: The adjacency list stores about 2 x 2580 = 5160 endpoint entries, while the matrix stores 860 x 860 = 739600 cells.",
+      "prompt": "For graphs and traversal, an undirected graph has 860 nodes and 2580 edges. Compare adjacency-list entries with adjacency-matrix cells.",
+      "correct_answer": "Calculation for graphs and traversal, the adjacency list stores about 2 x 2580 = 5160 endpoint entries, while the matrix stores 860 x 860 = 739600 cells.",
       "explanation": "M00-Q028 uses graph representation size from Graphs and Traversal and keeps units visible through the final numeric result.",
       "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
@@ -566,10 +566,10 @@
       "tags": [
         "algorithmic-foundations",
         "candidate-count",
-        "src:L07-worked"
+        "src:quiz-calculation-practice"
       ],
-      "prompt": "Harbor case in Algorithmic Foundations: A naive design checks 12 candidate groups against 1070 records each. How many comparisons happen before pruning?",
-      "correct_answer": "M00 Candidate Count case 7: The naive count is 12 x 1070 = 12840 comparisons before any pruning changes the shape of the search.",
+      "prompt": "For sorting and selection, a naive design checks 12 candidate groups against 1070 records each. How many comparisons happen before pruning?",
+      "correct_answer": "Calculation for sorting and selection, the naive count is 12 x 1070 = 12840 comparisons before any pruning changes the shape of the search.",
       "explanation": "M00-Q029 uses candidate count from Sorting and Selection and keeps units visible through the final numeric result.",
       "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
@@ -586,8 +586,8 @@
         "amortized-resize-copies",
         "src:L08-worked"
       ],
-      "prompt": "Indigo case in Algorithmic Foundations: A dynamic array starts at capacity 1 and doubles when full. After 25 appends, how many existing items were copied during resizes, and what is the final capacity?",
-      "correct_answer": "M00 Amortized Resize Copies case 8: Resizes copy 1 + 2 + 4 + ... below 25, totaling 31 copied items; final capacity is 32 slots.",
+      "prompt": "For tractability and design decisions, a dynamic array starts at capacity 1 and doubles when full. After 25 appends, how many existing items were copied during resizes, and what is the final capacity?",
+      "correct_answer": "Calculation for tractability and design decisions, resizes copy 1 + 2 + 4 + ... below 25, totaling 31 copied items; final capacity is 32 slots.",
       "explanation": "M00-Q030 uses amortized resize copies from Tractability and Design Decisions and keeps units visible through the final numeric result.",
       "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
@@ -604,10 +604,10 @@
         "asymptotic-analysis-and-its-limits",
         "src:EX-01"
       ],
-      "prompt": "In EX-01 (Growth Classes), a proposal for Asymptotic Analysis and Its Limits has measured capacity 180/s, a protected operating bound of 72%, and planned steady demand of 158.4/s. State the recommendation, the number that forces it, and what would change your mind.",
-      "correct_answer": "For M00 decision 1, recommend against. The protected bound is 180 x 0.72 = 129.6/s, and the planned 158.4/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 158.4/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 28.8/s of lower-priority work.",
-      "explanation": "M00-Q031 turns on the forcing number from EX-01, not preference; the reversal conditions are specific to the measured gap in this prompt.",
-      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
+      "prompt": "A proposal for Growth Classes measures 180/s and reserves 28% for failure, recovery, or skew. It plans steady demand at 117.6/s with a lower-priority shed point below the reserve. Should it ship? Name the deciding number and reversal evidence.",
+      "correct_answer": "Approve Growth Classes at 117.6/s. The deciding number is 180 x 0.72 = 129.6/s, leaving 12/s before the reserve is consumed. Withdraw approval if a drill, trace, or workload sample shows growth classes demand above 129.6/s or proves the shed point cannot protect lower-priority work.",
+      "explanation": "The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to growth classes demand and the protection policy in this case.",
+      "grading_notes": "Full credit gives the stated decision, computes 129.6/s, compares it with planned demand, and names a scenario-specific reversal condition."
     },
     {
       "question_id": "M00-Q032",
@@ -622,10 +622,10 @@
         "arrays-dynamic-arrays-and-locality",
         "src:EX-02"
       ],
-      "prompt": "In EX-02 (Amortized Resize), a proposal for Arrays, Dynamic Arrays, and Locality has measured capacity 197/s, a protected operating bound of 72%, and planned steady demand of 173.4/s. State the recommendation, the number that forces it, and what would change your mind.",
-      "correct_answer": "For M00 decision 2, recommend against. The protected bound is 197 x 0.72 = 141.8/s, and the planned 173.4/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 173.4/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 31.6/s of lower-priority work.",
-      "explanation": "M00-Q032 turns on the forcing number from EX-02, not preference; the reversal conditions are specific to the measured gap in this prompt.",
-      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
+      "prompt": "A proposal for Amortized Resize measures 197/s and reserves 28% for failure, recovery, or skew. It plans steady demand at 153.2/s and has no specific shed rule. Should it ship? Name the deciding number and reversal evidence.",
+      "correct_answer": "Decline Amortized Resize at 153.2/s. The deciding number is 197 x 0.72 = 141.8/s, so planned demand exceeds the usable region by 11.4/s. Approve later if repeated measurements lift usable capacity above 153.2/s or a named policy removes at least 11.4/s of deferrable work before saturation.",
+      "explanation": "The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to amortized resize demand and the protection policy in this case.",
+      "grading_notes": "Full credit gives the stated decision, computes 141.8/s, compares it with planned demand, and names a scenario-specific reversal condition."
     },
     {
       "question_id": "M00-Q033",
@@ -640,10 +640,10 @@
         "hash-tables",
         "src:EX-03"
       ],
-      "prompt": "In EX-03 (Operation Mix), a proposal for Hash Tables has measured capacity 214/s, a protected operating bound of 72%, and planned steady demand of 188.3/s. State the recommendation, the number that forces it, and what would change your mind.",
-      "correct_answer": "For M00 decision 3, recommend against. The protected bound is 214 x 0.72 = 154.1/s, and the planned 188.3/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 188.3/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 34.2/s of lower-priority work.",
-      "explanation": "M00-Q033 turns on the forcing number from EX-03, not preference; the reversal conditions are specific to the measured gap in this prompt.",
-      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
+      "prompt": "A proposal for Operation Mix measures 214/s and reserves 28% for failure, recovery, or skew. It plans 149.1/s steady demand, but only if a named fallback is active during recovery. Should it ship? Name the deciding number and reversal evidence.",
+      "correct_answer": "Approve conditionally for Operation Mix. The deciding number is 214 x 0.72 = 154.1/s, and 149.1/s fits only while the fallback remains enforceable. Keep the condition until recovery traffic, priority demand, or fallback tests show less than 5/s of usable margin.",
+      "explanation": "The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to operation mix demand and the protection policy in this case.",
+      "grading_notes": "Full credit gives the stated decision, computes 154.1/s, compares it with planned demand, and names a scenario-specific reversal condition."
     },
     {
       "question_id": "M00-Q034",
@@ -658,10 +658,10 @@
         "trees-and-balanced-search",
         "src:EX-04"
       ],
-      "prompt": "In EX-04 (Locality), a proposal for Trees and Balanced Search has measured capacity 231/s, a protected operating bound of 72%, and planned steady demand of 203.3/s. State the recommendation, the number that forces it, and what would change your mind.",
-      "correct_answer": "For M00 decision 4, recommend against. The protected bound is 231 x 0.72 = 166.3/s, and the planned 203.3/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 203.3/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 37.0/s of lower-priority work.",
-      "explanation": "M00-Q034 turns on the forcing number from EX-04, not preference; the reversal conditions are specific to the measured gap in this prompt.",
-      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
+      "prompt": "A proposal for Locality measures 231/s and reserves 28% for failure, recovery, or skew. It plans steady demand at 149.2/s with a lower-priority shed point below the reserve. Should it ship? Name the deciding number and reversal evidence.",
+      "correct_answer": "Approve Locality at 149.2/s. The deciding number is 231 x 0.72 = 166.3/s, leaving 17.1/s before the reserve is consumed. Require redesign if a drill, trace, or workload sample shows locality demand above 166.3/s or proves the shed point cannot protect lower-priority work.",
+      "explanation": "The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to locality demand and the protection policy in this case.",
+      "grading_notes": "Full credit gives the stated decision, computes 166.3/s, compares it with planned demand, and names a scenario-specific reversal condition."
     },
     {
       "question_id": "M00-Q035",
@@ -676,10 +676,10 @@
         "heaps-and-priority-queues",
         "src:EX-05"
       ],
-      "prompt": "In EX-05 (Graph Representation), a proposal for Heaps and Priority Queues has measured capacity 248/s, a protected operating bound of 72%, and planned steady demand of 218.2/s. State the recommendation, the number that forces it, and what would change your mind.",
-      "correct_answer": "For M00 decision 5, recommend against. The protected bound is 248 x 0.72 = 178.6/s, and the planned 218.2/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 218.2/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 39.6/s of lower-priority work.",
-      "explanation": "M00-Q035 turns on the forcing number from EX-05, not preference; the reversal conditions are specific to the measured gap in this prompt.",
-      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
+      "prompt": "A proposal for Graph Representation measures 248/s and reserves 28% for failure, recovery, or skew. It plans steady demand at 194.2/s and has no specific shed rule. Should it ship? Name the deciding number and reversal evidence.",
+      "correct_answer": "Decline Graph Representation at 194.2/s. The deciding number is 248 x 0.72 = 178.6/s, so planned demand exceeds the usable region by 15.6/s. Lift the decline if repeated measurements lift usable capacity above 194.2/s or a named policy removes at least 15.6/s of deferrable work before saturation.",
+      "explanation": "The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to graph representation demand and the protection policy in this case.",
+      "grading_notes": "Full credit gives the stated decision, computes 178.6/s, compares it with planned demand, and names a scenario-specific reversal condition."
     },
     {
       "question_id": "M00-Q036",
@@ -694,10 +694,10 @@
         "graphs-and-traversal",
         "src:EX-06"
       ],
-      "prompt": "In EX-06 (Priority Semantics), a proposal for Graphs and Traversal has measured capacity 265/s, a protected operating bound of 72%, and planned steady demand of 233.2/s. State the recommendation, the number that forces it, and what would change your mind.",
-      "correct_answer": "For M00 decision 6, recommend against. The protected bound is 265 x 0.72 = 190.8/s, and the planned 233.2/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 233.2/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 42.4/s of lower-priority work.",
-      "explanation": "M00-Q036 turns on the forcing number from EX-06, not preference; the reversal conditions are specific to the measured gap in this prompt.",
-      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
+      "prompt": "A proposal for Priority Semantics measures 265/s and reserves 28% for failure, recovery, or skew. It plans steady demand at 170.3/s with a lower-priority shed point below the reserve. Should it ship? Name the deciding number and reversal evidence.",
+      "correct_answer": "Approve Priority Semantics at 170.3/s. The deciding number is 265 x 0.72 = 190.8/s, leaving 20.5/s before the reserve is consumed. Reverse the call if a drill, trace, or workload sample shows priority semantics demand above 190.8/s or proves the shed point cannot protect lower-priority work.",
+      "explanation": "The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to priority semantics demand and the protection policy in this case.",
+      "grading_notes": "Full credit gives the stated decision, computes 190.8/s, compares it with planned demand, and names a scenario-specific reversal condition."
     },
     {
       "question_id": "M00-Q037",
@@ -712,10 +712,10 @@
         "sorting-and-selection",
         "src:EX-07"
       ],
-      "prompt": "In EX-07 (Sorting Boundary), a proposal for Sorting and Selection has measured capacity 282/s, a protected operating bound of 72%, and planned steady demand of 248.2/s. State the recommendation, the number that forces it, and what would change your mind.",
-      "correct_answer": "For M00 decision 7, recommend against. The protected bound is 282 x 0.72 = 203.0/s, and the planned 248.2/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 248.2/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 45.2/s of lower-priority work.",
-      "explanation": "M00-Q037 turns on the forcing number from EX-07, not preference; the reversal conditions are specific to the measured gap in this prompt.",
-      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
+      "prompt": "A proposal for Sorting Boundary measures 282/s and reserves 28% for failure, recovery, or skew. It plans steady demand at 221.4/s and has no specific shed rule. Should it ship? Name the deciding number and reversal evidence.",
+      "correct_answer": "Decline Sorting Boundary at 221.4/s. The deciding number is 282 x 0.72 = 203/s, so planned demand exceeds the usable region by 18.4/s. Accept the proposal when repeated measurements lift usable capacity above 221.4/s or a named policy removes at least 18.4/s of deferrable work before saturation.",
+      "explanation": "The decision turns on the usable capacity after the reserve, not the nominal measurement alone. The reversal condition is tied to sorting boundary demand and the protection policy in this case.",
+      "grading_notes": "Full credit gives the stated decision, computes 203/s, compares it with planned demand, and names a scenario-specific reversal condition."
     }
   ]
 }
