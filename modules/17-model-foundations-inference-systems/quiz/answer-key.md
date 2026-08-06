@@ -1,1103 +1,546 @@
 # M17 Quiz Answer Key
 
-This key covers all 100 questions for **Model Foundations and Inference Systems**. Use it after an attempt, or provide it with the LLM grading prompt for feedback.
+This key covers all 43 questions for **Model Foundations and Inference Systems**. Use it after an attempt, or provide it with the LLM grading prompt for feedback.
 
 ## M17-Q001
 
-**Type:** `multiple_choice`  
+**Type:** `short_answer`  
 **Difficulty:** `recall`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to derive vectors, matrices, norms, probability, entropy, gradients, and scaled dot-product attention with explicit shapes, units, and numerical limits.
+**Answer:** The common exponential factor cancels between numerator and denominator
 
-**Explanation:** Use Mathematics for Inference Decisions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
+**Explanation:** The cited self-check in L01 tests whether the learner can connect Mathematics for Inference Decisions to the module mechanism without replacing evidence with labels. This explanation is specific to M17-Q001 and its cited source.
 
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M17-Q002
 
 **Type:** `short_answer`  
 **Difficulty:** `application`
 
-**Answer:** A strong answer defines the mechanism from 'Tokens, Embeddings, and Attention', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
+**Answer:** Data movement, reuse, kernels, launch overhead, parallelism, and hardware limits are absent
 
-**Explanation:** Use Tokens, Embeddings, and Attention to reason from explicit assumptions to observable behavior.
+**Explanation:** The cited self-check in L01 tests whether the learner can connect Mathematics for Inference Decisions to the module mechanism without replacing evidence with labels. This explanation is specific to M17-Q002 and its cited source.
 
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M17-Q003
 
-**Type:** `calculation`  
+**Type:** `short_answer`  
 **Difficulty:** `synthesis`
 
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
+**Answer:** Entropy measures distributional uncertainty under the stated probabilities; it does not establish factual or task correctness
 
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Trace a decoder block and autoregressive generation loop.
+**Explanation:** The cited self-check in L01 tests whether the learner can connect Mathematics for Inference Decisions to the module mechanism without replacing evidence with labels. This explanation is specific to M17-Q003 and its cited source.
 
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M17-Q004
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
+**Type:** `short_answer`  
+**Difficulty:** `recall`
 
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Using parameter bytes as total serving memory.
+**Answer:** Rounding and cancellation dominate when two nearby floating-point results are subtracted
 
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
+**Explanation:** The cited self-check in L01 tests whether the learner can connect Mathematics for Inference Decisions to the module mechanism without replacing evidence with labels. This explanation is specific to M17-Q004 and its cited source.
 
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M17-Q005
 
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`  
+**Difficulty:** `application`
 
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement bounded batching, pre-admission resource reservation, quotas, shedding, and traffic-class fairness..
+**Answer:** At least tokenizer, normalization, special tokens, model, prompt policy, precision where relevant, and the prefix itself
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-07 and the measurement parts of RES-09.
+**Explanation:** The cited self-check in L02 tests whether the learner can connect Tokens, Embeddings, and Attention to the module mechanism without replacing evidence with labels. This explanation is specific to M17-Q005 and its cited source.
 
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M17-Q006
 
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
+**Type:** `short_answer`  
+**Difficulty:** `synthesis`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to apply versioned prefix and semantic caches and precision changes without crossing privacy, compatibility, or quality boundaries.
+**Answer:** [t,t] per head and batch item
 
-**Explanation:** Use Scheduling, Batching, Admission, and Fairness to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
+**Explanation:** The cited self-check in L02 tests whether the learner can connect Tokens, Embeddings, and Attention to the module mechanism without replacing evidence with labels. This explanation is specific to M17-Q006 and its cited source.
 
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M17-Q007
 
 **Type:** `short_answer`  
-**Difficulty:** `application`
+**Difficulty:** `recall`
 
-**Answer:** A strong answer defines the mechanism from 'Caches, Quantization, and Provider Failure', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
+**Answer:** Forbidden positions affected the normalization denominator and the remaining weights no longer form the intended distribution
 
-**Explanation:** Use Caches, Quantization, and Provider Failure to reason from explicit assumptions to observable behavior.
+**Explanation:** The cited self-check in L02 tests whether the learner can connect Tokens, Embeddings, and Attention to the module mechanism without replacing evidence with labels. This explanation is specific to M17-Q007 and its cited source.
 
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M17-Q008
 
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`  
+**Difficulty:** `application`
 
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
+**Answer:** It proves the local token-to-ID and embedding contract, not language quality
 
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Execute the full Atlas learning loop without leaking a final-project answer.
+**Explanation:** The cited self-check in L02 tests whether the learner can connect Tokens, Embeddings, and Attention to the module mechanism without replacing evidence with labels. This explanation is specific to M17-Q008 and its cited source.
 
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M17-Q009
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
+**Type:** `short_answer`  
+**Difficulty:** `synthesis`
 
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Dropping batch or sequence dimensions from a memory calculation.
+**Answer:** Prefill exposes matrix work across prompt tokens; decode is sequential and repeatedly moves weights and growing KV state
 
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
+**Explanation:** The cited self-check in L03 tests whether the learner can connect Transformer Inference from Prefill to Decode to the module mechanism without replacing evidence with labels. This explanation is specific to M17-Q009 and its cited source.
 
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M17-Q010
 
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`  
+**Difficulty:** `recall`
 
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement versioned tokenization, embeddings, causal attention, and a deterministic tiny transformer inference path..
+**Answer:** It avoids recomputing prior-token keys and values, not current-token work or all attention reads
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-02 §3.1–3.5 and RES-03 tokenization/architecture material.
+**Explanation:** The cited self-check in L03 tests whether the learner can connect Transformer Inference from Prefill to Decode to the module mechanism without replacing evidence with labels. This explanation is specific to M17-Q010 and its cited source.
 
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M17-Q011
 
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
+**Type:** `short_answer`  
+**Difficulty:** `application`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate weights, activations, kv cache, bandwidth, concurrency, headroom, failover reserve, and cost per useful output.
+**Answer:** The course counts only output that satisfies the declared completion and quality contract; the commercial policy may differ and must be stated
 
-**Explanation:** Use Transformer Inference from Prefill to Decode to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
+**Explanation:** The cited self-check in L03 tests whether the learner can connect Transformer Inference from Prefill to Decode to the module mechanism without replacing evidence with labels. This explanation is specific to M17-Q011 and its cited source.
 
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M17-Q012
 
 **Type:** `short_answer`  
-**Difficulty:** `application`
+**Difficulty:** `synthesis`
 
-**Answer:** A strong answer defines the mechanism from 'Compute, Memory, and Capacity Accounting', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
+**Answer:** Clients and operators need to distinguish success, rejection, cancellation, deadline, and provider failure rather than infer completion from a closed socket
 
-**Explanation:** Use Compute, Memory, and Capacity Accounting to reason from explicit assumptions to observable behavior.
+**Explanation:** The cited self-check in L03 tests whether the learner can connect Transformer Inference from Prefill to Decode to the module mechanism without replacing evidence with labels. This explanation is specific to M17-Q012 and its cited source.
 
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M17-Q013
 
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`  
+**Difficulty:** `recall`
 
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
+**Answer:** Requests reserve different KV and work; the same count can represent radically different bytes and deadlines
 
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Design a reproducible inference measurement protocol.
+**Explanation:** The cited self-check in L04 tests whether the learner can connect Compute, Memory, and Capacity Accounting to the module mechanism without replacing evidence with labels. This explanation is specific to M17-Q013 and its cited source.
 
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M17-Q014
 
-**Type:** `scenario_diagnosis`  
+**Type:** `short_answer`  
 **Difficulty:** `application`
 
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Calling a queue bounded because worker concurrency is bounded.
+**Answer:** Stated allocator/runtime uncertainty, variation, and recovery capacity; it is not an unexplained safety percentage
 
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
+**Explanation:** The cited self-check in L04 tests whether the learner can connect Compute, Memory, and Capacity Accounting to the module mechanism without replacing evidence with labels. This explanation is specific to M17-Q014 and its cited source.
 
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M17-Q015
 
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
+**Type:** `multiple_choice`  
+**Difficulty:** `application`
 
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose memory exhaustion, mixed-length interference, queue overload, cache collision, precision loss, and provider failure from preserved evidence..
+**Choices:**
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-05, RES-06, and RES-08.
+- Keep Mathematics for Inference Decisions scoped to its stated evidence and boundary.
+- Make the documented mistake: Dropping batch or sequence dimensions from a memory calculation
+- Treat Dropping batch or sequence dimensions from a memory calculation as complete proof without the lesson boundary
+- Choose the familiar tool before checking whether Dropping batch or sequence dimensions from a memory calculation appl.
 
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
+**Answer:** Keep Mathematics for Inference Decisions scoped to its stated evidence and boundary.
+
+**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M17-Q015 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
 
 ## M17-Q016
 
 **Type:** `multiple_choice`  
-**Difficulty:** `recall`
+**Difficulty:** `synthesis`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend an inference architecture across quality, latency, availability, security, cost, ownership, migration, rollback, and reversal.
+**Choices:**
 
-**Explanation:** Use Atlas Tutorial, Architecture Decision, and Teach-Back to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
+- Make the documented mistake: Mixing decimal vendor bytes with binary allocation bytes without d
+- Keep Mathematics for Inference Decisions scoped to its stated evidence and boundary.
+- Choose the familiar tool before checking whether Mixing decimal vendor bytes with binary allocation bytes without dis.
+- Treat Mixing decimal vendor bytes with binary allocation bytes without disc as complete proof without the lesson boun.
 
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
+**Answer:** Keep Mathematics for Inference Decisions scoped to its stated evidence and boundary.
+
+**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M17-Q016 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
 
 ## M17-Q017
 
-**Type:** `short_answer`  
-**Difficulty:** `application`
+**Type:** `multiple_choice`  
+**Difficulty:** `recall`
 
-**Answer:** A strong answer defines the mechanism from 'Mathematics for Inference Decisions', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
+**Choices:**
 
-**Explanation:** Use Mathematics for Inference Decisions to reason from explicit assumptions to observable behavior.
+- Choose the familiar tool before checking whether Calling cosine similarity semantic equivalence applies
+- Make the documented mistake: Calling cosine similarity semantic equivalence
+- Keep Mathematics for Inference Decisions scoped to its stated evidence and boundary.
+- Treat Calling cosine similarity semantic equivalence as complete proof without the lesson boundary
 
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
+**Answer:** Keep Mathematics for Inference Decisions scoped to its stated evidence and boundary.
+
+**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M17-Q017 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
 
 ## M17-Q018
 
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
+**Type:** `multiple_choice`  
+**Difficulty:** `application`
 
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
+**Choices:**
 
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Trace text through a versioned tokenizer and embedding table.
+- Choose the familiar tool before checking whether Treating average numerical error as a protected-example quality guar.
+- Treat Treating average numerical error as a protected-example quality guara as complete proof without the lesson boun.
+- Make the documented mistake: Treating average numerical error as a protected-example quality gu
+- Keep Mathematics for Inference Decisions scoped to its stated evidence and boundary.
 
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
+**Answer:** Keep Mathematics for Inference Decisions scoped to its stated evidence and boundary.
+
+**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M17-Q018 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
 
 ## M17-Q019
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
+**Type:** `multiple_choice`  
+**Difficulty:** `synthesis`
 
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Reporting model execution time as TTFT while excluding queue and tokenization.
+**Choices:**
 
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
+- Keep Mathematics for Inference Decisions scoped to its stated evidence and boundary.
+- Make the documented mistake: Using a gradient check with an unreported step size and precision
+- Treat Using a gradient check with an unreported step size and precision as complete proof without the lesson boundary
+- Choose the familiar tool before checking whether Using a gradient check with an unreported step size and precision ap.
 
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
+**Answer:** Keep Mathematics for Inference Decisions scoped to its stated evidence and boundary.
+
+**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M17-Q019 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
 
 ## M17-Q020
 
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
+**Type:** `multiple_choice`  
+**Difficulty:** `recall`
 
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for measure queue-inclusive ttft, inter-token latency, prefill, decode, outcomes, throughput, memory, and profiler limits..
+**Choices:**
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-03 and RES-05.
+- Make the documented mistake: Treating token count as a property of text independent of tokenize
+- Keep Tokens, Embeddings, and Attention scoped to its stated evidence and boundary.
+- Choose the familiar tool before checking whether Treating token count as a property of text independent of tokenizer.
+- Treat Treating token count as a property of text independent of tokenizer v as complete proof without the lesson boun.
 
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
+**Answer:** Keep Tokens, Embeddings, and Attention scoped to its stated evidence and boundary.
+
+**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M17-Q020 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
 
 ## M17-Q021
 
 **Type:** `multiple_choice`  
-**Difficulty:** `recall`
+**Difficulty:** `application`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement bounded batching, pre-admission resource reservation, quotas, shedding, and traffic-class fairness.
+**Choices:**
 
-**Explanation:** Use Profiling and Inference Metrics to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
+- Make the documented mistake: Omitting positional information while claiming order-sensitive beh
+- Treat Omitting positional information while claiming order-sensitive behavi as complete proof without the lesson boun.
+- Keep Tokens, Embeddings, and Attention scoped to its stated evidence and boundary.
+- Choose the familiar tool before checking whether Omitting positional information while claiming order-sensitive behav.
 
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
+**Answer:** Keep Tokens, Embeddings, and Attention scoped to its stated evidence and boundary.
+
+**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M17-Q021 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
 
 ## M17-Q022
 
-**Type:** `short_answer`  
-**Difficulty:** `application`
+**Type:** `multiple_choice`  
+**Difficulty:** `synthesis`
 
-**Answer:** A strong answer defines the mechanism from 'Scheduling, Batching, Admission, and Fairness', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
+**Choices:**
 
-**Explanation:** Use Scheduling, Batching, Admission, and Fairness to reason from explicit assumptions to observable behavior.
+- Choose the familiar tool before checking whether Masking values instead of attention logits applies
+- Treat Masking values instead of attention logits as complete proof without the lesson boundary
+- Make the documented mistake: Masking values instead of attention logits
+- Keep Tokens, Embeddings, and Attention scoped to its stated evidence and boundary.
 
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
+**Answer:** Keep Tokens, Embeddings, and Attention scoped to its stated evidence and boundary.
+
+**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M17-Q022 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
 
 ## M17-Q023
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Define safe prefix and semantic cache identities and invalidation.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M17-Q024
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Comparing candidates with different workloads or quality bars.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M17-Q025
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for derive vectors, matrices, norms, probability, entropy, gradients, and scaled dot-product attention with explicit shapes, units, and numerical limits..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-01 within its boundary.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M17-Q026
 
 **Type:** `multiple_choice`  
 **Difficulty:** `recall`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement versioned tokenization, embeddings, causal attention, and a deterministic tiny transformer inference path.
+**Choices:**
 
-**Explanation:** Use Tokens, Embeddings, and Attention to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
+- Keep Tokens, Embeddings, and Attention scoped to its stated evidence and boundary.
+- Treat Forgetting the scale or using hidden width rather than key width as complete proof without the lesson boundary
+- Choose the familiar tool before checking whether Forgetting the scale or using hidden width rather than key width app.
+- Make the documented mistake: Forgetting the scale or using hidden width rather than key width
 
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
+**Answer:** Keep Tokens, Embeddings, and Attention scoped to its stated evidence and boundary.
+
+**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M17-Q023 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+
+## M17-Q024
+
+**Type:** `multiple_choice`  
+**Difficulty:** `application`
+
+**Choices:**
+
+- Choose the familiar tool before checking whether Reading attention weights as a faithful explanation of model reasoni.
+- Keep Tokens, Embeddings, and Attention scoped to its stated evidence and boundary.
+- Make the documented mistake: Reading attention weights as a faithful explanation of model reaso
+- Treat Reading attention weights as a faithful explanation of model reasoning as complete proof without the lesson bou.
+
+**Answer:** Keep Tokens, Embeddings, and Attention scoped to its stated evidence and boundary.
+
+**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M17-Q024 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+
+## M17-Q025
+
+**Type:** `calculation`  
+**Difficulty:** `synthesis`
+
+**Answer:** Original concurrency = 200 x 0.070 = 14.00 operations. Revised rate = 200 x 1.25 = 250.0/s, so revised concurrency = 250.0 x 0.070 = 17.50 operations.
+
+**Explanation:** This perturbs the numeric practice around Mathematics for Inference Decisions: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M17-Q025 and its cited source.
+
+**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+
+## M17-Q026
+
+**Type:** `calculation`  
+**Difficulty:** `recall`
+
+**Answer:** Original concurrency = 120 x 0.080 = 9.60 operations. Revised rate = 120 x 1.30 = 156.0/s, so revised concurrency = 156.0 x 0.080 = 12.48 operations.
+
+**Explanation:** This perturbs the numeric practice around Tokens, Embeddings, and Attention: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M17-Q026 and its cited source.
+
+**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
 
 ## M17-Q027
 
-**Type:** `short_answer`  
+**Type:** `calculation`  
 **Difficulty:** `application`
 
-**Answer:** A strong answer defines the mechanism from 'Transformer Inference from Prefill to Decode', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
+**Answer:** Original concurrency = 130 x 0.040 = 5.20 operations. Revised rate = 130 x 1.35 = 175.5/s, so revised concurrency = 175.5 x 0.040 = 7.02 operations.
 
-**Explanation:** Use Transformer Inference from Prefill to Decode to reason from explicit assumptions to observable behavior.
+**Explanation:** This perturbs the numeric practice around Transformer Inference from Prefill to Decode: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M17-Q027 and its cited source.
 
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
+**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
 
 ## M17-Q028
 
 **Type:** `calculation`  
 **Difficulty:** `synthesis`
 
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
+**Answer:** Original concurrency = 140 x 0.050 = 7.00 operations. Revised rate = 140 x 1.40 = 196.0/s, so revised concurrency = 196.0 x 0.050 = 9.80 operations.
 
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Calculate weight, activation, KV-cache, bandwidth, and headroom requirements.
+**Explanation:** This perturbs the numeric practice around Compute, Memory, and Capacity Accounting: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M17-Q028 and its cited source.
 
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
+**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
 
 ## M17-Q029
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
+**Type:** `calculation`  
+**Difficulty:** `recall`
 
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Benchmarking a closed loop and claiming overload capacity.
+**Answer:** Original concurrency = 150 x 0.060 = 9.00 operations. Revised rate = 150 x 1.45 = 217.5/s, so revised concurrency = 217.5 x 0.060 = 13.05 operations.
 
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
+**Explanation:** This perturbs the numeric practice around Profiling and Inference Metrics: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M17-Q029 and its cited source.
 
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
+**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
 
 ## M17-Q030
 
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for apply versioned prefix and semantic caches and precision changes without crossing privacy, compatibility, or quality boundaries..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-05–RES-06.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M17-Q031
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose memory exhaustion, mixed-length interference, queue overload, cache collision, precision loss, and provider failure from preserved evidence.
-
-**Explanation:** Use Caches, Quantization, and Provider Failure to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M17-Q032
-
-**Type:** `short_answer`  
+**Type:** `calculation`  
 **Difficulty:** `application`
 
-**Answer:** A strong answer defines the mechanism from 'Atlas Tutorial, Architecture Decision, and Teach-Back', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
+**Answer:** Original concurrency = 160 x 0.070 = 11.20 operations. Revised rate = 160 x 1.10 = 176.0/s, so revised concurrency = 176.0 x 0.070 = 12.32 operations.
 
-**Explanation:** Use Atlas Tutorial, Architecture Decision, and Teach-Back to reason from explicit assumptions to observable behavior.
+**Explanation:** This perturbs the numeric practice around Scheduling, Batching, Admission, and Fairness: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M17-Q030 and its cited source.
 
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
+**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
 
-## M17-Q033
+## M17-Q031
 
 **Type:** `calculation`  
 **Difficulty:** `synthesis`
 
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
+**Answer:** Original concurrency = 170 x 0.080 = 13.60 operations. Revised rate = 170 x 1.15 = 195.5/s, so revised concurrency = 195.5 x 0.080 = 15.64 operations.
 
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Calculate vector, matrix, probability, entropy, and numerical-gradient examples.
+**Explanation:** This perturbs the numeric practice around Caches, Quantization, and Provider Failure: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M17-Q031 and its cited source.
 
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
+**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+
+## M17-Q032
+
+**Type:** `calculation`  
+**Difficulty:** `recall`
+
+**Answer:** Original concurrency = 180 x 0.040 = 7.20 operations. Revised rate = 180 x 1.20 = 216.0/s, so revised concurrency = 216.0 x 0.040 = 8.64 operations.
+
+**Explanation:** This perturbs the numeric practice around Atlas Tutorial, Architecture Decision, and Teach-Back: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M17-Q032 and its cited source.
+
+**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+
+## M17-Q033
+
+**Type:** `scenario_diagnosis`  
+**Difficulty:** `application`
+
+**Answer:** The fixture tests f01-memory-exhaustion-broken (broken), with I01 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f01-memory-exhaustion-broken, rather than the general presence of a lab run.
+
+**Explanation:** The cited fixture is machine-readable source material for M17; diagnosis should start from the emitted fields and connect them to Transformer Inference from Prefill to Decode. This explanation is specific to M17-Q033 and its cited source.
+
+**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
 
 ## M17-Q034
 
 **Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
+**Difficulty:** `synthesis`
 
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating token count as a property of text independent of tokenizer version.
+**Answer:** The fixture tests f01-memory-exhaustion-repaired (repaired), with I01 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f01-memory-exhaustion-repaired, rather than the general presence of a lab run.
 
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
+**Explanation:** The cited fixture is machine-readable source material for M17; diagnosis should start from the emitted fields and connect them to Compute, Memory, and Capacity Accounting. This explanation is specific to M17-Q034 and its cited source.
 
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
+**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
 
 ## M17-Q035
 
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for calculate weights, activations, kv cache, bandwidth, concurrency, headroom, failover reserve, and cost per useful output..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-02 and RES-04.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M17-Q036
-
-**Type:** `multiple_choice`  
+**Type:** `scenario_diagnosis`  
 **Difficulty:** `recall`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to measure queue-inclusive ttft, inter-token latency, prefill, decode, outcomes, throughput, memory, and profiler limits.
+**Answer:** The fixture tests f02-mixed-length-starvation-broken (broken), with I02 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f02-mixed-length-starvation-broken, rather than the general presence of a lab run.
 
-**Explanation:** Use Compute, Memory, and Capacity Accounting to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
+**Explanation:** The cited fixture is machine-readable source material for M17; diagnosis should start from the emitted fields and connect them to Profiling and Inference Metrics. This explanation is specific to M17-Q035 and its cited source.
 
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
+**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
 
-## M17-Q037
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Profiling and Inference Metrics', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Profiling and Inference Metrics to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M17-Q038
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Compare fixed, continuous, and token-budget batching.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M17-Q039
+## M17-Q036
 
 **Type:** `scenario_diagnosis`  
 **Difficulty:** `application`
 
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating a cache as a performance-only component.
+**Answer:** The fixture tests f02-mixed-length-starvation-repaired (repaired), with I02 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f02-mixed-length-starvation-repaired, rather than the general presence of a lab run.
 
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
+**Explanation:** The cited fixture is machine-readable source material for M17; diagnosis should start from the emitted fields and connect them to Scheduling, Batching, Admission, and Fairness. This explanation is specific to M17-Q036 and its cited source.
 
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
+**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+
+## M17-Q037
+
+**Type:** `scenario_diagnosis`  
+**Difficulty:** `synthesis`
+
+**Answer:** The fixture tests f03-queue-overload-broken (broken), with I03 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f03-queue-overload-broken, rather than the general presence of a lab run.
+
+**Explanation:** The cited fixture is machine-readable source material for M17; diagnosis should start from the emitted fields and connect them to Caches, Quantization, and Provider Failure. This explanation is specific to M17-Q037 and its cited source.
+
+**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+
+## M17-Q038
+
+**Type:** `scenario_diagnosis`  
+**Difficulty:** `recall`
+
+**Answer:** The fixture tests f03-queue-overload-repaired (repaired), with I03 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f03-queue-overload-repaired, rather than the general presence of a lab run.
+
+**Explanation:** The cited fixture is machine-readable source material for M17; diagnosis should start from the emitted fields and connect them to Atlas Tutorial, Architecture Decision, and Teach-Back. This explanation is specific to M17-Q038 and its cited source.
+
+**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+
+## M17-Q039
+
+**Type:** `design_judgment`  
+**Difficulty:** `synthesis`
+
+**Answer:** Recommend the option that preserves the Compute, Memory, and Capacity Accounting mechanism under the exercise constraints: Multiply a 2x3 token matrix by a 3x2 projection. Record every shape, multiply, addition, and byte assumption; identify which dimensions can batch. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+
+**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M17-Q039 and its cited source.
+
+**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
 
 ## M17-Q040
 
 **Type:** `design_judgment`  
-**Difficulty:** `synthesis`
+**Difficulty:** `recall`
 
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for defend an inference architecture across quality, latency, availability, security, cost, ownership, migration, rollback, and reversal..
+**Answer:** Recommend the option that preserves the Profiling and Inference Metrics mechanism under the exercise constraints: Calculate the L2 norm and cosine similarity for two exhibit vectors. Explain why similar direction does not prove interchangeable generated output. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-09 and revisit all bounded sources as needed.
+**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M17-Q040 and its cited source.
 
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
+**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
 
 ## M17-Q041
 
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
+**Type:** `design_judgment`  
+**Difficulty:** `application`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to derive vectors, matrices, norms, probability, entropy, gradients, and scaled dot-product attention with explicit shapes, units, and numerical limits.
+**Answer:** Recommend the option that preserves the Scheduling, Batching, Admission, and Fairness mechanism under the exercise constraints: Apply stable softmax to three logits, calculate entropy, then use a centered finite difference to estimate one derivative. State numerical limitations. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
 
-**Explanation:** Use Mathematics for Inference Decisions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
+**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M17-Q041 and its cited source.
 
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
+**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
 
 ## M17-Q042
 
-**Type:** `short_answer`  
-**Difficulty:** `application`
+**Type:** `design_judgment`  
+**Difficulty:** `synthesis`
 
-**Answer:** A strong answer defines the mechanism from 'Tokens, Embeddings, and Attention', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
+**Answer:** Recommend the option that preserves the Caches, Quantization, and Provider Failure mechanism under the exercise constraints: Show why subtracting the row maximum preserves softmax probabilities. Apply a causal mask before normalization and explain why masking afterward is wrong. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
 
-**Explanation:** Use Tokens, Embeddings, and Attention to reason from explicit assumptions to observable behavior.
+**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M17-Q042 and its cited source.
 
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
+**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
 
 ## M17-Q043
 
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Trace a decoder block and autoregressive generation loop.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M17-Q044
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Using parameter bytes as total serving memory.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M17-Q045
-
 **Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement bounded batching, pre-admission resource reservation, quotas, shedding, and traffic-class fairness..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-07 and the measurement parts of RES-09.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M17-Q046
-
-**Type:** `multiple_choice`  
 **Difficulty:** `recall`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to apply versioned prefix and semantic caches and precision changes without crossing privacy, compatibility, or quality boundaries.
+**Answer:** Recommend the option that preserves the Atlas Tutorial, Architecture Decision, and Teach-Back mechanism under the exercise constraints: Define Atlas vocabulary, unknown-token, normalization, model-version, and prompt policy behavior. Trace four tokens into embedding rows. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
 
-**Explanation:** Use Scheduling, Batching, Admission, and Fairness to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
+**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M17-Q043 and its cited source.
 
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M17-Q047
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Caches, Quantization, and Provider Failure', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Caches, Quantization, and Provider Failure to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M17-Q048
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Execute the full Atlas learning loop without leaking a final-project answer.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M17-Q049
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Dropping batch or sequence dimensions from a memory calculation.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M17-Q050
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement versioned tokenization, embeddings, causal attention, and a deterministic tiny transformer inference path..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-02 §3.1–3.5 and RES-03 tokenization/architecture material.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M17-Q051
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate weights, activations, kv cache, bandwidth, concurrency, headroom, failover reserve, and cost per useful output.
-
-**Explanation:** Use Transformer Inference from Prefill to Decode to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M17-Q052
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Compute, Memory, and Capacity Accounting', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Compute, Memory, and Capacity Accounting to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M17-Q053
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Design a reproducible inference measurement protocol.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M17-Q054
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Calling a queue bounded because worker concurrency is bounded.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M17-Q055
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose memory exhaustion, mixed-length interference, queue overload, cache collision, precision loss, and provider failure from preserved evidence..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-05, RES-06, and RES-08.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M17-Q056
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend an inference architecture across quality, latency, availability, security, cost, ownership, migration, rollback, and reversal.
-
-**Explanation:** Use Atlas Tutorial, Architecture Decision, and Teach-Back to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M17-Q057
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Mathematics for Inference Decisions', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Mathematics for Inference Decisions to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M17-Q058
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Trace text through a versioned tokenizer and embedding table.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M17-Q059
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Reporting model execution time as TTFT while excluding queue and tokenization.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M17-Q060
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for measure queue-inclusive ttft, inter-token latency, prefill, decode, outcomes, throughput, memory, and profiler limits..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-03 and RES-05.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M17-Q061
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement bounded batching, pre-admission resource reservation, quotas, shedding, and traffic-class fairness.
-
-**Explanation:** Use Profiling and Inference Metrics to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M17-Q062
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Scheduling, Batching, Admission, and Fairness', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Scheduling, Batching, Admission, and Fairness to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M17-Q063
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Define safe prefix and semantic cache identities and invalidation.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M17-Q064
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Comparing candidates with different workloads or quality bars.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M17-Q065
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for derive vectors, matrices, norms, probability, entropy, gradients, and scaled dot-product attention with explicit shapes, units, and numerical limits..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-01 within its boundary.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M17-Q066
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement versioned tokenization, embeddings, causal attention, and a deterministic tiny transformer inference path.
-
-**Explanation:** Use Tokens, Embeddings, and Attention to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M17-Q067
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Transformer Inference from Prefill to Decode', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Transformer Inference from Prefill to Decode to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M17-Q068
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Calculate weight, activation, KV-cache, bandwidth, and headroom requirements.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M17-Q069
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Benchmarking a closed loop and claiming overload capacity.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M17-Q070
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for apply versioned prefix and semantic caches and precision changes without crossing privacy, compatibility, or quality boundaries..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-05–RES-06.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M17-Q071
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose memory exhaustion, mixed-length interference, queue overload, cache collision, precision loss, and provider failure from preserved evidence.
-
-**Explanation:** Use Caches, Quantization, and Provider Failure to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M17-Q072
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Atlas Tutorial, Architecture Decision, and Teach-Back', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Atlas Tutorial, Architecture Decision, and Teach-Back to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M17-Q073
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Calculate vector, matrix, probability, entropy, and numerical-gradient examples.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M17-Q074
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating token count as a property of text independent of tokenizer version.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M17-Q075
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for calculate weights, activations, kv cache, bandwidth, concurrency, headroom, failover reserve, and cost per useful output..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-02 and RES-04.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M17-Q076
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to measure queue-inclusive ttft, inter-token latency, prefill, decode, outcomes, throughput, memory, and profiler limits.
-
-**Explanation:** Use Compute, Memory, and Capacity Accounting to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M17-Q077
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Profiling and Inference Metrics', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Profiling and Inference Metrics to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M17-Q078
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Compare fixed, continuous, and token-budget batching.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M17-Q079
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating a cache as a performance-only component.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M17-Q080
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for defend an inference architecture across quality, latency, availability, security, cost, ownership, migration, rollback, and reversal..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-09 and revisit all bounded sources as needed.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M17-Q081
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to derive vectors, matrices, norms, probability, entropy, gradients, and scaled dot-product attention with explicit shapes, units, and numerical limits.
-
-**Explanation:** Use Mathematics for Inference Decisions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M17-Q082
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Tokens, Embeddings, and Attention', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Tokens, Embeddings, and Attention to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M17-Q083
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Trace a decoder block and autoregressive generation loop.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M17-Q084
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Using parameter bytes as total serving memory.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M17-Q085
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement bounded batching, pre-admission resource reservation, quotas, shedding, and traffic-class fairness..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-07 and the measurement parts of RES-09.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M17-Q086
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to apply versioned prefix and semantic caches and precision changes without crossing privacy, compatibility, or quality boundaries.
-
-**Explanation:** Use Scheduling, Batching, Admission, and Fairness to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M17-Q087
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Caches, Quantization, and Provider Failure', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Caches, Quantization, and Provider Failure to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M17-Q088
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Execute the full Atlas learning loop without leaking a final-project answer.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M17-Q089
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Dropping batch or sequence dimensions from a memory calculation.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M17-Q090
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement versioned tokenization, embeddings, causal attention, and a deterministic tiny transformer inference path..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-02 §3.1–3.5 and RES-03 tokenization/architecture material.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M17-Q091
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate weights, activations, kv cache, bandwidth, concurrency, headroom, failover reserve, and cost per useful output.
-
-**Explanation:** Use Transformer Inference from Prefill to Decode to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M17-Q092
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Compute, Memory, and Capacity Accounting', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Compute, Memory, and Capacity Accounting to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M17-Q093
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Design a reproducible inference measurement protocol.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M17-Q094
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Calling a queue bounded because worker concurrency is bounded.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M17-Q095
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose memory exhaustion, mixed-length interference, queue overload, cache collision, precision loss, and provider failure from preserved evidence..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-05, RES-06, and RES-08.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M17-Q096
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend an inference architecture across quality, latency, availability, security, cost, ownership, migration, rollback, and reversal.
-
-**Explanation:** Use Atlas Tutorial, Architecture Decision, and Teach-Back to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M17-Q097
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Mathematics for Inference Decisions', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Mathematics for Inference Decisions to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M17-Q098
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Trace text through a versioned tokenizer and embedding table.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M17-Q099
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Reporting model execution time as TTFT while excluding queue and tokenization.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M17-Q100
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for measure queue-inclusive ttft, inter-token latency, prefill, decode, outcomes, throughput, memory, and profiler limits..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-03 and RES-05.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
+**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.

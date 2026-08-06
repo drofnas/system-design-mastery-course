@@ -40,23 +40,23 @@ Topological order is the systems workhorse: migrations, build graphs, schema dep
 4. Record what edge weights or missing edges mean.
 5. Treat cycles as design facts, not graph-library errors.
 
-## Worked Example
+## Worked example
 
 A service dependency map is a graph. To plan a migration, you may need to find
 all downstream consumers, detect cycles, and order changes so dependencies move
 before dependents.
 
-## Common Expert Mistakes
+## Common expert mistakes
 
 - Using a matrix for a sparse graph at large scale.
 - Ignoring cycles in dependency work.
 - Calling the first found path the cheapest path when edges have weights.
 
-## Guided Practice
+## Guided practice
 
 Use EX-05's graph: 10 million nodes, average degree 3. Estimate adjacency-list edge entries and adjacency-matrix cells. Then choose BFS, DFS, weighted shortest path, or topological sort for a service migration plan.
 
-## Self-Check
+## Self-check
 
 1. When is an adjacency matrix reasonable?
 2. Why does BFS find unweighted shortest paths?
@@ -70,6 +70,6 @@ Use EX-05's graph: 10 million nodes, average degree 3. Estimate adjacency-list e
 3. A directed acyclic graph.
 4. Some dependency must be broken, abstracted, or migrated jointly. For the practice, the list is about 30 million edge entries; the matrix is `10^14` cells; migration ordering usually needs topological sort plus cycle detection.
 
-## Sources And Next Work
+## Sources and next work
 
 Study RES-01, RES-02, RES-05, and RES-07. Then complete EX-05.

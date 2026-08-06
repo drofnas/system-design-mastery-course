@@ -34,23 +34,23 @@ Useful cache placement starts with the tier. A client cache can skip the network
 
 Read-through and cache-aside differ in ownership. In cache-aside, the application owns miss loading and cache population. In read-through, the cache abstraction owns the miss path. Write-through synchronously updates cache and authority. Write-around writes authority and lets reads repopulate. Write-back or write-behind accepts divergence and needs durable queues, ordering, replay, and reconciliation. Every policy should state which representation is authoritative after a partial failure.
 
-## Worked Example
+## Worked example
 
 A product catalog read can use CDN cache for public product pages and a shared
 cache for internal inventory summaries. Checkout authorization must still read
 from authority or a tightly bounded permission cache.
 
-## Common Expert Mistakes
+## Common expert mistakes
 
 - Caching before naming the authoritative source.
 - Treating write-behind as a performance switch instead of a consistency change.
 - Ignoring private representation keys.
 
-## Guided Practice
+## Guided practice
 
 For a product page with 95 percent anonymous reads, 4 percent personalized reads, and 1 percent writes, draw two paths: public catalog read through CDN/shared cache and personalized checkout authorization through authority. Compute how many of 10,000 reads are not anonymous and must not share the public key.
 
-## Self-Check
+## Self-check
 
 1. What can a client cache know that a CDN usually cannot?
 2. Who owns a miss in cache-aside?
@@ -64,6 +64,6 @@ For a product page with 95 percent anonymous reads, 4 percent personalized reads
 3. Authority and cache can diverge, and lost or reordered buffered writes need recovery.
 4. A database-adjacent or storage near-cache. For the practice, 5 percent of 10,000 reads, or 500, are personalized or otherwise not anonymous and need a separate key or authority path.
 
-## Sources And Next Work
+## Sources and next work
 
 Study RES-01 and RES-03. Then complete EX-01 and EX-02.

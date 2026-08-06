@@ -32,23 +32,23 @@ Sequential access is friendly to cache lines and prefetching because nearby addr
 
 The lab is intentionally modest about locality. It compares Python-level index traversal with Python-level node traversal so it does not confuse C builtin speed with data-structure speed. It still cannot prove CPU cache behavior because CPython integers are boxed objects and a list stores references, not packed primitive values. Treat the result as local evidence about this runtime, not as a universal locality benchmark.
 
-## Worked Example
+## Worked example
 
 For 10,000 events that must be scanned in order, an array is often a better
 default than a linked list. Both do O(n) logical work, but the array lets the
 processor fetch nearby elements predictably.
 
-## Common Expert Mistakes
+## Common expert mistakes
 
 - Saying amortized O(1) means every append is cheap.
 - Choosing a linked list for insertion while ignoring how the insertion point is found.
 - Forgetting that contiguous growth can require copying and memory headroom.
 
-## Guided Practice
+## Guided practice
 
 A dynamic array has 1,024 live elements and capacity 1,024. It doubles on the next append. Compute the new capacity, approximate peak slots during the copy, and post-resize unused headroom. Then name one workload where a linked structure could still be correct.
 
-## Self-Check
+## Self-check
 
 1. Why is indexed array access O(1)?
 2. What does doubling buy and what does it cost?
@@ -62,6 +62,6 @@ A dynamic array has 1,024 live elements and capacity 1,024. It doubles on the ne
 3. Only when the insertion point or node reference is already known; finding that point may still be O(n).
 4. CPython lists store references to objects and the lab runs interpreter loops, so it shows local runtime behavior, not isolated cache-line mechanics. For the practice, new capacity is 2,048, peak slots are about 3,072, and headroom after the append is 1,023 slots.
 
-## Sources And Next Work
+## Sources and next work
 
 Study RES-01 and RES-03. Then complete EX-02 and EX-04.

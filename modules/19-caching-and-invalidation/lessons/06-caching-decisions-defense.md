@@ -41,7 +41,7 @@ Removal criteria matter because caches become permanent complexity. If hit rate 
 4. Define observability and rollback triggers.
 5. Revisit the cache after warm-up and remove it if evidence fails.
 
-## Worked Example
+## Worked example
 
 For a public catalog summary, choose cache-aside in a shared cache, key by
 catalog version and locale, set TTL with jitter, invalidate on publication, use
@@ -49,17 +49,17 @@ single-flight regeneration, and serve bounded marked stale data during origin
 failure. Remove the cache if hit rate stays low after warm-up or if invalidation
 work exceeds origin savings.
 
-## Common Expert Mistakes
+## Common expert mistakes
 
 - Adding a cache without an owner.
 - Forgetting the removal condition.
 - Measuring only latency and not correctness.
 
-## Guided Practice
+## Guided practice
 
 Write a cache decision for a catalog summary. Use 12,000 reads/minute, 92 percent target hit rate, 3 ms hit cost, and 45 ms origin cost. Compute expected latency and origin read rate at target, then state one rollback trigger.
 
-## Self-Check
+## Self-check
 
 1. What is the first field in a cache decision?
 2. Why include removal criteria?
@@ -73,6 +73,6 @@ Write a cache decision for a catalog summary. Use 12,000 reads/minute, 92 percen
 3. Miss rate and origin request count before/after, not just average latency.
 4. Disable serving stale entries, bypass cache, purge, or roll back depending on the policy. For the practice, expected latency is `0.92*3 + 0.08*45 = 6.36 ms`, and origin reads are 960/minute; rollback on invalidation lag, unauthorized variants, or regeneration saturation.
 
-## Sources And Next Work
+## Sources and next work
 
 Study RES-01 and RES-03. Then complete EX-10.

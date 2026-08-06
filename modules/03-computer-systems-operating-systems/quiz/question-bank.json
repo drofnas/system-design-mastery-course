@@ -9,191 +9,179 @@
       "lesson_ids": [
         "L01"
       ],
-      "type": "multiple_choice",
+      "type": "short_answer",
       "difficulty": "recall",
       "tags": [
         "computer-systems-and-operating-systems",
-        "benchmark-contracts-pipelines-caches-and-localit",
-        "recall"
+        "benchmark-contracts-pipelines-caches-and",
+        "src:L01-selfcheck-1"
       ],
-      "prompt": "Which approach best applies 'Benchmark Contracts, Pipelines, Caches, and Locality' in Computer Systems and Operating Systems?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to freeze a falsifiable benchmark contract with equivalent work, machine boundaries, measurement limits, and production-transfer uncertainty.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to save a falsifiable benchmark contract with equivalent work, machine boundaries, measurement limits, and production-transfer uncertainty.",
-      "explanation": "Use Benchmark Contracts, Pipelines, Caches, and Locality to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+      "prompt": "Use the cited source to answer L01 (Benchmark Contracts, Pipelines, Caches, and Locality): Why must a checksum be consumed outside the timed loop?",
+      "correct_answer": "It prevents dead-code elimination and establishes equivalent output without adding output I/O to the timed region",
+      "explanation": "The cited self-check in L01 tests whether the learner can connect Benchmark Contracts, Pipelines, Caches, and Locality to the module mechanism without replacing evidence with labels. This explanation is specific to M03-Q001 and its cited source.",
+      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
     },
     {
       "question_id": "M03-Q002",
       "module_id": "M03",
       "lesson_ids": [
-        "L02"
+        "L01"
       ],
       "type": "short_answer",
       "difficulty": "application",
       "tags": [
         "computer-systems-and-operating-systems",
-        "processes-scheduling-context-switches-and-system",
-        "application"
+        "benchmark-contracts-pipelines-caches-and",
+        "src:L01-selfcheck-2"
       ],
-      "prompt": "In 3-5 sentences, explain how 'Processes, Scheduling, Context Switches, and System Calls' supports this outcome: Explain and measure how access patterns, branches, copying, pipelines, and caches shape equivalent application work.",
-      "correct_answer": "A strong answer defines the mechanism from 'Processes, Scheduling, Context Switches, and System Calls', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Processes, Scheduling, Context Switches, and System Calls to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+      "prompt": "Explain the mechanism behind L01 (Benchmark Contracts, Pipelines, Caches, and Locality): What does a lower elapsed time prove when no counter is available?",
+      "correct_answer": "It proves only that the complete measured variant finished sooner under the recorded conditions. It does not isolate a cache or branch mechanism",
+      "explanation": "The cited self-check in L01 tests whether the learner can connect Benchmark Contracts, Pipelines, Caches, and Locality to the module mechanism without replacing evidence with labels. This explanation is specific to M03-Q002 and its cited source.",
+      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
     },
     {
       "question_id": "M03-Q003",
       "module_id": "M03",
       "lesson_ids": [
-        "L03"
+        "L01"
       ],
-      "type": "calculation",
+      "type": "short_answer",
       "difficulty": "synthesis",
       "tags": [
         "computer-systems-and-operating-systems",
-        "virtual-memory-allocation-page-faults-and-rss",
-        "synthesis"
+        "benchmark-contracts-pipelines-caches-and",
+        "src:L01-selfcheck-3"
       ],
-      "prompt": "For 'Virtual Memory, Allocation, Page Faults, and RSS', what quantities, units, or thresholds would you calculate before trusting a design claim about: Relate runnable work, processes, threads, syscalls, context switches, quotas, and oversubscription to useful throughput.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Trace an address through translation, mapping, allocation, and possible I/O.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+      "prompt": "Name the evidence needed for L01 (Benchmark Contracts, Pipelines, Caches, and Locality): When is a warm cache the correct state rather than benchmark contamination?",
+      "correct_answer": "When production repeatedly reuses the same working set and the claim is about steady-state behavior. The contract must say so",
+      "explanation": "The cited self-check in L01 tests whether the learner can connect Benchmark Contracts, Pipelines, Caches, and Locality to the module mechanism without replacing evidence with labels. This explanation is specific to M03-Q003 and its cited source.",
+      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
     },
     {
       "question_id": "M03-Q004",
       "module_id": "M03",
       "lesson_ids": [
-        "L04"
+        "L01"
       ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
+      "type": "short_answer",
+      "difficulty": "recall",
       "tags": [
         "computer-systems-and-operating-systems",
-        "locks-contention-deadlock-and-false-sharing",
-        "application"
+        "benchmark-contracts-pipelines-caches-and",
+        "src:L01-selfcheck-4"
       ],
-      "prompt": "A learner applies 'Locks, Contention, Deadlock, and False Sharing' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Optimizing away a correctness boundary:** throughput does not repair races.",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+      "prompt": "Diagnose the boundary issue in L01 (Benchmark Contracts, Pipelines, Caches, and Locality): Why can a branchless implementation lose?",
+      "correct_answer": "It may execute more instructions or create longer data dependencies than a well-predicted branch",
+      "explanation": "The cited self-check in L01 tests whether the learner can connect Benchmark Contracts, Pipelines, Caches, and Locality to the module mechanism without replacing evidence with labels. This explanation is specific to M03-Q004 and its cited source.",
+      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
     },
     {
       "question_id": "M03-Q005",
       "module_id": "M03",
       "lesson_ids": [
-        "L05"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "files-page-cache-writeback-and-durable-writes",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Files, Page Cache, Writeback, and Durable Writes'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement and safely test lock contention, bounded deadlock, shared-state invariants, and false sharing..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Linux man-pages, write2: https://www.man7.org/linux/man-pages/man2/write.2.html - Linux man-pages, fsync2: https://www.man7.org/linux/man-pages/man2/fsync.2.html - Continue with EX-09 and the durability experiment.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
-    },
-    {
-      "question_id": "M03-Q006",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L06"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "device-queues-and-i/o-latency",
-        "recall"
-      ],
-      "prompt": "Which approach best applies 'Device Queues and I/O Latency' in Computer Systems and Operating Systems?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to distinguish buffered completion, page-cache writeback, device queues, file sync, directory durability, and recoverable acknowledgement.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to distinguish buffered completion, page-cache writeback, device queues, file sync, directory durability, and recoverable acknowledgement.",
-      "explanation": "Use Device Queues and I/O Latency to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
-    },
-    {
-      "question_id": "M03-Q007",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L07"
+        "L01"
       ],
       "type": "short_answer",
       "difficulty": "application",
       "tags": [
         "computer-systems-and-operating-systems",
-        "containers-quotas-throttling-and-memory-limits",
-        "application"
+        "benchmark-contracts-pipelines-caches-and",
+        "src:L01-selfcheck-5"
       ],
-      "prompt": "In 3-5 sentences, explain how 'Containers, Quotas, Throttling, and Memory Limits' supports this outcome: Apply unprivileged CPU, memory, PID, and I/O constraints and transfer container evidence with explicit operational limits and owners.",
-      "correct_answer": "A strong answer defines the mechanism from 'Containers, Quotas, Throttling, and Memory Limits', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Containers, Quotas, Throttling, and Memory Limits to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+      "prompt": "State the causal reason for L01 (Benchmark Contracts, Pipelines, Caches, and Locality): When does a faster packed scan fail to justify copying?",
+      "correct_answer": "When copy/allocation cost is outside the measurement, reuse is too low to cross C / Δ, or ownership, freshness, and memory requirements make the extra representation unsafe. Measure the complete boundary the decision will pay",
+      "explanation": "The cited self-check in L01 tests whether the learner can connect Benchmark Contracts, Pipelines, Caches, and Locality to the module mechanism without replacing evidence with labels. This explanation is specific to M03-Q005 and its cited source.",
+      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+    },
+    {
+      "question_id": "M03-Q006",
+      "module_id": "M03",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "synthesis",
+      "tags": [
+        "computer-systems-and-operating-systems",
+        "processes-scheduling-context-switches-an",
+        "src:L02-selfcheck-1"
+      ],
+      "prompt": "Identify the assumption behind L02 (Processes, Scheduling, Context Switches, and System Calls): Can a process consume no CPU while still being runnable?",
+      "correct_answer": "Yes. Runnable work can wait in a scheduler queue or be quota-throttled",
+      "explanation": "The cited self-check in L02 tests whether the learner can connect Processes, Scheduling, Context Switches, and System Calls to the module mechanism without replacing evidence with labels. This explanation is specific to M03-Q006 and its cited source.",
+      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+    },
+    {
+      "question_id": "M03-Q007",
+      "module_id": "M03",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "recall",
+      "tags": [
+        "computer-systems-and-operating-systems",
+        "processes-scheduling-context-switches-an",
+        "src:L02-selfcheck-2"
+      ],
+      "prompt": "Connect the lesson claim to L02 (Processes, Scheduling, Context Switches, and System Calls): Why does a voluntary context switch not prove I/O?",
+      "correct_answer": "A thread can voluntarily block on a lock, condition, sleep, or other resource",
+      "explanation": "The cited self-check in L02 tests whether the learner can connect Processes, Scheduling, Context Switches, and System Calls to the module mechanism without replacing evidence with labels. This explanation is specific to M03-Q007 and its cited source.",
+      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
     },
     {
       "question_id": "M03-Q008",
       "module_id": "M03",
       "lesson_ids": [
-        "L08"
+        "L02"
       ],
-      "type": "calculation",
-      "difficulty": "synthesis",
+      "type": "short_answer",
+      "difficulty": "application",
       "tags": [
         "computer-systems-and-operating-systems",
-        "causal-diagnosis-and-production-decisions",
-        "synthesis"
+        "processes-scheduling-context-switches-an",
+        "src:L02-selfcheck-3"
       ],
-      "prompt": "For 'Causal Diagnosis and Production Decisions', what quantities, units, or thresholds would you calculate before trusting a design claim about: Defend and teach a systems-performance decision from a counterintuitive result with cost, security, operations, ownership, migration, rollback, and reversal evidence.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Explain one counterintuitive result through a falsifiable causal chain.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+      "prompt": "Resolve the self-check about L02 (Processes, Scheduling, Context Switches, and System Calls): What is the safest claim from a rise in involuntary switches?",
+      "correct_answer": "Scheduling displacement increased under the recorded conditions; the cause still needs controlled variation",
+      "explanation": "The cited self-check in L02 tests whether the learner can connect Processes, Scheduling, Context Switches, and System Calls to the module mechanism without replacing evidence with labels. This explanation is specific to M03-Q008 and its cited source.",
+      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
     },
     {
       "question_id": "M03-Q009",
       "module_id": "M03",
       "lesson_ids": [
-        "L01"
+        "L02"
       ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
+      "type": "short_answer",
+      "difficulty": "synthesis",
       "tags": [
         "computer-systems-and-operating-systems",
-        "benchmark-contracts-pipelines-caches-and-localit",
-        "application"
+        "processes-scheduling-context-switches-an",
+        "src:L02-selfcheck-4"
       ],
-      "prompt": "A learner applies 'Benchmark Contracts, Pipelines, Caches, and Locality' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Timing unequal work:** a faster wrong checksum is not an optimization.",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+      "prompt": "Summarize the tradeoff in L02 (Processes, Scheduling, Context Switches, and System Calls): Why might batching change correctness as well as speed?",
+      "correct_answer": "It changes when data becomes visible, when failures surface, and which records share an error or durability boundary",
+      "explanation": "The cited self-check in L02 tests whether the learner can connect Processes, Scheduling, Context Switches, and System Calls to the module mechanism without replacing evidence with labels. This explanation is specific to M03-Q009 and its cited source.",
+      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
     },
     {
       "question_id": "M03-Q010",
       "module_id": "M03",
       "lesson_ids": [
-        "L02"
+        "L03"
       ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
+      "type": "short_answer",
+      "difficulty": "recall",
       "tags": [
         "computer-systems-and-operating-systems",
-        "processes-scheduling-context-switches-and-system",
-        "synthesis"
+        "virtual-memory-allocation-page-faults-an",
+        "src:L03-selfcheck-1"
       ],
-      "prompt": "You must make a design choice involving 'Processes, Scheduling, Context Switches, and System Calls'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for explain and measure how access patterns, branches, copying, pipelines, and caches shape equivalent application work..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Linux man-pages, getrusage2: https://man7.org/linux/man-pages/man2/getrusage.2.html - Julia Lawall, Opening the Box: https://www.usenix.org/conference/srecon24emea/presentation/lawall - Continue with EX-03 and EX-04.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+      "prompt": "Defend the conclusion for L03 (Virtual Memory, Allocation, Page Faults, and RSS): Does a successful allocation prove physical memory is resident?",
+      "correct_answer": "No. Reservation and lazy allocation can precede page touching and residency",
+      "explanation": "The cited self-check in L03 tests whether the learner can connect Virtual Memory, Allocation, Page Faults, and RSS to the module mechanism without replacing evidence with labels. This explanation is specific to M03-Q010 and its cited source.",
+      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
     },
     {
       "question_id": "M03-Q011",
@@ -201,26 +189,56 @@
       "lesson_ids": [
         "L03"
       ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
+      "type": "short_answer",
+      "difficulty": "application",
       "tags": [
         "computer-systems-and-operating-systems",
-        "virtual-memory-allocation-page-faults-and-rss",
-        "recall"
+        "virtual-memory-allocation-page-faults-an",
+        "src:L03-selfcheck-2"
       ],
-      "prompt": "Which approach best applies 'Virtual Memory, Allocation, Page Faults, and RSS' in Computer Systems and Operating Systems?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to relate runnable work, processes, threads, syscalls, context switches, quotas, and oversubscription to useful throughput.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to relate runnable work, processes, threads, syscalls, context switches, quotas, and oversubscription to useful throughput.",
-      "explanation": "Use Virtual Memory, Allocation, Page Faults, and RSS to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+      "prompt": "Challenge the claim in L03 (Virtual Memory, Allocation, Page Faults, and RSS): What distinguishes a major from a minor fault in getrusage?",
+      "correct_answer": "A reported major fault required I/O; a minor fault was serviced without I/O",
+      "explanation": "The cited self-check in L03 tests whether the learner can connect Virtual Memory, Allocation, Page Faults, and RSS to the module mechanism without replacing evidence with labels. This explanation is specific to M03-Q011 and its cited source.",
+      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
     },
     {
       "question_id": "M03-Q012",
+      "module_id": "M03",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "short_answer",
+      "difficulty": "synthesis",
+      "tags": [
+        "computer-systems-and-operating-systems",
+        "virtual-memory-allocation-page-faults-an",
+        "src:L03-selfcheck-3"
+      ],
+      "prompt": "Apply the module rule to L03 (Virtual Memory, Allocation, Page Faults, and RSS): Why record both current and peak memory?",
+      "correct_answer": "Current memory can fall before sampling, while peak shows maximum exposure; both still need platform definitions",
+      "explanation": "The cited self-check in L03 tests whether the learner can connect Virtual Memory, Allocation, Page Faults, and RSS to the module mechanism without replacing evidence with labels. This explanation is specific to M03-Q012 and its cited source.",
+      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+    },
+    {
+      "question_id": "M03-Q013",
+      "module_id": "M03",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "short_answer",
+      "difficulty": "recall",
+      "tags": [
+        "computer-systems-and-operating-systems",
+        "virtual-memory-allocation-page-faults-an",
+        "src:L03-selfcheck-4"
+      ],
+      "prompt": "Use the cited source to answer L03 (Virtual Memory, Allocation, Page Faults, and RSS): What is the correct owner of a cgroup OOM policy?",
+      "correct_answer": "The service and platform owners jointly define limits, termination/restart, observability, and capacity response",
+      "explanation": "The cited self-check in L03 tests whether the learner can connect Virtual Memory, Allocation, Page Faults, and RSS to the module mechanism without replacing evidence with labels. This explanation is specific to M03-Q013 and its cited source.",
+      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+    },
+    {
+      "question_id": "M03-Q014",
       "module_id": "M03",
       "lesson_ids": [
         "L04"
@@ -229,91 +247,61 @@
       "difficulty": "application",
       "tags": [
         "computer-systems-and-operating-systems",
-        "locks-contention-deadlock-and-false-sharing",
-        "application"
+        "locks-contention-deadlock-and-false-shar",
+        "src:L04-selfcheck-1"
       ],
-      "prompt": "In 3-5 sentences, explain how 'Locks, Contention, Deadlock, and False Sharing' supports this outcome: Diagnose allocation lifetime, page touching, faults, residency, reclaim pressure, and memory-limit outcomes without conflating their counters.",
-      "correct_answer": "A strong answer defines the mechanism from 'Locks, Contention, Deadlock, and False Sharing', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Locks, Contention, Deadlock, and False Sharing to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
-    },
-    {
-      "question_id": "M03-Q013",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L05"
-      ],
-      "type": "calculation",
-      "difficulty": "synthesis",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "files-page-cache-writeback-and-durable-writes",
-        "synthesis"
-      ],
-      "prompt": "For 'Files, Page Cache, Writeback, and Durable Writes', what quantities, units, or thresholds would you calculate before trusting a design claim about: Implement and safely test lock contention, bounded deadlock, shared-state invariants, and false sharing.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Trace an application write through buffering, page cache, writeback, and storage.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
-    },
-    {
-      "question_id": "M03-Q014",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L06"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "device-queues-and-i/o-latency",
-        "application"
-      ],
-      "prompt": "A learner applies 'Device Queues and I/O Latency' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Calling all I/O time disk time:** page cache and virtualization may intervene.",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+      "prompt": "Explain the mechanism behind L04 (Locks, Contention, Deadlock, and False Sharing): How does contention differ from deadlock?",
+      "correct_answer": "Contended actors eventually progress; a deadlocked wait cycle cannot progress without outside change",
+      "explanation": "The cited self-check in L04 tests whether the learner can connect Locks, Contention, Deadlock, and False Sharing to the module mechanism without replacing evidence with labels. This explanation is specific to M03-Q014 and its cited source.",
+      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
     },
     {
       "question_id": "M03-Q015",
       "module_id": "M03",
       "lesson_ids": [
-        "L07"
+        "L01"
       ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
+      "type": "multiple_choice",
+      "difficulty": "application",
       "tags": [
         "computer-systems-and-operating-systems",
-        "containers-quotas-throttling-and-memory-limits",
-        "synthesis"
+        "benchmark-contracts-pipelines-caches-and",
+        "src:L01-mistake-1"
       ],
-      "prompt": "You must make a design choice involving 'Containers, Quotas, Throttling, and Memory Limits'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for apply unprivileged cpu, memory, pid, and i/o constraints and transfer container evidence with explicit operational limits and owners..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Linux kernel, Control Group v2: https://www.kernel.org/doc/html/latest/admin-guide/cgroup-v2.html - Docker, resource constraints: https://docs.docker.com/engine/containers/resourceconstraints/ - Continue with EX-11 and the Linux constraint matrix.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+      "prompt": "For L01 (Benchmark Contracts, Pipelines, Caches, and Locality), which choice best avoids the cited mistake: Timing unequal work: a faster wrong checksum is not an optimization.?",
+      "choices": [
+        "Keep Benchmark Contracts, Pipelines, Caches, and Locality scoped to its stated evidence and bou.",
+        "Treat Timing unequal work: a faster wrong checksum is not an optimization as complete proof without the lesson bounda.",
+        "Make the documented mistake: Timing unequal work: a faster wrong checksum is not an optimizatio. with extra con",
+        "Choose the familiar tool before checking whether Timing unequal work: a faster wrong checksum is not an optimization."
+      ],
+      "correct_answer": "Keep Benchmark Contracts, Pipelines, Caches, and Locality scoped to its stated evidence and bou.",
+      "explanation": "The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M03-Q015 and its cited source.",
+      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
     },
     {
       "question_id": "M03-Q016",
       "module_id": "M03",
       "lesson_ids": [
-        "L08"
+        "L01"
       ],
       "type": "multiple_choice",
-      "difficulty": "recall",
+      "difficulty": "synthesis",
       "tags": [
         "computer-systems-and-operating-systems",
-        "causal-diagnosis-and-production-decisions",
-        "recall"
+        "benchmark-contracts-pipelines-caches-and",
+        "src:L01-mistake-2"
       ],
-      "prompt": "Which approach best applies 'Causal Diagnosis and Production Decisions' in Computer Systems and Operating Systems?",
+      "prompt": "For L01 (Benchmark Contracts, Pipelines, Caches, and Locality), which choice best avoids the cited mistake: Using one iteration: startup, interrupts, and frequency state dominate.?",
       "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend and teach a systems-performance decision from a counterintuitive result with cost, security, operations, ownership, migration, rollback, and reversal evidence.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
+        "Choose the familiar tool before checking whether Using one iteration: startup, interrupts, and frequency state domina.",
+        "Keep Benchmark Contracts, Pipelines, Caches, and Locality scoped to its stated evidence and bou.",
+        "Treat Using one iteration: startup, interrupts, and frequency state dominate as complete proof without the lesson bou.",
+        "Make the documented mistake: Using one iteration: startup, interrupts, and frequency state domi. with extra con"
       ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend and teach a systems-performance decision from a counterintuitive result with cost, security, operations, ownership, migration, rollback, and reversal evidence.",
-      "explanation": "Use Causal Diagnosis and Production Decisions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+      "correct_answer": "Keep Benchmark Contracts, Pipelines, Caches, and Locality scoped to its stated evidence and bou.",
+      "explanation": "The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M03-Q016 and its cited source.",
+      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
     },
     {
       "question_id": "M03-Q017",
@@ -321,149 +309,191 @@
       "lesson_ids": [
         "L01"
       ],
-      "type": "short_answer",
-      "difficulty": "application",
+      "type": "multiple_choice",
+      "difficulty": "recall",
       "tags": [
         "computer-systems-and-operating-systems",
-        "benchmark-contracts-pipelines-caches-and-localit",
-        "application"
+        "benchmark-contracts-pipelines-caches-and",
+        "src:L01-mistake-3"
       ],
-      "prompt": "In 3-5 sentences, explain how 'Benchmark Contracts, Pipelines, Caches, and Locality' supports this outcome: save a falsifiable benchmark contract with equivalent work, machine boundaries, measurement limits, and production-transfer uncertainty.",
-      "correct_answer": "A strong answer defines the mechanism from 'Benchmark Contracts, Pipelines, Caches, and Locality', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Benchmark Contracts, Pipelines, Caches, and Locality to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+      "prompt": "For L01 (Benchmark Contracts, Pipelines, Caches, and Locality), which choice best avoids the cited mistake: Naming a cache as cause without evidence: layout, vectorization, or copying?",
+      "choices": [
+        "Choose the familiar tool before checking whether Naming a cache as cause without evidence: layout, vectorization, or.",
+        "Treat Naming a cache as cause without evidence: layout, vectorization, or c as complete proof without the lesson boun.",
+        "Keep Benchmark Contracts, Pipelines, Caches, and Locality scoped to its stated evidence and bou.",
+        "Make the documented mistake: Naming a cache as cause without evidence: layout, vectorization, o. with extra con"
+      ],
+      "correct_answer": "Keep Benchmark Contracts, Pipelines, Caches, and Locality scoped to its stated evidence and bou.",
+      "explanation": "The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M03-Q017 and its cited source.",
+      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
     },
     {
       "question_id": "M03-Q018",
       "module_id": "M03",
       "lesson_ids": [
-        "L02"
+        "L01"
       ],
-      "type": "calculation",
-      "difficulty": "synthesis",
+      "type": "multiple_choice",
+      "difficulty": "application",
       "tags": [
         "computer-systems-and-operating-systems",
-        "processes-scheduling-context-switches-and-system",
-        "synthesis"
+        "benchmark-contracts-pipelines-caches-and",
+        "src:L01-mistake-4"
       ],
-      "prompt": "For 'Processes, Scheduling, Context Switches, and System Calls', what quantities, units, or thresholds would you calculate before trusting a design claim about: Explain and measure how access patterns, branches, copying, pipelines, and caches shape equivalent application work.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Distinguish executing, runnable, blocked, and throttled work.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+      "prompt": "For L01 (Benchmark Contracts, Pipelines, Caches, and Locality), which choice best avoids the cited mistake: Reporting only the best run: it selects favorable noise and hides variance.?",
+      "choices": [
+        "Make the documented mistake: Reporting only the best run: it selects favorable noise and hides. with extra conf",
+        "Choose the familiar tool before checking whether Reporting only the best run: it selects favorable noise and hides va.",
+        "Treat Reporting only the best run: it selects favorable noise and hides var as complete proof without the lesson boun.",
+        "Keep Benchmark Contracts, Pipelines, Caches, and Locality scoped to its stated evidence and bou."
+      ],
+      "correct_answer": "Keep Benchmark Contracts, Pipelines, Caches, and Locality scoped to its stated evidence and bou.",
+      "explanation": "The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M03-Q018 and its cited source.",
+      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
     },
     {
       "question_id": "M03-Q019",
       "module_id": "M03",
       "lesson_ids": [
-        "L03"
+        "L01"
       ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
+      "type": "multiple_choice",
+      "difficulty": "synthesis",
       "tags": [
         "computer-systems-and-operating-systems",
-        "virtual-memory-allocation-page-faults-and-rss",
-        "application"
+        "benchmark-contracts-pipelines-caches-and",
+        "src:L01-mistake-5"
       ],
-      "prompt": "A learner applies 'Virtual Memory, Allocation, Page Faults, and RSS' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Calling every fault a disk read:** minor faults require no storage I/O.",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+      "prompt": "For L01 (Benchmark Contracts, Pipelines, Caches, and Locality), which choice best avoids the cited mistake: Generalizing across machines: cache and branch behavior are not API contracts.?",
+      "choices": [
+        "Keep Benchmark Contracts, Pipelines, Caches, and Locality scoped to its stated evidence and bou.",
+        "Choose the familiar tool before checking whether Generalizing across machines: cache and branch behavior are not API.",
+        "Make the documented mistake: Generalizing across machines: cache and branch behavior are not AP. with extra con",
+        "Treat Generalizing across machines: cache and branch behavior are not API c as complete proof without the lesson boun."
+      ],
+      "correct_answer": "Keep Benchmark Contracts, Pipelines, Caches, and Locality scoped to its stated evidence and bou.",
+      "explanation": "The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M03-Q019 and its cited source.",
+      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
     },
     {
       "question_id": "M03-Q020",
       "module_id": "M03",
       "lesson_ids": [
-        "L04"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "locks-contention-deadlock-and-false-sharing",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Locks, Contention, Deadlock, and False Sharing'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose allocation lifetime, page touching, faults, residency, reclaim pressure, and memory-limit outcomes without conflating their counters..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Meta, Serving Facebook Multifeed: https://engineering.fb.com/2015/03/10/production-engineering/serving-facebook-multifeed-efficiency-performance-gains-through-redesign/ - Continue with EX-06 through EX-08.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
-    },
-    {
-      "question_id": "M03-Q021",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L05"
+        "L02"
       ],
       "type": "multiple_choice",
       "difficulty": "recall",
       "tags": [
         "computer-systems-and-operating-systems",
-        "files-page-cache-writeback-and-durable-writes",
-        "recall"
+        "processes-scheduling-context-switches-an",
+        "src:L02-mistake-1"
       ],
-      "prompt": "Which approach best applies 'Files, Page Cache, Writeback, and Durable Writes' in Computer Systems and Operating Systems?",
+      "prompt": "For L02 (Processes, Scheduling, Context Switches, and System Calls), which choice best avoids the cited mistake: Equating threads with parallelism: runnable threads still need CPU capacity.?",
       "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement and safely test lock contention, bounded deadlock, shared-state invariants, and false sharing.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
+        "Make the documented mistake: Equating threads with parallelism: runnable threads still need CPU. with extra con",
+        "Keep Processes, Scheduling, Context Switches, and System Calls scoped to its stated evidence an.",
+        "Choose the familiar tool before checking whether Equating threads with parallelism: runnable threads still need CPU c.",
+        "Treat Equating threads with parallelism: runnable threads still need CPU ca as complete proof without the lesson boun."
       ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement and safely test lock contention, bounded deadlock, shared-state invariants, and false sharing.",
-      "explanation": "Use Files, Page Cache, Writeback, and Durable Writes to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+      "correct_answer": "Keep Processes, Scheduling, Context Switches, and System Calls scoped to its stated evidence an.",
+      "explanation": "The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M03-Q020 and its cited source.",
+      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+    },
+    {
+      "question_id": "M03-Q021",
+      "module_id": "M03",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "application",
+      "tags": [
+        "computer-systems-and-operating-systems",
+        "processes-scheduling-context-switches-an",
+        "src:L02-mistake-2"
+      ],
+      "prompt": "For L02 (Processes, Scheduling, Context Switches, and System Calls), which choice best avoids the cited mistake: Calling every context switch bad: blocking is required for many correct waits.?",
+      "choices": [
+        "Treat Calling every context switch bad: blocking is required for many corre as complete proof without the lesson boun.",
+        "Choose the familiar tool before checking whether Calling every context switch bad: blocking is required for many corr.",
+        "Keep Processes, Scheduling, Context Switches, and System Calls scoped to its stated evidence an.",
+        "Make the documented mistake: Calling every context switch bad: blocking is required for many co. with extra con"
+      ],
+      "correct_answer": "Keep Processes, Scheduling, Context Switches, and System Calls scoped to its stated evidence an.",
+      "explanation": "The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M03-Q021 and its cited source.",
+      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
     },
     {
       "question_id": "M03-Q022",
       "module_id": "M03",
       "lesson_ids": [
-        "L06"
+        "L02"
       ],
-      "type": "short_answer",
-      "difficulty": "application",
+      "type": "multiple_choice",
+      "difficulty": "synthesis",
       "tags": [
         "computer-systems-and-operating-systems",
-        "device-queues-and-i/o-latency",
-        "application"
+        "processes-scheduling-context-switches-an",
+        "src:L02-mistake-3"
       ],
-      "prompt": "In 3-5 sentences, explain how 'Device Queues and I/O Latency' supports this outcome: Distinguish buffered completion, page-cache writeback, device queues, file sync, directory durability, and recoverable acknowledgement.",
-      "correct_answer": "A strong answer defines the mechanism from 'Device Queues and I/O Latency', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Device Queues and I/O Latency to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+      "prompt": "For L02 (Processes, Scheduling, Context Switches, and System Calls), which choice best avoids the cited mistake: Treating logical CPUs as identical physical cores: SMT and heterogeneous?",
+      "choices": [
+        "Choose the familiar tool before checking whether Treating logical CPUs as identical physical cores: SMT and heterogen.",
+        "Treat Treating logical CPUs as identical physical cores: SMT and heterogene as complete proof without the lesson boun.",
+        "Make the documented mistake: Treating logical CPUs as identical physical cores: SMT and heterog. with extra con",
+        "Keep Processes, Scheduling, Context Switches, and System Calls scoped to its stated evidence an."
+      ],
+      "correct_answer": "Keep Processes, Scheduling, Context Switches, and System Calls scoped to its stated evidence an.",
+      "explanation": "The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M03-Q022 and its cited source.",
+      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
     },
     {
       "question_id": "M03-Q023",
       "module_id": "M03",
       "lesson_ids": [
-        "L07"
+        "L02"
       ],
-      "type": "calculation",
-      "difficulty": "synthesis",
+      "type": "multiple_choice",
+      "difficulty": "recall",
       "tags": [
         "computer-systems-and-operating-systems",
-        "containers-quotas-throttling-and-memory-limits",
-        "synthesis"
+        "processes-scheduling-context-switches-an",
+        "src:L02-mistake-4"
       ],
-      "prompt": "For 'Containers, Quotas, Throttling, and Memory Limits', what quantities, units, or thresholds would you calculate before trusting a design claim about: Apply unprivileged CPU, memory, PID, and I/O constraints and transfer container evidence with explicit operational limits and owners.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Explain what a container owns, shares, and borrows from the host.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+      "prompt": "For L02 (Processes, Scheduling, Context Switches, and System Calls), which choice best avoids the cited mistake: Using syscall count alone: request size and kernel work also change cost.?",
+      "choices": [
+        "Keep Processes, Scheduling, Context Switches, and System Calls scoped to its stated evidence an.",
+        "Choose the familiar tool before checking whether Using syscall count alone: request size and kernel work also change.",
+        "Treat Using syscall count alone: request size and kernel work also change c as complete proof without the lesson boun.",
+        "Make the documented mistake: Using syscall count alone: request size and kernel work also chang. with extra con"
+      ],
+      "correct_answer": "Keep Processes, Scheduling, Context Switches, and System Calls scoped to its stated evidence an.",
+      "explanation": "The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M03-Q023 and its cited source.",
+      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
     },
     {
       "question_id": "M03-Q024",
       "module_id": "M03",
       "lesson_ids": [
-        "L08"
+        "L02"
       ],
-      "type": "scenario_diagnosis",
+      "type": "multiple_choice",
       "difficulty": "application",
       "tags": [
         "computer-systems-and-operating-systems",
-        "causal-diagnosis-and-production-decisions",
-        "application"
+        "processes-scheduling-context-switches-an",
+        "src:L02-mistake-5"
       ],
-      "prompt": "A learner applies 'Causal Diagnosis and Production Decisions' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Starting with the desired answer:** the experiment becomes confirmation theater.",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+      "prompt": "For L02 (Processes, Scheduling, Context Switches, and System Calls), which choice best avoids the cited mistake: Confusing throttled with blocked: the remediation and owner differ.?",
+      "choices": [
+        "Make the documented mistake: Confusing throttled with blocked: the remediation and owner differ. with extra con",
+        "Keep Processes, Scheduling, Context Switches, and System Calls scoped to its stated evidence an.",
+        "Treat Confusing throttled with blocked: the remediation and owner differ as complete proof without the lesson boundary",
+        "Choose the familiar tool before checking whether Confusing throttled with blocked: the remediation and owner differ a."
+      ],
+      "correct_answer": "Keep Processes, Scheduling, Context Switches, and System Calls scoped to its stated evidence an.",
+      "explanation": "The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M03-Q024 and its cited source.",
+      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
     },
     {
       "question_id": "M03-Q025",
@@ -471,17 +501,17 @@
       "lesson_ids": [
         "L01"
       ],
-      "type": "design_judgment",
+      "type": "calculation",
       "difficulty": "synthesis",
       "tags": [
         "computer-systems-and-operating-systems",
-        "benchmark-contracts-pipelines-caches-and-localit",
-        "synthesis"
+        "benchmark-contracts-pipelines-caches-and",
+        "src:L01-worked"
       ],
-      "prompt": "You must make a design choice involving 'Benchmark Contracts, Pipelines, Caches, and Locality'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for save a falsifiable benchmark contract with equivalent work, machine boundaries, measurement limits, and production-transfer uncertainty..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Intel, Optimization Reference Manual, current Volume 1 sections on front end and data access: https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html - Continue with EX-01 and EX-02, then save the Week 9 prediction.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+      "prompt": "While applying L01 (Benchmark Contracts, Pipelines, Caches, and Locality), a system handles 150 operations/s with 50 ms of scoped work per operation. If the rate rises by 25% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
+      "correct_answer": "Original concurrency = 150 x 0.050 = 7.50 operations. Revised rate = 150 x 1.25 = 187.5/s, so revised concurrency = 187.5 x 0.050 = 9.38 operations.",
+      "explanation": "This perturbs the numeric practice around Benchmark Contracts, Pipelines, Caches, and Locality: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M03-Q025 and its cited source.",
+      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
     },
     {
       "question_id": "M03-Q026",
@@ -489,23 +519,17 @@
       "lesson_ids": [
         "L02"
       ],
-      "type": "multiple_choice",
+      "type": "calculation",
       "difficulty": "recall",
       "tags": [
         "computer-systems-and-operating-systems",
-        "processes-scheduling-context-switches-and-system",
-        "recall"
+        "processes-scheduling-context-switches-an",
+        "src:L02-worked"
       ],
-      "prompt": "Which approach best applies 'Processes, Scheduling, Context Switches, and System Calls' in Computer Systems and Operating Systems?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to explain and measure how access patterns, branches, copying, pipelines, and caches shape equivalent application work.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to explain and measure how access patterns, branches, copying, pipelines, and caches shape equivalent application work.",
-      "explanation": "Use Processes, Scheduling, Context Switches, and System Calls to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+      "prompt": "While applying L02 (Processes, Scheduling, Context Switches, and System Calls), a system handles 160 operations/s with 60 ms of scoped work per operation. If the rate rises by 30% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
+      "correct_answer": "Original concurrency = 160 x 0.060 = 9.60 operations. Revised rate = 160 x 1.30 = 208.0/s, so revised concurrency = 208.0 x 0.060 = 12.48 operations.",
+      "explanation": "This perturbs the numeric practice around Processes, Scheduling, Context Switches, and System Calls: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M03-Q026 and its cited source.",
+      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
     },
     {
       "question_id": "M03-Q027",
@@ -513,17 +537,17 @@
       "lesson_ids": [
         "L03"
       ],
-      "type": "short_answer",
+      "type": "calculation",
       "difficulty": "application",
       "tags": [
         "computer-systems-and-operating-systems",
-        "virtual-memory-allocation-page-faults-and-rss",
-        "application"
+        "virtual-memory-allocation-page-faults-an",
+        "src:L03-worked"
       ],
-      "prompt": "In 3-5 sentences, explain how 'Virtual Memory, Allocation, Page Faults, and RSS' supports this outcome: Relate runnable work, processes, threads, syscalls, context switches, quotas, and oversubscription to useful throughput.",
-      "correct_answer": "A strong answer defines the mechanism from 'Virtual Memory, Allocation, Page Faults, and RSS', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Virtual Memory, Allocation, Page Faults, and RSS to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+      "prompt": "While applying L03 (Virtual Memory, Allocation, Page Faults, and RSS), a system handles 170 operations/s with 70 ms of scoped work per operation. If the rate rises by 35% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
+      "correct_answer": "Original concurrency = 170 x 0.070 = 11.90 operations. Revised rate = 170 x 1.35 = 229.5/s, so revised concurrency = 229.5 x 0.070 = 16.07 operations.",
+      "explanation": "This perturbs the numeric practice around Virtual Memory, Allocation, Page Faults, and RSS: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M03-Q027 and its cited source.",
+      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
     },
     {
       "question_id": "M03-Q028",
@@ -535,13 +559,13 @@
       "difficulty": "synthesis",
       "tags": [
         "computer-systems-and-operating-systems",
-        "locks-contention-deadlock-and-false-sharing",
-        "synthesis"
+        "locks-contention-deadlock-and-false-shar",
+        "src:L04-worked"
       ],
-      "prompt": "For 'Locks, Contention, Deadlock, and False Sharing', what quantities, units, or thresholds would you calculate before trusting a design claim about: Diagnose allocation lifetime, page touching, faults, residency, reclaim pressure, and memory-limit outcomes without conflating their counters.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Separate correctness synchronization from performance contention.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+      "prompt": "While applying L04 (Locks, Contention, Deadlock, and False Sharing), a system handles 180 operations/s with 80 ms of scoped work per operation. If the rate rises by 40% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
+      "correct_answer": "Original concurrency = 180 x 0.080 = 14.40 operations. Revised rate = 180 x 1.40 = 252.0/s, so revised concurrency = 252.0 x 0.080 = 20.16 operations.",
+      "explanation": "This perturbs the numeric practice around Locks, Contention, Deadlock, and False Sharing: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M03-Q028 and its cited source.",
+      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
     },
     {
       "question_id": "M03-Q029",
@@ -549,17 +573,17 @@
       "lesson_ids": [
         "L05"
       ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
+      "type": "calculation",
+      "difficulty": "recall",
       "tags": [
         "computer-systems-and-operating-systems",
-        "files-page-cache-writeback-and-durable-writes",
-        "application"
+        "files-page-cache-writeback-and-durable-w",
+        "src:L05-worked"
       ],
-      "prompt": "A learner applies 'Files, Page Cache, Writeback, and Durable Writes' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Treating close as a durability primitive:** delayed errors and storage state",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+      "prompt": "While applying L05 (Files, Page Cache, Writeback, and Durable Writes), a system handles 190 operations/s with 40 ms of scoped work per operation. If the rate rises by 45% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
+      "correct_answer": "Original concurrency = 190 x 0.040 = 7.60 operations. Revised rate = 190 x 1.45 = 275.5/s, so revised concurrency = 275.5 x 0.040 = 11.02 operations.",
+      "explanation": "This perturbs the numeric practice around Files, Page Cache, Writeback, and Durable Writes: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M03-Q029 and its cited source.",
+      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
     },
     {
       "question_id": "M03-Q030",
@@ -567,1361 +591,287 @@
       "lesson_ids": [
         "L06"
       ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
+      "type": "calculation",
+      "difficulty": "application",
       "tags": [
         "computer-systems-and-operating-systems",
-        "device-queues-and-i/o-latency",
-        "synthesis"
+        "device-queues-and-i-o-latency",
+        "src:L06-worked"
       ],
-      "prompt": "You must make a design choice involving 'Device Queues and I/O Latency'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for distinguish buffered completion, page-cache writeback, device queues, file sync, directory durability, and recoverable acknowledgement..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Linux kernel block writeback cache control: https://www.kernel.org/doc/html/latest/block/writebackcachecontrol.html - Continue with EX-10 and the bounded I/O competitor.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+      "prompt": "While applying L06 (Device Queues and I/O Latency), a system handles 200 operations/s with 50 ms of scoped work per operation. If the rate rises by 10% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
+      "correct_answer": "Original concurrency = 200 x 0.050 = 10.00 operations. Revised rate = 200 x 1.10 = 220.0/s, so revised concurrency = 220.0 x 0.050 = 11.00 operations.",
+      "explanation": "This perturbs the numeric practice around Device Queues and I/O Latency: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M03-Q030 and its cited source.",
+      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
     },
     {
       "question_id": "M03-Q031",
       "module_id": "M03",
       "lesson_ids": [
-        "L07"
+        "L03"
       ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
       "tags": [
         "computer-systems-and-operating-systems",
-        "containers-quotas-throttling-and-memory-limits",
-        "recall"
+        "virtual-memory-allocation-page-faults-an",
+        "src:fixture-allocation-per-iteration"
       ],
-      "prompt": "Which approach best applies 'Containers, Quotas, Throttling, and Memory Limits' in Computer Systems and Operating Systems?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to apply unprivileged cpu, memory, pid, and i/o constraints and transfer container evidence with explicit operational limits and owners.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to apply unprivileged cpu, memory, pid, and i/o constraints and transfer container evidence with explicit operational limits and owners.",
-      "explanation": "Use Containers, Quotas, Throttling, and Memory Limits to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+      "prompt": "A M03 lab fixture related to Virtual Memory, Allocation, Page Faults, and RSS exposes this trimmed evidence:\n\n  id=allocation-per-iteration\n  probe=allocation\n  variant=per_iteration\n  runtime=native\n  parameters.iterations=4096\n  parameters.bytes_per_iteration=4096\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
+      "correct_answer": "The fixture tests allocation-per-iteration (per_iteration), with per_iteration as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=allocation-per-iteration, rather than the general presence of a lab run.",
+      "explanation": "The cited fixture is machine-readable source material for M03; diagnosis should start from the emitted fields and connect them to Virtual Memory, Allocation, Page Faults, and RSS. This explanation is specific to M03-Q031 and its cited source.",
+      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
     },
     {
       "question_id": "M03-Q032",
       "module_id": "M03",
       "lesson_ids": [
-        "L08"
+        "L04"
       ],
-      "type": "short_answer",
-      "difficulty": "application",
+      "type": "scenario_diagnosis",
+      "difficulty": "synthesis",
       "tags": [
         "computer-systems-and-operating-systems",
-        "causal-diagnosis-and-production-decisions",
-        "application"
+        "locks-contention-deadlock-and-false-shar",
+        "src:fixture-allocation-reuse"
       ],
-      "prompt": "In 3-5 sentences, explain how 'Causal Diagnosis and Production Decisions' supports this outcome: Defend and teach a systems-performance decision from a counterintuitive result with cost, security, operations, ownership, migration, rollback, and reversal evidence.",
-      "correct_answer": "A strong answer defines the mechanism from 'Causal Diagnosis and Production Decisions', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Causal Diagnosis and Production Decisions to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+      "prompt": "A M03 lab fixture related to Locks, Contention, Deadlock, and False Sharing exposes this trimmed evidence:\n\n  id=allocation-reuse\n  probe=allocation\n  variant=reuse\n  runtime=native\n  parameters.iterations=4096\n  parameters.bytes_per_iteration=4096\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
+      "correct_answer": "The fixture tests allocation-reuse (reuse), with reuse as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=allocation-reuse, rather than the general presence of a lab run.",
+      "explanation": "The cited fixture is machine-readable source material for M03; diagnosis should start from the emitted fields and connect them to Locks, Contention, Deadlock, and False Sharing. This explanation is specific to M03-Q032 and its cited source.",
+      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
     },
     {
       "question_id": "M03-Q033",
       "module_id": "M03",
       "lesson_ids": [
-        "L01"
+        "L05"
       ],
-      "type": "calculation",
-      "difficulty": "synthesis",
+      "type": "scenario_diagnosis",
+      "difficulty": "recall",
       "tags": [
         "computer-systems-and-operating-systems",
-        "benchmark-contracts-pipelines-caches-and-localit",
-        "synthesis"
+        "files-page-cache-writeback-and-durable-w",
+        "src:fixture-allocation-working-set-128"
       ],
-      "prompt": "For 'Benchmark Contracts, Pipelines, Caches, and Locality', what quantities, units, or thresholds would you calculate before trusting a design claim about: save a falsifiable benchmark contract with equivalent work, machine boundaries, measurement limits, and production-transfer uncertainty.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - save equivalent work and a falsifiable prediction before measuring.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+      "prompt": "A M03 lab fixture related to Files, Page Cache, Writeback, and Durable Writes exposes this trimmed evidence:\n\n  id=allocation-working-set-128\n  probe=allocation\n  variant=working_set\n  runtime=native\n  parameters.iterations=128\n  parameters.bytes_per_iteration=1048576\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
+      "correct_answer": "The fixture tests allocation-working-set-128 (working_set), with working_set as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=allocation-working-set-128, rather than the general presence of a lab run.",
+      "explanation": "The cited fixture is machine-readable source material for M03; diagnosis should start from the emitted fields and connect them to Files, Page Cache, Writeback, and Durable Writes. This explanation is specific to M03-Q033 and its cited source.",
+      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
     },
     {
       "question_id": "M03-Q034",
       "module_id": "M03",
       "lesson_ids": [
-        "L02"
+        "L06"
       ],
       "type": "scenario_diagnosis",
       "difficulty": "application",
       "tags": [
         "computer-systems-and-operating-systems",
-        "processes-scheduling-context-switches-and-system",
-        "application"
+        "device-queues-and-i-o-latency",
+        "src:fixture-allocation-working-set-16"
       ],
-      "prompt": "A learner applies 'Processes, Scheduling, Context Switches, and System Calls' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Equating threads with parallelism:** runnable threads still need CPU capacity.",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+      "prompt": "A M03 lab fixture related to Device Queues and I/O Latency exposes this trimmed evidence:\n\n  id=allocation-working-set-16\n  probe=allocation\n  variant=working_set\n  runtime=native\n  parameters.iterations=16\n  parameters.bytes_per_iteration=1048576\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
+      "correct_answer": "The fixture tests allocation-working-set-16 (working_set), with working_set as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=allocation-working-set-16, rather than the general presence of a lab run.",
+      "explanation": "The cited fixture is machine-readable source material for M03; diagnosis should start from the emitted fields and connect them to Device Queues and I/O Latency. This explanation is specific to M03-Q034 and its cited source.",
+      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
     },
     {
       "question_id": "M03-Q035",
       "module_id": "M03",
       "lesson_ids": [
-        "L03"
+        "L07"
       ],
-      "type": "design_judgment",
+      "type": "scenario_diagnosis",
       "difficulty": "synthesis",
       "tags": [
         "computer-systems-and-operating-systems",
-        "virtual-memory-allocation-page-faults-and-rss",
-        "synthesis"
+        "containers-quotas-throttling-and-memory-",
+        "src:fixture-allocation-working-set-256"
       ],
-      "prompt": "You must make a design choice involving 'Virtual Memory, Allocation, Page Faults, and RSS'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for relate runnable work, processes, threads, syscalls, context switches, quotas, and oversubscription to useful throughput..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - MIT 6.004, Virtual Memory topic videos and transcripts: https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c16/c16s2/c16s2v2/ - Continue with EX-05 and the allocation probe.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+      "prompt": "A M03 lab fixture related to Containers, Quotas, Throttling, and Memory Limits exposes this trimmed evidence:\n\n  id=allocation-working-set-256\n  probe=allocation\n  variant=working_set\n  runtime=native\n  parameters.iterations=256\n  parameters.bytes_per_iteration=1048576\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
+      "correct_answer": "The fixture tests allocation-working-set-256 (working_set), with working_set as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=allocation-working-set-256, rather than the general presence of a lab run.",
+      "explanation": "The cited fixture is machine-readable source material for M03; diagnosis should start from the emitted fields and connect them to Containers, Quotas, Throttling, and Memory Limits. This explanation is specific to M03-Q035 and its cited source.",
+      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
     },
     {
       "question_id": "M03-Q036",
       "module_id": "M03",
       "lesson_ids": [
-        "L04"
+        "L08"
       ],
-      "type": "multiple_choice",
+      "type": "scenario_diagnosis",
       "difficulty": "recall",
       "tags": [
         "computer-systems-and-operating-systems",
-        "locks-contention-deadlock-and-false-sharing",
-        "recall"
+        "causal-diagnosis-and-production-decision",
+        "src:fixture-allocation-working-set-64"
       ],
-      "prompt": "Which approach best applies 'Locks, Contention, Deadlock, and False Sharing' in Computer Systems and Operating Systems?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose allocation lifetime, page touching, faults, residency, reclaim pressure, and memory-limit outcomes without conflating their counters.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose allocation lifetime, page touching, faults, residency, reclaim pressure, and memory-limit outcomes without conflating their counters.",
-      "explanation": "Use Locks, Contention, Deadlock, and False Sharing to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+      "prompt": "A M03 lab fixture related to Causal Diagnosis and Production Decisions exposes this trimmed evidence:\n\n  id=allocation-working-set-64\n  probe=allocation\n  variant=working_set\n  runtime=native\n  parameters.iterations=64\n  parameters.bytes_per_iteration=1048576\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
+      "correct_answer": "The fixture tests allocation-working-set-64 (working_set), with working_set as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=allocation-working-set-64, rather than the general presence of a lab run.",
+      "explanation": "The cited fixture is machine-readable source material for M03; diagnosis should start from the emitted fields and connect them to Causal Diagnosis and Production Decisions. This explanation is specific to M03-Q036 and its cited source.",
+      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
     },
     {
       "question_id": "M03-Q037",
       "module_id": "M03",
       "lesson_ids": [
-        "L05"
+        "L01"
       ],
-      "type": "short_answer",
+      "type": "scenario_diagnosis",
       "difficulty": "application",
       "tags": [
         "computer-systems-and-operating-systems",
-        "files-page-cache-writeback-and-durable-writes",
-        "application"
+        "benchmark-contracts-pipelines-caches-and",
+        "src:fixture-branch-mixed"
       ],
-      "prompt": "In 3-5 sentences, explain how 'Files, Page Cache, Writeback, and Durable Writes' supports this outcome: Implement and safely test lock contention, bounded deadlock, shared-state invariants, and false sharing.",
-      "correct_answer": "A strong answer defines the mechanism from 'Files, Page Cache, Writeback, and Durable Writes', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Files, Page Cache, Writeback, and Durable Writes to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+      "prompt": "A M03 lab fixture related to Benchmark Contracts, Pipelines, Caches, and Locality exposes this trimmed evidence:\n\n  id=branch-mixed\n  probe=locality\n  variant=branch_mixed\n  runtime=native\n  parameters.elements=1000000\n  parameters.stride=1\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
+      "correct_answer": "The fixture tests branch-mixed (branch_mixed), with branch_mixed as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=branch-mixed, rather than the general presence of a lab run.",
+      "explanation": "The cited fixture is machine-readable source material for M03; diagnosis should start from the emitted fields and connect them to Benchmark Contracts, Pipelines, Caches, and Locality. This explanation is specific to M03-Q037 and its cited source.",
+      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
     },
     {
       "question_id": "M03-Q038",
       "module_id": "M03",
       "lesson_ids": [
-        "L06"
+        "L02"
       ],
-      "type": "calculation",
+      "type": "scenario_diagnosis",
       "difficulty": "synthesis",
       "tags": [
         "computer-systems-and-operating-systems",
-        "device-queues-and-i/o-latency",
-        "synthesis"
+        "processes-scheduling-context-switches-an",
+        "src:fixture-branch-predictable"
       ],
-      "prompt": "For 'Device Queues and I/O Latency', what quantities, units, or thresholds would you calculate before trusting a design claim about: Distinguish buffered completion, page-cache writeback, device queues, file sync, directory durability, and recoverable acknowledgement.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Locate waiting across application, filesystem, block, and device queues.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+      "prompt": "A M03 lab fixture related to Processes, Scheduling, Context Switches, and System Calls exposes this trimmed evidence:\n\n  id=branch-predictable\n  probe=locality\n  variant=branch_predictable\n  runtime=native\n  parameters.elements=1000000\n  parameters.stride=1\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
+      "correct_answer": "The fixture tests branch-predictable (branch_predictable), with branch_predictable as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=branch-predictable, rather than the general presence of a lab run.",
+      "explanation": "The cited fixture is machine-readable source material for M03; diagnosis should start from the emitted fields and connect them to Processes, Scheduling, Context Switches, and System Calls. This explanation is specific to M03-Q038 and its cited source.",
+      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
     },
     {
       "question_id": "M03-Q039",
       "module_id": "M03",
       "lesson_ids": [
-        "L07"
+        "L03"
       ],
       "type": "scenario_diagnosis",
-      "difficulty": "application",
+      "difficulty": "recall",
       "tags": [
         "computer-systems-and-operating-systems",
-        "containers-quotas-throttling-and-memory-limits",
-        "application"
+        "virtual-memory-allocation-page-faults-an",
+        "src:fixture-contention-sharded-1"
       ],
-      "prompt": "A learner applies 'Containers, Quotas, Throttling, and Memory Limits' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Reading `free` as container allowance:** it may report host-visible values.",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+      "prompt": "A M03 lab fixture related to Virtual Memory, Allocation, Page Faults, and RSS exposes this trimmed evidence:\n\n  id=contention-sharded-1\n  probe=contention\n  variant=sharded\n  runtime=native\n  parameters.workers=1\n  parameters.iterations=500000\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
+      "correct_answer": "The fixture tests contention-sharded-1 (sharded), with sharded as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=contention-sharded-1, rather than the general presence of a lab run.",
+      "explanation": "The cited fixture is machine-readable source material for M03; diagnosis should start from the emitted fields and connect them to Virtual Memory, Allocation, Page Faults, and RSS. This explanation is specific to M03-Q039 and its cited source.",
+      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
     },
     {
       "question_id": "M03-Q040",
       "module_id": "M03",
       "lesson_ids": [
-        "L08"
+        "L04"
       ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
       "tags": [
         "computer-systems-and-operating-systems",
-        "causal-diagnosis-and-production-decisions",
-        "synthesis"
+        "locks-contention-deadlock-and-false-shar",
+        "src:fixture-contention-sharded-16"
       ],
-      "prompt": "You must make a design choice involving 'Causal Diagnosis and Production Decisions'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for defend and teach a systems-performance decision from a counterintuitive result with cost, security, operations, ownership, migration, rollback, and reversal evidence..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Julia Lawall, Opening the Box: https://www.usenix.org/conference/srecon24emea/presentation/lawall - Meta, Serving Facebook Multifeed: https://engineering.fb.com/2015/03/10/production-engineering/serving-facebook-multifeed-efficiency-performance-gains-through",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+      "prompt": "A M03 lab fixture related to Locks, Contention, Deadlock, and False Sharing exposes this trimmed evidence:\n\n  id=contention-sharded-16\n  probe=contention\n  variant=sharded\n  runtime=native\n  parameters.workers=16\n  parameters.iterations=500000\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
+      "correct_answer": "The fixture tests contention-sharded-16 (sharded), with sharded as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=contention-sharded-16, rather than the general presence of a lab run.",
+      "explanation": "The cited fixture is machine-readable source material for M03; diagnosis should start from the emitted fields and connect them to Locks, Contention, Deadlock, and False Sharing. This explanation is specific to M03-Q040 and its cited source.",
+      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
     },
     {
       "question_id": "M03-Q041",
       "module_id": "M03",
       "lesson_ids": [
-        "L01"
+        "L04"
       ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
+      "type": "design_judgment",
+      "difficulty": "synthesis",
       "tags": [
         "computer-systems-and-operating-systems",
-        "benchmark-contracts-pipelines-caches-and-localit",
-        "recall"
+        "locks-contention-deadlock-and-false-shar",
+        "src:EX-01"
       ],
-      "prompt": "Which approach best applies 'Benchmark Contracts, Pipelines, Caches, and Locality' in Computer Systems and Operating Systems?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to freeze a falsifiable benchmark contract with equivalent work, machine boundaries, measurement limits, and production-transfer uncertainty.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to save a falsifiable benchmark contract with equivalent work, machine boundaries, measurement limits, and production-transfer uncertainty.",
-      "explanation": "Use Benchmark Contracts, Pipelines, Caches, and Locality to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+      "prompt": "Atlas decision: In EX-01 (Freeze equivalent work), you must choose a course of action for Computer Systems and Operating Systems. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
+      "correct_answer": "Recommend the option that preserves the Locks, Contention, Deadlock, and False Sharing mechanism under the exercise constraints: Define the input count, output checksum, timed boundary, warm-up, seven measured repetitions, environment record, prediction, and falsifier for contiguous versus strided replay. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
+      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M03-Q041 and its cited source.",
+      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
     },
     {
       "question_id": "M03-Q042",
       "module_id": "M03",
       "lesson_ids": [
-        "L02"
+        "L05"
       ],
-      "type": "short_answer",
-      "difficulty": "application",
+      "type": "design_judgment",
+      "difficulty": "recall",
       "tags": [
         "computer-systems-and-operating-systems",
-        "processes-scheduling-context-switches-and-system",
-        "application"
+        "files-page-cache-writeback-and-durable-w",
+        "src:EX-02"
       ],
-      "prompt": "In 3-5 sentences, explain how 'Processes, Scheduling, Context Switches, and System Calls' supports this outcome: Explain and measure how access patterns, branches, copying, pipelines, and caches shape equivalent application work.",
-      "correct_answer": "A strong answer defines the mechanism from 'Processes, Scheduling, Context Switches, and System Calls', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Processes, Scheduling, Context Switches, and System Calls to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+      "prompt": "Beacon decision: In EX-02 (Locality and branch model), you must choose a course of action for Computer Systems and Operating Systems. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
+      "correct_answer": "Recommend the option that preserves the Files, Page Cache, Writeback, and Durable Writes mechanism under the exercise constraints: For 2,000,000 64-byte records, calculate bytes scanned for every-record and every-64th-record traversal The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
+      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M03-Q042 and its cited source.",
+      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
     },
     {
       "question_id": "M03-Q043",
       "module_id": "M03",
       "lesson_ids": [
-        "L03"
+        "L06"
       ],
-      "type": "calculation",
-      "difficulty": "synthesis",
+      "type": "design_judgment",
+      "difficulty": "application",
       "tags": [
         "computer-systems-and-operating-systems",
-        "virtual-memory-allocation-page-faults-and-rss",
-        "synthesis"
+        "device-queues-and-i-o-latency",
+        "src:EX-03"
       ],
-      "prompt": "For 'Virtual Memory, Allocation, Page Faults, and RSS', what quantities, units, or thresholds would you calculate before trusting a design claim about: Relate runnable work, processes, threads, syscalls, context switches, quotas, and oversubscription to useful throughput.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Trace an address through translation, mapping, allocation, and possible I/O.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+      "prompt": "Cedar decision: In EX-03 (Scheduler state table), you must choose a course of action for Computer Systems and Operating Systems. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
+      "correct_answer": "Recommend the option that preserves the Device Queues and I/O Latency mechanism under the exercise constraints: Classify five Transit worker intervals as executing, runnable, blocked, or quota-throttled. Name the evidence required for each classification. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
+      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M03-Q043 and its cited source.",
+      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
     },
     {
       "question_id": "M03-Q044",
       "module_id": "M03",
       "lesson_ids": [
-        "L04"
+        "L07"
       ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
+      "type": "design_judgment",
+      "difficulty": "synthesis",
       "tags": [
         "computer-systems-and-operating-systems",
-        "locks-contention-deadlock-and-false-sharing",
-        "application"
+        "containers-quotas-throttling-and-memory-",
+        "src:EX-04"
       ],
-      "prompt": "A learner applies 'Locks, Contention, Deadlock, and False Sharing' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Optimizing away a correctness boundary:** throughput does not repair races.",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+      "prompt": "Delta decision: In EX-04 (Syscall batching), you must choose a course of action for Computer Systems and Operating Systems. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
+      "correct_answer": "Recommend the option that preserves the Containers, Quotas, Throttling, and Memory Limits mechanism under the exercise constraints: Compare 4,096 fixed-size writes with 64 batched writes. Preserve total bytes and checksum. Predict user CPU, system CPU, and failure-boundary changes. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
+      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M03-Q044 and its cited source.",
+      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
     },
     {
       "question_id": "M03-Q045",
       "module_id": "M03",
       "lesson_ids": [
-        "L05"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "files-page-cache-writeback-and-durable-writes",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Files, Page Cache, Writeback, and Durable Writes'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement and safely test lock contention, bounded deadlock, shared-state invariants, and false sharing..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Linux man-pages, write2: https://www.man7.org/linux/man-pages/man2/write.2.html - Linux man-pages, fsync2: https://www.man7.org/linux/man-pages/man2/fsync.2.html - Continue with EX-09 and the durability experiment.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
-    },
-    {
-      "question_id": "M03-Q046",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L06"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "device-queues-and-i/o-latency",
-        "recall"
-      ],
-      "prompt": "Which approach best applies 'Device Queues and I/O Latency' in Computer Systems and Operating Systems?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to distinguish buffered completion, page-cache writeback, device queues, file sync, directory durability, and recoverable acknowledgement.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to distinguish buffered completion, page-cache writeback, device queues, file sync, directory durability, and recoverable acknowledgement.",
-      "explanation": "Use Device Queues and I/O Latency to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
-    },
-    {
-      "question_id": "M03-Q047",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L07"
-      ],
-      "type": "short_answer",
-      "difficulty": "application",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "containers-quotas-throttling-and-memory-limits",
-        "application"
-      ],
-      "prompt": "In 3-5 sentences, explain how 'Containers, Quotas, Throttling, and Memory Limits' supports this outcome: Apply unprivileged CPU, memory, PID, and I/O constraints and transfer container evidence with explicit operational limits and owners.",
-      "correct_answer": "A strong answer defines the mechanism from 'Containers, Quotas, Throttling, and Memory Limits', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Containers, Quotas, Throttling, and Memory Limits to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
-    },
-    {
-      "question_id": "M03-Q048",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L08"
-      ],
-      "type": "calculation",
-      "difficulty": "synthesis",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "causal-diagnosis-and-production-decisions",
-        "synthesis"
-      ],
-      "prompt": "For 'Causal Diagnosis and Production Decisions', what quantities, units, or thresholds would you calculate before trusting a design claim about: Defend and teach a systems-performance decision from a counterintuitive result with cost, security, operations, ownership, migration, rollback, and reversal evidence.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Explain one counterintuitive result through a falsifiable causal chain.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
-    },
-    {
-      "question_id": "M03-Q049",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "benchmark-contracts-pipelines-caches-and-localit",
-        "application"
-      ],
-      "prompt": "A learner applies 'Benchmark Contracts, Pipelines, Caches, and Locality' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Timing unequal work:** a faster wrong checksum is not an optimization.",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
-    },
-    {
-      "question_id": "M03-Q050",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L02"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "processes-scheduling-context-switches-and-system",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Processes, Scheduling, Context Switches, and System Calls'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for explain and measure how access patterns, branches, copying, pipelines, and caches shape equivalent application work..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Linux man-pages, getrusage2: https://man7.org/linux/man-pages/man2/getrusage.2.html - Julia Lawall, Opening the Box: https://www.usenix.org/conference/srecon24emea/presentation/lawall - Continue with EX-03 and EX-04.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
-    },
-    {
-      "question_id": "M03-Q051",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L03"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "virtual-memory-allocation-page-faults-and-rss",
-        "recall"
-      ],
-      "prompt": "Which approach best applies 'Virtual Memory, Allocation, Page Faults, and RSS' in Computer Systems and Operating Systems?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to relate runnable work, processes, threads, syscalls, context switches, quotas, and oversubscription to useful throughput.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to relate runnable work, processes, threads, syscalls, context switches, quotas, and oversubscription to useful throughput.",
-      "explanation": "Use Virtual Memory, Allocation, Page Faults, and RSS to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
-    },
-    {
-      "question_id": "M03-Q052",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L04"
-      ],
-      "type": "short_answer",
-      "difficulty": "application",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "locks-contention-deadlock-and-false-sharing",
-        "application"
-      ],
-      "prompt": "In 3-5 sentences, explain how 'Locks, Contention, Deadlock, and False Sharing' supports this outcome: Diagnose allocation lifetime, page touching, faults, residency, reclaim pressure, and memory-limit outcomes without conflating their counters.",
-      "correct_answer": "A strong answer defines the mechanism from 'Locks, Contention, Deadlock, and False Sharing', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Locks, Contention, Deadlock, and False Sharing to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
-    },
-    {
-      "question_id": "M03-Q053",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L05"
-      ],
-      "type": "calculation",
-      "difficulty": "synthesis",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "files-page-cache-writeback-and-durable-writes",
-        "synthesis"
-      ],
-      "prompt": "For 'Files, Page Cache, Writeback, and Durable Writes', what quantities, units, or thresholds would you calculate before trusting a design claim about: Implement and safely test lock contention, bounded deadlock, shared-state invariants, and false sharing.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Trace an application write through buffering, page cache, writeback, and storage.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
-    },
-    {
-      "question_id": "M03-Q054",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L06"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "device-queues-and-i/o-latency",
-        "application"
-      ],
-      "prompt": "A learner applies 'Device Queues and I/O Latency' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Calling all I/O time disk time:** page cache and virtualization may intervene.",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
-    },
-    {
-      "question_id": "M03-Q055",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L07"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "containers-quotas-throttling-and-memory-limits",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Containers, Quotas, Throttling, and Memory Limits'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for apply unprivileged cpu, memory, pid, and i/o constraints and transfer container evidence with explicit operational limits and owners..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Linux kernel, Control Group v2: https://www.kernel.org/doc/html/latest/admin-guide/cgroup-v2.html - Docker, resource constraints: https://docs.docker.com/engine/containers/resourceconstraints/ - Continue with EX-11 and the Linux constraint matrix.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
-    },
-    {
-      "question_id": "M03-Q056",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L08"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "causal-diagnosis-and-production-decisions",
-        "recall"
-      ],
-      "prompt": "Which approach best applies 'Causal Diagnosis and Production Decisions' in Computer Systems and Operating Systems?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend and teach a systems-performance decision from a counterintuitive result with cost, security, operations, ownership, migration, rollback, and reversal evidence.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend and teach a systems-performance decision from a counterintuitive result with cost, security, operations, ownership, migration, rollback, and reversal evidence.",
-      "explanation": "Use Causal Diagnosis and Production Decisions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
-    },
-    {
-      "question_id": "M03-Q057",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "short_answer",
-      "difficulty": "application",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "benchmark-contracts-pipelines-caches-and-localit",
-        "application"
-      ],
-      "prompt": "In 3-5 sentences, explain how 'Benchmark Contracts, Pipelines, Caches, and Locality' supports this outcome: save a falsifiable benchmark contract with equivalent work, machine boundaries, measurement limits, and production-transfer uncertainty.",
-      "correct_answer": "A strong answer defines the mechanism from 'Benchmark Contracts, Pipelines, Caches, and Locality', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Benchmark Contracts, Pipelines, Caches, and Locality to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
-    },
-    {
-      "question_id": "M03-Q058",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L02"
-      ],
-      "type": "calculation",
-      "difficulty": "synthesis",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "processes-scheduling-context-switches-and-system",
-        "synthesis"
-      ],
-      "prompt": "For 'Processes, Scheduling, Context Switches, and System Calls', what quantities, units, or thresholds would you calculate before trusting a design claim about: Explain and measure how access patterns, branches, copying, pipelines, and caches shape equivalent application work.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Distinguish executing, runnable, blocked, and throttled work.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
-    },
-    {
-      "question_id": "M03-Q059",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L03"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "virtual-memory-allocation-page-faults-and-rss",
-        "application"
-      ],
-      "prompt": "A learner applies 'Virtual Memory, Allocation, Page Faults, and RSS' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Calling every fault a disk read:** minor faults require no storage I/O.",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
-    },
-    {
-      "question_id": "M03-Q060",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L04"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "locks-contention-deadlock-and-false-sharing",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Locks, Contention, Deadlock, and False Sharing'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose allocation lifetime, page touching, faults, residency, reclaim pressure, and memory-limit outcomes without conflating their counters..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Meta, Serving Facebook Multifeed: https://engineering.fb.com/2015/03/10/production-engineering/serving-facebook-multifeed-efficiency-performance-gains-through-redesign/ - Continue with EX-06 through EX-08.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
-    },
-    {
-      "question_id": "M03-Q061",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L05"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "files-page-cache-writeback-and-durable-writes",
-        "recall"
-      ],
-      "prompt": "Which approach best applies 'Files, Page Cache, Writeback, and Durable Writes' in Computer Systems and Operating Systems?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement and safely test lock contention, bounded deadlock, shared-state invariants, and false sharing.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement and safely test lock contention, bounded deadlock, shared-state invariants, and false sharing.",
-      "explanation": "Use Files, Page Cache, Writeback, and Durable Writes to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
-    },
-    {
-      "question_id": "M03-Q062",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L06"
-      ],
-      "type": "short_answer",
-      "difficulty": "application",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "device-queues-and-i/o-latency",
-        "application"
-      ],
-      "prompt": "In 3-5 sentences, explain how 'Device Queues and I/O Latency' supports this outcome: Distinguish buffered completion, page-cache writeback, device queues, file sync, directory durability, and recoverable acknowledgement.",
-      "correct_answer": "A strong answer defines the mechanism from 'Device Queues and I/O Latency', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Device Queues and I/O Latency to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
-    },
-    {
-      "question_id": "M03-Q063",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L07"
-      ],
-      "type": "calculation",
-      "difficulty": "synthesis",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "containers-quotas-throttling-and-memory-limits",
-        "synthesis"
-      ],
-      "prompt": "For 'Containers, Quotas, Throttling, and Memory Limits', what quantities, units, or thresholds would you calculate before trusting a design claim about: Apply unprivileged CPU, memory, PID, and I/O constraints and transfer container evidence with explicit operational limits and owners.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Explain what a container owns, shares, and borrows from the host.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
-    },
-    {
-      "question_id": "M03-Q064",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L08"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "causal-diagnosis-and-production-decisions",
-        "application"
-      ],
-      "prompt": "A learner applies 'Causal Diagnosis and Production Decisions' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Starting with the desired answer:** the experiment becomes confirmation theater.",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
-    },
-    {
-      "question_id": "M03-Q065",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "benchmark-contracts-pipelines-caches-and-localit",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Benchmark Contracts, Pipelines, Caches, and Locality'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for save a falsifiable benchmark contract with equivalent work, machine boundaries, measurement limits, and production-transfer uncertainty..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Intel, Optimization Reference Manual, current Volume 1 sections on front end and data access: https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html - Continue with EX-01 and EX-02, then save the Week 9 prediction.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
-    },
-    {
-      "question_id": "M03-Q066",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L02"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "processes-scheduling-context-switches-and-system",
-        "recall"
-      ],
-      "prompt": "Which approach best applies 'Processes, Scheduling, Context Switches, and System Calls' in Computer Systems and Operating Systems?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to explain and measure how access patterns, branches, copying, pipelines, and caches shape equivalent application work.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to explain and measure how access patterns, branches, copying, pipelines, and caches shape equivalent application work.",
-      "explanation": "Use Processes, Scheduling, Context Switches, and System Calls to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
-    },
-    {
-      "question_id": "M03-Q067",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L03"
-      ],
-      "type": "short_answer",
-      "difficulty": "application",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "virtual-memory-allocation-page-faults-and-rss",
-        "application"
-      ],
-      "prompt": "In 3-5 sentences, explain how 'Virtual Memory, Allocation, Page Faults, and RSS' supports this outcome: Relate runnable work, processes, threads, syscalls, context switches, quotas, and oversubscription to useful throughput.",
-      "correct_answer": "A strong answer defines the mechanism from 'Virtual Memory, Allocation, Page Faults, and RSS', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Virtual Memory, Allocation, Page Faults, and RSS to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
-    },
-    {
-      "question_id": "M03-Q068",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L04"
-      ],
-      "type": "calculation",
-      "difficulty": "synthesis",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "locks-contention-deadlock-and-false-sharing",
-        "synthesis"
-      ],
-      "prompt": "For 'Locks, Contention, Deadlock, and False Sharing', what quantities, units, or thresholds would you calculate before trusting a design claim about: Diagnose allocation lifetime, page touching, faults, residency, reclaim pressure, and memory-limit outcomes without conflating their counters.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Separate correctness synchronization from performance contention.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
-    },
-    {
-      "question_id": "M03-Q069",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L05"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "files-page-cache-writeback-and-durable-writes",
-        "application"
-      ],
-      "prompt": "A learner applies 'Files, Page Cache, Writeback, and Durable Writes' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Treating close as a durability primitive:** delayed errors and storage state",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
-    },
-    {
-      "question_id": "M03-Q070",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L06"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "device-queues-and-i/o-latency",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Device Queues and I/O Latency'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for distinguish buffered completion, page-cache writeback, device queues, file sync, directory durability, and recoverable acknowledgement..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Linux kernel block writeback cache control: https://www.kernel.org/doc/html/latest/block/writebackcachecontrol.html - Continue with EX-10 and the bounded I/O competitor.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
-    },
-    {
-      "question_id": "M03-Q071",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L07"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "containers-quotas-throttling-and-memory-limits",
-        "recall"
-      ],
-      "prompt": "Which approach best applies 'Containers, Quotas, Throttling, and Memory Limits' in Computer Systems and Operating Systems?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to apply unprivileged cpu, memory, pid, and i/o constraints and transfer container evidence with explicit operational limits and owners.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to apply unprivileged cpu, memory, pid, and i/o constraints and transfer container evidence with explicit operational limits and owners.",
-      "explanation": "Use Containers, Quotas, Throttling, and Memory Limits to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
-    },
-    {
-      "question_id": "M03-Q072",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L08"
-      ],
-      "type": "short_answer",
-      "difficulty": "application",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "causal-diagnosis-and-production-decisions",
-        "application"
-      ],
-      "prompt": "In 3-5 sentences, explain how 'Causal Diagnosis and Production Decisions' supports this outcome: Defend and teach a systems-performance decision from a counterintuitive result with cost, security, operations, ownership, migration, rollback, and reversal evidence.",
-      "correct_answer": "A strong answer defines the mechanism from 'Causal Diagnosis and Production Decisions', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Causal Diagnosis and Production Decisions to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
-    },
-    {
-      "question_id": "M03-Q073",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "calculation",
-      "difficulty": "synthesis",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "benchmark-contracts-pipelines-caches-and-localit",
-        "synthesis"
-      ],
-      "prompt": "For 'Benchmark Contracts, Pipelines, Caches, and Locality', what quantities, units, or thresholds would you calculate before trusting a design claim about: save a falsifiable benchmark contract with equivalent work, machine boundaries, measurement limits, and production-transfer uncertainty.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - save equivalent work and a falsifiable prediction before measuring.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
-    },
-    {
-      "question_id": "M03-Q074",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L02"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "processes-scheduling-context-switches-and-system",
-        "application"
-      ],
-      "prompt": "A learner applies 'Processes, Scheduling, Context Switches, and System Calls' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Equating threads with parallelism:** runnable threads still need CPU capacity.",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
-    },
-    {
-      "question_id": "M03-Q075",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L03"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "virtual-memory-allocation-page-faults-and-rss",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Virtual Memory, Allocation, Page Faults, and RSS'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for relate runnable work, processes, threads, syscalls, context switches, quotas, and oversubscription to useful throughput..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - MIT 6.004, Virtual Memory topic videos and transcripts: https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c16/c16s2/c16s2v2/ - Continue with EX-05 and the allocation probe.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
-    },
-    {
-      "question_id": "M03-Q076",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L04"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "locks-contention-deadlock-and-false-sharing",
-        "recall"
-      ],
-      "prompt": "Which approach best applies 'Locks, Contention, Deadlock, and False Sharing' in Computer Systems and Operating Systems?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose allocation lifetime, page touching, faults, residency, reclaim pressure, and memory-limit outcomes without conflating their counters.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose allocation lifetime, page touching, faults, residency, reclaim pressure, and memory-limit outcomes without conflating their counters.",
-      "explanation": "Use Locks, Contention, Deadlock, and False Sharing to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
-    },
-    {
-      "question_id": "M03-Q077",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L05"
-      ],
-      "type": "short_answer",
-      "difficulty": "application",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "files-page-cache-writeback-and-durable-writes",
-        "application"
-      ],
-      "prompt": "In 3-5 sentences, explain how 'Files, Page Cache, Writeback, and Durable Writes' supports this outcome: Implement and safely test lock contention, bounded deadlock, shared-state invariants, and false sharing.",
-      "correct_answer": "A strong answer defines the mechanism from 'Files, Page Cache, Writeback, and Durable Writes', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Files, Page Cache, Writeback, and Durable Writes to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
-    },
-    {
-      "question_id": "M03-Q078",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L06"
-      ],
-      "type": "calculation",
-      "difficulty": "synthesis",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "device-queues-and-i/o-latency",
-        "synthesis"
-      ],
-      "prompt": "For 'Device Queues and I/O Latency', what quantities, units, or thresholds would you calculate before trusting a design claim about: Distinguish buffered completion, page-cache writeback, device queues, file sync, directory durability, and recoverable acknowledgement.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Locate waiting across application, filesystem, block, and device queues.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
-    },
-    {
-      "question_id": "M03-Q079",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L07"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "containers-quotas-throttling-and-memory-limits",
-        "application"
-      ],
-      "prompt": "A learner applies 'Containers, Quotas, Throttling, and Memory Limits' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Reading `free` as container allowance:** it may report host-visible values.",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
-    },
-    {
-      "question_id": "M03-Q080",
-      "module_id": "M03",
-      "lesson_ids": [
         "L08"
       ],
       "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "causal-diagnosis-and-production-decisions",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Causal Diagnosis and Production Decisions'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for defend and teach a systems-performance decision from a counterintuitive result with cost, security, operations, ownership, migration, rollback, and reversal evidence..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Julia Lawall, Opening the Box: https://www.usenix.org/conference/srecon24emea/presentation/lawall - Meta, Serving Facebook Multifeed: https://engineering.fb.com/2015/03/10/production-engineering/serving-facebook-multifeed-efficiency-performance-gains-through",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
-    },
-    {
-      "question_id": "M03-Q081",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "multiple_choice",
       "difficulty": "recall",
       "tags": [
         "computer-systems-and-operating-systems",
-        "benchmark-contracts-pipelines-caches-and-localit",
-        "recall"
+        "causal-diagnosis-and-production-decision",
+        "src:EX-05"
       ],
-      "prompt": "Which approach best applies 'Benchmark Contracts, Pipelines, Caches, and Locality' in Computer Systems and Operating Systems?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to freeze a falsifiable benchmark contract with equivalent work, machine boundaries, measurement limits, and production-transfer uncertainty.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to save a falsifiable benchmark contract with equivalent work, machine boundaries, measurement limits, and production-transfer uncertainty.",
-      "explanation": "Use Benchmark Contracts, Pipelines, Caches, and Locality to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
-    },
-    {
-      "question_id": "M03-Q082",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L02"
-      ],
-      "type": "short_answer",
-      "difficulty": "application",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "processes-scheduling-context-switches-and-system",
-        "application"
-      ],
-      "prompt": "In 3-5 sentences, explain how 'Processes, Scheduling, Context Switches, and System Calls' supports this outcome: Explain and measure how access patterns, branches, copying, pipelines, and caches shape equivalent application work.",
-      "correct_answer": "A strong answer defines the mechanism from 'Processes, Scheduling, Context Switches, and System Calls', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Processes, Scheduling, Context Switches, and System Calls to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
-    },
-    {
-      "question_id": "M03-Q083",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L03"
-      ],
-      "type": "calculation",
-      "difficulty": "synthesis",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "virtual-memory-allocation-page-faults-and-rss",
-        "synthesis"
-      ],
-      "prompt": "For 'Virtual Memory, Allocation, Page Faults, and RSS', what quantities, units, or thresholds would you calculate before trusting a design claim about: Relate runnable work, processes, threads, syscalls, context switches, quotas, and oversubscription to useful throughput.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Trace an address through translation, mapping, allocation, and possible I/O.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
-    },
-    {
-      "question_id": "M03-Q084",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L04"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "locks-contention-deadlock-and-false-sharing",
-        "application"
-      ],
-      "prompt": "A learner applies 'Locks, Contention, Deadlock, and False Sharing' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Optimizing away a correctness boundary:** throughput does not repair races.",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
-    },
-    {
-      "question_id": "M03-Q085",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L05"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "files-page-cache-writeback-and-durable-writes",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Files, Page Cache, Writeback, and Durable Writes'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement and safely test lock contention, bounded deadlock, shared-state invariants, and false sharing..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Linux man-pages, write2: https://www.man7.org/linux/man-pages/man2/write.2.html - Linux man-pages, fsync2: https://www.man7.org/linux/man-pages/man2/fsync.2.html - Continue with EX-09 and the durability experiment.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
-    },
-    {
-      "question_id": "M03-Q086",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L06"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "device-queues-and-i/o-latency",
-        "recall"
-      ],
-      "prompt": "Which approach best applies 'Device Queues and I/O Latency' in Computer Systems and Operating Systems?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to distinguish buffered completion, page-cache writeback, device queues, file sync, directory durability, and recoverable acknowledgement.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to distinguish buffered completion, page-cache writeback, device queues, file sync, directory durability, and recoverable acknowledgement.",
-      "explanation": "Use Device Queues and I/O Latency to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
-    },
-    {
-      "question_id": "M03-Q087",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L07"
-      ],
-      "type": "short_answer",
-      "difficulty": "application",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "containers-quotas-throttling-and-memory-limits",
-        "application"
-      ],
-      "prompt": "In 3-5 sentences, explain how 'Containers, Quotas, Throttling, and Memory Limits' supports this outcome: Apply unprivileged CPU, memory, PID, and I/O constraints and transfer container evidence with explicit operational limits and owners.",
-      "correct_answer": "A strong answer defines the mechanism from 'Containers, Quotas, Throttling, and Memory Limits', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Containers, Quotas, Throttling, and Memory Limits to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
-    },
-    {
-      "question_id": "M03-Q088",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L08"
-      ],
-      "type": "calculation",
-      "difficulty": "synthesis",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "causal-diagnosis-and-production-decisions",
-        "synthesis"
-      ],
-      "prompt": "For 'Causal Diagnosis and Production Decisions', what quantities, units, or thresholds would you calculate before trusting a design claim about: Defend and teach a systems-performance decision from a counterintuitive result with cost, security, operations, ownership, migration, rollback, and reversal evidence.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Explain one counterintuitive result through a falsifiable causal chain.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
-    },
-    {
-      "question_id": "M03-Q089",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "benchmark-contracts-pipelines-caches-and-localit",
-        "application"
-      ],
-      "prompt": "A learner applies 'Benchmark Contracts, Pipelines, Caches, and Locality' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Timing unequal work:** a faster wrong checksum is not an optimization.",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
-    },
-    {
-      "question_id": "M03-Q090",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L02"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "processes-scheduling-context-switches-and-system",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Processes, Scheduling, Context Switches, and System Calls'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for explain and measure how access patterns, branches, copying, pipelines, and caches shape equivalent application work..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Linux man-pages, getrusage2: https://man7.org/linux/man-pages/man2/getrusage.2.html - Julia Lawall, Opening the Box: https://www.usenix.org/conference/srecon24emea/presentation/lawall - Continue with EX-03 and EX-04.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
-    },
-    {
-      "question_id": "M03-Q091",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L03"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "virtual-memory-allocation-page-faults-and-rss",
-        "recall"
-      ],
-      "prompt": "Which approach best applies 'Virtual Memory, Allocation, Page Faults, and RSS' in Computer Systems and Operating Systems?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to relate runnable work, processes, threads, syscalls, context switches, quotas, and oversubscription to useful throughput.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to relate runnable work, processes, threads, syscalls, context switches, quotas, and oversubscription to useful throughput.",
-      "explanation": "Use Virtual Memory, Allocation, Page Faults, and RSS to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
-    },
-    {
-      "question_id": "M03-Q092",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L04"
-      ],
-      "type": "short_answer",
-      "difficulty": "application",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "locks-contention-deadlock-and-false-sharing",
-        "application"
-      ],
-      "prompt": "In 3-5 sentences, explain how 'Locks, Contention, Deadlock, and False Sharing' supports this outcome: Diagnose allocation lifetime, page touching, faults, residency, reclaim pressure, and memory-limit outcomes without conflating their counters.",
-      "correct_answer": "A strong answer defines the mechanism from 'Locks, Contention, Deadlock, and False Sharing', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Locks, Contention, Deadlock, and False Sharing to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
-    },
-    {
-      "question_id": "M03-Q093",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L05"
-      ],
-      "type": "calculation",
-      "difficulty": "synthesis",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "files-page-cache-writeback-and-durable-writes",
-        "synthesis"
-      ],
-      "prompt": "For 'Files, Page Cache, Writeback, and Durable Writes', what quantities, units, or thresholds would you calculate before trusting a design claim about: Implement and safely test lock contention, bounded deadlock, shared-state invariants, and false sharing.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Trace an application write through buffering, page cache, writeback, and storage.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
-    },
-    {
-      "question_id": "M03-Q094",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L06"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "device-queues-and-i/o-latency",
-        "application"
-      ],
-      "prompt": "A learner applies 'Device Queues and I/O Latency' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Calling all I/O time disk time:** page cache and virtualization may intervene.",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
-    },
-    {
-      "question_id": "M03-Q095",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L07"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "containers-quotas-throttling-and-memory-limits",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Containers, Quotas, Throttling, and Memory Limits'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for apply unprivileged cpu, memory, pid, and i/o constraints and transfer container evidence with explicit operational limits and owners..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Linux kernel, Control Group v2: https://www.kernel.org/doc/html/latest/admin-guide/cgroup-v2.html - Docker, resource constraints: https://docs.docker.com/engine/containers/resourceconstraints/ - Continue with EX-11 and the Linux constraint matrix.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
-    },
-    {
-      "question_id": "M03-Q096",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L08"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "causal-diagnosis-and-production-decisions",
-        "recall"
-      ],
-      "prompt": "Which approach best applies 'Causal Diagnosis and Production Decisions' in Computer Systems and Operating Systems?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend and teach a systems-performance decision from a counterintuitive result with cost, security, operations, ownership, migration, rollback, and reversal evidence.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend and teach a systems-performance decision from a counterintuitive result with cost, security, operations, ownership, migration, rollback, and reversal evidence.",
-      "explanation": "Use Causal Diagnosis and Production Decisions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
-    },
-    {
-      "question_id": "M03-Q097",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "short_answer",
-      "difficulty": "application",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "benchmark-contracts-pipelines-caches-and-localit",
-        "application"
-      ],
-      "prompt": "In 3-5 sentences, explain how 'Benchmark Contracts, Pipelines, Caches, and Locality' supports this outcome: save a falsifiable benchmark contract with equivalent work, machine boundaries, measurement limits, and production-transfer uncertainty.",
-      "correct_answer": "A strong answer defines the mechanism from 'Benchmark Contracts, Pipelines, Caches, and Locality', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Benchmark Contracts, Pipelines, Caches, and Locality to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
-    },
-    {
-      "question_id": "M03-Q098",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L02"
-      ],
-      "type": "calculation",
-      "difficulty": "synthesis",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "processes-scheduling-context-switches-and-system",
-        "synthesis"
-      ],
-      "prompt": "For 'Processes, Scheduling, Context Switches, and System Calls', what quantities, units, or thresholds would you calculate before trusting a design claim about: Explain and measure how access patterns, branches, copying, pipelines, and caches shape equivalent application work.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Distinguish executing, runnable, blocked, and throttled work.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
-    },
-    {
-      "question_id": "M03-Q099",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L03"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "virtual-memory-allocation-page-faults-and-rss",
-        "application"
-      ],
-      "prompt": "A learner applies 'Virtual Memory, Allocation, Page Faults, and RSS' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Calling every fault a disk read:** minor faults require no storage I/O.",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
-    },
-    {
-      "question_id": "M03-Q100",
-      "module_id": "M03",
-      "lesson_ids": [
-        "L04"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "computer-systems-and-operating-systems",
-        "locks-contention-deadlock-and-false-sharing",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Locks, Contention, Deadlock, and False Sharing'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose allocation lifetime, page touching, faults, residency, reclaim pressure, and memory-limit outcomes without conflating their counters..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Meta, Serving Facebook Multifeed: https://engineering.fb.com/2015/03/10/production-engineering/serving-facebook-multifeed-efficiency-performance-gains-through-redesign/ - Continue with EX-06 through EX-08.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+      "prompt": "Ember decision: In EX-05 (First-touch estimate), you must choose a course of action for Computer Systems and Operating Systems. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
+      "correct_answer": "Recommend the option that preserves the Causal Diagnosis and Production Decisions mechanism under the exercise constraints: Estimate pages for 16, 64, 128, and 256 MiB working sets at 4 KiB pages. Record why observed minor faults may differ and define a host-safe memory limit. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
+      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M03-Q045 and its cited source.",
+      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
     }
   ]
 }

@@ -40,23 +40,23 @@ same object. The policy also needs a negative path: if regeneration fails, waite
 must not all become new owners at once. Keep the lease until a bounded retry,
 serve marked stale data if allowed, or fail callers cleanly inside their deadline.
 
-## Worked Example
+## Worked example
 
 A homepage fragment expires at exactly noon. Ten thousand requests arrive. A
 single-flight lock lets one request regenerate while others wait or receive a
 marked stale response within a strict bound.
 
-## Common Expert Mistakes
+## Common expert mistakes
 
 - Giving every item the same TTL.
 - Letting regeneration bypass normal deadline and retry budgets.
 - Serving unmarked stale data indefinitely.
 
-## Guided Practice
+## Guided practice
 
 A hot key expires for 5,000 callers. Compare origin regenerations with no coalescing and with single-flight. Then use a 50-second soft TTL, 60-second hard TTL, and age 57 seconds to compute early-refresh probability.
 
-## Self-Check
+## Self-check
 
 1. What is the stampede invariant?
 2. Why is TTL jitter useful?
@@ -70,6 +70,6 @@ A hot key expires for 5,000 callers. Compare origin regenerations with no coales
 3. Wait within their deadline, receive marked bounded stale data, or fail fast; they must not retry into a new stampede.
 4. Otherwise stale data can become an unbounded correctness failure. For the practice, no coalescing can cause 5,000 regenerations; single-flight targets 1; probability is `(57-50)/(60-50) = 0.7`.
 
-## Sources And Next Work
+## Sources and next work
 
 Study RES-04. Then complete EX-07.

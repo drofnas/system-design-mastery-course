@@ -1,1103 +1,502 @@
 # M12 Quiz Answer Key
 
-This key covers all 100 questions for **Reliability, Incidents, and Disaster Recovery**. Use it after an attempt, or provide it with the LLM grading prompt for feedback.
+This key covers all 39 questions for **Reliability, Incidents, and Disaster Recovery**. Use it after an attempt, or provide it with the LLM grading prompt for feedback.
 
 ## M12-Q001
 
-**Type:** `multiple_choice`  
+**Type:** `short_answer`  
 **Difficulty:** `recall`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to define user-journey slis and slos with valid populations, windows, exclusions, latency, availability, freshness, and correctness.
+**Answer:** Outcome-dependent exclusions can remove bad events and invalidate the ratio
 
-**Explanation:** Use User Journeys, SLIs, and SLOs to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
+**Explanation:** The cited self-check in L01 tests whether the learner can connect User Journeys, SLIs, and SLOs to the module mechanism without replacing evidence with labels. This explanation is specific to M12-Q001 and its cited source.
 
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M12-Q002
 
 **Type:** `short_answer`  
 **Difficulty:** `application`
 
-**Answer:** A strong answer defines the mechanism from 'Error Budgets, Dependencies, and Composite Reliability', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
+**Answer:** Only when that component outcome is itself the user contract; otherwise it is diagnostic evidence for a journey SLI
 
-**Explanation:** Use Error Budgets, Dependencies, and Composite Reliability to reason from explicit assumptions to observable behavior.
+**Explanation:** The cited self-check in L01 tests whether the learner can connect User Journeys, SLIs, and SLOs to the module mechanism without replacing evidence with labels. This explanation is specific to M12-Q002 and its cited source.
 
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M12-Q003
 
-**Type:** `calculation`  
+**Type:** `short_answer`  
 **Difficulty:** `synthesis`
 
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
+**Answer:** When they protect different populations, consequences, owners, or decisions. Separate reporting prevents abundant low-value traffic hiding critical failure
 
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Calculate burn rate from observed error fraction and SLO error fraction.
+**Explanation:** The cited self-check in L01 tests whether the learner can connect User Journeys, SLIs, and SLOs to the module mechanism without replacing evidence with labels. This explanation is specific to M12-Q003 and its cited source.
 
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M12-Q004
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
+**Type:** `short_answer`  
+**Difficulty:** `recall`
 
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Call errors degradation:** no priority or minimum-useful contract exists.
+**Answer:** 750,000 × 0.0005 = 375 bad events
 
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
+**Explanation:** The cited self-check in L02 tests whether the learner can connect Error Budgets, Dependencies, and Composite Reliability to the module mechanism without replacing evidence with labels. This explanation is specific to M12-Q004 and its cited source.
 
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M12-Q005
 
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`  
+**Difficulty:** `application`
 
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for run incidents with explicit command, operations, communications, liaison, handoff, escalation, and stop conditions..
+**Answer:** One common network, deploy, credential, or data fault can fail several paths together, making their outcomes correlated
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-04 and RES-08, complete EX-10–EX-11, and preserve the incident timeline as raw evidence for the postmortem rather than rewriting it afterward.
+**Explanation:** The cited self-check in L02 tests whether the learner can connect Error Budgets, Dependencies, and Composite Reliability to the module mechanism without replacing evidence with labels. This explanation is specific to M12-Q005 and its cited source.
 
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M12-Q006
 
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
+**Type:** `short_answer`  
+**Difficulty:** `synthesis`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to produce an evidence-based postmortem and rank corrective work by risk reduction, effort, ownership, and verification.
+**Answer:** No. Error budgets govern user-visible reliability risk; safety invariants and authorization boundaries remain hard constraints
 
-**Explanation:** Use Postmortems and Corrective Work to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
+**Explanation:** The cited self-check in L02 tests whether the learner can connect Error Budgets, Dependencies, and Composite Reliability to the module mechanism without replacing evidence with labels. This explanation is specific to M12-Q006 and its cited source.
 
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M12-Q007
 
 **Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Backups, Restore, Failover, and Failback', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Backups, Restore, Failover, and Failback to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M12-Q008
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Design a controlled game day with hypothesis, safety, and evidence.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M12-Q009
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Measure component uptime:** users can fail while every process responds.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M12-Q010
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for calculate error budgets, burn, dependency exposure, shared fate, and composite reliability and use them in decisions..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Complete EX-03–EX-05 and carry the dependency/common-cause model into Lesson 3.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M12-Q011
-
-**Type:** `multiple_choice`  
 **Difficulty:** `recall`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement multi-window burn alerts and separate actionable journey symptoms from causal diagnostic telemetry.
+**Answer:** 0.005 / 0.0005 = 10
 
-**Explanation:** Use Burn Rates and Actionable Alerting to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
+**Explanation:** The cited self-check in L03 tests whether the learner can connect Burn Rates and Actionable Alerting to the module mechanism without replacing evidence with labels. This explanation is specific to M12-Q007 and its cited source.
 
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
-## M12-Q012
+## M12-Q008
 
 **Type:** `short_answer`  
 **Difficulty:** `application`
 
-**Answer:** A strong answer defines the mechanism from 'Graceful Degradation and Degraded Capacity', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
+**Answer:** The long window proves material budget spend; the short window proves impact is active and gives faster reset after recovery
 
-**Explanation:** Use Graceful Degradation and Degraded Capacity to reason from explicit assumptions to observable behavior.
+**Explanation:** The cited self-check in L03 tests whether the learner can connect Burn Rates and Actionable Alerting to the module mechanism without replacing evidence with labels. This explanation is specific to M12-Q008 and its cited source.
 
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+
+## M12-Q009
+
+**Type:** `short_answer`  
+**Difficulty:** `synthesis`
+
+**Answer:** The affected journey, user impact, scope, threshold, immediate safe action, owner, and links to diagnostics and the runbook
+
+**Explanation:** The cited self-check in L03 tests whether the learner can connect Burn Rates and Actionable Alerting to the module mechanism without replacing evidence with labels. This explanation is specific to M12-Q009 and its cited source.
+
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+
+## M12-Q010
+
+**Type:** `short_answer`  
+**Difficulty:** `recall`
+
+**Answer:** Its reduced behavior, freshness or completeness limits, and safe next action
+
+**Explanation:** The cited self-check in L04 tests whether the learner can connect Graceful Degradation and Degraded Capacity to the module mechanism without replacing evidence with labels. This explanation is specific to M12-Q010 and its cited source.
+
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+
+## M12-Q011
+
+**Type:** `short_answer`  
+**Difficulty:** `application`
+
+**Answer:** Reconciliation, catch-up, and probes consume the same finite resources; if they starve, the system cannot exit degradation
+
+**Explanation:** The cited self-check in L04 tests whether the learner can connect Graceful Degradation and Degraded Capacity to the module mechanism without replacing evidence with labels. This explanation is specific to M12-Q011 and its cited source.
+
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+
+## M12-Q012
+
+**Type:** `multiple_choice`  
+**Difficulty:** `application`
+
+**Choices:**
+
+- Keep User Journeys, SLIs, and SLOs scoped to its stated evidence and boundary.
+- Treat Measure component uptime: users can fail while every process responds as complete proof without the lesson boun.
+- Make the documented mistake: Measure component uptime: users can fail while every process respo
+- Choose the familiar tool before checking whether Measure component uptime: users can fail while every process respond.
+
+**Answer:** Keep User Journeys, SLIs, and SLOs scoped to its stated evidence and boundary.
+
+**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M12-Q012 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
 
 ## M12-Q013
 
-**Type:** `calculation`  
+**Type:** `multiple_choice`  
 **Difficulty:** `synthesis`
 
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
+**Choices:**
 
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Separate incident command, operations, communications, and liaison roles.
+- Make the documented mistake: Exclude planned degradation: a deliberate rejection still affects
+- Keep User Journeys, SLIs, and SLOs scoped to its stated evidence and boundary.
+- Treat Exclude planned degradation: a deliberate rejection still affects a u as complete proof without the lesson boun.
+- Choose the familiar tool before checking whether Exclude planned degradation: a deliberate rejection still affects a.
 
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
+**Answer:** Keep User Journeys, SLIs, and SLOs scoped to its stated evidence and boundary.
+
+**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M12-Q013 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
 
 ## M12-Q014
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
+**Type:** `multiple_choice`  
+**Difficulty:** `recall`
 
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Tell a heroic story:** individual effort replaces system learning.
+**Choices:**
 
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
+- Make the documented mistake: Use averages: a small harmed population disappears inside the mean
+- Choose the familiar tool before checking whether Use averages: a small harmed population disappears inside the mean a.
+- Keep User Journeys, SLIs, and SLOs scoped to its stated evidence and boundary.
+- Treat Use averages: a small harmed population disappears inside the mean as complete proof without the lesson boundary
 
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
+**Answer:** Keep User Journeys, SLIs, and SLOs scoped to its stated evidence and boundary.
+
+**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M12-Q014 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
 
 ## M12-Q015
 
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
+**Type:** `multiple_choice`  
+**Difficulty:** `application`
 
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for verify backup integrity, rpo, rto, restore, failover, fencing, reconciliation, and failback with controlled evidence..
+**Choices:**
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-06, complete EX-14–EX-15, and preserve F05–F09 recovery versions, timestamps, epochs, hashes, approvals, and reconciliation as raw evidence.
+- Make the documented mistake: Demand 100%: the objective stops supporting explicit risk trade-of
+- Treat Demand 100%: the objective stops supporting explicit risk trade-offs as complete proof without the lesson bound.
+- Choose the familiar tool before checking whether Demand 100%: the objective stops supporting explicit risk trade-offs.
+- Keep User Journeys, SLIs, and SLOs scoped to its stated evidence and boundary.
 
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
+**Answer:** Keep User Journeys, SLIs, and SLOs scoped to its stated evidence and boundary.
+
+**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M12-Q015 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
 
 ## M12-Q016
 
 **Type:** `multiple_choice`  
-**Difficulty:** `recall`
+**Difficulty:** `synthesis`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose nine reliability failures and defend cumulative review across consensus, messaging, operations, security, cost, ownership, and recovery.
+**Choices:**
 
-**Explanation:** Use Chaos, Game Days, and Reliability Decisions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
+- Keep User Journeys, SLIs, and SLOs scoped to its stated evidence and boundary.
+- Choose the familiar tool before checking whether Ignore coverage: missing end events can make the ratio look healthie.
+- Make the documented mistake: Ignore coverage: missing end events can make the ratio look health
+- Treat Ignore coverage: missing end events can make the ratio look healthier as complete proof without the lesson boun.
 
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
+**Answer:** Keep User Journeys, SLIs, and SLOs scoped to its stated evidence and boundary.
+
+**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M12-Q016 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
 
 ## M12-Q017
 
-**Type:** `short_answer`  
-**Difficulty:** `application`
+**Type:** `multiple_choice`  
+**Difficulty:** `recall`
 
-**Answer:** A strong answer defines the mechanism from 'User Journeys, SLIs, and SLOs', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
+**Choices:**
 
-**Explanation:** Use User Journeys, SLIs, and SLOs to reason from explicit assumptions to observable behavior.
+- Treat Subtract percentages: budget is computed against valid events or time as complete proof without the lesson boun.
+- Keep Error Budgets, Dependencies, and Composite Reliability scoped to its stated evidence and b.
+- Make the documented mistake: Subtract percentages: budget is computed against valid events or t. with extra con
+- Choose the familiar tool before checking whether Subtract percentages: budget is computed against valid events or tim.
 
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
+**Answer:** Keep Error Budgets, Dependencies, and Composite Reliability scoped to its stated evidence and b.
+
+**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M12-Q017 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
 
 ## M12-Q018
 
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
+**Type:** `multiple_choice`  
+**Difficulty:** `application`
 
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
+**Choices:**
 
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Calculate allowed bad events and consumed error budget.
+- Treat Multiply every dependency: optional, parallel, fallback, and correlat as complete proof without the lesson boun.
+- Choose the familiar tool before checking whether Multiply every dependency: optional, parallel, fallback, and correla.
+- Keep Error Budgets, Dependencies, and Composite Reliability scoped to its stated evidence and b.
+- Make the documented mistake: Multiply every dependency: optional, parallel, fallback, and corre. with extra con
 
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
+**Answer:** Keep Error Budgets, Dependencies, and Composite Reliability scoped to its stated evidence and b.
+
+**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M12-Q018 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
 
 ## M12-Q019
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
+**Type:** `multiple_choice`  
+**Difficulty:** `synthesis`
 
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Page at the SLO threshold:** noise arrives faster than useful action.
+**Choices:**
 
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
+- Treat Spend budget equally: priority journeys can have different consequenc as complete proof without the lesson boun.
+- Choose the familiar tool before checking whether Spend budget equally: priority journeys can have different consequen.
+- Make the documented mistake: Spend budget equally: priority journeys can have different consequ. with extra con
+- Keep Error Budgets, Dependencies, and Composite Reliability scoped to its stated evidence and b.
 
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
+**Answer:** Keep Error Budgets, Dependencies, and Composite Reliability scoped to its stated evidence and b.
+
+**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M12-Q019 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
 
 ## M12-Q020
 
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
+**Type:** `multiple_choice`  
+**Difficulty:** `recall`
 
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for build priority-aware degradation, load shedding, bounded dependency work, and degraded regional capacity..
+**Choices:**
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-03, complete EX-08–EX-09, implement the public lab contract, and record capacity predictions before running F01 or F07.
+- Keep Error Budgets, Dependencies, and Composite Reliability scoped to its stated evidence and b.
+- Choose the familiar tool before checking whether Treat budget as permission: invariant or security failures remain un.
+- Treat Treat budget as permission: invariant or security failures remain una as complete proof without the lesson boun.
+- Make the documented mistake: Treat budget as permission: invariant or security failures remain. with extra conf
 
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
+**Answer:** Keep Error Budgets, Dependencies, and Composite Reliability scoped to its stated evidence and b.
+
+**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M12-Q020 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
 
 ## M12-Q021
 
 **Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to run incidents with explicit command, operations, communications, liaison, handoff, escalation, and stop conditions.
-
-**Explanation:** Use Incident Command, Communication, and Runbooks to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M12-Q022
-
-**Type:** `short_answer`  
 **Difficulty:** `application`
 
-**Answer:** A strong answer defines the mechanism from 'Postmortems and Corrective Work', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
+**Choices:**
 
-**Explanation:** Use Postmortems and Corrective Work to reason from explicit assumptions to observable behavior.
+- Treat Page at the SLO threshold: noise arrives faster than useful action as complete proof without the lesson boundary
+- Keep Burn Rates and Actionable Alerting scoped to its stated evidence and boundary.
+- Choose the familiar tool before checking whether Page at the SLO threshold: noise arrives faster than useful action a.
+- Make the documented mistake: Page at the SLO threshold: noise arrives faster than useful action
 
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
+**Answer:** Keep Burn Rates and Actionable Alerting scoped to its stated evidence and boundary.
 
-## M12-Q023
+**Explanation:** The distractors are anchored in the mistake list for L03; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M12-Q021 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+
+## M12-Q022
 
 **Type:** `calculation`  
 **Difficulty:** `synthesis`
 
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
+**Answer:** Original concurrency = 150 x 0.045 = 6.75 operations. Revised rate = 150 x 1.25 = 187.5/s, so revised concurrency = 187.5 x 0.045 = 8.44 operations.
 
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Derive RPO and RTO from user/data consequence and measured evidence.
+**Explanation:** This perturbs the numeric practice around User Journeys, SLIs, and SLOs: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M12-Q022 and its cited source.
 
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
+**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+
+## M12-Q023
+
+**Type:** `calculation`  
+**Difficulty:** `recall`
+
+**Answer:** Original concurrency = 160 x 0.055 = 8.80 operations. Revised rate = 160 x 1.30 = 208.0/s, so revised concurrency = 208.0 x 0.055 = 11.44 operations.
+
+**Explanation:** This perturbs the numeric practice around Error Budgets, Dependencies, and Composite Reliability: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M12-Q023 and its cited source.
+
+**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
 
 ## M12-Q024
 
-**Type:** `scenario_diagnosis`  
+**Type:** `calculation`  
 **Difficulty:** `application`
 
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Inject chaos without a hypothesis:** spectacle replaces learning.
+**Answer:** Original concurrency = 170 x 0.065 = 11.05 operations. Revised rate = 170 x 1.35 = 229.5/s, so revised concurrency = 229.5 x 0.065 = 14.92 operations.
 
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
+**Explanation:** This perturbs the numeric practice around Burn Rates and Actionable Alerting: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M12-Q024 and its cited source.
 
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
+**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
 
 ## M12-Q025
 
-**Type:** `design_judgment`  
+**Type:** `calculation`  
 **Difficulty:** `synthesis`
 
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for define user-journey slis and slos with valid populations, windows, exclusions, latency, availability, freshness, and correctness..
+**Answer:** Original concurrency = 180 x 0.075 = 13.50 operations. Revised rate = 180 x 1.40 = 252.0/s, so revised concurrency = 252.0 x 0.075 = 18.90 operations.
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-01, complete EX-01–EX-02, and save the SLI population before opening the Northstar case or answer key.
+**Explanation:** This perturbs the numeric practice around Graceful Degradation and Degraded Capacity: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M12-Q025 and its cited source.
 
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
+**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
 
 ## M12-Q026
 
-**Type:** `multiple_choice`  
+**Type:** `calculation`  
 **Difficulty:** `recall`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate error budgets, burn, dependency exposure, shared fate, and composite reliability and use them in decisions.
+**Answer:** Original concurrency = 190 x 0.035 = 6.65 operations. Revised rate = 190 x 1.45 = 275.5/s, so revised concurrency = 275.5 x 0.035 = 9.64 operations.
 
-**Explanation:** Use Error Budgets, Dependencies, and Composite Reliability to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
+**Explanation:** This perturbs the numeric practice around Incident Command, Communication, and Runbooks: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M12-Q026 and its cited source.
 
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
+**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
 
 ## M12-Q027
 
-**Type:** `short_answer`  
+**Type:** `calculation`  
 **Difficulty:** `application`
 
-**Answer:** A strong answer defines the mechanism from 'Burn Rates and Actionable Alerting', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
+**Answer:** Original concurrency = 200 x 0.045 = 9.00 operations. Revised rate = 200 x 1.10 = 220.0/s, so revised concurrency = 220.0 x 0.045 = 9.90 operations.
 
-**Explanation:** Use Burn Rates and Actionable Alerting to reason from explicit assumptions to observable behavior.
+**Explanation:** This perturbs the numeric practice around Postmortems and Corrective Work: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M12-Q027 and its cited source.
 
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
+**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
 
 ## M12-Q028
 
 **Type:** `calculation`  
 **Difficulty:** `synthesis`
 
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
+**Answer:** Original concurrency = 120 x 0.055 = 6.60 operations. Revised rate = 120 x 1.15 = 138.0/s, so revised concurrency = 138.0 x 0.055 = 7.59 operations.
 
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Define a priority order and user-visible degraded contract.
+**Explanation:** This perturbs the numeric practice around Backups, Restore, Failover, and Failback: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M12-Q028 and its cited source.
 
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
+**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
 
 ## M12-Q029
 
 **Type:** `scenario_diagnosis`  
 **Difficulty:** `application`
 
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Best debugger commands:** coordination and impact become ownerless.
+**Answer:** The fixture tests f01-slow-dependency-load-broken (broken), with I04 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f01-slow-dependency-load-broken, rather than the general presence of a lab run.
 
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
+**Explanation:** The cited fixture is machine-readable source material for M12; diagnosis should start from the emitted fields and connect them to Burn Rates and Actionable Alerting. This explanation is specific to M12-Q029 and its cited source.
 
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
+**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
 
 ## M12-Q030
 
-**Type:** `design_judgment`  
+**Type:** `scenario_diagnosis`  
 **Difficulty:** `synthesis`
 
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for produce an evidence-based postmortem and rank corrective work by risk reduction, effort, ownership, and verification..
+**Answer:** The fixture tests f01-slow-dependency-load-repaired (repaired), with I04 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f01-slow-dependency-load-repaired, rather than the general presence of a lab run.
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-05, complete EX-12–EX-13, and use the incident-postmortem template.
+**Explanation:** The cited fixture is machine-readable source material for M12; diagnosis should start from the emitted fields and connect them to Graceful Degradation and Degraded Capacity. This explanation is specific to M12-Q030 and its cited source.
 
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
+**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
 
 ## M12-Q031
 
-**Type:** `multiple_choice`  
+**Type:** `scenario_diagnosis`  
 **Difficulty:** `recall`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to verify backup integrity, rpo, rto, restore, failover, fencing, reconciliation, and failback with controlled evidence.
+**Answer:** The fixture tests f02-budget-burn-broken (broken), with I03 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f02-budget-burn-broken, rather than the general presence of a lab run.
 
-**Explanation:** Use Backups, Restore, Failover, and Failback to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
+**Explanation:** The cited fixture is machine-readable source material for M12; diagnosis should start from the emitted fields and connect them to Incident Command, Communication, and Runbooks. This explanation is specific to M12-Q031 and its cited source.
 
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
+**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
 
 ## M12-Q032
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Chaos, Game Days, and Reliability Decisions', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Chaos, Game Days, and Reliability Decisions to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M12-Q033
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Specify valid and good events for a complete user journey.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M12-Q034
 
 **Type:** `scenario_diagnosis`  
 **Difficulty:** `application`
 
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Subtract percentages:** budget is computed against valid events or time.
+**Answer:** The fixture tests f02-budget-burn-repaired (repaired), with I03 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f02-budget-burn-repaired, rather than the general presence of a lab run.
 
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
+**Explanation:** The cited fixture is machine-readable source material for M12; diagnosis should start from the emitted fields and connect them to Postmortems and Corrective Work. This explanation is specific to M12-Q032 and its cited source.
 
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
+**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+
+## M12-Q033
+
+**Type:** `scenario_diagnosis`  
+**Difficulty:** `synthesis`
+
+**Answer:** The fixture tests f03-hidden-journey-failure-broken (broken), with I01 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f03-hidden-journey-failure-broken, rather than the general presence of a lab run.
+
+**Explanation:** The cited fixture is machine-readable source material for M12; diagnosis should start from the emitted fields and connect them to Backups, Restore, Failover, and Failback. This explanation is specific to M12-Q033 and its cited source.
+
+**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+
+## M12-Q034
+
+**Type:** `scenario_diagnosis`  
+**Difficulty:** `recall`
+
+**Answer:** The fixture tests f03-hidden-journey-failure-repaired (repaired), with I01 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f03-hidden-journey-failure-repaired, rather than the general presence of a lab run.
+
+**Explanation:** The cited fixture is machine-readable source material for M12; diagnosis should start from the emitted fields and connect them to Chaos, Game Days, and Reliability Decisions. This explanation is specific to M12-Q034 and its cited source.
+
+**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
 
 ## M12-Q035
 
 **Type:** `design_judgment`  
 **Difficulty:** `synthesis`
 
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement multi-window burn alerts and separate actionable journey symptoms from causal diagnostic telemetry..
+**Answer:** Recommend the option that preserves the Graceful Degradation and Degraded Capacity mechanism under the exercise constraints: For an archive search, define request acceptance, successful completion, deadline, correctness, freshness, valid events, good events, exclusions, missing telemetry, owner, and obje. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-02, complete EX-06–EX-07, and test the alert series before building degraded modes in Lesson 4.
+**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M12-Q035 and its cited source.
 
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
+**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
 
 ## M12-Q036
 
-**Type:** `multiple_choice`  
+**Type:** `design_judgment`  
 **Difficulty:** `recall`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to build priority-aware degradation, load shedding, bounded dependency work, and degraded regional capacity.
+**Answer:** Recommend the option that preserves the Incident Command, Communication, and Runbooks mechanism under the exercise constraints: Decide whether interactive search, document ingestion, and thumbnail rendering belong in one SLO The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
 
-**Explanation:** Use Graceful Degradation and Degraded Capacity to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
+**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M12-Q036 and its cited source.
 
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
+**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
 
 ## M12-Q037
 
-**Type:** `short_answer`  
+**Type:** `design_judgment`  
 **Difficulty:** `application`
 
-**Answer:** A strong answer defines the mechanism from 'Incident Command, Communication, and Runbooks', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
+**Answer:** Recommend the option that preserves the Postmortems and Corrective Work mechanism under the exercise constraints: A service targets 99.95% good events over 28 days and observes 750,000 valid events. Calculate allowed bad events. If 150 are bad, calculate budget consumed and remaining The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
 
-**Explanation:** Use Incident Command, Communication, and Runbooks to reason from explicit assumptions to observable behavior.
+**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M12-Q037 and its cited source.
 
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
+**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
 
 ## M12-Q038
 
-**Type:** `calculation`  
+**Type:** `design_judgment`  
 **Difficulty:** `synthesis`
 
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
+**Answer:** Recommend the option that preserves the Backups, Restore, Failover, and Failback mechanism under the exercise constraints: Draw serial, optional, fallback, and shared-fate paths for identity, archive search, and thumbnail services. State where multiplication is and is not a valid planning estimate. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
 
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Quantify impact and reconstruct a cited timeline.
+**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M12-Q038 and its cited source.
 
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
+**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
 
 ## M12-Q039
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Replica equals backup:** corruption or operator error can propagate.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M12-Q040
-
 **Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose nine reliability failures and defend cumulative review across consensus, messaging, operations, security, cost, ownership, and recovery..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-07, complete EX-16, finalize the disaster-recovery review, conduct the defense, save cumulative review in recovery review, and write the separate recovery review synthesis project delta.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M12-Q041
-
-**Type:** `multiple_choice`  
 **Difficulty:** `recall`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to define user-journey slis and slos with valid populations, windows, exclusions, latency, availability, freshness, and correctness.
+**Answer:** Recommend the option that preserves the Chaos, Game Days, and Reliability Decisions mechanism under the exercise constraints: Compare a second search replica, regional credential isolation, and a tested degraded mode The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
 
-**Explanation:** Use User Journeys, SLIs, and SLOs to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
+**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M12-Q039 and its cited source.
 
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M12-Q042
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Error Budgets, Dependencies, and Composite Reliability', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Error Budgets, Dependencies, and Composite Reliability to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M12-Q043
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Calculate burn rate from observed error fraction and SLO error fraction.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M12-Q044
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Call errors degradation:** no priority or minimum-useful contract exists.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M12-Q045
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for run incidents with explicit command, operations, communications, liaison, handoff, escalation, and stop conditions..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-04 and RES-08, complete EX-10–EX-11, and preserve the incident timeline as raw evidence for the postmortem rather than rewriting it afterward.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M12-Q046
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to produce an evidence-based postmortem and rank corrective work by risk reduction, effort, ownership, and verification.
-
-**Explanation:** Use Postmortems and Corrective Work to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M12-Q047
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Backups, Restore, Failover, and Failback', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Backups, Restore, Failover, and Failback to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M12-Q048
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Design a controlled game day with hypothesis, safety, and evidence.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M12-Q049
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Measure component uptime:** users can fail while every process responds.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M12-Q050
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for calculate error budgets, burn, dependency exposure, shared fate, and composite reliability and use them in decisions..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Complete EX-03–EX-05 and carry the dependency/common-cause model into Lesson 3.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M12-Q051
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement multi-window burn alerts and separate actionable journey symptoms from causal diagnostic telemetry.
-
-**Explanation:** Use Burn Rates and Actionable Alerting to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M12-Q052
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Graceful Degradation and Degraded Capacity', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Graceful Degradation and Degraded Capacity to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M12-Q053
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Separate incident command, operations, communications, and liaison roles.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M12-Q054
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Tell a heroic story:** individual effort replaces system learning.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M12-Q055
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for verify backup integrity, rpo, rto, restore, failover, fencing, reconciliation, and failback with controlled evidence..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-06, complete EX-14–EX-15, and preserve F05–F09 recovery versions, timestamps, epochs, hashes, approvals, and reconciliation as raw evidence.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M12-Q056
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose nine reliability failures and defend cumulative review across consensus, messaging, operations, security, cost, ownership, and recovery.
-
-**Explanation:** Use Chaos, Game Days, and Reliability Decisions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M12-Q057
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'User Journeys, SLIs, and SLOs', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use User Journeys, SLIs, and SLOs to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M12-Q058
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Calculate allowed bad events and consumed error budget.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M12-Q059
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Page at the SLO threshold:** noise arrives faster than useful action.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M12-Q060
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for build priority-aware degradation, load shedding, bounded dependency work, and degraded regional capacity..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-03, complete EX-08–EX-09, implement the public lab contract, and record capacity predictions before running F01 or F07.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M12-Q061
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to run incidents with explicit command, operations, communications, liaison, handoff, escalation, and stop conditions.
-
-**Explanation:** Use Incident Command, Communication, and Runbooks to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M12-Q062
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Postmortems and Corrective Work', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Postmortems and Corrective Work to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M12-Q063
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Derive RPO and RTO from user/data consequence and measured evidence.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M12-Q064
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Inject chaos without a hypothesis:** spectacle replaces learning.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M12-Q065
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for define user-journey slis and slos with valid populations, windows, exclusions, latency, availability, freshness, and correctness..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-01, complete EX-01–EX-02, and save the SLI population before opening the Northstar case or answer key.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M12-Q066
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate error budgets, burn, dependency exposure, shared fate, and composite reliability and use them in decisions.
-
-**Explanation:** Use Error Budgets, Dependencies, and Composite Reliability to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M12-Q067
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Burn Rates and Actionable Alerting', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Burn Rates and Actionable Alerting to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M12-Q068
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Define a priority order and user-visible degraded contract.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M12-Q069
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Best debugger commands:** coordination and impact become ownerless.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M12-Q070
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for produce an evidence-based postmortem and rank corrective work by risk reduction, effort, ownership, and verification..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-05, complete EX-12–EX-13, and use the incident-postmortem template.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M12-Q071
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to verify backup integrity, rpo, rto, restore, failover, fencing, reconciliation, and failback with controlled evidence.
-
-**Explanation:** Use Backups, Restore, Failover, and Failback to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M12-Q072
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Chaos, Game Days, and Reliability Decisions', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Chaos, Game Days, and Reliability Decisions to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M12-Q073
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Specify valid and good events for a complete user journey.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M12-Q074
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Subtract percentages:** budget is computed against valid events or time.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M12-Q075
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement multi-window burn alerts and separate actionable journey symptoms from causal diagnostic telemetry..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-02, complete EX-06–EX-07, and test the alert series before building degraded modes in Lesson 4.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M12-Q076
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to build priority-aware degradation, load shedding, bounded dependency work, and degraded regional capacity.
-
-**Explanation:** Use Graceful Degradation and Degraded Capacity to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M12-Q077
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Incident Command, Communication, and Runbooks', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Incident Command, Communication, and Runbooks to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M12-Q078
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Quantify impact and reconstruct a cited timeline.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M12-Q079
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Replica equals backup:** corruption or operator error can propagate.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M12-Q080
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose nine reliability failures and defend cumulative review across consensus, messaging, operations, security, cost, ownership, and recovery..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-07, complete EX-16, finalize the disaster-recovery review, conduct the defense, save cumulative review in recovery review, and write the separate recovery review synthesis project delta.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M12-Q081
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to define user-journey slis and slos with valid populations, windows, exclusions, latency, availability, freshness, and correctness.
-
-**Explanation:** Use User Journeys, SLIs, and SLOs to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M12-Q082
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Error Budgets, Dependencies, and Composite Reliability', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Error Budgets, Dependencies, and Composite Reliability to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M12-Q083
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Calculate burn rate from observed error fraction and SLO error fraction.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M12-Q084
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Call errors degradation:** no priority or minimum-useful contract exists.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M12-Q085
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for run incidents with explicit command, operations, communications, liaison, handoff, escalation, and stop conditions..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-04 and RES-08, complete EX-10–EX-11, and preserve the incident timeline as raw evidence for the postmortem rather than rewriting it afterward.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M12-Q086
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to produce an evidence-based postmortem and rank corrective work by risk reduction, effort, ownership, and verification.
-
-**Explanation:** Use Postmortems and Corrective Work to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M12-Q087
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Backups, Restore, Failover, and Failback', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Backups, Restore, Failover, and Failback to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M12-Q088
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Design a controlled game day with hypothesis, safety, and evidence.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M12-Q089
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Measure component uptime:** users can fail while every process responds.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M12-Q090
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for calculate error budgets, burn, dependency exposure, shared fate, and composite reliability and use them in decisions..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Complete EX-03–EX-05 and carry the dependency/common-cause model into Lesson 3.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M12-Q091
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement multi-window burn alerts and separate actionable journey symptoms from causal diagnostic telemetry.
-
-**Explanation:** Use Burn Rates and Actionable Alerting to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M12-Q092
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Graceful Degradation and Degraded Capacity', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Graceful Degradation and Degraded Capacity to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M12-Q093
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Separate incident command, operations, communications, and liaison roles.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M12-Q094
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Tell a heroic story:** individual effort replaces system learning.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M12-Q095
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for verify backup integrity, rpo, rto, restore, failover, fencing, reconciliation, and failback with controlled evidence..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-06, complete EX-14–EX-15, and preserve F05–F09 recovery versions, timestamps, epochs, hashes, approvals, and reconciliation as raw evidence.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M12-Q096
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose nine reliability failures and defend cumulative review across consensus, messaging, operations, security, cost, ownership, and recovery.
-
-**Explanation:** Use Chaos, Game Days, and Reliability Decisions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M12-Q097
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'User Journeys, SLIs, and SLOs', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use User Journeys, SLIs, and SLOs to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M12-Q098
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Calculate allowed bad events and consumed error budget.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M12-Q099
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Page at the SLO threshold:** noise arrives faster than useful action.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M12-Q100
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for build priority-aware degradation, load shedding, bounded dependency work, and degraded regional capacity..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-03, complete EX-08–EX-09, implement the public lab contract, and record capacity predictions before running F01 or F07.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
+**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.

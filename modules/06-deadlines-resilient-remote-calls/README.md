@@ -49,10 +49,10 @@ This module is part of the solo Computer Science and System Design Mastery path.
 - Answer key: [quiz/answer-key.md](quiz/answer-key.md).
 - LLM grading prompt: [quiz/llm-grader-prompt.md](quiz/llm-grader-prompt.md).
 
-Generate a 20-question quiz from the repository root:
+Generate a 12-question quiz from the repository root:
 
 ```bash
-python3 scripts/generate_quiz.py --module M06 --count 20 --output quiz-m06.json
+python3 scripts/generate_quiz.py --module M06 --output quiz-m06.json
 ```
 
 A module is complete when you can explain the lesson mechanisms, complete the practice, run or reason through the reinforcement lab, and score your quiz attempt with the answer key or LLM grader.

@@ -41,25 +41,25 @@ For a loop nest, count the number of times the inner body runs. If `for i in 1..
 4. Separate worst-case, expected, average-case, and amortized claims.
 5. Record the constant, locality, and measurement assumptions that could reverse a small-input decision.
 
-## Worked Example
+## Worked example
 
 If an operation scans 1,000 items today and 1,000,000 tomorrow, a linear scan
 grows by 1,000x. A balanced-tree lookup grows from about 10 comparisons to about
 20. That difference is a design signal. It is not proof that the tree is faster
 for today's workload.
 
-## Common Expert Mistakes
+## Common expert mistakes
 
 - Ignoring constants for hot paths.
 - Using worst-case notation without naming the adversary or input condition.
 - Calling amortized cost a latency guarantee.
 - Comparing algorithms without checking memory layout.
 
-## Guided Practice
+## Guided practice
 
 A dynamic array starts with capacity 1 and doubles when full. For 17 appends, list the resize capacities copied and compute the total copied elements. Then state the amortized append cost and the worst single append cost.
 
-## Self-Check
+## Self-check
 
 1. What constants appear in the formal Big-O definition?
 2. Why is amortized O(1) not the same as average-case O(1)?
@@ -73,6 +73,6 @@ A dynamic array starts with capacity 1 and doubles when full. For 17 appends, li
 3. The body runs `n(n+1)/2` times, so the tight bound is Theta(n^2).
 4. Representative input sizes, operation mix, memory layout, branch behavior, allocation cost, and tail latency for the actual workload. For the practice, copied capacities are `1 + 2 + 4 + 8 = 15`; total work is bounded by a small multiple of 17, but the append that grows from 16 to 32 copies 16 existing elements.
 
-## Sources And Next Work
+## Sources and next work
 
 Study RES-01 and RES-02. Then complete EX-01.

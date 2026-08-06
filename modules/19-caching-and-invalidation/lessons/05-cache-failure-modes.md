@@ -34,23 +34,23 @@ Poisoning stores an incorrect or malicious representation. Key collision and inc
 
 Other failures include unbounded memory growth from high-cardinality keys, stale data after schema change, negative-cache entries hiding newly created objects, and observability that counts poisoned or unauthorized hits as success. A useful dashboard separates public/private hit rate, stale age, regeneration count, origin fallback status, eviction reason, and key dimensions.
 
-## Worked Example
+## Worked example
 
 M16's private-cache-leak fixture is the web version of a general rule: a shared
 cache key that omits subject identity can serve private content to another
 subject.
 
-## Common Expert Mistakes
+## Common expert mistakes
 
 - Counting a poisoned hit as success.
 - Aggregating hit rate across public and private data.
 - Missing negative-cache effects on newly created objects.
 
-## Guided Practice
+## Guided practice
 
 A cache is flushed during a deploy and receives 20,000 reads/minute. Before the flush it had 95 percent hit rate. Compute origin reads before and immediately after the flush. Then name two controls that prevent a cold-start overload from becoming metastable.
 
-## Self-Check
+## Self-check
 
 1. Why can a cache hit be a failure?
 2. What turns cold start into metastability?
@@ -64,6 +64,6 @@ A cache is flushed during a deploy and receives 20,000 reads/minute. Before the 
 3. Missing subject, tenant, authorization, or private variation dimensions.
 4. Aggregation can hide privacy and correctness failures behind good public-cache performance. For the practice, origin reads go from 1,000/minute to 20,000/minute; controls include prewarming, stale serving, single-flight, and regeneration admission limits.
 
-## Sources And Next Work
+## Sources and next work
 
 Study RES-02 and revisit M16 F06. Then complete EX-08 and EX-09.

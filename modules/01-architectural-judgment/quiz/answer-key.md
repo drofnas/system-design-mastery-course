@@ -1,1103 +1,466 @@
 # M01 Quiz Answer Key
 
-This key covers all 100 questions for **Architectural Judgment**. Use it after an attempt, or provide it with the LLM grading prompt for feedback.
+This key covers all 37 questions for **Architectural Judgment**. Use it after an attempt, or provide it with the LLM grading prompt for feedback.
 
 ## M01-Q001
 
-**Type:** `multiple_choice`  
+**Type:** `short_answer`  
 **Difficulty:** `recall`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to translate an ambiguous product request into users, outcomes, scope, constraints, and measurable acceptance conditions.
+**Answer:** It names a structural approach, not a user or business result. It also hides the workload, failure model, and costs that might justify distribution
 
-**Explanation:** Use Architectural Judgment to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
+**Explanation:** The cited self-check in L01 tests whether the learner can connect Architectural Judgment to the module mechanism without replacing evidence with labels. This explanation is specific to M01-Q001 and its cited source.
 
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M01-Q002
 
 **Type:** `short_answer`  
 **Difficulty:** `application`
 
-**Answer:** A strong answer defines the mechanism from 'Problem Framing and Workloads', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
+**Answer:** An assumption is acceptable when it is labeled, its consequence if false is understood, the decision is proportionately reversible, and there is a plan to obtain stronger evidence
 
-**Explanation:** Use Problem Framing and Workloads to reason from explicit assumptions to observable behavior.
+**Explanation:** The cited self-check in L01 tests whether the learner can connect Architectural Judgment to the module mechanism without replacing evidence with labels. This explanation is specific to M01-Q002 and its cited source.
 
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M01-Q003
 
-**Type:** `calculation`  
+**Type:** `short_answer`  
 **Difficulty:** `synthesis`
 
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
+**Answer:** Significance comes from consequence and reversal cost: correctness, data, interfaces, failure behavior, trust, ownership, cost, or migration impact
 
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. After this lesson, you can: - Distinguish an invariant from a goal, process, or quality target.
+**Explanation:** The cited self-check in L01 tests whether the learner can connect Architectural Judgment to the module mechanism without replacing evidence with labels. This explanation is specific to M01-Q003 and its cited source.
 
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M01-Q004
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
+**Type:** `short_answer`  
+**Difficulty:** `recall`
 
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating Quality-Attribute Scenarios as a label instead of explaining the causal mechanism.
+**Answer:** Make the shared drivers and evidence visible, surface unresolved risk, help the group choose, and record what would cause reconsideration
 
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
+**Explanation:** The cited self-check in L01 tests whether the learner can connect Architectural Judgment to the module mechanism without replacing evidence with labels. This explanation is specific to M01-Q004 and its cited source.
 
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M01-Q005
 
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`  
+**Difficulty:** `application`
 
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for communicate system context, boundaries, flows, trust, and ownership without prematurely choosing deployable services..
+**Answer:** It does not specify operations per user, concurrency, time concentration, payload, read/write mix, skew, or background work
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Official C4 modelhttps://c4model.com/ - Creator-led C4 videohttps://www.youtube.com/watch?v=KvoBrUd1-5E - Next: Complete the initial baseline, then study Lesson 606-constraints-options-and-reversibility.md.
+**Explanation:** The cited self-check in L02 tests whether the learner can connect Problem Framing and Workloads to the module mechanism without replacing evidence with labels. This explanation is specific to M01-Q005 and its cited source.
 
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M01-Q006
 
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
+**Type:** `short_answer`  
+**Difficulty:** `synthesis`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to compare simple, moderate, and distributed designs using shared drivers, cost boundaries, evidence, and reversal conditions.
+**Answer:** A peak is a predictable high operating period; a burst is a shorter, concentrated event that may be exceptional and can exceed steady capacity
 
-**Explanation:** Use Constraints, Options, and Reversibility to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
+**Explanation:** The cited self-check in L02 tests whether the learner can connect Problem Framing and Workloads to the module mechanism without replacing evidence with labels. This explanation is specific to M01-Q006 and its cited source.
 
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M01-Q007
 
 **Type:** `short_answer`  
-**Difficulty:** `application`
+**Difficulty:** `recall`
 
-**Answer:** A strong answer defines the mechanism from 'Failure Models and Adversarial Review', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
+**Answer:** Label it as an assumption with units, source, confidence, consequence if false, and a plan to verify it
 
-**Explanation:** Use Failure Models and Adversarial Review to reason from explicit assumptions to observable behavior.
+**Explanation:** The cited self-check in L02 tests whether the learner can connect Problem Framing and Workloads to the module mechanism without replacing evidence with labels. This explanation is specific to M01-Q007 and its cited source.
 
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M01-Q008
 
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`  
+**Difficulty:** `application`
 
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
+**Answer:** Sensitivity shows which uncertain input can change the decision, focusing measurement effort where it matters
 
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. After this lesson, you can: - Decide when to use an ADR, RFC, experiment report, or risk entry.
+**Explanation:** The cited self-check in L02 tests whether the learner can connect Problem Framing and Workloads to the module mechanism without replacing evidence with labels. This explanation is specific to M01-Q008 and its cited source.
 
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M01-Q009
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
+**Type:** `short_answer`  
+**Difficulty:** `synthesis`
 
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating Architectural Judgment as a label instead of explaining the causal mechanism.
+**Answer:** A service metric observes one implementation boundary. A journey may cross clients, networks, and dependencies and can fail even when one server reports success
 
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
+**Explanation:** The cited self-check in L02 tests whether the learner can connect Problem Framing and Workloads to the module mechanism without replacing evidence with labels. This explanation is specific to M01-Q009 and its cited source.
 
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M01-Q010
 
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`  
+**Difficulty:** `recall`
 
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for build a workload model with normal, peak, burst, projected, skew, and uncertainty dimensions..
+**Answer:** An invariant forbids a state and must always hold under the covered model. An SLO permits a bounded amount of failure over a defined window
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Google SRE Workbook, “Implementing SLOs”https://sre.google/workbook/implementing-slos/ - Module resource assignment../resources.mdgoogle-sre-workbook-implementing-slos - Next: Lesson 303-invariants-and-state-ownership.md
+**Explanation:** The cited self-check in L03 tests whether the learner can connect Invariants and State Ownership to the module mechanism without replacing evidence with labels. This explanation is specific to M01-Q010 and its cited source.
 
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M01-Q011
 
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
+**Type:** `short_answer`  
+**Difficulty:** `application`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to express business, data, security, and operational invariants and assign authoritative state ownership.
+**Answer:** Preservation is evaluated at transitions. Without threatening operations, the statement cannot influence interfaces, concurrency, recovery, or tests
 
-**Explanation:** Use Invariants and State Ownership to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
+**Explanation:** The cited self-check in L03 tests whether the learner can connect Invariants and State Ownership to the module mechanism without replacing evidence with labels. This explanation is specific to M01-Q011 and its cited source.
 
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M01-Q012
 
 **Type:** `short_answer`  
-**Difficulty:** `application`
+**Difficulty:** `synthesis`
 
-**Answer:** A strong answer defines the mechanism from 'Quality-Attribute Scenarios', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
+**Answer:** Yes. Users and dependencies act on copies. A stale revoked alert or deleted private record can cause a real violation outside the source
 
-**Explanation:** Use Quality-Attribute Scenarios to reason from explicit assumptions to observable behavior.
+**Explanation:** The cited self-check in L03 tests whether the learner can connect Invariants and State Ownership to the module mechanism without replacing evidence with labels. This explanation is specific to M01-Q012 and its cited source.
 
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M01-Q013
 
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. After this lesson, you can: - Draw a system-context diagram that communicates users, external systems, responsibilities, and meaningful relationships.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M01-Q014
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating Constraints, Options, and Reversibility as a label instead of explaining the causal mechanism.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M01-Q015
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for state a scoped failure and overload model and expose unsupported claims through adversarial review..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - AWS Builder Center, “Challenges with Distributed Systems”https://builder.aws.com/content/3F08f7GPFiZMCgXD8gny6OjxR0Z/challenges-with-distributed-systems - CMU SEI, Early Architecture Analysishttps://www.sei.cmu.edu/library/early-analysis-of-software-architec
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M01-Q016
-
-**Type:** `multiple_choice`  
+**Type:** `short_answer`  
 **Difficulty:** `recall`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to write and defend an evidence-based rfc, resolve disagreement through decision drivers, and teach the causal model.
+**Answer:** It names storage, not the responsibility authorized to accept domain transitions, the allowed writers, or repair behavior
 
-**Explanation:** Use Decisions, RFCs, and Defense to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
+**Explanation:** The cited self-check in L03 tests whether the learner can connect Invariants and State Ownership to the module mechanism without replacing evidence with labels. This explanation is specific to M01-Q013 and its cited source.
 
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
-## M01-Q017
+## M01-Q014
 
 **Type:** `short_answer`  
 **Difficulty:** `application`
 
-**Answer:** A strong answer defines the mechanism from 'Architectural Judgment', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
+**Answer:** It connects the proposition to operations, concurrency, duplicates, enforcement, and observable evidence, exposing missing reasoning
 
-**Explanation:** Use Architectural Judgment to reason from explicit assumptions to observable behavior.
+**Explanation:** The cited self-check in L03 tests whether the learner can connect Invariants and State Ownership to the module mechanism without replacing evidence with labels. This explanation is specific to M01-Q014 and its cited source.
 
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+
+## M01-Q015
+
+**Type:** `short_answer`  
+**Difficulty:** `synthesis`
+
+**Answer:** Stimulus source, stimulus, environment, artifact, response, and response measure
+
+**Explanation:** The cited self-check in L04 tests whether the learner can connect Quality-Attribute Scenarios to the module mechanism without replacing evidence with labels. This explanation is specific to M01-Q015 and its cited source.
+
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+
+## M01-Q016
+
+**Type:** `short_answer`  
+**Difficulty:** `recall`
+
+**Answer:** A use case describes functional interaction. A scenario probes how a system responds under a quality-relevant condition such as load, fault, attack, or change
+
+**Explanation:** The cited self-check in L04 tests whether the learner can connect Quality-Attribute Scenarios to the module mechanism without replacing evidence with labels. This explanation is specific to M01-Q016 and its cited source.
+
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+
+## M01-Q017
+
+**Type:** `multiple_choice`  
+**Difficulty:** `application`
+
+**Choices:**
+
+- Keep Architectural Judgment scoped to its stated evidence and boundary.
+- Make the documented mistake: Treat Architectural Judgment as a slogan instead of evidence
+- Treat Treat Architectural Judgment as a slogan instead of evidence as complete proof without the lesson boundary
+- Choose the familiar tool before checking whether Treat Architectural Judgment as a slogan instead of evidence applies
+
+**Answer:** Keep Architectural Judgment scoped to its stated evidence and boundary.
+
+**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M01-Q017 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
 
 ## M01-Q018
 
-**Type:** `calculation`  
+**Type:** `multiple_choice`  
 **Difficulty:** `synthesis`
 
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
+**Choices:**
 
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. After this lesson, you can: - Express a critical user journey and its measurable business outcome.
+- Make the documented mistake: Treat Problem Framing and Workloads as a slogan instead of evidence
+- Keep Problem Framing and Workloads scoped to its stated evidence and boundary.
+- Choose the familiar tool before checking whether Treat Problem Framing and Workloads as a slogan instead of evidence.
+- Treat Treat Problem Framing and Workloads as a slogan instead of evidence as complete proof without the lesson bounda.
 
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
+**Answer:** Keep Problem Framing and Workloads scoped to its stated evidence and boundary.
+
+**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M01-Q018 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
 
 ## M01-Q019
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
+**Type:** `multiple_choice`  
+**Difficulty:** `recall`
 
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating Invariants and State Ownership as a label instead of explaining the causal mechanism.
+**Choices:**
 
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
+- Choose the familiar tool before checking whether Treat Invariants and State Ownership as a slogan instead of evidence.
+- Make the documented mistake: Treat Invariants and State Ownership as a slogan instead of eviden
+- Keep Invariants and State Ownership scoped to its stated evidence and boundary.
+- Treat Treat Invariants and State Ownership as a slogan instead of evidence as complete proof without the lesson bound.
 
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
+**Answer:** Keep Invariants and State Ownership scoped to its stated evidence and boundary.
+
+**Explanation:** The distractors are anchored in the mistake list for L03; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M01-Q019 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
 
 ## M01-Q020
 
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
+**Type:** `multiple_choice`  
+**Difficulty:** `application`
 
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for write measurable quality-attribute scenarios tied to user journeys and evidence collection..
+**Choices:**
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - CMU SEI, “Reasoning About Software Quality Attributes”https://www.sei.cmu.edu/library/reasoning-about-software-quality-attributes/ - CMU SEI Quality Attribute Workshop webcasthttps://www.sei.cmu.edu/library/architecting-in-a-complex-world-eliciting-and-speci
+- Treat Treat Quality-Attribute Scenarios as a slogan instead of evidence as complete proof without the lesson boundary
+- Choose the familiar tool before checking whether Treat Quality-Attribute Scenarios as a slogan instead of evidence ap.
+- Make the documented mistake: Treat Quality-Attribute Scenarios as a slogan instead of evidence
+- Keep Quality-Attribute Scenarios scoped to its stated evidence and boundary.
 
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
+**Answer:** Keep Quality-Attribute Scenarios scoped to its stated evidence and boundary.
+
+**Explanation:** The distractors are anchored in the mistake list for L04; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M01-Q020 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
 
 ## M01-Q021
 
 **Type:** `multiple_choice`  
-**Difficulty:** `recall`
+**Difficulty:** `synthesis`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to communicate system context, boundaries, flows, trust, and ownership without prematurely choosing deployable services.
+**Choices:**
 
-**Explanation:** Use Context and Boundaries to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
+- Keep Context and Boundaries scoped to its stated evidence and boundary.
+- Choose the familiar tool before checking whether Treat Context and Boundaries as a slogan instead of evidence applies
+- Treat Treat Context and Boundaries as a slogan instead of evidence as complete proof without the lesson boundary
+- Make the documented mistake: Treat Context and Boundaries as a slogan instead of evidence
 
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
+**Answer:** Keep Context and Boundaries scoped to its stated evidence and boundary.
+
+**Explanation:** The distractors are anchored in the mistake list for L05; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M01-Q021 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
 
 ## M01-Q022
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Constraints, Options, and Reversibility', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Constraints, Options, and Reversibility to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M01-Q023
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. After this lesson, you can: - State a failure model with faults, combinations, timing, and exclusions.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M01-Q024
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating Decisions, RFCs, and Defense as a label instead of explaining the causal mechanism.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M01-Q025
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for translate an ambiguous product request into users, outcomes, scope, constraints, and measurable acceptance conditions..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Course foundation: 00COURSESYLLABUS.md../../../00COURSESYLLABUS.md - Decision records: Michael Nygard, “Documenting Architecture Decisions”https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions - Next: Lesson 202-problem-framing-and-workloa
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M01-Q026
 
 **Type:** `multiple_choice`  
 **Difficulty:** `recall`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to build a workload model with normal, peak, burst, projected, skew, and uncertainty dimensions.
+**Choices:**
 
-**Explanation:** Use Problem Framing and Workloads to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
+- Treat Treat Constraints, Options, and Reversibility as a slogan instead of as complete proof without the lesson bound.
+- Keep Constraints, Options, and Reversibility scoped to its stated evidence and boundary.
+- Choose the familiar tool before checking whether Treat Constraints, Options, and Reversibility as a slogan instead of.
+- Make the documented mistake: Treat Constraints, Options, and Reversibility as a slogan instead
 
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
+**Answer:** Keep Constraints, Options, and Reversibility scoped to its stated evidence and boundary.
+
+**Explanation:** The distractors are anchored in the mistake list for L06; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M01-Q022 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+
+## M01-Q023
+
+**Type:** `multiple_choice`  
+**Difficulty:** `application`
+
+**Choices:**
+
+- Treat Treat Failure Models and Adversarial Review as a slogan instead of ev as complete proof without the lesson boun.
+- Choose the familiar tool before checking whether Treat Failure Models and Adversarial Review as a slogan instead of e.
+- Keep Failure Models and Adversarial Review scoped to its stated evidence and boundary.
+- Make the documented mistake: Treat Failure Models and Adversarial Review as a slogan instead of
+
+**Answer:** Keep Failure Models and Adversarial Review scoped to its stated evidence and boundary.
+
+**Explanation:** The distractors are anchored in the mistake list for L07; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M01-Q023 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+
+## M01-Q024
+
+**Type:** `multiple_choice`  
+**Difficulty:** `synthesis`
+
+**Choices:**
+
+- Choose the familiar tool before checking whether Treat Decisions, RFCs, and Defense as a slogan instead of evidence a.
+- Make the documented mistake: Treat Decisions, RFCs, and Defense as a slogan instead of evidence
+- Treat Treat Decisions, RFCs, and Defense as a slogan instead of evidence as complete proof without the lesson boundary
+- Keep Decisions, RFCs, and Defense scoped to its stated evidence and boundary.
+
+**Answer:** Keep Decisions, RFCs, and Defense scoped to its stated evidence and boundary.
+
+**Explanation:** The distractors are anchored in the mistake list for L08; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M01-Q024 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+
+## M01-Q025
+
+**Type:** `calculation`  
+**Difficulty:** `synthesis`
+
+**Answer:** Original concurrency = 130 x 0.040 = 5.20 operations. Revised rate = 130 x 1.25 = 162.5/s, so revised concurrency = 162.5 x 0.040 = 6.50 operations.
+
+**Explanation:** This perturbs the numeric practice around Architectural Judgment: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M01-Q025 and its cited source.
+
+**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+
+## M01-Q026
+
+**Type:** `calculation`  
+**Difficulty:** `recall`
+
+**Answer:** Original concurrency = 140 x 0.050 = 7.00 operations. Revised rate = 140 x 1.30 = 182.0/s, so revised concurrency = 182.0 x 0.050 = 9.10 operations.
+
+**Explanation:** This perturbs the numeric practice around Problem Framing and Workloads: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M01-Q026 and its cited source.
+
+**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
 
 ## M01-Q027
 
-**Type:** `short_answer`  
+**Type:** `calculation`  
 **Difficulty:** `application`
 
-**Answer:** A strong answer defines the mechanism from 'Invariants and State Ownership', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
+**Answer:** Original concurrency = 150 x 0.060 = 9.00 operations. Revised rate = 150 x 1.35 = 202.5/s, so revised concurrency = 202.5 x 0.060 = 12.15 operations.
 
-**Explanation:** Use Invariants and State Ownership to reason from explicit assumptions to observable behavior.
+**Explanation:** This perturbs the numeric practice around Invariants and State Ownership: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M01-Q027 and its cited source.
 
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
+**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
 
 ## M01-Q028
 
 **Type:** `calculation`  
 **Difficulty:** `synthesis`
 
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
+**Answer:** Original concurrency = 160 x 0.070 = 11.20 operations. Revised rate = 160 x 1.40 = 224.0/s, so revised concurrency = 224.0 x 0.070 = 15.68 operations.
 
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. After this lesson, you can: - Explain why “fast,” “reliable,” and “secure” are not requirements.
+**Explanation:** This perturbs the numeric practice around Quality-Attribute Scenarios: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M01-Q028 and its cited source.
 
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
+**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
 
 ## M01-Q029
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
+**Type:** `calculation`  
+**Difficulty:** `recall`
 
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating Context and Boundaries as a label instead of explaining the causal mechanism.
+**Answer:** Original concurrency = 170 x 0.080 = 13.60 operations. Revised rate = 170 x 1.45 = 246.5/s, so revised concurrency = 246.5 x 0.080 = 19.72 operations.
 
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
+**Explanation:** This perturbs the numeric practice around Context and Boundaries: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M01-Q029 and its cited source.
 
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
+**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
 
 ## M01-Q030
+
+**Type:** `calculation`  
+**Difficulty:** `application`
+
+**Answer:** Original concurrency = 180 x 0.040 = 7.20 operations. Revised rate = 180 x 1.10 = 198.0/s, so revised concurrency = 198.0 x 0.040 = 7.92 operations.
+
+**Explanation:** This perturbs the numeric practice around Constraints, Options, and Reversibility: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M01-Q030 and its cited source.
+
+**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+
+## M01-Q031
 
 **Type:** `design_judgment`  
 **Difficulty:** `synthesis`
 
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for compare simple, moderate, and distributed designs using shared drivers, cost boundaries, evidence, and reversal conditions..
+**Answer:** Recommend the option that preserves the Quality-Attribute Scenarios mechanism under the exercise constraints: Rewrite: > We need Kafka and microservices because rider traffic will grow. Produce: 1. A user/business outcome. 2. A workload assumption with units and horizon. 3. One invariant The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Michael Nygard, “Documenting Architecture Decisions”https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions - Next: Lesson 707-failure-models-and-adversarial-review.md
+**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M01-Q031 and its cited source.
 
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M01-Q031
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to state a scoped failure and overload model and expose unsupported claims through adversarial review.
-
-**Explanation:** Use Failure Models and Adversarial Review to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
+**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
 
 ## M01-Q032
 
-**Type:** `short_answer`  
-**Difficulty:** `application`
+**Type:** `design_judgment`  
+**Difficulty:** `recall`
 
-**Answer:** A strong answer defines the mechanism from 'Decisions, RFCs, and Defense', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
+**Answer:** Recommend the option that preserves the Context and Boundaries mechanism under the exercise constraints: Classify each statement and explain what evidence could change it: 1. The pilot must launch in sixteen weeks. 2. Traffic will grow fivefold. 3 The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
 
-**Explanation:** Use Decisions, RFCs, and Defense to reason from explicit assumptions to observable behavior.
+**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M01-Q032 and its cited source.
 
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
+**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
 
 ## M01-Q033
 
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
+**Type:** `design_judgment`  
+**Difficulty:** `application`
 
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
+**Answer:** Recommend the option that preserves the Constraints, Options, and Reversibility mechanism under the exercise constraints: A transit authority has 240,000 eligible riders. During a major incident: - Each rider makes 3 alert checks in a 90-minute period. - 25% of checks arrive in the busiest 4 minutes The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
 
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. After this lesson, you can: - Separate a system-design problem from a technology-selection exercise.
+**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M01-Q033 and its cited source.
 
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
+**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
 
 ## M01-Q034
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
+**Type:** `design_judgment`  
+**Difficulty:** `synthesis`
 
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating Problem Framing and Workloads as a label instead of explaining the causal mechanism.
+**Answer:** Recommend the option that preserves the Failure Models and Adversarial Review mechanism under the exercise constraints: Classify and rewrite weak statements: 1. Alerts should be delivered quickly. 2. A revoked alert is never current for a new rider view. 3. The platform should be secure. 4 The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
 
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
+**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M01-Q034 and its cited source.
 
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
+**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
 
 ## M01-Q035
 
 **Type:** `design_judgment`  
-**Difficulty:** `synthesis`
+**Difficulty:** `recall`
 
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for express business, data, security, and operational invariants and assign authoritative state ownership..
+**Answer:** Recommend the option that preserves the Decisions, RFCs, and Defense mechanism under the exercise constraints: For current alert version, operator authority, journey route, and delivery status: 1. Name the authoritative owner. 2. Name allowed writers. 3. Name derived readers. 4 The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - synthesis project invariant requirements: 00COURSESYLLABUS.md../../../00COURSESYLLABUS.md - Security depth appears in Module 13; transaction enforcement appears in Module 8.
+**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M01-Q035 and its cited source.
 
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
+**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
 
 ## M01-Q036
 
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
+**Type:** `design_judgment`  
+**Difficulty:** `application`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to write measurable quality-attribute scenarios tied to user journeys and evidence collection.
+**Answer:** Recommend the option that preserves the Architectural Judgment mechanism under the exercise constraints: Rewrite each requirement in six-part form: 1. Alerts are fast. 2. The system is available during an outage. 3. The platform is secure. 4. Recovery is quick. 5 The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
 
-**Explanation:** Use Quality-Attribute Scenarios to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
+**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M01-Q036 and its cited source.
 
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
+**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
 
 ## M01-Q037
 
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Context and Boundaries', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Context and Boundaries to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M01-Q038
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. After this lesson, you can: - Separate constraints, assumptions, preferences, and decision drivers.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M01-Q039
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating Failure Models and Adversarial Review as a label instead of explaining the causal mechanism.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M01-Q040
-
 **Type:** `design_judgment`  
 **Difficulty:** `synthesis`
 
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for write and defend an evidence-based rfc, resolve disagreement through decision drivers, and teach the causal model..
+**Answer:** Recommend the option that preserves the Problem Framing and Workloads mechanism under the exercise constraints: Critique this view: mermaid flowchart LR User --> API API --> PostgreSQL API --> Kafka Kafka --> Lambda Lambda --> Redis Redis --> Mobile Find at least eight problems The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Michael Nygard, “Documenting Architecture Decisions”https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions - CMU SEI, Architecture Tradeoff Analysis Method collectionhttps://www.sei.cmu.edu/library/architecture-tradeoff-analysis-method-coll
+**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M01-Q037 and its cited source.
 
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M01-Q041
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to translate an ambiguous product request into users, outcomes, scope, constraints, and measurable acceptance conditions.
-
-**Explanation:** Use Architectural Judgment to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M01-Q042
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Problem Framing and Workloads', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Problem Framing and Workloads to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M01-Q043
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. After this lesson, you can: - Distinguish an invariant from a goal, process, or quality target.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M01-Q044
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating Quality-Attribute Scenarios as a label instead of explaining the causal mechanism.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M01-Q045
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for communicate system context, boundaries, flows, trust, and ownership without prematurely choosing deployable services..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Official C4 modelhttps://c4model.com/ - Creator-led C4 videohttps://www.youtube.com/watch?v=KvoBrUd1-5E - Next: Complete the initial baseline, then study Lesson 606-constraints-options-and-reversibility.md.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M01-Q046
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to compare simple, moderate, and distributed designs using shared drivers, cost boundaries, evidence, and reversal conditions.
-
-**Explanation:** Use Constraints, Options, and Reversibility to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M01-Q047
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Failure Models and Adversarial Review', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Failure Models and Adversarial Review to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M01-Q048
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. After this lesson, you can: - Decide when to use an ADR, RFC, experiment report, or risk entry.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M01-Q049
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating Architectural Judgment as a label instead of explaining the causal mechanism.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M01-Q050
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for build a workload model with normal, peak, burst, projected, skew, and uncertainty dimensions..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Google SRE Workbook, “Implementing SLOs”https://sre.google/workbook/implementing-slos/ - Module resource assignment../resources.mdgoogle-sre-workbook-implementing-slos - Next: Lesson 303-invariants-and-state-ownership.md
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M01-Q051
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to express business, data, security, and operational invariants and assign authoritative state ownership.
-
-**Explanation:** Use Invariants and State Ownership to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M01-Q052
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Quality-Attribute Scenarios', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Quality-Attribute Scenarios to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M01-Q053
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. After this lesson, you can: - Draw a system-context diagram that communicates users, external systems, responsibilities, and meaningful relationships.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M01-Q054
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating Constraints, Options, and Reversibility as a label instead of explaining the causal mechanism.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M01-Q055
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for state a scoped failure and overload model and expose unsupported claims through adversarial review..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - AWS Builder Center, “Challenges with Distributed Systems”https://builder.aws.com/content/3F08f7GPFiZMCgXD8gny6OjxR0Z/challenges-with-distributed-systems - CMU SEI, Early Architecture Analysishttps://www.sei.cmu.edu/library/early-analysis-of-software-architec
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M01-Q056
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to write and defend an evidence-based rfc, resolve disagreement through decision drivers, and teach the causal model.
-
-**Explanation:** Use Decisions, RFCs, and Defense to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M01-Q057
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Architectural Judgment', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Architectural Judgment to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M01-Q058
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. After this lesson, you can: - Express a critical user journey and its measurable business outcome.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M01-Q059
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating Invariants and State Ownership as a label instead of explaining the causal mechanism.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M01-Q060
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for write measurable quality-attribute scenarios tied to user journeys and evidence collection..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - CMU SEI, “Reasoning About Software Quality Attributes”https://www.sei.cmu.edu/library/reasoning-about-software-quality-attributes/ - CMU SEI Quality Attribute Workshop webcasthttps://www.sei.cmu.edu/library/architecting-in-a-complex-world-eliciting-and-speci
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M01-Q061
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to communicate system context, boundaries, flows, trust, and ownership without prematurely choosing deployable services.
-
-**Explanation:** Use Context and Boundaries to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M01-Q062
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Constraints, Options, and Reversibility', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Constraints, Options, and Reversibility to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M01-Q063
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. After this lesson, you can: - State a failure model with faults, combinations, timing, and exclusions.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M01-Q064
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating Decisions, RFCs, and Defense as a label instead of explaining the causal mechanism.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M01-Q065
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for translate an ambiguous product request into users, outcomes, scope, constraints, and measurable acceptance conditions..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Course foundation: 00COURSESYLLABUS.md../../../00COURSESYLLABUS.md - Decision records: Michael Nygard, “Documenting Architecture Decisions”https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions - Next: Lesson 202-problem-framing-and-workloa
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M01-Q066
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to build a workload model with normal, peak, burst, projected, skew, and uncertainty dimensions.
-
-**Explanation:** Use Problem Framing and Workloads to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M01-Q067
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Invariants and State Ownership', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Invariants and State Ownership to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M01-Q068
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. After this lesson, you can: - Explain why “fast,” “reliable,” and “secure” are not requirements.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M01-Q069
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating Context and Boundaries as a label instead of explaining the causal mechanism.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M01-Q070
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for compare simple, moderate, and distributed designs using shared drivers, cost boundaries, evidence, and reversal conditions..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Michael Nygard, “Documenting Architecture Decisions”https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions - Next: Lesson 707-failure-models-and-adversarial-review.md
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M01-Q071
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to state a scoped failure and overload model and expose unsupported claims through adversarial review.
-
-**Explanation:** Use Failure Models and Adversarial Review to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M01-Q072
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Decisions, RFCs, and Defense', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Decisions, RFCs, and Defense to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M01-Q073
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. After this lesson, you can: - Separate a system-design problem from a technology-selection exercise.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M01-Q074
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating Problem Framing and Workloads as a label instead of explaining the causal mechanism.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M01-Q075
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for express business, data, security, and operational invariants and assign authoritative state ownership..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - synthesis project invariant requirements: 00COURSESYLLABUS.md../../../00COURSESYLLABUS.md - Security depth appears in Module 13; transaction enforcement appears in Module 8.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M01-Q076
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to write measurable quality-attribute scenarios tied to user journeys and evidence collection.
-
-**Explanation:** Use Quality-Attribute Scenarios to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M01-Q077
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Context and Boundaries', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Context and Boundaries to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M01-Q078
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. After this lesson, you can: - Separate constraints, assumptions, preferences, and decision drivers.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M01-Q079
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating Failure Models and Adversarial Review as a label instead of explaining the causal mechanism.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M01-Q080
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for write and defend an evidence-based rfc, resolve disagreement through decision drivers, and teach the causal model..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Michael Nygard, “Documenting Architecture Decisions”https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions - CMU SEI, Architecture Tradeoff Analysis Method collectionhttps://www.sei.cmu.edu/library/architecture-tradeoff-analysis-method-coll
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M01-Q081
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to translate an ambiguous product request into users, outcomes, scope, constraints, and measurable acceptance conditions.
-
-**Explanation:** Use Architectural Judgment to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M01-Q082
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Problem Framing and Workloads', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Problem Framing and Workloads to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M01-Q083
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. After this lesson, you can: - Distinguish an invariant from a goal, process, or quality target.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M01-Q084
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating Quality-Attribute Scenarios as a label instead of explaining the causal mechanism.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M01-Q085
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for communicate system context, boundaries, flows, trust, and ownership without prematurely choosing deployable services..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Official C4 modelhttps://c4model.com/ - Creator-led C4 videohttps://www.youtube.com/watch?v=KvoBrUd1-5E - Next: Complete the initial baseline, then study Lesson 606-constraints-options-and-reversibility.md.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M01-Q086
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to compare simple, moderate, and distributed designs using shared drivers, cost boundaries, evidence, and reversal conditions.
-
-**Explanation:** Use Constraints, Options, and Reversibility to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M01-Q087
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Failure Models and Adversarial Review', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Failure Models and Adversarial Review to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M01-Q088
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. After this lesson, you can: - Decide when to use an ADR, RFC, experiment report, or risk entry.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M01-Q089
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating Architectural Judgment as a label instead of explaining the causal mechanism.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M01-Q090
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for build a workload model with normal, peak, burst, projected, skew, and uncertainty dimensions..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Google SRE Workbook, “Implementing SLOs”https://sre.google/workbook/implementing-slos/ - Module resource assignment../resources.mdgoogle-sre-workbook-implementing-slos - Next: Lesson 303-invariants-and-state-ownership.md
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M01-Q091
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to express business, data, security, and operational invariants and assign authoritative state ownership.
-
-**Explanation:** Use Invariants and State Ownership to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M01-Q092
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Quality-Attribute Scenarios', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Quality-Attribute Scenarios to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M01-Q093
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. After this lesson, you can: - Draw a system-context diagram that communicates users, external systems, responsibilities, and meaningful relationships.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M01-Q094
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating Constraints, Options, and Reversibility as a label instead of explaining the causal mechanism.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M01-Q095
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for state a scoped failure and overload model and expose unsupported claims through adversarial review..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - AWS Builder Center, “Challenges with Distributed Systems”https://builder.aws.com/content/3F08f7GPFiZMCgXD8gny6OjxR0Z/challenges-with-distributed-systems - CMU SEI, Early Architecture Analysishttps://www.sei.cmu.edu/library/early-analysis-of-software-architec
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M01-Q096
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to write and defend an evidence-based rfc, resolve disagreement through decision drivers, and teach the causal model.
-
-**Explanation:** Use Decisions, RFCs, and Defense to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M01-Q097
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Architectural Judgment', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Architectural Judgment to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M01-Q098
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. After this lesson, you can: - Express a critical user journey and its measurable business outcome.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M01-Q099
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Treating Invariants and State Ownership as a label instead of explaining the causal mechanism.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M01-Q100
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for write measurable quality-attribute scenarios tied to user journeys and evidence collection..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - CMU SEI, “Reasoning About Software Quality Attributes”https://www.sei.cmu.edu/library/reasoning-about-software-quality-attributes/ - CMU SEI Quality Attribute Workshop webcasthttps://www.sei.cmu.edu/library/architecting-in-a-complex-world-eliciting-and-speci
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
+**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.

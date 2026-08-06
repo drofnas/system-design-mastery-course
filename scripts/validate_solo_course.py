@@ -48,6 +48,18 @@ RES_RE = re.compile(r'\bRES-\d{2}\b')
 INLINE_WEB_LINK_RE = re.compile(r'\]\(https?://|<https?://|(?<![\(<])https?://')
 QUESTION_TYPES = {'multiple_choice', 'short_answer', 'calculation', 'scenario_diagnosis', 'design_judgment'}
 DIFFICULTIES = {'recall', 'application', 'synthesis'}
+BANNED_TITLE_CASE_HEADINGS = {
+    'Worked Example': 'Worked example',
+    'Common Expert Mistakes': 'Common expert mistakes',
+    'Guided Practice': 'Guided practice',
+    'Self-Check': 'Self-check',
+    'Sources And Next Work': 'Sources and next work',
+}
+BANNED_ANSWER_OPENINGS = (
+    'a strong answer', 'a good response', 'a good answer',
+    'identify the', 'explain how', 'describe how',
+    'the learner should', 'state the mechanism',
+)
 
 
 def rel(path: Path) -> str:
@@ -105,7 +117,7 @@ def validate_links(errors: list[str]) -> None:
                 errors.append(f'{rel(path)}: broken local link {raw}')
 
 
-def validate_module(path: Path, errors: list[str]) -> None:
+def validate_module(path: Path, errors: list[str], *, strict: bool = False) -> None:
     root = path.parent
     manifest = load_json(path, errors)
     if not isinstance(manifest, dict):
@@ -118,6 +130,13 @@ def validate_module(path: Path, errors: list[str]) -> None:
         errors.append(f'{rel(path)}: course_id must be CSSDM')
     if not re.fullmatch(r'M\d{2}', str(module_id)):
         errors.append(f'{rel(path)}: invalid module id {module_id!r}')
+    quiz_status = manifest.get('quiz_status')
+    if manifest.get('status') != 'draft' and quiz_status not in {'legacy', 'rebuilt'}:
+        errors.append(f'{rel(path)}: ready modules must declare quiz_status')
+    if manifest.get('status') == 'draft' and quiz_status is not None:
+        errors.append(f'{rel(path)}: draft modules must omit quiz_status')
+    if strict and manifest.get('status') == 'ready' and quiz_status != 'rebuilt':
+        errors.append(f'{rel(path)}: ready modules must have quiz_status rebuilt in strict mode')
     required_paths = ['README.md', 'exercises/exercises.md', 'exercises/answer-key.md']
     if manifest.get('status') != 'draft':
         required_paths.extend(['quiz/question-bank.json', 'quiz/answer-key.md', 'quiz/llm-grader-prompt.md', 'quiz/README.md'])
@@ -136,11 +155,11 @@ def validate_module(path: Path, errors: list[str]) -> None:
     if not isinstance(bank, dict):
         return
     questions = bank.get('questions')
-    if not isinstance(questions, list) or len(questions) != 100:
-        errors.append(f'{rel(bank_path)}: must contain exactly 100 questions')
+    if not isinstance(questions, list) or not 30 <= len(questions) <= 60:
+        found = len(questions) if isinstance(questions, list) else 'non-list'
+        errors.append(f'{rel(bank_path)}: must contain 30-60 questions, found {found}')
         return
     seen = set()
-    type_seen = set()
     for question in questions:
         qid = question.get('question_id')
         if qid in seen:
@@ -149,7 +168,6 @@ def validate_module(path: Path, errors: list[str]) -> None:
         if question.get('module_id') != module_id:
             errors.append(f'{rel(bank_path)}: {qid} has wrong module_id')
         qtype = question.get('type')
-        type_seen.add(qtype)
         if qtype not in QUESTION_TYPES:
             errors.append(f'{rel(bank_path)}: {qid} invalid type {qtype}')
         if question.get('difficulty') not in DIFFICULTIES:
@@ -163,8 +181,6 @@ def validate_module(path: Path, errors: list[str]) -> None:
         for field in ['prompt', 'correct_answer', 'explanation', 'grading_notes']:
             if not str(question.get(field, '')).strip():
                 errors.append(f'{rel(bank_path)}: {qid} missing {field}')
-    if type_seen != QUESTION_TYPES:
-        errors.append(f'{rel(bank_path)}: must include all quiz question types')
     answer_key = (root / 'quiz' / 'answer-key.md').read_text(encoding='utf-8') if (root / 'quiz' / 'answer-key.md').exists() else ''
     for qid in seen:
         if f'## {qid}' not in answer_key:
@@ -232,6 +248,9 @@ def validate_lesson_frontmatter(errors: list[str]) -> None:
                 errors.append(f'{rel(lesson_path)}: title must match module.json: {expected[1]}')
             if 'week' in frontmatter:
                 errors.append(f'{rel(lesson_path)}: frontmatter week key remains')
+            for heading, replacement in BANNED_TITLE_CASE_HEADINGS.items():
+                if re.search(rf'^##\s+{re.escape(heading)}\s*$', text, re.MULTILINE):
+                    errors.append(f'{rel(lesson_path)}: use heading "{replacement}" instead of "{heading}"')
 
 
 def validate_resource_references(errors: list[str], warnings: list[str]) -> None:
@@ -260,20 +279,141 @@ def validate_resource_references(errors: list[str], warnings: list[str]) -> None
             warnings.append(f'{rel(resources_path)}: defined but uncited resources: {", ".join(uncited)}')
 
 
+def _prompt_skeleton(prompt: str) -> str:
+    s = re.sub(r"'[^']*'", "'X'", prompt)
+    s = re.sub(r'"[^"]*"', '"X"', s)
+    s = re.sub(r'\d+(?:\.\d+)?', 'N', s)
+    return re.sub(r'\s+', ' ', s).strip().lower()
+
+
+def validate_quiz_quality(errors: list[str], warnings: list[str], *, strict: bool = False) -> None:
+    findings = errors if strict else warnings
+    distractor_use: dict[str, list[str]] = {}
+    explanation_use: dict[str, list[str]] = {}
+
+    for bank_path in sorted((ROOT / 'modules').glob('*/quiz/question-bank.json')):
+        bank = load_json(bank_path, errors)
+        if not isinstance(bank, dict):
+            continue
+        questions = bank.get('questions', [])
+        if not isinstance(questions, list):
+            continue
+        label = rel(bank_path)
+        module_dir = bank_path.parent.parent
+        lesson_ids = {
+            f'L{p.name[:2]}' for p in sorted((module_dir / 'lessons').glob('*.md'))
+        }
+
+        skeletons: dict[str, int] = {}
+        mc = [q for q in questions if q.get('type') == 'multiple_choice']
+        position_counts: dict[int, int] = {}
+        longest_hits = 0
+
+        for q in questions:
+            qid = q.get('question_id', '?')
+            answer = (q.get('correct_answer') or '').strip()
+            prompt = q.get('prompt') or ''
+
+            for lid in q.get('lesson_ids', []):
+                if lid not in lesson_ids:
+                    findings.append(f'{label}: {qid} cites unknown lesson {lid}')
+
+            if not any(str(tag).startswith('src:') for tag in q.get('tags', [])):
+                findings.append(f'{label}: {qid} missing src: provenance tag')
+
+            if answer.lower().startswith(BANNED_ANSWER_OPENINGS):
+                findings.append(f'{label}: {qid} correct_answer is a rubric, not an answer')
+
+            sk = _prompt_skeleton(prompt)
+            skeletons[sk] = skeletons.get(sk, 0) + 1
+
+            explanation = (q.get('explanation') or '').strip()
+            explanation_use.setdefault(explanation, []).append(qid)
+
+            if q.get('type') == 'calculation':
+                if len(re.findall(r'\d', prompt)) < 2:
+                    findings.append(f'{label}: {qid} calculation prompt has no numeric inputs')
+                if not re.search(r'\d', answer):
+                    findings.append(f'{label}: {qid} calculation answer has no numeric result')
+
+            if q.get('type') == 'multiple_choice':
+                choices = q.get('choices') or []
+                if answer not in choices:
+                    findings.append(f'{label}: {qid} correct_answer not present in choices')
+                else:
+                    idx = choices.index(answer)
+                    position_counts[idx] = position_counts.get(idx, 0) + 1
+                    if choices and max(choices, key=len) == answer:
+                        longest_hits += 1
+                if len(choices) != 4:
+                    findings.append(f'{label}: {qid} multiple_choice needs exactly 4 choices')
+                lengths = sorted(len(c) for c in choices)
+                if lengths:
+                    median = lengths[len(lengths) // 2]
+                    for c in choices:
+                        if median and len(c) > 1.4 * median:
+                            findings.append(f'{label}: {qid} option length skew may reveal the answer')
+                            break
+                for c in choices:
+                    if c != answer:
+                        distractor_use.setdefault(c.strip(), []).append(qid)
+
+        for sk, count in skeletons.items():
+            if count > 2:
+                findings.append(f'{label}: prompt skeleton reused {count}x: {sk[:70]}')
+
+        if mc:
+            for idx, count in position_counts.items():
+                if count > 0.4 * len(mc):
+                    findings.append(
+                        f'{label}: {count}/{len(mc)} correct answers sit at choice index {idx}'
+                    )
+            if longest_hits > 0.4 * len(mc):
+                findings.append(
+                    f'{label}: correct answer is the longest option in {longest_hits}/{len(mc)} MC questions'
+                )
+
+        by_type: dict[str, dict[str, int]] = {}
+        for q in questions:
+            qtype = q.get('type')
+            by_type.setdefault(qtype, {})
+            difficulty = q.get('difficulty')
+            by_type[qtype][difficulty] = by_type[qtype].get(difficulty, 0) + 1
+        for qtype, dist in by_type.items():
+            total = sum(dist.values())
+            if total >= 5 and max(dist.values()) > 0.8 * total:
+                findings.append(
+                    f'{label}: difficulty is collinear with type for {qtype} '
+                    f'({max(dist.values())}/{total} share one level)'
+                )
+
+    for text, qids in distractor_use.items():
+        if text and len(qids) > 2:
+            findings.append(
+                f'distractor reused in {len(qids)} questions ({", ".join(qids[:4])}...): {text[:60]}'
+            )
+
+    for text, qids in explanation_use.items():
+        if text and len(qids) > 2:
+            findings.append(f'explanation reused in {len(qids)} questions: {text[:60]}')
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.parse_args()
+    parser.add_argument('--strict', action='store_true', help='Fail on quiz quality warnings and legacy quiz status')
+    args = parser.parse_args()
     errors: list[str] = []
     warnings: list[str] = []
     module_paths = sorted((ROOT / 'modules').glob('*/module.json'))
-    if len(module_paths) not in {18, 20}:
-        errors.append(f'Expected 18 or 20 modules, found {len(module_paths)}')
+    if len(module_paths) < 18:
+        errors.append(f'Expected at least 18 modules, found {len(module_paths)}')
     for path in module_paths:
-        validate_module(path, errors)
+        validate_module(path, errors, strict=args.strict)
     validate_links(errors)
     validate_old_terms(errors)
     validate_lesson_frontmatter(errors)
     validate_resource_references(errors, warnings)
+    validate_quiz_quality(errors, warnings, strict=args.strict)
     if errors:
         for error in errors:
             print(error, file=sys.stderr)

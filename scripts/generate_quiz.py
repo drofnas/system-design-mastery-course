@@ -22,19 +22,52 @@ def module_root(module: str) -> Path:
     return matches[0]
 
 
+def _split_filters(values: list[str] | None) -> set[str]:
+    if not values:
+        return set()
+    result: set[str] = set()
+    for value in values:
+        result.update(part.strip() for part in value.split(',') if part.strip())
+    return result
+
+
+def _load_seen_ids(path: str) -> set[str]:
+    data = json.loads(Path(path).read_text(encoding='utf-8'))
+    questions = data.get('questions', [])
+    if not isinstance(questions, list):
+        raise SystemExit(f'{path}: expected a generated quiz with a questions array')
+    return {str(q.get('question_id')) for q in questions if q.get('question_id')}
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument('--module', required=True, help='Module id such as M01')
-    parser.add_argument('--count', type=int, default=20)
+    parser.add_argument('--count', type=int, default=12)
     parser.add_argument('--seed', type=int)
+    parser.add_argument('--type', dest='types', action='append', help='Question type filter; repeat or comma-separate')
+    parser.add_argument('--difficulty', action='append', help='Difficulty filter; repeat or comma-separate')
+    parser.add_argument('--lesson', action='append', help='Lesson id filter such as L03 or comma-separated ids')
+    parser.add_argument('--exclude-seen', help='Prior generated quiz JSON whose question_ids should be excluded')
     parser.add_argument('--output', required=True)
     args = parser.parse_args()
 
     root = module_root(args.module.upper())
     bank = json.loads((root / 'quiz' / 'question-bank.json').read_text(encoding='utf-8'))
     questions = bank['questions']
+    type_filters = _split_filters(args.types)
+    difficulty_filters = _split_filters(args.difficulty)
+    lesson_filters = _split_filters(args.lesson)
+    excluded_ids = _load_seen_ids(args.exclude_seen) if args.exclude_seen else set()
+    if type_filters:
+        questions = [q for q in questions if q.get('type') in type_filters]
+    if difficulty_filters:
+        questions = [q for q in questions if q.get('difficulty') in difficulty_filters]
+    if lesson_filters:
+        questions = [q for q in questions if set(q.get('lesson_ids', [])) & lesson_filters]
+    if excluded_ids:
+        questions = [q for q in questions if q.get('question_id') not in excluded_ids]
     if args.count < 1 or args.count > len(questions):
-        raise SystemExit(f'--count must be between 1 and {len(questions)}')
+        raise SystemExit(f'--count must be between 1 and {len(questions)} after filters')
     rng = random.Random(args.seed)
     selected = rng.sample(questions, args.count)
     attempt = {
@@ -42,6 +75,12 @@ def main() -> int:
         'title': bank['title'],
         'seed': args.seed,
         'count': args.count,
+        'filters': {
+            'type': sorted(type_filters),
+            'difficulty': sorted(difficulty_filters),
+            'lesson': sorted(lesson_filters),
+            'exclude_seen': args.exclude_seen,
+        },
         'questions': selected,
     }
     output = Path(args.output)
