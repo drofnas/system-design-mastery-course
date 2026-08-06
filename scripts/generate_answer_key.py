@@ -36,7 +36,7 @@ def render_answer_key(bank: dict[str, Any]) -> str:
         lines.extend([
             f"## {question['question_id']}",
             '',
-            f"**Type:** `{question['type']}`  ",
+            f"**Type:** `{question['type']}`",
             f"**Difficulty:** `{question['difficulty']}`",
             '',
         ])

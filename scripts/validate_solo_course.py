@@ -286,10 +286,62 @@ def _prompt_skeleton(prompt: str) -> str:
     return re.sub(r'\s+', ' ', s).strip().lower()
 
 
+def _calculation_skeleton(prompt: str) -> str:
+    s = re.sub(r'\bL\d{2}\s*\([^)]*\)', 'LNN', prompt)
+    s = re.sub(r'\([^)]*lesson[^)]*\)', '(lesson)', s, flags=re.IGNORECASE)
+    return _prompt_skeleton(s)
+
+
+def _normalize_explanation(text: str) -> str:
+    text = re.sub(
+        r'\s*This explanation is specific to M\d\d-Q\d\d\d.*$',
+        '',
+        text.strip(),
+    )
+    return re.sub(r'\s+', ' ', text).strip()
+
+
+def _first_words(text: str, count: int = 5) -> str:
+    words = re.findall(r"[A-Za-z0-9']+", text.lower())
+    return ' '.join(words[:count])
+
+
+def _lesson_title(path: Path) -> str:
+    text = path.read_text(encoding='utf-8')
+    match = re.search(r'^title:\s*"?([^"\n]+)"?\s*$', text, re.MULTILINE)
+    if match:
+        return match.group(1)
+    match = re.search(r'^#\s+(.+)$', text, re.MULTILINE)
+    return match.group(1).strip() if match else path.stem
+
+
+def _section_exists(text: str, *names: str) -> bool:
+    wanted = {name.lower() for name in names}
+    for match in re.finditer(r'^(#{2,3})\s+(.+?)\s*$', text, re.MULTILINE):
+        heading = re.sub(r'[:].*$', '', match.group(2)).strip().lower()
+        if heading in wanted:
+            return True
+    return False
+
+
+def _exercise_exists(module_dir: Path, exercise_id: str) -> bool:
+    for path in (module_dir / 'exercises').glob('*.md'):
+        if re.search(rf'\b{re.escape(exercise_id)}\b', path.read_text(encoding='utf-8')):
+            return True
+    return False
+
+
 def validate_quiz_quality(errors: list[str], warnings: list[str], *, strict: bool = False) -> None:
     findings = errors if strict else warnings
     distractor_use: dict[str, list[str]] = {}
     explanation_use: dict[str, list[str]] = {}
+    answer_openings: dict[str, list[str]] = {}
+    calculation_skeletons: dict[str, list[str]] = {}
+    banned_distractor_bits = (
+        'Make the documented mistake',
+        'Choose the familiar tool before checking whether',
+        'as complete proof without the lesson boundary',
+    )
 
     for bank_path in sorted((ROOT / 'modules').glob('*/quiz/question-bank.json')):
         bank = load_json(bank_path, errors)
@@ -302,6 +354,12 @@ def validate_quiz_quality(errors: list[str], warnings: list[str], *, strict: boo
         module_dir = bank_path.parent.parent
         lesson_ids = {
             f'L{p.name[:2]}' for p in sorted((module_dir / 'lessons').glob('*.md'))
+        }
+        lesson_paths = {
+            f'L{p.name[:2]}': p for p in sorted((module_dir / 'lessons').glob('*.md'))
+        }
+        lesson_titles = {
+            lesson_id: _lesson_title(path) for lesson_id, path in lesson_paths.items()
         }
 
         skeletons: dict[str, int] = {}
@@ -323,18 +381,69 @@ def validate_quiz_quality(errors: list[str], warnings: list[str], *, strict: boo
 
             if answer.lower().startswith(BANNED_ANSWER_OPENINGS):
                 findings.append(f'{label}: {qid} correct_answer is a rubric, not an answer')
+            opening = _first_words(answer)
+            if opening:
+                answer_openings.setdefault(opening, []).append(f'{label}:{qid}')
 
             sk = _prompt_skeleton(prompt)
             skeletons[sk] = skeletons.get(sk, 0) + 1
 
             explanation = (q.get('explanation') or '').strip()
-            explanation_use.setdefault(explanation, []).append(qid)
+            if re.search(r'This explanation is specific to M\d\d-Q\d\d\d', explanation):
+                findings.append(f'{label}: {qid} explanation carries banned specificity suffix')
+            explanation_use.setdefault(_normalize_explanation(explanation), []).append(qid)
+
+            for tag in q.get('tags', []):
+                tag = str(tag)
+                if not tag.startswith('src:'):
+                    continue
+                source = tag[4:]
+                lesson_match = re.fullmatch(r'(L\d{2})-(selfcheck|mistake|worked)-?\d*', source)
+                if lesson_match:
+                    lesson_id, kind = lesson_match.groups()
+                    lesson_path = lesson_paths.get(lesson_id)
+                    if not lesson_path:
+                        findings.append(f'{label}: {qid} cites missing lesson source {tag}')
+                        continue
+                    lesson_text = lesson_path.read_text(encoding='utf-8')
+                    if kind == 'selfcheck' and not _section_exists(lesson_text, 'Self-check'):
+                        findings.append(f'{label}: {qid} cites {tag} but lesson has no Self-check section')
+                    if kind == 'mistake' and not _section_exists(lesson_text, 'Common expert mistakes'):
+                        findings.append(f'{label}: {qid} cites {tag} but lesson has no Common expert mistakes section')
+                    if kind == 'worked' and not _section_exists(lesson_text, 'Worked example'):
+                        findings.append(f'{label}: {qid} cites {tag} but lesson has no Worked example section')
+                exercise_match = re.fullmatch(r'EX-\d{2}', source)
+                if exercise_match and not _exercise_exists(module_dir, source):
+                    findings.append(f'{label}: {qid} cites {tag} but exercise does not exist')
 
             if q.get('type') == 'calculation':
                 if len(re.findall(r'\d', prompt)) < 2:
                     findings.append(f'{label}: {qid} calculation prompt has no numeric inputs')
                 if not re.search(r'\d', answer):
                     findings.append(f'{label}: {qid} calculation answer has no numeric result')
+                calculation_skeletons.setdefault(_calculation_skeleton(prompt), []).append(f'{label}:{qid}')
+                cited_lesson_tags = [
+                    str(tag)[4:] for tag in q.get('tags', [])
+                    if re.fullmatch(r'src:L\d{2}-worked', str(tag))
+                ]
+                for source in cited_lesson_tags:
+                    lesson_id = source[:3]
+                    lesson_path = lesson_paths.get(lesson_id)
+                    if not lesson_path:
+                        continue
+                    lesson_text = lesson_path.read_text(encoding='utf-8')
+                    prompt_numbers = {
+                        number.lstrip('0') or '0'
+                        for number in re.findall(r'\d+(?:\.\d+)?', prompt)
+                    }
+                    lesson_numbers = {
+                        number.lstrip('0') or '0'
+                        for number in re.findall(r'\d+(?:\.\d+)?', lesson_text)
+                    }
+                    if prompt_numbers and not prompt_numbers & lesson_numbers:
+                        warnings.append(
+                            f'{label}: {qid} calculation numbers do not appear in cited {lesson_id} worked example'
+                        )
 
             if q.get('type') == 'multiple_choice':
                 choices = q.get('choices') or []
@@ -356,7 +465,21 @@ def validate_quiz_quality(errors: list[str], warnings: list[str], *, strict: boo
                             break
                 for c in choices:
                     if c != answer:
+                        if any(bit in c for bit in banned_distractor_bits):
+                            findings.append(f'{label}: {qid} banned mechanical distractor form')
+                        for title in lesson_titles.values():
+                            if c.startswith(f'Keep {title}'):
+                                findings.append(f'{label}: {qid} banned Keep-title distractor form')
                         distractor_use.setdefault(c.strip(), []).append(qid)
+
+            if q.get('type') == 'scenario_diagnosis':
+                output_lines = re.findall(r'^\s*\w+(?:\.\w+)*\s*=\s*[\d.]+', prompt, re.MULTILINE)
+                if len(output_lines) < 3:
+                    findings.append(f'{label}: {qid} diagnosis prompt does not show at least 3 emitted fields')
+                if re.search(r'\b(scenario_id|variant|pair_id|seed)\b', prompt):
+                    findings.append(f'{label}: {qid} diagnosis prompt exposes fixture configuration identifiers')
+                if answer.startswith('The fixture tests'):
+                    findings.append(f'{label}: {qid} diagnosis answer opens with banned fixture-test phrasing')
 
         for sk, count in skeletons.items():
             if count > 2:
@@ -396,6 +519,18 @@ def validate_quiz_quality(errors: list[str], warnings: list[str], *, strict: boo
     for text, qids in explanation_use.items():
         if text and len(qids) > 2:
             findings.append(f'explanation reused in {len(qids)} questions: {text[:60]}')
+
+    for opening, qids in answer_openings.items():
+        if opening and len(qids) > 2:
+            findings.append(
+                f'correct-answer opening reused in {len(qids)} questions ({", ".join(qids[:4])}...): {opening}'
+            )
+
+    for skeleton, qids in calculation_skeletons.items():
+        if skeleton and len(qids) > 2:
+            findings.append(
+                f'calculation prompt skeleton reused repo-wide in {len(qids)} questions ({", ".join(qids[:4])}...): {skeleton[:70]}'
+            )
 
 
 def main() -> int:

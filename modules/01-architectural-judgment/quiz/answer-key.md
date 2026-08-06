@@ -4,463 +4,463 @@ This key covers all 37 questions for **Architectural Judgment**. Use it after an
 
 ## M01-Q001
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** It names a structural approach, not a user or business result. It also hides the workload, failure model, and costs that might justify distribution
+**Answer:** It names a structural approach, not a user or business result. It also hides the workload, failure model, and costs that might justify distribution.
 
-**Explanation:** The cited self-check in L01 tests whether the learner can connect Architectural Judgment to the module mechanism without replacing evidence with labels. This explanation is specific to M01-Q001 and its cited source.
+**Explanation:** M01-Q001 uses self-check 1 from Architectural Judgment; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M01-Q002
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `application`
 
-**Answer:** An assumption is acceptable when it is labeled, its consequence if false is understood, the decision is proportionately reversible, and there is a plan to obtain stronger evidence
+**Answer:** An assumption is acceptable when it is labeled, its consequence if false is understood, the decision is proportionately reversible, and there is a plan to obtain stronger evidence.
 
-**Explanation:** The cited self-check in L01 tests whether the learner can connect Architectural Judgment to the module mechanism without replacing evidence with labels. This explanation is specific to M01-Q002 and its cited source.
+**Explanation:** M01-Q002 uses self-check 2 from Architectural Judgment; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M01-Q003
 
-**Type:** `short_answer`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`
+**Difficulty:** `recall`
 
-**Answer:** Significance comes from consequence and reversal cost: correctness, data, interfaces, failure behavior, trust, ownership, cost, or migration impact
+**Answer:** Significance comes from consequence and reversal cost: correctness, data, interfaces, failure behavior, trust, ownership, cost, or migration impact.
 
-**Explanation:** The cited self-check in L01 tests whether the learner can connect Architectural Judgment to the module mechanism without replacing evidence with labels. This explanation is specific to M01-Q003 and its cited source.
+**Explanation:** M01-Q003 uses self-check 3 from Architectural Judgment; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M01-Q004
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** Make the shared drivers and evidence visible, surface unresolved risk, help the group choose, and record what would cause reconsideration
+**Answer:** Make the shared drivers and evidence visible, surface unresolved risk, help the group choose, and record what would cause reconsideration.
 
-**Explanation:** The cited self-check in L01 tests whether the learner can connect Architectural Judgment to the module mechanism without replacing evidence with labels. This explanation is specific to M01-Q004 and its cited source.
+**Explanation:** M01-Q004 uses self-check 4 from Architectural Judgment; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M01-Q005
 
-**Type:** `short_answer`  
-**Difficulty:** `application`
+**Type:** `short_answer`
+**Difficulty:** `recall`
 
-**Answer:** It does not specify operations per user, concurrency, time concentration, payload, read/write mix, skew, or background work
+**Answer:** It does not specify operations per user, concurrency, time concentration, payload, read/write mix, skew, or background work.
 
-**Explanation:** The cited self-check in L02 tests whether the learner can connect Problem Framing and Workloads to the module mechanism without replacing evidence with labels. This explanation is specific to M01-Q005 and its cited source.
+**Explanation:** M01-Q005 uses self-check 1 from Problem Framing and Workloads; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M01-Q006
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `synthesis`
 
-**Answer:** A peak is a predictable high operating period; a burst is a shorter, concentrated event that may be exceptional and can exceed steady capacity
+**Answer:** A peak is a predictable high operating period; a burst is a shorter, concentrated event that may be exceptional and can exceed steady capacity.
 
-**Explanation:** The cited self-check in L02 tests whether the learner can connect Problem Framing and Workloads to the module mechanism without replacing evidence with labels. This explanation is specific to M01-Q006 and its cited source.
+**Explanation:** M01-Q006 uses self-check 2 from Problem Framing and Workloads; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M01-Q007
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `application`
 
-**Answer:** Label it as an assumption with units, source, confidence, consequence if false, and a plan to verify it
+**Answer:** Label it as an assumption with units, source, confidence, consequence if false, and a plan to verify it.
 
-**Explanation:** The cited self-check in L02 tests whether the learner can connect Problem Framing and Workloads to the module mechanism without replacing evidence with labels. This explanation is specific to M01-Q007 and its cited source.
+**Explanation:** M01-Q007 uses self-check 3 from Problem Framing and Workloads; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M01-Q008
 
-**Type:** `short_answer`  
-**Difficulty:** `application`
+**Type:** `short_answer`
+**Difficulty:** `recall`
 
-**Answer:** Sensitivity shows which uncertain input can change the decision, focusing measurement effort where it matters
+**Answer:** Sensitivity shows which uncertain input can change the decision, focusing measurement effort where it matters.
 
-**Explanation:** The cited self-check in L02 tests whether the learner can connect Problem Framing and Workloads to the module mechanism without replacing evidence with labels. This explanation is specific to M01-Q008 and its cited source.
+**Explanation:** M01-Q008 uses self-check 4 from Problem Framing and Workloads; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M01-Q009
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `synthesis`
 
-**Answer:** A service metric observes one implementation boundary. A journey may cross clients, networks, and dependencies and can fail even when one server reports success
+**Answer:** A service metric observes one implementation boundary. A journey may cross clients, networks, and dependencies and can fail even when one server reports success.
 
-**Explanation:** The cited self-check in L02 tests whether the learner can connect Problem Framing and Workloads to the module mechanism without replacing evidence with labels. This explanation is specific to M01-Q009 and its cited source.
+**Explanation:** M01-Q009 uses self-check 5 from Problem Framing and Workloads; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M01-Q010
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** An invariant forbids a state and must always hold under the covered model. An SLO permits a bounded amount of failure over a defined window
+**Answer:** An invariant forbids a state and must always hold under the covered model. An SLO permits a bounded amount of failure over a defined window.
 
-**Explanation:** The cited self-check in L03 tests whether the learner can connect Invariants and State Ownership to the module mechanism without replacing evidence with labels. This explanation is specific to M01-Q010 and its cited source.
+**Explanation:** M01-Q010 uses self-check 1 from Invariants and State Ownership; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M01-Q011
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `application`
 
-**Answer:** Preservation is evaluated at transitions. Without threatening operations, the statement cannot influence interfaces, concurrency, recovery, or tests
+**Answer:** Preservation is evaluated at transitions. Without threatening operations, the statement cannot influence interfaces, concurrency, recovery, or tests.
 
-**Explanation:** The cited self-check in L03 tests whether the learner can connect Invariants and State Ownership to the module mechanism without replacing evidence with labels. This explanation is specific to M01-Q011 and its cited source.
+**Explanation:** M01-Q011 uses self-check 2 from Invariants and State Ownership; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M01-Q012
 
-**Type:** `short_answer`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`
+**Difficulty:** `recall`
 
-**Answer:** Yes. Users and dependencies act on copies. A stale revoked alert or deleted private record can cause a real violation outside the source
+**Answer:** Yes. Users and dependencies act on copies. A stale revoked alert or deleted private record can cause a real violation outside the source.
 
-**Explanation:** The cited self-check in L03 tests whether the learner can connect Invariants and State Ownership to the module mechanism without replacing evidence with labels. This explanation is specific to M01-Q012 and its cited source.
+**Explanation:** M01-Q012 uses self-check 3 from Invariants and State Ownership; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M01-Q013
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** It names storage, not the responsibility authorized to accept domain transitions, the allowed writers, or repair behavior
+**Answer:** It names storage, not the responsibility authorized to accept domain transitions, the allowed writers, or repair behavior.
 
-**Explanation:** The cited self-check in L03 tests whether the learner can connect Invariants and State Ownership to the module mechanism without replacing evidence with labels. This explanation is specific to M01-Q013 and its cited source.
+**Explanation:** M01-Q013 uses self-check 4 from Invariants and State Ownership; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M01-Q014
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `application`
 
-**Answer:** It connects the proposition to operations, concurrency, duplicates, enforcement, and observable evidence, exposing missing reasoning
+**Answer:** It connects the proposition to operations, concurrency, duplicates, enforcement, and observable evidence, exposing missing reasoning.
 
-**Explanation:** The cited self-check in L03 tests whether the learner can connect Invariants and State Ownership to the module mechanism without replacing evidence with labels. This explanation is specific to M01-Q014 and its cited source.
+**Explanation:** M01-Q014 uses self-check 5 from Invariants and State Ownership; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M01-Q015
 
-**Type:** `short_answer`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`
+**Difficulty:** `application`
 
-**Answer:** Stimulus source, stimulus, environment, artifact, response, and response measure
+**Answer:** Stimulus source, stimulus, environment, artifact, response, and response measure.
 
-**Explanation:** The cited self-check in L04 tests whether the learner can connect Quality-Attribute Scenarios to the module mechanism without replacing evidence with labels. This explanation is specific to M01-Q015 and its cited source.
+**Explanation:** M01-Q015 uses self-check 1 from Quality-Attribute Scenarios; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M01-Q016
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `recall`
 
-**Answer:** A use case describes functional interaction. A scenario probes how a system responds under a quality-relevant condition such as load, fault, attack, or change
+**Answer:** A use case describes functional interaction. A scenario probes how a system responds under a quality-relevant condition such as load, fault, attack, or change.
 
-**Explanation:** The cited self-check in L04 tests whether the learner can connect Quality-Attribute Scenarios to the module mechanism without replacing evidence with labels. This explanation is specific to M01-Q016 and its cited source.
+**Explanation:** M01-Q016 uses self-check 2 from Quality-Attribute Scenarios; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M01-Q017
 
-**Type:** `multiple_choice`  
-**Difficulty:** `application`
+**Type:** `multiple_choice`
+**Difficulty:** `recall`
 
 **Choices:**
 
-- Keep Architectural Judgment scoped to its stated evidence and boundary.
-- Make the documented mistake: Treat Architectural Judgment as a slogan instead of evidence
-- Treat Treat Architectural Judgment as a slogan instead of evidence as complete proof without the lesson boundary
-- Choose the familiar tool before checking whether Treat Architectural Judgment as a slogan instead of evidence applies
+- Measure the M01 scoped measurement and record the limiting assumption before approving the change.
+- Approve treating experience as evidence for Architectural Judgment; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for treating experience as evidence; the team can monitor Architectural Judgment after launch.
+- Approve the M01 shortcut for alpha now.
 
-**Answer:** Keep Architectural Judgment scoped to its stated evidence and boundary.
+**Answer:** Measure the M01 scoped measurement and record the limiting assumption before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M01-Q017 and its cited source.
+**Explanation:** M01-Q017 enacts mistake 1 from Architectural Judgment; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M01-Q018
 
-**Type:** `multiple_choice`  
-**Difficulty:** `synthesis`
+**Type:** `multiple_choice`
+**Difficulty:** `application`
 
 **Choices:**
 
-- Make the documented mistake: Treat Problem Framing and Workloads as a slogan instead of evidence
-- Keep Problem Framing and Workloads scoped to its stated evidence and boundary.
-- Choose the familiar tool before checking whether Treat Problem Framing and Workloads as a slogan instead of evidence.
-- Treat Treat Problem Framing and Workloads as a slogan instead of evidence as complete proof without the lesson bounda.
+- Approve using architecture labels as conclusions for Architectural Judgment; the local context makes that proposal familiar enough for review.
+- Bound the M01 scoped measurement before approving the change.
+- Defer measurement until production for using architecture labels as conclusions; the team can monitor Architectural Judgment after launch.
+- Approve the M01 shortcut for bravo now.
 
-**Answer:** Keep Problem Framing and Workloads scoped to its stated evidence and boundary.
+**Answer:** Bound the M01 scoped measurement before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M01-Q018 and its cited source.
+**Explanation:** M01-Q018 enacts mistake 2 from Architectural Judgment; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M01-Q019
 
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
+**Type:** `multiple_choice`
+**Difficulty:** `synthesis`
 
 **Choices:**
 
-- Choose the familiar tool before checking whether Treat Invariants and State Ownership as a slogan instead of evidence.
-- Make the documented mistake: Treat Invariants and State Ownership as a slogan instead of eviden
-- Keep Invariants and State Ownership scoped to its stated evidence and boundary.
-- Treat Treat Invariants and State Ownership as a slogan instead of evidence as complete proof without the lesson bound.
+- Approve optimizing for a hypothetical distant future for Architectural Judgment; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for optimizing for a hypothetical distant future; the team can monitor Architectural Judgment after launch.
+- Freeze the M01 scoped measurement before approval.
+- Approve the M01 shortcut for charlie now.
 
-**Answer:** Keep Invariants and State Ownership scoped to its stated evidence and boundary.
+**Answer:** Freeze the M01 scoped measurement before approval.
 
-**Explanation:** The distractors are anchored in the mistake list for L03; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M01-Q019 and its cited source.
+**Explanation:** M01-Q019 enacts mistake 3 from Architectural Judgment; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M01-Q020
 
-**Type:** `multiple_choice`  
-**Difficulty:** `application`
+**Type:** `multiple_choice`
+**Difficulty:** `recall`
 
 **Choices:**
 
-- Treat Treat Quality-Attribute Scenarios as a slogan instead of evidence as complete proof without the lesson boundary
-- Choose the familiar tool before checking whether Treat Quality-Attribute Scenarios as a slogan instead of evidence ap.
-- Make the documented mistake: Treat Quality-Attribute Scenarios as a slogan instead of evidence
-- Keep Quality-Attribute Scenarios scoped to its stated evidence and boundary.
+- Approve confusing disagreement with obstruction for Architectural Judgment; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for confusing disagreement with obstruction; the team can monitor Architectural Judgment after launch.
+- Approve the M01 shortcut for delta now.
+- Preserve the M01 scoped measurement and record the limiting assumption before approving the change.
 
-**Answer:** Keep Quality-Attribute Scenarios scoped to its stated evidence and boundary.
+**Answer:** Preserve the M01 scoped measurement and record the limiting assumption before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L04; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M01-Q020 and its cited source.
+**Explanation:** M01-Q020 enacts mistake 4 from Architectural Judgment; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M01-Q021
 
-**Type:** `multiple_choice`  
-**Difficulty:** `synthesis`
+**Type:** `multiple_choice`
+**Difficulty:** `application`
 
 **Choices:**
 
-- Keep Context and Boundaries scoped to its stated evidence and boundary.
-- Choose the familiar tool before checking whether Treat Context and Boundaries as a slogan instead of evidence applies
-- Treat Treat Context and Boundaries as a slogan instead of evidence as complete proof without the lesson boundary
-- Make the documented mistake: Treat Context and Boundaries as a slogan instead of evidence
+- Model the M01 scoped measurement before approving the change.
+- Approve recording only the winning option for Architectural Judgment; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for recording only the winning option; the team can monitor Architectural Judgment after launch.
+- Approve the M01 shortcut for ember now.
 
-**Answer:** Keep Context and Boundaries scoped to its stated evidence and boundary.
+**Answer:** Model the M01 scoped measurement before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L05; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M01-Q021 and its cited source.
+**Explanation:** M01-Q021 enacts mistake 5 from Architectural Judgment; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M01-Q022
 
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
+**Type:** `multiple_choice`
+**Difficulty:** `synthesis`
 
 **Choices:**
 
-- Treat Treat Constraints, Options, and Reversibility as a slogan instead of as complete proof without the lesson bound.
-- Keep Constraints, Options, and Reversibility scoped to its stated evidence and boundary.
-- Choose the familiar tool before checking whether Treat Constraints, Options, and Reversibility as a slogan instead of.
-- Make the documented mistake: Treat Constraints, Options, and Reversibility as a slogan instead
+- Approve using daily volume as a throughput target for Problem Framing and Workloads; the local context makes that proposal familiar enough for review.
+- Account the M01 scoped measurement before approval.
+- Defer measurement until production for using daily volume as a throughput target; the team can monitor Problem Framing and Workloads after launch.
+- Approve the M01 shortcut for fable now.
 
-**Answer:** Keep Constraints, Options, and Reversibility scoped to its stated evidence and boundary.
+**Answer:** Account the M01 scoped measurement before approval.
 
-**Explanation:** The distractors are anchored in the mistake list for L06; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M01-Q022 and its cited source.
+**Explanation:** M01-Q022 enacts mistake 1 from Problem Framing and Workloads; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M01-Q023
 
-**Type:** `multiple_choice`  
-**Difficulty:** `application`
+**Type:** `multiple_choice`
+**Difficulty:** `recall`
 
 **Choices:**
 
-- Treat Treat Failure Models and Adversarial Review as a slogan instead of ev as complete proof without the lesson boun.
-- Choose the familiar tool before checking whether Treat Failure Models and Adversarial Review as a slogan instead of e.
-- Keep Failure Models and Adversarial Review scoped to its stated evidence and boundary.
-- Make the documented mistake: Treat Failure Models and Adversarial Review as a slogan instead of
+- Approve treating estimates as promises for Problem Framing and Workloads; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for treating estimates as promises; the team can monitor Problem Framing and Workloads after launch.
+- Test the M01 scoped measurement and record the limiting assumption before approving the change.
+- Approve the M01 shortcut for harbor now.
 
-**Answer:** Keep Failure Models and Adversarial Review scoped to its stated evidence and boundary.
+**Answer:** Test the M01 scoped measurement and record the limiting assumption before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L07; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M01-Q023 and its cited source.
+**Explanation:** M01-Q023 enacts mistake 2 from Problem Framing and Workloads; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M01-Q024
 
-**Type:** `multiple_choice`  
-**Difficulty:** `synthesis`
+**Type:** `multiple_choice`
+**Difficulty:** `application`
 
 **Choices:**
 
-- Choose the familiar tool before checking whether Treat Decisions, RFCs, and Defense as a slogan instead of evidence a.
-- Make the documented mistake: Treat Decisions, RFCs, and Defense as a slogan instead of evidence
-- Treat Treat Decisions, RFCs, and Defense as a slogan instead of evidence as complete proof without the lesson boundary
-- Keep Decisions, RFCs, and Defense scoped to its stated evidence and boundary.
+- Approve modeling only user requests for Problem Framing and Workloads; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for modeling only user requests; the team can monitor Problem Framing and Workloads after launch.
+- Approve the M01 shortcut for indigo now.
+- Scope the M01 scoped measurement before approving the change.
 
-**Answer:** Keep Decisions, RFCs, and Defense scoped to its stated evidence and boundary.
+**Answer:** Scope the M01 scoped measurement before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L08; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M01-Q024 and its cited source.
+**Explanation:** M01-Q024 enacts mistake 3 from Problem Framing and Workloads; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M01-Q025
 
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
+**Type:** `calculation`
+**Difficulty:** `recall`
 
-**Answer:** Original concurrency = 130 x 0.040 = 5.20 operations. Revised rate = 130 x 1.25 = 162.5/s, so revised concurrency = 162.5 x 0.040 = 6.50 operations.
+**Answer:** M01 Workload Rate Conversion case 1: Average rate is 8,660,000 / 86,400 = 100.23/s. A 6x peak band is 601.39/s.
 
-**Explanation:** This perturbs the numeric practice around Architectural Judgment: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M01-Q025 and its cited source.
+**Explanation:** M01-Q025 uses workload rate conversion from Architectural Judgment and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M01-Q026
 
-**Type:** `calculation`  
-**Difficulty:** `recall`
+**Type:** `calculation`
+**Difficulty:** `application`
 
-**Answer:** Original concurrency = 140 x 0.050 = 7.00 operations. Revised rate = 140 x 1.30 = 182.0/s, so revised concurrency = 182.0 x 0.050 = 9.10 operations.
+**Answer:** M01 Estimate Sensitivity case 2: The low case is 209 x 0.80 = 167.2/s; the high case is 209 x 1.25 = 261.2/s.
 
-**Explanation:** This perturbs the numeric practice around Problem Framing and Workloads: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M01-Q026 and its cited source.
+**Explanation:** M01-Q026 uses estimate sensitivity from Problem Framing and Workloads and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M01-Q027
 
-**Type:** `calculation`  
-**Difficulty:** `application`
+**Type:** `calculation`
+**Difficulty:** `synthesis`
 
-**Answer:** Original concurrency = 150 x 0.060 = 9.00 operations. Revised rate = 150 x 1.35 = 202.5/s, so revised concurrency = 202.5 x 0.060 = 12.15 operations.
+**Answer:** M01 Weighted Operation Mix case 3: Weighted demand is 904 + 104 x 5 = 1424 read-equivalent units/s.
 
-**Explanation:** This perturbs the numeric practice around Invariants and State Ownership: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M01-Q027 and its cited source.
+**Explanation:** M01-Q027 uses weighted operation mix from Invariants and State Ownership and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M01-Q028
 
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
+**Type:** `design_judgment`
+**Difficulty:** `application`
 
-**Answer:** Original concurrency = 160 x 0.070 = 11.20 operations. Revised rate = 160 x 1.40 = 224.0/s, so revised concurrency = 224.0 x 0.070 = 15.68 operations.
+**Answer:** For M01 decision 1, recommend against. The protected bound is 183 x 0.72 = 131.8/s, and the planned 161.0/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 161.0/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 29.2/s of lower-priority work.
 
-**Explanation:** This perturbs the numeric practice around Quality-Attribute Scenarios: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M01-Q028 and its cited source.
+**Explanation:** M01-Q028 turns on the forcing number from EX-01, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M01-Q029
 
-**Type:** `calculation`  
-**Difficulty:** `recall`
+**Type:** `design_judgment`
+**Difficulty:** `synthesis`
 
-**Answer:** Original concurrency = 170 x 0.080 = 13.60 operations. Revised rate = 170 x 1.45 = 246.5/s, so revised concurrency = 246.5 x 0.080 = 19.72 operations.
+**Answer:** For M01 decision 2, recommend against. The protected bound is 200 x 0.72 = 144.0/s, and the planned 176.0/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 176.0/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 32.0/s of lower-priority work.
 
-**Explanation:** This perturbs the numeric practice around Context and Boundaries: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M01-Q029 and its cited source.
+**Explanation:** M01-Q029 turns on the forcing number from EX-02, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M01-Q030
 
-**Type:** `calculation`  
-**Difficulty:** `application`
+**Type:** `design_judgment`
+**Difficulty:** `recall`
 
-**Answer:** Original concurrency = 180 x 0.040 = 7.20 operations. Revised rate = 180 x 1.10 = 198.0/s, so revised concurrency = 198.0 x 0.040 = 7.92 operations.
+**Answer:** For M01 decision 3, recommend against. The protected bound is 217 x 0.72 = 156.2/s, and the planned 191.0/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 191.0/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 34.8/s of lower-priority work.
 
-**Explanation:** This perturbs the numeric practice around Constraints, Options, and Reversibility: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M01-Q030 and its cited source.
+**Explanation:** M01-Q030 turns on the forcing number from EX-03, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M01-Q031
 
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
+**Type:** `design_judgment`
+**Difficulty:** `application`
 
-**Answer:** Recommend the option that preserves the Quality-Attribute Scenarios mechanism under the exercise constraints: Rewrite: > We need Kafka and microservices because rider traffic will grow. Produce: 1. A user/business outcome. 2. A workload assumption with units and horizon. 3. One invariant The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M01 decision 4, recommend against. The protected bound is 234 x 0.72 = 168.5/s, and the planned 205.9/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 205.9/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 37.4/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M01-Q031 and its cited source.
+**Explanation:** M01-Q031 turns on the forcing number from EX-04, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M01-Q032
 
-**Type:** `design_judgment`  
-**Difficulty:** `recall`
+**Type:** `design_judgment`
+**Difficulty:** `synthesis`
 
-**Answer:** Recommend the option that preserves the Context and Boundaries mechanism under the exercise constraints: Classify each statement and explain what evidence could change it: 1. The pilot must launch in sixteen weeks. 2. Traffic will grow fivefold. 3 The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M01 decision 5, recommend against. The protected bound is 251 x 0.72 = 180.7/s, and the planned 220.9/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 220.9/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 40.2/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M01-Q032 and its cited source.
+**Explanation:** M01-Q032 turns on the forcing number from EX-05, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M01-Q033
 
-**Type:** `design_judgment`  
-**Difficulty:** `application`
+**Type:** `design_judgment`
+**Difficulty:** `recall`
 
-**Answer:** Recommend the option that preserves the Constraints, Options, and Reversibility mechanism under the exercise constraints: A transit authority has 240,000 eligible riders. During a major incident: - Each rider makes 3 alert checks in a 90-minute period. - 25% of checks arrive in the busiest 4 minutes The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M01 decision 6, recommend against. The protected bound is 268 x 0.72 = 193.0/s, and the planned 235.8/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 235.8/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 42.8/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M01-Q033 and its cited source.
+**Explanation:** M01-Q033 turns on the forcing number from EX-06, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M01-Q034
 
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
+**Type:** `design_judgment`
+**Difficulty:** `application`
 
-**Answer:** Recommend the option that preserves the Failure Models and Adversarial Review mechanism under the exercise constraints: Classify and rewrite weak statements: 1. Alerts should be delivered quickly. 2. A revoked alert is never current for a new rider view. 3. The platform should be secure. 4 The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M01 decision 7, recommend against. The protected bound is 285 x 0.72 = 205.2/s, and the planned 250.8/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 250.8/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 45.6/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M01-Q034 and its cited source.
+**Explanation:** M01-Q034 turns on the forcing number from EX-07, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M01-Q035
 
-**Type:** `design_judgment`  
-**Difficulty:** `recall`
+**Type:** `design_judgment`
+**Difficulty:** `synthesis`
 
-**Answer:** Recommend the option that preserves the Decisions, RFCs, and Defense mechanism under the exercise constraints: For current alert version, operator authority, journey route, and delivery status: 1. Name the authoritative owner. 2. Name allowed writers. 3. Name derived readers. 4 The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M01 decision 8, recommend against. The protected bound is 302 x 0.72 = 217.4/s, and the planned 265.8/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 265.8/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 48.4/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M01-Q035 and its cited source.
+**Explanation:** M01-Q035 turns on the forcing number from EX-08, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M01-Q036
 
-**Type:** `design_judgment`  
-**Difficulty:** `application`
+**Type:** `design_judgment`
+**Difficulty:** `recall`
 
-**Answer:** Recommend the option that preserves the Architectural Judgment mechanism under the exercise constraints: Rewrite each requirement in six-part form: 1. Alerts are fast. 2. The system is available during an outage. 3. The platform is secure. 4. Recovery is quick. 5 The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M01 decision 9, recommend against. The protected bound is 319 x 0.72 = 229.7/s, and the planned 280.7/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 280.7/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 51.0/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M01-Q036 and its cited source.
+**Explanation:** M01-Q036 turns on the forcing number from EX-09, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M01-Q037
 
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
+**Type:** `design_judgment`
+**Difficulty:** `application`
 
-**Answer:** Recommend the option that preserves the Problem Framing and Workloads mechanism under the exercise constraints: Critique this view: mermaid flowchart LR User --> API API --> PostgreSQL API --> Kafka Kafka --> Lambda Lambda --> Redis Redis --> Mobile Find at least eight problems The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M01 decision 10, recommend against. The protected bound is 336 x 0.72 = 241.9/s, and the planned 295.7/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 295.7/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 53.8/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M01-Q037 and its cited source.
+**Explanation:** M01-Q037 turns on the forcing number from EX-10, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.

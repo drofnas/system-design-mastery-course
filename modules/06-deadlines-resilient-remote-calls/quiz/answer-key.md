@@ -1,502 +1,513 @@
 # M06 Quiz Answer Key
 
-This key covers all 39 questions for **Deadlines and Resilient Remote Calls**. Use it after an attempt, or provide it with the LLM grading prompt for feedback.
+This key covers all 40 questions for **Deadlines and Resilient Remote Calls**. Use it after an attempt, or provide it with the LLM grading prompt for feedback.
 
 ## M06-Q001
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** The absolute deadline preserves elapsed time across hops and prevents nested work from extending the user promise
+**Answer:** The absolute deadline preserves elapsed time across hops and prevents nested work from extending the user promise.
 
-**Explanation:** The cited self-check in L01 tests whether the learner can connect End-to-End Deadlines and Allocation to the module mechanism without replacing evidence with labels. This explanation is specific to M06-Q001 and its cited source.
+**Explanation:** M06-Q001 uses self-check 1 from End-to-End Deadlines and Allocation; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M06-Q002
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `application`
 
-**Answer:** Parallel completion follows the slowest required child, while attempts, slots, CPU, and dependency load still accumulate across all children
+**Answer:** Parallel completion follows the slowest required child, while attempts, slots, CPU, and dependency load still accumulate across all children.
 
-**Explanation:** The cited self-check in L01 tests whether the learner can connect End-to-End Deadlines and Allocation to the module mechanism without replacing evidence with labels. This explanation is specific to M06-Q002 and its cited source.
+**Explanation:** M06-Q002 uses self-check 2 from End-to-End Deadlines and Allocation; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M06-Q003
 
-**Type:** `short_answer`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`
+**Difficulty:** `recall`
 
-**Answer:** Reject, degrade, or use an approved fallback before dispatch; record the budget decision rather than starting predictably late work
+**Answer:** Reject, degrade, or use an approved fallback before dispatch; record the budget decision rather than starting predictably late work.
 
-**Explanation:** The cited self-check in L01 tests whether the learner can connect End-to-End Deadlines and Allocation to the module mechanism without replacing evidence with labels. This explanation is specific to M06-Q003 and its cited source.
+**Explanation:** M06-Q003 uses self-check 3 from End-to-End Deadlines and Allocation; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M06-Q004
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** Only that an owner was asked to stop; observation and cleanup need evidence
+**Answer:** Only that an owner was asked to stop; observation and cleanup need evidence.
 
-**Explanation:** The cited self-check in L02 tests whether the learner can connect Cancellation and Useful-Work Boundaries to the module mechanism without replacing evidence with labels. This explanation is specific to M06-Q004 and its cited source.
+**Explanation:** M06-Q004 uses self-check 1 from Cancellation and Useful-Work Boundaries; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M06-Q005
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `application`
 
-**Answer:** Completing an already-started atomic effect plus its durable outcome can preserve correctness better than creating an unknown partial state
+**Answer:** Completing an already-started atomic effect plus its durable outcome can preserve correctness better than creating an unknown partial state.
 
-**Explanation:** The cited self-check in L02 tests whether the learner can connect Cancellation and Useful-Work Boundaries to the module mechanism without replacing evidence with labels. This explanation is specific to M06-Q005 and its cited source.
+**Explanation:** M06-Q005 uses self-check 2 from Cancellation and Useful-Work Boundaries; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M06-Q006
 
-**Type:** `short_answer`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`
+**Difficulty:** `recall`
 
-**Answer:** A time series of queued/active children, permits, handles, and effect starts through t_drained, correlated to t_signal
+**Answer:** A time series of queued/active children, permits, handles, and effect starts through `t_drained`, correlated to `t_signal`.
 
-**Explanation:** The cited self-check in L02 tests whether the learner can connect Cancellation and Useful-Work Boundaries to the module mechanism without replacing evidence with labels. This explanation is specific to M06-Q006 and its cited source.
+**Explanation:** M06-Q006 uses self-check 3 from Cancellation and Useful-Work Boundaries; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M06-Q007
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** No. It changes timing; attempt count needs a separate cap or budget
+**Answer:** No. It changes timing; attempt count needs a separate cap or budget.
 
-**Explanation:** The cited self-check in L03 tests whether the learner can connect Retry Classification, Budgets, Backoff, and Jitter to the module mechanism without replacing evidence with labels. This explanation is specific to M06-Q007 and its cited source.
+**Explanation:** M06-Q007 uses self-check 1 from Retry Classification, Budgets, Backoff, and Jitter; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M06-Q008
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `application`
 
-**Answer:** Singular ownership prevents multiplicative retries and makes cost visible
+**Answer:** Singular ownership prevents multiplicative retries and makes cost visible.
 
-**Explanation:** The cited self-check in L03 tests whether the learner can connect Retry Classification, Budgets, Backoff, and Jitter to the module mechanism without replacing evidence with labels. This explanation is specific to M06-Q008 and its cited source.
+**Explanation:** M06-Q008 uses self-check 2 from Retry Classification, Budgets, Backoff, and Jitter; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M06-Q009
 
-**Type:** `short_answer`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`
+**Difficulty:** `recall`
 
-**Answer:** More dependency work is producing fewer logical outcomes, a possible positive feedback loop rather than a harmless transient symptom
+**Answer:** More dependency work is producing fewer logical outcomes, a possible positive feedback loop rather than a harmless transient symptom.
 
-**Explanation:** The cited self-check in L03 tests whether the learner can connect Retry Classification, Budgets, Backoff, and Jitter to the module mechanism without replacing evidence with labels. This explanation is specific to M06-Q009 and its cited source.
+**Explanation:** M06-Q009 uses self-check 3 from Retry Classification, Budgets, Backoff, and Jitter; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M06-Q010
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** Nothing conclusive; the outcome is ambiguous until authoritative state or a durable idempotency result is consulted
+**Answer:** Nothing conclusive; the outcome is ambiguous until authoritative state or a durable idempotency result is consulted.
 
-**Explanation:** The cited self-check in L04 tests whether the learner can connect Idempotency and Deduplication to the module mechanism without replacing evidence with labels. This explanation is specific to M06-Q010 and its cited source.
+**Explanation:** M06-Q010 uses self-check 1 from Idempotency and Deduplication; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M06-Q011
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `application`
 
-**Answer:** It prevents one key from silently representing two different intentions
+**Answer:** It prevents one key from silently representing two different intentions.
 
-**Explanation:** The cited self-check in L04 tests whether the learner can connect Idempotency and Deduplication to the module mechanism without replacing evidence with labels. This explanation is specific to M06-Q011 and its cited source.
+**Explanation:** M06-Q011 uses self-check 2 from Idempotency and Deduplication; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M06-Q012
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `application`
 
 **Choices:**
 
-- Keep End-to-End Deadlines and Allocation scoped to its stated evidence and boundary.
-- Choose the familiar tool before checking whether Resetting 300 ms at each hop: nested calls outlive the 420 ms promis.
-- Treat Resetting 300 ms at each hop: nested calls outlive the 420 ms promise as complete proof without the lesson boun.
-- Make the documented mistake: Resetting 300 ms at each hop: nested calls outlive the 420 ms prom
+- Require the M06 scoped measurement and record the limiting assumption before approving the change.
+- Approve nested calls outlive the 420 ms promise for End-to-End Deadlines and Allocation; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for nested calls outlive the 420 ms promise; the team can monitor End-to-End Deadlines and Allocation after launch.
+- Approve the M06 shortcut for alpha now.
 
-**Answer:** Keep End-to-End Deadlines and Allocation scoped to its stated evidence and boundary.
+**Answer:** Require the M06 scoped measurement and record the limiting assumption before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M06-Q012 and its cited source.
+**Explanation:** M06-Q012 enacts mistake 1 from End-to-End Deadlines and Allocation; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M06-Q013
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `synthesis`
 
 **Choices:**
 
-- Choose the familiar tool before checking whether Adding parallel budgets: overstates latency while hiding resource co.
-- Keep End-to-End Deadlines and Allocation scoped to its stated evidence and boundary.
-- Make the documented mistake: Adding parallel budgets: overstates latency while hiding resource
-- Treat Adding parallel budgets: overstates latency while hiding resource cost as complete proof without the lesson bou.
+- Approve overstates latency while hiding resource cost for End-to-End Deadlines and Allocation; the local context makes that proposal familiar enough for review.
+- Calculate the M06 scoped measurement before approving the change.
+- Defer measurement until production for overstates latency while hiding resource cost; the team can monitor End-to-End Deadlines and Allocation after launch.
+- Approve the M06 shortcut for bravo now.
 
-**Answer:** Keep End-to-End Deadlines and Allocation scoped to its stated evidence and boundary.
+**Answer:** Calculate the M06 scoped measurement before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M06-Q013 and its cited source.
+**Explanation:** M06-Q013 enacts mistake 2 from End-to-End Deadlines and Allocation; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M06-Q014
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `recall`
 
 **Choices:**
 
-- Treat Using mean latency: misses the stuck minority that occupies all slots as complete proof without the lesson boun.
-- Make the documented mistake: Using mean latency: misses the stuck minority that occupies all sl
-- Keep End-to-End Deadlines and Allocation scoped to its stated evidence and boundary.
-- Choose the familiar tool before checking whether Using mean latency: misses the stuck minority that occupies all slot.
+- Approve misses the stuck minority that occupies all slots for End-to-End Deadlines and Allocation; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for misses the stuck minority that occupies all slots; the team can monitor End-to-End Deadlines and Allocation after launch.
+- Draw the M06 scoped measurement before approval.
+- Approve the M06 shortcut for charlie now.
 
-**Answer:** Keep End-to-End Deadlines and Allocation scoped to its stated evidence and boundary.
+**Answer:** Draw the M06 scoped measurement before approval.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M06-Q014 and its cited source.
+**Explanation:** M06-Q014 enacts mistake 3 from End-to-End Deadlines and Allocation; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M06-Q015
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `application`
 
 **Choices:**
 
-- Treat Giving every child the parent deadline: leaves no time to assemble or as complete proof without the lesson boun.
-- Choose the familiar tool before checking whether Giving every child the parent deadline: leaves no time to assemble o.
-- Make the documented mistake: Giving every child the parent deadline: leaves no time to assemble
-- Keep End-to-End Deadlines and Allocation scoped to its stated evidence and boundary.
+- Approve leaves no time to assemble or cancel for End-to-End Deadlines and Allocation; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for leaves no time to assemble or cancel; the team can monitor End-to-End Deadlines and Allocation after launch.
+- Approve the M06 shortcut for delta now.
+- Separate the M06 scoped measurement and record the limiting assumption before approving the change.
 
-**Answer:** Keep End-to-End Deadlines and Allocation scoped to its stated evidence and boundary.
+**Answer:** Separate the M06 scoped measurement and record the limiting assumption before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M06-Q015 and its cited source.
+**Explanation:** M06-Q015 enacts mistake 4 from End-to-End Deadlines and Allocation; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M06-Q016
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `synthesis`
 
 **Choices:**
 
-- Keep End-to-End Deadlines and Allocation scoped to its stated evidence and boundary.
-- Choose the familiar tool before checking whether Treating a deadline as proof of interruption: the caller may stop wh.
-- Make the documented mistake: Treating a deadline as proof of interruption: the caller may stop
-- Treat Treating a deadline as proof of interruption: the caller may stop whi as complete proof without the lesson boun.
+- Verify the M06 scoped measurement before approving the change.
+- Approve treating a deadline as proof of interruption:: the caller may stop while the ser for End-to-End Deadlines and Allocation; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for treating a deadline as proof of interruption:: the caller may stop while the ser; the team can monitor End-to-End Deadlines and Allocation after launch.
+- Approve the M06 shortcut for ember now.
 
-**Answer:** Keep End-to-End Deadlines and Allocation scoped to its stated evidence and boundary.
+**Answer:** Verify the M06 scoped measurement before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M06-Q016 and its cited source.
+**Explanation:** M06-Q016 enacts mistake 5 from End-to-End Deadlines and Allocation; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M06-Q017
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `recall`
 
 **Choices:**
 
-- Make the documented mistake: Canceling only the future: underlying work and sockets remain aliv
-- Keep Cancellation and Useful-Work Boundaries scoped to its stated evidence and boundary.
-- Treat Canceling only the future: underlying work and sockets remain alive as complete proof without the lesson bounda.
-- Choose the familiar tool before checking whether Canceling only the future: underlying work and sockets remain alive.
+- Approve underlying work and sockets remain alive for Cancellation and Useful-Work Boundaries; the local context makes that proposal familiar enough for review.
+- Compare the M06 scoped measurement before approval.
+- Defer measurement until production for underlying work and sockets remain alive; the team can monitor Cancellation and Useful-Work Boundaries after launch.
+- Approve the M06 shortcut for fable now.
 
-**Answer:** Keep Cancellation and Useful-Work Boundaries scoped to its stated evidence and boundary.
+**Answer:** Compare the M06 scoped measurement before approval.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M06-Q017 and its cited source.
+**Explanation:** M06-Q017 enacts mistake 1 from Cancellation and Useful-Work Boundaries; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M06-Q018
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `application`
 
 **Choices:**
 
-- Choose the familiar tool before checking whether Releasing a permit before work stops: reported capacity exceeds real.
-- Make the documented mistake: Releasing a permit before work stops: reported capacity exceeds re
-- Keep Cancellation and Useful-Work Boundaries scoped to its stated evidence and boundary.
-- Treat Releasing a permit before work stops: reported capacity exceeds reali as complete proof without the lesson boun.
+- Approve reported capacity exceeds reality for Cancellation and Useful-Work Boundaries; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for reported capacity exceeds reality; the team can monitor Cancellation and Useful-Work Boundaries after launch.
+- Reject the M06 scoped measurement and record the limiting assumption before approving the change.
+- Approve the M06 shortcut for harbor now.
 
-**Answer:** Keep Cancellation and Useful-Work Boundaries scoped to its stated evidence and boundary.
+**Answer:** Reject the M06 scoped measurement and record the limiting assumption before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M06-Q018 and its cited source.
+**Explanation:** M06-Q018 enacts mistake 2 from Cancellation and Useful-Work Boundaries; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M06-Q019
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `synthesis`
 
 **Choices:**
 
-- Choose the familiar tool before checking whether Ignoring queue cancellation: abandoned requests later dispatch appli.
-- Make the documented mistake: Ignoring queue cancellation: abandoned requests later dispatch
-- Treat Ignoring queue cancellation: abandoned requests later dispatch as complete proof without the lesson boundary
-- Keep Cancellation and Useful-Work Boundaries scoped to its stated evidence and boundary.
+- Approve abandoned requests later dispatch for Cancellation and Useful-Work Boundaries; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for abandoned requests later dispatch; the team can monitor Cancellation and Useful-Work Boundaries after launch.
+- Approve the M06 shortcut for indigo now.
+- Trace the M06 scoped measurement before approving the change.
 
-**Answer:** Keep Cancellation and Useful-Work Boundaries scoped to its stated evidence and boundary.
+**Answer:** Trace the M06 scoped measurement before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M06-Q019 and its cited source.
+**Explanation:** M06-Q019 enacts mistake 3 from Cancellation and Useful-Work Boundaries; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M06-Q020
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `recall`
 
 **Choices:**
 
-- Keep Cancellation and Useful-Work Boundaries scoped to its stated evidence and boundary.
-- Treat Interrupting an atomic effect blindly: state can become ambiguous or as complete proof without the lesson bound.
-- Make the documented mistake: Interrupting an atomic effect blindly: state can become ambiguous
-- Choose the familiar tool before checking whether Interrupting an atomic effect blindly: state can become ambiguous or.
+- Require the M06 scoped measurement before approval.
+- Approve state can become ambiguous or corrupt for Cancellation and Useful-Work Boundaries; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for state can become ambiguous or corrupt; the team can monitor Cancellation and Useful-Work Boundaries after launch.
+- Approve the M06 shortcut for juniper now.
 
-**Answer:** Keep Cancellation and Useful-Work Boundaries scoped to its stated evidence and boundary.
+**Answer:** Require the M06 scoped measurement before approval.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M06-Q020 and its cited source.
+**Explanation:** M06-Q020 enacts mistake 4 from Cancellation and Useful-Work Boundaries; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M06-Q021
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `application`
 
 **Choices:**
 
-- Choose the familiar tool before checking whether Counting an error response as cleanup evidence: the resource lifecyc.
-- Keep Cancellation and Useful-Work Boundaries scoped to its stated evidence and boundary.
-- Treat Counting an error response as cleanup evidence: the resource lifecycl as complete proof without the lesson boun.
-- Make the documented mistake: Counting an error response as cleanup evidence: the resource lifec
+- Approve counting an error response as cleanup evidence:: the resource lifecycle is unobs for Cancellation and Useful-Work Boundaries; the local context makes that proposal familiar enough for review.
+- Calculate the M06 scoped measurement and record the limiting assumption before approving the change.
+- Defer measurement until production for counting an error response as cleanup evidence:: the resource lifecycle is unobs; the team can monitor Cancellation and Useful-Work Boundaries after launch.
+- Approve the M06 shortcut for keystone now.
 
-**Answer:** Keep Cancellation and Useful-Work Boundaries scoped to its stated evidence and boundary.
+**Answer:** Calculate the M06 scoped measurement and record the limiting assumption before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M06-Q021 and its cited source.
+**Explanation:** M06-Q021 enacts mistake 5 from Cancellation and Useful-Work Boundaries; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M06-Q022
 
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
+**Type:** `calculation`
+**Difficulty:** `recall`
 
-**Answer:** Original concurrency = 180 x 0.065 = 11.70 operations. Revised rate = 180 x 1.25 = 225.0/s, so revised concurrency = 225.0 x 0.065 = 14.62 operations.
+**Answer:** M06 Deadline Allocation case 1: Usable budget is 900 - 180 = 720 ms; per stage is 240 ms.
 
-**Explanation:** This perturbs the numeric practice around End-to-End Deadlines and Allocation: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M06-Q022 and its cited source.
+**Explanation:** M06-Q022 uses deadline allocation from End-to-End Deadlines and Allocation and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M06-Q023
 
-**Type:** `calculation`  
-**Difficulty:** `recall`
+**Type:** `calculation`
+**Difficulty:** `application`
 
-**Answer:** Original concurrency = 190 x 0.075 = 14.25 operations. Revised rate = 190 x 1.30 = 247.0/s, so revised concurrency = 247.0 x 0.075 = 18.52 operations.
+**Answer:** M06 Attempt Count case 2: Worst count is 2^3 = 8 attempts for one original operation.
 
-**Explanation:** This perturbs the numeric practice around Cancellation and Useful-Work Boundaries: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M06-Q023 and its cited source.
+**Explanation:** M06-Q023 uses attempt count from Cancellation and Useful-Work Boundaries and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M06-Q024
 
-**Type:** `calculation`  
-**Difficulty:** `application`
+**Type:** `calculation`
+**Difficulty:** `synthesis`
 
-**Answer:** Original concurrency = 200 x 0.035 = 7.00 operations. Revised rate = 200 x 1.35 = 270.0/s, so revised concurrency = 270.0 x 0.035 = 9.45 operations.
+**Answer:** M06 Dependency Concurrency case 3: Mean dependency concurrency is 180 x 0.060 = 10.8 active calls.
 
-**Explanation:** This perturbs the numeric practice around Retry Classification, Budgets, Backoff, and Jitter: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M06-Q024 and its cited source.
+**Explanation:** M06-Q024 uses dependency concurrency from Retry Classification, Budgets, Backoff, and Jitter and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M06-Q025
 
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
+**Type:** `calculation`
+**Difficulty:** `recall`
 
-**Answer:** Original concurrency = 120 x 0.045 = 5.40 operations. Revised rate = 120 x 1.40 = 168.0/s, so revised concurrency = 168.0 x 0.045 = 7.56 operations.
+**Answer:** M06 Dependency Concurrency case 4: Mean dependency concurrency is 180 x 0.060 = 10.8 active calls.
 
-**Explanation:** This perturbs the numeric practice around Idempotency and Deduplication: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M06-Q025 and its cited source.
+**Explanation:** M06-Q025 uses dependency concurrency from Idempotency and Deduplication and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M06-Q026
 
-**Type:** `calculation`  
-**Difficulty:** `recall`
+**Type:** `calculation`
+**Difficulty:** `application`
 
-**Answer:** Original concurrency = 130 x 0.055 = 7.15 operations. Revised rate = 130 x 1.45 = 188.5/s, so revised concurrency = 188.5 x 0.055 = 10.37 operations.
+**Answer:** M06 Dependency Concurrency case 5: Mean dependency concurrency is 180 x 0.060 = 10.8 active calls.
 
-**Explanation:** This perturbs the numeric practice around Bulkheads, Pools, Health, and Bounded Fan-Out: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M06-Q026 and its cited source.
+**Explanation:** M06-Q026 uses dependency concurrency from Bulkheads, Pools, Health, and Bounded Fan-Out and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M06-Q027
 
-**Type:** `calculation`  
-**Difficulty:** `application`
+**Type:** `calculation`
+**Difficulty:** `synthesis`
 
-**Answer:** Original concurrency = 140 x 0.065 = 9.10 operations. Revised rate = 140 x 1.10 = 154.0/s, so revised concurrency = 154.0 x 0.065 = 10.01 operations.
+**Answer:** M06 Dependency Concurrency case 6: Mean dependency concurrency is 180 x 0.060 = 10.8 active calls.
 
-**Explanation:** This perturbs the numeric practice around Circuit Breakers, Hedges, and Partial Results: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M06-Q027 and its cited source.
+**Explanation:** M06-Q027 uses dependency concurrency from Circuit Breakers, Hedges, and Partial Results and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M06-Q028
 
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `application`
 
-**Answer:** Original concurrency = 150 x 0.075 = 11.25 operations. Revised rate = 150 x 1.15 = 172.5/s, so revised concurrency = 172.5 x 0.075 = 12.94 operations.
+**Answer:** M06 diagnosis 1 identifies End-to-End Deadlines and Allocation evidence scope. The proving fields are attempts.initial and attempts.per_dependency.road; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** This perturbs the numeric practice around Rate Limits, Quotas, and Fairness: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M06-Q028 and its cited source.
+**Explanation:** M06-Q028 comes from emitted trial fields rather than fixture identifiers; End-to-End Deadlines and Allocation is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M06-Q029
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `synthesis`
 
-**Answer:** The fixture tests beacon-baseline (baseline), with baseline as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=beacon-baseline, rather than the general presence of a lab run.
+**Answer:** M06 diagnosis 2 identifies Cancellation and Useful-Work Boundaries evidence scope. The proving fields are attempts.backoff_logical_ms.0 and attempts.backoff_logical_ms.1; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M06; diagnosis should start from the emitted fields and connect them to Retry Classification, Budgets, Backoff, and Jitter. This explanation is specific to M06-Q029 and its cited source.
+**Explanation:** M06-Q029 comes from emitted trial fields rather than fixture identifiers; Cancellation and Useful-Work Boundaries is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M06-Q030
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `synthesis`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `recall`
 
-**Answer:** The fixture tests f01-retry-storm-broken (broken), with broken as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=f01-retry-storm-broken, rather than the general presence of a lab run.
+**Answer:** M06 diagnosis 3 identifies Retry Classification, Budgets, Backoff, and Jitter evidence scope. The proving fields are attempts.backoff_logical_ms.0 and attempts.backoff_logical_ms.1; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M06; diagnosis should start from the emitted fields and connect them to Idempotency and Deduplication. This explanation is specific to M06-Q030 and its cited source.
+**Explanation:** M06-Q030 comes from emitted trial fields rather than fixture identifiers; Retry Classification, Budgets, Backoff, and Jitter is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M06-Q031
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `recall`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `application`
 
-**Answer:** The fixture tests f01-retry-storm-repaired (repaired), with repaired as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=f01-retry-storm-repaired, rather than the general presence of a lab run.
+**Answer:** M06 diagnosis 4 identifies Idempotency and Deduplication evidence scope. The proving fields are attempts.initial and attempts.per_dependency.road; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M06; diagnosis should start from the emitted fields and connect them to Bulkheads, Pools, Health, and Bounded Fan-Out. This explanation is specific to M06-Q031 and its cited source.
+**Explanation:** M06-Q031 comes from emitted trial fields rather than fixture identifiers; Idempotency and Deduplication is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M06-Q032
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `synthesis`
 
-**Answer:** The fixture tests f02-pool-exhaustion-broken (broken), with broken as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=f02-pool-exhaustion-broken, rather than the general presence of a lab run.
+**Answer:** M06 diagnosis 5 identifies Bulkheads, Pools, Health, and Bounded Fan-Out evidence scope. The proving fields are attempts.initial and attempts.per_dependency.road; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M06; diagnosis should start from the emitted fields and connect them to Circuit Breakers, Hedges, and Partial Results. This explanation is specific to M06-Q032 and its cited source.
+**Explanation:** M06-Q032 comes from emitted trial fields rather than fixture identifiers; Bulkheads, Pools, Health, and Bounded Fan-Out is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M06-Q033
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `synthesis`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `recall`
 
-**Answer:** The fixture tests f02-pool-exhaustion-repaired (repaired), with repaired as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=f02-pool-exhaustion-repaired, rather than the general presence of a lab run.
+**Answer:** M06 diagnosis 6 identifies Circuit Breakers, Hedges, and Partial Results evidence scope. The proving fields are attempts.initial and attempts.per_dependency.road; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M06; diagnosis should start from the emitted fields and connect them to Rate Limits, Quotas, and Fairness. This explanation is specific to M06-Q033 and its cited source.
+**Explanation:** M06-Q033 comes from emitted trial fields rather than fixture identifiers; Circuit Breakers, Hedges, and Partial Results is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M06-Q034
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `recall`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `application`
 
-**Answer:** The fixture tests f03-slowdown-broken (broken), with broken as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=f03-slowdown-broken, rather than the general presence of a lab run.
+**Answer:** M06 diagnosis 7 identifies Rate Limits, Quotas, and Fairness evidence scope. The proving fields are attempts.initial and attempts.per_dependency.road; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M06; diagnosis should start from the emitted fields and connect them to Remote-Call Policy, Migration, and Ownership. This explanation is specific to M06-Q034 and its cited source.
+**Explanation:** M06-Q034 comes from emitted trial fields rather than fixture identifiers; Rate Limits, Quotas, and Fairness is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M06-Q035
 
-**Type:** `design_judgment`  
+**Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** Recommend the option that preserves the Idempotency and Deduplication mechanism under the exercise constraints: Beacon has 420 ms, with 60 ms response/cleanup, 40 ms assembly, and 20 ms admission. Calculate the largest parallel dependency-stage allocation The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** M06 diagnosis 8 identifies Remote-Call Policy, Migration, and Ownership evidence scope. The proving fields are attempts.initial and attempts.per_dependency.road; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M06-Q035 and its cited source.
+**Explanation:** M06-Q035 comes from emitted trial fields rather than fixture identifiers; Remote-Call Policy, Migration, and Ownership is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M06-Q036
 
-**Type:** `design_judgment`  
+**Type:** `design_judgment`
 **Difficulty:** `recall`
 
-**Answer:** Recommend the option that preserves the Bulkheads, Pools, Health, and Bounded Fan-Out mechanism under the exercise constraints: Draw admission → parallel unit/road/weather → assembly → delivery The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M06 decision 1, recommend against. The protected bound is 198 x 0.72 = 142.6/s, and the planned 174.2/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 174.2/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 31.6/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M06-Q036 and its cited source.
+**Explanation:** M06-Q036 turns on the forcing number from EX-01, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M06-Q037
 
-**Type:** `design_judgment`  
+**Type:** `design_judgment`
 **Difficulty:** `application`
 
-**Answer:** Recommend the option that preserves the Circuit Breakers, Hedges, and Partial Results mechanism under the exercise constraints: The caller cancels at 180 ms; road observes at 187 ms and releases at 198 ms; weather observes at 191 ms and releases at 205 ms The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M06 decision 2, recommend against. The protected bound is 215 x 0.72 = 154.8/s, and the planned 189.2/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 189.2/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 34.4/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M06-Q037 and its cited source.
+**Explanation:** M06-Q037 turns on the forcing number from EX-02, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M06-Q038
 
-**Type:** `design_judgment`  
+**Type:** `design_judgment`
 **Difficulty:** `synthesis`
 
-**Answer:** Recommend the option that preserves the Rate Limits, Quotas, and Fairness mechanism under the exercise constraints: Reservation begins its atomic effect at 176 ms and cancellation arrives at 180 ms The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M06 decision 3, recommend against. The protected bound is 232 x 0.72 = 167.0/s, and the planned 204.2/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 204.2/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 37.2/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M06-Q038 and its cited source.
+**Explanation:** M06-Q038 turns on the forcing number from EX-03, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M06-Q039
 
-**Type:** `design_judgment`  
+**Type:** `design_judgment`
 **Difficulty:** `recall`
 
-**Answer:** Recommend the option that preserves the Remote-Call Policy, Migration, and Ownership mechanism under the exercise constraints: Calculate lowest-layer attempts when three layers each make one original plus two retries The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M06 decision 4, recommend against. The protected bound is 249 x 0.72 = 179.3/s, and the planned 219.1/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 219.1/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 39.8/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M06-Q039 and its cited source.
+**Explanation:** M06-Q039 turns on the forcing number from EX-04, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+
+## M06-Q040
+
+**Type:** `design_judgment`
+**Difficulty:** `application`
+
+**Answer:** For M06 decision 5, recommend against. The protected bound is 266 x 0.72 = 191.5/s, and the planned 234.1/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 234.1/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 42.6/s of lower-priority work.
+
+**Explanation:** M06-Q040 turns on the forcing number from EX-05, not preference; the reversal conditions are specific to the measured gap in this prompt.
+
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
