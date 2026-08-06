@@ -15,9 +15,11 @@ jobs:
           node-version: "24"
           check-latest: true
       - name: course structure
-        run: python3 scripts/validate_solo_course.py
+        run: python3 scripts/validate_solo_course.py --strict
       - name: schema conformance
         run: python3 scripts/schema_contract.py
+      - name: answer key drift
+        run: python3 scripts/generate_answer_key.py --all --check
       - name: lab suites
         run: |
           fail=0

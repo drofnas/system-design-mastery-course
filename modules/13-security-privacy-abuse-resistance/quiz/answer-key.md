@@ -1,1103 +1,546 @@
 # M13 Quiz Answer Key
 
-This key covers all 100 questions for **Security, Privacy, and Abuse Resistance**. Use it after an attempt, or provide it with the LLM grading prompt for feedback.
+This key covers all 43 questions for **Security, Privacy, and Abuse Resistance**. Use it after an attempt, or provide it with the LLM grading prompt for feedback.
 
 ## M13-Q001
 
-**Type:** `multiple_choice`  
+**Type:** `short_answer`  
 **Difficulty:** `recall`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to build a repeatable threat model from assets, actors, data flows, trust boundaries, abuse cases, risk owners, and reversal evidence.
+**Answer:** Assets do not show actors, flows, trust changes, misuse paths, or where a decision must be enforced
 
-**Explanation:** Use Threat models, trust boundaries, and abuse cases to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
+**Explanation:** The cited self-check in L01 tests whether the learner can connect Threat models, trust boundaries, and abuse cases to the module mechanism without replacing evidence with labels. This explanation is specific to M13-Q001 and its cited source.
 
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M13-Q002
 
 **Type:** `short_answer`  
 **Difficulty:** `application`
 
-**Answer:** A strong answer defines the mechanism from 'Identity, authentication, recovery, and sessions', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
+**Answer:** It names actor, precondition, concrete path, protected property, and observable outcome
 
-**Explanation:** Use Identity, authentication, recovery, and sessions to reason from explicit assumptions to observable behavior.
+**Explanation:** The cited self-check in L01 tests whether the learner can connect Threat models, trust boundaries, and abuse cases to the module mechanism without replacing evidence with labels. This explanation is specific to M13-Q002 and its cited source.
 
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M13-Q003
 
-**Type:** `calculation`  
+**Type:** `short_answer`  
 **Difficulty:** `synthesis`
 
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
+**Answer:** When exposure is explicit, an accountable owner approves it, expiry and review conditions exist, and evidence can trigger a different decision
 
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Express authorization as a decision over subject, object, action, context, and policy version.
+**Explanation:** The cited self-check in L01 tests whether the learner can connect Threat models, trust boundaries, and abuse cases to the module mechanism without replacing evidence with labels. This explanation is specific to M13-Q003 and its cited source.
 
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M13-Q004
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
+**Type:** `short_answer`  
+**Difficulty:** `recall`
 
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Adding tenant filters only in controllers:** workers, exports, caches, and
+**Answer:** A severe risk with weak likelihood data should remain visible; one combined score can falsely imply precision and hide uncertainty
 
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
+**Explanation:** The cited self-check in L01 tests whether the learner can connect Threat models, trust boundaries, and abuse cases to the module mechanism without replacing evidence with labels. This explanation is specific to M13-Q004 and its cited source.
 
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M13-Q005
 
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`  
+**Difficulty:** `application`
 
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for operate scoped secrets, certificates, and encryption keys through issuance, rotation, revocation, recovery, and retirement without inventing cryptography..
+**Answer:** Tokens can outlive the interactive authentication session and may be copied
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - OWASP Secrets Management Cheat Sheethttps://cheatsheetseries.owasp.org/cheatsheets/SecretsManagementCheatSheet.html - NIST Key Management Guidelineshttps://csrc.nist.gov/projects/key-management/key-management-guidelines Complete EX-09 and EX-10 and preserve
+**Explanation:** The cited self-check in L02 tests whether the learner can connect Identity, authentication, recovery, and sessions to the module mechanism without replacing evidence with labels. This explanation is specific to M13-Q005 and its cited source.
 
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M13-Q006
 
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
+**Type:** `short_answer`  
+**Difficulty:** `synthesis`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to design attributable tamper-detectable audit evidence and verified classification, minimization, retention, deletion, residency, and backup handling.
+**Answer:** Recovery can replace authenticators and restore privilege, bypassing the normal login path
 
-**Explanation:** Use Audit, privacy, and data lifecycles to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
+**Explanation:** The cited self-check in L02 tests whether the learner can connect Identity, authentication, recovery, and sessions to the module mechanism without replacing evidence with labels. This explanation is specific to M13-Q006 and its cited source.
 
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M13-Q007
 
 **Type:** `short_answer`  
-**Difficulty:** `application`
+**Difficulty:** `recall`
 
-**Answer:** A strong answer defines the mechanism from 'Supply chains, economic abuse, and security response', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
+**Answer:** At the server-side trust boundary before protected work, regardless of client behavior
 
-**Explanation:** Use Supply chains, economic abuse, and security response to reason from explicit assumptions to observable behavior.
+**Explanation:** The cited self-check in L02 tests whether the learner can connect Identity, authentication, recovery, and sessions to the module mechanism without replacing evidence with labels. This explanation is specific to M13-Q007 and its cited source.
 
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M13-Q008
 
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`  
+**Difficulty:** `application`
 
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
+**Answer:** Timed negative tests across every accepting component, including caches and federated boundaries
 
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Treat user, retrieved, tool, and memory content as data with explicit trust labels.
+**Explanation:** The cited self-check in L02 tests whether the learner can connect Identity, authentication, recovery, and sessions to the module mechanism without replacing evidence with labels. This explanation is specific to M13-Q008 and its cited source.
 
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M13-Q009
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
+**Type:** `short_answer`  
+**Difficulty:** `synthesis`
 
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Starting from controls:** a list of MFA, encryption, and firewalls can miss
+**Answer:** Subject, object, action, context, and the evaluated policy identity/version
 
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
+**Explanation:** The cited self-check in L03 tests whether the learner can connect Authorization models and enforcement to the module mechanism without replacing evidence with labels. This explanation is specific to M13-Q009 and its cited source.
 
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M13-Q010
 
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`  
+**Difficulty:** `recall`
 
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for design identity, authentication, recovery, session binding, assurance, expiry, revocation, and replay controls..
+**Answer:** When permissions depend on tenant, object ownership, delegation, classification, or other contextual relationships that cause role explosion
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - NIST SP 800-63B-4https://pages.nist.gov/800-63-4/sp800-63b.html Complete EX-03 and EX-04 and add session/recovery abuse cases to the saved model.
+**Explanation:** The cited self-check in L03 tests whether the learner can connect Authorization models and enforcement to the module mechanism without replacing evidence with labels. This explanation is specific to M13-Q010 and its cited source.
 
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M13-Q011
 
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
+**Type:** `short_answer`  
+**Difficulty:** `application`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to select role, attribute, or relationship authorization and enforce deny-by-default checks for every object and action.
+**Answer:** Identity, relationship, policy, or approval may change between enqueue and effect
 
-**Explanation:** Use Authorization models and enforcement to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
+**Explanation:** The cited self-check in L03 tests whether the learner can connect Authorization models and enforcement to the module mechanism without replacing evidence with labels. This explanation is specific to M13-Q011 and its cited source.
 
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M13-Q012
 
 **Type:** `short_answer`  
-**Difficulty:** `application`
+**Difficulty:** `synthesis`
 
-**Answer:** A strong answer defines the mechanism from 'Tenant isolation and scoped access', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
+**Answer:** Every input that can change the decision, plus a bounded policy validity period
 
-**Explanation:** Use Tenant isolation and scoped access to reason from explicit assumptions to observable behavior.
+**Explanation:** The cited self-check in L03 tests whether the learner can connect Authorization models and enforcement to the module mechanism without replacing evidence with labels. This explanation is specific to M13-Q012 and its cited source.
 
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M13-Q013
 
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`  
+**Difficulty:** `recall`
 
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
+**Answer:** The requester controls it unless it is verified and bound to authenticated membership
 
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Inventory credentials and key material by purpose, scope, custodian, and consumer.
+**Explanation:** The cited self-check in L04 tests whether the learner can connect Tenant isolation and scoped access to the module mechanism without replacing evidence with labels. This explanation is specific to M13-Q013 and its cited source.
 
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M13-Q014
 
-**Type:** `scenario_diagnosis`  
+**Type:** `short_answer`  
 **Difficulty:** `application`
 
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Logging everything:** sensitive data, cost, noise, and access risk grow while
+**Answer:** Cache, files, messages, search, exports, logs, administration, and backups
 
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
+**Explanation:** The cited self-check in L04 tests whether the learner can connect Tenant isolation and scoped access to the module mechanism without replacing evidence with labels. This explanation is specific to M13-Q014 and its cited source.
 
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M13-Q015
 
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
+**Type:** `multiple_choice`  
+**Difficulty:** `application`
 
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for bound dependency, supply-chain, economic-abuse, prompt-injection, and tool-authorization risk with deterministic enforcement and security response..
+**Choices:**
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - SLSA Specification 1.2https://slsa.dev/spec/v1.2/ Complete EX-14 and EX-15, then run F07 and F08 from saved predictions.
+- Keep Threat models, trust boundaries, and abuse cases scoped to its stated evidence and boundar.
+- Choose the familiar tool before checking whether Starting from controls: a list of MFA, encryption, and firewalls can.
+- Treat Starting from controls: a list of MFA, encryption, and firewalls can as complete proof without the lesson bound.
+- Make the documented mistake: Starting from controls: a list of MFA, encryption, and firewalls c. with extra con
 
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
+**Answer:** Keep Threat models, trust boundaries, and abuse cases scoped to its stated evidence and boundar.
+
+**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M13-Q015 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
 
 ## M13-Q016
 
 **Type:** `multiple_choice`  
-**Difficulty:** `recall`
+**Difficulty:** `synthesis`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose nine adversarial failures and defend a security architecture with residual risk, ownership, cost, migration, and reversal conditions.
+**Choices:**
 
-**Explanation:** Use Prompt injection, tool authorization, and security decisions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
+- Choose the familiar tool before checking whether Modeling only diagrams: a diagram without threats, responses, tests.
+- Keep Threat models, trust boundaries, and abuse cases scoped to its stated evidence and boundar.
+- Treat Modeling only diagrams: a diagram without threats, responses, tests as complete proof without the lesson bounda.
+- Make the documented mistake: Modeling only diagrams: a diagram without threats, responses, test. with extra con
 
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
+**Answer:** Keep Threat models, trust boundaries, and abuse cases scoped to its stated evidence and boundar.
+
+**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M13-Q016 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
 
 ## M13-Q017
 
-**Type:** `short_answer`  
-**Difficulty:** `application`
+**Type:** `multiple_choice`  
+**Difficulty:** `recall`
 
-**Answer:** A strong answer defines the mechanism from 'Threat models, trust boundaries, and abuse cases', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
+**Choices:**
 
-**Explanation:** Use Threat models, trust boundaries, and abuse cases to reason from explicit assumptions to observable behavior.
+- Make the documented mistake: Treating STRIDE as coverage proof: prompts help discovery; they do. with extra con
+- Treat Treating STRIDE as coverage proof: prompts help discovery; they do not as complete proof without the lesson bou.
+- Keep Threat models, trust boundaries, and abuse cases scoped to its stated evidence and boundar.
+- Choose the familiar tool before checking whether Treating STRIDE as coverage proof: prompts help discovery; they do n.
 
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
+**Answer:** Keep Threat models, trust boundaries, and abuse cases scoped to its stated evidence and boundar.
+
+**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M13-Q017 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
 
 ## M13-Q018
 
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
+**Type:** `multiple_choice`  
+**Difficulty:** `application`
 
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
+**Choices:**
 
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Separate identity proofing, authentication, authorization, and session continuity.
+- Make the documented mistake: Collapsing risk into one number: multiplying invented likelihood a. with extra con
+- Choose the familiar tool before checking whether Collapsing risk into one number: multiplying invented likelihood and.
+- Treat Collapsing risk into one number: multiplying invented likelihood and as complete proof without the lesson bound.
+- Keep Threat models, trust boundaries, and abuse cases scoped to its stated evidence and boundar.
 
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
+**Answer:** Keep Threat models, trust boundaries, and abuse cases scoped to its stated evidence and boundar.
+
+**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M13-Q018 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
 
 ## M13-Q019
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
+**Type:** `multiple_choice`  
+**Difficulty:** `synthesis`
 
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **One “admin” escape hatch:** broad roles hide object and action distinctions
+**Choices:**
 
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
+- Keep Threat models, trust boundaries, and abuse cases scoped to its stated evidence and boundar.
+- Choose the familiar tool before checking whether Accepting risk forever: an ownerless acceptance with no expiry is an.
+- Make the documented mistake: Accepting risk forever: an ownerless acceptance with no expiry is. with extra conf
+- Treat Accepting risk forever: an ownerless acceptance with no expiry is an as complete proof without the lesson bound.
 
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
+**Answer:** Keep Threat models, trust boundaries, and abuse cases scoped to its stated evidence and boundar.
+
+**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M13-Q019 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
 
 ## M13-Q020
 
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
+**Type:** `multiple_choice`  
+**Difficulty:** `recall`
 
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for preserve tenant isolation and least privilege through data, cache, file, queue, search, administrative, and break-glass paths..
+**Choices:**
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - OWASP Multi-Tenant Security Cheat Sheethttps://cheatsheetseries.owasp.org/cheatsheets/MultiTenantSecurityCheatSheet.html Complete EX-07 and EX-08, then implement and test every surface you claim to protect.
+- Choose the familiar tool before checking whether Equating authentication with authorization: a valid identity can sti.
+- Keep Identity, authentication, recovery, and sessions scoped to its stated evidence and boundar.
+- Treat Equating authentication with authorization: a valid identity can stil as complete proof without the lesson boun.
+- Make the documented mistake: Equating authentication with authorization: a valid identity can s. with extra con
 
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
+**Answer:** Keep Identity, authentication, recovery, and sessions scoped to its stated evidence and boundar.
+
+**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M13-Q020 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
 
 ## M13-Q021
 
 **Type:** `multiple_choice`  
-**Difficulty:** `recall`
+**Difficulty:** `application`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to operate scoped secrets, certificates, and encryption keys through issuance, rotation, revocation, recovery, and retirement without inventing cryptography.
+**Choices:**
 
-**Explanation:** Use Secrets, keys, certificates, and encryption to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
+- Treat Designing login but not recovery: the weakest identity transition bec as complete proof without the lesson boun.
+- Make the documented mistake: Designing login but not recovery: the weakest identity transition. with extra conf
+- Keep Identity, authentication, recovery, and sessions scoped to its stated evidence and boundar.
+- Choose the familiar tool before checking whether Designing login but not recovery: the weakest identity transition be.
 
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
+**Answer:** Keep Identity, authentication, recovery, and sessions scoped to its stated evidence and boundar.
+
+**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M13-Q021 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
 
 ## M13-Q022
 
-**Type:** `short_answer`  
-**Difficulty:** `application`
+**Type:** `multiple_choice`  
+**Difficulty:** `synthesis`
 
-**Answer:** A strong answer defines the mechanism from 'Audit, privacy, and data lifecycles', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
+**Choices:**
 
-**Explanation:** Use Audit, privacy, and data lifecycles to reason from explicit assumptions to observable behavior.
+- Make the documented mistake: Embedding claims forever: stale roles or tenant membership in long. with extra con
+- Treat Embedding claims forever: stale roles or tenant membership in long-li as complete proof without the lesson boun.
+- Choose the familiar tool before checking whether Embedding claims forever: stale roles or tenant membership in long-l.
+- Keep Identity, authentication, recovery, and sessions scoped to its stated evidence and boundar.
 
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
+**Answer:** Keep Identity, authentication, recovery, and sessions scoped to its stated evidence and boundar.
+
+**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M13-Q022 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
 
 ## M13-Q023
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Form dependency expectations and verify identity, digest, provenance, and policy.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M13-Q024
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Calling a system prompt a boundary:** models process instructions and data in
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M13-Q025
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for build a repeatable threat model from assets, actors, data flows, trust boundaries, abuse cases, risk owners, and reversal evidence..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - OWASP Threat Modeling Cheat Sheethttps://cheatsheetseries.owasp.org/cheatsheets/ThreatModelingCheatSheet.html - OWASP ASVShttps://owasp.org/www-project-application-security-verification-standard/ Complete EX-01 and EX-02, then save the threat model before
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M13-Q026
 
 **Type:** `multiple_choice`  
 **Difficulty:** `recall`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to design identity, authentication, recovery, session binding, assurance, expiry, revocation, and replay controls.
+**Choices:**
 
-**Explanation:** Use Identity, authentication, recovery, and sessions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
+- Keep Identity, authentication, recovery, and sessions scoped to its stated evidence and boundar.
+- Make the documented mistake: Client-only expiry: a server that accepts an expired credential st. with extra con
+- Treat Client-only expiry: a server that accepts an expired credential still as complete proof without the lesson boun.
+- Choose the familiar tool before checking whether Client-only expiry: a server that accepts an expired credential stil.
 
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
+**Answer:** Keep Identity, authentication, recovery, and sessions scoped to its stated evidence and boundar.
+
+**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M13-Q023 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+
+## M13-Q024
+
+**Type:** `multiple_choice`  
+**Difficulty:** `application`
+
+**Choices:**
+
+- Choose the familiar tool before checking whether Global logout claims without evidence: revocation must be measured a.
+- Keep Identity, authentication, recovery, and sessions scoped to its stated evidence and boundar.
+- Make the documented mistake: Global logout claims without evidence: revocation must be measured. with extra con
+- Treat Global logout claims without evidence: revocation must be measured ac as complete proof without the lesson boun.
+
+**Answer:** Keep Identity, authentication, recovery, and sessions scoped to its stated evidence and boundar.
+
+**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M13-Q024 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+
+## M13-Q025
+
+**Type:** `calculation`  
+**Difficulty:** `synthesis`
+
+**Answer:** Original concurrency = 160 x 0.050 = 8.00 operations. Revised rate = 160 x 1.25 = 200.0/s, so revised concurrency = 200.0 x 0.050 = 10.00 operations.
+
+**Explanation:** This perturbs the numeric practice around Threat models, trust boundaries, and abuse cases: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M13-Q025 and its cited source.
+
+**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+
+## M13-Q026
+
+**Type:** `calculation`  
+**Difficulty:** `recall`
+
+**Answer:** Original concurrency = 170 x 0.060 = 10.20 operations. Revised rate = 170 x 1.30 = 221.0/s, so revised concurrency = 221.0 x 0.060 = 13.26 operations.
+
+**Explanation:** This perturbs the numeric practice around Identity, authentication, recovery, and sessions: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M13-Q026 and its cited source.
+
+**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
 
 ## M13-Q027
 
-**Type:** `short_answer`  
+**Type:** `calculation`  
 **Difficulty:** `application`
 
-**Answer:** A strong answer defines the mechanism from 'Authorization models and enforcement', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
+**Answer:** Original concurrency = 180 x 0.070 = 12.60 operations. Revised rate = 180 x 1.35 = 243.0/s, so revised concurrency = 243.0 x 0.070 = 17.01 operations.
 
-**Explanation:** Use Authorization models and enforcement to reason from explicit assumptions to observable behavior.
+**Explanation:** This perturbs the numeric practice around Authorization models and enforcement: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M13-Q027 and its cited source.
 
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
+**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
 
 ## M13-Q028
 
 **Type:** `calculation`  
 **Difficulty:** `synthesis`
 
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
+**Answer:** Original concurrency = 190 x 0.080 = 15.20 operations. Revised rate = 190 x 1.40 = 266.0/s, so revised concurrency = 266.0 x 0.080 = 21.28 operations.
 
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Bind tenant identity to authenticated context rather than attacker-controlled input.
+**Explanation:** This perturbs the numeric practice around Tenant isolation and scoped access: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M13-Q028 and its cited source.
 
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
+**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
 
 ## M13-Q029
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
+**Type:** `calculation`  
+**Difficulty:** `recall`
 
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **One high-value shared secret:** attribution and containment become impossible.
+**Answer:** Original concurrency = 200 x 0.040 = 8.00 operations. Revised rate = 200 x 1.45 = 290.0/s, so revised concurrency = 290.0 x 0.040 = 11.60 operations.
 
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
+**Explanation:** This perturbs the numeric practice around Secrets, keys, certificates, and encryption: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M13-Q029 and its cited source.
 
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
+**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
 
 ## M13-Q030
 
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for design attributable tamper-detectable audit evidence and verified classification, minimization, retention, deletion, residency, and backup handling..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - OWASP Logging Cheat Sheethttps://cheatsheetseries.owasp.org/cheatsheets/LoggingCheatSheet.html - NIST Privacy Frameworkhttps://www.nist.gov/privacy-framework/privacy-framework Complete EX-11-EX-13 and save the copy ledger before running deletion tests.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M13-Q031
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to bound dependency, supply-chain, economic-abuse, prompt-injection, and tool-authorization risk with deterministic enforcement and security response.
-
-**Explanation:** Use Supply chains, economic abuse, and security response to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M13-Q032
-
-**Type:** `short_answer`  
+**Type:** `calculation`  
 **Difficulty:** `application`
 
-**Answer:** A strong answer defines the mechanism from 'Prompt injection, tool authorization, and security decisions', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
+**Answer:** Original concurrency = 120 x 0.050 = 6.00 operations. Revised rate = 120 x 1.10 = 132.0/s, so revised concurrency = 132.0 x 0.050 = 6.60 operations.
 
-**Explanation:** Use Prompt injection, tool authorization, and security decisions to reason from explicit assumptions to observable behavior.
+**Explanation:** This perturbs the numeric practice around Audit, privacy, and data lifecycles: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M13-Q030 and its cited source.
 
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
+**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
 
-## M13-Q033
+## M13-Q031
 
 **Type:** `calculation`  
 **Difficulty:** `synthesis`
 
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
+**Answer:** Original concurrency = 130 x 0.060 = 7.80 operations. Revised rate = 130 x 1.15 = 149.5/s, so revised concurrency = 149.5 x 0.060 = 8.97 operations.
 
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Decompose a system into assets, actors, processes, stores, flows, and trust boundaries.
+**Explanation:** This perturbs the numeric practice around Supply chains, economic abuse, and security response: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M13-Q031 and its cited source.
 
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
+**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+
+## M13-Q032
+
+**Type:** `calculation`  
+**Difficulty:** `recall`
+
+**Answer:** Original concurrency = 140 x 0.070 = 9.80 operations. Revised rate = 140 x 1.20 = 168.0/s, so revised concurrency = 168.0 x 0.070 = 11.76 operations.
+
+**Explanation:** This perturbs the numeric practice around Prompt injection, tool authorization, and security decisions: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M13-Q032 and its cited source.
+
+**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+
+## M13-Q033
+
+**Type:** `scenario_diagnosis`  
+**Difficulty:** `application`
+
+**Answer:** The fixture tests f01-cross-tenant-access-broken (broken), with I04 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f01-cross-tenant-access-broken, rather than the general presence of a lab run.
+
+**Explanation:** The cited fixture is machine-readable source material for M13; diagnosis should start from the emitted fields and connect them to Authorization models and enforcement. This explanation is specific to M13-Q033 and its cited source.
+
+**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
 
 ## M13-Q034
 
 **Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
+**Difficulty:** `synthesis`
 
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Equating authentication with authorization:** a valid identity can still be
+**Answer:** The fixture tests f01-cross-tenant-access-repaired (repaired), with I04 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f01-cross-tenant-access-repaired, rather than the general presence of a lab run.
 
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
+**Explanation:** The cited fixture is machine-readable source material for M13; diagnosis should start from the emitted fields and connect them to Tenant isolation and scoped access. This explanation is specific to M13-Q034 and its cited source.
 
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
+**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
 
 ## M13-Q035
 
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for select role, attribute, or relationship authorization and enforce deny-by-default checks for every object and action..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - OWASP Authorization Cheat Sheethttps://cheatsheetseries.owasp.org/cheatsheets/AuthorizationCheatSheet.html - Zanzibar paper and presentationhttps://www.usenix.org/conference/atc19/presentation/pang Complete EX-05 and EX-06 before implementing the authorizati
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M13-Q036
-
-**Type:** `multiple_choice`  
+**Type:** `scenario_diagnosis`  
 **Difficulty:** `recall`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to preserve tenant isolation and least privilege through data, cache, file, queue, search, administrative, and break-glass paths.
+**Answer:** The fixture tests f02-privilege-escalation-broken (broken), with I02 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f02-privilege-escalation-broken, rather than the general presence of a lab run.
 
-**Explanation:** Use Tenant isolation and scoped access to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
+**Explanation:** The cited fixture is machine-readable source material for M13; diagnosis should start from the emitted fields and connect them to Secrets, keys, certificates, and encryption. This explanation is specific to M13-Q035 and its cited source.
 
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
+**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
 
-## M13-Q037
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Secrets, keys, certificates, and encryption', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Secrets, keys, certificates, and encryption to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M13-Q038
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Design attributable, privacy-aware, tamper-detectable security events.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M13-Q039
+## M13-Q036
 
 **Type:** `scenario_diagnosis`  
 **Difficulty:** `application`
 
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Treating an SBOM as prevention:** inventory does not verify or block an artifact.
+**Answer:** The fixture tests f02-privilege-escalation-repaired (repaired), with I02 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f02-privilege-escalation-repaired, rather than the general presence of a lab run.
 
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
+**Explanation:** The cited fixture is machine-readable source material for M13; diagnosis should start from the emitted fields and connect them to Audit, privacy, and data lifecycles. This explanation is specific to M13-Q036 and its cited source.
 
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
+**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+
+## M13-Q037
+
+**Type:** `scenario_diagnosis`  
+**Difficulty:** `synthesis`
+
+**Answer:** The fixture tests f03-credential-replay-broken (broken), with I01 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f03-credential-replay-broken, rather than the general presence of a lab run.
+
+**Explanation:** The cited fixture is machine-readable source material for M13; diagnosis should start from the emitted fields and connect them to Supply chains, economic abuse, and security response. This explanation is specific to M13-Q037 and its cited source.
+
+**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+
+## M13-Q038
+
+**Type:** `scenario_diagnosis`  
+**Difficulty:** `recall`
+
+**Answer:** The fixture tests f03-credential-replay-repaired (repaired), with I01 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f03-credential-replay-repaired, rather than the general presence of a lab run.
+
+**Explanation:** The cited fixture is machine-readable source material for M13; diagnosis should start from the emitted fields and connect them to Prompt injection, tool authorization, and security decisions. This explanation is specific to M13-Q038 and its cited source.
+
+**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+
+## M13-Q039
+
+**Type:** `design_judgment`  
+**Difficulty:** `synthesis`
+
+**Answer:** Recommend the option that preserves the Tenant isolation and scoped access mechanism under the exercise constraints: Draw Northstar's publication path with actors, stores, processes, flows, trust boundaries, classifications, administrative paths, and protected outcomes. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+
+**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M13-Q039 and its cited source.
+
+**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
 
 ## M13-Q040
 
 **Type:** `design_judgment`  
-**Difficulty:** `synthesis`
+**Difficulty:** `recall`
 
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose nine adversarial failures and defend a security architecture with residual risk, ownership, cost, migration, and reversal conditions..
+**Answer:** Recommend the option that preserves the Secrets, keys, certificates, and encryption mechanism under the exercise constraints: Write three abuse cases using actor, precondition, path, property, impact. For each choose treatment, PEP, negative test, detection, recovery, owner, and expiry. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - OWASP LLM Prompt Injection Preventionhttps://cheatsheetseries.owasp.org/cheatsheets/LLMPromptInjectionPreventionCheatSheet.html - OWASP AI Agent Securityhttps://cheatsheetseries.owasp.org/cheatsheets/AIAgentSecurityCheatSheet.html Complete EX-16-EX-18, freez
+**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M13-Q040 and its cited source.
 
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
+**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
 
 ## M13-Q041
 
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
+**Type:** `design_judgment`  
+**Difficulty:** `application`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to build a repeatable threat model from assets, actors, data flows, trust boundaries, abuse cases, risk owners, and reversal evidence.
+**Answer:** Recommend the option that preserves the Audit, privacy, and data lifecycles mechanism under the exercise constraints: Model login, active session, sensitive reauthentication, logout, expiry, compromise, recovery, and authenticator replacement. Identify authoritative state. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
 
-**Explanation:** Use Threat models, trust boundaries, and abuse cases to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
+**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M13-Q041 and its cited source.
 
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
+**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
 
 ## M13-Q042
 
-**Type:** `short_answer`  
-**Difficulty:** `application`
+**Type:** `design_judgment`  
+**Difficulty:** `synthesis`
 
-**Answer:** A strong answer defines the mechanism from 'Identity, authentication, recovery, and sessions', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
+**Answer:** Recommend the option that preserves the Supply chains, economic abuse, and security response mechanism under the exercise constraints: Predict and test expired session, revoked session, stale role claim, stolen recovery code, and recovery-channel replacement. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
 
-**Explanation:** Use Identity, authentication, recovery, and sessions to reason from explicit assumptions to observable behavior.
+**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M13-Q042 and its cited source.
 
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
+**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
 
 ## M13-Q043
 
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Express authorization as a decision over subject, object, action, context, and policy version.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M13-Q044
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Adding tenant filters only in controllers:** workers, exports, caches, and
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M13-Q045
-
 **Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for operate scoped secrets, certificates, and encryption keys through issuance, rotation, revocation, recovery, and retirement without inventing cryptography..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - OWASP Secrets Management Cheat Sheethttps://cheatsheetseries.owasp.org/cheatsheets/SecretsManagementCheatSheet.html - NIST Key Management Guidelineshttps://csrc.nist.gov/projects/key-management/key-management-guidelines Complete EX-09 and EX-10 and preserve
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M13-Q046
-
-**Type:** `multiple_choice`  
 **Difficulty:** `recall`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to design attributable tamper-detectable audit evidence and verified classification, minimization, retention, deletion, residency, and backup handling.
+**Answer:** Recommend the option that preserves the Prompt injection, tool authorization, and security decisions mechanism under the exercise constraints: Write at least twelve allow and deny cases across researcher, collaborator, operator, service, assistant, and break-glass subjects. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
 
-**Explanation:** Use Audit, privacy, and data lifecycles to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
+**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M13-Q043 and its cited source.
 
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M13-Q047
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Supply chains, economic abuse, and security response', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Supply chains, economic abuse, and security response to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M13-Q048
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Treat user, retrieved, tool, and memory content as data with explicit trust labels.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M13-Q049
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Starting from controls:** a list of MFA, encryption, and firewalls can miss
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M13-Q050
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for design identity, authentication, recovery, session binding, assurance, expiry, revocation, and replay controls..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - NIST SP 800-63B-4https://pages.nist.gov/800-63-4/sp800-63b.html Complete EX-03 and EX-04 and add session/recovery abuse cases to the saved model.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M13-Q051
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to select role, attribute, or relationship authorization and enforce deny-by-default checks for every object and action.
-
-**Explanation:** Use Authorization models and enforcement to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M13-Q052
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Tenant isolation and scoped access', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Tenant isolation and scoped access to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M13-Q053
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Inventory credentials and key material by purpose, scope, custodian, and consumer.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M13-Q054
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Logging everything:** sensitive data, cost, noise, and access risk grow while
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M13-Q055
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for bound dependency, supply-chain, economic-abuse, prompt-injection, and tool-authorization risk with deterministic enforcement and security response..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - SLSA Specification 1.2https://slsa.dev/spec/v1.2/ Complete EX-14 and EX-15, then run F07 and F08 from saved predictions.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M13-Q056
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose nine adversarial failures and defend a security architecture with residual risk, ownership, cost, migration, and reversal conditions.
-
-**Explanation:** Use Prompt injection, tool authorization, and security decisions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M13-Q057
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Threat models, trust boundaries, and abuse cases', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Threat models, trust boundaries, and abuse cases to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M13-Q058
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Separate identity proofing, authentication, authorization, and session continuity.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M13-Q059
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **One “admin” escape hatch:** broad roles hide object and action distinctions
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M13-Q060
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for preserve tenant isolation and least privilege through data, cache, file, queue, search, administrative, and break-glass paths..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - OWASP Multi-Tenant Security Cheat Sheethttps://cheatsheetseries.owasp.org/cheatsheets/MultiTenantSecurityCheatSheet.html Complete EX-07 and EX-08, then implement and test every surface you claim to protect.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M13-Q061
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to operate scoped secrets, certificates, and encryption keys through issuance, rotation, revocation, recovery, and retirement without inventing cryptography.
-
-**Explanation:** Use Secrets, keys, certificates, and encryption to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M13-Q062
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Audit, privacy, and data lifecycles', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Audit, privacy, and data lifecycles to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M13-Q063
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Form dependency expectations and verify identity, digest, provenance, and policy.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M13-Q064
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Calling a system prompt a boundary:** models process instructions and data in
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M13-Q065
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for build a repeatable threat model from assets, actors, data flows, trust boundaries, abuse cases, risk owners, and reversal evidence..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - OWASP Threat Modeling Cheat Sheethttps://cheatsheetseries.owasp.org/cheatsheets/ThreatModelingCheatSheet.html - OWASP ASVShttps://owasp.org/www-project-application-security-verification-standard/ Complete EX-01 and EX-02, then save the threat model before
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M13-Q066
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to design identity, authentication, recovery, session binding, assurance, expiry, revocation, and replay controls.
-
-**Explanation:** Use Identity, authentication, recovery, and sessions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M13-Q067
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Authorization models and enforcement', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Authorization models and enforcement to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M13-Q068
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Bind tenant identity to authenticated context rather than attacker-controlled input.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M13-Q069
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **One high-value shared secret:** attribution and containment become impossible.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M13-Q070
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for design attributable tamper-detectable audit evidence and verified classification, minimization, retention, deletion, residency, and backup handling..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - OWASP Logging Cheat Sheethttps://cheatsheetseries.owasp.org/cheatsheets/LoggingCheatSheet.html - NIST Privacy Frameworkhttps://www.nist.gov/privacy-framework/privacy-framework Complete EX-11-EX-13 and save the copy ledger before running deletion tests.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M13-Q071
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to bound dependency, supply-chain, economic-abuse, prompt-injection, and tool-authorization risk with deterministic enforcement and security response.
-
-**Explanation:** Use Supply chains, economic abuse, and security response to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M13-Q072
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Prompt injection, tool authorization, and security decisions', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Prompt injection, tool authorization, and security decisions to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M13-Q073
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Decompose a system into assets, actors, processes, stores, flows, and trust boundaries.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M13-Q074
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Equating authentication with authorization:** a valid identity can still be
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M13-Q075
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for select role, attribute, or relationship authorization and enforce deny-by-default checks for every object and action..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - OWASP Authorization Cheat Sheethttps://cheatsheetseries.owasp.org/cheatsheets/AuthorizationCheatSheet.html - Zanzibar paper and presentationhttps://www.usenix.org/conference/atc19/presentation/pang Complete EX-05 and EX-06 before implementing the authorizati
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M13-Q076
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to preserve tenant isolation and least privilege through data, cache, file, queue, search, administrative, and break-glass paths.
-
-**Explanation:** Use Tenant isolation and scoped access to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M13-Q077
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Secrets, keys, certificates, and encryption', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Secrets, keys, certificates, and encryption to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M13-Q078
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Design attributable, privacy-aware, tamper-detectable security events.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M13-Q079
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Treating an SBOM as prevention:** inventory does not verify or block an artifact.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M13-Q080
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose nine adversarial failures and defend a security architecture with residual risk, ownership, cost, migration, and reversal conditions..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - OWASP LLM Prompt Injection Preventionhttps://cheatsheetseries.owasp.org/cheatsheets/LLMPromptInjectionPreventionCheatSheet.html - OWASP AI Agent Securityhttps://cheatsheetseries.owasp.org/cheatsheets/AIAgentSecurityCheatSheet.html Complete EX-16-EX-18, freez
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M13-Q081
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to build a repeatable threat model from assets, actors, data flows, trust boundaries, abuse cases, risk owners, and reversal evidence.
-
-**Explanation:** Use Threat models, trust boundaries, and abuse cases to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M13-Q082
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Identity, authentication, recovery, and sessions', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Identity, authentication, recovery, and sessions to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M13-Q083
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Express authorization as a decision over subject, object, action, context, and policy version.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M13-Q084
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Adding tenant filters only in controllers:** workers, exports, caches, and
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M13-Q085
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for operate scoped secrets, certificates, and encryption keys through issuance, rotation, revocation, recovery, and retirement without inventing cryptography..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - OWASP Secrets Management Cheat Sheethttps://cheatsheetseries.owasp.org/cheatsheets/SecretsManagementCheatSheet.html - NIST Key Management Guidelineshttps://csrc.nist.gov/projects/key-management/key-management-guidelines Complete EX-09 and EX-10 and preserve
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M13-Q086
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to design attributable tamper-detectable audit evidence and verified classification, minimization, retention, deletion, residency, and backup handling.
-
-**Explanation:** Use Audit, privacy, and data lifecycles to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M13-Q087
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Supply chains, economic abuse, and security response', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Supply chains, economic abuse, and security response to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M13-Q088
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Treat user, retrieved, tool, and memory content as data with explicit trust labels.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M13-Q089
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Starting from controls:** a list of MFA, encryption, and firewalls can miss
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M13-Q090
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for design identity, authentication, recovery, session binding, assurance, expiry, revocation, and replay controls..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - NIST SP 800-63B-4https://pages.nist.gov/800-63-4/sp800-63b.html Complete EX-03 and EX-04 and add session/recovery abuse cases to the saved model.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M13-Q091
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to select role, attribute, or relationship authorization and enforce deny-by-default checks for every object and action.
-
-**Explanation:** Use Authorization models and enforcement to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M13-Q092
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Tenant isolation and scoped access', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Tenant isolation and scoped access to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M13-Q093
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Inventory credentials and key material by purpose, scope, custodian, and consumer.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M13-Q094
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Logging everything:** sensitive data, cost, noise, and access risk grow while
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M13-Q095
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for bound dependency, supply-chain, economic-abuse, prompt-injection, and tool-authorization risk with deterministic enforcement and security response..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - SLSA Specification 1.2https://slsa.dev/spec/v1.2/ Complete EX-14 and EX-15, then run F07 and F08 from saved predictions.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M13-Q096
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose nine adversarial failures and defend a security architecture with residual risk, ownership, cost, migration, and reversal conditions.
-
-**Explanation:** Use Prompt injection, tool authorization, and security decisions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M13-Q097
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Threat models, trust boundaries, and abuse cases', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Threat models, trust boundaries, and abuse cases to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M13-Q098
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Separate identity proofing, authentication, authorization, and session continuity.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M13-Q099
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **One “admin” escape hatch:** broad roles hide object and action distinctions
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M13-Q100
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for preserve tenant isolation and least privilege through data, cache, file, queue, search, administrative, and break-glass paths..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - OWASP Multi-Tenant Security Cheat Sheethttps://cheatsheetseries.owasp.org/cheatsheets/MultiTenantSecurityCheatSheet.html Complete EX-07 and EX-08, then implement and test every surface you claim to protect.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
+**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.

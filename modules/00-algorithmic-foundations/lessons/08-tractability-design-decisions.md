@@ -41,24 +41,24 @@ The decision artifact should name the safe region. For example: exact search for
 4. Time-box the search and define fallback behavior.
 5. Measure solution quality and record reversal evidence.
 
-## Worked Example
+## Worked example
 
 Placing shards across regions while satisfying cost, latency, durability,
 tenant, and capacity constraints can become a search problem. A practical system
 usually narrows the candidate set, scores options, and records the accepted
 tradeoff rather than enumerating every assignment.
 
-## Common Expert Mistakes
+## Common expert mistakes
 
 - Treating an exponential search as a normal background job.
 - Hiding constraints in code instead of naming them.
 - Optimizing a score without preserving hard invariants.
 
-## Guided Practice
+## Guided practice
 
 A planner assigns 40 shards to 8 regions. Compute the naive candidate count as `8^40` in approximate powers of ten using `log10(8) ~= 0.903`. Then choose a bounded strategy that preserves hard data-residency constraints.
 
-## Self-Check
+## Self-check
 
 1. What is the working difference between P and NP?
 2. Why does bin packing show up in capacity placement?
@@ -72,6 +72,6 @@ A planner assigns 40 shards to 8 regions. Compute the naive candidate count as `
 3. Return a safe fallback, partial plan, or manual escalation rather than silently overrun.
 4. A high score must not override correctness, residency, security, or durability requirements. For the practice, `log10(8^40) = 36.12`, about `1.3e36` candidates; use pruning, heuristics, and bounded search with residency as a hard filter.
 
-## Sources And Next Work
+## Sources and next work
 
 Study RES-04 and RES-08. M01 is the natural next module after this one.

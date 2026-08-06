@@ -32,23 +32,23 @@ A binary heap is usually stored in an array. For zero-based indexing, children o
 
 In system design, the comparison function is policy. A priority queue can protect evacuation alerts from analytics exports, but sustained high-priority load can starve ordinary work. Aging, per-class quotas, maximum wait, and rejection policies turn priority from a slogan into an enforceable fairness contract.
 
-## Worked Example
+## Worked example
 
 M02 discusses admission control. If requests have priority classes, a priority
 queue can admit evacuation alerts before analytics exports. The design must
 still bound queue length and decide what gets rejected.
 
-## Common Expert Mistakes
+## Common expert mistakes
 
 - Treating priority as a boolean instead of an ordered policy.
 - Forgetting starvation.
 - Using priority queues without rejection or backpressure.
 
-## Guided Practice
+## Guided practice
 
 A heap contains 65,536 items. Estimate the maximum comparisons for one insert using heap height. Then initialize from 65,536 existing items: which bound is more appropriate, O(n) build-heap or n separate O(log n) inserts, and why?
 
-## Self-Check
+## Self-check
 
 1. Where are the children of array index `i` in a binary heap?
 2. Why is peek O(1) but remove-priority O(log n)?
@@ -62,6 +62,6 @@ A heap contains 65,536 items. Estimate the maximum comparisons for one insert us
 3. Most nodes are low in the tree and have little distance to move, so total sift work is linear.
 4. Aging, quotas, maximum waits, bounded queues, or explicit rejection. For the practice, height is 16, so one insert is bounded around that many levels; build-heap is the right initialization bound.
 
-## Sources And Next Work
+## Sources and next work
 
 Study RES-01 and RES-05. Then complete EX-06.

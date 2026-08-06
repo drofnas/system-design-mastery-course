@@ -1,1103 +1,477 @@
 # M05 Quiz Answer Key
 
-This key covers all 100 questions for **Network Foundations**. Use it after an attempt, or provide it with the LLM grading prompt for feedback.
+This key covers all 38 questions for **Network Foundations**. Use it after an attempt, or provide it with the LLM grading prompt for feedback.
 
 ## M05-Q001
 
-**Type:** `multiple_choice`  
+**Type:** `short_answer`  
 **Difficulty:** `recall`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to model a client journey as a layered path with round-trip, byte, bandwidth-delay-product, and tail-latency budgets.
+**Answer:** BDP describes path volume; sender windows, receiver flow control, congestion, loss, and application pacing can prevent filling it
 
-**Explanation:** Use Request Paths, Round Trips, and Byte Budgets to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
+**Explanation:** The cited self-check in L01 tests whether the learner can connect Request Paths, Round Trips, and Byte Budgets to the module mechanism without replacing evidence with labels. This explanation is specific to M05-Q001 and its cited source.
 
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M05-Q002
 
 **Type:** `short_answer`  
 **Difficulty:** `application`
 
-**Answer:** A strong answer defines the mechanism from 'DNS, Addressing, Routing, and Discovery', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
+**Answer:** Only when the implementation starts independent work concurrently and the critical path does not wait for both sequentially
 
-**Explanation:** Use DNS, Addressing, Routing, and Discovery to reason from explicit assumptions to observable behavior.
+**Explanation:** The cited self-check in L01 tests whether the learner can connect Request Paths, Round Trips, and Byte Budgets to the module mechanism without replacing evidence with labels. This explanation is specific to M05-Q002 and its cited source.
 
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M05-Q003
 
-**Type:** `calculation`  
+**Type:** `short_answer`  
 **Difficulty:** `synthesis`
 
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
+**Answer:** Each phase p95 may come from a different request; dependence and correlation determine the journey tail
 
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Explain TCP's reliable ordered byte stream without claiming message boundaries.
+**Explanation:** The cited self-check in L01 tests whether the learner can connect Request Paths, Round Trips, and Byte Budgets to the module mechanism without replacing evidence with labels. This explanation is specific to M05-Q003 and its cited source.
 
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M05-Q004
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
+**Type:** `short_answer`  
+**Difficulty:** `recall`
 
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Disabling verification to “test TLS” removes the property under test.
+**Answer:** It does not prove route reachability, TLS identity, proxy capacity, or service health
 
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
+**Explanation:** The cited self-check in L02 tests whether the learner can connect DNS, Addressing, Routing, and Discovery to the module mechanism without replacing evidence with labels. This explanation is specific to M05-Q004 and its cited source.
 
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M05-Q005
 
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`  
+**Difficulty:** `application`
 
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose proxy, load-balancer, nat, connection-pool, and slow-reader behavior with capacity, ownership, and cost evidence..
+**Answer:** NXDOMAIN is an authoritative nonexistence result; timeout lacks a response and is temporary uncertainty
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RFC 9293 keep-alive and connection behavior: https://www.rfc-editor.org/rfc/rfc9293.html - Continue with Lesson 6 to compare request concurrency over connections.
+**Explanation:** The cited self-check in L02 tests whether the learner can connect DNS, Addressing, Routing, and Discovery to the module mechanism without replacing evidence with labels. This explanation is specific to M05-Q005 and its cited source.
 
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M05-Q006
 
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
+**Type:** `short_answer`  
+**Difficulty:** `synthesis`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to compare http/1.1, http/2, and http/3 through setup, multiplexing, stream isolation, fallback, observability, and client-network constraints.
+**Answer:** Stub, recursive, and application caches can observe different insertion times and remaining lifetimes
 
-**Explanation:** Use HTTP/1.1 and HTTP/2 Multiplexing to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
+**Explanation:** The cited self-check in L02 tests whether the learner can connect DNS, Addressing, Routing, and Discovery to the module mechanism without replacing evidence with labels. This explanation is specific to M05-Q006 and its cited source.
 
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M05-Q007
 
 **Type:** `short_answer`  
-**Difficulty:** `application`
+**Difficulty:** `recall`
 
-**Answer:** A strong answer defines the mechanism from 'QUIC and HTTP/3 Stream Behavior', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
+**Answer:** It selects a forwarding path only; neighbor reachability, filtering, downstream routing, and service admission remain separate mechanisms
 
-**Explanation:** Use QUIC and HTTP/3 Stream Behavior to reason from explicit assumptions to observable behavior.
+**Explanation:** The cited self-check in L02 tests whether the learner can connect DNS, Addressing, Routing, and Discovery to the module mechanism without replacing evidence with labels. This explanation is specific to M05-Q007 and its cited source.
 
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M05-Q008
 
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`  
+**Difficulty:** `application`
 
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
+**Answer:** A reliable, ordered, bidirectional byte stream without application message boundaries
 
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Compare protocols and topologies under shared client and operating drivers.
+**Explanation:** The cited self-check in L03 tests whether the learner can connect TCP Ordering, Flow, Congestion, and Goodput to the module mechanism without replacing evidence with labels. This explanation is specific to M05-Q008 and its cited source.
 
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M05-Q009
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
+**Type:** `short_answer`  
+**Difficulty:** `synthesis`
 
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Adding marginal percentiles from different requests creates a journey that
+**Answer:** Flow control through receive capacity/window; congestion control protects the path
 
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
+**Explanation:** The cited self-check in L03 tests whether the learner can connect TCP Ordering, Flow, Congestion, and Goodput to the module mechanism without replacing evidence with labels. This explanation is specific to M05-Q009 and its cited source.
 
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M05-Q010
 
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`  
+**Difficulty:** `recall`
 
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for trace dns resolution, addressing, routing, caching, and discovery with explicit authority, expiry, and failure boundaries..
+**Answer:** Reuse can remove setup while transfer mechanics stay constant, so combining them hides the changed mechanism
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RFC 1034, concepts and server algorithm: https://datatracker.ietf.org/doc/html/rfc1034 - RFC 6724, default address-selection policy: https://www.rfc-editor.org/rfc/rfc6724.html - RFC 8305, connection racing across address families: https://www.rfc-editor.org
+**Explanation:** The cited self-check in L03 tests whether the learner can connect TCP Ordering, Flow, Congestion, and Goodput to the module mechanism without replacing evidence with labels. This explanation is specific to M05-Q010 and its cited source.
 
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M05-Q011
 
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
+**Type:** `short_answer`  
+**Difficulty:** `application`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to relate tcp ordering, loss recovery, flow control, congestion control, and receiver behavior to measured goodput and tail latency.
+**Answer:** Usually only that the local kernel accepted bytes into its socket state; peer receipt and application processing require other evidence
 
-**Explanation:** Use TCP Ordering, Flow, Congestion, and Goodput to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
+**Explanation:** The cited self-check in L03 tests whether the learner can connect TCP Ordering, Flow, Congestion, and Goodput to the module mechanism without replacing evidence with labels. This explanation is specific to M05-Q011 and its cited source.
 
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M05-Q012
 
 **Type:** `short_answer`  
-**Difficulty:** `application`
+**Difficulty:** `synthesis`
 
-**Answer:** A strong answer defines the mechanism from 'TLS Trust and Connection Establishment', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
+**Answer:** Chain validation to a configured trust anchor and hostname/identity matching
 
-**Explanation:** Use TLS Trust and Connection Establishment to reason from explicit assumptions to observable behavior.
+**Explanation:** The cited self-check in L04 tests whether the learner can connect TLS Trust and Connection Establishment to the module mechanism without replacing evidence with labels. This explanation is specific to M05-Q012 and its cited source.
 
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
+**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
 
 ## M05-Q013
 
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
+**Type:** `multiple_choice`  
+**Difficulty:** `application`
 
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
+**Choices:**
 
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Trace connection ownership across client, proxy, application, and dependency.
+- Keep Request Paths, Round Trips, and Byte Budgets scoped to its stated evidence and boundary.
+- Treat Adding marginal percentiles from different requests creates a journey as complete proof without the lesson boun.
+- Choose the familiar tool before checking whether Adding marginal percentiles from different requests creates a journe.
+- Make the documented mistake: Adding marginal percentiles from different requests creates a jour
 
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
+**Answer:** Keep Request Paths, Round Trips, and Byte Budgets scoped to its stated evidence and boundary.
+
+**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M05-Q013 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
 
 ## M05-Q014
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
+**Type:** `multiple_choice`  
+**Difficulty:** `synthesis`
 
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: “Multiplexed” does not mean independent at every lower layer.
+**Choices:**
 
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
+- Choose the familiar tool before checking whether Treating payload bytes as wire bytes hides headers and retransmissio.
+- Keep Request Paths, Round Trips, and Byte Budgets scoped to its stated evidence and boundary.
+- Treat Treating payload bytes as wire bytes hides headers and retransmissions as complete proof without the lesson bou.
+- Make the documented mistake: Treating payload bytes as wire bytes hides headers and retransmiss
 
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
+**Answer:** Keep Request Paths, Round Trips, and Byte Budgets scoped to its stated evidence and boundary.
+
+**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M05-Q014 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
 
 ## M05-Q015
 
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
+**Type:** `multiple_choice`  
+**Difficulty:** `recall`
 
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose nine hidden network faults from preserved evidence before reveal and design reruns that separate credible causes..
+**Choices:**
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RFC 9000, QUIC: https://www.rfc-editor.org/rfc/rfc9000.html - RFC 9114, HTTP/3: https://www.rfc-editor.org/rfc/rfc9114.html - Continue with Lesson 8 to turn mechanics into a migration decision.
+- Choose the familiar tool before checking whether Counting every phase as serial overstates cost when DNS/address atte.
+- Treat Counting every phase as serial overstates cost when DNS/address attem as complete proof without the lesson boun.
+- Keep Request Paths, Round Trips, and Byte Budgets scoped to its stated evidence and boundary.
+- Make the documented mistake: Counting every phase as serial overstates cost when DNS/address at
 
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
+**Answer:** Keep Request Paths, Round Trips, and Byte Budgets scoped to its stated evidence and boundary.
+
+**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M05-Q015 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
 
 ## M05-Q016
 
 **Type:** `multiple_choice`  
-**Difficulty:** `recall`
+**Difficulty:** `application`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend a protocol and topology decision through client outcomes, security, cost, ownership, migration, rollback, and reversal conditions.
+**Choices:**
 
-**Explanation:** Use Protocol and Topology Decisions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
+- Choose the familiar tool before checking whether Calling a lower bound an SLO prediction hides queues, loss, and appl.
+- Make the documented mistake: Calling a lower bound an SLO prediction hides queues, loss, and ap
+- Treat Calling a lower bound an SLO prediction hides queues, loss, and appli as complete proof without the lesson boun.
+- Keep Request Paths, Round Trips, and Byte Budgets scoped to its stated evidence and boundary.
 
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
+**Answer:** Keep Request Paths, Round Trips, and Byte Budgets scoped to its stated evidence and boundary.
+
+**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M05-Q016 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
 
 ## M05-Q017
 
-**Type:** `short_answer`  
-**Difficulty:** `application`
+**Type:** `multiple_choice`  
+**Difficulty:** `synthesis`
 
-**Answer:** A strong answer defines the mechanism from 'Request Paths, Round Trips, and Byte Budgets', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
+**Choices:**
 
-**Explanation:** Use Request Paths, Round Trips, and Byte Budgets to reason from explicit assumptions to observable behavior.
+- Keep DNS, Addressing, Routing, and Discovery scoped to its stated evidence and boundary.
+- Choose the familiar tool before checking whether “DNS is down” collapses authoritative, recursive, network, validatio.
+- Make the documented mistake: “DNS is down” collapses authoritative, recursive, network, validat
+- Treat “DNS is down” collapses authoritative, recursive, network, validation as complete proof without the lesson boun.
 
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
+**Answer:** Keep DNS, Addressing, Routing, and Discovery scoped to its stated evidence and boundary.
+
+**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M05-Q017 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
 
 ## M05-Q018
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Distinguish names, cached records, addresses, routes, and healthy endpoints.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M05-Q019
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Equating socket writes with peer receipt ignores buffering and acknowledgments.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M05-Q020
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for trace tls authentication and handshake costs while preserving hostname, certificate, key, resumption, and trust boundaries..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RFC 9846, TLS 1.3: https://www.rfc-editor.org/rfc/rfc9846.html - RFC 9525, Service Identity in TLS: https://www.rfc-editor.org/rfc/rfc9525.html - Continue with Lesson 5 for connection ownership beyond the TLS endpoint.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M05-Q021
 
 **Type:** `multiple_choice`  
 **Difficulty:** `recall`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose proxy, load-balancer, nat, connection-pool, and slow-reader behavior with capacity, ownership, and cost evidence.
+**Choices:**
 
-**Explanation:** Use Proxies, NAT, Pooling, and Exhaustion to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
+- Treat Infinite retry on timeout multiplies resolver load during failure as complete proof without the lesson boundary
+- Keep DNS, Addressing, Routing, and Discovery scoped to its stated evidence and boundary.
+- Make the documented mistake: Infinite retry on timeout multiplies resolver load during failure
+- Choose the familiar tool before checking whether Infinite retry on timeout multiplies resolver load during failure ap.
 
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
+**Answer:** Keep DNS, Addressing, Routing, and Discovery scoped to its stated evidence and boundary.
+
+**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M05-Q018 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+
+## M05-Q019
+
+**Type:** `multiple_choice`  
+**Difficulty:** `application`
+
+**Choices:**
+
+- Choose the familiar tool before checking whether Using a stale address without a stated policy can route to decommiss.
+- Make the documented mistake: Using a stale address without a stated policy can route to decommi
+- Keep DNS, Addressing, Routing, and Discovery scoped to its stated evidence and boundary.
+- Treat Using a stale address without a stated policy can route to decommissi as complete proof without the lesson boun.
+
+**Answer:** Keep DNS, Addressing, Routing, and Discovery scoped to its stated evidence and boundary.
+
+**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M05-Q019 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+
+## M05-Q020
+
+**Type:** `multiple_choice`  
+**Difficulty:** `synthesis`
+
+**Choices:**
+
+- Treat Logging full queried names can expose tenant or user data as complete proof without the lesson boundary
+- Choose the familiar tool before checking whether Logging full queried names can expose tenant or user data applies
+- Make the documented mistake: Logging full queried names can expose tenant or user data
+- Keep DNS, Addressing, Routing, and Discovery scoped to its stated evidence and boundary.
+
+**Answer:** Keep DNS, Addressing, Routing, and Discovery scoped to its stated evidence and boundary.
+
+**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M05-Q020 and its cited source.
+
+**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+
+## M05-Q021
+
+**Type:** `calculation`  
+**Difficulty:** `synthesis`
+
+**Answer:** Original concurrency = 170 x 0.060 = 10.20 operations. Revised rate = 170 x 1.25 = 212.5/s, so revised concurrency = 212.5 x 0.060 = 12.75 operations.
+
+**Explanation:** This perturbs the numeric practice around Request Paths, Round Trips, and Byte Budgets: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M05-Q021 and its cited source.
+
+**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
 
 ## M05-Q022
 
-**Type:** `short_answer`  
-**Difficulty:** `application`
+**Type:** `calculation`  
+**Difficulty:** `recall`
 
-**Answer:** A strong answer defines the mechanism from 'HTTP/1.1 and HTTP/2 Multiplexing', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
+**Answer:** Original concurrency = 180 x 0.070 = 12.60 operations. Revised rate = 180 x 1.30 = 234.0/s, so revised concurrency = 234.0 x 0.070 = 16.38 operations.
 
-**Explanation:** Use HTTP/1.1 and HTTP/2 Multiplexing to reason from explicit assumptions to observable behavior.
+**Explanation:** This perturbs the numeric practice around DNS, Addressing, Routing, and Discovery: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M05-Q022 and its cited source.
 
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
+**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
 
 ## M05-Q023
 
 **Type:** `calculation`  
-**Difficulty:** `synthesis`
+**Difficulty:** `application`
 
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
+**Answer:** Original concurrency = 190 x 0.080 = 15.20 operations. Revised rate = 190 x 1.35 = 256.5/s, so revised concurrency = 256.5 x 0.080 = 20.52 operations.
 
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Explain QUIC connection, packet-number-space, and stream recovery boundaries.
+**Explanation:** This perturbs the numeric practice around TCP Ordering, Flow, Congestion, and Goodput: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M05-Q023 and its cited source.
 
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
+**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
 
 ## M05-Q024
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Choosing one protocol for every operation hides different correctness and payload needs.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M05-Q025
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for model a client journey as a layered path with round-trip, byte, bandwidth-delay-product, and tail-latency budgets..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RFC 9293, TCP concepts and data communication: https://www.rfc-editor.org/rfc/rfc9293.html - Continue with Lesson 2 before interpreting a DNS phase.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M05-Q026
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to trace dns resolution, addressing, routing, caching, and discovery with explicit authority, expiry, and failure boundaries.
-
-**Explanation:** Use DNS, Addressing, Routing, and Discovery to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M05-Q027
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'TCP Ordering, Flow, Congestion, and Goodput', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use TCP Ordering, Flow, Congestion, and Goodput to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M05-Q028
 
 **Type:** `calculation`  
 **Difficulty:** `synthesis`
 
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
+**Answer:** Original concurrency = 200 x 0.040 = 8.00 operations. Revised rate = 200 x 1.40 = 280.0/s, so revised concurrency = 280.0 x 0.040 = 11.20 operations.
 
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Trace TLS 1.3 negotiation, key establishment, certificate authentication, and hostname validation.
+**Explanation:** This perturbs the numeric practice around TLS Trust and Connection Establishment: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M05-Q024 and its cited source.
 
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
+**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+
+## M05-Q025
+
+**Type:** `calculation`  
+**Difficulty:** `recall`
+
+**Answer:** Original concurrency = 120 x 0.050 = 6.00 operations. Revised rate = 120 x 1.45 = 174.0/s, so revised concurrency = 174.0 x 0.050 = 8.70 operations.
+
+**Explanation:** This perturbs the numeric practice around Proxies, NAT, Pooling, and Exhaustion: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M05-Q025 and its cited source.
+
+**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+
+## M05-Q026
+
+**Type:** `calculation`  
+**Difficulty:** `application`
+
+**Answer:** Original concurrency = 130 x 0.060 = 7.80 operations. Revised rate = 130 x 1.10 = 143.0/s, so revised concurrency = 143.0 x 0.060 = 8.58 operations.
+
+**Explanation:** This perturbs the numeric practice around HTTP/1.1 and HTTP/2 Multiplexing: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M05-Q026 and its cited source.
+
+**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+
+## M05-Q027
+
+**Type:** `calculation`  
+**Difficulty:** `synthesis`
+
+**Answer:** Original concurrency = 140 x 0.070 = 9.80 operations. Revised rate = 140 x 1.15 = 161.0/s, so revised concurrency = 161.0 x 0.070 = 11.27 operations.
+
+**Explanation:** This perturbs the numeric practice around QUIC and HTTP/3 Stream Behavior: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M05-Q027 and its cited source.
+
+**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+
+## M05-Q028
+
+**Type:** `scenario_diagnosis`  
+**Difficulty:** `application`
+
+**Answer:** The fixture tests transit-bandwidth (fixture), with fixture as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=transit-bandwidth, rather than the general presence of a lab run.
+
+**Explanation:** The cited fixture is machine-readable source material for M05; diagnosis should start from the emitted fields and connect them to TCP Ordering, Flow, Congestion, and Goodput. This explanation is specific to M05-Q028 and its cited source.
+
+**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
 
 ## M05-Q029
 
 **Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
+**Difficulty:** `synthesis`
 
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Counting requests but not held connections misses slow-reader capacity.
+**Answer:** The fixture tests transit-baseline (fixture), with fixture as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=transit-baseline, rather than the general presence of a lab run.
 
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
+**Explanation:** The cited fixture is machine-readable source material for M05; diagnosis should start from the emitted fields and connect them to TLS Trust and Connection Establishment. This explanation is specific to M05-Q029 and its cited source.
 
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
+**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
 
 ## M05-Q030
 
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for compare http/1.1, http/2, and http/3 through setup, multiplexing, stream isolation, fallback, observability, and client-network constraints..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RFC 9113, HTTP/2: https://www.rfc-editor.org/rfc/rfc9113.html - Continue with Lesson 7 for QUIC's different ordering boundary.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M05-Q031
-
-**Type:** `multiple_choice`  
+**Type:** `scenario_diagnosis`  
 **Difficulty:** `recall`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose nine hidden network faults from preserved evidence before reveal and design reruns that separate credible causes.
+**Answer:** The fixture tests transit-delay (fixture), with fixture as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=transit-delay, rather than the general presence of a lab run.
 
-**Explanation:** Use QUIC and HTTP/3 Stream Behavior to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
+**Explanation:** The cited fixture is machine-readable source material for M05; diagnosis should start from the emitted fields and connect them to Proxies, NAT, Pooling, and Exhaustion. This explanation is specific to M05-Q030 and its cited source.
 
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
+**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
 
-## M05-Q032
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Protocol and Topology Decisions', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Protocol and Topology Decisions to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M05-Q033
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Decompose one user operation into observable network phases.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M05-Q034
+## M05-Q031
 
 **Type:** `scenario_diagnosis`  
 **Difficulty:** `application`
 
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: “DNS is down” collapses authoritative, recursive, network, validation, and cache failures.
+**Answer:** The fixture tests transit-dns-failure (fixture), with fixture as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=transit-dns-failure, rather than the general presence of a lab run.
 
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
+**Explanation:** The cited fixture is machine-readable source material for M05; diagnosis should start from the emitted fields and connect them to HTTP/1.1 and HTTP/2 Multiplexing. This explanation is specific to M05-Q031 and its cited source.
 
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
+**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+
+## M05-Q032
+
+**Type:** `scenario_diagnosis`  
+**Difficulty:** `synthesis`
+
+**Answer:** The fixture tests transit-jitter (fixture), with fixture as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=transit-jitter, rather than the general presence of a lab run.
+
+**Explanation:** The cited fixture is machine-readable source material for M05; diagnosis should start from the emitted fields and connect them to QUIC and HTTP/3 Stream Behavior. This explanation is specific to M05-Q032 and its cited source.
+
+**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+
+## M05-Q033
+
+**Type:** `scenario_diagnosis`  
+**Difficulty:** `recall`
+
+**Answer:** The fixture tests transit-loss-quic (fixture), with fixture as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=transit-loss-quic, rather than the general presence of a lab run.
+
+**Explanation:** The cited fixture is machine-readable source material for M05; diagnosis should start from the emitted fields and connect them to Protocol and Topology Decisions. This explanation is specific to M05-Q033 and its cited source.
+
+**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+
+## M05-Q034
+
+**Type:** `design_judgment`  
+**Difficulty:** `synthesis`
+
+**Answer:** Recommend the option that preserves the TLS Trust and Connection Establishment mechanism under the exercise constraints: Using the Transit inputs, enumerate serial exchanges and calculate lower-bound setup, 12 KiB serialization, and BDP. Label assumptions and units. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+
+**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M05-Q034 and its cited source.
+
+**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
 
 ## M05-Q035
 
 **Type:** `design_judgment`  
-**Difficulty:** `synthesis`
+**Difficulty:** `recall`
 
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for relate tcp ordering, loss recovery, flow control, congestion control, and receiver behavior to measured goodput and tail latency..
+**Answer:** Recommend the option that preserves the Proxies, NAT, Pooling, and Exhaustion mechanism under the exercise constraints: Explain why DNS p95 + TLS p95 + application p95 is not necessarily journey p95. Design a correlated per-request measurement. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
 
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RFC 9293, Sections 2.2, 3.5, 3.7, and 3.8: https://www.rfc-editor.org/rfc/rfc9293.html - Continue with Lesson 4 for trust establishment over the connection.
+**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M05-Q035 and its cited source.
 
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
+**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
 
 ## M05-Q036
 
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
+**Type:** `design_judgment`  
+**Difficulty:** `application`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to trace tls authentication and handshake costs while preserving hostname, certificate, key, resumption, and trust boundaries.
+**Answer:** Recommend the option that preserves the HTTP/1.1 and HTTP/2 Multiplexing mechanism under the exercise constraints: For positive A, NXDOMAIN, NODATA, SERVFAIL, and timeout, state what is known, what remains unknown, cache behavior to record, and safe next action. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
 
-**Explanation:** Use TLS Trust and Connection Establishment to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
+**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M05-Q036 and its cited source.
 
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
+**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
 
 ## M05-Q037
 
-**Type:** `short_answer`  
-**Difficulty:** `application`
+**Type:** `design_judgment`  
+**Difficulty:** `synthesis`
 
-**Answer:** A strong answer defines the mechanism from 'Proxies, NAT, Pooling, and Exhaustion', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
+**Answer:** Recommend the option that preserves the QUIC and HTTP/3 Stream Behavior mechanism under the exercise constraints: Map Transit DNS record, recursive resolver, route, edge health, service discovery, and certificate to owners and escalation evidence. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
 
-**Explanation:** Use Proxies, NAT, Pooling, and Exhaustion to reason from explicit assumptions to observable behavior.
+**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M05-Q037 and its cited source.
 
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
+**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
 
 ## M05-Q038
 
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Compare connection reuse, pipelining constraints, and multiplexed streams.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M05-Q039
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: “QUIC fixes packet loss” confuses isolation with loss removal.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M05-Q040
-
 **Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for defend a protocol and topology decision through client outcomes, security, cost, ownership, migration, rollback, and reversal conditions..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Cloudflare, The Road to QUIC: https://blog.cloudflare.com/the-road-to-quic/ - USENIX, Deploying and Debugging HTTP/3: https://www.usenix.org/conference/srecon23emea/presentation/marx - Complete the protocol ADR and defense before evaluation.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M05-Q041
-
-**Type:** `multiple_choice`  
 **Difficulty:** `recall`
 
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to model a client journey as a layered path with round-trip, byte, bandwidth-delay-product, and tail-latency budgets.
+**Answer:** Recommend the option that preserves the Protocol and Topology Decisions mechanism under the exercise constraints: Given falling sender goodput, design evidence that distinguishes a slow reader, path congestion, and application pacing The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
 
-**Explanation:** Use Request Paths, Round Trips, and Byte Budgets to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
+**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M05-Q038 and its cited source.
 
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M05-Q042
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'DNS, Addressing, Routing, and Discovery', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use DNS, Addressing, Routing, and Discovery to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M05-Q043
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Explain TCP's reliable ordered byte stream without claiming message boundaries.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M05-Q044
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Disabling verification to “test TLS” removes the property under test.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M05-Q045
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose proxy, load-balancer, nat, connection-pool, and slow-reader behavior with capacity, ownership, and cost evidence..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RFC 9293 keep-alive and connection behavior: https://www.rfc-editor.org/rfc/rfc9293.html - Continue with Lesson 6 to compare request concurrency over connections.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M05-Q046
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to compare http/1.1, http/2, and http/3 through setup, multiplexing, stream isolation, fallback, observability, and client-network constraints.
-
-**Explanation:** Use HTTP/1.1 and HTTP/2 Multiplexing to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M05-Q047
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'QUIC and HTTP/3 Stream Behavior', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use QUIC and HTTP/3 Stream Behavior to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M05-Q048
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Compare protocols and topologies under shared client and operating drivers.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M05-Q049
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Adding marginal percentiles from different requests creates a journey that
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M05-Q050
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for trace dns resolution, addressing, routing, caching, and discovery with explicit authority, expiry, and failure boundaries..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RFC 1034, concepts and server algorithm: https://datatracker.ietf.org/doc/html/rfc1034 - RFC 6724, default address-selection policy: https://www.rfc-editor.org/rfc/rfc6724.html - RFC 8305, connection racing across address families: https://www.rfc-editor.org
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M05-Q051
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to relate tcp ordering, loss recovery, flow control, congestion control, and receiver behavior to measured goodput and tail latency.
-
-**Explanation:** Use TCP Ordering, Flow, Congestion, and Goodput to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M05-Q052
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'TLS Trust and Connection Establishment', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use TLS Trust and Connection Establishment to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M05-Q053
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Trace connection ownership across client, proxy, application, and dependency.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M05-Q054
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: “Multiplexed” does not mean independent at every lower layer.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M05-Q055
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose nine hidden network faults from preserved evidence before reveal and design reruns that separate credible causes..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RFC 9000, QUIC: https://www.rfc-editor.org/rfc/rfc9000.html - RFC 9114, HTTP/3: https://www.rfc-editor.org/rfc/rfc9114.html - Continue with Lesson 8 to turn mechanics into a migration decision.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M05-Q056
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend a protocol and topology decision through client outcomes, security, cost, ownership, migration, rollback, and reversal conditions.
-
-**Explanation:** Use Protocol and Topology Decisions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M05-Q057
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Request Paths, Round Trips, and Byte Budgets', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Request Paths, Round Trips, and Byte Budgets to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M05-Q058
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Distinguish names, cached records, addresses, routes, and healthy endpoints.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M05-Q059
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Equating socket writes with peer receipt ignores buffering and acknowledgments.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M05-Q060
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for trace tls authentication and handshake costs while preserving hostname, certificate, key, resumption, and trust boundaries..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RFC 9846, TLS 1.3: https://www.rfc-editor.org/rfc/rfc9846.html - RFC 9525, Service Identity in TLS: https://www.rfc-editor.org/rfc/rfc9525.html - Continue with Lesson 5 for connection ownership beyond the TLS endpoint.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M05-Q061
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose proxy, load-balancer, nat, connection-pool, and slow-reader behavior with capacity, ownership, and cost evidence.
-
-**Explanation:** Use Proxies, NAT, Pooling, and Exhaustion to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M05-Q062
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'HTTP/1.1 and HTTP/2 Multiplexing', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use HTTP/1.1 and HTTP/2 Multiplexing to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M05-Q063
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Explain QUIC connection, packet-number-space, and stream recovery boundaries.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M05-Q064
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Choosing one protocol for every operation hides different correctness and payload needs.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M05-Q065
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for model a client journey as a layered path with round-trip, byte, bandwidth-delay-product, and tail-latency budgets..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RFC 9293, TCP concepts and data communication: https://www.rfc-editor.org/rfc/rfc9293.html - Continue with Lesson 2 before interpreting a DNS phase.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M05-Q066
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to trace dns resolution, addressing, routing, caching, and discovery with explicit authority, expiry, and failure boundaries.
-
-**Explanation:** Use DNS, Addressing, Routing, and Discovery to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M05-Q067
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'TCP Ordering, Flow, Congestion, and Goodput', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use TCP Ordering, Flow, Congestion, and Goodput to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M05-Q068
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Trace TLS 1.3 negotiation, key establishment, certificate authentication, and hostname validation.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M05-Q069
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Counting requests but not held connections misses slow-reader capacity.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M05-Q070
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for compare http/1.1, http/2, and http/3 through setup, multiplexing, stream isolation, fallback, observability, and client-network constraints..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RFC 9113, HTTP/2: https://www.rfc-editor.org/rfc/rfc9113.html - Continue with Lesson 7 for QUIC's different ordering boundary.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M05-Q071
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose nine hidden network faults from preserved evidence before reveal and design reruns that separate credible causes.
-
-**Explanation:** Use QUIC and HTTP/3 Stream Behavior to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M05-Q072
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Protocol and Topology Decisions', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Protocol and Topology Decisions to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M05-Q073
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Decompose one user operation into observable network phases.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M05-Q074
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: “DNS is down” collapses authoritative, recursive, network, validation, and cache failures.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M05-Q075
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for relate tcp ordering, loss recovery, flow control, congestion control, and receiver behavior to measured goodput and tail latency..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RFC 9293, Sections 2.2, 3.5, 3.7, and 3.8: https://www.rfc-editor.org/rfc/rfc9293.html - Continue with Lesson 4 for trust establishment over the connection.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M05-Q076
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to trace tls authentication and handshake costs while preserving hostname, certificate, key, resumption, and trust boundaries.
-
-**Explanation:** Use TLS Trust and Connection Establishment to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M05-Q077
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Proxies, NAT, Pooling, and Exhaustion', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Proxies, NAT, Pooling, and Exhaustion to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M05-Q078
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Compare connection reuse, pipelining constraints, and multiplexed streams.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M05-Q079
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: “QUIC fixes packet loss” confuses isolation with loss removal.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M05-Q080
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for defend a protocol and topology decision through client outcomes, security, cost, ownership, migration, rollback, and reversal conditions..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - Cloudflare, The Road to QUIC: https://blog.cloudflare.com/the-road-to-quic/ - USENIX, Deploying and Debugging HTTP/3: https://www.usenix.org/conference/srecon23emea/presentation/marx - Complete the protocol ADR and defense before evaluation.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M05-Q081
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to model a client journey as a layered path with round-trip, byte, bandwidth-delay-product, and tail-latency budgets.
-
-**Explanation:** Use Request Paths, Round Trips, and Byte Budgets to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M05-Q082
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'DNS, Addressing, Routing, and Discovery', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use DNS, Addressing, Routing, and Discovery to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M05-Q083
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Explain TCP's reliable ordered byte stream without claiming message boundaries.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M05-Q084
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Disabling verification to “test TLS” removes the property under test.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M05-Q085
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose proxy, load-balancer, nat, connection-pool, and slow-reader behavior with capacity, ownership, and cost evidence..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RFC 9293 keep-alive and connection behavior: https://www.rfc-editor.org/rfc/rfc9293.html - Continue with Lesson 6 to compare request concurrency over connections.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M05-Q086
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to compare http/1.1, http/2, and http/3 through setup, multiplexing, stream isolation, fallback, observability, and client-network constraints.
-
-**Explanation:** Use HTTP/1.1 and HTTP/2 Multiplexing to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M05-Q087
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'QUIC and HTTP/3 Stream Behavior', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use QUIC and HTTP/3 Stream Behavior to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M05-Q088
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Compare protocols and topologies under shared client and operating drivers.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M05-Q089
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Adding marginal percentiles from different requests creates a journey that
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M05-Q090
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for trace dns resolution, addressing, routing, caching, and discovery with explicit authority, expiry, and failure boundaries..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RFC 1034, concepts and server algorithm: https://datatracker.ietf.org/doc/html/rfc1034 - RFC 6724, default address-selection policy: https://www.rfc-editor.org/rfc/rfc6724.html - RFC 8305, connection racing across address families: https://www.rfc-editor.org
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M05-Q091
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to relate tcp ordering, loss recovery, flow control, congestion control, and receiver behavior to measured goodput and tail latency.
-
-**Explanation:** Use TCP Ordering, Flow, Congestion, and Goodput to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M05-Q092
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'TLS Trust and Connection Establishment', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use TLS Trust and Connection Establishment to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M05-Q093
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Trace connection ownership across client, proxy, application, and dependency.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M05-Q094
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: “Multiplexed” does not mean independent at every lower layer.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M05-Q095
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose nine hidden network faults from preserved evidence before reveal and design reruns that separate credible causes..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RFC 9000, QUIC: https://www.rfc-editor.org/rfc/rfc9000.html - RFC 9114, HTTP/3: https://www.rfc-editor.org/rfc/rfc9114.html - Continue with Lesson 8 to turn mechanics into a migration decision.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
-
-## M05-Q096
-
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
-
-**Answer:** Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend a protocol and topology decision through client outcomes, security, cost, ownership, migration, rollback, and reversal conditions.
-
-**Explanation:** Use Protocol and Topology Decisions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.
-
-**Grading notes:** Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning.
-
-## M05-Q097
-
-**Type:** `short_answer`  
-**Difficulty:** `application`
-
-**Answer:** A strong answer defines the mechanism from 'Request Paths, Round Trips, and Byte Budgets', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.
-
-**Explanation:** Use Request Paths, Round Trips, and Byte Budgets to reason from explicit assumptions to observable behavior.
-
-**Grading notes:** Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation.
-
-## M05-Q098
-
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
-
-**Answer:** Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.
-
-**Explanation:** Calculation questions in this course are about scoped evidence, not numerology. - Distinguish names, cached records, addresses, routes, and healthy endpoints.
-
-**Grading notes:** Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold.
-
-## M05-Q099
-
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
-
-**Answer:** Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: Equating socket writes with peer receipt ignores buffering and acknowledgments.
-
-**Explanation:** Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.
-
-**Grading notes:** Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice.
-
-## M05-Q100
-
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
-
-**Answer:** Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for trace tls authentication and handshake costs while preserving hostname, certificate, key, resumption, and trust boundaries..
-
-**Explanation:** Design judgment is strongest when it keeps alternatives alive until evidence rules them out. - RFC 9846, TLS 1.3: https://www.rfc-editor.org/rfc/rfc9846.html - RFC 9525, Service Identity in TLS: https://www.rfc-editor.org/rfc/rfc9525.html - Continue with Lesson 5 for connection ownership beyond the TLS endpoint.
-
-**Grading notes:** Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition.
+**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.

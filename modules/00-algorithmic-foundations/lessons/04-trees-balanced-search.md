@@ -32,23 +32,23 @@ B-trees and B+ trees widen a node to hold many keys and children. If fanout is `
 
 Trees also preserve order. After a seek to the first key in a range, the scan can continue through adjacent leaves. That capability is why M07 treats B-tree indexes as access-path contracts, not just lookup accelerators.
 
-## Worked Example
+## Worked example
 
 If an API needs "all events for tenant T between two timestamps," order matters.
 A hash table can find one exact key quickly, but a tree can seek to the range and
 scan forward.
 
-## Common Expert Mistakes
+## Common expert mistakes
 
 - Choosing hashing for range queries.
 - Forgetting that balance maintenance changes write cost.
 - Treating a storage index as just an in-memory tree.
 
-## Guided Practice
+## Guided practice
 
 A B-tree-like index has 100-way fanout and 100,000,000 keys. Estimate height with `log_B(n)`. Compare that with binary height using powers of two. Then name one range query a hash table cannot serve alone.
 
-## Self-Check
+## Self-check
 
 1. What happens when a BST degenerates?
 2. What does a balancing invariant buy?
@@ -62,6 +62,6 @@ A B-tree-like index has 100-way fanout and 100,000,000 keys. Estimate height wit
 3. Larger fanout reduces levels, and levels often map to page reads or cache misses.
 4. Trees preserve sorted order, so they can seek then scan contiguous key ranges. For the practice, height is about 4; binary height is about 27; a tenant/time-window query is a typical range.
 
-## Sources And Next Work
+## Sources and next work
 
 Study RES-01 and RES-06. Then connect this lesson to M07 L03.

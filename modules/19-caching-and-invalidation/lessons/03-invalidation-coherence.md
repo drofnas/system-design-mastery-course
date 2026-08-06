@@ -33,23 +33,23 @@ Cache key design is part of correctness. A response may vary by tenant, subject,
 
 Across regions, coherence should name the authority and conflict rule. If two regions can write a derived representation, the cache has become a multi-writer system and needs versions, fencing, or reconciliation from authority.
 
-## Worked Example
+## Worked example
 
 A permissions object should include subject, tenant, policy version, and resource
 scope in its cache key or validation path. A role removal should invalidate or
 bypass cached permissions before a sensitive action is allowed.
 
-## Common Expert Mistakes
+## Common expert mistakes
 
 - Using TTL as the only invalidation strategy for high-risk data.
 - Forgetting derived indexes and regional copies.
 - Allowing two writers to update the same derived entry without version checks.
 
-## Guided Practice
+## Guided practice
 
 A permission cache key includes tenant and resource but omits subject and policy version. Name two possible wrong responses. Then design a versioned key and a maximum stale window for role removal.
 
-## Self-Check
+## Self-check
 
 1. Why is TTL not the same as invalidation?
 2. How do versioned keys sidestep many purge races?
@@ -63,6 +63,6 @@ A permission cache key includes tenant and resource but omits subject and policy
 3. Tenant, subject, authorization state, locale, device, feature flag, content negotiation, and schema version as applicable.
 4. A newly created object can remain hidden until the negative entry expires. For the practice, subject A could receive subject B's permission, and old policy could survive role removal; include subject and policy version in the key and bypass or cap stale permission reads to a very short window.
 
-## Sources And Next Work
+## Sources and next work
 
 Study RES-02 and RES-05. Then complete EX-05 and EX-06.

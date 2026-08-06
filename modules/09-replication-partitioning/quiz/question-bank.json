@@ -9,191 +9,179 @@
       "lesson_ids": [
         "L01"
       ],
-      "type": "multiple_choice",
+      "type": "short_answer",
       "difficulty": "recall",
       "tags": [
         "replication-and-partitioning",
-        "operation-semantics-and-session-guarantees",
-        "recall"
+        "operation-semantics-and-session-guarante",
+        "src:L01-selfcheck-1"
       ],
-      "prompt": "Which approach best applies 'Operation Semantics and Session Guarantees' in Replication and Partitioning?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to specify fresh, bounded-stale, read-your-writes, monotonic, causal, and linearizable requirements per operation.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to specify fresh, bounded-stale, read-your-writes, monotonic, causal, and linearizable requirements per operation.",
-      "explanation": "Use Operation Semantics and Session Guarantees to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+      "prompt": "Use the cited source to answer L01 (Operation Semantics and Session Guarantees): Does read-your-writes guarantee another user's read sees the write?",
+      "correct_answer": "No. It is scoped to one session unless a stronger contract is also present",
+      "explanation": "The cited self-check in L01 tests whether the learner can connect Operation Semantics and Session Guarantees to the module mechanism without replacing evidence with labels. This explanation is specific to M09-Q001 and its cited source.",
+      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
     },
     {
       "question_id": "M09-Q002",
       "module_id": "M09",
       "lesson_ids": [
-        "L02"
+        "L01"
       ],
       "type": "short_answer",
       "difficulty": "application",
       "tags": [
         "replication-and-partitioning",
-        "replication-topologies-and-acknowledgement-bound",
-        "application"
+        "operation-semantics-and-session-guarante",
+        "src:L01-selfcheck-2"
       ],
-      "prompt": "In 3-5 sentences, explain how 'Replication Topologies and Acknowledgement Boundaries' supports this outcome: Compare leader/follower, multi-leader, and leaderless replication with explicit synchronous and asynchronous acknowledgement boundaries.",
-      "correct_answer": "A strong answer defines the mechanism from 'Replication Topologies and Acknowledgement Boundaries', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Replication Topologies and Acknowledgement Boundaries to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+      "prompt": "Explain the mechanism behind L01 (Operation Semantics and Session Guarantees): Can a history satisfy monotonic reads while remaining stale?",
+      "correct_answer": "Yes. A session can observe versions 5, 5, 6 while authority is already at 9",
+      "explanation": "The cited self-check in L01 tests whether the learner can connect Operation Semantics and Session Guarantees to the module mechanism without replacing evidence with labels. This explanation is specific to M09-Q002 and its cited source.",
+      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
     },
     {
       "question_id": "M09-Q003",
       "module_id": "M09",
       "lesson_ids": [
-        "L03"
+        "L01"
       ],
-      "type": "calculation",
+      "type": "short_answer",
       "difficulty": "synthesis",
       "tags": [
         "replication-and-partitioning",
-        "quorums-intersections-and-hidden-assumptions",
-        "synthesis"
+        "operation-semantics-and-session-guarante",
+        "src:L01-selfcheck-3"
       ],
-      "prompt": "For 'Quorums, Intersections, and Hidden Assumptions', what quantities, units, or thresholds would you calculate before trusting a design claim about: Calculate quorum intersections and diagnose failures in membership, durability, concurrent-version, and sloppy-quorum assumptions.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Calculate read/write and write/write intersections.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+      "prompt": "Name the evidence needed for L01 (Operation Semantics and Session Guarantees): What must a bounded-staleness claim contain?",
+      "correct_answer": "A unit and bound, reference version/time, measurement point, failure action, and oracle",
+      "explanation": "The cited self-check in L01 tests whether the learner can connect Operation Semantics and Session Guarantees to the module mechanism without replacing evidence with labels. This explanation is specific to M09-Q003 and its cited source.",
+      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
     },
     {
       "question_id": "M09-Q004",
       "module_id": "M09",
       "lesson_ids": [
-        "L04"
+        "L01"
       ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
+      "type": "short_answer",
+      "difficulty": "recall",
       "tags": [
         "replication-and-partitioning",
-        "versions-conflicts-repair-and-convergence",
-        "application"
+        "operation-semantics-and-session-guarante",
+        "src:L01-selfcheck-4"
       ],
-      "prompt": "A learner applies 'Versions, Conflicts, Repair, and Convergence' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Last-write-wins without a valid clock/order:** clock skew or arrival order",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+      "prompt": "Diagnose the boundary issue in L01 (Operation Semantics and Session Guarantees): Why is \"eventually consistent\" insufficient for a controller transfer?",
+      "correct_answer": "Eventual convergence permits a window where conflicting owners can act; the invariant is violated before convergence repairs state",
+      "explanation": "The cited self-check in L01 tests whether the learner can connect Operation Semantics and Session Guarantees to the module mechanism without replacing evidence with labels. This explanation is specific to M09-Q004 and its cited source.",
+      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
     },
     {
       "question_id": "M09-Q005",
       "module_id": "M09",
       "lesson_ids": [
-        "L05"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "replication-and-partitioning",
-        "partitioning-consistent-hashing-and-resharding",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Partitioning, Consistent Hashing, and Resharding'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for compare hash, range, and consistent-hash partitioning using balance, movement, routing, and safe reshard evidence..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Use Dynamo's partitioning sections and the Meta Shard Manager case.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
-    },
-    {
-      "question_id": "M09-Q006",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L06"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "replication-and-partitioning",
-        "hot-keys-skew-fairness-and-tenant-isolation",
-        "recall"
-      ],
-      "prompt": "Which approach best applies 'Hot Keys, Skew, Fairness, and Tenant Isolation' in Replication and Partitioning?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose replica partition, leader loss, lag, lost acknowledgement, hot key, and reshard failures from immutable same-input evidence.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose replica partition, leader loss, lag, lost acknowledgement, hot key, and reshard failures from immutable same-input evidence.",
-      "explanation": "Use Hot Keys, Skew, Fairness, and Tenant Isolation to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
-    },
-    {
-      "question_id": "M09-Q007",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L07"
+        "L02"
       ],
       "type": "short_answer",
       "difficulty": "application",
       "tags": [
         "replication-and-partitioning",
-        "cap-pacelc-regional-placement-security-and-cost",
-        "application"
+        "replication-topologies-and-acknowledgeme",
+        "src:L02-selfcheck-1"
       ],
-      "prompt": "In 3-5 sentences, explain how 'CAP, PACELC, Regional Placement, Security, and Cost' supports this outcome: Design tenant isolation, regional placement, residency controls, capacity, repair ownership, migration, rollback, and cost.",
-      "correct_answer": "A strong answer defines the mechanism from 'CAP, PACELC, Regional Placement, Security, and Cost', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use CAP, PACELC, Regional Placement, Security, and Cost to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+      "prompt": "State the causal reason for L02 (Replication Topologies and Acknowledgement Boundaries): Does two acknowledgements mean two durable failure domains?",
+      "correct_answer": "No. The acknowledgement and placement contracts must prove durability and independence",
+      "explanation": "The cited self-check in L02 tests whether the learner can connect Replication Topologies and Acknowledgement Boundaries to the module mechanism without replacing evidence with labels. This explanation is specific to M09-Q005 and its cited source.",
+      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+    },
+    {
+      "question_id": "M09-Q006",
+      "module_id": "M09",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "synthesis",
+      "tags": [
+        "replication-and-partitioning",
+        "replication-topologies-and-acknowledgeme",
+        "src:L02-selfcheck-2"
+      ],
+      "prompt": "Identify the assumption behind L02 (Replication Topologies and Acknowledgement Boundaries): What new application obligation appears with multi-leader writes?",
+      "correct_answer": "Detect concurrent versions and define who or what resolves them without violating the business invariant",
+      "explanation": "The cited self-check in L02 tests whether the learner can connect Replication Topologies and Acknowledgement Boundaries to the module mechanism without replacing evidence with labels. This explanation is specific to M09-Q006 and its cited source.",
+      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+    },
+    {
+      "question_id": "M09-Q007",
+      "module_id": "M09",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "recall",
+      "tags": [
+        "replication-and-partitioning",
+        "replication-topologies-and-acknowledgeme",
+        "src:L02-selfcheck-3"
+      ],
+      "prompt": "Connect the lesson claim to L02 (Replication Topologies and Acknowledgement Boundaries): Why can a leader/follower system still return stale data?",
+      "correct_answer": "Followers can lag and the router may select one without a minimum-version rule",
+      "explanation": "The cited self-check in L02 tests whether the learner can connect Replication Topologies and Acknowledgement Boundaries to the module mechanism without replacing evidence with labels. This explanation is specific to M09-Q007 and its cited source.",
+      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
     },
     {
       "question_id": "M09-Q008",
       "module_id": "M09",
       "lesson_ids": [
-        "L08"
+        "L02"
       ],
-      "type": "calculation",
-      "difficulty": "synthesis",
+      "type": "short_answer",
+      "difficulty": "application",
       "tags": [
         "replication-and-partitioning",
-        "data-placement-decisions-migration-and-ownership",
-        "synthesis"
+        "replication-topologies-and-acknowledgeme",
+        "src:L02-selfcheck-4"
       ],
-      "prompt": "For 'Data-Placement Decisions, Migration, and Ownership', what quantities, units, or thresholds would you calculate before trusting a design claim about: Defend the Week 50 cumulative review invariant using storage, transaction, replication, partition, and preserved optional project evidence.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Produce an evidence-driven data-placement and consistency ADR.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+      "prompt": "Resolve the self-check about L02 (Replication Topologies and Acknowledgement Boundaries): What is the safe Module 9 response when the sole known leader stops?",
+      "correct_answer": "Explicitly reject authority-changing writes or recover the known authority; do not invent an unproved election",
+      "explanation": "The cited self-check in L02 tests whether the learner can connect Replication Topologies and Acknowledgement Boundaries to the module mechanism without replacing evidence with labels. This explanation is specific to M09-Q008 and its cited source.",
+      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
     },
     {
       "question_id": "M09-Q009",
       "module_id": "M09",
       "lesson_ids": [
-        "L01"
+        "L03"
       ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
+      "type": "short_answer",
+      "difficulty": "synthesis",
       "tags": [
         "replication-and-partitioning",
-        "operation-semantics-and-session-guarantees",
-        "application"
+        "quorums-intersections-and-hidden-assumpt",
+        "src:L03-selfcheck-1"
       ],
-      "prompt": "A learner applies 'Operation Semantics and Session Guarantees' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Choosing one label for the product:** it over-constrains cheap reads or",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+      "prompt": "Summarize the tradeoff in L03 (Quorums, Intersections, and Hidden Assumptions): For N=5, R=3, W=3, which intersections hold?",
+      "correct_answer": "Both: 3+3>5 and 2×3>5",
+      "explanation": "The cited self-check in L03 tests whether the learner can connect Quorums, Intersections, and Hidden Assumptions to the module mechanism without replacing evidence with labels. This explanation is specific to M09-Q009 and its cited source.",
+      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
     },
     {
       "question_id": "M09-Q010",
       "module_id": "M09",
       "lesson_ids": [
-        "L02"
+        "L03"
       ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
+      "type": "short_answer",
+      "difficulty": "recall",
       "tags": [
         "replication-and-partitioning",
-        "replication-topologies-and-acknowledgement-bound",
-        "synthesis"
+        "quorums-intersections-and-hidden-assumpt",
+        "src:L03-selfcheck-2"
       ],
-      "prompt": "You must make a design choice involving 'Replication Topologies and Acknowledgement Boundaries'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for compare leader/follower, multi-leader, and leaderless replication with explicit synchronous and asynchronous acknowledgement boundaries..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Read the bounded Dynamo sections in RES-01.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+      "prompt": "Defend the conclusion for L03 (Quorums, Intersections, and Hidden Assumptions): For N=5, R=4, W=2, which intersection fails?",
+      "correct_answer": "Write/write intersection fails because 4 is not greater than 5",
+      "explanation": "The cited self-check in L03 tests whether the learner can connect Quorums, Intersections, and Hidden Assumptions to the module mechanism without replacing evidence with labels. This explanation is specific to M09-Q010 and its cited source.",
+      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
     },
     {
       "question_id": "M09-Q011",
@@ -201,26 +189,56 @@
       "lesson_ids": [
         "L03"
       ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
+      "type": "short_answer",
+      "difficulty": "application",
       "tags": [
         "replication-and-partitioning",
-        "quorums-intersections-and-hidden-assumptions",
-        "recall"
+        "quorums-intersections-and-hidden-assumpt",
+        "src:L03-selfcheck-3"
       ],
-      "prompt": "Which approach best applies 'Quorums, Intersections, and Hidden Assumptions' in Replication and Partitioning?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate quorum intersections and diagnose failures in membership, durability, concurrent-version, and sloppy-quorum assumptions.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate quorum intersections and diagnose failures in membership, durability, concurrent-version, and sloppy-quorum assumptions.",
-      "explanation": "Use Quorums, Intersections, and Hidden Assumptions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+      "prompt": "Challenge the claim in L03 (Quorums, Intersections, and Hidden Assumptions): Can a quorum read safely return its fastest response?",
+      "correct_answer": "Not from arithmetic alone; it may need to compare versions and meet the operation's freshness rule",
+      "explanation": "The cited self-check in L03 tests whether the learner can connect Quorums, Intersections, and Hidden Assumptions to the module mechanism without replacing evidence with labels. This explanation is specific to M09-Q011 and its cited source.",
+      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
     },
     {
       "question_id": "M09-Q012",
+      "module_id": "M09",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "short_answer",
+      "difficulty": "synthesis",
+      "tags": [
+        "replication-and-partitioning",
+        "quorums-intersections-and-hidden-assumpt",
+        "src:L03-selfcheck-4"
+      ],
+      "prompt": "Apply the module rule to L03 (Quorums, Intersections, and Hidden Assumptions): Why must availability be defined before comparing partition behavior?",
+      "correct_answer": "The formal CAP definition and a product's bounded success SLO measure different outcomes; mixing them produces false claims",
+      "explanation": "The cited self-check in L03 tests whether the learner can connect Quorums, Intersections, and Hidden Assumptions to the module mechanism without replacing evidence with labels. This explanation is specific to M09-Q012 and its cited source.",
+      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+    },
+    {
+      "question_id": "M09-Q013",
+      "module_id": "M09",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "short_answer",
+      "difficulty": "recall",
+      "tags": [
+        "replication-and-partitioning",
+        "versions-conflicts-repair-and-convergenc",
+        "src:L04-selfcheck-1"
+      ],
+      "prompt": "Use the cited source to answer L04 (Versions, Conflicts, Repair, and Convergence): Does a larger wall-clock timestamp prove causality?",
+      "correct_answer": "No. Clock error and concurrent writers can make timestamps misleading",
+      "explanation": "The cited self-check in L04 tests whether the learner can connect Versions, Conflicts, Repair, and Convergence to the module mechanism without replacing evidence with labels. This explanation is specific to M09-Q013 and its cited source.",
+      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+    },
+    {
+      "question_id": "M09-Q014",
       "module_id": "M09",
       "lesson_ids": [
         "L04"
@@ -229,91 +247,61 @@
       "difficulty": "application",
       "tags": [
         "replication-and-partitioning",
-        "versions-conflicts-repair-and-convergence",
-        "application"
+        "versions-conflicts-repair-and-convergenc",
+        "src:L04-selfcheck-2"
       ],
-      "prompt": "In 3-5 sentences, explain how 'Versions, Conflicts, Repair, and Convergence' supports this outcome: Implement selectable version metadata, conflict preservation, read repair, and anti-entropy with convergence evidence.",
-      "correct_answer": "A strong answer defines the mechanism from 'Versions, Conflicts, Repair, and Convergence', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Versions, Conflicts, Repair, and Convergence to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
-    },
-    {
-      "question_id": "M09-Q013",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L05"
-      ],
-      "type": "calculation",
-      "difficulty": "synthesis",
-      "tags": [
-        "replication-and-partitioning",
-        "partitioning-consistent-hashing-and-resharding",
-        "synthesis"
-      ],
-      "prompt": "For 'Partitioning, Consistent Hashing, and Resharding', what quantities, units, or thresholds would you calculate before trusting a design claim about: Compare hash, range, and consistent-hash partitioning using balance, movement, routing, and safe reshard evidence.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Compare hash, range, and consistent-hash placement from workload evidence.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
-    },
-    {
-      "question_id": "M09-Q014",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L06"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "replication-and-partitioning",
-        "hot-keys-skew-fairness-and-tenant-isolation",
-        "application"
-      ],
-      "prompt": "A learner applies 'Hot Keys, Skew, Fairness, and Tenant Isolation' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Counting keys instead of cost:** one key can dominate all useful work.",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+      "prompt": "Explain the mechanism behind L04 (Versions, Conflicts, Repair, and Convergence): Why can read repair leave divergence forever?",
+      "correct_answer": "A key that is never read is never compared",
+      "explanation": "The cited self-check in L04 tests whether the learner can connect Versions, Conflicts, Repair, and Convergence to the module mechanism without replacing evidence with labels. This explanation is specific to M09-Q014 and its cited source.",
+      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
     },
     {
       "question_id": "M09-Q015",
       "module_id": "M09",
       "lesson_ids": [
-        "L07"
+        "L01"
       ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
+      "type": "multiple_choice",
+      "difficulty": "application",
       "tags": [
         "replication-and-partitioning",
-        "cap-pacelc-regional-placement-security-and-cost",
-        "synthesis"
+        "operation-semantics-and-session-guarante",
+        "src:L01-mistake-1"
       ],
-      "prompt": "You must make a design choice involving 'CAP, PACELC, Regional Placement, Security, and Cost'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for design tenant isolation, regional placement, residency controls, capacity, repair ownership, migration, rollback, and cost..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Read Gilbert/Lynch and Abadi's PACELC paper using the bounded assignments.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+      "prompt": "For L01 (Operation Semantics and Session Guarantees), which choice best avoids the cited mistake: Choosing one label for the product: it over-constrains cheap reads or?",
+      "choices": [
+        "Keep Operation Semantics and Session Guarantees scoped to its stated evidence and boundary.",
+        "Choose the familiar tool before checking whether Choosing one label for the product: it over-constrains cheap reads o.",
+        "Treat Choosing one label for the product: it over-constrains cheap reads or as complete proof without the lesson boun.",
+        "Make the documented mistake: Choosing one label for the product: it over-constrains cheap reads"
+      ],
+      "correct_answer": "Keep Operation Semantics and Session Guarantees scoped to its stated evidence and boundary.",
+      "explanation": "The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M09-Q015 and its cited source.",
+      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
     },
     {
       "question_id": "M09-Q016",
       "module_id": "M09",
       "lesson_ids": [
-        "L08"
+        "L01"
       ],
       "type": "multiple_choice",
-      "difficulty": "recall",
+      "difficulty": "synthesis",
       "tags": [
         "replication-and-partitioning",
-        "data-placement-decisions-migration-and-ownership",
-        "recall"
+        "operation-semantics-and-session-guarante",
+        "src:L01-mistake-2"
       ],
-      "prompt": "Which approach best applies 'Data-Placement Decisions, Migration, and Ownership' in Replication and Partitioning?",
+      "prompt": "For L01 (Operation Semantics and Session Guarantees), which choice best avoids the cited mistake: Equating acknowledgement with universal visibility: an asynchronous?",
       "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend the week 50 gate 3 invariant using storage, transaction, replication, partition, and preserved portfolio evidence.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
+        "Treat Equating acknowledgement with universal visibility: an asynchronous as complete proof without the lesson bounda.",
+        "Keep Operation Semantics and Session Guarantees scoped to its stated evidence and boundary.",
+        "Make the documented mistake: Equating acknowledgement with universal visibility: an asynchronous",
+        "Choose the familiar tool before checking whether Equating acknowledgement with universal visibility: an asynchronous."
       ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend the week 50 cumulative review invariant using storage, transaction, replication, partition, and preserved optional project evidence.",
-      "explanation": "Use Data-Placement Decisions, Migration, and Ownership to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+      "correct_answer": "Keep Operation Semantics and Session Guarantees scoped to its stated evidence and boundary.",
+      "explanation": "The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M09-Q016 and its cited source.",
+      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
     },
     {
       "question_id": "M09-Q017",
@@ -321,149 +309,191 @@
       "lesson_ids": [
         "L01"
       ],
-      "type": "short_answer",
-      "difficulty": "application",
+      "type": "multiple_choice",
+      "difficulty": "recall",
       "tags": [
         "replication-and-partitioning",
-        "operation-semantics-and-session-guarantees",
-        "application"
+        "operation-semantics-and-session-guarante",
+        "src:L01-mistake-3"
       ],
-      "prompt": "In 3-5 sentences, explain how 'Operation Semantics and Session Guarantees' supports this outcome: Specify fresh, bounded-stale, read-your-writes, monotonic, causal, and linearizable requirements per operation.",
-      "correct_answer": "A strong answer defines the mechanism from 'Operation Semantics and Session Guarantees', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Operation Semantics and Session Guarantees to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+      "prompt": "For L01 (Operation Semantics and Session Guarantees), which choice best avoids the cited mistake: Using wall-clock timestamps as version proof: clock skew can order events?",
+      "choices": [
+        "Treat Using wall-clock timestamps as version proof: clock skew can order ev as complete proof without the lesson boun.",
+        "Make the documented mistake: Using wall-clock timestamps as version proof: clock skew can order",
+        "Keep Operation Semantics and Session Guarantees scoped to its stated evidence and boundary.",
+        "Choose the familiar tool before checking whether Using wall-clock timestamps as version proof: clock skew can order e."
+      ],
+      "correct_answer": "Keep Operation Semantics and Session Guarantees scoped to its stated evidence and boundary.",
+      "explanation": "The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M09-Q017 and its cited source.",
+      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
     },
     {
       "question_id": "M09-Q018",
       "module_id": "M09",
       "lesson_ids": [
-        "L02"
+        "L01"
       ],
-      "type": "calculation",
-      "difficulty": "synthesis",
+      "type": "multiple_choice",
+      "difficulty": "application",
       "tags": [
         "replication-and-partitioning",
-        "replication-topologies-and-acknowledgement-bound",
-        "synthesis"
+        "operation-semantics-and-session-guarante",
+        "src:L01-mistake-4"
       ],
-      "prompt": "For 'Replication Topologies and Acknowledgement Boundaries', what quantities, units, or thresholds would you calculate before trusting a design claim about: Compare leader/follower, multi-leader, and leaderless replication with explicit synchronous and asynchronous acknowledgement boundaries.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Trace writes and reads through leader/follower, multi-leader, and leaderless topologies.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+      "prompt": "For L01 (Operation Semantics and Session Guarantees), which choice best avoids the cited mistake: Calling cache TTL bounded staleness: TTL bounds cache age only under?",
+      "choices": [
+        "Treat Calling cache TTL bounded staleness: TTL bounds cache age only under as complete proof without the lesson bound.",
+        "Make the documented mistake: Calling cache TTL bounded staleness: TTL bounds cache age only und",
+        "Choose the familiar tool before checking whether Calling cache TTL bounded staleness: TTL bounds cache age only under.",
+        "Keep Operation Semantics and Session Guarantees scoped to its stated evidence and boundary."
+      ],
+      "correct_answer": "Keep Operation Semantics and Session Guarantees scoped to its stated evidence and boundary.",
+      "explanation": "The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M09-Q018 and its cited source.",
+      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
     },
     {
       "question_id": "M09-Q019",
       "module_id": "M09",
       "lesson_ids": [
-        "L03"
+        "L01"
       ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
+      "type": "multiple_choice",
+      "difficulty": "synthesis",
       "tags": [
         "replication-and-partitioning",
-        "quorums-intersections-and-hidden-assumptions",
-        "application"
+        "operation-semantics-and-session-guarante",
+        "src:L01-mistake-5"
       ],
-      "prompt": "A learner applies 'Quorums, Intersections, and Hidden Assumptions' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Quoting R+W>N as linearizability:** intersection does not define version",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+      "prompt": "For L01 (Operation Semantics and Session Guarantees), which choice best avoids the cited mistake: Failing open on a session-token miss: returning an older version converts?",
+      "choices": [
+        "Keep Operation Semantics and Session Guarantees scoped to its stated evidence and boundary.",
+        "Make the documented mistake: Failing open on a session-token miss: returning an older version c",
+        "Treat Failing open on a session-token miss: returning an older version conv as complete proof without the lesson boun.",
+        "Choose the familiar tool before checking whether Failing open on a session-token miss: returning an older version con."
+      ],
+      "correct_answer": "Keep Operation Semantics and Session Guarantees scoped to its stated evidence and boundary.",
+      "explanation": "The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M09-Q019 and its cited source.",
+      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
     },
     {
       "question_id": "M09-Q020",
       "module_id": "M09",
       "lesson_ids": [
-        "L04"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "replication-and-partitioning",
-        "versions-conflicts-repair-and-convergence",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Versions, Conflicts, Repair, and Convergence'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement selectable version metadata, conflict preservation, read repair, and anti-entropy with convergence evidence..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Read the Cassandra Dynamo and Repair documentation plus Dynamo Sections 4.4–4.7.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
-    },
-    {
-      "question_id": "M09-Q021",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L05"
+        "L02"
       ],
       "type": "multiple_choice",
       "difficulty": "recall",
       "tags": [
         "replication-and-partitioning",
-        "partitioning-consistent-hashing-and-resharding",
-        "recall"
+        "replication-topologies-and-acknowledgeme",
+        "src:L02-mistake-1"
       ],
-      "prompt": "Which approach best applies 'Partitioning, Consistent Hashing, and Resharding' in Replication and Partitioning?",
+      "prompt": "For L02 (Replication Topologies and Acknowledgement Boundaries), which choice best avoids the cited mistake: Calling replication a backup: deletion, corruption, and operator error?",
       "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to compare hash, range, and consistent-hash partitioning using balance, movement, routing, and safe reshard evidence.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
+        "Treat Calling replication a backup: deletion, corruption, and operator error as complete proof without the lesson bou.",
+        "Keep Replication Topologies and Acknowledgement Boundaries scoped to its stated evidence and bo.",
+        "Make the documented mistake: Calling replication a backup: deletion, corruption, and operator e. with extra con",
+        "Choose the familiar tool before checking whether Calling replication a backup: deletion, corruption, and operator err."
       ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to compare hash, range, and consistent-hash partitioning using balance, movement, routing, and safe reshard evidence.",
-      "explanation": "Use Partitioning, Consistent Hashing, and Resharding to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+      "correct_answer": "Keep Replication Topologies and Acknowledgement Boundaries scoped to its stated evidence and bo.",
+      "explanation": "The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M09-Q020 and its cited source.",
+      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+    },
+    {
+      "question_id": "M09-Q021",
+      "module_id": "M09",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "application",
+      "tags": [
+        "replication-and-partitioning",
+        "replication-topologies-and-acknowledgeme",
+        "src:L02-mistake-2"
+      ],
+      "prompt": "For L02 (Replication Topologies and Acknowledgement Boundaries), which choice best avoids the cited mistake: Promising durability from replica count: copies may share a failure domain?",
+      "choices": [
+        "Make the documented mistake: Promising durability from replica count: copies may share a failur. with extra con",
+        "Treat Promising durability from replica count: copies may share a failure d as complete proof without the lesson boun.",
+        "Keep Replication Topologies and Acknowledgement Boundaries scoped to its stated evidence and bo.",
+        "Choose the familiar tool before checking whether Promising durability from replica count: copies may share a failure."
+      ],
+      "correct_answer": "Keep Replication Topologies and Acknowledgement Boundaries scoped to its stated evidence and bo.",
+      "explanation": "The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M09-Q021 and its cited source.",
+      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
     },
     {
       "question_id": "M09-Q022",
       "module_id": "M09",
       "lesson_ids": [
-        "L06"
+        "L02"
       ],
-      "type": "short_answer",
-      "difficulty": "application",
+      "type": "multiple_choice",
+      "difficulty": "synthesis",
       "tags": [
         "replication-and-partitioning",
-        "hot-keys-skew-fairness-and-tenant-isolation",
-        "application"
+        "replication-topologies-and-acknowledgeme",
+        "src:L02-mistake-3"
       ],
-      "prompt": "In 3-5 sentences, explain how 'Hot Keys, Skew, Fairness, and Tenant Isolation' supports this outcome: Diagnose replica partition, leader loss, lag, lost acknowledgement, hot key, and reshard failures from immutable same-input evidence.",
-      "correct_answer": "A strong answer defines the mechanism from 'Hot Keys, Skew, Fairness, and Tenant Isolation', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Hot Keys, Skew, Fairness, and Tenant Isolation to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+      "prompt": "For L02 (Replication Topologies and Acknowledgement Boundaries), which choice best avoids the cited mistake: Serving followers without session policy: latency improves while users?",
+      "choices": [
+        "Make the documented mistake: Serving followers without session policy: latency improves while u. with extra con",
+        "Treat Serving followers without session policy: latency improves while users as complete proof without the lesson bou.",
+        "Choose the familiar tool before checking whether Serving followers without session policy: latency improves while use.",
+        "Keep Replication Topologies and Acknowledgement Boundaries scoped to its stated evidence and bo."
+      ],
+      "correct_answer": "Keep Replication Topologies and Acknowledgement Boundaries scoped to its stated evidence and bo.",
+      "explanation": "The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M09-Q022 and its cited source.",
+      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
     },
     {
       "question_id": "M09-Q023",
       "module_id": "M09",
       "lesson_ids": [
-        "L07"
+        "L02"
       ],
-      "type": "calculation",
-      "difficulty": "synthesis",
+      "type": "multiple_choice",
+      "difficulty": "recall",
       "tags": [
         "replication-and-partitioning",
-        "cap-pacelc-regional-placement-security-and-cost",
-        "synthesis"
+        "replication-topologies-and-acknowledgeme",
+        "src:L02-mistake-4"
       ],
-      "prompt": "For 'CAP, PACELC, Regional Placement, Security, and Cost', what quantities, units, or thresholds would you calculate before trusting a design claim about: Design tenant isolation, regional placement, residency controls, capacity, repair ownership, migration, rollback, and cost.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Use CAP and PACELC as scoped reasoning tools rather than product labels.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+      "prompt": "For L02 (Replication Topologies and Acknowledgement Boundaries), which choice best avoids the cited mistake: Adding multi-leader for availability without conflict ownership: the?",
+      "choices": [
+        "Keep Replication Topologies and Acknowledgement Boundaries scoped to its stated evidence and bo.",
+        "Choose the familiar tool before checking whether Adding multi-leader for availability without conflict ownership: the.",
+        "Make the documented mistake: Adding multi-leader for availability without conflict ownership: t. with extra con",
+        "Treat Adding multi-leader for availability without conflict ownership: the as complete proof without the lesson bound."
+      ],
+      "correct_answer": "Keep Replication Topologies and Acknowledgement Boundaries scoped to its stated evidence and bo.",
+      "explanation": "The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M09-Q023 and its cited source.",
+      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
     },
     {
       "question_id": "M09-Q024",
       "module_id": "M09",
       "lesson_ids": [
-        "L08"
+        "L02"
       ],
-      "type": "scenario_diagnosis",
+      "type": "multiple_choice",
       "difficulty": "application",
       "tags": [
         "replication-and-partitioning",
-        "data-placement-decisions-migration-and-ownership",
-        "application"
+        "replication-topologies-and-acknowledgeme",
+        "src:L02-mistake-5"
       ],
-      "prompt": "A learner applies 'Data-Placement Decisions, Migration, and Ownership' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Feature inventory instead of decision:** lists do not connect mechanisms to",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+      "prompt": "For L02 (Replication Topologies and Acknowledgement Boundaries), which choice best avoids the cited mistake: Treating failover as routing: safe authority change requires coordination?",
+      "choices": [
+        "Treat Treating failover as routing: safe authority change requires coordina as complete proof without the lesson boun.",
+        "Keep Replication Topologies and Acknowledgement Boundaries scoped to its stated evidence and bo.",
+        "Choose the familiar tool before checking whether Treating failover as routing: safe authority change requires coordin.",
+        "Make the documented mistake: Treating failover as routing: safe authority change requires coord. with extra con"
+      ],
+      "correct_answer": "Keep Replication Topologies and Acknowledgement Boundaries scoped to its stated evidence and bo.",
+      "explanation": "The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M09-Q024 and its cited source.",
+      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
     },
     {
       "question_id": "M09-Q025",
@@ -471,17 +501,17 @@
       "lesson_ids": [
         "L01"
       ],
-      "type": "design_judgment",
+      "type": "calculation",
       "difficulty": "synthesis",
       "tags": [
         "replication-and-partitioning",
-        "operation-semantics-and-session-guarantees",
-        "synthesis"
+        "operation-semantics-and-session-guarante",
+        "src:L01-worked"
       ],
-      "prompt": "You must make a design choice involving 'Operation Semantics and Session Guarantees'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for specify fresh, bounded-stale, read-your-writes, monotonic, causal, and linearizable requirements per operation..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Use Terry et al., Session Guarantees for Weakly Consistent Replicated Data, Sections 1–4, and the consistency definitions linked in the resource guide.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+      "prompt": "While applying L01 (Operation Semantics and Session Guarantees), a system handles 120 operations/s with 80 ms of scoped work per operation. If the rate rises by 25% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
+      "correct_answer": "Original concurrency = 120 x 0.080 = 9.60 operations. Revised rate = 120 x 1.25 = 150.0/s, so revised concurrency = 150.0 x 0.080 = 12.00 operations.",
+      "explanation": "This perturbs the numeric practice around Operation Semantics and Session Guarantees: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M09-Q025 and its cited source.",
+      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
     },
     {
       "question_id": "M09-Q026",
@@ -489,23 +519,17 @@
       "lesson_ids": [
         "L02"
       ],
-      "type": "multiple_choice",
+      "type": "calculation",
       "difficulty": "recall",
       "tags": [
         "replication-and-partitioning",
-        "replication-topologies-and-acknowledgement-bound",
-        "recall"
+        "replication-topologies-and-acknowledgeme",
+        "src:L02-worked"
       ],
-      "prompt": "Which approach best applies 'Replication Topologies and Acknowledgement Boundaries' in Replication and Partitioning?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to compare leader/follower, multi-leader, and leaderless replication with explicit synchronous and asynchronous acknowledgement boundaries.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to compare leader/follower, multi-leader, and leaderless replication with explicit synchronous and asynchronous acknowledgement boundaries.",
-      "explanation": "Use Replication Topologies and Acknowledgement Boundaries to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+      "prompt": "While applying L02 (Replication Topologies and Acknowledgement Boundaries), a system handles 130 operations/s with 40 ms of scoped work per operation. If the rate rises by 30% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
+      "correct_answer": "Original concurrency = 130 x 0.040 = 5.20 operations. Revised rate = 130 x 1.30 = 169.0/s, so revised concurrency = 169.0 x 0.040 = 6.76 operations.",
+      "explanation": "This perturbs the numeric practice around Replication Topologies and Acknowledgement Boundaries: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M09-Q026 and its cited source.",
+      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
     },
     {
       "question_id": "M09-Q027",
@@ -513,17 +537,17 @@
       "lesson_ids": [
         "L03"
       ],
-      "type": "short_answer",
+      "type": "calculation",
       "difficulty": "application",
       "tags": [
         "replication-and-partitioning",
-        "quorums-intersections-and-hidden-assumptions",
-        "application"
+        "quorums-intersections-and-hidden-assumpt",
+        "src:L03-worked"
       ],
-      "prompt": "In 3-5 sentences, explain how 'Quorums, Intersections, and Hidden Assumptions' supports this outcome: Calculate quorum intersections and diagnose failures in membership, durability, concurrent-version, and sloppy-quorum assumptions.",
-      "correct_answer": "A strong answer defines the mechanism from 'Quorums, Intersections, and Hidden Assumptions', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Quorums, Intersections, and Hidden Assumptions to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+      "prompt": "While applying L03 (Quorums, Intersections, and Hidden Assumptions), a system handles 140 operations/s with 50 ms of scoped work per operation. If the rate rises by 35% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
+      "correct_answer": "Original concurrency = 140 x 0.050 = 7.00 operations. Revised rate = 140 x 1.35 = 189.0/s, so revised concurrency = 189.0 x 0.050 = 9.45 operations.",
+      "explanation": "This perturbs the numeric practice around Quorums, Intersections, and Hidden Assumptions: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M09-Q027 and its cited source.",
+      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
     },
     {
       "question_id": "M09-Q028",
@@ -535,13 +559,13 @@
       "difficulty": "synthesis",
       "tags": [
         "replication-and-partitioning",
-        "versions-conflicts-repair-and-convergence",
-        "synthesis"
+        "versions-conflicts-repair-and-convergenc",
+        "src:L04-worked"
       ],
-      "prompt": "For 'Versions, Conflicts, Repair, and Convergence', what quantities, units, or thresholds would you calculate before trusting a design claim about: Implement selectable version metadata, conflict preservation, read repair, and anti-entropy with convergence evidence.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Distinguish stale versions from concurrent siblings.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+      "prompt": "While applying L04 (Versions, Conflicts, Repair, and Convergence), a system handles 150 operations/s with 60 ms of scoped work per operation. If the rate rises by 40% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
+      "correct_answer": "Original concurrency = 150 x 0.060 = 9.00 operations. Revised rate = 150 x 1.40 = 210.0/s, so revised concurrency = 210.0 x 0.060 = 12.60 operations.",
+      "explanation": "This perturbs the numeric practice around Versions, Conflicts, Repair, and Convergence: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M09-Q028 and its cited source.",
+      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
     },
     {
       "question_id": "M09-Q029",
@@ -549,17 +573,17 @@
       "lesson_ids": [
         "L05"
       ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
+      "type": "calculation",
+      "difficulty": "recall",
       "tags": [
         "replication-and-partitioning",
-        "partitioning-consistent-hashing-and-resharding",
-        "application"
+        "partitioning-consistent-hashing-and-resh",
+        "src:L05-worked"
       ],
-      "prompt": "A learner applies 'Partitioning, Consistent Hashing, and Resharding' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Using averages to declare balance:** one hot partition controls tail latency.",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+      "prompt": "While applying L05 (Partitioning, Consistent Hashing, and Resharding), a system handles 160 operations/s with 70 ms of scoped work per operation. If the rate rises by 45% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
+      "correct_answer": "Original concurrency = 160 x 0.070 = 11.20 operations. Revised rate = 160 x 1.45 = 232.0/s, so revised concurrency = 232.0 x 0.070 = 16.24 operations.",
+      "explanation": "This perturbs the numeric practice around Partitioning, Consistent Hashing, and Resharding: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M09-Q029 and its cited source.",
+      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
     },
     {
       "question_id": "M09-Q030",
@@ -567,17 +591,17 @@
       "lesson_ids": [
         "L06"
       ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
+      "type": "calculation",
+      "difficulty": "application",
       "tags": [
         "replication-and-partitioning",
-        "hot-keys-skew-fairness-and-tenant-isolation",
-        "synthesis"
+        "hot-keys-skew-fairness-and-tenant-isolat",
+        "src:L06-worked"
       ],
-      "prompt": "You must make a design choice involving 'Hot Keys, Skew, Fairness, and Tenant Isolation'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose replica partition, leader loss, lag, lost acknowledgement, hot key, and reshard failures from immutable same-input evidence..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Read the Meta Shard Manager case and the DynamoDB paper's traffic-imbalance and fairness sections.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+      "prompt": "While applying L06 (Hot Keys, Skew, Fairness, and Tenant Isolation), a system handles 170 operations/s with 80 ms of scoped work per operation. If the rate rises by 10% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
+      "correct_answer": "Original concurrency = 170 x 0.080 = 13.60 operations. Revised rate = 170 x 1.10 = 187.0/s, so revised concurrency = 187.0 x 0.080 = 14.96 operations.",
+      "explanation": "This perturbs the numeric practice around Hot Keys, Skew, Fairness, and Tenant Isolation: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M09-Q030 and its cited source.",
+      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
     },
     {
       "question_id": "M09-Q031",
@@ -585,1343 +609,215 @@
       "lesson_ids": [
         "L07"
       ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
+      "type": "calculation",
+      "difficulty": "synthesis",
       "tags": [
         "replication-and-partitioning",
-        "cap-pacelc-regional-placement-security-and-cost",
-        "recall"
+        "cap-pacelc-regional-placement-security-a",
+        "src:L07-worked"
       ],
-      "prompt": "Which approach best applies 'CAP, PACELC, Regional Placement, Security, and Cost' in Replication and Partitioning?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to design tenant isolation, regional placement, residency controls, capacity, repair ownership, migration, rollback, and cost.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to design tenant isolation, regional placement, residency controls, capacity, repair ownership, migration, rollback, and cost.",
-      "explanation": "Use CAP, PACELC, Regional Placement, Security, and Cost to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+      "prompt": "While applying L07 (CAP, PACELC, Regional Placement, Security, and Cost), a system handles 180 operations/s with 40 ms of scoped work per operation. If the rate rises by 15% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
+      "correct_answer": "Original concurrency = 180 x 0.040 = 7.20 operations. Revised rate = 180 x 1.15 = 207.0/s, so revised concurrency = 207.0 x 0.040 = 8.28 operations.",
+      "explanation": "This perturbs the numeric practice around CAP, PACELC, Regional Placement, Security, and Cost: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M09-Q031 and its cited source.",
+      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
     },
     {
       "question_id": "M09-Q032",
       "module_id": "M09",
       "lesson_ids": [
-        "L08"
+        "L03"
       ],
-      "type": "short_answer",
+      "type": "scenario_diagnosis",
       "difficulty": "application",
       "tags": [
         "replication-and-partitioning",
-        "data-placement-decisions-migration-and-ownership",
-        "application"
+        "quorums-intersections-and-hidden-assumpt",
+        "src:fixture-f01-replica-partition-broken"
       ],
-      "prompt": "In 3-5 sentences, explain how 'Data-Placement Decisions, Migration, and Ownership' supports this outcome: Defend the Week 50 cumulative review invariant using storage, transaction, replication, partition, and preserved optional project evidence.",
-      "correct_answer": "A strong answer defines the mechanism from 'Data-Placement Decisions, Migration, and Ownership', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Data-Placement Decisions, Migration, and Ownership to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+      "prompt": "A M09 lab fixture related to Quorums, Intersections, and Hidden Assumptions exposes this trimmed evidence:\n\n  scenario_id=f01-replica-partition-broken\n  pair_id=F01\n  variant=broken\n  seed=901\n  topology.leader=n1\n  topology.replication_factor=3\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
+      "correct_answer": "The fixture tests f01-replica-partition-broken (broken), with broken as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f01-replica-partition-broken, rather than the general presence of a lab run.",
+      "explanation": "The cited fixture is machine-readable source material for M09; diagnosis should start from the emitted fields and connect them to Quorums, Intersections, and Hidden Assumptions. This explanation is specific to M09-Q032 and its cited source.",
+      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
     },
     {
       "question_id": "M09-Q033",
       "module_id": "M09",
       "lesson_ids": [
-        "L01"
+        "L04"
       ],
-      "type": "calculation",
+      "type": "scenario_diagnosis",
       "difficulty": "synthesis",
       "tags": [
         "replication-and-partitioning",
-        "operation-semantics-and-session-guarantees",
-        "synthesis"
+        "versions-conflicts-repair-and-convergenc",
+        "src:fixture-f01-replica-partition-repaired"
       ],
-      "prompt": "For 'Operation Semantics and Session Guarantees', what quantities, units, or thresholds would you calculate before trusting a design claim about: Specify fresh, bounded-stale, read-your-writes, monotonic, causal, and linearizable requirements per operation.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Translate a user outcome into an observable read/write history.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+      "prompt": "A M09 lab fixture related to Versions, Conflicts, Repair, and Convergence exposes this trimmed evidence:\n\n  scenario_id=f01-replica-partition-repaired\n  pair_id=F01\n  variant=repaired\n  seed=901\n  topology.leader=n1\n  topology.replication_factor=3\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
+      "correct_answer": "The fixture tests f01-replica-partition-repaired (repaired), with repaired as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f01-replica-partition-repaired, rather than the general presence of a lab run.",
+      "explanation": "The cited fixture is machine-readable source material for M09; diagnosis should start from the emitted fields and connect them to Versions, Conflicts, Repair, and Convergence. This explanation is specific to M09-Q033 and its cited source.",
+      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
     },
     {
       "question_id": "M09-Q034",
       "module_id": "M09",
       "lesson_ids": [
-        "L02"
+        "L05"
       ],
       "type": "scenario_diagnosis",
-      "difficulty": "application",
+      "difficulty": "recall",
       "tags": [
         "replication-and-partitioning",
-        "replication-topologies-and-acknowledgement-bound",
-        "application"
+        "partitioning-consistent-hashing-and-resh",
+        "src:fixture-f02-leader-stopped-broken"
       ],
-      "prompt": "A learner applies 'Replication Topologies and Acknowledgement Boundaries' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Calling replication a backup:** deletion, corruption, and operator error",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+      "prompt": "A M09 lab fixture related to Partitioning, Consistent Hashing, and Resharding exposes this trimmed evidence:\n\n  scenario_id=f02-leader-stopped-broken\n  pair_id=F02\n  variant=broken\n  seed=902\n  topology.leader=n1\n  topology.replication_factor=3\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
+      "correct_answer": "The fixture tests f02-leader-stopped-broken (broken), with broken as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f02-leader-stopped-broken, rather than the general presence of a lab run.",
+      "explanation": "The cited fixture is machine-readable source material for M09; diagnosis should start from the emitted fields and connect them to Partitioning, Consistent Hashing, and Resharding. This explanation is specific to M09-Q034 and its cited source.",
+      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
     },
     {
       "question_id": "M09-Q035",
       "module_id": "M09",
       "lesson_ids": [
-        "L03"
+        "L06"
       ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
       "tags": [
         "replication-and-partitioning",
-        "quorums-intersections-and-hidden-assumptions",
-        "synthesis"
+        "hot-keys-skew-fairness-and-tenant-isolat",
+        "src:fixture-f02-leader-stopped-repaired"
       ],
-      "prompt": "You must make a design choice involving 'Quorums, Intersections, and Hidden Assumptions'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for calculate quorum intersections and diagnose failures in membership, durability, concurrent-version, and sloppy-quorum assumptions..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Use the Dynamo paper's N/R/W discussion and Gilbert/Lynch definitions.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+      "prompt": "A M09 lab fixture related to Hot Keys, Skew, Fairness, and Tenant Isolation exposes this trimmed evidence:\n\n  scenario_id=f02-leader-stopped-repaired\n  pair_id=F02\n  variant=repaired\n  seed=902\n  topology.leader=n1\n  topology.replication_factor=3\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
+      "correct_answer": "The fixture tests f02-leader-stopped-repaired (repaired), with repaired as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f02-leader-stopped-repaired, rather than the general presence of a lab run.",
+      "explanation": "The cited fixture is machine-readable source material for M09; diagnosis should start from the emitted fields and connect them to Hot Keys, Skew, Fairness, and Tenant Isolation. This explanation is specific to M09-Q035 and its cited source.",
+      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
     },
     {
       "question_id": "M09-Q036",
       "module_id": "M09",
       "lesson_ids": [
-        "L04"
+        "L07"
       ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
+      "type": "scenario_diagnosis",
+      "difficulty": "synthesis",
       "tags": [
         "replication-and-partitioning",
-        "versions-conflicts-repair-and-convergence",
-        "recall"
+        "cap-pacelc-regional-placement-security-a",
+        "src:fixture-f03-replication-lag-broken"
       ],
-      "prompt": "Which approach best applies 'Versions, Conflicts, Repair, and Convergence' in Replication and Partitioning?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement selectable version metadata, conflict preservation, read repair, and anti-entropy with convergence evidence.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement selectable version metadata, conflict preservation, read repair, and anti-entropy with convergence evidence.",
-      "explanation": "Use Versions, Conflicts, Repair, and Convergence to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+      "prompt": "A M09 lab fixture related to CAP, PACELC, Regional Placement, Security, and Cost exposes this trimmed evidence:\n\n  scenario_id=f03-replication-lag-broken\n  pair_id=F03\n  variant=broken\n  seed=903\n  topology.leader=n1\n  topology.replication_factor=3\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
+      "correct_answer": "The fixture tests f03-replication-lag-broken (broken), with broken as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f03-replication-lag-broken, rather than the general presence of a lab run.",
+      "explanation": "The cited fixture is machine-readable source material for M09; diagnosis should start from the emitted fields and connect them to CAP, PACELC, Regional Placement, Security, and Cost. This explanation is specific to M09-Q036 and its cited source.",
+      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
     },
     {
       "question_id": "M09-Q037",
       "module_id": "M09",
       "lesson_ids": [
-        "L05"
+        "L08"
       ],
-      "type": "short_answer",
-      "difficulty": "application",
+      "type": "scenario_diagnosis",
+      "difficulty": "recall",
       "tags": [
         "replication-and-partitioning",
-        "partitioning-consistent-hashing-and-resharding",
-        "application"
+        "data-placement-decisions-migration-and-o",
+        "src:fixture-f03-replication-lag-repaired"
       ],
-      "prompt": "In 3-5 sentences, explain how 'Partitioning, Consistent Hashing, and Resharding' supports this outcome: Compare hash, range, and consistent-hash partitioning using balance, movement, routing, and safe reshard evidence.",
-      "correct_answer": "A strong answer defines the mechanism from 'Partitioning, Consistent Hashing, and Resharding', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Partitioning, Consistent Hashing, and Resharding to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+      "prompt": "A M09 lab fixture related to Data-Placement Decisions, Migration, and Ownership exposes this trimmed evidence:\n\n  scenario_id=f03-replication-lag-repaired\n  pair_id=F03\n  variant=repaired\n  seed=903\n  topology.leader=n1\n  topology.replication_factor=3\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
+      "correct_answer": "The fixture tests f03-replication-lag-repaired (repaired), with repaired as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f03-replication-lag-repaired, rather than the general presence of a lab run.",
+      "explanation": "The cited fixture is machine-readable source material for M09; diagnosis should start from the emitted fields and connect them to Data-Placement Decisions, Migration, and Ownership. This explanation is specific to M09-Q037 and its cited source.",
+      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
     },
     {
       "question_id": "M09-Q038",
       "module_id": "M09",
       "lesson_ids": [
-        "L06"
+        "L04"
       ],
-      "type": "calculation",
+      "type": "design_judgment",
       "difficulty": "synthesis",
       "tags": [
         "replication-and-partitioning",
-        "hot-keys-skew-fairness-and-tenant-isolation",
-        "synthesis"
+        "versions-conflicts-repair-and-convergenc",
+        "src:EX-01"
       ],
-      "prompt": "For 'Hot Keys, Skew, Fairness, and Tenant Isolation', what quantities, units, or thresholds would you calculate before trusting a design claim about: Diagnose replica partition, leader loss, lag, lost acknowledgement, hot key, and reshard failures from immutable same-input evidence.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Distinguish key-count balance from request, byte, CPU, and repair balance.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+      "prompt": "Atlas decision: In EX-01 (Operation histories), you must choose a course of action for Replication and Partitioning. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
+      "correct_answer": "Recommend the option that preserves the Versions, Conflicts, Repair, and Convergence mechanism under the exercise constraints: Write violating histories for controller transfer, operator refresh, public browse, and annotation reply The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
+      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M09-Q038 and its cited source.",
+      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
     },
     {
       "question_id": "M09-Q039",
       "module_id": "M09",
       "lesson_ids": [
-        "L07"
+        "L05"
       ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
+      "type": "design_judgment",
+      "difficulty": "recall",
       "tags": [
         "replication-and-partitioning",
-        "cap-pacelc-regional-placement-security-and-cost",
-        "application"
+        "partitioning-consistent-hashing-and-resh",
+        "src:EX-02"
       ],
-      "prompt": "A learner applies 'CAP, PACELC, Regional Placement, Security, and Cost' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Labeling a database CP/AP:** different APIs and configurations admit",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+      "prompt": "Beacon decision: In EX-02 (Weakest sufficient contract), you must choose a course of action for Replication and Partitioning. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
+      "correct_answer": "Recommend the option that preserves the Partitioning, Consistent Hashing, and Resharding mechanism under the exercise constraints: Assign a measurable consistency/session contract and explicit failure response to each EX-01 operation. Reject one unnecessarily strong choice. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
+      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M09-Q039 and its cited source.",
+      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
     },
     {
       "question_id": "M09-Q040",
       "module_id": "M09",
       "lesson_ids": [
-        "L08"
+        "L06"
       ],
       "type": "design_judgment",
-      "difficulty": "synthesis",
+      "difficulty": "application",
       "tags": [
         "replication-and-partitioning",
-        "data-placement-decisions-migration-and-ownership",
-        "synthesis"
+        "hot-keys-skew-fairness-and-tenant-isolat",
+        "src:EX-03"
       ],
-      "prompt": "You must make a design choice involving 'Data-Placement Decisions, Migration, and Ownership'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for defend the week 50 cumulative review invariant using storage, transaction, replication, partition, and preserved optional project evidence..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Use the DynamoDB and Meta cases for operated trade-offs, but retain Northstar's own workload and failure model.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+      "prompt": "Cedar decision: In EX-03 (Acknowledgement trace), you must choose a course of action for Replication and Partitioning. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
+      "correct_answer": "Recommend the option that preserves the Hot Keys, Skew, Fairness, and Tenant Isolation mechanism under the exercise constraints: Trace one write through acceptance, local persistence, remote receipt, durability, acknowledgement, and follower visibility. Mark every unknown. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
+      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M09-Q040 and its cited source.",
+      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
     },
     {
       "question_id": "M09-Q041",
       "module_id": "M09",
       "lesson_ids": [
-        "L01"
+        "L07"
       ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
+      "type": "design_judgment",
+      "difficulty": "synthesis",
       "tags": [
         "replication-and-partitioning",
-        "operation-semantics-and-session-guarantees",
-        "recall"
+        "cap-pacelc-regional-placement-security-a",
+        "src:EX-04"
       ],
-      "prompt": "Which approach best applies 'Operation Semantics and Session Guarantees' in Replication and Partitioning?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to specify fresh, bounded-stale, read-your-writes, monotonic, causal, and linearizable requirements per operation.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to specify fresh, bounded-stale, read-your-writes, monotonic, causal, and linearizable requirements per operation.",
-      "explanation": "Use Operation Semantics and Session Guarantees to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+      "prompt": "Delta decision: In EX-04 (Topology comparison), you must choose a course of action for Replication and Partitioning. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
+      "correct_answer": "Recommend the option that preserves the CAP, PACELC, Regional Placement, Security, and Cost mechanism under the exercise constraints: Compare leader/follower, multi-leader, and leaderless designs for annotations using latency, partition behavior, conflicts, repair, cost, and ownership. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
+      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M09-Q041 and its cited source.",
+      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
     },
     {
       "question_id": "M09-Q042",
       "module_id": "M09",
       "lesson_ids": [
-        "L02"
-      ],
-      "type": "short_answer",
-      "difficulty": "application",
-      "tags": [
-        "replication-and-partitioning",
-        "replication-topologies-and-acknowledgement-bound",
-        "application"
-      ],
-      "prompt": "In 3-5 sentences, explain how 'Replication Topologies and Acknowledgement Boundaries' supports this outcome: Compare leader/follower, multi-leader, and leaderless replication with explicit synchronous and asynchronous acknowledgement boundaries.",
-      "correct_answer": "A strong answer defines the mechanism from 'Replication Topologies and Acknowledgement Boundaries', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Replication Topologies and Acknowledgement Boundaries to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
-    },
-    {
-      "question_id": "M09-Q043",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L03"
-      ],
-      "type": "calculation",
-      "difficulty": "synthesis",
-      "tags": [
-        "replication-and-partitioning",
-        "quorums-intersections-and-hidden-assumptions",
-        "synthesis"
-      ],
-      "prompt": "For 'Quorums, Intersections, and Hidden Assumptions', what quantities, units, or thresholds would you calculate before trusting a design claim about: Calculate quorum intersections and diagnose failures in membership, durability, concurrent-version, and sloppy-quorum assumptions.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Calculate read/write and write/write intersections.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
-    },
-    {
-      "question_id": "M09-Q044",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L04"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "replication-and-partitioning",
-        "versions-conflicts-repair-and-convergence",
-        "application"
-      ],
-      "prompt": "A learner applies 'Versions, Conflicts, Repair, and Convergence' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Last-write-wins without a valid clock/order:** clock skew or arrival order",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
-    },
-    {
-      "question_id": "M09-Q045",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L05"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "replication-and-partitioning",
-        "partitioning-consistent-hashing-and-resharding",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Partitioning, Consistent Hashing, and Resharding'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for compare hash, range, and consistent-hash partitioning using balance, movement, routing, and safe reshard evidence..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Use Dynamo's partitioning sections and the Meta Shard Manager case.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
-    },
-    {
-      "question_id": "M09-Q046",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L06"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "replication-and-partitioning",
-        "hot-keys-skew-fairness-and-tenant-isolation",
-        "recall"
-      ],
-      "prompt": "Which approach best applies 'Hot Keys, Skew, Fairness, and Tenant Isolation' in Replication and Partitioning?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose replica partition, leader loss, lag, lost acknowledgement, hot key, and reshard failures from immutable same-input evidence.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose replica partition, leader loss, lag, lost acknowledgement, hot key, and reshard failures from immutable same-input evidence.",
-      "explanation": "Use Hot Keys, Skew, Fairness, and Tenant Isolation to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
-    },
-    {
-      "question_id": "M09-Q047",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L07"
-      ],
-      "type": "short_answer",
-      "difficulty": "application",
-      "tags": [
-        "replication-and-partitioning",
-        "cap-pacelc-regional-placement-security-and-cost",
-        "application"
-      ],
-      "prompt": "In 3-5 sentences, explain how 'CAP, PACELC, Regional Placement, Security, and Cost' supports this outcome: Design tenant isolation, regional placement, residency controls, capacity, repair ownership, migration, rollback, and cost.",
-      "correct_answer": "A strong answer defines the mechanism from 'CAP, PACELC, Regional Placement, Security, and Cost', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use CAP, PACELC, Regional Placement, Security, and Cost to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
-    },
-    {
-      "question_id": "M09-Q048",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L08"
-      ],
-      "type": "calculation",
-      "difficulty": "synthesis",
-      "tags": [
-        "replication-and-partitioning",
-        "data-placement-decisions-migration-and-ownership",
-        "synthesis"
-      ],
-      "prompt": "For 'Data-Placement Decisions, Migration, and Ownership', what quantities, units, or thresholds would you calculate before trusting a design claim about: Defend the Week 50 cumulative review invariant using storage, transaction, replication, partition, and preserved optional project evidence.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Produce an evidence-driven data-placement and consistency ADR.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
-    },
-    {
-      "question_id": "M09-Q049",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "replication-and-partitioning",
-        "operation-semantics-and-session-guarantees",
-        "application"
-      ],
-      "prompt": "A learner applies 'Operation Semantics and Session Guarantees' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Choosing one label for the product:** it over-constrains cheap reads or",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
-    },
-    {
-      "question_id": "M09-Q050",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L02"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "replication-and-partitioning",
-        "replication-topologies-and-acknowledgement-bound",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Replication Topologies and Acknowledgement Boundaries'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for compare leader/follower, multi-leader, and leaderless replication with explicit synchronous and asynchronous acknowledgement boundaries..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Read the bounded Dynamo sections in RES-01.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
-    },
-    {
-      "question_id": "M09-Q051",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L03"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "replication-and-partitioning",
-        "quorums-intersections-and-hidden-assumptions",
-        "recall"
-      ],
-      "prompt": "Which approach best applies 'Quorums, Intersections, and Hidden Assumptions' in Replication and Partitioning?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate quorum intersections and diagnose failures in membership, durability, concurrent-version, and sloppy-quorum assumptions.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate quorum intersections and diagnose failures in membership, durability, concurrent-version, and sloppy-quorum assumptions.",
-      "explanation": "Use Quorums, Intersections, and Hidden Assumptions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
-    },
-    {
-      "question_id": "M09-Q052",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L04"
-      ],
-      "type": "short_answer",
-      "difficulty": "application",
-      "tags": [
-        "replication-and-partitioning",
-        "versions-conflicts-repair-and-convergence",
-        "application"
-      ],
-      "prompt": "In 3-5 sentences, explain how 'Versions, Conflicts, Repair, and Convergence' supports this outcome: Implement selectable version metadata, conflict preservation, read repair, and anti-entropy with convergence evidence.",
-      "correct_answer": "A strong answer defines the mechanism from 'Versions, Conflicts, Repair, and Convergence', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Versions, Conflicts, Repair, and Convergence to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
-    },
-    {
-      "question_id": "M09-Q053",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L05"
-      ],
-      "type": "calculation",
-      "difficulty": "synthesis",
-      "tags": [
-        "replication-and-partitioning",
-        "partitioning-consistent-hashing-and-resharding",
-        "synthesis"
-      ],
-      "prompt": "For 'Partitioning, Consistent Hashing, and Resharding', what quantities, units, or thresholds would you calculate before trusting a design claim about: Compare hash, range, and consistent-hash partitioning using balance, movement, routing, and safe reshard evidence.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Compare hash, range, and consistent-hash placement from workload evidence.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
-    },
-    {
-      "question_id": "M09-Q054",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L06"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "replication-and-partitioning",
-        "hot-keys-skew-fairness-and-tenant-isolation",
-        "application"
-      ],
-      "prompt": "A learner applies 'Hot Keys, Skew, Fairness, and Tenant Isolation' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Counting keys instead of cost:** one key can dominate all useful work.",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
-    },
-    {
-      "question_id": "M09-Q055",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L07"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "replication-and-partitioning",
-        "cap-pacelc-regional-placement-security-and-cost",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'CAP, PACELC, Regional Placement, Security, and Cost'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for design tenant isolation, regional placement, residency controls, capacity, repair ownership, migration, rollback, and cost..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Read Gilbert/Lynch and Abadi's PACELC paper using the bounded assignments.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
-    },
-    {
-      "question_id": "M09-Q056",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L08"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "replication-and-partitioning",
-        "data-placement-decisions-migration-and-ownership",
-        "recall"
-      ],
-      "prompt": "Which approach best applies 'Data-Placement Decisions, Migration, and Ownership' in Replication and Partitioning?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend the week 50 gate 3 invariant using storage, transaction, replication, partition, and preserved portfolio evidence.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend the week 50 cumulative review invariant using storage, transaction, replication, partition, and preserved optional project evidence.",
-      "explanation": "Use Data-Placement Decisions, Migration, and Ownership to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
-    },
-    {
-      "question_id": "M09-Q057",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "short_answer",
-      "difficulty": "application",
-      "tags": [
-        "replication-and-partitioning",
-        "operation-semantics-and-session-guarantees",
-        "application"
-      ],
-      "prompt": "In 3-5 sentences, explain how 'Operation Semantics and Session Guarantees' supports this outcome: Specify fresh, bounded-stale, read-your-writes, monotonic, causal, and linearizable requirements per operation.",
-      "correct_answer": "A strong answer defines the mechanism from 'Operation Semantics and Session Guarantees', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Operation Semantics and Session Guarantees to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
-    },
-    {
-      "question_id": "M09-Q058",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L02"
-      ],
-      "type": "calculation",
-      "difficulty": "synthesis",
-      "tags": [
-        "replication-and-partitioning",
-        "replication-topologies-and-acknowledgement-bound",
-        "synthesis"
-      ],
-      "prompt": "For 'Replication Topologies and Acknowledgement Boundaries', what quantities, units, or thresholds would you calculate before trusting a design claim about: Compare leader/follower, multi-leader, and leaderless replication with explicit synchronous and asynchronous acknowledgement boundaries.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Trace writes and reads through leader/follower, multi-leader, and leaderless topologies.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
-    },
-    {
-      "question_id": "M09-Q059",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L03"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "replication-and-partitioning",
-        "quorums-intersections-and-hidden-assumptions",
-        "application"
-      ],
-      "prompt": "A learner applies 'Quorums, Intersections, and Hidden Assumptions' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Quoting R+W>N as linearizability:** intersection does not define version",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
-    },
-    {
-      "question_id": "M09-Q060",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L04"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "replication-and-partitioning",
-        "versions-conflicts-repair-and-convergence",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Versions, Conflicts, Repair, and Convergence'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement selectable version metadata, conflict preservation, read repair, and anti-entropy with convergence evidence..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Read the Cassandra Dynamo and Repair documentation plus Dynamo Sections 4.4–4.7.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
-    },
-    {
-      "question_id": "M09-Q061",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L05"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "replication-and-partitioning",
-        "partitioning-consistent-hashing-and-resharding",
-        "recall"
-      ],
-      "prompt": "Which approach best applies 'Partitioning, Consistent Hashing, and Resharding' in Replication and Partitioning?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to compare hash, range, and consistent-hash partitioning using balance, movement, routing, and safe reshard evidence.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to compare hash, range, and consistent-hash partitioning using balance, movement, routing, and safe reshard evidence.",
-      "explanation": "Use Partitioning, Consistent Hashing, and Resharding to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
-    },
-    {
-      "question_id": "M09-Q062",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L06"
-      ],
-      "type": "short_answer",
-      "difficulty": "application",
-      "tags": [
-        "replication-and-partitioning",
-        "hot-keys-skew-fairness-and-tenant-isolation",
-        "application"
-      ],
-      "prompt": "In 3-5 sentences, explain how 'Hot Keys, Skew, Fairness, and Tenant Isolation' supports this outcome: Diagnose replica partition, leader loss, lag, lost acknowledgement, hot key, and reshard failures from immutable same-input evidence.",
-      "correct_answer": "A strong answer defines the mechanism from 'Hot Keys, Skew, Fairness, and Tenant Isolation', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Hot Keys, Skew, Fairness, and Tenant Isolation to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
-    },
-    {
-      "question_id": "M09-Q063",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L07"
-      ],
-      "type": "calculation",
-      "difficulty": "synthesis",
-      "tags": [
-        "replication-and-partitioning",
-        "cap-pacelc-regional-placement-security-and-cost",
-        "synthesis"
-      ],
-      "prompt": "For 'CAP, PACELC, Regional Placement, Security, and Cost', what quantities, units, or thresholds would you calculate before trusting a design claim about: Design tenant isolation, regional placement, residency controls, capacity, repair ownership, migration, rollback, and cost.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Use CAP and PACELC as scoped reasoning tools rather than product labels.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
-    },
-    {
-      "question_id": "M09-Q064",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L08"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "replication-and-partitioning",
-        "data-placement-decisions-migration-and-ownership",
-        "application"
-      ],
-      "prompt": "A learner applies 'Data-Placement Decisions, Migration, and Ownership' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Feature inventory instead of decision:** lists do not connect mechanisms to",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
-    },
-    {
-      "question_id": "M09-Q065",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "replication-and-partitioning",
-        "operation-semantics-and-session-guarantees",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Operation Semantics and Session Guarantees'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for specify fresh, bounded-stale, read-your-writes, monotonic, causal, and linearizable requirements per operation..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Use Terry et al., Session Guarantees for Weakly Consistent Replicated Data, Sections 1–4, and the consistency definitions linked in the resource guide.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
-    },
-    {
-      "question_id": "M09-Q066",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L02"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "replication-and-partitioning",
-        "replication-topologies-and-acknowledgement-bound",
-        "recall"
-      ],
-      "prompt": "Which approach best applies 'Replication Topologies and Acknowledgement Boundaries' in Replication and Partitioning?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to compare leader/follower, multi-leader, and leaderless replication with explicit synchronous and asynchronous acknowledgement boundaries.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to compare leader/follower, multi-leader, and leaderless replication with explicit synchronous and asynchronous acknowledgement boundaries.",
-      "explanation": "Use Replication Topologies and Acknowledgement Boundaries to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
-    },
-    {
-      "question_id": "M09-Q067",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L03"
-      ],
-      "type": "short_answer",
-      "difficulty": "application",
-      "tags": [
-        "replication-and-partitioning",
-        "quorums-intersections-and-hidden-assumptions",
-        "application"
-      ],
-      "prompt": "In 3-5 sentences, explain how 'Quorums, Intersections, and Hidden Assumptions' supports this outcome: Calculate quorum intersections and diagnose failures in membership, durability, concurrent-version, and sloppy-quorum assumptions.",
-      "correct_answer": "A strong answer defines the mechanism from 'Quorums, Intersections, and Hidden Assumptions', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Quorums, Intersections, and Hidden Assumptions to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
-    },
-    {
-      "question_id": "M09-Q068",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L04"
-      ],
-      "type": "calculation",
-      "difficulty": "synthesis",
-      "tags": [
-        "replication-and-partitioning",
-        "versions-conflicts-repair-and-convergence",
-        "synthesis"
-      ],
-      "prompt": "For 'Versions, Conflicts, Repair, and Convergence', what quantities, units, or thresholds would you calculate before trusting a design claim about: Implement selectable version metadata, conflict preservation, read repair, and anti-entropy with convergence evidence.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Distinguish stale versions from concurrent siblings.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
-    },
-    {
-      "question_id": "M09-Q069",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L05"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "replication-and-partitioning",
-        "partitioning-consistent-hashing-and-resharding",
-        "application"
-      ],
-      "prompt": "A learner applies 'Partitioning, Consistent Hashing, and Resharding' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Using averages to declare balance:** one hot partition controls tail latency.",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
-    },
-    {
-      "question_id": "M09-Q070",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L06"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "replication-and-partitioning",
-        "hot-keys-skew-fairness-and-tenant-isolation",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Hot Keys, Skew, Fairness, and Tenant Isolation'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose replica partition, leader loss, lag, lost acknowledgement, hot key, and reshard failures from immutable same-input evidence..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Read the Meta Shard Manager case and the DynamoDB paper's traffic-imbalance and fairness sections.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
-    },
-    {
-      "question_id": "M09-Q071",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L07"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "replication-and-partitioning",
-        "cap-pacelc-regional-placement-security-and-cost",
-        "recall"
-      ],
-      "prompt": "Which approach best applies 'CAP, PACELC, Regional Placement, Security, and Cost' in Replication and Partitioning?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to design tenant isolation, regional placement, residency controls, capacity, repair ownership, migration, rollback, and cost.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to design tenant isolation, regional placement, residency controls, capacity, repair ownership, migration, rollback, and cost.",
-      "explanation": "Use CAP, PACELC, Regional Placement, Security, and Cost to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
-    },
-    {
-      "question_id": "M09-Q072",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L08"
-      ],
-      "type": "short_answer",
-      "difficulty": "application",
-      "tags": [
-        "replication-and-partitioning",
-        "data-placement-decisions-migration-and-ownership",
-        "application"
-      ],
-      "prompt": "In 3-5 sentences, explain how 'Data-Placement Decisions, Migration, and Ownership' supports this outcome: Defend the Week 50 cumulative review invariant using storage, transaction, replication, partition, and preserved optional project evidence.",
-      "correct_answer": "A strong answer defines the mechanism from 'Data-Placement Decisions, Migration, and Ownership', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Data-Placement Decisions, Migration, and Ownership to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
-    },
-    {
-      "question_id": "M09-Q073",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "calculation",
-      "difficulty": "synthesis",
-      "tags": [
-        "replication-and-partitioning",
-        "operation-semantics-and-session-guarantees",
-        "synthesis"
-      ],
-      "prompt": "For 'Operation Semantics and Session Guarantees', what quantities, units, or thresholds would you calculate before trusting a design claim about: Specify fresh, bounded-stale, read-your-writes, monotonic, causal, and linearizable requirements per operation.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Translate a user outcome into an observable read/write history.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
-    },
-    {
-      "question_id": "M09-Q074",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L02"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "replication-and-partitioning",
-        "replication-topologies-and-acknowledgement-bound",
-        "application"
-      ],
-      "prompt": "A learner applies 'Replication Topologies and Acknowledgement Boundaries' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Calling replication a backup:** deletion, corruption, and operator error",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
-    },
-    {
-      "question_id": "M09-Q075",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L03"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "replication-and-partitioning",
-        "quorums-intersections-and-hidden-assumptions",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Quorums, Intersections, and Hidden Assumptions'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for calculate quorum intersections and diagnose failures in membership, durability, concurrent-version, and sloppy-quorum assumptions..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Use the Dynamo paper's N/R/W discussion and Gilbert/Lynch definitions.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
-    },
-    {
-      "question_id": "M09-Q076",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L04"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "replication-and-partitioning",
-        "versions-conflicts-repair-and-convergence",
-        "recall"
-      ],
-      "prompt": "Which approach best applies 'Versions, Conflicts, Repair, and Convergence' in Replication and Partitioning?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement selectable version metadata, conflict preservation, read repair, and anti-entropy with convergence evidence.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement selectable version metadata, conflict preservation, read repair, and anti-entropy with convergence evidence.",
-      "explanation": "Use Versions, Conflicts, Repair, and Convergence to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
-    },
-    {
-      "question_id": "M09-Q077",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L05"
-      ],
-      "type": "short_answer",
-      "difficulty": "application",
-      "tags": [
-        "replication-and-partitioning",
-        "partitioning-consistent-hashing-and-resharding",
-        "application"
-      ],
-      "prompt": "In 3-5 sentences, explain how 'Partitioning, Consistent Hashing, and Resharding' supports this outcome: Compare hash, range, and consistent-hash partitioning using balance, movement, routing, and safe reshard evidence.",
-      "correct_answer": "A strong answer defines the mechanism from 'Partitioning, Consistent Hashing, and Resharding', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Partitioning, Consistent Hashing, and Resharding to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
-    },
-    {
-      "question_id": "M09-Q078",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L06"
-      ],
-      "type": "calculation",
-      "difficulty": "synthesis",
-      "tags": [
-        "replication-and-partitioning",
-        "hot-keys-skew-fairness-and-tenant-isolation",
-        "synthesis"
-      ],
-      "prompt": "For 'Hot Keys, Skew, Fairness, and Tenant Isolation', what quantities, units, or thresholds would you calculate before trusting a design claim about: Diagnose replica partition, leader loss, lag, lost acknowledgement, hot key, and reshard failures from immutable same-input evidence.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Distinguish key-count balance from request, byte, CPU, and repair balance.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
-    },
-    {
-      "question_id": "M09-Q079",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L07"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "replication-and-partitioning",
-        "cap-pacelc-regional-placement-security-and-cost",
-        "application"
-      ],
-      "prompt": "A learner applies 'CAP, PACELC, Regional Placement, Security, and Cost' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Labeling a database CP/AP:** different APIs and configurations admit",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
-    },
-    {
-      "question_id": "M09-Q080",
-      "module_id": "M09",
-      "lesson_ids": [
         "L08"
       ],
       "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "replication-and-partitioning",
-        "data-placement-decisions-migration-and-ownership",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Data-Placement Decisions, Migration, and Ownership'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for defend the week 50 cumulative review invariant using storage, transaction, replication, partition, and preserved optional project evidence..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Use the DynamoDB and Meta cases for operated trade-offs, but retain Northstar's own workload and failure model.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
-    },
-    {
-      "question_id": "M09-Q081",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "multiple_choice",
       "difficulty": "recall",
       "tags": [
         "replication-and-partitioning",
-        "operation-semantics-and-session-guarantees",
-        "recall"
+        "data-placement-decisions-migration-and-o",
+        "src:EX-05"
       ],
-      "prompt": "Which approach best applies 'Operation Semantics and Session Guarantees' in Replication and Partitioning?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to specify fresh, bounded-stale, read-your-writes, monotonic, causal, and linearizable requirements per operation.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to specify fresh, bounded-stale, read-your-writes, monotonic, causal, and linearizable requirements per operation.",
-      "explanation": "Use Operation Semantics and Session Guarantees to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
-    },
-    {
-      "question_id": "M09-Q082",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L02"
-      ],
-      "type": "short_answer",
-      "difficulty": "application",
-      "tags": [
-        "replication-and-partitioning",
-        "replication-topologies-and-acknowledgement-bound",
-        "application"
-      ],
-      "prompt": "In 3-5 sentences, explain how 'Replication Topologies and Acknowledgement Boundaries' supports this outcome: Compare leader/follower, multi-leader, and leaderless replication with explicit synchronous and asynchronous acknowledgement boundaries.",
-      "correct_answer": "A strong answer defines the mechanism from 'Replication Topologies and Acknowledgement Boundaries', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Replication Topologies and Acknowledgement Boundaries to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
-    },
-    {
-      "question_id": "M09-Q083",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L03"
-      ],
-      "type": "calculation",
-      "difficulty": "synthesis",
-      "tags": [
-        "replication-and-partitioning",
-        "quorums-intersections-and-hidden-assumptions",
-        "synthesis"
-      ],
-      "prompt": "For 'Quorums, Intersections, and Hidden Assumptions', what quantities, units, or thresholds would you calculate before trusting a design claim about: Calculate quorum intersections and diagnose failures in membership, durability, concurrent-version, and sloppy-quorum assumptions.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Calculate read/write and write/write intersections.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
-    },
-    {
-      "question_id": "M09-Q084",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L04"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "replication-and-partitioning",
-        "versions-conflicts-repair-and-convergence",
-        "application"
-      ],
-      "prompt": "A learner applies 'Versions, Conflicts, Repair, and Convergence' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Last-write-wins without a valid clock/order:** clock skew or arrival order",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
-    },
-    {
-      "question_id": "M09-Q085",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L05"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "replication-and-partitioning",
-        "partitioning-consistent-hashing-and-resharding",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Partitioning, Consistent Hashing, and Resharding'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for compare hash, range, and consistent-hash partitioning using balance, movement, routing, and safe reshard evidence..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Use Dynamo's partitioning sections and the Meta Shard Manager case.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
-    },
-    {
-      "question_id": "M09-Q086",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L06"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "replication-and-partitioning",
-        "hot-keys-skew-fairness-and-tenant-isolation",
-        "recall"
-      ],
-      "prompt": "Which approach best applies 'Hot Keys, Skew, Fairness, and Tenant Isolation' in Replication and Partitioning?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose replica partition, leader loss, lag, lost acknowledgement, hot key, and reshard failures from immutable same-input evidence.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose replica partition, leader loss, lag, lost acknowledgement, hot key, and reshard failures from immutable same-input evidence.",
-      "explanation": "Use Hot Keys, Skew, Fairness, and Tenant Isolation to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
-    },
-    {
-      "question_id": "M09-Q087",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L07"
-      ],
-      "type": "short_answer",
-      "difficulty": "application",
-      "tags": [
-        "replication-and-partitioning",
-        "cap-pacelc-regional-placement-security-and-cost",
-        "application"
-      ],
-      "prompt": "In 3-5 sentences, explain how 'CAP, PACELC, Regional Placement, Security, and Cost' supports this outcome: Design tenant isolation, regional placement, residency controls, capacity, repair ownership, migration, rollback, and cost.",
-      "correct_answer": "A strong answer defines the mechanism from 'CAP, PACELC, Regional Placement, Security, and Cost', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use CAP, PACELC, Regional Placement, Security, and Cost to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
-    },
-    {
-      "question_id": "M09-Q088",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L08"
-      ],
-      "type": "calculation",
-      "difficulty": "synthesis",
-      "tags": [
-        "replication-and-partitioning",
-        "data-placement-decisions-migration-and-ownership",
-        "synthesis"
-      ],
-      "prompt": "For 'Data-Placement Decisions, Migration, and Ownership', what quantities, units, or thresholds would you calculate before trusting a design claim about: Defend the Week 50 cumulative review invariant using storage, transaction, replication, partition, and preserved optional project evidence.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Produce an evidence-driven data-placement and consistency ADR.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
-    },
-    {
-      "question_id": "M09-Q089",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "replication-and-partitioning",
-        "operation-semantics-and-session-guarantees",
-        "application"
-      ],
-      "prompt": "A learner applies 'Operation Semantics and Session Guarantees' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Choosing one label for the product:** it over-constrains cheap reads or",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
-    },
-    {
-      "question_id": "M09-Q090",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L02"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "replication-and-partitioning",
-        "replication-topologies-and-acknowledgement-bound",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Replication Topologies and Acknowledgement Boundaries'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for compare leader/follower, multi-leader, and leaderless replication with explicit synchronous and asynchronous acknowledgement boundaries..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Read the bounded Dynamo sections in RES-01.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
-    },
-    {
-      "question_id": "M09-Q091",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L03"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "replication-and-partitioning",
-        "quorums-intersections-and-hidden-assumptions",
-        "recall"
-      ],
-      "prompt": "Which approach best applies 'Quorums, Intersections, and Hidden Assumptions' in Replication and Partitioning?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate quorum intersections and diagnose failures in membership, durability, concurrent-version, and sloppy-quorum assumptions.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate quorum intersections and diagnose failures in membership, durability, concurrent-version, and sloppy-quorum assumptions.",
-      "explanation": "Use Quorums, Intersections, and Hidden Assumptions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
-    },
-    {
-      "question_id": "M09-Q092",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L04"
-      ],
-      "type": "short_answer",
-      "difficulty": "application",
-      "tags": [
-        "replication-and-partitioning",
-        "versions-conflicts-repair-and-convergence",
-        "application"
-      ],
-      "prompt": "In 3-5 sentences, explain how 'Versions, Conflicts, Repair, and Convergence' supports this outcome: Implement selectable version metadata, conflict preservation, read repair, and anti-entropy with convergence evidence.",
-      "correct_answer": "A strong answer defines the mechanism from 'Versions, Conflicts, Repair, and Convergence', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Versions, Conflicts, Repair, and Convergence to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
-    },
-    {
-      "question_id": "M09-Q093",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L05"
-      ],
-      "type": "calculation",
-      "difficulty": "synthesis",
-      "tags": [
-        "replication-and-partitioning",
-        "partitioning-consistent-hashing-and-resharding",
-        "synthesis"
-      ],
-      "prompt": "For 'Partitioning, Consistent Hashing, and Resharding', what quantities, units, or thresholds would you calculate before trusting a design claim about: Compare hash, range, and consistent-hash partitioning using balance, movement, routing, and safe reshard evidence.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Compare hash, range, and consistent-hash placement from workload evidence.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
-    },
-    {
-      "question_id": "M09-Q094",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L06"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "replication-and-partitioning",
-        "hot-keys-skew-fairness-and-tenant-isolation",
-        "application"
-      ],
-      "prompt": "A learner applies 'Hot Keys, Skew, Fairness, and Tenant Isolation' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Counting keys instead of cost:** one key can dominate all useful work.",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
-    },
-    {
-      "question_id": "M09-Q095",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L07"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "replication-and-partitioning",
-        "cap-pacelc-regional-placement-security-and-cost",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'CAP, PACELC, Regional Placement, Security, and Cost'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for design tenant isolation, regional placement, residency controls, capacity, repair ownership, migration, rollback, and cost..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Read Gilbert/Lynch and Abadi's PACELC paper using the bounded assignments.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
-    },
-    {
-      "question_id": "M09-Q096",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L08"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "replication-and-partitioning",
-        "data-placement-decisions-migration-and-ownership",
-        "recall"
-      ],
-      "prompt": "Which approach best applies 'Data-Placement Decisions, Migration, and Ownership' in Replication and Partitioning?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend the week 50 gate 3 invariant using storage, transaction, replication, partition, and preserved portfolio evidence.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to defend the week 50 cumulative review invariant using storage, transaction, replication, partition, and preserved optional project evidence.",
-      "explanation": "Use Data-Placement Decisions, Migration, and Ownership to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
-    },
-    {
-      "question_id": "M09-Q097",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "short_answer",
-      "difficulty": "application",
-      "tags": [
-        "replication-and-partitioning",
-        "operation-semantics-and-session-guarantees",
-        "application"
-      ],
-      "prompt": "In 3-5 sentences, explain how 'Operation Semantics and Session Guarantees' supports this outcome: Specify fresh, bounded-stale, read-your-writes, monotonic, causal, and linearizable requirements per operation.",
-      "correct_answer": "A strong answer defines the mechanism from 'Operation Semantics and Session Guarantees', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Operation Semantics and Session Guarantees to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
-    },
-    {
-      "question_id": "M09-Q098",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L02"
-      ],
-      "type": "calculation",
-      "difficulty": "synthesis",
-      "tags": [
-        "replication-and-partitioning",
-        "replication-topologies-and-acknowledgement-bound",
-        "synthesis"
-      ],
-      "prompt": "For 'Replication Topologies and Acknowledgement Boundaries', what quantities, units, or thresholds would you calculate before trusting a design claim about: Compare leader/follower, multi-leader, and leaderless replication with explicit synchronous and asynchronous acknowledgement boundaries.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Trace writes and reads through leader/follower, multi-leader, and leaderless topologies.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
-    },
-    {
-      "question_id": "M09-Q099",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L03"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "replication-and-partitioning",
-        "quorums-intersections-and-hidden-assumptions",
-        "application"
-      ],
-      "prompt": "A learner applies 'Quorums, Intersections, and Hidden Assumptions' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Quoting R+W>N as linearizability:** intersection does not define version",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
-    },
-    {
-      "question_id": "M09-Q100",
-      "module_id": "M09",
-      "lesson_ids": [
-        "L04"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "replication-and-partitioning",
-        "versions-conflicts-repair-and-convergence",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Versions, Conflicts, Repair, and Convergence'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement selectable version metadata, conflict preservation, read repair, and anti-entropy with convergence evidence..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Read the Cassandra Dynamo and Repair documentation plus Dynamo Sections 4.4–4.7.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+      "prompt": "Ember decision: In EX-05 (Quorum arithmetic), you must choose a course of action for Replication and Partitioning. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
+      "correct_answer": "Recommend the option that preserves the Data-Placement Decisions, Migration, and Ownership mechanism under the exercise constraints: For (N,R,W) values (3,2,2), (5,4,2), and (5,2,3), calculate read/write and write/write intersection separately. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
+      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M09-Q042 and its cited source.",
+      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
     }
   ]
 }

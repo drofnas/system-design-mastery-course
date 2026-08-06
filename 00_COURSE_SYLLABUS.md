@@ -25,7 +25,7 @@ Each module follows the same loop:
 1. Learn the local lessons.
 2. Practice with guided exercises.
 3. Reinforce with a lab when the topic benefits from executable behavior.
-4. Test yourself with a randomized 20-question quiz drawn from 100 questions.
+4. Test yourself with a randomized quiz drawn from the module question bank.
 5. Grade with the answer key or the module LLM grading prompt.
 6. Optionally complete a project for deeper transfer.
 

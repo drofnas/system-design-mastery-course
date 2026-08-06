@@ -10,7 +10,7 @@ The course is not a classroom package or credentialing program. It is designed t
 2. Study the local lessons.
 3. Complete the guided exercises before opening the practice answer key.
 4. Run the reinforcement lab when the module has one.
-5. Generate a 20-question quiz from the 100-question bank.
+5. Generate a focused quiz from the module question bank.
 6. Grade yourself with the answer key or the module's LLM grading prompt.
 7. Use optional projects only when you want deeper practice.
 
@@ -38,12 +38,12 @@ M16.
 Generate a quiz from the repository root:
 
 ```bash
-python3 scripts/generate_quiz.py --module M01 --count 20 --output quiz-m01.json
+python3 scripts/generate_quiz.py --module M01 --output quiz-m01.json
 ```
 
 Use `--seed` to reproduce a quiz attempt. Each module has:
 
-- `quiz/question-bank.json`: 100 questions
+- `quiz/question-bank.json`: the module question bank
 - `quiz/answer-key.md`: answers and explanations
 - `quiz/llm-grader-prompt.md`: prompt for grading and remediation feedback
 

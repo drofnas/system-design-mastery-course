@@ -9,218 +9,182 @@
       "lesson_ids": [
         "L01"
       ],
-      "type": "multiple_choice",
+      "type": "short_answer",
       "difficulty": "recall",
       "tags": [
         "messaging-streams-and-workflows",
         "authority-events-queues-logs-and-streams",
-        "recall"
+        "src:L01-selfcheck-1"
       ],
-      "prompt": "Which approach best applies 'Authority, Events, Queues, Logs, and Streams' in Messaging, Streams, and Workflows?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to separate authoritative facts, commands, events, queues, logs, streams, and derived state, with explicit owners and rebuild contracts.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to separate authoritative facts, commands, events, queues, logs, streams, and derived state, with explicit owners and rebuild contracts.",
-      "explanation": "Use Authority, Events, Queues, Logs, and Streams to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+      "prompt": "Use the cited source to answer L01 (Authority, Events, Queues, Logs, and Streams): Can two stores both be authoritative for the same fact without a conflict rule?",
+      "correct_answer": "Not safely; concurrent disagreement needs a named resolution authority and may violate invariants while unresolved",
+      "explanation": "The cited self-check in L01 tests whether the learner can connect Authority, Events, Queues, Logs, and Streams to the module mechanism without replacing evidence with labels. This explanation is specific to M11-Q001 and its cited source.",
+      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
     },
     {
       "question_id": "M11-Q002",
       "module_id": "M11",
       "lesson_ids": [
-        "L02"
+        "L01"
       ],
       "type": "short_answer",
       "difficulty": "application",
       "tags": [
         "messaging-streams-and-workflows",
-        "delivery-semantics-identities-and-exactly-once-b",
-        "application"
+        "authority-events-queues-logs-and-streams",
+        "src:L01-selfcheck-2"
       ],
-      "prompt": "In 3-5 sentences, explain how 'Delivery Semantics, Identities, and Exactly-Once Boundaries' supports this outcome: Derive delivery failure windows, stable identities, ordering scope, and defensible exactly-once boundaries.",
-      "correct_answer": "A strong answer defines the mechanism from 'Delivery Semantics, Identities, and Exactly-Once Boundaries', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Delivery Semantics, Identities, and Exactly-Once Boundaries to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+      "prompt": "Explain the mechanism behind L01 (Authority, Events, Queues, Logs, and Streams): Does retaining a message make it an event?",
+      "correct_answer": "No. An event is a domain claim with authority and identity; retention is a transport property",
+      "explanation": "The cited self-check in L01 tests whether the learner can connect Authority, Events, Queues, Logs, and Streams to the module mechanism without replacing evidence with labels. This explanation is specific to M11-Q002 and its cited source.",
+      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
     },
     {
       "question_id": "M11-Q003",
       "module_id": "M11",
       "lesson_ids": [
-        "L03"
+        "L01"
       ],
-      "type": "calculation",
+      "type": "short_answer",
       "difficulty": "synthesis",
       "tags": [
         "messaging-streams-and-workflows",
-        "ordering-partition-keys-and-consumer-groups",
-        "synthesis"
+        "authority-events-queues-logs-and-streams",
+        "src:L01-selfcheck-3"
       ],
-      "prompt": "For 'Ordering, Partition Keys, and Consumer Groups', what quantities, units, or thresholds would you calculate before trusting a design claim about: Select partition keys and consumer-group topology from workload, fairness, and per-aggregate invariants.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - State the smallest ordering scope required by an invariant.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+      "prompt": "Name the evidence needed for L01 (Authority, Events, Queues, Logs, and Streams): What evidence proves a derived view can be rebuilt?",
+      "correct_answer": "A tested procedure starting from authoritative identities/versions, with comparison oracles and bounded repair, not a diagram label",
+      "explanation": "The cited self-check in L01 tests whether the learner can connect Authority, Events, Queues, Logs, and Streams to the module mechanism without replacing evidence with labels. This explanation is specific to M11-Q003 and its cited source.",
+      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
     },
     {
       "question_id": "M11-Q004",
       "module_id": "M11",
       "lesson_ids": [
-        "L04"
+        "L02"
       ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
+      "type": "short_answer",
+      "difficulty": "recall",
       "tags": [
         "messaging-streams-and-workflows",
-        "transactional-outbox-inbox-and-change-data-captu",
-        "application"
+        "delivery-semantics-identities-and-exactl",
+        "src:L02-selfcheck-1"
       ],
-      "prompt": "A learner applies 'Transactional Outbox, Inbox, and Change Data Capture' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Mark published before append:** a crash can suppress the only delivery.",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+      "prompt": "Diagnose the boundary issue in L02 (Delivery Semantics, Identities, and Exactly-Once Boundaries): Why can at-least-once delivery be safer than at-most-once?",
+      "correct_answer": "It avoids silent loss when retry plus idempotency is available; it does not make duplicates harmless by itself",
+      "explanation": "The cited self-check in L02 tests whether the learner can connect Delivery Semantics, Identities, and Exactly-Once Boundaries to the module mechanism without replacing evidence with labels. This explanation is specific to M11-Q004 and its cited source.",
+      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
     },
     {
       "question_id": "M11-Q005",
       "module_id": "M11",
       "lesson_ids": [
-        "L05"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "replay-poison-records-and-reconciliation",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Replay, Poison Records, and Reconciliation'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for design safe replay, poison handling, schema evolution, derived-state rebuild, and reconciliation..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Complete EX-09–EX-10 and the replay/reconciliation sections of the Week 42 worksheet before opening failure fixtures.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
-    },
-    {
-      "question_id": "M11-Q006",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L06"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "workflow-state-sagas-and-compensation",
-        "recall"
-      ],
-      "prompt": "Which approach best applies 'Workflow State, Sagas, and Compensation' in Messaging, Streams, and Workflows?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to model durable workflows, orchestration or choreography, idempotent compensation, and explicit points of no return.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to model durable workflows, orchestration or choreography, idempotent compensation, and explicit points of no return.",
-      "explanation": "Use Workflow State, Sagas, and Compensation to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
-    },
-    {
-      "question_id": "M11-Q007",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L07"
+        "L02"
       ],
       "type": "short_answer",
       "difficulty": "application",
       "tags": [
         "messaging-streams-and-workflows",
-        "event-time-watermarks-lag-and-bounded-recovery",
-        "application"
+        "delivery-semantics-identities-and-exactl",
+        "src:L02-selfcheck-2"
       ],
-      "prompt": "In 3-5 sentences, explain how 'Event Time, Watermarks, Lag, and Bounded Recovery' supports this outcome: Calculate lag and drain time and apply explicit event-time, watermark, late-data, backpressure, and recovery policies.",
-      "correct_answer": "A strong answer defines the mechanism from 'Event Time, Watermarks, Lag, and Bounded Recovery', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Event Time, Watermarks, Lag, and Bounded Recovery to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+      "prompt": "State the causal reason for L02 (Delivery Semantics, Identities, and Exactly-Once Boundaries): When is an inbox insufficient?",
+      "correct_answer": "When an effect occurs outside the inbox transaction or dedupe retention is shorter than replay/retry exposure",
+      "explanation": "The cited self-check in L02 tests whether the learner can connect Delivery Semantics, Identities, and Exactly-Once Boundaries to the module mechanism without replacing evidence with labels. This explanation is specific to M11-Q005 and its cited source.",
+      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+    },
+    {
+      "question_id": "M11-Q006",
+      "module_id": "M11",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "synthesis",
+      "tags": [
+        "messaging-streams-and-workflows",
+        "delivery-semantics-identities-and-exactl",
+        "src:L02-selfcheck-3"
+      ],
+      "prompt": "Identify the assumption behind L02 (Delivery Semantics, Identities, and Exactly-Once Boundaries): Can a unique constraint prove an external effect occurred?",
+      "correct_answer": "No. It proves only local uniqueness; the effect owner needs a stable key, receipt, or reconciliation query",
+      "explanation": "The cited self-check in L02 tests whether the learner can connect Delivery Semantics, Identities, and Exactly-Once Boundaries to the module mechanism without replacing evidence with labels. This explanation is specific to M11-Q006 and its cited source.",
+      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+    },
+    {
+      "question_id": "M11-Q007",
+      "module_id": "M11",
+      "lesson_ids": [
+        "L03"
+      ],
+      "type": "short_answer",
+      "difficulty": "recall",
+      "tags": [
+        "messaging-streams-and-workflows",
+        "ordering-partition-keys-and-consumer-gro",
+        "src:L03-selfcheck-1"
+      ],
+      "prompt": "Connect the lesson claim to L03 (Ordering, Partition Keys, and Consumer Groups): Do more consumers always reduce lag?",
+      "correct_answer": "No. Consumers beyond partition count are idle; a hot partition or shared dependency remains the bottleneck",
+      "explanation": "The cited self-check in L03 tests whether the learner can connect Ordering, Partition Keys, and Consumer Groups to the module mechanism without replacing evidence with labels. This explanation is specific to M11-Q007 and its cited source.",
+      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
     },
     {
       "question_id": "M11-Q008",
       "module_id": "M11",
       "lesson_ids": [
-        "L08"
+        "L03"
       ],
-      "type": "calculation",
-      "difficulty": "synthesis",
+      "type": "short_answer",
+      "difficulty": "application",
       "tags": [
         "messaging-streams-and-workflows",
-        "asynchronous-architecture-decisions",
-        "synthesis"
+        "ordering-partition-keys-and-consumer-gro",
+        "src:L03-selfcheck-2"
       ],
-      "prompt": "For 'Asynchronous Architecture Decisions', what quantities, units, or thresholds would you calculate before trusting a design claim about: Diagnose nine asynchronous failures and defend an RFC covering semantics, operations, security, cost, migration, ownership, dissent, and reversal evidence.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Compare synchronous, queue, log, choreography, and orchestration options.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+      "prompt": "Resolve the self-check about L03 (Ordering, Partition Keys, and Consumer Groups): Does one partition guarantee business causality?",
+      "correct_answer": "It gives a log order under its producer contract, not proof of causal or authoritative order from every source",
+      "explanation": "The cited self-check in L03 tests whether the learner can connect Ordering, Partition Keys, and Consumer Groups to the module mechanism without replacing evidence with labels. This explanation is specific to M11-Q008 and its cited source.",
+      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
     },
     {
       "question_id": "M11-Q009",
       "module_id": "M11",
       "lesson_ids": [
-        "L01"
+        "L03"
       ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
+      "type": "short_answer",
+      "difficulty": "synthesis",
       "tags": [
         "messaging-streams-and-workflows",
-        "authority-events-queues-logs-and-streams",
-        "application"
+        "ordering-partition-keys-and-consumer-gro",
+        "src:L03-selfcheck-3"
       ],
-      "prompt": "A learner applies 'Authority, Events, Queues, Logs, and Streams' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Treat the log as authority:** it may omit a CDC change or retain an obsolete",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+      "prompt": "Summarize the tradeoff in L03 (Ordering, Partition Keys, and Consumer Groups): When may a consumer skip a stale version?",
+      "correct_answer": "Only under a published version/repair contract that preserves required transitions and records the skip; otherwise it may hide missing state",
+      "explanation": "The cited self-check in L03 tests whether the learner can connect Ordering, Partition Keys, and Consumer Groups to the module mechanism without replacing evidence with labels. This explanation is specific to M11-Q009 and its cited source.",
+      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
     },
     {
       "question_id": "M11-Q010",
       "module_id": "M11",
       "lesson_ids": [
-        "L02"
+        "L04"
       ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "delivery-semantics-identities-and-exactly-once-b",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Delivery Semantics, Identities, and Exactly-Once Boundaries'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for derive delivery failure windows, stable identities, ordering scope, and defensible exactly-once boundaries..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Read RES-01's consumer-position and delivery-semantics sections, then complete EX-03–EX-04 and save the delivery table.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
-    },
-    {
-      "question_id": "M11-Q011",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L03"
-      ],
-      "type": "multiple_choice",
+      "type": "short_answer",
       "difficulty": "recall",
       "tags": [
         "messaging-streams-and-workflows",
-        "ordering-partition-keys-and-consumer-groups",
-        "recall"
+        "transactional-outbox-inbox-and-change-da",
+        "src:L04-selfcheck-1"
       ],
-      "prompt": "Which approach best applies 'Ordering, Partition Keys, and Consumer Groups' in Messaging, Streams, and Workflows?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to select partition keys and consumer-group topology from workload, fairness, and per-aggregate invariants.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to select partition keys and consumer-group topology from workload, fairness, and per-aggregate invariants.",
-      "explanation": "Use Ordering, Partition Keys, and Consumer Groups to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+      "prompt": "Defend the conclusion for L04 (Transactional Outbox, Inbox, and Change Data Capture): Does an outbox prevent duplicate publication?",
+      "correct_answer": "No. It prevents the fact/publication-intent gap; publication remains retryable and potentially duplicated",
+      "explanation": "The cited self-check in L04 tests whether the learner can connect Transactional Outbox, Inbox, and Change Data Capture to the module mechanism without replacing evidence with labels. This explanation is specific to M11-Q010 and its cited source.",
+      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
     },
     {
-      "question_id": "M11-Q012",
+      "question_id": "M11-Q011",
       "module_id": "M11",
       "lesson_ids": [
         "L04"
@@ -229,109 +193,157 @@
       "difficulty": "application",
       "tags": [
         "messaging-streams-and-workflows",
-        "transactional-outbox-inbox-and-change-data-captu",
-        "application"
+        "transactional-outbox-inbox-and-change-da",
+        "src:L04-selfcheck-2"
       ],
-      "prompt": "In 3-5 sentences, explain how 'Transactional Outbox, Inbox, and Change Data Capture' supports this outcome: Implement an atomic outbox, stable envelope, publisher, idempotent inbox, derived view, and CDC checkpoint boundary.",
-      "correct_answer": "A strong answer defines the mechanism from 'Transactional Outbox, Inbox, and Change Data Capture', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Transactional Outbox, Inbox, and Change Data Capture to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+      "prompt": "Challenge the claim in L04 (Transactional Outbox, Inbox, and Change Data Capture): Which crash does the inbox repair?",
+      "correct_answer": "Redelivery after local commit but before broker acknowledgement, provided the inbox and local effect committed together",
+      "explanation": "The cited self-check in L04 tests whether the learner can connect Transactional Outbox, Inbox, and Change Data Capture to the module mechanism without replacing evidence with labels. This explanation is specific to M11-Q011 and its cited source.",
+      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+    },
+    {
+      "question_id": "M11-Q012",
+      "module_id": "M11",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "application",
+      "tags": [
+        "messaging-streams-and-workflows",
+        "authority-events-queues-logs-and-streams",
+        "src:L01-mistake-1"
+      ],
+      "prompt": "For L01 (Authority, Events, Queues, Logs, and Streams), which choice best avoids the cited mistake: Treat the log as authority: it may omit a CDC change or retain an obsolete?",
+      "choices": [
+        "Keep Authority, Events, Queues, Logs, and Streams scoped to its stated evidence and boundary.",
+        "Choose the familiar tool before checking whether Treat the log as authority: it may omit a CDC change or retain an ob.",
+        "Make the documented mistake: Treat the log as authority: it may omit a CDC change or retain an",
+        "Treat Treat the log as authority: it may omit a CDC change or retain an obs as complete proof without the lesson boun."
+      ],
+      "correct_answer": "Keep Authority, Events, Queues, Logs, and Streams scoped to its stated evidence and boundary.",
+      "explanation": "The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M11-Q012 and its cited source.",
+      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
     },
     {
       "question_id": "M11-Q013",
       "module_id": "M11",
       "lesson_ids": [
-        "L05"
+        "L01"
       ],
-      "type": "calculation",
+      "type": "multiple_choice",
       "difficulty": "synthesis",
       "tags": [
         "messaging-streams-and-workflows",
-        "replay-poison-records-and-reconciliation",
-        "synthesis"
+        "authority-events-queues-logs-and-streams",
+        "src:L01-mistake-2"
       ],
-      "prompt": "For 'Replay, Poison Records, and Reconciliation', what quantities, units, or thresholds would you calculate before trusting a design claim about: Design safe replay, poison handling, schema evolution, derived-state rebuild, and reconciliation.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Design replay across code, schema, effect, and retention boundaries.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+      "prompt": "For L01 (Authority, Events, Queues, Logs, and Streams), which choice best avoids the cited mistake: Publish intent as fact: SendBulletinRequested is not evidence that a?",
+      "choices": [
+        "Treat Publish intent as fact: SendBulletinRequested is not evidence that a as complete proof without the lesson bound.",
+        "Keep Authority, Events, Queues, Logs, and Streams scoped to its stated evidence and boundary.",
+        "Make the documented mistake: Publish intent as fact: SendBulletinRequested is not evidence that",
+        "Choose the familiar tool before checking whether Publish intent as fact: SendBulletinRequested is not evidence that a."
+      ],
+      "correct_answer": "Keep Authority, Events, Queues, Logs, and Streams scoped to its stated evidence and boundary.",
+      "explanation": "The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M11-Q013 and its cited source.",
+      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
     },
     {
       "question_id": "M11-Q014",
       "module_id": "M11",
       "lesson_ids": [
-        "L06"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "workflow-state-sagas-and-compensation",
-        "application"
-      ],
-      "prompt": "A learner applies 'Workflow State, Sagas, and Compensation' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Use event presence as workflow state:** missing events and multiple branches",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
-    },
-    {
-      "question_id": "M11-Q015",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L07"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "event-time-watermarks-lag-and-bounded-recovery",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Event Time, Watermarks, Lag, and Bounded Recovery'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for calculate lag and drain time and apply explicit event-time, watermark, late-data, backpressure, and recovery policies..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-04, complete EX-13–EX-15, and save calculations and late-data rules before F06 and F08.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
-    },
-    {
-      "question_id": "M11-Q016",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L08"
+        "L01"
       ],
       "type": "multiple_choice",
       "difficulty": "recall",
       "tags": [
         "messaging-streams-and-workflows",
-        "asynchronous-architecture-decisions",
-        "recall"
+        "authority-events-queues-logs-and-streams",
+        "src:L01-mistake-3"
       ],
-      "prompt": "Which approach best applies 'Asynchronous Architecture Decisions' in Messaging, Streams, and Workflows?",
+      "prompt": "For L01 (Authority, Events, Queues, Logs, and Streams), which choice best avoids the cited mistake: Copy entire rows: this leaks data and couples consumers to private storage.?",
       "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose nine asynchronous failures and defend an rfc covering semantics, operations, security, cost, migration, ownership, dissent, and reversal evidence.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
+        "Make the documented mistake: Copy entire rows: this leaks data and couples consumers to private",
+        "Treat Copy entire rows: this leaks data and couples consumers to private st as complete proof without the lesson boun.",
+        "Keep Authority, Events, Queues, Logs, and Streams scoped to its stated evidence and boundary.",
+        "Choose the familiar tool before checking whether Copy entire rows: this leaks data and couples consumers to private s."
       ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose nine asynchronous failures and defend an rfc covering semantics, operations, security, cost, migration, ownership, dissent, and reversal evidence.",
-      "explanation": "Use Asynchronous Architecture Decisions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+      "correct_answer": "Keep Authority, Events, Queues, Logs, and Streams scoped to its stated evidence and boundary.",
+      "explanation": "The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M11-Q014 and its cited source.",
+      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+    },
+    {
+      "question_id": "M11-Q015",
+      "module_id": "M11",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "application",
+      "tags": [
+        "messaging-streams-and-workflows",
+        "authority-events-queues-logs-and-streams",
+        "src:L01-mistake-4"
+      ],
+      "prompt": "For L01 (Authority, Events, Queues, Logs, and Streams), which choice best avoids the cited mistake: Choose event-driven boundaries first: extra deployables create ownership,?",
+      "choices": [
+        "Choose the familiar tool before checking whether Choose event-driven boundaries first: extra deployables create owner.",
+        "Treat Choose event-driven boundaries first: extra deployables create owners as complete proof without the lesson boun.",
+        "Make the documented mistake: Choose event-driven boundaries first: extra deployables create own",
+        "Keep Authority, Events, Queues, Logs, and Streams scoped to its stated evidence and boundary."
+      ],
+      "correct_answer": "Keep Authority, Events, Queues, Logs, and Streams scoped to its stated evidence and boundary.",
+      "explanation": "The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M11-Q015 and its cited source.",
+      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+    },
+    {
+      "question_id": "M11-Q016",
+      "module_id": "M11",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "synthesis",
+      "tags": [
+        "messaging-streams-and-workflows",
+        "delivery-semantics-identities-and-exactl",
+        "src:L02-mistake-1"
+      ],
+      "prompt": "For L02 (Delivery Semantics, Identities, and Exactly-Once Boundaries), which choice best avoids the cited mistake: Generate a new ID on retry: deduplication cannot recognize sameness.?",
+      "choices": [
+        "Keep Delivery Semantics, Identities, and Exactly-Once Boundaries scoped to its stated evidence.",
+        "Choose the familiar tool before checking whether Generate a new ID on retry: deduplication cannot recognize sameness.",
+        "Make the documented mistake: Generate a new ID on retry: deduplication cannot recognize samenes",
+        "Treat Generate a new ID on retry: deduplication cannot recognize sameness as complete proof without the lesson bounda."
+      ],
+      "correct_answer": "Keep Delivery Semantics, Identities, and Exactly-Once Boundaries scoped to its stated evidence.",
+      "explanation": "The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M11-Q016 and its cited source.",
+      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
     },
     {
       "question_id": "M11-Q017",
       "module_id": "M11",
       "lesson_ids": [
-        "L01"
+        "L02"
       ],
-      "type": "short_answer",
-      "difficulty": "application",
+      "type": "multiple_choice",
+      "difficulty": "recall",
       "tags": [
         "messaging-streams-and-workflows",
-        "authority-events-queues-logs-and-streams",
-        "application"
+        "delivery-semantics-identities-and-exactl",
+        "src:L02-mistake-2"
       ],
-      "prompt": "In 3-5 sentences, explain how 'Authority, Events, Queues, Logs, and Streams' supports this outcome: Separate authoritative facts, commands, events, queues, logs, streams, and derived state, with explicit owners and rebuild contracts.",
-      "correct_answer": "A strong answer defines the mechanism from 'Authority, Events, Queues, Logs, and Streams', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Authority, Events, Queues, Logs, and Streams to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+      "prompt": "For L02 (Delivery Semantics, Identities, and Exactly-Once Boundaries), which choice best avoids the cited mistake: Use payload equality: legitimate equal events and serialization changes?",
+      "choices": [
+        "Make the documented mistake: Use payload equality: legitimate equal events and serialization ch",
+        "Keep Delivery Semantics, Identities, and Exactly-Once Boundaries scoped to its stated evidence.",
+        "Treat Use payload equality: legitimate equal events and serialization chang as complete proof without the lesson boun.",
+        "Choose the familiar tool before checking whether Use payload equality: legitimate equal events and serialization chan."
+      ],
+      "correct_answer": "Keep Delivery Semantics, Identities, and Exactly-Once Boundaries scoped to its stated evidence.",
+      "explanation": "The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M11-Q017 and its cited source.",
+      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
     },
     {
       "question_id": "M11-Q018",
@@ -339,98 +351,158 @@
       "lesson_ids": [
         "L02"
       ],
-      "type": "calculation",
-      "difficulty": "synthesis",
+      "type": "multiple_choice",
+      "difficulty": "application",
       "tags": [
         "messaging-streams-and-workflows",
-        "delivery-semantics-identities-and-exactly-once-b",
-        "synthesis"
+        "delivery-semantics-identities-and-exactl",
+        "src:L02-mistake-3"
       ],
-      "prompt": "For 'Delivery Semantics, Identities, and Exactly-Once Boundaries', what quantities, units, or thresholds would you calculate before trusting a design claim about: Derive delivery failure windows, stable identities, ordering scope, and defensible exactly-once boundaries.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Derive loss and duplication windows around processing and acknowledgement.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+      "prompt": "For L02 (Delivery Semantics, Identities, and Exactly-Once Boundaries), which choice best avoids the cited mistake: Commit offset before local state: a crash loses accepted work.?",
+      "choices": [
+        "Make the documented mistake: Commit offset before local state: a crash loses accepted work",
+        "Choose the familiar tool before checking whether Commit offset before local state: a crash loses accepted work applies",
+        "Keep Delivery Semantics, Identities, and Exactly-Once Boundaries scoped to its stated evidence.",
+        "Treat Commit offset before local state: a crash loses accepted work as complete proof without the lesson boundary"
+      ],
+      "correct_answer": "Keep Delivery Semantics, Identities, and Exactly-Once Boundaries scoped to its stated evidence.",
+      "explanation": "The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M11-Q018 and its cited source.",
+      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
     },
     {
       "question_id": "M11-Q019",
       "module_id": "M11",
       "lesson_ids": [
-        "L03"
+        "L02"
       ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
+      "type": "multiple_choice",
+      "difficulty": "synthesis",
       "tags": [
         "messaging-streams-and-workflows",
-        "ordering-partition-keys-and-consumer-groups",
-        "application"
+        "delivery-semantics-identities-and-exactl",
+        "src:L02-mistake-4"
       ],
-      "prompt": "A learner applies 'Ordering, Partition Keys, and Consumer Groups' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Require global order:** it reduces parallelism without preserving a named",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+      "prompt": "For L02 (Delivery Semantics, Identities, and Exactly-Once Boundaries), which choice best avoids the cited mistake: Call broker transactions end-to-end exactly once: external databases and?",
+      "choices": [
+        "Treat Call broker transactions end-to-end exactly once: external databases as complete proof without the lesson bound.",
+        "Make the documented mistake: Call broker transactions end-to-end exactly once: external databas",
+        "Choose the familiar tool before checking whether Call broker transactions end-to-end exactly once: external databases.",
+        "Keep Delivery Semantics, Identities, and Exactly-Once Boundaries scoped to its stated evidence."
+      ],
+      "correct_answer": "Keep Delivery Semantics, Identities, and Exactly-Once Boundaries scoped to its stated evidence.",
+      "explanation": "The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M11-Q019 and its cited source.",
+      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
     },
     {
       "question_id": "M11-Q020",
       "module_id": "M11",
       "lesson_ids": [
-        "L04"
+        "L01"
       ],
-      "type": "design_judgment",
+      "type": "calculation",
       "difficulty": "synthesis",
       "tags": [
         "messaging-streams-and-workflows",
-        "transactional-outbox-inbox-and-change-data-captu",
-        "synthesis"
+        "authority-events-queues-logs-and-streams",
+        "src:L01-worked"
       ],
-      "prompt": "You must make a design choice involving 'Transactional Outbox, Inbox, and Change Data Capture'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement an atomic outbox, stable envelope, publisher, idempotent inbox, derived view, and cdc checkpoint boundary..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-02 and RES-03, complete EX-07–EX-08, then build and inspect the Week 42 publication path.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+      "prompt": "While applying L01 (Authority, Events, Queues, Logs, and Streams), a system handles 140 operations/s with 40 ms of scoped work per operation. If the rate rises by 25% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
+      "correct_answer": "Original concurrency = 140 x 0.040 = 5.60 operations. Revised rate = 140 x 1.25 = 175.0/s, so revised concurrency = 175.0 x 0.040 = 7.00 operations.",
+      "explanation": "This perturbs the numeric practice around Authority, Events, Queues, Logs, and Streams: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M11-Q020 and its cited source.",
+      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
     },
     {
       "question_id": "M11-Q021",
       "module_id": "M11",
       "lesson_ids": [
-        "L05"
+        "L02"
       ],
-      "type": "multiple_choice",
+      "type": "calculation",
       "difficulty": "recall",
       "tags": [
         "messaging-streams-and-workflows",
-        "replay-poison-records-and-reconciliation",
-        "recall"
+        "delivery-semantics-identities-and-exactl",
+        "src:L02-worked"
       ],
-      "prompt": "Which approach best applies 'Replay, Poison Records, and Reconciliation' in Messaging, Streams, and Workflows?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to design safe replay, poison handling, schema evolution, derived-state rebuild, and reconciliation.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to design safe replay, poison handling, schema evolution, derived-state rebuild, and reconciliation.",
-      "explanation": "Use Replay, Poison Records, and Reconciliation to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+      "prompt": "While applying L02 (Delivery Semantics, Identities, and Exactly-Once Boundaries), a system handles 150 operations/s with 50 ms of scoped work per operation. If the rate rises by 30% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
+      "correct_answer": "Original concurrency = 150 x 0.050 = 7.50 operations. Revised rate = 150 x 1.30 = 195.0/s, so revised concurrency = 195.0 x 0.050 = 9.75 operations.",
+      "explanation": "This perturbs the numeric practice around Delivery Semantics, Identities, and Exactly-Once Boundaries: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M11-Q021 and its cited source.",
+      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
     },
     {
       "question_id": "M11-Q022",
       "module_id": "M11",
       "lesson_ids": [
+        "L03"
+      ],
+      "type": "calculation",
+      "difficulty": "application",
+      "tags": [
+        "messaging-streams-and-workflows",
+        "ordering-partition-keys-and-consumer-gro",
+        "src:L03-worked"
+      ],
+      "prompt": "While applying L03 (Ordering, Partition Keys, and Consumer Groups), a system handles 160 operations/s with 60 ms of scoped work per operation. If the rate rises by 35% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
+      "correct_answer": "Original concurrency = 160 x 0.060 = 9.60 operations. Revised rate = 160 x 1.35 = 216.0/s, so revised concurrency = 216.0 x 0.060 = 12.96 operations.",
+      "explanation": "This perturbs the numeric practice around Ordering, Partition Keys, and Consumer Groups: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M11-Q022 and its cited source.",
+      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
+    },
+    {
+      "question_id": "M11-Q023",
+      "module_id": "M11",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "calculation",
+      "difficulty": "synthesis",
+      "tags": [
+        "messaging-streams-and-workflows",
+        "transactional-outbox-inbox-and-change-da",
+        "src:L04-worked"
+      ],
+      "prompt": "While applying L04 (Transactional Outbox, Inbox, and Change Data Capture), a system handles 170 operations/s with 70 ms of scoped work per operation. If the rate rises by 40% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
+      "correct_answer": "Original concurrency = 170 x 0.070 = 11.90 operations. Revised rate = 170 x 1.40 = 238.0/s, so revised concurrency = 238.0 x 0.070 = 16.66 operations.",
+      "explanation": "This perturbs the numeric practice around Transactional Outbox, Inbox, and Change Data Capture: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M11-Q023 and its cited source.",
+      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
+    },
+    {
+      "question_id": "M11-Q024",
+      "module_id": "M11",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "calculation",
+      "difficulty": "recall",
+      "tags": [
+        "messaging-streams-and-workflows",
+        "replay-poison-records-and-reconciliation",
+        "src:L05-worked"
+      ],
+      "prompt": "While applying L05 (Replay, Poison Records, and Reconciliation), a system handles 180 operations/s with 80 ms of scoped work per operation. If the rate rises by 45% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
+      "correct_answer": "Original concurrency = 180 x 0.080 = 14.40 operations. Revised rate = 180 x 1.45 = 261.0/s, so revised concurrency = 261.0 x 0.080 = 20.88 operations.",
+      "explanation": "This perturbs the numeric practice around Replay, Poison Records, and Reconciliation: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M11-Q024 and its cited source.",
+      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
+    },
+    {
+      "question_id": "M11-Q025",
+      "module_id": "M11",
+      "lesson_ids": [
         "L06"
       ],
-      "type": "short_answer",
+      "type": "calculation",
       "difficulty": "application",
       "tags": [
         "messaging-streams-and-workflows",
         "workflow-state-sagas-and-compensation",
-        "application"
+        "src:L06-worked"
       ],
-      "prompt": "In 3-5 sentences, explain how 'Workflow State, Sagas, and Compensation' supports this outcome: Model durable workflows, orchestration or choreography, idempotent compensation, and explicit points of no return.",
-      "correct_answer": "A strong answer defines the mechanism from 'Workflow State, Sagas, and Compensation', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Workflow State, Sagas, and Compensation to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+      "prompt": "While applying L06 (Workflow State, Sagas, and Compensation), a system handles 190 operations/s with 40 ms of scoped work per operation. If the rate rises by 10% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
+      "correct_answer": "Original concurrency = 190 x 0.040 = 7.60 operations. Revised rate = 190 x 1.10 = 209.0/s, so revised concurrency = 209.0 x 0.040 = 8.36 operations.",
+      "explanation": "This perturbs the numeric practice around Workflow State, Sagas, and Compensation: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M11-Q025 and its cited source.",
+      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
     },
     {
-      "question_id": "M11-Q023",
+      "question_id": "M11-Q026",
       "module_id": "M11",
       "lesson_ids": [
         "L07"
@@ -439,73 +511,13 @@
       "difficulty": "synthesis",
       "tags": [
         "messaging-streams-and-workflows",
-        "event-time-watermarks-lag-and-bounded-recovery",
-        "synthesis"
+        "event-time-watermarks-lag-and-bounded-re",
+        "src:L07-worked"
       ],
-      "prompt": "For 'Event Time, Watermarks, Lag, and Bounded Recovery', what quantities, units, or thresholds would you calculate before trusting a design claim about: Calculate lag and drain time and apply explicit event-time, watermark, late-data, backpressure, and recovery policies.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Distinguish event time, processing time, windows, and watermarks.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
-    },
-    {
-      "question_id": "M11-Q024",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L08"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "asynchronous-architecture-decisions",
-        "application"
-      ],
-      "prompt": "A learner applies 'Asynchronous Architecture Decisions' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Select a broker as modernization:** no workload or ownership driver supports it.",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
-    },
-    {
-      "question_id": "M11-Q025",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "authority-events-queues-logs-and-streams",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Authority, Events, Queues, Logs, and Streams'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for separate authoritative facts, commands, events, queues, logs, streams, and derived state, with explicit owners and rebuild contracts..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-07 within its published boundary, then complete EX-01–EX-02 and the authority section of the Week 41 worksheet.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
-    },
-    {
-      "question_id": "M11-Q026",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L02"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "delivery-semantics-identities-and-exactly-once-b",
-        "recall"
-      ],
-      "prompt": "Which approach best applies 'Delivery Semantics, Identities, and Exactly-Once Boundaries' in Messaging, Streams, and Workflows?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to derive delivery failure windows, stable identities, ordering scope, and defensible exactly-once boundaries.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to derive delivery failure windows, stable identities, ordering scope, and defensible exactly-once boundaries.",
-      "explanation": "Use Delivery Semantics, Identities, and Exactly-Once Boundaries to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+      "prompt": "While applying L07 (Event Time, Watermarks, Lag, and Bounded Recovery), a system handles 200 operations/s with 50 ms of scoped work per operation. If the rate rises by 15% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
+      "correct_answer": "Original concurrency = 200 x 0.050 = 10.00 operations. Revised rate = 200 x 1.15 = 230.0/s, so revised concurrency = 230.0 x 0.050 = 11.50 operations.",
+      "explanation": "This perturbs the numeric practice around Event Time, Watermarks, Lag, and Bounded Recovery: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M11-Q026 and its cited source.",
+      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
     },
     {
       "question_id": "M11-Q027",
@@ -513,17 +525,17 @@
       "lesson_ids": [
         "L03"
       ],
-      "type": "short_answer",
+      "type": "scenario_diagnosis",
       "difficulty": "application",
       "tags": [
         "messaging-streams-and-workflows",
-        "ordering-partition-keys-and-consumer-groups",
-        "application"
+        "ordering-partition-keys-and-consumer-gro",
+        "src:fixture-f01-atomic-outbox-broken"
       ],
-      "prompt": "In 3-5 sentences, explain how 'Ordering, Partition Keys, and Consumer Groups' supports this outcome: Select partition keys and consumer-group topology from workload, fairness, and per-aggregate invariants.",
-      "correct_answer": "A strong answer defines the mechanism from 'Ordering, Partition Keys, and Consumer Groups', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Ordering, Partition Keys, and Consumer Groups to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+      "prompt": "A M11 lab fixture related to Ordering, Partition Keys, and Consumer Groups exposes this trimmed evidence:\n\n  scenario_id=f01-atomic-outbox-broken\n  pair_id=F01\n  variant=broken\n  seed=1101\n  workload.aggregate_id=obs-7\n  workload.event_id=evt-42\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
+      "correct_answer": "The fixture tests f01-atomic-outbox-broken (broken), with I01 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f01-atomic-outbox-broken, rather than the general presence of a lab run.",
+      "explanation": "The cited fixture is machine-readable source material for M11; diagnosis should start from the emitted fields and connect them to Ordering, Partition Keys, and Consumer Groups. This explanation is specific to M11-Q027 and its cited source.",
+      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
     },
     {
       "question_id": "M11-Q028",
@@ -531,17 +543,17 @@
       "lesson_ids": [
         "L04"
       ],
-      "type": "calculation",
+      "type": "scenario_diagnosis",
       "difficulty": "synthesis",
       "tags": [
         "messaging-streams-and-workflows",
-        "transactional-outbox-inbox-and-change-data-captu",
-        "synthesis"
+        "transactional-outbox-inbox-and-change-da",
+        "src:fixture-f01-atomic-outbox-repaired"
       ],
-      "prompt": "For 'Transactional Outbox, Inbox, and Change Data Capture', what quantities, units, or thresholds would you calculate before trusting a design claim about: Implement an atomic outbox, stable envelope, publisher, idempotent inbox, derived view, and CDC checkpoint boundary.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Implement one local transaction that records a fact and publication intent.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+      "prompt": "A M11 lab fixture related to Transactional Outbox, Inbox, and Change Data Capture exposes this trimmed evidence:\n\n  scenario_id=f01-atomic-outbox-repaired\n  pair_id=F01\n  variant=repaired\n  seed=1101\n  workload.aggregate_id=obs-7\n  workload.event_id=evt-42\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
+      "correct_answer": "The fixture tests f01-atomic-outbox-repaired (repaired), with I01 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f01-atomic-outbox-repaired, rather than the general presence of a lab run.",
+      "explanation": "The cited fixture is machine-readable source material for M11; diagnosis should start from the emitted fields and connect them to Transactional Outbox, Inbox, and Change Data Capture. This explanation is specific to M11-Q028 and its cited source.",
+      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
     },
     {
       "question_id": "M11-Q029",
@@ -550,16 +562,16 @@
         "L05"
       ],
       "type": "scenario_diagnosis",
-      "difficulty": "application",
+      "difficulty": "recall",
       "tags": [
         "messaging-streams-and-workflows",
         "replay-poison-records-and-reconciliation",
-        "application"
+        "src:fixture-f02-duplicate-delivery-broken"
       ],
-      "prompt": "A learner applies 'Replay, Poison Records, and Reconciliation' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Replay into live effects:** old records resend notifications.",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+      "prompt": "A M11 lab fixture related to Replay, Poison Records, and Reconciliation exposes this trimmed evidence:\n\n  scenario_id=f02-duplicate-delivery-broken\n  pair_id=F02\n  variant=broken\n  seed=1102\n  workload.aggregate_id=obs-7\n  workload.event_id=evt-42\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
+      "correct_answer": "The fixture tests f02-duplicate-delivery-broken (broken), with I03 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f02-duplicate-delivery-broken, rather than the general presence of a lab run.",
+      "explanation": "The cited fixture is machine-readable source material for M11; diagnosis should start from the emitted fields and connect them to Replay, Poison Records, and Reconciliation. This explanation is specific to M11-Q029 and its cited source.",
+      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
     },
     {
       "question_id": "M11-Q030",
@@ -567,17 +579,17 @@
       "lesson_ids": [
         "L06"
       ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
       "tags": [
         "messaging-streams-and-workflows",
         "workflow-state-sagas-and-compensation",
-        "synthesis"
+        "src:fixture-f02-duplicate-delivery-repaired"
       ],
-      "prompt": "You must make a design choice involving 'Workflow State, Sagas, and Compensation'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for model durable workflows, orchestration or choreography, idempotent compensation, and explicit points of no return..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-05, complete EX-11–EX-12, and save the workflow/compensation matrix before F07.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+      "prompt": "A M11 lab fixture related to Workflow State, Sagas, and Compensation exposes this trimmed evidence:\n\n  scenario_id=f02-duplicate-delivery-repaired\n  pair_id=F02\n  variant=repaired\n  seed=1102\n  workload.aggregate_id=obs-7\n  workload.event_id=evt-42\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
+      "correct_answer": "The fixture tests f02-duplicate-delivery-repaired (repaired), with I03 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f02-duplicate-delivery-repaired, rather than the general presence of a lab run.",
+      "explanation": "The cited fixture is machine-readable source material for M11; diagnosis should start from the emitted fields and connect them to Workflow State, Sagas, and Compensation. This explanation is specific to M11-Q030 and its cited source.",
+      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
     },
     {
       "question_id": "M11-Q031",
@@ -585,23 +597,17 @@
       "lesson_ids": [
         "L07"
       ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
+      "type": "scenario_diagnosis",
+      "difficulty": "synthesis",
       "tags": [
         "messaging-streams-and-workflows",
-        "event-time-watermarks-lag-and-bounded-recovery",
-        "recall"
+        "event-time-watermarks-lag-and-bounded-re",
+        "src:fixture-f03-effect-ambiguity-broken"
       ],
-      "prompt": "Which approach best applies 'Event Time, Watermarks, Lag, and Bounded Recovery' in Messaging, Streams, and Workflows?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate lag and drain time and apply explicit event-time, watermark, late-data, backpressure, and recovery policies.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate lag and drain time and apply explicit event-time, watermark, late-data, backpressure, and recovery policies.",
-      "explanation": "Use Event Time, Watermarks, Lag, and Bounded Recovery to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+      "prompt": "A M11 lab fixture related to Event Time, Watermarks, Lag, and Bounded Recovery exposes this trimmed evidence:\n\n  scenario_id=f03-effect-ambiguity-broken\n  pair_id=F03\n  variant=broken\n  seed=1103\n  workload.aggregate_id=obs-7\n  workload.event_id=evt-42\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
+      "correct_answer": "The fixture tests f03-effect-ambiguity-broken (broken), with I04 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f03-effect-ambiguity-broken, rather than the general presence of a lab run.",
+      "explanation": "The cited fixture is machine-readable source material for M11; diagnosis should start from the emitted fields and connect them to Event Time, Watermarks, Lag, and Bounded Recovery. This explanation is specific to M11-Q031 and its cited source.",
+      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
     },
     {
       "question_id": "M11-Q032",
@@ -609,1319 +615,107 @@
       "lesson_ids": [
         "L08"
       ],
-      "type": "short_answer",
-      "difficulty": "application",
+      "type": "scenario_diagnosis",
+      "difficulty": "recall",
       "tags": [
         "messaging-streams-and-workflows",
         "asynchronous-architecture-decisions",
-        "application"
+        "src:fixture-f03-effect-ambiguity-repaired"
       ],
-      "prompt": "In 3-5 sentences, explain how 'Asynchronous Architecture Decisions' supports this outcome: Diagnose nine asynchronous failures and defend an RFC covering semantics, operations, security, cost, migration, ownership, dissent, and reversal evidence.",
-      "correct_answer": "A strong answer defines the mechanism from 'Asynchronous Architecture Decisions', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Asynchronous Architecture Decisions to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
+      "prompt": "A M11 lab fixture related to Asynchronous Architecture Decisions exposes this trimmed evidence:\n\n  scenario_id=f03-effect-ambiguity-repaired\n  pair_id=F03\n  variant=repaired\n  seed=1103\n  workload.aggregate_id=obs-7\n  workload.event_id=evt-42\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
+      "correct_answer": "The fixture tests f03-effect-ambiguity-repaired (repaired), with I04 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f03-effect-ambiguity-repaired, rather than the general presence of a lab run.",
+      "explanation": "The cited fixture is machine-readable source material for M11; diagnosis should start from the emitted fields and connect them to Asynchronous Architecture Decisions. This explanation is specific to M11-Q032 and its cited source.",
+      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
     },
     {
       "question_id": "M11-Q033",
       "module_id": "M11",
       "lesson_ids": [
-        "L01"
+        "L04"
       ],
-      "type": "calculation",
+      "type": "design_judgment",
       "difficulty": "synthesis",
       "tags": [
         "messaging-streams-and-workflows",
-        "authority-events-queues-logs-and-streams",
-        "synthesis"
+        "transactional-outbox-inbox-and-change-da",
+        "src:EX-01"
       ],
-      "prompt": "For 'Authority, Events, Queues, Logs, and Streams', what quantities, units, or thresholds would you calculate before trusting a design claim about: Separate authoritative facts, commands, events, queues, logs, streams, and derived state, with explicit owners and rebuild contracts.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Classify state as authoritative, derived, transport, effect, or workflow state.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
+      "prompt": "Atlas decision: In EX-01 (Authority and derived state), you must choose a course of action for Messaging, Streams, and Workflows. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
+      "correct_answer": "Recommend the option that preserves the Transactional Outbox, Inbox, and Change Data Capture mechanism under the exercise constraints: Classify Northstar registry, outbox, broker record, catalog, bulletin receipt, and workflow history. Name authority and rebuild/repair. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
+      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M11-Q033 and its cited source.",
+      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
     },
     {
       "question_id": "M11-Q034",
       "module_id": "M11",
       "lesson_ids": [
-        "L02"
+        "L05"
       ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
+      "type": "design_judgment",
+      "difficulty": "recall",
       "tags": [
         "messaging-streams-and-workflows",
-        "delivery-semantics-identities-and-exactly-once-b",
-        "application"
+        "replay-poison-records-and-reconciliation",
+        "src:EX-02"
       ],
-      "prompt": "A learner applies 'Delivery Semantics, Identities, and Exactly-Once Boundaries' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Generate a new ID on retry:** deduplication cannot recognize sameness.",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
+      "prompt": "Beacon decision: In EX-02 (Event envelope review), you must choose a course of action for Messaging, Streams, and Workflows. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
+      "correct_answer": "Recommend the option that preserves the Replay, Poison Records, and Reconciliation mechanism under the exercise constraints: Draft ObservationPublished; justify identity, aggregate version, schema, time, payload, trace, and excluded private fields. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
+      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M11-Q034 and its cited source.",
+      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
     },
     {
       "question_id": "M11-Q035",
       "module_id": "M11",
       "lesson_ids": [
-        "L03"
+        "L06"
       ],
       "type": "design_judgment",
-      "difficulty": "synthesis",
+      "difficulty": "application",
       "tags": [
         "messaging-streams-and-workflows",
-        "ordering-partition-keys-and-consumer-groups",
-        "synthesis"
+        "workflow-state-sagas-and-compensation",
+        "src:EX-03"
       ],
-      "prompt": "You must make a design choice involving 'Ordering, Partition Keys, and Consumer Groups'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for select partition keys and consumer-group topology from workload, fairness, and per-aggregate invariants..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Use RES-01's producer, consumer, and partition sections; complete EX-05–EX-06 and the Week 41 partition/fairness review.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+      "prompt": "Cedar decision: In EX-03 (Crash-window derivation), you must choose a course of action for Messaging, Streams, and Workflows. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
+      "correct_answer": "Recommend the option that preserves the Workflow State, Sagas, and Compensation mechanism under the exercise constraints: Draw process/acknowledge orderings and identify loss, duplicate, and ambiguous outcomes. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
+      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M11-Q035 and its cited source.",
+      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
     },
     {
       "question_id": "M11-Q036",
       "module_id": "M11",
       "lesson_ids": [
-        "L04"
+        "L07"
       ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
+      "type": "design_judgment",
+      "difficulty": "synthesis",
       "tags": [
         "messaging-streams-and-workflows",
-        "transactional-outbox-inbox-and-change-data-captu",
-        "recall"
+        "event-time-watermarks-lag-and-bounded-re",
+        "src:EX-04"
       ],
-      "prompt": "Which approach best applies 'Transactional Outbox, Inbox, and Change Data Capture' in Messaging, Streams, and Workflows?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement an atomic outbox, stable envelope, publisher, idempotent inbox, derived view, and cdc checkpoint boundary.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement an atomic outbox, stable envelope, publisher, idempotent inbox, derived view, and cdc checkpoint boundary.",
-      "explanation": "Use Transactional Outbox, Inbox, and Change Data Capture to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
+      "prompt": "Delta decision: In EX-04 (Exactly-once claim audit), you must choose a course of action for Messaging, Streams, and Workflows. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
+      "correct_answer": "Recommend the option that preserves the Event Time, Watermarks, Lag, and Bounded Recovery mechanism under the exercise constraints: Audit \"the bulletin pipeline is exactly once.\" Name every participating state, transaction, and external effect. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
+      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M11-Q036 and its cited source.",
+      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
     },
     {
       "question_id": "M11-Q037",
       "module_id": "M11",
       "lesson_ids": [
-        "L05"
-      ],
-      "type": "short_answer",
-      "difficulty": "application",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "replay-poison-records-and-reconciliation",
-        "application"
-      ],
-      "prompt": "In 3-5 sentences, explain how 'Replay, Poison Records, and Reconciliation' supports this outcome: Design safe replay, poison handling, schema evolution, derived-state rebuild, and reconciliation.",
-      "correct_answer": "A strong answer defines the mechanism from 'Replay, Poison Records, and Reconciliation', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Replay, Poison Records, and Reconciliation to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
-    },
-    {
-      "question_id": "M11-Q038",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L06"
-      ],
-      "type": "calculation",
-      "difficulty": "synthesis",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "workflow-state-sagas-and-compensation",
-        "synthesis"
-      ],
-      "prompt": "For 'Workflow State, Sagas, and Compensation', what quantities, units, or thresholds would you calculate before trusting a design claim about: Model durable workflows, orchestration or choreography, idempotent compensation, and explicit points of no return.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Derive a durable workflow state machine and step identities.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
-    },
-    {
-      "question_id": "M11-Q039",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L07"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "event-time-watermarks-lag-and-bounded-recovery",
-        "application"
-      ],
-      "prompt": "A learner applies 'Event Time, Watermarks, Lag, and Bounded Recovery' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Call a watermark completeness:** offline sources can violate heuristic",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
-    },
-    {
-      "question_id": "M11-Q040",
-      "module_id": "M11",
-      "lesson_ids": [
         "L08"
       ],
       "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "asynchronous-architecture-decisions",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Asynchronous Architecture Decisions'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose nine asynchronous failures and defend an rfc covering semantics, operations, security, cost, migration, ownership, dissent, and reversal evidence..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-06, complete EX-16, write the RFC, conduct the defense, and preserve evaluation and remediation separately.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
-    },
-    {
-      "question_id": "M11-Q041",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "authority-events-queues-logs-and-streams",
-        "recall"
-      ],
-      "prompt": "Which approach best applies 'Authority, Events, Queues, Logs, and Streams' in Messaging, Streams, and Workflows?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to separate authoritative facts, commands, events, queues, logs, streams, and derived state, with explicit owners and rebuild contracts.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to separate authoritative facts, commands, events, queues, logs, streams, and derived state, with explicit owners and rebuild contracts.",
-      "explanation": "Use Authority, Events, Queues, Logs, and Streams to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
-    },
-    {
-      "question_id": "M11-Q042",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L02"
-      ],
-      "type": "short_answer",
-      "difficulty": "application",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "delivery-semantics-identities-and-exactly-once-b",
-        "application"
-      ],
-      "prompt": "In 3-5 sentences, explain how 'Delivery Semantics, Identities, and Exactly-Once Boundaries' supports this outcome: Derive delivery failure windows, stable identities, ordering scope, and defensible exactly-once boundaries.",
-      "correct_answer": "A strong answer defines the mechanism from 'Delivery Semantics, Identities, and Exactly-Once Boundaries', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Delivery Semantics, Identities, and Exactly-Once Boundaries to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
-    },
-    {
-      "question_id": "M11-Q043",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L03"
-      ],
-      "type": "calculation",
-      "difficulty": "synthesis",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "ordering-partition-keys-and-consumer-groups",
-        "synthesis"
-      ],
-      "prompt": "For 'Ordering, Partition Keys, and Consumer Groups', what quantities, units, or thresholds would you calculate before trusting a design claim about: Select partition keys and consumer-group topology from workload, fairness, and per-aggregate invariants.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - State the smallest ordering scope required by an invariant.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
-    },
-    {
-      "question_id": "M11-Q044",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L04"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "transactional-outbox-inbox-and-change-data-captu",
-        "application"
-      ],
-      "prompt": "A learner applies 'Transactional Outbox, Inbox, and Change Data Capture' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Mark published before append:** a crash can suppress the only delivery.",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
-    },
-    {
-      "question_id": "M11-Q045",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L05"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "replay-poison-records-and-reconciliation",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Replay, Poison Records, and Reconciliation'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for design safe replay, poison handling, schema evolution, derived-state rebuild, and reconciliation..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Complete EX-09–EX-10 and the replay/reconciliation sections of the Week 42 worksheet before opening failure fixtures.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
-    },
-    {
-      "question_id": "M11-Q046",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L06"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "workflow-state-sagas-and-compensation",
-        "recall"
-      ],
-      "prompt": "Which approach best applies 'Workflow State, Sagas, and Compensation' in Messaging, Streams, and Workflows?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to model durable workflows, orchestration or choreography, idempotent compensation, and explicit points of no return.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to model durable workflows, orchestration or choreography, idempotent compensation, and explicit points of no return.",
-      "explanation": "Use Workflow State, Sagas, and Compensation to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
-    },
-    {
-      "question_id": "M11-Q047",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L07"
-      ],
-      "type": "short_answer",
-      "difficulty": "application",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "event-time-watermarks-lag-and-bounded-recovery",
-        "application"
-      ],
-      "prompt": "In 3-5 sentences, explain how 'Event Time, Watermarks, Lag, and Bounded Recovery' supports this outcome: Calculate lag and drain time and apply explicit event-time, watermark, late-data, backpressure, and recovery policies.",
-      "correct_answer": "A strong answer defines the mechanism from 'Event Time, Watermarks, Lag, and Bounded Recovery', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Event Time, Watermarks, Lag, and Bounded Recovery to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
-    },
-    {
-      "question_id": "M11-Q048",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L08"
-      ],
-      "type": "calculation",
-      "difficulty": "synthesis",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "asynchronous-architecture-decisions",
-        "synthesis"
-      ],
-      "prompt": "For 'Asynchronous Architecture Decisions', what quantities, units, or thresholds would you calculate before trusting a design claim about: Diagnose nine asynchronous failures and defend an RFC covering semantics, operations, security, cost, migration, ownership, dissent, and reversal evidence.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Compare synchronous, queue, log, choreography, and orchestration options.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
-    },
-    {
-      "question_id": "M11-Q049",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "authority-events-queues-logs-and-streams",
-        "application"
-      ],
-      "prompt": "A learner applies 'Authority, Events, Queues, Logs, and Streams' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Treat the log as authority:** it may omit a CDC change or retain an obsolete",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
-    },
-    {
-      "question_id": "M11-Q050",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L02"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "delivery-semantics-identities-and-exactly-once-b",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Delivery Semantics, Identities, and Exactly-Once Boundaries'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for derive delivery failure windows, stable identities, ordering scope, and defensible exactly-once boundaries..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Read RES-01's consumer-position and delivery-semantics sections, then complete EX-03–EX-04 and save the delivery table.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
-    },
-    {
-      "question_id": "M11-Q051",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L03"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "ordering-partition-keys-and-consumer-groups",
-        "recall"
-      ],
-      "prompt": "Which approach best applies 'Ordering, Partition Keys, and Consumer Groups' in Messaging, Streams, and Workflows?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to select partition keys and consumer-group topology from workload, fairness, and per-aggregate invariants.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to select partition keys and consumer-group topology from workload, fairness, and per-aggregate invariants.",
-      "explanation": "Use Ordering, Partition Keys, and Consumer Groups to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
-    },
-    {
-      "question_id": "M11-Q052",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L04"
-      ],
-      "type": "short_answer",
-      "difficulty": "application",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "transactional-outbox-inbox-and-change-data-captu",
-        "application"
-      ],
-      "prompt": "In 3-5 sentences, explain how 'Transactional Outbox, Inbox, and Change Data Capture' supports this outcome: Implement an atomic outbox, stable envelope, publisher, idempotent inbox, derived view, and CDC checkpoint boundary.",
-      "correct_answer": "A strong answer defines the mechanism from 'Transactional Outbox, Inbox, and Change Data Capture', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Transactional Outbox, Inbox, and Change Data Capture to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
-    },
-    {
-      "question_id": "M11-Q053",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L05"
-      ],
-      "type": "calculation",
-      "difficulty": "synthesis",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "replay-poison-records-and-reconciliation",
-        "synthesis"
-      ],
-      "prompt": "For 'Replay, Poison Records, and Reconciliation', what quantities, units, or thresholds would you calculate before trusting a design claim about: Design safe replay, poison handling, schema evolution, derived-state rebuild, and reconciliation.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Design replay across code, schema, effect, and retention boundaries.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
-    },
-    {
-      "question_id": "M11-Q054",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L06"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "workflow-state-sagas-and-compensation",
-        "application"
-      ],
-      "prompt": "A learner applies 'Workflow State, Sagas, and Compensation' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Use event presence as workflow state:** missing events and multiple branches",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
-    },
-    {
-      "question_id": "M11-Q055",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L07"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "event-time-watermarks-lag-and-bounded-recovery",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Event Time, Watermarks, Lag, and Bounded Recovery'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for calculate lag and drain time and apply explicit event-time, watermark, late-data, backpressure, and recovery policies..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-04, complete EX-13–EX-15, and save calculations and late-data rules before F06 and F08.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
-    },
-    {
-      "question_id": "M11-Q056",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L08"
-      ],
-      "type": "multiple_choice",
       "difficulty": "recall",
       "tags": [
         "messaging-streams-and-workflows",
         "asynchronous-architecture-decisions",
-        "recall"
-      ],
-      "prompt": "Which approach best applies 'Asynchronous Architecture Decisions' in Messaging, Streams, and Workflows?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose nine asynchronous failures and defend an rfc covering semantics, operations, security, cost, migration, ownership, dissent, and reversal evidence.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose nine asynchronous failures and defend an rfc covering semantics, operations, security, cost, migration, ownership, dissent, and reversal evidence.",
-      "explanation": "Use Asynchronous Architecture Decisions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
-    },
-    {
-      "question_id": "M11-Q057",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "short_answer",
-      "difficulty": "application",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "authority-events-queues-logs-and-streams",
-        "application"
-      ],
-      "prompt": "In 3-5 sentences, explain how 'Authority, Events, Queues, Logs, and Streams' supports this outcome: Separate authoritative facts, commands, events, queues, logs, streams, and derived state, with explicit owners and rebuild contracts.",
-      "correct_answer": "A strong answer defines the mechanism from 'Authority, Events, Queues, Logs, and Streams', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Authority, Events, Queues, Logs, and Streams to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
-    },
-    {
-      "question_id": "M11-Q058",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L02"
-      ],
-      "type": "calculation",
-      "difficulty": "synthesis",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "delivery-semantics-identities-and-exactly-once-b",
-        "synthesis"
-      ],
-      "prompt": "For 'Delivery Semantics, Identities, and Exactly-Once Boundaries', what quantities, units, or thresholds would you calculate before trusting a design claim about: Derive delivery failure windows, stable identities, ordering scope, and defensible exactly-once boundaries.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Derive loss and duplication windows around processing and acknowledgement.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
-    },
-    {
-      "question_id": "M11-Q059",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L03"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "ordering-partition-keys-and-consumer-groups",
-        "application"
-      ],
-      "prompt": "A learner applies 'Ordering, Partition Keys, and Consumer Groups' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Require global order:** it reduces parallelism without preserving a named",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
-    },
-    {
-      "question_id": "M11-Q060",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L04"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "transactional-outbox-inbox-and-change-data-captu",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Transactional Outbox, Inbox, and Change Data Capture'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement an atomic outbox, stable envelope, publisher, idempotent inbox, derived view, and cdc checkpoint boundary..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-02 and RES-03, complete EX-07–EX-08, then build and inspect the Week 42 publication path.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
-    },
-    {
-      "question_id": "M11-Q061",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L05"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "replay-poison-records-and-reconciliation",
-        "recall"
-      ],
-      "prompt": "Which approach best applies 'Replay, Poison Records, and Reconciliation' in Messaging, Streams, and Workflows?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to design safe replay, poison handling, schema evolution, derived-state rebuild, and reconciliation.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to design safe replay, poison handling, schema evolution, derived-state rebuild, and reconciliation.",
-      "explanation": "Use Replay, Poison Records, and Reconciliation to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
-    },
-    {
-      "question_id": "M11-Q062",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L06"
-      ],
-      "type": "short_answer",
-      "difficulty": "application",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "workflow-state-sagas-and-compensation",
-        "application"
-      ],
-      "prompt": "In 3-5 sentences, explain how 'Workflow State, Sagas, and Compensation' supports this outcome: Model durable workflows, orchestration or choreography, idempotent compensation, and explicit points of no return.",
-      "correct_answer": "A strong answer defines the mechanism from 'Workflow State, Sagas, and Compensation', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Workflow State, Sagas, and Compensation to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
-    },
-    {
-      "question_id": "M11-Q063",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L07"
-      ],
-      "type": "calculation",
-      "difficulty": "synthesis",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "event-time-watermarks-lag-and-bounded-recovery",
-        "synthesis"
-      ],
-      "prompt": "For 'Event Time, Watermarks, Lag, and Bounded Recovery', what quantities, units, or thresholds would you calculate before trusting a design claim about: Calculate lag and drain time and apply explicit event-time, watermark, late-data, backpressure, and recovery policies.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Distinguish event time, processing time, windows, and watermarks.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
-    },
-    {
-      "question_id": "M11-Q064",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L08"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "asynchronous-architecture-decisions",
-        "application"
-      ],
-      "prompt": "A learner applies 'Asynchronous Architecture Decisions' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Select a broker as modernization:** no workload or ownership driver supports it.",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
-    },
-    {
-      "question_id": "M11-Q065",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "authority-events-queues-logs-and-streams",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Authority, Events, Queues, Logs, and Streams'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for separate authoritative facts, commands, events, queues, logs, streams, and derived state, with explicit owners and rebuild contracts..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-07 within its published boundary, then complete EX-01–EX-02 and the authority section of the Week 41 worksheet.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
-    },
-    {
-      "question_id": "M11-Q066",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L02"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "delivery-semantics-identities-and-exactly-once-b",
-        "recall"
-      ],
-      "prompt": "Which approach best applies 'Delivery Semantics, Identities, and Exactly-Once Boundaries' in Messaging, Streams, and Workflows?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to derive delivery failure windows, stable identities, ordering scope, and defensible exactly-once boundaries.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to derive delivery failure windows, stable identities, ordering scope, and defensible exactly-once boundaries.",
-      "explanation": "Use Delivery Semantics, Identities, and Exactly-Once Boundaries to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
-    },
-    {
-      "question_id": "M11-Q067",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L03"
-      ],
-      "type": "short_answer",
-      "difficulty": "application",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "ordering-partition-keys-and-consumer-groups",
-        "application"
-      ],
-      "prompt": "In 3-5 sentences, explain how 'Ordering, Partition Keys, and Consumer Groups' supports this outcome: Select partition keys and consumer-group topology from workload, fairness, and per-aggregate invariants.",
-      "correct_answer": "A strong answer defines the mechanism from 'Ordering, Partition Keys, and Consumer Groups', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Ordering, Partition Keys, and Consumer Groups to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
-    },
-    {
-      "question_id": "M11-Q068",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L04"
-      ],
-      "type": "calculation",
-      "difficulty": "synthesis",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "transactional-outbox-inbox-and-change-data-captu",
-        "synthesis"
-      ],
-      "prompt": "For 'Transactional Outbox, Inbox, and Change Data Capture', what quantities, units, or thresholds would you calculate before trusting a design claim about: Implement an atomic outbox, stable envelope, publisher, idempotent inbox, derived view, and CDC checkpoint boundary.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Implement one local transaction that records a fact and publication intent.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
-    },
-    {
-      "question_id": "M11-Q069",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L05"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "replay-poison-records-and-reconciliation",
-        "application"
-      ],
-      "prompt": "A learner applies 'Replay, Poison Records, and Reconciliation' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Replay into live effects:** old records resend notifications.",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
-    },
-    {
-      "question_id": "M11-Q070",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L06"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "workflow-state-sagas-and-compensation",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Workflow State, Sagas, and Compensation'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for model durable workflows, orchestration or choreography, idempotent compensation, and explicit points of no return..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-05, complete EX-11–EX-12, and save the workflow/compensation matrix before F07.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
-    },
-    {
-      "question_id": "M11-Q071",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L07"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "event-time-watermarks-lag-and-bounded-recovery",
-        "recall"
-      ],
-      "prompt": "Which approach best applies 'Event Time, Watermarks, Lag, and Bounded Recovery' in Messaging, Streams, and Workflows?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate lag and drain time and apply explicit event-time, watermark, late-data, backpressure, and recovery policies.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to calculate lag and drain time and apply explicit event-time, watermark, late-data, backpressure, and recovery policies.",
-      "explanation": "Use Event Time, Watermarks, Lag, and Bounded Recovery to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
-    },
-    {
-      "question_id": "M11-Q072",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L08"
-      ],
-      "type": "short_answer",
-      "difficulty": "application",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "asynchronous-architecture-decisions",
-        "application"
-      ],
-      "prompt": "In 3-5 sentences, explain how 'Asynchronous Architecture Decisions' supports this outcome: Diagnose nine asynchronous failures and defend an RFC covering semantics, operations, security, cost, migration, ownership, dissent, and reversal evidence.",
-      "correct_answer": "A strong answer defines the mechanism from 'Asynchronous Architecture Decisions', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Asynchronous Architecture Decisions to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
-    },
-    {
-      "question_id": "M11-Q073",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "calculation",
-      "difficulty": "synthesis",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "authority-events-queues-logs-and-streams",
-        "synthesis"
-      ],
-      "prompt": "For 'Authority, Events, Queues, Logs, and Streams', what quantities, units, or thresholds would you calculate before trusting a design claim about: Separate authoritative facts, commands, events, queues, logs, streams, and derived state, with explicit owners and rebuild contracts.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Classify state as authoritative, derived, transport, effect, or workflow state.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
-    },
-    {
-      "question_id": "M11-Q074",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L02"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "delivery-semantics-identities-and-exactly-once-b",
-        "application"
-      ],
-      "prompt": "A learner applies 'Delivery Semantics, Identities, and Exactly-Once Boundaries' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Generate a new ID on retry:** deduplication cannot recognize sameness.",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
-    },
-    {
-      "question_id": "M11-Q075",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L03"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "ordering-partition-keys-and-consumer-groups",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Ordering, Partition Keys, and Consumer Groups'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for select partition keys and consumer-group topology from workload, fairness, and per-aggregate invariants..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Use RES-01's producer, consumer, and partition sections; complete EX-05–EX-06 and the Week 41 partition/fairness review.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
-    },
-    {
-      "question_id": "M11-Q076",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L04"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "transactional-outbox-inbox-and-change-data-captu",
-        "recall"
-      ],
-      "prompt": "Which approach best applies 'Transactional Outbox, Inbox, and Change Data Capture' in Messaging, Streams, and Workflows?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement an atomic outbox, stable envelope, publisher, idempotent inbox, derived view, and cdc checkpoint boundary.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to implement an atomic outbox, stable envelope, publisher, idempotent inbox, derived view, and cdc checkpoint boundary.",
-      "explanation": "Use Transactional Outbox, Inbox, and Change Data Capture to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
-    },
-    {
-      "question_id": "M11-Q077",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L05"
-      ],
-      "type": "short_answer",
-      "difficulty": "application",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "replay-poison-records-and-reconciliation",
-        "application"
-      ],
-      "prompt": "In 3-5 sentences, explain how 'Replay, Poison Records, and Reconciliation' supports this outcome: Design safe replay, poison handling, schema evolution, derived-state rebuild, and reconciliation.",
-      "correct_answer": "A strong answer defines the mechanism from 'Replay, Poison Records, and Reconciliation', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Replay, Poison Records, and Reconciliation to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
-    },
-    {
-      "question_id": "M11-Q078",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L06"
-      ],
-      "type": "calculation",
-      "difficulty": "synthesis",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "workflow-state-sagas-and-compensation",
-        "synthesis"
-      ],
-      "prompt": "For 'Workflow State, Sagas, and Compensation', what quantities, units, or thresholds would you calculate before trusting a design claim about: Model durable workflows, orchestration or choreography, idempotent compensation, and explicit points of no return.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Derive a durable workflow state machine and step identities.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
-    },
-    {
-      "question_id": "M11-Q079",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L07"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "event-time-watermarks-lag-and-bounded-recovery",
-        "application"
-      ],
-      "prompt": "A learner applies 'Event Time, Watermarks, Lag, and Bounded Recovery' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Call a watermark completeness:** offline sources can violate heuristic",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
-    },
-    {
-      "question_id": "M11-Q080",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L08"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "asynchronous-architecture-decisions",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Asynchronous Architecture Decisions'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for diagnose nine asynchronous failures and defend an rfc covering semantics, operations, security, cost, migration, ownership, dissent, and reversal evidence..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-06, complete EX-16, write the RFC, conduct the defense, and preserve evaluation and remediation separately.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
-    },
-    {
-      "question_id": "M11-Q081",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "authority-events-queues-logs-and-streams",
-        "recall"
-      ],
-      "prompt": "Which approach best applies 'Authority, Events, Queues, Logs, and Streams' in Messaging, Streams, and Workflows?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to separate authoritative facts, commands, events, queues, logs, streams, and derived state, with explicit owners and rebuild contracts.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to separate authoritative facts, commands, events, queues, logs, streams, and derived state, with explicit owners and rebuild contracts.",
-      "explanation": "Use Authority, Events, Queues, Logs, and Streams to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
-    },
-    {
-      "question_id": "M11-Q082",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L02"
-      ],
-      "type": "short_answer",
-      "difficulty": "application",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "delivery-semantics-identities-and-exactly-once-b",
-        "application"
-      ],
-      "prompt": "In 3-5 sentences, explain how 'Delivery Semantics, Identities, and Exactly-Once Boundaries' supports this outcome: Derive delivery failure windows, stable identities, ordering scope, and defensible exactly-once boundaries.",
-      "correct_answer": "A strong answer defines the mechanism from 'Delivery Semantics, Identities, and Exactly-Once Boundaries', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Delivery Semantics, Identities, and Exactly-Once Boundaries to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
-    },
-    {
-      "question_id": "M11-Q083",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L03"
-      ],
-      "type": "calculation",
-      "difficulty": "synthesis",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "ordering-partition-keys-and-consumer-groups",
-        "synthesis"
-      ],
-      "prompt": "For 'Ordering, Partition Keys, and Consumer Groups', what quantities, units, or thresholds would you calculate before trusting a design claim about: Select partition keys and consumer-group topology from workload, fairness, and per-aggregate invariants.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - State the smallest ordering scope required by an invariant.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
-    },
-    {
-      "question_id": "M11-Q084",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L04"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "transactional-outbox-inbox-and-change-data-captu",
-        "application"
-      ],
-      "prompt": "A learner applies 'Transactional Outbox, Inbox, and Change Data Capture' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Mark published before append:** a crash can suppress the only delivery.",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
-    },
-    {
-      "question_id": "M11-Q085",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L05"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "replay-poison-records-and-reconciliation",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Replay, Poison Records, and Reconciliation'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for design safe replay, poison handling, schema evolution, derived-state rebuild, and reconciliation..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Complete EX-09–EX-10 and the replay/reconciliation sections of the Week 42 worksheet before opening failure fixtures.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
-    },
-    {
-      "question_id": "M11-Q086",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L06"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "workflow-state-sagas-and-compensation",
-        "recall"
-      ],
-      "prompt": "Which approach best applies 'Workflow State, Sagas, and Compensation' in Messaging, Streams, and Workflows?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to model durable workflows, orchestration or choreography, idempotent compensation, and explicit points of no return.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to model durable workflows, orchestration or choreography, idempotent compensation, and explicit points of no return.",
-      "explanation": "Use Workflow State, Sagas, and Compensation to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
-    },
-    {
-      "question_id": "M11-Q087",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L07"
-      ],
-      "type": "short_answer",
-      "difficulty": "application",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "event-time-watermarks-lag-and-bounded-recovery",
-        "application"
-      ],
-      "prompt": "In 3-5 sentences, explain how 'Event Time, Watermarks, Lag, and Bounded Recovery' supports this outcome: Calculate lag and drain time and apply explicit event-time, watermark, late-data, backpressure, and recovery policies.",
-      "correct_answer": "A strong answer defines the mechanism from 'Event Time, Watermarks, Lag, and Bounded Recovery', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Event Time, Watermarks, Lag, and Bounded Recovery to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
-    },
-    {
-      "question_id": "M11-Q088",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L08"
-      ],
-      "type": "calculation",
-      "difficulty": "synthesis",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "asynchronous-architecture-decisions",
-        "synthesis"
-      ],
-      "prompt": "For 'Asynchronous Architecture Decisions', what quantities, units, or thresholds would you calculate before trusting a design claim about: Diagnose nine asynchronous failures and defend an RFC covering semantics, operations, security, cost, migration, ownership, dissent, and reversal evidence.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Compare synchronous, queue, log, choreography, and orchestration options.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
-    },
-    {
-      "question_id": "M11-Q089",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "authority-events-queues-logs-and-streams",
-        "application"
-      ],
-      "prompt": "A learner applies 'Authority, Events, Queues, Logs, and Streams' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Treat the log as authority:** it may omit a CDC change or retain an obsolete",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
-    },
-    {
-      "question_id": "M11-Q090",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L02"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "delivery-semantics-identities-and-exactly-once-b",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Delivery Semantics, Identities, and Exactly-Once Boundaries'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for derive delivery failure windows, stable identities, ordering scope, and defensible exactly-once boundaries..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Read RES-01's consumer-position and delivery-semantics sections, then complete EX-03–EX-04 and save the delivery table.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
-    },
-    {
-      "question_id": "M11-Q091",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L03"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "ordering-partition-keys-and-consumer-groups",
-        "recall"
-      ],
-      "prompt": "Which approach best applies 'Ordering, Partition Keys, and Consumer Groups' in Messaging, Streams, and Workflows?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to select partition keys and consumer-group topology from workload, fairness, and per-aggregate invariants.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to select partition keys and consumer-group topology from workload, fairness, and per-aggregate invariants.",
-      "explanation": "Use Ordering, Partition Keys, and Consumer Groups to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
-    },
-    {
-      "question_id": "M11-Q092",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L04"
-      ],
-      "type": "short_answer",
-      "difficulty": "application",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "transactional-outbox-inbox-and-change-data-captu",
-        "application"
-      ],
-      "prompt": "In 3-5 sentences, explain how 'Transactional Outbox, Inbox, and Change Data Capture' supports this outcome: Implement an atomic outbox, stable envelope, publisher, idempotent inbox, derived view, and CDC checkpoint boundary.",
-      "correct_answer": "A strong answer defines the mechanism from 'Transactional Outbox, Inbox, and Change Data Capture', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Transactional Outbox, Inbox, and Change Data Capture to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
-    },
-    {
-      "question_id": "M11-Q093",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L05"
-      ],
-      "type": "calculation",
-      "difficulty": "synthesis",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "replay-poison-records-and-reconciliation",
-        "synthesis"
-      ],
-      "prompt": "For 'Replay, Poison Records, and Reconciliation', what quantities, units, or thresholds would you calculate before trusting a design claim about: Design safe replay, poison handling, schema evolution, derived-state rebuild, and reconciliation.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Design replay across code, schema, effect, and retention boundaries.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
-    },
-    {
-      "question_id": "M11-Q094",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L06"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "workflow-state-sagas-and-compensation",
-        "application"
-      ],
-      "prompt": "A learner applies 'Workflow State, Sagas, and Compensation' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Use event presence as workflow state:** missing events and multiple branches",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
-    },
-    {
-      "question_id": "M11-Q095",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L07"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "event-time-watermarks-lag-and-bounded-recovery",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Event Time, Watermarks, Lag, and Bounded Recovery'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for calculate lag and drain time and apply explicit event-time, watermark, late-data, backpressure, and recovery policies..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-04, complete EX-13–EX-15, and save calculations and late-data rules before F06 and F08.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
-    },
-    {
-      "question_id": "M11-Q096",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L08"
-      ],
-      "type": "multiple_choice",
-      "difficulty": "recall",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "asynchronous-architecture-decisions",
-        "recall"
-      ],
-      "prompt": "Which approach best applies 'Asynchronous Architecture Decisions' in Messaging, Streams, and Workflows?",
-      "choices": [
-        "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose nine asynchronous failures and defend an rfc covering semantics, operations, security, cost, migration, ownership, dissent, and reversal evidence.",
-        "Choose the most familiar technology first, then justify it with broad labels.",
-        "Skip assumptions and use average-case behavior as the complete answer.",
-        "Treat a successful local run as proof that all production conditions are covered."
-      ],
-      "correct_answer": "Start from the lesson's mechanism, state assumptions and boundaries, and connect the result to diagnose nine asynchronous failures and defend an rfc covering semantics, operations, security, cost, migration, ownership, dissent, and reversal evidence.",
-      "explanation": "Use Asynchronous Architecture Decisions to reason from explicit assumptions to observable behavior. The best answer makes the reasoning boundary explicit before selecting or defending an approach.",
-      "grading_notes": "Full credit requires choosing the mechanism-first answer and rejecting label-first or overgeneralized reasoning."
-    },
-    {
-      "question_id": "M11-Q097",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "short_answer",
-      "difficulty": "application",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "authority-events-queues-logs-and-streams",
-        "application"
-      ],
-      "prompt": "In 3-5 sentences, explain how 'Authority, Events, Queues, Logs, and Streams' supports this outcome: Separate authoritative facts, commands, events, queues, logs, streams, and derived state, with explicit owners and rebuild contracts.",
-      "correct_answer": "A strong answer defines the mechanism from 'Authority, Events, Queues, Logs, and Streams', states the relevant assumptions or boundary, explains the causal link to the outcome, and names one limitation or follow-up check.",
-      "explanation": "Use Authority, Events, Queues, Logs, and Streams to reason from explicit assumptions to observable behavior.",
-      "grading_notes": "Award full credit for precise mechanism, assumptions, causal link, and limitation. Partial credit for vocabulary without causal explanation."
-    },
-    {
-      "question_id": "M11-Q098",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L02"
-      ],
-      "type": "calculation",
-      "difficulty": "synthesis",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "delivery-semantics-identities-and-exactly-once-b",
-        "synthesis"
-      ],
-      "prompt": "For 'Delivery Semantics, Identities, and Exactly-Once Boundaries', what quantities, units, or thresholds would you calculate before trusting a design claim about: Derive delivery failure windows, stable identities, ordering scope, and defensible exactly-once boundaries.",
-      "correct_answer": "Identify the input quantities, align units and time windows, compute the relevant rate/capacity/latency/cost or bound, and state what result would falsify the claim.",
-      "explanation": "Calculation questions in this course are about scoped evidence, not numerology. - Derive loss and duplication windows around processing and acknowledgement.",
-      "grading_notes": "Full credit requires named quantities, consistent units, a computable relationship, and a falsification threshold."
-    },
-    {
-      "question_id": "M11-Q099",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L03"
-      ],
-      "type": "scenario_diagnosis",
-      "difficulty": "application",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "ordering-partition-keys-and-consumer-groups",
-        "application"
-      ],
-      "prompt": "A learner applies 'Ordering, Partition Keys, and Consumer Groups' and still gets a surprising failure under load, fault, skew, or misuse. What should they inspect first, and what common mistake might explain the failure?",
-      "correct_answer": "Inspect the boundary assumptions, measured signals, and invariant or resource that failed first. A likely mistake is: **Require global order:** it reduces parallelism without preserving a named",
-      "explanation": "Good diagnosis moves from observed evidence to the first violated assumption instead of jumping to a tool replacement.",
-      "grading_notes": "Full credit requires an observable first check and a plausible causal mistake. Do not give full credit for generic debugging advice."
-    },
-    {
-      "question_id": "M11-Q100",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L04"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "transactional-outbox-inbox-and-change-data-captu",
-        "synthesis"
-      ],
-      "prompt": "You must make a design choice involving 'Transactional Outbox, Inbox, and Change Data Capture'. What tradeoff would you document, and what evidence would make you reverse the choice?",
-      "correct_answer": "Document the decision drivers, credible alternatives, expected behavior, cost or operational consequences, and a specific reversal condition tied to measured evidence for implement an atomic outbox, stable envelope, publisher, idempotent inbox, derived view, and cdc checkpoint boundary..",
-      "explanation": "Design judgment is strongest when it keeps alternatives alive until evidence rules them out. Study RES-02 and RES-03, complete EX-07–EX-08, then build and inspect the Week 42 publication path.",
-      "grading_notes": "Full credit requires at least two alternatives, an evidence-based driver, and a concrete reversal condition."
+        "src:EX-05"
+      ],
+      "prompt": "Ember decision: In EX-05 (Partition-key comparison), you must choose a course of action for Messaging, Streams, and Workflows. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
+      "correct_answer": "Recommend the option that preserves the Asynchronous Architecture Decisions mechanism under the exercise constraints: Compare observation, institution, and random keys for ordering, skew, fairness, privacy, and parallelism. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
+      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M11-Q037 and its cited source.",
+      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
     }
   ]
 }

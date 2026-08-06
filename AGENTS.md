@@ -20,7 +20,7 @@ Each module should help one learner:
 - Learn the material locally
 - Practice with guided exercises and answer explanations
 - Reinforce the mechanism with a focused lab where useful
-- Take a randomized quiz from a 100-question bank
+- Take a randomized quiz from the module question bank
 - Grade with an answer key or LLM grading prompt
 - Optionally complete a deeper project
 
@@ -33,7 +33,7 @@ Every module quiz package must include:
 - `quiz/llm-grader-prompt.md`
 - `quiz/README.md`
 
-Question banks must contain exactly 100 questions and use the shared schema.
+Question banks must contain 30-60 traceable questions and use the shared schema.
 
 ## Git Workflow
 

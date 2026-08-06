@@ -33,22 +33,22 @@ Production sorts are hybrids. Timsort exploits existing runs and stability; intr
 
 External merge sort appears when data exceeds memory. With memory for `M` records, create sorted runs of size `M`, spill them, then merge runs in passes. Block size `B` matters because the cost is dominated by sequential reads and writes, not comparisons. This is the bridge to M07: the algorithm is also an I/O and recovery plan. Selection is separate: quickselect or a heap can find top-k or the nth item without imposing total order.
 
-## Worked Example
+## Worked example
 
 A leaderboard that returns top 100 items should not sort every user on every
 request. A heap, partial selection, or maintained ordered index can reduce work.
 
-## Common Expert Mistakes
+## Common expert mistakes
 
 - Sorting when top-k is enough.
 - Ignoring memory and temporary disk space.
 - Comparing algorithms without checking input distribution.
 
-## Guided Practice
+## Guided practice
 
 You need the top 100 items from 10 million scores. Compare full sort with maintaining a min-heap of size 100. Then describe the external merge-sort plan if the full data set cannot fit in memory.
 
-## Self-Check
+## Self-check
 
 1. Why does the comparison lower bound not apply to radix sort?
 2. What does sort stability preserve?
@@ -62,6 +62,6 @@ You need the top 100 items from 10 million scores. Compare full sort with mainta
 3. Top-k only needs the boundary set, not complete order among every item.
 4. Sequential I/O passes, temporary space, and recovery after spill or merge interruption. For the practice, heap work is O(n log 100), far less than O(n log n) for full sort when only top 100 are needed.
 
-## Sources And Next Work
+## Sources and next work
 
 Study RES-02 and RES-05. Then complete EX-07.

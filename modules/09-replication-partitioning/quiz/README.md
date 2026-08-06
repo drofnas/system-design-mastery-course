@@ -2,14 +2,14 @@
 
 Use this quiz package to check your understanding of **Replication and Partitioning**.
 
-- `question-bank.json` contains 100 questions.
+- `question-bank.json` contains the module's question bank.
 - `answer-key.md` explains every answer.
 - `llm-grader-prompt.md` gives a provider-neutral prompt for grading your attempt.
 
-Generate a 20-question attempt from the repository root:
+Generate a 12-question attempt from the repository root:
 
 ```bash
-python3 scripts/generate_quiz.py --module M09 --count 20 --output quiz-m09.json
+python3 scripts/generate_quiz.py --module M09 --output quiz-m09.json
 ```
 
-Add `--seed 1234` if you want to reproduce the same quiz later. Review the answer key only after answering.
+Add `--seed 1234` if you want to reproduce the same quiz later. Use `--type`, `--difficulty`, or `--lesson` for targeted review. Review the answer key only after answering.

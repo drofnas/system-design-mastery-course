@@ -32,23 +32,23 @@ Resizing restores load factor by allocating a larger table and rehashing entries
 
 Hashing is also a trust boundary. User-controlled keys can collide under a weak hash and turn expected O(1) work into long chains or probe sequences. Randomized seeding, keyed hashing, collision caps, tree buckets, and per-principal quotas are security controls as much as performance controls. A hash table also does not maintain order; range scans, prefix iteration, and earliest-expiry cleanup need a second structure.
 
-## Worked Example
+## Worked example
 
 An idempotency store receives request IDs and rejects duplicates. A hash table
 fits insert-if-absent and lookup. Expiry still needs a second mechanism, such as
 a heap or time buckets, or old keys stay forever.
 
-## Common Expert Mistakes
+## Common expert mistakes
 
 - Assuming random input when keys are user-controlled.
 - Forgetting resize spikes.
 - Using only a hash table when ordered cleanup is required.
 
-## Guided Practice
+## Guided practice
 
 A table has 1,000,000 buckets. Compare approximate open-addressing probe factors at 500,000 entries and 900,000 entries using `1/(1-alpha)`. Then decide whether a 1 percent ordered scan requirement can be served by the hash table alone.
 
-## Self-Check
+## Self-check
 
 1. What assumption makes expected O(1) lookup plausible?
 2. Why can resize be amortized yet still dangerous?
@@ -62,6 +62,6 @@ A table has 1,000,000 buckets. Compare approximate open-addressing probe factors
 3. `1/(1-0.9) = 10`, far higher than the `2` factor at alpha 0.5.
 4. It lacks sorted order; use a tree, sorted index, heap, or expiry buckets depending on the operation. For the practice, alpha is 0.5 and 0.9, so the approximate factors are 2 and 10; the ordered scan needs another ordered mechanism.
 
-## Sources And Next Work
+## Sources and next work
 
 Study RES-01 and RES-02. Then complete EX-03 and EX-09.
