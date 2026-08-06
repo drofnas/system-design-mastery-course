@@ -2,7 +2,21 @@
 
 This draft module gives caching a dedicated home. Earlier modules mention cache
 behavior in storage engines, CDNs, and inference systems; this module teaches
-the general mechanism and points back to those specializations.
+the general mechanism and points back to those specializations. It reads
+naturally after M07's storage-engine lessons and before or alongside M16's
+browser/CDN cache material, but it is numbered last because it acts as a
+cross-course synthesis.
+
+This module is intentionally labless in this phase. Caching is well suited to an
+executable stampede and eviction harness, but Phase 2 reserves that build for a
+future lab pass so the pre-quiz close-out can focus on lesson depth, citation
+consistency, and the existing lab floor.
+
+Use this module when a design conversation says "just cache it." The local work
+turns that sentence into a concrete policy: what is authoritative, which key is
+safe, how stale is allowed, who regenerates, and when the cache should be
+removed.
+That policy is the unit of learning; cache product names are secondary.
 
 ## Prerequisites
 
@@ -17,6 +31,7 @@ the general mechanism and points back to those specializations.
 - Choose eviction and TTL policies from workload shape and freshness risk.
 - Design invalidation, coherence, and stampede protection.
 - Recognize cache failures involving cold start, poisoning, private data, and stale serving.
+- Defend a cache with rollback and removal evidence, not just a faster happy path.
 
 ## Lessons
 
@@ -27,10 +42,17 @@ the general mechanism and points back to those specializations.
 5. [Cache Failure Modes](lessons/05-cache-failure-modes.md)
 6. [Caching Decisions and Defense](lessons/06-caching-decisions-defense.md)
 
-## Practice
+## Practice And Lab
 
 Complete [exercises](exercises/exercises.md), then compare with the
-[answer key](exercises/answer-key.md). This draft has no quiz package yet.
+[answer key](exercises/answer-key.md). No executable lab is required for this
+draft module; use the exercises as the local reinforcement path.
+
+## Quiz Status
+
+This module is draft. Its quiz package is intentionally deferred to the next
+quiz-bank cycle. The current exit condition is lesson and practice parity, not a
+question bank.
 
 ## Optional Project
 

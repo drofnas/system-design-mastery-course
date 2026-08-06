@@ -1,8 +1,21 @@
 # Module 00: Algorithmic Foundations
 
-This draft module adds the course's missing computer-science base without
-reteaching programming syntax. It assumes you can already write code and focuses
-on the analytical vocabulary behind data-structure and algorithm choices.
+This draft module adds the course's computer-science base without reteaching
+programming syntax. It is optional for learners who already have a strong CS
+background; if you can comfortably explain amortized dynamic-array growth, hash
+load factor, B-tree fanout, graph traversal, external sorting, and tractability
+tradeoffs, start at [Module 01](../01-architectural-judgment/README.md) and use
+this module as a reference.
+
+If those terms are rusty, do this module first. Later modules assume the
+vocabulary even when they are not teaching algorithms directly: M02 uses heaps
+and search boundaries in scheduling, M07 relies on B-trees and write
+amplification, M09 contains graph-shaped placement problems, and M14 treats
+dependencies as graphs.
+
+The goal is working fluency. You should finish able to explain why a data
+structure fits a workload, calculate the rough growth boundary, and name the
+measurement that would challenge your choice.
 
 ## Prerequisites
 
@@ -33,12 +46,14 @@ on the analytical vocabulary behind data-structure and algorithm choices.
 Complete [exercises](exercises/exercises.md), then compare your reasoning with
 the [answer key](exercises/answer-key.md). The optional
 [complexity lab](lab/README.md) emits deterministic evidence about operation
-counts and bounded local timing.
+counts, bounded local timing, lookup-growth ratios, and the limits of CPython
+measurement.
 
 ## Quiz Status
 
 This module is draft. Its quiz package is intentionally deferred to the next
-quiz-bank cycle.
+quiz-bank cycle. The lessons, exercises, lab, glossary, and resources are still
+complete local study material.
 
 ## Optional Project
 
