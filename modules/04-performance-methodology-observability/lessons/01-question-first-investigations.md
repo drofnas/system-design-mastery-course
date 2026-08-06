@@ -111,6 +111,6 @@ those are missing, keep the result as a clue rather than a conclusion.
 
 ## Sources and next work
 
-- Brendan Gregg, [The USE Method](https://www.brendangregg.com/usemethod.html).
-- Google SRE Workbook, [Monitoring](https://sre.google/workbook/monitoring/).
+- Brendan Gregg, The USE Method (RES-01).
+- Google SRE Workbook, Monitoring (RES-02).
 - Next: freeze the experiment dimensions in Lesson 2.

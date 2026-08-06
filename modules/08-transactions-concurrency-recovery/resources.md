@@ -142,3 +142,15 @@ task; record the substitution.
 Do not copy articles, chapters, slides, or transcripts into learner artifacts.
 Use short attributed quotations only when necessary and otherwise paraphrase with
 the source ID, exact section boundary, and stated evidence limit.
+
+### RES-10: MVCC introduction
+
+- URL: https://www.postgresql.org/docs/current/mvcc-intro.html
+- Use for: Source cited by `lessons/04-occ-mvcc-write-skew.md` during RES citation normalization.
+- Local alternative: lessons/04-occ-mvcc-write-skew.md
+
+### RES-11: Testing recovery from data loss
+
+- URL: https://docs.cloud.google.com/architecture/framework/reliability/perform-testing-for-recovery-from-data-loss
+- Use for: Source cited by `lessons/08-decisions-migration-ownership.md` during RES citation normalization.
+- Local alternative: lessons/08-decisions-migration-ownership.md

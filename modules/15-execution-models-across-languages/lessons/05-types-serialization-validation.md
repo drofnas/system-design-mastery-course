@@ -74,3 +74,4 @@ class. Include an evolution rule for adding an optional field.
 ## Sources and next work
 
 Use RES-05 and the public schemas. Continue to [Lesson 6](06-equivalent-work-measurement.md).
+- RES-16 -- JSON Schema: A Media Type for Describing JSON Documents, for the local mechanism boundary.

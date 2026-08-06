@@ -89,6 +89,6 @@ between claim/effect, and after effect/before response. State how each is repair
 
 ## Sources and next work
 
-- IETF, [RFC 9110 HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110.html), §§9.2.1–9.2.3.
-- gRPC Authors, [Status Codes](https://grpc.io/docs/guides/status-codes/), including ambiguous deadline outcomes.
+- IETF, RFC 9110 HTTP Semantics (RES-03), §§9.2.1–9.2.3.
+- gRPC Authors, Status Codes (RES-08), including ambiguous deadline outcomes.
 - Next: complete EX-07 and EX-08 and add authoritative effect-count checks.

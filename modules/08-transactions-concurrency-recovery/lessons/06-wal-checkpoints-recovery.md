@@ -98,6 +98,6 @@ make a recovery claim.
 
 ## Sources and next work
 
-- PostgreSQL, [Write-Ahead Logging](https://www.postgresql.org/docs/current/wal-intro.html).
-- PostgreSQL, [Reliability](https://www.postgresql.org/docs/current/wal-reliability.html).
+- PostgreSQL, Write-Ahead Logging (RES-04).
+- PostgreSQL, Reliability (RES-05).
 - Continue with EX-11–EX-12 and F04.

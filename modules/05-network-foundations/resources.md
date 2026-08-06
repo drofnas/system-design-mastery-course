@@ -116,3 +116,39 @@ task; record the substitution.
 Do not copy articles, chapters, slides, or transcripts into learner artifacts.
 Use short attributed quotations only when necessary and otherwise paraphrase with
 the source ID, exact section boundary, and stated evidence limit.
+
+### RES-08: Source reference
+
+- URL: https://www.rfc-editor.org/rfc/rfc6724.html
+- Use for: Source cited by `lessons/02-dns-routing-and-discovery.md` during RES citation normalization.
+- Local alternative: lessons/02-dns-routing-and-discovery.md
+
+### RES-09: Source reference
+
+- URL: https://www.rfc-editor.org/rfc/rfc8305.html
+- Use for: Source cited by `lessons/02-dns-routing-and-discovery.md` during RES citation normalization.
+- Local alternative: lessons/02-dns-routing-and-discovery.md
+
+### RES-10: Source reference
+
+- URL: https://www.rfc-editor.org/rfc/rfc1812.html
+- Use for: Source cited by `lessons/02-dns-routing-and-discovery.md` during RES citation normalization.
+- Local alternative: lessons/02-dns-routing-and-discovery.md
+
+### RES-11: Source reference
+
+- URL: https://datatracker.ietf.org/doc/rfc9520/
+- Use for: Source cited by `lessons/02-dns-routing-and-discovery.md` during RES citation normalization.
+- Local alternative: lessons/02-dns-routing-and-discovery.md
+
+### RES-12: Source reference
+
+- URL: https://www.rfc-editor.org/rfc/rfc9525.html
+- Use for: Source cited by `lessons/04-tls-trust-and-handshakes.md` during RES citation normalization.
+- Local alternative: lessons/04-tls-trust-and-handshakes.md
+
+### RES-13: Source reference
+
+- URL: https://www.rfc-editor.org/rfc/rfc9114.html
+- Use for: Source cited by `lessons/07-quic-http3-streams.md` during RES citation normalization.
+- Local alternative: lessons/07-quic-http3-streams.md

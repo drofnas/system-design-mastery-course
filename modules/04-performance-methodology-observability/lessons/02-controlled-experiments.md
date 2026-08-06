@@ -107,6 +107,6 @@ supports.
 ## Sources and next work
 
 - Tomas Kalibera and Richard E. Jones,
-  [Rigorous Benchmarking in Reasonable Time](https://kar.kent.ac.uk/33611/).
-- Python Software Foundation, [timeit](https://docs.python.org/3/library/timeit.html).
+  Rigorous Benchmarking in Reasonable Time (RES-05).
+- Python Software Foundation, timeit (RES-10).
 - Next: propagate a causal request identity in Lesson 3.

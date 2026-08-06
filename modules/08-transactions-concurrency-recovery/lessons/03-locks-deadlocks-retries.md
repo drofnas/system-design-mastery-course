@@ -96,5 +96,5 @@ external effects. A retry without idempotency is a new failure mode.
 
 ## Sources and next work
 
-- PostgreSQL, [Explicit Locking](https://www.postgresql.org/docs/current/explicit-locking.html).
+- PostgreSQL, Explicit Locking (RES-02).
 - Continue with EX-05–EX-06 and F03.

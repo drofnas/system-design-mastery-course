@@ -82,5 +82,5 @@ tenant cap, and failover reserve, then state what evidence would justify each.
 
 ## Sources and next work
 
-- Google SRE, [Addressing Cascading Failures](https://sre.google/sre-book/addressing-cascading-failures/), resource exhaustion and health checks.
+- Google SRE, Addressing Cascading Failures (RES-05), resource exhaustion and health checks.
 - Next: complete EX-09 and EX-12 and prove peak active never exceeds the contract.

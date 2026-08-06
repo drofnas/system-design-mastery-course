@@ -85,5 +85,5 @@ tests 64, 128, and 256 MiB limits without pressuring the host.
 
 ## Sources and next work
 
-- MIT 6.004, Virtual Memory topic videos and transcripts: https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c16/c16s2/c16s2v2/
+- MIT 6.004, Virtual Memory topic videos and transcripts: RES-02
 - Continue with EX-05 and the allocation probe.

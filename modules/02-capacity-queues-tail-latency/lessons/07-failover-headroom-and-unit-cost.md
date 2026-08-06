@@ -137,7 +137,7 @@ without shedding new work or adding recovery supply.
 
 ## Sources and next work
 
-- David Yanacek, [Avoiding Insurmountable Queue Backlogs](https://aws.amazon.com/builders-library/avoiding-insurmountable-queue-backlogs/)
-- Julius Plenz, [How to Trade off Server Utilization and Tail Latency](https://www.usenix.org/conference/srecon19asia/presentation/plenz)
+- David Yanacek, Avoiding Insurmountable Queue Backlogs (RES-04)
+- Julius Plenz, How to Trade off Server Utilization and Tail Latency (RES-06)
 
 Complete EX-10 and EX-11 during the sensitivity sweep.

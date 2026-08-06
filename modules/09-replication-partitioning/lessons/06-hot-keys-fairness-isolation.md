@@ -96,3 +96,4 @@ Complete EX-11 through EX-13.
 Read the Meta Shard Manager case and the DynamoDB paper's traffic-imbalance and
 fairness sections. Next scope partition and normal-operation trade-offs with
 CAP/PACELC and regional constraints.
+- RES-06 -- Scaling services with Shard Manager, for the local mechanism boundary.

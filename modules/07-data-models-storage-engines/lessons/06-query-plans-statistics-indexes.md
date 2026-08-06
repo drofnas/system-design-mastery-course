@@ -92,3 +92,4 @@ EX-12 using `EXPLAIN` evidence from a local database if available.
 
 - PostgreSQL Indexes, EXPLAIN, and Planner Statistics, RES-08–RES-10.
 - Continue to Lesson 7 and include plan evidence in EX-11–EX-12.
+- RES-09 -- Using EXPLAIN, for the local mechanism boundary.

@@ -254,10 +254,8 @@ between two of them.
 
 ## Sources and next work
 
-- [CMU SEI, “Reasoning About Software Quality
-  Attributes”](https://www.sei.cmu.edu/library/reasoning-about-software-quality-attributes/)
-- [CMU SEI Quality Attribute Workshop
-  webcast](https://www.sei.cmu.edu/library/architecting-in-a-complex-world-eliciting-and-specifying-quality-attribute-requirements/)
-- [Google SRE Workbook, “Implementing
-  SLOs”](https://sre.google/workbook/implementing-slos/)
+- CMU SEI, “Reasoning About Software Quality Attributes” (RES-01)
+- CMU SEI Quality Attribute Workshop webcast (RES-02)
+- Google SRE Workbook, “Implementing SLOs” (RES-03)
 - Next: [Lesson 5](05-context-and-boundaries.md)
+- RES-08 -- ISO/IEC 25010:2023 Product quality model, for the local mechanism boundary.

@@ -71,6 +71,6 @@ reduction and explain why all streams may still slow.
 
 ## Sources and next work
 
-- RFC 9000, QUIC: https://www.rfc-editor.org/rfc/rfc9000.html
-- RFC 9114, HTTP/3: https://www.rfc-editor.org/rfc/rfc9114.html
+- RFC 9000, QUIC: RES-05
+- RFC 9114, HTTP/3: RES-13
 - Continue with Lesson 8 to turn mechanics into a migration decision.

@@ -247,10 +247,8 @@ answer key.
 
 ## Sources and next work
 
-- [Michael Nygard, “Documenting Architecture
-  Decisions”](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions)
-- [CMU SEI, Architecture Tradeoff Analysis Method
-  collection](https://www.sei.cmu.edu/library/architecture-tradeoff-analysis-method-collection/)
+- Michael Nygard, “Documenting Architecture Decisions” (RES-06)
+- CMU SEI, Architecture Tradeoff Analysis Method collection (RES-10)
 - Next: complete the guided decision exercises, compare your answers with the
   practice key, and generate a module quiz.
 

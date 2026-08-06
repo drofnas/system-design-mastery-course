@@ -100,6 +100,6 @@ record it explicitly.
 
 ## Sources and next work
 
-- Kalibera and Jones, [Rigorous Benchmarking in Reasonable Time](https://kar.kent.ac.uk/33611/).
-- Python Software Foundation, [`statistics`](https://docs.python.org/3/library/statistics.html).
+- Kalibera and Jones, Rigorous Benchmarking in Reasonable Time (RES-05).
+- Python Software Foundation, statistics (RES-16).
 - Next: turn evidence into a reversible decision in Lesson 8.

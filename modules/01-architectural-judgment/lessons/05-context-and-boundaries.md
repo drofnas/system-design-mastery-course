@@ -244,7 +244,7 @@ the context view.
 
 ## Sources and next work
 
-- [Official C4 model](https://c4model.com/)
-- [Creator-led C4 video](https://www.youtube.com/watch?v=KvoBrUd1-5E)
+- Official C4 model (RES-04)
+- Creator-led C4 video (RES-05)
 - Next: Complete the initial baseline, then study
   [Lesson 6](06-constraints-options-and-reversibility.md).

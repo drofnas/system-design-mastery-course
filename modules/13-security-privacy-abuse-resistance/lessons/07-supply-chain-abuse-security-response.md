@@ -90,6 +90,6 @@ recovery test for each control failure.
 
 ## Sources and next work
 
-- [SLSA Specification 1.2](https://slsa.dev/spec/v1.2/)
+- SLSA Specification 1.2 (RES-11)
 
 Complete EX-14 and EX-15, then run F07 and F08 from frozen predictions.

@@ -101,6 +101,6 @@ constraint.
 
 ## Sources and next work
 
-- PostgreSQL, [Transaction Isolation](https://www.postgresql.org/docs/current/transaction-iso.html).
-- CMU 15-445, [Spring 2026 concurrency-control materials](https://15445.courses.cs.cmu.edu/spring2026/schedule.html).
+- PostgreSQL, Transaction Isolation (RES-01).
+- CMU 15-445, Spring 2026 concurrency-control materials (RES-03).
 - Continue with EX-03–EX-04 and the F01/F02 predictions.

@@ -91,3 +91,4 @@ ms. An 18 ms difference is insufficient.
 - Corbett et al., *Spanner*, Sections 3 and 4.1–4.2.
 - Lamport, *Time, Clocks, and the Ordering of Events*.
 - Next: Lesson 2 replaces uncertain wall time with observable causal order.
+- RES-02 -- Spanner: Google's Globally-Distributed Database, for the local mechanism boundary.

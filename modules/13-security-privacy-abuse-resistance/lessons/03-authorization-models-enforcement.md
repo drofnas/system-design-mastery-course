@@ -92,7 +92,7 @@ operability, and migration cost.
 
 ## Sources and next work
 
-- [OWASP Authorization Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html)
-- [Zanzibar paper and presentation](https://www.usenix.org/conference/atc19/presentation/pang)
+- OWASP Authorization Cheat Sheet (RES-04)
+- Zanzibar paper and presentation (RES-06)
 
 Complete EX-05 and EX-06 before implementing the authorization matrix.

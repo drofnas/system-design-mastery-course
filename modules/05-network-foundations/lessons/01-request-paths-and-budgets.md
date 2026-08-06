@@ -85,5 +85,5 @@ observed p95 could be higher and one reason it could be lower.
 
 ## Sources and next work
 
-- RFC 9293, TCP concepts and data communication: https://www.rfc-editor.org/rfc/rfc9293.html
+- RFC 9293, TCP concepts and data communication: RES-02
 - Continue with Lesson 2 before interpreting a DNS phase.

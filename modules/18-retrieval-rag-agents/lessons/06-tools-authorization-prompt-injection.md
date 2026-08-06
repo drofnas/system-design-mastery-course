@@ -72,3 +72,4 @@ Inspect the four tool schemas in `lab/contracts/`. For each, name the least priv
 ## Sources and next work
 
 Read the bounded OWASP assignment in [resources.md](../resources.md), then complete EX-13 and EX-14. Lesson 7 makes these controls survive retries, crashes, deadlines, and cancellation.
+- RES-05 -- LLM Prompt Injection Prevention Cheat Sheet, for the local mechanism boundary.

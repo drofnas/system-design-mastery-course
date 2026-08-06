@@ -103,7 +103,7 @@ operations, migration, and reversal evidence.
 
 ## Sources and next work
 
-- [OWASP LLM Prompt Injection Prevention](https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html)
-- [OWASP AI Agent Security](https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html)
+- OWASP LLM Prompt Injection Prevention (RES-12)
+- OWASP AI Agent Security (RES-13)
 
 Complete EX-16-EX-18, freeze F09 evidence, and defend the final RFC without AI assistance.

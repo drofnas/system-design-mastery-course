@@ -114,5 +114,5 @@ could still reject the change.
 ## Sources and next work
 
 - Intel, *Optimization Reference Manual*, current Volume 1 sections on front end
-  and data access: https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html
+  and data access: RES-07
 - Continue with EX-01 and EX-02, then freeze the systems prediction.

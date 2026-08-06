@@ -129,3 +129,15 @@ task; record the substitution.
 Do not copy articles, chapters, slides, or transcripts into learner artifacts.
 Use short attributed quotations only when necessary and otherwise paraphrase with
 the source ID, exact section boundary, and stated evidence limit.
+
+### RES-09: Source reference
+
+- URL: https://www.man7.org/linux/man-pages/man2/write.2.html
+- Use for: Source cited by `lessons/05-files-page-cache-and-durability.md` during RES citation normalization.
+- Local alternative: lessons/05-files-page-cache-and-durability.md
+
+### RES-10: Source reference
+
+- URL: https://docs.docker.com/engine/containers/resource_constraints/
+- Use for: Source cited by `lessons/07-containers-quotas-and-limits.md` during RES citation normalization.
+- Local alternative: lessons/07-containers-quotas-and-limits.md

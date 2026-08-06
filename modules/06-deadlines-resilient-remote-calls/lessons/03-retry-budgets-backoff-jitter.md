@@ -82,6 +82,6 @@ what happens when the process retry budget is empty.
 
 ## Sources and next work
 
-- Marc Brooker, [Timeouts, retries, and backoff with jitter](https://builder.aws.com/content/3EumjoZascWd1oZiEgL8ORlv3qE/timeouts-retries-and-backoff-with-jitter).
-- Google SRE, [Addressing Cascading Failures](https://sre.google/sre-book/addressing-cascading-failures/), retry cascades.
+- Marc Brooker, Timeouts, retries, and backoff with jitter (RES-04).
+- Google SRE, Addressing Cascading Failures (RES-05), retry cascades.
 - Next: complete EX-05 and EX-06 and implement retry budget telemetry.

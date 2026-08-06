@@ -93,6 +93,6 @@ role removal during a session, and recovery-channel replacement.
 
 ## Sources and next work
 
-- [NIST SP 800-63B-4](https://pages.nist.gov/800-63-4/sp800-63b.html)
+- NIST SP 800-63B-4 (RES-03)
 
 Complete EX-03 and EX-04 and add session/recovery abuse cases to the frozen model.

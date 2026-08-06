@@ -75,3 +75,4 @@ that restores comparability without deleting raw results.
 
 Use RES-11, reuse Module 4 measurement rules, and continue to
 [Lesson 7](07-northstar-polyglot-tutorial.md).
+- RES-17 -- Rigorous Benchmarking in Reasonable Time, for the local mechanism boundary.

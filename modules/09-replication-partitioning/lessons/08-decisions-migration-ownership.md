@@ -106,3 +106,4 @@ Use the DynamoDB and Meta cases for operated trade-offs, but retain Northstar's
 own workload and failure model. Complete the ADR, defense, Module 9 assessment,
 and Gate 3. Module 10 will establish time, coordination, and consensus proofs
 that this module deliberately leaves open.
+- RES-07 -- Amazon DynamoDB: A Scalable, Predictably Performant, and Fully Managed NoSQL Database Service, for the local mechanism boundary.

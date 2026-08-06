@@ -120,7 +120,7 @@ limit covers variance, service already in progress, and measurement error.
 
 ## Sources and next work
 
-- Google SRE, [Addressing Cascading Failures](https://sre.google/sre-book/addressing-cascading-failures/)
-- David Yanacek, [Avoiding Insurmountable Queue Backlogs](https://aws.amazon.com/builders-library/avoiding-insurmountable-queue-backlogs/)
+- Google SRE, Addressing Cascading Failures (RES-03)
+- David Yanacek, Avoiding Insurmountable Queue Backlogs (RES-04)
 
 Complete EX-07 and EX-08, then inspect the lab’s queue-full events.

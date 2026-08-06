@@ -89,7 +89,7 @@ what encryption does not protect.
 
 ## Sources and next work
 
-- [OWASP Secrets Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html)
-- [NIST Key Management Guidelines](https://csrc.nist.gov/projects/key-management/key-management-guidelines)
+- OWASP Secrets Management Cheat Sheet (RES-07)
+- NIST Key Management Guidelines (RES-08)
 
 Complete EX-09 and EX-10 and preserve rotation evidence rather than screenshots alone.

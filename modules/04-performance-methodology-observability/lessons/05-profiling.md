@@ -103,7 +103,7 @@ allocation, or instrumentation.
 
 ## Sources and next work
 
-- Python Software Foundation, [The Python Profilers](https://docs.python.org/3/library/profile.html).
-- Python Software Foundation, [`tracemalloc`](https://docs.python.org/3/library/tracemalloc.html).
-- OpenTelemetry, [Profiles](https://opentelemetry.io/docs/specs/otel/profiles/).
+- Python Software Foundation, The Python Profilers (RES-07).
+- Python Software Foundation, tracemalloc (RES-08).
+- OpenTelemetry, Profiles (RES-14).
 - Next: inspect dependency boundaries in Lesson 6.

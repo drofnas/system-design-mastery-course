@@ -97,5 +97,5 @@ be either committed, retryable, or safely absent.
 
 ## Sources and next work
 
-- PostgreSQL, [DDL Constraints](https://www.postgresql.org/docs/current/ddl-constraints.html).
+- PostgreSQL, DDL Constraints (RES-09).
 - Continue with EX-09–EX-10 and F05/F06.

@@ -96,6 +96,6 @@ shared condition concrete.
 
 ## Sources and next work
 
-- CMU 15-445, [MVCC lectures and notes](https://15445.courses.cs.cmu.edu/spring2026/schedule.html).
-- PostgreSQL, [MVCC introduction](https://www.postgresql.org/docs/current/mvcc-intro.html).
+- CMU 15-445, MVCC lectures and notes (RES-03).
+- PostgreSQL, MVCC introduction (RES-10).
 - Continue with EX-07–EX-08.

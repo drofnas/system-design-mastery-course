@@ -72,6 +72,6 @@ success, stop, rollback, ownership, and decommission evidence for every stage.
 
 ## Sources and next work
 
-- Cloudflare, The Road to QUIC: https://blog.cloudflare.com/the-road-to-quic/
-- USENIX, Deploying and Debugging HTTP/3: https://www.usenix.org/conference/srecon23emea/presentation/marx
+- Cloudflare, The Road to QUIC: RES-06
+- USENIX, Deploying and Debugging HTTP/3: RES-07
 - Complete the protocol ADR and defense before evaluation.

@@ -90,9 +90,9 @@ proves the address and route the client actually used.
 
 ## Sources and next work
 
-- RFC 1034, concepts and server algorithm: https://datatracker.ietf.org/doc/html/rfc1034
-- RFC 6724, default address-selection policy: https://www.rfc-editor.org/rfc/rfc6724.html
-- RFC 8305, connection racing across address families: https://www.rfc-editor.org/rfc/rfc8305.html
-- RFC 1812, longest-prefix forwarding behavior: https://www.rfc-editor.org/rfc/rfc1812.html
-- RFC 9520, negative caching of resolution failures: https://datatracker.ietf.org/doc/rfc9520/
+- RFC 1034, concepts and server algorithm: RES-01
+- RFC 6724, default address-selection policy: RES-08
+- RFC 8305, connection racing across address families: RES-09
+- RFC 1812, longest-prefix forwarding behavior: RES-10
+- RFC 9520, negative caching of resolution failures: RES-11
 - Continue with Lesson 3 to interpret connection evidence after resolution.

@@ -280,8 +280,6 @@ claim you would test next.
 
 ## Sources and next work
 
-- [AWS Builder Center, “Challenges with Distributed
-  Systems”](https://builder.aws.com/content/3F08f7GPFiZMCgXD8gny6OjxR0Z/challenges-with-distributed-systems)
-- [CMU SEI, Early Architecture
-  Analysis](https://www.sei.cmu.edu/library/early-analysis-of-software-architecture/)
+- AWS Builder Center, “Challenges with Distributed Systems” (RES-07)
+- CMU SEI, Early Architecture Analysis (RES-09)
 - Next: [Lesson 8](08-decisions-rfcs-and-defense.md)

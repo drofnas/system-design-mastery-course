@@ -103,6 +103,6 @@ of no work or merely a gap in instrumentation.
 
 ## Sources and next work
 
-- W3C, [Trace Context](https://www.w3.org/TR/trace-context/).
-- OpenTelemetry, [Tracing API](https://opentelemetry.io/docs/specs/otel/trace/api/).
+- W3C, Trace Context (RES-03).
+- OpenTelemetry, Tracing API (RES-11).
 - Next: bound aggregated signals in Lesson 4.

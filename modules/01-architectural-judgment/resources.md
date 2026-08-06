@@ -129,3 +129,15 @@ task; record the substitution.
 Do not copy articles, chapters, slides, or transcripts into learner artifacts.
 Use short attributed quotations only when necessary and otherwise paraphrase with
 the source ID, exact section boundary, and stated evidence limit.
+
+### RES-09: CMU SEI, Early Architecture Analysis
+
+- URL: https://www.sei.cmu.edu/library/early-analysis-of-software-architecture/
+- Use for: Source cited by `lessons/07-failure-models-and-adversarial-review.md` during RES citation normalization.
+- Local alternative: lessons/07-failure-models-and-adversarial-review.md
+
+### RES-10: CMU SEI, Architecture Tradeoff Analysis Method collection
+
+- URL: https://www.sei.cmu.edu/library/architecture-tradeoff-analysis-method-collection/
+- Use for: Source cited by `lessons/08-decisions-rfcs-and-defense.md` during RES citation normalization.
+- Local alternative: lessons/08-decisions-rfcs-and-defense.md

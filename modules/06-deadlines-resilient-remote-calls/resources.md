@@ -116,3 +116,9 @@ task; record the substitution.
 Do not copy articles, chapters, slides, or transcripts into learner artifacts.
 Use short attributed quotations only when necessary and otherwise paraphrase with
 the source ID, exact section boundary, and stated evidence limit.
+
+### RES-08: Status Codes
+
+- URL: https://grpc.io/docs/guides/status-codes/
+- Use for: Source cited by `lessons/04-idempotency-and-deduplication.md` during RES citation normalization.
+- Local alternative: lessons/04-idempotency-and-deduplication.md
