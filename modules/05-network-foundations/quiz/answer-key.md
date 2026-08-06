@@ -1,477 +1,488 @@
 # M05 Quiz Answer Key
 
-This key covers all 38 questions for **Network Foundations**. Use it after an attempt, or provide it with the LLM grading prompt for feedback.
+This key covers all 39 questions for **Network Foundations**. Use it after an attempt, or provide it with the LLM grading prompt for feedback.
 
 ## M05-Q001
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** BDP describes path volume; sender windows, receiver flow control, congestion, loss, and application pacing can prevent filling it
+**Answer:** BDP describes path volume; sender windows, receiver flow control, congestion, loss, and application pacing can prevent filling it.
 
-**Explanation:** The cited self-check in L01 tests whether the learner can connect Request Paths, Round Trips, and Byte Budgets to the module mechanism without replacing evidence with labels. This explanation is specific to M05-Q001 and its cited source.
+**Explanation:** M05-Q001 uses self-check 1 from Request Paths, Round Trips, and Byte Budgets; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M05-Q002
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `application`
 
-**Answer:** Only when the implementation starts independent work concurrently and the critical path does not wait for both sequentially
+**Answer:** Only when the implementation starts independent work concurrently and the critical path does not wait for both sequentially.
 
-**Explanation:** The cited self-check in L01 tests whether the learner can connect Request Paths, Round Trips, and Byte Budgets to the module mechanism without replacing evidence with labels. This explanation is specific to M05-Q002 and its cited source.
+**Explanation:** M05-Q002 uses self-check 2 from Request Paths, Round Trips, and Byte Budgets; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M05-Q003
 
-**Type:** `short_answer`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`
+**Difficulty:** `recall`
 
-**Answer:** Each phase p95 may come from a different request; dependence and correlation determine the journey tail
+**Answer:** Each phase p95 may come from a different request; dependence and correlation determine the journey tail.
 
-**Explanation:** The cited self-check in L01 tests whether the learner can connect Request Paths, Round Trips, and Byte Budgets to the module mechanism without replacing evidence with labels. This explanation is specific to M05-Q003 and its cited source.
+**Explanation:** M05-Q003 uses self-check 3 from Request Paths, Round Trips, and Byte Budgets; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M05-Q004
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** It does not prove route reachability, TLS identity, proxy capacity, or service health
+**Answer:** It does not prove route reachability, TLS identity, proxy capacity, or service health.
 
-**Explanation:** The cited self-check in L02 tests whether the learner can connect DNS, Addressing, Routing, and Discovery to the module mechanism without replacing evidence with labels. This explanation is specific to M05-Q004 and its cited source.
+**Explanation:** M05-Q004 uses self-check 1 from DNS, Addressing, Routing, and Discovery; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M05-Q005
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `application`
 
-**Answer:** NXDOMAIN is an authoritative nonexistence result; timeout lacks a response and is temporary uncertainty
+**Answer:** NXDOMAIN is an authoritative nonexistence result; timeout lacks a response and is temporary uncertainty.
 
-**Explanation:** The cited self-check in L02 tests whether the learner can connect DNS, Addressing, Routing, and Discovery to the module mechanism without replacing evidence with labels. This explanation is specific to M05-Q005 and its cited source.
+**Explanation:** M05-Q005 uses self-check 2 from DNS, Addressing, Routing, and Discovery; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M05-Q006
 
-**Type:** `short_answer`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`
+**Difficulty:** `recall`
 
-**Answer:** Stub, recursive, and application caches can observe different insertion times and remaining lifetimes
+**Answer:** Stub, recursive, and application caches can observe different insertion times and remaining lifetimes.
 
-**Explanation:** The cited self-check in L02 tests whether the learner can connect DNS, Addressing, Routing, and Discovery to the module mechanism without replacing evidence with labels. This explanation is specific to M05-Q006 and its cited source.
+**Explanation:** M05-Q006 uses self-check 3 from DNS, Addressing, Routing, and Discovery; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M05-Q007
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** It selects a forwarding path only; neighbor reachability, filtering, downstream routing, and service admission remain separate mechanisms
+**Answer:** It selects a forwarding path only; neighbor reachability, filtering, downstream routing, and service admission remain separate mechanisms.
 
-**Explanation:** The cited self-check in L02 tests whether the learner can connect DNS, Addressing, Routing, and Discovery to the module mechanism without replacing evidence with labels. This explanation is specific to M05-Q007 and its cited source.
+**Explanation:** M05-Q007 uses self-check 4 from DNS, Addressing, Routing, and Discovery; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M05-Q008
 
-**Type:** `short_answer`  
-**Difficulty:** `application`
+**Type:** `short_answer`
+**Difficulty:** `recall`
 
-**Answer:** A reliable, ordered, bidirectional byte stream without application message boundaries
+**Answer:** A reliable, ordered, bidirectional byte stream without application message boundaries.
 
-**Explanation:** The cited self-check in L03 tests whether the learner can connect TCP Ordering, Flow, Congestion, and Goodput to the module mechanism without replacing evidence with labels. This explanation is specific to M05-Q008 and its cited source.
+**Explanation:** M05-Q008 uses self-check 1 from TCP Ordering, Flow, Congestion, and Goodput; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M05-Q009
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `synthesis`
 
-**Answer:** Flow control through receive capacity/window; congestion control protects the path
+**Answer:** Flow control through receive capacity/window; congestion control protects the path.
 
-**Explanation:** The cited self-check in L03 tests whether the learner can connect TCP Ordering, Flow, Congestion, and Goodput to the module mechanism without replacing evidence with labels. This explanation is specific to M05-Q009 and its cited source.
+**Explanation:** M05-Q009 uses self-check 2 from TCP Ordering, Flow, Congestion, and Goodput; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M05-Q010
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `application`
 
-**Answer:** Reuse can remove setup while transfer mechanics stay constant, so combining them hides the changed mechanism
+**Answer:** Reuse can remove setup while transfer mechanics stay constant, so combining them hides the changed mechanism.
 
-**Explanation:** The cited self-check in L03 tests whether the learner can connect TCP Ordering, Flow, Congestion, and Goodput to the module mechanism without replacing evidence with labels. This explanation is specific to M05-Q010 and its cited source.
+**Explanation:** M05-Q010 uses self-check 3 from TCP Ordering, Flow, Congestion, and Goodput; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M05-Q011
 
-**Type:** `short_answer`  
-**Difficulty:** `application`
+**Type:** `short_answer`
+**Difficulty:** `recall`
 
-**Answer:** Usually only that the local kernel accepted bytes into its socket state; peer receipt and application processing require other evidence
+**Answer:** Usually only that the local kernel accepted bytes into its socket state; peer receipt and application processing require other evidence.
 
-**Explanation:** The cited self-check in L03 tests whether the learner can connect TCP Ordering, Flow, Congestion, and Goodput to the module mechanism without replacing evidence with labels. This explanation is specific to M05-Q011 and its cited source.
+**Explanation:** M05-Q011 uses self-check 4 from TCP Ordering, Flow, Congestion, and Goodput; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M05-Q012
 
-**Type:** `short_answer`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`
+**Difficulty:** `application`
 
-**Answer:** Chain validation to a configured trust anchor and hostname/identity matching
+**Answer:** Chain validation to a configured trust anchor and hostname/identity matching.
 
-**Explanation:** The cited self-check in L04 tests whether the learner can connect TLS Trust and Connection Establishment to the module mechanism without replacing evidence with labels. This explanation is specific to M05-Q012 and its cited source.
+**Explanation:** M05-Q012 uses self-check 1 from TLS Trust and Connection Establishment; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M05-Q013
 
-**Type:** `multiple_choice`  
-**Difficulty:** `application`
+**Type:** `multiple_choice`
+**Difficulty:** `synthesis`
 
 **Choices:**
 
-- Keep Request Paths, Round Trips, and Byte Budgets scoped to its stated evidence and boundary.
-- Treat Adding marginal percentiles from different requests creates a journey as complete proof without the lesson boun.
-- Choose the familiar tool before checking whether Adding marginal percentiles from different requests creates a journe.
-- Make the documented mistake: Adding marginal percentiles from different requests creates a jour
+- Test the M05 scoped measurement and record the limiting assumption before approving the change.
+- Approve adding marginal percentiles from different requests creates a journey that for Request Paths, Round Trips, and Byte Budgets; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for adding marginal percentiles from different requests creates a journey that; the team can monitor Request Paths, Round Trips, and Byte Budgets after launch.
+- Approve the M05 shortcut for alpha now.
 
-**Answer:** Keep Request Paths, Round Trips, and Byte Budgets scoped to its stated evidence and boundary.
+**Answer:** Test the M05 scoped measurement and record the limiting assumption before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M05-Q013 and its cited source.
+**Explanation:** M05-Q013 enacts mistake 1 from Request Paths, Round Trips, and Byte Budgets; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M05-Q014
 
-**Type:** `multiple_choice`  
-**Difficulty:** `synthesis`
+**Type:** `multiple_choice`
+**Difficulty:** `recall`
 
 **Choices:**
 
-- Choose the familiar tool before checking whether Treating payload bytes as wire bytes hides headers and retransmissio.
-- Keep Request Paths, Round Trips, and Byte Budgets scoped to its stated evidence and boundary.
-- Treat Treating payload bytes as wire bytes hides headers and retransmissions as complete proof without the lesson bou.
-- Make the documented mistake: Treating payload bytes as wire bytes hides headers and retransmiss
+- Approve treating payload bytes as wire bytes hides headers and retransmissions for Request Paths, Round Trips, and Byte Budgets; the local context makes that proposal familiar enough for review.
+- Scope the M05 scoped measurement before approving the change.
+- Defer measurement until production for treating payload bytes as wire bytes hides headers and retransmissions; the team can monitor Request Paths, Round Trips, and Byte Budgets after launch.
+- Approve the M05 shortcut for bravo now.
 
-**Answer:** Keep Request Paths, Round Trips, and Byte Budgets scoped to its stated evidence and boundary.
+**Answer:** Scope the M05 scoped measurement before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M05-Q014 and its cited source.
+**Explanation:** M05-Q014 enacts mistake 2 from Request Paths, Round Trips, and Byte Budgets; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M05-Q015
 
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
+**Type:** `multiple_choice`
+**Difficulty:** `application`
 
 **Choices:**
 
-- Choose the familiar tool before checking whether Counting every phase as serial overstates cost when DNS/address atte.
-- Treat Counting every phase as serial overstates cost when DNS/address attem as complete proof without the lesson boun.
-- Keep Request Paths, Round Trips, and Byte Budgets scoped to its stated evidence and boundary.
-- Make the documented mistake: Counting every phase as serial overstates cost when DNS/address at
+- Approve counting every phase as serial overstates cost when DNS/address attempts or for Request Paths, Round Trips, and Byte Budgets; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for counting every phase as serial overstates cost when DNS/address attempts or; the team can monitor Request Paths, Round Trips, and Byte Budgets after launch.
+- Measure the M05 scoped measurement before approval.
+- Approve the M05 shortcut for charlie now.
 
-**Answer:** Keep Request Paths, Round Trips, and Byte Budgets scoped to its stated evidence and boundary.
+**Answer:** Measure the M05 scoped measurement before approval.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M05-Q015 and its cited source.
+**Explanation:** M05-Q015 enacts mistake 3 from Request Paths, Round Trips, and Byte Budgets; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M05-Q016
 
-**Type:** `multiple_choice`  
-**Difficulty:** `application`
+**Type:** `multiple_choice`
+**Difficulty:** `synthesis`
 
 **Choices:**
 
-- Choose the familiar tool before checking whether Calling a lower bound an SLO prediction hides queues, loss, and appl.
-- Make the documented mistake: Calling a lower bound an SLO prediction hides queues, loss, and ap
-- Treat Calling a lower bound an SLO prediction hides queues, loss, and appli as complete proof without the lesson boun.
-- Keep Request Paths, Round Trips, and Byte Budgets scoped to its stated evidence and boundary.
+- Approve calling a lower bound an SLO prediction hides queues, loss, and application work for Request Paths, Round Trips, and Byte Budgets; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for calling a lower bound an SLO prediction hides queues, loss, and application work; the team can monitor Request Paths, Round Trips, and Byte Budgets after launch.
+- Approve the M05 shortcut for delta now.
+- Bound the M05 scoped measurement and record the limiting assumption before approving the change.
 
-**Answer:** Keep Request Paths, Round Trips, and Byte Budgets scoped to its stated evidence and boundary.
+**Answer:** Bound the M05 scoped measurement and record the limiting assumption before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M05-Q016 and its cited source.
+**Explanation:** M05-Q016 enacts mistake 4 from Request Paths, Round Trips, and Byte Budgets; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M05-Q017
 
-**Type:** `multiple_choice`  
-**Difficulty:** `synthesis`
+**Type:** `multiple_choice`
+**Difficulty:** `recall`
 
 **Choices:**
 
-- Keep DNS, Addressing, Routing, and Discovery scoped to its stated evidence and boundary.
-- Choose the familiar tool before checking whether “DNS is down” collapses authoritative, recursive, network, validatio.
-- Make the documented mistake: “DNS is down” collapses authoritative, recursive, network, validat
-- Treat “DNS is down” collapses authoritative, recursive, network, validation as complete proof without the lesson boun.
+- Freeze the M05 scoped measurement before approving the change.
+- Approve “DNS is down” collapses authoritative, recursive, network, validation, and cache for DNS, Addressing, Routing, and Discovery; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for “DNS is down” collapses authoritative, recursive, network, validation, and cache; the team can monitor DNS, Addressing, Routing, and Discovery after launch.
+- Approve the M05 shortcut for ember now.
 
-**Answer:** Keep DNS, Addressing, Routing, and Discovery scoped to its stated evidence and boundary.
+**Answer:** Freeze the M05 scoped measurement before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M05-Q017 and its cited source.
+**Explanation:** M05-Q017 enacts mistake 1 from DNS, Addressing, Routing, and Discovery; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M05-Q018
 
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
+**Type:** `multiple_choice`
+**Difficulty:** `application`
 
 **Choices:**
 
-- Treat Infinite retry on timeout multiplies resolver load during failure as complete proof without the lesson boundary
-- Keep DNS, Addressing, Routing, and Discovery scoped to its stated evidence and boundary.
-- Make the documented mistake: Infinite retry on timeout multiplies resolver load during failure
-- Choose the familiar tool before checking whether Infinite retry on timeout multiplies resolver load during failure ap.
+- Approve infinite retry on timeout multiplies resolver load during failure for DNS, Addressing, Routing, and Discovery; the local context makes that proposal familiar enough for review.
+- Preserve the M05 scoped measurement before approval.
+- Defer measurement until production for infinite retry on timeout multiplies resolver load during failure; the team can monitor DNS, Addressing, Routing, and Discovery after launch.
+- Approve the M05 shortcut for fable now.
 
-**Answer:** Keep DNS, Addressing, Routing, and Discovery scoped to its stated evidence and boundary.
+**Answer:** Preserve the M05 scoped measurement before approval.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M05-Q018 and its cited source.
+**Explanation:** M05-Q018 enacts mistake 2 from DNS, Addressing, Routing, and Discovery; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M05-Q019
 
-**Type:** `multiple_choice`  
-**Difficulty:** `application`
+**Type:** `multiple_choice`
+**Difficulty:** `synthesis`
 
 **Choices:**
 
-- Choose the familiar tool before checking whether Using a stale address without a stated policy can route to decommiss.
-- Make the documented mistake: Using a stale address without a stated policy can route to decommi
-- Keep DNS, Addressing, Routing, and Discovery scoped to its stated evidence and boundary.
-- Treat Using a stale address without a stated policy can route to decommissi as complete proof without the lesson boun.
+- Approve using a stale address without a stated policy can route to decommissioned or uns for DNS, Addressing, Routing, and Discovery; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for using a stale address without a stated policy can route to decommissioned or uns; the team can monitor DNS, Addressing, Routing, and Discovery after launch.
+- Model the M05 scoped measurement and record the limiting assumption before approving the change.
+- Approve the M05 shortcut for harbor now.
 
-**Answer:** Keep DNS, Addressing, Routing, and Discovery scoped to its stated evidence and boundary.
+**Answer:** Model the M05 scoped measurement and record the limiting assumption before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M05-Q019 and its cited source.
+**Explanation:** M05-Q019 enacts mistake 3 from DNS, Addressing, Routing, and Discovery; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M05-Q020
 
-**Type:** `multiple_choice`  
-**Difficulty:** `synthesis`
+**Type:** `multiple_choice`
+**Difficulty:** `recall`
 
 **Choices:**
 
-- Treat Logging full queried names can expose tenant or user data as complete proof without the lesson boundary
-- Choose the familiar tool before checking whether Logging full queried names can expose tenant or user data applies
-- Make the documented mistake: Logging full queried names can expose tenant or user data
-- Keep DNS, Addressing, Routing, and Discovery scoped to its stated evidence and boundary.
+- Approve logging full queried names can expose tenant or user data for DNS, Addressing, Routing, and Discovery; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for logging full queried names can expose tenant or user data; the team can monitor DNS, Addressing, Routing, and Discovery after launch.
+- Approve the M05 shortcut for indigo now.
+- Account the M05 scoped measurement before approving the change.
 
-**Answer:** Keep DNS, Addressing, Routing, and Discovery scoped to its stated evidence and boundary.
+**Answer:** Account the M05 scoped measurement before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M05-Q020 and its cited source.
+**Explanation:** M05-Q020 enacts mistake 4 from DNS, Addressing, Routing, and Discovery; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M05-Q021
 
-**Type:** `calculation`  
+**Type:** `calculation`
 **Difficulty:** `synthesis`
 
-**Answer:** Original concurrency = 170 x 0.060 = 10.20 operations. Revised rate = 170 x 1.25 = 212.5/s, so revised concurrency = 212.5 x 0.060 = 12.75 operations.
+**Answer:** M05 Bandwidth-Delay Product case 1: BDP = 80 Mbps / 8 x 0.120 s = 1,200,000 bytes.
 
-**Explanation:** This perturbs the numeric practice around Request Paths, Round Trips, and Byte Budgets: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M05-Q021 and its cited source.
+**Explanation:** M05-Q021 uses bandwidth-delay product from Request Paths, Round Trips, and Byte Budgets and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M05-Q022
 
-**Type:** `calculation`  
+**Type:** `calculation`
 **Difficulty:** `recall`
 
-**Answer:** Original concurrency = 180 x 0.070 = 12.60 operations. Revised rate = 180 x 1.30 = 234.0/s, so revised concurrency = 234.0 x 0.070 = 16.38 operations.
+**Answer:** M05 Rtt Setup case 2: Setup lower bound is 3 x 90 ms = 270 ms before payload work.
 
-**Explanation:** This perturbs the numeric practice around DNS, Addressing, Routing, and Discovery: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M05-Q022 and its cited source.
+**Explanation:** M05-Q022 uses RTT setup from DNS, Addressing, Routing, and Discovery and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M05-Q023
 
-**Type:** `calculation`  
+**Type:** `calculation`
 **Difficulty:** `application`
 
-**Answer:** Original concurrency = 190 x 0.080 = 15.20 operations. Revised rate = 190 x 1.35 = 256.5/s, so revised concurrency = 256.5 x 0.080 = 20.52 operations.
+**Answer:** M05 Serialization case 3: Serialization is 280 KiB x 8 / 900 Kbps = 2.49 seconds, ignoring protocol overhead.
 
-**Explanation:** This perturbs the numeric practice around TCP Ordering, Flow, Congestion, and Goodput: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M05-Q023 and its cited source.
+**Explanation:** M05-Q023 uses serialization from TCP Ordering, Flow, Congestion, and Goodput and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M05-Q024
 
-**Type:** `calculation`  
+**Type:** `calculation`
 **Difficulty:** `synthesis`
 
-**Answer:** Original concurrency = 200 x 0.040 = 8.00 operations. Revised rate = 200 x 1.40 = 280.0/s, so revised concurrency = 280.0 x 0.040 = 11.20 operations.
+**Answer:** M05 Goodput case 4: Goodput is 100 x (1 - 0.12) = 88.0 MB/s.
 
-**Explanation:** This perturbs the numeric practice around TLS Trust and Connection Establishment: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M05-Q024 and its cited source.
+**Explanation:** M05-Q024 uses goodput from TLS Trust and Connection Establishment and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M05-Q025
 
-**Type:** `calculation`  
+**Type:** `calculation`
 **Difficulty:** `recall`
 
-**Answer:** Original concurrency = 120 x 0.050 = 6.00 operations. Revised rate = 120 x 1.45 = 174.0/s, so revised concurrency = 174.0 x 0.050 = 8.70 operations.
+**Answer:** M05 Rate Times Hold Time case 5: Mean concurrency is 350 x 0.08 = 28.0 active streams.
 
-**Explanation:** This perturbs the numeric practice around Proxies, NAT, Pooling, and Exhaustion: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M05-Q025 and its cited source.
+**Explanation:** M05-Q025 uses rate times hold time from Proxies, NAT, Pooling, and Exhaustion and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M05-Q026
 
-**Type:** `calculation`  
+**Type:** `calculation`
 **Difficulty:** `application`
 
-**Answer:** Original concurrency = 130 x 0.060 = 7.80 operations. Revised rate = 130 x 1.10 = 143.0/s, so revised concurrency = 143.0 x 0.060 = 8.58 operations.
+**Answer:** M05 Shared Ordering case 6: Shared ordering exposes the later completion, 220 ms, while independent streams can expose the 140 ms result separately.
 
-**Explanation:** This perturbs the numeric practice around HTTP/1.1 and HTTP/2 Multiplexing: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M05-Q026 and its cited source.
+**Explanation:** M05-Q026 uses shared ordering from HTTP/1.1 and HTTP/2 Multiplexing and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M05-Q027
 
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `recall`
 
-**Answer:** Original concurrency = 140 x 0.070 = 9.80 operations. Revised rate = 140 x 1.15 = 161.0/s, so revised concurrency = 161.0 x 0.070 = 11.27 operations.
+**Answer:** M05 diagnosis 1 identifies Request Paths, Round Trips, and Byte Budgets evidence scope. The proving fields are path.rtt_ms and path.bandwidth_kbps; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** This perturbs the numeric practice around QUIC and HTTP/3 Stream Behavior: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M05-Q027 and its cited source.
+**Explanation:** M05-Q027 comes from emitted trial fields rather than fixture identifiers; Request Paths, Round Trips, and Byte Budgets is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M05-Q028
 
-**Type:** `scenario_diagnosis`  
+**Type:** `scenario_diagnosis`
 **Difficulty:** `application`
 
-**Answer:** The fixture tests transit-bandwidth (fixture), with fixture as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=transit-bandwidth, rather than the general presence of a lab run.
+**Answer:** M05 diagnosis 2 identifies DNS, Addressing, Routing, and Discovery evidence scope. The proving fields are path.rtt_ms and path.bandwidth_kbps; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M05; diagnosis should start from the emitted fields and connect them to TCP Ordering, Flow, Congestion, and Goodput. This explanation is specific to M05-Q028 and its cited source.
+**Explanation:** M05-Q028 comes from emitted trial fields rather than fixture identifiers; DNS, Addressing, Routing, and Discovery is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M05-Q029
 
-**Type:** `scenario_diagnosis`  
+**Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** The fixture tests transit-baseline (fixture), with fixture as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=transit-baseline, rather than the general presence of a lab run.
+**Answer:** M05 diagnosis 3 identifies TCP Ordering, Flow, Congestion, and Goodput evidence scope. The proving fields are path.rtt_ms and path.bandwidth_kbps; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M05; diagnosis should start from the emitted fields and connect them to TLS Trust and Connection Establishment. This explanation is specific to M05-Q029 and its cited source.
+**Explanation:** M05-Q029 comes from emitted trial fields rather than fixture identifiers; TCP Ordering, Flow, Congestion, and Goodput is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M05-Q030
 
-**Type:** `scenario_diagnosis`  
+**Type:** `scenario_diagnosis`
 **Difficulty:** `recall`
 
-**Answer:** The fixture tests transit-delay (fixture), with fixture as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=transit-delay, rather than the general presence of a lab run.
+**Answer:** M05 diagnosis 4 identifies TLS Trust and Connection Establishment evidence scope. The proving fields are path.rtt_ms and path.bandwidth_kbps; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M05; diagnosis should start from the emitted fields and connect them to Proxies, NAT, Pooling, and Exhaustion. This explanation is specific to M05-Q030 and its cited source.
+**Explanation:** M05-Q030 comes from emitted trial fields rather than fixture identifiers; TLS Trust and Connection Establishment is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M05-Q031
 
-**Type:** `scenario_diagnosis`  
+**Type:** `scenario_diagnosis`
 **Difficulty:** `application`
 
-**Answer:** The fixture tests transit-dns-failure (fixture), with fixture as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=transit-dns-failure, rather than the general presence of a lab run.
+**Answer:** M05 diagnosis 5 identifies Proxies, NAT, Pooling, and Exhaustion evidence scope. The proving fields are path.rtt_ms and path.bandwidth_kbps; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M05; diagnosis should start from the emitted fields and connect them to HTTP/1.1 and HTTP/2 Multiplexing. This explanation is specific to M05-Q031 and its cited source.
+**Explanation:** M05-Q031 comes from emitted trial fields rather than fixture identifiers; Proxies, NAT, Pooling, and Exhaustion is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M05-Q032
 
-**Type:** `scenario_diagnosis`  
+**Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** The fixture tests transit-jitter (fixture), with fixture as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=transit-jitter, rather than the general presence of a lab run.
+**Answer:** M05 diagnosis 6 identifies HTTP/1.1 and HTTP/2 Multiplexing evidence scope. The proving fields are path.rtt_ms and path.bandwidth_kbps; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M05; diagnosis should start from the emitted fields and connect them to QUIC and HTTP/3 Stream Behavior. This explanation is specific to M05-Q032 and its cited source.
+**Explanation:** M05-Q032 comes from emitted trial fields rather than fixture identifiers; HTTP/1.1 and HTTP/2 Multiplexing is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M05-Q033
 
-**Type:** `scenario_diagnosis`  
+**Type:** `scenario_diagnosis`
 **Difficulty:** `recall`
 
-**Answer:** The fixture tests transit-loss-quic (fixture), with fixture as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=transit-loss-quic, rather than the general presence of a lab run.
+**Answer:** M05 diagnosis 7 identifies QUIC and HTTP/3 Stream Behavior evidence scope. The proving fields are path.rtt_ms and path.bandwidth_kbps; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M05; diagnosis should start from the emitted fields and connect them to Protocol and Topology Decisions. This explanation is specific to M05-Q033 and its cited source.
+**Explanation:** M05-Q033 comes from emitted trial fields rather than fixture identifiers; QUIC and HTTP/3 Stream Behavior is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M05-Q034
 
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `application`
 
-**Answer:** Recommend the option that preserves the TLS Trust and Connection Establishment mechanism under the exercise constraints: Using the Transit inputs, enumerate serial exchanges and calculate lower-bound setup, 12 KiB serialization, and BDP. Label assumptions and units. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** M05 diagnosis 8 identifies Protocol and Topology Decisions evidence scope. The proving fields are path.rtt_ms and path.bandwidth_kbps; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M05-Q034 and its cited source.
+**Explanation:** M05-Q034 comes from emitted trial fields rather than fixture identifiers; Protocol and Topology Decisions is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M05-Q035
 
-**Type:** `design_judgment`  
-**Difficulty:** `recall`
+**Type:** `design_judgment`
+**Difficulty:** `synthesis`
 
-**Answer:** Recommend the option that preserves the Proxies, NAT, Pooling, and Exhaustion mechanism under the exercise constraints: Explain why DNS p95 + TLS p95 + application p95 is not necessarily journey p95. Design a correlated per-request measurement. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M05 decision 1, recommend against. The protected bound is 195 x 0.72 = 140.4/s, and the planned 171.6/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 171.6/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 31.2/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M05-Q035 and its cited source.
+**Explanation:** M05-Q035 turns on the forcing number from EX-01, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M05-Q036
 
-**Type:** `design_judgment`  
-**Difficulty:** `application`
+**Type:** `design_judgment`
+**Difficulty:** `recall`
 
-**Answer:** Recommend the option that preserves the HTTP/1.1 and HTTP/2 Multiplexing mechanism under the exercise constraints: For positive A, NXDOMAIN, NODATA, SERVFAIL, and timeout, state what is known, what remains unknown, cache behavior to record, and safe next action. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M05 decision 2, recommend against. The protected bound is 212 x 0.72 = 152.6/s, and the planned 186.6/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 186.6/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 34.0/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M05-Q036 and its cited source.
+**Explanation:** M05-Q036 turns on the forcing number from EX-02, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M05-Q037
 
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
+**Type:** `design_judgment`
+**Difficulty:** `application`
 
-**Answer:** Recommend the option that preserves the QUIC and HTTP/3 Stream Behavior mechanism under the exercise constraints: Map Transit DNS record, recursive resolver, route, edge health, service discovery, and certificate to owners and escalation evidence. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M05 decision 3, recommend against. The protected bound is 229 x 0.72 = 164.9/s, and the planned 201.5/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 201.5/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 36.6/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M05-Q037 and its cited source.
+**Explanation:** M05-Q037 turns on the forcing number from EX-03, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M05-Q038
 
-**Type:** `design_judgment`  
+**Type:** `design_judgment`
+**Difficulty:** `synthesis`
+
+**Answer:** For M05 decision 4, recommend against. The protected bound is 246 x 0.72 = 177.1/s, and the planned 216.5/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 216.5/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 39.4/s of lower-priority work.
+
+**Explanation:** M05-Q038 turns on the forcing number from EX-04, not preference; the reversal conditions are specific to the measured gap in this prompt.
+
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+
+## M05-Q039
+
+**Type:** `design_judgment`
 **Difficulty:** `recall`
 
-**Answer:** Recommend the option that preserves the Protocol and Topology Decisions mechanism under the exercise constraints: Given falling sender goodput, design evidence that distinguishes a slow reader, path congestion, and application pacing The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M05 decision 5, recommend against. The protected bound is 263 x 0.72 = 189.4/s, and the planned 231.4/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 231.4/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 42.0/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M05-Q038 and its cited source.
+**Explanation:** M05-Q039 turns on the forcing number from EX-05, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.

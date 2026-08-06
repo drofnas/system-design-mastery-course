@@ -1,466 +1,477 @@
 # M10 Quiz Answer Key
 
-This key covers all 37 questions for **Time, Coordination, and Consensus**. Use it after an attempt, or provide it with the LLM grading prompt for feedback.
+This key covers all 38 questions for **Time, Coordination, and Consensus**. Use it after an attempt, or provide it with the LLM grading prompt for feedback.
 
 ## M10-Q001
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** It has no shared origin or bounded relationship with another host's clock
+**Answer:** It has no shared origin or bounded relationship with another host's clock.
 
-**Explanation:** The cited self-check in L01 tests whether the learner can connect Physical Clocks, Drift, Skew, and Uncertainty to the module mechanism without replacing evidence with labels. This explanation is specific to M10-Q001 and its cited source.
+**Explanation:** M10-Q001 uses self-check 1 from Physical Clocks, Drift, Skew, and Uncertainty; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M10-Q002
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `application`
 
-**Answer:** Correctness-critical authority must fail closed or use a non-time proof; silently extending the bound changes the failure model
+**Answer:** Correctness-critical authority must fail closed or use a non-time proof; silently extending the bound changes the failure model.
 
-**Explanation:** The cited self-check in L01 tests whether the learner can connect Physical Clocks, Drift, Skew, and Uncertainty to the module mechanism without replacing evidence with labels. This explanation is specific to M10-Q002 and its cited source.
+**Explanation:** M10-Q002 uses self-check 2 from Physical Clocks, Drift, Skew, and Uncertainty; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M10-Q003
 
-**Type:** `short_answer`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`
+**Difficulty:** `recall`
 
-**Answer:** No. Overlap means the clock evidence is insufficient to order them; a causal message path could still order the events. The practice radius is 2 ms + 40×300/1,000,000 = 14 ms; pairwise skew is 28 ms. An 18 ms difference is insufficient
+**Answer:** No. Overlap means the clock evidence is insufficient to order them; a causal message path could still order the events. The practice radius is `2 ms + 40×300/1,000,000 = 14 ms`; pairwise skew is 28 ms. An 18 ms difference is insufficient.
 
-**Explanation:** The cited self-check in L01 tests whether the learner can connect Physical Clocks, Drift, Skew, and Uncertainty to the module mechanism without replacing evidence with labels. This explanation is specific to M10-Q003 and its cited source.
+**Explanation:** M10-Q003 uses self-check 3 from Physical Clocks, Drift, Skew, and Uncertainty; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M10-Q004
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** Only that the scalar order is compatible with possible causality; it does not prove a → b
+**Answer:** Only that the scalar order is compatible with possible causality; it does not prove `a → b`.
 
-**Explanation:** The cited self-check in L02 tests whether the learner can connect Logical Clocks, Vector Clocks, and Causal Order to the module mechanism without replacing evidence with labels. This explanation is specific to M10-Q004 and its cited source.
+**Explanation:** M10-Q004 uses self-check 1 from Logical Clocks, Vector Clocks, and Causal Order; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M10-Q005
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `application`
 
-**Answer:** When neither vector is componentwise less than the other
+**Answer:** When neither vector is componentwise less than the other.
 
-**Explanation:** The cited self-check in L02 tests whether the learner can connect Logical Clocks, Vector Clocks, and Causal Order to the module mechanism without replacing evidence with labels. This explanation is specific to M10-Q005 and its cited source.
+**Explanation:** M10-Q005 uses self-check 2 from Logical Clocks, Vector Clocks, and Causal Order; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M10-Q006
 
-**Type:** `short_answer`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`
+**Difficulty:** `recall`
 
-**Answer:** Separate nodes can sort only the events they know. Without agreement on the accepted set/prefix, they may authorize different commands. One valid trace is a1 L1/[1,0], send L2/[2,0], a2 L3/[3,0]; b1 L1/[0,1], receive L3/[2,2], b2 L4/[2,3]. a2 and b1 are concurrent; b1 → b2; neither a2 → b2 nor b2 → a2 follows
+**Answer:** Separate nodes can sort only the events they know. Without agreement on the accepted set/prefix, they may authorize different commands. One valid trace is `a1 L1/[1,0]`, send `L2/[2,0]`, `a2 L3/[3,0]`; `b1 L1/[0,1]`, receive `L3/[2,2]`, `b2 L4/[2,3]`. `a2` and `b1` are concurrent; `b1 → b2`; neither `a2 → b2` nor `b2 → a2` follows.
 
-**Explanation:** The cited self-check in L02 tests whether the learner can connect Logical Clocks, Vector Clocks, and Causal Order to the module mechanism without replacing evidence with labels. This explanation is specific to M10-Q006 and its cited source.
+**Explanation:** M10-Q006 uses self-check 3 from Logical Clocks, Vector Clocks, and Causal Order; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M10-Q007
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** Yes. A safe system may reject every write during quorum loss
+**Answer:** Yes. A safe system may reject every write during quorum loss.
 
-**Explanation:** The cited self-check in L03 tests whether the learner can connect Safety, Liveness, Failure Detectors, and Consensus Boundaries to the module mechanism without replacing evidence with labels. This explanation is specific to M10-Q007 and its cited source.
+**Explanation:** M10-Q007 uses self-check 1 from Safety, Liveness, Failure Detectors, and Consensus Boundaries; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M10-Q008
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `application`
 
-**Answer:** Only that the heartbeat was not observed before the local deadline under the observer's clock/scheduler/network conditions
+**Answer:** Only that the heartbeat was not observed before the local deadline under the observer's clock/scheduler/network conditions.
 
-**Explanation:** The cited self-check in L03 tests whether the learner can connect Safety, Liveness, Failure Detectors, and Consensus Boundaries to the module mechanism without replacing evidence with labels. This explanation is specific to M10-Q008 and its cited source.
+**Explanation:** M10-Q008 uses self-check 2 from Safety, Liveness, Failure Detectors, and Consensus Boundaries; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M10-Q009
 
-**Type:** `short_answer`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`
+**Difficulty:** `recall`
 
-**Answer:** An operation-level invariant, a failure model requiring automatic agreement, and a comparison showing simpler authority/reconciliation choices are insufficient
+**Answer:** An operation-level invariant, a failure model requiring automatic agreement, and a comparison showing simpler authority/reconciliation choices are insufficient.
 
-**Explanation:** The cited self-check in L03 tests whether the learner can connect Safety, Liveness, Failure Detectors, and Consensus Boundaries to the module mechanism without replacing evidence with labels. This explanation is specific to M10-Q009 and its cited source.
+**Explanation:** M10-Q009 uses self-check 3 from Safety, Liveness, Failure Detectors, and Consensus Boundaries; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M10-Q010
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** It provides a shared witness; protocol state/selection rules make that witness constrain later decisions
+**Answer:** It provides a shared witness; protocol state/selection rules make that witness constrain later decisions.
 
-**Explanation:** The cited self-check in L04 tests whether the learner can connect Paxos, Raft, and Replicated-State-Machine Foundations to the module mechanism without replacing evidence with labels. This explanation is specific to M10-Q010 and its cited source.
+**Explanation:** M10-Q010 uses self-check 1 from Paxos, Raft, and Replicated-State-Machine Foundations; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M10-Q011
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `application`
 
-**Answer:** Consensus agrees on commands, not arbitrary local side effects. Different application results would violate replicated-state-machine equivalence
+**Answer:** Consensus agrees on commands, not arbitrary local side effects. Different application results would violate replicated-state-machine equivalence.
 
-**Explanation:** The cited self-check in L04 tests whether the learner can connect Paxos, Raft, and Replicated-State-Machine Foundations to the module mechanism without replacing evidence with labels. This explanation is specific to M10-Q011 and its cited source.
+**Explanation:** M10-Q011 uses self-check 2 from Paxos, Raft, and Replicated-State-Machine Foundations; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M10-Q012
 
-**Type:** `multiple_choice`  
-**Difficulty:** `application`
+**Type:** `short_answer`
+**Difficulty:** `recall`
 
-**Choices:**
+**Answer:** No. Failover needs a new agreed epoch and an eligible log; the old leader may remain alive but partitioned. The proposer must choose X, the highest-numbered accepted value among its quorum. At a log index, the analogous obligation is that later leadership cannot choose a conflicting command after the earlier command is committed.
 
-- Keep Physical Clocks, Drift, Skew, and Uncertainty scoped to its stated evidence and boundary.
-- Choose the familiar tool before checking whether Treating NTP success as perfect time. Synchronization has error, age.
-- Treat Treating NTP success as perfect time. Synchronization has error, age as complete proof without the lesson bound.
-- Make the documented mistake: Treating NTP success as perfect time. Synchronization has error, a
+**Explanation:** M10-Q012 uses self-check 3 from Paxos, Raft, and Replicated-State-Machine Foundations; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Answer:** Keep Physical Clocks, Drift, Skew, and Uncertainty scoped to its stated evidence and boundary.
-
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M10-Q012 and its cited source.
-
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M10-Q013
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `synthesis`
 
 **Choices:**
 
-- Make the documented mistake: Confusing monotonic duration with global order. A monotonic local
-- Keep Physical Clocks, Drift, Skew, and Uncertainty scoped to its stated evidence and boundary.
-- Treat Confusing monotonic duration with global order. A monotonic local clo as complete proof without the lesson boun.
-- Choose the familiar tool before checking whether Confusing monotonic duration with global order. A monotonic local cl.
+- Test the M10 scoped measurement and record the limiting assumption before approving the change.
+- Approve synchronization has error, age, and for Physical Clocks, Drift, Skew, and Uncertainty; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for synchronization has error, age, and; the team can monitor Physical Clocks, Drift, Skew, and Uncertainty after launch.
+- Approve the M10 shortcut for alpha now.
 
-**Answer:** Keep Physical Clocks, Drift, Skew, and Uncertainty scoped to its stated evidence and boundary.
+**Answer:** Test the M10 scoped measurement and record the limiting assumption before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M10-Q013 and its cited source.
+**Explanation:** M10-Q013 enacts mistake 1 from Physical Clocks, Drift, Skew, and Uncertainty; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M10-Q014
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `recall`
 
 **Choices:**
 
-- Treat Using a lease without process-pause bounds. A client may stop executi as complete proof without the lesson boun.
-- Make the documented mistake: Using a lease without process-pause bounds. A client may stop exec
-- Keep Physical Clocks, Drift, Skew, and Uncertainty scoped to its stated evidence and boundary.
-- Choose the familiar tool before checking whether Using a lease without process-pause bounds. A client may stop execut.
+- Approve confusing monotonic duration with global order.: A monotonic local clock is for Physical Clocks, Drift, Skew, and Uncertainty; the local context makes that proposal familiar enough for review.
+- Scope the M10 scoped measurement before approving the change.
+- Defer measurement until production for confusing monotonic duration with global order.: A monotonic local clock is; the team can monitor Physical Clocks, Drift, Skew, and Uncertainty after launch.
+- Approve the M10 shortcut for bravo now.
 
-**Answer:** Keep Physical Clocks, Drift, Skew, and Uncertainty scoped to its stated evidence and boundary.
+**Answer:** Scope the M10 scoped measurement before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M10-Q014 and its cited source.
+**Explanation:** M10-Q014 enacts mistake 2 from Physical Clocks, Drift, Skew, and Uncertainty; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M10-Q015
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `application`
 
 **Choices:**
 
-- Choose the familiar tool before checking whether Using timestamps as fencing tokens. A resource needs a strictly orde.
-- Treat Using timestamps as fencing tokens. A resource needs a strictly order as complete proof without the lesson boun.
-- Make the documented mistake: Using timestamps as fencing tokens. A resource needs a strictly or
-- Keep Physical Clocks, Drift, Skew, and Uncertainty scoped to its stated evidence and boundary.
+- Approve using a lease without process-pause bounds.: A client may stop executing for Physical Clocks, Drift, Skew, and Uncertainty; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for using a lease without process-pause bounds.: A client may stop executing; the team can monitor Physical Clocks, Drift, Skew, and Uncertainty after launch.
+- Measure the M10 scoped measurement before approval.
+- Approve the M10 shortcut for charlie now.
 
-**Answer:** Keep Physical Clocks, Drift, Skew, and Uncertainty scoped to its stated evidence and boundary.
+**Answer:** Measure the M10 scoped measurement before approval.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M10-Q015 and its cited source.
+**Explanation:** M10-Q015 enacts mistake 3 from Physical Clocks, Drift, Skew, and Uncertainty; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M10-Q016
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `synthesis`
 
 **Choices:**
 
-- Keep Logical Clocks, Vector Clocks, and Causal Order scoped to its stated evidence and boundary.
-- Treat Reading causality from scalar order. L(a) < L(b) can hold for concurr as complete proof without the lesson boun.
-- Make the documented mistake: Reading causality from scalar order. L(a) < L(b) can hold for conc. with extra con
-- Choose the familiar tool before checking whether Reading causality from scalar order. L(a) < L(b) can hold for concur.
+- Approve a resource needs a strictly ordered for Physical Clocks, Drift, Skew, and Uncertainty; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for a resource needs a strictly ordered; the team can monitor Physical Clocks, Drift, Skew, and Uncertainty after launch.
+- Approve the M10 shortcut for delta now.
+- Bound the M10 scoped measurement and record the limiting assumption before approving the change.
 
-**Answer:** Keep Logical Clocks, Vector Clocks, and Causal Order scoped to its stated evidence and boundary.
+**Answer:** Bound the M10 scoped measurement and record the limiting assumption before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M10-Q016 and its cited source.
+**Explanation:** M10-Q016 enacts mistake 4 from Physical Clocks, Drift, Skew, and Uncertainty; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M10-Q017
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `recall`
 
 **Choices:**
 
-- Treat Calling concurrency simultaneous time. It means no observed causal pa as complete proof without the lesson boun.
-- Keep Logical Clocks, Vector Clocks, and Causal Order scoped to its stated evidence and boundary.
-- Choose the familiar tool before checking whether Calling concurrency simultaneous time. It means no observed causal p.
-- Make the documented mistake: Calling concurrency simultaneous time. It means no observed causal. with extra con
+- Freeze the M10 scoped measurement before approving the change.
+- Approve `L(a) < L(b)` can hold for concurrent for Logical Clocks, Vector Clocks, and Causal Order; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for `L(a) < L(b)` can hold for concurrent; the team can monitor Logical Clocks, Vector Clocks, and Causal Order after launch.
+- Approve the M10 shortcut for ember now.
 
-**Answer:** Keep Logical Clocks, Vector Clocks, and Causal Order scoped to its stated evidence and boundary.
+**Answer:** Freeze the M10 scoped measurement before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M10-Q017 and its cited source.
+**Explanation:** M10-Q017 enacts mistake 1 from Logical Clocks, Vector Clocks, and Causal Order; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M10-Q018
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `application`
 
 **Choices:**
 
-- Choose the familiar tool before checking whether Ignoring identity lifecycle in vectors. Dynamic membership needs ver.
-- Treat Ignoring identity lifecycle in vectors. Dynamic membership needs vers as complete proof without the lesson boun.
-- Keep Logical Clocks, Vector Clocks, and Causal Order scoped to its stated evidence and boundary.
-- Make the documented mistake: Ignoring identity lifecycle in vectors. Dynamic membership needs v. with extra con
+- Approve it means no observed causal path for Logical Clocks, Vector Clocks, and Causal Order; the local context makes that proposal familiar enough for review.
+- Preserve the M10 scoped measurement before approval.
+- Defer measurement until production for it means no observed causal path; the team can monitor Logical Clocks, Vector Clocks, and Causal Order after launch.
+- Approve the M10 shortcut for fable now.
 
-**Answer:** Keep Logical Clocks, Vector Clocks, and Causal Order scoped to its stated evidence and boundary.
+**Answer:** Preserve the M10 scoped measurement before approval.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M10-Q018 and its cited source.
+**Explanation:** M10-Q018 enacts mistake 2 from Logical Clocks, Vector Clocks, and Causal Order; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M10-Q019
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `synthesis`
 
 **Choices:**
 
-- Choose the familiar tool before checking whether Using a total tie-breaker as an invariant. Stable display order cann.
-- Make the documented mistake: Using a total tie-breaker as an invariant. Stable display order ca. with extra con
-- Treat Using a total tie-breaker as an invariant. Stable display order cannot as complete proof without the lesson bou.
-- Keep Logical Clocks, Vector Clocks, and Causal Order scoped to its stated evidence and boundary.
+- Approve dynamic membership needs versioned for Logical Clocks, Vector Clocks, and Causal Order; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for dynamic membership needs versioned; the team can monitor Logical Clocks, Vector Clocks, and Causal Order after launch.
+- Model the M10 scoped measurement and record the limiting assumption before approving the change.
+- Approve the M10 shortcut for harbor now.
 
-**Answer:** Keep Logical Clocks, Vector Clocks, and Causal Order scoped to its stated evidence and boundary.
+**Answer:** Model the M10 scoped measurement and record the limiting assumption before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M10-Q019 and its cited source.
+**Explanation:** M10-Q019 enacts mistake 3 from Logical Clocks, Vector Clocks, and Causal Order; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M10-Q020
 
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
+**Type:** `multiple_choice`
+**Difficulty:** `recall`
 
-**Answer:** Original concurrency = 130 x 0.035 = 4.55 operations. Revised rate = 130 x 1.25 = 162.5/s, so revised concurrency = 162.5 x 0.035 = 5.69 operations.
+**Choices:**
 
-**Explanation:** This perturbs the numeric practice around Physical Clocks, Drift, Skew, and Uncertainty: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M10-Q020 and its cited source.
+- Approve using a total tie-breaker as an invariant.: Stable display order cannot for Logical Clocks, Vector Clocks, and Causal Order; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for using a total tie-breaker as an invariant.: Stable display order cannot; the team can monitor Logical Clocks, Vector Clocks, and Causal Order after launch.
+- Approve the M10 shortcut for indigo now.
+- Account the M10 scoped measurement before approving the change.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Answer:** Account the M10 scoped measurement before approving the change.
+
+**Explanation:** M10-Q020 enacts mistake 4 from Logical Clocks, Vector Clocks, and Causal Order; the defensible response asks for the missing scope evidence before accepting the shortcut.
+
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M10-Q021
 
-**Type:** `calculation`  
-**Difficulty:** `recall`
+**Type:** `calculation`
+**Difficulty:** `synthesis`
 
-**Answer:** Original concurrency = 140 x 0.045 = 6.30 operations. Revised rate = 140 x 1.30 = 182.0/s, so revised concurrency = 182.0 x 0.045 = 8.19 operations.
+**Answer:** M10 Clock Interval case 1: Pairwise uncertainty radius is 2 + 2 = 4 ms.
 
-**Explanation:** This perturbs the numeric practice around Logical Clocks, Vector Clocks, and Causal Order: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M10-Q021 and its cited source.
+**Explanation:** M10-Q021 uses clock interval from Physical Clocks, Drift, Skew, and Uncertainty and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M10-Q022
 
-**Type:** `calculation`  
-**Difficulty:** `application`
+**Type:** `calculation`
+**Difficulty:** `recall`
 
-**Answer:** Original concurrency = 150 x 0.055 = 8.25 operations. Revised rate = 150 x 1.35 = 202.5/s, so revised concurrency = 202.5 x 0.055 = 11.14 operations.
+**Answer:** M10 Clock Drift case 2: Drift is 40/1,000,000 x 300 s x 1000 = 12.0 ms.
 
-**Explanation:** This perturbs the numeric practice around Safety, Liveness, Failure Detectors, and Consensus Boundaries: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M10-Q022 and its cited source.
+**Explanation:** M10-Q022 uses clock drift from Logical Clocks, Vector Clocks, and Causal Order and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M10-Q023
 
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
+**Type:** `calculation`
+**Difficulty:** `application`
 
-**Answer:** Original concurrency = 160 x 0.065 = 10.40 operations. Revised rate = 160 x 1.40 = 224.0/s, so revised concurrency = 224.0 x 0.065 = 14.56 operations.
+**Answer:** M10 Skew Ratio case 3: Skew ratio is 120 / 40 = 3.0x.
 
-**Explanation:** This perturbs the numeric practice around Paxos, Raft, and Replicated-State-Machine Foundations: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M10-Q023 and its cited source.
+**Explanation:** M10-Q023 uses skew ratio from Safety, Liveness, Failure Detectors, and Consensus Boundaries and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M10-Q024
 
-**Type:** `calculation`  
-**Difficulty:** `recall`
+**Type:** `calculation`
+**Difficulty:** `synthesis`
 
-**Answer:** Original concurrency = 170 x 0.075 = 12.75 operations. Revised rate = 170 x 1.45 = 246.5/s, so revised concurrency = 246.5 x 0.075 = 18.49 operations.
+**Answer:** M10 Raft Vote case 4: No. Terms tie at 4, so index decides; 18 < 20, so the voter should reject the vote.
 
-**Explanation:** This perturbs the numeric practice around Raft Leader Election and Persistent Hard State: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M10-Q024 and its cited source.
+**Explanation:** M10-Q024 uses Raft vote from Paxos, Raft, and Replicated-State-Machine Foundations and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M10-Q025
 
-**Type:** `calculation`  
+**Type:** `scenario_diagnosis`
 **Difficulty:** `application`
 
-**Answer:** Original concurrency = 180 x 0.035 = 6.30 operations. Revised rate = 180 x 1.10 = 198.0/s, so revised concurrency = 198.0 x 0.035 = 6.93 operations.
+**Answer:** M10 diagnosis 1 identifies leader completeness. The proving fields are events.0.tick and events.1.tick; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** This perturbs the numeric practice around Raft Log Replication, Commitment, and Application: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M10-Q025 and its cited source.
+**Explanation:** M10-Q025 comes from emitted trial fields rather than fixture identifiers; Physical Clocks, Drift, Skew, and Uncertainty is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M10-Q026
 
-**Type:** `calculation`  
+**Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** Original concurrency = 190 x 0.045 = 8.55 operations. Revised rate = 190 x 1.15 = 218.5/s, so revised concurrency = 218.5 x 0.045 = 9.83 operations.
+**Answer:** M10 diagnosis 2 identifies Logical Clocks, Vector Clocks, and Causal Order evidence scope. The proving fields are events.0.tick and events.1.tick; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** This perturbs the numeric practice around Clients, Linearizable Reads, Snapshots, and Compaction: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M10-Q026 and its cited source.
+**Explanation:** M10-Q026 comes from emitted trial fields rather than fixture identifiers; Logical Clocks, Vector Clocks, and Causal Order is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M10-Q027
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `recall`
 
-**Answer:** The fixture tests f01-leader-termination-broken (broken), with C05 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f01-leader-termination-broken, rather than the general presence of a lab run.
+**Answer:** M10 diagnosis 3 identifies stale-owner fencing. The proving fields are events.0.tick and events.1.tick; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M10; diagnosis should start from the emitted fields and connect them to Safety, Liveness, Failure Detectors, and Consensus Boundaries. This explanation is specific to M10-Q027 and its cited source.
+**Explanation:** M10-Q027 comes from emitted trial fields rather than fixture identifiers; Safety, Liveness, Failure Detectors, and Consensus Boundaries is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M10-Q028
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `synthesis`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `application`
 
-**Answer:** The fixture tests f01-leader-termination-repaired (repaired), with C05 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f01-leader-termination-repaired, rather than the general presence of a lab run.
+**Answer:** M10 diagnosis 4 identifies Paxos, Raft, and Replicated-State-Machine Foundations evidence scope. The proving fields are events.0.tick and events.1.tick; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M10; diagnosis should start from the emitted fields and connect them to Paxos, Raft, and Replicated-State-Machine Foundations. This explanation is specific to M10-Q028 and its cited source.
+**Explanation:** M10-Q028 comes from emitted trial fields rather than fixture identifiers; Paxos, Raft, and Replicated-State-Machine Foundations is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M10-Q029
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `recall`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `synthesis`
 
-**Answer:** The fixture tests f02-stale-partitioned-leader-broken (broken), with C08 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f02-stale-partitioned-leader-broken, rather than the general presence of a lab run.
+**Answer:** M10 diagnosis 5 identifies election safety. The proving fields are events.0.tick and events.1.tick; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M10; diagnosis should start from the emitted fields and connect them to Raft Leader Election and Persistent Hard State. This explanation is specific to M10-Q029 and its cited source.
+**Explanation:** M10-Q029 comes from emitted trial fields rather than fixture identifiers; Raft Leader Election and Persistent Hard State is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M10-Q030
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `recall`
 
-**Answer:** The fixture tests f02-stale-partitioned-leader-repaired (repaired), with C08 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f02-stale-partitioned-leader-repaired, rather than the general presence of a lab run.
+**Answer:** M10 diagnosis 6 identifies Raft Log Replication, Commitment, and Application evidence scope. The proving fields are events.0.tick and events.1.tick; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M10; diagnosis should start from the emitted fields and connect them to Raft Log Replication, Commitment, and Application. This explanation is specific to M10-Q030 and its cited source.
+**Explanation:** M10-Q030 comes from emitted trial fields rather than fixture identifiers; Raft Log Replication, Commitment, and Application is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M10-Q031
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `synthesis`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `application`
 
-**Answer:** The fixture tests f03-restart-persistence-broken (broken), with C01 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f03-restart-persistence-broken, rather than the general presence of a lab run.
+**Answer:** M10 diagnosis 7 identifies one logical client effect. The proving fields are client_results.0.logical_effects and client_results.0.result; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M10; diagnosis should start from the emitted fields and connect them to Clients, Linearizable Reads, Snapshots, and Compaction. This explanation is specific to M10-Q031 and its cited source.
+**Explanation:** M10-Q031 comes from emitted trial fields rather than fixture identifiers; Clients, Linearizable Reads, Snapshots, and Compaction is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M10-Q032
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `recall`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `synthesis`
 
-**Answer:** The fixture tests f03-restart-persistence-repaired (repaired), with C01 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f03-restart-persistence-repaired, rather than the general presence of a lab run.
+**Answer:** M10 diagnosis 8 identifies Membership, Leases, Fencing, and Coordination Decisions evidence scope. The proving fields are client_results.0.logical_effects and client_results.0.result; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M10; diagnosis should start from the emitted fields and connect them to Membership, Leases, Fencing, and Coordination Decisions. This explanation is specific to M10-Q032 and its cited source.
+**Explanation:** M10-Q032 comes from emitted trial fields rather than fixture identifiers; Membership, Leases, Fencing, and Coordination Decisions is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M10-Q033
 
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `recall`
 
-**Answer:** Recommend the option that preserves the Paxos, Raft, and Replicated-State-Machine Foundations mechanism under the exercise constraints: Two controllers synchronize within ±3 ms, drift at most 30 ppm, and have not synchronized for 200 seconds. Calculate each uncertainty radius and maximum pairwise skew The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** M10 diagnosis 9 identifies linearizable authority read barrier. The proving fields are events.0.tick and events.1.tick; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M10-Q033 and its cited source.
+**Explanation:** M10-Q033 comes from emitted trial fields rather than fixture identifiers; Physical Clocks, Drift, Skew, and Uncertainty is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M10-Q034
 
-**Type:** `design_judgment`  
-**Difficulty:** `recall`
+**Type:** `design_judgment`
+**Difficulty:** `application`
 
-**Answer:** Recommend the option that preserves the Raft Leader Election and Persistent Hard State mechanism under the exercise constraints: Northstar proposes a 5-second mount lease renewed every second The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M10 decision 1, recommend against. The protected bound is 210 x 0.72 = 151.2/s, and the planned 184.8/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 184.8/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 33.6/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M10-Q034 and its cited source.
+**Explanation:** M10-Q034 turns on the forcing number from EX-01, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M10-Q035
 
-**Type:** `design_judgment`  
-**Difficulty:** `application`
+**Type:** `design_judgment`
+**Difficulty:** `synthesis`
 
-**Answer:** Recommend the option that preserves the Raft Log Replication, Commitment, and Application mechanism under the exercise constraints: Draw three processes. n1 sends configuration C to n2; n3 independently creates note N; n2 acknowledges C and later receives N. Mark every causal edge and identify concurrent pairs. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M10 decision 2, recommend against. The protected bound is 227 x 0.72 = 163.4/s, and the planned 199.8/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 199.8/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 36.4/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M10-Q035 and its cited source.
+**Explanation:** M10-Q035 turns on the forcing number from EX-02, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M10-Q036
 
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
+**Type:** `design_judgment`
+**Difficulty:** `recall`
 
-**Answer:** Recommend the option that preserves the Clients, Linearizable Reads, Snapshots, and Compaction mechanism under the exercise constraints: Assign Lamport and three-component vector clocks to EX-03. Add a stable display tie-breaker and explain why it does not make N causally precede C. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M10 decision 3, recommend against. The protected bound is 244 x 0.72 = 175.7/s, and the planned 214.7/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 214.7/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 39.0/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M10-Q036 and its cited source.
+**Explanation:** M10-Q036 turns on the forcing number from EX-03, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M10-Q037
 
-**Type:** `design_judgment`  
-**Difficulty:** `recall`
+**Type:** `design_judgment`
+**Difficulty:** `application`
 
-**Answer:** Recommend the option that preserves the Membership, Leases, Fencing, and Coordination Decisions mechanism under the exercise constraints: Write two falsifiable safety properties and one conditional liveness property for telescope controller failover The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M10 decision 4, recommend against. The protected bound is 261 x 0.72 = 187.9/s, and the planned 229.7/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 229.7/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 41.8/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M10-Q037 and its cited source.
+**Explanation:** M10-Q037 turns on the forcing number from EX-04, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+
+## M10-Q038
+
+**Type:** `design_judgment`
+**Difficulty:** `synthesis`
+
+**Answer:** For M10 decision 5, recommend against. The protected bound is 278 x 0.72 = 200.2/s, and the planned 244.6/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 244.6/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 44.4/s of lower-priority work.
+
+**Explanation:** M10-Q038 turns on the forcing number from EX-05, not preference; the reversal conditions are specific to the measured gap in this prompt.
+
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.

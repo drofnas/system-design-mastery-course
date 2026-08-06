@@ -4,463 +4,463 @@ This key covers all 37 questions for **Algorithmic Foundations**. Use it after a
 
 ## M00-Q001
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** A positive multiplier c and a threshold n0; the bound only needs to hold beyond n0
+**Answer:** A positive multiplier `c` and a threshold `n0`; the bound only needs to hold beyond `n0`.
 
-**Explanation:** The cited self-check in L01 tests whether the learner can connect Asymptotic Analysis and Its Limits to the module mechanism without replacing evidence with labels. This explanation is specific to M00-Q001 and its cited source.
+**Explanation:** M00-Q001 uses self-check 1 from Asymptotic Analysis and Its Limits; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M00-Q002
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `application`
 
-**Answer:** Amortized cost bounds a sequence without assuming random input; average case depends on an input distribution
+**Answer:** Amortized cost bounds a sequence without assuming random input; average case depends on an input distribution.
 
-**Explanation:** The cited self-check in L01 tests whether the learner can connect Asymptotic Analysis and Its Limits to the module mechanism without replacing evidence with labels. This explanation is specific to M00-Q002 and its cited source.
+**Explanation:** M00-Q002 uses self-check 2 from Asymptotic Analysis and Its Limits; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M00-Q003
 
-**Type:** `short_answer`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`
+**Difficulty:** `recall`
 
-**Answer:** The body runs n(n+1)/2 times, so the tight bound is Theta(n^2)
+**Answer:** The body runs `n(n+1)/2` times, so the tight bound is Theta(n^2).
 
-**Explanation:** The cited self-check in L01 tests whether the learner can connect Asymptotic Analysis and Its Limits to the module mechanism without replacing evidence with labels. This explanation is specific to M00-Q003 and its cited source.
+**Explanation:** M00-Q003 uses self-check 3 from Asymptotic Analysis and Its Limits; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M00-Q004
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** Representative input sizes, operation mix, memory layout, branch behavior, allocation cost, and tail latency for the actual workload. For the practice, copied capacities are 1 + 2 + 4 + 8 = 15; total work is bounded by a small multiple of 17, but the append that grows from 16 to 32 copies 16 existing elements
+**Answer:** Representative input sizes, operation mix, memory layout, branch behavior, allocation cost, and tail latency for the actual workload. For the practice, copied capacities are `1 + 2 + 4 + 8 = 15`; total work is bounded by a small multiple of 17, but the append that grows from 16 to 32 copies 16 existing elements.
 
-**Explanation:** The cited self-check in L01 tests whether the learner can connect Asymptotic Analysis and Its Limits to the module mechanism without replacing evidence with labels. This explanation is specific to M00-Q004 and its cited source.
+**Explanation:** M00-Q004 uses self-check 4 from Asymptotic Analysis and Its Limits; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M00-Q005
 
-**Type:** `short_answer`  
-**Difficulty:** `application`
+**Type:** `short_answer`
+**Difficulty:** `recall`
 
-**Answer:** The address is computed from base plus index times element width, or from an equivalent runtime table lookup
+**Answer:** The address is computed from base plus index times element width, or from an equivalent runtime table lookup.
 
-**Explanation:** The cited self-check in L02 tests whether the learner can connect Arrays, Dynamic Arrays, and Locality to the module mechanism without replacing evidence with labels. This explanation is specific to M00-Q005 and its cited source.
+**Explanation:** M00-Q005 uses self-check 1 from Arrays, Dynamic Arrays, and Locality; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M00-Q006
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `synthesis`
 
-**Answer:** It bounds total copy work across many appends but creates spare memory and occasional resize spikes
+**Answer:** It bounds total copy work across many appends but creates spare memory and occasional resize spikes.
 
-**Explanation:** The cited self-check in L02 tests whether the learner can connect Arrays, Dynamic Arrays, and Locality to the module mechanism without replacing evidence with labels. This explanation is specific to M00-Q006 and its cited source.
+**Explanation:** M00-Q006 uses self-check 2 from Arrays, Dynamic Arrays, and Locality; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M00-Q007
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `application`
 
-**Answer:** Only when the insertion point or node reference is already known; finding that point may still be O(n)
+**Answer:** Only when the insertion point or node reference is already known; finding that point may still be O(n).
 
-**Explanation:** The cited self-check in L02 tests whether the learner can connect Arrays, Dynamic Arrays, and Locality to the module mechanism without replacing evidence with labels. This explanation is specific to M00-Q007 and its cited source.
+**Explanation:** M00-Q007 uses self-check 3 from Arrays, Dynamic Arrays, and Locality; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M00-Q008
 
-**Type:** `short_answer`  
-**Difficulty:** `application`
+**Type:** `short_answer`
+**Difficulty:** `recall`
 
-**Answer:** CPython lists store references to objects and the lab runs interpreter loops, so it shows local runtime behavior, not isolated cache-line mechanics. For the practice, new capacity is 2,048, peak slots are about 3,072, and headroom after the append is 1,023 slots
+**Answer:** CPython lists store references to objects and the lab runs interpreter loops, so it shows local runtime behavior, not isolated cache-line mechanics. For the practice, new capacity is 2,048, peak slots are about 3,072, and headroom after the append is 1,023 slots.
 
-**Explanation:** The cited self-check in L02 tests whether the learner can connect Arrays, Dynamic Arrays, and Locality to the module mechanism without replacing evidence with labels. This explanation is specific to M00-Q008 and its cited source.
+**Explanation:** M00-Q008 uses self-check 4 from Arrays, Dynamic Arrays, and Locality; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M00-Q009
 
-**Type:** `short_answer`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`
+**Difficulty:** `application`
 
-**Answer:** Keys distribute uniformly enough and the implementation keeps load factor bounded
+**Answer:** Keys distribute uniformly enough and the implementation keeps load factor bounded.
 
-**Explanation:** The cited self-check in L03 tests whether the learner can connect Hash Tables to the module mechanism without replacing evidence with labels. This explanation is specific to M00-Q009 and its cited source.
+**Explanation:** M00-Q009 uses self-check 1 from Hash Tables; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M00-Q010
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `recall`
 
-**Answer:** The sequence has bounded average cost, but one request can pay the rehash cost unless resize is moved or controlled
+**Answer:** The sequence has bounded average cost, but one request can pay the rehash cost unless resize is moved or controlled.
 
-**Explanation:** The cited self-check in L03 tests whether the learner can connect Hash Tables to the module mechanism without replacing evidence with labels. This explanation is specific to M00-Q010 and its cited source.
+**Explanation:** M00-Q010 uses self-check 2 from Hash Tables; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M00-Q011
 
-**Type:** `short_answer`  
-**Difficulty:** `application`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** 1/(1-0.9) = 10, far higher than the 2 factor at alpha 0.5
+**Answer:** `1/(1-0.9) = 10`, far higher than the `2` factor at alpha 0.5.
 
-**Explanation:** The cited self-check in L03 tests whether the learner can connect Hash Tables to the module mechanism without replacing evidence with labels. This explanation is specific to M00-Q011 and its cited source.
+**Explanation:** M00-Q011 uses self-check 3 from Hash Tables; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M00-Q012
 
-**Type:** `short_answer`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`
+**Difficulty:** `application`
 
-**Answer:** It lacks sorted order; use a tree, sorted index, heap, or expiry buckets depending on the operation. For the practice, alpha is 0.5 and 0.9, so the approximate factors are 2 and 10; the ordered scan needs another ordered mechanism
+**Answer:** It lacks sorted order; use a tree, sorted index, heap, or expiry buckets depending on the operation. For the practice, alpha is 0.5 and 0.9, so the approximate factors are 2 and 10; the ordered scan needs another ordered mechanism.
 
-**Explanation:** The cited self-check in L03 tests whether the learner can connect Hash Tables to the module mechanism without replacing evidence with labels. This explanation is specific to M00-Q012 and its cited source.
+**Explanation:** M00-Q012 uses self-check 4 from Hash Tables; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M00-Q013
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** Search, insert, and delete can become O(n)
+**Answer:** Search, insert, and delete can become O(n).
 
-**Explanation:** The cited self-check in L04 tests whether the learner can connect Trees and Balanced Search to the module mechanism without replacing evidence with labels. This explanation is specific to M00-Q013 and its cited source.
+**Explanation:** M00-Q013 uses self-check 1 from Trees and Balanced Search; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M00-Q014
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `application`
 
-**Answer:** It keeps height logarithmic at the cost of mutation maintenance
+**Answer:** It keeps height logarithmic at the cost of mutation maintenance.
 
-**Explanation:** The cited self-check in L04 tests whether the learner can connect Trees and Balanced Search to the module mechanism without replacing evidence with labels. This explanation is specific to M00-Q014 and its cited source.
+**Explanation:** M00-Q014 uses self-check 2 from Trees and Balanced Search; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M00-Q015
 
-**Type:** `short_answer`  
-**Difficulty:** `synthesis`
+**Type:** `multiple_choice`
+**Difficulty:** `application`
 
-**Answer:** Larger fanout reduces levels, and levels often map to page reads or cache misses
+**Choices:**
 
-**Explanation:** The cited self-check in L04 tests whether the learner can connect Trees and Balanced Search to the module mechanism without replacing evidence with labels. This explanation is specific to M00-Q015 and its cited source.
+- Scope the M00 scoped measurement and record the limiting assumption before approving the change.
+- Approve ignoring constants for hot paths for Asymptotic Analysis and Its Limits; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for ignoring constants for hot paths; the team can monitor Asymptotic Analysis and Its Limits after launch.
+- Approve the M00 shortcut for alpha now.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Answer:** Scope the M00 scoped measurement and record the limiting assumption before approving the change.
+
+**Explanation:** M00-Q015 enacts mistake 1 from Asymptotic Analysis and Its Limits; the defensible response asks for the missing scope evidence before accepting the shortcut.
+
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M00-Q016
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `multiple_choice`
+**Difficulty:** `synthesis`
 
-**Answer:** Trees preserve sorted order, so they can seek then scan contiguous key ranges. For the practice, height is about 4; binary height is about 27; a tenant/time-window query is a typical range
+**Choices:**
 
-**Explanation:** The cited self-check in L04 tests whether the learner can connect Trees and Balanced Search to the module mechanism without replacing evidence with labels. This explanation is specific to M00-Q016 and its cited source.
+- Approve using worst-case notation without naming the adversary or input condition for Asymptotic Analysis and Its Limits; the local context makes that proposal familiar enough for review.
+- Measure the M00 scoped measurement before approving the change.
+- Defer measurement until production for using worst-case notation without naming the adversary or input condition; the team can monitor Asymptotic Analysis and Its Limits after launch.
+- Approve the M00 shortcut for bravo now.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Answer:** Measure the M00 scoped measurement before approving the change.
+
+**Explanation:** M00-Q016 enacts mistake 2 from Asymptotic Analysis and Its Limits; the defensible response asks for the missing scope evidence before accepting the shortcut.
+
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M00-Q017
 
-**Type:** `multiple_choice`  
-**Difficulty:** `application`
+**Type:** `multiple_choice`
+**Difficulty:** `recall`
 
 **Choices:**
 
-- Keep Asymptotic Analysis and Its Limits scoped to its stated evidence and boundary.
-- Treat Ignoring constants for hot paths as complete proof without the lesson boundary
-- Make the documented mistake: Ignoring constants for hot paths
-- Choose the familiar tool before checking whether Ignoring constants for hot paths applies
+- Approve calling amortized cost a latency guarantee for Asymptotic Analysis and Its Limits; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for calling amortized cost a latency guarantee; the team can monitor Asymptotic Analysis and Its Limits after launch.
+- Bound the M00 scoped measurement before approval.
+- Approve the M00 shortcut for charlie now.
 
-**Answer:** Keep Asymptotic Analysis and Its Limits scoped to its stated evidence and boundary.
+**Answer:** Bound the M00 scoped measurement before approval.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M00-Q017 and its cited source.
+**Explanation:** M00-Q017 enacts mistake 3 from Asymptotic Analysis and Its Limits; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M00-Q018
 
-**Type:** `multiple_choice`  
-**Difficulty:** `synthesis`
+**Type:** `multiple_choice`
+**Difficulty:** `application`
 
 **Choices:**
 
-- Choose the familiar tool before checking whether Using worst-case notation without naming the adversary or input cond.
-- Keep Asymptotic Analysis and Its Limits scoped to its stated evidence and boundary.
-- Treat Using worst-case notation without naming the adversary or input condi as complete proof without the lesson boun.
-- Make the documented mistake: Using worst-case notation without naming the adversary or input co
+- Approve comparing algorithms without checking memory layout for Asymptotic Analysis and Its Limits; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for comparing algorithms without checking memory layout; the team can monitor Asymptotic Analysis and Its Limits after launch.
+- Approve the M00 shortcut for delta now.
+- Freeze the M00 scoped measurement and record the limiting assumption before approving the change.
 
-**Answer:** Keep Asymptotic Analysis and Its Limits scoped to its stated evidence and boundary.
+**Answer:** Freeze the M00 scoped measurement and record the limiting assumption before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M00-Q018 and its cited source.
+**Explanation:** M00-Q018 enacts mistake 4 from Asymptotic Analysis and Its Limits; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M00-Q019
 
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
+**Type:** `multiple_choice`
+**Difficulty:** `synthesis`
 
 **Choices:**
 
-- Make the documented mistake: Calling amortized cost a latency guarantee
-- Choose the familiar tool before checking whether Calling amortized cost a latency guarantee applies
-- Keep Asymptotic Analysis and Its Limits scoped to its stated evidence and boundary.
-- Treat Calling amortized cost a latency guarantee as complete proof without the lesson boundary
+- Preserve the M00 scoped measurement before approving the change.
+- Approve saying amortized O(1) means every append is cheap for Arrays, Dynamic Arrays, and Locality; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for saying amortized O(1) means every append is cheap; the team can monitor Arrays, Dynamic Arrays, and Locality after launch.
+- Approve the M00 shortcut for ember now.
 
-**Answer:** Keep Asymptotic Analysis and Its Limits scoped to its stated evidence and boundary.
+**Answer:** Preserve the M00 scoped measurement before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M00-Q019 and its cited source.
+**Explanation:** M00-Q019 enacts mistake 1 from Arrays, Dynamic Arrays, and Locality; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M00-Q020
 
-**Type:** `multiple_choice`  
-**Difficulty:** `application`
+**Type:** `multiple_choice`
+**Difficulty:** `recall`
 
 **Choices:**
 
-- Make the documented mistake: Comparing algorithms without checking memory layout
-- Treat Comparing algorithms without checking memory layout as complete proof without the lesson boundary
-- Choose the familiar tool before checking whether Comparing algorithms without checking memory layout applies
-- Keep Asymptotic Analysis and Its Limits scoped to its stated evidence and boundary.
+- Approve choosing a linked list for insertion while ignoring how the insertion point is f for Arrays, Dynamic Arrays, and Locality; the local context makes that proposal familiar enough for review.
+- Model the M00 scoped measurement before approval.
+- Defer measurement until production for choosing a linked list for insertion while ignoring how the insertion point is f; the team can monitor Arrays, Dynamic Arrays, and Locality after launch.
+- Approve the M00 shortcut for fable now.
 
-**Answer:** Keep Asymptotic Analysis and Its Limits scoped to its stated evidence and boundary.
+**Answer:** Model the M00 scoped measurement before approval.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M00-Q020 and its cited source.
+**Explanation:** M00-Q020 enacts mistake 2 from Arrays, Dynamic Arrays, and Locality; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M00-Q021
 
-**Type:** `multiple_choice`  
-**Difficulty:** `synthesis`
+**Type:** `multiple_choice`
+**Difficulty:** `application`
 
 **Choices:**
 
-- Keep Arrays, Dynamic Arrays, and Locality scoped to its stated evidence and boundary.
-- Treat Saying amortized O(1) means every append is cheap as complete proof without the lesson boundary
-- Choose the familiar tool before checking whether Saying amortized O(1) means every append is cheap applies
-- Make the documented mistake: Saying amortized O(1) means every append is cheap
+- Approve forgetting that contiguous growth can require copying and memory headroom for Arrays, Dynamic Arrays, and Locality; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for forgetting that contiguous growth can require copying and memory headroom; the team can monitor Arrays, Dynamic Arrays, and Locality after launch.
+- Account the M00 scoped measurement and record the limiting assumption before approving the change.
+- Approve the M00 shortcut for harbor now.
 
-**Answer:** Keep Arrays, Dynamic Arrays, and Locality scoped to its stated evidence and boundary.
+**Answer:** Account the M00 scoped measurement and record the limiting assumption before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M00-Q021 and its cited source.
+**Explanation:** M00-Q021 enacts mistake 3 from Arrays, Dynamic Arrays, and Locality; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M00-Q022
 
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
+**Type:** `multiple_choice`
+**Difficulty:** `synthesis`
 
 **Choices:**
 
-- Make the documented mistake: Choosing a linked list for insertion while ignoring how the insert
-- Keep Arrays, Dynamic Arrays, and Locality scoped to its stated evidence and boundary.
-- Choose the familiar tool before checking whether Choosing a linked list for insertion while ignoring how the insertio.
-- Treat Choosing a linked list for insertion while ignoring how the insertion as complete proof without the lesson boun.
+- Approve assuming random input when keys are user-controlled for Hash Tables; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for assuming random input when keys are user-controlled; the team can monitor Hash Tables after launch.
+- Approve the M00 shortcut for indigo now.
+- Test the M00 scoped measurement before approving the change.
 
-**Answer:** Keep Arrays, Dynamic Arrays, and Locality scoped to its stated evidence and boundary.
+**Answer:** Test the M00 scoped measurement before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M00-Q022 and its cited source.
+**Explanation:** M00-Q022 enacts mistake 1 from Hash Tables; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M00-Q023
 
-**Type:** `multiple_choice`  
+**Type:** `calculation`
 **Difficulty:** `application`
 
-**Choices:**
+**Answer:** M00 Amortized Resize Copies case 1: Resizes copy 1 + 2 + 4 + ... below 18, totaling 31 copied items; final capacity is 32 slots.
 
-- Choose the familiar tool before checking whether Forgetting that contiguous growth can require copying and memory hea.
-- Treat Forgetting that contiguous growth can require copying and memory head as complete proof without the lesson boun.
-- Keep Arrays, Dynamic Arrays, and Locality scoped to its stated evidence and boundary.
-- Make the documented mistake: Forgetting that contiguous growth can require copying and memory h
+**Explanation:** M00-Q023 uses amortized resize copies from Asymptotic Analysis and Its Limits and keeps units visible through the final numeric result.
 
-**Answer:** Keep Arrays, Dynamic Arrays, and Locality scoped to its stated evidence and boundary.
-
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M00-Q023 and its cited source.
-
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M00-Q024
 
-**Type:** `multiple_choice`  
+**Type:** `calculation`
 **Difficulty:** `synthesis`
 
-**Choices:**
+**Answer:** M00 Open Addressing Probe Factor case 2: At alpha 0.50, 1/(1-0.50) = 2. At alpha 0.90, 1/(1-0.90) = 10, so the high-load table is about 5x worse by this approximation.
 
-- Treat Assuming random input when keys are user-controlled as complete proof without the lesson boundary
-- Choose the familiar tool before checking whether Assuming random input when keys are user-controlled applies
-- Make the documented mistake: Assuming random input when keys are user-controlled
-- Keep Hash Tables scoped to its stated evidence and boundary. for hash tables
+**Explanation:** M00-Q024 uses open addressing probe factor from Arrays, Dynamic Arrays, and Locality and keeps units visible through the final numeric result.
 
-**Answer:** Keep Hash Tables scoped to its stated evidence and boundary. for hash tables
-
-**Explanation:** The distractors are anchored in the mistake list for L03; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M00-Q024 and its cited source.
-
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M00-Q025
 
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
+**Type:** `calculation`
+**Difficulty:** `recall`
 
-**Answer:** Original concurrency = 120 x 0.035 = 4.20 operations. Revised rate = 120 x 1.25 = 150.0/s, so revised concurrency = 150.0 x 0.035 = 5.25 operations.
+**Answer:** M00 B-Tree Fanout Height case 3: The B-tree needs about 4 page-level steps versus about 24 binary comparisons, a 20-level reduction in path depth for page-oriented access.
 
-**Explanation:** This perturbs the numeric practice around Asymptotic Analysis and Its Limits: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M00-Q025 and its cited source.
+**Explanation:** M00-Q025 uses B-tree fanout height from Hash Tables and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M00-Q026
 
-**Type:** `calculation`  
-**Difficulty:** `recall`
+**Type:** `calculation`
+**Difficulty:** `application`
 
-**Answer:** Original concurrency = 130 x 0.045 = 5.85 operations. Revised rate = 130 x 1.30 = 169.0/s, so revised concurrency = 169.0 x 0.045 = 7.61 operations.
+**Answer:** M00 Heap Height case 4: Heap height is floor(log2(1536)) = 10, so a sift traverses at most 10 levels.
 
-**Explanation:** This perturbs the numeric practice around Arrays, Dynamic Arrays, and Locality: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M00-Q026 and its cited source.
+**Explanation:** M00-Q026 uses heap height from Trees and Balanced Search and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M00-Q027
 
-**Type:** `calculation`  
-**Difficulty:** `application`
+**Type:** `calculation`
+**Difficulty:** `synthesis`
 
-**Answer:** Original concurrency = 140 x 0.055 = 7.70 operations. Revised rate = 140 x 1.35 = 189.0/s, so revised concurrency = 189.0 x 0.055 = 10.39 operations.
+**Answer:** M00 Graph Representation Size case 5: The adjacency list stores about 2 x 2550 = 5100 endpoint entries, while the matrix stores 850 x 850 = 722500 cells.
 
-**Explanation:** This perturbs the numeric practice around Hash Tables: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M00-Q027 and its cited source.
+**Explanation:** M00-Q027 uses graph representation size from Heaps and Priority Queues and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M00-Q028
 
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
+**Type:** `calculation`
+**Difficulty:** `recall`
 
-**Answer:** Original concurrency = 150 x 0.065 = 9.75 operations. Revised rate = 150 x 1.40 = 210.0/s, so revised concurrency = 210.0 x 0.065 = 13.65 operations.
+**Answer:** M00 Graph Representation Size case 6: The adjacency list stores about 2 x 2580 = 5160 endpoint entries, while the matrix stores 860 x 860 = 739600 cells.
 
-**Explanation:** This perturbs the numeric practice around Trees and Balanced Search: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M00-Q028 and its cited source.
+**Explanation:** M00-Q028 uses graph representation size from Graphs and Traversal and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M00-Q029
 
-**Type:** `calculation`  
-**Difficulty:** `recall`
+**Type:** `calculation`
+**Difficulty:** `application`
 
-**Answer:** Original concurrency = 160 x 0.075 = 12.00 operations. Revised rate = 160 x 1.45 = 232.0/s, so revised concurrency = 232.0 x 0.075 = 17.40 operations.
+**Answer:** M00 Candidate Count case 7: The naive count is 12 x 1070 = 12840 comparisons before any pruning changes the shape of the search.
 
-**Explanation:** This perturbs the numeric practice around Heaps and Priority Queues: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M00-Q029 and its cited source.
+**Explanation:** M00-Q029 uses candidate count from Sorting and Selection and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M00-Q030
 
-**Type:** `calculation`  
-**Difficulty:** `application`
+**Type:** `calculation`
+**Difficulty:** `synthesis`
 
-**Answer:** Original concurrency = 170 x 0.035 = 5.95 operations. Revised rate = 170 x 1.10 = 187.0/s, so revised concurrency = 187.0 x 0.035 = 6.55 operations.
+**Answer:** M00 Amortized Resize Copies case 8: Resizes copy 1 + 2 + 4 + ... below 25, totaling 31 copied items; final capacity is 32 slots.
 
-**Explanation:** This perturbs the numeric practice around Graphs and Traversal: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M00-Q030 and its cited source.
+**Explanation:** M00-Q030 uses amortized resize copies from Tractability and Design Decisions and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M00-Q031
 
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
+**Type:** `design_judgment`
+**Difficulty:** `application`
 
-**Answer:** Recommend the option that preserves the Trees and Balanced Search mechanism under the exercise constraints: Asymptotic reasoning, core data structures, graph algorithms, sorting, and tractability as practical design tools The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M00 decision 1, recommend against. The protected bound is 180 x 0.72 = 129.6/s, and the planned 158.4/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 158.4/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 28.8/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M00-Q031 and its cited source.
+**Explanation:** M00-Q031 turns on the forcing number from EX-01, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M00-Q032
 
-**Type:** `design_judgment`  
-**Difficulty:** `recall`
+**Type:** `design_judgment`
+**Difficulty:** `synthesis`
 
-**Answer:** Recommend the option that preserves the Heaps and Priority Queues mechanism under the exercise constraints: Asymptotic reasoning, core data structures, graph algorithms, sorting, and tractability as practical design tools The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M00 decision 2, recommend against. The protected bound is 197 x 0.72 = 141.8/s, and the planned 173.4/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 173.4/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 31.6/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M00-Q032 and its cited source.
+**Explanation:** M00-Q032 turns on the forcing number from EX-02, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M00-Q033
 
-**Type:** `design_judgment`  
-**Difficulty:** `application`
+**Type:** `design_judgment`
+**Difficulty:** `recall`
 
-**Answer:** Recommend the option that preserves the Graphs and Traversal mechanism under the exercise constraints: Asymptotic reasoning, core data structures, graph algorithms, sorting, and tractability as practical design tools The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M00 decision 3, recommend against. The protected bound is 214 x 0.72 = 154.1/s, and the planned 188.3/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 188.3/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 34.2/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M00-Q033 and its cited source.
+**Explanation:** M00-Q033 turns on the forcing number from EX-03, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M00-Q034
 
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
+**Type:** `design_judgment`
+**Difficulty:** `application`
 
-**Answer:** Recommend the option that preserves the Sorting and Selection mechanism under the exercise constraints: Asymptotic reasoning, core data structures, graph algorithms, sorting, and tractability as practical design tools The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M00 decision 4, recommend against. The protected bound is 231 x 0.72 = 166.3/s, and the planned 203.3/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 203.3/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 37.0/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M00-Q034 and its cited source.
+**Explanation:** M00-Q034 turns on the forcing number from EX-04, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M00-Q035
 
-**Type:** `design_judgment`  
-**Difficulty:** `recall`
+**Type:** `design_judgment`
+**Difficulty:** `synthesis`
 
-**Answer:** Recommend the option that preserves the Tractability and Design Decisions mechanism under the exercise constraints: Asymptotic reasoning, core data structures, graph algorithms, sorting, and tractability as practical design tools The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M00 decision 5, recommend against. The protected bound is 248 x 0.72 = 178.6/s, and the planned 218.2/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 218.2/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 39.6/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M00-Q035 and its cited source.
+**Explanation:** M00-Q035 turns on the forcing number from EX-05, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M00-Q036
 
-**Type:** `design_judgment`  
-**Difficulty:** `application`
+**Type:** `design_judgment`
+**Difficulty:** `recall`
 
-**Answer:** Recommend the option that preserves the Asymptotic Analysis and Its Limits mechanism under the exercise constraints: Asymptotic reasoning, core data structures, graph algorithms, sorting, and tractability as practical design tools The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M00 decision 6, recommend against. The protected bound is 265 x 0.72 = 190.8/s, and the planned 233.2/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 233.2/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 42.4/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M00-Q036 and its cited source.
+**Explanation:** M00-Q036 turns on the forcing number from EX-06, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M00-Q037
 
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
+**Type:** `design_judgment`
+**Difficulty:** `application`
 
-**Answer:** Recommend the option that preserves the Arrays, Dynamic Arrays, and Locality mechanism under the exercise constraints: Asymptotic reasoning, core data structures, graph algorithms, sorting, and tractability as practical design tools The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M00 decision 7, recommend against. The protected bound is 282 x 0.72 = 203.0/s, and the planned 248.2/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 248.2/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 45.2/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M00-Q037 and its cited source.
+**Explanation:** M00-Q037 turns on the forcing number from EX-07, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.

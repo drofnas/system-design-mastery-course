@@ -1,546 +1,557 @@
 # M17 Quiz Answer Key
 
-This key covers all 43 questions for **Model Foundations and Inference Systems**. Use it after an attempt, or provide it with the LLM grading prompt for feedback.
+This key covers all 44 questions for **Model Foundations and Inference Systems**. Use it after an attempt, or provide it with the LLM grading prompt for feedback.
 
 ## M17-Q001
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** The common exponential factor cancels between numerator and denominator
+**Answer:** The common exponential factor cancels between numerator and denominator.
 
-**Explanation:** The cited self-check in L01 tests whether the learner can connect Mathematics for Inference Decisions to the module mechanism without replacing evidence with labels. This explanation is specific to M17-Q001 and its cited source.
+**Explanation:** M17-Q001 uses self-check 1 from Mathematics for Inference Decisions; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M17-Q002
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `application`
 
-**Answer:** Data movement, reuse, kernels, launch overhead, parallelism, and hardware limits are absent
+**Answer:** Data movement, reuse, kernels, launch overhead, parallelism, and hardware limits are absent.
 
-**Explanation:** The cited self-check in L01 tests whether the learner can connect Mathematics for Inference Decisions to the module mechanism without replacing evidence with labels. This explanation is specific to M17-Q002 and its cited source.
+**Explanation:** M17-Q002 uses self-check 2 from Mathematics for Inference Decisions; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M17-Q003
 
-**Type:** `short_answer`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`
+**Difficulty:** `recall`
 
-**Answer:** Entropy measures distributional uncertainty under the stated probabilities; it does not establish factual or task correctness
+**Answer:** Entropy measures distributional uncertainty under the stated probabilities; it does not establish factual or task correctness.
 
-**Explanation:** The cited self-check in L01 tests whether the learner can connect Mathematics for Inference Decisions to the module mechanism without replacing evidence with labels. This explanation is specific to M17-Q003 and its cited source.
+**Explanation:** M17-Q003 uses self-check 3 from Mathematics for Inference Decisions; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M17-Q004
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** Rounding and cancellation dominate when two nearby floating-point results are subtracted
+**Answer:** Rounding and cancellation dominate when two nearby floating-point results are subtracted.
 
-**Explanation:** The cited self-check in L01 tests whether the learner can connect Mathematics for Inference Decisions to the module mechanism without replacing evidence with labels. This explanation is specific to M17-Q004 and its cited source.
+**Explanation:** M17-Q004 uses self-check 4 from Mathematics for Inference Decisions; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M17-Q005
 
-**Type:** `short_answer`  
-**Difficulty:** `application`
+**Type:** `short_answer`
+**Difficulty:** `recall`
 
-**Answer:** At least tokenizer, normalization, special tokens, model, prompt policy, precision where relevant, and the prefix itself
+**Answer:** At least tokenizer, normalization, special tokens, model, prompt policy, precision where relevant, and the prefix itself.
 
-**Explanation:** The cited self-check in L02 tests whether the learner can connect Tokens, Embeddings, and Attention to the module mechanism without replacing evidence with labels. This explanation is specific to M17-Q005 and its cited source.
+**Explanation:** M17-Q005 uses self-check 1 from Tokens, Embeddings, and Attention; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M17-Q006
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `synthesis`
 
-**Answer:** [t,t] per head and batch item
+**Answer:** `[t,t]` per head and batch item.
 
-**Explanation:** The cited self-check in L02 tests whether the learner can connect Tokens, Embeddings, and Attention to the module mechanism without replacing evidence with labels. This explanation is specific to M17-Q006 and its cited source.
+**Explanation:** M17-Q006 uses self-check 2 from Tokens, Embeddings, and Attention; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M17-Q007
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `application`
 
-**Answer:** Forbidden positions affected the normalization denominator and the remaining weights no longer form the intended distribution
+**Answer:** Forbidden positions affected the normalization denominator and the remaining weights no longer form the intended distribution.
 
-**Explanation:** The cited self-check in L02 tests whether the learner can connect Tokens, Embeddings, and Attention to the module mechanism without replacing evidence with labels. This explanation is specific to M17-Q007 and its cited source.
+**Explanation:** M17-Q007 uses self-check 3 from Tokens, Embeddings, and Attention; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M17-Q008
 
-**Type:** `short_answer`  
-**Difficulty:** `application`
+**Type:** `short_answer`
+**Difficulty:** `recall`
 
-**Answer:** It proves the local token-to-ID and embedding contract, not language quality
+**Answer:** It proves the local token-to-ID and embedding contract, not language quality.
 
-**Explanation:** The cited self-check in L02 tests whether the learner can connect Tokens, Embeddings, and Attention to the module mechanism without replacing evidence with labels. This explanation is specific to M17-Q008 and its cited source.
+**Explanation:** M17-Q008 uses self-check 4 from Tokens, Embeddings, and Attention; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M17-Q009
 
-**Type:** `short_answer`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`
+**Difficulty:** `application`
 
-**Answer:** Prefill exposes matrix work across prompt tokens; decode is sequential and repeatedly moves weights and growing KV state
+**Answer:** Prefill exposes matrix work across prompt tokens; decode is sequential and repeatedly moves weights and growing KV state.
 
-**Explanation:** The cited self-check in L03 tests whether the learner can connect Transformer Inference from Prefill to Decode to the module mechanism without replacing evidence with labels. This explanation is specific to M17-Q009 and its cited source.
+**Explanation:** M17-Q009 uses self-check 1 from Transformer Inference from Prefill to Decode; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M17-Q010
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `recall`
 
-**Answer:** It avoids recomputing prior-token keys and values, not current-token work or all attention reads
+**Answer:** It avoids recomputing prior-token keys and values, not current-token work or all attention reads.
 
-**Explanation:** The cited self-check in L03 tests whether the learner can connect Transformer Inference from Prefill to Decode to the module mechanism without replacing evidence with labels. This explanation is specific to M17-Q010 and its cited source.
+**Explanation:** M17-Q010 uses self-check 2 from Transformer Inference from Prefill to Decode; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M17-Q011
 
-**Type:** `short_answer`  
-**Difficulty:** `application`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** The course counts only output that satisfies the declared completion and quality contract; the commercial policy may differ and must be stated
+**Answer:** The course counts only output that satisfies the declared completion and quality contract; the commercial policy may differ and must be stated.
 
-**Explanation:** The cited self-check in L03 tests whether the learner can connect Transformer Inference from Prefill to Decode to the module mechanism without replacing evidence with labels. This explanation is specific to M17-Q011 and its cited source.
+**Explanation:** M17-Q011 uses self-check 3 from Transformer Inference from Prefill to Decode; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M17-Q012
 
-**Type:** `short_answer`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`
+**Difficulty:** `application`
 
-**Answer:** Clients and operators need to distinguish success, rejection, cancellation, deadline, and provider failure rather than infer completion from a closed socket
+**Answer:** Clients and operators need to distinguish success, rejection, cancellation, deadline, and provider failure rather than infer completion from a closed socket.
 
-**Explanation:** The cited self-check in L03 tests whether the learner can connect Transformer Inference from Prefill to Decode to the module mechanism without replacing evidence with labels. This explanation is specific to M17-Q012 and its cited source.
+**Explanation:** M17-Q012 uses self-check 4 from Transformer Inference from Prefill to Decode; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M17-Q013
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** Requests reserve different KV and work; the same count can represent radically different bytes and deadlines
+**Answer:** Requests reserve different KV and work; the same count can represent radically different bytes and deadlines.
 
-**Explanation:** The cited self-check in L04 tests whether the learner can connect Compute, Memory, and Capacity Accounting to the module mechanism without replacing evidence with labels. This explanation is specific to M17-Q013 and its cited source.
+**Explanation:** M17-Q013 uses self-check 1 from Compute, Memory, and Capacity Accounting; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M17-Q014
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `application`
 
-**Answer:** Stated allocator/runtime uncertainty, variation, and recovery capacity; it is not an unexplained safety percentage
+**Answer:** Stated allocator/runtime uncertainty, variation, and recovery capacity; it is not an unexplained safety percentage.
 
-**Explanation:** The cited self-check in L04 tests whether the learner can connect Compute, Memory, and Capacity Accounting to the module mechanism without replacing evidence with labels. This explanation is specific to M17-Q014 and its cited source.
+**Explanation:** M17-Q014 uses self-check 2 from Compute, Memory, and Capacity Accounting; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M17-Q015
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `application`
 
 **Choices:**
 
-- Keep Mathematics for Inference Decisions scoped to its stated evidence and boundary.
-- Make the documented mistake: Dropping batch or sequence dimensions from a memory calculation
-- Treat Dropping batch or sequence dimensions from a memory calculation as complete proof without the lesson boundary
-- Choose the familiar tool before checking whether Dropping batch or sequence dimensions from a memory calculation appl.
+- Scope the M17 scoped measurement and record the limiting assumption before approving the change.
+- Approve dropping batch or sequence dimensions from a memory calculation for Mathematics for Inference Decisions; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for dropping batch or sequence dimensions from a memory calculation; the team can monitor Mathematics for Inference Decisions after launch.
+- Approve the M17 shortcut for alpha now.
 
-**Answer:** Keep Mathematics for Inference Decisions scoped to its stated evidence and boundary.
+**Answer:** Scope the M17 scoped measurement and record the limiting assumption before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M17-Q015 and its cited source.
+**Explanation:** M17-Q015 enacts mistake 1 from Mathematics for Inference Decisions; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M17-Q016
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `synthesis`
 
 **Choices:**
 
-- Make the documented mistake: Mixing decimal vendor bytes with binary allocation bytes without d
-- Keep Mathematics for Inference Decisions scoped to its stated evidence and boundary.
-- Choose the familiar tool before checking whether Mixing decimal vendor bytes with binary allocation bytes without dis.
-- Treat Mixing decimal vendor bytes with binary allocation bytes without disc as complete proof without the lesson boun.
+- Approve mixing decimal vendor bytes with binary allocation bytes without disclosure for Mathematics for Inference Decisions; the local context makes that proposal familiar enough for review.
+- Measure the M17 scoped measurement before approving the change.
+- Defer measurement until production for mixing decimal vendor bytes with binary allocation bytes without disclosure; the team can monitor Mathematics for Inference Decisions after launch.
+- Approve the M17 shortcut for bravo now.
 
-**Answer:** Keep Mathematics for Inference Decisions scoped to its stated evidence and boundary.
+**Answer:** Measure the M17 scoped measurement before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M17-Q016 and its cited source.
+**Explanation:** M17-Q016 enacts mistake 2 from Mathematics for Inference Decisions; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M17-Q017
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `recall`
 
 **Choices:**
 
-- Choose the familiar tool before checking whether Calling cosine similarity semantic equivalence applies
-- Make the documented mistake: Calling cosine similarity semantic equivalence
-- Keep Mathematics for Inference Decisions scoped to its stated evidence and boundary.
-- Treat Calling cosine similarity semantic equivalence as complete proof without the lesson boundary
+- Approve calling cosine similarity semantic equivalence for Mathematics for Inference Decisions; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for calling cosine similarity semantic equivalence; the team can monitor Mathematics for Inference Decisions after launch.
+- Bound the M17 scoped measurement before approval.
+- Approve the M17 shortcut for charlie now.
 
-**Answer:** Keep Mathematics for Inference Decisions scoped to its stated evidence and boundary.
+**Answer:** Bound the M17 scoped measurement before approval.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M17-Q017 and its cited source.
+**Explanation:** M17-Q017 enacts mistake 3 from Mathematics for Inference Decisions; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M17-Q018
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `application`
 
 **Choices:**
 
-- Choose the familiar tool before checking whether Treating average numerical error as a protected-example quality guar.
-- Treat Treating average numerical error as a protected-example quality guara as complete proof without the lesson boun.
-- Make the documented mistake: Treating average numerical error as a protected-example quality gu
-- Keep Mathematics for Inference Decisions scoped to its stated evidence and boundary.
+- Approve treating average numerical error as a protected-example quality guarantee for Mathematics for Inference Decisions; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for treating average numerical error as a protected-example quality guarantee; the team can monitor Mathematics for Inference Decisions after launch.
+- Approve the M17 shortcut for delta now.
+- Freeze the M17 scoped measurement and record the limiting assumption before approving the change.
 
-**Answer:** Keep Mathematics for Inference Decisions scoped to its stated evidence and boundary.
+**Answer:** Freeze the M17 scoped measurement and record the limiting assumption before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M17-Q018 and its cited source.
+**Explanation:** M17-Q018 enacts mistake 4 from Mathematics for Inference Decisions; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M17-Q019
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `synthesis`
 
 **Choices:**
 
-- Keep Mathematics for Inference Decisions scoped to its stated evidence and boundary.
-- Make the documented mistake: Using a gradient check with an unreported step size and precision
-- Treat Using a gradient check with an unreported step size and precision as complete proof without the lesson boundary
-- Choose the familiar tool before checking whether Using a gradient check with an unreported step size and precision ap.
+- Preserve the M17 scoped measurement before approving the change.
+- Approve using a gradient check with an unreported step size and precision for Mathematics for Inference Decisions; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for using a gradient check with an unreported step size and precision; the team can monitor Mathematics for Inference Decisions after launch.
+- Approve the M17 shortcut for ember now.
 
-**Answer:** Keep Mathematics for Inference Decisions scoped to its stated evidence and boundary.
+**Answer:** Preserve the M17 scoped measurement before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M17-Q019 and its cited source.
+**Explanation:** M17-Q019 enacts mistake 5 from Mathematics for Inference Decisions; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M17-Q020
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `recall`
 
 **Choices:**
 
-- Make the documented mistake: Treating token count as a property of text independent of tokenize
-- Keep Tokens, Embeddings, and Attention scoped to its stated evidence and boundary.
-- Choose the familiar tool before checking whether Treating token count as a property of text independent of tokenizer.
-- Treat Treating token count as a property of text independent of tokenizer v as complete proof without the lesson boun.
+- Approve treating token count as a property of text independent of tokenizer version for Tokens, Embeddings, and Attention; the local context makes that proposal familiar enough for review.
+- Model the M17 scoped measurement before approval.
+- Defer measurement until production for treating token count as a property of text independent of tokenizer version; the team can monitor Tokens, Embeddings, and Attention after launch.
+- Approve the M17 shortcut for fable now.
 
-**Answer:** Keep Tokens, Embeddings, and Attention scoped to its stated evidence and boundary.
+**Answer:** Model the M17 scoped measurement before approval.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M17-Q020 and its cited source.
+**Explanation:** M17-Q020 enacts mistake 1 from Tokens, Embeddings, and Attention; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M17-Q021
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `application`
 
 **Choices:**
 
-- Make the documented mistake: Omitting positional information while claiming order-sensitive beh
-- Treat Omitting positional information while claiming order-sensitive behavi as complete proof without the lesson boun.
-- Keep Tokens, Embeddings, and Attention scoped to its stated evidence and boundary.
-- Choose the familiar tool before checking whether Omitting positional information while claiming order-sensitive behav.
+- Approve omitting positional information while claiming order-sensitive behavior for Tokens, Embeddings, and Attention; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for omitting positional information while claiming order-sensitive behavior; the team can monitor Tokens, Embeddings, and Attention after launch.
+- Account the M17 scoped measurement and record the limiting assumption before approving the change.
+- Approve the M17 shortcut for harbor now.
 
-**Answer:** Keep Tokens, Embeddings, and Attention scoped to its stated evidence and boundary.
+**Answer:** Account the M17 scoped measurement and record the limiting assumption before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M17-Q021 and its cited source.
+**Explanation:** M17-Q021 enacts mistake 2 from Tokens, Embeddings, and Attention; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M17-Q022
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `synthesis`
 
 **Choices:**
 
-- Choose the familiar tool before checking whether Masking values instead of attention logits applies
-- Treat Masking values instead of attention logits as complete proof without the lesson boundary
-- Make the documented mistake: Masking values instead of attention logits
-- Keep Tokens, Embeddings, and Attention scoped to its stated evidence and boundary.
+- Approve masking values instead of attention logits for Tokens, Embeddings, and Attention; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for masking values instead of attention logits; the team can monitor Tokens, Embeddings, and Attention after launch.
+- Approve the M17 shortcut for indigo now.
+- Test the M17 scoped measurement before approving the change.
 
-**Answer:** Keep Tokens, Embeddings, and Attention scoped to its stated evidence and boundary.
+**Answer:** Test the M17 scoped measurement before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M17-Q022 and its cited source.
+**Explanation:** M17-Q022 enacts mistake 3 from Tokens, Embeddings, and Attention; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M17-Q023
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `recall`
 
 **Choices:**
 
-- Keep Tokens, Embeddings, and Attention scoped to its stated evidence and boundary.
-- Treat Forgetting the scale or using hidden width rather than key width as complete proof without the lesson boundary
-- Choose the familiar tool before checking whether Forgetting the scale or using hidden width rather than key width app.
-- Make the documented mistake: Forgetting the scale or using hidden width rather than key width
+- Scope the M17 scoped measurement before approval.
+- Approve forgetting the scale or using hidden width rather than key width for Tokens, Embeddings, and Attention; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for forgetting the scale or using hidden width rather than key width; the team can monitor Tokens, Embeddings, and Attention after launch.
+- Approve the M17 shortcut for juniper now.
 
-**Answer:** Keep Tokens, Embeddings, and Attention scoped to its stated evidence and boundary.
+**Answer:** Scope the M17 scoped measurement before approval.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M17-Q023 and its cited source.
+**Explanation:** M17-Q023 enacts mistake 4 from Tokens, Embeddings, and Attention; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M17-Q024
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `application`
 
 **Choices:**
 
-- Choose the familiar tool before checking whether Reading attention weights as a faithful explanation of model reasoni.
-- Keep Tokens, Embeddings, and Attention scoped to its stated evidence and boundary.
-- Make the documented mistake: Reading attention weights as a faithful explanation of model reaso
-- Treat Reading attention weights as a faithful explanation of model reasoning as complete proof without the lesson bou.
+- Approve reading attention weights as a faithful explanation of model reasoning for Tokens, Embeddings, and Attention; the local context makes that proposal familiar enough for review.
+- Measure the M17 scoped measurement and record the limiting assumption before approving the change.
+- Defer measurement until production for reading attention weights as a faithful explanation of model reasoning; the team can monitor Tokens, Embeddings, and Attention after launch.
+- Approve the M17 shortcut for keystone now.
 
-**Answer:** Keep Tokens, Embeddings, and Attention scoped to its stated evidence and boundary.
+**Answer:** Measure the M17 scoped measurement and record the limiting assumption before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M17-Q024 and its cited source.
+**Explanation:** M17-Q024 enacts mistake 5 from Tokens, Embeddings, and Attention; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M17-Q025
 
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
+**Type:** `calculation`
+**Difficulty:** `recall`
 
-**Answer:** Original concurrency = 200 x 0.070 = 14.00 operations. Revised rate = 200 x 1.25 = 250.0/s, so revised concurrency = 250.0 x 0.070 = 17.50 operations.
+**Answer:** M17 Kv Cache case 1: Bytes = 4096 x 32 x 32 x 128 x 2 x 2 = 2,147,483,648, or 2.00 GiB.
 
-**Explanation:** This perturbs the numeric practice around Mathematics for Inference Decisions: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M17-Q025 and its cited source.
+**Explanation:** M17-Q025 uses KV cache from Mathematics for Inference Decisions and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M17-Q026
 
-**Type:** `calculation`  
-**Difficulty:** `recall`
+**Type:** `calculation`
+**Difficulty:** `application`
 
-**Answer:** Original concurrency = 120 x 0.080 = 9.60 operations. Revised rate = 120 x 1.30 = 156.0/s, so revised concurrency = 156.0 x 0.080 = 12.48 operations.
+**Answer:** M17 Capacity Deficit case 2: Capacity deficit is 1000 - 760 = 240/s.
 
-**Explanation:** This perturbs the numeric practice around Tokens, Embeddings, and Attention: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M17-Q026 and its cited source.
+**Explanation:** M17-Q026 uses capacity deficit from Tokens, Embeddings, and Attention and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M17-Q027
 
-**Type:** `calculation`  
-**Difficulty:** `application`
+**Type:** `calculation`
+**Difficulty:** `synthesis`
 
-**Answer:** Original concurrency = 130 x 0.040 = 5.20 operations. Revised rate = 130 x 1.35 = 175.5/s, so revised concurrency = 175.5 x 0.040 = 7.02 operations.
+**Answer:** M17 Ttft case 3: Queueing contribution is 7 x 120 = 840 ms before the new request starts prefill.
 
-**Explanation:** This perturbs the numeric practice around Transformer Inference from Prefill to Decode: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M17-Q027 and its cited source.
+**Explanation:** M17-Q027 uses TTFT from Transformer Inference from Prefill to Decode and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M17-Q028
 
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
+**Type:** `calculation`
+**Difficulty:** `recall`
 
-**Answer:** Original concurrency = 140 x 0.050 = 7.00 operations. Revised rate = 140 x 1.40 = 196.0/s, so revised concurrency = 196.0 x 0.050 = 9.80 operations.
+**Answer:** M17 Inference Capacity case 4: floor(80 / 6) = 13 requests fit before model weights and fragmentation.
 
-**Explanation:** This perturbs the numeric practice around Compute, Memory, and Capacity Accounting: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M17-Q028 and its cited source.
+**Explanation:** M17-Q028 uses inference capacity from Compute, Memory, and Capacity Accounting and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M17-Q029
 
-**Type:** `calculation`  
-**Difficulty:** `recall`
+**Type:** `calculation`
+**Difficulty:** `application`
 
-**Answer:** Original concurrency = 150 x 0.060 = 9.00 operations. Revised rate = 150 x 1.45 = 217.5/s, so revised concurrency = 217.5 x 0.060 = 13.05 operations.
+**Answer:** M17 Inference Capacity case 5: floor(80 / 6) = 13 requests fit before model weights and fragmentation.
 
-**Explanation:** This perturbs the numeric practice around Profiling and Inference Metrics: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M17-Q029 and its cited source.
+**Explanation:** M17-Q029 uses inference capacity from Profiling and Inference Metrics and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M17-Q030
 
-**Type:** `calculation`  
-**Difficulty:** `application`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `recall`
 
-**Answer:** Original concurrency = 160 x 0.070 = 11.20 operations. Revised rate = 160 x 1.10 = 176.0/s, so revised concurrency = 176.0 x 0.070 = 12.32 operations.
+**Answer:** M17 diagnosis 1 identifies I01=false in F01 modeled trial. The proving fields are cache.cross_tenant_hits and cache.stale_version_hits; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** This perturbs the numeric practice around Scheduling, Batching, Admission, and Fairness: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M17-Q030 and its cited source.
+**Explanation:** M17-Q030 comes from emitted trial fields rather than fixture identifiers; Mathematics for Inference Decisions is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M17-Q031
 
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `application`
 
-**Answer:** Original concurrency = 170 x 0.080 = 13.60 operations. Revised rate = 170 x 1.15 = 195.5/s, so revised concurrency = 195.5 x 0.080 = 15.64 operations.
+**Answer:** M17 diagnosis 2 identifies Tokens, Embeddings, and Attention evidence scope. The proving fields are cache.cross_tenant_hits and cache.stale_version_hits; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** This perturbs the numeric practice around Caches, Quantization, and Provider Failure: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M17-Q031 and its cited source.
+**Explanation:** M17-Q031 comes from emitted trial fields rather than fixture identifiers; Tokens, Embeddings, and Attention is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M17-Q032
 
-**Type:** `calculation`  
-**Difficulty:** `recall`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `synthesis`
 
-**Answer:** Original concurrency = 180 x 0.040 = 7.20 operations. Revised rate = 180 x 1.20 = 216.0/s, so revised concurrency = 216.0 x 0.040 = 8.64 operations.
+**Answer:** M17 diagnosis 3 identifies I02=false in F02 modeled trial. The proving fields are cache.cross_tenant_hits and cache.stale_version_hits; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** This perturbs the numeric practice around Atlas Tutorial, Architecture Decision, and Teach-Back: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M17-Q032 and its cited source.
+**Explanation:** M17-Q032 comes from emitted trial fields rather than fixture identifiers; Transformer Inference from Prefill to Decode is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M17-Q033
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `recall`
 
-**Answer:** The fixture tests f01-memory-exhaustion-broken (broken), with I01 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f01-memory-exhaustion-broken, rather than the general presence of a lab run.
+**Answer:** M17 diagnosis 4 identifies Compute, Memory, and Capacity Accounting evidence scope. The proving fields are cache.cross_tenant_hits and cache.stale_version_hits; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M17; diagnosis should start from the emitted fields and connect them to Transformer Inference from Prefill to Decode. This explanation is specific to M17-Q033 and its cited source.
+**Explanation:** M17-Q033 comes from emitted trial fields rather than fixture identifiers; Compute, Memory, and Capacity Accounting is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M17-Q034
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `synthesis`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `application`
 
-**Answer:** The fixture tests f01-memory-exhaustion-repaired (repaired), with I01 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f01-memory-exhaustion-repaired, rather than the general presence of a lab run.
+**Answer:** M17 diagnosis 5 identifies I03=false in F03 modeled trial. The proving fields are cache.cross_tenant_hits and cache.stale_version_hits; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M17; diagnosis should start from the emitted fields and connect them to Compute, Memory, and Capacity Accounting. This explanation is specific to M17-Q034 and its cited source.
+**Explanation:** M17-Q034 comes from emitted trial fields rather than fixture identifiers; Profiling and Inference Metrics is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M17-Q035
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `recall`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `synthesis`
 
-**Answer:** The fixture tests f02-mixed-length-starvation-broken (broken), with I02 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f02-mixed-length-starvation-broken, rather than the general presence of a lab run.
+**Answer:** M17 diagnosis 6 identifies Scheduling, Batching, Admission, and Fairness evidence scope. The proving fields are cache.cross_tenant_hits and cache.stale_version_hits; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M17; diagnosis should start from the emitted fields and connect them to Profiling and Inference Metrics. This explanation is specific to M17-Q035 and its cited source.
+**Explanation:** M17-Q035 comes from emitted trial fields rather than fixture identifiers; Scheduling, Batching, Admission, and Fairness is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M17-Q036
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `recall`
 
-**Answer:** The fixture tests f02-mixed-length-starvation-repaired (repaired), with I02 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f02-mixed-length-starvation-repaired, rather than the general presence of a lab run.
+**Answer:** M17 diagnosis 7 identifies I05=false in F04 modeled trial. The proving fields are cache.cross_tenant_hits and cache.stale_version_hits; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M17; diagnosis should start from the emitted fields and connect them to Scheduling, Batching, Admission, and Fairness. This explanation is specific to M17-Q036 and its cited source.
+**Explanation:** M17-Q036 comes from emitted trial fields rather than fixture identifiers; Caches, Quantization, and Provider Failure is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M17-Q037
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `synthesis`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `application`
 
-**Answer:** The fixture tests f03-queue-overload-broken (broken), with I03 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f03-queue-overload-broken, rather than the general presence of a lab run.
+**Answer:** M17 diagnosis 8 identifies Atlas Tutorial, Architecture Decision, and Teach-Back evidence scope. The proving fields are cache.cross_tenant_hits and cache.stale_version_hits; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M17; diagnosis should start from the emitted fields and connect them to Caches, Quantization, and Provider Failure. This explanation is specific to M17-Q037 and its cited source.
+**Explanation:** M17-Q037 comes from emitted trial fields rather than fixture identifiers; Atlas Tutorial, Architecture Decision, and Teach-Back is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M17-Q038
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `recall`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `synthesis`
 
-**Answer:** The fixture tests f03-queue-overload-repaired (repaired), with I03 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f03-queue-overload-repaired, rather than the general presence of a lab run.
+**Answer:** M17 diagnosis 9 identifies I07=false in F05 modeled trial. The proving fields are cache.cross_tenant_hits and cache.stale_version_hits; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M17; diagnosis should start from the emitted fields and connect them to Atlas Tutorial, Architecture Decision, and Teach-Back. This explanation is specific to M17-Q038 and its cited source.
+**Explanation:** M17-Q038 comes from emitted trial fields rather than fixture identifiers; Mathematics for Inference Decisions is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M17-Q039
 
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `recall`
 
-**Answer:** Recommend the option that preserves the Compute, Memory, and Capacity Accounting mechanism under the exercise constraints: Multiply a 2x3 token matrix by a 3x2 projection. Record every shape, multiply, addition, and byte assumption; identify which dimensions can batch. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** M17 diagnosis 10 identifies Tokens, Embeddings, and Attention evidence scope. The proving fields are cache.cross_tenant_hits and cache.stale_version_hits; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M17-Q039 and its cited source.
+**Explanation:** M17-Q039 comes from emitted trial fields rather than fixture identifiers; Tokens, Embeddings, and Attention is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M17-Q040
 
-**Type:** `design_judgment`  
-**Difficulty:** `recall`
+**Type:** `design_judgment`
+**Difficulty:** `application`
 
-**Answer:** Recommend the option that preserves the Profiling and Inference Metrics mechanism under the exercise constraints: Calculate the L2 norm and cosine similarity for two exhibit vectors. Explain why similar direction does not prove interchangeable generated output. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M17 decision 1, recommend against. The protected bound is 231 x 0.72 = 166.3/s, and the planned 203.3/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 203.3/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 37.0/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M17-Q040 and its cited source.
+**Explanation:** M17-Q040 turns on the forcing number from EX-01, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M17-Q041
 
-**Type:** `design_judgment`  
-**Difficulty:** `application`
+**Type:** `design_judgment`
+**Difficulty:** `synthesis`
 
-**Answer:** Recommend the option that preserves the Scheduling, Batching, Admission, and Fairness mechanism under the exercise constraints: Apply stable softmax to three logits, calculate entropy, then use a centered finite difference to estimate one derivative. State numerical limitations. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M17 decision 2, recommend against. The protected bound is 248 x 0.72 = 178.6/s, and the planned 218.2/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 218.2/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 39.6/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M17-Q041 and its cited source.
+**Explanation:** M17-Q041 turns on the forcing number from EX-02, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M17-Q042
 
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
+**Type:** `design_judgment`
+**Difficulty:** `recall`
 
-**Answer:** Recommend the option that preserves the Caches, Quantization, and Provider Failure mechanism under the exercise constraints: Show why subtracting the row maximum preserves softmax probabilities. Apply a causal mask before normalization and explain why masking afterward is wrong. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M17 decision 3, recommend against. The protected bound is 265 x 0.72 = 190.8/s, and the planned 233.2/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 233.2/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 42.4/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M17-Q042 and its cited source.
+**Explanation:** M17-Q042 turns on the forcing number from EX-03, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M17-Q043
 
-**Type:** `design_judgment`  
-**Difficulty:** `recall`
+**Type:** `design_judgment`
+**Difficulty:** `application`
 
-**Answer:** Recommend the option that preserves the Atlas Tutorial, Architecture Decision, and Teach-Back mechanism under the exercise constraints: Define Atlas vocabulary, unknown-token, normalization, model-version, and prompt policy behavior. Trace four tokens into embedding rows. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M17 decision 4, recommend against. The protected bound is 282 x 0.72 = 203.0/s, and the planned 248.2/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 248.2/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 45.2/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M17-Q043 and its cited source.
+**Explanation:** M17-Q043 turns on the forcing number from EX-04, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+
+## M17-Q044
+
+**Type:** `design_judgment`
+**Difficulty:** `synthesis`
+
+**Answer:** For M17 decision 5, recommend against. The protected bound is 299 x 0.72 = 215.3/s, and the planned 263.1/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 263.1/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 47.8/s of lower-priority work.
+
+**Explanation:** M17-Q044 turns on the forcing number from EX-05, not preference; the reversal conditions are specific to the measured gap in this prompt.
+
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.

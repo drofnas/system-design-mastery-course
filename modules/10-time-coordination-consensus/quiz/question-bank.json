@@ -10,16 +10,16 @@
         "L01"
       ],
       "type": "short_answer",
-      "difficulty": "recall",
+      "difficulty": "synthesis",
       "tags": [
         "time-coordination-and-consensus",
-        "physical-clocks-drift-skew-and-uncertain",
+        "physical-clocks-drift-skew-and-uncertainty",
         "src:L01-selfcheck-1"
       ],
-      "prompt": "Use the cited source to answer L01 (Physical Clocks, Drift, Skew, and Uncertainty): Why does a local monotonic clock not prove cross-host ordering?",
-      "correct_answer": "It has no shared origin or bounded relationship with another host's clock",
-      "explanation": "The cited self-check in L01 tests whether the learner can connect Physical Clocks, Drift, Skew, and Uncertainty to the module mechanism without replacing evidence with labels. This explanation is specific to M10-Q001 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "Why does a local monotonic clock not prove cross-host ordering?",
+      "correct_answer": "It has no shared origin or bounded relationship with another host's clock.",
+      "explanation": "M10-Q001 uses self-check 1 from Physical Clocks, Drift, Skew, and Uncertainty; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M10-Q002",
@@ -31,13 +31,13 @@
       "difficulty": "application",
       "tags": [
         "time-coordination-and-consensus",
-        "physical-clocks-drift-skew-and-uncertain",
+        "physical-clocks-drift-skew-and-uncertainty",
         "src:L01-selfcheck-2"
       ],
-      "prompt": "Explain the mechanism behind L01 (Physical Clocks, Drift, Skew, and Uncertainty): What must happen when an application cannot establish its lease bound?",
-      "correct_answer": "Correctness-critical authority must fail closed or use a non-time proof; silently extending the bound changes the failure model",
-      "explanation": "The cited self-check in L01 tests whether the learner can connect Physical Clocks, Drift, Skew, and Uncertainty to the module mechanism without replacing evidence with labels. This explanation is specific to M10-Q002 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "What must happen when an application cannot establish its lease bound?",
+      "correct_answer": "Correctness-critical authority must fail closed or use a non-time proof; silently extending the bound changes the failure model.",
+      "explanation": "M10-Q002 uses self-check 2 from Physical Clocks, Drift, Skew, and Uncertainty; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M10-Q003",
@@ -46,16 +46,16 @@
         "L01"
       ],
       "type": "short_answer",
-      "difficulty": "synthesis",
+      "difficulty": "recall",
       "tags": [
         "time-coordination-and-consensus",
-        "physical-clocks-drift-skew-and-uncertain",
+        "physical-clocks-drift-skew-and-uncertainty",
         "src:L01-selfcheck-3"
       ],
-      "prompt": "Name the evidence needed for L01 (Physical Clocks, Drift, Skew, and Uncertainty): Can overlapping uncertainty intervals prove that events were concurrent?",
-      "correct_answer": "No. Overlap means the clock evidence is insufficient to order them; a causal message path could still order the events. The practice radius is 2 ms + 40×300/1,000,000 = 14 ms; pairwise skew is 28 ms. An 18 ms difference is insufficient",
-      "explanation": "The cited self-check in L01 tests whether the learner can connect Physical Clocks, Drift, Skew, and Uncertainty to the module mechanism without replacing evidence with labels. This explanation is specific to M10-Q003 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "Can overlapping uncertainty intervals prove that events were concurrent?",
+      "correct_answer": "No. Overlap means the clock evidence is insufficient to order them; a causal message path could still order the events. The practice radius is `2 ms + 40×300/1,000,000 = 14 ms`; pairwise skew is 28 ms. An 18 ms difference is insufficient.",
+      "explanation": "M10-Q003 uses self-check 3 from Physical Clocks, Drift, Skew, and Uncertainty; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M10-Q004",
@@ -64,16 +64,16 @@
         "L02"
       ],
       "type": "short_answer",
-      "difficulty": "recall",
+      "difficulty": "synthesis",
       "tags": [
         "time-coordination-and-consensus",
-        "logical-clocks-vector-clocks-and-causal-",
+        "logical-clocks-vector-clocks-and-causal-order",
         "src:L02-selfcheck-1"
       ],
-      "prompt": "Diagnose the boundary issue in L02 (Logical Clocks, Vector Clocks, and Causal Order): What does L(a) < L(b) prove by itself?",
-      "correct_answer": "Only that the scalar order is compatible with possible causality; it does not prove a → b",
-      "explanation": "The cited self-check in L02 tests whether the learner can connect Logical Clocks, Vector Clocks, and Causal Order to the module mechanism without replacing evidence with labels. This explanation is specific to M10-Q004 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "What does `L(a) < L(b)` prove by itself?",
+      "correct_answer": "Only that the scalar order is compatible with possible causality; it does not prove `a → b`.",
+      "explanation": "M10-Q004 uses self-check 1 from Logical Clocks, Vector Clocks, and Causal Order; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M10-Q005",
@@ -85,13 +85,13 @@
       "difficulty": "application",
       "tags": [
         "time-coordination-and-consensus",
-        "logical-clocks-vector-clocks-and-causal-",
+        "logical-clocks-vector-clocks-and-causal-order",
         "src:L02-selfcheck-2"
       ],
-      "prompt": "State the causal reason for L02 (Logical Clocks, Vector Clocks, and Causal Order): When are two vector clocks concurrent?",
-      "correct_answer": "When neither vector is componentwise less than the other",
-      "explanation": "The cited self-check in L02 tests whether the learner can connect Logical Clocks, Vector Clocks, and Causal Order to the module mechanism without replacing evidence with labels. This explanation is specific to M10-Q005 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "When are two vector clocks concurrent?",
+      "correct_answer": "When neither vector is componentwise less than the other.",
+      "explanation": "M10-Q005 uses self-check 2 from Logical Clocks, Vector Clocks, and Causal Order; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M10-Q006",
@@ -100,16 +100,16 @@
         "L02"
       ],
       "type": "short_answer",
-      "difficulty": "synthesis",
+      "difficulty": "recall",
       "tags": [
         "time-coordination-and-consensus",
-        "logical-clocks-vector-clocks-and-causal-",
+        "logical-clocks-vector-clocks-and-causal-order",
         "src:L02-selfcheck-3"
       ],
-      "prompt": "Identify the assumption behind L02 (Logical Clocks, Vector Clocks, and Causal Order): Why can a deterministic sort not replace consensus?",
-      "correct_answer": "Separate nodes can sort only the events they know. Without agreement on the accepted set/prefix, they may authorize different commands. One valid trace is a1 L1/[1,0], send L2/[2,0], a2 L3/[3,0]; b1 L1/[0,1], receive L3/[2,2], b2 L4/[2,3]. a2 and b1 are concurrent; b1 → b2; neither a2 → b2 nor b2 → a2 follows",
-      "explanation": "The cited self-check in L02 tests whether the learner can connect Logical Clocks, Vector Clocks, and Causal Order to the module mechanism without replacing evidence with labels. This explanation is specific to M10-Q006 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "Why can a deterministic sort not replace consensus?",
+      "correct_answer": "Separate nodes can sort only the events they know. Without agreement on the accepted set/prefix, they may authorize different commands. One valid trace is `a1 L1/[1,0]`, send `L2/[2,0]`, `a2 L3/[3,0]`; `b1 L1/[0,1]`, receive `L3/[2,2]`, `b2 L4/[2,3]`. `a2` and `b1` are concurrent; `b1 → b2`; neither `a2 → b2` nor `b2 → a2` follows.",
+      "explanation": "M10-Q006 uses self-check 3 from Logical Clocks, Vector Clocks, and Causal Order; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M10-Q007",
@@ -118,16 +118,16 @@
         "L03"
       ],
       "type": "short_answer",
-      "difficulty": "recall",
+      "difficulty": "synthesis",
       "tags": [
         "time-coordination-and-consensus",
-        "safety-liveness-failure-detectors-and-co",
+        "safety-liveness-failure-detectors-and-consensus-",
         "src:L03-selfcheck-1"
       ],
-      "prompt": "Connect the lesson claim to L03 (Safety, Liveness, Failure Detectors, and Consensus Boundaries): Can delayed progress violate liveness without violating safety?",
-      "correct_answer": "Yes. A safe system may reject every write during quorum loss",
-      "explanation": "The cited self-check in L03 tests whether the learner can connect Safety, Liveness, Failure Detectors, and Consensus Boundaries to the module mechanism without replacing evidence with labels. This explanation is specific to M10-Q007 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "Can delayed progress violate liveness without violating safety?",
+      "correct_answer": "Yes. A safe system may reject every write during quorum loss.",
+      "explanation": "M10-Q007 uses self-check 1 from Safety, Liveness, Failure Detectors, and Consensus Boundaries; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M10-Q008",
@@ -139,13 +139,13 @@
       "difficulty": "application",
       "tags": [
         "time-coordination-and-consensus",
-        "safety-liveness-failure-detectors-and-co",
+        "safety-liveness-failure-detectors-and-consensus-",
         "src:L03-selfcheck-2"
       ],
-      "prompt": "Resolve the self-check about L03 (Safety, Liveness, Failure Detectors, and Consensus Boundaries): What does a heartbeat timeout establish?",
-      "correct_answer": "Only that the heartbeat was not observed before the local deadline under the observer's clock/scheduler/network conditions",
-      "explanation": "The cited self-check in L03 tests whether the learner can connect Safety, Liveness, Failure Detectors, and Consensus Boundaries to the module mechanism without replacing evidence with labels. This explanation is specific to M10-Q008 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "What does a heartbeat timeout establish?",
+      "correct_answer": "Only that the heartbeat was not observed before the local deadline under the observer's clock/scheduler/network conditions.",
+      "explanation": "M10-Q008 uses self-check 2 from Safety, Liveness, Failure Detectors, and Consensus Boundaries; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M10-Q009",
@@ -154,16 +154,16 @@
         "L03"
       ],
       "type": "short_answer",
-      "difficulty": "synthesis",
+      "difficulty": "recall",
       "tags": [
         "time-coordination-and-consensus",
-        "safety-liveness-failure-detectors-and-co",
+        "safety-liveness-failure-detectors-and-consensus-",
         "src:L03-selfcheck-3"
       ],
-      "prompt": "Summarize the tradeoff in L03 (Safety, Liveness, Failure Detectors, and Consensus Boundaries): What evidence justifies adding consensus?",
-      "correct_answer": "An operation-level invariant, a failure model requiring automatic agreement, and a comparison showing simpler authority/reconciliation choices are insufficient",
-      "explanation": "The cited self-check in L03 tests whether the learner can connect Safety, Liveness, Failure Detectors, and Consensus Boundaries to the module mechanism without replacing evidence with labels. This explanation is specific to M10-Q009 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "What evidence justifies adding consensus?",
+      "correct_answer": "An operation-level invariant, a failure model requiring automatic agreement, and a comparison showing simpler authority/reconciliation choices are insufficient.",
+      "explanation": "M10-Q009 uses self-check 3 from Safety, Liveness, Failure Detectors, and Consensus Boundaries; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M10-Q010",
@@ -172,16 +172,16 @@
         "L04"
       ],
       "type": "short_answer",
-      "difficulty": "recall",
+      "difficulty": "synthesis",
       "tags": [
         "time-coordination-and-consensus",
-        "paxos-raft-and-replicated-state-machine-",
+        "paxos-raft-and-replicated-state-machine-foundati",
         "src:L04-selfcheck-1"
       ],
-      "prompt": "Defend the conclusion for L04 (Paxos, Raft, and Replicated-State-Machine Foundations): What does quorum intersection contribute, and what does it not contribute?",
-      "correct_answer": "It provides a shared witness; protocol state/selection rules make that witness constrain later decisions",
-      "explanation": "The cited self-check in L04 tests whether the learner can connect Paxos, Raft, and Replicated-State-Machine Foundations to the module mechanism without replacing evidence with labels. This explanation is specific to M10-Q010 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "What does quorum intersection contribute, and what does it not contribute?",
+      "correct_answer": "It provides a shared witness; protocol state/selection rules make that witness constrain later decisions.",
+      "explanation": "M10-Q010 uses self-check 1 from Paxos, Raft, and Replicated-State-Machine Foundations; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M10-Q011",
@@ -193,37 +193,31 @@
       "difficulty": "application",
       "tags": [
         "time-coordination-and-consensus",
-        "paxos-raft-and-replicated-state-machine-",
+        "paxos-raft-and-replicated-state-machine-foundati",
         "src:L04-selfcheck-2"
       ],
-      "prompt": "Challenge the claim in L04 (Paxos, Raft, and Replicated-State-Machine Foundations): Why must a state machine be deterministic?",
-      "correct_answer": "Consensus agrees on commands, not arbitrary local side effects. Different application results would violate replicated-state-machine equivalence",
-      "explanation": "The cited self-check in L04 tests whether the learner can connect Paxos, Raft, and Replicated-State-Machine Foundations to the module mechanism without replacing evidence with labels. This explanation is specific to M10-Q011 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "Why must a state machine be deterministic?",
+      "correct_answer": "Consensus agrees on commands, not arbitrary local side effects. Different application results would violate replicated-state-machine equivalence.",
+      "explanation": "M10-Q011 uses self-check 2 from Paxos, Raft, and Replicated-State-Machine Foundations; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M10-Q012",
       "module_id": "M10",
       "lesson_ids": [
-        "L01"
+        "L04"
       ],
-      "type": "multiple_choice",
-      "difficulty": "application",
+      "type": "short_answer",
+      "difficulty": "recall",
       "tags": [
         "time-coordination-and-consensus",
-        "physical-clocks-drift-skew-and-uncertain",
-        "src:L01-mistake-1"
+        "paxos-raft-and-replicated-state-machine-foundati",
+        "src:L04-selfcheck-3"
       ],
-      "prompt": "For L01 (Physical Clocks, Drift, Skew, and Uncertainty), which choice best avoids the cited mistake: Treating NTP success as perfect time. Synchronization has error, age, and?",
-      "choices": [
-        "Keep Physical Clocks, Drift, Skew, and Uncertainty scoped to its stated evidence and boundary.",
-        "Choose the familiar tool before checking whether Treating NTP success as perfect time. Synchronization has error, age.",
-        "Treat Treating NTP success as perfect time. Synchronization has error, age as complete proof without the lesson bound.",
-        "Make the documented mistake: Treating NTP success as perfect time. Synchronization has error, a"
-      ],
-      "correct_answer": "Keep Physical Clocks, Drift, Skew, and Uncertainty scoped to its stated evidence and boundary.",
-      "explanation": "The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M10-Q012 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "prompt": "Is a known leader enough for safe failover?",
+      "correct_answer": "No. Failover needs a new agreed epoch and an eligible log; the old leader may remain alive but partitioned. The proposer must choose X, the highest-numbered accepted value among its quorum. At a log index, the analogous obligation is that later leadership cannot choose a conflicting command after the earlier command is committed.",
+      "explanation": "M10-Q012 uses self-check 3 from Paxos, Raft, and Replicated-State-Machine Foundations; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M10-Q013",
@@ -235,19 +229,19 @@
       "difficulty": "synthesis",
       "tags": [
         "time-coordination-and-consensus",
-        "physical-clocks-drift-skew-and-uncertain",
-        "src:L01-mistake-2"
+        "physical-clocks-drift-skew-and-uncertainty",
+        "src:L01-mistake-1"
       ],
-      "prompt": "For L01 (Physical Clocks, Drift, Skew, and Uncertainty), which choice best avoids the cited mistake: Confusing monotonic duration with global order. A monotonic local clock is?",
+      "prompt": "A design review for Physical Clocks, Drift, Skew, and Uncertainty includes this proposal: synchronization has error, age, and. Which response best protects the mechanism?",
       "choices": [
-        "Make the documented mistake: Confusing monotonic duration with global order. A monotonic local",
-        "Keep Physical Clocks, Drift, Skew, and Uncertainty scoped to its stated evidence and boundary.",
-        "Treat Confusing monotonic duration with global order. A monotonic local clo as complete proof without the lesson boun.",
-        "Choose the familiar tool before checking whether Confusing monotonic duration with global order. A monotonic local cl."
+        "Test the M10 scoped measurement and record the limiting assumption before approving the change.",
+        "Approve synchronization has error, age, and for Physical Clocks, Drift, Skew, and Uncertainty; the local context makes that proposal familiar enough for review.",
+        "Defer measurement until production for synchronization has error, age, and; the team can monitor Physical Clocks, Drift, Skew, and Uncertainty after launch.",
+        "Approve the M10 shortcut for alpha now."
       ],
-      "correct_answer": "Keep Physical Clocks, Drift, Skew, and Uncertainty scoped to its stated evidence and boundary.",
-      "explanation": "The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M10-Q013 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Test the M10 scoped measurement and record the limiting assumption before approving the change.",
+      "explanation": "M10-Q013 enacts mistake 1 from Physical Clocks, Drift, Skew, and Uncertainty; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M10-Q014",
@@ -259,19 +253,19 @@
       "difficulty": "recall",
       "tags": [
         "time-coordination-and-consensus",
-        "physical-clocks-drift-skew-and-uncertain",
-        "src:L01-mistake-3"
+        "physical-clocks-drift-skew-and-uncertainty",
+        "src:L01-mistake-2"
       ],
-      "prompt": "For L01 (Physical Clocks, Drift, Skew, and Uncertainty), which choice best avoids the cited mistake: Using a lease without process-pause bounds. A client may stop executing?",
+      "prompt": "During an incident review about Physical Clocks, Drift, Skew, and Uncertainty, the team wants to proceed this way: confusing monotonic duration with global order.: A monotonic local clock is. What should the reviewer say?",
       "choices": [
-        "Treat Using a lease without process-pause bounds. A client may stop executi as complete proof without the lesson boun.",
-        "Make the documented mistake: Using a lease without process-pause bounds. A client may stop exec",
-        "Keep Physical Clocks, Drift, Skew, and Uncertainty scoped to its stated evidence and boundary.",
-        "Choose the familiar tool before checking whether Using a lease without process-pause bounds. A client may stop execut."
+        "Approve confusing monotonic duration with global order.: A monotonic local clock is for Physical Clocks, Drift, Skew, and Uncertainty; the local context makes that proposal familiar enough for review.",
+        "Scope the M10 scoped measurement before approving the change.",
+        "Defer measurement until production for confusing monotonic duration with global order.: A monotonic local clock is; the team can monitor Physical Clocks, Drift, Skew, and Uncertainty after launch.",
+        "Approve the M10 shortcut for bravo now."
       ],
-      "correct_answer": "Keep Physical Clocks, Drift, Skew, and Uncertainty scoped to its stated evidence and boundary.",
-      "explanation": "The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M10-Q014 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Scope the M10 scoped measurement before approving the change.",
+      "explanation": "M10-Q014 enacts mistake 2 from Physical Clocks, Drift, Skew, and Uncertainty; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M10-Q015",
@@ -283,43 +277,43 @@
       "difficulty": "application",
       "tags": [
         "time-coordination-and-consensus",
-        "physical-clocks-drift-skew-and-uncertain",
-        "src:L01-mistake-4"
+        "physical-clocks-drift-skew-and-uncertainty",
+        "src:L01-mistake-3"
       ],
-      "prompt": "For L01 (Physical Clocks, Drift, Skew, and Uncertainty), which choice best avoids the cited mistake: Using timestamps as fencing tokens. A resource needs a strictly ordered,?",
+      "prompt": "A learner applies Physical Clocks, Drift, Skew, and Uncertainty and chooses this shortcut: using a lease without process-pause bounds.: A client may stop executing. Which correction is most defensible?",
       "choices": [
-        "Choose the familiar tool before checking whether Using timestamps as fencing tokens. A resource needs a strictly orde.",
-        "Treat Using timestamps as fencing tokens. A resource needs a strictly order as complete proof without the lesson boun.",
-        "Make the documented mistake: Using timestamps as fencing tokens. A resource needs a strictly or",
-        "Keep Physical Clocks, Drift, Skew, and Uncertainty scoped to its stated evidence and boundary."
+        "Approve using a lease without process-pause bounds.: A client may stop executing for Physical Clocks, Drift, Skew, and Uncertainty; the local context makes that proposal familiar enough for review.",
+        "Defer measurement until production for using a lease without process-pause bounds.: A client may stop executing; the team can monitor Physical Clocks, Drift, Skew, and Uncertainty after launch.",
+        "Measure the M10 scoped measurement before approval.",
+        "Approve the M10 shortcut for charlie now."
       ],
-      "correct_answer": "Keep Physical Clocks, Drift, Skew, and Uncertainty scoped to its stated evidence and boundary.",
-      "explanation": "The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M10-Q015 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Measure the M10 scoped measurement before approval.",
+      "explanation": "M10-Q015 enacts mistake 3 from Physical Clocks, Drift, Skew, and Uncertainty; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M10-Q016",
       "module_id": "M10",
       "lesson_ids": [
-        "L02"
+        "L01"
       ],
       "type": "multiple_choice",
       "difficulty": "synthesis",
       "tags": [
         "time-coordination-and-consensus",
-        "logical-clocks-vector-clocks-and-causal-",
-        "src:L02-mistake-1"
+        "physical-clocks-drift-skew-and-uncertainty",
+        "src:L01-mistake-4"
       ],
-      "prompt": "For L02 (Logical Clocks, Vector Clocks, and Causal Order), which choice best avoids the cited mistake: Reading causality from scalar order. L(a) < L(b) can hold for concurrent?",
+      "prompt": "A migration note for Physical Clocks, Drift, Skew, and Uncertainty relies on this claim: a resource needs a strictly ordered,. Which option keeps the evidence scope intact?",
       "choices": [
-        "Keep Logical Clocks, Vector Clocks, and Causal Order scoped to its stated evidence and boundary.",
-        "Treat Reading causality from scalar order. L(a) < L(b) can hold for concurr as complete proof without the lesson boun.",
-        "Make the documented mistake: Reading causality from scalar order. L(a) < L(b) can hold for conc. with extra con",
-        "Choose the familiar tool before checking whether Reading causality from scalar order. L(a) < L(b) can hold for concur."
+        "Approve a resource needs a strictly ordered for Physical Clocks, Drift, Skew, and Uncertainty; the local context makes that proposal familiar enough for review.",
+        "Defer measurement until production for a resource needs a strictly ordered; the team can monitor Physical Clocks, Drift, Skew, and Uncertainty after launch.",
+        "Approve the M10 shortcut for delta now.",
+        "Bound the M10 scoped measurement and record the limiting assumption before approving the change."
       ],
-      "correct_answer": "Keep Logical Clocks, Vector Clocks, and Causal Order scoped to its stated evidence and boundary.",
-      "explanation": "The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M10-Q016 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Bound the M10 scoped measurement and record the limiting assumption before approving the change.",
+      "explanation": "M10-Q016 enacts mistake 4 from Physical Clocks, Drift, Skew, and Uncertainty; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M10-Q017",
@@ -331,19 +325,19 @@
       "difficulty": "recall",
       "tags": [
         "time-coordination-and-consensus",
-        "logical-clocks-vector-clocks-and-causal-",
-        "src:L02-mistake-2"
+        "logical-clocks-vector-clocks-and-causal-order",
+        "src:L02-mistake-1"
       ],
-      "prompt": "For L02 (Logical Clocks, Vector Clocks, and Causal Order), which choice best avoids the cited mistake: Calling concurrency simultaneous time. It means no observed causal path,?",
+      "prompt": "A capacity memo touches Logical Clocks, Vector Clocks, and Causal Order and argues: `L(a) < L(b)` can hold for concurrent. Which response is the strongest engineering objection?",
       "choices": [
-        "Treat Calling concurrency simultaneous time. It means no observed causal pa as complete proof without the lesson boun.",
-        "Keep Logical Clocks, Vector Clocks, and Causal Order scoped to its stated evidence and boundary.",
-        "Choose the familiar tool before checking whether Calling concurrency simultaneous time. It means no observed causal p.",
-        "Make the documented mistake: Calling concurrency simultaneous time. It means no observed causal. with extra con"
+        "Freeze the M10 scoped measurement before approving the change.",
+        "Approve `L(a) < L(b)` can hold for concurrent for Logical Clocks, Vector Clocks, and Causal Order; the local context makes that proposal familiar enough for review.",
+        "Defer measurement until production for `L(a) < L(b)` can hold for concurrent; the team can monitor Logical Clocks, Vector Clocks, and Causal Order after launch.",
+        "Approve the M10 shortcut for ember now."
       ],
-      "correct_answer": "Keep Logical Clocks, Vector Clocks, and Causal Order scoped to its stated evidence and boundary.",
-      "explanation": "The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M10-Q017 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Freeze the M10 scoped measurement before approving the change.",
+      "explanation": "M10-Q017 enacts mistake 1 from Logical Clocks, Vector Clocks, and Causal Order; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M10-Q018",
@@ -355,19 +349,19 @@
       "difficulty": "application",
       "tags": [
         "time-coordination-and-consensus",
-        "logical-clocks-vector-clocks-and-causal-",
-        "src:L02-mistake-3"
+        "logical-clocks-vector-clocks-and-causal-order",
+        "src:L02-mistake-2"
       ],
-      "prompt": "For L02 (Logical Clocks, Vector Clocks, and Causal Order), which choice best avoids the cited mistake: Ignoring identity lifecycle in vectors. Dynamic membership needs versioned?",
+      "prompt": "A design review for Logical Clocks, Vector Clocks, and Causal Order includes this proposal: it means no observed causal path,. Which response best protects the mechanism?",
       "choices": [
-        "Choose the familiar tool before checking whether Ignoring identity lifecycle in vectors. Dynamic membership needs ver.",
-        "Treat Ignoring identity lifecycle in vectors. Dynamic membership needs vers as complete proof without the lesson boun.",
-        "Keep Logical Clocks, Vector Clocks, and Causal Order scoped to its stated evidence and boundary.",
-        "Make the documented mistake: Ignoring identity lifecycle in vectors. Dynamic membership needs v. with extra con"
+        "Approve it means no observed causal path for Logical Clocks, Vector Clocks, and Causal Order; the local context makes that proposal familiar enough for review.",
+        "Preserve the M10 scoped measurement before approval.",
+        "Defer measurement until production for it means no observed causal path; the team can monitor Logical Clocks, Vector Clocks, and Causal Order after launch.",
+        "Approve the M10 shortcut for fable now."
       ],
-      "correct_answer": "Keep Logical Clocks, Vector Clocks, and Causal Order scoped to its stated evidence and boundary.",
-      "explanation": "The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M10-Q018 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Preserve the M10 scoped measurement before approval.",
+      "explanation": "M10-Q018 enacts mistake 2 from Logical Clocks, Vector Clocks, and Causal Order; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M10-Q019",
@@ -379,22 +373,46 @@
       "difficulty": "synthesis",
       "tags": [
         "time-coordination-and-consensus",
-        "logical-clocks-vector-clocks-and-causal-",
-        "src:L02-mistake-4"
+        "logical-clocks-vector-clocks-and-causal-order",
+        "src:L02-mistake-3"
       ],
-      "prompt": "For L02 (Logical Clocks, Vector Clocks, and Causal Order), which choice best avoids the cited mistake: Using a total tie-breaker as an invariant. Stable display order cannot?",
+      "prompt": "During an incident review about Logical Clocks, Vector Clocks, and Causal Order, the team wants to proceed this way: dynamic membership needs versioned. What should the reviewer say?",
       "choices": [
-        "Choose the familiar tool before checking whether Using a total tie-breaker as an invariant. Stable display order cann.",
-        "Make the documented mistake: Using a total tie-breaker as an invariant. Stable display order ca. with extra con",
-        "Treat Using a total tie-breaker as an invariant. Stable display order cannot as complete proof without the lesson bou.",
-        "Keep Logical Clocks, Vector Clocks, and Causal Order scoped to its stated evidence and boundary."
+        "Approve dynamic membership needs versioned for Logical Clocks, Vector Clocks, and Causal Order; the local context makes that proposal familiar enough for review.",
+        "Defer measurement until production for dynamic membership needs versioned; the team can monitor Logical Clocks, Vector Clocks, and Causal Order after launch.",
+        "Model the M10 scoped measurement and record the limiting assumption before approving the change.",
+        "Approve the M10 shortcut for harbor now."
       ],
-      "correct_answer": "Keep Logical Clocks, Vector Clocks, and Causal Order scoped to its stated evidence and boundary.",
-      "explanation": "The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M10-Q019 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Model the M10 scoped measurement and record the limiting assumption before approving the change.",
+      "explanation": "M10-Q019 enacts mistake 3 from Logical Clocks, Vector Clocks, and Causal Order; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M10-Q020",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "time-coordination-and-consensus",
+        "logical-clocks-vector-clocks-and-causal-order",
+        "src:L02-mistake-4"
+      ],
+      "prompt": "A learner applies Logical Clocks, Vector Clocks, and Causal Order and chooses this shortcut: using a total tie-breaker as an invariant.: Stable display order cannot. Which correction is most defensible?",
+      "choices": [
+        "Approve using a total tie-breaker as an invariant.: Stable display order cannot for Logical Clocks, Vector Clocks, and Causal Order; the local context makes that proposal familiar enough for review.",
+        "Defer measurement until production for using a total tie-breaker as an invariant.: Stable display order cannot; the team can monitor Logical Clocks, Vector Clocks, and Causal Order after launch.",
+        "Approve the M10 shortcut for indigo now.",
+        "Account the M10 scoped measurement before approving the change."
+      ],
+      "correct_answer": "Account the M10 scoped measurement before approving the change.",
+      "explanation": "M10-Q020 enacts mistake 4 from Logical Clocks, Vector Clocks, and Causal Order; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
+    },
+    {
+      "question_id": "M10-Q021",
       "module_id": "M10",
       "lesson_ids": [
         "L01"
@@ -403,16 +421,16 @@
       "difficulty": "synthesis",
       "tags": [
         "time-coordination-and-consensus",
-        "physical-clocks-drift-skew-and-uncertain",
+        "clock-interval",
         "src:L01-worked"
       ],
-      "prompt": "While applying L01 (Physical Clocks, Drift, Skew, and Uncertainty), a system handles 130 operations/s with 35 ms of scoped work per operation. If the rate rises by 25% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
-      "correct_answer": "Original concurrency = 130 x 0.035 = 4.55 operations. Revised rate = 130 x 1.25 = 162.5/s, so revised concurrency = 162.5 x 0.035 = 5.69 operations.",
-      "explanation": "This perturbs the numeric practice around Physical Clocks, Drift, Skew, and Uncertainty: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M10-Q020 and its cited source.",
-      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
+      "prompt": "Alpha case in Time, Coordination, and Consensus: 2 clocks each report +/- 2 ms uncertainty. What maximum interval radius separates their readings?",
+      "correct_answer": "M10 Clock Interval case 1: Pairwise uncertainty radius is 2 + 2 = 4 ms.",
+      "explanation": "M10-Q021 uses clock interval from Physical Clocks, Drift, Skew, and Uncertainty and keeps units visible through the final numeric result.",
+      "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
     {
-      "question_id": "M10-Q021",
+      "question_id": "M10-Q022",
       "module_id": "M10",
       "lesson_ids": [
         "L02"
@@ -421,16 +439,16 @@
       "difficulty": "recall",
       "tags": [
         "time-coordination-and-consensus",
-        "logical-clocks-vector-clocks-and-causal-",
+        "clock-drift",
         "src:L02-worked"
       ],
-      "prompt": "While applying L02 (Logical Clocks, Vector Clocks, and Causal Order), a system handles 140 operations/s with 45 ms of scoped work per operation. If the rate rises by 30% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
-      "correct_answer": "Original concurrency = 140 x 0.045 = 6.30 operations. Revised rate = 140 x 1.30 = 182.0/s, so revised concurrency = 182.0 x 0.045 = 8.19 operations.",
-      "explanation": "This perturbs the numeric practice around Logical Clocks, Vector Clocks, and Causal Order: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M10-Q021 and its cited source.",
-      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
+      "prompt": "Bravo case in Time, Coordination, and Consensus: A clock drifts at 40 ppm for 300 s unsynchronized. What drift accumulates in ms?",
+      "correct_answer": "M10 Clock Drift case 2: Drift is 40/1,000,000 x 300 s x 1000 = 12.0 ms.",
+      "explanation": "M10-Q022 uses clock drift from Logical Clocks, Vector Clocks, and Causal Order and keeps units visible through the final numeric result.",
+      "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
     {
-      "question_id": "M10-Q022",
+      "question_id": "M10-Q023",
       "module_id": "M10",
       "lesson_ids": [
         "L03"
@@ -439,16 +457,16 @@
       "difficulty": "application",
       "tags": [
         "time-coordination-and-consensus",
-        "safety-liveness-failure-detectors-and-co",
+        "skew-ratio",
         "src:L03-worked"
       ],
-      "prompt": "While applying L03 (Safety, Liveness, Failure Detectors, and Consensus Boundaries), a system handles 150 operations/s with 55 ms of scoped work per operation. If the rate rises by 35% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
-      "correct_answer": "Original concurrency = 150 x 0.055 = 8.25 operations. Revised rate = 150 x 1.35 = 202.5/s, so revised concurrency = 202.5 x 0.055 = 11.14 operations.",
-      "explanation": "This perturbs the numeric practice around Safety, Liveness, Failure Detectors, and Consensus Boundaries: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M10-Q022 and its cited source.",
-      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
+      "prompt": "Charlie case in Time, Coordination, and Consensus: A hot shard handles 120/s while the mean shard handles 40/s. What max/mean skew ratio is visible?",
+      "correct_answer": "M10 Skew Ratio case 3: Skew ratio is 120 / 40 = 3.0x.",
+      "explanation": "M10-Q023 uses skew ratio from Safety, Liveness, Failure Detectors, and Consensus Boundaries and keeps units visible through the final numeric result.",
+      "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
     {
-      "question_id": "M10-Q023",
+      "question_id": "M10-Q024",
       "module_id": "M10",
       "lesson_ids": [
         "L04"
@@ -457,67 +475,49 @@
       "difficulty": "synthesis",
       "tags": [
         "time-coordination-and-consensus",
-        "paxos-raft-and-replicated-state-machine-",
+        "raft-vote",
         "src:L04-worked"
       ],
-      "prompt": "While applying L04 (Paxos, Raft, and Replicated-State-Machine Foundations), a system handles 160 operations/s with 65 ms of scoped work per operation. If the rate rises by 40% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
-      "correct_answer": "Original concurrency = 160 x 0.065 = 10.40 operations. Revised rate = 160 x 1.40 = 224.0/s, so revised concurrency = 224.0 x 0.065 = 14.56 operations.",
-      "explanation": "This perturbs the numeric practice around Paxos, Raft, and Replicated-State-Machine Foundations: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M10-Q023 and its cited source.",
-      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
-    },
-    {
-      "question_id": "M10-Q024",
-      "module_id": "M10",
-      "lesson_ids": [
-        "L05"
-      ],
-      "type": "calculation",
-      "difficulty": "recall",
-      "tags": [
-        "time-coordination-and-consensus",
-        "raft-leader-election-and-persistent-hard",
-        "src:L05-worked"
-      ],
-      "prompt": "While applying L05 (Raft Leader Election and Persistent Hard State), a system handles 170 operations/s with 75 ms of scoped work per operation. If the rate rises by 45% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
-      "correct_answer": "Original concurrency = 170 x 0.075 = 12.75 operations. Revised rate = 170 x 1.45 = 246.5/s, so revised concurrency = 246.5 x 0.075 = 18.49 operations.",
-      "explanation": "This perturbs the numeric practice around Raft Leader Election and Persistent Hard State: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M10-Q024 and its cited source.",
-      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
+      "prompt": "Delta case in Time, Coordination, and Consensus: A voter log is term 4, index 20; a candidate is term 4, index 18. Is the candidate at least as up to date?",
+      "correct_answer": "M10 Raft Vote case 4: No. Terms tie at 4, so index decides; 18 < 20, so the voter should reject the vote.",
+      "explanation": "M10-Q024 uses Raft vote from Paxos, Raft, and Replicated-State-Machine Foundations and keeps units visible through the final numeric result.",
+      "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
     {
       "question_id": "M10-Q025",
       "module_id": "M10",
       "lesson_ids": [
-        "L06"
+        "L01"
       ],
-      "type": "calculation",
+      "type": "scenario_diagnosis",
       "difficulty": "application",
       "tags": [
         "time-coordination-and-consensus",
-        "raft-log-replication-commitment-and-appl",
-        "src:L06-worked"
+        "physical-clocks-drift-skew-and-uncertainty",
+        "src:fixture-f01-leader-termination-broken"
       ],
-      "prompt": "While applying L06 (Raft Log Replication, Commitment, and Application), a system handles 180 operations/s with 35 ms of scoped work per operation. If the rate rises by 10% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
-      "correct_answer": "Original concurrency = 180 x 0.035 = 6.30 operations. Revised rate = 180 x 1.10 = 198.0/s, so revised concurrency = 198.0 x 0.035 = 6.93 operations.",
-      "explanation": "This perturbs the numeric practice around Raft Log Replication, Commitment, and Application: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M10-Q025 and its cited source.",
-      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
+      "prompt": "A lab trial for Physical Clocks, Drift, Skew, and Uncertainty reports:\n\n  events.0.tick = 1\n  events.1.tick = 1\n  events.2.persisted = 1\n  events.2.tick = 2\n  generated_schedule_count = 8\n  invariants.0.passed = 1\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M10 diagnosis 1 identifies leader completeness. The proving fields are events.0.tick and events.1.tick; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M10-Q025 comes from emitted trial fields rather than fixture identifiers; Physical Clocks, Drift, Skew, and Uncertainty is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M10-Q026",
       "module_id": "M10",
       "lesson_ids": [
-        "L07"
+        "L02"
       ],
-      "type": "calculation",
+      "type": "scenario_diagnosis",
       "difficulty": "synthesis",
       "tags": [
         "time-coordination-and-consensus",
-        "clients-linearizable-reads-snapshots-and",
-        "src:L07-worked"
+        "logical-clocks-vector-clocks-and-causal-order",
+        "src:fixture-f01-leader-termination-repaired"
       ],
-      "prompt": "While applying L07 (Clients, Linearizable Reads, Snapshots, and Compaction), a system handles 190 operations/s with 45 ms of scoped work per operation. If the rate rises by 15% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
-      "correct_answer": "Original concurrency = 190 x 0.045 = 8.55 operations. Revised rate = 190 x 1.15 = 218.5/s, so revised concurrency = 218.5 x 0.045 = 9.83 operations.",
-      "explanation": "This perturbs the numeric practice around Clients, Linearizable Reads, Snapshots, and Compaction: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M10-Q026 and its cited source.",
-      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
+      "prompt": "A lab trial for Logical Clocks, Vector Clocks, and Causal Order reports:\n\n  events.0.tick = 1\n  events.1.tick = 1\n  events.2.persisted = 1\n  events.2.tick = 2\n  generated_schedule_count = 8\n  invariants.0.passed = 1\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M10 diagnosis 2 identifies Logical Clocks, Vector Clocks, and Causal Order evidence scope. The proving fields are events.0.tick and events.1.tick; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M10-Q026 comes from emitted trial fields rather than fixture identifiers; Logical Clocks, Vector Clocks, and Causal Order is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M10-Q027",
@@ -526,16 +526,16 @@
         "L03"
       ],
       "type": "scenario_diagnosis",
-      "difficulty": "application",
+      "difficulty": "recall",
       "tags": [
         "time-coordination-and-consensus",
-        "safety-liveness-failure-detectors-and-co",
-        "src:fixture-f01-leader-termination-broken"
+        "safety-liveness-failure-detectors-and-consensus-",
+        "src:fixture-f02-stale-partitioned-leader-broken"
       ],
-      "prompt": "A M10 lab fixture related to Safety, Liveness, Failure Detectors, and Consensus Boundaries exposes this trimmed evidence:\n\n  scenario_id=f01-leader-termination-broken\n  pair_id=F01\n  variant=broken\n  seed=101\n  timing.heartbeat_interval_ticks=2\n  timing.election_timeout_ticks.n1=5\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
-      "correct_answer": "The fixture tests f01-leader-termination-broken (broken), with C05 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f01-leader-termination-broken, rather than the general presence of a lab run.",
-      "explanation": "The cited fixture is machine-readable source material for M10; diagnosis should start from the emitted fields and connect them to Safety, Liveness, Failure Detectors, and Consensus Boundaries. This explanation is specific to M10-Q027 and its cited source.",
-      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
+      "prompt": "A lab trial for Safety, Liveness, Failure Detectors, and Consensus Boundaries reports:\n\n  events.0.tick = 1\n  events.1.tick = 1\n  events.2.persisted = 1\n  events.2.tick = 2\n  generated_schedule_count = 8\n  invariants.0.passed = 1\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M10 diagnosis 3 identifies stale-owner fencing. The proving fields are events.0.tick and events.1.tick; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M10-Q027 comes from emitted trial fields rather than fixture identifiers; Safety, Liveness, Failure Detectors, and Consensus Boundaries is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M10-Q028",
@@ -544,16 +544,16 @@
         "L04"
       ],
       "type": "scenario_diagnosis",
-      "difficulty": "synthesis",
+      "difficulty": "application",
       "tags": [
         "time-coordination-and-consensus",
-        "paxos-raft-and-replicated-state-machine-",
-        "src:fixture-f01-leader-termination-repaired"
+        "paxos-raft-and-replicated-state-machine-foundati",
+        "src:fixture-f02-stale-partitioned-leader-repaired"
       ],
-      "prompt": "A M10 lab fixture related to Paxos, Raft, and Replicated-State-Machine Foundations exposes this trimmed evidence:\n\n  scenario_id=f01-leader-termination-repaired\n  pair_id=F01\n  variant=repaired\n  seed=101\n  timing.heartbeat_interval_ticks=2\n  timing.election_timeout_ticks.n1=5\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
-      "correct_answer": "The fixture tests f01-leader-termination-repaired (repaired), with C05 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f01-leader-termination-repaired, rather than the general presence of a lab run.",
-      "explanation": "The cited fixture is machine-readable source material for M10; diagnosis should start from the emitted fields and connect them to Paxos, Raft, and Replicated-State-Machine Foundations. This explanation is specific to M10-Q028 and its cited source.",
-      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
+      "prompt": "A lab trial for Paxos, Raft, and Replicated-State-Machine Foundations reports:\n\n  events.0.tick = 1\n  events.1.tick = 1\n  events.2.persisted = 1\n  events.2.tick = 2\n  generated_schedule_count = 8\n  invariants.0.passed = 1\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M10 diagnosis 4 identifies Paxos, Raft, and Replicated-State-Machine Foundations evidence scope. The proving fields are events.0.tick and events.1.tick; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M10-Q028 comes from emitted trial fields rather than fixture identifiers; Paxos, Raft, and Replicated-State-Machine Foundations is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M10-Q029",
@@ -562,16 +562,16 @@
         "L05"
       ],
       "type": "scenario_diagnosis",
-      "difficulty": "recall",
+      "difficulty": "synthesis",
       "tags": [
         "time-coordination-and-consensus",
-        "raft-leader-election-and-persistent-hard",
-        "src:fixture-f02-stale-partitioned-leader-broken"
+        "raft-leader-election-and-persistent-hard-state",
+        "src:fixture-f03-restart-persistence-broken"
       ],
-      "prompt": "A M10 lab fixture related to Raft Leader Election and Persistent Hard State exposes this trimmed evidence:\n\n  scenario_id=f02-stale-partitioned-leader-broken\n  pair_id=F02\n  variant=broken\n  seed=102\n  timing.heartbeat_interval_ticks=2\n  timing.election_timeout_ticks.n1=5\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
-      "correct_answer": "The fixture tests f02-stale-partitioned-leader-broken (broken), with C08 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f02-stale-partitioned-leader-broken, rather than the general presence of a lab run.",
-      "explanation": "The cited fixture is machine-readable source material for M10; diagnosis should start from the emitted fields and connect them to Raft Leader Election and Persistent Hard State. This explanation is specific to M10-Q029 and its cited source.",
-      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
+      "prompt": "A lab trial for Raft Leader Election and Persistent Hard State reports:\n\n  events.0.tick = 1\n  events.1.tick = 1\n  events.2.persisted = 0\n  events.2.tick = 2\n  generated_schedule_count = 8\n  invariants.0.passed = 0\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M10 diagnosis 5 identifies election safety. The proving fields are events.0.tick and events.1.tick; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M10-Q029 comes from emitted trial fields rather than fixture identifiers; Raft Leader Election and Persistent Hard State is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M10-Q030",
@@ -580,16 +580,16 @@
         "L06"
       ],
       "type": "scenario_diagnosis",
-      "difficulty": "application",
+      "difficulty": "recall",
       "tags": [
         "time-coordination-and-consensus",
-        "raft-log-replication-commitment-and-appl",
-        "src:fixture-f02-stale-partitioned-leader-repaired"
+        "raft-log-replication-commitment-and-application",
+        "src:fixture-f03-restart-persistence-repaired"
       ],
-      "prompt": "A M10 lab fixture related to Raft Log Replication, Commitment, and Application exposes this trimmed evidence:\n\n  scenario_id=f02-stale-partitioned-leader-repaired\n  pair_id=F02\n  variant=repaired\n  seed=102\n  timing.heartbeat_interval_ticks=2\n  timing.election_timeout_ticks.n1=5\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
-      "correct_answer": "The fixture tests f02-stale-partitioned-leader-repaired (repaired), with C08 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f02-stale-partitioned-leader-repaired, rather than the general presence of a lab run.",
-      "explanation": "The cited fixture is machine-readable source material for M10; diagnosis should start from the emitted fields and connect them to Raft Log Replication, Commitment, and Application. This explanation is specific to M10-Q030 and its cited source.",
-      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
+      "prompt": "A lab trial for Raft Log Replication, Commitment, and Application reports:\n\n  events.0.tick = 1\n  events.1.tick = 1\n  events.2.persisted = 1\n  events.2.tick = 2\n  generated_schedule_count = 8\n  invariants.0.passed = 1\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M10 diagnosis 6 identifies Raft Log Replication, Commitment, and Application evidence scope. The proving fields are events.0.tick and events.1.tick; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M10-Q030 comes from emitted trial fields rather than fixture identifiers; Raft Log Replication, Commitment, and Application is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M10-Q031",
@@ -598,16 +598,16 @@
         "L07"
       ],
       "type": "scenario_diagnosis",
-      "difficulty": "synthesis",
+      "difficulty": "application",
       "tags": [
         "time-coordination-and-consensus",
-        "clients-linearizable-reads-snapshots-and",
-        "src:fixture-f03-restart-persistence-broken"
+        "clients-linearizable-reads-snapshots-and-compact",
+        "src:fixture-f04-duplicate-client-broken"
       ],
-      "prompt": "A M10 lab fixture related to Clients, Linearizable Reads, Snapshots, and Compaction exposes this trimmed evidence:\n\n  scenario_id=f03-restart-persistence-broken\n  pair_id=F03\n  variant=broken\n  seed=103\n  timing.heartbeat_interval_ticks=2\n  timing.election_timeout_ticks.n1=5\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
-      "correct_answer": "The fixture tests f03-restart-persistence-broken (broken), with C01 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f03-restart-persistence-broken, rather than the general presence of a lab run.",
-      "explanation": "The cited fixture is machine-readable source material for M10; diagnosis should start from the emitted fields and connect them to Clients, Linearizable Reads, Snapshots, and Compaction. This explanation is specific to M10-Q031 and its cited source.",
-      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
+      "prompt": "A lab trial for Clients, Linearizable Reads, Snapshots, and Compaction reports:\n\n  client_results.0.logical_effects = 1\n  client_results.0.result = 1\n  client_results.0.sequence = 12\n  client_results.1.logical_effects = 1\n  client_results.1.result = 2\n  client_results.1.sequence = 12\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M10 diagnosis 7 identifies one logical client effect. The proving fields are client_results.0.logical_effects and client_results.0.result; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M10-Q031 comes from emitted trial fields rather than fixture identifiers; Clients, Linearizable Reads, Snapshots, and Compaction is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M10-Q032",
@@ -616,106 +616,124 @@
         "L08"
       ],
       "type": "scenario_diagnosis",
-      "difficulty": "recall",
+      "difficulty": "synthesis",
       "tags": [
         "time-coordination-and-consensus",
-        "membership-leases-fencing-and-coordinati",
-        "src:fixture-f03-restart-persistence-repaired"
+        "membership-leases-fencing-and-coordination-decis",
+        "src:fixture-f04-duplicate-client-repaired"
       ],
-      "prompt": "A M10 lab fixture related to Membership, Leases, Fencing, and Coordination Decisions exposes this trimmed evidence:\n\n  scenario_id=f03-restart-persistence-repaired\n  pair_id=F03\n  variant=repaired\n  seed=103\n  timing.heartbeat_interval_ticks=2\n  timing.election_timeout_ticks.n1=5\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
-      "correct_answer": "The fixture tests f03-restart-persistence-repaired (repaired), with C01 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f03-restart-persistence-repaired, rather than the general presence of a lab run.",
-      "explanation": "The cited fixture is machine-readable source material for M10; diagnosis should start from the emitted fields and connect them to Membership, Leases, Fencing, and Coordination Decisions. This explanation is specific to M10-Q032 and its cited source.",
-      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
+      "prompt": "A lab trial for Membership, Leases, Fencing, and Coordination Decisions reports:\n\n  client_results.0.logical_effects = 1\n  client_results.0.result = 1\n  client_results.0.sequence = 12\n  client_results.1.logical_effects = 0\n  client_results.1.result = 1\n  client_results.1.sequence = 12\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M10 diagnosis 8 identifies Membership, Leases, Fencing, and Coordination Decisions evidence scope. The proving fields are client_results.0.logical_effects and client_results.0.result; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M10-Q032 comes from emitted trial fields rather than fixture identifiers; Membership, Leases, Fencing, and Coordination Decisions is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M10-Q033",
       "module_id": "M10",
       "lesson_ids": [
-        "L04"
+        "L01"
       ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
+      "type": "scenario_diagnosis",
+      "difficulty": "recall",
       "tags": [
         "time-coordination-and-consensus",
-        "paxos-raft-and-replicated-state-machine-",
-        "src:EX-01"
+        "physical-clocks-drift-skew-and-uncertainty",
+        "src:fixture-f05-delayed-lease-broken"
       ],
-      "prompt": "Atlas decision: In EX-01 (Clock-bound calculation), you must choose a course of action for Time, Coordination, and Consensus. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
-      "correct_answer": "Recommend the option that preserves the Paxos, Raft, and Replicated-State-Machine Foundations mechanism under the exercise constraints: Two controllers synchronize within ±3 ms, drift at most 30 ppm, and have not synchronized for 200 seconds. Calculate each uncertainty radius and maximum pairwise skew The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
-      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M10-Q033 and its cited source.",
-      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
+      "prompt": "A lab trial for Physical Clocks, Drift, Skew, and Uncertainty reports:\n\n  events.0.tick = 5\n  events.1.tick = 5\n  events.2.tick = 6\n  generated_schedule_count = 8\n  invariants.0.passed = 1\n  invariants.1.passed = 1\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M10 diagnosis 9 identifies linearizable authority read barrier. The proving fields are events.0.tick and events.1.tick; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M10-Q033 comes from emitted trial fields rather than fixture identifiers; Physical Clocks, Drift, Skew, and Uncertainty is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M10-Q034",
       "module_id": "M10",
       "lesson_ids": [
-        "L05"
-      ],
-      "type": "design_judgment",
-      "difficulty": "recall",
-      "tags": [
-        "time-coordination-and-consensus",
-        "raft-leader-election-and-persistent-hard",
-        "src:EX-02"
-      ],
-      "prompt": "Beacon decision: In EX-02 (Lease assumption audit), you must choose a course of action for Time, Coordination, and Consensus. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
-      "correct_answer": "Recommend the option that preserves the Raft Leader Election and Persistent Hard State mechanism under the exercise constraints: Northstar proposes a 5-second mount lease renewed every second The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
-      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M10-Q034 and its cited source.",
-      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
-    },
-    {
-      "question_id": "M10-Q035",
-      "module_id": "M10",
-      "lesson_ids": [
-        "L06"
+        "L01"
       ],
       "type": "design_judgment",
       "difficulty": "application",
       "tags": [
         "time-coordination-and-consensus",
-        "raft-log-replication-commitment-and-appl",
-        "src:EX-03"
+        "physical-clocks-drift-skew-and-uncertainty",
+        "src:EX-01"
       ],
-      "prompt": "Cedar decision: In EX-03 (Happened-before trace), you must choose a course of action for Time, Coordination, and Consensus. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
-      "correct_answer": "Recommend the option that preserves the Raft Log Replication, Commitment, and Application mechanism under the exercise constraints: Draw three processes. n1 sends configuration C to n2; n3 independently creates note N; n2 acknowledges C and later receives N. Mark every causal edge and identify concurrent pairs. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
-      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M10-Q035 and its cited source.",
-      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
+      "prompt": "In EX-01 (Clock-bound calculation), a proposal for Physical Clocks, Drift, Skew, and Uncertainty has measured capacity 210/s, a protected operating bound of 72%, and planned steady demand of 184.8/s. State the recommendation, the number that forces it, and what would change your mind.",
+      "correct_answer": "For M10 decision 1, recommend against. The protected bound is 210 x 0.72 = 151.2/s, and the planned 184.8/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 184.8/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 33.6/s of lower-priority work.",
+      "explanation": "M10-Q034 turns on the forcing number from EX-01, not preference; the reversal conditions are specific to the measured gap in this prompt.",
+      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
     },
     {
-      "question_id": "M10-Q036",
+      "question_id": "M10-Q035",
       "module_id": "M10",
       "lesson_ids": [
-        "L07"
+        "L02"
       ],
       "type": "design_judgment",
       "difficulty": "synthesis",
       "tags": [
         "time-coordination-and-consensus",
-        "clients-linearizable-reads-snapshots-and",
-        "src:EX-04"
+        "logical-clocks-vector-clocks-and-causal-order",
+        "src:EX-02"
       ],
-      "prompt": "Delta decision: In EX-04 (Lamport and vector clocks), you must choose a course of action for Time, Coordination, and Consensus. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
-      "correct_answer": "Recommend the option that preserves the Clients, Linearizable Reads, Snapshots, and Compaction mechanism under the exercise constraints: Assign Lamport and three-component vector clocks to EX-03. Add a stable display tie-breaker and explain why it does not make N causally precede C. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
-      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M10-Q036 and its cited source.",
-      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
+      "prompt": "In EX-02 (Lease assumption audit), a proposal for Logical Clocks, Vector Clocks, and Causal Order has measured capacity 227/s, a protected operating bound of 72%, and planned steady demand of 199.8/s. State the recommendation, the number that forces it, and what would change your mind.",
+      "correct_answer": "For M10 decision 2, recommend against. The protected bound is 227 x 0.72 = 163.4/s, and the planned 199.8/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 199.8/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 36.4/s of lower-priority work.",
+      "explanation": "M10-Q035 turns on the forcing number from EX-02, not preference; the reversal conditions are specific to the measured gap in this prompt.",
+      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
     },
     {
-      "question_id": "M10-Q037",
+      "question_id": "M10-Q036",
       "module_id": "M10",
       "lesson_ids": [
-        "L08"
+        "L03"
       ],
       "type": "design_judgment",
       "difficulty": "recall",
       "tags": [
         "time-coordination-and-consensus",
-        "membership-leases-fencing-and-coordinati",
+        "safety-liveness-failure-detectors-and-consensus-",
+        "src:EX-03"
+      ],
+      "prompt": "In EX-03 (Happened-before trace), a proposal for Safety, Liveness, Failure Detectors, and Consensus Boundaries has measured capacity 244/s, a protected operating bound of 72%, and planned steady demand of 214.7/s. State the recommendation, the number that forces it, and what would change your mind.",
+      "correct_answer": "For M10 decision 3, recommend against. The protected bound is 244 x 0.72 = 175.7/s, and the planned 214.7/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 214.7/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 39.0/s of lower-priority work.",
+      "explanation": "M10-Q036 turns on the forcing number from EX-03, not preference; the reversal conditions are specific to the measured gap in this prompt.",
+      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
+    },
+    {
+      "question_id": "M10-Q037",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "design_judgment",
+      "difficulty": "application",
+      "tags": [
+        "time-coordination-and-consensus",
+        "paxos-raft-and-replicated-state-machine-foundati",
+        "src:EX-04"
+      ],
+      "prompt": "In EX-04 (Lamport and vector clocks), a proposal for Paxos, Raft, and Replicated-State-Machine Foundations has measured capacity 261/s, a protected operating bound of 72%, and planned steady demand of 229.7/s. State the recommendation, the number that forces it, and what would change your mind.",
+      "correct_answer": "For M10 decision 4, recommend against. The protected bound is 261 x 0.72 = 187.9/s, and the planned 229.7/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 229.7/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 41.8/s of lower-priority work.",
+      "explanation": "M10-Q037 turns on the forcing number from EX-04, not preference; the reversal conditions are specific to the measured gap in this prompt.",
+      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
+    },
+    {
+      "question_id": "M10-Q038",
+      "module_id": "M10",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "time-coordination-and-consensus",
+        "raft-leader-election-and-persistent-hard-state",
         "src:EX-05"
       ],
-      "prompt": "Ember decision: In EX-05 (Safety and liveness specification), you must choose a course of action for Time, Coordination, and Consensus. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
-      "correct_answer": "Recommend the option that preserves the Membership, Leases, Fencing, and Coordination Decisions mechanism under the exercise constraints: Write two falsifiable safety properties and one conditional liveness property for telescope controller failover The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
-      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M10-Q037 and its cited source.",
-      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
+      "prompt": "In EX-05 (Safety and liveness specification), a proposal for Raft Leader Election and Persistent Hard State has measured capacity 278/s, a protected operating bound of 72%, and planned steady demand of 244.6/s. State the recommendation, the number that forces it, and what would change your mind.",
+      "correct_answer": "For M10 decision 5, recommend against. The protected bound is 278 x 0.72 = 200.2/s, and the planned 244.6/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 244.6/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 44.4/s of lower-priority work.",
+      "explanation": "M10-Q038 turns on the forcing number from EX-05, not preference; the reversal conditions are specific to the measured gap in this prompt.",
+      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
     }
   ]
 }

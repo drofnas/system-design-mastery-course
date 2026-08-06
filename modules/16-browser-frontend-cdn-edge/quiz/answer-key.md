@@ -4,543 +4,543 @@ This key covers all 43 questions for **Browser, Frontend, CDN, and Edge Architec
 
 ## M16-Q001
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** Its continuation runs as a microtask before the event loop can reach a rendering opportunity; a self-feeding microtask chain can keep delaying paint
+**Answer:** Its continuation runs as a microtask before the event loop can reach a rendering opportunity; a self-feeding microtask chain can keep delaying paint.
 
-**Explanation:** The cited self-check in L01 tests whether the learner can connect Browser Work and the Rendering Pipeline to the module mechanism without replacing evidence with labels. This explanation is specific to M16-Q001 and its cited source.
+**Explanation:** M16-Q001 uses self-check 1 from Browser Work and the Rendering Pipeline; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M16-Q002
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `application`
 
-**Answer:** A compositor-supported change whose required properties and pixels are already available may reuse work, but the trace must confirm the path
+**Answer:** A compositor-supported change whose required properties and pixels are already available may reuse work, but the trace must confirm the path.
 
-**Explanation:** The cited self-check in L01 tests whether the learner can connect Browser Work and the Rendering Pipeline to the module mechanism without replacing evidence with labels. This explanation is specific to M16-Q002 and its cited source.
+**Explanation:** M16-Q002 uses self-check 2 from Browser Work and the Rendering Pipeline; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M16-Q003
 
-**Type:** `short_answer`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`
+**Difficulty:** `recall`
 
-**Answer:** Transfer cost, queue bounds, cancellation, stale results, and ownership still determine whether the user journey and capacity are safe
+**Answer:** Transfer cost, queue bounds, cancellation, stale results, and ownership still determine whether the user journey and capacity are safe.
 
-**Explanation:** The cited self-check in L01 tests whether the learner can connect Browser Work and the Rendering Pipeline to the module mechanism without replacing evidence with labels. This explanation is specific to M16-Q003 and its cited source.
+**Explanation:** M16-Q003 uses self-check 3 from Browser Work and the Rendering Pipeline; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M16-Q004
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** INP is derived from eligible interactions over page visits and reported at a field population percentile; the lab is one controlled observation
+**Answer:** INP is derived from eligible interactions over page visits and reported at a field population percentile; the lab is one controlled observation.
 
-**Explanation:** The cited self-check in L01 tests whether the learner can connect Browser Work and the Rendering Pipeline to the module mechanism without replacing evidence with labels. This explanation is specific to M16-Q004 and its cited source.
+**Explanation:** M16-Q004 uses self-check 4 from Browser Work and the Rendering Pipeline; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M16-Q005
 
-**Type:** `short_answer`  
-**Difficulty:** `application`
+**Type:** `short_answer`
+**Difficulty:** `recall`
 
-**Answer:** Routes differ in critical content, interaction, personalization, rendering, cacheability, and client populations
+**Answer:** Routes differ in critical content, interaction, personalization, rendering, cacheability, and client populations.
 
-**Explanation:** The cited self-check in L02 tests whether the learner can connect Performance Budgets and Evidence to the module mechanism without replacing evidence with labels. This explanation is specific to M16-Q005 and its cited source.
+**Explanation:** M16-Q005 uses self-check 1 from Performance Budgets and Evidence; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M16-Q006
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `synthesis`
 
-**Answer:** It can reject a change under equivalent controlled conditions; it cannot establish the population impact without field evidence
+**Answer:** It can reject a change under equivalent controlled conditions; it cannot establish the population impact without field evidence.
 
-**Explanation:** The cited self-check in L02 tests whether the learner can connect Performance Budgets and Evidence to the module mechanism without replacing evidence with labels. This explanation is specific to M16-Q006 and its cited source.
+**Explanation:** M16-Q006 uses self-check 2 from Performance Budgets and Evidence; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M16-Q007
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `application`
 
-**Answer:** Visits with no eligible interaction produce no INP; treating them as fast or dropping them silently changes the observed population
+**Answer:** Visits with no eligible interaction produce no INP; treating them as fast or dropping them silently changes the observed population.
 
-**Explanation:** The cited self-check in L02 tests whether the learner can connect Performance Budgets and Evidence to the module mechanism without replacing evidence with labels. This explanation is specific to M16-Q007 and its cited source.
+**Explanation:** M16-Q007 uses self-check 3 from Performance Budgets and Evidence; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M16-Q008
 
-**Type:** `short_answer`  
-**Difficulty:** `application`
+**Type:** `short_answer`
+**Difficulty:** `recall`
 
-**Answer:** The signal/window, owner, release or mitigation action, exception process, and reversal/expiry condition
+**Answer:** The signal/window, owner, release or mitigation action, exception process, and reversal/expiry condition.
 
-**Explanation:** The cited self-check in L02 tests whether the learner can connect Performance Budgets and Evidence to the module mechanism without replacing evidence with labels. This explanation is specific to M16-Q008 and its cited source.
+**Explanation:** M16-Q008 uses self-check 4 from Performance Budgets and Evidence; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M16-Q009
 
-**Type:** `short_answer`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`
+**Difficulty:** `application`
 
-**Answer:** At minimum route existence/authorization, safe response headers, cache policy, and the error contract that cannot be expressed after commitment
+**Answer:** At minimum route existence/authorization, safe response headers, cache policy, and the error contract that cannot be expressed after commitment.
 
-**Explanation:** The cited self-check in L03 tests whether the learner can connect Route Rendering and Hydration to the module mechanism without replacing evidence with labels. This explanation is specific to M16-Q009 and its cited source.
+**Explanation:** M16-Q009 uses self-check 1 from Route Rendering and Hydration; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M16-Q010
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `recall`
 
-**Answer:** Each island is still a hydration root whose server markup and initial client state must match
+**Answer:** Each island is still a hydration root whose server markup and initial client state must match.
 
-**Explanation:** The cited self-check in L03 tests whether the learner can connect Route Rendering and Hydration to the module mechanism without replacing evidence with labels. This explanation is specific to M16-Q010 and its cited source.
+**Explanation:** M16-Q010 uses self-check 2 from Route Rendering and Hydration; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M16-Q011
 
-**Type:** `short_answer`  
-**Difficulty:** `application`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** When browser-local state or interaction dominates and the route still has a useful, recoverable, accessible shell with bounded code/data dependencies
+**Answer:** When browser-local state or interaction dominates and the route still has a useful, recoverable, accessible shell with bounded code/data dependencies.
 
-**Explanation:** The cited self-check in L03 tests whether the learner can connect Route Rendering and Hydration to the module mechanism without replacing evidence with labels. This explanation is specific to M16-Q011 and its cited source.
+**Explanation:** M16-Q011 uses self-check 3 from Route Rendering and Hydration; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M16-Q012
 
-**Type:** `short_answer`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`
+**Difficulty:** `application`
 
-**Answer:** It does not prove useful content, interactivity, accessibility, correct status, completion, or failure recovery
+**Answer:** It does not prove useful content, interactivity, accessibility, correct status, completion, or failure recovery.
 
-**Explanation:** The cited self-check in L03 tests whether the learner can connect Route Rendering and Hydration to the module mechanism without replacing evidence with labels. This explanation is specific to M16-Q012 and its cited source.
+**Explanation:** M16-Q012 uses self-check 4 from Route Rendering and Hydration; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M16-Q013
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** Cookies are high-cardinality and sensitive, and a shared cache remains the wrong authority for subject access; bypass shared storage instead
+**Answer:** Cookies are high-cardinality and sensitive, and a shared cache remains the wrong authority for subject access; bypass shared storage instead.
 
-**Explanation:** The cited self-check in L04 tests whether the learner can connect HTTP and CDN Cache Safety to the module mechanism without replacing evidence with labels. This explanation is specific to M16-Q013 and its cited source.
+**Explanation:** M16-Q013 uses self-check 1 from HTTP and CDN Cache Safety; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M16-Q014
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `application`
 
-**Answer:** It identifies a selected representation for validation under its scope; it does not prove authorization or universal semantic freshness
+**Answer:** It identifies a selected representation for validation under its scope; it does not prove authorization or universal semantic freshness.
 
-**Explanation:** The cited self-check in L04 tests whether the learner can connect HTTP and CDN Cache Safety to the module mechanism without replacing evidence with labels. This explanation is specific to M16-Q014 and its cited source.
+**Explanation:** M16-Q014 uses self-check 2 from HTTP and CDN Cache Safety; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M16-Q015
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `application`
 
 **Choices:**
 
-- Keep Browser Work and the Rendering Pipeline scoped to its stated evidence and boundary.
-- Make the documented mistake: Calling every callback a macrotask. The platform contract uses tas
-- Choose the familiar tool before checking whether Calling every callback a macrotask. The platform contract uses tasks.
-- Treat Calling every callback a macrotask. The platform contract uses tasks as complete proof without the lesson bound.
+- Scope the M16 scoped measurement and record the limiting assumption before approving the change.
+- Approve the platform contract uses tasks and for Browser Work and the Rendering Pipeline; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for the platform contract uses tasks and; the team can monitor Browser Work and the Rendering Pipeline after launch.
+- Approve the M16 shortcut for alpha now.
 
-**Answer:** Keep Browser Work and the Rendering Pipeline scoped to its stated evidence and boundary.
+**Answer:** Scope the M16 scoped measurement and record the limiting assumption before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M16-Q015 and its cited source.
+**Explanation:** M16-Q015 enacts mistake 1 from Browser Work and the Rendering Pipeline; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M16-Q016
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `synthesis`
 
 **Choices:**
 
-- Make the documented mistake: Treating promises as free concurrency. Promise continuations are
-- Keep Browser Work and the Rendering Pipeline scoped to its stated evidence and boundary.
-- Treat Treating promises as free concurrency. Promise continuations are as complete proof without the lesson boundary
-- Choose the familiar tool before checking whether Treating promises as free concurrency. Promise continuations are app.
+- Approve promise continuations are for Browser Work and the Rendering Pipeline; the local context makes that proposal familiar enough for review.
+- Measure the M16 scoped measurement before approving the change.
+- Defer measurement until production for promise continuations are; the team can monitor Browser Work and the Rendering Pipeline after launch.
+- Approve the M16 shortcut for bravo now.
 
-**Answer:** Keep Browser Work and the Rendering Pipeline scoped to its stated evidence and boundary.
+**Answer:** Measure the M16 scoped measurement before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M16-Q016 and its cited source.
+**Explanation:** M16-Q016 enacts mistake 2 from Browser Work and the Rendering Pipeline; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M16-Q017
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `recall`
 
 **Choices:**
 
-- Make the documented mistake: Reading a flame chart as causation. A long stack is evidence of ti
-- Treat Reading a flame chart as causation. A long stack is evidence of time as complete proof without the lesson bound.
-- Keep Browser Work and the Rendering Pipeline scoped to its stated evidence and boundary.
-- Choose the familiar tool before checking whether Reading a flame chart as causation. A long stack is evidence of time.
+- Approve a long stack is evidence of time spent for Browser Work and the Rendering Pipeline; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for a long stack is evidence of time spent; the team can monitor Browser Work and the Rendering Pipeline after launch.
+- Bound the M16 scoped measurement before approval.
+- Approve the M16 shortcut for charlie now.
 
-**Answer:** Keep Browser Work and the Rendering Pipeline scoped to its stated evidence and boundary.
+**Answer:** Bound the M16 scoped measurement before approval.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M16-Q017 and its cited source.
+**Explanation:** M16-Q017 enacts mistake 3 from Browser Work and the Rendering Pipeline; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M16-Q018
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `application`
 
 **Choices:**
 
-- Make the documented mistake: Forcing layout in a measurement loop. Alternating geometry reads a
-- Treat Forcing layout in a measurement loop. Alternating geometry reads and as complete proof without the lesson bound.
-- Choose the familiar tool before checking whether Forcing layout in a measurement loop. Alternating geometry reads and.
-- Keep Browser Work and the Rendering Pipeline scoped to its stated evidence and boundary.
+- Approve alternating geometry reads and DOM for Browser Work and the Rendering Pipeline; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for alternating geometry reads and DOM; the team can monitor Browser Work and the Rendering Pipeline after launch.
+- Approve the M16 shortcut for delta now.
+- Freeze the M16 scoped measurement and record the limiting assumption before approving the change.
 
-**Answer:** Keep Browser Work and the Rendering Pipeline scoped to its stated evidence and boundary.
+**Answer:** Freeze the M16 scoped measurement and record the limiting assumption before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M16-Q018 and its cited source.
+**Explanation:** M16-Q018 enacts mistake 4 from Browser Work and the Rendering Pipeline; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M16-Q019
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `synthesis`
 
 **Choices:**
 
-- Keep Browser Work and the Rendering Pipeline scoped to its stated evidence and boundary.
-- Treat Optimizing average frame time. One blocked critical interaction can be as complete proof without the lesson bou.
-- Make the documented mistake: Optimizing average frame time. One blocked critical interaction ca
-- Choose the familiar tool before checking whether Optimizing average frame time. One blocked critical interaction can.
+- Preserve the M16 scoped measurement before approving the change.
+- Approve one blocked critical interaction can be for Browser Work and the Rendering Pipeline; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for one blocked critical interaction can be; the team can monitor Browser Work and the Rendering Pipeline after launch.
+- Approve the M16 shortcut for ember now.
 
-**Answer:** Keep Browser Work and the Rendering Pipeline scoped to its stated evidence and boundary.
+**Answer:** Preserve the M16 scoped measurement before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M16-Q019 and its cited source.
+**Explanation:** M16-Q019 enacts mistake 5 from Browser Work and the Rendering Pipeline; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M16-Q020
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `recall`
 
 **Choices:**
 
-- Choose the familiar tool before checking whether Using Lighthouse score as the contract. A composite score hides the.
-- Keep Performance Budgets and Evidence scoped to its stated evidence and boundary.
-- Treat Using Lighthouse score as the contract. A composite score hides the r as complete proof without the lesson boun.
-- Make the documented mistake: Using Lighthouse score as the contract. A composite score hides th
+- Approve a composite score hides the route for Performance Budgets and Evidence; the local context makes that proposal familiar enough for review.
+- Model the M16 scoped measurement before approval.
+- Defer measurement until production for a composite score hides the route; the team can monitor Performance Budgets and Evidence after launch.
+- Approve the M16 shortcut for fable now.
 
-**Answer:** Keep Performance Budgets and Evidence scoped to its stated evidence and boundary.
+**Answer:** Model the M16 scoped measurement before approval.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M16-Q020 and its cited source.
+**Explanation:** M16-Q020 enacts mistake 1 from Performance Budgets and Evidence; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M16-Q021
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `application`
 
 **Choices:**
 
-- Make the documented mistake: Mixing cold and warm cache trials. They answer different questions
-- Treat Mixing cold and warm cache trials. They answer different questions as complete proof without the lesson boundary
-- Keep Performance Budgets and Evidence scoped to its stated evidence and boundary.
-- Choose the familiar tool before checking whether Mixing cold and warm cache trials. They answer different questions a.
+- Approve they answer different questions for Performance Budgets and Evidence; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for they answer different questions; the team can monitor Performance Budgets and Evidence after launch.
+- Account the M16 scoped measurement and record the limiting assumption before approving the change.
+- Approve the M16 shortcut for harbor now.
 
-**Answer:** Keep Performance Budgets and Evidence scoped to its stated evidence and boundary.
+**Answer:** Account the M16 scoped measurement and record the limiting assumption before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M16-Q021 and its cited source.
+**Explanation:** M16-Q021 enacts mistake 2 from Performance Budgets and Evidence; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M16-Q022
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `synthesis`
 
 **Choices:**
 
-- Choose the familiar tool before checking whether Reporting p75 from five repetitions. A tiny controlled sample is not.
-- Make the documented mistake: Reporting p75 from five repetitions. A tiny controlled sample is n
-- Treat Reporting p75 from five repetitions. A tiny controlled sample is not a as complete proof without the lesson bou.
-- Keep Performance Budgets and Evidence scoped to its stated evidence and boundary.
+- Approve a tiny controlled sample is not a for Performance Budgets and Evidence; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for a tiny controlled sample is not a; the team can monitor Performance Budgets and Evidence after launch.
+- Approve the M16 shortcut for indigo now.
+- Test the M16 scoped measurement before approving the change.
 
-**Answer:** Keep Performance Budgets and Evidence scoped to its stated evidence and boundary.
+**Answer:** Test the M16 scoped measurement before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M16-Q022 and its cited source.
+**Explanation:** M16-Q022 enacts mistake 3 from Performance Budgets and Evidence; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M16-Q023
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `recall`
 
 **Choices:**
 
-- Keep Performance Budgets and Evidence scoped to its stated evidence and boundary.
-- Treat Optimizing a milestone that users cannot use. Early pixels can still as complete proof without the lesson bound.
-- Choose the familiar tool before checking whether Optimizing a milestone that users cannot use. Early pixels can still.
-- Make the documented mistake: Optimizing a milestone that users cannot use. Early pixels can sti
+- Scope the M16 scoped measurement before approval.
+- Approve optimizing a milestone that users cannot use.: Early pixels can still be for Performance Budgets and Evidence; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for optimizing a milestone that users cannot use.: Early pixels can still be; the team can monitor Performance Budgets and Evidence after launch.
+- Approve the M16 shortcut for juniper now.
 
-**Answer:** Keep Performance Budgets and Evidence scoped to its stated evidence and boundary.
+**Answer:** Scope the M16 scoped measurement before approval.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M16-Q023 and its cited source.
+**Explanation:** M16-Q023 enacts mistake 4 from Performance Budgets and Evidence; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M16-Q024
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `application`
 
 **Choices:**
 
-- Treat Ignoring telemetry overhead and missingness. Collection can change wo as complete proof without the lesson boun.
-- Keep Performance Budgets and Evidence scoped to its stated evidence and boundary.
-- Make the documented mistake: Ignoring telemetry overhead and missingness. Collection can change
-- Choose the familiar tool before checking whether Ignoring telemetry overhead and missingness. Collection can change w.
+- Approve ignoring telemetry overhead and missingness.: Collection can change work for Performance Budgets and Evidence; the local context makes that proposal familiar enough for review.
+- Measure the M16 scoped measurement and record the limiting assumption before approving the change.
+- Defer measurement until production for ignoring telemetry overhead and missingness.: Collection can change work; the team can monitor Performance Budgets and Evidence after launch.
+- Approve the M16 shortcut for keystone now.
 
-**Answer:** Keep Performance Budgets and Evidence scoped to its stated evidence and boundary.
+**Answer:** Measure the M16 scoped measurement and record the limiting assumption before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M16-Q024 and its cited source.
+**Explanation:** M16-Q024 enacts mistake 5 from Performance Budgets and Evidence; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M16-Q025
 
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
+**Type:** `calculation`
+**Difficulty:** `recall`
 
-**Answer:** Original concurrency = 190 x 0.065 = 12.35 operations. Revised rate = 190 x 1.25 = 237.5/s, so revised concurrency = 237.5 x 0.065 = 15.44 operations.
+**Answer:** M16 Frontend Shell Delivery case 1: Serialization is 110 x 8 / 900 = 0.98 s; RTT adds 360 ms, for about 1338 ms.
 
-**Explanation:** This perturbs the numeric practice around Browser Work and the Rendering Pipeline: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M16-Q025 and its cited source.
+**Explanation:** M16-Q025 uses frontend shell delivery from Browser Work and the Rendering Pipeline and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M16-Q026
 
-**Type:** `calculation`  
-**Difficulty:** `recall`
+**Type:** `calculation`
+**Difficulty:** `application`
 
-**Answer:** Original concurrency = 200 x 0.075 = 15.00 operations. Revised rate = 200 x 1.30 = 260.0/s, so revised concurrency = 260.0 x 0.075 = 19.50 operations.
+**Answer:** M16 Interaction Block case 2: It exceeds the budget by 220 - 100 = 120 ms.
 
-**Explanation:** This perturbs the numeric practice around Performance Budgets and Evidence: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M16-Q026 and its cited source.
+**Explanation:** M16-Q026 uses interaction block from Performance Budgets and Evidence and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M16-Q027
 
-**Type:** `calculation`  
-**Difficulty:** `application`
+**Type:** `calculation`
+**Difficulty:** `synthesis`
 
-**Answer:** Original concurrency = 120 x 0.035 = 4.20 operations. Revised rate = 120 x 1.35 = 162.0/s, so revised concurrency = 162.0 x 0.035 = 5.67 operations.
+**Answer:** M16 Serialization case 3: Serialization is 280 KiB x 8 / 900 Kbps = 2.49 seconds, ignoring protocol overhead.
 
-**Explanation:** This perturbs the numeric practice around Route Rendering and Hydration: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M16-Q027 and its cited source.
+**Explanation:** M16-Q027 uses serialization from Route Rendering and Hydration and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M16-Q028
 
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
+**Type:** `calculation`
+**Difficulty:** `recall`
 
-**Answer:** Original concurrency = 130 x 0.045 = 5.85 operations. Revised rate = 130 x 1.40 = 182.0/s, so revised concurrency = 182.0 x 0.045 = 8.19 operations.
+**Answer:** M16 Rtt Setup case 4: Setup lower bound is 3 x 90 ms = 270 ms before payload work.
 
-**Explanation:** This perturbs the numeric practice around HTTP and CDN Cache Safety: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M16-Q028 and its cited source.
+**Explanation:** M16-Q028 uses RTT setup from HTTP and CDN Cache Safety and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M16-Q029
 
-**Type:** `calculation`  
-**Difficulty:** `recall`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `synthesis`
 
-**Answer:** Original concurrency = 140 x 0.055 = 7.70 operations. Revised rate = 140 x 1.45 = 203.0/s, so revised concurrency = 203.0 x 0.055 = 11.16 operations.
+**Answer:** M16 diagnosis 1 identifies controlled interaction is below guardrail and long work is attributed. The proving fields are accessibility.focus_preserved and accessibility.keyboard_path; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** This perturbs the numeric practice around Accessibility and Resilient Interaction: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M16-Q029 and its cited source.
+**Explanation:** M16-Q029 comes from emitted trial fields rather than fixture identifiers; Browser Work and the Rendering Pipeline is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M16-Q030
 
-**Type:** `calculation`  
-**Difficulty:** `application`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `recall`
 
-**Answer:** Original concurrency = 150 x 0.065 = 9.75 operations. Revised rate = 150 x 1.10 = 165.0/s, so revised concurrency = 165.0 x 0.065 = 10.72 operations.
+**Answer:** M16 diagnosis 2 identifies Performance Budgets and Evidence evidence scope. The proving fields are accessibility.focus_preserved and accessibility.keyboard_path; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** This perturbs the numeric practice around Memory, Third Parties, and Observability: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M16-Q030 and its cited source.
+**Explanation:** M16-Q030 comes from emitted trial fields rather than fixture identifiers; Performance Budgets and Evidence is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M16-Q031
 
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `application`
 
-**Answer:** Original concurrency = 160 x 0.075 = 12.00 operations. Revised rate = 160 x 1.15 = 184.0/s, so revised concurrency = 184.0 x 0.075 = 13.80 operations.
+**Answer:** M16 diagnosis 3 identifies server/client state hashes agree and recoverable mismatches are zero. The proving fields are accessibility.focus_preserved and accessibility.keyboard_path; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** This perturbs the numeric practice around Northstar Browser-Edge Tutorial: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M16-Q031 and its cited source.
+**Explanation:** M16-Q031 comes from emitted trial fields rather than fixture identifiers; Route Rendering and Hydration is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M16-Q032
 
-**Type:** `calculation`  
-**Difficulty:** `recall`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `synthesis`
 
-**Answer:** Original concurrency = 170 x 0.035 = 5.95 operations. Revised rate = 170 x 1.20 = 204.0/s, so revised concurrency = 204.0 x 0.035 = 7.14 operations.
+**Answer:** M16 diagnosis 4 identifies HTTP and CDN Cache Safety evidence scope. The proving fields are accessibility.focus_preserved and accessibility.keyboard_path; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** This perturbs the numeric practice around Frontend-Edge Decision and Teach-Back: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M16-Q032 and its cited source.
+**Explanation:** M16-Q032 comes from emitted trial fields rather than fixture identifiers; HTTP and CDN Cache Safety is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M16-Q033
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `recall`
 
-**Answer:** The fixture tests f01-long-main-thread-broken (broken), with I01 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f01-long-main-thread-broken, rather than the general presence of a lab run.
+**Answer:** M16 diagnosis 5 identifies route-owned active resources and detached nodes return to baseline. The proving fields are accessibility.focus_preserved and accessibility.keyboard_path; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M16; diagnosis should start from the emitted fields and connect them to Route Rendering and Hydration. This explanation is specific to M16-Q033 and its cited source.
+**Explanation:** M16-Q033 comes from emitted trial fields rather than fixture identifiers; Accessibility and Resilient Interaction is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M16-Q034
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `synthesis`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `application`
 
-**Answer:** The fixture tests f01-long-main-thread-repaired (repaired), with I01 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f01-long-main-thread-repaired, rather than the general presence of a lab run.
+**Answer:** M16 diagnosis 6 identifies Memory, Third Parties, and Observability evidence scope. The proving fields are accessibility.focus_preserved and accessibility.keyboard_path; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M16; diagnosis should start from the emitted fields and connect them to HTTP and CDN Cache Safety. This explanation is specific to M16-Q034 and its cited source.
+**Explanation:** M16-Q034 comes from emitted trial fields rather than fixture identifiers; Memory, Third Parties, and Observability is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M16-Q035
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `recall`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `synthesis`
 
-**Answer:** The fixture tests f02-hydration-mismatch-broken (broken), with I03 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f02-hydration-mismatch-broken, rather than the general presence of a lab run.
+**Answer:** M16 diagnosis 7 identifies core semantic route survives slow or blocked optional dependency. The proving fields are accessibility.focus_preserved and accessibility.keyboard_path; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M16; diagnosis should start from the emitted fields and connect them to Accessibility and Resilient Interaction. This explanation is specific to M16-Q035 and its cited source.
+**Explanation:** M16-Q035 comes from emitted trial fields rather than fixture identifiers; Northstar Browser-Edge Tutorial is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M16-Q036
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `recall`
 
-**Answer:** The fixture tests f02-hydration-mismatch-repaired (repaired), with I03 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f02-hydration-mismatch-repaired, rather than the general presence of a lab run.
+**Answer:** M16 diagnosis 8 identifies Frontend-Edge Decision and Teach-Back evidence scope. The proving fields are accessibility.focus_preserved and accessibility.keyboard_path; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M16; diagnosis should start from the emitted fields and connect them to Memory, Third Parties, and Observability. This explanation is specific to M16-Q036 and its cited source.
+**Explanation:** M16-Q036 comes from emitted trial fields rather than fixture identifiers; Frontend-Edge Decision and Teach-Back is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M16-Q037
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `synthesis`
+**Type:** `design_judgment`
+**Difficulty:** `application`
 
-**Answer:** The fixture tests f03-route-resource-leak-broken (broken), with I04 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f03-route-resource-leak-broken, rather than the general presence of a lab run.
+**Answer:** For M16 decision 1, recommend against. The protected bound is 228 x 0.72 = 164.2/s, and the planned 200.6/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 200.6/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 36.4/s of lower-priority work.
 
-**Explanation:** The cited fixture is machine-readable source material for M16; diagnosis should start from the emitted fields and connect them to Northstar Browser-Edge Tutorial. This explanation is specific to M16-Q037 and its cited source.
+**Explanation:** M16-Q037 turns on the forcing number from EX-01, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M16-Q038
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `recall`
+**Type:** `design_judgment`
+**Difficulty:** `synthesis`
 
-**Answer:** The fixture tests f03-route-resource-leak-repaired (repaired), with I04 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f03-route-resource-leak-repaired, rather than the general presence of a lab run.
+**Answer:** For M16 decision 2, recommend against. The protected bound is 245 x 0.72 = 176.4/s, and the planned 215.6/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 215.6/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 39.2/s of lower-priority work.
 
-**Explanation:** The cited fixture is machine-readable source material for M16; diagnosis should start from the emitted fields and connect them to Frontend-Edge Decision and Teach-Back. This explanation is specific to M16-Q038 and its cited source.
+**Explanation:** M16-Q038 turns on the forcing number from EX-02, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M16-Q039
 
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
+**Type:** `design_judgment`
+**Difficulty:** `recall`
 
-**Answer:** Recommend the option that preserves the HTTP and CDN Cache Safety mechanism under the exercise constraints: Trace input, handler, promise microtasks, style/layout/paint, and next visible feedback for the event filter. Mark evidence needed at each boundary. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M16 decision 3, recommend against. The protected bound is 262 x 0.72 = 188.6/s, and the planned 230.6/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 230.6/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 42.0/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M16-Q039 and its cited source.
+**Explanation:** M16-Q039 turns on the forcing number from EX-03, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M16-Q040
 
-**Type:** `design_judgment`  
-**Difficulty:** `recall`
+**Type:** `design_judgment`
+**Difficulty:** `application`
 
-**Answer:** Recommend the option that preserves the Accessibility and Resilient Interaction mechanism under the exercise constraints: Design broken/repaired trials for a 240 ms filter calculation while preserving input, useful result, browser profile, and DOM semantics. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M16 decision 4, recommend against. The protected bound is 279 x 0.72 = 200.9/s, and the planned 245.5/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 245.5/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 44.6/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M16-Q040 and its cited source.
+**Explanation:** M16-Q040 turns on the forcing number from EX-04, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M16-Q041
 
-**Type:** `design_judgment`  
-**Difficulty:** `application`
+**Type:** `design_judgment`
+**Difficulty:** `synthesis`
 
-**Answer:** Recommend the option that preserves the Memory, Third Parties, and Observability mechanism under the exercise constraints: Calculate the transfer lower bound for 160 KiB over 1.2 Mbps with two 140 ms dependent round trips. List at least five omitted costs. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M16 decision 5, recommend against. The protected bound is 296 x 0.72 = 213.1/s, and the planned 260.5/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 260.5/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 47.4/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M16-Q041 and its cited source.
+**Explanation:** M16-Q041 turns on the forcing number from EX-05, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M16-Q042
 
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
+**Type:** `design_judgment`
+**Difficulty:** `recall`
 
-**Answer:** Recommend the option that preserves the Northstar Browser-Edge Tutorial mechanism under the exercise constraints: Classify field p75, five Playwright runs, a synthetic journey, and one trace. State the decision each can and cannot support. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M16 decision 6, recommend against. The protected bound is 313 x 0.72 = 225.4/s, and the planned 275.4/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 275.4/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 50.0/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M16-Q042 and its cited source.
+**Explanation:** M16-Q042 turns on the forcing number from EX-06, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M16-Q043
 
-**Type:** `design_judgment`  
-**Difficulty:** `recall`
+**Type:** `design_judgment`
+**Difficulty:** `application`
 
-**Answer:** Recommend the option that preserves the Frontend-Edge Decision and Teach-Back mechanism under the exercise constraints: Choose static, server, streaming, client, or island behavior for the four Northstar routes. Record authority, useful HTML, interaction, and failure. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M16 decision 7, recommend against. The protected bound is 330 x 0.72 = 237.6/s, and the planned 290.4/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 290.4/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 52.8/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M16-Q043 and its cited source.
+**Explanation:** M16-Q043 turns on the forcing number from EX-07, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.

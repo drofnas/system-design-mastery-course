@@ -4,521 +4,521 @@ This key covers all 41 questions for **Capacity, Queues, and Tail Latency**. Use
 
 ## M02-Q001
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** Concurrency depends on rate and time in the boundary; a daily total provides neither short-window rate nor service time
+**Answer:** Concurrency depends on rate and time in the boundary; a daily total provides neither short-window rate nor service time.
 
-**Explanation:** The cited self-check in L01 tests whether the learner can connect Workload and Useful Work to the module mechanism without replacing evidence with labels. This explanation is specific to M02-Q001 and its cited source.
+**Explanation:** M02-Q001 uses self-check 1 from Workload and Useful Work; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M02-Q002
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `application`
 
-**Answer:** No. It may recover one logical operation, but it remains another attempt for the same identity
+**Answer:** No. It may recover one logical operation, but it remains another attempt for the same identity.
 
-**Explanation:** The cited self-check in L01 tests whether the learner can connect Workload and Useful Work to the module mechanism without replacing evidence with labels. This explanation is specific to M02-Q002 and its cited source.
+**Explanation:** M02-Q002 uses self-check 2 from Workload and Useful Work; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M02-Q003
 
-**Type:** `short_answer`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`
+**Difficulty:** `recall`
 
-**Answer:** Key or tenant skew, including the rate and concentration window
+**Answer:** Key or tenant skew, including the rate and concentration window.
 
-**Explanation:** The cited self-check in L01 tests whether the learner can connect Workload and Useful Work to the module mechanism without replacing evidence with labels. This explanation is specific to M02-Q003 and its cited source.
+**Explanation:** M02-Q003 uses self-check 3 from Workload and Useful Work; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M02-Q004
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** Recovery often overlaps new demand. Ignoring it produces a design that can serve normally but cannot catch up
+**Answer:** Recovery often overlaps new demand. Ignoring it produces a design that can serve normally but cannot catch up.
 
-**Explanation:** The cited self-check in L01 tests whether the learner can connect Workload and Useful Work to the module mechanism without replacing evidence with labels. This explanation is specific to M02-Q004 and its cited source.
+**Explanation:** M02-Q004 uses self-check 4 from Workload and Useful Work; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M02-Q005
 
-**Type:** `short_answer`  
-**Difficulty:** `application`
+**Type:** `short_answer`
+**Difficulty:** `recall`
 
-**Answer:** Only when attempted work enters the chosen boundary; cheap pre-admission rejection belongs outside it
+**Answer:** Only when attempted work enters the chosen boundary; cheap pre-admission rejection belongs outside it.
 
-**Explanation:** The cited self-check in L02 tests whether the learner can connect Little’s Law and Saturation to the module mechanism without replacing evidence with labels. This explanation is specific to M02-Q005 and its cited source.
+**Explanation:** M02-Q005 uses self-check 1 from Little’s Law and Saturation; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M02-Q006
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `synthesis`
 
-**Answer:** No. The identity assumes suitable long-run averages; queue trend and completion evidence establish stability
+**Answer:** No. The identity assumes suitable long-run averages; queue trend and completion evidence establish stability.
 
-**Explanation:** The cited self-check in L02 tests whether the learner can connect Little’s Law and Saturation to the module mechanism without replacing evidence with labels. This explanation is specific to M02-Q006 and its cited source.
+**Explanation:** M02-Q006 uses self-check 2 from Little’s Law and Saturation; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M02-Q007
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `application`
 
-**Answer:** It leaves no room for variance, bursts, interruptions, recovery, or model error
+**Answer:** It leaves no room for variance, bursts, interruptions, recovery, or model error.
 
-**Explanation:** The cited self-check in L02 tests whether the learner can connect Little’s Law and Saturation to the module mechanism without replacing evidence with labels. This explanation is specific to M02-Q007 and its cited source.
+**Explanation:** M02-Q007 uses self-check 3 from Little’s Law and Saturation; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M02-Q008
 
-**Type:** `short_answer`  
-**Difficulty:** `application`
+**Type:** `short_answer`
+**Difficulty:** `recall`
 
-**Answer:** Downstream concurrency reaches its bound and rejection or waiting appears while service workers remain below their own bound. For the practice: in-system L = 120 × 0.08 = 9.6; in-service demand is 120 × 0.05 = 6, so six workers are modeled at 100%
+**Answer:** Downstream concurrency reaches its bound and rejection or waiting appears while service workers remain below their own bound.
 
-**Explanation:** The cited self-check in L02 tests whether the learner can connect Little’s Law and Saturation to the module mechanism without replacing evidence with labels. This explanation is specific to M02-Q008 and its cited source.
+**Explanation:** M02-Q008 uses self-check 4 from Little’s Law and Saturation; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M02-Q009
 
-**Type:** `short_answer`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`
+**Difficulty:** `application`
 
-**Answer:** The missing observations were never collected; sorting the remaining values cannot reconstruct their experience without an explicit correction model
+**Answer:** The missing observations were never collected; sorting the remaining values cannot reconstruct their experience without an explicit correction model.
 
-**Explanation:** The cited self-check in L03 tests whether the learner can connect Latency Measurement to the module mechanism without replacing evidence with labels. This explanation is specific to M02-Q009 and its cited source.
+**Explanation:** M02-Q009 uses self-check 1 from Latency Measurement; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M02-Q010
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `recall`
 
-**Answer:** The generator did not deliver the requested schedule, so system-capacity conclusions are confounded
+**Answer:** The generator did not deliver the requested schedule, so system-capacity conclusions are confounded.
 
-**Explanation:** The cited self-check in L03 tests whether the learner can connect Latency Measurement to the module mechanism without replacing evidence with labels. This explanation is specific to M02-Q010 and its cited source.
+**Explanation:** M02-Q010 uses self-check 2 from Latency Measurement; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M02-Q011
 
-**Type:** `short_answer`  
-**Difficulty:** `application`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** Yes, in the attempted-user population. Record rejection latency and outcome separately rather than mixing it with successful-service latency
+**Answer:** Yes, in the attempted-user population. Record rejection latency and outcome separately rather than mixing it with successful-service latency.
 
-**Explanation:** The cited self-check in L03 tests whether the learner can connect Latency Measurement to the module mechanism without replacing evidence with labels. This explanation is specific to M02-Q011 and its cited source.
+**Explanation:** M02-Q011 uses self-check 3 from Latency Measurement; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M02-Q012
 
-**Type:** `short_answer`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`
+**Difficulty:** `application`
 
-**Answer:** Maximum exposes extreme observations and timeout censoring, although it is not stable enough to replace percentiles
+**Answer:** Maximum exposes extreme observations and timeout censoring, although it is not stable enough to replace percentiles.
 
-**Explanation:** The cited self-check in L03 tests whether the learner can connect Latency Measurement to the module mechanism without replacing evidence with labels. This explanation is specific to M02-Q012 and its cited source.
+**Explanation:** M02-Q012 uses self-check 4 from Latency Measurement; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M02-Q013
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** It cannot be determined from the branch p99 alone; the full distribution, fan-out, correlation, and response rule matter
+**Answer:** It cannot be determined from the branch p99 alone; the full distribution, fan-out, correlation, and response rule matter.
 
-**Explanation:** The cited self-check in L04 tests whether the learner can connect Fan-out and Tail Amplification to the module mechanism without replacing evidence with labels. This explanation is specific to M02-Q013 and its cited source.
+**Explanation:** M02-Q013 uses self-check 1 from Fan-out and Tail Amplification; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M02-Q014
 
-**Type:** `short_answer`  
-**Difficulty:** `application`
+**Type:** `multiple_choice`
+**Difficulty:** `recall`
 
-**Answer:** Averages hide long journeys or hot keys that create disproportionate branch work
+**Choices:**
 
-**Explanation:** The cited self-check in L04 tests whether the learner can connect Fan-out and Tail Amplification to the module mechanism without replacing evidence with labels. This explanation is specific to M02-Q014 and its cited source.
+- Calculate the M02 scoped measurement and record the limiting assumption before approving the change.
+- Approve host count is supply, not demand for Workload and Useful Work; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for host count is supply, not demand; the team can monitor Workload and Useful Work after launch.
+- Approve the M02 shortcut for alpha now.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Answer:** Calculate the M02 scoped measurement and record the limiting assumption before approving the change.
+
+**Explanation:** M02-Q014 enacts mistake 1 from Workload and Useful Work; the defensible response asks for the missing scope evidence before accepting the shortcut.
+
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M02-Q015
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `application`
 
 **Choices:**
 
-- Keep Workload and Useful Work scoped to its stated evidence and boundary.
-- Make the documented mistake: Start from host count: host count is supply, not demand
-- Treat Start from host count: host count is supply, not demand as complete proof without the lesson boundary
-- Choose the familiar tool before checking whether Start from host count: host count is supply, not demand applies
+- Approve it erases burst duration and recovery debt for Workload and Useful Work; the local context makes that proposal familiar enough for review.
+- Draw the M02 scoped measurement before approving the change.
+- Defer measurement until production for it erases burst duration and recovery debt; the team can monitor Workload and Useful Work after launch.
+- Approve the M02 shortcut for bravo now.
 
-**Answer:** Keep Workload and Useful Work scoped to its stated evidence and boundary.
+**Answer:** Draw the M02 scoped measurement before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M02-Q015 and its cited source.
+**Explanation:** M02-Q015 enacts mistake 2 from Workload and Useful Work; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M02-Q016
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `synthesis`
 
 **Choices:**
 
-- Choose the familiar tool before checking whether Average a whole day: it erases burst duration and recovery debt appl.
-- Keep Workload and Useful Work scoped to its stated evidence and boundary.
-- Treat Average a whole day: it erases burst duration and recovery debt as complete proof without the lesson boundary
-- Make the documented mistake: Average a whole day: it erases burst duration and recovery debt
+- Approve retries appear as successful scaling for Workload and Useful Work; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for retries appear as successful scaling; the team can monitor Workload and Useful Work after launch.
+- Separate the M02 scoped measurement before approval.
+- Approve the M02 shortcut for charlie now.
 
-**Answer:** Keep Workload and Useful Work scoped to its stated evidence and boundary.
+**Answer:** Separate the M02 scoped measurement before approval.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M02-Q016 and its cited source.
+**Explanation:** M02-Q016 enacts mistake 3 from Workload and Useful Work; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M02-Q017
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `recall`
 
 **Choices:**
 
-- Choose the familiar tool before checking whether Mix requests and attempts: retries appear as successful scaling appl.
-- Treat Mix requests and attempts: retries appear as successful scaling as complete proof without the lesson boundary
-- Keep Workload and Useful Work scoped to its stated evidence and boundary.
-- Make the documented mistake: Mix requests and attempts: retries appear as successful scaling
+- Approve reconciliation and backlog drain consume the for Workload and Useful Work; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for reconciliation and backlog drain consume the; the team can monitor Workload and Useful Work after launch.
+- Approve the M02 shortcut for delta now.
+- Verify the M02 scoped measurement and record the limiting assumption before approving the change.
 
-**Answer:** Keep Workload and Useful Work scoped to its stated evidence and boundary.
+**Answer:** Verify the M02 scoped measurement and record the limiting assumption before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M02-Q017 and its cited source.
+**Explanation:** M02-Q017 enacts mistake 4 from Workload and Useful Work; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M02-Q018
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `application`
 
 **Choices:**
 
-- Choose the familiar tool before checking whether Model only foreground work: reconciliation and backlog drain consume.
-- Make the documented mistake: Model only foreground work: reconciliation and backlog drain consu
-- Treat Model only foreground work: reconciliation and backlog drain consume as complete proof without the lesson bound.
-- Keep Workload and Useful Work scoped to its stated evidence and boundary.
+- Compare the M02 scoped measurement before approving the change.
+- Approve false precision hides the sensitivity for Workload and Useful Work; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for false precision hides the sensitivity; the team can monitor Workload and Useful Work after launch.
+- Approve the M02 shortcut for ember now.
 
-**Answer:** Keep Workload and Useful Work scoped to its stated evidence and boundary.
+**Answer:** Compare the M02 scoped measurement before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M02-Q018 and its cited source.
+**Explanation:** M02-Q018 enacts mistake 5 from Workload and Useful Work; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M02-Q019
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `synthesis`
 
 **Choices:**
 
-- Keep Workload and Useful Work scoped to its stated evidence and boundary.
-- Choose the familiar tool before checking whether Treat projections as measurements: false precision hides the sensiti.
-- Treat Treat projections as measurements: false precision hides the sensitiv as complete proof without the lesson boun.
-- Make the documented mistake: Treat projections as measurements: false precision hides the sensi
+- Approve server concurrency with client end-to-end for Little’s Law and Saturation; the local context makes that proposal familiar enough for review.
+- Reject the M02 scoped measurement before approval.
+- Defer measurement until production for server concurrency with client end-to-end; the team can monitor Little’s Law and Saturation after launch.
+- Approve the M02 shortcut for fable now.
 
-**Answer:** Keep Workload and Useful Work scoped to its stated evidence and boundary.
+**Answer:** Reject the M02 scoped measurement before approval.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M02-Q019 and its cited source.
+**Explanation:** M02-Q019 enacts mistake 1 from Little’s Law and Saturation; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M02-Q020
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `recall`
 
 **Choices:**
 
-- Choose the familiar tool before checking whether Combine different boundaries: server concurrency with client end-to-.
-- Keep Little’s Law and Saturation scoped to its stated evidence and boundary.
-- Treat Combine different boundaries: server concurrency with client end-to-e as complete proof without the lesson boun.
-- Make the documented mistake: Combine different boundaries: server concurrency with client end-t
+- Approve rejected work did not occupy the for Little’s Law and Saturation; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for rejected work did not occupy the; the team can monitor Little’s Law and Saturation after launch.
+- Trace the M02 scoped measurement and record the limiting assumption before approving the change.
+- Approve the M02 shortcut for harbor now.
 
-**Answer:** Keep Little’s Law and Saturation scoped to its stated evidence and boundary.
+**Answer:** Trace the M02 scoped measurement and record the limiting assumption before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M02-Q020 and its cited source.
+**Explanation:** M02-Q020 enacts mistake 2 from Little’s Law and Saturation; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M02-Q021
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `application`
 
 **Choices:**
 
-- Choose the familiar tool before checking whether Use attempted rate after rejection: rejected work did not occupy the.
-- Treat Use attempted rate after rejection: rejected work did not occupy the as complete proof without the lesson bound.
-- Keep Little’s Law and Saturation scoped to its stated evidence and boundary.
-- Make the documented mistake: Use attempted rate after rejection: rejected work did not occupy t
+- Approve the calculation has no variance for Little’s Law and Saturation; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for the calculation has no variance; the team can monitor Little’s Law and Saturation after launch.
+- Approve the M02 shortcut for indigo now.
+- Require the M02 scoped measurement before approving the change.
 
-**Answer:** Keep Little’s Law and Saturation scoped to its stated evidence and boundary.
+**Answer:** Require the M02 scoped measurement before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M02-Q021 and its cited source.
+**Explanation:** M02-Q021 enacts mistake 3 from Little’s Law and Saturation; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M02-Q022
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `synthesis`
 
 **Choices:**
 
-- Choose the familiar tool before checking whether Call the nominal limit safe capacity: the calculation has no varianc.
-- Treat Call the nominal limit safe capacity: the calculation has no variance, as complete proof without the lesson bou.
-- Make the documented mistake: Call the nominal limit safe capacity: the calculation has no varia
-- Keep Little’s Law and Saturation scoped to its stated evidence and boundary.
+- Calculate the M02 scoped measurement before approval.
+- Approve little’s Law relates long-run averages for Little’s Law and Saturation; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for little’s Law relates long-run averages; the team can monitor Little’s Law and Saturation after launch.
+- Approve the M02 shortcut for juniper now.
 
-**Answer:** Keep Little’s Law and Saturation scoped to its stated evidence and boundary.
+**Answer:** Calculate the M02 scoped measurement before approval.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M02-Q022 and its cited source.
+**Explanation:** M02-Q022 enacts mistake 4 from Little’s Law and Saturation; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M02-Q023
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `recall`
 
 **Choices:**
 
-- Keep Little’s Law and Saturation scoped to its stated evidence and boundary.
-- Treat Infer percentiles from a mean: Little’s Law relates long-run averages as complete proof without the lesson boun.
-- Make the documented mistake: Infer percentiles from a mean: Little’s Law relates long-run avera
-- Choose the familiar tool before checking whether Infer percentiles from a mean: Little’s Law relates long-run average.
+- Approve shared downstreams can bind first for Little’s Law and Saturation; the local context makes that proposal familiar enough for review.
+- Draw the M02 scoped measurement and record the limiting assumption before approving the change.
+- Defer measurement until production for shared downstreams can bind first; the team can monitor Little’s Law and Saturation after launch.
+- Approve the M02 shortcut for keystone now.
 
-**Answer:** Keep Little’s Law and Saturation scoped to its stated evidence and boundary.
+**Answer:** Draw the M02 scoped measurement and record the limiting assumption before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M02-Q023 and its cited source.
+**Explanation:** M02-Q023 enacts mistake 5 from Little’s Law and Saturation; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M02-Q024
 
-**Type:** `multiple_choice`  
-**Difficulty:** `application`
+**Type:** `calculation`
+**Difficulty:** `synthesis`
 
-**Choices:**
+**Answer:** M02 Retry Amplification case 1: Attempts are 120 x (1 + 0.25) = 150.0/s; useful throughput is still bounded by the 120/s logical identities.
 
-- Choose the familiar tool before checking whether Assume every worker is interchangeable: shared downstreams can bind.
-- Keep Little’s Law and Saturation scoped to its stated evidence and boundary.
-- Treat Assume every worker is interchangeable: shared downstreams can bind f as complete proof without the lesson boun.
-- Make the documented mistake: Assume every worker is interchangeable: shared downstreams can bin
+**Explanation:** M02-Q024 uses retry amplification from Workload and Useful Work and keeps units visible through the final numeric result.
 
-**Answer:** Keep Little’s Law and Saturation scoped to its stated evidence and boundary.
-
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M02-Q024 and its cited source.
-
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M02-Q025
 
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
+**Type:** `calculation`
+**Difficulty:** `recall`
 
-**Answer:** Original concurrency = 140 x 0.045 = 6.30 operations. Revised rate = 140 x 1.25 = 175.0/s, so revised concurrency = 175.0 x 0.045 = 7.88 operations.
+**Answer:** M02 Little'S Law case 2: L = 124/s x 0.080 s = 9.92 requests inside the boundary.
 
-**Explanation:** This perturbs the numeric practice around Workload and Useful Work: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M02-Q025 and its cited source.
+**Explanation:** M02-Q025 uses Little's Law from Little’s Law and Saturation and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M02-Q026
 
-**Type:** `calculation`  
-**Difficulty:** `recall`
+**Type:** `calculation`
+**Difficulty:** `application`
 
-**Answer:** Original concurrency = 150 x 0.055 = 8.25 operations. Revised rate = 150 x 1.30 = 195.0/s, so revised concurrency = 195.0 x 0.055 = 10.72 operations.
+**Answer:** M02 Fan-Out Tail Probability case 3: At least one slow branch = 1 - (1 - 0.020)^4 = 0.0776, or 7.76%.
 
-**Explanation:** This perturbs the numeric practice around Little’s Law and Saturation: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M02-Q026 and its cited source.
+**Explanation:** M02-Q026 uses fan-out tail probability from Latency Measurement and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M02-Q027
 
-**Type:** `calculation`  
-**Difficulty:** `application`
+**Type:** `calculation`
+**Difficulty:** `synthesis`
 
-**Answer:** Original concurrency = 160 x 0.065 = 10.40 operations. Revised rate = 160 x 1.35 = 216.0/s, so revised concurrency = 216.0 x 0.065 = 14.04 operations.
+**Answer:** M02 Queue Drain Bound case 4: Drain time is 54,000 / 240/s = 225.0 seconds before overhead or new arrivals.
 
-**Explanation:** This perturbs the numeric practice around Latency Measurement: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M02-Q027 and its cited source.
+**Explanation:** M02-Q027 uses queue drain bound from Fan-out and Tail Amplification and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M02-Q028
 
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
+**Type:** `calculation`
+**Difficulty:** `recall`
 
-**Answer:** Original concurrency = 170 x 0.075 = 12.75 operations. Revised rate = 170 x 1.40 = 238.0/s, so revised concurrency = 238.0 x 0.075 = 17.85 operations.
+**Answer:** M02 Layered Retry Attempts case 5: The multiplier is 3^4 = 81 attempts at the deepest dependency for one original request.
 
-**Explanation:** This perturbs the numeric practice around Fan-out and Tail Amplification: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M02-Q028 and its cited source.
+**Explanation:** M02-Q028 uses layered retry attempts from Bounded Overload Control and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M02-Q029
 
-**Type:** `calculation`  
-**Difficulty:** `recall`
+**Type:** `calculation`
+**Difficulty:** `application`
 
-**Answer:** Original concurrency = 180 x 0.035 = 6.30 operations. Revised rate = 180 x 1.45 = 261.0/s, so revised concurrency = 261.0 x 0.035 = 9.13 operations.
+**Answer:** M02 Failover Headroom case 6: Failover-adjusted capacity is 315.6 x 0.75 = 236.7/s, so steady state must stay at or below about 236.7/s.
 
-**Explanation:** This perturbs the numeric practice around Bounded Overload Control: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M02-Q029 and its cited source.
+**Explanation:** M02-Q029 uses failover headroom from Retries and Downstream Protection and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M02-Q030
 
-**Type:** `calculation`  
-**Difficulty:** `application`
+**Type:** `calculation`
+**Difficulty:** `synthesis`
 
-**Answer:** Original concurrency = 190 x 0.045 = 8.55 operations. Revised rate = 190 x 1.10 = 209.0/s, so revised concurrency = 209.0 x 0.045 = 9.41 operations.
+**Answer:** M02 Backlog Drain case 7: Net drain is (240 - 150) / 1.25 = 72.0/s, so drain time is 54,000 / 72.0 = 750.0 seconds.
 
-**Explanation:** This perturbs the numeric practice around Retries and Downstream Protection: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M02-Q030 and its cited source.
+**Explanation:** M02-Q030 uses backlog drain from Failover Headroom and Unit Cost and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M02-Q031
 
-**Type:** `scenario_diagnosis`  
+**Type:** `scenario_diagnosis`
 **Difficulty:** `application`
 
-**Answer:** The fixture tests fixture-closed-loop-stall (closed), with closed as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=fixture-closed-loop-stall, rather than the general presence of a lab run.
+**Answer:** M02 diagnosis 1 identifies Workload and Useful Work evidence scope. The proving fields are arrival.rate_per_second and arrival.duration_seconds; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M02; diagnosis should start from the emitted fields and connect them to Latency Measurement. This explanation is specific to M02-Q031 and its cited source.
+**Explanation:** M02-Q031 comes from emitted trial fields rather than fixture identifiers; Workload and Useful Work is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M02-Q032
 
-**Type:** `scenario_diagnosis`  
+**Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** The fixture tests fixture-failover-loss (open), with open as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=fixture-failover-loss, rather than the general presence of a lab run.
+**Answer:** M02 diagnosis 2 identifies Little’s Law and Saturation evidence scope. The proving fields are arrival.rate_per_second and arrival.duration_seconds; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M02; diagnosis should start from the emitted fields and connect them to Fan-out and Tail Amplification. This explanation is specific to M02-Q032 and its cited source.
+**Explanation:** M02-Q032 comes from emitted trial fields rather than fixture identifiers; Little’s Law and Saturation is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M02-Q033
 
-**Type:** `scenario_diagnosis`  
+**Type:** `scenario_diagnosis`
 **Difficulty:** `recall`
 
-**Answer:** The fixture tests fixture-failover-normal (open), with open as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=fixture-failover-normal, rather than the general presence of a lab run.
+**Answer:** M02 diagnosis 3 identifies Latency Measurement evidence scope. The proving fields are arrival.rate_per_second and arrival.duration_seconds; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M02; diagnosis should start from the emitted fields and connect them to Bounded Overload Control. This explanation is specific to M02-Q033 and its cited source.
+**Explanation:** M02-Q033 comes from emitted trial fields rather than fixture identifiers; Latency Measurement is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M02-Q034
 
-**Type:** `scenario_diagnosis`  
+**Type:** `scenario_diagnosis`
 **Difficulty:** `application`
 
-**Answer:** The fixture tests fixture-open-loop-stall (open), with open as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=fixture-open-loop-stall, rather than the general presence of a lab run.
+**Answer:** M02 diagnosis 4 identifies Fan-out and Tail Amplification evidence scope. The proving fields are arrival.rate_per_second and arrival.duration_seconds; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M02; diagnosis should start from the emitted fields and connect them to Retries and Downstream Protection. This explanation is specific to M02-Q034 and its cited source.
+**Explanation:** M02-Q034 comes from emitted trial fields rather than fixture identifiers; Fan-out and Tail Amplification is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M02-Q035
 
-**Type:** `scenario_diagnosis`  
+**Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** The fixture tests fixture-retry-amplification (open), with open as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=fixture-retry-amplification, rather than the general presence of a lab run.
+**Answer:** M02 diagnosis 5 identifies Bounded Overload Control evidence scope. The proving fields are arrival.rate_per_second and arrival.duration_seconds; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M02; diagnosis should start from the emitted fields and connect them to Failover Headroom and Unit Cost. This explanation is specific to M02-Q035 and its cited source.
+**Explanation:** M02-Q035 comes from emitted trial fields rather than fixture identifiers; Bounded Overload Control is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M02-Q036
 
-**Type:** `scenario_diagnosis`  
+**Type:** `scenario_diagnosis`
 **Difficulty:** `recall`
 
-**Answer:** The fixture tests fixture-saturation (open), with open as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=fixture-saturation, rather than the general presence of a lab run.
+**Answer:** M02 diagnosis 6 identifies Retries and Downstream Protection evidence scope. The proving fields are arrival.rate_per_second and arrival.duration_seconds; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M02; diagnosis should start from the emitted fields and connect them to Capacity Decisions and Defense. This explanation is specific to M02-Q036 and its cited source.
+**Explanation:** M02-Q036 comes from emitted trial fields rather than fixture identifiers; Retries and Downstream Protection is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M02-Q037
 
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
+**Type:** `design_judgment`
+**Difficulty:** `application`
 
-**Answer:** Recommend the option that preserves the Fan-out and Tail Amplification mechanism under the exercise constraints: At peak, Transit Signal receives 170 rider lookups/s. Two percent receive one retry. Each lookup has three route legs. 1 The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M02 decision 1, recommend against. The protected bound is 186 x 0.72 = 133.9/s, and the planned 163.7/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 163.7/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 29.8/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M02-Q037 and its cited source.
+**Explanation:** M02-Q037 turns on the forcing number from EX-01, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M02-Q038
 
-**Type:** `design_judgment`  
-**Difficulty:** `recall`
+**Type:** `design_judgment`
+**Difficulty:** `synthesis`
 
-**Answer:** Recommend the option that preserves the Bounded Overload Control mechanism under the exercise constraints: Compare the five-minute 800/s burst with 800/s sustained for one hour. Calculate logical requests in both periods The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M02 decision 2, recommend against. The protected bound is 203 x 0.72 = 146.2/s, and the planned 178.6/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 178.6/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 32.4/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M02-Q038 and its cited source.
+**Explanation:** M02-Q038 turns on the forcing number from EX-02, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M02-Q039
 
-**Type:** `design_judgment`  
-**Difficulty:** `application`
+**Type:** `design_judgment`
+**Difficulty:** `recall`
 
-**Answer:** Recommend the option that preserves the Retries and Downstream Protection mechanism under the exercise constraints: At 170 admitted requests/s, mean in-system time is 80 ms and mean service time is 25 ms. 1. Calculate in-system concurrency. 2. Calculate service concurrency. 3 The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M02 decision 3, recommend against. The protected bound is 220 x 0.72 = 158.4/s, and the planned 193.6/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 193.6/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 35.2/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M02-Q039 and its cited source.
+**Explanation:** M02-Q039 turns on the forcing number from EX-03, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M02-Q040
 
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
+**Type:** `design_judgment`
+**Difficulty:** `application`
 
-**Answer:** Recommend the option that preserves the Failover Headroom and Unit Cost mechanism under the exercise constraints: Draw an event timeline for 50 open-loop arrivals/s during a two-second service stall. Compare it with one closed-loop participant The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M02 decision 4, recommend against. The protected bound is 237 x 0.72 = 170.6/s, and the planned 208.6/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 208.6/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 38.0/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M02-Q040 and its cited source.
+**Explanation:** M02-Q040 turns on the forcing number from EX-04, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M02-Q041
 
-**Type:** `design_judgment`  
-**Difficulty:** `recall`
+**Type:** `design_judgment`
+**Difficulty:** `synthesis`
 
-**Answer:** Recommend the option that preserves the Capacity Decisions and Defense mechanism under the exercise constraints: Write a trial contract for the Transit baseline: population, boundary, workload, warm-up, duration, repetitions, outcomes, percentiles, rejection treatment, clock, generator check,. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M02 decision 5, recommend against. The protected bound is 254 x 0.72 = 182.9/s, and the planned 223.5/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 223.5/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 40.6/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M02-Q041 and its cited source.
+**Explanation:** M02-Q041 turns on the forcing number from EX-05, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.

@@ -10,16 +10,16 @@
         "L01"
       ],
       "type": "short_answer",
-      "difficulty": "recall",
+      "difficulty": "synthesis",
       "tags": [
         "computer-systems-and-operating-systems",
-        "benchmark-contracts-pipelines-caches-and",
+        "benchmark-contracts-pipelines-caches-and-localit",
         "src:L01-selfcheck-1"
       ],
-      "prompt": "Use the cited source to answer L01 (Benchmark Contracts, Pipelines, Caches, and Locality): Why must a checksum be consumed outside the timed loop?",
-      "correct_answer": "It prevents dead-code elimination and establishes equivalent output without adding output I/O to the timed region",
-      "explanation": "The cited self-check in L01 tests whether the learner can connect Benchmark Contracts, Pipelines, Caches, and Locality to the module mechanism without replacing evidence with labels. This explanation is specific to M03-Q001 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "Why must a checksum be consumed outside the timed loop?",
+      "correct_answer": "It prevents dead-code elimination and establishes equivalent output without adding output I/O to the timed region.",
+      "explanation": "M03-Q001 uses self-check 1 from Benchmark Contracts, Pipelines, Caches, and Locality; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M03-Q002",
@@ -31,13 +31,13 @@
       "difficulty": "application",
       "tags": [
         "computer-systems-and-operating-systems",
-        "benchmark-contracts-pipelines-caches-and",
+        "benchmark-contracts-pipelines-caches-and-localit",
         "src:L01-selfcheck-2"
       ],
-      "prompt": "Explain the mechanism behind L01 (Benchmark Contracts, Pipelines, Caches, and Locality): What does a lower elapsed time prove when no counter is available?",
-      "correct_answer": "It proves only that the complete measured variant finished sooner under the recorded conditions. It does not isolate a cache or branch mechanism",
-      "explanation": "The cited self-check in L01 tests whether the learner can connect Benchmark Contracts, Pipelines, Caches, and Locality to the module mechanism without replacing evidence with labels. This explanation is specific to M03-Q002 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "What does a lower elapsed time prove when no counter is available?",
+      "correct_answer": "It proves only that the complete measured variant finished sooner under the recorded conditions. It does not isolate a cache or branch mechanism.",
+      "explanation": "M03-Q002 uses self-check 2 from Benchmark Contracts, Pipelines, Caches, and Locality; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M03-Q003",
@@ -46,16 +46,16 @@
         "L01"
       ],
       "type": "short_answer",
-      "difficulty": "synthesis",
+      "difficulty": "recall",
       "tags": [
         "computer-systems-and-operating-systems",
-        "benchmark-contracts-pipelines-caches-and",
+        "benchmark-contracts-pipelines-caches-and-localit",
         "src:L01-selfcheck-3"
       ],
-      "prompt": "Name the evidence needed for L01 (Benchmark Contracts, Pipelines, Caches, and Locality): When is a warm cache the correct state rather than benchmark contamination?",
-      "correct_answer": "When production repeatedly reuses the same working set and the claim is about steady-state behavior. The contract must say so",
-      "explanation": "The cited self-check in L01 tests whether the learner can connect Benchmark Contracts, Pipelines, Caches, and Locality to the module mechanism without replacing evidence with labels. This explanation is specific to M03-Q003 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "When is a warm cache the correct state rather than benchmark contamination?",
+      "correct_answer": "When production repeatedly reuses the same working set and the claim is about steady-state behavior. The contract must say so.",
+      "explanation": "M03-Q003 uses self-check 3 from Benchmark Contracts, Pipelines, Caches, and Locality; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M03-Q004",
@@ -64,16 +64,16 @@
         "L01"
       ],
       "type": "short_answer",
-      "difficulty": "recall",
+      "difficulty": "synthesis",
       "tags": [
         "computer-systems-and-operating-systems",
-        "benchmark-contracts-pipelines-caches-and",
+        "benchmark-contracts-pipelines-caches-and-localit",
         "src:L01-selfcheck-4"
       ],
-      "prompt": "Diagnose the boundary issue in L01 (Benchmark Contracts, Pipelines, Caches, and Locality): Why can a branchless implementation lose?",
-      "correct_answer": "It may execute more instructions or create longer data dependencies than a well-predicted branch",
-      "explanation": "The cited self-check in L01 tests whether the learner can connect Benchmark Contracts, Pipelines, Caches, and Locality to the module mechanism without replacing evidence with labels. This explanation is specific to M03-Q004 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "Why can a branchless implementation lose?",
+      "correct_answer": "It may execute more instructions or create longer data dependencies than a well-predicted branch.",
+      "explanation": "M03-Q004 uses self-check 4 from Benchmark Contracts, Pipelines, Caches, and Locality; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M03-Q005",
@@ -85,13 +85,13 @@
       "difficulty": "application",
       "tags": [
         "computer-systems-and-operating-systems",
-        "benchmark-contracts-pipelines-caches-and",
+        "benchmark-contracts-pipelines-caches-and-localit",
         "src:L01-selfcheck-5"
       ],
-      "prompt": "State the causal reason for L01 (Benchmark Contracts, Pipelines, Caches, and Locality): When does a faster packed scan fail to justify copying?",
-      "correct_answer": "When copy/allocation cost is outside the measurement, reuse is too low to cross C / Δ, or ownership, freshness, and memory requirements make the extra representation unsafe. Measure the complete boundary the decision will pay",
-      "explanation": "The cited self-check in L01 tests whether the learner can connect Benchmark Contracts, Pipelines, Caches, and Locality to the module mechanism without replacing evidence with labels. This explanation is specific to M03-Q005 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "When does a faster packed scan fail to justify copying?",
+      "correct_answer": "When copy/allocation cost is outside the measurement, reuse is too low to cross `C / Δ`, or ownership, freshness, and memory requirements make the extra representation unsafe. Measure the complete boundary the decision will pay.",
+      "explanation": "M03-Q005 uses self-check 5 from Benchmark Contracts, Pipelines, Caches, and Locality; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M03-Q006",
@@ -100,16 +100,16 @@
         "L02"
       ],
       "type": "short_answer",
-      "difficulty": "synthesis",
+      "difficulty": "application",
       "tags": [
         "computer-systems-and-operating-systems",
-        "processes-scheduling-context-switches-an",
+        "processes-scheduling-context-switches-and-system",
         "src:L02-selfcheck-1"
       ],
-      "prompt": "Identify the assumption behind L02 (Processes, Scheduling, Context Switches, and System Calls): Can a process consume no CPU while still being runnable?",
-      "correct_answer": "Yes. Runnable work can wait in a scheduler queue or be quota-throttled",
-      "explanation": "The cited self-check in L02 tests whether the learner can connect Processes, Scheduling, Context Switches, and System Calls to the module mechanism without replacing evidence with labels. This explanation is specific to M03-Q006 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "Can a process consume no CPU while still being runnable?",
+      "correct_answer": "Yes. Runnable work can wait in a scheduler queue or be quota-throttled.",
+      "explanation": "M03-Q006 uses self-check 1 from Processes, Scheduling, Context Switches, and System Calls; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M03-Q007",
@@ -121,13 +121,13 @@
       "difficulty": "recall",
       "tags": [
         "computer-systems-and-operating-systems",
-        "processes-scheduling-context-switches-an",
+        "processes-scheduling-context-switches-and-system",
         "src:L02-selfcheck-2"
       ],
-      "prompt": "Connect the lesson claim to L02 (Processes, Scheduling, Context Switches, and System Calls): Why does a voluntary context switch not prove I/O?",
-      "correct_answer": "A thread can voluntarily block on a lock, condition, sleep, or other resource",
-      "explanation": "The cited self-check in L02 tests whether the learner can connect Processes, Scheduling, Context Switches, and System Calls to the module mechanism without replacing evidence with labels. This explanation is specific to M03-Q007 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "Why does a voluntary context switch not prove I/O?",
+      "correct_answer": "A thread can voluntarily block on a lock, condition, sleep, or other resource.",
+      "explanation": "M03-Q007 uses self-check 2 from Processes, Scheduling, Context Switches, and System Calls; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M03-Q008",
@@ -136,16 +136,16 @@
         "L02"
       ],
       "type": "short_answer",
-      "difficulty": "application",
+      "difficulty": "synthesis",
       "tags": [
         "computer-systems-and-operating-systems",
-        "processes-scheduling-context-switches-an",
+        "processes-scheduling-context-switches-and-system",
         "src:L02-selfcheck-3"
       ],
-      "prompt": "Resolve the self-check about L02 (Processes, Scheduling, Context Switches, and System Calls): What is the safest claim from a rise in involuntary switches?",
-      "correct_answer": "Scheduling displacement increased under the recorded conditions; the cause still needs controlled variation",
-      "explanation": "The cited self-check in L02 tests whether the learner can connect Processes, Scheduling, Context Switches, and System Calls to the module mechanism without replacing evidence with labels. This explanation is specific to M03-Q008 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "What is the safest claim from a rise in involuntary switches?",
+      "correct_answer": "Scheduling displacement increased under the recorded conditions; the cause still needs controlled variation.",
+      "explanation": "M03-Q008 uses self-check 3 from Processes, Scheduling, Context Switches, and System Calls; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M03-Q009",
@@ -154,16 +154,16 @@
         "L02"
       ],
       "type": "short_answer",
-      "difficulty": "synthesis",
+      "difficulty": "application",
       "tags": [
         "computer-systems-and-operating-systems",
-        "processes-scheduling-context-switches-an",
+        "processes-scheduling-context-switches-and-system",
         "src:L02-selfcheck-4"
       ],
-      "prompt": "Summarize the tradeoff in L02 (Processes, Scheduling, Context Switches, and System Calls): Why might batching change correctness as well as speed?",
-      "correct_answer": "It changes when data becomes visible, when failures surface, and which records share an error or durability boundary",
-      "explanation": "The cited self-check in L02 tests whether the learner can connect Processes, Scheduling, Context Switches, and System Calls to the module mechanism without replacing evidence with labels. This explanation is specific to M03-Q009 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "Why might batching change correctness as well as speed?",
+      "correct_answer": "It changes when data becomes visible, when failures surface, and which records share an error or durability boundary.",
+      "explanation": "M03-Q009 uses self-check 4 from Processes, Scheduling, Context Switches, and System Calls; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M03-Q010",
@@ -172,16 +172,16 @@
         "L03"
       ],
       "type": "short_answer",
-      "difficulty": "recall",
+      "difficulty": "synthesis",
       "tags": [
         "computer-systems-and-operating-systems",
-        "virtual-memory-allocation-page-faults-an",
+        "virtual-memory-allocation-page-faults-and-rss",
         "src:L03-selfcheck-1"
       ],
-      "prompt": "Defend the conclusion for L03 (Virtual Memory, Allocation, Page Faults, and RSS): Does a successful allocation prove physical memory is resident?",
-      "correct_answer": "No. Reservation and lazy allocation can precede page touching and residency",
-      "explanation": "The cited self-check in L03 tests whether the learner can connect Virtual Memory, Allocation, Page Faults, and RSS to the module mechanism without replacing evidence with labels. This explanation is specific to M03-Q010 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "Does a successful allocation prove physical memory is resident?",
+      "correct_answer": "No. Reservation and lazy allocation can precede page touching and residency.",
+      "explanation": "M03-Q010 uses self-check 1 from Virtual Memory, Allocation, Page Faults, and RSS; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M03-Q011",
@@ -193,13 +193,13 @@
       "difficulty": "application",
       "tags": [
         "computer-systems-and-operating-systems",
-        "virtual-memory-allocation-page-faults-an",
+        "virtual-memory-allocation-page-faults-and-rss",
         "src:L03-selfcheck-2"
       ],
-      "prompt": "Challenge the claim in L03 (Virtual Memory, Allocation, Page Faults, and RSS): What distinguishes a major from a minor fault in getrusage?",
-      "correct_answer": "A reported major fault required I/O; a minor fault was serviced without I/O",
-      "explanation": "The cited self-check in L03 tests whether the learner can connect Virtual Memory, Allocation, Page Faults, and RSS to the module mechanism without replacing evidence with labels. This explanation is specific to M03-Q011 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "What distinguishes a major from a minor fault in `getrusage`?",
+      "correct_answer": "A reported major fault required I/O; a minor fault was serviced without I/O.",
+      "explanation": "M03-Q011 uses self-check 2 from Virtual Memory, Allocation, Page Faults, and RSS; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M03-Q012",
@@ -208,16 +208,16 @@
         "L03"
       ],
       "type": "short_answer",
-      "difficulty": "synthesis",
+      "difficulty": "recall",
       "tags": [
         "computer-systems-and-operating-systems",
-        "virtual-memory-allocation-page-faults-an",
+        "virtual-memory-allocation-page-faults-and-rss",
         "src:L03-selfcheck-3"
       ],
-      "prompt": "Apply the module rule to L03 (Virtual Memory, Allocation, Page Faults, and RSS): Why record both current and peak memory?",
-      "correct_answer": "Current memory can fall before sampling, while peak shows maximum exposure; both still need platform definitions",
-      "explanation": "The cited self-check in L03 tests whether the learner can connect Virtual Memory, Allocation, Page Faults, and RSS to the module mechanism without replacing evidence with labels. This explanation is specific to M03-Q012 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "Why record both current and peak memory?",
+      "correct_answer": "Current memory can fall before sampling, while peak shows maximum exposure; both still need platform definitions.",
+      "explanation": "M03-Q012 uses self-check 3 from Virtual Memory, Allocation, Page Faults, and RSS; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M03-Q013",
@@ -226,16 +226,16 @@
         "L03"
       ],
       "type": "short_answer",
-      "difficulty": "recall",
+      "difficulty": "synthesis",
       "tags": [
         "computer-systems-and-operating-systems",
-        "virtual-memory-allocation-page-faults-an",
+        "virtual-memory-allocation-page-faults-and-rss",
         "src:L03-selfcheck-4"
       ],
-      "prompt": "Use the cited source to answer L03 (Virtual Memory, Allocation, Page Faults, and RSS): What is the correct owner of a cgroup OOM policy?",
-      "correct_answer": "The service and platform owners jointly define limits, termination/restart, observability, and capacity response",
-      "explanation": "The cited self-check in L03 tests whether the learner can connect Virtual Memory, Allocation, Page Faults, and RSS to the module mechanism without replacing evidence with labels. This explanation is specific to M03-Q013 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "What is the correct owner of a cgroup OOM policy?",
+      "correct_answer": "The service and platform owners jointly define limits, termination/restart, observability, and capacity response.",
+      "explanation": "M03-Q013 uses self-check 4 from Virtual Memory, Allocation, Page Faults, and RSS; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M03-Q014",
@@ -244,16 +244,16 @@
         "L04"
       ],
       "type": "short_answer",
-      "difficulty": "application",
+      "difficulty": "recall",
       "tags": [
         "computer-systems-and-operating-systems",
-        "locks-contention-deadlock-and-false-shar",
+        "locks-contention-deadlock-and-false-sharing",
         "src:L04-selfcheck-1"
       ],
-      "prompt": "Explain the mechanism behind L04 (Locks, Contention, Deadlock, and False Sharing): How does contention differ from deadlock?",
-      "correct_answer": "Contended actors eventually progress; a deadlocked wait cycle cannot progress without outside change",
-      "explanation": "The cited self-check in L04 tests whether the learner can connect Locks, Contention, Deadlock, and False Sharing to the module mechanism without replacing evidence with labels. This explanation is specific to M03-Q014 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "How does contention differ from deadlock?",
+      "correct_answer": "Contended actors eventually progress; a deadlocked wait cycle cannot progress without outside change.",
+      "explanation": "M03-Q014 uses self-check 1 from Locks, Contention, Deadlock, and False Sharing; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M03-Q015",
@@ -265,19 +265,19 @@
       "difficulty": "application",
       "tags": [
         "computer-systems-and-operating-systems",
-        "benchmark-contracts-pipelines-caches-and",
+        "benchmark-contracts-pipelines-caches-and-localit",
         "src:L01-mistake-1"
       ],
-      "prompt": "For L01 (Benchmark Contracts, Pipelines, Caches, and Locality), which choice best avoids the cited mistake: Timing unequal work: a faster wrong checksum is not an optimization.?",
+      "prompt": "A design review for Benchmark Contracts, Pipelines, Caches, and Locality includes this proposal: a faster wrong checksum is not an optimization. Which response best protects the mechanism?",
       "choices": [
-        "Keep Benchmark Contracts, Pipelines, Caches, and Locality scoped to its stated evidence and bou.",
-        "Treat Timing unequal work: a faster wrong checksum is not an optimization as complete proof without the lesson bounda.",
-        "Make the documented mistake: Timing unequal work: a faster wrong checksum is not an optimizatio. with extra con",
-        "Choose the familiar tool before checking whether Timing unequal work: a faster wrong checksum is not an optimization."
+        "Scope the M03 scoped measurement and record the limiting assumption before approving the change.",
+        "Approve a faster wrong checksum is not an optimization for Benchmark Contracts, Pipelines, Caches, and Locality; the local context makes that proposal familiar enough for review.",
+        "Defer measurement until production for a faster wrong checksum is not an optimization; the team can monitor Benchmark Contracts, Pipelines, Caches, and Locality after launch.",
+        "Approve the M03 shortcut for alpha now."
       ],
-      "correct_answer": "Keep Benchmark Contracts, Pipelines, Caches, and Locality scoped to its stated evidence and bou.",
-      "explanation": "The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M03-Q015 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Scope the M03 scoped measurement and record the limiting assumption before approving the change.",
+      "explanation": "M03-Q015 enacts mistake 1 from Benchmark Contracts, Pipelines, Caches, and Locality; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M03-Q016",
@@ -289,19 +289,19 @@
       "difficulty": "synthesis",
       "tags": [
         "computer-systems-and-operating-systems",
-        "benchmark-contracts-pipelines-caches-and",
+        "benchmark-contracts-pipelines-caches-and-localit",
         "src:L01-mistake-2"
       ],
-      "prompt": "For L01 (Benchmark Contracts, Pipelines, Caches, and Locality), which choice best avoids the cited mistake: Using one iteration: startup, interrupts, and frequency state dominate.?",
+      "prompt": "During an incident review about Benchmark Contracts, Pipelines, Caches, and Locality, the team wants to proceed this way: startup, interrupts, and frequency state dominate. What should the reviewer say?",
       "choices": [
-        "Choose the familiar tool before checking whether Using one iteration: startup, interrupts, and frequency state domina.",
-        "Keep Benchmark Contracts, Pipelines, Caches, and Locality scoped to its stated evidence and bou.",
-        "Treat Using one iteration: startup, interrupts, and frequency state dominate as complete proof without the lesson bou.",
-        "Make the documented mistake: Using one iteration: startup, interrupts, and frequency state domi. with extra con"
+        "Approve startup, interrupts, and frequency state dominate for Benchmark Contracts, Pipelines, Caches, and Locality; the local context makes that proposal familiar enough for review.",
+        "Measure the M03 scoped measurement before approving the change.",
+        "Defer measurement until production for startup, interrupts, and frequency state dominate; the team can monitor Benchmark Contracts, Pipelines, Caches, and Locality after launch.",
+        "Approve the M03 shortcut for bravo now."
       ],
-      "correct_answer": "Keep Benchmark Contracts, Pipelines, Caches, and Locality scoped to its stated evidence and bou.",
-      "explanation": "The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M03-Q016 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Measure the M03 scoped measurement before approving the change.",
+      "explanation": "M03-Q016 enacts mistake 2 from Benchmark Contracts, Pipelines, Caches, and Locality; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M03-Q017",
@@ -313,19 +313,19 @@
       "difficulty": "recall",
       "tags": [
         "computer-systems-and-operating-systems",
-        "benchmark-contracts-pipelines-caches-and",
+        "benchmark-contracts-pipelines-caches-and-localit",
         "src:L01-mistake-3"
       ],
-      "prompt": "For L01 (Benchmark Contracts, Pipelines, Caches, and Locality), which choice best avoids the cited mistake: Naming a cache as cause without evidence: layout, vectorization, or copying?",
+      "prompt": "A learner applies Benchmark Contracts, Pipelines, Caches, and Locality and chooses this shortcut: layout, vectorization, or copying. Which correction is most defensible?",
       "choices": [
-        "Choose the familiar tool before checking whether Naming a cache as cause without evidence: layout, vectorization, or.",
-        "Treat Naming a cache as cause without evidence: layout, vectorization, or c as complete proof without the lesson boun.",
-        "Keep Benchmark Contracts, Pipelines, Caches, and Locality scoped to its stated evidence and bou.",
-        "Make the documented mistake: Naming a cache as cause without evidence: layout, vectorization, o. with extra con"
+        "Approve layout, vectorization, or copying for Benchmark Contracts, Pipelines, Caches, and Locality; the local context makes that proposal familiar enough for review.",
+        "Defer measurement until production for layout, vectorization, or copying; the team can monitor Benchmark Contracts, Pipelines, Caches, and Locality after launch.",
+        "Bound the M03 scoped measurement before approval.",
+        "Approve the M03 shortcut for charlie now."
       ],
-      "correct_answer": "Keep Benchmark Contracts, Pipelines, Caches, and Locality scoped to its stated evidence and bou.",
-      "explanation": "The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M03-Q017 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Bound the M03 scoped measurement before approval.",
+      "explanation": "M03-Q017 enacts mistake 3 from Benchmark Contracts, Pipelines, Caches, and Locality; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M03-Q018",
@@ -337,19 +337,19 @@
       "difficulty": "application",
       "tags": [
         "computer-systems-and-operating-systems",
-        "benchmark-contracts-pipelines-caches-and",
+        "benchmark-contracts-pipelines-caches-and-localit",
         "src:L01-mistake-4"
       ],
-      "prompt": "For L01 (Benchmark Contracts, Pipelines, Caches, and Locality), which choice best avoids the cited mistake: Reporting only the best run: it selects favorable noise and hides variance.?",
+      "prompt": "A migration note for Benchmark Contracts, Pipelines, Caches, and Locality relies on this claim: it selects favorable noise and hides variance. Which option keeps the evidence scope intact?",
       "choices": [
-        "Make the documented mistake: Reporting only the best run: it selects favorable noise and hides. with extra conf",
-        "Choose the familiar tool before checking whether Reporting only the best run: it selects favorable noise and hides va.",
-        "Treat Reporting only the best run: it selects favorable noise and hides var as complete proof without the lesson boun.",
-        "Keep Benchmark Contracts, Pipelines, Caches, and Locality scoped to its stated evidence and bou."
+        "Approve it selects favorable noise and hides variance for Benchmark Contracts, Pipelines, Caches, and Locality; the local context makes that proposal familiar enough for review.",
+        "Defer measurement until production for it selects favorable noise and hides variance; the team can monitor Benchmark Contracts, Pipelines, Caches, and Locality after launch.",
+        "Approve the M03 shortcut for delta now.",
+        "Freeze the M03 scoped measurement and record the limiting assumption before approving the change."
       ],
-      "correct_answer": "Keep Benchmark Contracts, Pipelines, Caches, and Locality scoped to its stated evidence and bou.",
-      "explanation": "The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M03-Q018 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Freeze the M03 scoped measurement and record the limiting assumption before approving the change.",
+      "explanation": "M03-Q018 enacts mistake 4 from Benchmark Contracts, Pipelines, Caches, and Locality; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M03-Q019",
@@ -361,19 +361,19 @@
       "difficulty": "synthesis",
       "tags": [
         "computer-systems-and-operating-systems",
-        "benchmark-contracts-pipelines-caches-and",
+        "benchmark-contracts-pipelines-caches-and-localit",
         "src:L01-mistake-5"
       ],
-      "prompt": "For L01 (Benchmark Contracts, Pipelines, Caches, and Locality), which choice best avoids the cited mistake: Generalizing across machines: cache and branch behavior are not API contracts.?",
+      "prompt": "A capacity memo touches Benchmark Contracts, Pipelines, Caches, and Locality and argues: cache and branch behavior are not API contracts. Which response is the strongest engineering objection?",
       "choices": [
-        "Keep Benchmark Contracts, Pipelines, Caches, and Locality scoped to its stated evidence and bou.",
-        "Choose the familiar tool before checking whether Generalizing across machines: cache and branch behavior are not API.",
-        "Make the documented mistake: Generalizing across machines: cache and branch behavior are not AP. with extra con",
-        "Treat Generalizing across machines: cache and branch behavior are not API c as complete proof without the lesson boun."
+        "Preserve the M03 scoped measurement before approving the change.",
+        "Approve cache and branch behavior are not API contracts for Benchmark Contracts, Pipelines, Caches, and Locality; the local context makes that proposal familiar enough for review.",
+        "Defer measurement until production for cache and branch behavior are not API contracts; the team can monitor Benchmark Contracts, Pipelines, Caches, and Locality after launch.",
+        "Approve the M03 shortcut for ember now."
       ],
-      "correct_answer": "Keep Benchmark Contracts, Pipelines, Caches, and Locality scoped to its stated evidence and bou.",
-      "explanation": "The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M03-Q019 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Preserve the M03 scoped measurement before approving the change.",
+      "explanation": "M03-Q019 enacts mistake 5 from Benchmark Contracts, Pipelines, Caches, and Locality; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M03-Q020",
@@ -385,19 +385,19 @@
       "difficulty": "recall",
       "tags": [
         "computer-systems-and-operating-systems",
-        "processes-scheduling-context-switches-an",
+        "processes-scheduling-context-switches-and-system",
         "src:L02-mistake-1"
       ],
-      "prompt": "For L02 (Processes, Scheduling, Context Switches, and System Calls), which choice best avoids the cited mistake: Equating threads with parallelism: runnable threads still need CPU capacity.?",
+      "prompt": "A design review for Processes, Scheduling, Context Switches, and System Calls includes this proposal: runnable threads still need CPU capacity. Which response best protects the mechanism?",
       "choices": [
-        "Make the documented mistake: Equating threads with parallelism: runnable threads still need CPU. with extra con",
-        "Keep Processes, Scheduling, Context Switches, and System Calls scoped to its stated evidence an.",
-        "Choose the familiar tool before checking whether Equating threads with parallelism: runnable threads still need CPU c.",
-        "Treat Equating threads with parallelism: runnable threads still need CPU ca as complete proof without the lesson boun."
+        "Approve runnable threads still need CPU capacity for Processes, Scheduling, Context Switches, and System Cal; the local context makes that proposal familiar enough for review.",
+        "Model the M03 scoped measurement before approval.",
+        "Defer measurement until production for runnable threads still need CPU capacity; the team can monitor Processes, Scheduling, Context Switches, and System Cal after launch.",
+        "Approve the M03 shortcut for fable now."
       ],
-      "correct_answer": "Keep Processes, Scheduling, Context Switches, and System Calls scoped to its stated evidence an.",
-      "explanation": "The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M03-Q020 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Model the M03 scoped measurement before approval.",
+      "explanation": "M03-Q020 enacts mistake 1 from Processes, Scheduling, Context Switches, and System Calls; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M03-Q021",
@@ -409,19 +409,19 @@
       "difficulty": "application",
       "tags": [
         "computer-systems-and-operating-systems",
-        "processes-scheduling-context-switches-an",
+        "processes-scheduling-context-switches-and-system",
         "src:L02-mistake-2"
       ],
-      "prompt": "For L02 (Processes, Scheduling, Context Switches, and System Calls), which choice best avoids the cited mistake: Calling every context switch bad: blocking is required for many correct waits.?",
+      "prompt": "During an incident review about Processes, Scheduling, Context Switches, and System Calls, the team wants to proceed this way: blocking is required for many correct waits. What should the reviewer say?",
       "choices": [
-        "Treat Calling every context switch bad: blocking is required for many corre as complete proof without the lesson boun.",
-        "Choose the familiar tool before checking whether Calling every context switch bad: blocking is required for many corr.",
-        "Keep Processes, Scheduling, Context Switches, and System Calls scoped to its stated evidence an.",
-        "Make the documented mistake: Calling every context switch bad: blocking is required for many co. with extra con"
+        "Approve blocking is required for many correct waits for Processes, Scheduling, Context Switches, and System Cal; the local context makes that proposal familiar enough for review.",
+        "Defer measurement until production for blocking is required for many correct waits; the team can monitor Processes, Scheduling, Context Switches, and System Cal after launch.",
+        "Account the M03 scoped measurement and record the limiting assumption before approving the change.",
+        "Approve the M03 shortcut for harbor now."
       ],
-      "correct_answer": "Keep Processes, Scheduling, Context Switches, and System Calls scoped to its stated evidence an.",
-      "explanation": "The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M03-Q021 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Account the M03 scoped measurement and record the limiting assumption before approving the change.",
+      "explanation": "M03-Q021 enacts mistake 2 from Processes, Scheduling, Context Switches, and System Calls; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M03-Q022",
@@ -433,19 +433,19 @@
       "difficulty": "synthesis",
       "tags": [
         "computer-systems-and-operating-systems",
-        "processes-scheduling-context-switches-an",
+        "processes-scheduling-context-switches-and-system",
         "src:L02-mistake-3"
       ],
-      "prompt": "For L02 (Processes, Scheduling, Context Switches, and System Calls), which choice best avoids the cited mistake: Treating logical CPUs as identical physical cores: SMT and heterogeneous?",
+      "prompt": "A learner applies Processes, Scheduling, Context Switches, and System Calls and chooses this shortcut: treating logical CPUs as identical physical cores:: SMT and heterogeneous. Which correction is most defensible?",
       "choices": [
-        "Choose the familiar tool before checking whether Treating logical CPUs as identical physical cores: SMT and heterogen.",
-        "Treat Treating logical CPUs as identical physical cores: SMT and heterogene as complete proof without the lesson boun.",
-        "Make the documented mistake: Treating logical CPUs as identical physical cores: SMT and heterog. with extra con",
-        "Keep Processes, Scheduling, Context Switches, and System Calls scoped to its stated evidence an."
+        "Approve treating logical CPUs as identical physical cores:: SMT and heterogeneous for Processes, Scheduling, Context Switches, and System Cal; the local context makes that proposal familiar enough for review.",
+        "Defer measurement until production for treating logical CPUs as identical physical cores:: SMT and heterogeneous; the team can monitor Processes, Scheduling, Context Switches, and System Cal after launch.",
+        "Approve the M03 shortcut for indigo now.",
+        "Test the M03 scoped measurement before approving the change."
       ],
-      "correct_answer": "Keep Processes, Scheduling, Context Switches, and System Calls scoped to its stated evidence an.",
-      "explanation": "The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M03-Q022 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Test the M03 scoped measurement before approving the change.",
+      "explanation": "M03-Q022 enacts mistake 3 from Processes, Scheduling, Context Switches, and System Calls; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M03-Q023",
@@ -457,19 +457,19 @@
       "difficulty": "recall",
       "tags": [
         "computer-systems-and-operating-systems",
-        "processes-scheduling-context-switches-an",
+        "processes-scheduling-context-switches-and-system",
         "src:L02-mistake-4"
       ],
-      "prompt": "For L02 (Processes, Scheduling, Context Switches, and System Calls), which choice best avoids the cited mistake: Using syscall count alone: request size and kernel work also change cost.?",
+      "prompt": "A migration note for Processes, Scheduling, Context Switches, and System Calls relies on this claim: request size and kernel work also change cost. Which option keeps the evidence scope intact?",
       "choices": [
-        "Keep Processes, Scheduling, Context Switches, and System Calls scoped to its stated evidence an.",
-        "Choose the familiar tool before checking whether Using syscall count alone: request size and kernel work also change.",
-        "Treat Using syscall count alone: request size and kernel work also change c as complete proof without the lesson boun.",
-        "Make the documented mistake: Using syscall count alone: request size and kernel work also chang. with extra con"
+        "Scope the M03 scoped measurement before approval.",
+        "Approve request size and kernel work also change cost for Processes, Scheduling, Context Switches, and System Cal; the local context makes that proposal familiar enough for review.",
+        "Defer measurement until production for request size and kernel work also change cost; the team can monitor Processes, Scheduling, Context Switches, and System Cal after launch.",
+        "Approve the M03 shortcut for juniper now."
       ],
-      "correct_answer": "Keep Processes, Scheduling, Context Switches, and System Calls scoped to its stated evidence an.",
-      "explanation": "The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M03-Q023 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Scope the M03 scoped measurement before approval.",
+      "explanation": "M03-Q023 enacts mistake 4 from Processes, Scheduling, Context Switches, and System Calls; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M03-Q024",
@@ -481,19 +481,19 @@
       "difficulty": "application",
       "tags": [
         "computer-systems-and-operating-systems",
-        "processes-scheduling-context-switches-an",
+        "processes-scheduling-context-switches-and-system",
         "src:L02-mistake-5"
       ],
-      "prompt": "For L02 (Processes, Scheduling, Context Switches, and System Calls), which choice best avoids the cited mistake: Confusing throttled with blocked: the remediation and owner differ.?",
+      "prompt": "A capacity memo touches Processes, Scheduling, Context Switches, and System Calls and argues: the remediation and owner differ. Which response is the strongest engineering objection?",
       "choices": [
-        "Make the documented mistake: Confusing throttled with blocked: the remediation and owner differ. with extra con",
-        "Keep Processes, Scheduling, Context Switches, and System Calls scoped to its stated evidence an.",
-        "Treat Confusing throttled with blocked: the remediation and owner differ as complete proof without the lesson boundary",
-        "Choose the familiar tool before checking whether Confusing throttled with blocked: the remediation and owner differ a."
+        "Approve the remediation and owner differ for Processes, Scheduling, Context Switches, and System Cal; the local context makes that proposal familiar enough for review.",
+        "Measure the M03 scoped measurement and record the limiting assumption before approving the change.",
+        "Defer measurement until production for the remediation and owner differ; the team can monitor Processes, Scheduling, Context Switches, and System Cal after launch.",
+        "Approve the M03 shortcut for keystone now."
       ],
-      "correct_answer": "Keep Processes, Scheduling, Context Switches, and System Calls scoped to its stated evidence an.",
-      "explanation": "The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M03-Q024 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Measure the M03 scoped measurement and record the limiting assumption before approving the change.",
+      "explanation": "M03-Q024 enacts mistake 5 from Processes, Scheduling, Context Switches, and System Calls; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M03-Q025",
@@ -502,16 +502,16 @@
         "L01"
       ],
       "type": "calculation",
-      "difficulty": "synthesis",
+      "difficulty": "recall",
       "tags": [
         "computer-systems-and-operating-systems",
-        "benchmark-contracts-pipelines-caches-and",
+        "cache-line-scan",
         "src:L01-worked"
       ],
-      "prompt": "While applying L01 (Benchmark Contracts, Pipelines, Caches, and Locality), a system handles 150 operations/s with 50 ms of scoped work per operation. If the rate rises by 25% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
-      "correct_answer": "Original concurrency = 150 x 0.050 = 7.50 operations. Revised rate = 150 x 1.25 = 187.5/s, so revised concurrency = 187.5 x 0.050 = 9.38 operations.",
-      "explanation": "This perturbs the numeric practice around Benchmark Contracts, Pipelines, Caches, and Locality: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M03-Q025 and its cited source.",
-      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
+      "prompt": "Alpha case in Computer Systems and Operating Systems: A scan reads 10,040 records of 64 bytes on 64-byte cache lines. How many cache lines are touched if records are packed?",
+      "correct_answer": "M03 Cache-Line Scan case 1: Packed records touch 10,040 x 64 / 64 = 10,040 cache lines.",
+      "explanation": "M03-Q025 uses cache-line scan from Benchmark Contracts, Pipelines, Caches, and Locality and keeps units visible through the final numeric result.",
+      "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
     {
       "question_id": "M03-Q026",
@@ -520,16 +520,16 @@
         "L02"
       ],
       "type": "calculation",
-      "difficulty": "recall",
+      "difficulty": "application",
       "tags": [
         "computer-systems-and-operating-systems",
-        "processes-scheduling-context-switches-an",
+        "page-first-touches",
         "src:L02-worked"
       ],
-      "prompt": "While applying L02 (Processes, Scheduling, Context Switches, and System Calls), a system handles 160 operations/s with 60 ms of scoped work per operation. If the rate rises by 30% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
-      "correct_answer": "Original concurrency = 160 x 0.060 = 9.60 operations. Revised rate = 160 x 1.30 = 208.0/s, so revised concurrency = 208.0 x 0.060 = 12.48 operations.",
-      "explanation": "This perturbs the numeric practice around Processes, Scheduling, Context Switches, and System Calls: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M03-Q026 and its cited source.",
-      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
+      "prompt": "Bravo case in Computer Systems and Operating Systems: A process first-touches a 256 MiB region using 4 KiB pages. How many pages are faulted?",
+      "correct_answer": "M03 Page First Touches case 2: 256 MiB is 262144 KiB; 262144 / 4 = 65,536 pages.",
+      "explanation": "M03-Q026 uses page first touches from Processes, Scheduling, Context Switches, and System Calls and keeps units visible through the final numeric result.",
+      "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
     {
       "question_id": "M03-Q027",
@@ -538,16 +538,16 @@
         "L03"
       ],
       "type": "calculation",
-      "difficulty": "application",
+      "difficulty": "synthesis",
       "tags": [
         "computer-systems-and-operating-systems",
-        "virtual-memory-allocation-page-faults-an",
+        "cpu-quota",
         "src:L03-worked"
       ],
-      "prompt": "While applying L03 (Virtual Memory, Allocation, Page Faults, and RSS), a system handles 170 operations/s with 70 ms of scoped work per operation. If the rate rises by 35% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
-      "correct_answer": "Original concurrency = 170 x 0.070 = 11.90 operations. Revised rate = 170 x 1.35 = 229.5/s, so revised concurrency = 229.5 x 0.070 = 16.07 operations.",
-      "explanation": "This perturbs the numeric practice around Virtual Memory, Allocation, Page Faults, and RSS: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M03-Q027 and its cited source.",
-      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
+      "prompt": "Charlie case in Computer Systems and Operating Systems: A container has 2.0 CPU quota and bursts to 3.5 CPU for one second. How much demand exceeds quota?",
+      "correct_answer": "M03 Cpu Quota case 3: Excess demand is 3.5 - 2.0 = 1.5 CPU-seconds during that second.",
+      "explanation": "M03-Q027 uses CPU quota from Virtual Memory, Allocation, Page Faults, and RSS and keeps units visible through the final numeric result.",
+      "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
     {
       "question_id": "M03-Q028",
@@ -556,16 +556,16 @@
         "L04"
       ],
       "type": "calculation",
-      "difficulty": "synthesis",
+      "difficulty": "recall",
       "tags": [
         "computer-systems-and-operating-systems",
-        "locks-contention-deadlock-and-false-shar",
+        "cpu-quota",
         "src:L04-worked"
       ],
-      "prompt": "While applying L04 (Locks, Contention, Deadlock, and False Sharing), a system handles 180 operations/s with 80 ms of scoped work per operation. If the rate rises by 40% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
-      "correct_answer": "Original concurrency = 180 x 0.080 = 14.40 operations. Revised rate = 180 x 1.40 = 252.0/s, so revised concurrency = 252.0 x 0.080 = 20.16 operations.",
-      "explanation": "This perturbs the numeric practice around Locks, Contention, Deadlock, and False Sharing: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M03-Q028 and its cited source.",
-      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
+      "prompt": "Delta case in Computer Systems and Operating Systems: A container has 2.0 CPU quota and bursts to 3.5 CPU for one second. How much demand exceeds quota?",
+      "correct_answer": "M03 Cpu Quota case 4: Excess demand is 3.5 - 2.0 = 1.5 CPU-seconds during that second.",
+      "explanation": "M03-Q028 uses CPU quota from Locks, Contention, Deadlock, and False Sharing and keeps units visible through the final numeric result.",
+      "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
     {
       "question_id": "M03-Q029",
@@ -574,214 +574,214 @@
         "L05"
       ],
       "type": "calculation",
-      "difficulty": "recall",
+      "difficulty": "application",
       "tags": [
         "computer-systems-and-operating-systems",
-        "files-page-cache-writeback-and-durable-w",
+        "cache-line-scan",
         "src:L05-worked"
       ],
-      "prompt": "While applying L05 (Files, Page Cache, Writeback, and Durable Writes), a system handles 190 operations/s with 40 ms of scoped work per operation. If the rate rises by 45% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
-      "correct_answer": "Original concurrency = 190 x 0.040 = 7.60 operations. Revised rate = 190 x 1.45 = 275.5/s, so revised concurrency = 275.5 x 0.040 = 11.02 operations.",
-      "explanation": "This perturbs the numeric practice around Files, Page Cache, Writeback, and Durable Writes: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M03-Q029 and its cited source.",
-      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
+      "prompt": "Ember case in Computer Systems and Operating Systems: A scan reads 10,080 records of 64 bytes on 64-byte cache lines. How many cache lines are touched if records are packed?",
+      "correct_answer": "M03 Cache-Line Scan case 5: Packed records touch 10,080 x 64 / 64 = 10,080 cache lines.",
+      "explanation": "M03-Q029 uses cache-line scan from Files, Page Cache, Writeback, and Durable Writes and keeps units visible through the final numeric result.",
+      "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
     {
       "question_id": "M03-Q030",
       "module_id": "M03",
       "lesson_ids": [
-        "L06"
+        "L01"
       ],
-      "type": "calculation",
-      "difficulty": "application",
+      "type": "scenario_diagnosis",
+      "difficulty": "recall",
       "tags": [
         "computer-systems-and-operating-systems",
-        "device-queues-and-i-o-latency",
-        "src:L06-worked"
+        "benchmark-contracts-pipelines-caches-and-localit",
+        "src:fixture-allocation-per-iteration"
       ],
-      "prompt": "While applying L06 (Device Queues and I/O Latency), a system handles 200 operations/s with 50 ms of scoped work per operation. If the rate rises by 10% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
-      "correct_answer": "Original concurrency = 200 x 0.050 = 10.00 operations. Revised rate = 200 x 1.10 = 220.0/s, so revised concurrency = 220.0 x 0.050 = 11.00 operations.",
-      "explanation": "This perturbs the numeric practice around Device Queues and I/O Latency: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M03-Q030 and its cited source.",
-      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
+      "prompt": "A lab trial for Benchmark Contracts, Pipelines, Caches, and Locality reports:\n\n  parameters.iterations = 4096\n  parameters.bytes_per_iteration = 4096\n  warmup = 1\n  repetitions = 3\n  timeout_seconds = 10\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M03 diagnosis 1 identifies Benchmark Contracts, Pipelines, Caches, and Locality evidence scope. The proving fields are parameters.iterations and parameters.bytes_per_iteration; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M03-Q030 comes from emitted trial fields rather than fixture identifiers; Benchmark Contracts, Pipelines, Caches, and Locality is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M03-Q031",
       "module_id": "M03",
       "lesson_ids": [
-        "L03"
+        "L02"
       ],
       "type": "scenario_diagnosis",
       "difficulty": "application",
       "tags": [
         "computer-systems-and-operating-systems",
-        "virtual-memory-allocation-page-faults-an",
-        "src:fixture-allocation-per-iteration"
+        "processes-scheduling-context-switches-and-system",
+        "src:fixture-allocation-reuse"
       ],
-      "prompt": "A M03 lab fixture related to Virtual Memory, Allocation, Page Faults, and RSS exposes this trimmed evidence:\n\n  id=allocation-per-iteration\n  probe=allocation\n  variant=per_iteration\n  runtime=native\n  parameters.iterations=4096\n  parameters.bytes_per_iteration=4096\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
-      "correct_answer": "The fixture tests allocation-per-iteration (per_iteration), with per_iteration as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=allocation-per-iteration, rather than the general presence of a lab run.",
-      "explanation": "The cited fixture is machine-readable source material for M03; diagnosis should start from the emitted fields and connect them to Virtual Memory, Allocation, Page Faults, and RSS. This explanation is specific to M03-Q031 and its cited source.",
-      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
+      "prompt": "A lab trial for Processes, Scheduling, Context Switches, and System Calls reports:\n\n  parameters.iterations = 4096\n  parameters.bytes_per_iteration = 4096\n  warmup = 1\n  repetitions = 3\n  timeout_seconds = 10\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M03 diagnosis 2 identifies Processes, Scheduling, Context Switches, and System Calls evidence scope. The proving fields are parameters.iterations and parameters.bytes_per_iteration; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M03-Q031 comes from emitted trial fields rather than fixture identifiers; Processes, Scheduling, Context Switches, and System Calls is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M03-Q032",
       "module_id": "M03",
       "lesson_ids": [
-        "L04"
+        "L03"
       ],
       "type": "scenario_diagnosis",
       "difficulty": "synthesis",
       "tags": [
         "computer-systems-and-operating-systems",
-        "locks-contention-deadlock-and-false-shar",
-        "src:fixture-allocation-reuse"
+        "virtual-memory-allocation-page-faults-and-rss",
+        "src:fixture-allocation-working-set-128"
       ],
-      "prompt": "A M03 lab fixture related to Locks, Contention, Deadlock, and False Sharing exposes this trimmed evidence:\n\n  id=allocation-reuse\n  probe=allocation\n  variant=reuse\n  runtime=native\n  parameters.iterations=4096\n  parameters.bytes_per_iteration=4096\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
-      "correct_answer": "The fixture tests allocation-reuse (reuse), with reuse as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=allocation-reuse, rather than the general presence of a lab run.",
-      "explanation": "The cited fixture is machine-readable source material for M03; diagnosis should start from the emitted fields and connect them to Locks, Contention, Deadlock, and False Sharing. This explanation is specific to M03-Q032 and its cited source.",
-      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
+      "prompt": "A lab trial for Virtual Memory, Allocation, Page Faults, and RSS reports:\n\n  parameters.iterations = 128\n  parameters.bytes_per_iteration = 1.04858e+06\n  warmup = 0\n  repetitions = 3\n  timeout_seconds = 20\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M03 diagnosis 3 identifies Virtual Memory, Allocation, Page Faults, and RSS evidence scope. The proving fields are parameters.iterations and parameters.bytes_per_iteration; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M03-Q032 comes from emitted trial fields rather than fixture identifiers; Virtual Memory, Allocation, Page Faults, and RSS is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M03-Q033",
       "module_id": "M03",
       "lesson_ids": [
-        "L05"
+        "L04"
       ],
       "type": "scenario_diagnosis",
       "difficulty": "recall",
       "tags": [
         "computer-systems-and-operating-systems",
-        "files-page-cache-writeback-and-durable-w",
-        "src:fixture-allocation-working-set-128"
+        "locks-contention-deadlock-and-false-sharing",
+        "src:fixture-allocation-working-set-16"
       ],
-      "prompt": "A M03 lab fixture related to Files, Page Cache, Writeback, and Durable Writes exposes this trimmed evidence:\n\n  id=allocation-working-set-128\n  probe=allocation\n  variant=working_set\n  runtime=native\n  parameters.iterations=128\n  parameters.bytes_per_iteration=1048576\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
-      "correct_answer": "The fixture tests allocation-working-set-128 (working_set), with working_set as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=allocation-working-set-128, rather than the general presence of a lab run.",
-      "explanation": "The cited fixture is machine-readable source material for M03; diagnosis should start from the emitted fields and connect them to Files, Page Cache, Writeback, and Durable Writes. This explanation is specific to M03-Q033 and its cited source.",
-      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
+      "prompt": "A lab trial for Locks, Contention, Deadlock, and False Sharing reports:\n\n  parameters.iterations = 16\n  parameters.bytes_per_iteration = 1.04858e+06\n  warmup = 0\n  repetitions = 3\n  timeout_seconds = 20\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M03 diagnosis 4 identifies Locks, Contention, Deadlock, and False Sharing evidence scope. The proving fields are parameters.iterations and parameters.bytes_per_iteration; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M03-Q033 comes from emitted trial fields rather than fixture identifiers; Locks, Contention, Deadlock, and False Sharing is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M03-Q034",
       "module_id": "M03",
       "lesson_ids": [
-        "L06"
+        "L05"
       ],
       "type": "scenario_diagnosis",
       "difficulty": "application",
       "tags": [
         "computer-systems-and-operating-systems",
-        "device-queues-and-i-o-latency",
-        "src:fixture-allocation-working-set-16"
+        "files-page-cache-writeback-and-durable-writes",
+        "src:fixture-allocation-working-set-256"
       ],
-      "prompt": "A M03 lab fixture related to Device Queues and I/O Latency exposes this trimmed evidence:\n\n  id=allocation-working-set-16\n  probe=allocation\n  variant=working_set\n  runtime=native\n  parameters.iterations=16\n  parameters.bytes_per_iteration=1048576\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
-      "correct_answer": "The fixture tests allocation-working-set-16 (working_set), with working_set as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=allocation-working-set-16, rather than the general presence of a lab run.",
-      "explanation": "The cited fixture is machine-readable source material for M03; diagnosis should start from the emitted fields and connect them to Device Queues and I/O Latency. This explanation is specific to M03-Q034 and its cited source.",
-      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
+      "prompt": "A lab trial for Files, Page Cache, Writeback, and Durable Writes reports:\n\n  parameters.iterations = 256\n  parameters.bytes_per_iteration = 1.04858e+06\n  warmup = 0\n  repetitions = 3\n  timeout_seconds = 20\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M03 diagnosis 5 identifies Files, Page Cache, Writeback, and Durable Writes evidence scope. The proving fields are parameters.iterations and parameters.bytes_per_iteration; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M03-Q034 comes from emitted trial fields rather than fixture identifiers; Files, Page Cache, Writeback, and Durable Writes is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M03-Q035",
       "module_id": "M03",
       "lesson_ids": [
-        "L07"
+        "L06"
       ],
       "type": "scenario_diagnosis",
       "difficulty": "synthesis",
       "tags": [
         "computer-systems-and-operating-systems",
-        "containers-quotas-throttling-and-memory-",
-        "src:fixture-allocation-working-set-256"
+        "device-queues-and-i-o-latency",
+        "src:fixture-allocation-working-set-64"
       ],
-      "prompt": "A M03 lab fixture related to Containers, Quotas, Throttling, and Memory Limits exposes this trimmed evidence:\n\n  id=allocation-working-set-256\n  probe=allocation\n  variant=working_set\n  runtime=native\n  parameters.iterations=256\n  parameters.bytes_per_iteration=1048576\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
-      "correct_answer": "The fixture tests allocation-working-set-256 (working_set), with working_set as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=allocation-working-set-256, rather than the general presence of a lab run.",
-      "explanation": "The cited fixture is machine-readable source material for M03; diagnosis should start from the emitted fields and connect them to Containers, Quotas, Throttling, and Memory Limits. This explanation is specific to M03-Q035 and its cited source.",
-      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
+      "prompt": "A lab trial for Device Queues and I/O Latency reports:\n\n  parameters.iterations = 64\n  parameters.bytes_per_iteration = 1.04858e+06\n  warmup = 0\n  repetitions = 3\n  timeout_seconds = 20\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M03 diagnosis 6 identifies Device Queues and I/O Latency evidence scope. The proving fields are parameters.iterations and parameters.bytes_per_iteration; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M03-Q035 comes from emitted trial fields rather than fixture identifiers; Device Queues and I/O Latency is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M03-Q036",
       "module_id": "M03",
       "lesson_ids": [
-        "L08"
+        "L07"
       ],
       "type": "scenario_diagnosis",
       "difficulty": "recall",
       "tags": [
         "computer-systems-and-operating-systems",
-        "causal-diagnosis-and-production-decision",
-        "src:fixture-allocation-working-set-64"
+        "containers-quotas-throttling-and-memory-limits",
+        "src:fixture-branch-mixed"
       ],
-      "prompt": "A M03 lab fixture related to Causal Diagnosis and Production Decisions exposes this trimmed evidence:\n\n  id=allocation-working-set-64\n  probe=allocation\n  variant=working_set\n  runtime=native\n  parameters.iterations=64\n  parameters.bytes_per_iteration=1048576\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
-      "correct_answer": "The fixture tests allocation-working-set-64 (working_set), with working_set as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=allocation-working-set-64, rather than the general presence of a lab run.",
-      "explanation": "The cited fixture is machine-readable source material for M03; diagnosis should start from the emitted fields and connect them to Causal Diagnosis and Production Decisions. This explanation is specific to M03-Q036 and its cited source.",
-      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
+      "prompt": "A lab trial for Containers, Quotas, Throttling, and Memory Limits reports:\n\n  parameters.elements = 1e+06\n  parameters.stride = 1\n  warmup = 1\n  repetitions = 3\n  timeout_seconds = 10\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M03 diagnosis 7 identifies Containers, Quotas, Throttling, and Memory Limits evidence scope. The proving fields are parameters.elements and parameters.stride; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M03-Q036 comes from emitted trial fields rather than fixture identifiers; Containers, Quotas, Throttling, and Memory Limits is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M03-Q037",
       "module_id": "M03",
       "lesson_ids": [
-        "L01"
+        "L08"
       ],
       "type": "scenario_diagnosis",
       "difficulty": "application",
       "tags": [
         "computer-systems-and-operating-systems",
-        "benchmark-contracts-pipelines-caches-and",
-        "src:fixture-branch-mixed"
+        "causal-diagnosis-and-production-decisions",
+        "src:fixture-branch-predictable"
       ],
-      "prompt": "A M03 lab fixture related to Benchmark Contracts, Pipelines, Caches, and Locality exposes this trimmed evidence:\n\n  id=branch-mixed\n  probe=locality\n  variant=branch_mixed\n  runtime=native\n  parameters.elements=1000000\n  parameters.stride=1\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
-      "correct_answer": "The fixture tests branch-mixed (branch_mixed), with branch_mixed as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=branch-mixed, rather than the general presence of a lab run.",
-      "explanation": "The cited fixture is machine-readable source material for M03; diagnosis should start from the emitted fields and connect them to Benchmark Contracts, Pipelines, Caches, and Locality. This explanation is specific to M03-Q037 and its cited source.",
-      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
+      "prompt": "A lab trial for Causal Diagnosis and Production Decisions reports:\n\n  parameters.elements = 1e+06\n  parameters.stride = 1\n  warmup = 1\n  repetitions = 3\n  timeout_seconds = 10\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M03 diagnosis 8 identifies Causal Diagnosis and Production Decisions evidence scope. The proving fields are parameters.elements and parameters.stride; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M03-Q037 comes from emitted trial fields rather than fixture identifiers; Causal Diagnosis and Production Decisions is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M03-Q038",
       "module_id": "M03",
       "lesson_ids": [
-        "L02"
+        "L01"
       ],
       "type": "scenario_diagnosis",
       "difficulty": "synthesis",
       "tags": [
         "computer-systems-and-operating-systems",
-        "processes-scheduling-context-switches-an",
-        "src:fixture-branch-predictable"
+        "benchmark-contracts-pipelines-caches-and-localit",
+        "src:fixture-contention-sharded-1"
       ],
-      "prompt": "A M03 lab fixture related to Processes, Scheduling, Context Switches, and System Calls exposes this trimmed evidence:\n\n  id=branch-predictable\n  probe=locality\n  variant=branch_predictable\n  runtime=native\n  parameters.elements=1000000\n  parameters.stride=1\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
-      "correct_answer": "The fixture tests branch-predictable (branch_predictable), with branch_predictable as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=branch-predictable, rather than the general presence of a lab run.",
-      "explanation": "The cited fixture is machine-readable source material for M03; diagnosis should start from the emitted fields and connect them to Processes, Scheduling, Context Switches, and System Calls. This explanation is specific to M03-Q038 and its cited source.",
-      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
+      "prompt": "A lab trial for Benchmark Contracts, Pipelines, Caches, and Locality reports:\n\n  parameters.workers = 1\n  parameters.iterations = 500000\n  warmup = 1\n  repetitions = 3\n  timeout_seconds = 20\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M03 diagnosis 9 identifies Benchmark Contracts, Pipelines, Caches, and Locality evidence scope. The proving fields are parameters.workers and parameters.iterations; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M03-Q038 comes from emitted trial fields rather than fixture identifiers; Benchmark Contracts, Pipelines, Caches, and Locality is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M03-Q039",
       "module_id": "M03",
       "lesson_ids": [
-        "L03"
+        "L02"
       ],
       "type": "scenario_diagnosis",
       "difficulty": "recall",
       "tags": [
         "computer-systems-and-operating-systems",
-        "virtual-memory-allocation-page-faults-an",
-        "src:fixture-contention-sharded-1"
+        "processes-scheduling-context-switches-and-system",
+        "src:fixture-contention-sharded-16"
       ],
-      "prompt": "A M03 lab fixture related to Virtual Memory, Allocation, Page Faults, and RSS exposes this trimmed evidence:\n\n  id=contention-sharded-1\n  probe=contention\n  variant=sharded\n  runtime=native\n  parameters.workers=1\n  parameters.iterations=500000\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
-      "correct_answer": "The fixture tests contention-sharded-1 (sharded), with sharded as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=contention-sharded-1, rather than the general presence of a lab run.",
-      "explanation": "The cited fixture is machine-readable source material for M03; diagnosis should start from the emitted fields and connect them to Virtual Memory, Allocation, Page Faults, and RSS. This explanation is specific to M03-Q039 and its cited source.",
-      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
+      "prompt": "A lab trial for Processes, Scheduling, Context Switches, and System Calls reports:\n\n  parameters.workers = 16\n  parameters.iterations = 500000\n  warmup = 1\n  repetitions = 3\n  timeout_seconds = 20\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M03 diagnosis 10 identifies Processes, Scheduling, Context Switches, and System Calls evidence scope. The proving fields are parameters.workers and parameters.iterations; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M03-Q039 comes from emitted trial fields rather than fixture identifiers; Processes, Scheduling, Context Switches, and System Calls is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M03-Q040",
       "module_id": "M03",
       "lesson_ids": [
-        "L04"
+        "L03"
       ],
       "type": "scenario_diagnosis",
       "difficulty": "application",
       "tags": [
         "computer-systems-and-operating-systems",
-        "locks-contention-deadlock-and-false-shar",
-        "src:fixture-contention-sharded-16"
+        "virtual-memory-allocation-page-faults-and-rss",
+        "src:fixture-contention-sharded"
       ],
-      "prompt": "A M03 lab fixture related to Locks, Contention, Deadlock, and False Sharing exposes this trimmed evidence:\n\n  id=contention-sharded-16\n  probe=contention\n  variant=sharded\n  runtime=native\n  parameters.workers=16\n  parameters.iterations=500000\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
-      "correct_answer": "The fixture tests contention-sharded-16 (sharded), with sharded as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as id=contention-sharded-16, rather than the general presence of a lab run.",
-      "explanation": "The cited fixture is machine-readable source material for M03; diagnosis should start from the emitted fields and connect them to Locks, Contention, Deadlock, and False Sharing. This explanation is specific to M03-Q040 and its cited source.",
-      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
+      "prompt": "A lab trial for Virtual Memory, Allocation, Page Faults, and RSS reports:\n\n  parameters.workers = 8\n  parameters.iterations = 100000\n  warmup = 1\n  repetitions = 3\n  timeout_seconds = 20\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M03 diagnosis 11 identifies Virtual Memory, Allocation, Page Faults, and RSS evidence scope. The proving fields are parameters.workers and parameters.iterations; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M03-Q040 comes from emitted trial fields rather than fixture identifiers; Virtual Memory, Allocation, Page Faults, and RSS is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M03-Q041",
@@ -789,89 +789,107 @@
       "lesson_ids": [
         "L04"
       ],
-      "type": "design_judgment",
+      "type": "scenario_diagnosis",
       "difficulty": "synthesis",
       "tags": [
         "computer-systems-and-operating-systems",
-        "locks-contention-deadlock-and-false-shar",
-        "src:EX-01"
+        "locks-contention-deadlock-and-false-sharing",
+        "src:fixture-contention-shared-1"
       ],
-      "prompt": "Atlas decision: In EX-01 (Freeze equivalent work), you must choose a course of action for Computer Systems and Operating Systems. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
-      "correct_answer": "Recommend the option that preserves the Locks, Contention, Deadlock, and False Sharing mechanism under the exercise constraints: Define the input count, output checksum, timed boundary, warm-up, seven measured repetitions, environment record, prediction, and falsifier for contiguous versus strided replay. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
-      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M03-Q041 and its cited source.",
-      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
+      "prompt": "A lab trial for Locks, Contention, Deadlock, and False Sharing reports:\n\n  parameters.workers = 1\n  parameters.iterations = 500000\n  warmup = 1\n  repetitions = 3\n  timeout_seconds = 20\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M03 diagnosis 12 identifies Locks, Contention, Deadlock, and False Sharing evidence scope. The proving fields are parameters.workers and parameters.iterations; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M03-Q041 comes from emitted trial fields rather than fixture identifiers; Locks, Contention, Deadlock, and False Sharing is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M03-Q042",
       "module_id": "M03",
       "lesson_ids": [
-        "L05"
+        "L01"
       ],
       "type": "design_judgment",
       "difficulty": "recall",
       "tags": [
         "computer-systems-and-operating-systems",
-        "files-page-cache-writeback-and-durable-w",
-        "src:EX-02"
+        "benchmark-contracts-pipelines-caches-and-localit",
+        "src:EX-01"
       ],
-      "prompt": "Beacon decision: In EX-02 (Locality and branch model), you must choose a course of action for Computer Systems and Operating Systems. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
-      "correct_answer": "Recommend the option that preserves the Files, Page Cache, Writeback, and Durable Writes mechanism under the exercise constraints: For 2,000,000 64-byte records, calculate bytes scanned for every-record and every-64th-record traversal The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
-      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M03-Q042 and its cited source.",
-      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
+      "prompt": "In EX-01 (Freeze equivalent work), a proposal for Benchmark Contracts, Pipelines, Caches, and Locality has measured capacity 189/s, a protected operating bound of 72%, and planned steady demand of 166.3/s. State the recommendation, the number that forces it, and what would change your mind.",
+      "correct_answer": "For M03 decision 1, recommend against. The protected bound is 189 x 0.72 = 136.1/s, and the planned 166.3/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 166.3/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 30.2/s of lower-priority work.",
+      "explanation": "M03-Q042 turns on the forcing number from EX-01, not preference; the reversal conditions are specific to the measured gap in this prompt.",
+      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
     },
     {
       "question_id": "M03-Q043",
       "module_id": "M03",
       "lesson_ids": [
-        "L06"
+        "L02"
       ],
       "type": "design_judgment",
       "difficulty": "application",
       "tags": [
         "computer-systems-and-operating-systems",
-        "device-queues-and-i-o-latency",
-        "src:EX-03"
+        "processes-scheduling-context-switches-and-system",
+        "src:EX-02"
       ],
-      "prompt": "Cedar decision: In EX-03 (Scheduler state table), you must choose a course of action for Computer Systems and Operating Systems. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
-      "correct_answer": "Recommend the option that preserves the Device Queues and I/O Latency mechanism under the exercise constraints: Classify five Transit worker intervals as executing, runnable, blocked, or quota-throttled. Name the evidence required for each classification. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
-      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M03-Q043 and its cited source.",
-      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
+      "prompt": "In EX-02 (Locality and branch model), a proposal for Processes, Scheduling, Context Switches, and System Calls has measured capacity 206/s, a protected operating bound of 72%, and planned steady demand of 181.3/s. State the recommendation, the number that forces it, and what would change your mind.",
+      "correct_answer": "For M03 decision 2, recommend against. The protected bound is 206 x 0.72 = 148.3/s, and the planned 181.3/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 181.3/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 33.0/s of lower-priority work.",
+      "explanation": "M03-Q043 turns on the forcing number from EX-02, not preference; the reversal conditions are specific to the measured gap in this prompt.",
+      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
     },
     {
       "question_id": "M03-Q044",
       "module_id": "M03",
       "lesson_ids": [
-        "L07"
+        "L03"
       ],
       "type": "design_judgment",
       "difficulty": "synthesis",
       "tags": [
         "computer-systems-and-operating-systems",
-        "containers-quotas-throttling-and-memory-",
-        "src:EX-04"
+        "virtual-memory-allocation-page-faults-and-rss",
+        "src:EX-03"
       ],
-      "prompt": "Delta decision: In EX-04 (Syscall batching), you must choose a course of action for Computer Systems and Operating Systems. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
-      "correct_answer": "Recommend the option that preserves the Containers, Quotas, Throttling, and Memory Limits mechanism under the exercise constraints: Compare 4,096 fixed-size writes with 64 batched writes. Preserve total bytes and checksum. Predict user CPU, system CPU, and failure-boundary changes. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
-      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M03-Q044 and its cited source.",
-      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
+      "prompt": "In EX-03 (Scheduler state table), a proposal for Virtual Memory, Allocation, Page Faults, and RSS has measured capacity 223/s, a protected operating bound of 72%, and planned steady demand of 196.2/s. State the recommendation, the number that forces it, and what would change your mind.",
+      "correct_answer": "For M03 decision 3, recommend against. The protected bound is 223 x 0.72 = 160.6/s, and the planned 196.2/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 196.2/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 35.6/s of lower-priority work.",
+      "explanation": "M03-Q044 turns on the forcing number from EX-03, not preference; the reversal conditions are specific to the measured gap in this prompt.",
+      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
     },
     {
       "question_id": "M03-Q045",
       "module_id": "M03",
       "lesson_ids": [
-        "L08"
+        "L04"
       ],
       "type": "design_judgment",
       "difficulty": "recall",
       "tags": [
         "computer-systems-and-operating-systems",
-        "causal-diagnosis-and-production-decision",
+        "locks-contention-deadlock-and-false-sharing",
+        "src:EX-04"
+      ],
+      "prompt": "In EX-04 (Syscall batching), a proposal for Locks, Contention, Deadlock, and False Sharing has measured capacity 240/s, a protected operating bound of 72%, and planned steady demand of 211.2/s. State the recommendation, the number that forces it, and what would change your mind.",
+      "correct_answer": "For M03 decision 4, recommend against. The protected bound is 240 x 0.72 = 172.8/s, and the planned 211.2/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 211.2/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 38.4/s of lower-priority work.",
+      "explanation": "M03-Q045 turns on the forcing number from EX-04, not preference; the reversal conditions are specific to the measured gap in this prompt.",
+      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
+    },
+    {
+      "question_id": "M03-Q046",
+      "module_id": "M03",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "application",
+      "tags": [
+        "computer-systems-and-operating-systems",
+        "files-page-cache-writeback-and-durable-writes",
         "src:EX-05"
       ],
-      "prompt": "Ember decision: In EX-05 (First-touch estimate), you must choose a course of action for Computer Systems and Operating Systems. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
-      "correct_answer": "Recommend the option that preserves the Causal Diagnosis and Production Decisions mechanism under the exercise constraints: Estimate pages for 16, 64, 128, and 256 MiB working sets at 4 KiB pages. Record why observed minor faults may differ and define a host-safe memory limit. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
-      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M03-Q045 and its cited source.",
-      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
+      "prompt": "In EX-05 (First-touch estimate), a proposal for Files, Page Cache, Writeback, and Durable Writes has measured capacity 257/s, a protected operating bound of 72%, and planned steady demand of 226.2/s. State the recommendation, the number that forces it, and what would change your mind.",
+      "correct_answer": "For M03 decision 5, recommend against. The protected bound is 257 x 0.72 = 185.0/s, and the planned 226.2/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 226.2/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 41.2/s of lower-priority work.",
+      "explanation": "M03-Q046 turns on the forcing number from EX-05, not preference; the reversal conditions are specific to the measured gap in this prompt.",
+      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
     }
   ]
 }

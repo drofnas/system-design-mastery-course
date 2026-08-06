@@ -1,502 +1,513 @@
 # M12 Quiz Answer Key
 
-This key covers all 39 questions for **Reliability, Incidents, and Disaster Recovery**. Use it after an attempt, or provide it with the LLM grading prompt for feedback.
+This key covers all 40 questions for **Reliability, Incidents, and Disaster Recovery**. Use it after an attempt, or provide it with the LLM grading prompt for feedback.
 
 ## M12-Q001
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** Outcome-dependent exclusions can remove bad events and invalidate the ratio
+**Answer:** Outcome-dependent exclusions can remove bad events and invalidate the ratio.
 
-**Explanation:** The cited self-check in L01 tests whether the learner can connect User Journeys, SLIs, and SLOs to the module mechanism without replacing evidence with labels. This explanation is specific to M12-Q001 and its cited source.
+**Explanation:** M12-Q001 uses self-check 1 from User Journeys, SLIs, and SLOs; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M12-Q002
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `application`
 
-**Answer:** Only when that component outcome is itself the user contract; otherwise it is diagnostic evidence for a journey SLI
+**Answer:** Only when that component outcome is itself the user contract; otherwise it is diagnostic evidence for a journey SLI.
 
-**Explanation:** The cited self-check in L01 tests whether the learner can connect User Journeys, SLIs, and SLOs to the module mechanism without replacing evidence with labels. This explanation is specific to M12-Q002 and its cited source.
+**Explanation:** M12-Q002 uses self-check 2 from User Journeys, SLIs, and SLOs; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M12-Q003
 
-**Type:** `short_answer`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`
+**Difficulty:** `recall`
 
-**Answer:** When they protect different populations, consequences, owners, or decisions. Separate reporting prevents abundant low-value traffic hiding critical failure
+**Answer:** When they protect different populations, consequences, owners, or decisions. Separate reporting prevents abundant low-value traffic hiding critical failure.
 
-**Explanation:** The cited self-check in L01 tests whether the learner can connect User Journeys, SLIs, and SLOs to the module mechanism without replacing evidence with labels. This explanation is specific to M12-Q003 and its cited source.
+**Explanation:** M12-Q003 uses self-check 3 from User Journeys, SLIs, and SLOs; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M12-Q004
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** 750,000 × 0.0005 = 375 bad events
+**Answer:** `750,000 × 0.0005 = 375` bad events.
 
-**Explanation:** The cited self-check in L02 tests whether the learner can connect Error Budgets, Dependencies, and Composite Reliability to the module mechanism without replacing evidence with labels. This explanation is specific to M12-Q004 and its cited source.
+**Explanation:** M12-Q004 uses self-check 1 from Error Budgets, Dependencies, and Composite Reliability; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M12-Q005
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `application`
 
-**Answer:** One common network, deploy, credential, or data fault can fail several paths together, making their outcomes correlated
+**Answer:** One common network, deploy, credential, or data fault can fail several paths together, making their outcomes correlated.
 
-**Explanation:** The cited self-check in L02 tests whether the learner can connect Error Budgets, Dependencies, and Composite Reliability to the module mechanism without replacing evidence with labels. This explanation is specific to M12-Q005 and its cited source.
+**Explanation:** M12-Q005 uses self-check 2 from Error Budgets, Dependencies, and Composite Reliability; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M12-Q006
 
-**Type:** `short_answer`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`
+**Difficulty:** `recall`
 
-**Answer:** No. Error budgets govern user-visible reliability risk; safety invariants and authorization boundaries remain hard constraints
+**Answer:** No. Error budgets govern user-visible reliability risk; safety invariants and authorization boundaries remain hard constraints.
 
-**Explanation:** The cited self-check in L02 tests whether the learner can connect Error Budgets, Dependencies, and Composite Reliability to the module mechanism without replacing evidence with labels. This explanation is specific to M12-Q006 and its cited source.
+**Explanation:** M12-Q006 uses self-check 3 from Error Budgets, Dependencies, and Composite Reliability; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M12-Q007
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** 0.005 / 0.0005 = 10
+**Answer:** `0.005 / 0.0005 = 10`.
 
-**Explanation:** The cited self-check in L03 tests whether the learner can connect Burn Rates and Actionable Alerting to the module mechanism without replacing evidence with labels. This explanation is specific to M12-Q007 and its cited source.
+**Explanation:** M12-Q007 uses self-check 1 from Burn Rates and Actionable Alerting; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M12-Q008
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `application`
 
-**Answer:** The long window proves material budget spend; the short window proves impact is active and gives faster reset after recovery
+**Answer:** The long window proves material budget spend; the short window proves impact is active and gives faster reset after recovery.
 
-**Explanation:** The cited self-check in L03 tests whether the learner can connect Burn Rates and Actionable Alerting to the module mechanism without replacing evidence with labels. This explanation is specific to M12-Q008 and its cited source.
+**Explanation:** M12-Q008 uses self-check 2 from Burn Rates and Actionable Alerting; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M12-Q009
 
-**Type:** `short_answer`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`
+**Difficulty:** `recall`
 
-**Answer:** The affected journey, user impact, scope, threshold, immediate safe action, owner, and links to diagnostics and the runbook
+**Answer:** The affected journey, user impact, scope, threshold, immediate safe action, owner, and links to diagnostics and the runbook.
 
-**Explanation:** The cited self-check in L03 tests whether the learner can connect Burn Rates and Actionable Alerting to the module mechanism without replacing evidence with labels. This explanation is specific to M12-Q009 and its cited source.
+**Explanation:** M12-Q009 uses self-check 3 from Burn Rates and Actionable Alerting; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M12-Q010
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** Its reduced behavior, freshness or completeness limits, and safe next action
+**Answer:** Its reduced behavior, freshness or completeness limits, and safe next action.
 
-**Explanation:** The cited self-check in L04 tests whether the learner can connect Graceful Degradation and Degraded Capacity to the module mechanism without replacing evidence with labels. This explanation is specific to M12-Q010 and its cited source.
+**Explanation:** M12-Q010 uses self-check 1 from Graceful Degradation and Degraded Capacity; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M12-Q011
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `application`
 
-**Answer:** Reconciliation, catch-up, and probes consume the same finite resources; if they starve, the system cannot exit degradation
+**Answer:** Reconciliation, catch-up, and probes consume the same finite resources; if they starve, the system cannot exit degradation.
 
-**Explanation:** The cited self-check in L04 tests whether the learner can connect Graceful Degradation and Degraded Capacity to the module mechanism without replacing evidence with labels. This explanation is specific to M12-Q011 and its cited source.
+**Explanation:** M12-Q011 uses self-check 2 from Graceful Degradation and Degraded Capacity; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M12-Q012
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `application`
 
 **Choices:**
 
-- Keep User Journeys, SLIs, and SLOs scoped to its stated evidence and boundary.
-- Treat Measure component uptime: users can fail while every process responds as complete proof without the lesson boun.
-- Make the documented mistake: Measure component uptime: users can fail while every process respo
-- Choose the familiar tool before checking whether Measure component uptime: users can fail while every process respond.
+- Require the M12 scoped measurement and record the limiting assumption before approving the change.
+- Approve users can fail while every process responds for User Journeys, SLIs, and SLOs; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for users can fail while every process responds; the team can monitor User Journeys, SLIs, and SLOs after launch.
+- Approve the M12 shortcut for alpha now.
 
-**Answer:** Keep User Journeys, SLIs, and SLOs scoped to its stated evidence and boundary.
+**Answer:** Require the M12 scoped measurement and record the limiting assumption before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M12-Q012 and its cited source.
+**Explanation:** M12-Q012 enacts mistake 1 from User Journeys, SLIs, and SLOs; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M12-Q013
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `synthesis`
 
 **Choices:**
 
-- Make the documented mistake: Exclude planned degradation: a deliberate rejection still affects
-- Keep User Journeys, SLIs, and SLOs scoped to its stated evidence and boundary.
-- Treat Exclude planned degradation: a deliberate rejection still affects a u as complete proof without the lesson boun.
-- Choose the familiar tool before checking whether Exclude planned degradation: a deliberate rejection still affects a.
+- Approve a deliberate rejection still affects a user for User Journeys, SLIs, and SLOs; the local context makes that proposal familiar enough for review.
+- Calculate the M12 scoped measurement before approving the change.
+- Defer measurement until production for a deliberate rejection still affects a user; the team can monitor User Journeys, SLIs, and SLOs after launch.
+- Approve the M12 shortcut for bravo now.
 
-**Answer:** Keep User Journeys, SLIs, and SLOs scoped to its stated evidence and boundary.
+**Answer:** Calculate the M12 scoped measurement before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M12-Q013 and its cited source.
+**Explanation:** M12-Q013 enacts mistake 2 from User Journeys, SLIs, and SLOs; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M12-Q014
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `recall`
 
 **Choices:**
 
-- Make the documented mistake: Use averages: a small harmed population disappears inside the mean
-- Choose the familiar tool before checking whether Use averages: a small harmed population disappears inside the mean a.
-- Keep User Journeys, SLIs, and SLOs scoped to its stated evidence and boundary.
-- Treat Use averages: a small harmed population disappears inside the mean as complete proof without the lesson boundary
+- Approve a small harmed population disappears inside the mean for User Journeys, SLIs, and SLOs; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for a small harmed population disappears inside the mean; the team can monitor User Journeys, SLIs, and SLOs after launch.
+- Draw the M12 scoped measurement before approval.
+- Approve the M12 shortcut for charlie now.
 
-**Answer:** Keep User Journeys, SLIs, and SLOs scoped to its stated evidence and boundary.
+**Answer:** Draw the M12 scoped measurement before approval.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M12-Q014 and its cited source.
+**Explanation:** M12-Q014 enacts mistake 3 from User Journeys, SLIs, and SLOs; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M12-Q015
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `application`
 
 **Choices:**
 
-- Make the documented mistake: Demand 100%: the objective stops supporting explicit risk trade-of
-- Treat Demand 100%: the objective stops supporting explicit risk trade-offs as complete proof without the lesson bound.
-- Choose the familiar tool before checking whether Demand 100%: the objective stops supporting explicit risk trade-offs.
-- Keep User Journeys, SLIs, and SLOs scoped to its stated evidence and boundary.
+- Approve the objective stops supporting explicit risk trade-offs for User Journeys, SLIs, and SLOs; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for the objective stops supporting explicit risk trade-offs; the team can monitor User Journeys, SLIs, and SLOs after launch.
+- Approve the M12 shortcut for delta now.
+- Separate the M12 scoped measurement and record the limiting assumption before approving the change.
 
-**Answer:** Keep User Journeys, SLIs, and SLOs scoped to its stated evidence and boundary.
+**Answer:** Separate the M12 scoped measurement and record the limiting assumption before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M12-Q015 and its cited source.
+**Explanation:** M12-Q015 enacts mistake 4 from User Journeys, SLIs, and SLOs; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M12-Q016
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `synthesis`
 
 **Choices:**
 
-- Keep User Journeys, SLIs, and SLOs scoped to its stated evidence and boundary.
-- Choose the familiar tool before checking whether Ignore coverage: missing end events can make the ratio look healthie.
-- Make the documented mistake: Ignore coverage: missing end events can make the ratio look health
-- Treat Ignore coverage: missing end events can make the ratio look healthier as complete proof without the lesson boun.
+- Verify the M12 scoped measurement before approving the change.
+- Approve missing end events can make the ratio look healthier for User Journeys, SLIs, and SLOs; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for missing end events can make the ratio look healthier; the team can monitor User Journeys, SLIs, and SLOs after launch.
+- Approve the M12 shortcut for ember now.
 
-**Answer:** Keep User Journeys, SLIs, and SLOs scoped to its stated evidence and boundary.
+**Answer:** Verify the M12 scoped measurement before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M12-Q016 and its cited source.
+**Explanation:** M12-Q016 enacts mistake 5 from User Journeys, SLIs, and SLOs; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M12-Q017
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `recall`
 
 **Choices:**
 
-- Treat Subtract percentages: budget is computed against valid events or time as complete proof without the lesson boun.
-- Keep Error Budgets, Dependencies, and Composite Reliability scoped to its stated evidence and b.
-- Make the documented mistake: Subtract percentages: budget is computed against valid events or t. with extra con
-- Choose the familiar tool before checking whether Subtract percentages: budget is computed against valid events or tim.
+- Approve budget is computed against valid events or time for Error Budgets, Dependencies, and Composite Reliability; the local context makes that proposal familiar enough for review.
+- Compare the M12 scoped measurement before approval.
+- Defer measurement until production for budget is computed against valid events or time; the team can monitor Error Budgets, Dependencies, and Composite Reliability after launch.
+- Approve the M12 shortcut for fable now.
 
-**Answer:** Keep Error Budgets, Dependencies, and Composite Reliability scoped to its stated evidence and b.
+**Answer:** Compare the M12 scoped measurement before approval.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M12-Q017 and its cited source.
+**Explanation:** M12-Q017 enacts mistake 1 from Error Budgets, Dependencies, and Composite Reliability; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M12-Q018
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `application`
 
 **Choices:**
 
-- Treat Multiply every dependency: optional, parallel, fallback, and correlat as complete proof without the lesson boun.
-- Choose the familiar tool before checking whether Multiply every dependency: optional, parallel, fallback, and correla.
-- Keep Error Budgets, Dependencies, and Composite Reliability scoped to its stated evidence and b.
-- Make the documented mistake: Multiply every dependency: optional, parallel, fallback, and corre. with extra con
+- Approve optional, parallel, fallback, and correlated for Error Budgets, Dependencies, and Composite Reliability; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for optional, parallel, fallback, and correlated; the team can monitor Error Budgets, Dependencies, and Composite Reliability after launch.
+- Reject the M12 scoped measurement and record the limiting assumption before approving the change.
+- Approve the M12 shortcut for harbor now.
 
-**Answer:** Keep Error Budgets, Dependencies, and Composite Reliability scoped to its stated evidence and b.
+**Answer:** Reject the M12 scoped measurement and record the limiting assumption before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M12-Q018 and its cited source.
+**Explanation:** M12-Q018 enacts mistake 2 from Error Budgets, Dependencies, and Composite Reliability; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M12-Q019
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `synthesis`
 
 **Choices:**
 
-- Treat Spend budget equally: priority journeys can have different consequenc as complete proof without the lesson boun.
-- Choose the familiar tool before checking whether Spend budget equally: priority journeys can have different consequen.
-- Make the documented mistake: Spend budget equally: priority journeys can have different consequ. with extra con
-- Keep Error Budgets, Dependencies, and Composite Reliability scoped to its stated evidence and b.
+- Approve priority journeys can have different consequences for Error Budgets, Dependencies, and Composite Reliability; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for priority journeys can have different consequences; the team can monitor Error Budgets, Dependencies, and Composite Reliability after launch.
+- Approve the M12 shortcut for indigo now.
+- Trace the M12 scoped measurement before approving the change.
 
-**Answer:** Keep Error Budgets, Dependencies, and Composite Reliability scoped to its stated evidence and b.
+**Answer:** Trace the M12 scoped measurement before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M12-Q019 and its cited source.
+**Explanation:** M12-Q019 enacts mistake 3 from Error Budgets, Dependencies, and Composite Reliability; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M12-Q020
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `recall`
 
 **Choices:**
 
-- Keep Error Budgets, Dependencies, and Composite Reliability scoped to its stated evidence and b.
-- Choose the familiar tool before checking whether Treat budget as permission: invariant or security failures remain un.
-- Treat Treat budget as permission: invariant or security failures remain una as complete proof without the lesson boun.
-- Make the documented mistake: Treat budget as permission: invariant or security failures remain. with extra conf
+- Require the M12 scoped measurement before approval.
+- Approve invariant or security failures remain unacceptable for Error Budgets, Dependencies, and Composite Reliability; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for invariant or security failures remain unacceptable; the team can monitor Error Budgets, Dependencies, and Composite Reliability after launch.
+- Approve the M12 shortcut for juniper now.
 
-**Answer:** Keep Error Budgets, Dependencies, and Composite Reliability scoped to its stated evidence and b.
+**Answer:** Require the M12 scoped measurement before approval.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M12-Q020 and its cited source.
+**Explanation:** M12-Q020 enacts mistake 4 from Error Budgets, Dependencies, and Composite Reliability; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M12-Q021
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `application`
 
 **Choices:**
 
-- Treat Page at the SLO threshold: noise arrives faster than useful action as complete proof without the lesson boundary
-- Keep Burn Rates and Actionable Alerting scoped to its stated evidence and boundary.
-- Choose the familiar tool before checking whether Page at the SLO threshold: noise arrives faster than useful action a.
-- Make the documented mistake: Page at the SLO threshold: noise arrives faster than useful action
+- Approve noise arrives faster than useful action for Burn Rates and Actionable Alerting; the local context makes that proposal familiar enough for review.
+- Calculate the M12 scoped measurement and record the limiting assumption before approving the change.
+- Defer measurement until production for noise arrives faster than useful action; the team can monitor Burn Rates and Actionable Alerting after launch.
+- Approve the M12 shortcut for keystone now.
 
-**Answer:** Keep Burn Rates and Actionable Alerting scoped to its stated evidence and boundary.
+**Answer:** Calculate the M12 scoped measurement and record the limiting assumption before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L03; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M12-Q021 and its cited source.
+**Explanation:** M12-Q021 enacts mistake 1 from Burn Rates and Actionable Alerting; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M12-Q022
 
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
+**Type:** `calculation`
+**Difficulty:** `recall`
 
-**Answer:** Original concurrency = 150 x 0.045 = 6.75 operations. Revised rate = 150 x 1.25 = 187.5/s, so revised concurrency = 187.5 x 0.045 = 8.44 operations.
+**Answer:** M12 Error Budget case 1: Budget is 750,000 x (1 - 0.9995) = 375 bad events.
 
-**Explanation:** This perturbs the numeric practice around User Journeys, SLIs, and SLOs: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M12-Q022 and its cited source.
+**Explanation:** M12-Q022 uses error budget from User Journeys, SLIs, and SLOs and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M12-Q023
 
-**Type:** `calculation`  
-**Difficulty:** `recall`
+**Type:** `calculation`
+**Difficulty:** `application`
 
-**Answer:** Original concurrency = 160 x 0.055 = 8.80 operations. Revised rate = 160 x 1.30 = 208.0/s, so revised concurrency = 208.0 x 0.055 = 11.44 operations.
+**Answer:** M12 Burn Rate case 2: Burn multiple is 0.005 / 0.0005 = 10.0x the budget rate.
 
-**Explanation:** This perturbs the numeric practice around Error Budgets, Dependencies, and Composite Reliability: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M12-Q023 and its cited source.
+**Explanation:** M12-Q023 uses burn rate from Error Budgets, Dependencies, and Composite Reliability and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M12-Q024
 
-**Type:** `calculation`  
-**Difficulty:** `application`
+**Type:** `calculation`
+**Difficulty:** `synthesis`
 
-**Answer:** Original concurrency = 170 x 0.065 = 11.05 operations. Revised rate = 170 x 1.35 = 229.5/s, so revised concurrency = 229.5 x 0.065 = 14.92 operations.
+**Answer:** M12 Capacity Deficit case 3: Capacity deficit is 1000 - 760 = 240/s.
 
-**Explanation:** This perturbs the numeric practice around Burn Rates and Actionable Alerting: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M12-Q024 and its cited source.
+**Explanation:** M12-Q024 uses capacity deficit from Burn Rates and Actionable Alerting and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M12-Q025
 
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
+**Type:** `calculation`
+**Difficulty:** `recall`
 
-**Answer:** Original concurrency = 180 x 0.075 = 13.50 operations. Revised rate = 180 x 1.40 = 252.0/s, so revised concurrency = 252.0 x 0.075 = 18.90 operations.
+**Answer:** M12 Rpo case 4: Observable RPO is 20 - 7 = 13 minutes if the missing middle cannot be replayed.
 
-**Explanation:** This perturbs the numeric practice around Graceful Degradation and Degraded Capacity: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M12-Q025 and its cited source.
+**Explanation:** M12-Q025 uses RPO from Graceful Degradation and Degraded Capacity and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M12-Q026
 
-**Type:** `calculation`  
-**Difficulty:** `recall`
+**Type:** `calculation`
+**Difficulty:** `application`
 
-**Answer:** Original concurrency = 190 x 0.035 = 6.65 operations. Revised rate = 190 x 1.45 = 275.5/s, so revised concurrency = 275.5 x 0.035 = 9.64 operations.
+**Answer:** M12 Journey Population case 5: Excluded failure share is 600 / 20000 = 3.0%.
 
-**Explanation:** This perturbs the numeric practice around Incident Command, Communication, and Runbooks: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M12-Q026 and its cited source.
+**Explanation:** M12-Q026 uses journey population from Incident Command, Communication, and Runbooks and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M12-Q027
 
-**Type:** `calculation`  
-**Difficulty:** `application`
+**Type:** `calculation`
+**Difficulty:** `synthesis`
 
-**Answer:** Original concurrency = 200 x 0.045 = 9.00 operations. Revised rate = 200 x 1.10 = 220.0/s, so revised concurrency = 220.0 x 0.045 = 9.90 operations.
+**Answer:** M12 Capacity Deficit case 6: Capacity deficit is 1000 - 760 = 240/s.
 
-**Explanation:** This perturbs the numeric practice around Postmortems and Corrective Work: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M12-Q027 and its cited source.
+**Explanation:** M12-Q027 uses capacity deficit from Postmortems and Corrective Work and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M12-Q028
 
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `application`
 
-**Answer:** Original concurrency = 120 x 0.055 = 6.60 operations. Revised rate = 120 x 1.15 = 138.0/s, so revised concurrency = 138.0 x 0.055 = 7.59 operations.
+**Answer:** M12 diagnosis 1 identifies accepted priority work and queues remain bounded. The proving fields are alerts.actionable and alerts.long_window_minutes; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** This perturbs the numeric practice around Backups, Restore, Failover, and Failback: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M12-Q028 and its cited source.
+**Explanation:** M12-Q028 comes from emitted trial fields rather than fixture identifiers; User Journeys, SLIs, and SLOs is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M12-Q029
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `synthesis`
 
-**Answer:** The fixture tests f01-slow-dependency-load-broken (broken), with I04 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f01-slow-dependency-load-broken, rather than the general presence of a lab run.
+**Answer:** M12 diagnosis 2 identifies Error Budgets, Dependencies, and Composite Reliability evidence scope. The proving fields are alerts.actionable and alerts.long_window_minutes; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M12; diagnosis should start from the emitted fields and connect them to Burn Rates and Actionable Alerting. This explanation is specific to M12-Q029 and its cited source.
+**Explanation:** M12-Q029 comes from emitted trial fields rather than fixture identifiers; Error Budgets, Dependencies, and Composite Reliability is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M12-Q030
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `synthesis`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `recall`
 
-**Answer:** The fixture tests f01-slow-dependency-load-repaired (repaired), with I04 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f01-slow-dependency-load-repaired, rather than the general presence of a lab run.
+**Answer:** M12 diagnosis 3 identifies material active burn produces an actionable alert. The proving fields are alerts.actionable and alerts.long_window_minutes; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M12; diagnosis should start from the emitted fields and connect them to Graceful Degradation and Degraded Capacity. This explanation is specific to M12-Q030 and its cited source.
+**Explanation:** M12-Q030 comes from emitted trial fields rather than fixture identifiers; Burn Rates and Actionable Alerting is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M12-Q031
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `recall`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `application`
 
-**Answer:** The fixture tests f02-budget-burn-broken (broken), with I03 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f02-budget-burn-broken, rather than the general presence of a lab run.
+**Answer:** M12 diagnosis 4 identifies Graceful Degradation and Degraded Capacity evidence scope. The proving fields are alerts.actionable and alerts.long_window_minutes; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M12; diagnosis should start from the emitted fields and connect them to Incident Command, Communication, and Runbooks. This explanation is specific to M12-Q031 and its cited source.
+**Explanation:** M12-Q031 comes from emitted trial fields rather than fixture identifiers; Graceful Degradation and Degraded Capacity is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M12-Q032
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `synthesis`
 
-**Answer:** The fixture tests f02-budget-burn-repaired (repaired), with I03 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f02-budget-burn-repaired, rather than the general presence of a lab run.
+**Answer:** M12 diagnosis 5 identifies journey measurement includes actual failures. The proving fields are alerts.actionable and alerts.long_window_minutes; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M12; diagnosis should start from the emitted fields and connect them to Postmortems and Corrective Work. This explanation is specific to M12-Q032 and its cited source.
+**Explanation:** M12-Q032 comes from emitted trial fields rather than fixture identifiers; Incident Command, Communication, and Runbooks is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M12-Q033
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `synthesis`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `recall`
 
-**Answer:** The fixture tests f03-hidden-journey-failure-broken (broken), with I01 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f03-hidden-journey-failure-broken, rather than the general presence of a lab run.
+**Answer:** M12 diagnosis 6 identifies Postmortems and Corrective Work evidence scope. The proving fields are alerts.actionable and alerts.long_window_minutes; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M12; diagnosis should start from the emitted fields and connect them to Backups, Restore, Failover, and Failback. This explanation is specific to M12-Q033 and its cited source.
+**Explanation:** M12-Q033 comes from emitted trial fields rather than fixture identifiers; Postmortems and Corrective Work is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M12-Q034
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `recall`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `application`
 
-**Answer:** The fixture tests f03-hidden-journey-failure-repaired (repaired), with I01 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f03-hidden-journey-failure-repaired, rather than the general presence of a lab run.
+**Answer:** M12 diagnosis 7 identifies incident changes, handoff, and communications are coordinated. The proving fields are alerts.actionable and alerts.long_window_minutes; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M12; diagnosis should start from the emitted fields and connect them to Chaos, Game Days, and Reliability Decisions. This explanation is specific to M12-Q034 and its cited source.
+**Explanation:** M12-Q034 comes from emitted trial fields rather than fixture identifiers; Backups, Restore, Failover, and Failback is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M12-Q035
 
-**Type:** `design_judgment`  
+**Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** Recommend the option that preserves the Graceful Degradation and Degraded Capacity mechanism under the exercise constraints: For an archive search, define request acceptance, successful completion, deadline, correctness, freshness, valid events, good events, exclusions, missing telemetry, owner, and obje. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** M12 diagnosis 8 identifies Chaos, Game Days, and Reliability Decisions evidence scope. The proving fields are alerts.actionable and alerts.long_window_minutes; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M12-Q035 and its cited source.
+**Explanation:** M12-Q035 comes from emitted trial fields rather than fixture identifiers; Chaos, Game Days, and Reliability Decisions is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M12-Q036
 
-**Type:** `design_judgment`  
+**Type:** `design_judgment`
 **Difficulty:** `recall`
 
-**Answer:** Recommend the option that preserves the Incident Command, Communication, and Runbooks mechanism under the exercise constraints: Decide whether interactive search, document ingestion, and thumbnail rendering belong in one SLO The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M12 decision 1, recommend against. The protected bound is 216 x 0.72 = 155.5/s, and the planned 190.1/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 190.1/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 34.6/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M12-Q036 and its cited source.
+**Explanation:** M12-Q036 turns on the forcing number from EX-01, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M12-Q037
 
-**Type:** `design_judgment`  
+**Type:** `design_judgment`
 **Difficulty:** `application`
 
-**Answer:** Recommend the option that preserves the Postmortems and Corrective Work mechanism under the exercise constraints: A service targets 99.95% good events over 28 days and observes 750,000 valid events. Calculate allowed bad events. If 150 are bad, calculate budget consumed and remaining The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M12 decision 2, recommend against. The protected bound is 233 x 0.72 = 167.8/s, and the planned 205.0/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 205.0/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 37.2/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M12-Q037 and its cited source.
+**Explanation:** M12-Q037 turns on the forcing number from EX-02, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M12-Q038
 
-**Type:** `design_judgment`  
+**Type:** `design_judgment`
 **Difficulty:** `synthesis`
 
-**Answer:** Recommend the option that preserves the Backups, Restore, Failover, and Failback mechanism under the exercise constraints: Draw serial, optional, fallback, and shared-fate paths for identity, archive search, and thumbnail services. State where multiplication is and is not a valid planning estimate. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M12 decision 3, recommend against. The protected bound is 250 x 0.72 = 180.0/s, and the planned 220.0/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 220.0/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 40.0/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M12-Q038 and its cited source.
+**Explanation:** M12-Q038 turns on the forcing number from EX-03, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M12-Q039
 
-**Type:** `design_judgment`  
+**Type:** `design_judgment`
 **Difficulty:** `recall`
 
-**Answer:** Recommend the option that preserves the Chaos, Game Days, and Reliability Decisions mechanism under the exercise constraints: Compare a second search replica, regional credential isolation, and a tested degraded mode The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M12 decision 4, recommend against. The protected bound is 267 x 0.72 = 192.2/s, and the planned 235.0/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 235.0/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 42.8/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M12-Q039 and its cited source.
+**Explanation:** M12-Q039 turns on the forcing number from EX-04, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+
+## M12-Q040
+
+**Type:** `design_judgment`
+**Difficulty:** `application`
+
+**Answer:** For M12 decision 5, recommend against. The protected bound is 284 x 0.72 = 204.5/s, and the planned 249.9/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 249.9/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 45.4/s of lower-priority work.
+
+**Explanation:** M12-Q040 turns on the forcing number from EX-05, not preference; the reversal conditions are specific to the measured gap in this prompt.
+
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.

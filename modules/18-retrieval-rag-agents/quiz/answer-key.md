@@ -1,564 +1,575 @@
 # M18 Quiz Answer Key
 
-This key covers all 44 questions for **Retrieval, RAG, and Agent Systems**. Use it after an attempt, or provide it with the LLM grading prompt for feedback.
+This key covers all 45 questions for **Retrieval, RAG, and Agent Systems**. Use it after an attempt, or provide it with the LLM grading prompt for feedback.
 
 ## M18-Q001
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** Recall counts relevant items in the prefix but assigns no extra credit for earlier positions
+**Answer:** Recall counts relevant items in the prefix but assigns no extra credit for earlier positions.
 
-**Explanation:** The cited self-check in L01 tests whether the learner can connect Retrieval Contracts, Outcomes, and Evaluation to the module mechanism without replacing evidence with labels. This explanation is specific to M18-Q001 and its cited source.
+**Explanation:** M18-Q001 uses self-check 1 from Retrieval Contracts, Outcomes, and Evaluation; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M18-Q002
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `application`
 
-**Answer:** nDCG scores relevance judgments, not authorization, revocation, citation validity, or claim entailment
+**Answer:** nDCG scores relevance judgments, not authorization, revocation, citation validity, or claim entailment.
 
-**Explanation:** The cited self-check in L01 tests whether the learner can connect Retrieval Contracts, Outcomes, and Evaluation to the module mechanism without replacing evidence with labels. This explanation is specific to M18-Q002 and its cited source.
+**Explanation:** M18-Q002 uses self-check 2 from Retrieval Contracts, Outcomes, and Evaluation; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M18-Q003
 
-**Type:** `short_answer`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`
+**Difficulty:** `recall`
 
-**Answer:** It tests whether the system abstains instead of converting absent evidence into an assertion
+**Answer:** It tests whether the system abstains instead of converting absent evidence into an assertion.
 
-**Explanation:** The cited self-check in L01 tests whether the learner can connect Retrieval Contracts, Outcomes, and Evaluation to the module mechanism without replacing evidence with labels. This explanation is specific to M18-Q003 and its cited source.
+**Explanation:** M18-Q003 uses self-check 3 from Retrieval Contracts, Outcomes, and Evaluation; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M18-Q004
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** It increases index space, duplicate candidates, context use, and correlated ranking errors
+**Answer:** It increases index space, duplicate candidates, context use, and correlated ranking errors.
 
-**Explanation:** The cited self-check in L02 tests whether the learner can connect Chunking, Lexical and Vector Retrieval, and Access Filters to the module mechanism without replacing evidence with labels. This explanation is specific to M18-Q004 and its cited source.
+**Explanation:** M18-Q004 uses self-check 1 from Chunking, Lexical and Vector Retrieval, and Access Filters; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M18-Q005
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `application`
 
-**Answer:** Source ID plus immutable source version/content hash binds the passage; a filename alone does not
+**Answer:** Source ID plus immutable source version/content hash binds the passage; a filename alone does not.
 
-**Explanation:** The cited self-check in L02 tests whether the learner can connect Chunking, Lexical and Vector Retrieval, and Access Filters to the module mechanism without replacing evidence with labels. This explanation is specific to M18-Q005 and its cited source.
+**Explanation:** M18-Q005 uses self-check 2 from Chunking, Lexical and Vector Retrieval, and Access Filters; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M18-Q006
 
-**Type:** `short_answer`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`
+**Difficulty:** `recall`
 
-**Answer:** No. Authorization comes from current deterministic policy before content exposure
+**Answer:** No. Authorization comes from current deterministic policy before content exposure.
 
-**Explanation:** The cited self-check in L02 tests whether the learner can connect Chunking, Lexical and Vector Retrieval, and Access Filters to the module mechanism without replacing evidence with labels. This explanation is specific to M18-Q006 and its cited source.
+**Explanation:** M18-Q006 uses self-check 3 from Chunking, Lexical and Vector Retrieval, and Access Filters; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M18-Q007
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** It supplies the fixed-snapshot oracle, audits missed neighbors, and can serve small/rebuild cases
+**Answer:** It supplies the fixed-snapshot oracle, audits missed neighbors, and can serve small/rebuild cases.
 
-**Explanation:** The cited self-check in L03 tests whether the learner can connect Exact Search, HNSW, and Index Economics to the module mechanism without replacing evidence with labels. This explanation is specific to M18-Q007 and its cited source.
+**Explanation:** M18-Q007 uses self-check 1 from Exact Search, HNSW, and Index Economics; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M18-Q008
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `application`
 
-**Answer:** efSearch; M and efConstruction shape the graph and build cost
+**Answer:** `efSearch`; `M` and `efConstruction` shape the graph and build cost.
 
-**Explanation:** The cited self-check in L03 tests whether the learner can connect Exact Search, HNSW, and Index Economics to the module mechanism without replacing evidence with labels. This explanation is specific to M18-Q008 and its cited source.
+**Explanation:** M18-Q008 uses self-check 2 from Exact Search, HNSW, and Index Economics; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M18-Q009
 
-**Type:** `short_answer`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`
+**Difficulty:** `recall`
 
-**Answer:** Only deterministic behavior on that fixture, not scale, population recall, or hardware performance
+**Answer:** Only deterministic behavior on that fixture, not scale, population recall, or hardware performance.
 
-**Explanation:** The cited self-check in L03 tests whether the learner can connect Exact Search, HNSW, and Index Economics to the module mechanism without replacing evidence with labels. This explanation is specific to M18-Q009 and its cited source.
+**Explanation:** M18-Q009 uses self-check 3 from Exact Search, HNSW, and Index Economics; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M18-Q010
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** The raw scores have different meanings and scales; rank fusion avoids pretending they are calibrated
+**Answer:** The raw scores have different meanings and scales; rank fusion avoids pretending they are calibrated.
 
-**Explanation:** The cited self-check in L04 tests whether the learner can connect Hybrid Retrieval, Reranking, and Release Criteria to the module mechanism without replacing evidence with labels. This explanation is specific to M18-Q010 and its cited source.
+**Explanation:** M18-Q010 uses self-check 1 from Hybrid Retrieval, Reranking, and Release Criteria; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M18-Q011
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `application`
 
-**Answer:** No. Candidate recall bounds what the reranker can recover
+**Answer:** No. Candidate recall bounds what the reranker can recover.
 
-**Explanation:** The cited self-check in L04 tests whether the learner can connect Hybrid Retrieval, Reranking, and Release Criteria to the module mechanism without replacing evidence with labels. This explanation is specific to M18-Q011 and its cited source.
+**Explanation:** M18-Q011 uses self-check 2 from Hybrid Retrieval, Reranking, and Release Criteria; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M18-Q012
 
-**Type:** `short_answer`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`
+**Difficulty:** `recall`
 
-**Answer:** The candidate fails the release gate and requires repair or explicit safe degradation
+**Answer:** The candidate fails the release gate and requires repair or explicit safe degradation.
 
-**Explanation:** The cited self-check in L04 tests whether the learner can connect Hybrid Retrieval, Reranking, and Release Criteria to the module mechanism without replacing evidence with labels. This explanation is specific to M18-Q012 and its cited source.
+**Explanation:** M18-Q012 uses self-check 3 from Hybrid Retrieval, Reranking, and Release Criteria; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M18-Q013
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** Ranking is processing: an unauthorized chunk can affect scores, reranking, generated text, and logs even if removed later
+**Answer:** Ranking is processing: an unauthorized chunk can affect scores, reranking, generated text, and logs even if removed later.
 
-**Explanation:** The cited self-check in L05 tests whether the learner can connect Evidence provenance, grounding, freshness, and abstention to the module mechanism without replacing evidence with labels. This explanation is specific to M18-Q013 and its cited source.
+**Explanation:** M18-Q013 uses self-check 1 from Evidence provenance, grounding, freshness, and abstention; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M18-Q014
 
-**Type:** `multiple_choice`  
-**Difficulty:** `application`
+**Type:** `multiple_choice`
+**Difficulty:** `recall`
 
 **Choices:**
 
-- Keep Retrieval Contracts, Outcomes, and Evaluation scoped to its stated evidence and boundary.
-- Choose the familiar tool before checking whether Treating clicks or model-generated labels as unquestioned ground tru.
-- Treat Treating clicks or model-generated labels as unquestioned ground truth as complete proof without the lesson bou.
-- Make the documented mistake: Treating clicks or model-generated labels as unquestioned ground t
+- Calculate the M18 scoped measurement and record the limiting assumption before approving the change.
+- Approve treating clicks or model-generated labels as unquestioned ground truth for Retrieval Contracts, Outcomes, and Evaluation; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for treating clicks or model-generated labels as unquestioned ground truth; the team can monitor Retrieval Contracts, Outcomes, and Evaluation after launch.
+- Approve the M18 shortcut for alpha now.
 
-**Answer:** Keep Retrieval Contracts, Outcomes, and Evaluation scoped to its stated evidence and boundary.
+**Answer:** Calculate the M18 scoped measurement and record the limiting assumption before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M18-Q014 and its cited source.
+**Explanation:** M18-Q014 enacts mistake 1 from Retrieval Contracts, Outcomes, and Evaluation; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M18-Q015
 
-**Type:** `multiple_choice`  
-**Difficulty:** `synthesis`
+**Type:** `multiple_choice`
+**Difficulty:** `application`
 
 **Choices:**
 
-- Choose the familiar tool before checking whether Optimizing an aggregate while hiding unanswerable, revoked, or priva.
-- Keep Retrieval Contracts, Outcomes, and Evaluation scoped to its stated evidence and boundary.
-- Make the documented mistake: Optimizing an aggregate while hiding unanswerable, revoked, or pri
-- Treat Optimizing an aggregate while hiding unanswerable, revoked, or privat as complete proof without the lesson boun.
+- Approve optimizing an aggregate while hiding unanswerable, revoked, or private slices for Retrieval Contracts, Outcomes, and Evaluation; the local context makes that proposal familiar enough for review.
+- Draw the M18 scoped measurement before approving the change.
+- Defer measurement until production for optimizing an aggregate while hiding unanswerable, revoked, or private slices; the team can monitor Retrieval Contracts, Outcomes, and Evaluation after launch.
+- Approve the M18 shortcut for bravo now.
 
-**Answer:** Keep Retrieval Contracts, Outcomes, and Evaluation scoped to its stated evidence and boundary.
+**Answer:** Draw the M18 scoped measurement before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M18-Q015 and its cited source.
+**Explanation:** M18-Q015 enacts mistake 2 from Retrieval Contracts, Outcomes, and Evaluation; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M18-Q016
 
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
+**Type:** `multiple_choice`
+**Difficulty:** `synthesis`
 
 **Choices:**
 
-- Choose the familiar tool before checking whether Comparing candidates on different queries or relevance judgments app.
-- Make the documented mistake: Comparing candidates on different queries or relevance judgments
-- Keep Retrieval Contracts, Outcomes, and Evaluation scoped to its stated evidence and boundary.
-- Treat Comparing candidates on different queries or relevance judgments as complete proof without the lesson boundary
+- Approve comparing candidates on different queries or relevance judgments for Retrieval Contracts, Outcomes, and Evaluation; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for comparing candidates on different queries or relevance judgments; the team can monitor Retrieval Contracts, Outcomes, and Evaluation after launch.
+- Separate the M18 scoped measurement before approval.
+- Approve the M18 shortcut for charlie now.
 
-**Answer:** Keep Retrieval Contracts, Outcomes, and Evaluation scoped to its stated evidence and boundary.
+**Answer:** Separate the M18 scoped measurement before approval.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M18-Q016 and its cited source.
+**Explanation:** M18-Q016 enacts mistake 3 from Retrieval Contracts, Outcomes, and Evaluation; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M18-Q017
 
-**Type:** `multiple_choice`  
-**Difficulty:** `application`
+**Type:** `multiple_choice`
+**Difficulty:** `recall`
 
 **Choices:**
 
-- Make the documented mistake: Calling an offline metric a product outcome without a validation p
-- Treat Calling an offline metric a product outcome without a validation plan as complete proof without the lesson boun.
-- Choose the familiar tool before checking whether Calling an offline metric a product outcome without a validation pla.
-- Keep Retrieval Contracts, Outcomes, and Evaluation scoped to its stated evidence and boundary.
+- Approve calling an offline metric a product outcome without a validation plan for Retrieval Contracts, Outcomes, and Evaluation; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for calling an offline metric a product outcome without a validation plan; the team can monitor Retrieval Contracts, Outcomes, and Evaluation after launch.
+- Approve the M18 shortcut for delta now.
+- Verify the M18 scoped measurement and record the limiting assumption before approving the change.
 
-**Answer:** Keep Retrieval Contracts, Outcomes, and Evaluation scoped to its stated evidence and boundary.
+**Answer:** Verify the M18 scoped measurement and record the limiting assumption before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M18-Q017 and its cited source.
+**Explanation:** M18-Q017 enacts mistake 4 from Retrieval Contracts, Outcomes, and Evaluation; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M18-Q018
 
-**Type:** `multiple_choice`  
-**Difficulty:** `synthesis`
+**Type:** `multiple_choice`
+**Difficulty:** `application`
 
 **Choices:**
 
-- Keep Retrieval Contracts, Outcomes, and Evaluation scoped to its stated evidence and boundary.
-- Choose the familiar tool before checking whether Counting any fluent answer as useful output applies
-- Make the documented mistake: Counting any fluent answer as useful output
-- Treat Counting any fluent answer as useful output as complete proof without the lesson boundary
+- Compare the M18 scoped measurement before approving the change.
+- Approve counting any fluent answer as useful output for Retrieval Contracts, Outcomes, and Evaluation; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for counting any fluent answer as useful output; the team can monitor Retrieval Contracts, Outcomes, and Evaluation after launch.
+- Approve the M18 shortcut for ember now.
 
-**Answer:** Keep Retrieval Contracts, Outcomes, and Evaluation scoped to its stated evidence and boundary.
+**Answer:** Compare the M18 scoped measurement before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M18-Q018 and its cited source.
+**Explanation:** M18-Q018 enacts mistake 5 from Retrieval Contracts, Outcomes, and Evaluation; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M18-Q019
 
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
+**Type:** `multiple_choice`
+**Difficulty:** `synthesis`
 
 **Choices:**
 
-- Make the documented mistake: Chunking by characters and severing tables, exceptions, or authori. with extra con
-- Keep Chunking, Lexical and Vector Retrieval, and Access Filters scoped to its stated evidence a.
-- Choose the familiar tool before checking whether Chunking by characters and severing tables, exceptions, or authority.
-- Treat Chunking by characters and severing tables, exceptions, or authority as complete proof without the lesson bound.
+- Approve chunking by characters and severing tables, exceptions, or authority context for Chunking, Lexical and Vector Retrieval, and Access Filt; the local context makes that proposal familiar enough for review.
+- Reject the M18 scoped measurement before approval.
+- Defer measurement until production for chunking by characters and severing tables, exceptions, or authority context; the team can monitor Chunking, Lexical and Vector Retrieval, and Access Filt after launch.
+- Approve the M18 shortcut for fable now.
 
-**Answer:** Keep Chunking, Lexical and Vector Retrieval, and Access Filters scoped to its stated evidence a.
+**Answer:** Reject the M18 scoped measurement before approval.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M18-Q019 and its cited source.
+**Explanation:** M18-Q019 enacts mistake 1 from Chunking, Lexical and Vector Retrieval, and Access Filters; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M18-Q020
 
-**Type:** `multiple_choice`  
-**Difficulty:** `application`
+**Type:** `multiple_choice`
+**Difficulty:** `recall`
 
 **Choices:**
 
-- Choose the familiar tool before checking whether Filtering after retrieval, allowing private material into prompts or.
-- Treat Filtering after retrieval, allowing private material into prompts or as complete proof without the lesson bound.
-- Keep Chunking, Lexical and Vector Retrieval, and Access Filters scoped to its stated evidence a.
-- Make the documented mistake: Filtering after retrieval, allowing private material into prompts. with extra conf
+- Approve filtering after retrieval, allowing private material into prompts or logs for Chunking, Lexical and Vector Retrieval, and Access Filt; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for filtering after retrieval, allowing private material into prompts or logs; the team can monitor Chunking, Lexical and Vector Retrieval, and Access Filt after launch.
+- Trace the M18 scoped measurement and record the limiting assumption before approving the change.
+- Approve the M18 shortcut for harbor now.
 
-**Answer:** Keep Chunking, Lexical and Vector Retrieval, and Access Filters scoped to its stated evidence a.
+**Answer:** Trace the M18 scoped measurement and record the limiting assumption before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M18-Q020 and its cited source.
+**Explanation:** M18-Q020 enacts mistake 2 from Chunking, Lexical and Vector Retrieval, and Access Filters; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M18-Q021
 
-**Type:** `multiple_choice`  
-**Difficulty:** `synthesis`
+**Type:** `multiple_choice`
+**Difficulty:** `application`
 
 **Choices:**
 
-- Make the documented mistake: Comparing raw BM25 and cosine scores as if their scales were calib. with extra con
-- Choose the familiar tool before checking whether Comparing raw BM25 and cosine scores as if their scales were calibra.
-- Treat Comparing raw BM25 and cosine scores as if their scales were calibrat as complete proof without the lesson boun.
-- Keep Chunking, Lexical and Vector Retrieval, and Access Filters scoped to its stated evidence a.
+- Approve comparing raw BM25 and cosine scores as if their scales were calibrated for Chunking, Lexical and Vector Retrieval, and Access Filt; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for comparing raw BM25 and cosine scores as if their scales were calibrated; the team can monitor Chunking, Lexical and Vector Retrieval, and Access Filt after launch.
+- Approve the M18 shortcut for indigo now.
+- Require the M18 scoped measurement before approving the change.
 
-**Answer:** Keep Chunking, Lexical and Vector Retrieval, and Access Filters scoped to its stated evidence a.
+**Answer:** Require the M18 scoped measurement before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M18-Q021 and its cited source.
+**Explanation:** M18-Q021 enacts mistake 3 from Chunking, Lexical and Vector Retrieval, and Access Filters; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M18-Q022
 
-**Type:** `multiple_choice`  
-**Difficulty:** `recall`
+**Type:** `multiple_choice`
+**Difficulty:** `synthesis`
 
 **Choices:**
 
-- Keep Chunking, Lexical and Vector Retrieval, and Access Filters scoped to its stated evidence a.
-- Treat Omitting source version from a chunk identity as complete proof without the lesson boundary
-- Make the documented mistake: Omitting source version from a chunk identity. with extra confidence
-- Choose the familiar tool before checking whether Omitting source version from a chunk identity applies
+- Calculate the M18 scoped measurement before approval.
+- Approve omitting source version from a chunk identity for Chunking, Lexical and Vector Retrieval, and Access Filt; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for omitting source version from a chunk identity; the team can monitor Chunking, Lexical and Vector Retrieval, and Access Filt after launch.
+- Approve the M18 shortcut for juniper now.
 
-**Answer:** Keep Chunking, Lexical and Vector Retrieval, and Access Filters scoped to its stated evidence a.
+**Answer:** Calculate the M18 scoped measurement before approval.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M18-Q022 and its cited source.
+**Explanation:** M18-Q022 enacts mistake 4 from Chunking, Lexical and Vector Retrieval, and Access Filters; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M18-Q023
 
-**Type:** `multiple_choice`  
-**Difficulty:** `application`
+**Type:** `multiple_choice`
+**Difficulty:** `recall`
 
 **Choices:**
 
-- Treat Assuming embedding proximity preserves negation or policy validity as complete proof without the lesson boundary
-- Keep Chunking, Lexical and Vector Retrieval, and Access Filters scoped to its stated evidence a.
-- Choose the familiar tool before checking whether Assuming embedding proximity preserves negation or policy validity a.
-- Make the documented mistake: Assuming embedding proximity preserves negation or policy validity. with extra con
+- Approve assuming embedding proximity preserves negation or policy validity for Chunking, Lexical and Vector Retrieval, and Access Filt; the local context makes that proposal familiar enough for review.
+- Draw the M18 scoped measurement and record the limiting assumption before approving the change.
+- Defer measurement until production for assuming embedding proximity preserves negation or policy validity; the team can monitor Chunking, Lexical and Vector Retrieval, and Access Filt after launch.
+- Approve the M18 shortcut for keystone now.
 
-**Answer:** Keep Chunking, Lexical and Vector Retrieval, and Access Filters scoped to its stated evidence a.
+**Answer:** Draw the M18 scoped measurement and record the limiting assumption before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M18-Q023 and its cited source.
+**Explanation:** M18-Q023 enacts mistake 5 from Chunking, Lexical and Vector Retrieval, and Access Filters; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M18-Q024
 
-**Type:** `multiple_choice`  
-**Difficulty:** `synthesis`
+**Type:** `multiple_choice`
+**Difficulty:** `application`
 
 **Choices:**
 
-- Treat Calling logarithmic average behavior a worst-case guarantee as complete proof without the lesson boundary
-- Choose the familiar tool before checking whether Calling logarithmic average behavior a worst-case guarantee applies
-- Keep Exact Search, HNSW, and Index Economics scoped to its stated evidence and boundary.
-- Make the documented mistake: Calling logarithmic average behavior a worst-case guarantee
+- Approve calling logarithmic average behavior a worst-case guarantee for Exact Search, HNSW, and Index Economics; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for calling logarithmic average behavior a worst-case guarantee; the team can monitor Exact Search, HNSW, and Index Economics after launch.
+- Separate the M18 scoped measurement before approving the change.
+- Approve the M18 shortcut for lantern now.
 
-**Answer:** Keep Exact Search, HNSW, and Index Economics scoped to its stated evidence and boundary.
+**Answer:** Separate the M18 scoped measurement before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L03; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M18-Q024 and its cited source.
+**Explanation:** M18-Q024 enacts mistake 1 from Exact Search, HNSW, and Index Economics; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M18-Q025
 
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
+**Type:** `calculation`
+**Difficulty:** `recall`
 
-**Answer:** Original concurrency = 120 x 0.075 = 9.00 operations. Revised rate = 120 x 1.25 = 150.0/s, so revised concurrency = 150.0 x 0.075 = 11.25 operations.
+**Answer:** M18 Reciprocal Rank case 1: Reciprocal rank is 1/3 = 0.333.
 
-**Explanation:** This perturbs the numeric practice around Retrieval Contracts, Outcomes, and Evaluation: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M18-Q025 and its cited source.
+**Explanation:** M18-Q025 uses reciprocal rank from Retrieval Contracts, Outcomes, and Evaluation and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M18-Q026
 
-**Type:** `calculation`  
-**Difficulty:** `recall`
+**Type:** `calculation`
+**Difficulty:** `application`
 
-**Answer:** Original concurrency = 130 x 0.035 = 4.55 operations. Revised rate = 130 x 1.30 = 169.0/s, so revised concurrency = 169.0 x 0.035 = 5.92 operations.
+**Answer:** M18 Ndcg case 2: DCG = 0 + 3/log2(3) + 2/log2(4) = 2.893; ideal DCG = 3 + 2/log2(3) = 4.262; nDCG = 0.679.
 
-**Explanation:** This perturbs the numeric practice around Chunking, Lexical and Vector Retrieval, and Access Filters: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M18-Q026 and its cited source.
+**Explanation:** M18-Q026 uses nDCG from Chunking, Lexical and Vector Retrieval, and Access Filters and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M18-Q027
 
-**Type:** `calculation`  
-**Difficulty:** `application`
+**Type:** `calculation`
+**Difficulty:** `synthesis`
 
-**Answer:** Original concurrency = 140 x 0.045 = 6.30 operations. Revised rate = 140 x 1.35 = 189.0/s, so revised concurrency = 189.0 x 0.045 = 8.51 operations.
+**Answer:** M18 Cosine Similarity case 3: Cosine similarity is 0.72 / (0.9 x 1.2) = 0.667.
 
-**Explanation:** This perturbs the numeric practice around Exact Search, HNSW, and Index Economics: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M18-Q027 and its cited source.
+**Explanation:** M18-Q027 uses cosine similarity from Exact Search, HNSW, and Index Economics and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M18-Q028
 
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
+**Type:** `calculation`
+**Difficulty:** `recall`
 
-**Answer:** Original concurrency = 150 x 0.055 = 8.25 operations. Revised rate = 150 x 1.40 = 210.0/s, so revised concurrency = 210.0 x 0.055 = 11.55 operations.
+**Answer:** M18 Recall case 4: Recall@3 is 2/3 = 0.667.
 
-**Explanation:** This perturbs the numeric practice around Hybrid Retrieval, Reranking, and Release Criteria: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M18-Q028 and its cited source.
+**Explanation:** M18-Q028 uses recall from Hybrid Retrieval, Reranking, and Release Criteria and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M18-Q029
 
-**Type:** `calculation`  
-**Difficulty:** `recall`
+**Type:** `calculation`
+**Difficulty:** `application`
 
-**Answer:** Original concurrency = 160 x 0.065 = 10.40 operations. Revised rate = 160 x 1.45 = 232.0/s, so revised concurrency = 232.0 x 0.065 = 15.08 operations.
+**Answer:** M18 Rrf case 5: RRF = 1/(60+2) + 1/(60+5) = 0.03151.
 
-**Explanation:** This perturbs the numeric practice around Evidence provenance, grounding, freshness, and abstention: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M18-Q029 and its cited source.
+**Explanation:** M18-Q029 uses RRF from Evidence provenance, grounding, freshness, and abstention and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M18-Q030
 
-**Type:** `calculation`  
-**Difficulty:** `application`
+**Type:** `calculation`
+**Difficulty:** `synthesis`
 
-**Answer:** Original concurrency = 170 x 0.075 = 12.75 operations. Revised rate = 170 x 1.10 = 187.0/s, so revised concurrency = 187.0 x 0.075 = 14.03 operations.
+**Answer:** M18 Retrieval Tokens case 6: Retrieval tokens are 6 x 850 = 5100 tokens before instructions or answer budget.
 
-**Explanation:** This perturbs the numeric practice around Structured tools, authorization, approval, and hostile context: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M18-Q030 and its cited source.
+**Explanation:** M18-Q030 uses retrieval tokens from Structured tools, authorization, approval, and hostile context and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M18-Q031
 
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `application`
 
-**Answer:** Original concurrency = 180 x 0.035 = 6.30 operations. Revised rate = 180 x 1.15 = 207.0/s, so revised concurrency = 207.0 x 0.035 = 7.24 operations.
+**Answer:** M18 diagnosis 1 identifies AI02=false in F01 modeled trial. The proving fields are answer.abstained and answer.citation_versions_valid; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** This perturbs the numeric practice around Durable agent workflows, replay, cancellation, and budgets: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M18-Q031 and its cited source.
+**Explanation:** M18-Q031 comes from emitted trial fields rather than fixture identifiers; Retrieval Contracts, Outcomes, and Evaluation is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M18-Q032
 
-**Type:** `calculation`  
-**Difficulty:** `recall`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `synthesis`
 
-**Answer:** Original concurrency = 190 x 0.045 = 8.55 operations. Revised rate = 190 x 1.20 = 228.0/s, so revised concurrency = 228.0 x 0.045 = 10.26 operations.
+**Answer:** M18 diagnosis 2 identifies Chunking, Lexical and Vector Retrieval, and Access Filters evidence scope. The proving fields are answer.abstained and answer.citation_versions_valid; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** This perturbs the numeric practice around CivicAid Decision Tutorial and Synthesis Review: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M18-Q032 and its cited source.
+**Explanation:** M18-Q032 comes from emitted trial fields rather than fixture identifiers; Chunking, Lexical and Vector Retrieval, and Access Filters is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M18-Q033
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `recall`
 
-**Answer:** The fixture tests f01-index-freshness-broken (broken), with AI05 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f01-index-freshness-broken, rather than the general presence of a lab run.
+**Answer:** M18 diagnosis 3 identifies AI03=false in F02 modeled trial. The proving fields are answer.abstained and answer.citation_versions_valid; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M18; diagnosis should start from the emitted fields and connect them to Exact Search, HNSW, and Index Economics. This explanation is specific to M18-Q033 and its cited source.
+**Explanation:** M18-Q033 comes from emitted trial fields rather than fixture identifiers; Exact Search, HNSW, and Index Economics is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M18-Q034
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `synthesis`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `application`
 
-**Answer:** The fixture tests f01-index-freshness-repaired (repaired), with AI05 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f01-index-freshness-repaired, rather than the general presence of a lab run.
+**Answer:** M18 diagnosis 4 identifies Hybrid Retrieval, Reranking, and Release Criteria evidence scope. The proving fields are answer.abstained and answer.citation_versions_valid; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M18; diagnosis should start from the emitted fields and connect them to Hybrid Retrieval, Reranking, and Release Criteria. This explanation is specific to M18-Q034 and its cited source.
+**Explanation:** M18-Q034 comes from emitted trial fields rather than fixture identifiers; Hybrid Retrieval, Reranking, and Release Criteria is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M18-Q035
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `recall`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `synthesis`
 
-**Answer:** The fixture tests f02-revoked-evidence-broken (broken), with AI03 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f02-revoked-evidence-broken, rather than the general presence of a lab run.
+**Answer:** M18 diagnosis 5 identifies AI04=false in F03 modeled trial. The proving fields are answer.abstained and answer.citation_versions_valid; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M18; diagnosis should start from the emitted fields and connect them to Evidence provenance, grounding, freshness, and abstention. This explanation is specific to M18-Q035 and its cited source.
+**Explanation:** M18-Q035 comes from emitted trial fields rather than fixture identifiers; Evidence provenance, grounding, freshness, and abstention is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M18-Q036
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `recall`
 
-**Answer:** The fixture tests f02-revoked-evidence-repaired (repaired), with AI03 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f02-revoked-evidence-repaired, rather than the general presence of a lab run.
+**Answer:** M18 diagnosis 6 identifies Structured tools, authorization, approval, and hostile context evidence scope. The proving fields are answer.abstained and answer.citation_versions_valid; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M18; diagnosis should start from the emitted fields and connect them to Structured tools, authorization, approval, and hostile context. This explanation is specific to M18-Q036 and its cited source.
+**Explanation:** M18-Q036 comes from emitted trial fields rather than fixture identifiers; Structured tools, authorization, approval, and hostile context is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M18-Q037
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `synthesis`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `application`
 
-**Answer:** The fixture tests f03-low-quality-retrieval-broken (broken), with AI04 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f03-low-quality-retrieval-broken, rather than the general presence of a lab run.
+**Answer:** M18 diagnosis 7 identifies AI07=false in F04 modeled trial. The proving fields are answer.abstained and answer.citation_versions_valid; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M18; diagnosis should start from the emitted fields and connect them to Durable agent workflows, replay, cancellation, and budgets. This explanation is specific to M18-Q037 and its cited source.
+**Explanation:** M18-Q037 comes from emitted trial fields rather than fixture identifiers; Durable agent workflows, replay, cancellation, and budgets is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M18-Q038
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `recall`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `synthesis`
 
-**Answer:** The fixture tests f03-low-quality-retrieval-repaired (repaired), with AI04 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f03-low-quality-retrieval-repaired, rather than the general presence of a lab run.
+**Answer:** M18 diagnosis 8 identifies CivicAid Decision Tutorial and Synthesis Review evidence scope. The proving fields are answer.abstained and answer.citation_versions_valid; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M18; diagnosis should start from the emitted fields and connect them to CivicAid Decision Tutorial and Synthesis Review. This explanation is specific to M18-Q038 and its cited source.
+**Explanation:** M18-Q038 comes from emitted trial fields rather than fixture identifiers; CivicAid Decision Tutorial and Synthesis Review is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M18-Q039
 
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `recall`
 
-**Answer:** Recommend the option that preserves the Hybrid Retrieval, Reranking, and Release Criteria mechanism under the exercise constraints: Write a user outcome, decision consequence, query population, relevance-judgment rule, latency objective, and cost boundary The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** M18 diagnosis 9 identifies AI11=false in F05 modeled trial. The proving fields are answer.abstained and answer.citation_versions_valid; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M18-Q039 and its cited source.
+**Explanation:** M18-Q039 comes from emitted trial fields rather than fixture identifiers; Retrieval Contracts, Outcomes, and Evaluation is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M18-Q040
 
-**Type:** `design_judgment`  
-**Difficulty:** `recall`
+**Type:** `design_judgment`
+**Difficulty:** `application`
 
-**Answer:** Recommend the option that preserves the Evidence provenance, grounding, freshness, and abstention mechanism under the exercise constraints: For relevance grades [3, 0, 2, 1] returned in that order, calculate Recall@4, reciprocal rank, DCG@4, and nDCG@4 against the ideal ordering. State the gain and discount conventions. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M18 decision 1, recommend against. The protected bound is 234 x 0.72 = 168.5/s, and the planned 205.9/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 205.9/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 37.4/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M18-Q040 and its cited source.
+**Explanation:** M18-Q040 turns on the forcing number from EX-01, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M18-Q041
 
-**Type:** `design_judgment`  
-**Difficulty:** `application`
+**Type:** `design_judgment`
+**Difficulty:** `synthesis`
 
-**Answer:** Recommend the option that preserves the Structured tools, authorization, approval, and hostile context mechanism under the exercise constraints: Create two chunking schemes for one versioned permit regulation. Predict effects on term match, semantic context, citation precision, revocation, and index work. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M18 decision 2, recommend against. The protected bound is 251 x 0.72 = 180.7/s, and the planned 220.9/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 220.9/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 40.2/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M18-Q041 and its cited source.
+**Explanation:** M18-Q041 turns on the forcing number from EX-02, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M18-Q042
 
-**Type:** `design_judgment`  
-**Difficulty:** `synthesis`
+**Type:** `design_judgment`
+**Difficulty:** `recall`
 
-**Answer:** Recommend the option that preserves the Durable agent workflows, replay, cancellation, and budgets mechanism under the exercise constraints: Calculate a two-term BM25 comparison for three short documents. Apply authorization and validity filtering before scoring and explain why post-filtering changes the security claim. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M18 decision 3, recommend against. The protected bound is 268 x 0.72 = 193.0/s, and the planned 235.8/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 235.8/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 42.8/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M18-Q042 and its cited source.
+**Explanation:** M18-Q042 turns on the forcing number from EX-03, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M18-Q043
 
-**Type:** `design_judgment`  
-**Difficulty:** `recall`
+**Type:** `design_judgment`
+**Difficulty:** `application`
 
-**Answer:** Recommend the option that preserves the CivicAid Decision Tutorial and Synthesis Review mechanism under the exercise constraints: Use the lab's exact cosine path to produce the expected top-k for every query. Record ties and the deterministic tie-break rule. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M18 decision 4, recommend against. The protected bound is 285 x 0.72 = 205.2/s, and the planned 250.8/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 250.8/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 45.6/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M18-Q043 and its cited source.
+**Explanation:** M18-Q043 turns on the forcing number from EX-04, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M18-Q044
 
-**Type:** `design_judgment`  
-**Difficulty:** `application`
+**Type:** `design_judgment`
+**Difficulty:** `synthesis`
 
-**Answer:** Recommend the option that preserves the Retrieval Contracts, Outcomes, and Evaluation mechanism under the exercise constraints: Run at least three M, efConstruction, and efSearch settings against the exact oracle. Plot or tabulate recall, visited nodes, and index edges The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M18 decision 5, recommend against. The protected bound is 302 x 0.72 = 217.4/s, and the planned 265.8/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 265.8/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 48.4/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M18-Q044 and its cited source.
+**Explanation:** M18-Q044 turns on the forcing number from EX-05, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+
+## M18-Q045
+
+**Type:** `design_judgment`
+**Difficulty:** `recall`
+
+**Answer:** For M18 decision 6, recommend against. The protected bound is 319 x 0.72 = 229.7/s, and the planned 280.7/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 280.7/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 51.0/s of lower-priority work.
+
+**Explanation:** M18-Q045 turns on the forcing number from EX-06, not preference; the reversal conditions are specific to the measured gap in this prompt.
+
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.

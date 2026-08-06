@@ -10,16 +10,16 @@
         "L01"
       ],
       "type": "short_answer",
-      "difficulty": "recall",
+      "difficulty": "synthesis",
       "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
+        "browser-frontend-cdn-and-edge-architecture",
         "browser-work-and-the-rendering-pipeline",
         "src:L01-selfcheck-1"
       ],
-      "prompt": "Use the cited source to answer L01 (Browser Work and the Rendering Pipeline): Why can a resolved promise still delay visual feedback?",
-      "correct_answer": "Its continuation runs as a microtask before the event loop can reach a rendering opportunity; a self-feeding microtask chain can keep delaying paint",
-      "explanation": "The cited self-check in L01 tests whether the learner can connect Browser Work and the Rendering Pipeline to the module mechanism without replacing evidence with labels. This explanation is specific to M16-Q001 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "Why can a resolved promise still delay visual feedback?",
+      "correct_answer": "Its continuation runs as a microtask before the event loop can reach a rendering opportunity; a self-feeding microtask chain can keep delaying paint.",
+      "explanation": "M16-Q001 uses self-check 1 from Browser Work and the Rendering Pipeline; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M16-Q002",
@@ -30,14 +30,14 @@
       "type": "short_answer",
       "difficulty": "application",
       "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
+        "browser-frontend-cdn-and-edge-architecture",
         "browser-work-and-the-rendering-pipeline",
         "src:L01-selfcheck-2"
       ],
-      "prompt": "Explain the mechanism behind L01 (Browser Work and the Rendering Pipeline): When can a change avoid layout and paint?",
-      "correct_answer": "A compositor-supported change whose required properties and pixels are already available may reuse work, but the trace must confirm the path",
-      "explanation": "The cited self-check in L01 tests whether the learner can connect Browser Work and the Rendering Pipeline to the module mechanism without replacing evidence with labels. This explanation is specific to M16-Q002 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "When can a change avoid layout and paint?",
+      "correct_answer": "A compositor-supported change whose required properties and pixels are already available may reuse work, but the trace must confirm the path.",
+      "explanation": "M16-Q002 uses self-check 2 from Browser Work and the Rendering Pipeline; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M16-Q003",
@@ -46,16 +46,16 @@
         "L01"
       ],
       "type": "short_answer",
-      "difficulty": "synthesis",
+      "difficulty": "recall",
       "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
+        "browser-frontend-cdn-and-edge-architecture",
         "browser-work-and-the-rendering-pipeline",
         "src:L01-selfcheck-3"
       ],
-      "prompt": "Name the evidence needed for L01 (Browser Work and the Rendering Pipeline): What makes worker offload an incomplete repair?",
-      "correct_answer": "Transfer cost, queue bounds, cancellation, stale results, and ownership still determine whether the user journey and capacity are safe",
-      "explanation": "The cited self-check in L01 tests whether the learner can connect Browser Work and the Rendering Pipeline to the module mechanism without replacing evidence with labels. This explanation is specific to M16-Q003 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "What makes worker offload an incomplete repair?",
+      "correct_answer": "Transfer cost, queue bounds, cancellation, stale results, and ownership still determine whether the user journey and capacity are safe.",
+      "explanation": "M16-Q003 uses self-check 3 from Browser Work and the Rendering Pipeline; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M16-Q004",
@@ -64,16 +64,16 @@
         "L01"
       ],
       "type": "short_answer",
-      "difficulty": "recall",
+      "difficulty": "synthesis",
       "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
+        "browser-frontend-cdn-and-edge-architecture",
         "browser-work-and-the-rendering-pipeline",
         "src:L01-selfcheck-4"
       ],
-      "prompt": "Diagnose the boundary issue in L01 (Browser Work and the Rendering Pipeline): Why is one Playwright interaction not INP?",
-      "correct_answer": "INP is derived from eligible interactions over page visits and reported at a field population percentile; the lab is one controlled observation",
-      "explanation": "The cited self-check in L01 tests whether the learner can connect Browser Work and the Rendering Pipeline to the module mechanism without replacing evidence with labels. This explanation is specific to M16-Q004 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "Why is one Playwright interaction not INP?",
+      "correct_answer": "INP is derived from eligible interactions over page visits and reported at a field population percentile; the lab is one controlled observation.",
+      "explanation": "M16-Q004 uses self-check 4 from Browser Work and the Rendering Pipeline; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M16-Q005",
@@ -82,16 +82,16 @@
         "L02"
       ],
       "type": "short_answer",
-      "difficulty": "application",
+      "difficulty": "recall",
       "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
+        "browser-frontend-cdn-and-edge-architecture",
         "performance-budgets-and-evidence",
         "src:L02-selfcheck-1"
       ],
-      "prompt": "State the causal reason for L02 (Performance Budgets and Evidence): Why is a byte budget route-specific?",
-      "correct_answer": "Routes differ in critical content, interaction, personalization, rendering, cacheability, and client populations",
-      "explanation": "The cited self-check in L02 tests whether the learner can connect Performance Budgets and Evidence to the module mechanism without replacing evidence with labels. This explanation is specific to M16-Q005 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "Why is a byte budget route-specific?",
+      "correct_answer": "Routes differ in critical content, interaction, personalization, rendering, cacheability, and client populations.",
+      "explanation": "M16-Q005 uses self-check 1 from Performance Budgets and Evidence; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M16-Q006",
@@ -102,14 +102,14 @@
       "type": "short_answer",
       "difficulty": "synthesis",
       "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
+        "browser-frontend-cdn-and-edge-architecture",
         "performance-budgets-and-evidence",
         "src:L02-selfcheck-2"
       ],
-      "prompt": "Identify the assumption behind L02 (Performance Budgets and Evidence): When is a lab regression meaningful without field data?",
-      "correct_answer": "It can reject a change under equivalent controlled conditions; it cannot establish the population impact without field evidence",
-      "explanation": "The cited self-check in L02 tests whether the learner can connect Performance Budgets and Evidence to the module mechanism without replacing evidence with labels. This explanation is specific to M16-Q006 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "When is a lab regression meaningful without field data?",
+      "correct_answer": "It can reject a change under equivalent controlled conditions; it cannot establish the population impact without field evidence.",
+      "explanation": "M16-Q006 uses self-check 2 from Performance Budgets and Evidence; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M16-Q007",
@@ -118,16 +118,16 @@
         "L02"
       ],
       "type": "short_answer",
-      "difficulty": "recall",
+      "difficulty": "application",
       "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
+        "browser-frontend-cdn-and-edge-architecture",
         "performance-budgets-and-evidence",
         "src:L02-selfcheck-3"
       ],
-      "prompt": "Connect the lesson claim to L02 (Performance Budgets and Evidence): Why must missing INP observations be counted?",
-      "correct_answer": "Visits with no eligible interaction produce no INP; treating them as fast or dropping them silently changes the observed population",
-      "explanation": "The cited self-check in L02 tests whether the learner can connect Performance Budgets and Evidence to the module mechanism without replacing evidence with labels. This explanation is specific to M16-Q007 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "Why must missing INP observations be counted?",
+      "correct_answer": "Visits with no eligible interaction produce no INP; treating them as fast or dropping them silently changes the observed population.",
+      "explanation": "M16-Q007 uses self-check 3 from Performance Budgets and Evidence; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M16-Q008",
@@ -136,16 +136,16 @@
         "L02"
       ],
       "type": "short_answer",
-      "difficulty": "application",
+      "difficulty": "recall",
       "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
+        "browser-frontend-cdn-and-edge-architecture",
         "performance-budgets-and-evidence",
         "src:L02-selfcheck-4"
       ],
-      "prompt": "Resolve the self-check about L02 (Performance Budgets and Evidence): What should a breach policy contain?",
-      "correct_answer": "The signal/window, owner, release or mitigation action, exception process, and reversal/expiry condition",
-      "explanation": "The cited self-check in L02 tests whether the learner can connect Performance Budgets and Evidence to the module mechanism without replacing evidence with labels. This explanation is specific to M16-Q008 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "What should a breach policy contain?",
+      "correct_answer": "The signal/window, owner, release or mitigation action, exception process, and reversal/expiry condition.",
+      "explanation": "M16-Q008 uses self-check 4 from Performance Budgets and Evidence; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M16-Q009",
@@ -154,16 +154,16 @@
         "L03"
       ],
       "type": "short_answer",
-      "difficulty": "synthesis",
+      "difficulty": "application",
       "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
+        "browser-frontend-cdn-and-edge-architecture",
         "route-rendering-and-hydration",
         "src:L03-selfcheck-1"
       ],
-      "prompt": "Summarize the tradeoff in L03 (Route Rendering and Hydration): What must be known before a streaming response commits?",
-      "correct_answer": "At minimum route existence/authorization, safe response headers, cache policy, and the error contract that cannot be expressed after commitment",
-      "explanation": "The cited self-check in L03 tests whether the learner can connect Route Rendering and Hydration to the module mechanism without replacing evidence with labels. This explanation is specific to M16-Q009 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "What must be known before a streaming response commits?",
+      "correct_answer": "At minimum route existence/authorization, safe response headers, cache policy, and the error contract that cannot be expressed after commitment.",
+      "explanation": "M16-Q009 uses self-check 1 from Route Rendering and Hydration; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M16-Q010",
@@ -174,14 +174,14 @@
       "type": "short_answer",
       "difficulty": "recall",
       "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
+        "browser-frontend-cdn-and-edge-architecture",
         "route-rendering-and-hydration",
         "src:L03-selfcheck-2"
       ],
-      "prompt": "Defend the conclusion for L03 (Route Rendering and Hydration): Why can an island still have a hydration mismatch?",
-      "correct_answer": "Each island is still a hydration root whose server markup and initial client state must match",
-      "explanation": "The cited self-check in L03 tests whether the learner can connect Route Rendering and Hydration to the module mechanism without replacing evidence with labels. This explanation is specific to M16-Q010 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "Why can an island still have a hydration mismatch?",
+      "correct_answer": "Each island is still a hydration root whose server markup and initial client state must match.",
+      "explanation": "M16-Q010 uses self-check 2 from Route Rendering and Hydration; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M16-Q011",
@@ -190,16 +190,16 @@
         "L03"
       ],
       "type": "short_answer",
-      "difficulty": "application",
+      "difficulty": "synthesis",
       "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
+        "browser-frontend-cdn-and-edge-architecture",
         "route-rendering-and-hydration",
         "src:L03-selfcheck-3"
       ],
-      "prompt": "Challenge the claim in L03 (Route Rendering and Hydration): When is client rendering appropriate?",
-      "correct_answer": "When browser-local state or interaction dominates and the route still has a useful, recoverable, accessible shell with bounded code/data dependencies",
-      "explanation": "The cited self-check in L03 tests whether the learner can connect Route Rendering and Hydration to the module mechanism without replacing evidence with labels. This explanation is specific to M16-Q011 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "When is client rendering appropriate?",
+      "correct_answer": "When browser-local state or interaction dominates and the route still has a useful, recoverable, accessible shell with bounded code/data dependencies.",
+      "explanation": "M16-Q011 uses self-check 3 from Route Rendering and Hydration; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M16-Q012",
@@ -208,16 +208,16 @@
         "L03"
       ],
       "type": "short_answer",
-      "difficulty": "synthesis",
+      "difficulty": "application",
       "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
+        "browser-frontend-cdn-and-edge-architecture",
         "route-rendering-and-hydration",
         "src:L03-selfcheck-4"
       ],
-      "prompt": "Apply the module rule to L03 (Route Rendering and Hydration): What does a loading skeleton fail to prove?",
-      "correct_answer": "It does not prove useful content, interactivity, accessibility, correct status, completion, or failure recovery",
-      "explanation": "The cited self-check in L03 tests whether the learner can connect Route Rendering and Hydration to the module mechanism without replacing evidence with labels. This explanation is specific to M16-Q012 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "What does a loading skeleton fail to prove?",
+      "correct_answer": "It does not prove useful content, interactivity, accessibility, correct status, completion, or failure recovery.",
+      "explanation": "M16-Q012 uses self-check 4 from Route Rendering and Hydration; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M16-Q013",
@@ -226,16 +226,16 @@
         "L04"
       ],
       "type": "short_answer",
-      "difficulty": "recall",
+      "difficulty": "synthesis",
       "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
+        "browser-frontend-cdn-and-edge-architecture",
         "http-and-cdn-cache-safety",
         "src:L04-selfcheck-1"
       ],
-      "prompt": "Use the cited source to answer L04 (HTTP and CDN Cache Safety): Why is Vary: Cookie usually a poor private-content strategy?",
-      "correct_answer": "Cookies are high-cardinality and sensitive, and a shared cache remains the wrong authority for subject access; bypass shared storage instead",
-      "explanation": "The cited self-check in L04 tests whether the learner can connect HTTP and CDN Cache Safety to the module mechanism without replacing evidence with labels. This explanation is specific to M16-Q013 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "Why is `Vary: Cookie` usually a poor private-content strategy?",
+      "correct_answer": "Cookies are high-cardinality and sensitive, and a shared cache remains the wrong authority for subject access; bypass shared storage instead.",
+      "explanation": "M16-Q013 uses self-check 1 from HTTP and CDN Cache Safety; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M16-Q014",
@@ -246,14 +246,14 @@
       "type": "short_answer",
       "difficulty": "application",
       "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
+        "browser-frontend-cdn-and-edge-architecture",
         "http-and-cdn-cache-safety",
         "src:L04-selfcheck-2"
       ],
-      "prompt": "Explain the mechanism behind L04 (HTTP and CDN Cache Safety): What does an ETag prove?",
-      "correct_answer": "It identifies a selected representation for validation under its scope; it does not prove authorization or universal semantic freshness",
-      "explanation": "The cited self-check in L04 tests whether the learner can connect HTTP and CDN Cache Safety to the module mechanism without replacing evidence with labels. This explanation is specific to M16-Q014 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "What does an ETag prove?",
+      "correct_answer": "It identifies a selected representation for validation under its scope; it does not prove authorization or universal semantic freshness.",
+      "explanation": "M16-Q014 uses self-check 2 from HTTP and CDN Cache Safety; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M16-Q015",
@@ -264,20 +264,20 @@
       "type": "multiple_choice",
       "difficulty": "application",
       "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
+        "browser-frontend-cdn-and-edge-architecture",
         "browser-work-and-the-rendering-pipeline",
         "src:L01-mistake-1"
       ],
-      "prompt": "For L01 (Browser Work and the Rendering Pipeline), which choice best avoids the cited mistake: Calling every callback a macrotask. The platform contract uses tasks and?",
+      "prompt": "A design review for Browser Work and the Rendering Pipeline includes this proposal: the platform contract uses tasks and. Which response best protects the mechanism?",
       "choices": [
-        "Keep Browser Work and the Rendering Pipeline scoped to its stated evidence and boundary.",
-        "Make the documented mistake: Calling every callback a macrotask. The platform contract uses tas",
-        "Choose the familiar tool before checking whether Calling every callback a macrotask. The platform contract uses tasks.",
-        "Treat Calling every callback a macrotask. The platform contract uses tasks as complete proof without the lesson bound."
+        "Scope the M16 scoped measurement and record the limiting assumption before approving the change.",
+        "Approve the platform contract uses tasks and for Browser Work and the Rendering Pipeline; the local context makes that proposal familiar enough for review.",
+        "Defer measurement until production for the platform contract uses tasks and; the team can monitor Browser Work and the Rendering Pipeline after launch.",
+        "Approve the M16 shortcut for alpha now."
       ],
-      "correct_answer": "Keep Browser Work and the Rendering Pipeline scoped to its stated evidence and boundary.",
-      "explanation": "The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M16-Q015 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Scope the M16 scoped measurement and record the limiting assumption before approving the change.",
+      "explanation": "M16-Q015 enacts mistake 1 from Browser Work and the Rendering Pipeline; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M16-Q016",
@@ -288,20 +288,20 @@
       "type": "multiple_choice",
       "difficulty": "synthesis",
       "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
+        "browser-frontend-cdn-and-edge-architecture",
         "browser-work-and-the-rendering-pipeline",
         "src:L01-mistake-2"
       ],
-      "prompt": "For L01 (Browser Work and the Rendering Pipeline), which choice best avoids the cited mistake: Treating promises as free concurrency. Promise continuations are?",
+      "prompt": "During an incident review about Browser Work and the Rendering Pipeline, the team wants to proceed this way: promise continuations are. What should the reviewer say?",
       "choices": [
-        "Make the documented mistake: Treating promises as free concurrency. Promise continuations are",
-        "Keep Browser Work and the Rendering Pipeline scoped to its stated evidence and boundary.",
-        "Treat Treating promises as free concurrency. Promise continuations are as complete proof without the lesson boundary",
-        "Choose the familiar tool before checking whether Treating promises as free concurrency. Promise continuations are app."
+        "Approve promise continuations are for Browser Work and the Rendering Pipeline; the local context makes that proposal familiar enough for review.",
+        "Measure the M16 scoped measurement before approving the change.",
+        "Defer measurement until production for promise continuations are; the team can monitor Browser Work and the Rendering Pipeline after launch.",
+        "Approve the M16 shortcut for bravo now."
       ],
-      "correct_answer": "Keep Browser Work and the Rendering Pipeline scoped to its stated evidence and boundary.",
-      "explanation": "The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M16-Q016 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Measure the M16 scoped measurement before approving the change.",
+      "explanation": "M16-Q016 enacts mistake 2 from Browser Work and the Rendering Pipeline; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M16-Q017",
@@ -312,20 +312,20 @@
       "type": "multiple_choice",
       "difficulty": "recall",
       "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
+        "browser-frontend-cdn-and-edge-architecture",
         "browser-work-and-the-rendering-pipeline",
         "src:L01-mistake-3"
       ],
-      "prompt": "For L01 (Browser Work and the Rendering Pipeline), which choice best avoids the cited mistake: Reading a flame chart as causation. A long stack is evidence of time spent,?",
+      "prompt": "A learner applies Browser Work and the Rendering Pipeline and chooses this shortcut: a long stack is evidence of time spent,. Which correction is most defensible?",
       "choices": [
-        "Make the documented mistake: Reading a flame chart as causation. A long stack is evidence of ti",
-        "Treat Reading a flame chart as causation. A long stack is evidence of time as complete proof without the lesson bound.",
-        "Keep Browser Work and the Rendering Pipeline scoped to its stated evidence and boundary.",
-        "Choose the familiar tool before checking whether Reading a flame chart as causation. A long stack is evidence of time."
+        "Approve a long stack is evidence of time spent for Browser Work and the Rendering Pipeline; the local context makes that proposal familiar enough for review.",
+        "Defer measurement until production for a long stack is evidence of time spent; the team can monitor Browser Work and the Rendering Pipeline after launch.",
+        "Bound the M16 scoped measurement before approval.",
+        "Approve the M16 shortcut for charlie now."
       ],
-      "correct_answer": "Keep Browser Work and the Rendering Pipeline scoped to its stated evidence and boundary.",
-      "explanation": "The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M16-Q017 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Bound the M16 scoped measurement before approval.",
+      "explanation": "M16-Q017 enacts mistake 3 from Browser Work and the Rendering Pipeline; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M16-Q018",
@@ -336,20 +336,20 @@
       "type": "multiple_choice",
       "difficulty": "application",
       "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
+        "browser-frontend-cdn-and-edge-architecture",
         "browser-work-and-the-rendering-pipeline",
         "src:L01-mistake-4"
       ],
-      "prompt": "For L01 (Browser Work and the Rendering Pipeline), which choice best avoids the cited mistake: Forcing layout in a measurement loop. Alternating geometry reads and DOM?",
+      "prompt": "A migration note for Browser Work and the Rendering Pipeline relies on this claim: alternating geometry reads and DOM. Which option keeps the evidence scope intact?",
       "choices": [
-        "Make the documented mistake: Forcing layout in a measurement loop. Alternating geometry reads a",
-        "Treat Forcing layout in a measurement loop. Alternating geometry reads and as complete proof without the lesson bound.",
-        "Choose the familiar tool before checking whether Forcing layout in a measurement loop. Alternating geometry reads and.",
-        "Keep Browser Work and the Rendering Pipeline scoped to its stated evidence and boundary."
+        "Approve alternating geometry reads and DOM for Browser Work and the Rendering Pipeline; the local context makes that proposal familiar enough for review.",
+        "Defer measurement until production for alternating geometry reads and DOM; the team can monitor Browser Work and the Rendering Pipeline after launch.",
+        "Approve the M16 shortcut for delta now.",
+        "Freeze the M16 scoped measurement and record the limiting assumption before approving the change."
       ],
-      "correct_answer": "Keep Browser Work and the Rendering Pipeline scoped to its stated evidence and boundary.",
-      "explanation": "The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M16-Q018 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Freeze the M16 scoped measurement and record the limiting assumption before approving the change.",
+      "explanation": "M16-Q018 enacts mistake 4 from Browser Work and the Rendering Pipeline; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M16-Q019",
@@ -360,20 +360,20 @@
       "type": "multiple_choice",
       "difficulty": "synthesis",
       "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
+        "browser-frontend-cdn-and-edge-architecture",
         "browser-work-and-the-rendering-pipeline",
         "src:L01-mistake-5"
       ],
-      "prompt": "For L01 (Browser Work and the Rendering Pipeline), which choice best avoids the cited mistake: Optimizing average frame time. One blocked critical interaction can be?",
+      "prompt": "A capacity memo touches Browser Work and the Rendering Pipeline and argues: one blocked critical interaction can be. Which response is the strongest engineering objection?",
       "choices": [
-        "Keep Browser Work and the Rendering Pipeline scoped to its stated evidence and boundary.",
-        "Treat Optimizing average frame time. One blocked critical interaction can be as complete proof without the lesson bou.",
-        "Make the documented mistake: Optimizing average frame time. One blocked critical interaction ca",
-        "Choose the familiar tool before checking whether Optimizing average frame time. One blocked critical interaction can."
+        "Preserve the M16 scoped measurement before approving the change.",
+        "Approve one blocked critical interaction can be for Browser Work and the Rendering Pipeline; the local context makes that proposal familiar enough for review.",
+        "Defer measurement until production for one blocked critical interaction can be; the team can monitor Browser Work and the Rendering Pipeline after launch.",
+        "Approve the M16 shortcut for ember now."
       ],
-      "correct_answer": "Keep Browser Work and the Rendering Pipeline scoped to its stated evidence and boundary.",
-      "explanation": "The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M16-Q019 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Preserve the M16 scoped measurement before approving the change.",
+      "explanation": "M16-Q019 enacts mistake 5 from Browser Work and the Rendering Pipeline; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M16-Q020",
@@ -384,20 +384,20 @@
       "type": "multiple_choice",
       "difficulty": "recall",
       "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
+        "browser-frontend-cdn-and-edge-architecture",
         "performance-budgets-and-evidence",
         "src:L02-mistake-1"
       ],
-      "prompt": "For L02 (Performance Budgets and Evidence), which choice best avoids the cited mistake: Using Lighthouse score as the contract. A composite score hides the route,?",
+      "prompt": "A design review for Performance Budgets and Evidence includes this proposal: a composite score hides the route,. Which response best protects the mechanism?",
       "choices": [
-        "Choose the familiar tool before checking whether Using Lighthouse score as the contract. A composite score hides the.",
-        "Keep Performance Budgets and Evidence scoped to its stated evidence and boundary.",
-        "Treat Using Lighthouse score as the contract. A composite score hides the r as complete proof without the lesson boun.",
-        "Make the documented mistake: Using Lighthouse score as the contract. A composite score hides th"
+        "Approve a composite score hides the route for Performance Budgets and Evidence; the local context makes that proposal familiar enough for review.",
+        "Model the M16 scoped measurement before approval.",
+        "Defer measurement until production for a composite score hides the route; the team can monitor Performance Budgets and Evidence after launch.",
+        "Approve the M16 shortcut for fable now."
       ],
-      "correct_answer": "Keep Performance Budgets and Evidence scoped to its stated evidence and boundary.",
-      "explanation": "The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M16-Q020 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Model the M16 scoped measurement before approval.",
+      "explanation": "M16-Q020 enacts mistake 1 from Performance Budgets and Evidence; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M16-Q021",
@@ -408,20 +408,20 @@
       "type": "multiple_choice",
       "difficulty": "application",
       "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
+        "browser-frontend-cdn-and-edge-architecture",
         "performance-budgets-and-evidence",
         "src:L02-mistake-2"
       ],
-      "prompt": "For L02 (Performance Budgets and Evidence), which choice best avoids the cited mistake: Mixing cold and warm cache trials. They answer different questions.?",
+      "prompt": "During an incident review about Performance Budgets and Evidence, the team wants to proceed this way: they answer different questions. What should the reviewer say?",
       "choices": [
-        "Make the documented mistake: Mixing cold and warm cache trials. They answer different questions",
-        "Treat Mixing cold and warm cache trials. They answer different questions as complete proof without the lesson boundary",
-        "Keep Performance Budgets and Evidence scoped to its stated evidence and boundary.",
-        "Choose the familiar tool before checking whether Mixing cold and warm cache trials. They answer different questions a."
+        "Approve they answer different questions for Performance Budgets and Evidence; the local context makes that proposal familiar enough for review.",
+        "Defer measurement until production for they answer different questions; the team can monitor Performance Budgets and Evidence after launch.",
+        "Account the M16 scoped measurement and record the limiting assumption before approving the change.",
+        "Approve the M16 shortcut for harbor now."
       ],
-      "correct_answer": "Keep Performance Budgets and Evidence scoped to its stated evidence and boundary.",
-      "explanation": "The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M16-Q021 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Account the M16 scoped measurement and record the limiting assumption before approving the change.",
+      "explanation": "M16-Q021 enacts mistake 2 from Performance Budgets and Evidence; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M16-Q022",
@@ -432,20 +432,20 @@
       "type": "multiple_choice",
       "difficulty": "synthesis",
       "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
+        "browser-frontend-cdn-and-edge-architecture",
         "performance-budgets-and-evidence",
         "src:L02-mistake-3"
       ],
-      "prompt": "For L02 (Performance Budgets and Evidence), which choice best avoids the cited mistake: Reporting p75 from five repetitions. A tiny controlled sample is not a?",
+      "prompt": "A learner applies Performance Budgets and Evidence and chooses this shortcut: a tiny controlled sample is not a. Which correction is most defensible?",
       "choices": [
-        "Choose the familiar tool before checking whether Reporting p75 from five repetitions. A tiny controlled sample is not.",
-        "Make the documented mistake: Reporting p75 from five repetitions. A tiny controlled sample is n",
-        "Treat Reporting p75 from five repetitions. A tiny controlled sample is not a as complete proof without the lesson bou.",
-        "Keep Performance Budgets and Evidence scoped to its stated evidence and boundary."
+        "Approve a tiny controlled sample is not a for Performance Budgets and Evidence; the local context makes that proposal familiar enough for review.",
+        "Defer measurement until production for a tiny controlled sample is not a; the team can monitor Performance Budgets and Evidence after launch.",
+        "Approve the M16 shortcut for indigo now.",
+        "Test the M16 scoped measurement before approving the change."
       ],
-      "correct_answer": "Keep Performance Budgets and Evidence scoped to its stated evidence and boundary.",
-      "explanation": "The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M16-Q022 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Test the M16 scoped measurement before approving the change.",
+      "explanation": "M16-Q022 enacts mistake 3 from Performance Budgets and Evidence; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M16-Q023",
@@ -456,20 +456,20 @@
       "type": "multiple_choice",
       "difficulty": "recall",
       "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
+        "browser-frontend-cdn-and-edge-architecture",
         "performance-budgets-and-evidence",
         "src:L02-mistake-4"
       ],
-      "prompt": "For L02 (Performance Budgets and Evidence), which choice best avoids the cited mistake: Optimizing a milestone that users cannot use. Early pixels can still be?",
+      "prompt": "A migration note for Performance Budgets and Evidence relies on this claim: optimizing a milestone that users cannot use.: Early pixels can still be. Which option keeps the evidence scope intact?",
       "choices": [
-        "Keep Performance Budgets and Evidence scoped to its stated evidence and boundary.",
-        "Treat Optimizing a milestone that users cannot use. Early pixels can still as complete proof without the lesson bound.",
-        "Choose the familiar tool before checking whether Optimizing a milestone that users cannot use. Early pixels can still.",
-        "Make the documented mistake: Optimizing a milestone that users cannot use. Early pixels can sti"
+        "Scope the M16 scoped measurement before approval.",
+        "Approve optimizing a milestone that users cannot use.: Early pixels can still be for Performance Budgets and Evidence; the local context makes that proposal familiar enough for review.",
+        "Defer measurement until production for optimizing a milestone that users cannot use.: Early pixels can still be; the team can monitor Performance Budgets and Evidence after launch.",
+        "Approve the M16 shortcut for juniper now."
       ],
-      "correct_answer": "Keep Performance Budgets and Evidence scoped to its stated evidence and boundary.",
-      "explanation": "The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M16-Q023 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Scope the M16 scoped measurement before approval.",
+      "explanation": "M16-Q023 enacts mistake 4 from Performance Budgets and Evidence; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M16-Q024",
@@ -480,20 +480,20 @@
       "type": "multiple_choice",
       "difficulty": "application",
       "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
+        "browser-frontend-cdn-and-edge-architecture",
         "performance-budgets-and-evidence",
         "src:L02-mistake-5"
       ],
-      "prompt": "For L02 (Performance Budgets and Evidence), which choice best avoids the cited mistake: Ignoring telemetry overhead and missingness. Collection can change work,?",
+      "prompt": "A capacity memo touches Performance Budgets and Evidence and argues: ignoring telemetry overhead and missingness.: Collection can change work,. Which response is the strongest engineering objection?",
       "choices": [
-        "Treat Ignoring telemetry overhead and missingness. Collection can change wo as complete proof without the lesson boun.",
-        "Keep Performance Budgets and Evidence scoped to its stated evidence and boundary.",
-        "Make the documented mistake: Ignoring telemetry overhead and missingness. Collection can change",
-        "Choose the familiar tool before checking whether Ignoring telemetry overhead and missingness. Collection can change w."
+        "Approve ignoring telemetry overhead and missingness.: Collection can change work for Performance Budgets and Evidence; the local context makes that proposal familiar enough for review.",
+        "Measure the M16 scoped measurement and record the limiting assumption before approving the change.",
+        "Defer measurement until production for ignoring telemetry overhead and missingness.: Collection can change work; the team can monitor Performance Budgets and Evidence after launch.",
+        "Approve the M16 shortcut for keystone now."
       ],
-      "correct_answer": "Keep Performance Budgets and Evidence scoped to its stated evidence and boundary.",
-      "explanation": "The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M16-Q024 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Measure the M16 scoped measurement and record the limiting assumption before approving the change.",
+      "explanation": "M16-Q024 enacts mistake 5 from Performance Budgets and Evidence; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M16-Q025",
@@ -502,16 +502,16 @@
         "L01"
       ],
       "type": "calculation",
-      "difficulty": "synthesis",
+      "difficulty": "recall",
       "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
-        "browser-work-and-the-rendering-pipeline",
+        "browser-frontend-cdn-and-edge-architecture",
+        "frontend-shell-delivery",
         "src:L01-worked"
       ],
-      "prompt": "While applying L01 (Browser Work and the Rendering Pipeline), a system handles 190 operations/s with 65 ms of scoped work per operation. If the rate rises by 25% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
-      "correct_answer": "Original concurrency = 190 x 0.065 = 12.35 operations. Revised rate = 190 x 1.25 = 237.5/s, so revised concurrency = 237.5 x 0.065 = 15.44 operations.",
-      "explanation": "This perturbs the numeric practice around Browser Work and the Rendering Pipeline: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M16-Q025 and its cited source.",
-      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
+      "prompt": "Alpha case in Browser, Frontend, CDN, and Edge Architecture: A shell path sends 110 KiB over 900 Kbps and needs 2 RTTs at 180 ms. Estimate lower-bound delivery time.",
+      "correct_answer": "M16 Frontend Shell Delivery case 1: Serialization is 110 x 8 / 900 = 0.98 s; RTT adds 360 ms, for about 1338 ms.",
+      "explanation": "M16-Q025 uses frontend shell delivery from Browser Work and the Rendering Pipeline and keeps units visible through the final numeric result.",
+      "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
     {
       "question_id": "M16-Q026",
@@ -520,16 +520,16 @@
         "L02"
       ],
       "type": "calculation",
-      "difficulty": "recall",
+      "difficulty": "application",
       "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
-        "performance-budgets-and-evidence",
+        "browser-frontend-cdn-and-edge-architecture",
+        "interaction-block",
         "src:L02-worked"
       ],
-      "prompt": "While applying L02 (Performance Budgets and Evidence), a system handles 200 operations/s with 75 ms of scoped work per operation. If the rate rises by 30% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
-      "correct_answer": "Original concurrency = 200 x 0.075 = 15.00 operations. Revised rate = 200 x 1.30 = 260.0/s, so revised concurrency = 260.0 x 0.075 = 19.50 operations.",
-      "explanation": "This perturbs the numeric practice around Performance Budgets and Evidence: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M16-Q026 and its cited source.",
-      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
+      "prompt": "Bravo case in Browser, Frontend, CDN, and Edge Architecture: A synchronous block lasts 220 ms against a 100 ms interaction budget. How much does it exceed the budget?",
+      "correct_answer": "M16 Interaction Block case 2: It exceeds the budget by 220 - 100 = 120 ms.",
+      "explanation": "M16-Q026 uses interaction block from Performance Budgets and Evidence and keeps units visible through the final numeric result.",
+      "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
     {
       "question_id": "M16-Q027",
@@ -538,16 +538,16 @@
         "L03"
       ],
       "type": "calculation",
-      "difficulty": "application",
+      "difficulty": "synthesis",
       "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
-        "route-rendering-and-hydration",
+        "browser-frontend-cdn-and-edge-architecture",
+        "serialization",
         "src:L03-worked"
       ],
-      "prompt": "While applying L03 (Route Rendering and Hydration), a system handles 120 operations/s with 35 ms of scoped work per operation. If the rate rises by 35% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
-      "correct_answer": "Original concurrency = 120 x 0.035 = 4.20 operations. Revised rate = 120 x 1.35 = 162.0/s, so revised concurrency = 162.0 x 0.035 = 5.67 operations.",
-      "explanation": "This perturbs the numeric practice around Route Rendering and Hydration: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M16-Q027 and its cited source.",
-      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
+      "prompt": "Charlie case in Browser, Frontend, CDN, and Edge Architecture: A response is 280 KiB over a 900 Kbps link. Estimate serialization time.",
+      "correct_answer": "M16 Serialization case 3: Serialization is 280 KiB x 8 / 900 Kbps = 2.49 seconds, ignoring protocol overhead.",
+      "explanation": "M16-Q027 uses serialization from Route Rendering and Hydration and keeps units visible through the final numeric result.",
+      "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
     {
       "question_id": "M16-Q028",
@@ -556,91 +556,55 @@
         "L04"
       ],
       "type": "calculation",
-      "difficulty": "synthesis",
+      "difficulty": "recall",
       "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
-        "http-and-cdn-cache-safety",
+        "browser-frontend-cdn-and-edge-architecture",
+        "rtt-setup",
         "src:L04-worked"
       ],
-      "prompt": "While applying L04 (HTTP and CDN Cache Safety), a system handles 130 operations/s with 45 ms of scoped work per operation. If the rate rises by 40% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
-      "correct_answer": "Original concurrency = 130 x 0.045 = 5.85 operations. Revised rate = 130 x 1.40 = 182.0/s, so revised concurrency = 182.0 x 0.045 = 8.19 operations.",
-      "explanation": "This perturbs the numeric practice around HTTP and CDN Cache Safety: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M16-Q028 and its cited source.",
-      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
+      "prompt": "Delta case in Browser, Frontend, CDN, and Edge Architecture: A connection setup needs 3 round trips on a 90 ms path. What setup lower bound does RTT impose?",
+      "correct_answer": "M16 Rtt Setup case 4: Setup lower bound is 3 x 90 ms = 270 ms before payload work.",
+      "explanation": "M16-Q028 uses RTT setup from HTTP and CDN Cache Safety and keeps units visible through the final numeric result.",
+      "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
     {
       "question_id": "M16-Q029",
       "module_id": "M16",
       "lesson_ids": [
-        "L05"
+        "L01"
       ],
-      "type": "calculation",
-      "difficulty": "recall",
+      "type": "scenario_diagnosis",
+      "difficulty": "synthesis",
       "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
-        "accessibility-and-resilient-interaction",
-        "src:L05-worked"
+        "browser-frontend-cdn-and-edge-architecture",
+        "browser-work-and-the-rendering-pipeline",
+        "src:fixture-f01-long-main-thread-broken"
       ],
-      "prompt": "While applying L05 (Accessibility and Resilient Interaction), a system handles 140 operations/s with 55 ms of scoped work per operation. If the rate rises by 45% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
-      "correct_answer": "Original concurrency = 140 x 0.055 = 7.70 operations. Revised rate = 140 x 1.45 = 203.0/s, so revised concurrency = 203.0 x 0.055 = 11.16 operations.",
-      "explanation": "This perturbs the numeric practice around Accessibility and Resilient Interaction: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M16-Q029 and its cited source.",
-      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
+      "prompt": "A lab trial for Browser Work and the Rendering Pipeline reports:\n\n  accessibility.focus_preserved = 1\n  accessibility.keyboard_path = 1\n  accessibility.manual_boundary_recorded = 1\n  accessibility.semantic_structure = 1\n  cache.degraded_marked = 1\n  cache.private_cache_entries = 0\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M16 diagnosis 1 identifies controlled interaction is below guardrail and long work is attributed. The proving fields are accessibility.focus_preserved and accessibility.keyboard_path; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M16-Q029 comes from emitted trial fields rather than fixture identifiers; Browser Work and the Rendering Pipeline is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M16-Q030",
       "module_id": "M16",
       "lesson_ids": [
-        "L06"
+        "L02"
       ],
-      "type": "calculation",
-      "difficulty": "application",
+      "type": "scenario_diagnosis",
+      "difficulty": "recall",
       "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
-        "memory-third-parties-and-observability",
-        "src:L06-worked"
+        "browser-frontend-cdn-and-edge-architecture",
+        "performance-budgets-and-evidence",
+        "src:fixture-f01-long-main-thread-repaired"
       ],
-      "prompt": "While applying L06 (Memory, Third Parties, and Observability), a system handles 150 operations/s with 65 ms of scoped work per operation. If the rate rises by 10% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
-      "correct_answer": "Original concurrency = 150 x 0.065 = 9.75 operations. Revised rate = 150 x 1.10 = 165.0/s, so revised concurrency = 165.0 x 0.065 = 10.72 operations.",
-      "explanation": "This perturbs the numeric practice around Memory, Third Parties, and Observability: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M16-Q030 and its cited source.",
-      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
+      "prompt": "A lab trial for Performance Budgets and Evidence reports:\n\n  accessibility.focus_preserved = 1\n  accessibility.keyboard_path = 1\n  accessibility.manual_boundary_recorded = 1\n  accessibility.semantic_structure = 1\n  cache.degraded_marked = 1\n  cache.private_cache_entries = 0\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M16 diagnosis 2 identifies Performance Budgets and Evidence evidence scope. The proving fields are accessibility.focus_preserved and accessibility.keyboard_path; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M16-Q030 comes from emitted trial fields rather than fixture identifiers; Performance Budgets and Evidence is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M16-Q031",
-      "module_id": "M16",
-      "lesson_ids": [
-        "L07"
-      ],
-      "type": "calculation",
-      "difficulty": "synthesis",
-      "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
-        "northstar-browser-edge-tutorial",
-        "src:L07-worked"
-      ],
-      "prompt": "While applying L07 (Northstar Browser-Edge Tutorial), a system handles 160 operations/s with 75 ms of scoped work per operation. If the rate rises by 15% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
-      "correct_answer": "Original concurrency = 160 x 0.075 = 12.00 operations. Revised rate = 160 x 1.15 = 184.0/s, so revised concurrency = 184.0 x 0.075 = 13.80 operations.",
-      "explanation": "This perturbs the numeric practice around Northstar Browser-Edge Tutorial: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M16-Q031 and its cited source.",
-      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
-    },
-    {
-      "question_id": "M16-Q032",
-      "module_id": "M16",
-      "lesson_ids": [
-        "L08"
-      ],
-      "type": "calculation",
-      "difficulty": "recall",
-      "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
-        "frontend-edge-decision-and-teach-back",
-        "src:L08-worked"
-      ],
-      "prompt": "While applying L08 (Frontend-Edge Decision and Teach-Back), a system handles 170 operations/s with 35 ms of scoped work per operation. If the rate rises by 20% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
-      "correct_answer": "Original concurrency = 170 x 0.035 = 5.95 operations. Revised rate = 170 x 1.20 = 204.0/s, so revised concurrency = 204.0 x 0.035 = 7.14 operations.",
-      "explanation": "This perturbs the numeric practice around Frontend-Edge Decision and Teach-Back: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M16-Q032 and its cited source.",
-      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
-    },
-    {
-      "question_id": "M16-Q033",
       "module_id": "M16",
       "lesson_ids": [
         "L03"
@@ -648,194 +612,230 @@
       "type": "scenario_diagnosis",
       "difficulty": "application",
       "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
+        "browser-frontend-cdn-and-edge-architecture",
         "route-rendering-and-hydration",
-        "src:fixture-f01-long-main-thread-broken"
+        "src:fixture-f02-hydration-mismatch-broken"
       ],
-      "prompt": "A M16 lab fixture related to Route Rendering and Hydration exposes this trimmed evidence:\n\n  scenario_id=f01-long-main-thread-broken\n  pair_id=F01\n  variant=broken\n  seed=1601\n  route.id=/sky-events\n  route.rendering_mode=island\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
-      "correct_answer": "The fixture tests f01-long-main-thread-broken (broken), with I01 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f01-long-main-thread-broken, rather than the general presence of a lab run.",
-      "explanation": "The cited fixture is machine-readable source material for M16; diagnosis should start from the emitted fields and connect them to Route Rendering and Hydration. This explanation is specific to M16-Q033 and its cited source.",
-      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
+      "prompt": "A lab trial for Route Rendering and Hydration reports:\n\n  accessibility.focus_preserved = 0\n  accessibility.keyboard_path = 1\n  accessibility.manual_boundary_recorded = 1\n  accessibility.semantic_structure = 1\n  cache.degraded_marked = 1\n  cache.private_cache_entries = 0\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M16 diagnosis 3 identifies server/client state hashes agree and recoverable mismatches are zero. The proving fields are accessibility.focus_preserved and accessibility.keyboard_path; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M16-Q031 comes from emitted trial fields rather than fixture identifiers; Route Rendering and Hydration is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
+    },
+    {
+      "question_id": "M16-Q032",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "synthesis",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "http-and-cdn-cache-safety",
+        "src:fixture-f02-hydration-mismatch-repaired"
+      ],
+      "prompt": "A lab trial for HTTP and CDN Cache Safety reports:\n\n  accessibility.focus_preserved = 1\n  accessibility.keyboard_path = 1\n  accessibility.manual_boundary_recorded = 1\n  accessibility.semantic_structure = 1\n  cache.degraded_marked = 1\n  cache.private_cache_entries = 0\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M16 diagnosis 4 identifies HTTP and CDN Cache Safety evidence scope. The proving fields are accessibility.focus_preserved and accessibility.keyboard_path; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M16-Q032 comes from emitted trial fields rather than fixture identifiers; HTTP and CDN Cache Safety is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
+    },
+    {
+      "question_id": "M16-Q033",
+      "module_id": "M16",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "recall",
+      "tags": [
+        "browser-frontend-cdn-and-edge-architecture",
+        "accessibility-and-resilient-interaction",
+        "src:fixture-f03-route-resource-leak-broken"
+      ],
+      "prompt": "A lab trial for Accessibility and Resilient Interaction reports:\n\n  accessibility.focus_preserved = 1\n  accessibility.keyboard_path = 1\n  accessibility.manual_boundary_recorded = 1\n  accessibility.semantic_structure = 1\n  cache.degraded_marked = 1\n  cache.private_cache_entries = 0\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M16 diagnosis 5 identifies route-owned active resources and detached nodes return to baseline. The proving fields are accessibility.focus_preserved and accessibility.keyboard_path; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M16-Q033 comes from emitted trial fields rather than fixture identifiers; Accessibility and Resilient Interaction is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M16-Q034",
       "module_id": "M16",
       "lesson_ids": [
-        "L04"
+        "L06"
       ],
       "type": "scenario_diagnosis",
-      "difficulty": "synthesis",
+      "difficulty": "application",
       "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
-        "http-and-cdn-cache-safety",
-        "src:fixture-f01-long-main-thread-repaired"
+        "browser-frontend-cdn-and-edge-architecture",
+        "memory-third-parties-and-observability",
+        "src:fixture-f03-route-resource-leak-repaired"
       ],
-      "prompt": "A M16 lab fixture related to HTTP and CDN Cache Safety exposes this trimmed evidence:\n\n  scenario_id=f01-long-main-thread-repaired\n  pair_id=F01\n  variant=repaired\n  seed=1601\n  route.id=/sky-events\n  route.rendering_mode=island\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
-      "correct_answer": "The fixture tests f01-long-main-thread-repaired (repaired), with I01 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f01-long-main-thread-repaired, rather than the general presence of a lab run.",
-      "explanation": "The cited fixture is machine-readable source material for M16; diagnosis should start from the emitted fields and connect them to HTTP and CDN Cache Safety. This explanation is specific to M16-Q034 and its cited source.",
-      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
+      "prompt": "A lab trial for Memory, Third Parties, and Observability reports:\n\n  accessibility.focus_preserved = 1\n  accessibility.keyboard_path = 1\n  accessibility.manual_boundary_recorded = 1\n  accessibility.semantic_structure = 1\n  cache.degraded_marked = 1\n  cache.private_cache_entries = 0\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M16 diagnosis 6 identifies Memory, Third Parties, and Observability evidence scope. The proving fields are accessibility.focus_preserved and accessibility.keyboard_path; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M16-Q034 comes from emitted trial fields rather than fixture identifiers; Memory, Third Parties, and Observability is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M16-Q035",
       "module_id": "M16",
       "lesson_ids": [
-        "L05"
+        "L07"
       ],
       "type": "scenario_diagnosis",
-      "difficulty": "recall",
+      "difficulty": "synthesis",
       "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
-        "accessibility-and-resilient-interaction",
-        "src:fixture-f02-hydration-mismatch-broken"
+        "browser-frontend-cdn-and-edge-architecture",
+        "northstar-browser-edge-tutorial",
+        "src:fixture-f04-third-party-block-broken"
       ],
-      "prompt": "A M16 lab fixture related to Accessibility and Resilient Interaction exposes this trimmed evidence:\n\n  scenario_id=f02-hydration-mismatch-broken\n  pair_id=F02\n  variant=broken\n  seed=1602\n  route.id=/staff/schedule\n  route.rendering_mode=island\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
-      "correct_answer": "The fixture tests f02-hydration-mismatch-broken (broken), with I03 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f02-hydration-mismatch-broken, rather than the general presence of a lab run.",
-      "explanation": "The cited fixture is machine-readable source material for M16; diagnosis should start from the emitted fields and connect them to Accessibility and Resilient Interaction. This explanation is specific to M16-Q035 and its cited source.",
-      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
+      "prompt": "A lab trial for Northstar Browser-Edge Tutorial reports:\n\n  accessibility.focus_preserved = 1\n  accessibility.keyboard_path = 1\n  accessibility.manual_boundary_recorded = 1\n  accessibility.semantic_structure = 1\n  cache.degraded_marked = 1\n  cache.private_cache_entries = 0\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M16 diagnosis 7 identifies core semantic route survives slow or blocked optional dependency. The proving fields are accessibility.focus_preserved and accessibility.keyboard_path; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M16-Q035 comes from emitted trial fields rather than fixture identifiers; Northstar Browser-Edge Tutorial is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M16-Q036",
       "module_id": "M16",
       "lesson_ids": [
-        "L06"
+        "L08"
       ],
       "type": "scenario_diagnosis",
-      "difficulty": "application",
+      "difficulty": "recall",
       "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
-        "memory-third-parties-and-observability",
-        "src:fixture-f02-hydration-mismatch-repaired"
+        "browser-frontend-cdn-and-edge-architecture",
+        "frontend-edge-decision-and-teach-back",
+        "src:fixture-f04-third-party-block-repaired"
       ],
-      "prompt": "A M16 lab fixture related to Memory, Third Parties, and Observability exposes this trimmed evidence:\n\n  scenario_id=f02-hydration-mismatch-repaired\n  pair_id=F02\n  variant=repaired\n  seed=1602\n  route.id=/staff/schedule\n  route.rendering_mode=island\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
-      "correct_answer": "The fixture tests f02-hydration-mismatch-repaired (repaired), with I03 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f02-hydration-mismatch-repaired, rather than the general presence of a lab run.",
-      "explanation": "The cited fixture is machine-readable source material for M16; diagnosis should start from the emitted fields and connect them to Memory, Third Parties, and Observability. This explanation is specific to M16-Q036 and its cited source.",
-      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
+      "prompt": "A lab trial for Frontend-Edge Decision and Teach-Back reports:\n\n  accessibility.focus_preserved = 1\n  accessibility.keyboard_path = 1\n  accessibility.manual_boundary_recorded = 1\n  accessibility.semantic_structure = 1\n  cache.degraded_marked = 1\n  cache.private_cache_entries = 0\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M16 diagnosis 8 identifies Frontend-Edge Decision and Teach-Back evidence scope. The proving fields are accessibility.focus_preserved and accessibility.keyboard_path; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M16-Q036 comes from emitted trial fields rather than fixture identifiers; Frontend-Edge Decision and Teach-Back is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M16-Q037",
       "module_id": "M16",
       "lesson_ids": [
-        "L07"
+        "L01"
       ],
-      "type": "scenario_diagnosis",
-      "difficulty": "synthesis",
+      "type": "design_judgment",
+      "difficulty": "application",
       "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
-        "northstar-browser-edge-tutorial",
-        "src:fixture-f03-route-resource-leak-broken"
+        "browser-frontend-cdn-and-edge-architecture",
+        "browser-work-and-the-rendering-pipeline",
+        "src:EX-01"
       ],
-      "prompt": "A M16 lab fixture related to Northstar Browser-Edge Tutorial exposes this trimmed evidence:\n\n  scenario_id=f03-route-resource-leak-broken\n  pair_id=F03\n  variant=broken\n  seed=1603\n  route.id=/live\n  route.rendering_mode=client\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
-      "correct_answer": "The fixture tests f03-route-resource-leak-broken (broken), with I04 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f03-route-resource-leak-broken, rather than the general presence of a lab run.",
-      "explanation": "The cited fixture is machine-readable source material for M16; diagnosis should start from the emitted fields and connect them to Northstar Browser-Edge Tutorial. This explanation is specific to M16-Q037 and its cited source.",
-      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
+      "prompt": "In EX-01 (Interaction trace), a proposal for Browser Work and the Rendering Pipeline has measured capacity 228/s, a protected operating bound of 72%, and planned steady demand of 200.6/s. State the recommendation, the number that forces it, and what would change your mind.",
+      "correct_answer": "For M16 decision 1, recommend against. The protected bound is 228 x 0.72 = 164.2/s, and the planned 200.6/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 200.6/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 36.4/s of lower-priority work.",
+      "explanation": "M16-Q037 turns on the forcing number from EX-01, not preference; the reversal conditions are specific to the measured gap in this prompt.",
+      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
     },
     {
       "question_id": "M16-Q038",
       "module_id": "M16",
       "lesson_ids": [
-        "L08"
+        "L02"
       ],
-      "type": "scenario_diagnosis",
-      "difficulty": "recall",
+      "type": "design_judgment",
+      "difficulty": "synthesis",
       "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
-        "frontend-edge-decision-and-teach-back",
-        "src:fixture-f03-route-resource-leak-repaired"
+        "browser-frontend-cdn-and-edge-architecture",
+        "performance-budgets-and-evidence",
+        "src:EX-02"
       ],
-      "prompt": "A M16 lab fixture related to Frontend-Edge Decision and Teach-Back exposes this trimmed evidence:\n\n  scenario_id=f03-route-resource-leak-repaired\n  pair_id=F03\n  variant=repaired\n  seed=1603\n  route.id=/live\n  route.rendering_mode=client\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
-      "correct_answer": "The fixture tests f03-route-resource-leak-repaired (repaired), with I04 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f03-route-resource-leak-repaired, rather than the general presence of a lab run.",
-      "explanation": "The cited fixture is machine-readable source material for M16; diagnosis should start from the emitted fields and connect them to Frontend-Edge Decision and Teach-Back. This explanation is specific to M16-Q038 and its cited source.",
-      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
+      "prompt": "In EX-02 (One-control long-task pair), a proposal for Performance Budgets and Evidence has measured capacity 245/s, a protected operating bound of 72%, and planned steady demand of 215.6/s. State the recommendation, the number that forces it, and what would change your mind.",
+      "correct_answer": "For M16 decision 2, recommend against. The protected bound is 245 x 0.72 = 176.4/s, and the planned 215.6/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 215.6/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 39.2/s of lower-priority work.",
+      "explanation": "M16-Q038 turns on the forcing number from EX-02, not preference; the reversal conditions are specific to the measured gap in this prompt.",
+      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
     },
     {
       "question_id": "M16-Q039",
       "module_id": "M16",
       "lesson_ids": [
-        "L04"
+        "L03"
       ],
       "type": "design_judgment",
-      "difficulty": "synthesis",
+      "difficulty": "recall",
       "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
-        "http-and-cdn-cache-safety",
-        "src:EX-01"
+        "browser-frontend-cdn-and-edge-architecture",
+        "route-rendering-and-hydration",
+        "src:EX-03"
       ],
-      "prompt": "Atlas decision: In EX-01 (Interaction trace), you must choose a course of action for Browser, Frontend, CDN, and Edge Architecture. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
-      "correct_answer": "Recommend the option that preserves the HTTP and CDN Cache Safety mechanism under the exercise constraints: Trace input, handler, promise microtasks, style/layout/paint, and next visible feedback for the event filter. Mark evidence needed at each boundary. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
-      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M16-Q039 and its cited source.",
-      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
+      "prompt": "In EX-03 (Critical-path calculation), a proposal for Route Rendering and Hydration has measured capacity 262/s, a protected operating bound of 72%, and planned steady demand of 230.6/s. State the recommendation, the number that forces it, and what would change your mind.",
+      "correct_answer": "For M16 decision 3, recommend against. The protected bound is 262 x 0.72 = 188.6/s, and the planned 230.6/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 230.6/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 42.0/s of lower-priority work.",
+      "explanation": "M16-Q039 turns on the forcing number from EX-03, not preference; the reversal conditions are specific to the measured gap in this prompt.",
+      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
     },
     {
       "question_id": "M16-Q040",
       "module_id": "M16",
       "lesson_ids": [
-        "L05"
+        "L04"
       ],
       "type": "design_judgment",
-      "difficulty": "recall",
+      "difficulty": "application",
       "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
-        "accessibility-and-resilient-interaction",
-        "src:EX-02"
+        "browser-frontend-cdn-and-edge-architecture",
+        "http-and-cdn-cache-safety",
+        "src:EX-04"
       ],
-      "prompt": "Beacon decision: In EX-02 (One-control long-task pair), you must choose a course of action for Browser, Frontend, CDN, and Edge Architecture. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
-      "correct_answer": "Recommend the option that preserves the Accessibility and Resilient Interaction mechanism under the exercise constraints: Design broken/repaired trials for a 240 ms filter calculation while preserving input, useful result, browser profile, and DOM semantics. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
-      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M16-Q040 and its cited source.",
-      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
+      "prompt": "In EX-04 (Evidence classification), a proposal for HTTP and CDN Cache Safety has measured capacity 279/s, a protected operating bound of 72%, and planned steady demand of 245.5/s. State the recommendation, the number that forces it, and what would change your mind.",
+      "correct_answer": "For M16 decision 4, recommend against. The protected bound is 279 x 0.72 = 200.9/s, and the planned 245.5/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 245.5/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 44.6/s of lower-priority work.",
+      "explanation": "M16-Q040 turns on the forcing number from EX-04, not preference; the reversal conditions are specific to the measured gap in this prompt.",
+      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
     },
     {
       "question_id": "M16-Q041",
       "module_id": "M16",
       "lesson_ids": [
-        "L06"
+        "L05"
       ],
       "type": "design_judgment",
-      "difficulty": "application",
+      "difficulty": "synthesis",
       "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
-        "memory-third-parties-and-observability",
-        "src:EX-03"
+        "browser-frontend-cdn-and-edge-architecture",
+        "accessibility-and-resilient-interaction",
+        "src:EX-05"
       ],
-      "prompt": "Cedar decision: In EX-03 (Critical-path calculation), you must choose a course of action for Browser, Frontend, CDN, and Edge Architecture. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
-      "correct_answer": "Recommend the option that preserves the Memory, Third Parties, and Observability mechanism under the exercise constraints: Calculate the transfer lower bound for 160 KiB over 1.2 Mbps with two 140 ms dependent round trips. List at least five omitted costs. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
-      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M16-Q041 and its cited source.",
-      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
+      "prompt": "In EX-05 (Route rendering matrix), a proposal for Accessibility and Resilient Interaction has measured capacity 296/s, a protected operating bound of 72%, and planned steady demand of 260.5/s. State the recommendation, the number that forces it, and what would change your mind.",
+      "correct_answer": "For M16 decision 5, recommend against. The protected bound is 296 x 0.72 = 213.1/s, and the planned 260.5/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 260.5/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 47.4/s of lower-priority work.",
+      "explanation": "M16-Q041 turns on the forcing number from EX-05, not preference; the reversal conditions are specific to the measured gap in this prompt.",
+      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
     },
     {
       "question_id": "M16-Q042",
       "module_id": "M16",
       "lesson_ids": [
-        "L07"
+        "L06"
       ],
       "type": "design_judgment",
-      "difficulty": "synthesis",
+      "difficulty": "recall",
       "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
-        "northstar-browser-edge-tutorial",
-        "src:EX-04"
+        "browser-frontend-cdn-and-edge-architecture",
+        "memory-third-parties-and-observability",
+        "src:EX-06"
       ],
-      "prompt": "Delta decision: In EX-04 (Evidence classification), you must choose a course of action for Browser, Frontend, CDN, and Edge Architecture. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
-      "correct_answer": "Recommend the option that preserves the Northstar Browser-Edge Tutorial mechanism under the exercise constraints: Classify field p75, five Playwright runs, a synthetic journey, and one trace. State the decision each can and cannot support. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
-      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M16-Q042 and its cited source.",
-      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
+      "prompt": "In EX-06 (Streaming commitment), a proposal for Memory, Third Parties, and Observability has measured capacity 313/s, a protected operating bound of 72%, and planned steady demand of 275.4/s. State the recommendation, the number that forces it, and what would change your mind.",
+      "correct_answer": "For M16 decision 6, recommend against. The protected bound is 313 x 0.72 = 225.4/s, and the planned 275.4/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 275.4/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 50.0/s of lower-priority work.",
+      "explanation": "M16-Q042 turns on the forcing number from EX-06, not preference; the reversal conditions are specific to the measured gap in this prompt.",
+      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
     },
     {
       "question_id": "M16-Q043",
       "module_id": "M16",
       "lesson_ids": [
-        "L08"
+        "L07"
       ],
       "type": "design_judgment",
-      "difficulty": "recall",
+      "difficulty": "application",
       "tags": [
-        "browser-frontend-cdn-and-edge-architectu",
-        "frontend-edge-decision-and-teach-back",
-        "src:EX-05"
+        "browser-frontend-cdn-and-edge-architecture",
+        "northstar-browser-edge-tutorial",
+        "src:EX-07"
       ],
-      "prompt": "Ember decision: In EX-05 (Route rendering matrix), you must choose a course of action for Browser, Frontend, CDN, and Edge Architecture. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
-      "correct_answer": "Recommend the option that preserves the Frontend-Edge Decision and Teach-Back mechanism under the exercise constraints: Choose static, server, streaming, client, or island behavior for the four Northstar routes. Record authority, useful HTML, interaction, and failure. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
-      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M16-Q043 and its cited source.",
-      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
+      "prompt": "In EX-07 (Hydration identity), a proposal for Northstar Browser-Edge Tutorial has measured capacity 330/s, a protected operating bound of 72%, and planned steady demand of 290.4/s. State the recommendation, the number that forces it, and what would change your mind.",
+      "correct_answer": "For M16 decision 7, recommend against. The protected bound is 330 x 0.72 = 237.6/s, and the planned 290.4/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 290.4/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 52.8/s of lower-priority work.",
+      "explanation": "M16-Q043 turns on the forcing number from EX-07, not preference; the reversal conditions are specific to the measured gap in this prompt.",
+      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
     }
   ]
 }

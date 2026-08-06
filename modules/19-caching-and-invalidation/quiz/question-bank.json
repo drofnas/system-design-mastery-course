@@ -10,16 +10,16 @@
         "L01"
       ],
       "type": "short_answer",
-      "difficulty": "recall",
+      "difficulty": "synthesis",
       "tags": [
         "caching-and-invalidation",
         "cache-placement-and-read-write-paths",
         "src:L01-selfcheck-1"
       ],
-      "prompt": "Use the cited source to answer L01 (Cache Placement and Read/Write Paths): What can a client cache know that a CDN usually cannot?",
-      "correct_answer": "The exact local user/session context, though it may not know global freshness",
-      "explanation": "The cited self-check in L01 tests whether the learner can connect Cache Placement and Read/Write Paths to the module mechanism without replacing evidence with labels. This explanation is specific to M19-Q001 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "What can a client cache know that a CDN usually cannot?",
+      "correct_answer": "The exact local user/session context, though it may not know global freshness.",
+      "explanation": "M19-Q001 uses self-check 1 from Cache Placement and Read/Write Paths; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M19-Q002",
@@ -34,31 +34,13 @@
         "cache-placement-and-read-write-paths",
         "src:L01-selfcheck-2"
       ],
-      "prompt": "Explain the mechanism behind L01 (Cache Placement and Read/Write Paths): Who owns a miss in cache-aside?",
-      "correct_answer": "The application path that detects the miss, reads authority, and writes the cache",
-      "explanation": "The cited self-check in L01 tests whether the learner can connect Cache Placement and Read/Write Paths to the module mechanism without replacing evidence with labels. This explanation is specific to M19-Q002 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "Who owns a miss in cache-aside?",
+      "correct_answer": "The application path that detects the miss, reads authority, and writes the cache.",
+      "explanation": "M19-Q002 uses self-check 2 from Cache Placement and Read/Write Paths; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M19-Q003",
-      "module_id": "M19",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "short_answer",
-      "difficulty": "synthesis",
-      "tags": [
-        "caching-and-invalidation",
-        "cache-placement-and-read-write-paths",
-        "src:L01-selfcheck-3"
-      ],
-      "prompt": "Name the evidence needed for L01 (Cache Placement and Read/Write Paths): Why is write-behind a consistency change?",
-      "correct_answer": "Authority and cache can diverge, and lost or reordered buffered writes need recovery",
-      "explanation": "The cited self-check in L01 tests whether the learner can connect Cache Placement and Read/Write Paths to the module mechanism without replacing evidence with labels. This explanation is specific to M19-Q003 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
-    },
-    {
-      "question_id": "M19-Q004",
       "module_id": "M19",
       "lesson_ids": [
         "L01"
@@ -68,12 +50,30 @@
       "tags": [
         "caching-and-invalidation",
         "cache-placement-and-read-write-paths",
+        "src:L01-selfcheck-3"
+      ],
+      "prompt": "Why is write-behind a consistency change?",
+      "correct_answer": "Authority and cache can diverge, and lost or reordered buffered writes need recovery.",
+      "explanation": "M19-Q003 uses self-check 3 from Cache Placement and Read/Write Paths; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
+    },
+    {
+      "question_id": "M19-Q004",
+      "module_id": "M19",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "short_answer",
+      "difficulty": "synthesis",
+      "tags": [
+        "caching-and-invalidation",
+        "cache-placement-and-read-write-paths",
         "src:L01-selfcheck-4"
       ],
-      "prompt": "Diagnose the boundary issue in L01 (Cache Placement and Read/Write Paths): Which tier protects origin but not client-edge latency?",
-      "correct_answer": "A database-adjacent or storage near-cache. For the practice, 5 percent of 10,000 reads, or 500, are personalized or otherwise not anonymous and need a separate key or authority path",
-      "explanation": "The cited self-check in L01 tests whether the learner can connect Cache Placement and Read/Write Paths to the module mechanism without replacing evidence with labels. This explanation is specific to M19-Q004 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "Which tier protects origin but not client-edge latency?",
+      "correct_answer": "A database-adjacent or storage near-cache. For the practice, 5 percent of 10,000 reads, or 500, are personalized or otherwise not anonymous and need a separate key or authority path.",
+      "explanation": "M19-Q004 uses self-check 4 from Cache Placement and Read/Write Paths; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M19-Q005",
@@ -82,16 +82,16 @@
         "L02"
       ],
       "type": "short_answer",
-      "difficulty": "application",
+      "difficulty": "recall",
       "tags": [
         "caching-and-invalidation",
         "eviction-policies-and-hit-rate-economics",
         "src:L02-selfcheck-1"
       ],
-      "prompt": "State the causal reason for L02 (Eviction Policies and Hit-Rate Economics): What does Belady's optimal policy require?",
-      "correct_answer": "Knowledge of the future access trace",
-      "explanation": "The cited self-check in L02 tests whether the learner can connect Eviction Policies and Hit-Rate Economics to the module mechanism without replacing evidence with labels. This explanation is specific to M19-Q005 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "What does Belady's optimal policy require?",
+      "correct_answer": "Knowledge of the future access trace.",
+      "explanation": "M19-Q005 uses self-check 1 from Eviction Policies and Hit-Rate Economics; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M19-Q006",
@@ -106,31 +106,13 @@
         "eviction-policies-and-hit-rate-economics",
         "src:L02-selfcheck-2"
       ],
-      "prompt": "Identify the assumption behind L02 (Eviction Policies and Hit-Rate Economics): Why can five hit-rate points matter more near high hit rates?",
-      "correct_answer": "Miss rate falls from 10 percent to 5 percent, halving origin load",
-      "explanation": "The cited self-check in L02 tests whether the learner can connect Eviction Policies and Hit-Rate Economics to the module mechanism without replacing evidence with labels. This explanation is specific to M19-Q006 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "Why can five hit-rate points matter more near high hit rates?",
+      "correct_answer": "Miss rate falls from 10 percent to 5 percent, halving origin load.",
+      "explanation": "M19-Q006 uses self-check 2 from Eviction Policies and Hit-Rate Economics; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M19-Q007",
-      "module_id": "M19",
-      "lesson_ids": [
-        "L02"
-      ],
-      "type": "short_answer",
-      "difficulty": "recall",
-      "tags": [
-        "caching-and-invalidation",
-        "eviction-policies-and-hit-rate-economics",
-        "src:L02-selfcheck-3"
-      ],
-      "prompt": "Connect the lesson claim to L02 (Eviction Policies and Hit-Rate Economics): What workload harms pure LRU?",
-      "correct_answer": "A large one-time scan that fills the cache with cold objects",
-      "explanation": "The cited self-check in L02 tests whether the learner can connect Eviction Policies and Hit-Rate Economics to the module mechanism without replacing evidence with labels. This explanation is specific to M19-Q007 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
-    },
-    {
-      "question_id": "M19-Q008",
       "module_id": "M19",
       "lesson_ids": [
         "L02"
@@ -140,12 +122,30 @@
       "tags": [
         "caching-and-invalidation",
         "eviction-policies-and-hit-rate-economics",
+        "src:L02-selfcheck-3"
+      ],
+      "prompt": "What workload harms pure LRU?",
+      "correct_answer": "A large one-time scan that fills the cache with cold objects.",
+      "explanation": "M19-Q007 uses self-check 3 from Eviction Policies and Hit-Rate Economics; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
+    },
+    {
+      "question_id": "M19-Q008",
+      "module_id": "M19",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "short_answer",
+      "difficulty": "recall",
+      "tags": [
+        "caching-and-invalidation",
+        "eviction-policies-and-hit-rate-economics",
         "src:L02-selfcheck-4"
       ],
-      "prompt": "Resolve the self-check about L02 (Eviction Policies and Hit-Rate Economics): Why is hit rate alone incomplete?",
-      "correct_answer": "Miss cost, item size, regeneration synchronization, and correctness risk also matter. For the practice, effective latency is 0.9*2 + 0.1*50 = 6.8 ms and 0.95*2 + 0.05*50 = 4.4 ms; origin rate drops from 1,000 to 500 requests/minute",
-      "explanation": "The cited self-check in L02 tests whether the learner can connect Eviction Policies and Hit-Rate Economics to the module mechanism without replacing evidence with labels. This explanation is specific to M19-Q008 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "Why is hit rate alone incomplete?",
+      "correct_answer": "Miss cost, item size, regeneration synchronization, and correctness risk also matter. For the practice, effective latency is `0.9*2 + 0.1*50 = 6.8 ms` and `0.95*2 + 0.05*50 = 4.4 ms`; origin rate drops from 1,000 to 500 requests/minute.",
+      "explanation": "M19-Q008 uses self-check 4 from Eviction Policies and Hit-Rate Economics; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M19-Q009",
@@ -154,16 +154,16 @@
         "L03"
       ],
       "type": "short_answer",
-      "difficulty": "synthesis",
+      "difficulty": "application",
       "tags": [
         "caching-and-invalidation",
         "invalidation-and-coherence",
         "src:L03-selfcheck-1"
       ],
-      "prompt": "Summarize the tradeoff in L03 (Invalidation and Coherence): Why is TTL not the same as invalidation?",
-      "correct_answer": "TTL expires by time; invalidation responds to an authoritative change",
-      "explanation": "The cited self-check in L03 tests whether the learner can connect Invalidation and Coherence to the module mechanism without replacing evidence with labels. This explanation is specific to M19-Q009 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "Why is TTL not the same as invalidation?",
+      "correct_answer": "TTL expires by time; invalidation responds to an authoritative change.",
+      "explanation": "M19-Q009 uses self-check 1 from Invalidation and Coherence; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M19-Q010",
@@ -178,10 +178,10 @@
         "invalidation-and-coherence",
         "src:L03-selfcheck-2"
       ],
-      "prompt": "Defend the conclusion for L03 (Invalidation and Coherence): How do versioned keys sidestep many purge races?",
-      "correct_answer": "New writes use a new key, so old entries are no longer consulted for current reads",
-      "explanation": "The cited self-check in L03 tests whether the learner can connect Invalidation and Coherence to the module mechanism without replacing evidence with labels. This explanation is specific to M19-Q010 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "How do versioned keys sidestep many purge races?",
+      "correct_answer": "New writes use a new key, so old entries are no longer consulted for current reads.",
+      "explanation": "M19-Q010 uses self-check 2 from Invalidation and Coherence; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M19-Q011",
@@ -190,16 +190,16 @@
         "L03"
       ],
       "type": "short_answer",
-      "difficulty": "application",
+      "difficulty": "synthesis",
       "tags": [
         "caching-and-invalidation",
         "invalidation-and-coherence",
         "src:L03-selfcheck-3"
       ],
-      "prompt": "Challenge the claim in L03 (Invalidation and Coherence): What dimensions commonly belong in a cache key?",
-      "correct_answer": "Tenant, subject, authorization state, locale, device, feature flag, content negotiation, and schema version as applicable",
-      "explanation": "The cited self-check in L03 tests whether the learner can connect Invalidation and Coherence to the module mechanism without replacing evidence with labels. This explanation is specific to M19-Q011 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "What dimensions commonly belong in a cache key?",
+      "correct_answer": "Tenant, subject, authorization state, locale, device, feature flag, content negotiation, and schema version as applicable.",
+      "explanation": "M19-Q011 uses self-check 3 from Invalidation and Coherence; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M19-Q012",
@@ -208,16 +208,16 @@
         "L03"
       ],
       "type": "short_answer",
-      "difficulty": "synthesis",
+      "difficulty": "application",
       "tags": [
         "caching-and-invalidation",
         "invalidation-and-coherence",
         "src:L03-selfcheck-4"
       ],
-      "prompt": "Apply the module rule to L03 (Invalidation and Coherence): What is the risk of negative caching?",
-      "correct_answer": "A newly created object can remain hidden until the negative entry expires. For the practice, subject A could receive subject B's permission, and old policy could survive role removal; include subject and policy version in the key and bypass or cap stale permission reads to a very short window",
-      "explanation": "The cited self-check in L03 tests whether the learner can connect Invalidation and Coherence to the module mechanism without replacing evidence with labels. This explanation is specific to M19-Q012 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "What is the risk of negative caching?",
+      "correct_answer": "A newly created object can remain hidden until the negative entry expires. For the practice, subject A could receive subject B's permission, and old policy could survive role removal; include subject and policy version in the key and bypass or cap stale permission reads to a very short window.",
+      "explanation": "M19-Q012 uses self-check 4 from Invalidation and Coherence; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M19-Q013",
@@ -226,16 +226,16 @@
         "L04"
       ],
       "type": "short_answer",
-      "difficulty": "recall",
+      "difficulty": "synthesis",
       "tags": [
         "caching-and-invalidation",
         "stampede-protection",
         "src:L04-selfcheck-1"
       ],
-      "prompt": "Use the cited source to answer L04 (Stampede Protection): What is the stampede invariant?",
-      "correct_answer": "Many misses for the same key cause bounded regeneration work, ideally one in flight",
-      "explanation": "The cited self-check in L04 tests whether the learner can connect Stampede Protection to the module mechanism without replacing evidence with labels. This explanation is specific to M19-Q013 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "What is the stampede invariant?",
+      "correct_answer": "Many misses for the same key cause bounded regeneration work, ideally one in flight.",
+      "explanation": "M19-Q013 uses self-check 1 from Stampede Protection; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M19-Q014",
@@ -244,22 +244,22 @@
         "L01"
       ],
       "type": "multiple_choice",
-      "difficulty": "application",
+      "difficulty": "recall",
       "tags": [
         "caching-and-invalidation",
         "cache-placement-and-read-write-paths",
         "src:L01-mistake-1"
       ],
-      "prompt": "For L01 (Cache Placement and Read/Write Paths), which choice best avoids the cited mistake: Caching before naming the authoritative source.?",
+      "prompt": "A design review for Cache Placement and Read/Write Paths includes this proposal: caching before naming the authoritative source. Which response best protects the mechanism?",
       "choices": [
-        "Keep Cache Placement and Read/Write Paths scoped to its stated evidence and boundary.",
-        "Make the documented mistake: Caching before naming the authoritative source",
-        "Treat Caching before naming the authoritative source as complete proof without the lesson boundary",
-        "Choose the familiar tool before checking whether Caching before naming the authoritative source applies"
+        "Calculate the M19 scoped measurement and record the limiting assumption before approving the change.",
+        "Approve caching before naming the authoritative source for Cache Placement and Read/Write Paths; the local context makes that proposal familiar enough for review.",
+        "Defer measurement until production for caching before naming the authoritative source; the team can monitor Cache Placement and Read/Write Paths after launch.",
+        "Approve the M19 shortcut for alpha now."
       ],
-      "correct_answer": "Keep Cache Placement and Read/Write Paths scoped to its stated evidence and boundary.",
-      "explanation": "The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M19-Q014 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Calculate the M19 scoped measurement and record the limiting assumption before approving the change.",
+      "explanation": "M19-Q014 enacts mistake 1 from Cache Placement and Read/Write Paths; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M19-Q015",
@@ -268,22 +268,22 @@
         "L01"
       ],
       "type": "multiple_choice",
-      "difficulty": "synthesis",
+      "difficulty": "application",
       "tags": [
         "caching-and-invalidation",
         "cache-placement-and-read-write-paths",
         "src:L01-mistake-2"
       ],
-      "prompt": "For L01 (Cache Placement and Read/Write Paths), which choice best avoids the cited mistake: Treating write-behind as a performance switch instead of a consistency change.?",
+      "prompt": "During an incident review about Cache Placement and Read/Write Paths, the team wants to proceed this way: treating write-behind as a performance switch instead of a consistency change. What should the reviewer say?",
       "choices": [
-        "Choose the familiar tool before checking whether Treating write-behind as a performance switch instead of a consisten.",
-        "Keep Cache Placement and Read/Write Paths scoped to its stated evidence and boundary.",
-        "Make the documented mistake: Treating write-behind as a performance switch instead of a consist",
-        "Treat Treating write-behind as a performance switch instead of a consistenc as complete proof without the lesson boun."
+        "Approve treating write-behind as a performance switch instead of a consistency change for Cache Placement and Read/Write Paths; the local context makes that proposal familiar enough for review.",
+        "Draw the M19 scoped measurement before approving the change.",
+        "Defer measurement until production for treating write-behind as a performance switch instead of a consistency change; the team can monitor Cache Placement and Read/Write Paths after launch.",
+        "Approve the M19 shortcut for bravo now."
       ],
-      "correct_answer": "Keep Cache Placement and Read/Write Paths scoped to its stated evidence and boundary.",
-      "explanation": "The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M19-Q015 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Draw the M19 scoped measurement before approving the change.",
+      "explanation": "M19-Q015 enacts mistake 2 from Cache Placement and Read/Write Paths; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M19-Q016",
@@ -292,22 +292,22 @@
         "L01"
       ],
       "type": "multiple_choice",
-      "difficulty": "recall",
+      "difficulty": "synthesis",
       "tags": [
         "caching-and-invalidation",
         "cache-placement-and-read-write-paths",
         "src:L01-mistake-3"
       ],
-      "prompt": "For L01 (Cache Placement and Read/Write Paths), which choice best avoids the cited mistake: Ignoring private representation keys.?",
+      "prompt": "A learner applies Cache Placement and Read/Write Paths and chooses this shortcut: ignoring private representation keys. Which correction is most defensible?",
       "choices": [
-        "Treat Ignoring private representation keys as complete proof without the lesson boundary",
-        "Make the documented mistake: Ignoring private representation keys",
-        "Keep Cache Placement and Read/Write Paths scoped to its stated evidence and boundary.",
-        "Choose the familiar tool before checking whether Ignoring private representation keys applies"
+        "Approve ignoring private representation keys for Cache Placement and Read/Write Paths; the local context makes that proposal familiar enough for review.",
+        "Defer measurement until production for ignoring private representation keys; the team can monitor Cache Placement and Read/Write Paths after launch.",
+        "Separate the M19 scoped measurement before approval.",
+        "Approve the M19 shortcut for charlie now."
       ],
-      "correct_answer": "Keep Cache Placement and Read/Write Paths scoped to its stated evidence and boundary.",
-      "explanation": "The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M19-Q016 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Separate the M19 scoped measurement before approval.",
+      "explanation": "M19-Q016 enacts mistake 3 from Cache Placement and Read/Write Paths; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M19-Q017",
@@ -316,22 +316,22 @@
         "L02"
       ],
       "type": "multiple_choice",
-      "difficulty": "application",
+      "difficulty": "recall",
       "tags": [
         "caching-and-invalidation",
         "eviction-policies-and-hit-rate-economics",
         "src:L02-mistake-1"
       ],
-      "prompt": "For L02 (Eviction Policies and Hit-Rate Economics), which choice best avoids the cited mistake: Reporting hit rate without miss cost.?",
+      "prompt": "A migration note for Eviction Policies and Hit-Rate Economics relies on this claim: reporting hit rate without miss cost. Which option keeps the evidence scope intact?",
       "choices": [
-        "Choose the familiar tool before checking whether Reporting hit rate without miss cost applies",
-        "Make the documented mistake: Reporting hit rate without miss cost",
-        "Treat Reporting hit rate without miss cost as complete proof without the lesson boundary",
-        "Keep Eviction Policies and Hit-Rate Economics scoped to its stated evidence and boundary."
+        "Approve reporting hit rate without miss cost for Eviction Policies and Hit-Rate Economics; the local context makes that proposal familiar enough for review.",
+        "Defer measurement until production for reporting hit rate without miss cost; the team can monitor Eviction Policies and Hit-Rate Economics after launch.",
+        "Approve the M19 shortcut for delta now.",
+        "Verify the M19 scoped measurement and record the limiting assumption before approving the change."
       ],
-      "correct_answer": "Keep Eviction Policies and Hit-Rate Economics scoped to its stated evidence and boundary.",
-      "explanation": "The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M19-Q017 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Verify the M19 scoped measurement and record the limiting assumption before approving the change.",
+      "explanation": "M19-Q017 enacts mistake 1 from Eviction Policies and Hit-Rate Economics; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M19-Q018",
@@ -340,22 +340,22 @@
         "L02"
       ],
       "type": "multiple_choice",
-      "difficulty": "synthesis",
+      "difficulty": "application",
       "tags": [
         "caching-and-invalidation",
         "eviction-policies-and-hit-rate-economics",
         "src:L02-mistake-2"
       ],
-      "prompt": "For L02 (Eviction Policies and Hit-Rate Economics), which choice best avoids the cited mistake: Letting batch scans evict interactive hot data.?",
+      "prompt": "A capacity memo touches Eviction Policies and Hit-Rate Economics and argues: letting batch scans evict interactive hot data. Which response is the strongest engineering objection?",
       "choices": [
-        "Keep Eviction Policies and Hit-Rate Economics scoped to its stated evidence and boundary.",
-        "Treat Letting batch scans evict interactive hot data as complete proof without the lesson boundary",
-        "Make the documented mistake: Letting batch scans evict interactive hot data",
-        "Choose the familiar tool before checking whether Letting batch scans evict interactive hot data applies"
+        "Compare the M19 scoped measurement before approving the change.",
+        "Approve letting batch scans evict interactive hot data for Eviction Policies and Hit-Rate Economics; the local context makes that proposal familiar enough for review.",
+        "Defer measurement until production for letting batch scans evict interactive hot data; the team can monitor Eviction Policies and Hit-Rate Economics after launch.",
+        "Approve the M19 shortcut for ember now."
       ],
-      "correct_answer": "Keep Eviction Policies and Hit-Rate Economics scoped to its stated evidence and boundary.",
-      "explanation": "The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M19-Q018 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Compare the M19 scoped measurement before approving the change.",
+      "explanation": "M19-Q018 enacts mistake 2 from Eviction Policies and Hit-Rate Economics; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M19-Q019",
@@ -364,22 +364,22 @@
         "L02"
       ],
       "type": "multiple_choice",
-      "difficulty": "recall",
+      "difficulty": "synthesis",
       "tags": [
         "caching-and-invalidation",
         "eviction-policies-and-hit-rate-economics",
         "src:L02-mistake-3"
       ],
-      "prompt": "For L02 (Eviction Policies and Hit-Rate Economics), which choice best avoids the cited mistake: Ignoring item size and recomputation cost.?",
+      "prompt": "A design review for Eviction Policies and Hit-Rate Economics includes this proposal: ignoring item size and recomputation cost. Which response best protects the mechanism?",
       "choices": [
-        "Treat Ignoring item size and recomputation cost as complete proof without the lesson boundary",
-        "Keep Eviction Policies and Hit-Rate Economics scoped to its stated evidence and boundary.",
-        "Make the documented mistake: Ignoring item size and recomputation cost",
-        "Choose the familiar tool before checking whether Ignoring item size and recomputation cost applies"
+        "Approve ignoring item size and recomputation cost for Eviction Policies and Hit-Rate Economics; the local context makes that proposal familiar enough for review.",
+        "Reject the M19 scoped measurement before approval.",
+        "Defer measurement until production for ignoring item size and recomputation cost; the team can monitor Eviction Policies and Hit-Rate Economics after launch.",
+        "Approve the M19 shortcut for fable now."
       ],
-      "correct_answer": "Keep Eviction Policies and Hit-Rate Economics scoped to its stated evidence and boundary.",
-      "explanation": "The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M19-Q019 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Reject the M19 scoped measurement before approval.",
+      "explanation": "M19-Q019 enacts mistake 3 from Eviction Policies and Hit-Rate Economics; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M19-Q020",
@@ -388,22 +388,22 @@
         "L03"
       ],
       "type": "multiple_choice",
-      "difficulty": "application",
+      "difficulty": "recall",
       "tags": [
         "caching-and-invalidation",
         "invalidation-and-coherence",
         "src:L03-mistake-1"
       ],
-      "prompt": "For L03 (Invalidation and Coherence), which choice best avoids the cited mistake: Using TTL as the only invalidation strategy for high-risk data.?",
+      "prompt": "During an incident review about Invalidation and Coherence, the team wants to proceed this way: using TTL as the only invalidation strategy for high-risk data. What should the reviewer say?",
       "choices": [
-        "Make the documented mistake: Using TTL as the only invalidation strategy for high-risk data",
-        "Treat Using TTL as the only invalidation strategy for high-risk data as complete proof without the lesson boundary",
-        "Keep Invalidation and Coherence scoped to its stated evidence and boundary.",
-        "Choose the familiar tool before checking whether Using TTL as the only invalidation strategy for high-risk data appli."
+        "Approve using TTL as the only invalidation strategy for high-risk data for Invalidation and Coherence; the local context makes that proposal familiar enough for review.",
+        "Defer measurement until production for using TTL as the only invalidation strategy for high-risk data; the team can monitor Invalidation and Coherence after launch.",
+        "Trace the M19 scoped measurement and record the limiting assumption before approving the change.",
+        "Approve the M19 shortcut for harbor now."
       ],
-      "correct_answer": "Keep Invalidation and Coherence scoped to its stated evidence and boundary.",
-      "explanation": "The distractors are anchored in the mistake list for L03; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M19-Q020 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Trace the M19 scoped measurement and record the limiting assumption before approving the change.",
+      "explanation": "M19-Q020 enacts mistake 1 from Invalidation and Coherence; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M19-Q021",
@@ -412,22 +412,22 @@
         "L03"
       ],
       "type": "multiple_choice",
-      "difficulty": "synthesis",
+      "difficulty": "application",
       "tags": [
         "caching-and-invalidation",
         "invalidation-and-coherence",
         "src:L03-mistake-2"
       ],
-      "prompt": "For L03 (Invalidation and Coherence), which choice best avoids the cited mistake: Forgetting derived indexes and regional copies.?",
+      "prompt": "A learner applies Invalidation and Coherence and chooses this shortcut: forgetting derived indexes and regional copies. Which correction is most defensible?",
       "choices": [
-        "Make the documented mistake: Forgetting derived indexes and regional copies",
-        "Treat Forgetting derived indexes and regional copies as complete proof without the lesson boundary",
-        "Choose the familiar tool before checking whether Forgetting derived indexes and regional copies applies",
-        "Keep Invalidation and Coherence scoped to its stated evidence and boundary."
+        "Approve forgetting derived indexes and regional copies for Invalidation and Coherence; the local context makes that proposal familiar enough for review.",
+        "Defer measurement until production for forgetting derived indexes and regional copies; the team can monitor Invalidation and Coherence after launch.",
+        "Approve the M19 shortcut for indigo now.",
+        "Require the M19 scoped measurement before approving the change."
       ],
-      "correct_answer": "Keep Invalidation and Coherence scoped to its stated evidence and boundary.",
-      "explanation": "The distractors are anchored in the mistake list for L03; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M19-Q021 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Require the M19 scoped measurement before approving the change.",
+      "explanation": "M19-Q021 enacts mistake 2 from Invalidation and Coherence; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M19-Q022",
@@ -436,16 +436,16 @@
         "L01"
       ],
       "type": "calculation",
-      "difficulty": "synthesis",
+      "difficulty": "recall",
       "tags": [
         "caching-and-invalidation",
-        "cache-placement-and-read-write-paths",
+        "cache-effective-latency",
         "src:L01-worked"
       ],
-      "prompt": "While applying L01 (Cache Placement and Read/Write Paths), a system handles 130 operations/s with 80 ms of scoped work per operation. If the rate rises by 25% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
-      "correct_answer": "Original concurrency = 130 x 0.080 = 10.40 operations. Revised rate = 130 x 1.25 = 162.5/s, so revised concurrency = 162.5 x 0.080 = 13.00 operations.",
-      "explanation": "This perturbs the numeric practice around Cache Placement and Read/Write Paths: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M19-Q022 and its cited source.",
-      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
+      "prompt": "Alpha case in Caching and Invalidation: Cache hit rate is 90%, cache latency 2 ms, origin latency 50 ms. What effective latency follows?",
+      "correct_answer": "M19 Cache Effective Latency case 1: Effective latency is 0.9 x 2 + (1 - 0.9) x 50 = 6.8 ms.",
+      "explanation": "M19-Q022 uses cache effective latency from Cache Placement and Read/Write Paths and keeps units visible through the final numeric result.",
+      "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
     {
       "question_id": "M19-Q023",
@@ -454,16 +454,16 @@
         "L02"
       ],
       "type": "calculation",
-      "difficulty": "recall",
+      "difficulty": "application",
       "tags": [
         "caching-and-invalidation",
-        "eviction-policies-and-hit-rate-economics",
+        "origin-rate",
         "src:L02-worked"
       ],
-      "prompt": "While applying L02 (Eviction Policies and Hit-Rate Economics), a system handles 140 operations/s with 40 ms of scoped work per operation. If the rate rises by 30% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
-      "correct_answer": "Original concurrency = 140 x 0.040 = 5.60 operations. Revised rate = 140 x 1.30 = 182.0/s, so revised concurrency = 182.0 x 0.040 = 7.28 operations.",
-      "explanation": "This perturbs the numeric practice around Eviction Policies and Hit-Rate Economics: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M19-Q023 and its cited source.",
-      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
+      "prompt": "Bravo case in Caching and Invalidation: A service sees 10,000 reads/min and cache hit rate is 95%. What origin read rate remains?",
+      "correct_answer": "M19 Origin Rate case 2: Origin reads are 10,000 x (1 - 0.95) = 500/min.",
+      "explanation": "M19-Q023 uses origin rate from Eviction Policies and Hit-Rate Economics and keeps units visible through the final numeric result.",
+      "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
     {
       "question_id": "M19-Q024",
@@ -472,16 +472,16 @@
         "L03"
       ],
       "type": "calculation",
-      "difficulty": "application",
+      "difficulty": "synthesis",
       "tags": [
         "caching-and-invalidation",
-        "invalidation-and-coherence",
+        "stampede-coalescing",
         "src:L03-worked"
       ],
-      "prompt": "While applying L03 (Invalidation and Coherence), a system handles 150 operations/s with 50 ms of scoped work per operation. If the rate rises by 35% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
-      "correct_answer": "Original concurrency = 150 x 0.050 = 7.50 operations. Revised rate = 150 x 1.35 = 202.5/s, so revised concurrency = 202.5 x 0.050 = 10.12 operations.",
-      "explanation": "This perturbs the numeric practice around Invalidation and Coherence: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M19-Q024 and its cited source.",
-      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
+      "prompt": "Charlie case in Caching and Invalidation: 80 concurrent misses target one key. With request coalescing, how many regenerations should run?",
+      "correct_answer": "M19 Stampede Coalescing case 3: Coalescing allows 1 regeneration instead of 80, avoiding 79 duplicate origin computations.",
+      "explanation": "M19-Q024 uses stampede coalescing from Invalidation and Coherence and keeps units visible through the final numeric result.",
+      "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
     {
       "question_id": "M19-Q025",
@@ -490,16 +490,16 @@
         "L04"
       ],
       "type": "calculation",
-      "difficulty": "synthesis",
+      "difficulty": "recall",
       "tags": [
         "caching-and-invalidation",
-        "stampede-protection",
+        "cold-start-load",
         "src:L04-worked"
       ],
-      "prompt": "While applying L04 (Stampede Protection), a system handles 160 operations/s with 60 ms of scoped work per operation. If the rate rises by 40% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
-      "correct_answer": "Original concurrency = 160 x 0.060 = 9.60 operations. Revised rate = 160 x 1.40 = 224.0/s, so revised concurrency = 224.0 x 0.060 = 13.44 operations.",
-      "explanation": "This perturbs the numeric practice around Stampede Protection: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M19-Q025 and its cited source.",
-      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
+      "prompt": "Delta case in Caching and Invalidation: A cache flush makes 5,000 keys cold and origin can regenerate 250/s. What lower-bound warmup time follows?",
+      "correct_answer": "M19 Cold-Start Load case 4: Warmup lower bound is 5,000 / 250 = 20.0 seconds.",
+      "explanation": "M19-Q025 uses cold-start load from Stampede Protection and keeps units visible through the final numeric result.",
+      "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
     {
       "question_id": "M19-Q026",
@@ -508,16 +508,16 @@
         "L05"
       ],
       "type": "calculation",
-      "difficulty": "recall",
+      "difficulty": "application",
       "tags": [
         "caching-and-invalidation",
-        "cache-failure-modes",
+        "stale-window",
         "src:L05-worked"
       ],
-      "prompt": "While applying L05 (Cache Failure Modes), a system handles 170 operations/s with 70 ms of scoped work per operation. If the rate rises by 45% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
-      "correct_answer": "Original concurrency = 170 x 0.070 = 11.90 operations. Revised rate = 170 x 1.45 = 246.5/s, so revised concurrency = 246.5 x 0.070 = 17.25 operations.",
-      "explanation": "This perturbs the numeric practice around Cache Failure Modes: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M19-Q026 and its cited source.",
-      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
+      "prompt": "Ember case in Caching and Invalidation: A cache TTL is 300 seconds and authority changed 45 seconds ago. What stale window can remain?",
+      "correct_answer": "M19 Stale Window case 5: The stale window can last up to 300 - 45 = 255 more seconds without invalidation.",
+      "explanation": "M19-Q026 uses stale window from Cache Failure Modes and keeps units visible through the final numeric result.",
+      "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
     {
       "question_id": "M19-Q027",
@@ -526,142 +526,142 @@
         "L06"
       ],
       "type": "calculation",
-      "difficulty": "application",
+      "difficulty": "synthesis",
       "tags": [
         "caching-and-invalidation",
-        "caching-decisions-and-defense",
+        "hit-rate-economics",
         "src:L06-worked"
       ],
-      "prompt": "While applying L06 (Caching Decisions and Defense), a system handles 180 operations/s with 80 ms of scoped work per operation. If the rate rises by 10% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
-      "correct_answer": "Original concurrency = 180 x 0.080 = 14.40 operations. Revised rate = 180 x 1.10 = 198.0/s, so revised concurrency = 198.0 x 0.080 = 15.84 operations.",
-      "explanation": "This perturbs the numeric practice around Caching Decisions and Defense: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M19-Q027 and its cited source.",
-      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
+      "prompt": "Fable case in Caching and Invalidation: Hit rate improves from 90% to 95% at 10,000 reads/min. How many origin reads/min are saved?",
+      "correct_answer": "M19 Hit-Rate Economics case 6: Saved origin reads are 10,000 x (0.10 - 0.05) = 500/min.",
+      "explanation": "M19-Q027 uses hit-rate economics from Caching Decisions and Defense and keeps units visible through the final numeric result.",
+      "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
     {
       "question_id": "M19-Q028",
       "module_id": "M19",
       "lesson_ids": [
-        "L04"
+        "L01"
       ],
       "type": "design_judgment",
-      "difficulty": "synthesis",
+      "difficulty": "application",
       "tags": [
         "caching-and-invalidation",
-        "stampede-protection",
-        "src:EX-00"
+        "cache-placement-and-read-write-paths",
+        "src:EX-01"
       ],
-      "prompt": "Atlas decision: In EX-00 (module decision), you must choose a course of action for Caching and Invalidation. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
-      "correct_answer": "Recommend the option that preserves the Stampede Protection mechanism under the exercise constraints: Cache placement, eviction, invalidation, coherence, stampede protection, and cache failure modes The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
-      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M19-Q028 and its cited source.",
-      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
+      "prompt": "In EX-01 (Placement), a proposal for Cache Placement and Read/Write Paths has measured capacity 237/s, a protected operating bound of 72%, and planned steady demand of 208.6/s. State the recommendation, the number that forces it, and what would change your mind.",
+      "correct_answer": "For M19 decision 1, recommend against. The protected bound is 237 x 0.72 = 170.6/s, and the planned 208.6/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 208.6/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 38.0/s of lower-priority work.",
+      "explanation": "M19-Q028 turns on the forcing number from EX-01, not preference; the reversal conditions are specific to the measured gap in this prompt.",
+      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
     },
     {
       "question_id": "M19-Q029",
       "module_id": "M19",
       "lesson_ids": [
-        "L05"
+        "L02"
       ],
       "type": "design_judgment",
-      "difficulty": "recall",
+      "difficulty": "synthesis",
       "tags": [
         "caching-and-invalidation",
-        "cache-failure-modes",
-        "src:EX-00"
+        "eviction-policies-and-hit-rate-economics",
+        "src:EX-02"
       ],
-      "prompt": "Beacon decision: In EX-00 (module decision), you must choose a course of action for Caching and Invalidation. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
-      "correct_answer": "Recommend the option that preserves the Cache Failure Modes mechanism under the exercise constraints: Cache placement, eviction, invalidation, coherence, stampede protection, and cache failure modes The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
-      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M19-Q029 and its cited source.",
-      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
+      "prompt": "In EX-02 (Write Policy), a proposal for Eviction Policies and Hit-Rate Economics has measured capacity 254/s, a protected operating bound of 72%, and planned steady demand of 223.5/s. State the recommendation, the number that forces it, and what would change your mind.",
+      "correct_answer": "For M19 decision 2, recommend against. The protected bound is 254 x 0.72 = 182.9/s, and the planned 223.5/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 223.5/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 40.6/s of lower-priority work.",
+      "explanation": "M19-Q029 turns on the forcing number from EX-02, not preference; the reversal conditions are specific to the measured gap in this prompt.",
+      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
     },
     {
       "question_id": "M19-Q030",
       "module_id": "M19",
       "lesson_ids": [
-        "L06"
-      ],
-      "type": "design_judgment",
-      "difficulty": "application",
-      "tags": [
-        "caching-and-invalidation",
-        "caching-decisions-and-defense",
-        "src:EX-00"
-      ],
-      "prompt": "Cedar decision: In EX-00 (module decision), you must choose a course of action for Caching and Invalidation. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
-      "correct_answer": "Recommend the option that preserves the Caching Decisions and Defense mechanism under the exercise constraints: Cache placement, eviction, invalidation, coherence, stampede protection, and cache failure modes The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
-      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M19-Q030 and its cited source.",
-      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
-    },
-    {
-      "question_id": "M19-Q031",
-      "module_id": "M19",
-      "lesson_ids": [
-        "L01"
-      ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
-      "tags": [
-        "caching-and-invalidation",
-        "cache-placement-and-read-write-paths",
-        "src:EX-00"
-      ],
-      "prompt": "Delta decision: In EX-00 (module decision), you must choose a course of action for Caching and Invalidation. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
-      "correct_answer": "Recommend the option that preserves the Cache Placement and Read/Write Paths mechanism under the exercise constraints: Cache placement, eviction, invalidation, coherence, stampede protection, and cache failure modes The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
-      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M19-Q031 and its cited source.",
-      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
-    },
-    {
-      "question_id": "M19-Q032",
-      "module_id": "M19",
-      "lesson_ids": [
-        "L02"
+        "L03"
       ],
       "type": "design_judgment",
       "difficulty": "recall",
       "tags": [
         "caching-and-invalidation",
-        "eviction-policies-and-hit-rate-economics",
-        "src:EX-00"
-      ],
-      "prompt": "Ember decision: In EX-00 (module decision), you must choose a course of action for Caching and Invalidation. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
-      "correct_answer": "Recommend the option that preserves the Eviction Policies and Hit-Rate Economics mechanism under the exercise constraints: Cache placement, eviction, invalidation, coherence, stampede protection, and cache failure modes The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
-      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M19-Q032 and its cited source.",
-      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
-    },
-    {
-      "question_id": "M19-Q033",
-      "module_id": "M19",
-      "lesson_ids": [
-        "L03"
-      ],
-      "type": "design_judgment",
-      "difficulty": "application",
-      "tags": [
-        "caching-and-invalidation",
         "invalidation-and-coherence",
-        "src:EX-00"
+        "src:EX-03"
       ],
-      "prompt": "Fable decision: In EX-00 (module decision), you must choose a course of action for Caching and Invalidation. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
-      "correct_answer": "Recommend the option that preserves the Invalidation and Coherence mechanism under the exercise constraints: Cache placement, eviction, invalidation, coherence, stampede protection, and cache failure modes The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
-      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M19-Q033 and its cited source.",
-      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
+      "prompt": "In EX-03 (Hit-Rate Economics), a proposal for Invalidation and Coherence has measured capacity 271/s, a protected operating bound of 72%, and planned steady demand of 238.5/s. State the recommendation, the number that forces it, and what would change your mind.",
+      "correct_answer": "For M19 decision 3, recommend against. The protected bound is 271 x 0.72 = 195.1/s, and the planned 238.5/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 238.5/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 43.4/s of lower-priority work.",
+      "explanation": "M19-Q030 turns on the forcing number from EX-03, not preference; the reversal conditions are specific to the measured gap in this prompt.",
+      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
     },
     {
-      "question_id": "M19-Q034",
+      "question_id": "M19-Q031",
       "module_id": "M19",
       "lesson_ids": [
         "L04"
       ],
       "type": "design_judgment",
-      "difficulty": "synthesis",
+      "difficulty": "application",
       "tags": [
         "caching-and-invalidation",
         "stampede-protection",
-        "src:EX-00"
+        "src:EX-04"
       ],
-      "prompt": "Granite decision: In EX-00 (module decision), you must choose a course of action for Caching and Invalidation. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
-      "correct_answer": "Recommend the option that preserves the Stampede Protection mechanism under the exercise constraints: Cache placement, eviction, invalidation, coherence, stampede protection, and cache failure modes The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
-      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M19-Q034 and its cited source.",
-      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
+      "prompt": "In EX-04 (Eviction), a proposal for Stampede Protection has measured capacity 288/s, a protected operating bound of 72%, and planned steady demand of 253.4/s. State the recommendation, the number that forces it, and what would change your mind.",
+      "correct_answer": "For M19 decision 4, recommend against. The protected bound is 288 x 0.72 = 207.4/s, and the planned 253.4/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 253.4/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 46.0/s of lower-priority work.",
+      "explanation": "M19-Q031 turns on the forcing number from EX-04, not preference; the reversal conditions are specific to the measured gap in this prompt.",
+      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
+    },
+    {
+      "question_id": "M19-Q032",
+      "module_id": "M19",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "caching-and-invalidation",
+        "cache-failure-modes",
+        "src:EX-05"
+      ],
+      "prompt": "In EX-05 (Invalidation), a proposal for Cache Failure Modes has measured capacity 305/s, a protected operating bound of 72%, and planned steady demand of 268.4/s. State the recommendation, the number that forces it, and what would change your mind.",
+      "correct_answer": "For M19 decision 5, recommend against. The protected bound is 305 x 0.72 = 219.6/s, and the planned 268.4/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 268.4/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 48.8/s of lower-priority work.",
+      "explanation": "M19-Q032 turns on the forcing number from EX-05, not preference; the reversal conditions are specific to the measured gap in this prompt.",
+      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
+    },
+    {
+      "question_id": "M19-Q033",
+      "module_id": "M19",
+      "lesson_ids": [
+        "L06"
+      ],
+      "type": "design_judgment",
+      "difficulty": "recall",
+      "tags": [
+        "caching-and-invalidation",
+        "caching-decisions-and-defense",
+        "src:EX-06"
+      ],
+      "prompt": "In EX-06 (Coherence), a proposal for Caching Decisions and Defense has measured capacity 322/s, a protected operating bound of 72%, and planned steady demand of 283.4/s. State the recommendation, the number that forces it, and what would change your mind.",
+      "correct_answer": "For M19 decision 6, recommend against. The protected bound is 322 x 0.72 = 231.8/s, and the planned 283.4/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 283.4/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 51.6/s of lower-priority work.",
+      "explanation": "M19-Q033 turns on the forcing number from EX-06, not preference; the reversal conditions are specific to the measured gap in this prompt.",
+      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
+    },
+    {
+      "question_id": "M19-Q034",
+      "module_id": "M19",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "design_judgment",
+      "difficulty": "application",
+      "tags": [
+        "caching-and-invalidation",
+        "cache-placement-and-read-write-paths",
+        "src:EX-07"
+      ],
+      "prompt": "In EX-07 (Stampede), a proposal for Cache Placement and Read/Write Paths has measured capacity 339/s, a protected operating bound of 72%, and planned steady demand of 298.3/s. State the recommendation, the number that forces it, and what would change your mind.",
+      "correct_answer": "For M19 decision 7, recommend against. The protected bound is 339 x 0.72 = 244.1/s, and the planned 298.3/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 298.3/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 54.2/s of lower-priority work.",
+      "explanation": "M19-Q034 turns on the forcing number from EX-07, not preference; the reversal conditions are specific to the measured gap in this prompt.",
+      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
     }
   ]
 }

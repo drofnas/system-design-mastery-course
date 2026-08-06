@@ -1,535 +1,546 @@
 # M09 Quiz Answer Key
 
-This key covers all 42 questions for **Replication and Partitioning**. Use it after an attempt, or provide it with the LLM grading prompt for feedback.
+This key covers all 43 questions for **Replication and Partitioning**. Use it after an attempt, or provide it with the LLM grading prompt for feedback.
 
 ## M09-Q001
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** No. It is scoped to one session unless a stronger contract is also present
+**Answer:** No. It is scoped to one session unless a stronger contract is also present.
 
-**Explanation:** The cited self-check in L01 tests whether the learner can connect Operation Semantics and Session Guarantees to the module mechanism without replacing evidence with labels. This explanation is specific to M09-Q001 and its cited source.
+**Explanation:** M09-Q001 uses self-check 1 from Operation Semantics and Session Guarantees; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M09-Q002
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `application`
 
-**Answer:** Yes. A session can observe versions 5, 5, 6 while authority is already at 9
+**Answer:** Yes. A session can observe versions 5, 5, 6 while authority is already at 9.
 
-**Explanation:** The cited self-check in L01 tests whether the learner can connect Operation Semantics and Session Guarantees to the module mechanism without replacing evidence with labels. This explanation is specific to M09-Q002 and its cited source.
+**Explanation:** M09-Q002 uses self-check 2 from Operation Semantics and Session Guarantees; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M09-Q003
 
-**Type:** `short_answer`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`
+**Difficulty:** `recall`
 
-**Answer:** A unit and bound, reference version/time, measurement point, failure action, and oracle
+**Answer:** A unit and bound, reference version/time, measurement point, failure action, and oracle.
 
-**Explanation:** The cited self-check in L01 tests whether the learner can connect Operation Semantics and Session Guarantees to the module mechanism without replacing evidence with labels. This explanation is specific to M09-Q003 and its cited source.
+**Explanation:** M09-Q003 uses self-check 3 from Operation Semantics and Session Guarantees; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M09-Q004
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** Eventual convergence permits a window where conflicting owners can act; the invariant is violated before convergence repairs state
+**Answer:** Eventual convergence permits a window where conflicting owners can act; the invariant is violated before convergence repairs state.
 
-**Explanation:** The cited self-check in L01 tests whether the learner can connect Operation Semantics and Session Guarantees to the module mechanism without replacing evidence with labels. This explanation is specific to M09-Q004 and its cited source.
+**Explanation:** M09-Q004 uses self-check 4 from Operation Semantics and Session Guarantees; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M09-Q005
 
-**Type:** `short_answer`  
-**Difficulty:** `application`
+**Type:** `short_answer`
+**Difficulty:** `recall`
 
-**Answer:** No. The acknowledgement and placement contracts must prove durability and independence
+**Answer:** No. The acknowledgement and placement contracts must prove durability and independence.
 
-**Explanation:** The cited self-check in L02 tests whether the learner can connect Replication Topologies and Acknowledgement Boundaries to the module mechanism without replacing evidence with labels. This explanation is specific to M09-Q005 and its cited source.
+**Explanation:** M09-Q005 uses self-check 1 from Replication Topologies and Acknowledgement Boundaries; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M09-Q006
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `synthesis`
 
-**Answer:** Detect concurrent versions and define who or what resolves them without violating the business invariant
+**Answer:** Detect concurrent versions and define who or what resolves them without violating the business invariant.
 
-**Explanation:** The cited self-check in L02 tests whether the learner can connect Replication Topologies and Acknowledgement Boundaries to the module mechanism without replacing evidence with labels. This explanation is specific to M09-Q006 and its cited source.
+**Explanation:** M09-Q006 uses self-check 2 from Replication Topologies and Acknowledgement Boundaries; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M09-Q007
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `application`
 
-**Answer:** Followers can lag and the router may select one without a minimum-version rule
+**Answer:** Followers can lag and the router may select one without a minimum-version rule.
 
-**Explanation:** The cited self-check in L02 tests whether the learner can connect Replication Topologies and Acknowledgement Boundaries to the module mechanism without replacing evidence with labels. This explanation is specific to M09-Q007 and its cited source.
+**Explanation:** M09-Q007 uses self-check 3 from Replication Topologies and Acknowledgement Boundaries; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M09-Q008
 
-**Type:** `short_answer`  
-**Difficulty:** `application`
+**Type:** `short_answer`
+**Difficulty:** `recall`
 
-**Answer:** Explicitly reject authority-changing writes or recover the known authority; do not invent an unproved election
+**Answer:** Explicitly reject authority-changing writes or recover the known authority; do not invent an unproved election.
 
-**Explanation:** The cited self-check in L02 tests whether the learner can connect Replication Topologies and Acknowledgement Boundaries to the module mechanism without replacing evidence with labels. This explanation is specific to M09-Q008 and its cited source.
+**Explanation:** M09-Q008 uses self-check 4 from Replication Topologies and Acknowledgement Boundaries; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M09-Q009
 
-**Type:** `short_answer`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`
+**Difficulty:** `application`
 
-**Answer:** Both: 3+3>5 and 2×3>5
+**Answer:** Both: 3+3>5 and 2×3>5.
 
-**Explanation:** The cited self-check in L03 tests whether the learner can connect Quorums, Intersections, and Hidden Assumptions to the module mechanism without replacing evidence with labels. This explanation is specific to M09-Q009 and its cited source.
+**Explanation:** M09-Q009 uses self-check 1 from Quorums, Intersections, and Hidden Assumptions; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M09-Q010
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `recall`
 
-**Answer:** Write/write intersection fails because 4 is not greater than 5
+**Answer:** Write/write intersection fails because 4 is not greater than 5.
 
-**Explanation:** The cited self-check in L03 tests whether the learner can connect Quorums, Intersections, and Hidden Assumptions to the module mechanism without replacing evidence with labels. This explanation is specific to M09-Q010 and its cited source.
+**Explanation:** M09-Q010 uses self-check 2 from Quorums, Intersections, and Hidden Assumptions; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M09-Q011
 
-**Type:** `short_answer`  
-**Difficulty:** `application`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** Not from arithmetic alone; it may need to compare versions and meet the operation's freshness rule
+**Answer:** Not from arithmetic alone; it may need to compare versions and meet the operation's freshness rule.
 
-**Explanation:** The cited self-check in L03 tests whether the learner can connect Quorums, Intersections, and Hidden Assumptions to the module mechanism without replacing evidence with labels. This explanation is specific to M09-Q011 and its cited source.
+**Explanation:** M09-Q011 uses self-check 3 from Quorums, Intersections, and Hidden Assumptions; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M09-Q012
 
-**Type:** `short_answer`  
-**Difficulty:** `synthesis`
+**Type:** `short_answer`
+**Difficulty:** `application`
 
-**Answer:** The formal CAP definition and a product's bounded success SLO measure different outcomes; mixing them produces false claims
+**Answer:** The formal CAP definition and a product's bounded success SLO measure different outcomes; mixing them produces false claims.
 
-**Explanation:** The cited self-check in L03 tests whether the learner can connect Quorums, Intersections, and Hidden Assumptions to the module mechanism without replacing evidence with labels. This explanation is specific to M09-Q012 and its cited source.
+**Explanation:** M09-Q012 uses self-check 4 from Quorums, Intersections, and Hidden Assumptions; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M09-Q013
 
-**Type:** `short_answer`  
-**Difficulty:** `recall`
+**Type:** `short_answer`
+**Difficulty:** `synthesis`
 
-**Answer:** No. Clock error and concurrent writers can make timestamps misleading
+**Answer:** No. Clock error and concurrent writers can make timestamps misleading.
 
-**Explanation:** The cited self-check in L04 tests whether the learner can connect Versions, Conflicts, Repair, and Convergence to the module mechanism without replacing evidence with labels. This explanation is specific to M09-Q013 and its cited source.
+**Explanation:** M09-Q013 uses self-check 1 from Versions, Conflicts, Repair, and Convergence; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M09-Q014
 
-**Type:** `short_answer`  
+**Type:** `short_answer`
 **Difficulty:** `application`
 
-**Answer:** A key that is never read is never compared
+**Answer:** A key that is never read is never compared.
 
-**Explanation:** The cited self-check in L04 tests whether the learner can connect Versions, Conflicts, Repair, and Convergence to the module mechanism without replacing evidence with labels. This explanation is specific to M09-Q014 and its cited source.
+**Explanation:** M09-Q014 uses self-check 2 from Versions, Conflicts, Repair, and Convergence; the answer ties the mechanism to the cited evidence scope rather than a label.
 
-**Grading notes:** Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition.
+**Grading notes:** Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity.
 
 ## M09-Q015
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `application`
 
 **Choices:**
 
-- Keep Operation Semantics and Session Guarantees scoped to its stated evidence and boundary.
-- Choose the familiar tool before checking whether Choosing one label for the product: it over-constrains cheap reads o.
-- Treat Choosing one label for the product: it over-constrains cheap reads or as complete proof without the lesson boun.
-- Make the documented mistake: Choosing one label for the product: it over-constrains cheap reads
+- Scope the M09 scoped measurement and record the limiting assumption before approving the change.
+- Approve it over-constrains cheap reads or for Operation Semantics and Session Guarantees; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for it over-constrains cheap reads or; the team can monitor Operation Semantics and Session Guarantees after launch.
+- Approve the M09 shortcut for alpha now.
 
-**Answer:** Keep Operation Semantics and Session Guarantees scoped to its stated evidence and boundary.
+**Answer:** Scope the M09 scoped measurement and record the limiting assumption before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M09-Q015 and its cited source.
+**Explanation:** M09-Q015 enacts mistake 1 from Operation Semantics and Session Guarantees; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M09-Q016
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `synthesis`
 
 **Choices:**
 
-- Treat Equating acknowledgement with universal visibility: an asynchronous as complete proof without the lesson bounda.
-- Keep Operation Semantics and Session Guarantees scoped to its stated evidence and boundary.
-- Make the documented mistake: Equating acknowledgement with universal visibility: an asynchronous
-- Choose the familiar tool before checking whether Equating acknowledgement with universal visibility: an asynchronous.
+- Approve equating acknowledgement with universal visibility:: an asynchronous for Operation Semantics and Session Guarantees; the local context makes that proposal familiar enough for review.
+- Measure the M09 scoped measurement before approving the change.
+- Defer measurement until production for equating acknowledgement with universal visibility:: an asynchronous; the team can monitor Operation Semantics and Session Guarantees after launch.
+- Approve the M09 shortcut for bravo now.
 
-**Answer:** Keep Operation Semantics and Session Guarantees scoped to its stated evidence and boundary.
+**Answer:** Measure the M09 scoped measurement before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M09-Q016 and its cited source.
+**Explanation:** M09-Q016 enacts mistake 2 from Operation Semantics and Session Guarantees; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M09-Q017
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `recall`
 
 **Choices:**
 
-- Treat Using wall-clock timestamps as version proof: clock skew can order ev as complete proof without the lesson boun.
-- Make the documented mistake: Using wall-clock timestamps as version proof: clock skew can order
-- Keep Operation Semantics and Session Guarantees scoped to its stated evidence and boundary.
-- Choose the familiar tool before checking whether Using wall-clock timestamps as version proof: clock skew can order e.
+- Approve using wall-clock timestamps as version proof:: clock skew can order events for Operation Semantics and Session Guarantees; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for using wall-clock timestamps as version proof:: clock skew can order events; the team can monitor Operation Semantics and Session Guarantees after launch.
+- Bound the M09 scoped measurement before approval.
+- Approve the M09 shortcut for charlie now.
 
-**Answer:** Keep Operation Semantics and Session Guarantees scoped to its stated evidence and boundary.
+**Answer:** Bound the M09 scoped measurement before approval.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M09-Q017 and its cited source.
+**Explanation:** M09-Q017 enacts mistake 3 from Operation Semantics and Session Guarantees; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M09-Q018
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `application`
 
 **Choices:**
 
-- Treat Calling cache TTL bounded staleness: TTL bounds cache age only under as complete proof without the lesson bound.
-- Make the documented mistake: Calling cache TTL bounded staleness: TTL bounds cache age only und
-- Choose the familiar tool before checking whether Calling cache TTL bounded staleness: TTL bounds cache age only under.
-- Keep Operation Semantics and Session Guarantees scoped to its stated evidence and boundary.
+- Approve tTL bounds cache age only under for Operation Semantics and Session Guarantees; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for tTL bounds cache age only under; the team can monitor Operation Semantics and Session Guarantees after launch.
+- Approve the M09 shortcut for delta now.
+- Freeze the M09 scoped measurement and record the limiting assumption before approving the change.
 
-**Answer:** Keep Operation Semantics and Session Guarantees scoped to its stated evidence and boundary.
+**Answer:** Freeze the M09 scoped measurement and record the limiting assumption before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M09-Q018 and its cited source.
+**Explanation:** M09-Q018 enacts mistake 4 from Operation Semantics and Session Guarantees; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M09-Q019
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `synthesis`
 
 **Choices:**
 
-- Keep Operation Semantics and Session Guarantees scoped to its stated evidence and boundary.
-- Make the documented mistake: Failing open on a session-token miss: returning an older version c
-- Treat Failing open on a session-token miss: returning an older version conv as complete proof without the lesson boun.
-- Choose the familiar tool before checking whether Failing open on a session-token miss: returning an older version con.
+- Preserve the M09 scoped measurement before approving the change.
+- Approve returning an older version converts for Operation Semantics and Session Guarantees; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for returning an older version converts; the team can monitor Operation Semantics and Session Guarantees after launch.
+- Approve the M09 shortcut for ember now.
 
-**Answer:** Keep Operation Semantics and Session Guarantees scoped to its stated evidence and boundary.
+**Answer:** Preserve the M09 scoped measurement before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M09-Q019 and its cited source.
+**Explanation:** M09-Q019 enacts mistake 5 from Operation Semantics and Session Guarantees; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M09-Q020
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `recall`
 
 **Choices:**
 
-- Treat Calling replication a backup: deletion, corruption, and operator error as complete proof without the lesson bou.
-- Keep Replication Topologies and Acknowledgement Boundaries scoped to its stated evidence and bo.
-- Make the documented mistake: Calling replication a backup: deletion, corruption, and operator e. with extra con
-- Choose the familiar tool before checking whether Calling replication a backup: deletion, corruption, and operator err.
+- Approve deletion, corruption, and operator error for Replication Topologies and Acknowledgement Boundaries; the local context makes that proposal familiar enough for review.
+- Model the M09 scoped measurement before approval.
+- Defer measurement until production for deletion, corruption, and operator error; the team can monitor Replication Topologies and Acknowledgement Boundaries after launch.
+- Approve the M09 shortcut for fable now.
 
-**Answer:** Keep Replication Topologies and Acknowledgement Boundaries scoped to its stated evidence and bo.
+**Answer:** Model the M09 scoped measurement before approval.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M09-Q020 and its cited source.
+**Explanation:** M09-Q020 enacts mistake 1 from Replication Topologies and Acknowledgement Boundaries; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M09-Q021
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `application`
 
 **Choices:**
 
-- Make the documented mistake: Promising durability from replica count: copies may share a failur. with extra con
-- Treat Promising durability from replica count: copies may share a failure d as complete proof without the lesson boun.
-- Keep Replication Topologies and Acknowledgement Boundaries scoped to its stated evidence and bo.
-- Choose the familiar tool before checking whether Promising durability from replica count: copies may share a failure.
+- Approve copies may share a failure domain for Replication Topologies and Acknowledgement Boundaries; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for copies may share a failure domain; the team can monitor Replication Topologies and Acknowledgement Boundaries after launch.
+- Account the M09 scoped measurement and record the limiting assumption before approving the change.
+- Approve the M09 shortcut for harbor now.
 
-**Answer:** Keep Replication Topologies and Acknowledgement Boundaries scoped to its stated evidence and bo.
+**Answer:** Account the M09 scoped measurement and record the limiting assumption before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M09-Q021 and its cited source.
+**Explanation:** M09-Q021 enacts mistake 2 from Replication Topologies and Acknowledgement Boundaries; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M09-Q022
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `synthesis`
 
 **Choices:**
 
-- Make the documented mistake: Serving followers without session policy: latency improves while u. with extra con
-- Treat Serving followers without session policy: latency improves while users as complete proof without the lesson bou.
-- Choose the familiar tool before checking whether Serving followers without session policy: latency improves while use.
-- Keep Replication Topologies and Acknowledgement Boundaries scoped to its stated evidence and bo.
+- Approve latency improves while users for Replication Topologies and Acknowledgement Boundaries; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for latency improves while users; the team can monitor Replication Topologies and Acknowledgement Boundaries after launch.
+- Approve the M09 shortcut for indigo now.
+- Test the M09 scoped measurement before approving the change.
 
-**Answer:** Keep Replication Topologies and Acknowledgement Boundaries scoped to its stated evidence and bo.
+**Answer:** Test the M09 scoped measurement before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M09-Q022 and its cited source.
+**Explanation:** M09-Q022 enacts mistake 3 from Replication Topologies and Acknowledgement Boundaries; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M09-Q023
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `recall`
 
 **Choices:**
 
-- Keep Replication Topologies and Acknowledgement Boundaries scoped to its stated evidence and bo.
-- Choose the familiar tool before checking whether Adding multi-leader for availability without conflict ownership: the.
-- Make the documented mistake: Adding multi-leader for availability without conflict ownership: t. with extra con
-- Treat Adding multi-leader for availability without conflict ownership: the as complete proof without the lesson bound.
+- Scope the M09 scoped measurement before approval.
+- Approve adding multi-leader for availability without conflict ownership:: the for Replication Topologies and Acknowledgement Boundaries; the local context makes that proposal familiar enough for review.
+- Defer measurement until production for adding multi-leader for availability without conflict ownership:: the; the team can monitor Replication Topologies and Acknowledgement Boundaries after launch.
+- Approve the M09 shortcut for juniper now.
 
-**Answer:** Keep Replication Topologies and Acknowledgement Boundaries scoped to its stated evidence and bo.
+**Answer:** Scope the M09 scoped measurement before approval.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M09-Q023 and its cited source.
+**Explanation:** M09-Q023 enacts mistake 4 from Replication Topologies and Acknowledgement Boundaries; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M09-Q024
 
-**Type:** `multiple_choice`  
+**Type:** `multiple_choice`
 **Difficulty:** `application`
 
 **Choices:**
 
-- Treat Treating failover as routing: safe authority change requires coordina as complete proof without the lesson boun.
-- Keep Replication Topologies and Acknowledgement Boundaries scoped to its stated evidence and bo.
-- Choose the familiar tool before checking whether Treating failover as routing: safe authority change requires coordin.
-- Make the documented mistake: Treating failover as routing: safe authority change requires coord. with extra con
+- Approve safe authority change requires coordination for Replication Topologies and Acknowledgement Boundaries; the local context makes that proposal familiar enough for review.
+- Measure the M09 scoped measurement and record the limiting assumption before approving the change.
+- Defer measurement until production for safe authority change requires coordination; the team can monitor Replication Topologies and Acknowledgement Boundaries after launch.
+- Approve the M09 shortcut for keystone now.
 
-**Answer:** Keep Replication Topologies and Acknowledgement Boundaries scoped to its stated evidence and bo.
+**Answer:** Measure the M09 scoped measurement and record the limiting assumption before approving the change.
 
-**Explanation:** The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M09-Q024 and its cited source.
+**Explanation:** M09-Q024 enacts mistake 5 from Replication Topologies and Acknowledgement Boundaries; the defensible response asks for the missing scope evidence before accepting the shortcut.
 
-**Grading notes:** Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list.
+**Grading notes:** Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check.
 
 ## M09-Q025
 
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
+**Type:** `calculation`
+**Difficulty:** `recall`
 
-**Answer:** Original concurrency = 120 x 0.080 = 9.60 operations. Revised rate = 120 x 1.25 = 150.0/s, so revised concurrency = 150.0 x 0.080 = 12.00 operations.
+**Answer:** M09 Repair Bytes case 1: Bytes are 10,000 x 1024 = 10,240,000; that is 9.77 MiB.
 
-**Explanation:** This perturbs the numeric practice around Operation Semantics and Session Guarantees: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M09-Q025 and its cited source.
+**Explanation:** M09-Q025 uses repair bytes from Operation Semantics and Session Guarantees and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M09-Q026
 
-**Type:** `calculation`  
-**Difficulty:** `recall`
+**Type:** `calculation`
+**Difficulty:** `application`
 
-**Answer:** Original concurrency = 130 x 0.040 = 5.20 operations. Revised rate = 130 x 1.30 = 169.0/s, so revised concurrency = 169.0 x 0.040 = 6.76 operations.
+**Answer:** M09 Key Movement case 2: Movement ratio is 2 / 8 = 0.25, or 25%.
 
-**Explanation:** This perturbs the numeric practice around Replication Topologies and Acknowledgement Boundaries: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M09-Q026 and its cited source.
+**Explanation:** M09-Q026 uses key movement from Replication Topologies and Acknowledgement Boundaries and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M09-Q027
 
-**Type:** `calculation`  
-**Difficulty:** `application`
+**Type:** `calculation`
+**Difficulty:** `synthesis`
 
-**Answer:** Original concurrency = 140 x 0.050 = 7.00 operations. Revised rate = 140 x 1.35 = 189.0/s, so revised concurrency = 189.0 x 0.050 = 9.45 operations.
+**Answer:** M09 Copy Time case 3: 200 GiB is 204800 MiB; 204800 / 40 = 5120 seconds, or 1.42 hours.
 
-**Explanation:** This perturbs the numeric practice around Quorums, Intersections, and Hidden Assumptions: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M09-Q027 and its cited source.
+**Explanation:** M09-Q027 uses copy time from Quorums, Intersections, and Hidden Assumptions and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M09-Q028
 
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
+**Type:** `calculation`
+**Difficulty:** `recall`
 
-**Answer:** Original concurrency = 150 x 0.060 = 9.00 operations. Revised rate = 150 x 1.40 = 210.0/s, so revised concurrency = 210.0 x 0.060 = 12.60 operations.
+**Answer:** M09 Skew Ratio case 4: Skew ratio is 120 / 40 = 3.0x.
 
-**Explanation:** This perturbs the numeric practice around Versions, Conflicts, Repair, and Convergence: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M09-Q028 and its cited source.
+**Explanation:** M09-Q028 uses skew ratio from Versions, Conflicts, Repair, and Convergence and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M09-Q029
 
-**Type:** `calculation`  
-**Difficulty:** `recall`
+**Type:** `calculation`
+**Difficulty:** `application`
 
-**Answer:** Original concurrency = 160 x 0.070 = 11.20 operations. Revised rate = 160 x 1.45 = 232.0/s, so revised concurrency = 232.0 x 0.070 = 16.24 operations.
+**Answer:** M09 Serialization case 5: Serialization is 280 KiB x 8 / 900 Kbps = 2.49 seconds, ignoring protocol overhead.
 
-**Explanation:** This perturbs the numeric practice around Partitioning, Consistent Hashing, and Resharding: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M09-Q029 and its cited source.
+**Explanation:** M09-Q029 uses serialization from Partitioning, Consistent Hashing, and Resharding and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M09-Q030
 
-**Type:** `calculation`  
-**Difficulty:** `application`
+**Type:** `calculation`
+**Difficulty:** `synthesis`
 
-**Answer:** Original concurrency = 170 x 0.080 = 13.60 operations. Revised rate = 170 x 1.10 = 187.0/s, so revised concurrency = 187.0 x 0.080 = 14.96 operations.
+**Answer:** M09 Quorum case 6: It can lose 2 replicas and still collect 3 acknowledgements.
 
-**Explanation:** This perturbs the numeric practice around Hot Keys, Skew, Fairness, and Tenant Isolation: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M09-Q030 and its cited source.
+**Explanation:** M09-Q030 uses quorum from Hot Keys, Skew, Fairness, and Tenant Isolation and keeps units visible through the final numeric result.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit.
 
 ## M09-Q031
 
-**Type:** `calculation`  
-**Difficulty:** `synthesis`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `application`
 
-**Answer:** Original concurrency = 180 x 0.040 = 7.20 operations. Revised rate = 180 x 1.15 = 207.0/s, so revised concurrency = 207.0 x 0.040 = 8.28 operations.
+**Answer:** M09 diagnosis 1 identifies fault exposes the predicted invariant failure. The proving fields are acknowledgements.ambiguous and acknowledgements.attempted; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** This perturbs the numeric practice around CAP, PACELC, Regional Placement, Security, and Cost: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M09-Q031 and its cited source.
+**Explanation:** M09-Q031 comes from emitted trial fields rather than fixture identifiers; Operation Semantics and Session Guarantees is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M09-Q032
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `synthesis`
 
-**Answer:** The fixture tests f01-replica-partition-broken (broken), with broken as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f01-replica-partition-broken, rather than the general presence of a lab run.
+**Answer:** M09 diagnosis 2 identifies Replication Topologies and Acknowledgement Boundaries evidence scope. The proving fields are acknowledgements.ambiguous and acknowledgements.attempted; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M09; diagnosis should start from the emitted fields and connect them to Quorums, Intersections, and Hidden Assumptions. This explanation is specific to M09-Q032 and its cited source.
+**Explanation:** M09-Q032 comes from emitted trial fields rather than fixture identifiers; Replication Topologies and Acknowledgement Boundaries is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M09-Q033
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `synthesis`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `recall`
 
-**Answer:** The fixture tests f01-replica-partition-repaired (repaired), with repaired as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f01-replica-partition-repaired, rather than the general presence of a lab run.
+**Answer:** M09 diagnosis 3 identifies fault exposes the predicted invariant failure. The proving fields are acknowledgements.ambiguous and acknowledgements.attempted; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M09; diagnosis should start from the emitted fields and connect them to Versions, Conflicts, Repair, and Convergence. This explanation is specific to M09-Q033 and its cited source.
+**Explanation:** M09-Q033 comes from emitted trial fields rather than fixture identifiers; Quorums, Intersections, and Hidden Assumptions is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M09-Q034
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `recall`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `application`
 
-**Answer:** The fixture tests f02-leader-stopped-broken (broken), with broken as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f02-leader-stopped-broken, rather than the general presence of a lab run.
+**Answer:** M09 diagnosis 4 identifies Versions, Conflicts, Repair, and Convergence evidence scope. The proving fields are acknowledgements.ambiguous and acknowledgements.attempted; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M09; diagnosis should start from the emitted fields and connect them to Partitioning, Consistent Hashing, and Resharding. This explanation is specific to M09-Q034 and its cited source.
+**Explanation:** M09-Q034 comes from emitted trial fields rather than fixture identifiers; Versions, Conflicts, Repair, and Convergence is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M09-Q035
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `application`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `synthesis`
 
-**Answer:** The fixture tests f02-leader-stopped-repaired (repaired), with repaired as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f02-leader-stopped-repaired, rather than the general presence of a lab run.
+**Answer:** M09 diagnosis 5 identifies fault exposes the predicted invariant failure. The proving fields are acknowledgements.ambiguous and acknowledgements.attempted; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M09; diagnosis should start from the emitted fields and connect them to Hot Keys, Skew, Fairness, and Tenant Isolation. This explanation is specific to M09-Q035 and its cited source.
+**Explanation:** M09-Q035 comes from emitted trial fields rather than fixture identifiers; Partitioning, Consistent Hashing, and Resharding is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M09-Q036
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `synthesis`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `recall`
 
-**Answer:** The fixture tests f03-replication-lag-broken (broken), with broken as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f03-replication-lag-broken, rather than the general presence of a lab run.
+**Answer:** M09 diagnosis 6 identifies Hot Keys, Skew, Fairness, and Tenant Isolation evidence scope. The proving fields are acknowledgements.ambiguous and acknowledgements.attempted; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M09; diagnosis should start from the emitted fields and connect them to CAP, PACELC, Regional Placement, Security, and Cost. This explanation is specific to M09-Q036 and its cited source.
+**Explanation:** M09-Q036 comes from emitted trial fields rather than fixture identifiers; Hot Keys, Skew, Fairness, and Tenant Isolation is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M09-Q037
 
-**Type:** `scenario_diagnosis`  
-**Difficulty:** `recall`
+**Type:** `scenario_diagnosis`
+**Difficulty:** `application`
 
-**Answer:** The fixture tests f03-replication-lag-repaired (repaired), with repaired as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f03-replication-lag-repaired, rather than the general presence of a lab run.
+**Answer:** M09 diagnosis 7 identifies blind retry duplicates the logical write after an ambiguous acknowledgement. The proving fields are acknowledgements.ambiguous and acknowledgements.attempted; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The cited fixture is machine-readable source material for M09; diagnosis should start from the emitted fields and connect them to Data-Placement Decisions, Migration, and Ownership. This explanation is specific to M09-Q037 and its cited source.
+**Explanation:** M09-Q037 comes from emitted trial fields rather than fixture identifiers; CAP, PACELC, Regional Placement, Security, and Cost is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M09-Q038
 
-**Type:** `design_judgment`  
+**Type:** `scenario_diagnosis`
 **Difficulty:** `synthesis`
 
-**Answer:** Recommend the option that preserves the Versions, Conflicts, Repair, and Convergence mechanism under the exercise constraints: Write violating histories for controller transfer, operator refresh, public browse, and annotation reply The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** M09 diagnosis 8 identifies Data-Placement Decisions, Migration, and Ownership evidence scope. The proving fields are acknowledgements.ambiguous and acknowledgements.attempted; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M09-Q038 and its cited source.
+**Explanation:** M09-Q038 comes from emitted trial fields rather than fixture identifiers; Data-Placement Decisions, Migration, and Ownership is tested by comparing committed state, applied state, and invariant evidence.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism.
 
 ## M09-Q039
 
-**Type:** `design_judgment`  
+**Type:** `design_judgment`
 **Difficulty:** `recall`
 
-**Answer:** Recommend the option that preserves the Partitioning, Consistent Hashing, and Resharding mechanism under the exercise constraints: Assign a measurable consistency/session contract and explicit failure response to each EX-01 operation. Reject one unnecessarily strong choice. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M09 decision 1, recommend against. The protected bound is 207 x 0.72 = 149.0/s, and the planned 182.2/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 182.2/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 33.2/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M09-Q039 and its cited source.
+**Explanation:** M09-Q039 turns on the forcing number from EX-01, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M09-Q040
 
-**Type:** `design_judgment`  
+**Type:** `design_judgment`
 **Difficulty:** `application`
 
-**Answer:** Recommend the option that preserves the Hot Keys, Skew, Fairness, and Tenant Isolation mechanism under the exercise constraints: Trace one write through acceptance, local persistence, remote receipt, durability, acknowledgement, and follower visibility. Mark every unknown. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M09 decision 2, recommend against. The protected bound is 224 x 0.72 = 161.3/s, and the planned 197.1/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 197.1/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 35.8/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M09-Q040 and its cited source.
+**Explanation:** M09-Q040 turns on the forcing number from EX-02, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M09-Q041
 
-**Type:** `design_judgment`  
+**Type:** `design_judgment`
 **Difficulty:** `synthesis`
 
-**Answer:** Recommend the option that preserves the CAP, PACELC, Regional Placement, Security, and Cost mechanism under the exercise constraints: Compare leader/follower, multi-leader, and leaderless designs for annotations using latency, partition behavior, conflicts, repair, cost, and ownership. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M09 decision 3, recommend against. The protected bound is 241 x 0.72 = 173.5/s, and the planned 212.1/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 212.1/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 38.6/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M09-Q041 and its cited source.
+**Explanation:** M09-Q041 turns on the forcing number from EX-03, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
 
 ## M09-Q042
 
-**Type:** `design_judgment`  
+**Type:** `design_judgment`
 **Difficulty:** `recall`
 
-**Answer:** Recommend the option that preserves the Data-Placement Decisions, Migration, and Ownership mechanism under the exercise constraints: For (N,R,W) values (3,2,2), (5,4,2), and (5,2,3), calculate read/write and write/write intersection separately. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.
+**Answer:** For M09 decision 4, recommend against. The protected bound is 258 x 0.72 = 185.8/s, and the planned 227.0/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 227.0/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 41.2/s of lower-priority work.
 
-**Explanation:** The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M09-Q042 and its cited source.
+**Explanation:** M09-Q042 turns on the forcing number from EX-04, not preference; the reversal conditions are specific to the measured gap in this prompt.
 
-**Grading notes:** Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition.
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.
+
+## M09-Q043
+
+**Type:** `design_judgment`
+**Difficulty:** `application`
+
+**Answer:** For M09 decision 5, recommend against. The protected bound is 275 x 0.72 = 198.0/s, and the planned 242.0/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 242.0/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 44.0/s of lower-priority work.
+
+**Explanation:** M09-Q043 turns on the forcing number from EX-05, not preference; the reversal conditions are specific to the measured gap in this prompt.
+
+**Grading notes:** Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence.

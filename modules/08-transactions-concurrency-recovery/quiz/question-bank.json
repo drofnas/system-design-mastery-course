@@ -10,16 +10,16 @@
         "L01"
       ],
       "type": "short_answer",
-      "difficulty": "recall",
+      "difficulty": "synthesis",
       "tags": [
         "transactions-concurrency-and-recovery",
         "invariants-and-transaction-boundaries",
         "src:L01-selfcheck-1"
       ],
-      "prompt": "Use the cited source to answer L01 (Invariants and Transaction Boundaries): Why is “the rows are consistent” not an invariant?",
-      "correct_answer": "It has no falsifiable condition or named authority. 2. The constraint is evaluated at the commit/write boundary against concurrent database state; pre-checks can become stale. 3. Coupling it enlarges contention and recovery scope while adding no authoritative correctness if it can be reconstructed",
-      "explanation": "The cited self-check in L01 tests whether the learner can connect Invariants and Transaction Boundaries to the module mechanism without replacing evidence with labels. This explanation is specific to M08-Q001 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "Why is “the rows are consistent” not an invariant?",
+      "correct_answer": "It has no falsifiable condition or named authority. 2. The constraint is evaluated at the commit/write boundary against concurrent database state; pre-checks can become stale. 3. Coupling it enlarges contention and recovery scope while adding no authoritative correctness if it can be reconstructed.",
+      "explanation": "M08-Q001 uses self-check 1 from Invariants and Transaction Boundaries; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M08-Q002",
@@ -34,10 +34,10 @@
         "invariants-and-transaction-boundaries",
         "src:L01-selfcheck-2"
       ],
-      "prompt": "Explain the mechanism behind L01 (Invariants and Transaction Boundaries): When is a schema constraint stronger than an application pre-check?",
-      "correct_answer": "Map an invariant to authority, writers, a minimal atomic boundary, an enforcement point, and a falsifiable proof. Distinguish database consistency from application correctness",
-      "explanation": "The cited self-check in L01 tests whether the learner can connect Invariants and Transaction Boundaries to the module mechanism without replacing evidence with labels. This explanation is specific to M08-Q002 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "When is a schema constraint stronger than an application pre-check?",
+      "correct_answer": "M08 L01 answer: preserve the Invariants and Transaction Boundaries mechanism and its evidence scope.",
+      "explanation": "M08-Q002 uses self-check 2 from Invariants and Transaction Boundaries; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M08-Q003",
@@ -46,16 +46,16 @@
         "L01"
       ],
       "type": "short_answer",
-      "difficulty": "synthesis",
+      "difficulty": "recall",
       "tags": [
         "transactions-concurrency-and-recovery",
         "invariants-and-transaction-boundaries",
         "src:L01-selfcheck-3"
       ],
-      "prompt": "Name the evidence needed for L01 (Invariants and Transaction Boundaries): Why should a rebuildable summary usually remain outside the authoritative transaction?",
-      "correct_answer": "Map an invariant to authority, writers, a minimal atomic boundary, an enforcement point, and a falsifiable proof. Distinguish database consistency from application correctness",
-      "explanation": "The cited self-check in L01 tests whether the learner can connect Invariants and Transaction Boundaries to the module mechanism without replacing evidence with labels. This explanation is specific to M08-Q003 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "Why should a rebuildable summary usually remain outside the authoritative transaction?",
+      "correct_answer": "M08 L01 answer: preserve the Invariants and Transaction Boundaries mechanism and its evidence scope.",
+      "explanation": "M08-Q003 uses self-check 3 from Invariants and Transaction Boundaries; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M08-Q004",
@@ -64,16 +64,16 @@
         "L02"
       ],
       "type": "short_answer",
-      "difficulty": "recall",
+      "difficulty": "synthesis",
       "tags": [
         "transactions-concurrency-and-recovery",
-        "histories-serializability-and-isolation-",
+        "histories-serializability-and-isolation-anomalie",
         "src:L02-selfcheck-1"
       ],
-      "prompt": "Diagnose the boundary issue in L02 (Histories, Serializability, and Isolation Anomalies): Can a history contain no dirty reads and still violate an invariant?",
-      "correct_answer": "Yes; write skew uses committed snapshots. 2. Lost update overwrites the same logical value; write skew uses disjoint writes whose combined effect violates a predicate. 3. Roll back and retry the entire transaction from fresh state, subject to bounded eligibility and deadline rules",
-      "explanation": "The cited self-check in L02 tests whether the learner can connect Histories, Serializability, and Isolation Anomalies to the module mechanism without replacing evidence with labels. This explanation is specific to M08-Q004 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "Can a history contain no dirty reads and still violate an invariant?",
+      "correct_answer": "Yes; write skew uses committed snapshots. 2. Lost update overwrites the same logical value; write skew uses disjoint writes whose combined effect violates a predicate. 3. Roll back and retry the entire transaction from fresh state, subject to bounded eligibility and deadline rules.",
+      "explanation": "M08-Q004 uses self-check 1 from Histories, Serializability, and Isolation Anomalies; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M08-Q005",
@@ -85,13 +85,13 @@
       "difficulty": "application",
       "tags": [
         "transactions-concurrency-and-recovery",
-        "histories-serializability-and-isolation-",
+        "histories-serializability-and-isolation-anomalie",
         "src:L02-selfcheck-2"
       ],
-      "prompt": "State the causal reason for L02 (Histories, Serializability, and Isolation Anomalies): What distinguishes lost update from write skew?",
-      "correct_answer": "Read a history, construct dependencies, identify lost update and write skew, and select an isolation claim per operation rather than per product",
-      "explanation": "The cited self-check in L02 tests whether the learner can connect Histories, Serializability, and Isolation Anomalies to the module mechanism without replacing evidence with labels. This explanation is specific to M08-Q005 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "What distinguishes lost update from write skew?",
+      "correct_answer": "M08 L02 answer: preserve the Histories, Serializability, and Isolation Anomalies mechanism and its evidence scope.",
+      "explanation": "M08-Q005 uses self-check 2 from Histories, Serializability, and Isolation Anomalies; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M08-Q006",
@@ -100,16 +100,16 @@
         "L02"
       ],
       "type": "short_answer",
-      "difficulty": "synthesis",
+      "difficulty": "recall",
       "tags": [
         "transactions-concurrency-and-recovery",
-        "histories-serializability-and-isolation-",
+        "histories-serializability-and-isolation-anomalie",
         "src:L02-selfcheck-3"
       ],
-      "prompt": "Identify the assumption behind L02 (Histories, Serializability, and Isolation Anomalies): What must happen after a serialization failure?",
-      "correct_answer": "Read a history, construct dependencies, identify lost update and write skew, and select an isolation claim per operation rather than per product",
-      "explanation": "The cited self-check in L02 tests whether the learner can connect Histories, Serializability, and Isolation Anomalies to the module mechanism without replacing evidence with labels. This explanation is specific to M08-Q006 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "What must happen after a serialization failure?",
+      "correct_answer": "M08 L02 answer: preserve the Histories, Serializability, and Isolation Anomalies mechanism and its evidence scope.",
+      "explanation": "M08-Q006 uses self-check 3 from Histories, Serializability, and Isolation Anomalies; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M08-Q007",
@@ -118,16 +118,16 @@
         "L03"
       ],
       "type": "short_answer",
-      "difficulty": "recall",
+      "difficulty": "synthesis",
       "tags": [
         "transactions-concurrency-and-recovery",
-        "locks-two-phase-locking-deadlocks-and-re",
+        "locks-two-phase-locking-deadlocks-and-retries",
         "src:L03-selfcheck-1"
       ],
-      "prompt": "Connect the lesson claim to L03 (Locks, Two-Phase Locking, Deadlocks, and Retries): Why does canonical order reduce but not eliminate deadlocks?",
-      "correct_answer": "Other code paths, database internals, and lock upgrades can introduce new orders. 2. The whole transaction, snapshot, locks, authorization decision, and deadline-derived work. 3. A concurrent row may appear after the check; a constraint or protected predicate decides against commit-time state",
-      "explanation": "The cited self-check in L03 tests whether the learner can connect Locks, Two-Phase Locking, Deadlocks, and Retries to the module mechanism without replacing evidence with labels. This explanation is specific to M08-Q007 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "Why does canonical order reduce but not eliminate deadlocks?",
+      "correct_answer": "Other code paths, database internals, and lock upgrades can introduce new orders. 2. The whole transaction, snapshot, locks, authorization decision, and deadline-derived work. 3. A concurrent row may appear after the check; a constraint or protected predicate decides against commit-time state.",
+      "explanation": "M08-Q007 uses self-check 1 from Locks, Two-Phase Locking, Deadlocks, and Retries; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M08-Q008",
@@ -139,13 +139,13 @@
       "difficulty": "application",
       "tags": [
         "transactions-concurrency-and-recovery",
-        "locks-two-phase-locking-deadlocks-and-re",
+        "locks-two-phase-locking-deadlocks-and-retries",
         "src:L03-selfcheck-2"
       ],
-      "prompt": "Resolve the self-check about L03 (Locks, Two-Phase Locking, Deadlocks, and Retries): What state must be reset before retry?",
-      "correct_answer": "Derive lock compatibility and wait-for graphs, explain strict 2PL, recover from deadlock, and implement bounded whole-transaction retry",
-      "explanation": "The cited self-check in L03 tests whether the learner can connect Locks, Two-Phase Locking, Deadlocks, and Retries to the module mechanism without replacing evidence with labels. This explanation is specific to M08-Q008 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "What state must be reset before retry?",
+      "correct_answer": "M08 L03 answer: preserve the Locks, Two-Phase Locking, Deadlocks, and Retries mechanism and its evidence scope.",
+      "explanation": "M08-Q008 uses self-check 2 from Locks, Two-Phase Locking, Deadlocks, and Retries; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M08-Q009",
@@ -154,16 +154,16 @@
         "L03"
       ],
       "type": "short_answer",
-      "difficulty": "synthesis",
+      "difficulty": "recall",
       "tags": [
         "transactions-concurrency-and-recovery",
-        "locks-two-phase-locking-deadlocks-and-re",
+        "locks-two-phase-locking-deadlocks-and-retries",
         "src:L03-selfcheck-3"
       ],
-      "prompt": "Summarize the tradeoff in L03 (Locks, Two-Phase Locking, Deadlocks, and Retries): Why can a “check then insert” need predicate or uniqueness protection?",
-      "correct_answer": "Derive lock compatibility and wait-for graphs, explain strict 2PL, recover from deadlock, and implement bounded whole-transaction retry",
-      "explanation": "The cited self-check in L03 tests whether the learner can connect Locks, Two-Phase Locking, Deadlocks, and Retries to the module mechanism without replacing evidence with labels. This explanation is specific to M08-Q009 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "Why can a “check then insert” need predicate or uniqueness protection?",
+      "correct_answer": "M08 L03 answer: preserve the Locks, Two-Phase Locking, Deadlocks, and Retries mechanism and its evidence scope.",
+      "explanation": "M08-Q009 uses self-check 3 from Locks, Two-Phase Locking, Deadlocks, and Retries; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M08-Q010",
@@ -172,16 +172,16 @@
         "L04"
       ],
       "type": "short_answer",
-      "difficulty": "recall",
+      "difficulty": "synthesis",
       "tags": [
         "transactions-concurrency-and-recovery",
-        "optimistic-control-mvcc-snapshots-and-wr",
+        "optimistic-control-mvcc-snapshots-and-write-skew",
         "src:L04-selfcheck-1"
       ],
-      "prompt": "Defend the conclusion for L04 (Optimistic Control, MVCC, Snapshots, and Write Skew): Why can two non-overlapping writes still conflict logically?",
-      "correct_answer": "They can jointly falsify a predicate read by both transactions. 2. Work is discarded after reads/computation, then repeated under continued contention",
-      "explanation": "The cited self-check in L04 tests whether the learner can connect Optimistic Control, MVCC, Snapshots, and Write Skew to the module mechanism without replacing evidence with labels. This explanation is specific to M08-Q010 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "Why can two non-overlapping writes still conflict logically?",
+      "correct_answer": "They can jointly falsify a predicate read by both transactions. 2. Work is discarded after reads/computation, then repeated under continued contention.",
+      "explanation": "M08-Q010 uses self-check 1 from Optimistic Control, MVCC, Snapshots, and Write Skew; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M08-Q011",
@@ -193,61 +193,49 @@
       "difficulty": "application",
       "tags": [
         "transactions-concurrency-and-recovery",
-        "optimistic-control-mvcc-snapshots-and-wr",
+        "optimistic-control-mvcc-snapshots-and-write-skew",
         "src:L04-selfcheck-2"
       ],
-      "prompt": "Challenge the claim in L04 (Optimistic Control, MVCC, Snapshots, and Write Skew): What makes an OCC retry expensive?",
-      "correct_answer": "Oldest active snapshot/version-retention age and retained bytes, paired with cleanup lag and transaction age",
-      "explanation": "The cited self-check in L04 tests whether the learner can connect Optimistic Control, MVCC, Snapshots, and Write Skew to the module mechanism without replacing evidence with labels. This explanation is specific to M08-Q011 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "What makes an OCC retry expensive?",
+      "correct_answer": "Oldest active snapshot/version-retention age and retained bytes, paired with cleanup lag and transaction age.",
+      "explanation": "M08-Q011 uses self-check 2 from Optimistic Control, MVCC, Snapshots, and Write Skew; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M08-Q012",
       "module_id": "M08",
       "lesson_ids": [
-        "L01"
+        "L04"
       ],
-      "type": "multiple_choice",
-      "difficulty": "application",
+      "type": "short_answer",
+      "difficulty": "recall",
       "tags": [
         "transactions-concurrency-and-recovery",
-        "invariants-and-transaction-boundaries",
-        "src:L01-mistake-1"
+        "optimistic-control-mvcc-snapshots-and-write-skew",
+        "src:L04-selfcheck-3"
       ],
-      "prompt": "For L01 (Invariants and Transaction Boundaries), which choice best avoids the cited mistake: Calling a transaction “ACID” without naming the admitted histories.?",
-      "choices": [
-        "Keep Invariants and Transaction Boundaries scoped to its stated evidence and boundary.",
-        "Make the documented mistake: Calling a transaction “ACID” without naming the admitted histories",
-        "Choose the familiar tool before checking whether Calling a transaction “ACID” without naming the admitted histories a.",
-        "Treat Calling a transaction “ACID” without naming the admitted histories as complete proof without the lesson boundary"
-      ],
-      "correct_answer": "Keep Invariants and Transaction Boundaries scoped to its stated evidence and boundary.",
-      "explanation": "The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M08-Q012 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "prompt": "Which metric reveals snapshot retention pressure?",
+      "correct_answer": "M08 L04 answer: preserve the Optimistic Control, MVCC, Snapshots, and Write Skew mechanism and its evidence scope.",
+      "explanation": "M08-Q012 uses self-check 3 from Optimistic Control, MVCC, Snapshots, and Write Skew; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M08-Q013",
       "module_id": "M08",
       "lesson_ids": [
-        "L01"
+        "L05"
       ],
-      "type": "multiple_choice",
+      "type": "short_answer",
       "difficulty": "synthesis",
       "tags": [
         "transactions-concurrency-and-recovery",
-        "invariants-and-transaction-boundaries",
-        "src:L01-mistake-2"
+        "constraints-authority-and-atomic-workflows",
+        "src:L05-selfcheck-1"
       ],
-      "prompt": "For L01 (Invariants and Transaction Boundaries), which choice best avoids the cited mistake: Putting network calls inside a transaction and assuming atomicity crosses the?",
-      "choices": [
-        "Make the documented mistake: Putting network calls inside a transaction and assuming atomicity",
-        "Keep Invariants and Transaction Boundaries scoped to its stated evidence and boundary.",
-        "Choose the familiar tool before checking whether Putting network calls inside a transaction and assuming atomicity cr.",
-        "Treat Putting network calls inside a transaction and assuming atomicity cro as complete proof without the lesson boun."
-      ],
-      "correct_answer": "Keep Invariants and Transaction Boundaries scoped to its stated evidence and boundary.",
-      "explanation": "The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M08-Q013 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "prompt": "Why is application validation still useful if a constraint exists?",
+      "correct_answer": "It improves authorization and feedback, while the constraint remains the concurrency-safe final guard. 2. No; it creates a durable intent and a retriable/reconcilable workflow. 3. Authority identity/version or LSN, rebuild rule, and freshness/validity state.",
+      "explanation": "M08-Q013 uses self-check 1 from Constraints, Authority, and Atomic Workflows; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M08-Q014",
@@ -260,18 +248,18 @@
       "tags": [
         "transactions-concurrency-and-recovery",
         "invariants-and-transaction-boundaries",
-        "src:L01-mistake-3"
+        "src:L01-mistake-1"
       ],
-      "prompt": "For L01 (Invariants and Transaction Boundaries), which choice best avoids the cited mistake: Treating a cache or summary as authority because it is convenient to query.?",
+      "prompt": "A design review for Invariants and Transaction Boundaries includes this proposal: calling a transaction “ACID” without naming the admitted histories. Which response best protects the mechanism?",
       "choices": [
-        "Make the documented mistake: Treating a cache or summary as authority because it is convenient",
-        "Choose the familiar tool before checking whether Treating a cache or summary as authority because it is convenient to.",
-        "Keep Invariants and Transaction Boundaries scoped to its stated evidence and boundary.",
-        "Treat Treating a cache or summary as authority because it is convenient to as complete proof without the lesson bound."
+        "Calculate the M08 scoped measurement and record the limiting assumption before approving the change.",
+        "Approve calling a transaction “ACID” without naming the admitted histories for Invariants and Transaction Boundaries; the local context makes that proposal familiar enough for review.",
+        "Defer measurement until production for calling a transaction “ACID” without naming the admitted histories; the team can monitor Invariants and Transaction Boundaries after launch.",
+        "Approve the M08 shortcut for alpha now."
       ],
-      "correct_answer": "Keep Invariants and Transaction Boundaries scoped to its stated evidence and boundary.",
-      "explanation": "The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M08-Q014 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Calculate the M08 scoped measurement and record the limiting assumption before approving the change.",
+      "explanation": "M08-Q014 enacts mistake 1 from Invariants and Transaction Boundaries; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M08-Q015",
@@ -284,66 +272,66 @@
       "tags": [
         "transactions-concurrency-and-recovery",
         "invariants-and-transaction-boundaries",
-        "src:L01-mistake-4"
+        "src:L01-mistake-2"
       ],
-      "prompt": "For L01 (Invariants and Transaction Boundaries), which choice best avoids the cited mistake: Widening every boundary “for safety,” increasing lock duration and recovery?",
+      "prompt": "During an incident review about Invariants and Transaction Boundaries, the team wants to proceed this way: putting network calls inside a transaction and assuming atomicity crosses the. What should the reviewer say?",
       "choices": [
-        "Make the documented mistake: Widening every boundary “for safety,” increasing lock duration and",
-        "Treat Widening every boundary “for safety,” increasing lock duration and re as complete proof without the lesson boun.",
-        "Choose the familiar tool before checking whether Widening every boundary “for safety,” increasing lock duration and r.",
-        "Keep Invariants and Transaction Boundaries scoped to its stated evidence and boundary."
+        "Approve putting network calls inside a transaction and assuming atomicity crosses the for Invariants and Transaction Boundaries; the local context makes that proposal familiar enough for review.",
+        "Draw the M08 scoped measurement before approving the change.",
+        "Defer measurement until production for putting network calls inside a transaction and assuming atomicity crosses the; the team can monitor Invariants and Transaction Boundaries after launch.",
+        "Approve the M08 shortcut for bravo now."
       ],
-      "correct_answer": "Keep Invariants and Transaction Boundaries scoped to its stated evidence and boundary.",
-      "explanation": "The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M08-Q015 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Draw the M08 scoped measurement before approving the change.",
+      "explanation": "M08-Q015 enacts mistake 2 from Invariants and Transaction Boundaries; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M08-Q016",
       "module_id": "M08",
       "lesson_ids": [
-        "L02"
+        "L01"
       ],
       "type": "multiple_choice",
       "difficulty": "synthesis",
       "tags": [
         "transactions-concurrency-and-recovery",
-        "histories-serializability-and-isolation-",
-        "src:L02-mistake-1"
+        "invariants-and-transaction-boundaries",
+        "src:L01-mistake-3"
       ],
-      "prompt": "For L02 (Histories, Serializability, and Isolation Anomalies), which choice best avoids the cited mistake: Listing ANSI anomaly names without drawing the violating schedule.?",
+      "prompt": "A learner applies Invariants and Transaction Boundaries and chooses this shortcut: treating a cache or summary as authority because it is convenient to query. Which correction is most defensible?",
       "choices": [
-        "Keep Histories, Serializability, and Isolation Anomalies scoped to its stated evidence and boun.",
-        "Make the documented mistake: Listing ANSI anomaly names without drawing the violating schedule. with extra conf",
-        "Treat Listing ANSI anomaly names without drawing the violating schedule as complete proof without the lesson boundary",
-        "Choose the familiar tool before checking whether Listing ANSI anomaly names without drawing the violating schedule ap."
+        "Approve treating a cache or summary as authority because it is convenient to query for Invariants and Transaction Boundaries; the local context makes that proposal familiar enough for review.",
+        "Defer measurement until production for treating a cache or summary as authority because it is convenient to query; the team can monitor Invariants and Transaction Boundaries after launch.",
+        "Separate the M08 scoped measurement before approval.",
+        "Approve the M08 shortcut for charlie now."
       ],
-      "correct_answer": "Keep Histories, Serializability, and Isolation Anomalies scoped to its stated evidence and boun.",
-      "explanation": "The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M08-Q016 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Separate the M08 scoped measurement before approval.",
+      "explanation": "M08-Q016 enacts mistake 3 from Invariants and Transaction Boundaries; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M08-Q017",
       "module_id": "M08",
       "lesson_ids": [
-        "L02"
+        "L01"
       ],
       "type": "multiple_choice",
       "difficulty": "recall",
       "tags": [
         "transactions-concurrency-and-recovery",
-        "histories-serializability-and-isolation-",
-        "src:L02-mistake-2"
+        "invariants-and-transaction-boundaries",
+        "src:L01-mistake-4"
       ],
-      "prompt": "For L02 (Histories, Serializability, and Isolation Anomalies), which choice best avoids the cited mistake: Assuming repeatable read or snapshot means serializable in every database.?",
+      "prompt": "A migration note for Invariants and Transaction Boundaries relies on this claim: widening every boundary “for safety,” increasing lock duration and recovery. Which option keeps the evidence scope intact?",
       "choices": [
-        "Treat Assuming repeatable read or snapshot means serializable in every data as complete proof without the lesson boun.",
-        "Keep Histories, Serializability, and Isolation Anomalies scoped to its stated evidence and boun.",
-        "Choose the familiar tool before checking whether Assuming repeatable read or snapshot means serializable in every dat.",
-        "Make the documented mistake: Assuming repeatable read or snapshot means serializable in every d. with extra con"
+        "Approve widening every boundary “for safety,” increasing lock duration and recovery for Invariants and Transaction Boundaries; the local context makes that proposal familiar enough for review.",
+        "Defer measurement until production for widening every boundary “for safety,” increasing lock duration and recovery; the team can monitor Invariants and Transaction Boundaries after launch.",
+        "Approve the M08 shortcut for delta now.",
+        "Verify the M08 scoped measurement and record the limiting assumption before approving the change."
       ],
-      "correct_answer": "Keep Histories, Serializability, and Isolation Anomalies scoped to its stated evidence and boun.",
-      "explanation": "The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M08-Q017 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Verify the M08 scoped measurement and record the limiting assumption before approving the change.",
+      "explanation": "M08-Q017 enacts mistake 4 from Invariants and Transaction Boundaries; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M08-Q018",
@@ -355,19 +343,19 @@
       "difficulty": "application",
       "tags": [
         "transactions-concurrency-and-recovery",
-        "histories-serializability-and-isolation-",
-        "src:L02-mistake-3"
+        "histories-serializability-and-isolation-anomalie",
+        "src:L02-mistake-1"
       ],
-      "prompt": "For L02 (Histories, Serializability, and Isolation Anomalies), which choice best avoids the cited mistake: Retrying only the failed statement after the transaction snapshot is invalid.?",
+      "prompt": "A capacity memo touches Histories, Serializability, and Isolation Anomalies and argues: listing ANSI anomaly names without drawing the violating schedule. Which response is the strongest engineering objection?",
       "choices": [
-        "Choose the familiar tool before checking whether Retrying only the failed statement after the transaction snapshot is.",
-        "Make the documented mistake: Retrying only the failed statement after the transaction snapshot. with extra conf",
-        "Keep Histories, Serializability, and Isolation Anomalies scoped to its stated evidence and boun.",
-        "Treat Retrying only the failed statement after the transaction snapshot is as complete proof without the lesson bound."
+        "Compare the M08 scoped measurement before approving the change.",
+        "Approve listing ANSI anomaly names without drawing the violating schedule for Histories, Serializability, and Isolation Anomalies; the local context makes that proposal familiar enough for review.",
+        "Defer measurement until production for listing ANSI anomaly names without drawing the violating schedule; the team can monitor Histories, Serializability, and Isolation Anomalies after launch.",
+        "Approve the M08 shortcut for ember now."
       ],
-      "correct_answer": "Keep Histories, Serializability, and Isolation Anomalies scoped to its stated evidence and boun.",
-      "explanation": "The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M08-Q018 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Compare the M08 scoped measurement before approving the change.",
+      "explanation": "M08-Q018 enacts mistake 1 from Histories, Serializability, and Isolation Anomalies; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M08-Q019",
@@ -379,37 +367,43 @@
       "difficulty": "synthesis",
       "tags": [
         "transactions-concurrency-and-recovery",
-        "histories-serializability-and-isolation-",
-        "src:L02-mistake-4"
+        "histories-serializability-and-isolation-anomalie",
+        "src:L02-mistake-2"
       ],
-      "prompt": "For L02 (Histories, Serializability, and Isolation Anomalies), which choice best avoids the cited mistake: Raising isolation globally without measuring abort and latency costs.?",
+      "prompt": "A design review for Histories, Serializability, and Isolation Anomalies includes this proposal: assuming repeatable read or snapshot means serializable in every database. Which response best protects the mechanism?",
       "choices": [
-        "Choose the familiar tool before checking whether Raising isolation globally without measuring abort and latency costs.",
-        "Make the documented mistake: Raising isolation globally without measuring abort and latency cos. with extra con",
-        "Treat Raising isolation globally without measuring abort and latency costs as complete proof without the lesson bound.",
-        "Keep Histories, Serializability, and Isolation Anomalies scoped to its stated evidence and boun."
+        "Approve assuming repeatable read or snapshot means serializable in every database for Histories, Serializability, and Isolation Anomalies; the local context makes that proposal familiar enough for review.",
+        "Reject the M08 scoped measurement before approval.",
+        "Defer measurement until production for assuming repeatable read or snapshot means serializable in every database; the team can monitor Histories, Serializability, and Isolation Anomalies after launch.",
+        "Approve the M08 shortcut for fable now."
       ],
-      "correct_answer": "Keep Histories, Serializability, and Isolation Anomalies scoped to its stated evidence and boun.",
-      "explanation": "The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M08-Q019 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Reject the M08 scoped measurement before approval.",
+      "explanation": "M08-Q019 enacts mistake 2 from Histories, Serializability, and Isolation Anomalies; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M08-Q020",
       "module_id": "M08",
       "lesson_ids": [
-        "L01"
+        "L02"
       ],
-      "type": "calculation",
-      "difficulty": "synthesis",
+      "type": "multiple_choice",
+      "difficulty": "recall",
       "tags": [
         "transactions-concurrency-and-recovery",
-        "invariants-and-transaction-boundaries",
-        "src:L01-worked"
+        "histories-serializability-and-isolation-anomalie",
+        "src:L02-mistake-3"
       ],
-      "prompt": "While applying L01 (Invariants and Transaction Boundaries), a system handles 200 operations/s with 75 ms of scoped work per operation. If the rate rises by 25% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
-      "correct_answer": "Original concurrency = 200 x 0.075 = 15.00 operations. Revised rate = 200 x 1.25 = 250.0/s, so revised concurrency = 250.0 x 0.075 = 18.75 operations.",
-      "explanation": "This perturbs the numeric practice around Invariants and Transaction Boundaries: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M08-Q020 and its cited source.",
-      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
+      "prompt": "During an incident review about Histories, Serializability, and Isolation Anomalies, the team wants to proceed this way: retrying only the failed statement after the transaction snapshot is invalid. What should the reviewer say?",
+      "choices": [
+        "Approve retrying only the failed statement after the transaction snapshot is invalid for Histories, Serializability, and Isolation Anomalies; the local context makes that proposal familiar enough for review.",
+        "Defer measurement until production for retrying only the failed statement after the transaction snapshot is invalid; the team can monitor Histories, Serializability, and Isolation Anomalies after launch.",
+        "Trace the M08 scoped measurement and record the limiting assumption before approving the change.",
+        "Approve the M08 shortcut for harbor now."
+      ],
+      "correct_answer": "Trace the M08 scoped measurement and record the limiting assumption before approving the change.",
+      "explanation": "M08-Q020 enacts mistake 3 from Histories, Serializability, and Isolation Anomalies; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M08-Q021",
@@ -417,107 +411,113 @@
       "lesson_ids": [
         "L02"
       ],
-      "type": "calculation",
-      "difficulty": "recall",
+      "type": "multiple_choice",
+      "difficulty": "application",
       "tags": [
         "transactions-concurrency-and-recovery",
-        "histories-serializability-and-isolation-",
-        "src:L02-worked"
+        "histories-serializability-and-isolation-anomalie",
+        "src:L02-mistake-4"
       ],
-      "prompt": "While applying L02 (Histories, Serializability, and Isolation Anomalies), a system handles 120 operations/s with 35 ms of scoped work per operation. If the rate rises by 30% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
-      "correct_answer": "Original concurrency = 120 x 0.035 = 4.20 operations. Revised rate = 120 x 1.30 = 156.0/s, so revised concurrency = 156.0 x 0.035 = 5.46 operations.",
-      "explanation": "This perturbs the numeric practice around Histories, Serializability, and Isolation Anomalies: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M08-Q021 and its cited source.",
-      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
+      "prompt": "A learner applies Histories, Serializability, and Isolation Anomalies and chooses this shortcut: raising isolation globally without measuring abort and latency costs. Which correction is most defensible?",
+      "choices": [
+        "Approve raising isolation globally without measuring abort and latency costs for Histories, Serializability, and Isolation Anomalies; the local context makes that proposal familiar enough for review.",
+        "Defer measurement until production for raising isolation globally without measuring abort and latency costs; the team can monitor Histories, Serializability, and Isolation Anomalies after launch.",
+        "Approve the M08 shortcut for indigo now.",
+        "Require the M08 scoped measurement before approving the change."
+      ],
+      "correct_answer": "Require the M08 scoped measurement before approving the change.",
+      "explanation": "M08-Q021 enacts mistake 4 from Histories, Serializability, and Isolation Anomalies; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M08-Q022",
       "module_id": "M08",
       "lesson_ids": [
-        "L03"
-      ],
-      "type": "calculation",
-      "difficulty": "application",
-      "tags": [
-        "transactions-concurrency-and-recovery",
-        "locks-two-phase-locking-deadlocks-and-re",
-        "src:L03-worked"
-      ],
-      "prompt": "While applying L03 (Locks, Two-Phase Locking, Deadlocks, and Retries), a system handles 130 operations/s with 45 ms of scoped work per operation. If the rate rises by 35% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
-      "correct_answer": "Original concurrency = 130 x 0.045 = 5.85 operations. Revised rate = 130 x 1.35 = 175.5/s, so revised concurrency = 175.5 x 0.045 = 7.90 operations.",
-      "explanation": "This perturbs the numeric practice around Locks, Two-Phase Locking, Deadlocks, and Retries: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M08-Q022 and its cited source.",
-      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
-    },
-    {
-      "question_id": "M08-Q023",
-      "module_id": "M08",
-      "lesson_ids": [
-        "L04"
-      ],
-      "type": "calculation",
-      "difficulty": "synthesis",
-      "tags": [
-        "transactions-concurrency-and-recovery",
-        "optimistic-control-mvcc-snapshots-and-wr",
-        "src:L04-worked"
-      ],
-      "prompt": "While applying L04 (Optimistic Control, MVCC, Snapshots, and Write Skew), a system handles 140 operations/s with 55 ms of scoped work per operation. If the rate rises by 40% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
-      "correct_answer": "Original concurrency = 140 x 0.055 = 7.70 operations. Revised rate = 140 x 1.40 = 196.0/s, so revised concurrency = 196.0 x 0.055 = 10.78 operations.",
-      "explanation": "This perturbs the numeric practice around Optimistic Control, MVCC, Snapshots, and Write Skew: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M08-Q023 and its cited source.",
-      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
-    },
-    {
-      "question_id": "M08-Q024",
-      "module_id": "M08",
-      "lesson_ids": [
-        "L05"
+        "L01"
       ],
       "type": "calculation",
       "difficulty": "recall",
       "tags": [
         "transactions-concurrency-and-recovery",
-        "constraints-authority-and-atomic-workflo",
-        "src:L05-worked"
+        "rpo",
+        "src:L01-worked"
       ],
-      "prompt": "While applying L05 (Constraints, Authority, and Atomic Workflows), a system handles 150 operations/s with 65 ms of scoped work per operation. If the rate rises by 45% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
-      "correct_answer": "Original concurrency = 150 x 0.065 = 9.75 operations. Revised rate = 150 x 1.45 = 217.5/s, so revised concurrency = 217.5 x 0.065 = 14.14 operations.",
-      "explanation": "This perturbs the numeric practice around Constraints, Authority, and Atomic Workflows: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M08-Q024 and its cited source.",
-      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
+      "prompt": "Alpha case in Transactions, Concurrency, and Recovery: A restore has a base snapshot 20 minutes old and the last 7 minutes of WAL are available. What data-loss window remains?",
+      "correct_answer": "M08 Rpo case 1: Observable RPO is 20 - 7 = 13 minutes if the missing middle cannot be replayed.",
+      "explanation": "M08-Q022 uses RPO from Invariants and Transaction Boundaries and keeps units visible through the final numeric result.",
+      "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
     {
-      "question_id": "M08-Q025",
+      "question_id": "M08-Q023",
       "module_id": "M08",
       "lesson_ids": [
-        "L06"
+        "L02"
       ],
       "type": "calculation",
       "difficulty": "application",
       "tags": [
         "transactions-concurrency-and-recovery",
-        "wal-checkpoints-redo-undo-and-group-comm",
-        "src:L06-worked"
+        "rpo",
+        "src:L02-worked"
       ],
-      "prompt": "While applying L06 (WAL, Checkpoints, Redo/Undo, and Group Commit), a system handles 160 operations/s with 75 ms of scoped work per operation. If the rate rises by 10% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
-      "correct_answer": "Original concurrency = 160 x 0.075 = 12.00 operations. Revised rate = 160 x 1.10 = 176.0/s, so revised concurrency = 176.0 x 0.075 = 13.20 operations.",
-      "explanation": "This perturbs the numeric practice around WAL, Checkpoints, Redo/Undo, and Group Commit: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M08-Q025 and its cited source.",
-      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
+      "prompt": "Bravo case in Transactions, Concurrency, and Recovery: A restore has a base snapshot 20 minutes old and the last 7 minutes of WAL are available. What data-loss window remains?",
+      "correct_answer": "M08 Rpo case 2: Observable RPO is 20 - 7 = 13 minutes if the missing middle cannot be replayed.",
+      "explanation": "M08-Q023 uses RPO from Histories, Serializability, and Isolation Anomalies and keeps units visible through the final numeric result.",
+      "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
     {
-      "question_id": "M08-Q026",
+      "question_id": "M08-Q024",
       "module_id": "M08",
       "lesson_ids": [
-        "L07"
+        "L03"
       ],
       "type": "calculation",
       "difficulty": "synthesis",
       "tags": [
         "transactions-concurrency-and-recovery",
-        "backups-pitr-restore-validation-and-obje",
-        "src:L07-worked"
+        "recovery-state-enumeration",
+        "src:L03-worked"
       ],
-      "prompt": "While applying L07 (Backups, PITR, Restore Validation, and Objectives), a system handles 170 operations/s with 35 ms of scoped work per operation. If the rate rises by 15% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
-      "correct_answer": "Original concurrency = 170 x 0.035 = 5.95 operations. Revised rate = 170 x 1.15 = 195.5/s, so revised concurrency = 195.5 x 0.035 = 6.84 operations.",
-      "explanation": "This perturbs the numeric practice around Backups, PITR, Restore Validation, and Objectives: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M08-Q026 and its cited source.",
-      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
+      "prompt": "Charlie case in Transactions, Concurrency, and Recovery: A crash analysis tracks 4 authoritative states across 3 crash points. How many state cases are enumerated?",
+      "correct_answer": "M08 Recovery State Enumeration case 3: The enumeration has 4 x 3 = 12 state cases.",
+      "explanation": "M08-Q024 uses recovery state enumeration from Locks, Two-Phase Locking, Deadlocks, and Retries and keeps units visible through the final numeric result.",
+      "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
+    },
+    {
+      "question_id": "M08-Q025",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L01"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "application",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "invariants-and-transaction-boundaries",
+        "src:fixture-f01-lost-update-broken"
+      ],
+      "prompt": "A lab trial for Invariants and Transaction Boundaries reports:\n\n  initial_state.completed_exposures = 0\n  invariants.0.value = 2\n  control.atomic_workflow = 1\n  control.flush_before_ack = 1\n  control.validate_restore = 1\n  control.rebuild_derived = 1\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M08 diagnosis 1 identifies Invariants and Transaction Boundaries evidence scope. The proving fields are initial_state.completed_exposures and invariants.0.value; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M08-Q025 comes from emitted trial fields rather than fixture identifiers; Invariants and Transaction Boundaries is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
+    },
+    {
+      "question_id": "M08-Q026",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "scenario_diagnosis",
+      "difficulty": "synthesis",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "histories-serializability-and-isolation-anomalie",
+        "src:fixture-f01-lost-update-repaired"
+      ],
+      "prompt": "A lab trial for Histories, Serializability, and Isolation Anomalies reports:\n\n  initial_state.completed_exposures = 0\n  invariants.0.value = 2\n  control.atomic_workflow = 1\n  control.flush_before_ack = 1\n  control.validate_restore = 1\n  control.rebuild_derived = 1\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M08 diagnosis 2 identifies Histories, Serializability, and Isolation Anomalies evidence scope. The proving fields are initial_state.completed_exposures and invariants.0.value; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M08-Q026 comes from emitted trial fields rather than fixture identifiers; Histories, Serializability, and Isolation Anomalies is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M08-Q027",
@@ -526,16 +526,16 @@
         "L03"
       ],
       "type": "scenario_diagnosis",
-      "difficulty": "application",
+      "difficulty": "recall",
       "tags": [
         "transactions-concurrency-and-recovery",
-        "locks-two-phase-locking-deadlocks-and-re",
-        "src:fixture-f01-lost-update-broken"
+        "locks-two-phase-locking-deadlocks-and-retries",
+        "src:fixture-f02-write-skew-broken"
       ],
-      "prompt": "A M08 lab fixture related to Locks, Two-Phase Locking, Deadlocks, and Retries exposes this trimmed evidence:\n\n  scenario_id=f01-lost-update-broken\n  pair_id=F01\n  variant=broken\n  seed=8001\n  initial_state.completed_exposures=0\n  control.isolation=unsafe\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
-      "correct_answer": "The fixture tests f01-lost-update-broken (broken), with broken as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f01-lost-update-broken, rather than the general presence of a lab run.",
-      "explanation": "The cited fixture is machine-readable source material for M08; diagnosis should start from the emitted fields and connect them to Locks, Two-Phase Locking, Deadlocks, and Retries. This explanation is specific to M08-Q027 and its cited source.",
-      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
+      "prompt": "A lab trial for Locks, Two-Phase Locking, Deadlocks, and Retries reports:\n\n  initial_state.certified_controllers = 2\n  invariants.0.value = 1\n  control.atomic_workflow = 1\n  control.flush_before_ack = 1\n  control.validate_restore = 1\n  control.rebuild_derived = 1\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M08 diagnosis 3 identifies Locks, Two-Phase Locking, Deadlocks, and Retries evidence scope. The proving fields are initial_state.certified_controllers and invariants.0.value; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M08-Q027 comes from emitted trial fields rather than fixture identifiers; Locks, Two-Phase Locking, Deadlocks, and Retries is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M08-Q028",
@@ -544,16 +544,16 @@
         "L04"
       ],
       "type": "scenario_diagnosis",
-      "difficulty": "synthesis",
+      "difficulty": "application",
       "tags": [
         "transactions-concurrency-and-recovery",
-        "optimistic-control-mvcc-snapshots-and-wr",
-        "src:fixture-f01-lost-update-repaired"
+        "optimistic-control-mvcc-snapshots-and-write-skew",
+        "src:fixture-f02-write-skew-repaired"
       ],
-      "prompt": "A M08 lab fixture related to Optimistic Control, MVCC, Snapshots, and Write Skew exposes this trimmed evidence:\n\n  scenario_id=f01-lost-update-repaired\n  pair_id=F01\n  variant=repaired\n  seed=8001\n  initial_state.completed_exposures=0\n  control.isolation=strict_2pl\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
-      "correct_answer": "The fixture tests f01-lost-update-repaired (repaired), with repaired as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f01-lost-update-repaired, rather than the general presence of a lab run.",
-      "explanation": "The cited fixture is machine-readable source material for M08; diagnosis should start from the emitted fields and connect them to Optimistic Control, MVCC, Snapshots, and Write Skew. This explanation is specific to M08-Q028 and its cited source.",
-      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
+      "prompt": "A lab trial for Optimistic Control, MVCC, Snapshots, and Write Skew reports:\n\n  initial_state.certified_controllers = 2\n  invariants.0.value = 1\n  control.atomic_workflow = 1\n  control.flush_before_ack = 1\n  control.validate_restore = 1\n  control.rebuild_derived = 1\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M08 diagnosis 4 identifies Optimistic Control, MVCC, Snapshots, and Write Skew evidence scope. The proving fields are initial_state.certified_controllers and invariants.0.value; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M08-Q028 comes from emitted trial fields rather than fixture identifiers; Optimistic Control, MVCC, Snapshots, and Write Skew is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M08-Q029",
@@ -562,16 +562,16 @@
         "L05"
       ],
       "type": "scenario_diagnosis",
-      "difficulty": "recall",
+      "difficulty": "synthesis",
       "tags": [
         "transactions-concurrency-and-recovery",
-        "constraints-authority-and-atomic-workflo",
-        "src:fixture-f02-write-skew-broken"
+        "constraints-authority-and-atomic-workflows",
+        "src:fixture-f03-deadlock-broken"
       ],
-      "prompt": "A M08 lab fixture related to Constraints, Authority, and Atomic Workflows exposes this trimmed evidence:\n\n  scenario_id=f02-write-skew-broken\n  pair_id=F02\n  variant=broken\n  seed=8002\n  initial_state.certified_controllers=2\n  control.isolation=snapshot\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
-      "correct_answer": "The fixture tests f02-write-skew-broken (broken), with broken as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f02-write-skew-broken, rather than the general presence of a lab run.",
-      "explanation": "The cited fixture is machine-readable source material for M08; diagnosis should start from the emitted fields and connect them to Constraints, Authority, and Atomic Workflows. This explanation is specific to M08-Q029 and its cited source.",
-      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
+      "prompt": "A lab trial for Constraints, Authority, and Atomic Workflows reports:\n\n  initial_state.completed_transfers = 0\n  invariants.0.value = 2\n  control.atomic_workflow = 1\n  control.flush_before_ack = 1\n  control.validate_restore = 1\n  control.rebuild_derived = 1\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M08 diagnosis 5 identifies Constraints, Authority, and Atomic Workflows evidence scope. The proving fields are initial_state.completed_transfers and invariants.0.value; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M08-Q029 comes from emitted trial fields rather than fixture identifiers; Constraints, Authority, and Atomic Workflows is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M08-Q030",
@@ -580,16 +580,16 @@
         "L06"
       ],
       "type": "scenario_diagnosis",
-      "difficulty": "application",
+      "difficulty": "recall",
       "tags": [
         "transactions-concurrency-and-recovery",
-        "wal-checkpoints-redo-undo-and-group-comm",
-        "src:fixture-f02-write-skew-repaired"
+        "wal-checkpoints-redo-undo-and-group-commit",
+        "src:fixture-f03-deadlock-repaired"
       ],
-      "prompt": "A M08 lab fixture related to WAL, Checkpoints, Redo/Undo, and Group Commit exposes this trimmed evidence:\n\n  scenario_id=f02-write-skew-repaired\n  pair_id=F02\n  variant=repaired\n  seed=8002\n  initial_state.certified_controllers=2\n  control.isolation=serializable\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
-      "correct_answer": "The fixture tests f02-write-skew-repaired (repaired), with repaired as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f02-write-skew-repaired, rather than the general presence of a lab run.",
-      "explanation": "The cited fixture is machine-readable source material for M08; diagnosis should start from the emitted fields and connect them to WAL, Checkpoints, Redo/Undo, and Group Commit. This explanation is specific to M08-Q030 and its cited source.",
-      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
+      "prompt": "A lab trial for WAL, Checkpoints, Redo/Undo, and Group Commit reports:\n\n  initial_state.completed_transfers = 0\n  invariants.0.value = 2\n  control.atomic_workflow = 1\n  control.flush_before_ack = 1\n  control.validate_restore = 1\n  control.rebuild_derived = 1\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M08 diagnosis 6 identifies WAL, Checkpoints, Redo/Undo, and Group Commit evidence scope. The proving fields are initial_state.completed_transfers and invariants.0.value; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M08-Q030 comes from emitted trial fields rather than fixture identifiers; WAL, Checkpoints, Redo/Undo, and Group Commit is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M08-Q031",
@@ -598,16 +598,16 @@
         "L07"
       ],
       "type": "scenario_diagnosis",
-      "difficulty": "synthesis",
+      "difficulty": "application",
       "tags": [
         "transactions-concurrency-and-recovery",
-        "backups-pitr-restore-validation-and-obje",
-        "src:fixture-f03-deadlock-broken"
+        "backups-pitr-restore-validation-and-objectives",
+        "src:fixture-f04-process-termination-broken"
       ],
-      "prompt": "A M08 lab fixture related to Backups, PITR, Restore Validation, and Objectives exposes this trimmed evidence:\n\n  scenario_id=f03-deadlock-broken\n  pair_id=F03\n  variant=broken\n  seed=8003\n  initial_state.completed_transfers=0\n  control.isolation=strict_2pl\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
-      "correct_answer": "The fixture tests f03-deadlock-broken (broken), with broken as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f03-deadlock-broken, rather than the general presence of a lab run.",
-      "explanation": "The cited fixture is machine-readable source material for M08; diagnosis should start from the emitted fields and connect them to Backups, PITR, Restore Validation, and Objectives. This explanation is specific to M08-Q031 and its cited source.",
-      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
+      "prompt": "A lab trial for Backups, PITR, Restore Validation, and Objectives reports:\n\n  initial_state.durable_exposure = 0\n  invariants.0.value = 1\n  transactions.0.writes.durable_exposure = 1\n  control.atomic_workflow = 1\n  control.flush_before_ack = 0\n  control.validate_restore = 1\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M08 diagnosis 7 identifies Backups, PITR, Restore Validation, and Objectives evidence scope. The proving fields are initial_state.durable_exposure and invariants.0.value; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M08-Q031 comes from emitted trial fields rather than fixture identifiers; Backups, PITR, Restore Validation, and Objectives is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M08-Q032",
@@ -616,106 +616,106 @@
         "L08"
       ],
       "type": "scenario_diagnosis",
-      "difficulty": "recall",
+      "difficulty": "synthesis",
       "tags": [
         "transactions-concurrency-and-recovery",
         "transaction-and-recovery-decisions",
-        "src:fixture-f03-deadlock-repaired"
+        "src:fixture-f04-process-termination-repaired"
       ],
-      "prompt": "A M08 lab fixture related to Transaction and Recovery Decisions exposes this trimmed evidence:\n\n  scenario_id=f03-deadlock-repaired\n  pair_id=F03\n  variant=repaired\n  seed=8003\n  initial_state.completed_transfers=0\n  control.isolation=strict_2pl\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
-      "correct_answer": "The fixture tests f03-deadlock-repaired (repaired), with repaired as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f03-deadlock-repaired, rather than the general presence of a lab run.",
-      "explanation": "The cited fixture is machine-readable source material for M08; diagnosis should start from the emitted fields and connect them to Transaction and Recovery Decisions. This explanation is specific to M08-Q032 and its cited source.",
-      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
+      "prompt": "A lab trial for Transaction and Recovery Decisions reports:\n\n  initial_state.durable_exposure = 0\n  invariants.0.value = 1\n  transactions.0.writes.durable_exposure = 1\n  control.atomic_workflow = 1\n  control.flush_before_ack = 1\n  control.validate_restore = 1\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M08 diagnosis 8 identifies Transaction and Recovery Decisions evidence scope. The proving fields are initial_state.durable_exposure and invariants.0.value; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M08-Q032 comes from emitted trial fields rather than fixture identifiers; Transaction and Recovery Decisions is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M08-Q033",
       "module_id": "M08",
       "lesson_ids": [
-        "L04"
+        "L01"
       ],
       "type": "design_judgment",
-      "difficulty": "synthesis",
+      "difficulty": "recall",
       "tags": [
         "transactions-concurrency-and-recovery",
-        "optimistic-control-mvcc-snapshots-and-wr",
+        "invariants-and-transaction-boundaries",
         "src:EX-01"
       ],
-      "prompt": "Atlas decision: In EX-01 (Invariant enforcement map), you must choose a course of action for Transactions, Concurrency, and Recovery. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
-      "correct_answer": "Recommend the option that preserves the Optimistic Control, MVCC, Snapshots, and Write Skew mechanism under the exercise constraints: Map N-01–N-06 to authority, writers, boundary, constraint, oracle, and owner. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
-      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M08-Q033 and its cited source.",
-      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
+      "prompt": "In EX-01 (Invariant enforcement map), a proposal for Invariants and Transaction Boundaries has measured capacity 204/s, a protected operating bound of 72%, and planned steady demand of 179.5/s. State the recommendation, the number that forces it, and what would change your mind.",
+      "correct_answer": "For M08 decision 1, recommend against. The protected bound is 204 x 0.72 = 146.9/s, and the planned 179.5/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 179.5/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 32.6/s of lower-priority work.",
+      "explanation": "M08-Q033 turns on the forcing number from EX-01, not preference; the reversal conditions are specific to the measured gap in this prompt.",
+      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
     },
     {
       "question_id": "M08-Q034",
       "module_id": "M08",
       "lesson_ids": [
-        "L05"
-      ],
-      "type": "design_judgment",
-      "difficulty": "recall",
-      "tags": [
-        "transactions-concurrency-and-recovery",
-        "constraints-authority-and-atomic-workflo",
-        "src:EX-02"
-      ],
-      "prompt": "Beacon decision: In EX-02 (Minimal transaction boundary), you must choose a course of action for Transactions, Concurrency, and Recovery. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
-      "correct_answer": "Recommend the option that preserves the Constraints, Authority, and Atomic Workflows mechanism under the exercise constraints: Classify result, audit, summary, notification, and telescope command as authoritative, derived, or external; draw commit and repair boundaries. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
-      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M08-Q034 and its cited source.",
-      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
-    },
-    {
-      "question_id": "M08-Q035",
-      "module_id": "M08",
-      "lesson_ids": [
-        "L06"
+        "L02"
       ],
       "type": "design_judgment",
       "difficulty": "application",
       "tags": [
         "transactions-concurrency-and-recovery",
-        "wal-checkpoints-redo-undo-and-group-comm",
-        "src:EX-03"
+        "histories-serializability-and-isolation-anomalie",
+        "src:EX-02"
       ],
-      "prompt": "Cedar decision: In EX-03 (Lost-update history), you must choose a course of action for Transactions, Concurrency, and Recovery. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
-      "correct_answer": "Recommend the option that preserves the WAL, Checkpoints, Redo/Undo, and Group Commit mechanism under the exercise constraints: Write F01 as ordered reads/writes/commits, calculate expected and observed counts, and identify the dependency that makes one update disappear. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
-      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M08-Q035 and its cited source.",
-      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
+      "prompt": "In EX-02 (Minimal transaction boundary), a proposal for Histories, Serializability, and Isolation Anomalies has measured capacity 221/s, a protected operating bound of 72%, and planned steady demand of 194.5/s. State the recommendation, the number that forces it, and what would change your mind.",
+      "correct_answer": "For M08 decision 2, recommend against. The protected bound is 221 x 0.72 = 159.1/s, and the planned 194.5/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 194.5/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 35.4/s of lower-priority work.",
+      "explanation": "M08-Q034 turns on the forcing number from EX-02, not preference; the reversal conditions are specific to the measured gap in this prompt.",
+      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
     },
     {
-      "question_id": "M08-Q036",
+      "question_id": "M08-Q035",
       "module_id": "M08",
       "lesson_ids": [
-        "L07"
+        "L03"
       ],
       "type": "design_judgment",
       "difficulty": "synthesis",
       "tags": [
         "transactions-concurrency-and-recovery",
-        "backups-pitr-restore-validation-and-obje",
-        "src:EX-04"
+        "locks-two-phase-locking-deadlocks-and-retries",
+        "src:EX-03"
       ],
-      "prompt": "Delta decision: In EX-04 (Write-skew graph), you must choose a course of action for Transactions, Concurrency, and Recovery. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
-      "correct_answer": "Recommend the option that preserves the Backups, PITR, Restore Validation, and Objectives mechanism under the exercise constraints: Draw F02 snapshots and serialization edges. Explain why same-row write-conflict detection is insufficient and compare two repairs. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
-      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M08-Q036 and its cited source.",
-      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
+      "prompt": "In EX-03 (Lost-update history), a proposal for Locks, Two-Phase Locking, Deadlocks, and Retries has measured capacity 238/s, a protected operating bound of 72%, and planned steady demand of 209.4/s. State the recommendation, the number that forces it, and what would change your mind.",
+      "correct_answer": "For M08 decision 3, recommend against. The protected bound is 238 x 0.72 = 171.4/s, and the planned 209.4/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 209.4/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 38.0/s of lower-priority work.",
+      "explanation": "M08-Q035 turns on the forcing number from EX-03, not preference; the reversal conditions are specific to the measured gap in this prompt.",
+      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
     },
     {
-      "question_id": "M08-Q037",
+      "question_id": "M08-Q036",
       "module_id": "M08",
       "lesson_ids": [
-        "L08"
+        "L04"
       ],
       "type": "design_judgment",
       "difficulty": "recall",
       "tags": [
         "transactions-concurrency-and-recovery",
-        "transaction-and-recovery-decisions",
+        "optimistic-control-mvcc-snapshots-and-write-skew",
+        "src:EX-04"
+      ],
+      "prompt": "In EX-04 (Write-skew graph), a proposal for Optimistic Control, MVCC, Snapshots, and Write Skew has measured capacity 255/s, a protected operating bound of 72%, and planned steady demand of 224.4/s. State the recommendation, the number that forces it, and what would change your mind.",
+      "correct_answer": "For M08 decision 4, recommend against. The protected bound is 255 x 0.72 = 183.6/s, and the planned 224.4/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 224.4/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 40.8/s of lower-priority work.",
+      "explanation": "M08-Q036 turns on the forcing number from EX-04, not preference; the reversal conditions are specific to the measured gap in this prompt.",
+      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
+    },
+    {
+      "question_id": "M08-Q037",
+      "module_id": "M08",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "application",
+      "tags": [
+        "transactions-concurrency-and-recovery",
+        "constraints-authority-and-atomic-workflows",
         "src:EX-05"
       ],
-      "prompt": "Ember decision: In EX-05 (Lock compatibility), you must choose a course of action for Transactions, Concurrency, and Recovery. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
-      "correct_answer": "Recommend the option that preserves the Transaction and Recovery Decisions mechanism under the exercise constraints: Create a compatibility table for shared, exclusive, and update-intent locks; apply it to an exclusive telescope window. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
-      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M08-Q037 and its cited source.",
-      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
+      "prompt": "In EX-05 (Lock compatibility), a proposal for Constraints, Authority, and Atomic Workflows has measured capacity 272/s, a protected operating bound of 72%, and planned steady demand of 239.4/s. State the recommendation, the number that forces it, and what would change your mind.",
+      "correct_answer": "For M08 decision 5, recommend against. The protected bound is 272 x 0.72 = 195.8/s, and the planned 239.4/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 239.4/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 43.6/s of lower-priority work.",
+      "explanation": "M08-Q037 turns on the forcing number from EX-05, not preference; the reversal conditions are specific to the measured gap in this prompt.",
+      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
     }
   ]
 }

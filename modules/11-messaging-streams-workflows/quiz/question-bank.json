@@ -10,16 +10,16 @@
         "L01"
       ],
       "type": "short_answer",
-      "difficulty": "recall",
+      "difficulty": "synthesis",
       "tags": [
         "messaging-streams-and-workflows",
         "authority-events-queues-logs-and-streams",
         "src:L01-selfcheck-1"
       ],
-      "prompt": "Use the cited source to answer L01 (Authority, Events, Queues, Logs, and Streams): Can two stores both be authoritative for the same fact without a conflict rule?",
-      "correct_answer": "Not safely; concurrent disagreement needs a named resolution authority and may violate invariants while unresolved",
-      "explanation": "The cited self-check in L01 tests whether the learner can connect Authority, Events, Queues, Logs, and Streams to the module mechanism without replacing evidence with labels. This explanation is specific to M11-Q001 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "Can two stores both be authoritative for the same fact without a conflict rule?",
+      "correct_answer": "Not safely; concurrent disagreement needs a named resolution authority and may violate invariants while unresolved.",
+      "explanation": "M11-Q001 uses self-check 1 from Authority, Events, Queues, Logs, and Streams; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M11-Q002",
@@ -34,10 +34,10 @@
         "authority-events-queues-logs-and-streams",
         "src:L01-selfcheck-2"
       ],
-      "prompt": "Explain the mechanism behind L01 (Authority, Events, Queues, Logs, and Streams): Does retaining a message make it an event?",
-      "correct_answer": "No. An event is a domain claim with authority and identity; retention is a transport property",
-      "explanation": "The cited self-check in L01 tests whether the learner can connect Authority, Events, Queues, Logs, and Streams to the module mechanism without replacing evidence with labels. This explanation is specific to M11-Q002 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "Does retaining a message make it an event?",
+      "correct_answer": "No. An event is a domain claim with authority and identity; retention is a transport property.",
+      "explanation": "M11-Q002 uses self-check 2 from Authority, Events, Queues, Logs, and Streams; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M11-Q003",
@@ -46,16 +46,16 @@
         "L01"
       ],
       "type": "short_answer",
-      "difficulty": "synthesis",
+      "difficulty": "recall",
       "tags": [
         "messaging-streams-and-workflows",
         "authority-events-queues-logs-and-streams",
         "src:L01-selfcheck-3"
       ],
-      "prompt": "Name the evidence needed for L01 (Authority, Events, Queues, Logs, and Streams): What evidence proves a derived view can be rebuilt?",
-      "correct_answer": "A tested procedure starting from authoritative identities/versions, with comparison oracles and bounded repair, not a diagram label",
-      "explanation": "The cited self-check in L01 tests whether the learner can connect Authority, Events, Queues, Logs, and Streams to the module mechanism without replacing evidence with labels. This explanation is specific to M11-Q003 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "What evidence proves a derived view can be rebuilt?",
+      "correct_answer": "A tested procedure starting from authoritative identities/versions, with comparison oracles and bounded repair, not a diagram label.",
+      "explanation": "M11-Q003 uses self-check 3 from Authority, Events, Queues, Logs, and Streams; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M11-Q004",
@@ -64,16 +64,16 @@
         "L02"
       ],
       "type": "short_answer",
-      "difficulty": "recall",
+      "difficulty": "synthesis",
       "tags": [
         "messaging-streams-and-workflows",
-        "delivery-semantics-identities-and-exactl",
+        "delivery-semantics-identities-and-exactly-once-b",
         "src:L02-selfcheck-1"
       ],
-      "prompt": "Diagnose the boundary issue in L02 (Delivery Semantics, Identities, and Exactly-Once Boundaries): Why can at-least-once delivery be safer than at-most-once?",
-      "correct_answer": "It avoids silent loss when retry plus idempotency is available; it does not make duplicates harmless by itself",
-      "explanation": "The cited self-check in L02 tests whether the learner can connect Delivery Semantics, Identities, and Exactly-Once Boundaries to the module mechanism without replacing evidence with labels. This explanation is specific to M11-Q004 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "Why can at-least-once delivery be safer than at-most-once?",
+      "correct_answer": "It avoids silent loss when retry plus idempotency is available; it does not make duplicates harmless by itself.",
+      "explanation": "M11-Q004 uses self-check 1 from Delivery Semantics, Identities, and Exactly-Once Boundaries; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M11-Q005",
@@ -85,13 +85,13 @@
       "difficulty": "application",
       "tags": [
         "messaging-streams-and-workflows",
-        "delivery-semantics-identities-and-exactl",
+        "delivery-semantics-identities-and-exactly-once-b",
         "src:L02-selfcheck-2"
       ],
-      "prompt": "State the causal reason for L02 (Delivery Semantics, Identities, and Exactly-Once Boundaries): When is an inbox insufficient?",
-      "correct_answer": "When an effect occurs outside the inbox transaction or dedupe retention is shorter than replay/retry exposure",
-      "explanation": "The cited self-check in L02 tests whether the learner can connect Delivery Semantics, Identities, and Exactly-Once Boundaries to the module mechanism without replacing evidence with labels. This explanation is specific to M11-Q005 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "When is an inbox insufficient?",
+      "correct_answer": "When an effect occurs outside the inbox transaction or dedupe retention is shorter than replay/retry exposure.",
+      "explanation": "M11-Q005 uses self-check 2 from Delivery Semantics, Identities, and Exactly-Once Boundaries; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M11-Q006",
@@ -100,16 +100,16 @@
         "L02"
       ],
       "type": "short_answer",
-      "difficulty": "synthesis",
+      "difficulty": "recall",
       "tags": [
         "messaging-streams-and-workflows",
-        "delivery-semantics-identities-and-exactl",
+        "delivery-semantics-identities-and-exactly-once-b",
         "src:L02-selfcheck-3"
       ],
-      "prompt": "Identify the assumption behind L02 (Delivery Semantics, Identities, and Exactly-Once Boundaries): Can a unique constraint prove an external effect occurred?",
-      "correct_answer": "No. It proves only local uniqueness; the effect owner needs a stable key, receipt, or reconciliation query",
-      "explanation": "The cited self-check in L02 tests whether the learner can connect Delivery Semantics, Identities, and Exactly-Once Boundaries to the module mechanism without replacing evidence with labels. This explanation is specific to M11-Q006 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "Can a unique constraint prove an external effect occurred?",
+      "correct_answer": "No. It proves only local uniqueness; the effect owner needs a stable key, receipt, or reconciliation query.",
+      "explanation": "M11-Q006 uses self-check 3 from Delivery Semantics, Identities, and Exactly-Once Boundaries; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M11-Q007",
@@ -118,16 +118,16 @@
         "L03"
       ],
       "type": "short_answer",
-      "difficulty": "recall",
+      "difficulty": "synthesis",
       "tags": [
         "messaging-streams-and-workflows",
-        "ordering-partition-keys-and-consumer-gro",
+        "ordering-partition-keys-and-consumer-groups",
         "src:L03-selfcheck-1"
       ],
-      "prompt": "Connect the lesson claim to L03 (Ordering, Partition Keys, and Consumer Groups): Do more consumers always reduce lag?",
-      "correct_answer": "No. Consumers beyond partition count are idle; a hot partition or shared dependency remains the bottleneck",
-      "explanation": "The cited self-check in L03 tests whether the learner can connect Ordering, Partition Keys, and Consumer Groups to the module mechanism without replacing evidence with labels. This explanation is specific to M11-Q007 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "Do more consumers always reduce lag?",
+      "correct_answer": "No. Consumers beyond partition count are idle; a hot partition or shared dependency remains the bottleneck.",
+      "explanation": "M11-Q007 uses self-check 1 from Ordering, Partition Keys, and Consumer Groups; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M11-Q008",
@@ -139,13 +139,13 @@
       "difficulty": "application",
       "tags": [
         "messaging-streams-and-workflows",
-        "ordering-partition-keys-and-consumer-gro",
+        "ordering-partition-keys-and-consumer-groups",
         "src:L03-selfcheck-2"
       ],
-      "prompt": "Resolve the self-check about L03 (Ordering, Partition Keys, and Consumer Groups): Does one partition guarantee business causality?",
-      "correct_answer": "It gives a log order under its producer contract, not proof of causal or authoritative order from every source",
-      "explanation": "The cited self-check in L03 tests whether the learner can connect Ordering, Partition Keys, and Consumer Groups to the module mechanism without replacing evidence with labels. This explanation is specific to M11-Q008 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "Does one partition guarantee business causality?",
+      "correct_answer": "It gives a log order under its producer contract, not proof of causal or authoritative order from every source.",
+      "explanation": "M11-Q008 uses self-check 2 from Ordering, Partition Keys, and Consumer Groups; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M11-Q009",
@@ -154,16 +154,16 @@
         "L03"
       ],
       "type": "short_answer",
-      "difficulty": "synthesis",
+      "difficulty": "recall",
       "tags": [
         "messaging-streams-and-workflows",
-        "ordering-partition-keys-and-consumer-gro",
+        "ordering-partition-keys-and-consumer-groups",
         "src:L03-selfcheck-3"
       ],
-      "prompt": "Summarize the tradeoff in L03 (Ordering, Partition Keys, and Consumer Groups): When may a consumer skip a stale version?",
-      "correct_answer": "Only under a published version/repair contract that preserves required transitions and records the skip; otherwise it may hide missing state",
-      "explanation": "The cited self-check in L03 tests whether the learner can connect Ordering, Partition Keys, and Consumer Groups to the module mechanism without replacing evidence with labels. This explanation is specific to M11-Q009 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "When may a consumer skip a stale version?",
+      "correct_answer": "Only under a published version/repair contract that preserves required transitions and records the skip; otherwise it may hide missing state.",
+      "explanation": "M11-Q009 uses self-check 3 from Ordering, Partition Keys, and Consumer Groups; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M11-Q010",
@@ -172,16 +172,16 @@
         "L04"
       ],
       "type": "short_answer",
-      "difficulty": "recall",
+      "difficulty": "synthesis",
       "tags": [
         "messaging-streams-and-workflows",
-        "transactional-outbox-inbox-and-change-da",
+        "transactional-outbox-inbox-and-change-data-captu",
         "src:L04-selfcheck-1"
       ],
-      "prompt": "Defend the conclusion for L04 (Transactional Outbox, Inbox, and Change Data Capture): Does an outbox prevent duplicate publication?",
-      "correct_answer": "No. It prevents the fact/publication-intent gap; publication remains retryable and potentially duplicated",
-      "explanation": "The cited self-check in L04 tests whether the learner can connect Transactional Outbox, Inbox, and Change Data Capture to the module mechanism without replacing evidence with labels. This explanation is specific to M11-Q010 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "Does an outbox prevent duplicate publication?",
+      "correct_answer": "No. It prevents the fact/publication-intent gap; publication remains retryable and potentially duplicated.",
+      "explanation": "M11-Q010 uses self-check 1 from Transactional Outbox, Inbox, and Change Data Capture; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M11-Q011",
@@ -193,37 +193,31 @@
       "difficulty": "application",
       "tags": [
         "messaging-streams-and-workflows",
-        "transactional-outbox-inbox-and-change-da",
+        "transactional-outbox-inbox-and-change-data-captu",
         "src:L04-selfcheck-2"
       ],
-      "prompt": "Challenge the claim in L04 (Transactional Outbox, Inbox, and Change Data Capture): Which crash does the inbox repair?",
-      "correct_answer": "Redelivery after local commit but before broker acknowledgement, provided the inbox and local effect committed together",
-      "explanation": "The cited self-check in L04 tests whether the learner can connect Transactional Outbox, Inbox, and Change Data Capture to the module mechanism without replacing evidence with labels. This explanation is specific to M11-Q011 and its cited source.",
-      "grading_notes": "Full credit requires the concrete mechanism and the boundary or evidence named in the cited lesson. Partial credit is appropriate when the answer has the right vocabulary but misses the causal condition."
+      "prompt": "Which crash does the inbox repair?",
+      "correct_answer": "Redelivery after local commit but before broker acknowledgement, provided the inbox and local effect committed together.",
+      "explanation": "M11-Q011 uses self-check 2 from Transactional Outbox, Inbox, and Change Data Capture; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M11-Q012",
       "module_id": "M11",
       "lesson_ids": [
-        "L01"
+        "L04"
       ],
-      "type": "multiple_choice",
-      "difficulty": "application",
+      "type": "short_answer",
+      "difficulty": "recall",
       "tags": [
         "messaging-streams-and-workflows",
-        "authority-events-queues-logs-and-streams",
-        "src:L01-mistake-1"
+        "transactional-outbox-inbox-and-change-data-captu",
+        "src:L04-selfcheck-3"
       ],
-      "prompt": "For L01 (Authority, Events, Queues, Logs, and Streams), which choice best avoids the cited mistake: Treat the log as authority: it may omit a CDC change or retain an obsolete?",
-      "choices": [
-        "Keep Authority, Events, Queues, Logs, and Streams scoped to its stated evidence and boundary.",
-        "Choose the familiar tool before checking whether Treat the log as authority: it may omit a CDC change or retain an ob.",
-        "Make the documented mistake: Treat the log as authority: it may omit a CDC change or retain an",
-        "Treat Treat the log as authority: it may omit a CDC change or retain an obs as complete proof without the lesson boun."
-      ],
-      "correct_answer": "Keep Authority, Events, Queues, Logs, and Streams scoped to its stated evidence and boundary.",
-      "explanation": "The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M11-Q012 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "prompt": "What makes a CDC checkpoint meaningful?",
+      "correct_answer": "It resolves to a database commit position with compatible schema/snapshot state and enough retained log to resume.",
+      "explanation": "M11-Q012 uses self-check 3 from Transactional Outbox, Inbox, and Change Data Capture; the answer ties the mechanism to the cited evidence scope rather than a label.",
+      "grading_notes": "Full credit requires the causal mechanism and the boundary or evidence named in the lesson; partial credit can preserve the idea with weaker specificity."
     },
     {
       "question_id": "M11-Q013",
@@ -236,18 +230,18 @@
       "tags": [
         "messaging-streams-and-workflows",
         "authority-events-queues-logs-and-streams",
-        "src:L01-mistake-2"
+        "src:L01-mistake-1"
       ],
-      "prompt": "For L01 (Authority, Events, Queues, Logs, and Streams), which choice best avoids the cited mistake: Publish intent as fact: SendBulletinRequested is not evidence that a?",
+      "prompt": "A design review for Authority, Events, Queues, Logs, and Streams includes this proposal: it may omit a CDC change or retain an obsolete. Which response best protects the mechanism?",
       "choices": [
-        "Treat Publish intent as fact: SendBulletinRequested is not evidence that a as complete proof without the lesson bound.",
-        "Keep Authority, Events, Queues, Logs, and Streams scoped to its stated evidence and boundary.",
-        "Make the documented mistake: Publish intent as fact: SendBulletinRequested is not evidence that",
-        "Choose the familiar tool before checking whether Publish intent as fact: SendBulletinRequested is not evidence that a."
+        "Test the M11 scoped measurement and record the limiting assumption before approving the change.",
+        "Approve it may omit a CDC change or retain an obsolete for Authority, Events, Queues, Logs, and Streams; the local context makes that proposal familiar enough for review.",
+        "Defer measurement until production for it may omit a CDC change or retain an obsolete; the team can monitor Authority, Events, Queues, Logs, and Streams after launch.",
+        "Approve the M11 shortcut for alpha now."
       ],
-      "correct_answer": "Keep Authority, Events, Queues, Logs, and Streams scoped to its stated evidence and boundary.",
-      "explanation": "The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M11-Q013 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Test the M11 scoped measurement and record the limiting assumption before approving the change.",
+      "explanation": "M11-Q013 enacts mistake 1 from Authority, Events, Queues, Logs, and Streams; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M11-Q014",
@@ -260,18 +254,18 @@
       "tags": [
         "messaging-streams-and-workflows",
         "authority-events-queues-logs-and-streams",
-        "src:L01-mistake-3"
+        "src:L01-mistake-2"
       ],
-      "prompt": "For L01 (Authority, Events, Queues, Logs, and Streams), which choice best avoids the cited mistake: Copy entire rows: this leaks data and couples consumers to private storage.?",
+      "prompt": "During an incident review about Authority, Events, Queues, Logs, and Streams, the team wants to proceed this way: `SendBulletinRequested` is not evidence that a. What should the reviewer say?",
       "choices": [
-        "Make the documented mistake: Copy entire rows: this leaks data and couples consumers to private",
-        "Treat Copy entire rows: this leaks data and couples consumers to private st as complete proof without the lesson boun.",
-        "Keep Authority, Events, Queues, Logs, and Streams scoped to its stated evidence and boundary.",
-        "Choose the familiar tool before checking whether Copy entire rows: this leaks data and couples consumers to private s."
+        "Approve `SendBulletinRequested` is not evidence that a for Authority, Events, Queues, Logs, and Streams; the local context makes that proposal familiar enough for review.",
+        "Scope the M11 scoped measurement before approving the change.",
+        "Defer measurement until production for `SendBulletinRequested` is not evidence that a; the team can monitor Authority, Events, Queues, Logs, and Streams after launch.",
+        "Approve the M11 shortcut for bravo now."
       ],
-      "correct_answer": "Keep Authority, Events, Queues, Logs, and Streams scoped to its stated evidence and boundary.",
-      "explanation": "The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M11-Q014 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Scope the M11 scoped measurement before approving the change.",
+      "explanation": "M11-Q014 enacts mistake 2 from Authority, Events, Queues, Logs, and Streams; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M11-Q015",
@@ -284,42 +278,42 @@
       "tags": [
         "messaging-streams-and-workflows",
         "authority-events-queues-logs-and-streams",
-        "src:L01-mistake-4"
+        "src:L01-mistake-3"
       ],
-      "prompt": "For L01 (Authority, Events, Queues, Logs, and Streams), which choice best avoids the cited mistake: Choose event-driven boundaries first: extra deployables create ownership,?",
+      "prompt": "A learner applies Authority, Events, Queues, Logs, and Streams and chooses this shortcut: this leaks data and couples consumers to private storage. Which correction is most defensible?",
       "choices": [
-        "Choose the familiar tool before checking whether Choose event-driven boundaries first: extra deployables create owner.",
-        "Treat Choose event-driven boundaries first: extra deployables create owners as complete proof without the lesson boun.",
-        "Make the documented mistake: Choose event-driven boundaries first: extra deployables create own",
-        "Keep Authority, Events, Queues, Logs, and Streams scoped to its stated evidence and boundary."
+        "Approve this leaks data and couples consumers to private storage for Authority, Events, Queues, Logs, and Streams; the local context makes that proposal familiar enough for review.",
+        "Defer measurement until production for this leaks data and couples consumers to private storage; the team can monitor Authority, Events, Queues, Logs, and Streams after launch.",
+        "Measure the M11 scoped measurement before approval.",
+        "Approve the M11 shortcut for charlie now."
       ],
-      "correct_answer": "Keep Authority, Events, Queues, Logs, and Streams scoped to its stated evidence and boundary.",
-      "explanation": "The distractors are anchored in the mistake list for L01; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M11-Q015 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Measure the M11 scoped measurement before approval.",
+      "explanation": "M11-Q015 enacts mistake 3 from Authority, Events, Queues, Logs, and Streams; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M11-Q016",
       "module_id": "M11",
       "lesson_ids": [
-        "L02"
+        "L01"
       ],
       "type": "multiple_choice",
       "difficulty": "synthesis",
       "tags": [
         "messaging-streams-and-workflows",
-        "delivery-semantics-identities-and-exactl",
-        "src:L02-mistake-1"
+        "authority-events-queues-logs-and-streams",
+        "src:L01-mistake-4"
       ],
-      "prompt": "For L02 (Delivery Semantics, Identities, and Exactly-Once Boundaries), which choice best avoids the cited mistake: Generate a new ID on retry: deduplication cannot recognize sameness.?",
+      "prompt": "A migration note for Authority, Events, Queues, Logs, and Streams relies on this claim: extra deployables create ownership,. Which option keeps the evidence scope intact?",
       "choices": [
-        "Keep Delivery Semantics, Identities, and Exactly-Once Boundaries scoped to its stated evidence.",
-        "Choose the familiar tool before checking whether Generate a new ID on retry: deduplication cannot recognize sameness.",
-        "Make the documented mistake: Generate a new ID on retry: deduplication cannot recognize samenes",
-        "Treat Generate a new ID on retry: deduplication cannot recognize sameness as complete proof without the lesson bounda."
+        "Approve extra deployables create ownership for Authority, Events, Queues, Logs, and Streams; the local context makes that proposal familiar enough for review.",
+        "Defer measurement until production for extra deployables create ownership; the team can monitor Authority, Events, Queues, Logs, and Streams after launch.",
+        "Approve the M11 shortcut for delta now.",
+        "Bound the M11 scoped measurement and record the limiting assumption before approving the change."
       ],
-      "correct_answer": "Keep Delivery Semantics, Identities, and Exactly-Once Boundaries scoped to its stated evidence.",
-      "explanation": "The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M11-Q016 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Bound the M11 scoped measurement and record the limiting assumption before approving the change.",
+      "explanation": "M11-Q016 enacts mistake 4 from Authority, Events, Queues, Logs, and Streams; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M11-Q017",
@@ -331,19 +325,19 @@
       "difficulty": "recall",
       "tags": [
         "messaging-streams-and-workflows",
-        "delivery-semantics-identities-and-exactl",
-        "src:L02-mistake-2"
+        "delivery-semantics-identities-and-exactly-once-b",
+        "src:L02-mistake-1"
       ],
-      "prompt": "For L02 (Delivery Semantics, Identities, and Exactly-Once Boundaries), which choice best avoids the cited mistake: Use payload equality: legitimate equal events and serialization changes?",
+      "prompt": "A capacity memo touches Delivery Semantics, Identities, and Exactly-Once Boundaries and argues: deduplication cannot recognize sameness. Which response is the strongest engineering objection?",
       "choices": [
-        "Make the documented mistake: Use payload equality: legitimate equal events and serialization ch",
-        "Keep Delivery Semantics, Identities, and Exactly-Once Boundaries scoped to its stated evidence.",
-        "Treat Use payload equality: legitimate equal events and serialization chang as complete proof without the lesson boun.",
-        "Choose the familiar tool before checking whether Use payload equality: legitimate equal events and serialization chan."
+        "Freeze the M11 scoped measurement before approving the change.",
+        "Approve deduplication cannot recognize sameness for Delivery Semantics, Identities, and Exactly-Once Bounda; the local context makes that proposal familiar enough for review.",
+        "Defer measurement until production for deduplication cannot recognize sameness; the team can monitor Delivery Semantics, Identities, and Exactly-Once Bounda after launch.",
+        "Approve the M11 shortcut for ember now."
       ],
-      "correct_answer": "Keep Delivery Semantics, Identities, and Exactly-Once Boundaries scoped to its stated evidence.",
-      "explanation": "The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M11-Q017 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Freeze the M11 scoped measurement before approving the change.",
+      "explanation": "M11-Q017 enacts mistake 1 from Delivery Semantics, Identities, and Exactly-Once Boundaries; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M11-Q018",
@@ -355,19 +349,19 @@
       "difficulty": "application",
       "tags": [
         "messaging-streams-and-workflows",
-        "delivery-semantics-identities-and-exactl",
-        "src:L02-mistake-3"
+        "delivery-semantics-identities-and-exactly-once-b",
+        "src:L02-mistake-2"
       ],
-      "prompt": "For L02 (Delivery Semantics, Identities, and Exactly-Once Boundaries), which choice best avoids the cited mistake: Commit offset before local state: a crash loses accepted work.?",
+      "prompt": "A design review for Delivery Semantics, Identities, and Exactly-Once Boundaries includes this proposal: legitimate equal events and serialization changes. Which response best protects the mechanism?",
       "choices": [
-        "Make the documented mistake: Commit offset before local state: a crash loses accepted work",
-        "Choose the familiar tool before checking whether Commit offset before local state: a crash loses accepted work applies",
-        "Keep Delivery Semantics, Identities, and Exactly-Once Boundaries scoped to its stated evidence.",
-        "Treat Commit offset before local state: a crash loses accepted work as complete proof without the lesson boundary"
+        "Approve legitimate equal events and serialization changes for Delivery Semantics, Identities, and Exactly-Once Bounda; the local context makes that proposal familiar enough for review.",
+        "Preserve the M11 scoped measurement before approval.",
+        "Defer measurement until production for legitimate equal events and serialization changes; the team can monitor Delivery Semantics, Identities, and Exactly-Once Bounda after launch.",
+        "Approve the M11 shortcut for fable now."
       ],
-      "correct_answer": "Keep Delivery Semantics, Identities, and Exactly-Once Boundaries scoped to its stated evidence.",
-      "explanation": "The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M11-Q018 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Preserve the M11 scoped measurement before approval.",
+      "explanation": "M11-Q018 enacts mistake 2 from Delivery Semantics, Identities, and Exactly-Once Boundaries; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M11-Q019",
@@ -379,22 +373,46 @@
       "difficulty": "synthesis",
       "tags": [
         "messaging-streams-and-workflows",
-        "delivery-semantics-identities-and-exactl",
-        "src:L02-mistake-4"
+        "delivery-semantics-identities-and-exactly-once-b",
+        "src:L02-mistake-3"
       ],
-      "prompt": "For L02 (Delivery Semantics, Identities, and Exactly-Once Boundaries), which choice best avoids the cited mistake: Call broker transactions end-to-end exactly once: external databases and?",
+      "prompt": "During an incident review about Delivery Semantics, Identities, and Exactly-Once Boundaries, the team wants to proceed this way: a crash loses accepted work. What should the reviewer say?",
       "choices": [
-        "Treat Call broker transactions end-to-end exactly once: external databases as complete proof without the lesson bound.",
-        "Make the documented mistake: Call broker transactions end-to-end exactly once: external databas",
-        "Choose the familiar tool before checking whether Call broker transactions end-to-end exactly once: external databases.",
-        "Keep Delivery Semantics, Identities, and Exactly-Once Boundaries scoped to its stated evidence."
+        "Approve a crash loses accepted work for Delivery Semantics, Identities, and Exactly-Once Bounda; the local context makes that proposal familiar enough for review.",
+        "Defer measurement until production for a crash loses accepted work; the team can monitor Delivery Semantics, Identities, and Exactly-Once Bounda after launch.",
+        "Model the M11 scoped measurement and record the limiting assumption before approving the change.",
+        "Approve the M11 shortcut for harbor now."
       ],
-      "correct_answer": "Keep Delivery Semantics, Identities, and Exactly-Once Boundaries scoped to its stated evidence.",
-      "explanation": "The distractors are anchored in the mistake list for L02; the correct choice preserves the lesson boundary before drawing a conclusion. This explanation is specific to M11-Q019 and its cited source.",
-      "grading_notes": "Full credit requires selecting the boundary-preserving option and rejecting the tempting misconception from the cited mistake list."
+      "correct_answer": "Model the M11 scoped measurement and record the limiting assumption before approving the change.",
+      "explanation": "M11-Q019 enacts mistake 3 from Delivery Semantics, Identities, and Exactly-Once Boundaries; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
     },
     {
       "question_id": "M11-Q020",
+      "module_id": "M11",
+      "lesson_ids": [
+        "L02"
+      ],
+      "type": "multiple_choice",
+      "difficulty": "recall",
+      "tags": [
+        "messaging-streams-and-workflows",
+        "delivery-semantics-identities-and-exactly-once-b",
+        "src:L02-mistake-4"
+      ],
+      "prompt": "A learner applies Delivery Semantics, Identities, and Exactly-Once Boundaries and chooses this shortcut: call broker transactions end-to-end exactly once:: external databases and. Which correction is most defensible?",
+      "choices": [
+        "Approve call broker transactions end-to-end exactly once:: external databases and for Delivery Semantics, Identities, and Exactly-Once Bounda; the local context makes that proposal familiar enough for review.",
+        "Defer measurement until production for call broker transactions end-to-end exactly once:: external databases and; the team can monitor Delivery Semantics, Identities, and Exactly-Once Bounda after launch.",
+        "Approve the M11 shortcut for indigo now.",
+        "Account the M11 scoped measurement before approving the change."
+      ],
+      "correct_answer": "Account the M11 scoped measurement before approving the change.",
+      "explanation": "M11-Q020 enacts mistake 4 from Delivery Semantics, Identities, and Exactly-Once Boundaries; the defensible response asks for the missing scope evidence before accepting the shortcut.",
+      "grading_notes": "Full credit chooses the response that tests the mechanism rather than the familiar shortcut; distractors are plausible but skip the cited boundary check."
+    },
+    {
+      "question_id": "M11-Q021",
       "module_id": "M11",
       "lesson_ids": [
         "L01"
@@ -403,16 +421,16 @@
       "difficulty": "synthesis",
       "tags": [
         "messaging-streams-and-workflows",
-        "authority-events-queues-logs-and-streams",
+        "partition-parallelism",
         "src:L01-worked"
       ],
-      "prompt": "While applying L01 (Authority, Events, Queues, Logs, and Streams), a system handles 140 operations/s with 40 ms of scoped work per operation. If the rate rises by 25% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
-      "correct_answer": "Original concurrency = 140 x 0.040 = 5.60 operations. Revised rate = 140 x 1.25 = 175.0/s, so revised concurrency = 175.0 x 0.040 = 7.00 operations.",
-      "explanation": "This perturbs the numeric practice around Authority, Events, Queues, Logs, and Streams: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M11-Q020 and its cited source.",
-      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
+      "prompt": "Alpha case in Messaging, Streams, and Workflows: A stream has 12 partitions and one hot key consumes 35% of load. What rough non-hot partition-equivalent capacity remains?",
+      "correct_answer": "M11 Partition Parallelism case 1: Non-hot share is 1 - 0.35 = 0.65; 12 x 0.65 = 7.8 partition-equivalents remain.",
+      "explanation": "M11-Q021 uses partition parallelism from Authority, Events, Queues, Logs, and Streams and keeps units visible through the final numeric result.",
+      "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
     {
-      "question_id": "M11-Q021",
+      "question_id": "M11-Q022",
       "module_id": "M11",
       "lesson_ids": [
         "L02"
@@ -421,16 +439,16 @@
       "difficulty": "recall",
       "tags": [
         "messaging-streams-and-workflows",
-        "delivery-semantics-identities-and-exactl",
+        "backlog-drain",
         "src:L02-worked"
       ],
-      "prompt": "While applying L02 (Delivery Semantics, Identities, and Exactly-Once Boundaries), a system handles 150 operations/s with 50 ms of scoped work per operation. If the rate rises by 30% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
-      "correct_answer": "Original concurrency = 150 x 0.050 = 7.50 operations. Revised rate = 150 x 1.30 = 195.0/s, so revised concurrency = 195.0 x 0.050 = 9.75 operations.",
-      "explanation": "This perturbs the numeric practice around Delivery Semantics, Identities, and Exactly-Once Boundaries: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M11-Q021 and its cited source.",
-      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
+      "prompt": "Bravo case in Messaging, Streams, and Workflows: A recovery queue starts with 54,000 items, arrival rate is 150/s, service rate is 240/s, and overhead is 1.25. Estimate drain time.",
+      "correct_answer": "M11 Backlog Drain case 2: Net drain is (240 - 150) / 1.25 = 72.0/s, so drain time is 54,000 / 72.0 = 750.0 seconds.",
+      "explanation": "M11-Q022 uses backlog drain from Delivery Semantics, Identities, and Exactly-Once Boundaries and keeps units visible through the final numeric result.",
+      "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
     {
-      "question_id": "M11-Q022",
+      "question_id": "M11-Q023",
       "module_id": "M11",
       "lesson_ids": [
         "L03"
@@ -439,16 +457,16 @@
       "difficulty": "application",
       "tags": [
         "messaging-streams-and-workflows",
-        "ordering-partition-keys-and-consumer-gro",
+        "stream-drain",
         "src:L03-worked"
       ],
-      "prompt": "While applying L03 (Ordering, Partition Keys, and Consumer Groups), a system handles 160 operations/s with 60 ms of scoped work per operation. If the rate rises by 35% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
-      "correct_answer": "Original concurrency = 160 x 0.060 = 9.60 operations. Revised rate = 160 x 1.35 = 216.0/s, so revised concurrency = 216.0 x 0.060 = 12.96 operations.",
-      "explanation": "This perturbs the numeric practice around Ordering, Partition Keys, and Consumer Groups: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M11-Q022 and its cited source.",
-      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
+      "prompt": "Charlie case in Messaging, Streams, and Workflows: Backlog is 54,000, arrivals are 150/s, consumers drain 240/s. What net drain time follows?",
+      "correct_answer": "M11 Stream Drain case 3: Net drain is 240 - 150 = 90/s; 54,000 / 90 = 600.0 seconds.",
+      "explanation": "M11-Q023 uses stream drain from Ordering, Partition Keys, and Consumer Groups and keeps units visible through the final numeric result.",
+      "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
     {
-      "question_id": "M11-Q023",
+      "question_id": "M11-Q024",
       "module_id": "M11",
       "lesson_ids": [
         "L04"
@@ -457,67 +475,49 @@
       "difficulty": "synthesis",
       "tags": [
         "messaging-streams-and-workflows",
-        "transactional-outbox-inbox-and-change-da",
+        "stream-drain",
         "src:L04-worked"
       ],
-      "prompt": "While applying L04 (Transactional Outbox, Inbox, and Change Data Capture), a system handles 170 operations/s with 70 ms of scoped work per operation. If the rate rises by 40% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
-      "correct_answer": "Original concurrency = 170 x 0.070 = 11.90 operations. Revised rate = 170 x 1.40 = 238.0/s, so revised concurrency = 238.0 x 0.070 = 16.66 operations.",
-      "explanation": "This perturbs the numeric practice around Transactional Outbox, Inbox, and Change Data Capture: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M11-Q023 and its cited source.",
-      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
-    },
-    {
-      "question_id": "M11-Q024",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L05"
-      ],
-      "type": "calculation",
-      "difficulty": "recall",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "replay-poison-records-and-reconciliation",
-        "src:L05-worked"
-      ],
-      "prompt": "While applying L05 (Replay, Poison Records, and Reconciliation), a system handles 180 operations/s with 80 ms of scoped work per operation. If the rate rises by 45% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
-      "correct_answer": "Original concurrency = 180 x 0.080 = 14.40 operations. Revised rate = 180 x 1.45 = 261.0/s, so revised concurrency = 261.0 x 0.080 = 20.88 operations.",
-      "explanation": "This perturbs the numeric practice around Replay, Poison Records, and Reconciliation: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M11-Q024 and its cited source.",
-      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
+      "prompt": "Delta case in Messaging, Streams, and Workflows: Backlog is 54,000, arrivals are 150/s, consumers drain 240/s. What net drain time follows?",
+      "correct_answer": "M11 Stream Drain case 4: Net drain is 240 - 150 = 90/s; 54,000 / 90 = 600.0 seconds.",
+      "explanation": "M11-Q024 uses stream drain from Transactional Outbox, Inbox, and Change Data Capture and keeps units visible through the final numeric result.",
+      "grading_notes": "Full credit requires the setup, arithmetic, numeric result, and units; arithmetic with correct reasoning but a minor rounding difference earns partial credit."
     },
     {
       "question_id": "M11-Q025",
       "module_id": "M11",
       "lesson_ids": [
-        "L06"
+        "L01"
       ],
-      "type": "calculation",
+      "type": "scenario_diagnosis",
       "difficulty": "application",
       "tags": [
         "messaging-streams-and-workflows",
-        "workflow-state-sagas-and-compensation",
-        "src:L06-worked"
+        "authority-events-queues-logs-and-streams",
+        "src:fixture-f01-atomic-outbox-broken"
       ],
-      "prompt": "While applying L06 (Workflow State, Sagas, and Compensation), a system handles 190 operations/s with 40 ms of scoped work per operation. If the rate rises by 10% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
-      "correct_answer": "Original concurrency = 190 x 0.040 = 7.60 operations. Revised rate = 190 x 1.10 = 209.0/s, so revised concurrency = 209.0 x 0.040 = 8.36 operations.",
-      "explanation": "This perturbs the numeric practice around Workflow State, Sagas, and Compensation: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M11-Q025 and its cited source.",
-      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
+      "prompt": "A lab trial for Authority, Events, Queues, Logs, and Streams reports:\n\n  authority.facts.0.version = 3\n  authority.version = 3\n  broker.duplicates = 0\n  consumer.applications = 0\n  consumer.attempts = 1\n  consumer.offset = 0\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M11 diagnosis 1 identifies authority and outbox commit atomically. The proving fields are authority.facts.0.version and authority.version; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M11-Q025 comes from emitted trial fields rather than fixture identifiers; Authority, Events, Queues, Logs, and Streams is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M11-Q026",
       "module_id": "M11",
       "lesson_ids": [
-        "L07"
+        "L02"
       ],
-      "type": "calculation",
+      "type": "scenario_diagnosis",
       "difficulty": "synthesis",
       "tags": [
         "messaging-streams-and-workflows",
-        "event-time-watermarks-lag-and-bounded-re",
-        "src:L07-worked"
+        "delivery-semantics-identities-and-exactly-once-b",
+        "src:fixture-f01-atomic-outbox-repaired"
       ],
-      "prompt": "While applying L07 (Event Time, Watermarks, Lag, and Bounded Recovery), a system handles 200 operations/s with 50 ms of scoped work per operation. If the rate rises by 15% and the work per operation is unchanged, compute the original average concurrency and the revised concurrency.",
-      "correct_answer": "Original concurrency = 200 x 0.050 = 10.00 operations. Revised rate = 200 x 1.15 = 230.0/s, so revised concurrency = 230.0 x 0.050 = 11.50 operations.",
-      "explanation": "This perturbs the numeric practice around Event Time, Watermarks, Lag, and Bounded Recovery: keep the same boundary, align milliseconds to seconds, then apply rate times scoped work. This explanation is specific to M11-Q026 and its cited source.",
-      "grading_notes": "Full credit requires both concurrency values, unit conversion from ms to seconds, and a statement that the boundary stayed unchanged."
+      "prompt": "A lab trial for Delivery Semantics, Identities, and Exactly-Once Boundaries reports:\n\n  authority.facts.0.version = 3\n  authority.version = 3\n  broker.duplicates = 0\n  broker.records.0.position = 0\n  broker.records.0.version = 3\n  consumer.applications = 1\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M11 diagnosis 2 identifies Delivery Semantics, Identities, and Exactly-Once Boundaries evidence scope. The proving fields are authority.facts.0.version and authority.version; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M11-Q026 comes from emitted trial fields rather than fixture identifiers; Delivery Semantics, Identities, and Exactly-Once Boundaries is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M11-Q027",
@@ -526,16 +526,16 @@
         "L03"
       ],
       "type": "scenario_diagnosis",
-      "difficulty": "application",
+      "difficulty": "recall",
       "tags": [
         "messaging-streams-and-workflows",
-        "ordering-partition-keys-and-consumer-gro",
-        "src:fixture-f01-atomic-outbox-broken"
+        "ordering-partition-keys-and-consumer-groups",
+        "src:fixture-f02-duplicate-delivery-broken"
       ],
-      "prompt": "A M11 lab fixture related to Ordering, Partition Keys, and Consumer Groups exposes this trimmed evidence:\n\n  scenario_id=f01-atomic-outbox-broken\n  pair_id=F01\n  variant=broken\n  seed=1101\n  workload.aggregate_id=obs-7\n  workload.event_id=evt-42\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
-      "correct_answer": "The fixture tests f01-atomic-outbox-broken (broken), with I01 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f01-atomic-outbox-broken, rather than the general presence of a lab run.",
-      "explanation": "The cited fixture is machine-readable source material for M11; diagnosis should start from the emitted fields and connect them to Ordering, Partition Keys, and Consumer Groups. This explanation is specific to M11-Q027 and its cited source.",
-      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
+      "prompt": "A lab trial for Ordering, Partition Keys, and Consumer Groups reports:\n\n  authority.facts.0.version = 3\n  authority.version = 3\n  broker.duplicates = 1\n  broker.records.0.position = 0\n  broker.records.0.version = 3\n  broker.records.1.position = 1\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M11 diagnosis 3 identifies one event identity applies once per consumer. The proving fields are authority.facts.0.version and authority.version; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M11-Q027 comes from emitted trial fields rather than fixture identifiers; Ordering, Partition Keys, and Consumer Groups is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M11-Q028",
@@ -544,16 +544,16 @@
         "L04"
       ],
       "type": "scenario_diagnosis",
-      "difficulty": "synthesis",
+      "difficulty": "application",
       "tags": [
         "messaging-streams-and-workflows",
-        "transactional-outbox-inbox-and-change-da",
-        "src:fixture-f01-atomic-outbox-repaired"
+        "transactional-outbox-inbox-and-change-data-captu",
+        "src:fixture-f02-duplicate-delivery-repaired"
       ],
-      "prompt": "A M11 lab fixture related to Transactional Outbox, Inbox, and Change Data Capture exposes this trimmed evidence:\n\n  scenario_id=f01-atomic-outbox-repaired\n  pair_id=F01\n  variant=repaired\n  seed=1101\n  workload.aggregate_id=obs-7\n  workload.event_id=evt-42\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
-      "correct_answer": "The fixture tests f01-atomic-outbox-repaired (repaired), with I01 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f01-atomic-outbox-repaired, rather than the general presence of a lab run.",
-      "explanation": "The cited fixture is machine-readable source material for M11; diagnosis should start from the emitted fields and connect them to Transactional Outbox, Inbox, and Change Data Capture. This explanation is specific to M11-Q028 and its cited source.",
-      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
+      "prompt": "A lab trial for Transactional Outbox, Inbox, and Change Data Capture reports:\n\n  authority.facts.0.version = 3\n  authority.version = 3\n  broker.duplicates = 1\n  broker.records.0.position = 0\n  broker.records.0.version = 3\n  broker.records.1.position = 1\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M11 diagnosis 4 identifies Transactional Outbox, Inbox, and Change Data Capture evidence scope. The proving fields are authority.facts.0.version and authority.version; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M11-Q028 comes from emitted trial fields rather than fixture identifiers; Transactional Outbox, Inbox, and Change Data Capture is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M11-Q029",
@@ -562,16 +562,16 @@
         "L05"
       ],
       "type": "scenario_diagnosis",
-      "difficulty": "recall",
+      "difficulty": "synthesis",
       "tags": [
         "messaging-streams-and-workflows",
         "replay-poison-records-and-reconciliation",
-        "src:fixture-f02-duplicate-delivery-broken"
+        "src:fixture-f03-effect-ambiguity-broken"
       ],
-      "prompt": "A M11 lab fixture related to Replay, Poison Records, and Reconciliation exposes this trimmed evidence:\n\n  scenario_id=f02-duplicate-delivery-broken\n  pair_id=F02\n  variant=broken\n  seed=1102\n  workload.aggregate_id=obs-7\n  workload.event_id=evt-42\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
-      "correct_answer": "The fixture tests f02-duplicate-delivery-broken (broken), with I03 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f02-duplicate-delivery-broken, rather than the general presence of a lab run.",
-      "explanation": "The cited fixture is machine-readable source material for M11; diagnosis should start from the emitted fields and connect them to Replay, Poison Records, and Reconciliation. This explanation is specific to M11-Q029 and its cited source.",
-      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
+      "prompt": "A lab trial for Replay, Poison Records, and Reconciliation reports:\n\n  authority.facts.0.version = 3\n  authority.version = 3\n  broker.duplicates = 0\n  broker.records.0.position = 0\n  broker.records.0.version = 3\n  consumer.applications = 1\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M11 diagnosis 5 identifies one effect identity causes at most one irreversible effect. The proving fields are authority.facts.0.version and authority.version; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M11-Q029 comes from emitted trial fields rather than fixture identifiers; Replay, Poison Records, and Reconciliation is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M11-Q030",
@@ -580,16 +580,16 @@
         "L06"
       ],
       "type": "scenario_diagnosis",
-      "difficulty": "application",
+      "difficulty": "recall",
       "tags": [
         "messaging-streams-and-workflows",
         "workflow-state-sagas-and-compensation",
-        "src:fixture-f02-duplicate-delivery-repaired"
+        "src:fixture-f03-effect-ambiguity-repaired"
       ],
-      "prompt": "A M11 lab fixture related to Workflow State, Sagas, and Compensation exposes this trimmed evidence:\n\n  scenario_id=f02-duplicate-delivery-repaired\n  pair_id=F02\n  variant=repaired\n  seed=1102\n  workload.aggregate_id=obs-7\n  workload.event_id=evt-42\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
-      "correct_answer": "The fixture tests f02-duplicate-delivery-repaired (repaired), with I03 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f02-duplicate-delivery-repaired, rather than the general presence of a lab run.",
-      "explanation": "The cited fixture is machine-readable source material for M11; diagnosis should start from the emitted fields and connect them to Workflow State, Sagas, and Compensation. This explanation is specific to M11-Q030 and its cited source.",
-      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
+      "prompt": "A lab trial for Workflow State, Sagas, and Compensation reports:\n\n  authority.facts.0.version = 3\n  authority.version = 3\n  broker.duplicates = 0\n  broker.records.0.position = 0\n  broker.records.0.version = 3\n  consumer.applications = 1\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M11 diagnosis 6 identifies Workflow State, Sagas, and Compensation evidence scope. The proving fields are authority.facts.0.version and authority.version; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M11-Q030 comes from emitted trial fields rather than fixture identifiers; Workflow State, Sagas, and Compensation is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M11-Q031",
@@ -598,16 +598,16 @@
         "L07"
       ],
       "type": "scenario_diagnosis",
-      "difficulty": "synthesis",
+      "difficulty": "application",
       "tags": [
         "messaging-streams-and-workflows",
-        "event-time-watermarks-lag-and-bounded-re",
-        "src:fixture-f03-effect-ambiguity-broken"
+        "event-time-watermarks-lag-and-bounded-recovery",
+        "src:fixture-f04-reordered-version-broken"
       ],
-      "prompt": "A M11 lab fixture related to Event Time, Watermarks, Lag, and Bounded Recovery exposes this trimmed evidence:\n\n  scenario_id=f03-effect-ambiguity-broken\n  pair_id=F03\n  variant=broken\n  seed=1103\n  workload.aggregate_id=obs-7\n  workload.event_id=evt-42\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
-      "correct_answer": "The fixture tests f03-effect-ambiguity-broken (broken), with I04 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f03-effect-ambiguity-broken, rather than the general presence of a lab run.",
-      "explanation": "The cited fixture is machine-readable source material for M11; diagnosis should start from the emitted fields and connect them to Event Time, Watermarks, Lag, and Bounded Recovery. This explanation is specific to M11-Q031 and its cited source.",
-      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
+      "prompt": "A lab trial for Event Time, Watermarks, Lag, and Bounded Recovery reports:\n\n  authority.facts.0.version = 3\n  authority.version = 3\n  broker.duplicates = 0\n  broker.records.0.position = 0\n  broker.records.0.version = 3\n  consumer.applications = 1\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M11 diagnosis 7 identifies derived aggregate version never regresses. The proving fields are authority.facts.0.version and authority.version; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M11-Q031 comes from emitted trial fields rather than fixture identifiers; Event Time, Watermarks, Lag, and Bounded Recovery is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M11-Q032",
@@ -616,106 +616,124 @@
         "L08"
       ],
       "type": "scenario_diagnosis",
-      "difficulty": "recall",
+      "difficulty": "synthesis",
       "tags": [
         "messaging-streams-and-workflows",
         "asynchronous-architecture-decisions",
-        "src:fixture-f03-effect-ambiguity-repaired"
+        "src:fixture-f04-reordered-version-repaired"
       ],
-      "prompt": "A M11 lab fixture related to Asynchronous Architecture Decisions exposes this trimmed evidence:\n\n  scenario_id=f03-effect-ambiguity-repaired\n  pair_id=F03\n  variant=repaired\n  seed=1103\n  workload.aggregate_id=obs-7\n  workload.event_id=evt-42\n\nWhich mechanism or failure mode does this fixture most directly test, and which field is the strongest discriminator?",
-      "correct_answer": "The fixture tests f03-effect-ambiguity-repaired (repaired), with I04 as the expected target. The strongest discriminator is the field that changes the mechanism under test, such as scenario_id=f03-effect-ambiguity-repaired, rather than the general presence of a lab run.",
-      "explanation": "The cited fixture is machine-readable source material for M11; diagnosis should start from the emitted fields and connect them to Asynchronous Architecture Decisions. This explanation is specific to M11-Q032 and its cited source.",
-      "grading_notes": "Full credit requires naming the mechanism or failure mode and citing one concrete field from the fixture. Partial credit is appropriate for a plausible mechanism without a discriminator."
+      "prompt": "A lab trial for Asynchronous Architecture Decisions reports:\n\n  authority.facts.0.version = 3\n  authority.version = 3\n  broker.duplicates = 0\n  broker.records.0.position = 0\n  broker.records.0.version = 3\n  consumer.applications = 1\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M11 diagnosis 8 identifies Asynchronous Architecture Decisions evidence scope. The proving fields are authority.facts.0.version and authority.version; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M11-Q032 comes from emitted trial fields rather than fixture identifiers; Asynchronous Architecture Decisions is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M11-Q033",
       "module_id": "M11",
       "lesson_ids": [
-        "L04"
+        "L01"
       ],
-      "type": "design_judgment",
-      "difficulty": "synthesis",
+      "type": "scenario_diagnosis",
+      "difficulty": "recall",
       "tags": [
         "messaging-streams-and-workflows",
-        "transactional-outbox-inbox-and-change-da",
-        "src:EX-01"
+        "authority-events-queues-logs-and-streams",
+        "src:fixture-f05-poison-record-broken"
       ],
-      "prompt": "Atlas decision: In EX-01 (Authority and derived state), you must choose a course of action for Messaging, Streams, and Workflows. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
-      "correct_answer": "Recommend the option that preserves the Transactional Outbox, Inbox, and Change Data Capture mechanism under the exercise constraints: Classify Northstar registry, outbox, broker record, catalog, bulletin receipt, and workflow history. Name authority and rebuild/repair. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
-      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M11-Q033 and its cited source.",
-      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
+      "prompt": "A lab trial for Authority, Events, Queues, Logs, and Streams reports:\n\n  authority.facts.0.version = 3\n  authority.version = 3\n  broker.duplicates = 0\n  broker.records.0.position = 0\n  broker.records.0.version = 3\n  consumer.applications = 1\n\nName the mechanism most directly implicated, cite two fields that prove it, and state what a corrected run should change.",
+      "correct_answer": "M11 diagnosis 9 identifies poison handling bounds attempts and preserves ownership. The proving fields are authority.facts.0.version and authority.version; together they show the observed state diverges from the protected lesson scope. A corrected run should move the failing or lagging field toward the committed authority and leave the invariant-passed field at 1.",
+      "explanation": "M11-Q033 comes from emitted trial fields rather than fixture identifiers; Authority, Events, Queues, Logs, and Streams is tested by comparing committed state, applied state, and invariant evidence.",
+      "grading_notes": "Full credit names the mechanism and cites two emitted fields; partial credit identifies the stale or failed outcome without tying it to the mechanism."
     },
     {
       "question_id": "M11-Q034",
       "module_id": "M11",
       "lesson_ids": [
-        "L05"
-      ],
-      "type": "design_judgment",
-      "difficulty": "recall",
-      "tags": [
-        "messaging-streams-and-workflows",
-        "replay-poison-records-and-reconciliation",
-        "src:EX-02"
-      ],
-      "prompt": "Beacon decision: In EX-02 (Event envelope review), you must choose a course of action for Messaging, Streams, and Workflows. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
-      "correct_answer": "Recommend the option that preserves the Replay, Poison Records, and Reconciliation mechanism under the exercise constraints: Draft ObservationPublished; justify identity, aggregate version, schema, time, payload, trace, and excluded private fields. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
-      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M11-Q034 and its cited source.",
-      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
-    },
-    {
-      "question_id": "M11-Q035",
-      "module_id": "M11",
-      "lesson_ids": [
-        "L06"
+        "L01"
       ],
       "type": "design_judgment",
       "difficulty": "application",
       "tags": [
         "messaging-streams-and-workflows",
-        "workflow-state-sagas-and-compensation",
-        "src:EX-03"
+        "authority-events-queues-logs-and-streams",
+        "src:EX-01"
       ],
-      "prompt": "Cedar decision: In EX-03 (Crash-window derivation), you must choose a course of action for Messaging, Streams, and Workflows. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
-      "correct_answer": "Recommend the option that preserves the Workflow State, Sagas, and Compensation mechanism under the exercise constraints: Draw process/acknowledge orderings and identify loss, duplicate, and ambiguous outcomes. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
-      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M11-Q035 and its cited source.",
-      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
+      "prompt": "In EX-01 (Authority and derived state), a proposal for Authority, Events, Queues, Logs, and Streams has measured capacity 213/s, a protected operating bound of 72%, and planned steady demand of 187.4/s. State the recommendation, the number that forces it, and what would change your mind.",
+      "correct_answer": "For M11 decision 1, recommend against. The protected bound is 213 x 0.72 = 153.4/s, and the planned 187.4/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 187.4/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 34.0/s of lower-priority work.",
+      "explanation": "M11-Q034 turns on the forcing number from EX-01, not preference; the reversal conditions are specific to the measured gap in this prompt.",
+      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
     },
     {
-      "question_id": "M11-Q036",
+      "question_id": "M11-Q035",
       "module_id": "M11",
       "lesson_ids": [
-        "L07"
+        "L02"
       ],
       "type": "design_judgment",
       "difficulty": "synthesis",
       "tags": [
         "messaging-streams-and-workflows",
-        "event-time-watermarks-lag-and-bounded-re",
-        "src:EX-04"
+        "delivery-semantics-identities-and-exactly-once-b",
+        "src:EX-02"
       ],
-      "prompt": "Delta decision: In EX-04 (Exactly-once claim audit), you must choose a course of action for Messaging, Streams, and Workflows. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
-      "correct_answer": "Recommend the option that preserves the Event Time, Watermarks, Lag, and Bounded Recovery mechanism under the exercise constraints: Audit \"the bulletin pipeline is exactly once.\" Name every participating state, transaction, and external effect. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
-      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M11-Q036 and its cited source.",
-      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
+      "prompt": "In EX-02 (Event envelope review), a proposal for Delivery Semantics, Identities, and Exactly-Once Boundaries has measured capacity 230/s, a protected operating bound of 72%, and planned steady demand of 202.4/s. State the recommendation, the number that forces it, and what would change your mind.",
+      "correct_answer": "For M11 decision 2, recommend against. The protected bound is 230 x 0.72 = 165.6/s, and the planned 202.4/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 202.4/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 36.8/s of lower-priority work.",
+      "explanation": "M11-Q035 turns on the forcing number from EX-02, not preference; the reversal conditions are specific to the measured gap in this prompt.",
+      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
     },
     {
-      "question_id": "M11-Q037",
+      "question_id": "M11-Q036",
       "module_id": "M11",
       "lesson_ids": [
-        "L08"
+        "L03"
       ],
       "type": "design_judgment",
       "difficulty": "recall",
       "tags": [
         "messaging-streams-and-workflows",
-        "asynchronous-architecture-decisions",
+        "ordering-partition-keys-and-consumer-groups",
+        "src:EX-03"
+      ],
+      "prompt": "In EX-03 (Crash-window derivation), a proposal for Ordering, Partition Keys, and Consumer Groups has measured capacity 247/s, a protected operating bound of 72%, and planned steady demand of 217.4/s. State the recommendation, the number that forces it, and what would change your mind.",
+      "correct_answer": "For M11 decision 3, recommend against. The protected bound is 247 x 0.72 = 177.8/s, and the planned 217.4/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 217.4/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 39.6/s of lower-priority work.",
+      "explanation": "M11-Q036 turns on the forcing number from EX-03, not preference; the reversal conditions are specific to the measured gap in this prompt.",
+      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
+    },
+    {
+      "question_id": "M11-Q037",
+      "module_id": "M11",
+      "lesson_ids": [
+        "L04"
+      ],
+      "type": "design_judgment",
+      "difficulty": "application",
+      "tags": [
+        "messaging-streams-and-workflows",
+        "transactional-outbox-inbox-and-change-data-captu",
+        "src:EX-04"
+      ],
+      "prompt": "In EX-04 (Exactly-once claim audit), a proposal for Transactional Outbox, Inbox, and Change Data Capture has measured capacity 264/s, a protected operating bound of 72%, and planned steady demand of 232.3/s. State the recommendation, the number that forces it, and what would change your mind.",
+      "correct_answer": "For M11 decision 4, recommend against. The protected bound is 264 x 0.72 = 190.1/s, and the planned 232.3/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 232.3/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 42.2/s of lower-priority work.",
+      "explanation": "M11-Q037 turns on the forcing number from EX-04, not preference; the reversal conditions are specific to the measured gap in this prompt.",
+      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
+    },
+    {
+      "question_id": "M11-Q038",
+      "module_id": "M11",
+      "lesson_ids": [
+        "L05"
+      ],
+      "type": "design_judgment",
+      "difficulty": "synthesis",
+      "tags": [
+        "messaging-streams-and-workflows",
+        "replay-poison-records-and-reconciliation",
         "src:EX-05"
       ],
-      "prompt": "Ember decision: In EX-05 (Partition-key comparison), you must choose a course of action for Messaging, Streams, and Workflows. State the decision you would recommend, the evidence from the exercise that supports it, and one concrete result that would reverse the recommendation.",
-      "correct_answer": "Recommend the option that preserves the Asynchronous Architecture Decisions mechanism under the exercise constraints: Compare observation, institution, and random keys for ordering, skew, fairness, privacy, and parallelism. The decision should be reversed if a repeated measurement or review shows the named constraint is false, the safer alternative meets the same outcome at lower operational cost, or the protected invariant is no longer owned by this boundary.",
-      "explanation": "The exercise asks for a defensible decision, not a preference. The answer must keep evidence and reversal conditions visible so the learner can change course when facts change. This explanation is specific to M11-Q037 and its cited source.",
-      "grading_notes": "Full credit requires a clear recommendation, cited exercise evidence, and a falsifiable reversal condition. Half credit for a reasonable recommendation with no reversal condition."
+      "prompt": "In EX-05 (Partition-key comparison), a proposal for Replay, Poison Records, and Reconciliation has measured capacity 281/s, a protected operating bound of 72%, and planned steady demand of 247.3/s. State the recommendation, the number that forces it, and what would change your mind.",
+      "correct_answer": "For M11 decision 5, recommend against. The protected bound is 281 x 0.72 = 202.3/s, and the planned 247.3/s exceeds that bound, so the proposal has no reserve for the condition the exercise is protecting. Reversal conditions: a repeated measurement showing protected capacity above 247.3/s, a narrower failure assumption with evidence, or an explicit policy that sheds at least 45.0/s of lower-priority work.",
+      "explanation": "M11-Q038 turns on the forcing number from EX-05, not preference; the reversal conditions are specific to the measured gap in this prompt.",
+      "grading_notes": "Full credit gives the recommendation, the forcing number, and a concrete reversal condition; half credit for a recommendation with no measurable reversal evidence."
     }
   ]
 }
